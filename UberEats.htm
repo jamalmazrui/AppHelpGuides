@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Uber Eats Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Uber Eats Help Guide</h1>
+<p class="subtitle">Uber Eats’ official help for ordering, gathered into
+one screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="uber-eats-help-guide">Uber Eats Help Guide</h1>
+<p>This guide gathers Uber Eats’ official help for people ordering food:
+placing and tracking orders, delivery, payment and refunds, your
+account, and what to do when an order goes wrong. It was taken from
+Uber’s own help centre on 28 July 2026.</p>
+<p>Uber Eats is a phone app, on iPhone and Android, with a web version
+for ordering. There is no Windows program and no Alexa skill.</p>
+<p>Uber Eats help is filed in three audiences on one site: people
+ordering, restaurants, and shops. Only the ordering side is here. The
+restaurant and shop material — the Uber Eats Orders app, menu
+management, store hours — is written for merchants and runs to seven
+hundred pages; it would deserve a volume of its own, and can be gathered
+on request. Courier help lives in the driver hub, which is separate
+again.</p>
+<p>This is a small volume, and that is a fact about Uber rather than
+about the gathering. Uber’s eater hub lists no articles at all: it links
+only to the merchant trees. The articles below were reached by name and
+by following the links between them, and they appear to be the whole of
+Uber’s published eater help — most eater questions are answered inside
+the app’s own support flow rather than in pages anyone can read.</p>
+<p>Uber publishes no categories for these articles, so the sections
+below are editorial: grouped by subject, and that choice is mine rather
+than Uber’s. Uber also serves several of these articles at more than one
+address, and the fullest copy of each was kept.</p>
+<p>Headings run three deep: this title, then a section, then an article.
+Every article is listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#placing-an-order">Placing an order</a>
+<ul>
+<li><a href="#how-to-place-a-business-group-order">How to place a
+business group order</a></li>
+<li><a href="#how-to-place-a-group-order">How to Place a Group
+Order</a></li>
+<li><a href="#how-to-place-an-order-on-uber-eats">How to place an order
+on Uber Eats</a></li>
+<li><a href="#how-to-switch-between-personal-and-business-profiles">How
+to switch between personal and business profiles</a></li>
+</ul></li>
+<li><a href="#payment-uber-cash-and-tips">Payment, Uber Cash and
+tips</a>
+<ul>
+<li><a href="#authorization-holds---faq">Authorization holds -
+FAQ</a></li>
+<li><a href="#change-payment-method">Change payment method</a></li>
+<li><a href="#change-tip">Change tip</a></li>
+<li><a href="#clarify-my-order-total">Clarify my order total</a></li>
+<li><a href="#how-do-i-update-or-delete-a-payment-method">How do I
+update or delete a payment method?</a></li>
+<li><a href="#how-to-add-a-tip">How to add a tip</a></li>
+<li><a href="#i-have-an-outstanding-charge-on-my-account">I have an
+outstanding charge on my account</a></li>
+<li><a href="#purchasing-uber-cash">Purchasing Uber Cash</a></li>
+<li><a href="#uber-cash-faq">Uber Cash FAQ</a></li>
+</ul></li>
+<li><a href="#promotions-and-promo-codes">Promotions and promo codes</a>
+<ul>
+<li><a href="#how-do-promo-codes-work">How do promo codes work?</a></li>
+<li><a href="#promo-code-didnt-apply">Promo code didn’t apply</a></li>
+</ul></li>
+<li><a href="#when-an-order-goes-wrong">When an order goes wrong</a>
+<ul>
+<li><a href="#order-never-arrived">Order never arrived</a></li>
+</ul></li>
+<li><a href="#your-account-and-your-data">Your account and your data</a>
+<ul>
+<li><a href="#i-forgot-my-password">I forgot my password</a></li>
+<li><a href="#request-a-copy-of-your-uber-data">Request a copy of your
+Uber data</a></li>
+<li><a href="#whats-in-your-uber-data-download">What’s in your Uber data
+download?</a></li>
+</ul></li>
+<li><a href="#accessibility">Accessibility</a>
+<ul>
+<li><a href="#i-have-feedback-about-voiceover-or-talkback-features">I
+have feedback about VoiceOver or TalkBack features</a></li>
+</ul></li>
+<li><a href="#other-uber-eats-help-articles">Other Uber Eats help
+articles</a>
+<ul>
+<li><a href="#food-damage-or-quality-issue">Food damage or quality
+issue</a></li>
+<li><a href="#i-used-the-wrong-profile-for-my-order">I used the wrong
+profile for my order</a></li>
+</ul></li>
+</ul>
+<h2 id="placing-an-order">Placing an order</h2>
+<h3 id="how-to-place-a-business-group-order">How to place a business
+group order</h3>
+<p>When you initiate a group order, you’ll receive a shareable link that
+will allow multiple people to add items to the same business group
+order. You can either pay for everyone, or have each guest pay for their
+own share.</p>
+<p>Please note that a business profile is needed to place a business
+group order. Without a business profile, you won’t be able to bill the
+meal to your organization’s payment method.</p>
+<h4 id="to-create-a-business-profile">To create a business profile</h4>
+<ol type="1">
+<li>Open the Uber Eats app and tap “Account” at the bottom right.</li>
+<li>Tap “Business Preferences”</li>
+<li>Tap “Start using Uber for business” or “Add another business
+profile.”</li>
+<li>Follow the prompts to create your business profile.</li>
+<li>Optional: Select your company’s expense provider to enable automatic
+receipt forwarding (you’ll receive an email to complete the linking
+process).</li>
+</ol>
+<p>To add an expense provider later, see this article for
+instructions.</p>
+<h4 id="how-to-place-a-business-group-order-1">How to place a business
+group order</h4>
+<ol type="1">
+<li>Sign in to the Uber Eats app or visit <a
+href="https://ubereats.com">ubereats.com</a>.</li>
+<li>Select your business profile, then find the merchant you’d like to
+order from.</li>
+<li>Select “Group order” in the app or “Start group order” on
+ubereats.com.</li>
+<li>Edit the details of the group order if you need to, such as the
+delivery address, set a routine, or spend limit. You can also choose to
+pay for everyone or split the bill.</li>
+<li>If you set a routine for the order, you can edit the frequency,
+delivery days, and the routine start and end dates.</li>
+<li>Select “Share a link”. This will give you a link to send to everyone
+in your group.</li>
+<li>Add your own items if you’re participating in the order.</li>
+<li>Once everyone else has added their items, select “View order” and
+“Go to checkout”.</li>
+<li>If the group order is ready, select “Lock order &amp; continue”. By
+locking it, guests can’t edit or add more items. If it’s not ready,
+select “Go back”.</li>
+<li>Review the order details again and follow the on-screen
+instructions.</li>
+<li>Select “Place group order”.</li>
+</ol>
+<h3 id="how-to-place-a-group-order">How to Place a Group Order</h3>
+<p>When you initiate a group order you can choose if you want the order
+to repeat by default. Order creators can choose if there should be an
+“end date” after which the order no longer repeats, or if they would
+prefer for the order to repeat indefinitely.</p>
+<h6 id="how-to-place-a-group-order-1">How to place a group order?</h6>
+<ol type="1">
+<li>Sign in to the Uber Eats app or visit <a
+href="https://ubereats.com/">ubereats.com</a>.</li>
+<li>Pick a merchant you want to order from.</li>
+<li>Select “Group order” in the app or “Start group order” on <a
+href="https://ubereats.com/">ubereats.com</a>.</li>
+<li>Edit the details of the group order if you’d like, such as the
+delivery address, set a routine, an optional deadline for everyone to
+select their items, or an optional spending limit.</li>
+<li>You can also choose to pay for everyone or split the bill.</li>
+<li>If you set a routine for the order, you can edit the frequency,
+delivery days, and the routine start and end dates.</li>
+<li>Select “Share a link”. This will give you a link to send to everyone
+in your group.</li>
+<li>Add your own items.</li>
+<li>Once everyone else has added their items, select “View order” and
+“Go to checkout”.</li>
+<li>If the group order is ready, select “Lock order &amp; continue”. By
+locking it, guests can’t edit or add more items. If it’s not ready,
+select “Go back”.</li>
+<li>Review the delivery details again and click “Next”.</li>
+<li>Select “Place group order”.</li>
+</ol>
+<h6 id="how-to-join-a-group-order">How to join a group order?</h6>
+<ol type="1">
+<li>Open the text message you receive to join the group order.</li>
+<li>Tap “Join order”.</li>
+<li>Add your items to the cart.</li>
+<li>Follow the instructions on the screen.</li>
+</ol>
+<h6 id="how-do-i-select-a-payment-method">How do I select a payment
+method?</h6>
+<p>There are two payment methods for group orders:</p>
+<ol type="1">
+<li>“You pay for everybody:” Group orders default to this option. If you
+are an admin that manages the budget, this is the best group order
+option for you, because it allows you to set an order limit.</li>
+<li>“Guests pay for themselves:” Participants pay for their own order,
+taxes, and fees. Each participant will have to be logged into their Uber
+Eats account to provide payment information.‌ Please note that an order
+can be split a maximum of 18 ways.</li>
+</ol>
+<h6 id="what-is-a-bill-split-order">What is a Bill Split Order?</h6>
+<p>A Bill Split Order is a group order but each order participant pays
+for their own order.</p>
+<p>MORE INFORMATION ON REPEAT GROUP ORDER</p>
+<p>MORE INFORMATION ON EDITING GROUP ORDERS</p>
+<h3 id="how-to-place-an-order-on-uber-eats">How to place an order on
+Uber Eats</h3>
+<p>Order Uber Eats two ways:</p>
+<ul>
+<li>On the app: Download the app to get started</li>
+<li>In your web browser: Visit <a
+href="https://ubereats.com">ubereats.com</a> to get started</li>
+</ul>
+<p><strong>To place an order:</strong></p>
+<ol type="1">
+<li>Sign in (or create an account) and set your delivery address.</li>
+<li>Choose the restaurant you want to order from.</li>
+<li>Select your items and tap “Add to Cart”.</li>
+<li>To place your order, select “View cart” or “Checkout”.</li>
+<li>Review your order and tap “Place Order”.
+<ul>
+<li>Note: When using for business purposes, <a
+href="#how-to-switch-between-personal-and-business-profiles">switch to
+your business profile</a> before completing your order.</li>
+</ul></li>
+<li>Track your order’s progress.</li>
+</ol>
+<p><em>If using the app, ensure your volume is on to hear when your
+order arrives.</em></p>
+<p>To place a group order where everyone can add their own items, visit
+the articles below:</p>
+<h3 id="how-to-switch-between-personal-and-business-profiles">How to
+switch between personal and business profiles</h3>
+<p>Switch between your personal and business profiles two ways:</p>
+<p><strong>Before selecting your items:</strong></p>
+<ol type="1">
+<li>At the top of your screen, tap the delivery details.</li>
+<li>Scroll down to Profile and toggle the button to your business
+profile.</li>
+</ol>
+<p><strong>Before checking out:</strong></p>
+<ol type="1">
+<li>Select your items and tap View Cart.</li>
+<li>On the checkout page, scroll down to the payment method.</li>
+<li>Toggle the button to your business profile.</li>
+</ol>
+<p>To switch profiles after an order is delivered, follow the steps in
+the article below.</p>
+<h2 id="payment-uber-cash-and-tips">Payment, Uber Cash and tips</h2>
+<h3 id="authorization-holds---faq">Authorization holds - FAQ</h3>
+<p>When you place an order, it creates an <em>authorization hold</em>.
+These apply only to those paying with a credit or debit card.
+Authorization holds are a way for us to confirm your funds can go
+through successfully. These are not payment charges.</p>
+<p>Authorization holds are temporary and the pending line transaction on
+your bank statement will disappear after a few days.</p>
+<p><strong>Note:</strong> If you canceled an order and still see this
+authorization hold, the refund may take 3-10 days to process.</p>
+<p>For more info on authorization holds, see our frequently-asked
+questions:</p>
+<p><strong>Why was I charged twice for an order?</strong></p>
+<p>Sometimes, an authorization hold doesn’t get processed at the same
+speed as the actual charge, making it appear as though you were charged
+twice. This does not mean you were charged twice. This is because when
+you first placed the order, we put a temporary charge, which acts as a
+<em>hold</em>, with your payment method.</p>
+<p>If your order was canceled, the temporary authorization hold should
+reverse within a few business days.</p>
+<p><strong>When will the authorization hold be removed?</strong></p>
+<p>It usually takes 3-10 business days after the charge goes through. It
+may sometimes take longer than that depending on your bank’s processing
+times or policy.</p>
+<p><strong>Where can I get more information on authorization
+holds?</strong></p>
+<p>If you’d like more information on the authorization hold you’re
+seeing on your statement, contact your bank.</p>
+<p>They’ll be able to confirm that the money hasn’t left your account.
+They’ll also be able to give you more information about their
+authorization hold process and a clearer time frame of when the line
+item will disappear from your statement.</p>
+<h3 id="change-payment-method">Change payment method</h3>
+<p>If you need to change the payment method for an order that was
+already completed, share the brand and last 4 digits of your preferred
+credit card below. We can’t switch payment for orders that haven’t been
+completed.</p>
+<p>If you haven’t placed your order, you can change your payment method
+in the app.</p>
+<ol type="1">
+<li>After adding the items you’d like to order, tap “CHECK OUT”</li>
+<li>Scroll down and tap the payment method</li>
+<li>Select your preferred payment account <em>You can add a payment
+method by tapping the “Add Payment” icon.</em></li>
+<li>Review and tap “PLACE ORDER”</li>
+</ol>
+<h3 id="change-tip">Change tip</h3>
+<p>If a delivery person is matched, you can edit the tip amount up to
+one hour after your order arrives.</p>
+<h5 id="change-your-tip-2-ways">Change your tip 2 ways</h5>
+<h6 id="follow-in-app-prompts">1. Follow in-app prompts</h6>
+<p>After your order arrives, you’ll be prompted to add a rating and tip
+for the delivery person if you choose:</p>
+<ol type="1">
+<li>Follow the on-screen prompts to add your rating and view your
+current tip amount</li>
+<li>Tap <strong>“Edit”</strong> to change the amount.</li>
+<li>Tap <strong>“Save and continue”</strong> to save your new tip
+amount.</li>
+</ol>
+<h6 id="from-the-orders-section">2. From the “Orders” section</h6>
+<ol type="1">
+<li>From the main screen, tap <strong>“Account”</strong> and then
+<strong>“Orders”</strong>.</li>
+<li>Scroll to find your order and select it.</li>
+<li>Tap <strong>“Edit amount”</strong> next to the tip.</li>
+</ol>
+<p><em>The option to edit your tip is available for up to one hour after
+the order is delivered.</em></p>
+<p>You can also <a href="#how-to-add-a-tip">add a tip</a> for the
+delivery person after the order has been placed. Tips added after the
+order has been delivered can’t be changed.</p>
+<h3 id="clarify-my-order-total">Clarify my order total</h3>
+<p>Seeing two charges?</p>
+<p>It’s possible it may be an authorization hold. All orders create an
+“authorization hold” when you place an order, which is similar to what
+happens when you check into a hotel and the concierge holds a charge on
+your credit card. Once the order goes through, this hold clears and you
+should see only the single charge for the order.</p>
+<p>To learn more about authorization holds, please review this
+article:</p>
+<p>If you still need help with multiple charges, please fill out the
+details below to help us investigate:</p>
+<h3 id="how-do-i-update-or-delete-a-payment-method">How do I update or
+delete a payment method?</h3>
+<p>Adding and selecting a preferred payment method will allow you to
+place an order. Depending on your country and city, you can add payment
+methods such as credit cards, cash, or a PayPal account. When an order
+is delivered, your selected payment method is charged.</p>
+<h6 id="add-a-payment-method">Add a payment method</h6>
+<ol type="1">
+<li>Select <strong>Account</strong>, and then
+<strong>Wallet</strong>.</li>
+<li>Select <strong>Add Payment</strong>.</li>
+<li>Add a payment method by scanning a card, manually entering card
+info, or adding an alternative payment type.</li>
+</ol>
+<p><strong>Scan a credit or debit card</strong></p>
+<ol type="1">
+<li>To scan a card, tap the camera icon. Your phone may ask permission
+for the app to use the camera.</li>
+<li>Center your card in your phone’s screen so that all 4 corners flash
+green. Cards with embossed letters and numbers are typically easiest to
+scan.</li>
+<li>Enter the card’s expiration date, CVV number, and billing ZIP or
+postal code.</li>
+<li>Select <strong>Save</strong>.</li>
+</ol>
+<p><strong>Manually add a credit or debit card</strong></p>
+<ol type="1">
+<li>Enter your card number.</li>
+<li>Enter the expiration date, CVV number, and billing ZIP or postal
+code.</li>
+<li>Select <strong>Save</strong>.</li>
+</ol>
+<p><strong>Update card info</strong></p>
+<p>You can edit a debit or credit card’s expiration date, CVV number,
+and billing zip or postal code.</p>
+<ol type="1">
+<li>Select <strong>Account</strong> and then
+<strong>Wallet.</strong></li>
+<li>Select the payment option you’d like to update.</li>
+<li>Select <strong>Edit</strong>.<br />
+</li>
+<li>Make changes, then select <strong>Save</strong>.</li>
+</ol>
+<p>While a debit or credit card number can’t be edited, a card can be
+removed from your account and then added again as a new payment
+method.</p>
+<h6 id="delete-a-payment-method">Delete a payment method</h6>
+<p>Your account must have at least one payment method at all times. If
+you wish to delete your only payment method, you’ll need to add a new
+one first.</p>
+<ol type="1">
+<li>Select <strong>Account</strong> and then
+<strong>Wallet</strong>.</li>
+<li>Select the card you’d like to delete.</li>
+<li>Select <strong>Delete</strong>, then confirm.</li>
+</ol>
+<h3 id="how-to-add-a-tip">How to add a tip</h3>
+<p>You can add a tip for your delivery person 3 ways.</p>
+<h4 id="before-placing-your-order">1. Before placing your order</h4>
+<ol type="1">
+<li>After selecting your order items, follow the prompts to check
+out.</li>
+<li>The last screen before placing your order will be the tip
+screen.</li>
+<li>Select the tip amount/percentage or tap <strong>Other</strong> to
+enter a custom amount.</li>
+</ol>
+<p><em>You can change this tip amount up to one hour after the order has
+been delivered.</em></p>
+<h4 id="after-delivery">2. After delivery</h4>
+<p>Once your order is delivered, you’re prompted to rate your experience
+and add a tip.</p>
+<p>If you add a tip after delivery, you’ll be emailed an updated receipt
+that includes the new tip amount.</p>
+<p><em>You can’t change this tip amount after adding it.</em></p>
+<h4 id="in-your-order-history">3. In your order history</h4>
+<p>You can add a tip to a completed order for up to 40 days after
+delivery:</p>
+<ol type="1">
+<li>In your Uber Eats app, tap <strong>Orders</strong> in the bottom
+menu bar.</li>
+<li>Select <strong>Past Orders</strong> and then the order you want to
+add a tip to.</li>
+<li>Rate your order, select a tip amount, then click
+<strong>Submit</strong>.</li>
+</ol>
+<p><em>You can’t change this tip amount after adding it.</em></p>
+<h3 id="i-have-an-outstanding-charge-on-my-account">I have an
+outstanding charge on my account</h3>
+<p>If you see an outstanding charge on your account, it could mean a
+payment didn’t go through. This can happen when:</p>
+<ul>
+<li>A payment method has insufficient funds</li>
+<li>Your request experienced an upcharge</li>
+<li>A technical issue caused your payment to fail</li>
+</ul>
+<p>When an unsuccessful payment occurs, you may be unable to place an
+order or tip your delivery person.</p>
+<p><strong>To clear an outstanding payment:</strong></p>
+<ol type="1">
+<li>Open the app.</li>
+<li>The app will prompt you to choose a payment method for the
+charge.</li>
+<li>Follow the prompts to pay the balance or confirm that you’ll pay in
+cash to the next delivery person (if cash payments are available in your
+area.)</li>
+<li>If your digital payment method is declined, you’ll need to update it
+or select a different one.</li>
+</ol>
+<p>If you have any trouble clearing the balance, fill out the form below
+after making sure the payment method you want to use is added to your
+account:</p>
+<h3 id="purchasing-uber-cash">Purchasing Uber Cash</h3>
+<p><strong>To purchase Uber Cash directly through your app:</strong></p>
+<ol type="1">
+<li>Select the Account icon in the menu bar at the bottom of your
+app.</li>
+<li>Choose <strong>Wallet</strong> and then <strong>Add
+Funds</strong>.</li>
+<li>Pick the amount you’d like to purchase.</li>
+<li>Select <strong>Payment Method</strong> to choose how you’d like to
+buy.</li>
+<li>Tap <strong>Purchase</strong>.</li>
+</ol>
+<p><strong>To enable/disable auto-refill:</strong></p>
+<ol type="1">
+<li>Select the Account icon in the menu bar at the bottom of your
+app</li>
+<li>Tap <strong>Wallet</strong>.</li>
+<li>Tap <strong>Auto-Refill</strong>.</li>
+<li>Choose the amount added to your balance each time it drops below
+$10.</li>
+<li>Toggle <strong>Auto-Refill</strong> on/off.</li>
+<li>Tap <strong>Update</strong>.</li>
+</ol>
+<h6 id="what-happens-to-my-uber-cash-if-i-delete-my-account">What
+happens to my Uber Cash if I delete my account?</h6>
+<p>When your account is deleted, you will be emailed a PIN you can
+redeem in the future for the Uber Cash balance you previously
+purchased.</p>
+<p>Promotional credits, along with other amounts of Uber Cash that were
+not purchased will be permanently forfeited if your account is
+deleted.</p>
+<p>If you’re having an issue purchasing Uber Cash, please share the
+details with us below.</p>
+<h3 id="uber-cash-faq">Uber Cash FAQ</h3>
+<h6 id="what-is-uber-cash">What is Uber Cash?</h6>
+<p>Uber Cash is a payment option that can be used to pay for rides and
+Eats orders.</p>
+<h6 id="how-do-i-get-uber-cash">How do I get Uber Cash?</h6>
+<p><a href="#purchasing-uber-cash">Uber Cash can be purchased</a>
+directly in the Uber app.</p>
+<p>An Uber Cash balance can also come from other sources such as:</p>
+<ul>
+<li>The balance of any gift cards</li>
+<li>Credits given by Uber Support</li>
+<li>Uber promotional credits</li>
+<li>Amex Premium Benefits</li>
+</ul>
+<h6 id="how-do-i-use-uber-cash">How do I use Uber Cash?</h6>
+<ol type="1">
+<li>Create an order in the Uber Eats app.</li>
+<li>Select <strong>View cart</strong> or <strong>Checkout</strong>.</li>
+<li>Above the <strong>Place Order</strong> button, tap your current
+payment method.</li>
+<li>Select <strong>Uber Cash</strong> on the <strong>Payment
+Options</strong> screen.</li>
+<li>Return to the order screen and check that Uber Cash is the selected
+payment method.</li>
+<li>Review your order and tap <strong>Place Order</strong>.</li>
+</ol>
+<h6 id="do-orders-cost-more-when-paying-with-uber-cash">Do orders cost
+more when paying with Uber Cash?</h6>
+<p>No, there’s no difference in price between orders paid for with Uber
+Cash compared to any other payment method.</p>
+<h6 id="does-uber-cash-apply-to-family-profiles">Does Uber Cash apply to
+family profiles?</h6>
+<p>It does not.</p>
+<h6 id="are-uber-cash-purchases-refundable">Are Uber Cash purchases
+refundable?</h6>
+<p>Uber Cash purchases can be refunded if your remaining balance is at
+least $5. See the help center article for more details:</p>
+<p>If you’re facing issues and need assistance with Uber Cash, please
+connect with us below and we’ll be happy to take a look.</p>
+<h2 id="promotions-and-promo-codes">Promotions and promo codes</h2>
+<h3 id="how-do-promo-codes-work">How do promo codes work?</h3>
+<h6 id="what-are-promo-codes-and-how-do-they-work">What are promo codes
+and how do they work?</h6>
+<p>We offer special promotions to provide discounts on items.</p>
+<p>When using a promo code, please keep the following in mind:</p>
+<ul>
+<li>Promos must be applied before placing your order, they can’t be
+applied after placing an order.</li>
+<li>Store promos will automatically be applied first, with the highest
+value account promo added next. You can select a preferred promo code to
+apply to a specific order, or none to save them for future orders.</li>
+<li>Some promos only apply to specific cities, states, countries,
+etc.</li>
+<li>Promos can’t be combined - only one promo code can be applied to an
+order and if it’s for a specific amount, any unused amount does not roll
+over to another order.</li>
+<li>Some promos may only apply for certain user types; for example,
+first-time users.</li>
+<li>Some promos may only apply if you receive them via email or in-app
+notification. You’ll need to place the order from an account with an
+email that matches the email where you received the promo code to be
+eligible.</li>
+<li>Rides promos do not apply to delivery or pickup orders.</li>
+</ul>
+<h6 id="how-do-i-add-a-promo-code-to-my-account">How do I add a promo
+code to my account?</h6>
+<ol type="1">
+<li>Tap the profile icon at the bottom of the main screen.</li>
+<li>Tap “Promotions.”</li>
+<li>Tap “Enter Promo Code.”</li>
+<li>Enter the code and tap “Apply.”</li>
+</ol>
+<h6 id="how-do-i-view-active-redeemed-and-expired-promo-codes">How do I
+view active, redeemed, and expired promo codes?</h6>
+<ol type="1">
+<li>Tap the profile icon at the bottom of the main screen.</li>
+<li>Tap “Promotions.”</li>
+</ol>
+<ul>
+<li>Active promotions appear at the top of the page and display the
+expiration date and country where they can be used in</li>
+<li>Past promotions appear just below the “Active Promotions”. You can
+see if the promo code expired or was redeemed.</li>
+</ul>
+<h3 id="promo-code-didnt-apply">Promo code didn’t apply</h3>
+<p>You can check if your promo code applied to a previous order by
+viewing the receipt for that order.</p>
+<h6 id="to-view-a-receipt-in-the-app">To view a receipt in the app:</h6>
+<ol type="1">
+<li>Tap the Account icon in the menu bar at the bottom of the main
+screen.</li>
+<li>Select <strong>Orders</strong> then <strong>Past
+Orders</strong>.</li>
+<li>Tap on the past order you’d like to view.</li>
+<li>Tap <strong>View receipt</strong>.</li>
+<li>The promo discount will appear below the subtotal.</li>
+</ol>
+<p>You can also view your available promos and add new promos to your
+account by navigating to the “Promotions” section in the app.</p>
+<p><em>Promo codes can only be used once. Any leftover credit on a
+single promotion does not apply to future orders. Also, remember that
+each promo code has its own terms and conditions: make sure you’re using
+it in the applicable location, currency and before the expiration
+date.</em></p>
+<p>Please note that promo codes should be added <strong>before</strong>
+placing the order. We cannot apply a promo code if you forgot to add
+it.</p>
+<p>If the promo applied successfully you should see it included in the
+order charge checkout, just before hitting the <strong>Order</strong>
+button.</p>
+<p>For more on how promo codes work, see <a
+href="#how-do-promo-codes-work">this article</a>.</p>
+<p>If you believe there was an error with applying or redeeming a promo
+code, please let us know:</p>
+<h2 id="when-an-order-goes-wrong">When an order goes wrong</h2>
+<h3 id="order-never-arrived">Order never arrived</h3>
+<p>If you never received your order but was charged for it, let us know
+here.</p>
+<p>We’ll review what happened and make any necessary adjustments.</p>
+<p><strong>Note:</strong></p>
+<p>If matched with a <strong>delivery person</strong></p>
+<ul>
+<li>If you selected the delivery option “Leave at door”, please check
+your door to make sure your order has not already arrived.</li>
+<li>If a delivery person made a reasonable effort to contact you when
+arriving at your requested location, you may not be eligible for a
+refund.</li>
+</ul>
+<h2 id="your-account-and-your-data">Your account and your data</h2>
+<h3 id="i-forgot-my-password">I forgot my password</h3>
+<p>If you forgot your password, the fastest way to reset it is by
+selecting “<strong>Request a link to reset your password</strong>”
+below.</p>
+<p>After entering the email address associated with your account, you’ll
+receive an email from us containing a password reset link. This link
+will expire after 10 minutes. If you do not open it in time, you’ll need
+to request again to receive a new link.</p>
+<p>It’s a good practice to create a unique password. Be careful not to
+share your password in emails or other communication. Customer support
+will never ask you for your password.</p>
+<h3 id="request-a-copy-of-your-uber-data">Request a copy of your Uber
+data</h3>
+<p>At Uber, we value your trust and want to help you understand what
+data we collect and how it’s used. You can visit Uber’s Privacy Overview
+or Privacy Notice for detailed information about how Uber collects and
+uses personal data.</p>
+<p>We also offer options for you to view and make choices about what
+information is collected and shared when you use Uber. To access this
+data, you’ll need to sign in to your account using 2-step verification
+for an extra measure of security.</p>
+<p>EXPLORE YOUR DATA</p>
+<p>View and explore a summary of information about your account, such as
+number of trips taken and Uber Eats orders.</p>
+<p>DOWNLOAD YOUR DATA</p>
+<p>With this option, you can request a file of your data to download.
+We’ll send you a notification through email or text when we receive your
+request, and again when the file is ready to download.</p>
+<p>DELETE YOUR ACCOUNT</p>
+<p>Downloading your data does not delete the data or your account from
+Uber’s systems. Please use the link below if you wish to delete your
+account.</p>
+<h3 id="whats-in-your-uber-data-download">What’s in your Uber data
+download?</h3>
+<p>Depending on how you use the Uber platform, the contents of your data
+download may include the following:</p>
+<h6 id="account-data">Account data</h6>
+<p>Your account data will include information such as:</p>
+<ul>
+<li>Your name, email address, mobile number, rating(s), and the date you
+signed up with Uber</li>
+<li>Referral code(s) issued by Uber</li>
+<li>Payment method information such as the date you created and updated
+a payment method, the issuing bank’s name, billing country, and payment
+method type (Visa, debit, etc.)</li>
+<li>Metadata about support conversations with Uber</li>
+<li>Communications sent between driver and rider or between delivery
+person and customer
+<ul>
+<li>Note: You will only see messages you sent</li>
+</ul></li>
+</ul>
+<h6 id="rider-data">Rider data</h6>
+<p>Your rider data includes information used to get you to your
+destination, such as:</p>
+<ul>
+<li>Times and locations at which a trip was requested, started, and
+ended, as well as distance traveled</li>
+<li>Trip prices and currency</li>
+<li>30 days of mobile event data, such as device OS, device model,
+device language, app version, and the time and location the data was
+collected</li>
+</ul>
+<h6 id="uber-eats-data">Uber Eats data</h6>
+<p>Your Uber Eats data includes order history details like:</p>
+<ul>
+<li>Merchant names, items ordered, prices, and the time you placed your
+order</li>
+<li>Customizations or special instructions</li>
+<li>30 days of mobile event data, such as device OS, device model,
+device language, app version, and the time and location the data was
+collected</li>
+</ul>
+<p>Learn more in the “Data collections and uses” section of our Privacy
+Notice.</p>
+<h6 id="whats-not-included-in-your-data-download">What’s not included in
+your data download?</h6>
+<p>Some information is reasonably not included in your data download.
+This can be for security reasons or because the information is
+proprietary. We also do not include information containing the personal
+data of another party that we can’t reasonably exclude; for example, we
+do not include content from support tickets, email exchanges with Uber,
+or messages you’ve received.</p>
+<p>Below is a list of the type of information not included in the
+download for each account type, along with the reason why it is not
+included.</p>
+<h6 id="account-data-1">Account data</h6>
+<p>Highly personal data that you have provided to us such as Social
+Security number, mailing address, and bank account and credit card
+details are not included in your download. We exclude this data for your
+personal security. You will only receive messages you have sent. For
+security reasons, messages you have received are not included.</p>
+<h6 id="mobile-event-data">Mobile event data</h6>
+<p>Mobile event data included in your export - such as device OS, device
+model, device language, and app version - is limited to the past 30 days
+to reduce the size of your download and allow us to provide your data as
+quickly as possible.</p>
+<h6 id="rider-data-1">Rider data</h6>
+<ul>
+<li>Names and addresses of places you’ve saved are currently not
+included due to technical limitations</li>
+<li>Information such as estimated arrival time, pricing calculations,
+and details about marketplace-driven promotional discounts are not
+included in the download for proprietary reasons</li>
+</ul>
+<h6 id="uber-eats-data-1">Uber Eats data</h6>
+<ul>
+<li>Delivery fee calculations and promotional discount details are not
+included in the download for proprietary reasons</li>
+<li>Delivery fee calculations and promotional discount details are not
+included in the download for proprietary reasons</li>
+</ul>
+<h6 id="driver-data">Driver data</h6>
+<p>Your download may contain a very limited amount of information about
+your driver experience. You can find more of your driver data and
+information in the driver dashboard.</p>
+<p>Your data download contains the most relevant data about how you use
+the Uber platform. If you have questions about your personal data, would
+like to receive specific data that is not available in your download,
+would like to request a correction of your data, or would otherwise like
+to contact Uber’s Data Protection Officer (DPO), you can submit a
+request through the link below.</p>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="i-have-feedback-about-voiceover-or-talkback-features">I have
+feedback about VoiceOver or TalkBack features</h3>
+<p>If you have feedback regarding VoiceOver or TalkBack within the Uber
+app, please let us know here. If you have feedback about the VoiceOver
+or Talkback features, please contact Apple or Google support.</p>
+<h2 id="other-uber-eats-help-articles">Other Uber Eats help
+articles</h2>
+<h3 id="food-damage-or-quality-issue">Food damage or quality issue</h3>
+<p>We’re sorry the food you received didn’t meet your expectations.
+You’ll have the opportunity to rate each item in your order so you can
+give specific feedback about each dish. Your ratings are an important
+way for us to ensure that we partner with only the highest quality
+merchants.</p>
+<p>If you believe the food you received was unacceptable, please share a
+few details about what was wrong so our team can help.</p>
+<h3 id="i-used-the-wrong-profile-for-my-order">I used the wrong profile
+for my order</h3>
+<p>To change your profile after an order is delivered, fill out the form
+below to contact our support team.</p>
+<p><strong>Note:</strong> We can’t change the profile for orders that
+haven’t been delivered. Before placing your order, follow the steps in
+the link below to switch payment profiles.</p>
+</body>
+</html>
