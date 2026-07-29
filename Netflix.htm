@@ -1,0 +1,3847 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Netflix Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Netflix Help Guide</h1>
+<p class="subtitle">Netflix’s official help, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="netflix-help-guide">Netflix Help Guide</h1>
+<p>This guide gathers Netflix’s official help: signing up, plans and
+billing, your account and profiles, the Netflix Household rules,
+watching — playback, sound, subtitles and downloads — games, the devices
+Netflix runs on, fixing problems and error codes, and accessibility. It
+was taken from Netflix’s own help centre on 28 July 2026.</p>
+<p>Netflix reaches more surfaces than most services in this collection.
+There is a Netflix app for Windows, the site works in any supported
+browser, and there is an app for iPhone and iPad. There is no Alexa
+skill. A good deal of the help also covers televisions, streaming
+players, games consoles and headsets; that sits outside this project’s
+usual four-surface scope but is genuinely useful, so it is kept, and the
+articles say which device they are about.</p>
+<p>One thing to be honest about: the sections below are mine, not
+Netflix’s. Netflix numbers its articles rather than filing them in a
+published category tree, and its help home offers only a short list of
+popular topics, so the grouping here is editorial — assembled from what
+each article is about. Where an article could sit in two places, the
+first matching rule won; the accessibility article, for instance, has a
+section of its own.</p>
+<p>Cross references between articles are live links inside this document
+wherever the article referred to is also here. Netflix serves some
+articles at two addresses, and where that happened the fuller copy was
+kept.</p>
+<p>Headings run three deep: this title, then a section, then an article,
+with each article’s own subheadings nested beneath. Every article is
+listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#getting-started-and-signing-up">Getting started and
+signing up</a>
+<ul>
+<li><a href="#cant-redeem-netflix-gift-card">Can’t redeem Netflix gift
+card</a></li>
+<li><a href="#getting-started-with-netflix">Getting started with
+Netflix</a></li>
+<li><a href="#how-to-download-the-netflix-app">How to download the
+Netflix app</a></li>
+<li><a href="#how-to-sign-up-for-netflix">How to sign up for
+Netflix</a></li>
+<li><a href="#netflix-gift-cards">Netflix Gift Cards</a></li>
+<li><a href="#netflix-says-to-sign-up-when-trying-to-sign-in">Netflix
+says to sign up when trying to sign in</a></li>
+<li><a href="#what-is-netflix">What is Netflix?</a></li>
+</ul></li>
+<li><a href="#plans-billing-and-payments">Plans, billing and
+payments</a>
+<ul>
+<li><a href="#ads-on-netflix">Ads on Netflix</a></li>
+<li><a href="#billing-and-payments">Billing and Payments</a></li>
+<li><a href="#charged-after-canceling-netflix">Charged after canceling
+Netflix</a></li>
+<li><a href="#charged-twice-by-netflix">Charged twice by
+Netflix</a></li>
+<li><a href="#extra-members">Extra Members</a></li>
+<li><a href="#find-the-paypal-invoice-id-or-billing-id">Find the PayPal
+Invoice ID or Billing ID</a></li>
+<li><a href="#how-to-add-or-update-a-payment-method">How to add or
+update a payment method</a></li>
+<li><a href="#how-to-cancel-netflix">How to cancel Netflix</a></li>
+<li><a href="#how-to-change-your-plan">How to change your plan</a></li>
+<li><a href="#how-to-find-your-billing-date">How to find your billing
+date</a></li>
+<li><a href="#how-to-pay-for-netflix">How to pay for Netflix</a></li>
+<li><a href="#how-to-remove-payment-methods-from-your-account">How to
+remove payment methods from your account</a></li>
+<li><a href="#how-to-restart-your-netflix-membership">How to restart
+your Netflix membership</a></li>
+<li><a
+href="#netflix-says-your-account-is-on-hold-because-of-a-problem-with-your-last-payment">Netflix
+says ‘Your account is on hold because of a problem with your last
+payment.’</a></li>
+<li><a href="#plans-and-pricing">Plans and Pricing</a></li>
+<li><a href="#taxes-on-your-netflix-membership">Taxes on your Netflix
+membership</a></li>
+<li><a
+href="#unrecognized-or-unauthorized-charges-from-netflix">Unrecognized
+or unauthorized charges from Netflix</a></li>
+<li><a href="#why-your-netflix-price-changed">Why your Netflix price
+changed</a></li>
+</ul></li>
+<li><a href="#your-account-profiles-and-household">Your account,
+profiles and household</a>
+<ul>
+<li><a href="#cant-sign-in-to-netflix">Can’t sign in to Netflix</a></li>
+<li><a
+href="#fix-issues-with-sign-in-or-sign-up-codes-links-or-one-time-passwords">Fix
+issues with sign-in or sign-up codes, links, or one-time
+passwords</a></li>
+<li><a href="#forgot-email-or-phone-number-for-netflix">Forgot email or
+phone number for Netflix</a></li>
+<li><a href="#how-to-add-edit-or-remove-a-profile-pin">How to add, edit,
+or remove a profile PIN</a></li>
+<li><a href="#how-to-change-or-reset-your-password">How to change or
+reset your password</a></li>
+<li><a href="#how-to-create-a-profile-for-kids">How to create a profile
+for kids</a></li>
+<li><a href="#how-to-create-edit-or-delete-profiles">How to create,
+edit, or delete profiles</a></li>
+<li><a href="#how-to-hide-titles-from-viewing-history">How to hide
+titles from viewing history</a></li>
+<li><a href="#how-to-keep-your-account-secure">How to keep your account
+secure</a></li>
+<li><a href="#how-to-require-a-pin-to-add-a-new-profile">How to require
+a PIN to add a new profile</a></li>
+<li><a href="#how-to-see-viewing-history-and-device-activity">How to see
+viewing history and device activity</a></li>
+<li><a href="#how-to-set-profile-maturity-ratings-or-block-titles">How
+to set profile maturity ratings or block titles</a></li>
+<li><a href="#how-to-sign-in-to-netflix">How to sign in to
+Netflix</a></li>
+<li><a href="#how-to-stop-someone-from-using-your-account">How to stop
+someone from using your account</a></li>
+<li><a href="#how-to-update-a-netflix-household">How to update a Netflix
+Household</a></li>
+<li><a href="#how-to-update-netflix-account-information">How to update
+Netflix account information</a></li>
+<li><a href="#locked-profile-isnt-asking-for-pin">Locked profile isn’t
+asking for PIN</a></li>
+<li><a href="#moving-with-netflix">Moving with Netflix</a></li>
+<li><a
+href="#netflix-account-email-was-changed-without-permission">Netflix
+account email was changed without permission</a></li>
+<li><a
+href="#netflix-says-sorry-we-cant-find-an-account-with-this-email-address">Netflix
+says ‘Sorry, we can’t find an account with this email address.’</a></li>
+<li><a href="#netflix-says-account-is-already-in-use">Netflix says
+account is already in use</a></li>
+<li><a
+href="#netflix-says-your-tvdevice-isnt-part-of-the-netflix-household">Netflix
+says, ‘Your TV/device isn’t part of the Netflix Household’</a></li>
+<li><a
+href="#netflix-wont-save-changes-to-my-account-information-or-profile-settings">Netflix
+won’t save changes to my account information or profile
+settings</a></li>
+<li><a
+href="#phishing-or-suspicious-emails-or-texts-claiming-to-be-from-netflix">Phishing
+or suspicious emails or texts claiming to be from Netflix</a></li>
+<li><a href="#profile-transfers">Profile transfers</a></li>
+<li><a href="#sharing-your-netflix-account">Sharing your Netflix
+account</a></li>
+<li><a href="#what-is-a-netflix-household">What is a Netflix
+Household?</a></li>
+</ul></li>
+<li><a href="#watching-playback-sound-and-subtitles">Watching: playback,
+sound and subtitles</a>
+<ul>
+<li><a href="#cant-set-up-netflix-kids">Can’t set up Netflix
+Kids</a></li>
+<li><a href="#how-netflixs-recommendations-system-works">How Netflix’s
+Recommendations System Works</a></li>
+<li><a href="#how-to-autoplay-the-next-episode">How to autoplay the next
+episode</a></li>
+<li><a
+href="#how-to-change-the-appearance-of-subtitles-and-closed-captions">How
+to change the appearance of subtitles and closed captions</a></li>
+<li><a href="#how-to-change-the-language-on-netflix">How to change the
+language on Netflix</a></li>
+<li><a href="#how-to-download-titles-to-watch-offline">How to download
+titles to watch offline</a></li>
+<li><a href="#how-to-find-and-download-netflix-mobile-games">How to find
+and download Netflix mobile games</a></li>
+<li><a href="#how-to-get-the-best-video-quality">How to get the best
+video quality</a></li>
+<li><a href="#how-to-remove-titles-from-the-continue-watching-row">How
+to remove titles from the ‘Continue Watching’ row</a></li>
+<li><a href="#how-to-report-issues-with-a-title">How to report issues
+with a title</a></li>
+<li><a href="#how-to-turn-preview-autoplay-on-or-off">How to turn
+preview autoplay on or off</a></li>
+<li><a href="#how-to-use-my-list">How to use ‘My List’</a></li>
+<li><a
+href="#how-to-use-subtitles-captions-or-choose-audio-language">How to
+use subtitles, captions, or choose audio language</a></li>
+<li><a
+href="#i-cant-change-the-maturity-rating-limits-in-the-netflix-kids-experience">I
+can’t change the maturity rating limits in the Netflix Kids
+experience</a></li>
+<li><a href="#maturity-ratings-for-games-on-netflix">Maturity ratings
+for games on Netflix</a></li>
+<li><a
+href="#maturity-ratings-for-tv-shows-and-movies-on-netflix">Maturity
+ratings for TV shows and movies on Netflix</a></li>
+<li><a href="#parental-controls-on-netflix">Parental controls on
+Netflix</a></li>
+<li><a href="#spatial-audio-on-netflix">Spatial audio on
+Netflix</a></li>
+</ul></li>
+<li><a href="#games-on-netflix">Games on Netflix</a>
+<ul>
+<li><a href="#how-do-game-saves-work-on-netflix">How do game saves work
+on Netflix?</a></li>
+<li><a href="#how-to-create-and-manage-netflix-game-handles">How to
+create and manage Netflix game handles</a></li>
+<li><a href="#how-to-report-other-players-in-netflix-games">How to
+report other players in Netflix games</a></li>
+<li><a href="#play-games-on-mobile-devices">Play games on mobile
+devices</a></li>
+<li><a href="#play-games-on-tvs-and-computers">Play games on TVs and
+computers</a></li>
+</ul></li>
+<li><a href="#devices-and-apps">Devices and apps</a>
+<ul>
+<li><a href="#browser-isnt-supported">Browser isn’t supported</a></li>
+<li><a href="#fix-a-problem-on-your-android-phone-or-tablet">Fix a
+problem on your Android phone or tablet</a></li>
+<li><a href="#fix-a-problem-on-your-tv-or-streaming-media-player">Fix a
+problem on your TV or streaming media player</a></li>
+<li><a href="#google-play-shows-device-incompatible-message">Google Play
+shows ‘device incompatible’ message</a></li>
+<li><a href="#how-to-cast-or-mirror-netflix-from-your-mobile-device">How
+to Cast or Mirror Netflix from Your Mobile Device</a></li>
+<li><a href="#how-to-rate-tv-shows-and-movies">How to rate TV shows and
+movies</a></li>
+<li><a href="#how-to-use-netflix-on-your-amazon-fire-tv-device">How to
+use Netflix on your Amazon Fire TV device</a></li>
+<li><a href="#how-to-use-netflix-on-your-android-phone-or-tablet">How to
+use Netflix on your Android phone or tablet</a></li>
+<li><a href="#how-to-use-netflix-on-your-apple-tv">How to use Netflix on
+your Apple TV</a></li>
+<li><a href="#how-to-use-netflix-on-your-apple-vision-pro">How to use
+Netflix on your Apple Vision Pro</a></li>
+<li><a href="#how-to-use-netflix-on-your-chromecast">How to use Netflix
+on your Chromecast</a></li>
+<li><a
+href="#how-to-use-netflix-on-your-hisense-tv-or-streaming-media-player">How
+to use Netflix on your Hisense TV or streaming media player</a></li>
+<li><a href="#how-to-use-netflix-on-your-iphone-or-ipad">How to use
+Netflix on your iPhone or iPad</a></li>
+<li><a
+href="#how-to-use-netflix-on-your-lg-tv-blu-ray-player-or-streaming-media-player">How
+to use Netflix on your LG TV, Blu-ray player, or streaming media
+player</a></li>
+<li><a href="#how-to-use-netflix-on-your-mac-computer">How to use
+Netflix on your Mac computer</a></li>
+<li><a
+href="#how-to-use-netflix-on-your-meta-quest-oculus-vr-headset">How to
+use Netflix on your Meta Quest (Oculus) VR headset</a></li>
+<li><a
+href="#how-to-use-netflix-on-your-panasonic-tv-or-blu-ray-player">How to
+use Netflix on your Panasonic TV or Blu-ray player</a></li>
+<li><a
+href="#how-to-use-netflix-on-your-philips-tv-or-blu-ray-player">How to
+use Netflix on your Philips TV or Blu-ray player</a></li>
+<li><a
+href="#how-to-use-netflix-on-your-samsung-tv-or-blu-ray-player">How to
+use Netflix on your Samsung TV or Blu-ray player</a></li>
+<li><a href="#how-to-use-netflix-on-your-sharp-tv-or-blu-ray-player">How
+to use Netflix on your Sharp TV or Blu-ray player</a></li>
+<li><a href="#how-to-use-netflix-on-your-sony-tv-or-blu-ray-player">How
+to use Netflix on your Sony TV or Blu-ray player</a></li>
+<li><a href="#how-to-use-netflix-on-your-tcl-tv">How to use Netflix on
+your TCL TV</a></li>
+<li><a href="#how-to-use-netflix-on-your-toshiba-tv-or-tvs-regza-tv">How
+to use Netflix on your Toshiba TV or TVS REGZA TV</a></li>
+<li><a href="#how-to-use-netflix-on-your-vestel-tv">How to use Netflix
+on your Vestel TV</a></li>
+<li><a href="#how-to-use-netflix-on-your-vizio-tv-or-blu-ray-player">How
+to use Netflix on your Vizio TV or Blu-ray player</a></li>
+<li><a href="#how-to-use-netflix-on-your-windows-computer-or-tablet">How
+to use Netflix on your Windows computer or tablet</a></li>
+<li><a href="#how-to-watch-netflix-on-your-tv">How to watch Netflix on
+your TV</a></li>
+<li><a href="#netflix-error-tvq-pb-101">Netflix Error
+tvq-pb-101</a></li>
+<li><a href="#netflix-error-tvq-st-103">Netflix Error
+tvq-st-103</a></li>
+<li><a
+href="#netflix-freezes-stops-responding-or-gets-stuck-loading-but-device-isnt-frozen">Netflix
+freezes, stops responding, or gets stuck loading, but device isn’t
+frozen</a></li>
+<li><a
+href="#netflix-says-netflix-is-no-longer-available-on-this-device">Netflix
+says ‘Netflix is no longer available on this device.’</a></li>
+<li><a
+href="#netflix-says-this-current-app-version-is-no-longer-supported-please-upgrade-the-os-and-app-version">Netflix
+says ‘This current app version is no longer supported. Please upgrade
+the OS and App version.’</a></li>
+<li><a
+href="#netflix-says-this-device-is-not-supported-by-the-app">Netflix
+says ‘This device is not supported by the app.’</a></li>
+<li><a
+href="#netflix-says-this-app-is-not-compatible-with-your-device">Netflix
+says, ‘This app is not compatible with your device.’</a></li>
+<li><a
+href="#netflix-supported-browsers-and-system-requirements">Netflix
+supported browsers and system requirements</a></li>
+<li><a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">Netflix
+Supported Devices | Watch Netflix on your TV, phone, or
+computer</a></li>
+</ul></li>
+<li><a href="#fixing-problems-and-error-codes">Fixing problems and error
+codes</a>
+<ul>
+<li><a href="#black-screen-with-no-sound">Black screen with no
+sound</a></li>
+<li><a href="#black-screen-with-sound">Black screen with sound</a></li>
+<li><a href="#netflix-error-113">Netflix Error 113</a></li>
+<li><a href="#netflix-error-nw-2-5">Netflix Error NW-2-5</a></li>
+<li><a href="#netflix-error-nw-3-6">Netflix Error NW-3-6</a></li>
+<li><a href="#netflix-error-ui-113">Netflix Error ui-113</a></li>
+<li><a href="#netflix-error-ui-800-3">Netflix Error ui-800-3</a></li>
+<li><a href="#netflix-says-update-required">Netflix says ‘Update
+required’</a></li>
+<li><a
+href="#netflix-says-sorry-something-went-wrong-please-try-again-later">Netflix
+says, ‘Sorry, something went wrong. Please try again later.’</a></li>
+<li><a href="#video-freezes-but-sound-keeps-playing">Video freezes but
+sound keeps playing</a></li>
+</ul></li>
+<li><a href="#accessibility">Accessibility</a>
+<ul>
+<li><a href="#accessibility-on-netflix">Accessibility on
+Netflix</a></li>
+</ul></li>
+<li><a href="#other-help-articles">Other help articles</a>
+<ul>
+<li><a href="#how-netflix-streams-videos">How Netflix streams
+videos</a></li>
+<li><a href="#how-to-add-change-or-delete-a-phone-number">How to add,
+change or delete a phone number</a></li>
+<li><a href="#how-to-control-how-much-data-netflix-uses">How to control
+how much data Netflix uses</a></li>
+<li><a href="#how-to-search-and-browse-netflix">How to search and browse
+Netflix</a></li>
+<li><a href="#how-to-use-netflix-on-your-amazon-fire-tablet">How to use
+Netflix on your Amazon Fire tablet</a></li>
+<li><a href="#how-to-use-netflix-on-your-playstation">How to use Netflix
+on your PlayStation</a></li>
+<li><a href="#how-to-use-netflix-on-your-roku">How to use Netflix on
+your Roku</a></li>
+<li><a href="#how-to-use-netflix-on-your-xbox">How to use Netflix on
+your Xbox</a></li>
+<li><a href="#netflix-asks-for-sign-in-every-time-its-opened">Netflix
+asks for sign-in every time it’s opened</a></li>
+<li><a href="#netflix-says-there-was-a-problem-signing-in">Netflix says
+‘There was a problem signing in.’</a></li>
+<li><a href="#netflix-recommended-internet-speeds">Netflix-recommended
+internet speeds</a></li>
+<li><a href="#responsible-vulnerability-disclosure">Responsible
+Vulnerability Disclosure</a></li>
+<li><a href="#using-netflix-outside-of-your-home">Using Netflix outside
+of your home</a></li>
+<li><a href="#video-issues-with-netflix">Video issues with
+Netflix</a></li>
+<li><a href="#what-is-hdcp">What is HDCP?</a></li>
+</ul></li>
+</ul>
+<h2 id="getting-started-and-signing-up">Getting started and signing
+up</h2>
+<h3 id="cant-redeem-netflix-gift-card">Can’t redeem Netflix gift
+card</h3>
+<p>If you can’t redeem a Netflix gift card, try the following steps for
+the error message or issue you are experiencing.</p>
+<h3 id="getting-started-with-netflix">Getting started with Netflix</h3>
+<p>Welcome to Netflix! Below you’ll find some information to get you
+started. If you don’t see a topic covered here, try searching for it on
+our Help Center. If you haven’t signed up yet and would like to learn
+more, visit <a href="#what-is-netflix">What is Netflix?</a></p>
+<h5 id="signing-in">Signing in</h5>
+<p>Once you’ve opened the Netflix app or website, select Sign In to get
+to your account and start watching TV shows and movies. You can sign in
+on one or multiple Netflix-compatible devices. If you have any issues,
+review the troubleshooting steps in <a
+href="#cant-sign-in-to-netflix">Can’t sign in to Netflix</a>. If you
+don’t have the Netflix app, visit <a
+href="#how-to-download-the-netflix-app">How to download the Netflix
+app</a>.</p>
+<h5 id="creating-profiles">Creating profiles</h5>
+<p>You can <a href="#how-to-create-edit-or-delete-profiles">create
+profiles</a> for members in your household, allowing them to have their
+own personalized Netflix experience. Your account can have up to five
+individual profiles, and you can set a <a
+href="#how-to-set-profile-maturity-ratings-or-block-titles">maturity
+rating level</a> on each one. Each profile will have its own <a
+href="#how-to-rate-tv-shows-and-movies">recommendations</a> based on
+that profile’s ratings and tastes.</p>
+<h5 id="finding-tv-shows-and-movies">Finding TV shows and movies</h5>
+<p>You can <a href="#how-to-search-and-browse-netflix">search for titles
+you’re interested in</a> or browse suggestions provided by Netflix. Once
+you start viewing and rating titles, Netflix will show <a
+href="#how-to-rate-tv-shows-and-movies">recommendations</a>. You can
+also <a
+href="#how-to-use-subtitles-captions-or-choose-audio-language">enable
+subtitles, captions, or alternate audio</a> on many titles, or browse
+titles with your preferred subtitle or audio language.</p>
+<h5 id="managing-your-account">Managing your account</h5>
+<p>You can update your account information at any time, and change your
+email, phone number, or membership plan by selecting the Account option
+in the Netflix menu. With Profile &amp; Parental Controls, you can also
+adjust content controls, such as playback preference, language, and
+subtitles. The articles below can help you learn more about managing
+your account.</p>
+<h6 id="membership-billing">Membership &amp; billing</h6>
+<ul>
+<li><p><a href="#how-to-update-netflix-account-information">How to
+update Netflix account information</a></p></li>
+<li><p><a href="#billing-and-payments">Billing and payment
+questions</a></p></li>
+<li><p><a href="#netflix-gift-cards">Using Netflix Gift
+Cards</a></p></li>
+</ul>
+<h6 id="plan-details">Plan details</h6>
+<ul>
+<li><p><a href="#how-to-change-your-plan">How to change your
+plan</a></p></li>
+<li><p><a href="#how-to-cancel-netflix">How to cancel
+Netflix</a></p></li>
+<li><p><a href="#how-to-restart-your-netflix-membership">How to restart
+your Netflix account</a></p></li>
+</ul>
+<h6 id="settings">Settings</h6>
+<ul>
+<li><p><a href="#parental-controls-on-netflix">Parental controls on
+Netflix</a></p></li>
+<li><p><a href="#accessibility-on-netflix">Accessibility on
+Netflix</a></p></li>
+<li><p><a href="#how-to-download-titles-to-watch-offline">How to
+download titles to watch offline</a></p></li>
+</ul>
+<h6 id="my-profile">My Profile</h6>
+<ul>
+<li><p><a href="#how-to-see-viewing-history-and-device-activity">How to
+see and download viewing history</a></p></li>
+<li><p><a
+href="#how-to-change-the-appearance-of-subtitles-and-closed-captions">How
+to change the appearance of subtitles and captions</a></p></li>
+<li><p><a href="#how-to-control-how-much-data-netflix-uses">How to
+control how much data Netflix uses</a></p></li>
+</ul>
+<h5 id="streaming-on-different-devices">Streaming on different
+devices</h5>
+<p>You can switch between your Netflix-compatible devices at any time.
+While your membership plan determines the <a
+href="#plans-and-pricing">number of screens you can watch on at the same
+time</a>, it doesn’t restrict the number of devices you can add to your
+account. To watch on a device that hasn’t been added to your account,
+just sign in to Netflix on that device. You can find more information
+about <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">Netflix
+compatible devices</a>, or read our <a
+href="#how-to-download-the-netflix-app">article about downloading the
+Netflix app</a> for help setting up a new device.</p>
+<h5 id="watching-on-the-go">Watching on the go</h5>
+<p>You can access Netflix in over 190 countries around the world. If you
+know you’ll be offline, you can <a
+href="#how-to-download-titles-to-watch-offline">download TV shows and
+movies on Netflix</a>. To watch from a different latitude or time zone,
+learn what to expect while <a
+href="#using-netflix-outside-of-your-home">traveling</a> or <a
+href="#moving-with-netflix">moving</a>.</p>
+<h3 id="how-to-download-the-netflix-app">How to download the Netflix
+app</h3>
+<p>Netflix is available <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">on
+many devices</a>. The Netflix app may come pre-installed or you may need
+to download and install it.</p>
+<h6 id="get-the-netflix-app-on-a-phone-or-tablet">Get the Netflix app on
+a phone or tablet</h6>
+<p>To install Netflix, follow the link for your device from your
+smartphone or tablet.</p>
+<ul>
+<li><p><a href="https://apps.apple.com/app/netflix/id363590051">Apple
+iPhone or iPad</a>​</p></li>
+<li><p><a
+href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient">Android
+phones or tablets</a></p></li>
+<li><p><a
+href="https://galaxystore.samsung.com/detail/com.netflix.mediaclient">Samsung
+Galaxy phones and tablets</a>​</p></li>
+<li><p><a href="https://www.amazon.com/Netflix-Inc/dp/B005ZXWMUS">Amazon
+Fire tablets</a>​</p></li>
+<li><p><a
+href="https://apps.microsoft.com/store/detail/9WZDNCRFJ3TJ?launch=true&amp;cid=Netflix-HelpCenter-MiniPDP&amp;mode=mini">Windows
+tablets</a></p></li>
+</ul>
+<h6 id="get-the-netflix-app-on-a-computer">Get the Netflix app on a
+computer</h6>
+<p>The Netflix app is available for some computers. To install Netflix,
+follow the link for your computer below.</p>
+<ul>
+<li><p>Windows 10 or later computers can <a
+href="https://apps.microsoft.com/store/detail/9WZDNCRFJ3TJ?launch=true&amp;cid=Netflix-HelpCenter-MiniPDP&amp;mode=mini">download
+the Netflix app from the Microsoft Store</a>.</p></li>
+<li><p>Chromebooks can <a
+href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient">download
+the Netflix app</a> from the Google Play Store. For help installing
+apps, go to the <a
+href="https://support.google.com/chromebook/answer/7021273">Google
+Support site</a>.</p></li>
+</ul>
+<p>To watch Netflix without the app, go to netflix.com using a <a
+href="#netflix-supported-browsers-and-system-requirements">supported web
+browser</a>.</p>
+<h6 id="get-the-netflix-app-on-a-tv-or-tv-streaming-device">Get the
+Netflix app on a TV or TV streaming device</h6>
+<p>Most devices provide Netflix as a pre-installed app that you can
+access from the main menu, or from a Netflix button on your remote. If
+you can’t find Netflix from the main menu or remote, it’s possible that
+your device has an app store you can download the Netflix app from. If
+you can’t find the app store or don’t see Netflix offered, contact your
+device manufacturer to learn how you can access Netflix.</p>
+<h3 id="how-to-sign-up-for-netflix">How to sign up for Netflix</h3>
+<p>Join the millions of subscribers around the world who enjoy unlimited
+award-winning TV shows, movies, documentaries, and more.</p>
+<p>As a Netflix member, you are charged once a month on the date you
+signed up. You have the freedom to <a
+href="#how-to-change-your-plan">change your plan</a> or <a
+href="#how-to-cancel-netflix">cancel</a> online at any time if you
+decide Netflix isn’t for you.<br />
+Signing up for a Netflix account is easy! Follow the steps for your
+device below.</p>
+<p>Learn more <a href="#what-is-netflix">about Netflix</a>.</p>
+<h3 id="netflix-gift-cards">Netflix Gift Cards</h3>
+<p>You can use Netflix gift cards to pay for Netflix or to give as a
+gift. Netflix gift cards can be purchased at various retail locations
+and online.</p>
+<ul>
+<li><p>Gift cards do not expire, which is printed on the back of each
+card.</p></li>
+<li><p>Gift cards are non-refundable. Once a Netflix gift card is
+applied to an account, you can watch Netflix until the gift card balance
+runs out.</p></li>
+<li><p>Gift cards cannot be reloaded.</p></li>
+<li><p>Netflix gift cards can only be used for a Netflix streaming
+subscription. Visit the following pages to learn more about accepted
+payment methods for <a
+href="https://help.netflixshopsupport.com/">Netflix Shop</a> or Netflix
+House.</p></li>
+</ul>
+<p>Do not share a gift card serial number or gift card code with anyone
+except the intended recipient.</p>
+<p>Not what you’re looking for? You can also find support for Netflix
+promotions.</p>
+<h3 id="netflix-says-to-sign-up-when-trying-to-sign-in">Netflix says to
+sign up when trying to sign in</h3>
+<p>If you see steps to create a new account when you try to sign in to
+Netflix, follow these steps to return to the Sign In page.</p>
+<p>If these steps didn’t work, your account is either using a different
+email address or isn’t active anymore. Check whether you’ve been charged
+by Netflix recently.</p>
+<p>If you have:</p>
+<ul>
+<li><p>A charge from Netflix in the last month: Your account is still
+active, but it might be set up with a different email address. Try
+signing in with a different email address.</p>
+<p>Note:If you can’t remember the email or phone number for your Netflix
+account, <a href="#forgot-email-or-phone-number-for-netflix">follow
+these troubleshooting steps</a>.</p></li>
+<li><p>No charge from Netflix in the last month: Your account might not
+be active anymore. Follow the steps to <a
+href="#how-to-restart-your-netflix-membership">restart your
+account</a>.</p>
+<p>Note:If you have an active gift card or promotion on your account,
+you might not see recent charges from Netflix.</p></li>
+</ul>
+<h3 id="what-is-netflix">What is Netflix?</h3>
+<p>Netflix is a subscription-based <a
+href="#how-netflix-streams-videos">streaming service</a> that allows our
+members to watch TV shows and movies on an internet-connected
+device.</p>
+<p><a href="#plans-and-pricing">Depending on your plan</a>, you can also
+<a href="#how-to-download-titles-to-watch-offline">download TV shows and
+movies</a> to your Android phone or tablet, iPhone, iPad, or Google
+Chromebook device and watch without an internet connection.</p>
+<p>If you’re already a member and would like to learn more about using
+Netflix, visit <a href="#getting-started-with-netflix">Getting started
+with Netflix</a>.</p>
+<hr />
+<h5 id="tv-shows-movies">TV Shows &amp; Movies</h5>
+<p>Netflix content varies by region and may change over time. You can
+watch a variety of award-winning Netflix originals, TV shows, movies,
+documentaries, and more.</p>
+<p>The more you watch, the better Netflix gets at <a
+href="#how-netflixs-recommendations-system-works">recommending</a> TV
+shows and movies.</p>
+<hr />
+<h5 id="supported-devices">Supported Devices</h5>
+<p>You can watch Netflix through any <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">supported
+internet-connected device</a> that offers the Netflix app, including
+smart TVs, game consoles, streaming media players, cable boxes,
+smartphones, and tablets. You can also watch Netflix on your computer
+using an internet browser. To get the best performance, you can review
+the <a href="#netflix-supported-browsers-and-system-requirements">system
+requirements</a> for web browser compatibility and check our <a
+href="#netflix-recommended-internet-speeds">internet speed
+recommendations</a>.</p>
+<p>Note:A small percentage of devices may not be supported by <a
+href="#plans-and-pricing">all plans</a>.</p>
+<p>Need help getting set up? Search our Help Center for the manufacturer
+of the device you’re using.</p>
+<p>Note:The Netflix app may come pre-loaded on certain devices, or you
+may need to download the Netflix app onto your device. Netflix app
+functionality may differ between devices.</p>
+<hr />
+<h5 id="plans-and-pricing">Plans and Pricing</h5>
+<p>Each <a href="#plans-and-pricing">Netflix plan</a> determines the
+number of devices you can watch Netflix on at the same time and whether
+you can watch in High Definition (HD), Full High Definition (FHD), or
+Ultra High Definition (UHD).</p>
+<p>You can <a href="#how-to-change-your-plan">change your plan</a> or <a
+href="#how-to-cancel-netflix">cancel</a> online at any time.</p>
+<hr />
+<h5 id="get-started">Get Started</h5>
+<p>To start watching Netflix:</p>
+<ol type="1">
+<li><p>Visit netflix.com/signup.</p></li>
+<li><p><a href="#plans-and-pricing">Choose a plan</a>.</p></li>
+<li><p>Create an account by entering your email address and creating a
+password.</p></li>
+<li><p>Enter a <a href="#how-to-pay-for-netflix">payment
+method</a>.</p></li>
+</ol>
+<p>As a Netflix member, you are charged once a month on the date you
+signed up.</p>
+<h2 id="plans-billing-and-payments">Plans, billing and payments</h2>
+<h3 id="ads-on-netflix">Ads on Netflix</h3>
+<p>Netflix offers a variety of plans and experiences to meet your
+entertainment needs, some of which are ad-supported. To learn more about
+the ad experience on Netflix, choose from the sections below.</p>
+<h5 id="ad-supported-experience">Ad-supported experience</h5>
+<p>An ad-supported experience allows you to enjoy Netflix at a lower
+price. Our ad-supported experiences include commercial breaks in most TV
+shows and movies.</p>
+<p>While the vast majority of TV shows and movies are available with an
+ad-supported experience, a small number are not due to licensing
+restrictions. These titles will appear with a lock icon when you search
+or browse Netflix.</p>
+<p>Ad-supported experiences are not available in all regions. See which
+<a href="#plans-and-pricing">plans and experiences</a> are offered in
+your country.</p>
+<p>Note: A few supported devices can’t be used with an ad-supported
+experience because the Netflix app or software on the device cannot be
+updated. You can check your plan compatibility on your TV or TV
+streaming device.</p>
+<p>​</p>
+<h3 id="billing-and-payments">Billing and Payments</h3>
+<h5 id="your-netflix-service-charges">Your Netflix service charges</h5>
+<p>Your billing history, along with the price and applicable taxes for
+your subscription, can be found in the payment history on your account
+page.</p>
+<h5 id="resolve-payment-issues">Resolve payment issues</h5>
+<p>If there is a problem with your payment method, here are some of the
+most common causes with suggestions to resolve the issue.</p>
+<h5 id="investigate-unexpected-charges">Investigate unexpected
+charges</h5>
+<h3 id="charged-after-canceling-netflix">Charged after canceling
+Netflix</h3>
+<p>If your account was canceled but you’re still seeing a charge, you or
+someone who was using your account may have accidentally restarted it.
+If you can’t complete the steps below, please contact us.</p>
+<p>Sign in to netflix.com and do the following:</p>
+<ol type="1">
+<li><p>Cancel your account.</p>
+<ul>
+<li><p>Go to netflix.com/cancelplan.</p></li>
+<li><p>Select Finish Cancellation. Your account will close at the end of
+your current billing cycle, and you won’t be charged again.</p></li>
+</ul></li>
+<li><p>Change your password to prevent someone else from restarting your
+account.</p>
+<ul>
+<li><p>Go to netflix.com/password and change your password.</p></li>
+<li><p>Be sure to check the box that says Sign out of all devices. This
+will change your current password and sign out any devices where your
+account is still signed in.</p></li>
+</ul></li>
+</ol>
+<hr />
+<p>Not quite what you’re looking for? See also <a
+href="#unrecognized-or-unauthorized-charges-from-netflix">Unrecognized
+or unauthorized charges from Netflix</a> or <a
+href="#charged-twice-by-netflix">Charged twice by Netflix</a>.</p>
+<h3 id="charged-twice-by-netflix">Charged twice by Netflix</h3>
+<p>If you recently changed to a higher-priced plan or purchased an extra
+member slot, you could see multiple charges that month.</p>
+<ul>
+<li><p>Changing to a higher-priced plan takes effect immediately so you
+can enjoy all of the added features. Your billing date may change based
+on the remaining balance of your last payment, or you may be charged a
+separate prorated amount for the balance, resulting in two Netflix
+charges in the same month.</p></li>
+<li><p>When purchasing an extra member slot you will be charged a
+separate prorated amount for the first month, resulting in two Netflix
+charges in the same month.</p></li>
+</ul>
+<p>If you’re seeing multiple charges and it isn’t due to one of the
+above, please contact us.</p>
+<hr />
+<p>Not quite what you’re looking for? See also <a
+href="#unrecognized-or-unauthorized-charges-from-netflix">Unrecognized
+or unauthorized charges from Netflix</a> or <a
+href="#charged-after-canceling-netflix">Charged after canceling
+Netflix</a>.</p>
+<h3 id="extra-members">Extra Members</h3>
+<p>If you would like to share Netflix with people outside of your <a
+href="#what-is-a-netflix-household">household</a>, you can add an extra
+member to your Netflix account at a <a href="#plans-and-pricing">lower
+price</a>.</p>
+<ul>
+<li><p>The account owner pays for the extra member’s slot.</p></li>
+<li><p>The account owner manages the addition and removal of extra
+members.</p></li>
+<li><p>Extra members have their own account, password, and profile. They
+don’t affect the account owner’s experience.</p></li>
+<li><p>Extra members need to be in the same country where the account
+owner signed up.</p>
+<ul>
+<li>If you have a package with Netflix, account owners and extra members
+need to be in the same country where the package was purchased.</li>
+</ul>
+<p>Note: Overseas territories may also be blocked.</p></li>
+</ul>
+<hr />
+<h5 id="extra-member-benefits">Extra member benefits</h5>
+<hr />
+<h5 id="manage-extra-members">Manage extra members</h5>
+<p>If you need help adding or managing an extra member account, follow
+the steps below based on who’s using the account and how you pay for
+Netflix.</p>
+<hr />
+<h5 id="troubleshooting">Troubleshooting</h5>
+<h3 id="find-the-paypal-invoice-id-or-billing-id">Find the PayPal
+Invoice ID or Billing ID</h3>
+<p>If you are using PayPal to pay for Netflix, our Customer Service team
+will need to verify your PayPal Invoice ID or Billing ID to make any
+changes to your Netflix account.</p>
+<p>Note: If you prefer not to provide this information, you can make
+changes to your account directly from your Account page.</p>
+<h5 id="find-your-paypal-invoice-id-through-paypal">Find your PayPal
+Invoice ID through PayPal</h5>
+<ol type="1">
+<li><p>Go to your <a
+href="https://www.paypal.com/myaccount/transactions/">PayPal Activity
+page</a> (you may be prompted to sign in).</p></li>
+<li><p>Choose the most recent Netflix.com charge.</p></li>
+<li><p>View the Invoice ID.</p></li>
+</ol>
+<h5 id="find-your-paypal-invoice-id-through-email">Find your PayPal
+Invoice ID through Email</h5>
+<ol type="1">
+<li><p>Go to the email account you used to set up PayPal.</p></li>
+<li><p>Search for emails from service@paypal.com for the most recent
+Netflix.com purchase receipt.</p></li>
+<li><p>Select View or Manage Payment.</p>
+<ul>
+<li>You’ll be redirected to PayPal to view your transaction (you may be
+prompted to sign in).</li>
+</ul></li>
+<li><p>View the Invoice ID on the transaction details page.</p></li>
+</ol>
+<p>Note: If you do not receive emails from PayPal, you may need to
+update your PayPal notification settings.</p>
+<h5 id="find-your-paypal-billing-id-through-paypal">Find your PayPal
+Billing ID through PayPal</h5>
+<p>Browser:</p>
+<ol type="1">
+<li><p>Go to <a href="https://www.paypal.com/myaccount/autopay/">Manage
+Automatic Payments</a> on your PayPal account (you may be prompted to
+sign in).</p></li>
+<li><p>Select Netflix.com under the Automatic Payments list.</p>
+<ul>
+<li>If Netflix.com is listed multiple times, start from the top and view
+each one until you see a Total billed amount greater than $0.00.</li>
+</ul>
+<p>Note: Total billed amounts for $0.00 typically indicate a failed
+transaction, and we need the billing ID from a successful
+transaction.</p></li>
+<li><p>View the Billing ID (B-XXXXXXXXXXXXXXXXX).</p></li>
+</ol>
+<p>PayPal App:</p>
+<ol type="1">
+<li><p>Sign in to the PayPal App</p></li>
+<li><p>In the top right, tap your profile icon</p></li>
+<li><p>Tap Subscriptions</p></li>
+<li><p>Tap Netflix</p></li>
+<li><p>Tap Account</p></li>
+<li><p>View the Billing ID (B-XXXXXXXXX…)</p></li>
+</ol>
+<h5 id="update-payment-method-for-paypal">Update payment method for
+PayPal</h5>
+<p>To update the payment method for your PayPal account, visit <a
+href="https://www.paypal.com/">PayPal’s website</a> or contact <a
+href="https://www.paypal.com/smarthelp/contact-us">PayPal’s customer
+support</a> for help.</p>
+<h3 id="how-to-add-or-update-a-payment-method">How to add or update a
+payment method</h3>
+<p>To add or update your payment method for Netflix, follow the steps
+based on how you pay for Netflix:</p>
+<p>​</p>
+<h3 id="how-to-cancel-netflix">How to cancel Netflix</h3>
+<p>You can cancel your Netflix account at any time.</p>
+<ol type="1">
+<li><p>Go to the Manage your membership page. You may need to sign in
+first if you haven’t already.</p></li>
+<li><p>Tap or click Cancel.</p>
+<p>​</p></li>
+<li><p>Under Cancel, tap or click Finish Cancellation.</p>
+<p>​</p>
+<p>​</p></li>
+</ol>
+<p>That’s it! A confirmation email will be sent to the email on the
+account.</p>
+<p>Note: This is the only way to cancel your account and end your
+membership. Signing out of your account or deleting the Netflix app
+doesn’t cancel your account.</p>
+<h3 id="how-to-change-your-plan">How to change your plan</h3>
+<p>You can change your Netflix plan by following these steps:</p>
+<ol type="1">
+<li><p>Go to the Change Plan page in a browser. You may need to sign in
+if you haven’t already.</p></li>
+<li><p>Choose the plan you’d like, then select Continue or Update.</p>
+<p>If you don’t have the option to change your plan, see “Can’t change
+plan” below.</p></li>
+<li><p>Tap or click Confirm Change or Confirm.</p></li>
+</ol>
+<p>Changing to a higher-priced plan takes effect immediately so you can
+enjoy all of the added features. Your billing date may change based on
+the remaining balance of your last payment, or you may be charged a
+prorated amount for the balance.</p>
+<p>Changing to a lower-priced plan takes effect on your next billing
+date. You can continue to use the features of the higher-priced plan
+until then.</p>
+<p>Note: If you have Netflix through a partner package or package
+add-on, search our Help Center for the article on your partner to find
+details on plan change timing and eligibility.</p>
+<h3 id="how-to-find-your-billing-date">How to find your billing
+date</h3>
+<p><strong>Find your billing date</strong></p>
+<p>Sign in to your account and go to the payment history page to view
+your membership plan and billing history. Your billing date corresponds
+to the day you signed up for your Netflix account.</p>
+<ul>
+<li><p>Your billing date may be one day earlier due to time zone
+differences.</p></li>
+<li><p>If the day of your billing date does not occur in every month
+(for example, the 31st), you will be billed on the last day of that
+month instead.</p></li>
+<li><p>If you pay for Netflix through a third party, your Netflix
+billing date may vary from your provider’s billing date.</p></li>
+</ul>
+<p><strong>Change your billing date</strong></p>
+<p>To change your billing date, you’ll need to <a
+href="#how-to-cancel-netflix">cancel your account</a> then <a
+href="#how-to-restart-your-netflix-membership">restart it</a> on the
+date you want to be billed on.</p>
+<ul>
+<li><p>If you cancel within your current billing period, you can
+continue watching Netflix until your billing period ends. Then you can
+restart your account on the date you want to be billed on.</p></li>
+<li><p>If your account is on hold, your account is canceled immediately
+and you can restart it at any time.</p></li>
+</ul>
+<h3 id="how-to-pay-for-netflix">How to pay for Netflix</h3>
+<p><a href="#plans-and-pricing">Choose a plan</a> that meets your needs
+and your budget. As a Netflix member, you are charged once a month on
+the <a href="#how-to-find-your-billing-date">date you signed up</a>.</p>
+<p>There are several options to pay for Netflix.</p>
+<p>Credit and Debit Cards</p>
+<p>We accept the following cards, which must be enabled for recurring
+e-commerce transactions.</p>
+<p>Note: You may need to enable your card for international
+transactions.</p>
+<ul>
+<li><p>Visa</p></li>
+<li><p>MasterCard</p></li>
+<li><p>American Express</p></li>
+<li><p>Discover</p></li>
+</ul>
+<p>Virtual Cards</p>
+<p>We accept virtual cards in select markets. If your virtual card is
+declined, please choose a different payment method.</p>
+<p>Prepaid Cards</p>
+<p>We accept prepaid cards with the following logos.</p>
+<ul>
+<li><p>Visa</p></li>
+<li><p>MasterCard</p></li>
+<li><p>American Express</p></li>
+<li><p>Discover</p></li>
+</ul>
+<p>Netflix Gift Cards</p>
+<p>A <a href="#netflix-gift-cards">Netflix gift card</a> is a great
+choice when you want to give the gift of Netflix, or if you prefer to
+use cash to prepay your own subscription.</p>
+<ul>
+<li><p>You can purchase <a href="#netflix-gift-cards">Netflix gift
+cards</a> at select retailers.</p></li>
+<li><p>You can redeem multiple gift cards on your account.</p></li>
+</ul>
+<p>PayPal</p>
+<ul>
+<li>We accept PayPal.</li>
+</ul>
+<p>Partner Payments</p>
+<p>The following partners allow you to add Netflix to their bill or
+offer a package with Netflix included.</p>
+<ul>
+<li><p>Cox</p></li>
+<li><p>Comcast Xfinity</p></li>
+<li><p>Comcast Xfinity Package</p></li>
+<li><p>DirecTV Package</p></li>
+<li><p>Dish Package</p></li>
+<li><p>Frontier Package</p></li>
+<li><p>Optimum Package</p></li>
+<li><p>Spectrum Package</p></li>
+<li><p>T-Mobile Package</p></li>
+<li><p>Verizon Package</p></li>
+</ul>
+<h3 id="how-to-remove-payment-methods-from-your-account">How to remove
+payment methods from your account</h3>
+<p>To remove a payment method from your account, go to the Manage
+payment info page and Delete the payment method you want to remove. You
+may need to sign in if you haven’t already.</p>
+<p>If you only have one payment method on file, you can’t remove it
+without adding a new payment method first. When a payment method is
+removed from your account, Netflix will no longer be able to charge that
+payment method unless it is re-added to your Netflix account.</p>
+<p>If you have Netflix through a partner package and wish to remove a
+backup payment method, contact us for help.</p>
+<p>Customer Service is unable to remove a specific payment method from
+your account. However, we can remove all payment methods as long as you
+are not paying through a partner or with a gift card. Once removed, you
+can add a new payment method to your account before your current billing
+period ends if you want to continue using Netflix.</p>
+<p>Note:Some third-party payment methods cannot be removed from
+accounts.</p>
+<p>If you have questions about data deletion or retention, contact
+privacy@netflix.com.</p>
+<h3 id="how-to-restart-your-netflix-membership">How to restart your
+Netflix membership</h3>
+<p>Follow the steps below if you’ve canceled your account and want to
+restart it.</p>
+<p>1. Try to sign in to your account.</p>
+<p>Be sure to choose Sign In. Do not choose Get Started, Join to Watch,
+or Join Now.</p>
+<p>If you don’t remember your password, you can reset it.﻿</p>
+<p>2. Can you sign in?</p>
+<hr />
+<p>If your Netflix account was restarted without your permission, cancel
+it by following the steps in <a href="#how-to-cancel-netflix">How to
+cancel Netflix</a>, and then do the steps listed there under “Preventing
+others from restarting your account.”</p>
+<h3
+id="netflix-says-your-account-is-on-hold-because-of-a-problem-with-your-last-payment">Netflix
+says ‘Your account is on hold because of a problem with your last
+payment.’</h3>
+<p>If you’re getting error code E101 or the error message below, it
+means that Netflix couldn’t process your last payment.</p>
+<p>Error message</p>
+<p>Your account is on hold because of a problem with your last
+payment.</p>
+<p>There could be a few reasons why this is happening:</p>
+<ul>
+<li><p>The payment method might not have enough money. (Pending charges
+or authorizations can affect the available balance on your
+card.)</p></li>
+<li><p>The payment method has expired or is no longer valid.</p></li>
+<li><p>Your financial institution didn’t approve the monthly
+charge.</p></li>
+<li><p>The payment information given to Netflix doesn’t match what your
+bank has on file.</p></li>
+<li><p>US only: The credit card zip code on your Netflix account doesn’t
+match what your bank has on file.</p>
+<p>​</p></li>
+</ul>
+<p>To get back to enjoying Netflix, you can update or change your
+payment method or contact your financial institution.</p>
+<h3 id="plans-and-pricing">Plans and Pricing</h3>
+<p>Netflix offers a variety of plans to meet your entertainment
+needs.</p>
+<p>As a Netflix member, you are charged monthly on the date you signed
+up. A Netflix account is for people who live together in a single
+household. Learn more about <a
+href="#sharing-your-netflix-account">sharing Netflix</a>.</p>
+<p>Sign up for Netflix today and choose from several <a
+href="#how-to-pay-for-netflix">payment options</a>. You can easily
+change your plan or cancel at any time.</p>
+<p>[TABLE]</p>
+<h6 id="pricing-us-dollar">Pricing (US Dollar)</h6>
+<ul>
+<li><p>Standard with ads: $8.99 / month</p></li>
+<li><p>Standard: $19.99 / month</p>
+<ul>
+<li>Add 1 <a href="#extra-members">extra member</a> for $7.99 / month
+with ads or $9.99 / month without ads</li>
+</ul></li>
+<li><p>Premium: $26.99 / month</p>
+<ul>
+<li>Add up to 2 <a href="#extra-members">extra members</a> for $7.99
+each / month with ads or $9.99 each / month without ads</li>
+</ul></li>
+</ul>
+<p>Note: Extra members have their own account and password, but their
+membership is paid for by the person who invited them to share their
+Netflix account. Your plan determines how many extra member slots you
+can add.</p>
+<p>The Basic plan has been discontinued. You can change your plan at any
+time.</p>
+<p>Depending on where you live, you <a
+href="#taxes-on-your-netflix-membership">may be charged taxes</a> in
+addition to your membership price.</p>
+<p>Plan prices and extra member eligibility may vary if you have Netflix
+through a package or add-on.</p>
+<h3 id="taxes-on-your-netflix-membership">Taxes on your Netflix
+membership</h3>
+<p>Your billing history, along with the price and applicable taxes for
+your subscription, can be found in the payment history on your account
+page.</p>
+<p>Below you can find answers to commonly asked questions about taxes on
+your Netflix membership.</p>
+<h3 id="unrecognized-or-unauthorized-charges-from-netflix">Unrecognized
+or unauthorized charges from Netflix</h3>
+<p>If you have charges on your statement from Netflix that you weren’t
+expecting, follow the steps below that apply.</p>
+<p>Charged by Netflix but don’t have an account</p>
+<p><strong>Someone may have started an account with your payment
+method</strong></p>
+<p>If you never signed up for Netflix or suspect someone is using your
+payment information for a Netflix account without your consent, please
+contact us immediately.</p>
+<p>Still being charged on expired card</p>
+<p><strong>Your bank may have updated your credit or debit card
+information</strong></p>
+<p>Banks may automatically update credit or debit card numbers when a
+new card is issued. This update allows your card to continue to be
+charged, even if it’s expired. You can remove or update your payment
+information at any time from your Account page.</p>
+<p>Charged different amount than expected</p>
+<p>See <a href="#why-your-netflix-price-changed">why your Netflix price
+changed.</a></p>
+<p>Charged after canceling account</p>
+<p>See <a href="#charged-after-canceling-netflix">Charged after
+canceling Netflix</a></p>
+<p>Charged multiple times</p>
+<p>See <a href="#charged-twice-by-netflix">Charged twice by
+Netflix</a></p>
+<h3 id="why-your-netflix-price-changed">Why your Netflix price
+changed</h3>
+<p>Plans and pricing may change as we continue to improve our service
+and add more TV shows and movies. Adjustments can also happen in
+response to local market changes, such as changes to <a
+href="#taxes-on-your-netflix-membership">local taxes</a> or
+inflation.</p>
+<p>Here are answers to a few common questions about price changes:</p>
+<p>How will I be notified of a price change?</p>
+<p>If your price is changing, Netflix will send you an email with
+details about the price change one month before the billing date on
+which your price will increase.</p>
+<p>You can also review the payment history on your account to check your
+billing date and plan price.</p>
+<p>Note: If you have a Netflix package add-on through a partner, your
+partner will send the price change notification.</p>
+<p>What if I didn’t see the email about the price change?</p>
+<p>If you did not see the email, please confirm that the email address
+associated with your account is correct.</p>
+<p>Where can I compare Netflix plans and prices?</p>
+<p>You can compare our current <a href="#plans-and-pricing">plans and
+pricing</a> and change plans at any time.</p>
+<p>Can I keep the old plan price?</p>
+<p>Once a price change is announced, the new plan prices apply to
+everyone. You can change your plan at any time.</p>
+<p>Why was I charged for a higher plan?</p>
+<p>If you or someone in your household upgraded your Netflix plan, your
+bill will reflect the higher plan price. This includes special sign-up
+or upgrade offers for a limited time. Once the offer ends, you may be
+charged the higher plan price. Check the email or text you received when
+the offer started for the original details.</p>
+<h2 id="your-account-profiles-and-household">Your account, profiles and
+household</h2>
+<h3 id="cant-sign-in-to-netflix">Can’t sign in to Netflix</h3>
+<p>If you’re having trouble signing into your Netflix account, choose
+the option that best matches the issue you’re having.</p>
+<h3
+id="fix-issues-with-sign-in-or-sign-up-codes-links-or-one-time-passwords">Fix
+issues with sign-in or sign-up codes, links, or one-time passwords</h3>
+<p>If you’re having trouble signing up for Netflix with a link or
+signing in to your account with a code, follow the steps in the section
+that best matches your issue.</p>
+<p>If you’re still having trouble after following the instructions
+above, contact us.</p>
+<h3 id="forgot-email-or-phone-number-for-netflix">Forgot email or phone
+number for Netflix</h3>
+<p>If you’ve forgotten the email or phone number you use to log in to
+Netflix, you’ll have to update your information. To access your account,
+follow the instructions for the payment method you use to pay for
+Netflix.</p>
+<p>Credit or debit card</p>
+<ol type="1">
+<li><p>Go to netflix.com/LoginHelp.</p></li>
+<li><p>Select I don’t remember my email or phone.</p></li>
+<li><p>Enter your first name, last name, and the credit or debit card
+you use to pay for Netflix.</p></li>
+<li><p>Select Find account.</p></li>
+</ol>
+<p>Netflix will send a password reset email to the email address listed
+on your account. If you don’t recognize or no longer have access to the
+email address we have for your account, contact Netflix customer
+service.</p>
+<p>Third party</p>
+<p>If you pay for Netflix through a third party, or have Netflix
+included with a package, search our Help Center for the name of the
+service provider to find the relevant billing article. Then refer to the
+“I’m having trouble signing in to Netflix” section.</p>
+<p>Other payment methods</p>
+<p>If you use a Netflix gift card or some other payment method, contact
+Netflix customer service to recover your sign-in information.</p>
+<h3 id="how-to-add-edit-or-remove-a-profile-pin">How to add, edit, or
+remove a profile PIN</h3>
+<p>To restrict access to a specific profile on your account, you can
+protect it with a Profile Lock PIN. You’ll enter this PIN to open the
+profile or play titles downloaded from it.</p>
+<p>Note: Extra member accounts have 1 profile and it can’t have a
+profile lock.</p>
+<h6 id="android-phone-or-tablet-iphone-or-ipad">Android phone or tablet,
+iPhone or iPad</h6>
+<ol type="1">
+<li><p>Open the Netflix app.</p></li>
+<li><p>In the lower right, tap My Netflix .</p></li>
+<li><p>At the top, tap the profile name.</p></li>
+<li><p>Tap Manage Profiles , then choose the profile you want to
+edit.</p></li>
+<li><p>Tap Profile Lock .</p></li>
+<li><p>Add, edit, or remove a profile PIN.</p>
+<p>To add a profile PIN, tap Create a Profile Lock.</p>
+<ol type="1">
+<li><p>Verify your identity by entering your Netflix account
+password.</p>
+<p>Note: If you don’t have a password for your account, follow the steps
+under “Web browser” to change your settings instead.</p></li>
+<li><p>Enter 4 numbers to create your Profile Lock PIN.</p></li>
+</ol>
+<p>To edit a profile PIN, tap Edit PIN.</p>
+<ol type="1">
+<li><p>Enter your current PIN.</p></li>
+<li><p>Enter your new PIN.</p></li>
+</ol>
+<p>To remove a profile PIN, tap Delete Profile Lock.</p>
+<ol type="1">
+<li><p>Enter your current PIN.</p></li>
+<li><p>Tap Yes to confirm.</p></li>
+</ol></li>
+</ol>
+<h6 id="web-browser">Web browser</h6>
+<ol type="1">
+<li><p>Using a browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then choose a profile.</p></li>
+<li><p>Select Profile Lock.</p></li>
+<li><p>Add, edit, or remove a profile PIN.</p>
+<p>To add a profile PIN, click Create a Profile Lock.</p>
+<ol type="1">
+<li>Enter 4 numbers to create your Profile Lock PIN and click Save
+PIN.</li>
+</ol>
+<p>To edit a profile PIN, click Edit PIN.</p>
+<ol type="1">
+<li><p>Verify your identity by entering a code sent to your email or
+mobile phone number, or by entering your Netflix account
+password.</p></li>
+<li><p>Enter your new PIN and click Save PIN.</p></li>
+<li><p>To <a href="#how-to-require-a-pin-to-add-a-new-profile">require a
+PIN any time a new profile is added</a> to your account, check the box
+to Require PIN to add new profiles.</p>
+<p>Note: This can only be selected when adding a Profile Lock for the
+main (first) profile.</p></li>
+</ol>
+<p>To remove a profile PIN, click Delete Profile Lock.</p>
+<ol type="1">
+<li>Verify your identity by entering a code sent to your email or mobile
+phone number, or by entering your Netflix account password.</li>
+</ol></li>
+</ol>
+<p>Your device may require a refresh to pick up the updated settings. To
+refresh:</p>
+<ul>
+<li><p>Switch to another profile, then switch back.</p></li>
+<li><p>Or, sign out of your device and sign back in.</p></li>
+</ul>
+<h5 id="how-to-recover-a-profile-lock-pin">How to recover a Profile Lock
+PIN</h5>
+<p>If you forget your Profile Lock PIN, tap or select Forgot PIN? or go
+to netflix.com/account and follow the steps above to edit or remove your
+PIN.</p>
+<h3 id="how-to-change-or-reset-your-password">How to change or reset
+your password</h3>
+<h5 id="resetting-your-password">Resetting your password</h5>
+<p>You can reset your password by asking for a reset link to be sent to
+you by email or text message. (We can only send text messages if you’ve
+added a <a href="#how-to-add-change-or-delete-a-phone-number">mobile
+phone number</a> to your Netflix account.) If you can’t use your email
+or phone number, you might be able to use your credit card
+information.</p>
+<p>Note: If you sign in to Netflix with an email you’ve added to your
+profile, you don’t have a password and won’t be able to reset one with
+these steps. Go to Can’t sign in to Netflix, or ask the account owner
+for help if you’re having trouble signing in.</p>
+<h5 id="changing-your-password">Changing your password</h5>
+<p>If you know your password and can sign in to Netflix but want to
+change it, go to the Change password page.</p>
+<ul>
+<li>You can’t change your password if a Kids profile is active. Change
+to another profile first and then change the password.</li>
+</ul>
+<p>When choosing a password, it should be:</p>
+<ul>
+<li><p>Different than what you use for any other websites or
+apps</p></li>
+<li><p>At least 8 characters long</p></li>
+<li><p>A mix of uppercase and lowercase letters, numbers, and
+symbols</p></li>
+<li><p>Not easily guessed - such as “password,” “12345678,” or use any
+personal information (name, birthday, address)</p></li>
+</ul>
+<p>A password manager can make it easier to keep track of unique
+passwords.</p>
+<h3 id="how-to-create-a-profile-for-kids">How to create a profile for
+kids</h3>
+<p>To manage the types of shows, movies, and games that kids and other
+people on your Netflix account can watch or play, you can <a
+href="#how-to-create-edit-or-delete-profiles">create individual
+profiles</a> with customized maturity ratings. Profiles can be added on
+devices made after 2013.</p>
+<ol type="1">
+<li><p>Go to your Manage Profiles page using a device below:</p>
+<ul>
+<li><p>TV or streaming device: Go to the profile selection screen, then
+choose Add Profile+.</p></li>
+<li><p>Android phone or tablet, iPhone, or iPad: In the lower right of
+the Netflix app, tap My Netflix, tap your profile, then tap Manage
+Profiles.</p></li>
+<li><p>Web browser: Go to your Manage Profiles page.</p></li>
+</ul></li>
+<li><p>Choose Add Profile.</p></li>
+<li><p>Add a name to the profile. To use the Netflix Kids experience,
+select For Kids, Kids Profile, or Kid? depending on your device.</p>
+<ul>
+<li>Kids profiles have a logo on the profile icon so they are easy to
+identify.</li>
+</ul></li>
+<li><p>Select Continue. The new profile will show on the list of
+profiles on your account.</p></li>
+</ol>
+<p>If you can’t create a profile from your device or when using a mobile
+browser, visit netflix.com on a computer and follow the steps above.</p>
+<p>Note: The main profile on your Netflix account can’t be set up as a
+Kids profile.</p>
+<hr />
+<p>You can also edit an existing secondary profile using these
+devices.</p>
+<h6 id="android-phone-or-tablet-iphone-or-ipad-1">Android phone or
+tablet, iPhone, or iPad</h6>
+<ol type="1">
+<li><p>Open the Netflix app.</p></li>
+<li><p>In the lower right, tap My Netflix, tap your profile, then tap
+Manage Profiles.</p></li>
+<li><p>On the profile you want to edit, tap the Edit icon.</p></li>
+<li><p>Tap Viewing Restrictions.</p></li>
+<li><p>Tap Maturity Rating.</p></li>
+<li><p>Enter your Netflix account password.</p></li>
+<li><p>Tap Kids Profile, then tap the Back icon.</p></li>
+<li><p>Tap Restart App.</p></li>
+</ol>
+<h6 id="web-browser-1">Web browser</h6>
+<ol type="1">
+<li><p>Using a browser, go to the Manage Profiles page and choose the
+profile you want to edit.</p></li>
+<li><p>Under Maturity Settings, choose Edit.</p></li>
+<li><p>Enter your Netflix account password.</p></li>
+<li><p>Select Display the Netflix Kids experience with titles just for
+kids.</p></li>
+<li><p>Choose Save.</p></li>
+</ol>
+<p>If you choose a maturity rating that’s higher than the level allowed
+for the Netflix Kids experience, then the Kids experience won’t be
+applied to that profile.</p>
+<hr />
+<h5 id="the-netflix-kids-experience">The Netflix Kids experience</h5>
+<p>A Netflix Kids experience profile:</p>
+<ul>
+<li><p>Has a logo on the profile icon so it’s easy to identify.</p></li>
+<li><p>Has a simplified look and feel.</p></li>
+<li><p>Removes direct access to account settings.</p></li>
+<li><p>Can’t have an email address added, so kids can’t sign in directly
+to Netflix</p></li>
+<li><p>Plays only shows, movies, and games carefully selected for
+kids.</p>
+<p>​</p></li>
+</ul>
+<p>Note:Your device may require a refresh to pick up the updated
+settings. To refresh:</p>
+<ul>
+<li><p>Switch to another profile, then switch back.</p></li>
+<li><p>Or, sign out of your device and sign back in.</p></li>
+</ul>
+<h3 id="how-to-create-edit-or-delete-profiles">How to create, edit, or
+delete profiles</h3>
+<p>People who live together in a single household can have their own
+personalized Netflix experience. You can have up to 5 profiles on a
+single Netflix account.</p>
+<p>Note: Profiles aren’t available on devices made before 2013. Extra
+member accounts can only have 1 profile.</p>
+<p>Each profile allows for its own:</p>
+<ul>
+<li><p>Personal and contact information (including profile name, game
+handle, and email address)</p>
+<p>Note: Depending on your account and profile, this information may
+also include gender, first and last name, and phone number.</p></li>
+<li><p>Profile lock</p></li>
+<li><p>Language preference</p></li>
+<li><p>Maturity level and specific viewing restrictions</p></li>
+<li><p>Subtitle appearance</p></li>
+<li><p>Playback settings</p></li>
+<li><p>Notification settings</p></li>
+<li><p>Viewing activity log</p></li>
+<li><p>Game handle</p></li>
+<li><p>Game saves</p></li>
+<li><p>Personalized show and movie suggestions</p></li>
+<li><p>My List</p></li>
+<li><p>Ratings</p></li>
+</ul>
+<p>Note: Some profile features aren’t available for Kids profiles.</p>
+<h3 id="how-to-hide-titles-from-viewing-history">How to hide titles from
+viewing history</h3>
+<p>When you hide titles from your viewing history:</p>
+<ul>
+<li><p>They won’t appear in Netflix as a TV show or movie you’ve
+watched.</p></li>
+<li><p>They won’t be used to make recommendations to you, unless you
+watch them again.</p></li>
+<li><p>They’ll be removed from the Continue Watching row.</p></li>
+</ul>
+<p>To hide titles from your viewing history:</p>
+<ol type="1">
+<li><p>From a web browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then choose a profile.</p></li>
+<li><p>Open Viewing activity for that profile.</p></li>
+<li><p>On the Watching page, click the hide icon next to the episode or
+title you want to hide. If you hide an episode, you’ll see the option to
+hide the entire series.</p>
+<ul>
+<li>To hide all of your viewing history, select the Hide all option at
+the bottom of the page and confirm.</li>
+</ul></li>
+</ol>
+<p>It can take up to 24 hours for a hidden title to be removed from all
+your devices. Titles can’t be hidden if the Viewing activity page is
+reached from a Netflix Kids profile.</p>
+<p>See our Privacy and Security help page for information on more
+topics.</p>
+<h3 id="how-to-keep-your-account-secure">How to keep your account
+secure</h3>
+<p>Here are our top recommendations for keeping your account and
+personal information safe.</p>
+<h5 id="use-a-password-for-netflix-that-you-dont-use-anywhere-else">Use
+a password for Netflix that you don’t use anywhere else</h5>
+<p>If you use the same email and password combination for more than one
+website, app, or service and an attacker gains access to one, they can
+then use that email and password to take over any other account that
+uses the same combination.</p>
+<p>Your password should be:</p>
+<ul>
+<li><p>Different than what you use for any other websites or
+apps</p></li>
+<li><p>At least 8 characters long</p></li>
+<li><p>A mix of uppercase and lowercase letters, numbers, and
+symbols</p></li>
+<li><p>Not easily guessed - such as “password,” “12345678,” or use any
+personal information (name, birthday, address)</p></li>
+</ul>
+<p>A password manager can make it easier to keep track of unique
+passwords.</p>
+<p>You can change your password by sending yourself a password reset
+email or text message, or change it on the Change Password page.</p>
+<h5 id="keep-your-personal-information-safe">Keep your personal
+information safe</h5>
+<p>Netflix will never ask you to share personal information in a text or
+email. This includes:</p>
+<ul>
+<li><p>Credit or debit card numbers</p></li>
+<li><p>Bank account details</p></li>
+<li><p>Netflix passwords</p></li>
+</ul>
+<p>We’ll also never ask for payment through a 3rd party vendor or
+website.</p>
+<h5 id="other-things-you-should-do">Other things you should do</h5>
+<p>If you have questions about the privacy of your information, please
+see our Privacy Statement.</p>
+<h3 id="how-to-require-a-pin-to-add-a-new-profile">How to require a PIN
+to add a new profile</h3>
+<p>You can have a PIN be required to add new profiles to your Netflix
+account. First, follow the steps to <a
+href="#how-to-add-edit-or-remove-a-profile-pin">add a Profile Lock PIN
+to the main profile of your Netflix account</a>. This setting is
+available only on the main profile of your Netflix account.</p>
+<p>Note: In your Netflix account, the main profile is the one shown on
+the far left or upper left when Netflix asks “Who’s watching?”</p>
+<p>After a Profile Lock PIN is set up on your main profile, follow the
+steps below to make the PIN required to add new profiles:</p>
+<ol type="1">
+<li><p>Using a web browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then click the main account profile (the one at
+the top).</p></li>
+<li><p>Select Profile Lock.</p></li>
+<li><p>Verify your identity by sending a code by email or text or by
+entering your Netflix account password.</p></li>
+<li><p>Check the box to Require PIN to add new profiles, then click Save
+PIN.</p></li>
+</ol>
+<p>Your device may need to be refreshed for the settings to be updated.
+To refresh:</p>
+<ul>
+<li><p>Switch to another profile, then switch back.</p></li>
+<li><p>Or, sign out of your device and sign back in.</p></li>
+</ul>
+<p>Some older devices don’t work with Profile Lock PINs, <a
+href="#locked-profile-isnt-asking-for-pin">here’s why</a>.​</p>
+<h3 id="how-to-see-viewing-history-and-device-activity">How to see
+viewing history and device activity</h3>
+<p>You can see the TV shows and movies that have been watched on each
+profile on your account.</p>
+<ol type="1">
+<li><p>From a web browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then choose a profile.</p></li>
+<li><p>Open Viewing activity<strong>.</strong></p></li>
+<li><p>If you see a limited list, use the Show More button.</p></li>
+</ol>
+<p>To download a list into a spreadsheet, select Download all at the
+bottom of the page. The downloaded file can be opened using any
+spreadsheet software that supports the CSV file format.</p>
+<p>Note:If your account is no longer active, you’ll have to download a
+copy of your information to see your viewing history.</p>
+<p>You can also see a list of devices that have used your account
+recently.</p>
+<h3 id="how-to-set-profile-maturity-ratings-or-block-titles">How to set
+profile maturity ratings or block titles</h3>
+<p>When you set a <a
+href="#maturity-ratings-for-tv-shows-and-movies-on-netflix">maturity
+rating</a> for a profile, that profile will only see shows, movies, and
+games with a rating at or below that level. You can also block specific
+shows or movies from individual profiles.</p>
+<p>Note: You might need to refresh your device to pick up the updated
+settings. To refresh:</p>
+<ul>
+<li><p>Switch to another profile, then switch back.</p></li>
+<li><p>Or sign out of your device and sign back in.</p></li>
+</ul>
+<h3 id="how-to-sign-in-to-netflix">How to sign in to Netflix</h3>
+<p>To sign in, follow the steps for your device below.</p>
+<ul>
+<li><p>You can sign in with the primary account email or phone number,
+or an email address added to a secondary profile.</p></li>
+<li><p>If you’re having problems signing in to your Netflix account, see
+<a href="#cant-sign-in-to-netflix">Can’t sign in to
+Netflix</a>.</p></li>
+</ul>
+<h5 id="tv-or-tv-streaming-device">TV or TV streaming device</h5>
+<p>Sign in on a smart TV or device that connects to a TV, including
+streaming sticks and media players, cable boxes, Apple TV, and Xbox or
+PlayStation game consoles.</p>
+<h5 id="phone-or-tablet">Phone or tablet</h5>
+<p>Sign in to the mobile app on an Android phone or tablet, iPhone, or
+iPad.</p>
+<h5 id="computer-or-web-browser">Computer or web browser</h5>
+<p>Sign in on the Netflix website or the Netflix app for Windows 10 and
+later.</p>
+<h3 id="how-to-stop-someone-from-using-your-account">How to stop someone
+from using your account</h3>
+<p>If someone is using your account without permission, do the following
+to prevent further use:</p>
+<ol type="1">
+<li><p><a href="#how-to-change-or-reset-your-password">Change your
+Netflix password</a>.</p>
+<p>We recommend using a password that is:</p>
+<ul>
+<li><p>Unique to Netflix and not used for other websites or
+apps</p></li>
+<li><p>At least 8 characters long</p></li>
+<li><p>A combination of letters, numbers, and symbols using both upper
+and lower-case letters</p></li>
+<li><p>Not easily guessed - such as “password,” “12345,” or your
+personal information (name, birthday, address)</p></li>
+</ul>
+<p>A password manager can make it easier to keep track of unique
+passwords.</p></li>
+<li><p>Sign out of devices you don’t recognize.</p>
+<p>Note:Signing out of all devices will remove all devices connected to
+your account. You will need to sign in again with your new password on
+any devices you wish to use.</p></li>
+<li><p>See <a href="#how-to-keep-your-account-secure">How to keep your
+account secure</a> for more steps you can take to secure your
+account.</p></li>
+</ol>
+<p>If you’re unable to reset your password, or if you continue seeing
+suspicious account activity after completing the steps above, please
+contact us.</p>
+<h3 id="how-to-update-a-netflix-household">How to update a Netflix
+Household</h3>
+<p>A <a href="#what-is-a-netflix-household">Netflix Household</a> is a
+collection of devices connected to the internet at the main place where
+you watch Netflix. When you sign in to Netflix from any device on the
+same internet connection as your TV, it will automatically be associated
+with your Netflix Household. If you get an error message on your device,
+you may need to update your Netflix Household.</p>
+<h5 id="update-your-netflix-household">Update your Netflix
+Household</h5>
+<p>You can update your Netflix Household when signed in to Netflix from
+most TVs connected to your internet. If you don’t watch Netflix on a TV
+or don’t have one, you do not need to establish a Netflix Household for
+your account.</p>
+<p>Note: These steps should only take about 8 minutes.</p>
+<ol type="1">
+<li><p>From the Netflix home screen on your TV, press the back button on
+your remote (Menu button on an Apple TV) to access the menu.</p></li>
+<li><p>If the menu is at the top, go left to your profile icon. If the
+menu is on the left, go to the bottom.</p>
+<p>Select Get Help or Settings, then Manage Netflix Household.</p>
+<p>Note: If you don’t see Manage Netflix Household on the menu, you will
+need to use a different TV device.</p></li>
+<li><p>Select Update Netflix Household.</p>
+<p>​</p></li>
+<li><p>Select Send Email​. A verification link will be sent to the
+account email address. Verification links expire after 15 minutes.</p>
+<p>Note: If there is no email address on the account, you will have an
+option to Send Text to the phone number on the account.</p></li>
+<li><p>If you do not receive the verification link by email, click
+Resend Email​.</p>
+<p>​</p></li>
+<li><p>Select Yes, This Was Me in the email, then Confirm Update to
+continue.</p></li>
+<li><p>You will receive a confirmation email and your TV will refresh so
+you can start watching.</p></li>
+</ol>
+<p>If these steps didn’t work, there may be another device connected to
+your Netflix Household that is causing the issue. This can happen if you
+are still signed in to your account from a recent hotel stay or someone
+else’s home, for example. To fix the issue:</p>
+<ul>
+<li><p>See which devices are signed in to your account and sign out of
+unrecognized devices or select Sign out of All Devices.</p></li>
+<li><p>Follow the steps above again to update the Netflix
+Household.</p></li>
+</ul>
+<p>NOTE: “Internet connection” refers to your wired or wireless internet
+connection. If you have multiple Wi-Fi networks, we may only associate
+one with your Netflix Household. If you want to watch Netflix on a
+device that is connected to a Wi-Fi network using a different ISP
+account or that has a different external IP address, you may be asked to
+verify that device as part of your Netflix Household. Make sure to
+update your Netflix Household from a device that is connected to your
+preferred or most used internet connection.</p>
+<h3 id="how-to-update-netflix-account-information">How to update Netflix
+account information</h3>
+<p>If you want to update your Netflix account information, follow the
+steps below.</p>
+<p>Once you update your account information, we’ll send you an email
+confirming the changes. If you have any issues saving your updated
+information, <a
+href="#netflix-wont-save-changes-to-my-account-information-or-profile-settings">follow
+these troubleshooting steps</a>.</p>
+<h3 id="locked-profile-isnt-asking-for-pin">Locked profile isn’t asking
+for PIN</h3>
+<p>In some cases, you won’t be asked to enter a PIN even when a <a
+href="#how-to-add-edit-or-remove-a-profile-pin">profile is locked</a>
+because:</p>
+<ul>
+<li><p>Some devices can’t be updated to require a PIN to enter locked
+profiles. On these devices:</p>
+<ul>
+<li><p>The Profile Lock PIN isn’t required to access a locked profile,
+but is required to watch TV shows or movies in that profile.</p></li>
+<li><p>You can’t add new profiles if a PIN is required to add profiles
+to the account.</p></li>
+</ul></li>
+<li><p>Some web browsers automatically open a locked profile when you
+sign in.</p>
+<ul>
+<li><p>The web browser automatically opens the last profile used. If you
+don’t want to be automatically signed in to the last used profile, clear
+your browser cookies.</p></li>
+<li><p>Your account password is still required to sign in and access the
+locked profile.</p></li>
+<li><p>Anyone with your password can change parental controls.</p></li>
+</ul></li>
+</ul>
+<h3 id="moving-with-netflix">Moving with Netflix</h3>
+<h5 id="moving-within-your-current-country">Moving within your current
+country</h5>
+<p>If you’re moving within your current country, you may need to <a
+href="#how-to-update-a-netflix-household">update your Netflix
+Household</a> to continue watching Netflix and enjoy the same
+experience.</p>
+<p>Note: Customers in the US or Canada should update their billing
+information to receive the correct tax rate. See <a
+href="#taxes-on-your-netflix-membership">Taxes on your Netflix
+membership</a>to learn more.</p>
+<h5 id="moving-to-a-new-country">Moving to a new country</h5>
+<p>If you’re moving to a new country, you will need to cancel your
+membership and sign up again in the new country.</p>
+<p>Here are a few things to be aware of:</p>
+<ul>
+<li><p>Pricing, billing currency, and available payment methods vary by
+country.</p></li>
+<li><p>You’ll continue to be charged the Netflix plan price in the
+currency of the country you signed up in until you cancel and
+restart.</p>
+<ul>
+<li><p>To change the country for your account:</p>
+<ol type="1">
+<li><p>Cancel your account.</p>
+<p>Note: We save your Viewing Activity for 24 months after your account
+closes so you can pick up where you left off when you rejoin. Your
+recommendations, ratings, and account details will also be saved during
+that time.</p></li>
+<li><p>Wait until your membership ends.</p></li>
+<li><p><a href="#how-to-restart-your-netflix-membership">Restart your
+account</a> (Note: you must be in the country you moved to at the time
+you restart your account).</p></li>
+</ol></li>
+</ul></li>
+<li><p>Your selection of TV shows and movies may change. Your choices
+for streaming and downloading will vary by country.</p></li>
+<li><p>Audio and subtitle options may change.</p></li>
+<li><p>Maturity ratings are different by country. Your parental control
+settings may need to be updated.</p>
+<ul>
+<li><p>To update the profile <a
+href="#maturity-ratings-for-tv-shows-and-movies-on-netflix">maturity
+ratings</a> to match those in the country you moved to, follow the steps
+above to change the country for your account.</p></li>
+<li><p>If your account was set up with age verification, follow the
+steps above to change the country for your account.</p></li>
+</ul></li>
+<li><p>If you receive the What you watch or Watch recommendations &amp;
+more emails and move to a new country, the email will still show TV
+shows and movies for the country you signed up in. You can unsubscribe
+from them in your Notification Settings.</p></li>
+</ul>
+<hr />
+<p>Unless you’ve recently moved, you cannot change the country for your
+account.</p>
+<p>For troubleshooting questions, visit Netflix thinks I’m in a
+different country.</p>
+<h3 id="netflix-account-email-was-changed-without-permission">Netflix
+account email was changed without permission</h3>
+<p>We take account security seriously at Netflix. If you got an email
+from Netflix saying your email address has been changed and you
+<strong>did not</strong> request the change, please contact us.</p>
+<p>See our tips for extra steps you can take to help <a
+href="#how-to-keep-your-account-secure">keep your Netflix account
+secure</a>.</p>
+<h3
+id="netflix-says-sorry-we-cant-find-an-account-with-this-email-address">Netflix
+says ‘Sorry, we can’t find an account with this email address.’</h3>
+<p>If you get this error when trying to sign in with an existing
+account:</p>
+<p>Sorry, we can’t find an account with this email address. Please try
+again or create a new account.</p>
+<p><strong>Follow these steps:</strong></p>
+<ol type="1">
+<li><p>Visit netflix.com/loginhelp.</p></li>
+<li><p>Select I don’t remember my email or phone and fill out the
+form.</p></li>
+<li><p>Select Find Account.</p></li>
+</ol>
+<p>If you’re billed through another company or get Netflix as part of a
+package, search the name of the service provider in the Help Center.
+Open the related billing article and go to the section “I’m having
+trouble signing in to Netflix.”</p>
+<p>If you still can’t sign in, please contact us.</p>
+<h3 id="netflix-says-account-is-already-in-use">Netflix says account is
+already in use</h3>
+<p>If you get the error code E123 or any of these messages when you play
+a TV show or movie:</p>
+<p>Too many people are using your account right now.</p>
+<p>Your Netflix account is in use on another device.</p>
+<p>Your Netflix account is in use on too many devices.</p>
+<p>It means the maximum number of devices allowed to watch at the same
+time using your Netflix account has been reached. Your <a
+href="#plans-and-pricing">Netflix plan</a> determines how many devices
+are allowed to watch at the same time using your account.</p>
+<p>To fix the problem:</p>
+<ul>
+<li><p>On a different device using your account, stop playing Netflix or
+close the Netflix app. If you don’t know which devices on your account
+might be playing Netflix at the same time, you can check which devices
+recently watched.</p>
+<p>Note:After stopping Netflix on a different device, you may need to
+wait 5-10 minutes before you can watch on your device.</p></li>
+<li><p>Or, <a href="#how-to-change-your-plan">upgrade your Netflix
+plan</a> to allow more devices to watch at the same time (up to 4 with
+the Premium plan).</p></li>
+</ul>
+<p>If your Netflix account is being used without permission, you can <a
+href="#how-to-stop-someone-from-using-your-account">stop someone from
+using your account</a>.</p>
+<h3
+id="netflix-says-your-tvdevice-isnt-part-of-the-netflix-household">Netflix
+says, ‘Your TV/device isn’t part of the Netflix Household’</h3>
+<p>Your TV isn’t part of the Netflix Household for this account</p>
+<p>Your device isn’t part of the Netflix Household for this account</p>
+<p>This device isn’t part of your Netflix Household</p>
+<p>If you see one of these messages, it means that Netflix was unable to
+associate your TV or device with your <a
+href="#how-to-update-a-netflix-household">Netflix Household</a>.</p>
+<p>You may need to verify your device to watch Netflix. To fix the
+problem, follow the steps based on the option you see on your
+screen.</p>
+<p>If you signed in to Netflix from a device that is not connected to
+the Netflix Household, you may need to create an account.</p>
+<p>​</p>
+<p>If this is your account, you may need to update the Netflix
+Household, confirm if you’re traveling or on the go, or verify your TV
+or device.</p>
+<p>If these steps didn’t work or don’t apply, there may be another
+device connected to your Netflix Household that is causing the issue.
+This can happen if you are still signed in to your account from a recent
+hotel stay or someone else’s home, for example. To fix the issue:</p>
+<ol type="1">
+<li><p>See which devices are signed in to your account and sign out of
+unrecognized devices, or select Sign out of All Devices.</p></li>
+<li><p>Follow the steps to <a
+href="#how-to-update-a-netflix-household">update the Netflix
+Household</a>.</p></li>
+</ol>
+<h3
+id="netflix-wont-save-changes-to-my-account-information-or-profile-settings">Netflix
+won’t save changes to my account information or profile settings</h3>
+<p>If you’re having trouble changing your account information or profile
+settings on the Netflix website, it usually means that data stored in
+your browser needs to be refreshed. It may also mean that a browser
+extension or add-on is preventing the Netflix website from working
+properly.</p>
+<p>To fix the problem, follow the steps below.</p>
+<p>If clearing the Netflix cookie and restarting your browser didn’t
+work, follow the steps for your browser below.</p>
+<h3
+id="phishing-or-suspicious-emails-or-texts-claiming-to-be-from-netflix">Phishing
+or suspicious emails or texts claiming to be from Netflix</h3>
+<p>If you get an email or text message (SMS) asking for your Netflix
+account email, phone, password, or payment method it probably didn’t
+come from Netflix. Below are tips for identifying and handling
+suspicious emails and texts to keep your account safe.</p>
+<p>How to tell if an email or text is actually from Netflix</p>
+<ul>
+<li><p>We’ll never ask you to share your personal information in a text
+or email. This includes:</p>
+<ul>
+<li><p>Credit or debit card numbers</p></li>
+<li><p>Bank account details</p></li>
+<li><p>Netflix passwords</p></li>
+</ul></li>
+<li><p>We’ll never ask for payment through a 3rd party vendor or
+website.</p></li>
+<li><p>If the text or email links to a URL that you don’t recognize,
+don’t tap or click it. If you did already, do not enter any information
+on the website that opened.</p></li>
+</ul>
+<h6 id="what-should-i-do-if-i-get-a-suspicious-email-or-text">What
+should I do if I get a suspicious email or text?</h6>
+<p>Scammers can’t get information from you unless you give it to them.
+So don’t click any links in the messages or reply to them.</p>
+<h6
+id="what-if-i-already-clicked-a-link-or-shared-personal-information">What
+if I already clicked a link or shared personal information?</h6>
+<ul>
+<li><p><a href="#how-to-change-or-reset-your-password">Change your
+Netflix password</a> to a new one that is strong and unique to
+Netflix.</p></li>
+<li><p>Update your password on any other websites or apps where you used
+the same email and password combination.</p>
+<p>Note: To help keep your accounts secure, it’s best not to use the
+same email and password combinations for any websites or apps.</p></li>
+<li><p>Contact your financial institution if you entered any payment
+information, as it may have been compromised.</p></li>
+<li><p>Forward the message to phishing@netflix.com with the steps
+above.</p></li>
+</ul>
+<h6
+id="what-if-i-see-a-website-app-or-phone-number-pretending-to-be-netflix-or-netflix-customer-service">What
+if I see a website, app, or phone number pretending to be Netflix or
+Netflix Customer Service?</h6>
+<ol type="1">
+<li><p>Don’t click any links or give any information to the website or
+app.</p></li>
+<li><p>Send a copy of the phone number, link to the website, or app
+pretending to be from Netflix in an email to
+phishing@netflix.com.</p></li>
+</ol>
+<h6 id="what-are-the-best-ways-to-keep-my-information-safe">What are the
+best ways to keep my information safe?</h6>
+<p>Be careful anytime you get an email or text requesting personal
+information.</p>
+<ul>
+<li><p>Don’t click a link if you’re not sure about it; go directly to
+the company website instead.</p></li>
+<li><p>Never send personal or financially sensitive information through
+email.</p></li>
+<li><p>Check the sender’s address to see if it looks
+legitimate.</p></li>
+<li><p>On a computer browser, hover over any links before clicking on
+them to see the URL. Make sure the links go where you expect them
+to.</p></li>
+<li><p>Install anti-virus software to help guard your devices and
+personal information.</p></li>
+</ul>
+<p>Please contact us if you think your <a
+href="#netflix-account-email-was-changed-without-permission">email was
+changed without your permission</a>so we can help you change it back.
+You can also visit <a href="#how-to-keep-your-account-secure">How to
+keep your account secure</a> for more security tips.</p>
+<h3 id="profile-transfers">Profile transfers</h3>
+<p>Profile transfer enables the Netflix member and people using the
+member’s account to transfer a profile to a new account, an existing
+account, or an <a href="#extra-members">extra member</a> slot –
+including the recommendations, viewing history, My List, game saves,
+settings, and more.</p>
+<p>A profile can be transferred as long as it:</p>
+<ul>
+<li><p>is on an active account</p></li>
+<li><p>isn’t a Kids profile</p></li>
+<li><p>isn’t PIN protected (if it has a PIN, <a
+href="#how-to-add-edit-or-remove-a-profile-pin">remove it</a> and then
+transfer)</p></li>
+<li><p>doesn’t have a profile email address attached to it (if it has an
+email, <a href="#how-to-create-edit-or-delete-profiles">remove it</a>
+and then transfer)</p></li>
+<li><p>isn’t a profile in an Extra Member account</p>
+<ul>
+<li>Primary Profiles cannot be transferred to Extra Member accounts​</li>
+</ul></li>
+</ul>
+<h6 id="how-to">​How to…</h6>
+<h6 id="information-that-will-be-transferred">​Information that will be
+transferred</h6>
+<h6 id="more-about-profile-transfer">​More about profile transfer</h6>
+<h3 id="sharing-your-netflix-account">Sharing your Netflix account</h3>
+<p>You may not share your Netflix account outside of your household. A
+<a href="#what-is-a-netflix-household">Netflix Household</a> is a
+collection of devices connected to the internet at the main place where
+you watch Netflix.</p>
+<p>People who are not in your household will need to <a
+href="#how-to-sign-up-for-netflix">create their own account</a> to watch
+Netflix, or can be added as an <a href="#extra-members">extra
+member</a>.</p>
+<p>Add an extra member</p>
+<ul>
+<li><p>Account owners on a Standard or Premium plan in many countries
+can share Netflix with someone who doesn’t live with them by adding an
+extra member to their account.</p></li>
+<li><p>The account owner will need to purchase an extra member slot,
+then invite someone to be an extra member.</p></li>
+<li><p>The extra member must be activated in the same country where the
+account owner created it.</p>
+<p>Note: Overseas territories may also be blocked.</p></li>
+<li><p>Extra members cannot be added to some Netflix-included packages
+or third-party billed accounts.</p>
+<ul>
+<li>Confirm you can add extra members by searching our Help Center for
+your package provider to find the correct article, then refer to the
+section “Are extra members supported with this package?”</li>
+</ul></li>
+<li><p>Extra members cannot be added to ad-supported plans.</p></li>
+</ul>
+<p>When starting a new account or adding an extra member, a profile can
+be <a href="#profile-transfers">transferred</a> from an existing
+account, including recommendations, viewing history, My List, saved
+games, settings, and more.</p>
+<h3 id="what-is-a-netflix-household">What is a Netflix Household?</h3>
+<p>A Netflix Household is a collection of devices connected to the
+internet at the main place where you watch Netflix. You may not share
+your Netflix account outside of your household. People who are not in
+your household will need to <a href="#how-to-sign-up-for-netflix">create
+their own account</a> to watch Netflix, or can be added as an <a
+href="#extra-members">extra member</a>.</p>
+<p>When you sign in to Netflix from any device on the same internet
+connection as your TV, we will automatically establish your Netflix
+Household based on IP address, device IDs, and account activity. We do
+not collect GPS data to try to determine the precise physical location
+of your devices.</p>
+<p>You can always <a href="#how-to-update-a-netflix-household">update
+your Netflix Household</a> from a TV. You can also check for
+unrecognized or unwanted devices using your account and select Sign out
+of All Devices.</p>
+<h2 id="watching-playback-sound-and-subtitles">Watching: playback, sound
+and subtitles</h2>
+<h3 id="cant-set-up-netflix-kids">Can’t set up Netflix Kids</h3>
+<p>If you can’t select Kids Profile in Viewing Restrictions,</p>
+<ul>
+<li><p>The profile may be set to allow shows and movies with a higher
+maturity rating level than the Netflix Kids experience.</p>
+<ul>
+<li><p>To use the Netflix Kids experience for that profile, select a
+lower maturity level.</p></li>
+<li><p>If you select a maturity level higher than the kids level for
+your region, the profile won’t show the Netflix Kids
+experience.</p></li>
+</ul></li>
+<li><p>You may have an extra member account with only 1 profile, and it
+can’t be a Netflix Kids profile.</p></li>
+</ul>
+<h3 id="how-netflixs-recommendations-system-works">How Netflix’s
+Recommendations System Works</h3>
+<p>Our business is a subscription service model that offers personalized
+recommendations, to help you find shows, movies, and games we think you
+might enjoy. To do this we have created an innovative recommendations
+system. This article provides a high level description of our
+recommendations system in plain language.</p>
+<h6 id="the-basics">The basics</h6>
+<p>Whenever you access the Netflix service, our recommendations system
+strives to help you find a show, movie, or game to enjoy with ease. We
+estimate the likelihood that you will enjoy a particular title in our
+catalog based on a number of factors including:</p>
+<ul>
+<li><p>your interactions with our service (such as your viewing history
+and how you rated other titles),</p></li>
+<li><p>other members with similar tastes and preferences on our service,
+and</p></li>
+<li><p>information about the titles, such as their genre, categories,
+actors, release year, etc.</p></li>
+</ul>
+<p>In addition to knowing what you have watched on Netflix, to best
+personalize the recommendations we also consider factors including:</p>
+<ul>
+<li><p>the time of day you’re enjoying Netflix,</p></li>
+<li><p>the languages you prefer</p></li>
+<li><p>the devices you are enjoying Netflix on, and</p></li>
+<li><p>how long you enjoyed a Netflix title.</p></li>
+</ul>
+<p>All of these signals are used as some of the inputs that we process
+in our algorithms. (An algorithm is a process or set of rules followed
+in a problem solving operation.) The recommendations system does not
+include demographic information (such as age or gender) as part of the
+decision making process.</p>
+<p>If you’re not seeing something you want to watch, you can always
+search the entire catalog available to you. We try to make searching as
+easy and quick as possible. When you enter a search query, the top
+results we return are based on a number of factors, including the
+actions of other members who have entered the same or similar queries,
+our prediction of what you’d like to enjoy on Netflix, and others.</p>
+<p>Below is a description of how the system works over time, and how
+these pieces of information influence what we present to you.</p>
+<h6 id="jump-starting-the-recommendations-system">“Jump starting” the
+recommendations system</h6>
+<p>When you create your Netflix account, or add a <a
+href="#how-to-create-edit-or-delete-profiles">new profile</a> in your
+account, we ask you to choose a few titles that you like. We use these
+titles to “jump start” your recommendations. Choosing a few titles you
+like is optional. If you choose to forego this step then we will start
+you off with a diverse and popular set of titles to get you going.</p>
+<p>Once you start engaging with titles on the service, this will
+“supersede” any initial preferences you provided us. As you continue to
+enjoy Netflix over time, the titles you engage with more recently will
+outweigh titles you engaged with in the past in terms of driving our
+recommendations system.</p>
+<h6 id="rows-rankings-and-title-representation">Rows, rankings and title
+representation</h6>
+<p>When you look at your Netflix homepage, our systems have ranked
+titles and positioned them in a way that is designed to present the best
+possible ordering of titles that you may enjoy.</p>
+<p>On each page, there are multiple layers of personalization. For
+example, in a row, we may personalize the following:</p>
+<ul>
+<li><p>the choice of row (such as Continue Watching)</p></li>
+<li><p>which titles appear in the row, and</p></li>
+<li><p>the order of those titles.</p></li>
+</ul>
+<p>The most recommended titles go to the top. The most strongly
+recommended titles start on the left of each row and go right – unless
+you have selected Arabic or Hebrew as your language in our systems, in
+which case these will go right to left.</p>
+<h6 id="how-we-improve-our-recommendations-system">How we improve our
+recommendations system</h6>
+<p>We take feedback from every visit to the Netflix service (for
+example, what titles you start watching, if you finish those titles, and
+how you rate those titles, such as thumbs up) and continually update our
+algorithms with those signals to improve the accuracy of their
+prediction of what you’re most likely to watch. Our data, algorithms,
+and computation systems continue to feed into each other to produce
+fresh recommendations so that your Netflix experience remains relevant
+and helpful.</p>
+<p>See our Privacy and Security help page for information on more
+topics.</p>
+<h3 id="how-to-autoplay-the-next-episode">How to autoplay the next
+episode</h3>
+<p>You can set Netflix to automatically play the next episode in a
+series.</p>
+<h6 id="android-phone-or-tablet-iphone-or-ipad-2">Android phone or
+tablet, iPhone, or iPad</h6>
+<ol type="1">
+<li><p>Open the Netflix app and select a profile.</p></li>
+<li><p>In the lower right, tap My Netflix.</p></li>
+<li><p>At the top, tap the profile name.</p></li>
+<li><p>Tap Manage Profiles.</p></li>
+<li><p>Select the profile you want to edit.</p></li>
+<li><p>Toggle the switch next to Autoplay Next Episode to turn the
+setting on or off.</p></li>
+<li><p>Tap Done (iPhones and iPads only).</p></li>
+</ol>
+<h6 id="web-browser-2">Web browser</h6>
+<ol type="1">
+<li><p>Using a browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then choose a profile.</p></li>
+<li><p>Select Playback settings.</p></li>
+<li><p>Toggle the switch next to Autoplay Next Episode to turn the
+setting on or off.</p></li>
+</ol>
+<p>Your preference will update automatically. You may need to refresh
+your device to pick up the updated settings.</p>
+<h6 id="to-refresh">To refresh:</h6>
+<ul>
+<li><p>Switch to another profile, then switch back.</p></li>
+<li><p>Or, sign out of your Netflix account, and then sign back
+in.</p></li>
+</ul>
+<h6 id="related-articles">Related articles</h6>
+<ul>
+<li><p>Next episode isn’t playing automatically</p></li>
+<li><p><a href="#how-to-turn-preview-autoplay-on-or-off">How to turn
+autoplay previews on or off</a></p></li>
+</ul>
+<h3
+id="how-to-change-the-appearance-of-subtitles-and-closed-captions">How
+to change the appearance of subtitles and closed captions</h3>
+<p>You can change the font, size, shadow, and background color of
+subtitles and closed captions.</p>
+<p>Looking to turn on or off, or change your subtitle, caption, or audio
+language? Learn <a
+href="#how-to-use-subtitles-captions-or-choose-audio-language">how to
+use subtitles, captions, or choosing your audio language</a>.</p>
+<h3 id="how-to-change-the-language-on-netflix">How to change the
+language on Netflix</h3>
+<p>You can change your Netflix language settings for display text,
+audio, and subtitles.</p>
+<h3 id="how-to-download-titles-to-watch-offline">How to download titles
+to watch offline</h3>
+<p>You can watch TV shows and movies offline at any time by downloading
+them from the Netflix app. Learn more about finding, downloading, and
+watching downloaded TV shows and movies below.</p>
+<p>To download TV shows or movies you’ll need one of these devices with
+the latest version of the Netflix app installed:</p>
+<ul>
+<li><p>Android phone or tablet</p></li>
+<li><p>iPhone or iPad</p></li>
+<li><p>Amazon Fire tablet</p></li>
+<li><p>Google Chromebook (<a
+href="https://support.google.com/googleplay/answer/7021273">with Google
+Play Store installed</a>)</p></li>
+</ul>
+<p>Note: Some older operating system versions for these devices may not
+support downloads. Make sure your device has the latest updates
+installed.</p>
+<h6 id="find-a-tv-show-or-movie">Find a TV show or movie</h6>
+<p>Find a TV show or movie and look for the Downloads icon , or filter
+by what is available for download.</p>
+<p>Note: Not all TV shows and movies are available for download. To
+learn why, go to this article with more information.</p>
+<h6 id="download-a-tv-show-or-movie">Download a TV show or movie</h6>
+<ol type="1">
+<li><p>Open the Netflix app.</p></li>
+<li><p>Browse all TV shows and movies available for download:</p>
+<ul>
+<li><p>iPhone, iPad, Android, or Fire devices: Tap Downloads &gt; See
+What You Can Download</p></li>
+<li><p>Chromebook: Click Downloads &gt; Find More to Download</p></li>
+</ul></li>
+<li><p>Select a TV show or movie you want to download onto your
+device.</p>
+<ul>
+<li><p>For movies, select Download.</p></li>
+<li><p>For TV shows, select the download button next to an episode or
+tap the Download Season to download all episodes of a season.</p></li>
+</ul></li>
+</ol>
+<p>To save on <a href="#how-to-control-how-much-data-netflix-uses">data
+usage</a>, we recommend being connected to Wi-Fi while downloading.</p>
+<p>Ad-free plans can have up to 100 active downloads at a time per
+device based on the number of devices <a
+href="#plans-and-pricing">included in your Netflix plan</a>.</p>
+<p>Ad-supported plans are limited to 15 total downloads per device per
+calendar month.</p>
+<p>If you cancel your account, downloads on your device will be deleted.
+If you restart your membership, you’ll need to download them again.</p>
+<h6 id="watch-downloaded-tv-shows-and-movies">Watch downloaded TV shows
+and movies</h6>
+<p>To access and watch the downloads offline, follow the steps
+below.</p>
+<ol type="1">
+<li><p>Open the Netflix app.</p></li>
+<li><p>Tap Downloads.</p></li>
+<li><p>Find the download you want to watch, then select Play.</p></li>
+</ol>
+<p>Note: You need to stay signed in to your Netflix account to access
+the downloads offline. If you’re using a <a
+href="#how-to-create-a-profile-for-kids">Kids profile</a>, downloaded TV
+shows and movies with higher maturity ratings may not be available to
+watch offline.</p>
+<p>Downloaded TV shows and movies are available on the device that was
+used to download them and you can view them from any of your Netflix
+profiles.</p>
+<p>Downloads will expire after a period of time, and some have a limit
+on how many times they can be downloaded per year. Once you’re done
+watching, delete downloads from your device to free up space.</p>
+<p>Learn more about downloads</p>
+<ul>
+<li><p>How to use ‘Smart Downloads’</p></li>
+<li><p>How to use ‘Download Next Episode’</p></li>
+<li><p>How to use ‘Downloads for You’</p></li>
+<li><p>How to change the video quality of a download</p></li>
+<li><p>How to store downloads on an SD card</p></li>
+</ul>
+<p>Fix common download problems</p>
+<ul>
+<li><p>Can’t download a TV show or movie</p></li>
+<li><p>Why isn’t a movie or TV show available for download?</p></li>
+<li><p>My downloaded title says ‘Expired.’</p></li>
+</ul>
+<h3 id="how-to-find-and-download-netflix-mobile-games">How to find and
+download Netflix mobile games</h3>
+<p>To play, you’ll have to install the game on your device first. You
+need:</p>
+<ul>
+<li><p>An active Netflix membership</p></li>
+<li><p>An internet connection to download and install the game</p></li>
+<li><p>Enough storage space on your device</p></li>
+<li><p>A compatible device</p>
+<ul>
+<li><p>Note that device requirements vary by game. For the best
+experience across Netflix games, we recommend the following OS versions
+or higher:</p>
+<ul>
+<li><p>Android phone or tablet: Android 9</p></li>
+<li><p>iPhone: iOS 17</p></li>
+<li><p>iPad: iPadOS 17</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="how-to-get-the-best-video-quality">How to get the best video
+quality</h3>
+<p>Make sure that you’re watching Netflix in the highest quality
+possible, whether it’s HD, 4K Ultra HD, or with HDR.</p>
+<p>You should get the best quality automatically, but if things don’t
+look as good as you expect, this article may help.</p>
+<p>If you want to change the video quality of downloads, see How to
+change the video quality of a download.</p>
+<hr />
+<p>Follow each of the steps below. If you make any changes, stop and
+check to see if it made a difference before moving on.</p>
+<p>Watching on a computer or mobile device? You may need to check a few
+more things. See the article that applies to your device for more
+information: <a
+href="#how-to-use-netflix-on-your-windows-computer-or-tablet">Windows</a>,
+<a href="#how-to-use-netflix-on-your-mac-computer">Mac</a>, <a
+href="#how-to-use-netflix-on-your-android-phone-or-tablet">Android
+phone/tablet</a>, <a
+href="#how-to-use-netflix-on-your-iphone-or-ipad">iPhone/iPad.</a></p>
+<p>If you’ve followed all of the steps and still aren’t getting the
+video quality you think you should, contact your device
+manufacturer.</p>
+<h3 id="how-to-remove-titles-from-the-continue-watching-row">How to
+remove titles from the ‘Continue Watching’ row</h3>
+<p>You can remove TV shows or movies from the Continue Watching row when
+watching on:</p>
+<ul>
+<li><p>Computers</p></li>
+<li><p>TVs</p></li>
+<li><p>Android devices with the latest version of the Netflix
+app</p></li>
+<li><p>iPhone or iPad</p></li>
+</ul>
+<p>Note: Removing titles from the Continue Watching row is only
+available on the latest version of the Netflix app. For older app
+versions without this feature, you can<a
+href="#how-to-hide-titles-from-viewing-history">remove titles from your
+Viewing activity</a>, which also removes them from Continue
+Watching.</p>
+<h3 id="how-to-report-issues-with-a-title">How to report issues with a
+title</h3>
+<p>If you notice an issue with the quality, sound, picture, video, or
+subtitles on a TV show or movie, you can report it directly to Netflix.
+While not every issue will be fixed right away, reporting a problem lets
+our content teams know about an issue to work on fixing it.</p>
+<p>You can report any of the following issues with a title:</p>
+<ul>
+<li><p>Buffering</p></li>
+<li><p>Problems with the subtitles or captions, including quality or
+availability</p></li>
+<li><p>Problems with the audio or dubbing, including quality or
+availability</p></li>
+<li><p>Problems with the video quality or aspect ratio</p></li>
+<li><p>Volume levels</p></li>
+<li><p>Episodes or seasons out of order</p></li>
+<li><p>Problems with the maturity rating or classification</p></li>
+<li><p>Inappropriate content</p></li>
+<li><p>Title or description is wrong or has errors</p></li>
+<li><p>Image for a title is incorrect, misleading, or is a
+spoiler</p></li>
+</ul>
+<p>If you’re having issues with every title you play, see <a
+href="#video-issues-with-netflix">Video issues with Netflix</a> or TV
+show or movie has sound issues.</p>
+<h6 id="how-to-report-issues">How to report issues</h6>
+<p>You can report a problem with a title while watching it in a web
+browser or the Netflix app on Windows 10 and later, or from your Account
+page on the Netflix website.</p>
+<h3 id="how-to-turn-preview-autoplay-on-or-off">How to turn preview
+autoplay on or off</h3>
+<p>To help you find your next show or movie, you can set Netflix to play
+previews automatically.</p>
+<p>Note: iPads and some older TVs and TV streaming devices don’t support
+preview autoplay.</p>
+<h6 id="android-phone-or-tablet-iphone-or-ipad-3">Android phone or
+tablet, iPhone or iPad</h6>
+<ol type="1">
+<li><p>Open the Netflix app and select a profile.</p></li>
+<li><p>In the lower right, tap My Netflix.</p></li>
+<li><p>At the top, tap the profile name.</p></li>
+<li><p>Tap Manage Profiles.</p></li>
+<li><p>Select the profile you want to edit.</p></li>
+<li><p>Toggle the switch next to Autoplay Previews to turn the setting
+on or off.</p></li>
+<li><p>Tap Done (iPhones and iPads only).​​</p></li>
+</ol>
+<h6 id="web-browser-3">Web browser</h6>
+<ol type="1">
+<li><p>Using a browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then choose a profile.</p></li>
+<li><p>Select Playback settings.</p></li>
+<li><p>Toggle the switch next to Autoplay previews to turn the setting
+on or off.</p>
+<p>Your preference will update automatically. You may need to refresh
+your device for the changes to take effect.</p></li>
+</ol>
+<h6 id="to-refresh-1">To refresh:</h6>
+<ul>
+<li><p>Switch to another profile, then switch back.</p></li>
+<li><p>Or, sign out of your Netflix account, and then sign back
+in.</p></li>
+</ul>
+<h6 id="related-article">Related article</h6>
+<ul>
+<li><a href="#how-to-autoplay-the-next-episode">How to play the next
+episode automatically</a></li>
+</ul>
+<h3 id="how-to-use-my-list">How to use ‘My List’</h3>
+<p>You can create a watch list of TV shows and movies by adding them to
+My List. On compatible mobile devices, you can also add games to My
+List.</p>
+<h3 id="how-to-use-subtitles-captions-or-choose-audio-language">How to
+use subtitles, captions, or choose audio language</h3>
+<p>You can change the subtitles, captions, and audio language for many
+shows and movies. While choosing a language to stream a title in on a
+supported device, you’ll see all available languages for that title. For
+downloads, Netflix shows the 2 most relevant languages.</p>
+<p>Note: You may see subtitles even if your subtitle settings are off
+while watching shows and movies that include dialogue in a language
+other than the title’s original language.</p>
+<p>To use subtitles, captions, or choose audio language:</p>
+<ol type="1">
+<li><p>Open Netflix and start playing a TV show or movie.</p></li>
+<li><p>Take the action listed for your device:</p></li>
+</ol>
+<p>[TABLE]</p>
+<p>3. At either the top or bottom of the screen, select Audio &amp;
+Subtitles. On TVs, language options may appear at the bottom without the
+icon. You can choose from the languages shown or select Other to see all
+language options.</p>
+<p>4. Make changes to your audio or subtitle selections.</p>
+<p>Note:Subtitle and audio preferences aren’t saved when viewing most
+Kids titles from an adult profile. They are saved when viewing from a
+Kids profile. If you have to reset your audio every time you try to
+watch, play a title with a maturity rating of Teens or above for 2-3
+mins to set your preferred audio language. This will save your settings
+for future viewing.</p>
+<p>You can also <a
+href="#how-to-change-the-appearance-of-subtitles-and-closed-captions">change
+the appearance of subtitles and closed captions</a> across your
+devices.</p>
+<p>You can also <a href="#how-to-search-and-browse-netflix">search</a>
+for titles with specific audio language directly on Netflix to see all
+available titles (for example, “English Dubbed Movies &amp; TV”).</p>
+<hr />
+<p>For titles available with Subtitles for the Deaf and Hard of Hearing
+(SDH), look for the SDH badge on a title’s details page.</p>
+<p>Note: Some shows may not have SDH available for all seasons or
+episodes.</p>
+<p>If a title doesn’t have SDH available, you may be defaulted to
+subtitles that only include dialogue and don’t include context like
+sounds or music.</p>
+<h3
+id="i-cant-change-the-maturity-rating-limits-in-the-netflix-kids-experience">I
+can’t change the maturity rating limits in the Netflix Kids
+experience</h3>
+<p>If you can’t change the maturity rating level in a profile with the
+Netflix Kids experience, the profile was probably automatically created
+when you started your Netflix account. For these profiles, you won’t be
+able to change the maturity rating level above the allowed level for
+Netflix Kids. If you try to increase above that allowed level, you will
+get this error message:</p>
+<p>Since this is a default Netflix Kids profile, content above a certain
+maturity level is restricted.</p>
+<p>If you want to customize a profile with a new maturity rating level,
+delete the Netflix Kids profile with the issue and create a new
+profile.</p>
+<h3 id="maturity-ratings-for-games-on-netflix">Maturity ratings for
+games on Netflix</h3>
+<p>Make informed gameplay choices for you and your family with maturity
+ratings for games on Netflix.</p>
+<ul>
+<li><p>Maturity ratings are set by the International Age Ratings
+Coalition (IARC) and the Apple App Store. IARC also works with local
+standards organizations for country-specific ratings.</p></li>
+<li><p>Maturity ratings will be displayed based on the device and
+operating system, such as Android or iOS.</p></li>
+<li><p>Game ratings may vary by region and operating system.</p></li>
+</ul>
+<p>In your country, Netflix uses the following game ratings:</p>
+<h6 id="android-phones-tablets">Android phones &amp; tablets</h6>
+<p>Entertainment Software Ratings Board (ESRB) via International Age
+Rating Coalition (IARC). ESRB age ratings are as follows:</p>
+<p>[TABLE]</p>
+<h6 id="iphone-ipad">iPhone &amp; iPad</h6>
+<p>Apple provides age ratings information for all apps published on iOS
+devices. Apple’s age ratings are as follows:</p>
+<p>[TABLE]</p>
+<h6 id="games-on-tv-and-netflix.com">Games on TV and Netflix.com</h6>
+<p>Netflix Games provides age ratings information for all games
+published on TV devices and Netflix.com. Netflix Games’ age ratings are
+as follows:</p>
+<p>[TABLE]</p>
+<p>You can find a game’s maturity rating:</p>
+<ul>
+<li><p>On the game’s details page in the Netflix app.</p></li>
+<li><p>On the game’s app store page in the Google Play Store or Apple
+App Store.</p></li>
+</ul>
+<p>In addition to the rating, you may also find a list of content
+advisories that contributed to the assigned age rating (for example:
+fear, violence, language).</p>
+<p>Setting up maturity ratings for a profile affects which games are
+available. To set a maturity rating level:</p>
+<h6 id="android-phone-or-tablet-iphone-or-ipad-4">Android phone or
+tablet, iPhone, or iPad</h6>
+<ol type="1">
+<li><p>Open the Netflix app.</p></li>
+<li><p>In the lower right, tap My Netflix.</p></li>
+<li><p>In the upper right, tap the Menu.</p></li>
+<li><p>Tap Manage Profiles.</p></li>
+<li><p>Choose the profile you want to edit.</p></li>
+<li><p>Tap Viewing Restrictions.</p></li>
+<li><p>Tap Maturity Rating.</p></li>
+<li><p>Enter your Netflix account password.</p></li>
+<li><p>Set the maturity rating level you’d like.</p></li>
+</ol>
+<h6 id="web-browser-4">Web browser</h6>
+<ol type="1">
+<li><p>Using a browser, go to your Account page.</p></li>
+<li><p>Select Profiles, then choose a profile.</p></li>
+<li><p>Choose Adjust Parental Controls.​</p></li>
+<li><p>Enter your Netflix account password, if prompted.</p></li>
+<li><p>Set the maturity rating level you’d like.</p></li>
+<li><p>Choose Save.</p></li>
+</ol>
+<p>Here’s how game maturity ratings line up with the available <a
+href="#maturity-ratings-for-tv-shows-and-movies-on-netflix">TV show or
+movie maturity rating settings</a> set for a profile:</p>
+<p>[TABLE]</p>
+<p>Profiles set up with maturity rating settings will only show games
+that meet or fall below the selected maturity rating level. For example,
+to prevent games of maturity level T or more showing for a profile, set
+the profile maturity rating to TV-PG / PG.</p>
+<p>For more information, see <a
+href="#parental-controls-on-netflix">Parental Controls on
+Netflix</a>.</p>
+<h3 id="maturity-ratings-for-tv-shows-and-movies-on-netflix">Maturity
+ratings for TV shows and movies on Netflix</h3>
+<p>Make informed viewing choices for you and your family with maturity
+ratings for TV shows and movies on Netflix.</p>
+<ul>
+<li><p>Maturity ratings are either set by Netflix or by a local
+standards organization.</p></li>
+<li><p>Netflix sets maturity ratings by the frequency and impact of
+mature content in a title, such as the amount of violence, sex, adult
+language, nudity, or substance use that may be present.</p></li>
+<li><p>Netflix also provides details on the mature content found within
+a TV show or movie, if applicable.</p></li>
+<li><p>Maturity ratings and advisories found on a TV show’s details page
+reflect the overall or highest maturity level of the series.</p>
+<p>Note:For TV shows with more than one season, we show the ratings for
+the season you’re watching in the top corner of the screen when first
+playing the title. These may differ from the show’s overall rating or
+mature content themes.</p></li>
+<li><p>TV and movie ratings may vary by region.</p></li>
+</ul>
+<p>In your country, Netflix uses the following TV and movie ratings:</p>
+<h6 id="recommended-for-kids">Recommended for Kids</h6>
+<p>[TABLE]</p>
+<h6 id="recommended-for-teens">Recommended for Teens</h6>
+<p>[TABLE]</p>
+<h6 id="recommended-for-adults">Recommended for Adults</h6>
+<p>[TABLE]</p>
+<p>You can find a title’s maturity rating:</p>
+<ul>
+<li><p>When first playing a title, the rating will appear briefly in the
+top corner of your screen.</p></li>
+<li><p>On a TV show or movie’s details page. The location of this
+information may vary by device.</p></li>
+</ul>
+<p>In addition to the rating, you’ll also find details about the content
+of the title that determined the rating (for example: sex, language,
+violence, nudity).</p>
+<p>Note: Podcast titles don’t include advisories at this time.</p>
+<p>Here’s how to set a maturity rating level for a profile based on your
+device:</p>
+<h6 id="android-phone-or-tablet-iphone-or-ipad-5">Android phone or
+tablet, iPhone, or iPad</h6>
+<p>Note: To edit the Maturity Rating level for a Kids profile, you have
+to use a web browser.</p>
+<ol type="1">
+<li><p>Open the Netflix app.</p></li>
+<li><p>In the lower right, tap My Netflix.</p></li>
+<li><p>At the top, tap the profile name.</p></li>
+<li><p>Tap Manage Profiles.</p></li>
+<li><p>Choose the profile you want to edit.</p></li>
+<li><p>Tap Viewing Restrictions.</p></li>
+<li><p>Tap Maturity Rating.</p></li>
+<li><p>Verify your identity by entering your Netflix account
+password.</p>
+<ul>
+<li>If you don’t have a password for your account, follow the steps
+under “Web browser” to change your settings instead.</li>
+</ul></li>
+<li><p>Set the Maturity Rating level you’d like.</p></li>
+</ol>
+<h6 id="web-browser-5">Web browser</h6>
+<ol type="1">
+<li><p>Using a browser, go to your Account page.</p></li>
+<li><p>Select Profiles.</p></li>
+<li><p>Select Adjust parental controls​, then choose a profile.</p></li>
+<li><p>Verify your identity by entering a code sent to your email or
+mobile phone number, or by entering your Netflix account
+password.</p></li>
+<li><p>Set the Maturity Rating level you’d like.</p></li>
+<li><p>Choose Save.</p></li>
+</ol>
+<p>Note: Game ratings correspond to the show or movie maturity settings
+set for the profile. See <a
+href="#maturity-ratings-for-games-on-netflix">Maturity ratings for games
+on Netflix</a> for details.</p>
+<p>Profiles with a maturity level set will only display titles that
+match the selected maturity rating level.</p>
+<p>If you have trouble changing maturity levels on a Kids profile, see
+<a
+href="#i-cant-change-the-maturity-rating-limits-in-the-netflix-kids-experience">I
+can’t change the maturity rating limits in the Netflix Kids
+experience</a>.</p>
+<p>For more information, see <a
+href="#parental-controls-on-netflix">Parental Controls on
+Netflix</a>.</p>
+<p>You can also <a
+href="#how-to-set-profile-maturity-ratings-or-block-titles">block
+specific shows and movies</a> from individual profiles.</p>
+<h3 id="parental-controls-on-netflix">Parental controls on Netflix</h3>
+<p>To choose the types of TV shows, movies, or games your kids can watch
+or play, you can manage their profiles individually or create a profile
+with the Netflix Kids experience.</p>
+<h6 id="start-using-parental-controls">Start using parental
+controls:</h6>
+<ol type="1">
+<li><p><a href="#how-to-create-a-profile-for-kids">Create a profile for
+kids</a></p></li>
+<li><p><a
+href="#how-to-set-profile-maturity-ratings-or-block-titles">Set profile
+maturity ratings or block titles</a></p></li>
+<li><p><a href="#how-to-add-edit-or-remove-a-profile-pin">Lock your
+profile or other profiles on your account</a></p></li>
+<li><p><a href="#how-to-require-a-pin-to-add-a-new-profile">Require a
+PIN to add a new profile</a></p></li>
+<li><p><a href="#how-to-turn-preview-autoplay-on-or-off">Turn autoplay
+previews on or off</a></p></li>
+<li><p><a href="#how-to-autoplay-the-next-episode">Adjust autoplay
+settings for TV shows</a></p></li>
+<li><p><a href="#how-to-see-viewing-history-and-device-activity">Access
+viewing history for a profile</a></p></li>
+</ol>
+<h6 id="related-articles-1">Related articles:</h6>
+<ul>
+<li><p><a
+href="#maturity-ratings-for-tv-shows-and-movies-on-netflix">Maturity
+ratings for TV shows and movies on Netflix</a></p></li>
+<li><p><a href="#maturity-ratings-for-games-on-netflix">Maturity ratings
+for games on Netflix</a></p></li>
+<li><p>Managing your account-level PIN</p></li>
+</ul>
+<h6 id="troubleshooting-1">Troubleshooting</h6>
+<ul>
+<li><p><a href="#cant-set-up-netflix-kids">Why can’t I use the Netflix
+Kids experience?</a></p></li>
+<li><p><a
+href="#i-cant-change-the-maturity-rating-limits-in-the-netflix-kids-experience">I
+can’t change the maturity rating limits in the Netflix Kids
+experience</a></p></li>
+<li><p><a href="#locked-profile-isnt-asking-for-pin">I’m not being
+prompted to enter a Profile Lock PIN</a></p></li>
+</ul>
+<h3 id="spatial-audio-on-netflix">Spatial audio on Netflix</h3>
+<p>Spatial audio enhances sound without the need for surround sound
+speakers or home theater equipment and is available on the Netflix <a
+href="#plans-and-pricing">Premium plan</a>. It works on all <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">Netflix-supported
+devices</a>.</p>
+<p>To find TV shows and movies with spatial audio, search for “spatial
+audio” in the Netflix app. You’ll see a spatial audio label next to the
+title’s description.</p>
+<p>Related articles</p>
+<p><a href="#how-to-change-your-plan">How to change your plan</a></p>
+<p>Netflix Spatial Audio announcement with demonstration</p>
+<h2 id="games-on-netflix">Games on Netflix</h2>
+<h3 id="how-do-game-saves-work-on-netflix">How do game saves work on
+Netflix?</h3>
+<p>Games are saved to the profile you choose to play a game, either
+through cloud saves or locally on your device.</p>
+<p>What are cloud saves?</p>
+<p>Cloud saves are stored online. Much like streaming your favorite TV
+shows and movies, you can pick up where you left off in a game on any
+device by using the same account and profile.</p>
+<p>You can check for cloud save support on a game’s Support page. Look
+for the game listed on <a href="#play-games-on-mobile-devices">Netflix
+Games</a>, or search for it by name.</p>
+<h6 id="games-that-support-cloud-saves">Games that support cloud
+saves</h6>
+<ul>
+<li><p>Game progress is stored on your Netflix account profile. If you
+remove a game and then download it again or play the game on a different
+device, you can pick up where you left off.</p>
+<p>If an account profile that you played a game with is deleted, your
+game saves will also be removed and can’t be restored.</p></li>
+</ul>
+<h6 id="games-that-dont-support-cloud-saves">Games that don’t support
+cloud saves</h6>
+<ul>
+<li>Game progress is saved only on the device and under the same Netflix
+profile. If you uninstall the game, clear game data, or delete the
+profile you played with, you’ll permanently delete your saves for that
+game.</li>
+</ul>
+<hr />
+<h3 id="how-to-create-and-manage-netflix-game-handles">How to create and
+manage Netflix game handles</h3>
+<p>Choose a unique name to use while playing <a
+href="#play-games-on-mobile-devices">Netflix games</a>.</p>
+<ul>
+<li><p>Game handles appear in some games with features like
+leaderboards.</p></li>
+<li><p>The handle you choose will be used for all Netflix games that
+support them.</p></li>
+<li><p>Each Netflix profile can have one game handle.</p>
+<p>Note:Game handles are not available in Kids profiles.</p></li>
+<li><p>You can’t use a handle that another player has chosen.</p></li>
+<li><p>For some games, you’ll have to create a handle before you can
+play the game.</p></li>
+<li><p>Once created, a handle can be edited but cannot be
+deleted.</p></li>
+</ul>
+<hr />
+<h5 id="creating-or-changing-your-game-handle">Creating or changing your
+game handle</h5>
+<h6 id="handle-creation-tips">Handle creation tips</h6>
+<p>Handles must:</p>
+<ul>
+<li><p>Be 3-16 characters in length.</p></li>
+<li><p>Not use emojis, punctuation, or special characters.</p></li>
+<li><p>Not use more than one script or language.</p></li>
+</ul>
+<hr />
+<h6 id="error-message-while-creating-handles">Error message while
+creating handles</h6>
+<ul>
+<li><p>Handle not available: The handle you’re trying to create is
+already being used by someone else. To fix this, choose a different
+handle, or try to add something to the handle to make it unique.</p>
+<ul>
+<li><p>Example: If you’re trying to use “CoolCat” and see this error,
+you can try alternatives like “CoolCat1,” “CoolCat2,” “CoolestCat,”
+“CoolerCat,” etc.</p>
+<p>Note:Handles aren’t case sensitive, so “CoolCat” is the same as
+“coolcat” or “COOLCAT” when choosing a handle.</p></li>
+</ul></li>
+<li><p>Must be 16 characters or less: Handles have a 16-character limit.
+Try a shorter handle.</p></li>
+<li><p>Must be longer than 2 characters: Handles must be more than 2
+characters. Try something longer.</p></li>
+<li><p>Handle not allowed: This appears when a handle doesn’t meet our
+Community Guidelines. Please try a different handle to
+continue.</p></li>
+</ul>
+<hr />
+<h5 id="questions-about-handles">Questions about handles</h5>
+<h3 id="how-to-report-other-players-in-netflix-games">How to report
+other players in Netflix games</h3>
+<p>We want everyone to have fun and play fair. If you see someone
+breaking the rules of our <em>Community Guidelines</em>, here’s how to
+let us know.</p>
+<p>​</p>
+<h5 id="report-directly-in-the-game">Report directly in the game</h5>
+<ol type="1">
+<li><p>Select the player: Choose the player you want to report.</p></li>
+<li><p>Tap or click the Report button: While you’re playing, look for
+the Report button. It’s usually in the player’s profile or the game
+menu.</p></li>
+<li><p>Tell us what happened: Pick the reason for the report, or tell us
+in your own words.</p></li>
+<li><p>Submit: Press Submit to send the report.</p></li>
+</ol>
+<h5 id="contact-us">Contact us</h5>
+<p>If you can’t report in the game, you can send a report to the game’s
+support site.</p>
+<ol type="1">
+<li><p>Remember the player’s game handle: Write down the name they use
+in the game.</p></li>
+<li><p><a href="https://support.netflixgames.com/">Contact us</a>:
+Select the game you are playing and send a report to our Player Support
+team.</p></li>
+<li><p>Give details: Tell us the game handle, the name of the game, and
+what happened.</p></li>
+</ol>
+<p>Thank you for helping us keep the game safe and fun for everyone!</p>
+<p>​</p>
+<p>​</p>
+<h3 id="play-games-on-mobile-devices">Play games on mobile devices</h3>
+<h6 id="new-games">New Games</h6>
+<p>[TABLE]</p>
+<ul>
+<li><p>No ads. No extra fees. No in-app purchases.</p></li>
+<li><p>Unlimited access to more than 80 exclusive mobile games.</p></li>
+<li><p>Included with your Netflix membership.</p></li>
+<li><p>Download on Android phones &amp; tablets, iPhone and
+iPad.</p></li>
+</ul>
+<hr />
+<p>​</p>
+<h5 id="related-articles-2">Related Articles​​​​​​</h5>
+<ul>
+<li><p>For games you can play on your TV or a computer web browser, see
+<a href="#play-games-on-tvs-and-computers">Play games on TVs and
+computers</a>.​</p></li>
+<li><p>Community Guidelines</p></li>
+</ul>
+<h3 id="play-games-on-tvs-and-computers">Play games on TVs and
+computers</h3>
+<p>Netflix members can play games on TV and on their computer through
+Netflix.com. This is a beta experience and not yet available in all
+countries or on all devices.</p>
+<p>All games—mobile and TV—are included with your membership: No ads,
+fees, or in-app purchases.</p>
+<p>Games are currently available in Australia, Austria, Belgium, Brazil,
+Canada, Finland, France, Germany, Ireland, Italy, Mexico, the
+Netherlands, New Zealand, Poland, South Africa, Spain, Sweden,
+Switzerland, the United Kingdom, and the United States. More countries
+will be added in the future.</p>
+<p>Note: If you’re looking for games you download and play on your
+mobile device, see <a href="#play-games-on-mobile-devices">Play games on
+mobile devices.</a></p>
+<hr />
+<h5 id="can-my-device-play-games">Can my device play games?</h5>
+<hr />
+<h5 id="how-to-play">How to play</h5>
+<p>​</p>
+<p>Exit a game</p>
+<ul>
+<li><p>TV: Press the Netflix “N” button on your phone or tablet, or use
+the back button on your TV remote.</p></li>
+<li><p>Computer browser: Hold Shift + Tab and click Exit Game.</p></li>
+</ul>
+<hr />
+<h5 id="troubleshooting-2">Troubleshooting</h5>
+<h6 id="need-more-help">Need more help?</h6>
+<p>If the steps above don’t fix your issue, or want to share
+feedback:</p>
+<ul>
+<li><p>Feedback: You can share feedback after you exit a game session
+through your mobile controller or keyboard.</p></li>
+<li><p>Contact us: You can always contact us for more help.</p></li>
+</ul>
+<hr />
+<h5 id="information-collection-and-processing">Information collection
+and processing</h5>
+<p>In addition to what is described in the Netflix Privacy Statement,
+when you use Games on TV and on Netflix.com, we automatically receive
+and store information about the Netflix app, device, and the Netflix
+account (if you are logged in) used to play the game.</p>
+<p>If you use a mobile device as a controller, the gameplay information
+is linked to the Netflix account on which the Netflix Game on TV is
+running. We use this information in accordance with the Netflix Privacy
+Statement.</p>
+<h2 id="devices-and-apps">Devices and apps</h2>
+<h3 id="browser-isnt-supported">Browser isn’t supported</h3>
+<p>If Netflix brought you to this article instead of playing a TV show
+or movie, it means your browser doesn’t support playing Netflix
+videos.</p>
+<p>Note:Netflix ended support for Silverlight on September 13, 2023.</p>
+<p>To keep watching Netflix, you’ll need to update your browser to <a
+href="#netflix-supported-browsers-and-system-requirements">a version
+that supports HTML5</a>:</p>
+<ul>
+<li><p><a href="https://www.google.com/chrome/">Google
+Chrome</a></p></li>
+<li><p><a href="https://www.microsoft.com/edge">Microsoft
+Edge</a></p></li>
+<li><p><a href="https://support.apple.com/HT204416">Safari</a></p></li>
+<li><p><a href="https://mozilla.org/firefox/products">Mozilla
+Firefox</a></p></li>
+<li><p><a href="https://www.opera.com/">Opera</a></p></li>
+</ul>
+<p>Note:To find out which browsers will work with your computer, read
+our <a href="#netflix-supported-browsers-and-system-requirements">system
+requirements</a>.</p>
+<h3 id="fix-a-problem-on-your-android-phone-or-tablet">Fix a problem on
+your Android phone or tablet</h3>
+<p>If Netflix isn’t working on your Android phone or tablet, you can fix
+common issues with these steps.</p>
+<h3 id="fix-a-problem-on-your-tv-or-streaming-media-player">Fix a
+problem on your TV or streaming media player</h3>
+<p>If Netflix isn’t working on your TV or a device connected to your TV,
+you can often fix the problem with these basic troubleshooting
+steps.</p>
+<p>Restart your device</p>
+<ol type="1">
+<li><p>Turn off your device. If your device has a power cable, unplug
+it.</p></li>
+<li><p>Make sure your device is completely off, not just in sleep or
+standby mode.</p></li>
+<li><p>Leave your device off for 15 seconds.</p></li>
+<li><p>Turn on your device and try Netflix again.</p></li>
+</ol>
+<p>Restart your home network</p>
+<ol type="1">
+<li><p>Turn off your device, then unplug your modem and router from
+power.</p></li>
+<li><p>After 30 seconds, plug in your modem and router.</p></li>
+<li><p>Wait 1 minute, then turn on your device.</p></li>
+<li><p>Try Netflix again.</p></li>
+</ol>
+<p>Note: Some devices, modems, and routers might take longer to
+reconnect to the Internet.</p>
+<p>Sign out of Netflix</p>
+<ol type="1">
+<li><p>Go to the Netflix home screen and press the back button on your
+remote to get to the menu.</p></li>
+<li><p>If the menu is at the top: Go left to your profile icon, select
+Get Help, then Sign out, then select Yes.</p>
+<p>If the menu is on the left: At the bottom, select Get Help, then Sign
+out, then select Yes.</p></li>
+<li><p>Sign back in and try Netflix again.</p></li>
+</ol>
+<p>If your device is on an error screen:</p>
+<ol type="1">
+<li><p>Select More Details.</p></li>
+<li><p>Select Sign out or Reset.</p></li>
+<li><p>Sign back in and try Netflix again.</p></li>
+</ol>
+<p>If you can’t find Get Help or Sign out:</p>
+<ol type="1">
+<li><p>Using your remote, press these buttons in this order: Up, Up,
+Down, Down, Left, Right, Left, Right, Up, Up, Up, Up.</p></li>
+<li><p>On the menu that appears, select Sign out, Reset, or
+Deactivate.</p></li>
+</ol>
+<p>Note: If you have an Apple TV, <a
+href="#how-to-use-netflix-on-your-apple-tv">follow these steps to sign
+out instead</a>.</p>
+<p>What to do next</p>
+<p>Try searching our Help Center for the issue or error code you get.
+There may be an article in our Help Center with steps to fix the exact
+issue or error on your device.</p>
+<p>If the steps didn’t fix the problem or there wasn’t an article that
+matched your issue, contact Customer Service for more help.</p>
+<h3 id="google-play-shows-device-incompatible-message">Google Play shows
+‘device incompatible’ message</h3>
+<p>If you’re trying to download the Netflix app from the Play Store and
+get this message:</p>
+<p>Your device isn’t compatible with this version.</p>
+<p>It means your Android device might not meet the Google Play Store
+requirements for downloading the Netflix app.</p>
+<p>To fix the problem:</p>
+<p>Check your device’s Play Protect status</p>
+<ol type="1">
+<li><p>Open the Play Store app.</p></li>
+<li><p>In the upper right, tap your Profile icon.</p></li>
+<li><p>Tap Settings &gt; About.</p></li>
+<li><p>Under Play Protect certification, check your device’s
+certification status.</p></li>
+</ol>
+<p>If you see Device is certified, contact us for more help.</p>
+<p>If your device isn’t certified, you’ll need to use a <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">supported
+device</a> to watch Netflix. We recommend contacting your device’s
+manufacturer to ask for a Play Protect certified device. To learn more,
+go to Google’s <a
+href="https://support.google.com/android/answer/10248227">support page
+about Play Protect certification</a>.</p>
+<h3 id="how-to-cast-or-mirror-netflix-from-your-mobile-device">How to
+Cast or Mirror Netflix from Your Mobile Device</h3>
+<p>If you don’t have the Netflix app on your TV or on a device that
+connects to your TV, you may still be able to use your mobile device to
+cast, mirror, or connect to your TV using a video cable.</p>
+<p>Casting</p>
+<p>Use the Netflix mobile app to browse, play, or stop shows on your TV.
+This only works on cast-compatible TVs and displays. (See
+cast-compatible device list below.)</p>
+<p>​</p>
+<p>Wireless screen mirroring</p>
+<p>Display your entire mobile screen on your TV using a built-in feature
+or app. Note that Netflix may not support certain devices or mirroring
+apps.</p>
+<p>​</p>
+<p>Video cable or adapter</p>
+<p>Connect your mobile device directly to your TV or other display using
+a video cable or adapter. (Your device or video cable/adapter may not be
+supported by Netflix. See below for details.)</p>
+<p>Note: Casting or mirroring is available on Standard or Premium plans.
+To check or change your plan, visit your account settings.</p>
+<h3 id="how-to-rate-tv-shows-and-movies">How to rate TV shows and
+movies</h3>
+<p>To get better suggestions for TV shows and movies you might like, you
+can rate what you’ve watched as I like this, Love this!, or Not for
+me.</p>
+<p>In addition to TV shows and movies you’ve rated, Netflix gets a
+better idea of what you might like by looking at:</p>
+<ul>
+<li><p>The genres you watch</p></li>
+<li><p>Your viewing history</p></li>
+<li><p>The ratings of Netflix members who have similar tastes to
+you</p></li>
+</ul>
+<p>If we think a TV show or movie is a good match for you, you may see
+it shown with a double thumbs up icon .</p>
+<p>The ratings you provide also help us recommend popular TV shows and
+movies on Netflix. TV shows and movies with the most positive ratings
+will have a Most Liked label.</p>
+<p>Note: Some older devices may show stars rather than a thumbs up or
+thumbs down. To save your thumbs up/down ratings, visit Netflix.com or
+use the Netflix app.</p>
+<h3 id="how-to-use-netflix-on-your-amazon-fire-tv-device">How to use
+Netflix on your Amazon Fire TV device</h3>
+<p>Use this article to learn about Netflix features on your Amazon Fire
+TV device and how to set up, sign out, or delete the app.</p>
+<h3 id="how-to-use-netflix-on-your-android-phone-or-tablet">How to use
+Netflix on your Android phone or tablet</h3>
+<p>Learn how to set up and sign out of your Netflix account on your
+Android device.</p>
+<p>Having a problem with your device? Learn how to <a
+href="#fix-a-problem-on-your-android-phone-or-tablet">fix a problem on
+your Android phone or tablet</a>.</p>
+<h3 id="how-to-use-netflix-on-your-apple-tv">How to use Netflix on your
+Apple TV</h3>
+<p>Learn about Netflix features on your Apple TV, including how to set
+up and sign out of your account. If you don’t know if Netflix works on
+your device, follow the steps in the “Set Up Netflix” section.</p>
+<h3 id="how-to-use-netflix-on-your-apple-vision-pro">How to use Netflix
+on your Apple Vision Pro</h3>
+<p>Netflix is available through the Safari browser app on your Apple
+Vision Pro.</p>
+<h3 id="how-to-use-netflix-on-your-chromecast">How to use Netflix on
+your Chromecast</h3>
+<p>Learn how to set up and use Netflix and its various features on your
+Chromecast.</p>
+<p>Older Chromecast models without a remote control can only be used for
+casting. They are not compatible with an ad-supported experience, and
+can’t stream Live events.</p>
+<p>Need help? Learn how to fix a problem on your Chromecast.</p>
+<h3
+id="how-to-use-netflix-on-your-hisense-tv-or-streaming-media-player">How
+to use Netflix on your Hisense TV or streaming media player</h3>
+<p>Netflix is available on many Hisense devices in Australia, Canada,
+Europe, Latin America, New Zealand, and the United States.</p>
+<h3 id="how-to-use-netflix-on-your-iphone-or-ipad">How to use Netflix on
+your iPhone or iPad</h3>
+<h3
+id="how-to-use-netflix-on-your-lg-tv-blu-ray-player-or-streaming-media-player">How
+to use Netflix on your LG TV, Blu-ray player, or streaming media
+player</h3>
+<p>Use this article to learn about Netflix features on your LG TV,
+Blu-ray player, streaming media player, or home theater system. If you
+don’t know if Netflix works on your device, follow the steps in the “Set
+Up Netflix” section.</p>
+<h3 id="how-to-use-netflix-on-your-mac-computer">How to use Netflix on
+your Mac computer</h3>
+<p>Use this article to learn about Netflix features on your Mac
+computer, and how to set up and sign out of your account.</p>
+<h3 id="how-to-use-netflix-on-your-meta-quest-oculus-vr-headset">How to
+use Netflix on your Meta Quest (Oculus) VR headset</h3>
+<p>Netflix is available through the Meta Quest Browser for Meta Quest
+headsets.</p>
+<h3 id="how-to-use-netflix-on-your-panasonic-tv-or-blu-ray-player">How
+to use Netflix on your Panasonic TV or Blu-ray player</h3>
+<p>Use this article to learn about using Netflix on your Panasonic TV,
+Blu-ray player, or home theater system.</p>
+<h3 id="how-to-use-netflix-on-your-philips-tv-or-blu-ray-player">How to
+use Netflix on your Philips TV or Blu-ray player</h3>
+<p>Use this article to learn about Netflix features on your Philips
+device, and how to set up and sign out of your account. If you don’t
+know if Netflix works on your device, follow the steps in the “Set Up
+Netflix” section.</p>
+<h3 id="how-to-use-netflix-on-your-samsung-tv-or-blu-ray-player">How to
+use Netflix on your Samsung TV or Blu-ray player</h3>
+<p>Use this article to learn about Netflix features on your Samsung TV,
+projector, Blu-ray player, or home theater system, including how to set
+up and sign out of your account. If you don’t know if Netflix works on
+your device, follow the steps in the “Set up Netflix” section.</p>
+<h3 id="how-to-use-netflix-on-your-sharp-tv-or-blu-ray-player">How to
+use Netflix on your Sharp TV or Blu-ray player</h3>
+<p>Use this article to learn about Netflix features on your Sharp TV,
+Blu-ray player, or home theater system, and how to set up and sign out
+of your account. If you don’t know if Netflix works on your device,
+follow the steps in the “Set Up Netflix” section.</p>
+<h3 id="how-to-use-netflix-on-your-sony-tv-or-blu-ray-player">How to use
+Netflix on your Sony TV or Blu-ray player</h3>
+<p>Learn about Netflix features on your Sony TV or Blu-ray player, and
+how to set up and sign out of your account. If you’re not sure if
+Netflix works on your device, follow the steps in the “Set Up Netflix”
+section.</p>
+<h3 id="how-to-use-netflix-on-your-tcl-tv">How to use Netflix on your
+TCL TV</h3>
+<p>Use this article to learn about Netflix features on your TCL TV, and
+how to set up and sign out of your account.</p>
+<h3 id="how-to-use-netflix-on-your-toshiba-tv-or-tvs-regza-tv">How to
+use Netflix on your Toshiba TV or TVS REGZA TV</h3>
+<p>Use this article to learn about Netflix features on your Toshiba TV
+or TVS REGZA TV, or home theater system, including how to set up and
+sign out of your account.</p>
+<h3 id="how-to-use-netflix-on-your-vestel-tv">How to use Netflix on your
+Vestel TV</h3>
+<p>Use this article to learn about Netflix features on your Vestel TV,
+and how to set up and sign out of your account. Vestel TVs may appear
+under the Finlux, JVC, Polaroid, or RCA brand names in some
+countries.</p>
+<h3 id="how-to-use-netflix-on-your-vizio-tv-or-blu-ray-player">How to
+use Netflix on your Vizio TV or Blu-ray player</h3>
+<p>Use this article to learn about Netflix features on your Vizio TV,
+Blu-ray player, or home theater system. If you don’t know if your device
+supports Netflix, follow the steps in the “Set Up Netflix” section.</p>
+<h3 id="how-to-use-netflix-on-your-windows-computer-or-tablet">How to
+use Netflix on your Windows computer or tablet</h3>
+<p>Learn about Netflix features on your Windows computer or tablet and
+how to set up and sign out of your account.</p>
+<p>Don’t know if Netflix works on your device? Follow the steps in the
+“Set Up Netflix” section below. You can watch Netflix on a Windows
+computer or tablet from a web browser or the Netflix app for Windows 10
+and later.</p>
+<h3 id="how-to-watch-netflix-on-your-tv">How to watch Netflix on your
+TV</h3>
+<p>To watch Netflix on your TV, you need a <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">device
+with the Netflix app</a>. The Netflix app is available on many:</p>
+<ul>
+<li><p>Smart TVs</p></li>
+<li><p>Streaming sticks and boxes</p></li>
+<li><p>Cable boxes</p></li>
+<li><p>Blu-ray players</p></li>
+<li><p>Game consoles</p></li>
+</ul>
+<p>On Netflix-ready TVs, the Netflix app is on the main menu or home
+screen. If you don’t see the Netflix app, but your TV has an app store,
+search for Netflix to see if the app can be downloaded and installed on
+your device.</p>
+<p>Note: If you don’t have a Netflix app, you can try updating the
+system software on your device. If you’re not sure how to do this, check
+your owner’s manual or contact the manufacturer.</p>
+<h3 id="netflix-error-tvq-pb-101">Netflix Error tvq-pb-101</h3>
+<p>Check the error code on your TV. If there are additional numbers or
+letters inside parentheses ( ), search for that exact error code in our
+Help Center. There might be an article with steps that fix your exact
+error code.</p>
+<p>This error happens when an issue with data stored on your device
+stops Netflix from playing.</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h3 id="netflix-error-tvq-st-103">Netflix Error tvq-st-103</h3>
+<p>If you see the error code tvq-st-103, often with one of these
+messages:</p>
+<p>Unable to connect to Netflix. Please try again or visit:
+www.netflix.com/help</p>
+<p>Netflix has encountered an error. Retrying in [X] seconds.</p>
+<p>It usually means that a network problem is stopping your device from
+reaching Netflix. Follow the troubleshooting steps for your device to
+solve the problem.</p>
+<h3
+id="netflix-freezes-stops-responding-or-gets-stuck-loading-but-device-isnt-frozen">Netflix
+freezes, stops responding, or gets stuck loading, but device isn’t
+frozen</h3>
+<p>If Netflix freezes or gets stuck loading, but the rest of your device
+is working, you can often fix the problem with these basic
+troubleshooting steps. This usually happens when data stored on your
+device needs to be refreshed, or when a network issue stops Netflix from
+loading.</p>
+<p>Note: If your device isn’t working or responding at all, see these
+troubleshooting steps.</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h6 id="smart-tvs">Smart TVs</h6>
+<h6 id="mobile-phones-and-tablets">Mobile phones and tablets</h6>
+<h6 id="computers">Computers</h6>
+<h6 id="streaming-media-players">Streaming media players</h6>
+<h6 id="game-consoles">Game consoles</h6>
+<h3
+id="netflix-says-netflix-is-no-longer-available-on-this-device">Netflix
+says ‘Netflix is no longer available on this device.’</h3>
+<p>If you get error code R40, R12, or R25-9, or one of the messages in
+the boxes below, it means that your device can no longer or won’t be
+able to support Netflix after a certain date. Please note, this error is
+related to the device you use with Netflix. Your Netflix account and
+membership have not changed in any way.</p>
+<p>Error messages:</p>
+<p>Netflix is no longer available on this device. Please visit
+netflix.com/compatibledevices for a list of supported devices.</p>
+<p>Unfortunately, Netflix will no longer be available on this device
+after (DATE). Please visit netflix.com/compatibledevices for a list of
+supported devices.</p>
+<p>You can still enjoy Netflix on a variety of <a
+href="#netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">supported
+devices</a>.</p>
+<p>If you have a streaming stick, cable box, or game console that
+connects to your TV with an HDMI cable, check to see if it has a Netflix
+app. ​</p>
+<h3
+id="netflix-says-this-current-app-version-is-no-longer-supported-please-upgrade-the-os-and-app-version">Netflix
+says ‘This current app version is no longer supported. Please upgrade
+the OS and App version.’</h3>
+<p>If you see a Netflix error code that begins with an “R” (e.g., R22-1
+or R39-1) or one of the messages below, it means the Netflix app and/or
+your device’s operating system (OS) must be updated to a supported
+version to continue working. Please note, this error is related to the
+device you use with Netflix. Your Netflix account and membership have
+not changed in any way.</p>
+<p>Error messages:</p>
+<p>This current app version is no longer supported. Please upgrade the
+OS and App version. (R39-1)​</p>
+<p>​This current app version will not be supported starting (DATE).
+Please upgrade the OS and App version. (R39-1)</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h3 id="netflix-says-this-device-is-not-supported-by-the-app">Netflix
+says ‘This device is not supported by the app.’</h3>
+<p>If you see an error on your Android device that says</p>
+<p>This device is not supported by the app.</p>
+<p>It typically means that an out-of-date version of the Netflix app has
+been installed on your device. Follow the troubleshooting steps below to
+resolve the issue.</p>
+<p><strong>Reinstall the Netflix app</strong></p>
+<p>If you uninstall Netflix, any TV shows or movies you’ve downloaded on
+your device will be removed. You’ll also be signed out of your account.
+Be sure to have your password on hand.</p>
+<ol type="1">
+<li><p>From your Android phone or tablet, open the <a
+href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient">Netflix
+page in the Play Store.</a></p></li>
+<li><p>Tap Uninstall, then Install.</p></li>
+<li><p>Try Netflix again.</p>
+<p>​</p></li>
+</ol>
+<h3
+id="netflix-says-this-app-is-not-compatible-with-your-device">Netflix
+says, ‘This app is not compatible with your device.’</h3>
+<p>If you’re getting the error message below when trying to use or
+install Netflix on your Android device, it usually means that your
+device needs to be restarted or that it isn’t Play Protect certified.
+(That means it won’t be able to get the Netflix app from the Google Play
+Store.)</p>
+<p>Error message</p>
+<p>This app is not compatible with your device.</p>
+<p>To fix the problem:</p>
+<p>​</p>
+<h3 id="netflix-supported-browsers-and-system-requirements">Netflix
+supported browsers and system requirements</h3>
+<p>You can create an account and watch Netflix using one of the below
+web browsers on your computer, iPad, or Meta Quest headset.</p>
+<h5 id="supported-web-browsers">Supported web browsers</h5>
+<ul>
+<li><p>Chrome: <a href="https://www.google.com/chrome/">Download</a> or
+learn <a href="https://support.google.com/chrome/answer/95414">how to
+update</a>.</p></li>
+<li><p>Edge: <a href="https://www.microsoft.com/edge">Download</a> or
+learn <a
+href="https://support.microsoft.com/topic/microsoft-edge-update-settings-af8aaca2-1b69-4870-94fe-18822dbb7ef1">how
+to update</a>.</p></li>
+<li><p>Firefox: <a
+href="https://www.mozilla.org/firefox/browsers/">Download</a> or learn
+<a
+href="https://support.mozilla.org/en-US/kb/update-firefox-latest-release">how
+to update</a>.</p></li>
+<li><p>Opera: <a href="https://www.opera.com/">Download</a> or learn <a
+href="https://help.opera.com/latest/crashes-and-issues/#updateBrowser">how
+to update</a>.</p></li>
+<li><p>Safari: <a href="https://support.apple.com/HT204416">Download</a>
+or learn <a href="https://support.apple.com/HT204416">how to
+update</a>.</p>
+<p>​</p></li>
+</ul>
+<p>If you’re having trouble signing up, signing in, or watching Netflix
+and you’re using one of the web browsers listed above, you might need to
+<a href="#netflix-says-update-required">update your computer, mobile
+device, or browser</a> to meet Netflix’s system and browser requirements
+(see below).</p>
+<h5 id="system-and-browser-version-requirements">System and browser
+version requirements</h5>
+<p>Select your device to see the minimum requirements for watching
+Netflix.</p>
+<h3
+id="netflix-supported-devices-watch-netflix-on-your-tv-phone-or-computer">Netflix
+Supported Devices | Watch Netflix on your TV, phone, or computer</h3>
+<p>You can watch Netflix on any supported smart TV, phone, tablet,
+streaming player, or game console that connects to the internet and
+offers the Netflix app, or at netflix.com using a computer.</p>
+<h5 id="tvs-and-tv-streaming-devices">TVs and TV streaming devices</h5>
+<p>Many TVs, TV streaming devices, and media players come with the
+Netflix app included. To get started, use the links below to learn how
+to get Netflix on your device.</p>
+<ul>
+<li><p><a
+href="#how-to-use-netflix-on-your-amazon-fire-tv-device">Amazon Fire
+TV/Stick</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-apple-tv">Apple
+TV</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-chromecast">Chromecast</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-hisense-tv-or-streaming-media-player">Hisense</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-lg-tv-blu-ray-player-or-streaming-media-player">LG</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-panasonic-tv-or-blu-ray-player">Panasonic</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-philips-tv-or-blu-ray-player">Philips</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-roku">Roku
+TV/Stick</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-samsung-tv-or-blu-ray-player">Samsung</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-sharp-tv-or-blu-ray-player">Sharp</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-sony-tv-or-blu-ray-player">Sony</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-tcl-tv">TCL</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-vestel-tv">Vestel</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-vizio-tv-or-blu-ray-player">Vizio</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-toshiba-tv-or-tvs-regza-tv">Toshiba or
+TVS REGZA TV</a></p></li>
+</ul>
+<p>Note:Netflix may no longer be available on some TVs and TV streaming
+devices made before 2015.</p>
+<p>Not seeing your device? Search for your device’s name or manufacturer
+in our Help Center for more information. To learn more about device
+support, contact us or the company that made your device.</p>
+<h5 id="mobile-phones-and-tablets-1">Mobile phones and tablets</h5>
+<p>You can watch Netflix on any supported mobile phone or tablet. To get
+started, use the links below to see specific requirements and learn how
+to get the Netflix app on your device.</p>
+<ul>
+<li><p><a
+href="#how-to-use-netflix-on-your-android-phone-or-tablet">Android phone
+or tablet</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-iphone-or-ipad">iPhone or
+iPad</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-amazon-fire-tablet">Amazon
+Fire tablet</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-windows-computer-or-tablet">Windows
+tablet</a></p></li>
+</ul>
+<h5 id="computers-1">Computers</h5>
+<p>You can watch Netflix on Mac, Windows, or Chromebook computers. To
+get started, go to netflix.com using <a
+href="#netflix-supported-browsers-and-system-requirements">a supported
+web browser</a>, or get the <a
+href="#how-to-use-netflix-on-your-windows-computer-or-tablet">Netflix
+app for Windows</a>.</p>
+<p>Note:For issues getting started, make sure your computer and browser
+meet <a href="#netflix-supported-browsers-and-system-requirements">these
+system requirements</a>.</p>
+<h5 id="cable-boxes">Cable boxes</h5>
+<p>Many internet, cable, and pay TV providers include the Netflix app on
+their devices. To get started, search the name of your provider in our
+Help Center to check if Netflix is available on your device. To learn
+more about device support, contact us or the company that provided your
+device.</p>
+<h5 id="video-game-consoles-and-arvr-devices">Video game consoles and
+AR/VR devices</h5>
+<p>You can watch Netflix on these popular video game consoles and AR/VR
+devices. To get started, use the links below to learn how to get Netflix
+on your game console.</p>
+<ul>
+<li><p><a href="#how-to-use-netflix-on-your-playstation">Sony
+PlayStation consoles</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-xbox">Microsoft Xbox
+consoles</a></p></li>
+<li><p><a href="#how-to-use-netflix-on-your-apple-vision-pro">Apple
+Vision Pro</a></p></li>
+<li><p><a
+href="#how-to-use-netflix-on-your-meta-quest-oculus-vr-headset">Meta
+Quest headsets</a></p></li>
+</ul>
+<h2 id="fixing-problems-and-error-codes">Fixing problems and error
+codes</h2>
+<h3 id="black-screen-with-no-sound">Black screen with no sound</h3>
+<p>If you get a black or blank screen with no sound when you try to
+watch or open Netflix, it usually means an issue with your device or the
+cable connecting your devices stopped Netflix from playing.</p>
+<p>Note:If you can’t return to the previous screen or your device isn’t
+working at all, see these troubleshooting steps.</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h6 id="smart-tvs-1">Smart TVs</h6>
+<h6 id="mobile-phones-and-tablets-2">Mobile phones and tablets</h6>
+<h6 id="streaming-media-players-1">Streaming media players</h6>
+<h6 id="computers-2">Computers</h6>
+<h6 id="game-consoles-1">Game consoles</h6>
+<h3 id="black-screen-with-sound">Black screen with sound</h3>
+<p>If you hear sound but don’t see video, or if the video goes black
+while watching, it usually means an issue with your device or a video
+cable stopped Netflix from showing video.</p>
+<p>Note:If you don’t get any sound or video, <a
+href="#black-screen-with-no-sound">follow these steps instead</a>.</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h3 id="netflix-error-113">Netflix Error 113</h3>
+<p>If you see the error code 113 on your Apple TV, often accompanied by
+one of the following messages:</p>
+<p>Sorry, we had trouble logging you in.</p>
+<p>Your Netflix account name or password couldn’t be verified. Please
+try again. Go to www.netflix.com/support for more information.</p>
+<p>It usually means there’s an issue with your sign-in information.
+Follow the troubleshooting steps below to resolve the issue.</p>
+<h3 id="netflix-error-nw-2-5">Netflix Error NW-2-5</h3>
+<p>You might see this message on your TV or TV streaming device when you
+try to open Netflix:</p>
+<p>Netflix has encountered an error. Retrying in [X] seconds.<br />
+Code: NW-2-5</p>
+<p>Error code NW-2-5 means your device took too long to connect to
+Netflix. This usually points to an internet connection problem on your
+device or home network.</p>
+<p>Follow the steps below to fix the issue. If it isn’t fixed after
+doing these steps, you’ll need to contact your internet service provider
+(ISP).</p>
+<h3 id="netflix-error-nw-3-6">Netflix Error NW-3-6</h3>
+<p>We’re having a problem connecting to Netflix. Please try again or
+visit: www.netflix.com/help</p>
+<p>This error happens when a network issue stops your device from
+reaching Netflix.</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h3 id="netflix-error-ui-113">Netflix Error ui-113</h3>
+<p>You might get the error code ui-113 with this message:</p>
+<p>Couldn’t connect to Netflix. Please try again or restart your home
+network and streaming device.</p>
+<p>This error happens when an issue with data on your device or your
+network connection stops Netflix from working, or if your device is no
+longer supported.</p>
+<p>To fix the problem:</p>
+<h3 id="netflix-error-ui-800-3">Netflix Error ui-800-3</h3>
+<p>If the error code shown on your device also has numbers in
+parentheses ( ), search for that exact error code in our Help Center to
+get the right steps. Example: ui-800-3 (123456)</p>
+<p>If the error code on your device shows only ui-800-3, it means
+information stored on your device needs to be refreshed, or a network
+issue stopped Netflix from opening.</p>
+<p>To fix the problem, follow the steps for your device.</p>
+<h3 id="netflix-says-update-required">Netflix says ‘Update
+required’</h3>
+<p>If you get one of these messages when going to netflix.com:</p>
+<p>Update Required</p>
+<p>Please make some updates</p>
+<p>It means your browser, operating system, or device needs to be
+updated or that Netflix doesn’t support it.</p>
+<p>To fix the problem, follow the steps below. If you still can’t access
+Netflix or need to make changes to your account, contact us for
+help.</p>
+<p>Update your web browser</p>
+<p>Use the links below to get steps to update your browser:</p>
+<ul>
+<li><p><a
+href="https://support.google.com/chrome/answer/95414">Chrome</a></p></li>
+<li><p><a
+href="https://support.microsoft.com/topic/microsoft-edge-update-settings-af8aaca2-1b69-4870-94fe-18822dbb7ef1">Edge</a></p></li>
+<li><p><a
+href="https://support.mozilla.org/kb/update-firefox-latest-release">Firefox</a></p></li>
+<li><p><a href="https://support.apple.com/HT204416">Safari</a></p></li>
+<li><p><a
+href="https://help.opera.com/latest/crashes-and-issues/#updateBrowser">Opera</a></p></li>
+</ul>
+<p>Note:Netflix doesn’t support other browsers, but installing updates
+for them may still work. If updating doesn’t work, you’ll need to <a
+href="#netflix-supported-browsers-and-system-requirements">get a
+supported browser</a> to use the Netflix website.</p>
+<p>If no browser updates are available or updating doesn’t fix the
+problem, follow the next steps to update your device.</p>
+<p>Update your device</p>
+<p>Select an option below to get steps to update your mobile device or
+computer’s operating system.</p>
+<p><strong>Computers</strong></p>
+<p>Windows</p>
+<p>Use the links below to get steps to check for updates to your version
+of Windows, then try Netflix again.</p>
+<ul>
+<li><p><a
+href="https://support.microsoft.com/windows/update-windows-3c5ae7fc-9fb6-9af1-1984-b5e0412c556a#WindowsVersion=Windows_11">Windows
+11</a></p></li>
+<li><p><a
+href="https://support.microsoft.com/windows/update-windows-3c5ae7fc-9fb6-9af1-1984-b5e0412c556a#WindowsVersion=Windows_10">Windows
+10</a></p></li>
+</ul>
+<p>Computers with Windows XP, Vista, 7, or 8.1 installed are no longer
+supported by Microsoft and can’t update to a version that works with
+Netflix. To explore your options or learn more, <a
+href="https://support.microsoft.com/windows/what-does-it-mean-if-windows-isn-t-supported-08f3b92d-7539-671e-1452-2e71cdad18b5">go
+to Microsoft’s support site</a>.</p>
+<p>Mac</p>
+<p>Follow Apple’s steps to <a
+href="https://support.apple.com/HT201541">install updates and upgrades
+for macOS</a>, then try Netflix again.</p>
+<p>Chromebook</p>
+<p>Follow Google’s steps to <a
+href="https://support.google.com/chromebook/answer/177889">update your
+Chromebook’s operating system</a>, then try Netflix again.</p>
+<p>Linux</p>
+<p>Because the steps to update a Linux device can be unique for each
+Linux distribution, Netflix Customer Service isn’t able to assist with
+following the steps for your device.</p>
+<p><strong>Mobile phones and tablets</strong></p>
+<p>Android phone or tablet</p>
+<p>You can update your Android device’s OS (operating system) from the
+Settings app. <a
+href="https://support.google.com/android/answer/7680439">Visit Google’s
+support site</a> to get the exact steps or to troubleshoot an issue.</p>
+<p>iPhone or iPad</p>
+<p>You can update your iPhone or iPad to the latest available iOS or
+iPadOS version from the Settings app. <a
+href="https://support.apple.com/en-us/118575">Visit Apple’s support
+site</a> to get the exact steps or to troubleshoot an issue.</p>
+<p>If you installed updates for your mobile device or computer, your web
+browser might now be able to update to a more recent version. You may
+need to follow the steps to update your browser again to fix the
+problem.</p>
+<h3
+id="netflix-says-sorry-something-went-wrong-please-try-again-later">Netflix
+says, ‘Sorry, something went wrong. Please try again later.’</h3>
+<p>You may get this error message while using Netflix.</p>
+<p>Sorry, something went wrong. Please try again later.</p>
+<p>This error message is common and usually fixes itself after a short
+time. If the error doesn’t fix itself, these troubleshooting steps can
+help.</p>
+<p>Select the option below that best matches what you were trying to do
+when the error happened:</p>
+<h3 id="video-freezes-but-sound-keeps-playing">Video freezes but sound
+keeps playing</h3>
+<p>If the video freezes on one image but the sound continues when you
+watch a title, it typically points to information stored on your device
+that needs to be refreshed. Follow the troubleshooting steps for your
+device below to resolve the issue.</p>
+<h2 id="accessibility">Accessibility</h2>
+<h3 id="accessibility-on-netflix">Accessibility on Netflix</h3>
+<p>At Netflix, we want everyone to enjoy great stories, no matter their
+language, device, internet connection, or abilities. That’s why we offer
+a variety of accessibility features guided by international
+accessibility standards and relevant legal frameworks.</p>
+<p>We have a number of accessibility features, including support for
+assistive technologies such as screen readers and listening systems, use
+of built-in features on iPhone and iPad, and Android phones and tablets,
+and our own tools, including the ability to customize subtitles and
+closed captions on TV and adjust playback speed on mobile.</p>
+<p>In addition to regularly monitoring and improving our accessibility
+features, we ask for feedback from members and accessibility and
+disability advocacy groups. Scroll to the bottom of this page to share
+your feedback.</p>
+<p>The following accessibility features are available for people with
+hearing, sight, or physical mobility needs.</p>
+<h5 id="assistive-listening-systems">Assistive listening systems</h5>
+<p>You can use many types of assistive listening headsets, hearing aids,
+headphones, or neck loops to listen to your TV shows or movies.</p>
+<h5 id="audio-descriptions">Audio descriptions</h5>
+<p>Netflix has a wide range of TV shows and movies available with audio
+descriptions, which give more detail about what’s happening on screen,
+including facial expressions, physical actions, and changes in
+scene.</p>
+<h5 id="brightness-controls">Brightness controls</h5>
+<p>You can increase or decrease the brightness of a TV show or movie if
+you’re watching it on a mobile device.</p>
+<h5 id="font-size-controls">Font size controls</h5>
+<p>You can increase the font size in the Netflix app by updating font
+size settings on your iPhone, iPad, or Android mobile device.</p>
+<h5 id="keyboard-shortcuts">Keyboard shortcuts</h5>
+<p>If you’re watching Netflix on your computer, you can use this list of
+keyboard shortcuts to control settings such as play/pause, rewind,
+fast-forward, as well as screen size and volume.</p>
+<h5 id="playback-speed-controls">Playback speed controls</h5>
+<p>You can increase or decrease the playback speed of a TV show or movie
+if you’re watching it on a mobile device.</p>
+<h5 id="screen-readers">Screen readers</h5>
+<p>You can navigate Netflix with many common screen readers which can
+read text aloud.</p>
+<h5 id="subtitles-closed-captions">Subtitles &amp; closed captions</h5>
+<p>You can <a
+href="#how-to-change-the-appearance-of-subtitles-and-closed-captions">change
+the font, size, shadow, and background color</a>of both <a
+href="#how-to-use-subtitles-captions-or-choose-audio-language">subtitles</a>
+(dialog turned into readable text on your screen) and <a
+href="#how-to-use-subtitles-captions-or-choose-audio-language">closed
+captions</a> (dialog, plus a description of sounds you’d hear in a TV
+show or movie).</p>
+<h5 id="voice-commands">Voice commands</h5>
+<p>You can find and play TV shows and movies on Netflix by using voice
+commands with a voice-enabled remote control or voice-activated
+assistant.</p>
+<hr />
+<p>We’re always looking for accessibility feedback. Please reach out via
+voice or chat customer support, use our <a
+href="#how-to-report-issues-with-a-title">Report a Problem tool</a> or
+fill out our dedicated <a
+href="https://netflix.jotform.com/203105245680043">Accessibility
+Feedback form</a>. Visit how to share accessibility-related feedback to
+learn more.</p>
+<h2 id="other-help-articles">Other help articles</h2>
+<h3 id="how-netflix-streams-videos">How Netflix streams videos</h3>
+<p>Netflix sends movies and TV shows to your screen using the internet,
+but we need help. Our content goes through many points before it reaches
+you, like servers, the internet, and your internet provider’s
+network.</p>
+<h6 id="it-starts-when-you-press-play">It starts when you press
+‘Play’</h6>
+<p>When you press play, Netflix sends the video to your internet
+provider using the fastest way possible. Think of it like driving on a
+road. When Netflix sends a video, we try to avoid traffic, accidents,
+and construction along the way to get the video to you quickly. Shorter
+paths make your video quality better.</p>
+<hr />
+<h6 id="we-cant-do-it-without-help">We can’t do it without help</h6>
+<p>After Netflix sends the video to your internet provider, it goes
+through their network to get to your home. If their network is too slow
+or has issues, it can affect your video quality or cause issues with
+your Netflix experience.</p>
+<p>If the road is clear, your internet provider will send the video
+directly to your screen. The video quality you get can be also affected
+by how strong your home internet connection is, and how many devices in
+your home are using the internet at the same time.</p>
+<hr />
+<h6 id="help-when-you-need-it">Help when you need it</h6>
+<p>Congestion on any part of the connection between Netflix and your
+screen can affect your video streaming quality and can even cause
+streaming problems.</p>
+<ul>
+<li><p>If you get an error, search for the error code on the Netflix
+Help Center.</p></li>
+<li><p>If your internet connection is weak or slow, these articles might
+help:</p>
+<ul>
+<li><p>TV show or movie loads slowly or keeps buffering</p></li>
+<li><p><a
+href="#netflix-freezes-stops-responding-or-gets-stuck-loading-but-device-isnt-frozen">Netflix
+freezes, stops responding, or gets stuck loading</a></p></li>
+<li><p>Poor quality or distorted video</p></li>
+</ul></li>
+</ul>
+<p>If your issue isn’t listed, search our Help Center for the problem
+you’re having.</p>
+<h3 id="how-to-add-change-or-delete-a-phone-number">How to add, change
+or delete a phone number</h3>
+<p>Adding a phone number to your account makes sign-in easier, improves
+account security, and can help you get back into your account if you
+ever forget your password.</p>
+<p>To add, change or delete a phone number:</p>
+<ol type="1">
+<li><p>Go to the Mobile phone page. You may need to sign in if you
+haven’t already.</p></li>
+<li><p>Follow the instructions to confirm your identity.</p></li>
+<li><p>After confirming, you can do the following:</p>
+<ul>
+<li><p>Add phone number: choose a country, enter the phone number and
+then choose Next.</p></li>
+<li><p>Change: edit the phone number and choose Next.</p></li>
+<li><p>Delete: Choose Delete Phone Number.</p></li>
+</ul></li>
+<li><p>To use the new number for Netflix you’ll need to confirm it’s
+valid by entering the code we sent to your phone in a text message when
+you changed it. You can also verify it at this link: Confirm your
+recovery phone number.</p></li>
+</ol>
+<p>Note: Only one account can have your verified phone number on it.
+Verifying your phone number will also remove it from any other accounts
+it is tied to.</p>
+<p>If you aren’t getting text messages to the phone number on your
+account, there could be a delay from your carrier. If the problem
+continues, please contact your phone carrier for help.</p>
+<h3 id="how-to-control-how-much-data-netflix-uses">How to control how
+much data Netflix uses</h3>
+<p>Watching shows or movies on Netflix uses varying amounts of data per
+hour, depending on the video quality. You can adjust your data usage
+settings by following the steps below.</p>
+<h3 id="how-to-search-and-browse-netflix">How to search and browse
+Netflix</h3>
+<h5 id="searching">Searching</h5>
+<p>To search for shows and movies, look for the Search icon in the
+Netflix app and enter a search term.</p>
+<p>Note: To search for shows and movies by specific subtitle, audio, or
+original language, visit Browse by Languages on the web.</p>
+<p>[TABLE]</p>
+<h5 id="browsing">Browsing</h5>
+<p>Your homepage shows rows of shows and movies we think you’ll like.
+You can narrow these suggestions using the shortcuts (for example, Shows
+or Movies) toward the top of the screen. To find recently released shows
+and movies, use the New &amp; Popular, Latest, or New &amp; Hot
+shortcuts (the availability of these sections and their names vary based
+on your device), or scroll down to the New on Netflix or Top 10
+rows.</p>
+<p>Note: If you don’t see a show or movie you expect, check the <a
+href="#how-to-set-profile-maturity-ratings-or-block-titles">maturity
+rating</a> and language preferences set on a profile, as these can
+affect what you see. If you still don’t find what you’re looking for,
+you can suggest shows or movies.</p>
+<h3 id="how-to-use-netflix-on-your-amazon-fire-tablet">How to use
+Netflix on your Amazon Fire tablet</h3>
+<p>Learn how to set up and sign out of your Netflix account on your
+Amazon Fire HD tablet.</p>
+<h3 id="how-to-use-netflix-on-your-playstation">How to use Netflix on
+your PlayStation</h3>
+<p>Learn how to set up and use Netflix and its various features on
+PlayStation.</p>
+<h3 id="how-to-use-netflix-on-your-roku">How to use Netflix on your
+Roku</h3>
+<p>Use this article to learn about Netflix features and how to set up
+and sign out of your account. If you’re unsure if your device supports
+Netflix, follow the steps in the “Set Up Netflix” section to try to find
+the Netflix app.</p>
+<h3 id="how-to-use-netflix-on-your-xbox">How to use Netflix on your
+Xbox</h3>
+<p>Use this article to learn about Netflix features and how to set up
+and sign out of your account. If you don’t know if your device supports
+Netflix, follow the steps in the “Set Up Netflix” section.</p>
+<h3 id="netflix-asks-for-sign-in-every-time-its-opened">Netflix asks for
+sign-in every time it’s opened</h3>
+<p>Your device won’t stay signed in to Netflix forever. Which is why,
+occasionally, you might be asked to sign in to your account. But if
+you’re getting asked to sign in every time you open Netflix, it means
+that there’s a device issue or setting that’s keeping Netflix from
+staying signed in.</p>
+<ul>
+<li><p>If you can’t sign in at all, <a
+href="#cant-sign-in-to-netflix">follow these steps</a>.</p></li>
+<li><p>If Netflix asks you to confirm that your device is part of your
+Netflix Household every time you open the app, <a
+href="#netflix-says-your-tvdevice-isnt-part-of-the-netflix-household">follow
+these steps</a> instead.</p></li>
+<li><p>If you sign in using an email that has been added to a profile
+and are being asked to sign in repeatedly, your email may have been
+removed. Contact the account owner to check.</p>
+<p>​</p></li>
+</ul>
+<p>To fix the problem, follow the steps for your device.</p>
+<h3 id="netflix-says-there-was-a-problem-signing-in">Netflix says ‘There
+was a problem signing in.’</h3>
+<p>If you get an error on your iPhone or iPad that says:</p>
+<p>There was a problem signing in.<br />
+Please try again later.</p>
+<p>It usually means data stored on your device needs to be refreshed.
+Follow the steps below to fix the problem.</p>
+<h3 id="netflix-recommended-internet-speeds">Netflix-recommended
+internet speeds</h3>
+<p>To get the best video quality when watching TV shows, movies, or live
+events on Netflix, we recommend having a stable internet connection
+speed (as shown in the table below).</p>
+<p>[TABLE]</p>
+<h6 id="how-to-manage-netflix-video-quality">How to manage Netflix video
+quality</h6>
+<ul>
+<li>Many factors can affect streaming video quality. See <a
+href="#how-to-get-the-best-video-quality">How to get the best video
+quality</a> for details.</li>
+</ul>
+<h6 id="how-to-manage-data-and-bandwidth-usage">How to manage data and
+bandwidth usage</h6>
+<ul>
+<li><p>If your internet plan limits your data usage, you can <a
+href="#how-to-control-how-much-data-netflix-uses">change or lower the
+amount of data Netflix uses</a>.</p></li>
+<li><p>If your internet service provider limits your internet speed, try
+changing your video quality setting for a more stable connection or to
+fix buffering issues.</p></li>
+</ul>
+<h6 id="how-to-check-your-internet-speed">How to check your internet
+speed</h6>
+<ul>
+<li><p>To check your internet speed on a mobile phone, tablet, or
+computer, open a web browser and go to <a
+href="https://www.fast.com">Fast.com</a>.</p></li>
+<li><p>On other devices, like a TV or a device that connects to a TV,
+you can check your internet speed in the Netflix app by following these
+steps:</p></li>
+</ul>
+<h3 id="responsible-vulnerability-disclosure">Responsible Vulnerability
+Disclosure</h3>
+<p>We believe that responsible security research and disclosure help us
+continually improve how we keep our members, partners, and employees
+secure. Please report potential security vulnerabilities to us via our
+<a href="https://hackerone.com/netflix/">HackerOne bug bounty
+program</a>.</p>
+<p>If you are a Netflix member and have questions concerning fraud or
+malware, please see the following support pages:</p>
+<ul>
+<li><p>Account fraud or unauthorized charges: <a
+href="#unrecognized-or-unauthorized-charges-from-netflix">Unrecognized
+or unauthorized charges from Netflix</a></p></li>
+<li><p>Potential malware or computer viruses: I’m getting ads or pop-ups
+while watching Netflix on my computer.</p></li>
+</ul>
+<p>If you are a customer seeking information on your account, billing,
+or site content, please reach out to customer support via phone or live
+chat.</p>
+<h5 id="security-researcher-hall-of-fame">Security Researcher Hall of
+Fame</h5>
+<p>Netflix would like to thank the following researchers for
+participating in our responsible disclosure program.</p>
+<h6 id="participating-security-researchers">Participating security
+researchers</h6>
+<p>For a full and up-to-date list of contributing security researchers,
+please see the <a href="https://hackerone.com/netflix/thanks">HackerOne
+Netflix Hall of Fame page</a>.</p>
+<h3 id="using-netflix-outside-of-your-home">Using Netflix outside of
+your home</h3>
+<p>Netflix is easy to use when on the go or traveling. Use Netflix as
+usual to watch on your mobile devices and computers - or sign into a new
+TV, like at a hotel or a holiday rental.</p>
+<p>When watching outside of the country you signed up for Netflix in,
+you might experience small differences to:</p>
+<ul>
+<li><p>Selection of TV shows and movies: Choices for streaming and
+downloading (including audio/subtitle options) vary by country. Also, My
+List and Continue Watching titles may not be available.</p></li>
+<li><p>Different maturity ratings: Maturity ratings and classifications
+are shown for the country you are in. If you have parental controls set
+that use a different rating system than the country you’re visiting,
+titles may be available (or unavailable) due to the differences in the
+maturity ratings.</p></li>
+<li><p>Downloads: Current <a
+href="#how-to-download-titles-to-watch-offline">downloaded titles on
+your phone or tablet</a> may not be available while in a different
+country.</p></li>
+</ul>
+<p>Note: Gift cards and other cash payment methods vary by country and
+may not be available or eligible for use in your travel location. Please
+remember to top up your account or add a backup payment method before
+traveling.</p>
+<p>If you’re getting ready to move or have recently moved, see <a
+href="#moving-with-netflix">Moving with Netflix</a> for some things to
+be aware of.</p>
+<h3 id="video-issues-with-netflix">Video issues with Netflix</h3>
+<p>If you get a video or display issue with all TV shows or movies on
+Netflix, you can usually fix the problem with some basic steps. To get
+started, select your issue below.</p>
+<p>Note: If only one TV show or movie has video issues, you can <a
+href="#how-to-report-issues-with-a-title">report the issue directly to
+Netflix</a>.</p>
+<p>Related articles</p>
+<p>TV show or movie has sound issues</p>
+<h3 id="what-is-hdcp">What is HDCP?</h3>
+<p>HDCP stands for High-bandwidth Digital Content Protection. The
+purpose of HDCP is to protect digital copyrighted content as it travels
+from a device to your TV, generally through HDMI or DVI connections.
+HDCP is required to stream Netflix from a device connected to your
+TV.</p>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>App Help Guides</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">App Help Guides</h1>
+<p class="subtitle">Official product help documentation, gathered into
+single screen-reader-efficient documents</p>
+</header>
+<h1 id="app-help-guides">App Help Guides</h1>
+<p>Every guide in this repository is the <strong>official, public help
+documentation published by the makers of the product itself</strong>,
+gathered from their own help centres and reassembled into one Markdown
+document per product.</p>
+<p>Nothing here is a summary, a rewrite, or a third-party explanation.
+The words are the publisher’s own. What changes is the shape: instead of
+hundreds of separate web pages wrapped in navigation bars, cookie
+notices, chat widgets and scripts, each product’s help arrives as a
+single document that a screen reader can read from top to bottom or jump
+around by heading.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#why-this-exists">Why this exists</a></li>
+<li><a href="#what-is-in-each-guide">What is in each guide</a></li>
+<li><a href="#the-volumes">The volumes</a></li>
+<li><a href="#how-the-guides-are-made">How the guides are made</a></li>
+<li><a href="#quality-gates">Quality gates</a></li>
+<li><a href="#scope-conventions">Scope conventions</a></li>
+<li><a href="#honesty-about-limits">Honesty about limits</a></li>
+<li><a href="#reading-a-guide-with-a-screen-reader">Reading a guide with
+a screen reader</a></li>
+<li><a href="#copyright-and-attribution">Copyright and
+attribution</a></li>
+</ul>
+<h2 id="why-this-exists">Why this exists</h2>
+<p>Modern help centres are built for sighted mouse users. An answer that
+is three sentences long sits inside a page of several hundred kilobytes,
+behind an accordion that must be expanded, below a search box that
+steals focus, beside a chat widget that announces itself. Finding one
+fact can mean a dozen page loads, each with its own banner to dismiss
+and its own landmark structure to relearn.</p>
+<p>A single document removes all of that. One file, one heading
+structure, one search. No page loads, no scripts, no consent dialogs. It
+works offline, on a braille display, in a text editor, or read aloud end
+to end.</p>
+<p>The guides are also <strong>comprehensive</strong> rather than
+selective. Where a publisher has a hundred articles about its product,
+the guide has a hundred articles. Nothing is left out for brevity;
+anything left out for scope is named.</p>
+<h2 id="what-is-in-each-guide">What is in each guide</h2>
+<p>Each guide is a Pandoc-flavoured Markdown file with the same
+shape:</p>
+<ul>
+<li>A title block giving the product, a subtitle, and the date the
+material was gathered.</li>
+<li>A preamble stating where the text came from, on what date, which
+surfaces the product runs on, what was included, and what was
+deliberately left out.</li>
+<li>A table of contents listing every section and every article, each as
+a link.</li>
+<li>Sections, then articles, nested three deep: the guide title, a
+section, an article. Each article’s own subheadings sit beneath it.</li>
+</ul>
+<p>Cross references between articles become links inside the document,
+so following a “see also” never leaves the file.</p>
+<h2 id="the-volumes">The volumes</h2>
+<p>One file per product. The collection at the time of writing:</p>
+<p><strong>AI assistants</strong></p>
+<ul>
+<li>Claude, including Claude Code</li>
+<li>OpenAI ChatGPT, including Codex</li>
+<li>Google Gemini, including Antigravity</li>
+<li>Microsoft Copilot, consumer and Microsoft 365 editions</li>
+</ul>
+<p><strong>Operating systems and platforms</strong></p>
+<ul>
+<li>Windows</li>
+<li>macOS</li>
+<li>iOS iPhone User Guide</li>
+<li>Android</li>
+<li>Amazon Alexa</li>
+</ul>
+<p><strong>Browsers and developer tools</strong></p>
+<ul>
+<li>Google Chrome</li>
+<li>Microsoft Edge</li>
+<li>Visual Studio Code, with a separate volume for its API</li>
+<li>GitHub</li>
+</ul>
+<p><strong>Social and communication</strong></p>
+<ul>
+<li>Facebook</li>
+<li>Instagram</li>
+<li>WhatsApp</li>
+<li>LinkedIn</li>
+<li>X</li>
+<li>Mastodon</li>
+<li>Wikipedia</li>
+<li>Zoom</li>
+<li>Calendly</li>
+</ul>
+<p><strong>Assistive technology</strong></p>
+<ul>
+<li>Be My Eyes</li>
+<li>Aira</li>
+<li>Meta AI Glasses</li>
+<li>Indigo, the accessible GPS app from APH</li>
+<li>VoiceVista, the Soundscape successor</li>
+<li>Merlin Bird ID</li>
+</ul>
+<p><strong>Reading and libraries</strong></p>
+<ul>
+<li>Audible</li>
+<li>Bookshare</li>
+<li>NLS, the National Library Service for the Blind and Print
+Disabled</li>
+</ul>
+<p><strong>Work and careers</strong></p>
+<ul>
+<li>Indeed</li>
+<li>USAJOBS</li>
+<li>Monster</li>
+</ul>
+<p><strong>Government and benefits</strong></p>
+<ul>
+<li>IRS</li>
+<li>Social Security Administration</li>
+</ul>
+<p><strong>Publishing and websites</strong></p>
+<ul>
+<li>WordPress</li>
+<li>Drupal</li>
+</ul>
+<p><strong>News and media</strong></p>
+<ul>
+<li>BBC</li>
+<li>Google News</li>
+<li>SmartNews</li>
+<li>Netflix</li>
+</ul>
+<p><strong>Travel and delivery</strong></p>
+<ul>
+<li>Amtrak</li>
+<li>Lyft</li>
+<li>DoorDash</li>
+<li>Instacart</li>
+<li>Grubhub</li>
+<li>Waymo</li>
+</ul>
+<h2 id="how-the-guides-are-made">How the guides are made</h2>
+<p>Each product follows the same cycle:</p>
+<ol type="1">
+<li>The publisher’s own help centre is located and confirmed live.
+Addresses always come from the publisher’s own pages, never from a
+search engine — several of these help centres are impersonated by pages
+carrying fake support telephone numbers.</li>
+<li>A gathering script is written for that estate and run locally. It
+reads plainly where plain requests work and raises a real browser only
+where they do not, waits for a page’s content rather than its file size,
+resumes after interruption, and writes a log that says in plain words
+what happened.</li>
+<li>The saved pages are assembled into one document, using the help
+centre’s own categories where it publishes them.</li>
+<li>The result is checked against the quality gates below and released
+only when every one of them is clean.</li>
+</ol>
+<h2 id="quality-gates">Quality gates</h2>
+<p>No guide ships unless all of these pass:</p>
+<ul>
+<li>Every heading appears in the table of contents, and every contents
+entry points at a real heading.</li>
+<li>No broken internal links.</li>
+<li>No bare web addresses, and no link whose visible text is an address
+— both read badly aloud.</li>
+<li>No navigation remnants: no “skip to content”, no cookie notices, no
+“was this article helpful”, no stray markup.</li>
+<li>Headings nest properly, so a heading list is navigable.</li>
+<li>The file parses cleanly through Pandoc, carries a byte-order mark,
+and uses Windows line endings.</li>
+</ul>
+<h2 id="scope-conventions">Scope conventions</h2>
+<p>Guides cover the surfaces a person actually uses: the Windows
+program, the web version, the iPhone or iPad app, and the Alexa skill,
+wherever each exists. Each guide’s preamble says which of those the
+product has — many have only one or two.</p>
+<p>Consistently excluded, and always named where excluded:</p>
+<ul>
+<li>Developer APIs and integration documentation.</li>
+<li>Administrator material: the settings for running an organisation’s
+estate rather than using the product.</li>
+<li>Estates written for a different audience — drivers, couriers,
+merchants, publishers, member stations — which would deserve their own
+volumes.</li>
+<li>Contact forms, ticket queues, chat assistants and virtual agents,
+which hold nothing to read.</li>
+</ul>
+<h2 id="honesty-about-limits">Honesty about limits</h2>
+<ul>
+<li><strong>Each guide is a snapshot</strong>, taken on the date in its
+preamble. Help centres change; a guide does not update itself.</li>
+<li><strong>Where a publisher offers no categories</strong>, the
+grouping is editorial, and the preamble says so rather than passing my
+arrangement off as theirs.</li>
+<li><strong>Some estates could not be gathered.</strong> Where a
+publisher’s help is closed to automated reading, or exists only inside
+an app, that is recorded rather than papered over with third-party
+writing.</li>
+<li><strong>Some guides are thin because the help is thin.</strong> A
+product that answers through a chat assistant has little written
+guidance, and the guide says so instead of padding.</li>
+<li><strong>Some are large in unexpected places.</strong> One delivery
+service files the terms of every promotion as a help article; those are
+kept, and the preamble points to where the how-to material actually
+lives.</li>
+</ul>
+<h2 id="reading-a-guide-with-a-screen-reader">Reading a guide with a
+screen reader</h2>
+<p>The guides are plain Markdown and can be read in any editor. A few
+things make them quicker:</p>
+<ul>
+<li>The heading structure is only three deep by design, so a heading
+list is a usable index rather than a wall.</li>
+<li>The table of contents at the top links to every article, so jumping
+is a matter of following a link rather than scrolling.</li>
+<li>Because everything is one file, a find command searches the entire
+product’s help at once — often faster than any help centre’s own search
+box.</li>
+<li>An HTML rendering of this file sits beside it as
+<code>README.htm</code>, and any guide can be rendered the same way with
+Pandoc:
+<code>pandoc -s -o Netflix_Help_Guide.htm Netflix_Help_Guide.md</code></li>
+</ul>
+<h2 id="copyright-and-attribution">Copyright and attribution</h2>
+<p>The help text in these guides belongs to the companies and
+organisations that wrote and published it. Each guide names its source
+and the date it was taken. These documents are format conversions made
+for accessibility — the same words, in a shape a screen reader can move
+through efficiently — and this repository is not affiliated with,
+endorsed by, or produced in cooperation with any of the publishers named
+here.</p>
+<p>For the current, authoritative version of any answer, consult the
+publisher’s own help centre.</p>
+</body>
+</html>
