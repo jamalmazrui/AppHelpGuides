@@ -1,0 +1,37 @@
+﻿# AppHelpGuides -- what does not belong in the repository.
+#
+# The repository holds the finished guides and the scripts that make them.
+# It does not hold harvests: those are raw copies of other people's help
+# centres, they run to hundreds of megabytes, and they can be regathered by
+# running the script again.
+
+# Harvest folders, which the get<Name>Help.py scripts create beside themselves.
+*Help/
+*HelpSmall/
+ZoomHelpSmall*/
+
+# Harvest archives and their shrunk parts. The finished guide archives, which
+# are named <Name>_Help_Guide.zip, are kept -- the rule below re-admits them.
+*Help.zip
+*HelpSmall*.zip
+*Transcripts.zip
+!*_Help_Guide.zip
+!*_User_Guide.zip
+
+# Run logs. The logs matter while diagnosing a run, not afterwards.
+*.md
+*.log
+
+# Python and editor leavings.
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Windows and archive tool leavings.
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
