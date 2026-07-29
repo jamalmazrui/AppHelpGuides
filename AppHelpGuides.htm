@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>How These Guides Were Made</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">How These Guides Were Made</h1>
+<p class="subtitle">A friendly walkthrough, so you can do the same for
+the apps you care about</p>
+</header>
+<h1 id="how-these-guides-were-made">How These Guides Were Made</h1>
+<p>If you have read one of these guides and thought “I wish this existed
+for the app I use every day” — you can make it. This page explains how
+the collection was built, what you need, what goes wrong and how to get
+past it, and it ends with a prompt you can copy and paste into Claude to
+start your own.</p>
+<p>Nothing here requires you to be a programmer. You need to be able to
+run a command, upload a file, and describe what you want.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#the-idea-in-one-paragraph">The idea in one
+paragraph</a></li>
+<li><a href="#what-you-need">What you need</a></li>
+<li><a href="#the-cycle">The cycle</a></li>
+<li><a href="#what-makes-a-good-guide">What makes a good guide</a></li>
+<li><a href="#things-that-go-wrong-and-what-they-mean">Things that go
+wrong, and what they mean</a></li>
+<li><a href="#habits-worth-copying">Habits worth copying</a></li>
+<li><a href="#the-prompt">The prompt</a></li>
+<li><a href="#after-the-first-guide">After the first guide</a></li>
+</ul>
+<h2 id="the-idea-in-one-paragraph">The idea in one paragraph</h2>
+<p>A help centre is a few hundred short answers scattered across a few
+hundred web pages, each wrapped in navigation, banners, chat widgets and
+scripts. All of that is furniture for a sighted mouse user and
+obstruction for the rest of us. The trick is simply this: fetch the
+pages once, keep the words, throw the furniture away, and put everything
+into a single well-structured file that you can read straight through,
+jump around by heading, or search in one go. The words stay the
+publisher’s own. Only the shape changes.</p>
+<h2 id="what-you-need">What you need</h2>
+<ul>
+<li><strong>A Windows PC</strong> with your screen reader, and Microsoft
+Edge installed. Edge is already there on Windows.</li>
+<li><strong>Python</strong>, from python.org. During installation, tick
+the box that adds Python to your PATH.</li>
+<li><strong>Playwright</strong>, which lets a script drive Edge. In a
+command prompt: <code>pip install playwright</code>. Some help centres
+need this; many do not.</li>
+<li><strong>Claude</strong>, at claude.ai, on a plan that lets you
+upload and download files.</li>
+<li><strong>A folder to work in</strong>, such as
+<code>C:\AppHelpGuides</code>.</li>
+</ul>
+<p>That is the whole toolkit. There is nothing to configure.</p>
+<h2 id="the-cycle">The cycle</h2>
+<p>Each guide follows the same five steps. The first one takes an
+evening; after that they take under an hour, and most of that is
+waiting.</p>
+<ol type="1">
+<li><strong>Ask.</strong> Tell Claude which app you want, and on which
+surfaces you use it — the Windows program, the website, the phone app,
+an Alexa skill. Claude finds the publisher’s real help centre and
+confirms it is live before writing anything.</li>
+<li><strong>Receive a script.</strong> Claude writes a gathering script
+for that particular help centre and sends it to you. It is a single
+Python file. You do not need to read it.</li>
+<li><strong>Run it.</strong> Put it in your folder and run it:
+<code>python getNetflixHelp.py</code>. It writes two things: a zip
+archive of the pages it saved, and a log that says in plain words what
+happened.</li>
+<li><strong>Send both back.</strong> Upload the zip and the log to
+Claude. The log matters as much as the zip — it is how problems get
+diagnosed.</li>
+<li><strong>Get your guide.</strong> Claude assembles the pages into one
+document, checks it against a list of quality rules, and sends it to
+you.</li>
+</ol>
+<p>If step three goes wrong, that is normal and it is not your fault.
+Send the log anyway. Half the guides in this collection took two or
+three attempts, and every attempt taught the next one something.</p>
+<h2 id="what-makes-a-good-guide">What makes a good guide</h2>
+<p>Ask for these, because they are what turn a pile of pages into
+something pleasant to read:</p>
+<ul>
+<li><strong>One file.</strong> Not a folder of files, not a website. One
+document per product.</li>
+<li><strong>Three heading levels, no more.</strong> The guide title, a
+section, an article. A heading list should be an index, not a wall.</li>
+<li><strong>A table of contents that matches</strong> — every article
+listed, every entry a working link.</li>
+<li><strong>A preamble that tells the truth</strong>: where the text
+came from, on what date, which surfaces the product actually runs on,
+and what was deliberately left out.</li>
+<li><strong>No furniture.</strong> No “skip to content”, no cookie
+notices, no “was this article helpful”, no stray markup.</li>
+<li><strong>Cross references as internal links</strong>, so a “see also”
+never leaves the file.</li>
+<li><strong>Tables turned into lists</strong>, which read far better
+aloud.</li>
+<li><strong>Scope stated, not silently assumed.</strong> If a
+publisher’s help covers drivers, merchants and customers, say which one
+the guide holds.</li>
+</ul>
+<p>Ask Claude to check every one of these before sending you the file,
+and to tell you if any fails.</p>
+<h2 id="things-that-go-wrong-and-what-they-mean">Things that go wrong,
+and what they mean</h2>
+<p>These are the failures this collection actually hit. Knowing them
+saves hours.</p>
+<ul>
+<li><strong>The log stops right after “Using installed Microsoft
+Edge”.</strong> Another browser-driving script is still running. Only
+one at a time. Let the first finish, then run the second.</li>
+<li><strong>Pages save, but the guide comes out nearly empty.</strong>
+The script saved the page’s shell before the help was filled in. Modern
+help centres send a large empty frame instantly and pour the words in a
+moment later. Tell Claude the pages have no text in them; the cure is to
+wait for content rather than for page size.</li>
+<li><strong>The zip is too big to upload.</strong> Ask Claude for a
+shrinking script. It keeps the article from each page and throws the
+rest away, then splits the result into parts small enough to send.</li>
+<li><strong>The upload truncates silently.</strong> If Claude says the
+archive is cut short, it usually is. Shrink it and send it in
+parts.</li>
+<li><strong>The run goes on forever, opening pages in other
+languages.</strong> The address rules were too loose. Stop it, and tell
+Claude what you saw — it is a one-line fix.</li>
+<li><strong>Everything comes back blank after the first page or
+two.</strong> The site is rate-limiting the browser. Ask for pacing
+between pages.</li>
+<li><strong>Searching for a help centre returns rubbish.</strong>
+Several are impersonated by pages carrying fake support telephone
+numbers. Never take an address from a search result. Ask Claude to read
+the publisher’s own footer instead — that is how the Expedia and BBC
+help centres were finally found.</li>
+<li><strong>Nothing works, three ways running.</strong> Some help exists
+only inside an app, or behind a check that refuses automated reading.
+Record it and move on. Two or three products in this collection ended
+that way, and saying so is more useful than pretending otherwise.</li>
+</ul>
+<h2 id="habits-worth-copying">Habits worth copying</h2>
+<ul>
+<li><strong>Run one browser job at a time.</strong> Most of the wasted
+hours came from ignoring this.</li>
+<li><strong>Keep the logs.</strong> Every real diagnosis in this project
+came from a log, not from a guess.</li>
+<li><strong>Let the publisher’s own categories set the
+structure</strong> where they exist. Ask Claude to say so plainly when
+the grouping is its own invention instead.</li>
+<li><strong>Do not accept a summary.</strong> The whole point is the
+publisher’s own words. If a guide is thin, it should be thin because the
+help is thin, and the preamble should say which.</li>
+<li><strong>Ask what was left out.</strong> A good guide names its
+exclusions.</li>
+<li><strong>Convert to HTML for daily reading.</strong> The guides are
+written as Markdown and render to a single HTML file with one command:
+<code>pandoc -s -o Netflix.htm Netflix_Help_Guide.md</code></li>
+</ul>
+<h2 id="the-prompt">The prompt</h2>
+<p>Copy everything between the lines into Claude, replacing the app name
+and the surfaces with your own. You can paste it as your very first
+message.</p>
+<pre><code>I am a screen reader user. I want to build a single-file, screen-reader-friendly
+guide containing the complete official help documentation for one app, so I can
+read and search it all in one place instead of clicking through a help centre.
+
+The app is: [NAME OF APP]
+I use it on: [e.g. Windows, the website, my iPhone]
+
+Please work with me like this:
+
+1. First, find the publisher&#39;s own help centre and confirm it is live. Take the
+   address from the publisher&#39;s own pages, never from a search result -- some
+   help centres are impersonated by pages with fake support phone numbers. Tell
+   me what you found and what its structure looks like before writing anything.
+
+2. Then write me a single self-contained Python script that gathers it. I will
+   run it on Windows and send you back what it produces. Please make it:
+   - use plain requests where they work, and a visible Microsoft Edge only where
+     they do not
+   - wait for a page&#39;s actual content to appear, never just for the page to be
+     big, because many help centres send a large empty frame first
+   - stop with a clear message if the browser does not open within two minutes,
+     since that means another script is already using it
+   - stay inside the audience I want, and exclude other audiences such as
+     drivers, merchants or administrators
+   - resume over pages it already saved if I run it twice
+   - save a zip archive and a log that says in plain words what happened,
+     including a final verdict line
+
+3. I will upload the zip and the log. Please diagnose anything that went wrong
+   from the log rather than guessing, and tell me plainly if a run failed.
+
+4. Then build the guide as one Markdown file with:
+   - a preamble saying where the text came from, on what date, which surfaces
+     the product runs on, and what was deliberately left out
+   - a table of contents listing every article as a link
+   - exactly three heading levels: guide title, section, article
+   - the publisher&#39;s own categories as sections where they publish them, and a
+     clear statement in the preamble when the grouping is your own
+   - cross references between articles turned into internal links
+   - tables rewritten as lists, which read better aloud
+   - no navigation remnants, no cookie notices, no &quot;was this article helpful&quot;
+   - the publisher&#39;s own words throughout, not summaries
+
+5. Before sending it, check that every heading appears in the contents, that no
+   internal link is broken, that there are no bare web addresses and no link
+   whose visible text is an address, and tell me the result of those checks.
+
+Deliver the guide as a .md file inside a zip archive, with the file at the root
+of the archive.</code></pre>
+<p>If the first script fails, paste the log back and say what you saw on
+screen. That is genuinely all the diagnosis Claude needs.</p>
+<h2 id="after-the-first-guide">After the first guide</h2>
+<p>Once you have one, the rest are quicker. A few things worth
+doing:</p>
+<ul>
+<li><strong>Keep them together</strong> in one folder, and consider a
+GitHub repository so others can download the lot.</li>
+<li><strong>Render them to HTML</strong> so they open in a browser and
+read comfortably from top to bottom.</li>
+<li><strong>Re-gather occasionally.</strong> Help centres change; a
+guide is a snapshot with a date on it.</li>
+<li><strong>Share the ones you make.</strong> The collection this page
+describes grew from one guide to more than forty. Yours may cover an app
+nobody has done yet.</li>
+</ul>
+<p>The help text in any guide belongs to the company that wrote it.
+These documents are format conversions made for accessibility — the same
+words, in a shape a screen reader can move through efficiently — and
+they are no substitute for the publisher’s own help centre when you need
+the very latest answer.</p>
+</body>
+</html>
