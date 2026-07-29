@@ -19,6 +19,9 @@ ZoomHelpSmall*/
 !*_User_Guide.zip
 
 # Run logs. The logs matter while diagnosing a run, not afterwards.
+*.cmd
+*.ps1
+temp.txt
 *.md
 *.log
 
