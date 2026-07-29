@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>SmartNews Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">SmartNews Help Guide</h1>
+<p class="subtitle">SmartNews’ official help for readers, gathered into
+one screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="smartnews-help-guide">SmartNews Help Guide</h1>
+<p>This guide gathers SmartNews’ official help for readers of the app:
+using the app day to day, your account, notifications, the Points
+programme, and troubleshooting. It was taken from SmartNews’ own help
+centre on 28 July 2026.</p>
+<p>SmartNews is a phone app, on iPhone and Android. There is no Windows
+program, no web application, and no Alexa skill, so the usual
+four-interface scope narrows to the app alone.</p>
+<p>The sections below are SmartNews’ own categories, and each article
+carries the name of the section it sits in. The separate help centre for
+publishers — the news organisations who supply the stories — is a
+different audience and is not included, nor is the Japanese edition’s
+help.</p>
+<p>Headings run three deep: this title, then a category, then an
+article, with each article’s own subheadings nested beneath. Every
+article is listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#account">Account</a>
+<ul>
+<li><a href="#how-can-i-delete-my-account">How can I delete my
+account?</a></li>
+<li><a href="#how-do-i-log-in-with-my-email">How do I log in with my
+email?</a></li>
+<li><a
+href="#how-to-read-shared-articles-when-redirected-to-the-smartnews-download-page">How
+to read shared articles when redirected to the SmartNews download
+page</a></li>
+<li><a href="#i-cant-login-to-smartnews">I can’t login to
+SmartNews</a></li>
+<li><a href="#manage-your-phone-number-on-smartnews">Manage your phone
+number on SmartNews</a></li>
+<li><a href="#name-change-on-profile">Name change on profile</a></li>
+<li><a href="#recently-read-common-questions">Recently Read: common
+questions</a></li>
+<li><a
+href="#the-username-on-my-smartnews-profile-does-not-look-familiar">The
+username on my SmartNews profile does not look familiar</a></li>
+<li><a href="#what-does-profile-tab-do">What does Profile tab
+do?</a></li>
+<li><a
+href="#what-if-i-forgot-my-password-for-google-apple-or-facebook">What
+if I forgot my password for Google, Apple, or Facebook?</a></li>
+<li><a href="#where-did-my-profile-tab-go">Where Did My Profile Tab
+Go?</a></li>
+<li><a href="#why-isnt-my-phone-verification-code-arriving">Why isn’t my
+phone verification code arriving?</a></li>
+</ul></li>
+<li><a href="#announcements">Announcements</a>
+<ul>
+<li><a
+href="#solved-app-and-articles-not-loading-june-8-9-2026">[SOLVED] App
+and Articles Not Loading [June 8-9, 2026]</a></li>
+<li><a
+href="#solved-issue-with-refreshing-articles---aug-5-2024">[SOLVED]
+Issue with Refreshing Articles - Aug 5, 2024</a></li>
+<li><a
+href="#solved-ongoing-incident-impacting-all-channels-and-feeds">[SOLVED]
+Ongoing Incident Impacting All Channels and Feeds</a></li>
+<li><a href="#solved-some-images-may-not-be-loading-right-now">[SOLVED]
+Some images may not be loading right now</a></li>
+<li><a href="#about-the-ios-185-beta-issue">About the iOS 18.5 Beta
+Issue</a></li>
+<li><a href="#fixed-technical-issues---feb-12-2025">FIXED Technical
+Issues - Feb 12, 2025</a></li>
+<li><a
+href="#important-announcement-the-wildfire-hurricane-map-will-be-discontinued-on-06082023">IMPORTANT
+ANNOUNCEMENT: The Wildfire / Hurricane map will be discontinued on
+06/08/2023</a></li>
+<li><a
+href="#important-announcement-what-to-watch-feature-has-been-discontinued-on-11302023">IMPORTANT
+ANNOUNCEMENT: What to Watch feature has been discontinued on
+11/30/2023.</a></li>
+<li><a
+href="#important-update-android-os-80-and-81-support-ending">Important
+Update: Android OS 8.0 and 8.1 Support Ending</a></li>
+<li><a href="#issue-with-article-not-loading---started-april-10">Issue
+with Article Not Loading - Started April 10</a></li>
+<li><a href="#the-social-channel-will-be-discontinued-on-4302023">The
+Social channel will be discontinued on 4/30/2023</a></li>
+<li><a href="#update-to-autoplay-video-ads-setting---may-2024">Update to
+Autoplay Video Ads Setting - May 2024</a></li>
+</ul></li>
+<li><a href="#notifications">Notifications</a>
+<ul>
+<li><a
+href="#how-do-i-control-whether-my-phone-vibrates-when-i-receive-notifications-android">How
+do I control whether my phone vibrates when I receive notifications?
+(Android)</a></li>
+<li><a href="#how-to-manage-your-notifications">How To Manage Your
+Notifications</a></li>
+<li><a href="#notification-types-and-what-they-mean">Notification types
+and what they mean</a></li>
+<li><a href="#notifications-not-working">Notifications not
+working</a></li>
+<li><a
+href="#why-am-i-not-receiving-notifications-after-reinstalling">Why Am I
+Not Receiving Notifications After Reinstalling?</a></li>
+<li><a
+href="#why-does-tapping-a-notification-take-me-to-the-top-channel">Why
+does tapping a notification take me to the Top channel?</a></li>
+</ul></li>
+<li><a href="#smartnews-points">SmartNews Points</a>
+<ul>
+<li><a
+href="#can-i-disable-or-remove-the-missionsrewards-feature-from-the-app">Can
+I disable or remove the Missions/Rewards feature from the app?</a></li>
+<li><a
+href="#how-do-i-ensure-my-points-are-saved-if-i-switch-devices">How do I
+ensure my points are saved if I switch devices?</a></li>
+<li><a
+href="#how-do-i-ensure-my-points-carry-over-when-switching-to-a-new-phone">How
+do I ensure my points carry over when switching to a new phone?</a></li>
+<li><a href="#i-cannot-find-the-rewards-or-missions-tab">I cannot find
+the Rewards or Missions tab</a></li>
+<li><a href="#i-redeemed-my-points-but-where-is-my-gift-card">I redeemed
+my points, but where is my gift card?</a></li>
+<li><a
+href="#smartnews-points-program-frequently-asked-questions">SmartNews
+Points Program: Frequently Asked Questions</a></li>
+<li><a href="#why-did-my-smartnews-points-disappear">Why did my
+SmartNews Points disappear?</a></li>
+<li><a
+href="#why-didnt-i-receive-my-points-after-completing-a-mission">Why
+didn’t I receive my points after completing a mission?</a></li>
+<li><a
+href="#why-do-my-daily-mission-goals-look-different-from-other-users-or-change-on-different-devices">Why
+do my Daily Mission goals look different from other users (or change on
+different devices)?</a></li>
+</ul></li>
+<li><a href="#using-the-smartnews-app">Using the SmartNews App</a>
+<ul>
+<li><a href="#can-i-purchase-an-ad-free-plan">Can I purchase an ad-free
+plan?</a></li>
+<li><a href="#can-i-search-for-older-stories">Can I search for older
+stories?</a></li>
+<li><a href="#can-i-set-the-app-to-only-refresh-manually">Can I set the
+app to only refresh manually?</a></li>
+<li><a href="#how-do-i-add-more-to-following">How do I add more to
+Following?</a></li>
+<li><a href="#how-do-i-rearrange-or-delete-channels">How do I rearrange
+or delete Channels?</a></li>
+<li><a href="#how-do-i-reorder-the-tabs">How do I reorder the
+tabs?</a></li>
+<li><a href="#how-to-capture-a-screen-recording">How to capture a screen
+recording</a></li>
+<li><a
+href="#how-to-change-language-or-hide-the-translation-toolbar-on-smartnews-ios-only">How
+to change language or hide the translation toolbar on SmartNews [iOS
+only]</a></li>
+<li><a href="#how-to-get-your-device-token-androidios">How to get your
+device token (Android/iOS)</a></li>
+<li><a href="#how-to-switch-to-dark-mode">How to switch to Dark
+Mode</a></li>
+<li><a href="#how-to-unsubscribe-from-our-email-newsletters">How to
+unsubscribe from our email newsletters</a></li>
+<li><a href="#how-to-use-block-publishers">How to use block
+publishers</a></li>
+<li><a href="#how-to-use-bookmarks-in-smartnews-ios">How to use
+Bookmarks in SmartNews (iOS)</a></li>
+<li><a href="#i-cant-find-block-publisher-name">I can’t find “Block
+[Publisher Name]”</a></li>
+<li><a
+href="#i-have-a-question-or-feedback-for-an-article-i-saw-on-smartnews-app">I
+have a question or feedback for an article I saw on SmartNews
+app</a></li>
+<li><a href="#i-want-to-read-the-article-i-opened-in-the-past">I want to
+read the article I opened in the past</a></li>
+<li><a href="#smartview-doesnt-show-anything">SmartView doesn’t show
+anything</a></li>
+<li><a href="#the-news-isnt-loading">The news isn’t loading</a></li>
+<li><a
+href="#what-are-the-minimum-supported-environments-for-ios-and-android">What
+are the minimum supported environments for iOS and Android?</a></li>
+<li><a href="#where-did-my-city-tab-go">Where did my [city] tab
+go?</a></li>
+<li><a href="#why-can-i-not-see-local-contents">Why can I not see local
+contents?</a></li>
+<li><a href="#why-is-the-smarttake-channel-gone-from-my-app">Why is the
+SmartTake Channel gone from my app?</a></li>
+</ul></li>
+</ul>
+<h2 id="account">Account</h2>
+<h3 id="how-can-i-delete-my-account">How can I delete my account?</h3>
+<h5 id="how-to-delete-my-account">How to delete my account</h5>
+<p>All of the following data will be deleted.</p>
+<ul>
+<li>Channel settings</li>
+<li>Recommended content based on your interests</li>
+<li>Followed topics</li>
+<li>Browsing history</li>
+<li>All app settings</li>
+<li>Account information</li>
+<li>Other data you have provided</li>
+</ul>
+<p>If you delete your account, all the history and other information
+associated with the account will be deleted as well.</p>
+<p>Data stored on our server will be deleted in accordance with
+applicable laws and regulations.</p>
+<h5 id="how-to-delete">How to Delete</h5>
+<ol type="1">
+<li>Delete data stored in the app.
+<ul>
+<li>SmartNews app version 22.2.30 (iOS) / 23.10.40 (Android) or
+later:<br />
+Open <a
+href="smartnews://openAccountDeletion?referrer=resetUserDataFaq">this
+link</a> on your smartphone. By following the instructions on that
+screen, data in the app will be deleted immediately and data stored on
+our server will be deleted in accordance with applicable laws and
+regulations.</li>
+<li>SmartNews app version prior to 22.2.30 (iOS) / 23.10.40
+(Android):<br />
+Please send your inquiry through this form mentioning that you would
+like to delete your data.</li>
+</ul></li>
+<li>Delete data stored on web browsers.
+<ul>
+<li>Safari on iOS:<br />
+Referring to <a href="https://support.apple.com/en-us/HT201265">this
+information</a>, please go to the iOS settings app and perform “Remove
+All Website Data” for Safari.</li>
+<li>Chrome on Android:<br />
+Referring to <a
+href="https://support.google.com/chrome/answer/95647?hl=en&amp;co=GENIE.Platform%3DAndroid">this
+information</a>, please go to the Chrome app settings and clear “Cookies
+and Site Data” for “All Time.”</li>
+<li>The other web browsers:<br />
+Please delete the Cookies and Site Data in the app you are using. Note
+that some apps might use different terms instead of “Cookies” and “Site
+Data.”</li>
+</ul></li>
+<li>Delete data stored on other devices you have.
+<ul>
+<li>Please perform the above 1 and 2 on the other devices as well. The
+data associated with your account will be deleted by the operation on
+your first device. To delete the data associated with the other devices,
+the operations are required on the other devices as well.</li>
+</ul></li>
+<li>Stop signing in to SmartNews with your Apple ID (if you used “Sign
+in with Apple.”)
+<ul>
+<li>Referring to <a
+href="https://support.apple.com/en-us/HT210426#stopusingappleid">this
+information</a>, please stop using “Sign in with Apple.”</li>
+</ul></li>
+</ol>
+<h3 id="how-do-i-log-in-with-my-email">How do I log in with my
+email?</h3>
+<p>Our email login uses a password-less design to keep your account
+secure without requiring you to remember a password. This allows you to
+access your account via a code or link sent directly to your email
+address. When you enter your email address in the app, we will send a
+one-time code or a login link directly to your inbox. Simply click that
+link or enter the code in the app to be logged in automatically.</p>
+<p>We recommend using the email login option for the most consistent
+experience across your devices.</p>
+<h6 id="how-to-sign-in-or-create-an-account">How to Sign In or Create an
+Account</h6>
+<p>The process is the same whether you are a new user or returning to an
+existing account:</p>
+<ol type="1">
+<li>Open the SmartNews app on your mobile device.</li>
+<li>Tap the Profile icon.</li>
+<li>Tap one of the 3rd party icons (Google, Apple, or Facebook) or
+select Email.</li>
+<li>Enter your email address or follow the login credentials for your
+chosen 3rd party account.</li>
+</ol>
+<p>If you chose email login:</p>
+<ul>
+<li>Check your email inbox for a message from SmartNews.</li>
+<li>Tap the login link in that email or enter the one-time code provided
+into the app.</li>
+</ul>
+<h6 id="important-note-on-missions">Important Note on Missions</h6>
+<p>Mission points are specific to each individual account. Please be
+aware that mission points cannot be transferred between accounts.</p>
+<h6 id="having-trouble-logging-in">Having trouble logging in?</h6>
+<p>Please see the article below.<br />
+<a href="#i-cant-login-to-smartnews">I can’t login to SmartNews</a></p>
+<h3
+id="how-to-read-shared-articles-when-redirected-to-the-smartnews-download-page">How
+to read shared articles when redirected to the SmartNews download
+page</h3>
+<p>If you click on a shared news link and are redirected to the
+SmartNews download page, don’t worry! You can still access the article
+without downloading the app.</p>
+<h6 id="how-to-read-the-article"><strong>How to Read the
+Article:</strong></h6>
+<p>On the download page, locate the button in the top right corner or at
+the bottom of the article preview labeled “<strong>Read Full
+Article</strong>”.<br />
+Tap this button, and you’ll be redirected to the original publisher’s
+website to view the article on your computer.</p>
+<p>Some people may not see this page, and this is expected! Your phone
+may be able to jump directly to our app if SmartNews is already
+installed on your phone.</p>
+<h3 id="i-cant-login-to-smartnews">I can’t login to SmartNews</h3>
+<p>If you are having trouble, please simply try the login process again.
+This solves the issue most of the time. If the login link is still not
+working or you are seeing an error, please try the following:</p>
+<ul>
+<li><strong>Request a new link:</strong> Links expire quickly for
+security. Try fresh login process again.</li>
+<li><strong>Check your connection:</strong> Ensure you have a stable
+internet connection via Wi-Fi or cellular data.</li>
+<li><strong>Update the app:</strong> Visit the App Store or Google Play
+Store to ensure you are using the latest version of SmartNews.</li>
+<li>If you are stuck in a loop where the link just opens the app but
+does not log you in, try copying the entire URL from the email and
+pasting it into your mobile browser like Safari or Chrome instead of
+clicking it.</li>
+</ul>
+<h6
+id="what-if-i-receive-the-email-on-a-different-device-than-my-phone-or-tablet">What
+if I receive the email on a different device than my phone or
+tablet?</h6>
+<p>If you’re currently checking your email on a computer but would like
+to log in on your mobile device or another device where you’ve received
+emails, please follow these steps:</p>
+<ol type="1">
+<li>Open your email account on the mobile device where the SmartNews app
+is installed.</li>
+<li>If you cannot access that email account on your mobile device,
+forward the login email to an address you can open on that phone or
+tablet.</li>
+<li>Tap the link or copy the code directly on the target device. Because
+these links are time-limited for security, you must open the URL quickly
+on the device where you want to use SmartNews.</li>
+</ol>
+<h6 id="what-if-i-forgot-my-password-for-google-apple-or-facebook">What
+if I forgot my password for Google, Apple, or Facebook?</h6>
+<p>Kindly review the following page:</p>
+<p><a
+href="#what-if-i-forgot-my-password-for-google-apple-or-facebook">What
+if I forgot my password for Google, Apple, or Facebook?</a></p>
+<h6
+id="why-am-i-getting-an-error-code-when-verifying-my-email-login">Why am
+I getting an error code when verifying my email login?</h6>
+<p>If the app displays an error message immediately after you enter your
+email verification login code, your account has most likely triggered a
+temporary protective lock.</p>
+<p><strong>The Cause: T</strong>his error typically happens when too
+many security requests are generated in a short period.</p>
+<p><strong>The Fix:</strong> Do not repeatedly request new codes, as
+this will extend the system block. Please wait a full 24 hours before
+attempting to log in again to let the automated security window
+reset.</p>
+<h3 id="manage-your-phone-number-on-smartnews">Manage your phone number
+on SmartNews</h3>
+<h6 id="how-to-add-or-authenticate-your-phone-number">How to add or
+authenticate your phone number</h6>
+<p>To redeem rewards or secure your account, you may be asked to
+authenticate your phone number.</p>
+<ol type="1">
+<li>Open the SmartNews app and go to the Profile tab.</li>
+<li>Tap the Settings (gear) icon in the top right corner.</li>
+<li>Under Account, tap Manage Phone Number.</li>
+<li>Follow the on-screen prompts to enter your mobile number and enter
+the verification code sent via SMS.</li>
+</ol>
+<h6
+id="how-to-remove-your-phone-number-if-you-need-to-de-authenticate-or-remove-a-number-from-your-account">How
+to remove your phone number If you need to de-authenticate or remove a
+number from your account:</h6>
+<p>Open the SmartNews app and go to the Profile tab.</p>
+<ol type="1">
+<li>Tap the Settings (gear) icon in the top right corner.</li>
+<li>Select Account.</li>
+<li>Tap Manage Phone Number.</li>
+<li>Find the phone number section and select De-authenticate.</li>
+</ol>
+<p>Please note that you must have a verified phone number linked to your
+account to redeem gift cards. This authentication step is required to
+ensure secure delivery of your points and rewards.</p>
+<h3 id="name-change-on-profile">Name change on profile</h3>
+<p><strong>Q: I want to change my name on my profile. What should I
+do?</strong></p>
+<p>You can easily change your username at any time by following these
+steps:</p>
+<ol type="1">
+<li>Open the SmartNews app and go to setting on your right top
+corner</li>
+<li>Navigate from Account &gt; Edit profile</li>
+<li>Enter a new Display Name of your choice.</li>
+<li>Hit Complete to save your changes.</li>
+</ol>
+<p>Your new username will now be updated.</p>
+<p><strong>Q: I changed my name, but it’s not showing correctly on my
+profile. What should I do?</strong><br />
+If you’ve recently changed your name and it hasn’t been updated on your
+profile page, try logging out and logging back into your account. This
+can help refresh your profile and display the correct name.</p>
+<p><strong>Q: What should I do if I still see the old name after logging
+in again?</strong><br />
+If your profile still shows the old name after logging back in, please
+wait a little while and try again. It may take some time for changes to
+fully reflect. If the issue persists, feel free to reach out to our
+support team for further assistance.</p>
+<p><strong>Q: The username on my SmartNews profile does not look
+familiar</strong></p>
+<p>Please read below article:</p>
+<p><a
+href="#the-username-on-my-smartnews-profile-does-not-look-familiar">The
+username on my SmartNews profile does not look familiar</a></p>
+<h3 id="recently-read-common-questions">Recently Read: common
+questions</h3>
+<h5
+id="some-of-my-previously-read-articles-are-missing-from-recently-read."><strong>Some
+of my previously read articles are missing from “Recently
+Read.”</strong></h5>
+<p>You may be experiencing a connection error due to a weak network
+signal or a temporary server problem. Please return to the “Recently
+Read” view at a later time.</p>
+<h5
+id="how-can-i-remove-an-article-from-recently-read-in-profile-view"><strong>How
+can I remove an article from “Recently Read” in Profile
+View</strong></h5>
+<p>At this time, you can’t remove articles from “Recently Read.”</p>
+<h3 id="the-username-on-my-smartnews-profile-does-not-look-familiar">The
+username on my SmartNews profile does not look familiar</h3>
+<p>On SmartNews, if you did not set up your own username, one may have
+been system-generated for you.</p>
+<p>**<br />
+You can easily change your username at any time** by following these
+steps:</p>
+<ol type="1">
+<li>Open the SmartNews app and go to setting on your right top
+corner</li>
+<li>Navigate from Account &gt; Edit profile</li>
+<li>Enter a new Display Name of your choice.</li>
+<li>Hit Complete to save your changes.</li>
+</ol>
+<p>Your new username will now be updated.</p>
+<p>**<br />
+**If you’re still unsure about the username change or have concerns
+about your account, please don’t hesitate to contact us with more
+details.</p>
+<h3 id="what-does-profile-tab-do">What does Profile tab do?</h3>
+<h5 id="what-is-recently-read"><strong>What is Recently
+Read?</strong></h5>
+<p>Based on user feedback, we’ve introduced user accounts to help you
+find your “Recently Read” articles and to keep your SmartNews experience
+consistent across multiple devices.</p>
+<h5 id="why-are-there-facebook-and-google-apple-icons"><strong>Why are
+there Facebook and Google / Apple icons?</strong></h5>
+<p>If you are using an iOS device, you can sign in using your existing
+Facebook or Apple accounts. If you’re on Android, you’ll be able to sign
+in using your Facebook or Google accounts.</p>
+<h5 id="what-can-i-do-if-i-sign-in-with-an-account"><strong>What can I
+do if I sign in with an account?</strong></h5>
+<p>Signing in with an account allows you to access a “Recently Read”
+list, so you’ll be able to easily locate stories you saw previously. An
+account will also let you access your reading history, installed
+channels and other settings across multiple devices—say, a phone and a
+tablet—and easily transfer everything when you upgrade to a new
+device.</p>
+<h5 id="i-forgot-my-password"><strong>I forgot my password</strong></h5>
+<p>Our current email login is password-less design, which allows you to
+access via code or link sent to your email address.</p>
+<p>If have forgotten your password for your Facebook and Google/Apple
+login, please contact via their website as we do not manage those login
+credentials.</p>
+<h5 id="my-login-code-doesnt-work"><strong>My login code doesn’t
+work</strong></h5>
+<p>Try logging out and in again, if this continues please reach out to
+us via the help center.</p>
+<h5
+id="how-can-i-change-the-email-address-used-for-the-login"><strong>How
+can I change the email address used for the login?</strong></h5>
+<p>We currently do not have a way to change the email address used for
+our login.</p>
+<p>We are working on this to make it happen soon… stay tuned!</p>
+<h5 id="how-can-i-sign-out"><strong>How can I sign out?</strong></h5>
+<p>To sign out, tap to open the Settings page. Under “Account”, select
+“Sign out”.</p>
+<h5 id="how-does-smartnews-use-my-personal-information"><strong>How does
+SmartNews use my personal information?</strong></h5>
+<p>Once you create an account, personal information is used in
+accordance with our Privacy Policy:
+<code>https://www.smartnews.com/privacy/#us</code>.</p>
+<h5 id="how-to-delete-my-account-1"><strong>How to delete my
+account</strong></h5>
+<p>Please visit the below page for detailed instructions:<br />
+<a href="#how-can-i-delete-my-account">How can I delete my
+account?</a></p>
+<h3 id="what-if-i-forgot-my-password-for-google-apple-or-facebook">What
+if I forgot my password for Google, Apple, or Facebook?</h3>
+<p>If you have forgotten your password for your Facebook, Google, or
+Apple login, please contact those services via their websites as we do
+not manage those login credentials.</p>
+<p>For Google:
+<code>https://accounts.google.com/signin/recovery</code></p>
+<p>For Apple: <code>https://iforgot.apple.com</code></p>
+<p>For Facebook:
+<code>https://www.facebook.com/login/identify</code></p>
+<h3 id="where-did-my-profile-tab-go">Where Did My Profile Tab Go?</h3>
+<p>The layout of the app header can change depending on your scrolling
+activity or active feed view. If you cannot see your profile option in
+its usual spot, please follow these quick instructions to reveal it.</p>
+<h6 id="how-to-reveal-your-profile-tab">How to Reveal Your Profile
+Tab</h6>
+<p>To find your profile details, settings, and account history, use the
+following action steps:</p>
+<ul>
+<li><p><strong>Check the Bottom Navigation Bar:</strong> Look for the
+profile tab in the bottom bar, or drag down on the top channel tab to
+make the top section appear (with the search bar and Profile
+icon).</p></li>
+<li><p><strong>The Quick Reveal Drag:</strong> If you are currently
+browsing an individual news channel and the top menu disappears, place
+your finger near the top of the screen and <strong>drag down</strong>
+anywhere on the active channel feed. This action will force the hidden
+header area to slide down, displaying the profile icon directly next to
+the search bar.</p></li>
+</ul>
+<h6 id="still-cannot-find-the-profile-icon">Still Cannot Find the
+Profile Icon?</h6>
+<p>If dragging down on your channel tab fails to reveal the search bar
+and profile icon, run through these quick display fixes:</p>
+<ol type="1">
+<li><p><strong>Force-Close the App:</strong> Fully shut down SmartNews
+from your mobile device’s active background multitasking menu and reopen
+it to reload the user interface layout.</p></li>
+<li><p><strong>Verify App Updates:</strong> Go to the App Store or
+Google Play Store and ensure you are running the most recent version of
+SmartNews. An outdated application build can occasionally cause
+structural interface items to misalign.</p></li>
+<li><p><strong>Verify Your Device Compatibility:</strong> Ensure your
+smartphone or tablet meets our operational baseline software
+requirements (<strong>iOS 17.0 or above</strong> / <strong>Android 9.0
+or above</strong>).</p></li>
+</ol>
+<h6 id="still-need-help">Still Need Help?</h6>
+<p>Please contact our support desk through the contact options in your
+device store, and provide your unique <strong>Device Token</strong>
+using these steps:</p>
+<ol type="1">
+<li><p>Open SmartNews and look for the profile tab in the bottom bar, or
+drag down on the top channel tab to make the top section appear (with
+the search bar and Profile icon).</p></li>
+<li><p>Tap the Settings (gear) icon in the top right corner. Scroll all
+the way to the bottom and long-press (hold down) on the version
+information. This will allow you to copy a unique code.</p></li>
+<li><p>Please paste it into your reply.</p></li>
+</ol>
+<h3 id="why-isnt-my-phone-verification-code-arriving">Why isn’t my phone
+verification code arriving?</h3>
+<p>If you requested an SMS code and it hasn’t arrived, you are most
+likely capped by our daily security limit. To protect your data from
+spam or brute-force attacks, our system limits verification requests per
+phone number. Please wait a full 24 hours before trying again to allow
+the security cap to reset.</p>
+<h2 id="announcements">Announcements</h2>
+<h3 id="solved-app-and-articles-not-loading-june-8-9-2026">[SOLVED] App
+and Articles Not Loading [June 8-9, 2026]</h3>
+<p>[UPDATE 1AM PST]</p>
+<p>SmartNews recently experienced temporary technical difficulties that
+affected specific features within the mobile application. Full
+functionality has now been successfully restored.</p>
+<p><strong>Current Status &amp; Guidance:</strong><br />
+Our engineering teams have successfully resolved the root cause of this
+disruption, and all systems are now operating normally.</p>
+<p>If you continue to experience loading or delivery issues, please try
+the following troubleshooting steps to refresh your app:</p>
+<ol type="1">
+<li>Force close and restart the SmartNews app.</li>
+<li>Clear the app cache through your device’s settings.</li>
+</ol>
+<p>We sincerely apologize for any inconvenience this disruption may have
+caused and appreciate your patience. Thank you for your continued
+support of SmartNews.</p>
+<p>[SERVICE ALERT 11PM PST]</p>
+<p>SmartNews is currently experiencing technical difficulties that are
+affecting specific features within the mobile application.</p>
+<p><strong>Incident Period:</strong> 10:30 PM Monday, June 8, 2026 –
+1:00 AM Tuesday, June 9, 2026 PST</p>
+<p><strong>Identified Issues:</strong></p>
+<ul>
+<li><p><strong>Article Delivery:</strong> Content may fail to load or
+display correctly.</p></li>
+<li><p><strong>Local Channel:</strong> Localized news content may fail
+to load or display properly within your Local channel.</p></li>
+<li><p><strong>Mission Feature:</strong> The Mission and rewards
+interface may fail to open or function as intended.</p></li>
+<li><p><em>Please note that other minor in-app features may also
+experience temporary instability.</em></p></li>
+</ul>
+<p><strong>Current Status:</strong> Our engineering teams are actively
+investigating the root cause of this disruption and are working with the
+highest priority to restore full functionality.</p>
+<p><strong>Important Notice:</strong> Because our team is already
+actively tracking and remediating this incident, <strong>there is no
+need to submit a customer support inquiry regarding this
+matter.</strong> Official updates will be posted directly to this page
+as soon as the resolution is deployed.</p>
+<p>We sincerely apologize for any inconvenience this disruption may
+cause and appreciate your patience and cooperation as we work to resolve
+this issue swiftly. Thank you for your continued support of
+SmartNews.</p>
+<h3 id="solved-issue-with-refreshing-articles---aug-5-2024">[SOLVED]
+Issue with Refreshing Articles - Aug 5, 2024</h3>
+<p>UPDATE - Aug 6, 2023</p>
+<p>Our service is back to normal now. We apologize for any inconvenience
+this incident may have caused and appreciate the patience and
+understanding of our users. Our team is committed to ensuring the
+reliability and performance of our systems and will continue to take
+proactive steps to prevent future occurrences.</p>
+<p>===</p>
+<p>We sincerely apologize for the recent disruption in our service.
+Users may have experienced difficulties refreshing articles, and
+scrolling down the feed fetching new articles. The service impact
+includes all channels including local channel.</p>
+<p>Our technical team is currently working diligently to resolve the
+issue as quickly as possible. Immediate measures have been implemented
+to mitigate the impact, and we are committed to restoring normal service
+levels without further delay.</p>
+<p>For ongoing updates and additional information regarding this
+incident, please visit our website at
+<code>https://support.smartnews.com/hc/en-us</code>. If you require
+immediate assistance or have specific questions related to this
+incident, please do not hesitate to contact our customer support team
+from here.</p>
+<h3
+id="solved-ongoing-incident-impacting-all-channels-and-feeds">[SOLVED]
+Ongoing Incident Impacting All Channels and Feeds</h3>
+<p>We’re pleased to inform you that the loading issue caused by a
+server-side problem has been resolved as of Dec 3, 9:05 PM PST.</p>
+<p>If you’re still encountering any issues, please try the following
+steps:</p>
+<ol type="1">
+<li><strong>Refresh the App</strong>: Close and reopen it.</li>
+<li><strong>Clear Cache</strong>: This can often resolve lingering
+problems.</li>
+</ol>
+<p>If the problem persists, feel free to contact us directly, and we’ll
+assist you promptly.</p>
+<p>===</p>
+<p>We are currently experiencing a system-wide incident that is
+affecting all channels. Our team is actively investigating the issue and
+working to resolve it as quickly as possible.</p>
+<h6 id="what-to-expect">What to Expect</h6>
+<ul>
+<li>You may experience delays or loading issue across all channels.</li>
+<li>Access to some features might be temporarily limited.</li>
+</ul>
+<h6 id="current-status">Current Status</h6>
+<p>Our engineers are prioritizing this issue and are working diligently
+to restore services. We’ll share updates directly through this help
+center article as new information becomes available.</p>
+<h6 id="what-you-can-do">What You Can Do</h6>
+<ul>
+<li><strong>Stay Updated</strong>: Check back here periodically for
+updates.</li>
+<li><strong>Reach Out</strong>: If you have urgent concerns, contact our
+support team via below link.</li>
+</ul>
+<p>We sincerely apologize for any inconvenience this may cause and
+appreciate your understanding and patience as we work to resolve the
+issue. If you have questions or need assistance, feel free to reach out
+to our support team.</p>
+<h3 id="solved-some-images-may-not-be-loading-right-now">[SOLVED] Some
+images may not be loading right now</h3>
+<p>Update: Jan 12, 12:00 AM PST</p>
+<p>The issue that caused article images to appear blank in articles has
+been resolved.</p>
+<p>If you’re still seeing missing images, please try:</p>
+<ul>
+<li><p>Clear the app cache</p></li>
+<li><p>Restart the app (fully close it, then reopen)</p></li>
+</ul>
+<p>Thanks for your patience, and sorry for the disruption.</p>
+<p>Update: Jan 11, 10:30 PM PST</p>
+<p>We’re currently aware of an issue where some images aren’t showing up
+in SmartNews. You might see blank spaces or missing images while
+browsing stories.</p>
+<p>Our team is already looking into it and working to get things back to
+normal as quickly as possible.</p>
+<p>Thanks for your patience, we’ll update this article as we learn
+more.</p>
+<h3 id="about-the-ios-185-beta-issue">About the iOS 18.5 Beta Issue</h3>
+<p><em>Last updated: April 22, 2025</em></p>
+<p>Some users running iOS 18.5 Beta are experiencing an issue where
+articles open in external websites instead of within the SmartNews app.
+This change can lead to more ads, pop-ups, and cookie prompts, making
+the reading experience less smooth.</p>
+<p>This only affects users on iOS 18.5 Beta, not the public iOS
+release.</p>
+<p>We’re actively working on a fix and expect to restore the regular
+SmartNews experience soon. In the meantime, we really appreciate your
+patience and understanding!</p>
+<p>If you’re affected, updating to the latest version of the SmartNews
+app (25.4.30) from the App Store may help resolve the issue.</p>
+<h3 id="fixed-technical-issues---feb-12-2025">FIXED Technical Issues -
+Feb 12, 2025</h3>
+<p>Feb 12, 2025 6:00 PST</p>
+<p>The issue has now been resolved—thank you for your patience!</p>
+<p>If you’re still experiencing any trouble, please try restarting your
+device and clearing your cache. That should help everything refresh
+properly.</p>
+<p>Feb 12, 2025 4:30 PST</p>
+<h6 id="were-aware-of-the-issue-and-actively-working-on-a-fix.">We’re
+aware of the issue and actively working on a fix.</h6>
+<p>Our team is currently experiencing technical difficulties that may be
+affecting your SmartNews experience. We sincerely apologize for the
+inconvenience and want to assure you that our engineers are working hard
+to resolve the issue as quickly as possible.</p>
+<h6 id="what-you-need-to-know">What you need to know:</h6>
+<ul>
+<li>Our team is aware of the issue and actively investigating.</li>
+<li>We appreciate your patience as we work on a fix.</li>
+<li>Once the issue is resolved, we’ll provide an update.</li>
+</ul>
+<p>We understand how frustrating technical issues can be, and we truly
+appreciate your support. If you have any further questions or need
+assistance, please reach out to our support team.</p>
+<p>Thank you for your patience and for being a valued SmartNews
+user!</p>
+<h3
+id="important-announcement-the-wildfire-hurricane-map-will-be-discontinued-on-06082023">IMPORTANT
+ANNOUNCEMENT: The Wildfire / Hurricane map will be discontinued on
+06/08/2023</h3>
+<p>IMPORTANT ANNOUNCEMENT: The Wildfire / Hurricane map will be
+discontinued on 06/08/2023. Support for this feature can no longer be
+maintained after this date. Thank you so much for your patience and
+support during this time.</p>
+<h6 id="faq">FAQ:</h6>
+<p>Q: Why is the Wildfire / Hurricane map being discontinued?</p>
+<p>A: At SmartNews, we’re always reassessing and improving our features
+so we can deliver the best possible experience. The Wildfire and
+Hurricane maps were discontinued due to the relatively low usage by our
+users, which allows us to focus our efforts on other offerings.</p>
+<p>Q: Will I still be able to log in to my local map via SmartNews?</p>
+<p>A: Yes! The map is still available through the Local Channel of your
+SmartNews app.</p>
+<p>Q: When does the Wildfire / Hurricane map disappear from my feed?</p>
+<p>A: The Wildfire / Hurricane map is no longer available after
+06/08/2023.</p>
+<h3
+id="important-announcement-what-to-watch-feature-has-been-discontinued-on-11302023">IMPORTANT
+ANNOUNCEMENT: What to Watch feature has been discontinued on
+11/30/2023.</h3>
+<p>What to Watch has been discontinued as of 11/30/2023.</p>
+<p>Thank you for your support!</p>
+<h5 id="faq-1">FAQ</h5>
+<p>Q: Why is the W2W feature gone?</p>
+<p>A: At SmartNews, we’re always reassessing and improving our features
+so we can deliver the best possible experience. The What to Watch
+feature was discontinued due to the relatively low usage by our users -
+this allows us to focus our efforts on other offerings. Please stay
+tuned and thank you for your patience and support.</p>
+<p>Q: When did it disappear from my feed?</p>
+<p>A: The feature was deprecated on November 30, 2023.</p>
+<h3 id="important-update-android-os-80-and-81-support-ending">Important
+Update: Android OS 8.0 and 8.1 Support Ending</h3>
+<p>To ensure our users continue to have a secure and high-quality
+experience, SmartNews is updating its supported operating system
+requirements. On April 13, 2026, we will officially change our supported
+OS versions.</p>
+<h6 id="summary-of-changes">Summary of Changes</h6>
+<p>Current requirement: Android 8.0 or higher</p>
+<p>Requirement after April 13, 2026: Android 9.0 or higher</p>
+<h6 id="who-is-affected">Who is affected?</h6>
+<p>This change affects users currently using the SmartNews app on
+devices running Android 8.0 or Android 8.1.</p>
+<h6 id="how-does-this-affect-the-app">How does this affect the app?</h6>
+<p>After April 13, 2026, you can still use the version of the app
+already installed on your device. However, you will not be able to
+update to newer versions of SmartNews. This means you will not receive
+new features, performance improvements, or bug fixes. We cannot
+guarantee that the app will continue to function correctly on these
+older operating systems.</p>
+<h6 id="recommended-action">Recommended Action:</h6>
+<p>Update your OS We strongly recommend updating your device to Android
+9.0 or higher to ensure you have the latest features and security
+updates.</p>
+<p>How to check and update your Android version:</p>
+<ol type="1">
+<li><p>Open your device Settings app.</p></li>
+<li><p>Tap System, then tap System update.</p></li>
+<li><p>You will see your current Android version.</p></li>
+<li><p>If an update is available, follow the on-screen steps to download
+and install it.</p></li>
+</ol>
+<p>For detailed instructions from Google, please visit:
+<code>https://support.google.com/android/answer/7680439</code></p>
+<h6 id="what-if-my-device-cannot-update-to-android-9.0">What if my
+device cannot update to Android 9.0?</h6>
+<p>If your device hardware does not support Android 9.0 or higher, you
+may need to switch to a newer supported device to keep your SmartNews
+app updated with the latest improvements.</p>
+<p>We appreciate your understanding as we work to provide the best
+possible service.</p>
+<h3 id="issue-with-article-not-loading---started-april-10">Issue with
+Article Not Loading - Started April 10</h3>
+<h6 id="update-april-11-1100-pm">UPDATE April 11, 11:00 PM</h6>
+<p>Upon investigation, it has come to our attention that the issue may
+be related to potential blocking of our internal server by certain
+Internet Service Providers (ISPs), in other words, Wi-Fi providers.</p>
+<p>Here are some steps you can take to troubleshoot this issue:</p>
+<ol type="1">
+<li><strong>Use a Different Network</strong>: If possible, try
+connecting to a different Wi-Fi network or use a mobile data connection
+to see if the issue persists. This can help determine if the problem is
+specific to your current network.</li>
+<li><strong>Contact Your ISP</strong>: If the problem continues, we
+recommend reaching out to your Internet Service Provider (ISP) or Wi-Fi
+provider to inquire about any potential blocks or restrictions on
+accessing our services. Provide them with specific details about the
+issue you are experiencing. Also let us know which internet provider you
+are using, this will help us identify who is blocking our server which
+is the root cause of the issue.</li>
+<li><strong>Stay Updated</strong>: We are actively investigating this
+issue and will provide updates as soon as more information becomes
+available. Please monitor our FAQ page for any announcements or updates
+regarding the situation.</li>
+</ol>
+<p>===</p>
+<p>We are aware that some of you may be experiencing difficulties with
+articles not loading properly on our app. We sincerely apologize for any
+inconvenience this may have caused. Our team is actively investigating
+the issue to identify the root cause and implement a solution as quickly
+as possible.</p>
+<ul>
+<li>Started: April 10 5:00 PM</li>
+<li>Status: Investigating</li>
+<li>Impact: iOS and Android devices located within the US</li>
+</ul>
+<p>We apologize for any inconvenience caused and thank you for your
+patience and understanding as we work to resolve this issue
+promptly.</p>
+<p>Sincerely,</p>
+<p>SmartNews Team</p>
+<h3 id="the-social-channel-will-be-discontinued-on-4302023">The Social
+channel will be discontinued on 4/30/2023</h3>
+<p>IMPORTANT ANNOUNCEMENT: The Social channel will be discontinued on
+4/30/2023. Support for this feature can no longer be maintained after
+this date. Thank you so much for your patience and support during this
+time.</p>
+<h5 id="faq-2">FAQ:</h5>
+<p><strong>Q:</strong> Why is the Social channel being discontinued?</p>
+<p><strong>A:</strong> While we appreciate the benefits that Twitter has
+provided us in the past, the cost of maintaining our activities with
+them has become too high for us to continue. As a result, we will no
+longer be offering Twitter integration on our platform.</p>
+<p><strong>Q:</strong> Will I still be able to log in to my Twitter
+account?</p>
+<p><strong>A:</strong> No. This will no longer be available.</p>
+<p><strong>Q:</strong> When does Social channel disappear from my
+feed?</p>
+<p><strong>A:</strong> The Social channel will disappear by April 30,
+2023.</p>
+<h3 id="update-to-autoplay-video-ads-setting---may-2024">Update to
+Autoplay Video Ads Setting - May 2024</h3>
+<p>At SmartNews, we’re always working to improve your experience in our
+app. We want to let you know about a change we’re making to the autoplay
+video ads setting.</p>
+<h5 id="whats-changing"><strong>What’s Changing?</strong></h5>
+<p>Starting with version 24.5.10 (iOS) and 24.5.30 (Android) of the
+SmartNews app, we’re removing the option to turn off autoplay for video
+ads. This means that all video ads will now autoplay when they’re
+visible on your screen, and will pause when you scroll past them.</p>
+<h5 id="why-are-we-making-this-change"><strong>Why Are We Making This
+Change?</strong></h5>
+<p>We’ve decided to make this change for a few key reasons:</p>
+<ol type="1">
+<li><strong>Consistency</strong>: By having all video ads autoplay when
+in view, we can provide a more consistent and predictable experience
+across the app.</li>
+<li><strong>Alignment with Industry Standards</strong>: Most apps and
+websites now use autoplay for video ads. By adopting this approach,
+we’re aligning SmartNews with what users expect based on their
+experiences in other apps.</li>
+<li><strong>Simplified Experience</strong>: Removing the autoplay
+setting simplifies the app and ensures all users have the same
+experience, making it easier for us to continue improving
+SmartNews.</li>
+</ol>
+<h5 id="what-does-this-mean-for-you"><strong>What Does This Mean for
+You?</strong></h5>
+<p>If you previously had autoplay video ads turned off (set as “Never”
+or “Only on Wi-Fi”), you’ll now see video ads start to play silently as
+you scroll to them. The videos will pause when you scroll past them, and
+you can always tap on a video to unmute it if you’re interested in the
+content.</p>
+<p>We believe this change will create a more consistent experience for
+all our users. We understand that some users may have preferred to keep
+autoplay off. However, there are limitations from our third-party video
+ad partners where SmartNews doesn’t have full control to guarantee it
+not being autoplayed.</p>
+<h5 id="going-forward"><strong>Going Forward</strong></h5>
+<p>We’re committed to making SmartNews the best it can be, and we
+believe this update is a step in that direction. We appreciate your
+understanding as we work to improve the app experience for everyone.</p>
+<p>Thank you for being a valued member of the SmartNews community. If
+you have any questions, please visit our Help Center or contact our
+support team directly.</p>
+<h2 id="notifications">Notifications</h2>
+<h3
+id="how-do-i-control-whether-my-phone-vibrates-when-i-receive-notifications-android">How
+do I control whether my phone vibrates when I receive notifications?
+(Android)</h3>
+<h6 id="for-android-version-8.0-and-above">For Android version 8.0 and
+above</h6>
+<p>You can change the settings for “scheduled updates” and “breaking
+news” notifications separately. Please follow the steps below to change
+the notification settings.</p>
+<ol type="1">
+<li>Open the Settings page (the button is on the top right of the
+screen)</li>
+<li>Tap “Push notification settings”</li>
+<li>Select “Notification system settings” under “Scheduled updates” or
+“Breaking news”</li>
+<li>Tap “Advanced” and turn off for “Vibrate”</li>
+</ol>
+<h6 id="for-older-versions-of-android">For older versions of
+Android</h6>
+<ol type="1">
+<li>Open the Settings page (the button is on the top right of the
+screen)</li>
+<li>Tap “Push notification settings” from the list</li>
+<li>Tap “Notification” in the “Notification behavior” section</li>
+<li>Choose “Without Vibration”</li>
+</ol>
+<h3 id="how-to-manage-your-notifications">How To Manage Your
+Notifications</h3>
+<p>If you no longer want SmartNews alerts on your phone, you can turn
+off notifications from inside the app. These steps are the same on iOS
+and Android.</p>
+<h5 id="turn-off-notifications-in-the-smartnews-app">Turn off
+notifications in the SmartNews app</h5>
+<ol type="1">
+<li>Open the SmartNews app and tap the Profile tab in the bottom bar. If
+you do not see the bottom bar, drag down on any channel tab to make the
+Profile icon appear.</li>
+<li>Tap the Settings gear icon in the top right corner.</li>
+<li>Tap Notifications.</li>
+<li>Toggle the switches on or off for each category to customize your
+alerts.</li>
+</ol>
+<h5
+id="optional-turn-off-notifications-in-your-phone-settings">Optional:
+turn off notifications in your phone settings</h5>
+<p>If you want to block all SmartNews alerts at the device level:</p>
+<h6 id="ios">iOS</h6>
+<ol type="1">
+<li>Open Settings</li>
+<li>Tap Notifications</li>
+<li>Tap SmartNews</li>
+<li>Turn off Allow Notifications</li>
+</ol>
+<h6 id="android">Android</h6>
+<ol type="1">
+<li>Open Settings</li>
+<li>Tap Apps (or Apps &amp; notifications)</li>
+<li>Tap SmartNews</li>
+<li>Tap Notifications</li>
+<li>Turn off notifications (or disable specific categories)</li>
+<li>If you still get notifications after turning them off</li>
+<li>Force close SmartNews and reopen it</li>
+<li>Double-check both the in-app Notification toggles and your phone’s
+notification settings</li>
+<li>Restart your device</li>
+</ol>
+<h3 id="notification-types-and-what-they-mean">Notification types and
+what they mean</h3>
+<h6 id="definition-of-each-notification">Definition of each
+notification</h6>
+<p>SmartNews offers several types of alerts to ensure you stay informed
+according to your interests. You can manage these by navigating to the
+Profile tab, tapping the Settings (gear icon), and selecting
+Notifications.</p>
+<ul>
+<li><p>******Scheduled Pushes:** These are curated headlines sent to you
+at specific times throughout the day to inform you about what is going
+on around the world.</p></li>
+<li><p>******Breaking News:** Immediate notifications regarding
+important or urgent news unfolding at this moment.</p></li>
+<li><p>******Local Updates**: If you have set up your local news
+preferences, you can receive updates about news happening in your
+specific area.</p></li>
+<li><p>******Personalized Picks:** These are recommendations delivered
+to you based on your unique reading habits and the SmartNews
+algorithm.</p></li>
+<li><p>******Point Campaigns:** These notifications provide information
+about SmartNews points giveaway campaigns, where you can earn rewards by
+completing missions like launching the app or reading articles.</p></li>
+</ul>
+<h3 id="notifications-not-working">Notifications not working</h3>
+<p>If SmartNews notifications aren’t arriving even though everything
+looks enabled, try the steps below.</p>
+<h6 id="before-you-start">Before you start</h6>
+<p><strong>* If you recently reinstalled SmartNews, switched devices, or
+changed notification settings, delivery may take time to fully stabilize
+(up to 7 days).</strong></p>
+<h6 id="step-1-check-smartnews-notification-settings">Step 1: Check
+SmartNews notification settings</h6>
+<p>1. Open SmartNews<br />
+2. Tap Profile (bottom right)<br />
+3. Tap Settings (gear)<br />
+4. Tap Notifications<br />
+5. Turn notifications off, then back on</p>
+<h6 id="step-2-check-your-phones-notification-settings">Step 2: Check
+your phone’s notification settings</h6>
+<p><strong>iOS (iPhone/iPad)</strong></p>
+<p>1. Open iPhone Settings<br />
+2. Tap Notifications<br />
+3. Tap SmartNews<br />
+4. Allow Notifications: ON<br />
+5. Alerts, Sounds, and Badges: ON (as preferred)</p>
+<p><strong>Android</strong></p>
+<p>1. Open Android Settings<br />
+2. Tap Apps (or Apps &amp; notifications)<br />
+3. Tap SmartNews<br />
+4. Tap Notifications<br />
+5. Turn notifications ON and enable the categories you want</p>
+<h6 id="step-3-allow-background-activity">Step 3: Allow background
+activity</h6>
+<p><strong>iOS</strong></p>
+<p>1. iPhone Settings &gt; General &gt; Background App Refresh<br />
+2. Turn Background App Refresh ON, and enable SmartNews</p>
+<p><strong>Android</strong></p>
+<p>1. Android Settings &gt; Battery (or Battery &amp; device care)<br />
+2. Find Battery optimization / Background usage limits<br />
+3. Make sure SmartNews is allowed to run in the background (not
+Sleeping/Restricted)</p>
+<h6 id="step-4-restart-and-test">Step 4: Restart and test</h6>
+<p>1. Restart your device<br />
+2. Open SmartNews and scroll for a minute<br />
+3. Wait a bit and check if notifications begin arriving</p>
+<h6 id="still-not-working">Still not working?</h6>
+<p>Please send us your device information so we can investigate.</p>
+<p><a href="#how-to-get-your-device-token-androidios">How to get your
+device token (Android/iOS)</a></p>
+<h3 id="why-am-i-not-receiving-notifications-after-reinstalling">Why Am
+I Not Receiving Notifications After Reinstalling?</h3>
+<p>If you have recently reinstalled SmartNews, please allow
+approximately one week for your scheduled notifications to resume.</p>
+<p>This delay occurs because scheduled pushes require time for our
+systems and servers to register your new device token, which is reset
+during the reinstallation process. Because phone notification settings
+are structured differently across various devices, the app requires this
+synchronization period to determine if your settings are coming from the
+app itself or your specific device configuration.</p>
+<h3 id="why-does-tapping-a-notification-take-me-to-the-top-channel">Why
+does tapping a notification take me to the Top channel?</h3>
+<p>Some notifications open the Top channel instead of a specific
+article. You can review past notifications anytime by tapping the
+Notifications tab in the bottom navigation. This tab shows up to one
+week of notification history.</p>
+<p>On iOS, the Top page may also include a Top News section that
+displays about three recent notifications.</p>
+<h2 id="smartnews-points">SmartNews Points</h2>
+<h3
+id="can-i-disable-or-remove-the-missionsrewards-feature-from-the-app">Can
+I disable or remove the Missions/Rewards feature from the app?</h3>
+<p>The Missions and Rewards feature is an integral, built-in component
+of the SmartNews app experience. Because it is a core part of the
+application’s design and interface, it cannot be disabled or removed
+from the menu at this time.</p>
+<p>This feature is designed to award SmartNews Points (SNP) as you read
+and engage with your news content, functioning alongside your feed
+without altering the articles or headlines you see.</p>
+<p>While the Rewards tab remains a permanent part of the app layout,
+participation is entirely optional; you can continue to use SmartNews to
+read your preferred channels as usual without interacting with the
+rewards program.</p>
+<h3 id="how-do-i-ensure-my-points-are-saved-if-i-switch-devices">How do
+I ensure my points are saved if I switch devices?</h3>
+<p>To ensure your SmartNews Points are protected and available when you
+switch devices, <strong>you must link to a registered account.</strong>
+If you earn points as a guest (without being logged in), those points
+are stored only on that specific device and cannot be recovered or
+transferred if the app is deleted or moved.</p>
+<h6 id="steps-to-save-your-points">Steps to Save Your Points</h6>
+<ol type="1">
+<li><p>Make sure you are logged in on your old device: Open SmartNews on
+your original device and check your Profile tab. If you are not logged
+in, please create a new account now to ensure your current points are
+synced to our servers before you move to a new device.</p></li>
+<li><p>Log into the same account on your new device: Once you have your
+new device, download SmartNews and log in using the exact same
+credentials.</p></li>
+</ol>
+<h6 id="important-warnings">Important Warnings</h6>
+<ul>
+<li><p><strong>The Login Sequence Matters:</strong> When you log into an
+existing account, points currently on the device (guest points) do not
+automatically merge or transfer into that account. Logging into an
+account that already has a balance will overwrite the local guest points
+on the device.</p></li>
+<li><p><strong>No Manual Transfers:</strong> SmartNews does not manually
+transfer points between different accounts or from a guest status once
+they are lost.</p></li>
+</ul>
+<h3
+id="how-do-i-ensure-my-points-carry-over-when-switching-to-a-new-phone">How
+do I ensure my points carry over when switching to a new phone?</h3>
+<p><strong>Link an Account Immediately:</strong> We strongly recommend
+creating an account and logging into the same account before you
+accumulate points or switch devices.</p>
+<p><strong>The Guest Profile Risk:</strong> If you earn points as a
+guest (without logging in) and later try to sign into an existing
+account on your new phone, the points may not be transfer correctly</p>
+<p><strong>Loss Prevention</strong>: Guest points will not transfer over
+during an account merge and cannot be recovered manually by customer
+service. To preserve your local guest balance when registering for the
+first time, make sure to select the option to create a new account
+directly from that prompt screen.</p>
+<h3 id="i-cannot-find-the-rewards-or-missions-tab">I cannot find the
+Rewards or Missions tab</h3>
+<p>The Rewards program (also known as Daily Missions or SmartNews
+Points) is a mobile-only feature. If the tab has suddenly disappeared or
+is not visible on your device, please review the requirements and
+troubleshooting steps below to restore it.</p>
+<h6 id="check-core-requirements">1. Check Core Requirements</h6>
+<p>Before troubleshooting, ensure your device and location meet the
+eligibility criteria for the program:</p>
+<ul>
+<li><strong>Operating System Requirements:</strong> Your device must
+meet our minimum OS requirements to run the latest version of the app.
+Your device must be on <strong>iOS 17.0 and above</strong> or
+<strong>Android 9.0 and above</strong>. If your device is on an older
+operating system, please update your phone’s software first.</li>
+</ul>
+<h6 id="perform-a-clean-reinstallation">2. Perform a Clean
+Reinstallation</h6>
+<p>If you meet the requirements above but the tab is still missing, a
+corrupted app cache or a minor installation glitch is likely
+responsible. Please completely reinstall the app using the specific
+instructions for your device type below.</p>
+<h6 id="for-ios-iphoneipad-users">For iOS (iPhone/iPad) Users</h6>
+<ol type="1">
+<li><p>Go to your device’s home screen, press and hold the
+<strong>SmartNews</strong> icon, and select <strong>Delete App</strong>
+to remove it.</p></li>
+<li><p>Open the <strong>App Store</strong>.</p></li>
+<li><p>Type <strong>SmartNews</strong> into the search bar.</p></li>
+<li><p>Tap the cloud download icon to perform a fresh
+installation.</p></li>
+<li><p>Launch the app and log back into your account.</p></li>
+</ol>
+<h6 id="for-android-users">For Android Users</h6>
+<ol type="1">
+<li><p>Press and hold the <strong>SmartNews</strong> app icon on your
+screen, then tap <strong>App Info</strong> (or navigate to your phone’s
+system <strong>Settings</strong> → <strong>Apps</strong> →
+<strong>SmartNews</strong>).</p></li>
+<li><p>Tap <strong>Uninstall</strong> and confirm to remove the
+app.</p></li>
+<li><p>Open the <strong>Google Play Store</strong>.</p></li>
+<li><p>Search for <strong>SmartNews</strong> and tap
+<strong>Install</strong>.</p></li>
+<li><p>Launch the app and log back into your account.</p></li>
+</ol>
+<h6 id="still-having-issues">Still Having Issues?</h6>
+<p>Please reach out to us through our help center contact form and
+include your unique <strong>Device Token</strong> so we can pull your
+app logs immediately.</p>
+<blockquote>
+<p><strong>How to locate and copy your Device Token:</strong></p>
+<ol type="1">
+<li><p>Open SmartNews and look for the profile tab in the bottom bar, or
+drag down on the top channel tab to make the top section appear (with
+the search bar and Profile icon).</p></li>
+<li><p>Tap the Settings (gear) icon in the top right corner. Scroll all
+the way to the bottom and long-press (hold down) on the version
+information. This will allow you to copy a unique code.</p></li>
+<li><p>Please paste it into your support request message.</p></li>
+</ol>
+</blockquote>
+<h3 id="i-redeemed-my-points-but-where-is-my-gift-card">I redeemed my
+points, but where is my gift card?</h3>
+<p>If you successfully exchanged your SmartNews Points but haven’t
+received your gift card email, you can track your reward and find your
+reference details directly inside the app.</p>
+<p>Follow the steps below to locate your reward or resolve the issue
+instantly.</p>
+<h6 id="step-1-locate-your-tango-reference-id-in-the-app">Step 1: Locate
+your Tango Reference ID in the App</h6>
+<ol type="1">
+<li><p>Open the <strong>SmartNews</strong> app and navigate to the
+<strong>My Rewards</strong> (or Missions) tab.</p></li>
+<li><p>Tap on <strong>Points History</strong> (located directly below
+your point balance).</p></li>
+<li><p>Select the <strong>Redeemed</strong> tab at the top.</p></li>
+<li><p>Tap on the specific item you attempted to redeem.</p></li>
+<li><p>Scroll to the bottom of the screen to find your <strong>Tango
+Reference ID</strong>.</p></li>
+</ol>
+<h6 id="step-2-choose-the-scenario-that-matches-your-issue">Step 2:
+Choose the scenario that matches your issue</h6>
+<p>Depending on what you see on your screen, follow the corresponding
+instructions below to claim your reward:</p>
+<h6
+id="scenario-a-you-already-entered-your-email-address-but-never-received-the-gift-card">📥
+Scenario A: You already entered your email address but never received
+the gift card</h6>
+<p>If your points were deducted and you already submitted your email but
+the gift card hasn’t arrived (and isn’t in your spam folder):</p>
+<ul>
+<li><strong>Action:</strong> Copy the <strong>Tango Reference
+ID</strong> from the bottom of your redemption screen and contact the
+Tango Support team directly for immediate delivery assistance.</li>
+</ul>
+<blockquote>
+<p><strong>Tango Support Contact Options:</strong></p>
+<ul>
+<li><p><strong>Chat:</strong> Visit the <a
+href="https://www.tangocard.com/contact-us">Tango Help Center</a> and
+open the chat window in the lower-right corner.</p></li>
+<li><p><strong>Phone:</strong> Call <strong>877-558-2646</strong>
+(Available 6:00 AM – 5:00 PM PT, 7 days a week).</p></li>
+</ul>
+</blockquote>
+<h6 id="scenario-b-you-need-to-select-your-specific-gift-card-brand">🏷️
+Scenario B: You need to select your specific gift card brand</h6>
+<p>If your SmartNews points successfully transferred to Tango but you
+haven’t chosen your final retail gift card (e.g., Amazon, Starbucks,
+Target):</p>
+<ul>
+<li><strong>Action:</strong> Tap the <strong>Visit Tango</strong> button
+on the redemption screen. From there, you can select your preferred gift
+card brand and enter your secure email address to complete the
+delivery.</li>
+</ul>
+<h6
+id="scenario-c-you-are-completely-lost-or-the-information-is-missing">❓
+Scenario C: You are completely lost or the information is missing</h6>
+<p>If your points disappeared, your history is blank, or you cannot find
+the transaction details:</p>
+<ul>
+<li><p><strong>Action:</strong> We are here to help! Reach out to
+<strong>SmartNews Support</strong>. To help us resolve this on our first
+reply, please include your <strong>Transaction ID</strong> and your
+<strong>Device Token</strong> in your message.</p></li>
+<li><p><a href="#how-to-get-your-device-token-androidios">How to get
+your device token (Android/iOS)</a></p></li>
+</ul>
+<h3 id="smartnews-points-program-frequently-asked-questions">SmartNews
+Points Program: Frequently Asked Questions</h3>
+<p>Welcome to the SmartNews Points Program! Below you will find
+everything you need to know about earning, tracking, and redeeming your
+points for real-world rewards.</p>
+<h5 id="program-basics-value">🪙 Program Basics &amp; Value</h5>
+<h6 id="what-are-smartnews-points-snp">What are SmartNews Points
+(SNP)?</h6>
+<p>SmartNews Points are rewards you earn by completing interactive
+missions within the app, such as launching SmartNews daily or reading
+featured articles. These points can be accumulated and exchanged for
+digital gift cards through our rewards partner,
+<strong>Tango</strong>.</p>
+<h6 id="what-is-the-exchange-rate-and-minimum-redemption-amount">What is
+the exchange rate and minimum redemption amount?</h6>
+<table>
+<thead>
+<tr>
+<th><strong>Metric</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exchange Rate</strong></td>
+<td>10 SNP = $0.01, 1000 SNP = $1.00</td>
+</tr>
+<tr>
+<td><strong>Minimum Balance to Redeem</strong></td>
+<td>500 SNP = $.50</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Please Note:</strong> While SmartNews allows you to
+initiate an exchange at 500 points ($0.50), many of our gift card
+partners (like Amazon, Target, or Starbucks) have their own minimum
+brand thresholds (often $1.00 or $5.00). You may need to save up more
+points to claim specific brands on the Tango platform.</p>
+</blockquote>
+<h6 id="do-my-points-expire">Do my points expire?</h6>
+<p>Yes, points expire <strong>180 days</strong> from your <em>last point
+acquisition date</em>.</p>
+<ul>
+<li><strong>How to extend them:</strong> Simply complete a new mission!
+Earning fresh points automatically extends the expiration date of your
+entire existing point balance for another 180 days.</li>
+</ul>
+<h5 id="account-security">🔐 Account Security</h5>
+<h6
+id="why-did-my-points-disappeared-when-i-tried-selecting-gift-card">Why
+did my points disappeared, when I tried selecting gift card</h6>
+<p>If your points were deducted but you don’t see your gift card,
+<strong>do not panic.</strong> You can locate your transaction details
+entirely inside the app.</p>
+<h6 id="locate-your-tango-reference-id"><strong>Locate your Tango
+Reference ID</strong></h6>
+<ol type="1">
+<li><p>Open the <strong>SmartNews</strong> app and go to the <strong>My
+Rewards</strong> / <strong>Missions</strong> tab.</p></li>
+<li><p>Look directly below your point balance and tap <strong>Points
+History</strong>.</p></li>
+<li><p>Tap the <strong>Redeemed</strong> section.</p></li>
+<li><p>Select the specific item you attempted to redeem.</p></li>
+<li><p>Scroll to the absolute <strong>bottom of the screen</strong> to
+find your unique <strong>Tango Reference ID</strong>.</p></li>
+</ol>
+<p>You can find more information and step-by-step instructions in the
+article below:</p>
+<p><a href="#i-redeemed-my-points-but-where-is-my-gift-card">I redeemed
+my points, but where is my gift card?</a></p>
+<h5 id="my-points-disappeared">🪙 My Points Disappeared!</h5>
+<p>For a full breakdown of how to safeguard your rewards or attempt to
+recover an old account, see our dedicated guide: <a
+href="#why-did-my-smartnews-points-disappear">Why did my SmartNews
+Points disappear?</a></p>
+<blockquote>
+<p>💡 <strong>How to prevent this next time:</strong> Always ensure you
+are securely logged into a permanent account profile <em>before</em>
+starting your daily missions. This locks your points to your identity so
+they follow you to any new device.</p>
+</blockquote>
+<h5 id="gift-card-troubleshooting">🎁 Gift Card Troubleshooting</h5>
+<h6 id="i-redeemed-my-points-but-where-is-my-gift-card-1">I redeemed my
+points, but where is my gift card?</h6>
+<p>If your points are gone but you don’t have your voucher, do not
+contact support just yet. You can find your tracking code inside the
+app. Follow our step-by-step recovery guide here: <a
+href="#i-redeemed-my-points-but-where-is-my-gift-card">I redeemed my
+points, but where is my gift card?</a></p>
+<h5 id="eligibility-mission-rules">📋 Eligibility &amp; Mission
+Rules</h5>
+<h6 id="am-i-eligible-to-participate-in-rewards-campaigns">Am I eligible
+to participate in rewards campaigns?</h6>
+<p>To participate and earn points, you must meet the following
+criteria:</p>
+<ul>
+<li><p>Be a legal resident of the 50 United States or the District of
+Columbia.</p></li>
+<li><p>Be at least 14 years old (users under 18 require
+parental/guardian consent).</p></li>
+<li><p>Maintain only <strong>one unique account</strong> per
+person.</p></li>
+<li><p>Use a supported mobile device running the latest version of the
+SmartNews app (Missions are not available on desktop web
+browsers).</p></li>
+</ul>
+<h6
+id="why-do-my-daily-mission-goals-look-different-from-other-users">Why
+do my Daily Mission goals look different from other users?</h6>
+<p>If you noticed that your daily reading targets, point values, or
+active missions don’t match another user’s app—or change when you switch
+devices—your app is completely healthy.</p>
+<p>You can find more information from:</p>
+<p><a
+href="#why-do-my-daily-mission-goals-look-different-from-other-users-or-change-on-different-devices">Why
+do my Daily Mission goals look different from other users (or change on
+different devices)?</a></p>
+<h6 id="why-didnt-i-receive-my-points-after-completing-a-mission">Why
+didn’t I receive my points after completing a mission?</h6>
+<p>You can find more information and step-by-step instructions in the
+article below:</p>
+<p><a
+href="#why-didnt-i-receive-my-points-after-completing-a-mission">Why
+didn’t I receive my points after completing a mission?</a></p>
+<h3 id="why-did-my-smartnews-points-disappear">Why did my SmartNews
+Points disappear?</h3>
+<p>If your point balance suddenly shows as zero or appears lower than
+expected, please follow these self-troubleshooting steps to locate your
+funds before contacting support:</p>
+<h6 id="check-your-login-status">1. Check Your Login Status</h6>
+<p>You may have accidentally logged into a different profile or switched
+to a guest session.</p>
+<ul>
+<li>If you previously linked your account via a third-party login (such
+as Google, Apple, or Facebook) or an alternative email address, log out
+and sign back in using that specific method.</li>
+</ul>
+<h6 id="review-your-point-history">2. Review Your Point History</h6>
+<p>Your points might not actually be missing; you may have already
+completed the redemption process.</p>
+<ul>
+<li><p>Open the <strong>Mission / Rewards</strong> tab in the
+app.</p></li>
+<li><p>Scroll directly below your current point balance and look for the
+<strong>Point History</strong> section.</p></li>
+<li><p>Check to see if your missing points are listed under an item
+marked as <strong>Redeemed</strong>.</p></li>
+</ul>
+<h6 id="retrieve-your-balance-from-tango">3. Retrieve Your Balance from
+Tango</h6>
+<p>If you see a completed redemption in your history, your point balance
+has already been securely transferred to our rewards partner, Tango, to
+be converted into a gift card.</p>
+<ul>
+<li><p>Tap on the redeemed item within your <strong>Point
+History</strong>.</p></li>
+<li><p>Select <strong>Visit Tango</strong> to open their secure rewards
+portal.</p></li>
+<li><p>Browse the catalog, select your preferred gift card merchant, and
+enter your email address to have the voucher sent straight to your inbox
+instantly.</p></li>
+</ul>
+<h3 id="why-didnt-i-receive-my-points-after-completing-a-mission">Why
+didn’t I receive my points after completing a mission?</h3>
+<p>If your points were not added to your balance after completing a
+task, please review this troubleshooting checklist before reaching out
+to support:</p>
+<ul>
+<li><p><strong>The “Collect” Button Was Missed:</strong> Completing the
+task is only the first step. You must manually tap the
+<strong>Collect</strong> button inside the Mission center to claim your
+points.</p></li>
+<li><p><strong>The Campaign Expired:</strong> If a campaign period ends
+before you tap <strong>Collect</strong>, your unclaimed points are
+permanently deleted. Uncollected points from expired campaigns cannot be
+backdated or granted retroactively.</p></li>
+<li><p><strong>Account Was Unlinked or Deleted:</strong> If you log out,
+unlink your credentials, or initiate an account deletion before the
+points fully process and register to your wallet balance, the
+transaction will fail.</p></li>
+<li><p><strong>App Reinstalled Prematurely:</strong> If you uninstall
+and reinstall the SmartNews app before logging into your registered
+account, your local session progress and pending points will be lost.
+Always verify your account login status before performing an app
+reinstallation.</p></li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Important Policy Notice:</strong> If you have verified
+that none of the scenarios above apply to your session, the discrepancy
+may be due to an isolated localized system or network error. Please note
+that SmartNews cannot provide manual point adjustments or financial
+compensation for points missed due to unexpected connectivity drops or
+system sync errors.</p>
+</blockquote>
+<h3
+id="why-do-my-daily-mission-goals-look-different-from-other-users-or-change-on-different-devices">Why
+do my Daily Mission goals look different from other users (or change on
+different devices)?</h3>
+<p>SmartNews dynamically updates and tests different configurations for
+each reward campaign to optimize app performance and campaign
+operations. Because of these ongoing optimizations, your account or
+specific device may receive localized goals, different mission
+requirements, or unique point structures that vary from what other users
+see.</p>
+<p>All active milestones and rules are calculated automatically for your
+specific app instance. Please follow the explicit goal progression
+tracking displayed inside your active Missions tab.</p>
+<h2 id="using-the-smartnews-app">Using the SmartNews App</h2>
+<h3 id="can-i-purchase-an-ad-free-plan">Can I purchase an ad-free
+plan?</h3>
+<p>Currently, SmartNews does not offer a paid subscription or a premium
+plan to remove advertisements.</p>
+<p>SmartNews is a free app, and advertisements allow us to continue
+providing high-quality news from our publishing partners at no cost to
+our users.</p>
+<p>While you cannot disable ads entirely, we are constantly working to
+ensure that the advertisements shown are relevant and do not interfere
+with your reading experience.</p>
+<h3 id="can-i-search-for-older-stories">Can I search for older
+stories?</h3>
+<p>Yes! Tap and pull down to reveal a search bar above the channel tabs.
+Tap inside the search box to search by keyword across a 14-day
+archive.</p>
+<h3 id="can-i-set-the-app-to-only-refresh-manually">Can I set the app to
+only refresh manually?</h3>
+<p>To make sure you always have instant access to the freshest, most
+personalized news the moment you open the app, SmartNews automatically
+updates your feed in the background. Because we prioritize keeping your
+news delivered in real-time, we do not currently offer an app setting to
+switch entirely to manual-only refreshing.</p>
+<p>However, you can still take complete control and force an instant
+update whenever you want!</p>
+<h6 id="how-to-manually-refresh-smartnews-ios-android">How to Manually
+Refresh SmartNews (iOS &amp; Android)</h6>
+<p>If you’ve been away from the app for a bit or just want to see if new
+breaking stories have developed, you can trigger a manual refresh in
+seconds:</p>
+<ol type="1">
+<li><p>Open SmartNews and navigate to any <strong>Channel View</strong>
+(such as <em>Top News</em>, <em>Local</em>, or your favorite followed
+topic).</p></li>
+<li><p>Touch the screen and <strong>pull down firmly</strong>.</p></li>
+<li><p>You will see a loading indicator appear at the top of the page.
+<strong>Release your finger</strong>, and your feed will instantly
+update with the latest headlines.</p></li>
+</ol>
+<blockquote>
+<p>💡 <strong>Quick Tip:</strong> If your feed ever feels stuck or isn’t
+updating after a manual pull-down, simply force-close the SmartNews app
+from your device’s multitasking menu and reopen it to establish a fresh
+connection to our servers.</p>
+</blockquote>
+<h3 id="how-do-i-add-more-to-following">How do I add more to
+Following?</h3>
+<p>It’s easy to add your favorites.</p>
+<p>.</p>
+<p>Flip or scroll all the way to the right, until you see the
+<strong>+</strong> tab. Open it to access a growing list of local city
+news and publisher channels you can add.</p>
+<p>SmartNews has more than 150+ official publisher channels worldwide
+and more than 80+ in the US, with more being added every month.</p>
+<h3 id="how-do-i-rearrange-or-delete-channels">How do I rearrange or
+delete Channels?</h3>
+<p>Tap and hold one of the tabs at the top of your screen for a couple
+seconds. Then you’ll see a list of all of your Channels.</p>
+<ul>
+<li>Reordering: On the right, drag the list icons to reorder your
+Channels.</li>
+<li>Delete: On the left, uncheck any Channels you’d like to hide.</li>
+</ul>
+<h3 id="how-do-i-reorder-the-tabs">How do I reorder the tabs?</h3>
+<p>Pull down to expose the gear icon and go to Setting &gt; Channel
+Settings.</p>
+<p>To move a channel, hold the triple-bar icon on the right and drag the
+channel to the desired location.</p>
+<p>To remove a channel, tap the icon to the left of the channel
+name.</p>
+<p>You may also do a long press-and-hold on any tab. This opens the Edit
+Channels screen, same as above.</p>
+<h3 id="how-to-capture-a-screen-recording">How to capture a screen
+recording</h3>
+<h6 id="q-how-do-i-record-my-screen-on-ios">Q: How do I record my screen
+on iOS?</h6>
+<p>To record your screen on an iOS device, follow these steps:</p>
+<ol type="1">
+<li>Open the Control Center: Swipe down from the top-right corner of
+your screen (iPhone X or later) or swipe up from the bottom of the
+screen (iPhone 8 or earlier).</li>
+<li>Tap the Screen Recording button: It looks like a circle with a dot
+inside. If you don’t see it, go to Settings &gt; Control Center and add
+Screen Recording to your controls.</li>
+<li>Start Recording: After tapping the button, you’ll see a 3-second
+countdown. Your screen will begin recording after the countdown.</li>
+<li>Stop Recording: To stop, tap the red bar at the top of the screen,
+then tap Stop.</li>
+</ol>
+<p>For more details, you can visit Apple’s official guide <a
+href="https://support.apple.com/en-us/102653">here.</a></p>
+<h6 id="q-how-do-i-record-my-screen-on-android">Q: How do I record my
+screen on Android?</h6>
+<p>To record your screen on an Android device, follow these steps:</p>
+<ol type="1">
+<li>Open Quick Settings: Swipe down twice from the top of the
+screen.</li>
+<li>Tap the Screen Record icon: If you don’t see it, swipe left, or tap
+Edit and drag the Screen</li>
+<li>Record icon to your Quick Settings.</li>
+<li>Start Recording: Select what you want to record (such as audio) and
+tap Start. There will be a 3-second countdown before the recording
+starts.</li>
+<li>Stop Recording: Swipe down from the top and tap the Screen Recorder
+notification, then tap Stop.</li>
+</ol>
+<p>For more details, check your device’s support guide <a
+href="https://support.google.com/android/answer/9075928?hl=en">here</a>.</p>
+<p><strong>Resources:</strong></p>
+<p><a
+href="https://support.google.com/android/answer/9075928?hl=en">Google
+Support: Take a screenshot or record your screen on your Android
+device</a></p>
+<p><a
+href="https://www.samsung.com/us/support/answer/ANS10001616/">Samsung:
+Record and capture your Galaxy phone or tablet’s screen</a></p>
+<p><a
+href="https://www.samsung.com/au/support/mobile-devices/using-screen-recorder/">Samsung:
+Using the Screen Recorder on my Samsung device</a></p>
+<p><a
+href="https://support.apple.com/guide/iphone/take-a-screenshot-iphc872c0115/ios">Apple:
+Take a screenshot on iPhone</a></p>
+<p><a href="https://support.apple.com/en-us/102653">Apple: Record the
+screen on your iPhone, iPad, or iPod touch</a></p>
+<h3
+id="how-to-change-language-or-hide-the-translation-toolbar-on-smartnews-ios-only">How
+to change language or hide the translation toolbar on SmartNews [iOS
+only]</h3>
+<p>SmartNews now includes a real-time translation tool for text
+articles. <strong><em>Please note: This feature is currently available
+on iOS devices only.</em></strong> Use the quick steps below to
+customize your view, switch languages, or turn the feature off
+entirely.</p>
+<h6 id="how-to-change-your-translation-language">How to Change Your
+Translation Language</h6>
+<p>Depending on what you see on your screen right now, use one of the
+two methods below:</p>
+<p><strong>If the translation bar is visible on your
+screen:</strong></p>
+<ol type="1">
+<li><p>Locate the toolbar directly below the colorful channel
+tabs.</p></li>
+<li><p>Tap the <strong>language name</strong> shown on the bar.</p></li>
+<li><p>Select your preferred target language from the list.</p></li>
+</ol>
+<p><strong>If the translation bar is hidden:</strong></p>
+<ol type="1">
+<li><p>Look for the profile tab in the bottom bar, or drag down on the
+top channel tab to make the top section appear (with the search bar and
+Profile icon).</p></li>
+<li><p>Tap the <strong>Settings (gear) icon</strong> in the top right
+corner.</p></li>
+<li><p>Tap <strong>Translation Settings</strong>.</p></li>
+<li><p>Turn the feature <strong>ON</strong>, then select your preferred
+language.</p></li>
+</ol>
+<h6 id="how-to-hide-or-remove-the-translation-bar">How to Hide or Remove
+the Translation Bar</h6>
+<p>If you do not want to see the translation bar while scrolling through
+your news feed:</p>
+<ul>
+<li>Tap the <strong>X</strong> icon on the far right side of the
+translation bar. The toolbar will slide away and remain hidden.</li>
+</ul>
+<h6 id="how-to-bring-back-a-hidden-translation-bar">How to Bring Back a
+Hidden Translation Bar</h6>
+<p>If you previously closed the bar and want it to show up on your
+channels again:</p>
+<ol type="1">
+<li><p>Look for the profile tab in the bottom bar, or drag down on the
+top channel tab to make the top section appear (with the search bar and
+Profile icon).</p></li>
+<li><p>Tap the <strong>Settings (gear) icon</strong> in the top right
+corner.</p></li>
+<li><p>Tap <strong>Translation Settings</strong>.</p></li>
+<li><p>Switch the translation toolbar setting to
+<strong>ON</strong>.</p></li>
+</ol>
+<blockquote>
+<p>📸 <strong>Still not working? Help us fix it fast!</strong></p>
+<p>If you are reading a supported text article and the translation fails
+to load, please open a support request. <strong>You must attach a
+screenshot of the un-translated page, along with your Translation
+Setting page.</strong></p>
+</blockquote>
+<h3 id="how-to-get-your-device-token-androidios">How to get your device
+token (Android/iOS)</h3>
+<p>This page shows you how to retrieve your device token.<br />
+Unique token is required if we need to troubleshoot your device in
+depth, or enroll into testing experiments we have in place. Steps to
+retrieve this token is the same across both OS devices.</p>
+<h5 id="how-to-retrieve-device-token">How to retrieve device token:</h5>
+<p>1. Click on Profile then click on the Settings icon at the top right
+hand corner</p>
+<p>2. Scroll down till you see Version. Long-press the version number
+until “Copy” pops up. Once you have clicked on Copy, you can now paste
+and send it to our customer support (<a
+href="mailto:support@smartnews.com"
+class="email">support@smartnews.com</a>)</p>
+<h3 id="how-to-switch-to-dark-mode">How to switch to Dark Mode</h3>
+<p>Supported versions: iOS 13.0 or higher, Android 7.0 or higher</p>
+<p>You can switch to dark mode if your device is supported.</p>
+<ol type="1">
+<li><p>Open SmartNews.</p></li>
+<li><p>Pull down on your screen until you see the Search bar. Tap on the
+profile icon in the righthand corner, then tap to open the Settings
+page.</p></li>
+<li><p>Follow the remaining steps, specific to your device
+type.</p></li>
+<li><ul>
+<li><strong>iOS (iOS 13.0 or higher)</strong>
+<ul>
+<li>Tap [Dark Mode] and pick your preference
+<ul>
+<li>[System Default] - the app follows the OS setting</li>
+<li>[Always Light] - the app always uses Light mode</li>
+<li>[Always Dark] - the app always uses Dark mode</li>
+</ul></li>
+</ul></li>
+<li><strong>Android (Android 7.0 or higher)</strong>
+<ul>
+<li>Tap [Theme] and pick your preference
+<ul>
+<li>[System default] - the app follows the OS setting
+<ul>
+<li>[Light] - the app always uses the Light theme</li>
+<li>[Dark] - the app always uses the Dark theme</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
+<p>[<strong>NOTE</strong>]</p>
+<ul>
+<li>The default theme is [System Default] (iOS) and [System default]
+(Android).</li>
+<li>If your device version is Android 9.0 or less, the battery saver
+function of the device will influence SmartNews’s dark mode function.
+SmartNews may automatically switch to the dark theme when the battery
+saver is on. Once you turn off the function, SmartNews may return to the
+light theme.
+<ul>
+<li><strong>How to check your device’s battery saver setting</strong>
+<ul>
+<li>Open your device’s [Setting] page &gt; [Battery] &gt; [Battery
+Saver]</li>
+<li>Swipe from the top to the bottom of your screen. When the [MENU]
+appears, if [Battery saver] is greyed out, it’s off. If it’s not, it’s
+on.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="how-to-unsubscribe-from-our-email-newsletters">How to
+unsubscribe from our email newsletters</h3>
+<p>If you no longer wish to receive our email newsletters, unsubscribing
+is quick and easy! Just follow these simple steps:</p>
+<ol type="1">
+<li>Open any of our newsletters in your email.</li>
+<li>Scroll to the bottom of the message.</li>
+<li>Click the link that says, “Update your email preferences or
+unsubscribe here.”</li>
+<li>By clicking this link, you will be removed from our mailing list,
+and you won’t receive any further newsletters from us.</li>
+</ol>
+<h3 id="how-to-use-block-publishers">How to use block publishers</h3>
+<h5 id="how-to-block-a-publisher">How to block a publisher</h5>
+<ol type="1">
+<li><p>Open any channel where you see a list of articles.</p></li>
+<li><p>Tap the <strong>…</strong> menu.</p></li>
+<li><p>Select <strong>Block [Publisher Name]</strong>.</p></li>
+</ol>
+<h5 id="how-to-manage-blocked-publishers">How to manage blocked
+publishers</h5>
+<ol type="1">
+<li><p>Tap <strong>Profile</strong> (bottom right).</p></li>
+<li><p>Open the Profile tab and look under <strong>Follow / See
+Less</strong>.</p></li>
+<li><p>Scroll until <strong>Blocked</strong> to view your list.</p></li>
+<li><p>Select a publisher to unblock.</p></li>
+</ol>
+<h5 id="i-cant-find-block-publisher-namewhat-should-i-do">I can’t find
+“Block [Publisher Name]”—what should I do?</h5>
+<p><a href="#i-cant-find-block-publisher-name">I can’t find “Block
+[Publisher Name]”</a></p>
+<h5 id="can-i-edit-the-top-news-tab-top-news-and-publishers">Can I edit
+the Top News tab (Top News and publishers)?</h5>
+<p>No. The publishers shown in <strong>Top News</strong> are
+hand-selected to encourage you to explore a wider variety of news
+sources, discover new perspectives, and stay informed beyond the topics
+you already follow.</p>
+<h3 id="how-to-use-bookmarks-in-smartnews-ios">How to use Bookmarks in
+SmartNews (iOS)</h3>
+<p>Currently, bookmark feature is <strong>available only on
+iOS</strong>.</p>
+<ul>
+<li><p><strong>Save an article:</strong> Tap the <strong>bookmark
+icon</strong> at the top right of any article.</p></li>
+<li><p><strong>View saved articles:</strong> Go to <strong>Profile &gt;
+Saved</strong> to see all your bookmarked articles.</p></li>
+<li><p><strong>Remove a bookmark:</strong> Tap the <strong>bookmark
+icon</strong> again to un-save an article.</p></li>
+</ul>
+<p><em>Note:</em> You may need to <strong>log in</strong> to use this
+feature.</p>
+<h3 id="i-cant-find-block-publisher-name">I can’t find “Block [Publisher
+Name]”</h3>
+<p>If you don’t see the <strong>Block</strong> option, try these
+steps:</p>
+<ol type="1">
+<li><p>Open a channel that shows a <strong>list of articles</strong>,
+then tap the <strong>…</strong> menu (the option may not appear
+everywhere).</p></li>
+<li><p>If the publisher is set to <strong>See Less</strong>, remove
+<strong>See Less</strong> first:</p>
+<ul>
+<li>Tap <strong>…</strong> → <strong>Remove from See Less</strong>, then
+check <strong>…</strong> again for <strong>Block [Publisher
+Name]</strong>.</li>
+</ul></li>
+</ol>
+<p>Still not seeing it?</p>
+<ul>
+<li><p>Go to <strong>Profile</strong> (bottom right) → under
+<strong>Follow / See Less</strong> tap <strong>See Less</strong>, and
+remove the publisher there.</p></li>
+<li><p>Then return to the article list and try the <strong>…</strong>
+menu again.</p></li>
+</ul>
+<h3
+id="i-have-a-question-or-feedback-for-an-article-i-saw-on-smartnews-app">I
+have a question or feedback for an article I saw on SmartNews app</h3>
+<p>As a news aggregator, we partner with publishers and SmartNews does
+not publish our own articles. Since the articles itself was written by
+writers and reporters outside of the company, we would recommend
+contacting directly with them for any feedback about the content.</p>
+<h3 id="i-want-to-read-the-article-i-opened-in-the-past">I want to read
+the article I opened in the past</h3>
+<p>If you’d like to revisit articles you read in the past, you can find
+them in your Profile tab:</p>
+<p>Profile (bottom tab) &gt; Recently Read</p>
+<p>Note: Some articles may open on the publisher’s original website when
+you tap them.</p>
+<h3 id="smartview-doesnt-show-anything">SmartView doesn’t show
+anything</h3>
+<p>If your network connection is slow, it may take longer to load
+articles, including the SmartView.</p>
+<h3 id="the-news-isnt-loading">The news isn’t loading</h3>
+<p>You may be experiencing a connection error because of a weak network
+signal or a temporary server problem.</p>
+<ul>
+<li>Try switching between Wi-fi and cellular. Is there any
+difference?</li>
+<li>Open your browser, can you connect to the internet without an
+issue?</li>
+<li>Do you have VPN, ad, or child-friendly internet blockers, changed
+any settings with your internet recently?</li>
+<li>Try moving to a place with a stronger signal, or wait a bit and try
+connecting again.</li>
+</ul>
+<h3
+id="what-are-the-minimum-supported-environments-for-ios-and-android">What
+are the minimum supported environments for iOS and Android?</h3>
+<h6 id="supporting-os">Supporting OS</h6>
+<ul>
+<li>iOS 17.0 and above</li>
+<li>Android 9.0 and above</li>
+</ul>
+<h6 id="service-locations">Service Locations</h6>
+<p>Some of our features are limited to the mainland US.</p>
+<h6 id="why-do-we-have-minimum-requirements">Why do we have minimum
+requirements?</h6>
+<p>Having minimum requirements ensures that our app can leverage the
+latest features and optimizations provided by the operating systems. It
+also allows us to maintain stability, security, and performance across
+different devices and versions.</p>
+<h6
+id="what-happens-if-my-device-does-not-meet-the-minimum-requirements">What
+happens if my device does not meet the minimum requirements?</h6>
+<p>If your device does not meet the minimum required operating system
+version, you may encounter compatibility issues or find that the app is
+not available for download from the respective app store. In such cases,
+consider updating your device’s operating system to enjoy the latest
+version of our app.</p>
+<h6 id="how-can-i-check-my-devices-operating-system-version">How can I
+check my device’s operating system version?</h6>
+<ul>
+<li><strong>iOS:</strong> Go to Settings &gt; General &gt; About, and
+look for the “Software Version” entry.</li>
+<li><strong>Android:</strong> Go to Settings &gt; About phone (or About
+tablet), and look for the “Android version” or “Software information”
+section.</li>
+</ul>
+<h6 id="can-i-request-support-for-older-versions-of-ios-or-android">Can
+I request support for older versions of iOS or Android?</h6>
+<p>Unfortunately, we cannot support older versions indefinitely due to
+technical constraints and the evolving nature of mobile operating
+systems. However, we strive to provide compatibility with a broad range
+of devices to accommodate as many users as possible.</p>
+<h6
+id="where-can-i-get-more-information-about-supported-devices-and-versions">Where
+can I get more information about supported devices and versions?</h6>
+<p>For the most up-to-date information on supported devices and
+operating system versions, please visit our website or contact our
+customer support team.</p>
+<h3 id="where-did-my-city-tab-go">Where did my [city] tab go?</h3>
+<p>Several months ago SmartNews released a more precise and dynamic
+local news channel for all our US Edition users. The new Local channel
+is just to the left of the Top tab.</p>
+<p>If you share your location with the SmartNews application, the news
+will always be relevant to your location, everytime you check SmartNews.
+Alternatively, you can also enter your zip code, which will fix your
+location to your selected locale rather than having it change depending
+on where you are at any given moment. To take advantage of this new
+Local News feature, make sure to update your SmartNews app to the most
+recent version of SmartNews (at least iOS : 6.2.5 or Android : 5.5.12),
+tap the Local tab next to Top and follow the directions to share your
+location.</p>
+<p>These are the legacy city channels that will be removed:</p>
+<table>
+<tbody>
+<tr>
+<td>ABQ-Santa Fe</td>
+<td>Honolulu</td>
+<td>Philadelphia</td>
+</tr>
+<tr>
+<td>Alaska</td>
+<td>Houston</td>
+<td>Phoenix</td>
+</tr>
+<tr>
+<td>Atlanta</td>
+<td>Indianapolis</td>
+<td>Pittsburgh</td>
+</tr>
+<tr>
+<td>Austin</td>
+<td>Jacksonville</td>
+<td>Portland, OR</td>
+</tr>
+<tr>
+<td>Baltimore</td>
+<td>Kansas City</td>
+<td>Raleigh-Durham</td>
+</tr>
+<tr>
+<td>Boston</td>
+<td>Las Vegas</td>
+<td>Richmond</td>
+</tr>
+<tr>
+<td>Buffalo</td>
+<td>Little Rock</td>
+<td>Sacramento</td>
+</tr>
+<tr>
+<td>Central Alabama</td>
+<td>Los Angeles</td>
+<td>Salt Lake City</td>
+</tr>
+<tr>
+<td>Central Valley</td>
+<td>Louisville</td>
+<td>San Antonio</td>
+</tr>
+<tr>
+<td>Charlotte</td>
+<td>Madison</td>
+<td>San Diego</td>
+</tr>
+<tr>
+<td>Chicago</td>
+<td>Memphis</td>
+<td>Seattle</td>
+</tr>
+<tr>
+<td>Cincinnati</td>
+<td>Miami</td>
+<td>SF Bay Area</td>
+</tr>
+<tr>
+<td>Cleveland</td>
+<td>Milwaukee</td>
+<td>St. Louis</td>
+</tr>
+<tr>
+<td>Columbus</td>
+<td>Minneapolis</td>
+<td>Tampa Bay</td>
+</tr>
+<tr>
+<td>Dallas</td>
+<td>Nashville</td>
+<td>Tulsa</td>
+</tr>
+<tr>
+<td>Denver</td>
+<td>New Orleans</td>
+<td>Washington DC</td>
+</tr>
+<tr>
+<td>Detroit</td>
+<td>New York City</td>
+<td>West Palm Beach</td>
+</tr>
+<tr>
+<td>El Paso</td>
+<td>Norfolk</td>
+<td>Winston-Salem</td>
+</tr>
+<tr>
+<td>Grand Rapids</td>
+<td>Oklahoma City</td>
+<td></td>
+</tr>
+<tr>
+<td>Greenville, SC</td>
+<td>Omaha</td>
+<td></td>
+</tr>
+<tr>
+<td>Hartford-New Haven</td>
+<td>Orlando</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-can-i-not-see-local-contents">Why can I not see local
+contents?</h3>
+<p>We currently support local features for zip codes within the United
+States, excluding Puerto Rico and Northern Mariana Islands.</p>
+<p>If you are having trouble accessing zip codes within this region,
+please try the below troubleshooting:</p>
+<ul>
+<li>Reset your zip code</li>
+<li>Clear cache, restart your app</li>
+</ul>
+<h3 id="why-is-the-smarttake-channel-gone-from-my-app">Why is the
+SmartTake Channel gone from my app?</h3>
+<p>The SmartTake Channel was discontinued because it wasn’t as widely
+used as other features. This change allows us to focus on improving the
+parts of SmartNews that bring the most value to our users.<br />
+Thank you for your support - we’re always working to make SmartNews the
+best experience possible.</p>
+</body>
+</html>

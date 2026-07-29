@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Grubhub Diner Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Grubhub Diner Help Guide</h1>
+<p class="subtitle">Grubhub’s official help for diners, gathered into
+one screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="grubhub-diner-help-guide">Grubhub Diner Help Guide</h1>
+<p>This guide gathers the official help Grubhub publishes for diners —
+the people ordering the food. It was taken from Grubhub’s own help pages
+on 28 July 2026.</p>
+<p>Grubhub splits its help four ways by audience: diners here,
+restaurants on a separate site, delivery partners on a third, and
+corporate accounts on a fourth. Only the diner estate is included, and
+it is small: Grubhub answers most questions through a chat assistant
+rather than a library of articles, so what follows is the written
+guidance that exists, not a summary of a larger collection.</p>
+<p>The pages are the ones Grubhub’s own help wizard offers: how Grubhub
+and Grubhub Plus work, memberships including the student, bank and Lyft
+partnerships, and the pick-up benefit. Grubhub’s privacy policy and
+terms of use are not included: they render inside the ordinary site
+chrome rather than the help wizard, so a copy would carry cookie vendor
+lists and page scaffolding with it. They remain on Grubhub’s site.</p>
+<p>Headings run three deep: this title, then a group, then a page. Every
+page is listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#common-questions">Common questions</a>
+<ul>
+<li><a href="#grubhub-for-amazon-prime-members">Grubhub+ for Amazon
+Prime members</a></li>
+<li><a href="#grubhub-membership">Grubhub+ membership</a></li>
+<li><a href="#grubhub-student-membership">Grubhub+ Student
+Membership</a></li>
+<li><a href="#how-do-i-cancel-my-membership">How do I cancel my
+membership?</a></li>
+<li><a href="#how-does-grubhub-work">How does Grubhub+ work?</a></li>
+<li><a href="#how-does-my-grubhub-with-lyft-pink-work">How does my
+Grubhub+ with Lyft Pink work?</a></li>
+<li><a href="#how-does-my-grubhub-with-my-bank-of-america-card-work">How
+does my Grubhub+ with my Bank of America card work?</a></li>
+<li><a href="#how-does-my-pick-up-benefit-work">How does my pick up
+benefit work?</a></li>
+</ul></li>
+</ul>
+<h2 id="common-questions">Common questions</h2>
+<h3 id="grubhub-for-amazon-prime-members">Grubhub+ for Amazon Prime
+members</h3>
+<p><strong>What is the Grubhub+ offer for Amazon Prime
+members?</strong></p>
+<p>Amazon Prime members can enjoy Grubhub+ free ($120 annual value), as
+long as they have an active Prime membership and their Grubhub and
+Amazon accounts are linked. No expiration date or monthly Grubhub+
+membership fees.</p>
+<p><strong>What is included in Grubhub+?</strong></p>
+<p>Grubhub+ is Grubhub’s membership program. Members get exclusive
+benefits like $0 delivery fees and lower service fees on delivery orders
+that meet the subtotal minimum (before tax, tip and fees) from Grubhub+
+eligible merchants (the “Subtotal Minimum”), 5% back in Grubhub+ Credit
+on eligible pickup orders, and access to exclusive offers. Additional
+fees may apply. The current Subtotal Minimum is $12, except for those
+participating in Grubhub+ Student, who are subject to a $15 Subtotal
+Minimum. Subtotal Minimums are subject to change.</p>
+<p>See the full Grubhub+ terms and conditions for more information.</p>
+<p><strong>How can I redeem my free Grubhub+ membership through Amazon
+Prime?</strong></p>
+<ol type="1">
+<li>Go to
+&lt;<code>https://www.amazon.com/prime/offer/embedded/grubhub/prime-deal/</code>&gt;
+and click “Activate Now”</li>
+<li>Sign in to Amazon to link your Grubhub account</li>
+<li>Agree to the terms and conditions to connect your Prime and Grubhub
+accounts</li>
+<li>Agree to share your Prime membership status with Grubhub</li>
+<li>Start enjoying all the benefits of free Grubhub+</li>
+</ol>
+<p><strong>What if I’m not a Prime member?</strong></p>
+<p>This offer is only available to current Prime members. To join Prime
+and redeem your Grubhub+ offer, you can sign up using the steps above,
+then experience all that Prime has to offer, including exclusive
+shopping, savings, and entertainment benefits.</p>
+<p><strong>What if I already have a Grubhub+ membership?</strong></p>
+<p>Existing Grubhub+ members can redeem this offer. Sign in or sign up
+for Prime on &lt;<code>https://amazon.com</code>&gt; and follow the
+steps above to activate this offer.</p>
+<p>If your Amazon account matches the email address of your Grubhub
+account and you have a paid Grubhub+ membership at the time of signup,
+your paid membership will be canceled and your free Grubhub+ through
+Amazon Prime will begin on the calendar day immediately following the
+end of your then-current billing cycle.</p>
+<p>If the email of your current Grubhub account does not match your
+Amazon account, you will need to cancel your paid or trial Grubhub+
+membership in the Grubhub app, on <code>https://grubhub.com</code>, or
+by contacting Grubhub customer support for assistance in canceling your
+paid Grubhub+ membership.</p>
+<p><strong>What if I’ve already redeemed the Prime Grubhub+
+offer?</strong></p>
+<p>No action is needed if you’ve previously redeemed the Prime Grubhub+
+offer. You can continue enjoying your Grubhub+ benefits, now with no
+expiration date.</p>
+<p><strong>How many Grubhub+ accounts can I claim with my Prime
+membership?</strong></p>
+<p>You are only able to claim one Grubhub+ membership per Amazon
+account. If you have already activated a Grubhub+ membership for Amazon
+Prime or Amazon Prime Student members, then your Grubhub+ will apply to
+that Grubhub account only and cannot be transferred to other Grubhub
+accounts without unlinking your Amazon and Grubhub accounts.</p>
+<p><strong>How do I unlink my Amazon and Grubhub accounts?</strong></p>
+<p>You can visit the Manage apps &amp; data services in the Manage Your
+Data section on the Your Account page of
+&lt;<code>https://amazon.com</code>&gt; to remove the preexisting
+linkage.</p>
+<p><strong>What if I cancel or pause my Prime membership?</strong></p>
+<p>If you cancel or pause your Prime membership you will lose your
+access to free Grubhub+ through Amazon Prime when that cancellation or
+pause goes into effect.</p>
+<p>If you choose to restart your Prime membership, you will need to
+redeem this offer again by visiting
+&lt;<code>https://www.amazon.com/prime/offer/embedded/grubhub/prime-deal/</code>&gt;.</p>
+<p>If you decide not to continue your membership with Amazon Prime, you
+can always sign up for a paid Grubhub+ membership to continue receiving
+Grubhub+ benefits at <code>https://www.grubhub.com/plus</code>.</p>
+<p><strong>Who do I contact if I have an issue connecting my
+account?</strong></p>
+<p>First, verify that you are logged in to Amazon and that your Prime
+membership is active, then attempt to redeem the offer by visiting
+&lt;<code>https://www.amazon.com/prime/offer/embedded/grubhub/prime-deal/</code>&gt;.</p>
+<p>For questions about your Prime membership, contact <a
+href="https://www.amazon.com/hz/contact-us/foresight/hubgateway">Amazon
+customer service</a>.</p>
+<p>For questions about your Grubhub account or Grubhub+ membership,
+contact Grubhub customer support.</p>
+<p><strong>What if I previously redeemed the Prime Student offer for a
+free Grubhub+ membership?</strong></p>
+<p>Prime Student members who have already redeemed the Grubhub+ Student
+offer will continue to receive free Grubhub+ until they graduate. If you
+decide to purchase a Prime membership once your Prime Student membership
+expires, you will continue to receive Grubhub+ for free with no action
+required. If you do not purchase a Prime membership when your Prime
+Student membership expires, you will lose access to your free Grubhub+
+membership. You may regain your free Grubhub+ membership by purchasing
+Amazon Prime and ensuring your Grubhub and Amazon accounts are
+linked.</p>
+<p><strong>Will my free Grubhub+ membership convert to a paid
+membership?</strong></p>
+<p>Your free Grubhub+ membership with Amazon Prime will never convert to
+a paid membership. If you deactivate your Amazon Prime account, you will
+not be auto-enrolled into a paid Grubhub+ membership.</p>
+<p><strong>How do I cancel my free Grubhub+ membership through Amazon
+Prime?</strong></p>
+<p>You will have free access to Grubhub+ with your Prime membership as
+long as you have Prime and your Grubhub and Amazon accounts are linked.
+To cancel your free Grubhub+ membership, please visit the Manage apps
+&amp; data services in the Manage Your Data section on the Your Account
+page of &lt;<code>https://amazon.com</code>&gt;. From there you can
+unlink your Amazon and Grubhub accounts, which will cancel your free
+Grubhub+ membership through Amazon Prime. You can also contact Grubhub
+customer support to help cancel your Grubhub+ membership.</p>
+<p><strong>Will my personal data be shared between Amazon and
+Grubhub?</strong></p>
+<p>By linking your Amazon and Grubhub accounts, you agree that Amazon
+will share your Prime membership status information with Grubhub for the
+purposes of enabling your Grubhub offer and that Grubhub may share offer
+redemption and/or cancellation information with Amazon.</p>
+<p><strong>What if my Amazon or Grubhub account is deleted?</strong></p>
+<p>Deletion of your Grubhub or Amazon account will result in the
+termination of your free Grubhub+ membership for Amazon Prime members.
+Currently, there isn’t a way to restore your Grubhub+ account once your
+Grubhub or Amazon account is deleted. If you would like to rejoin
+Grubhub+, you can create a new Grubhub or Amazon account then redeem
+this offer again by following the steps listed above. Subject to Grubhub
+and Amazon terms of use.</p>
+<h3 id="grubhub-membership">Grubhub+ membership</h3>
+<p>How does Grubhub+ work?</p>
+<p>Which restaurants are eligible?</p>
+<p>Add or update my payment method</p>
+<p>How do I cancel my membership?</p>
+<p>What is the Grubhub+ Student Membership?</p>
+<p>What is the Grubhub+ offer for Amazon Prime members?</p>
+<p>How does my Grubhub+ with Lyft Pink work?</p>
+<p>How does my Grubhub+ with my Bank of America card work?</p>
+<p>How does my pick up benefit work?</p>
+<p>How do reduced service fees work?</p>
+<h3 id="grubhub-student-membership">Grubhub+ Student Membership</h3>
+<p>Grubhub+ Student Membership is a special promotional membership
+program for college students who are affiliated with select universities
+through Grubhub Campus Dining. Grubhub+ Student Membership allows access
+to the following benefits:</p>
+<ol type="1">
+<li>$0 delivery fees and lower service fees on eligible delivery orders
+that meet the subtotal minimum at select off-campus restaurants</li>
+<li>5% back in Grubhub+ credit per eligible pickup order, which can be
+used on future Grubhub orders (except on-campus orders)</li>
+<li>Exclusive offers on eligible orders</li>
+<li>Matched Donate the Change donations from Grubhub+ restaurants. Terms
+apply</li>
+</ol>
+<h3 id="how-do-i-cancel-my-membership">How do I cancel my
+membership?</h3>
+<p>You can cancel your Grubhub+ membership at any time. If you cancel,
+your membership benefits will continue through the end of the current
+billing cycle. If you cancel during a trial period, your benefits will
+end immediately. To cancel your Grubhub+ membership:</p>
+<p><strong>iOS and Android App Users:</strong></p>
+<ol type="1">
+<li>Log in to your account</li>
+<li>Tap on the Account icon</li>
+<li>Navigate to Grubhub+ membership menu option</li>
+<li>Select Manage Membership button</li>
+<li>Tap Cancel membership</li>
+<li>Confirm Cancel membership</li>
+</ol>
+<p><strong>Desktop Users:</strong></p>
+<ol type="1">
+<li>Navigate to grubhub.com or seamless.com</li>
+<li>Log in to your account</li>
+<li>Click on the drop-down menu in the upper right-hand corner</li>
+<li>Navigate to Grubhub+ menu option</li>
+<li>Click Cancel membership</li>
+<li>Confirm Cancel membership</li>
+</ol>
+<h3 id="how-does-grubhub-work">How does Grubhub+ work?</h3>
+<p><strong>What is Grubhub+?</strong></p>
+<p><a href="https://www.Grubhub.com/plus/purchase">Grubhub+ is our
+standard monthly membership program</a>. Grubhub+ members get unlimited
+$0 delivery fees and reduced service fees on eligible delivery orders of
+$12+ from restaurants, convenience stores and more in the Grubhub+
+network, can earn 5% back in Grubhub+ credit per eligible pickup order,
+have access to exclusive offers and more!</p>
+<p><strong>How does it work?</strong></p>
+<p>After joining, look for the Grubhub+ badge next to a restaurant’s
+name or use the Grubhub+ filter to search for participating restaurants.
+Order from any of these restaurants and you will receive $0 delivery
+fees and lower service fees on eligible orders of $12 or more. There are
+no special codes required and no limits on how many orders you can place
+per month. You also can earn 5% back in Grubhub+ credit per eligible
+pickup order, which can be used on future Grubhub orders.</p>
+<p><strong>Are there any exceptions?</strong></p>
+<p>Orders containing alcohol do not qualify for Grubhub+ benefits.
+Certain order types (including catering orders, and scheduled team
+orders) may not qualify for Grubhub+ benefits. However, you’ll still
+receive your $0 delivery fees and lower service fees on eligible orders
+from Grubhub+ merchants.</p>
+<p>Grubhub+ Student is a free membership program for active students,
+faculty, or staff of a qualifying college campus affiliated with Grubhub
+Campus Dining. Orders placed using a Grubhub+ Student account may be
+subject to different restrictions, order minimums, and eligibility
+requirements than Grubhub+ to receive benefits. Additionally, on-campus
+orders may not qualify for Grubhub+ benefits, including, without
+limitation, 5% Grubhub+ credit on pickup orders and $0 delivery fees. To
+learn more about Grubhub+ Student, visit grubhub.com/about/campus.</p>
+<p><strong>How do I join?</strong></p>
+<p>It’s easy and you can use your benefits immediately. <a
+href="https://www.Grubhub.com/plus/purchase">Join Grubhub+
+today</a>!</p>
+<h3 id="how-does-my-grubhub-with-lyft-pink-work">How does my Grubhub+
+with Lyft Pink work?</h3>
+<p><strong>How much does Grubhub+ cost?</strong></p>
+<p>Grubhub+ costs $9.99/month but Lyft Pink members can enjoy a Grubhub+
+membership free for one year.</p>
+<p><strong>How long does the Grubhub+ benefit through Lyft Pink
+last?</strong></p>
+<p>Lyft Pink members can enjoy a Grubhub+ membership free for one year
+(normally $9.99/month) with their Lyft Pink membership. After your free
+trial ends, it will convert to a paid Grubhub+ membership and Grubhub
+will automatically charge you each month at the then-current rate
+(currently $9.99) plus applicable tax until you cancel. Grubhub may
+charge any payment method on file for your Grubhub account.</p>
+<p><strong>Where can I see when my Grubhub+ one year free trial
+ends?</strong></p>
+<p>Lyft Pink members can check the Grubhub+ one year free trial
+expiration date by visiting the “Grubhub+ membership” section in your
+Grubhub account settings.</p>
+<p><strong>What if I already have Grubhub+?</strong></p>
+<p>Follow the steps to set up your Grubhub+ free trial with Lyft Pink.
+Once you activate this Lyft Pink perk, your existing Grubhub+ account
+will be migrated at the end of your current billing cycle, and your free
+1-year Grubhub+ trial will begin.</p>
+<p>Grubhub Campus and Corporate users as well as certain other existing
+Grubhub+ members are excluded from participating in this offer.</p>
+<p><strong>What if I don’t have Lyft Pink?</strong></p>
+<p>This offer is only available to Lyft Pink members. You must sign up
+for Lyft Pink, link your Lyft Pink and Grubhub accounts, and complete
+the sign up process through the offer page currently available at
+&lt;<code>https://www.lyftGrubhub.com</code>&gt; in order to redeem this
+offer.</p>
+<p><strong>What if I cancel my Lyft Pink membership?</strong></p>
+<p>If you cancel your Lyft Pink membership, you’ll have until the end of
+your then-current Lyft Pink billing cycle to use all your Lyft Pink
+perks, including Grubhub+. When your Lyft Pink membership ends, your
+free trial of Grubhub+ will also end. If you pause your Lyft Pink
+membership but do not cancel it, your free trial of Grubhub+ will not
+pause or be affected.</p>
+<p><strong>What if I try Grubhub+ and want to cancel?</strong></p>
+<p>You can cancel Grubhub+ at any time by visiting the “Grubhub+
+membership” section in your Grubhub account settings. If you cancel
+during the free trial, your Grubhub+ membership benefits will end
+immediately, but your Lyft Pink membership won’t be affected. For
+questions about your Grubhub+ membership or Grubhub account, contact
+Grubhub customer support.</p>
+<p><strong>Are there any other terms applicable to this
+offer?</strong></p>
+<p>Offer available for authenticated and active Lyft Pink members only
+(subject to verification by Grubhub). Must link Lyft Pink and Grubhub
+accounts to participate. Grubhub+ $0 delivery fees and lower service
+fees only apply to standard delivery orders from Grubhub+ eligible
+merchants that meet the subtotal minimum (before tax, tip, and fees) on
+the applicable menu page or as otherwise indicated on the Grubhub
+platform. Additional fees may apply and vary on orders. Grubhub+ 5%
+pickup credit applicable on eligible pickup orders only. 5% pickup
+credit calculated based on the qualifying order subtotal from eligible
+merchants only. Credit will appear as a “Grubhub+ Credit” payment method
+at checkout. Credit is redeemable on eligible future Grubhub pickup and
+delivery orders only. Credit is not transferrable, may not be exchanged
+for cash, expires 90 days after most recent credit is issued, may not be
+applied toward purchase containing alcohol, and is subject to additional
+restrictions. Credit cannot be accrued or redeemed on on-campus dining
+orders. If you are an existing Grubhub+ member on a paid plan, your paid
+plan will be canceled upon signup and your free trial will begin on the
+first calendar day immediately following the current billing cycle. Free
+12 month free trial available for 365 days from date trial is initiated.
+<strong>Grubhub+ is an automatically renewing membership service
+requiring recurring payments. After your free trial ends, your free
+trial will convert to a paid Grubhub+ membership and Grubhub will
+automatically charge you each month at the then-current rate (currently
+$9.99 per month) plus applicable tax until you cancel unless you do not
+have a payment method saved in your Grubhub account at renewal. Grubhub
+may charge any payment method on file for your Grubhub account. See
+Grubhub+ cancellation and refund policy and full terms at
+&lt;<code>https://lp.Grubhub.com/legal/plus/</code>&gt;.</strong>
+Canceling during the free trial period will result in immediate
+termination of the Grubhub+ membership and benefits. Termination of your
+Lyft Pink membership will result in termination of your Grubhub+ free
+trial. Grubhub+ is subject to merchant and delivery availability.
+Grubhub reserves the right to change whether a merchant is eligible for
+Grubhub+ at any time with or without notice to members. To the maximum
+extent permitted by law, Grubhub reserves the right to cancel, suspend
+and/or modify any aspect of or the entirety of this offer, for any
+reason at any time, with or without notice, including, without
+limitation, if any fraud or technical failure impairs the integrity or
+proper functioning of the offer. Offer cannot be combined with other
+free trial offers. This offer is available in the United States only
+(not available in Puerto Rico or the U.S. Virgin Islands).</p>
+<h3 id="how-does-my-grubhub-with-my-bank-of-america-card-work">How does
+my Grubhub+ with my Bank of America card work?</h3>
+<p><strong>How do I claim my year of free Grubhub+?</strong></p>
+<p>As of 12/31/23 at 11:59 PM PST, this offer is no longer available for
+redemption. Users who have already redeemed this offer will be able to
+utilize the rest of their remaining trial.</p>
+<p>Please refer to the following FAQs for more information about the
+offer.</p>
+<p><strong>How much does Grubhub+ cost?</strong></p>
+<p>Eligible Bank of America card holders were able to claim a 1 year
+trial of Grubhub+ for free. The offer ended 12/31/23. Once your 12-month
+free trial has ended, you will be billed at the then-current rate
+(currently $9.99/month) plus applicable tax until you cancel. You can
+cancel any time by contacting Grubhub customer support or visiting the
+“Grubhub+ membership” section in your Grubhub account settings.</p>
+<p><strong>What if I try Grubhub+ and want to cancel?</strong></p>
+<p>You can cancel your Grubhub+ membership any time by going to your
+account page and following the prompts. If you cancel your free trial,
+your Grubhub+ benefits will end immediately. If you cancel a paid
+subscription, your Grubhub+ benefits will end after the next billing
+cycle. If you have any questions, contact Grubhub customer support or
+refer to our cancellation instructions here.</p>
+<h3 id="how-does-my-pick-up-benefit-work">How does my pick up benefit
+work?</h3>
+<p><strong>How does my Grubhub+ pickup benefit work?</strong></p>
+<p>5% pickup credit applicable on eligible pickup orders only and is
+calculated based on the qualifying order subtotal. Credit will appear as
+a “Grubhub+ Credit” payment method at checkout. Grubhub+ Credit is
+redeemable on eligible future Grubhub orders only. Grubhub+ Credit is
+not transferable, may not be exchanged for cash, expires 90 days after
+most recent credit is issued, may not be applied toward purchases
+containing alcohol, and is subject to additional restrictions. Grubhub+
+Credit cannot be accrued or redeemed on on-campus dining orders. Subject
+to merchant and delivery ability.</p>
+<p><strong>What about my $10 monthly pickup benefit?</strong></p>
+<p>Previously, paid Grubhub+ subscribers received a $10 monthly credit
+to be used on pickup orders. However, we have changed that benefit to 5%
+back in Grubhub+ Credit on every eligible pickup order to be used on
+future Grubhub Orders. For members with an existing pickup benefit, that
+benefit will cease following the end of the member’s next full billing
+cycle after announcement of this change on July 25, 2023.</p>
+<p><strong>What are the restrictions of the pickup benefit?</strong></p>
+<p>Earn Rules:</p>
+<ul>
+<li><p>Eligible on Grubhub pickup orders (excludes on-campus orders).
+Can be earned on Restaurant and Convenience orders. Valid on Group
+Orders and earning will go to host of order.</p></li>
+<li><p>The 5% credit is calculated based on order subtotal only
+(excluding tax, fees, tip, promos). No minimum order amount
+restriction.</p></li>
+<li><p>Grubhub+ Credit will be added to the member’s account after
+making an eligible pickup order and expires 90 days after
+issuance.</p></li>
+</ul>
+<p><strong>Redemption Rules:</strong></p>
+<ul>
+<li><p>Users can apply Grubhub+ Credit to and order during checkout flow
+via the “Your Payment” selection</p></li>
+<li><p>Grubhub+ Credit can be used on future delivery or pickup orders
+on the Grubhub platform (excluding on-campus merchants).</p></li>
+<li><p>Grubhub+ Credit cannot be redeemed on orders containing
+alcohol</p></li>
+<li><p>Grubhub+ Credit must be used within 90 days of last issuance
+(otherwise it will expire).</p></li>
+</ul>
+</body>
+</html>
