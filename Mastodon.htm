@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-28" />
+  <title>Mastodon Help Compendium</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Mastodon Help Compendium</h1>
+<p class="subtitle">The official Mastodon user documentation, covering
+the web interface and the official mobile apps</p>
+<p class="date">2026-07-28</p>
+</header>
+<h1 id="mastodon-help-compendium">Mastodon Help Compendium</h1>
+<p>This compendium contains the complete official Mastodon user
+documentation from docs.joinmastodon.org (14 articles), taken from the
+project’s freely licensed documentation source. It covers signing up and
+choosing a server, posting, your profile, preferences, discoverability,
+moderation from a user’s perspective, moving or leaving your account,
+dealing with the wider network, external tools, running your own server,
+and the official iOS and Android app user guide. Articles are
+alphabetized by title under one category matching the documentation’s
+own Using Mastodon section; each article’s own sections appear as
+subheadings within it. The documentation’s separate administration,
+developer, and API reference sections are not included in this
+user-oriented volume but are available on request. Images are reduced to
+bracketed captions and embedded videos are omitted.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#cat-using-mastodon">Using Mastodon</a>
+<ul>
+<li><a href="#dealing-with-unwanted-content">Dealing with unwanted
+content</a></li>
+<li><a href="#more-settings">More settings</a></li>
+<li><a href="#moving-or-leaving-accounts">Moving or leaving
+accounts</a></li>
+<li><a href="#official-ios-and-android-apps">Official iOS and Android
+apps</a></li>
+<li><a href="#posting-to-your-profile">Posting to your profile</a></li>
+<li><a href="#promoting-yourself-and-others">Promoting yourself and
+others</a></li>
+<li><a href="#quoting-other-posts">Quoting other posts</a></li>
+<li><a href="#running-your-own-server">Running your own server</a></li>
+<li><a href="#set-your-preferences">Set your preferences</a></li>
+<li><a href="#setting-up-your-profile">Setting up your profile</a></li>
+<li><a href="#signing-up-for-an-account">Signing up for an
+account</a></li>
+<li><a href="#using-mastodon-externally">Using Mastodon
+externally</a></li>
+<li><a href="#using-the-network-features">Using the network
+features</a></li>
+<li><a href="#welcome-to-mastodon">Welcome to Mastodon</a></li>
+</ul></li>
+</ul>
+<h2 id="cat-using-mastodon">Using Mastodon</h2>
+<h3 id="dealing-with-unwanted-content">Dealing with unwanted
+content</h3>
+<p><em>Control what you see, for a more comfortable social media
+experience.</em></p>
+<h4 id="filtering-posts">Filtering posts</h4>
+<p>It is possible to filter statuses for specific keywords and phrases
+so that they can be hidden automatically.</p>
+<p>[Image: A sample of active filters for various keywords in different
+contexts]</p>
+<p>To create or manage your filters, go to <strong>Preferences</strong>
+&gt; <strong>Filters</strong>. The “Add new filter” button will let you
+create a new filter, and existing filters can be edited or deleted. Your
+existing filters will be summarized in a table.</p>
+<p>[Image: Filters can have an expiry date, specific contexts,
+server-side visibility options, and use word boundaries]</p>
+<h5 id="keyword-or-phrase">Keyword or phrase</h5>
+<p>This is the string that will be matched. The keyword will be searched
+for in any status’s content, including CW, media descriptions, and poll
+options.</p>
+<h5 id="expire-after">Expire after</h5>
+<p>Optionally only apply the filter for a limited amount of time.
+Expired filters are not automatically deleted, but can be reactivated by
+setting a new expiry date (or changing it back to “never” expire).</p>
+<h5 id="filter-contexts">Filter contexts</h5>
+<p>Choose where the filter will be applied:</p>
+<ul>
+<li>Home timeline and lists = matching statuses will be removed from
+your home feed and lists</li>
+<li>Notifications = matching notifications will not be shown</li>
+<li>Public timelines = matching statuses will not appear in
+local/federated timelines</li>
+<li>Conversations = matching statuses will be hidden in threads and
+detailed views</li>
+<li>Profiles = matching statuses will be hidden in profile views</li>
+</ul>
+<h5 id="hide-completely">Hide completely</h5>
+<p>Filtering is usually done client-side, so that disabling a filter
+will cause filtered statuses to be visible again. However, if you enable
+“Hide completely”, any matching statuses will disappear completely and
+will never be delivered to your home or notifications.</p>
+<h5 id="whole-word">Whole word</h5>
+<p>Filters normally apply to any status that contains the included
+characters, regardless of whether they are in the middle of a word.
+Enabling “whole word” will only apply the filter if the keyword is
+surrounded by spaces or other non-alphanumeric characters.</p>
+<h4 id="user-level-actions">User-level actions</h4>
+<p>[Image: The profile dropdown menu offers various actions]</p>
+<h5 id="hiding-boosts">Hiding boosts</h5>
+<p>If you hide boosts from someone, you won’t see their boosts in your
+home feed. This option only appears on users who you are currently
+following.</p>
+<h5 id="quote-posts">Quote posts</h5>
+<p>If your post is quoted by another user in an unwanted way, you can <a
+href="https://docs.joinmastodon.org/../quote-posts/#remove">remove your
+quoted post</a>.</p>
+<h5 id="muting">Muting</h5>
+<p>When muting, you have the option to mute notifications from them or
+not. Muting without muting notifications hides the user from your
+view:</p>
+<ul>
+<li>You won’t see the user in your home feed</li>
+<li>You won’t see other people boosting the user</li>
+<li>You won’t see other people mentioning the user</li>
+<li>You won’t see the user in public timelines</li>
+</ul>
+<p>If you choose to also mute notifications from them, you will
+additionally not see notifications from that user.</p>
+<p>Mutes can also have an optional duration, after which they will
+expire.</p>
+<p>The user has no way of knowing they have been muted.</p>
+<h5 id="blocking">Blocking</h5>
+<p>Blocking hides a user from your view:</p>
+<ul>
+<li>If you were following the user you unfollow them</li>
+<li>You won’t see the user in your home feed</li>
+<li>You won’t see other people boosting the user</li>
+<li>You won’t see other people mentioning the user</li>
+<li>You won’t see the user in public timelines</li>
+<li>You won’t see notifications from that user</li>
+</ul>
+<p>Additionally, on the blocked user’s side:</p>
+<ul>
+<li>The user is forced to unfollow you</li>
+<li>The user cannot follow you</li>
+<li>The user won’t see other people’s boosts of you</li>
+<li>The user won’t see you in public timelines</li>
+</ul>
+<p>If you and the blocked user are on the same server, the blocked user
+will not be able to view your posts on your profile while logged in.</p>
+<h5 id="hiding-an-entire-server">Hiding an entire server</h5>
+<p>[Image: Sample of blocking an entire domain]</p>
+<p>If you block an entire server:</p>
+<ul>
+<li>You will not see posts from that server on the public timelines</li>
+<li>You won’t see other people’s boosts of that server in your home
+feed</li>
+<li>You won’t see notifications from that server</li>
+<li>You will lose any followers that you might have had on that
+server</li>
+</ul>
+<h4 id="reporting-problematic-content-to-moderators">Reporting
+problematic content to moderators</h4>
+<p>[Image: The report modal allows selecting example statuses, adding a
+note, and forwarding reports]</p>
+<p>If you see a status or user that is violating the rules of your
+website, you can report that user to your site’s moderators. Clicking
+the “report” option on the user dropdown or status dropdown will open
+the report modal. Here, you can (and should) add a note about why you
+are reporting this account. You can attach certain problematic statuses
+for additional context on why you are reporting the account, and if
+their conduct is violating the rules of the remote website, you can also
+choose to forward the report to their site’s moderators.</p>
+<h3 id="more-settings">More settings</h3>
+<p><em>Invite new users, sort through your contacts, and secure your
+account.</em></p>
+<h4 id="generating-invites">Generating invites</h4>
+<p>[Image: Invite people to join your server]</p>
+<p>Invite links can be generated and shared with other people, and some
+servers require invites in order to register for an account. When
+generating an invite link, you can set the max uses to limit how many
+times a certain link is used, or how long it has been active. Invite
+links can be deactivated at any time.</p>
+<p>Go to <strong>Preferences</strong> &gt; <strong>Invite
+people</strong> to generate invite links.</p>
+<h4 id="follows-and-followers">Follows and followers</h4>
+<p>[Image: Mutuals who have not moved their account, sorted by most
+recent]</p>
+<p>Within settings, you can find a relationship manager that lets you
+filter and sort through the profiles that you are connected to, based on
+different criteria:</p>
+<ul>
+<li><strong>Relationship:</strong> whether a profile is following you,
+followed by you, or mutually following each other.</li>
+<li><strong>Account status:</strong> whether a profile is currently
+marked as redirected or not.</li>
+<li><strong>Account activity:</strong> whether a profile has posted in
+the past month or not.</li>
+</ul>
+<p>You can select certain users to unfollow, or to remove from your
+followers, by checking the boxes and clicking the corresponding button
+in the table header.</p>
+<h4 id="account-settings">Account settings</h4>
+<p>From the account settings, you can change your email address, set a
+new password, revoke active sessions or authorized apps, and enable
+two-factor authentication.</p>
+<h3 id="moving-or-leaving-accounts">Moving or leaving accounts</h3>
+<p><em>Take your information and do what you want with it.</em></p>
+<h4 id="summary">Summary</h4>
+<p>If your current server is going to shut down, has changed policies,
+is not being maintained, or for whatever other reason is no longer
+working for you, you can migrate your account to a new server and
+preserve much of your account content and relationships.</p>
+<p>Follow these steps to migrate accounts:</p>
+<ol type="1">
+<li><p>Create a new Mastodon account on another server. Try to choose
+one that you think will work for you long term, or make your
+own.</p></li>
+<li><p>Set up the new account with your profile, bio, avatar and header,
+etc. This is not strictly necessary from a technical perspective, but it
+will help anyone who encounters it trust that it really is you. You may
+want to send out a post from the new account announcing the move as
+well.</p></li>
+<li><p>From the old account, <a
+href="https://docs.joinmastodon.org/user/moving/#export">export a list
+of people you follow</a>. If you are following people who require
+approval for followers, they will have to re-approve you.</p></li>
+<li><p>From the new account, import that just-exported list of people
+you follow (and any other lists you exported).</p></li>
+<li><p>Create an alias from the old to new account. From the new
+account, go to Preferences &gt; Account and find “Moving from a
+different account”. Click “create an account alias”. Enter your old
+account handle and click “Create alias”.</p>
+<blockquote>
+<p><strong>Note:</strong> You haven’t changed anything yet, you have
+only prepared. Pause at this point and see if you have anything in your
+old account you will need access to, such as notifications and DMs. Once
+you proceed to the next step you will no longer have access to your old
+account.</p>
+</blockquote></li>
+<li><p>Redirect your old account to your new account. In your old
+account, go to Preferences &gt; Account, find “Moving to a different
+account” and click “configure it here”. Enter your new account handle
+and your old account password (because this is on the old account
+server) and click “Move followers”. If you see an error like “not an
+alias of this account”, make sure you have completed the “alias” step
+above. You may need to wait up to 24 hours and try again.</p></li>
+</ol>
+<p>At this point your old account will no longer be accessible to you
+and your server will begin notifying the people who follow you of your
+new handle (they will be automatically switched to follow your new
+account). If you have enough followers, it may batch these requests up,
+so you may see new followers appear on your new account gradually as
+that happens.</p>
+<h4 id="exporting-your-information">Exporting your information</h4>
+<p>[Image: The data export page in settings]</p>
+<p>At any time you want, you can go to Settings &gt; Import and export
+&gt; Export and download a CSV file for your current followed accounts,
+your currently created lists, your currently blocked accounts, your
+currently muted accounts, and your currently blocked domains. Your
+following, blocking, muting, and domain-blocking lists can be imported
+at Settings &gt; Import and export &gt; Import, where they can either be
+merged or overwritten.</p>
+<p>Requesting an archive of your posts and media can be done once every
+7 days, and can be downloaded in Activity Streams 2.0 JSON format.
+Mastodon currently does not support importing posts or media due to
+technical limitations, but your archive can be viewed by any software
+that understands how to parse Activity Streams 2.0 documents.</p>
+<h4 id="redirecting-or-moving-your-profile">Redirecting or moving your
+profile</h4>
+<p>From the bottom of Settings &gt; Account, you can find options
+related to account redirection or migration.</p>
+<h5 id="profile-redirect">Profile redirect</h5>
+<p>Redirecting your account disables posting from that account and
+displays a “profile moved” notice indicating your new account. Anyone
+viewing your profile can see this notice and will know to follow you at
+your new account. Following redirected accounts is not possible. The
+redirect can be canceled at any time.</p>
+<h5 id="profile-move">Profile move</h5>
+<p>[Image: Profile move form]</p>
+<p>Moving your account is the same as redirecting your account, but it
+will also irreversibly force everyone to unfollow your current account
+and follow your new account, if their software supports the Move
+activity. Your posts will not be moved, due to technical limitations.
+There is also a 30-day cooldown period in which you cannot migrate
+again, so be very careful before using this option!</p>
+<p>While moving your profile should automatically move your followers
+over, it does not automatically transfer your follows, blocks, mutes, or
+bookmarks. Those can be imported from <a
+href="https://docs.joinmastodon.org/user/moving/#export">previously
+exported CSV files</a>.</p>
+<h5 id="account-aliases">Account aliases</h5>
+<p>Profile moves can only be initiated when your two accounts have been
+aliased. Account aliases are currently not used for anything other than
+profile moves, where you will need to set your old account as an alias
+of your new account before initiating the move. Setting aliases is
+harmless and reversible on its own.</p>
+<h4 id="deleting-your-account">Deleting your account</h4>
+<p>[Image: Account deletion form]</p>
+<p>From the bottom of Settings &gt; Account, you can find the form to
+delete your account. Deleting your account is irreversible, and will
+cause both your profile and username to become forever unusable.</p>
+<h3 id="official-ios-and-android-apps">Official iOS and Android
+apps</h3>
+<p><em>Learn the basics of the official iOS and Android apps for
+Mastodon</em></p>
+<h4 id="installation">Installation</h4>
+<ul>
+<li>Download the <a
+href="https://apps.apple.com/us/app/mastodon/id1571998974">official iOS
+app on the App Store</a></li>
+<li>Download the <a
+href="https://play.google.com/store/apps/details?id=org.joinmastodon.android&amp;hl=en_US&amp;pli=1">official
+Android app on the Google Play Store</a></li>
+</ul>
+<h4 id="first-steps">First Steps</h4>
+<ol type="1">
+<li>Join Mastodon by clicking “Join Mastodon Social”.</li>
+<li>Agree to the rules.</li>
+<li>Create an account.</li>
+</ol>
+<h4 id="basic-app-features">Basic app features</h4>
+<ul>
+<li>Home screen shows accounts currently followed.</li>
+<li>Search button allows you to look for hashtags and users.</li>
+<li>Pencil button allows you to create a post.</li>
+<li>Bell button will show your notifications.</li>
+<li>Profile button displays user profile.</li>
+</ul>
+<h3 id="posting-to-your-profile">Posting to your profile</h3>
+<p><em>Sharing your thoughts has never been more convenient.</em></p>
+<p>[Image: Compose form with optional Content Warning enabled]</p>
+<h4 id="text">Text</h4>
+<p>The main body of each status update can be composed using the text
+field. The default character limit is 500 characters.</p>
+<h5 id="links">Links</h5>
+<p>[Image: Links must start with http(s):// and are counted as 23
+characters regardless of length]</p>
+<p>If you include links in your post, they must begin with
+<code>http://</code> or <code>https://</code>. All links are counted as
+23 characters, no matter how long they actually are, so there is no need
+to use a link shortener to save characters. In fact, using a link
+shortener is actively discouraged.</p>
+<h5 id="mentions">Mentions</h5>
+<p>[Image: Suggested mentions for both local and remote users]</p>
+<p>You can mention users by typing out their full address,
+e.g. <code>@alice@example.com</code>. Note that any usage
+of<code>@word</code> will be interpreted as mentioning the local user
+with the username <code>word</code>, if that user exists. Only the
+username part will count against your character limit – the domain is
+not counted.</p>
+<h5 id="hashtags">Hashtags</h5>
+<p>[Image: Hashtags are autosuggested with usage frequency]</p>
+<p>You can use a <code>#hashtag</code> to make your post discoverable to
+anyone searching for that hashtag. Hashtags can contain alphanumeric
+characters and underscores, but cannot contain numbers only.</p>
+<h5 id="custom-emoji">Custom emoji</h5>
+<p>[Image: An array of custom emoji are available in the selector]</p>
+<p>Each server offers a set of custom emoji you can use, similar to
+Slack or Discord. You can use an emoji using its shortcode like
+<code>:thounking:</code> or by clicking the emoji face in the compose
+box and browsing through the “Custom” category. You can also browse
+through and search for standard Unicode emoji.</p>
+<p>To choose a different emoji skin tone, use the selector next to the
+emoji search box.</p>
+<h4 id="attachments">Attachments</h4>
+<p>You can attach either files or a poll to your status.</p>
+<h5 id="files">Files</h5>
+<p>[Image: New post with a thumbnail for attached media, with an Edit
+button for additional options]</p>
+<p>Click the photo stack to attach a file to your post. You can attach
+the following:</p>
+<ul>
+<li><strong>Images</strong> (PNG, JPG, HEIF, WEBP, AVIF) <strong>up to
+16MB</strong>. Images will be downscaled to 8.3 megapixels (enough for a
+3840x2160 image). Up to 4 images can be attached, per post.</li>
+<li><strong>Animated GIFs</strong> (GIFV) <strong>up to 16MB</strong>
+are converted to soundless MP4s. GIF dimensions must be less than 1MP
+(1280x720). You can also upload soundless MP4 and WebM files, which will
+be looped in clients the same way as an animated GIF. Only one animated
+GIF can be attached, per post.
+<ul>
+<li>Static GIF files have the same limits applied to them as animated
+GIF files. If you are having issues uploading these images, you will
+need to convert it to another supported image format.</li>
+</ul></li>
+<li><strong>Videos</strong> (MP4, M4V, MOV, WebM) <strong>up to
+99MB</strong>. Video will be transcoded to H.264 MP4 with a maximum
+bitrate of 1300kbps and framerate of 120fps. Only one video can be
+attached, per post.</li>
+<li><strong>Audio</strong> (MP3, OGG, WAV, FLAC, OPUS, AAC, M4A, 3GP)
+<strong>up to 99MB</strong>. Audio will be transcoded to MP3 using V2
+VBR (roughly 192kbps). Only one audio file can be attached, per
+post.</li>
+</ul>
+<h6 id="editing-media">Editing media</h6>
+<p>[Image: Edit media to add a media description (ALT text) or choose a
+focal point for the preview thumbnail]</p>
+<p>By clicking the “Edit” link on the attachment thumbnail, you can load
+a modal which will allow adding a media description or changing the
+focal point. Although optional, it is a good idea to add media
+descriptions that briefly describe what is in contained in the media.
+These descriptions will be shown when the media fails to load for any
+reason, or when accessed by screen readers and other assistive
+technology. Setting the focal point is also optional, but can make
+preview thumbnails looks better when they are not shown in a 16:9 aspect
+ratio.</p>
+<h5 id="polls">Polls</h5>
+<p>[Image: New post with a poll in a ‘pick one’ style, that expires
+after one day]</p>
+<p>Click the bar graph icon to attach a poll to your post.</p>
+<ul>
+<li>You can add up to 4 choices. Each choice can be up to 25
+characters.</li>
+<li>Polls default to pick-one/single-choice. Click on the radio button
+to switch your poll to any-of/multiple-choice checkboxes.</li>
+<li>Polls can be set to expire in 5 minutes, 30 minutes, 1 hour, 6
+hours, 1 day, 3 days, or 7 days.</li>
+</ul>
+<h4 id="post-visibility-privacy">Post visibility &amp; privacy</h4>
+<p>Posts can be published with one of four different post visibility
+levels. You can <a
+href="https://docs.joinmastodon.org/../preferences/#posting">set a
+default posting visibility</a>, and you can change the visibility for a
+draft post by opening the “Visibility and interactions” dialog from the
+button above the text of the post.</p>
+<p>[Image: The ‘visibility and interactions’ dialog, showing the
+available options for post visibility]</p>
+<p>The following table shows where posts made with a certain privacy
+setting will be visible. “Public feeds” includes search results,
+trending, and live feeds.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Public feeds</th>
+<th style="text-align: left;">Profile view</th>
+<th style="text-align: left;">Home feeds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Public</td>
+<td style="text-align: left;">Visible</td>
+<td style="text-align: left;">Visible</td>
+<td style="text-align: left;">Visible</td>
+</tr>
+<tr>
+<td style="text-align: left;">Quiet public</td>
+<td style="text-align: left;">Hidden</td>
+<td style="text-align: left;">Visible</td>
+<td style="text-align: left;">Visible</td>
+</tr>
+<tr>
+<td style="text-align: left;">Followers</td>
+<td style="text-align: left;">Hidden</td>
+<td style="text-align: left;">Visible for followers and mentioned
+accounts</td>
+<td style="text-align: left;">Visible for followers and mentioned
+accounts</td>
+</tr>
+<tr>
+<td style="text-align: left;">Private mention</td>
+<td style="text-align: left;">Hidden</td>
+<td style="text-align: left;">Visible for mentioned accounts</td>
+<td style="text-align: left;">Visible for mentioned accounts</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Direct links (permalinks) to posts with
+“Followers” or “Private mention” visibility can only be accessed by
+logged-in users eligible to see the post. Note that opening permalinks
+in a browser will redirect to the origin server of the post (where you
+might not have an account). If you want to open a post on the server
+that your account is on, log into your server, paste the link into the
+search field and select “Open URL on Mastodon”.</p>
+</blockquote>
+<p>Below you’ll find a detailed description of each post visibility
+setting.</p>
+<h5 id="public">Public</h5>
+<p>The default option.</p>
+<ul>
+<li>Anyone can see your post at the permalink without logging in.</li>
+<li>Your post will appear in-app in the public timelines and on your
+profile.</li>
+<li>Your followers will receive the post in their home feeds, and anyone
+mentioned will receive the post in notifications.</li>
+<li>Your post can be boosted into other home feeds.</li>
+</ul>
+<h5 id="quiet-public">Quiet public</h5>
+<p>The same as public, but with the following differences:</p>
+<ul>
+<li>Your post will not appear in Mastodon’s live feeds or explore
+features.</li>
+<li>Your post will not appear in search results, even if your account
+has opted-in to full text search.</li>
+</ul>
+<p>This option was previously known as “Unlisted”.</p>
+<h5 id="followers">Followers</h5>
+<p>A more limited delivery option.</p>
+<ul>
+<li>Only accounts following you and those that were mentioned in the
+post can see your post.</li>
+<li>Your post will not appear in-app except to your followers and anyone
+mentioned.</li>
+<li>Your followers will receive the post in their home feeds, and anyone
+mentioned will receive the post in notifications.</li>
+<li>Your post cannot be boosted, except by yourself.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> To effectively publish followers-only posts,
+you must <strong>disable the “Automatically accept new followers”
+option</strong> – otherwise anyone could follow you to view older
+posts.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> Please mind that post privacy on Mastodon is
+per-post, rather than account-wide. <strong>There is no way to make past
+public posts private.</strong></p>
+</blockquote>
+<h5 id="private-mention">Private mention</h5>
+<p>Send your post only to mentioned users.</p>
+<ul>
+<li>Only accounts that were mentioned in your post can see it.</li>
+<li>Your post will not appear in-app except to anyone mentioned.</li>
+<li>Anyone mentioned will receive the post in notifications. It will not
+appear in the home timeline.</li>
+<li>Your post cannot be boosted.</li>
+</ul>
+<p>This option was previously known as “Specific people”.</p>
+<blockquote>
+<p><strong>Note:</strong> <strong>Do not share dangerous and sensitive
+information over private mentions</strong>. Mastodon is not an encrypted
+messaging app like Signal or Matrix, and the database administrators of
+the sender’s and recipient’s servers may obtain access to the text.</p>
+</blockquote>
+<h4 id="visibility-of-replies">Visibility of Replies</h4>
+<p>Your replies will only appear on your followers’ Home feeds if they
+follow both you and the person you are replying to.</p>
+<p>Some notes about this:</p>
+<ul>
+<li>A new post you make which starts with an <code>@mention</code> is
+<strong>not</strong> considered a reply, so it will show up on the Home
+feed of all your followers.</li>
+<li>The reply’s visibility (Public vs Unlisted vs Followers-only) does
+<strong>not</strong> affect whether it shows up on the Home feed.</li>
+<li>If your post is public and contains a followed hashtag, it will be
+shown on the Home feed regardless of whether it is a reply.</li>
+<li>Other Fediverse software may show all of your replies on the Home
+feed, no matter who the posts are replies to.</li>
+</ul>
+<h4 id="content-warnings">Content Warnings</h4>
+<p>[Image: Expanded post with a content warning that also has attached
+images obscured]</p>
+<p>One feature that Mastodon provides that you may not have seen on
+other social networks is the option to attach a content warning to your
+posts. When a content warning is included, the status content will be
+collapsed by default, and only the Content Warning will be shown,
+similarly to an email subject line or a “read more” break. This can be
+used to add a summary or subject for your post, to collapse long posts,
+or to otherwise provide context or setup for the body of the post.</p>
+<p>When media is attached, a checkbox appears to allow you to “mark
+media as sensitive”. This hides the full media behind a blurred
+thumbnail by default. Adding a CW to a post automatically marks the
+media as sensitive as well.</p>
+<h3 id="promoting-yourself-and-others">Promoting yourself and
+others</h3>
+<p><em>Give visibility to hashtags, profiles, and posts.</em></p>
+<h4 id="featured-links-on-your-profile">Featured links on your
+profile</h4>
+<h5 id="featured-hashtags">Featured hashtags</h5>
+<p>[Image: A list of featured hashtags showing last usage date and total
+usage]</p>
+<p>You can choose to feature certain hashtags that you use often. Go to
+<strong>Preferences</strong> &gt; <strong>Edit profile</strong> &gt;
+<strong>Featured hashtags</strong> to manage which hashtags you are
+currently featuring. Once featured, a link to the hashtag will be shown
+on your profile, with the date of the last time it was used in a status,
+as well as the total number of statuses in which it was used.</p>
+<h4 id="pinned-posts">Pinned posts</h4>
+<p>[Image: An example of a user’s pinned post]</p>
+<p>You can choose to feature up to 5 of your own public posts at the top
+of your profile. Go to the status dropdown menu and click “Pin on
+profile”. When you pin a post, it will appear at the top of your “posts”
+tab, before all other chronological status updates.</p>
+<h4 id="profile-directory">Profile directory</h4>
+<p>[Image: List of users in the profile directory]</p>
+<p>The profile directory shows all accounts that have opted into being
+shown in the directory, and can be used to quickly find profiles that
+you may be interested in following.</p>
+<p>The profile directory can be sorted either by recent activity (the
+most recently published status), or by new arrivals (the most recently
+created accounts). The directory can also be filtered to show only local
+accounts, or to show all known accounts that your website is aware
+of.</p>
+<p>Profiles appear as cards that include a user’s display name, address,
+account bio, and some brief stats such as how many posts they’ve
+published, how many followers they have, and the time of their last
+published status.</p>
+<h3 id="quoting-other-posts">Quoting other posts</h3>
+<p><em>All about quoting content (your own posts, or those made by other
+people).</em></p>
+<p><code>&lt;style&gt;</code> #TableOfContents ul ul ul {display:
+none}</p>
+<h4 id="what-are-quote-posts">What are quote posts?</h4>
+<p>Quote posts allow you to reference another user’s post in your own,
+while adding your own commentary.</p>
+<ul>
+<li>Found something inspiring? Quote your favourite posts from where you
+typically boost them.</li>
+<li>Don’t want to be quoted? Disable quoting by default for all posts,
+or turn off quoting for a specific post</li>
+<li>Want your thoughts to inspire a wider audience? Keep the default
+setting enabled to ‘Anyone’.</li>
+</ul>
+<p>Quoting is just one way of interacting with existing posts on
+Mastodon. For more interactions (replies, boosts, etc.) see the <a
+href="https://docs.joinmastodon.org/../network/#actions">Interacting
+with Posts</a> section.</p>
+<h4 id="how-to-quote-others">How to quote others</h4>
+<p>If an author of a post has enabled quoting, you’ll see an option to
+quote their post under a new menu accessed from the
+<strong>Boost</strong> button.</p>
+<p>Your post will then appear within the composer window, where you can
+add your comment and post to continue the discussion.</p>
+<h4 id="setting-your-default-quote-settings">Setting your default quote
+settings</h4>
+<p>Disable or limit quotes by navigating to <strong>Settings &gt;
+Preferences &gt; Posting Defaults</strong>. These defaults will apply to
+all <em>future</em> posts you create.</p>
+<p>(Note: Users on Mastodon 4.4 will find this setting under
+<strong>Settings &gt; Preferences &gt; Other</strong>)</p>
+<p>Your visibility setting controls options for who can quote. When you
+make a followers-only post, others (including followers) won’t be able
+to quote it – this ensures that your post remains visible to only your
+followers.</p>
+<h4 id="customizing-quote-settings-when-composing-a-post">Customizing
+quote settings when composing a post</h4>
+<p>Override your global settings for an individual post by navigating to
+<strong>Visibility and interaction settings</strong> within the
+composer.</p>
+<h4 id="notifications">Notifications</h4>
+<p>Mastodon will notify users being quoted as long as the quote is using
+the new protocol and the quote is accepted by your quote policy. Your
+notification filter settings will also apply to these notifications.</p>
+<h4 id="removing-your-post-from-someones-quote-post">Removing your post
+from someone’s quote post</h4>
+<p>You can easily remove your original post from another user’s post
+using the ellipsis icon.</p>
+<p>Sometimes, removing your post from a single quote may not be enough.
+If you believe someone is abusing the ability to quote you, you can also
+take the following actions:</p>
+<ul>
+<li>Block the user. While this action won’t retroactively remove your
+post from posts the user has already published, it will prevent the user
+from quoting you in future posts.</li>
+<li>Change the quote settings for your published post. The next section
+outlines how to do this.</li>
+</ul>
+<h4 id="changing-quote-settings-on-a-published-post">Changing quote
+settings on a published post</h4>
+<p>On your own published posts, edit the quote settings from the
+ellipsis icon. Changes to disallow quoting will prevent users from
+quoting your post in the future, but will not apply retroactively to
+quotes already published.</p>
+<p>Only public and quiet public posts can be edited this way; your
+followers-only posts and direct mentions can only ever be quoted by
+you.</p>
+<h4 id="additional-tips">Additional tips</h4>
+<p><strong>Power booster?</strong> You can still boost quickly using
+<code>Shift + Click</code> on the <strong>Boost</strong> button or using
+the <code>‘B’</code> hotkey.</p>
+<p><strong>Quote responsibly.</strong> Authors can remove their post if
+they’re uncomfortable with the way you’ve quoted them. See <a
+href="https://docs.joinmastodon.org/user/quote-posts/#remove">Removing
+your post from someone’s quote post</a> for more details.</p>
+<h4 id="frequently-asked-questions">Frequently Asked Questions</h4>
+<h6
+id="do-quote-posts-appear-in-the-same-context-as-a-thread-or-do-they-create-a-new-context">Do
+quote posts appear in the same context as a thread, or do they create a
+new context?</h6>
+<p>Quote posts create a new context, and do not appear in the replies.
+Replies to the quote post will only notify you if you are also
+mentioned.</p>
+<h6
+id="i-dont-want-to-be-quoted-at-all-can-i-prevent-people-from-quoting-me">I
+don’t want to be quoted at all, can I prevent people from quoting
+me?</h6>
+<p>Yes, for every post you make, you can decide who can quote you, from
+“Anyone”, “Followers only”, and “Just me”. People you have blocked are
+not able to quote you, even if you have selected “Anyone”. You can
+select “Just me” if you don’t want to be quoted at all (note that you
+can <em>always</em> quote yourself).</p>
+<h6
+id="will-there-be-a-setting-to-enable-quoting-for-accounts-i-follow">Will
+there be a setting to enable quoting for “Accounts I follow”?</h6>
+<p>This will not be part of the quote posts implementation in Mastodon
+4.5. We may consider this option for the future.</p>
+<h6 id="what-happens-if-the-quoted-post-is-deleted-or-edited">What
+happens if the quoted post is deleted or edited?</h6>
+<p>If a quoted post is deleted, the contents of the quote post will
+remain, but the quoted post will be replaced with a placeholder
+explaining it is unavailable. If the quoted post is edited, this will be
+reflected when viewing the quote post.</p>
+<h6 id="i-dont-want-to-see-quote-posts-can-i-disable-them">I don’t want
+to see quote posts, can I disable them?</h6>
+<p>The Mastodon web interface allows you to hide quote posts from your
+own timeline, the same way it allows you to hide boosts or replies.</p>
+<h6
+id="as-a-server-administrator-i-dont-want-my-users-to-use-and-see-quotes-can-i-disable-them">As
+a server administrator, I don’t want my users to use and see quotes, can
+I disable them?</h6>
+<p>No, there is no server setting in Mastodon to disable quote display
+or authoring for their users.</p>
+<h6
+id="i-dont-like-how-my-post-was-quoted.-can-i-remove-it-do-i-need-to-block-the-person-who-quoted-me">I
+don’t like how my post was quoted. Can I remove it? Do I need to block
+the person who quoted me?</h6>
+<p>Yes, you can <a
+href="https://docs.joinmastodon.org/user/quote-posts/#remove">revoke a
+quote</a> at any time. This will be irreversible though, so proceed with
+caution. You do not need to block the author to remove the quote.</p>
+<h6
+id="i-dont-want-my-post-to-be-quoted-anymore.-can-i-stop-the-quotes-do-i-need-to-delete-the-post">I
+don’t want my post to be quoted anymore. Can I stop the quotes? Do I
+need to delete the post?</h6>
+<p>You can change the quote policy at any time without deleting the
+post. It will only affect new quotes, existing ones will remain unless
+you manually remove them.</p>
+<h6 id="are-my-old-posts-quotable">Are my old posts quotable?</h6>
+<p>Posts made in Mastodon 4.4 and earlier do not allow quotes, although
+you can make them quotable by individually <a
+href="https://docs.joinmastodon.org/user/quote-posts/#change">changing
+their quote policy</a>.</p>
+<h6 id="can-i-quote-and-reply-at-the-same-time">Can I quote and reply at
+the same time?</h6>
+<p>Yes. Start writing a reply, then click the “Quote” button on the post
+you want to quote. The quote will be attached to the reply.</p>
+<h6
+id="why-doesnt-mastodon-use-the-existing-object-links-method-for-quotes">Why
+doesn’t Mastodon use the existing “Object Links” method for quotes?</h6>
+<p>Fediverse Enhancement Proposal FEP-e232 describes the concept of
+“Object Links” for ActivityPub. This FEP is used by some other Fediverse
+platforms to provide functionality similar to quote posts. Mastodon
+chose to implement additional <em>consent</em> and <em>visibility</em>
+options, via a new FEP (see <a
+href="https://docs.joinmastodon.org/user/quote-posts/#faq-consent">How
+does Mastodon enforce quote consent?</a>)</p>
+<h6 id="how-does-mastodon-enforce-quote-consent">How does Mastodon
+enforce quote consent?</h6>
+<p>Mastodon uses <a
+href="https://codeberg.org/fediverse/fep/src/branch/main/fep/044f/fep-044f.md">FEP-044f,
+Consent-respecting quote posts</a> to advertise who is expected to be
+allowed to quote a post, request for consent, distribute and revoke
+approval. Mastodon checks the post’s policy before offering the quote
+option. It only displays quotes in two cases: when you quote yourself,
+or when the quote has proper authorization from the original author.
+Mastodon cannot prevent other fediverse software from showing quotes
+without consent, but it won’t display such quotes itself. We encourage
+other implementers to make use of the protocol described in Fediverse
+Enhancement Proposal FEP-044f.</p>
+<h6 id="how-do-mastodon-quotes-show-up-in-other-fediverse-software">How
+do Mastodon quotes show up in other Fediverse software?</h6>
+<p>Quotes authored with Mastodon should show up just like any other
+quote in Misskey, Akkoma, and most other pieces of Fediverse software
+that already have some quote implementations.</p>
+<h6
+id="how-do-quotes-from-other-fediverse-software-show-up-in-mastodon">How
+do quotes from other Fediverse software show up in Mastodon?</h6>
+<p>Only self-quotes and quotes with explicit consent will show up as
+proper quotes in Mastodon. Some quotes won’t meet these requirements.
+These include quotes from software that doesn’t support Mastodon’s
+approval system. They will appear as regular posts, not as quotes.</p>
+<h6 id="why-is-my-quote-taking-time-to-appear">Why is my quote taking
+time to appear?</h6>
+<p>While Mastodon will automatically approve or reject quotes according
+to your settings (see <a
+href="https://docs.joinmastodon.org/user/quote-posts/#defaults">Setting
+your default quote settings</a>), other Fediverse software might require
+manual approval of quotes. This means that when you quote posts from
+across the Fediverse, it may take time for your quote to appear. When
+the quote is approved, it will automatically update on your post.</p>
+<h6 id="how-do-quotes-interact-with-blocks">How do quotes interact with
+blocks?</h6>
+<p>If you have blocked someone and see someone quoting them, the quote
+post will still appear, but the quote will be hidden. The same applies
+if they have blocked you. Blocked users cannot quote your new posts.
+However, their existing quotes of your posts will remain visible until
+manually removed.</p>
+<h3 id="running-your-own-server">Running your own server</h3>
+<h4 id="why-would-you-want-to-run-your-own-mastodon-server">Why would
+you want to run your own Mastodon server?</h4>
+<ul>
+<li>Absolute control over your own voice on the web, not subject to
+anyone else’s rules or whims. Your server is your property, with your
+rules. It will exist as long as you want it to exist.</li>
+<li>You are <em>not</em> isolated on your own server. You can follow
+anyone on any other server, and they can follow you, and you can
+exchange messages just like if you were on the same server.</li>
+<li>You can either limit sign-ups to be the only one on the server and
+run it like personal (micro)blog, maintain an invite-only community for
+family or friends or run a server anyone can sign up on, it’s up to
+you!</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Please mind that providing a public internet
+service involves moderation work and community management, and that such
+work becomes more complicated the larger your server grows.</p>
+</blockquote>
+<h4 id="so-you-want-to-run-your-own-mastodon-server">So you want to run
+your own Mastodon server</h4>
+<p>Here is what you need:</p>
+<ul>
+<li><p>A <strong>domain name</strong>. This is how you and others will
+access your server and how you and your users will be identified on the
+network.</p>
+<p><strong>How to get</strong>: Namecheap, Gandi, any of the infinite
+number of domain name registrars. Comes with a yearly cost that varies
+depending on domain name choice.</p>
+<blockquote>
+<p><strong>Note:</strong> If you plan to use the Mastodon word mark in
+your domain, you need to have written permission from Mastodon GmbH
+first, as described in the <a
+href="https://joinmastodon.org/trademark">Mastodon Trademark
+Policy</a>.</p>
+</blockquote></li>
+<li><p>A <strong>VPS</strong>. Something that will run the Mastodon code
+that will always be connected to the internet.</p>
+<p><strong>How to get</strong>: DigitalOcean, Hetzner, Exoscale,
+Scaleway, any of the infinite number of hosting providers. Comes with a
+monthly or yearly cost that varies depending on hardware
+specifications.</p></li>
+<li><p>An <strong>e-mail provider</strong>. Mastodon needs to send
+confirmation links and various notifications through e-mail, and hosting
+your own SMTP server, while possible, is much more difficult to do
+reliably than to use a third-party provider.</p>
+<p><strong>How to get</strong>: Mailgun, SparkPost, Postmark, Sendgrid,
+any of the infinite number of e-mail hosting providers that expose an
+SMTP API. Comes with a monthly cost based on volume of e-mails
+sent.</p></li>
+<li><p>Optional: <strong>Object storage provider</strong>. Mastodon can
+save files that you and your users upload on the hard disk drive of the
+VPS it runs on, however, the hard disk drive is usually not infinite and
+difficult to upgrade later. An object storage provider gives you
+practically infinite metered file storage.</p>
+<p><strong>How to get</strong>: Amazon S3, Exoscale, Wasabi, Google
+Cloud, anything that exposes either an S3-compatible or OpenStack
+Swift-compatible API. Comes with a monthly cost based on the amount of
+files stored as well as how often they are accessed.</p></li>
+</ul>
+<p>There exist a number of <strong>dedicated Mastodon hosting
+providers</strong> that take care of many if not all of the above
+requirements, that you can choose if you’re interested in someone else
+taking care of all the technical stuff. Usually you still need to buy
+your own domain name though. Some of such providers are:</p>
+<p>Managed hosting solutions are great for those who do not have
+experience or desire to install and maintain software. However, being in
+charge of all components on your own hardware gives greater control over
+scaling, performance and customization.</p>
+<p>Mastodon scales quite well horizontally. If your needs outgrow the
+capacity of a single machine, Mastodon can be divided into multiple app
+servers, background workers, multiple Redis backends, PostgreSQL
+replicas – but 1-click install won’t cut it.</p>
+<p>If you’re interested in installing everything on your own, proceed
+here:</p>
+<h3 id="set-your-preferences">Set your preferences</h3>
+<p><em>Customise things just the way you like them.</em></p>
+<h4 id="customizing-the-user-interface">Customizing the user
+interface</h4>
+<h5 id="choose-a-theme">Choose a theme</h5>
+<p>Mastodon has multiple theme options:</p>
+<ul>
+<li>Automatically switch between a dark and light theme depending on
+your operating system preferences.</li>
+<li>Manually switch between a dark and light theme.</li>
+<li>Optionally use a higher contrast theme.</li>
+</ul>
+<p>[Image: Mastodon post and thread as viewed from the light theme]</p>
+<h5 id="choose-your-layout">Choose your layout</h5>
+<p>Mastodon defaults to a simple, one-column layout with a compose box
+on the left and a column switcher on the right. You can choose to enable
+the advanced web interface, which allows you to view and pin multiple
+columns at the same time.</p>
+<p>[Image: Columns of the advanced web interface using the light
+theme]</p>
+<p>In either interface, updates will load automatically as new posts are
+available. You can enable Slow Mode to instead show a banner at the top
+of the column indicating the number of new items available, which will
+be loaded only when you click the banner.</p>
+<p>For accessibility reasons, the auto-play of animated GIFs is disabled
+by default. You can enable animated GIFs if you want to see animations.
+You can also reduce motion of animations throughout the UI.</p>
+<p>Trending hashtags can be shown or hidden below the getting started
+column in the advanced UI, or below the column switcher in the simple UI
+(only when there is enough space to display them).</p>
+<h5 id="confirmation-dialogs">Confirmation dialogs</h5>
+<p>You can choose to require confirmation before performing certain
+actions. Currently, confirmations can be set before performing the
+following actions:</p>
+<ul>
+<li>Unfollow</li>
+<li>Boost</li>
+<li>Delete</li>
+</ul>
+<h5 id="sensitive-content">Sensitive content</h5>
+<p>By default, any media marked as sensitive is hidden behind a
+click-through overlay. You can also choose to always show/hide media
+behind this overlay, regardless of whether it is marked as
+sensitive.</p>
+<p>Hidden and unloaded media uses a colorful gradient provided by the
+BlurHash algorithm, which uses the colors of the image but blurs the
+details. These gradients can be disabled.</p>
+<p>[Image: An example blurhash thumbnail]</p>
+<p>Posts with content warnings are collapsed by default, but you can
+choose to always expand the warnings so that the full post is
+displayed.</p>
+<h4 id="controlling-your-notifications">Controlling your
+notifications</h4>
+<h5 id="sending-emails">Sending emails</h5>
+<p>You can choose to receive email notifications according to the type
+of notification you receive within Mastodon. The following notification
+types are available to enable:</p>
+<ul>
+<li>Follows</li>
+<li>Follow requests</li>
+<li>Boosts</li>
+<li>Favourites</li>
+<li>Mentions</li>
+</ul>
+<p>You can also enable digest emails, which will provide you with an
+overview of notifications received during periods of long
+inactivity.</p>
+<h5 id="hiding-certain-notifications">Hiding certain notifications</h5>
+<p>You can choose to not receive notifications from people you don’t
+follow, or from people who don’t follow you. This will cause replies,
+favourites, boosts, and other interactions to not be shown to you.</p>
+<p>You can also choose to not receive notifications when you receive a
+direct message from people you don’t follow.</p>
+<h4 id="miscellaneous-options">Miscellaneous options</h4>
+<p>If you opt out of search engine indexing, a <code>noindex</code> flag
+will be added to your public profile and status pages.</p>
+<p>You can choose to hide your network, which will make your following
+and follower lists private to you only.</p>
+<p>If you want to see posts that are boosted multiple times be
+reinserted into your feed at the top, you can disable boost grouping in
+timelines.</p>
+<h5
+id="setting-defaults-for-post-visibility-post-language-and-media-sensitivity">Setting
+defaults for post visibility, post language, and media sensitivity</h5>
+<p>Posts default to public visibility. You can choose to default new
+posts as unlisted or followers-only instead. For an explanation of all
+post visibility settings, see <a
+href="https://docs.joinmastodon.org/../posting/#privacy">Posting to your
+Mastodon profile &gt; Post visibility &amp; privacy</a>. The default
+posting visibility can be changed from the “Posting defaults” page
+within the “Preferences” area.</p>
+<p>If you primarily or exclusively post in a certain language, it is a
+good idea to set that language here.</p>
+<p>If you often post sensitive media, you can choose to always mark your
+media as sensitive.</p>
+<h5 id="filtering-languages-on-public-timelines">Filtering languages on
+public timelines</h5>
+<p>You can choose to only show posts in certain detected languages while
+browsing the public timelines. However, note that language detection can
+be very imprecise, so you may still see some posts in a disabled
+language, or miss some posts from enabled languages.</p>
+<h3 id="setting-up-your-profile">Setting up your profile</h3>
+<p><em>Get started with your new account.</em></p>
+<h4 id="your-appearance">Your appearance</h4>
+<p>[Image: Profile card showing display name, avatar, header and short
+bio]</p>
+<p>You can change how your profile appears to others by navigating to
+<strong>Preferences</strong> &gt; <strong>Public profile</strong> &gt;
+<strong>Edit profile</strong>.</p>
+<h5 id="display-name">Display name</h5>
+<p>Your display name is shown to other users before your address. You
+can set a display name up to 30 characters by default.</p>
+<h5 id="bio">Bio</h5>
+<p>Your bio is a short description of yourself that is displayed as a
+note on your profile. You can set a bio of up to 500 characters by
+default. All links are counted as 23 characters, no matter how long they
+actually are, so there is no need to use a link shortener to save
+characters. In fact, using a link shortener is actively discouraged.</p>
+<h5 id="avatar">Avatar</h5>
+<p>Your avatar is an icon that is displayed next to your posts and is
+part of your visual identity. You can upload an avatar as a WEBP, PNG,
+GIF, or JPG image up to 2MB in size. This image will be downscaled to
+400x400.</p>
+<h5 id="header">Header</h5>
+<p>Your header is a banner image shown at the top of your profile, as
+well as in profile cards used in follow lists and account directories.
+You can upload a header as a WEBP, PNG, GIF, or JPG image up to 2MB in
+size. This image will be downscaled to 1500x500.</p>
+<h4 id="profile-flags">Profile flags</h4>
+<p>You can set certain flags on your profile to let others know how you
+use Mastodon.</p>
+<p>[Image: Overview of a profile with the Automated flag set]</p>
+<h5 id="locked-account">Locked account</h5>
+<p>By locking your account, two things will happen:</p>
+<ul>
+<li>New followers will not be automatically accepted, but will instead
+require you to manually approve them.</li>
+<li>A lock icon will be shown to others, to let them know that their
+follow will not be immediately accepted.</li>
+</ul>
+<h5 id="bot-account">Bot account</h5>
+<p>Enabling the bot flag will add a bot icon to your profile. This icon
+will let others know that your profile may perform automated actions, or
+might not be monitored by a human. Other software may choose to treat
+bot profiles differently, but Mastodon currently treats the bot flag as
+a visual indication only.</p>
+<h5 id="profile-directory-1">Profile directory</h5>
+<p>Opting in to be listed on the profile directory will make your
+profile discoverable through a feature that allows browsing through
+profiles.</p>
+<h4 id="profile-metadata">Profile metadata</h4>
+<p>Profile metadata is a way to add extra information to your profile
+that is easy to skim. You have 4 rows where you can define the label and
+the value. For example:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Age</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Country</td>
+<td style="text-align: left;">Germany</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pronouns</td>
+<td style="text-align: left;">he/him</td>
+</tr>
+<tr>
+<td style="text-align: left;">Website</td>
+<td style="text-align: left;"><code>https://example.com</code></td>
+</tr>
+</tbody>
+</table>
+<p>It’s completely up to you what you put there. The content can contain
+mentions, hashtags, custom emojis and links.</p>
+<h5 id="link-verification">Link verification</h5>
+<p>Document-based verification and blue ticks are not possible without a
+central authority. However, Mastodon can cross-reference the links you
+put on your profile to prove that you are the real owner of those links.
+In case one of those links is your personal homepage that is known and
+trusted, it can serve as the next-best-thing to identity document
+verification.</p>
+<blockquote>
+<p><strong>Note:</strong> Because Mastodon can be self-hosted, there is
+no better way to verify your identity than to host Mastodon on your own
+domain, which people already trust.</p>
+</blockquote>
+<p>If you put an HTTPS link in your profile metadata, Mastodon checks if
+that link resolves to a web page that links back to your Mastodon
+profile with a special <code>rel=me</code> attribute. If so, you get a
+verification checkmark next to that link, since you are confirmed as the
+owner. Likewise, Mastodon puts <code>rel="me"</code> on the links within
+profile metadata. The link might look something like this:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://social.example.com/@username&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;me&quot;</span><span class="dt">&gt;</span>Follow me on Mastodon!<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>It may also be embedded directly in the head of your web page:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://social.example.com/@username&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;me&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<h6 id="validation-criteria-for-verified-links">Validation criteria for
+verified links</h6>
+<p>Mastodon will validate the “verified link” profile field under the
+following conditions:</p>
+<ul>
+<li>The value of the profile field is <strong>a link that MUST start
+with HTTPS</strong>. Other values will not be processed. Other types of
+links are not processed. In particular, plain HTTP links are not
+processed because they are insecure and may be modified by an attacker
+in transit.</li>
+<li>Since 4.0: <strong>the hostname must not change after IDN
+normalization</strong>. This is to prevent homeograph attacks where some
+Unicode character is used that looks confusingly similar to some ASCII
+character in a mixed string. For example, <code>U+0061</code> (English
+lowercase “a”) and <code>U+0430</code> (Cyrillic small letter “а”)
+appear nearly identical, but they are completely different characters.
+This similarity in appearance could be used maliciously to mislead
+people.</li>
+</ul>
+<p>Mastodon will then resolve the link and fetch the web page located
+there, looking for a qualified link that matches the criteria:</p>
+<ul>
+<li>The resolved page must contain at least one <code>a</code> or
+<code>link</code> tag with a <code>rel="me"</code> attribute.
+<ul>
+<li>The <code>href</code> attribute on one of those elements must be
+equal to the URL for your Mastodon profile.</li>
+</ul></li>
+<li>If no links with <code>rel="me"</code> are found, Mastodon will look
+for the <em>first</em> link, and the <code>href</code> value must
+redirect to your Mastodon profile’s URL. (This provides limited support
+for web pages that use link shorteners and do not use rel-me.)</li>
+<li>The HTTP response must not exceed 1 MB.</li>
+<li>The link must appear directly in the HTML response and be accessible
+without executing JavaScript.</li>
+</ul>
+<p><strong>Any such link must not be within an
+<code>iframe</code></strong>. An <code>iframe</code> effectively means
+the link is no longer on the same web page, but rather it is on some
+external web page which is being embedded in the current one. (Note that
+some “block-based” CMS software may wrap block elements within iframes,
+which prevents verification for this reason.)</p>
+<blockquote>
+<p><strong>Note:</strong> Make sure to save your profile <em>after</em>
+adding the rel-me link to your web page! The verification process is
+triggered when you save your profile, and may take some time before
+completing. If you have added the rel-me link and verification is not
+working, then try deleting the link, saving, re-adding the link, and
+saving again.</p>
+</blockquote>
+<h5 id="author-attribution">Author attribution</h5>
+<p>If you are an author or creator, your Mastodon account can be
+credited and linked when your articles, blog posts, and other works are
+shared on Mastodon and across the fediverse. This is possible by
+including a <code>fediverse:creator</code> tag in the HTML code of the
+websites where your work is published.</p>
+<p>Go to <strong>Preferences</strong> &gt; <strong>Public
+profile</strong> &gt; <strong>Verification</strong> &gt; <strong>Author
+attribution</strong> to get the code that you will need to copy and
+paste into the head of the article’s HTML. The code might look something
+like this:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;fediverse:creator&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;@username@social.example.com&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>Next, add the domain name of the publication, such as
+<code>example.com</code>, to the <strong>Websites allowed to credit
+you</strong> field. This protects you from false attributions in link
+previews.</p>
+<p>Anything that you publish on an allowed website will be attributed to
+you when it is shared to the fediverse, and the author byline will
+include the link to your Mastodon profile.</p>
+<h3 id="signing-up-for-an-account">Signing up for an account</h3>
+<p><em>Find your perfect community.</em></p>
+<h4 id="choosing-a-website">Choosing a website</h4>
+<p>You have to choose a website to sign up on, like you would choose an
+email provider, or a World of Warcraft realm for your new character. The
+website will be your service provider, hosting your account, your
+profile, and your home feed.</p>
+<blockquote>
+<p><strong>Note:</strong> You can <a
+href="https://joinmastodon.org/#getting-started">browse a list of
+servers by categories and languages on joinmastodon.org</a>.</p>
+</blockquote>
+<h5 id="understanding-a-websites-policies">Understanding a website’s
+policies</h5>
+<p>Before you sign up for a service, it is important to understand its
+policies and terms of use. A Mastodon website will usually have its
+policies listed on the <code>/about/more</code> page, which can be found
+by clicking “learn more” on the landing page while not logged in to that
+website.</p>
+<h5 id="signup-modes">Signup modes</h5>
+<p>Mastodon allows website administrators to set one of three different
+signup modes: open signups, invites, and approval mode.</p>
+<h6 id="open-signup">Open signup</h6>
+<p>Some websites may allow you to register immediately – just fill out
+the registration with your username, email address, and password, and
+you can start using your account.</p>
+<h6 id="server-invites">Server invites</h6>
+<p>Some websites disable the registration form, and instead require
+invite links to be generated and shared in order to allow people to
+register.</p>
+<h6 id="approval-based-registration">Approval-based registration</h6>
+<p>Some websites allow you to fill out a registration form, but with an
+additional form entry for mentioning why you want to join that website.
+Once you submit the form, your account must be approved by a moderator
+before you can start using it.</p>
+<h4 id="your-username-and-your-domain">Your username and your
+domain</h4>
+<p>Mastodon usernames actually consist of two parts:</p>
+<ul>
+<li>The local username, e.g. <code>alice</code></li>
+<li>And the domain of the website, e.g. <code>example.com</code></li>
+</ul>
+<p>Just like an email address. For convenience sake, Mastodon allows you
+to skip the second part when addressing people on the same server as
+you, but you have to keep in mind when sharing your username with other
+people, you need to include the domain or they won’t be able to find you
+as easily.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sharing your username</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">I’m <code>@alice</code> on Mastodon!</td>
+<td style="text-align: left;">Wrong</td>
+</tr>
+<tr>
+<td style="text-align: left;">I’m <code>@alice@example.com</code> on
+Mastodon!</td>
+<td style="text-align: left;">Correct</td>
+</tr>
+<tr>
+<td style="text-align: left;">I’m <code>https://example.com/</code><span
+class="citation" data-cites="alice">@alice</span> on Mastodon!</td>
+<td style="text-align: left;">Correct</td>
+</tr>
+</tbody>
+</table>
+<p>The search form in Mastodon will find people either with the above
+address form, or the link to the person’s profile, so you can share that
+instead if you prefer.</p>
+<p>The same username <em>can</em> be registered on different servers –
+there is no way to claim all of them ahead of time. Just like with
+email, you should not expect <code>alice@outlook.com</code> to be the
+same person as <code>alice@gmail.com</code> or
+<code>alice@yahoo.com</code>.</p>
+<h3 id="using-mastodon-externally">Using Mastodon externally</h3>
+<p><em>You can browse and interact on Mastodon from external apps or
+websites.</em></p>
+<h4 id="remote-interactions-on-another-mastodon-site">Remote
+interactions on another Mastodon site</h4>
+<p>When you are browsing a remote site powered by Mastodon, clicking on
+any of the interaction buttons will load a dialog that will redirect you
+to your local site.</p>
+<p>[Image: A remote interaction dialog for replying to a post]</p>
+<h4 id="signing-into-a-client-app">Signing into a client app</h4>
+<p>You can use your Mastodon account to sign into any app that
+implements the Mastodon API. A list of such apps can be found at <a
+href="https://joinmastodon.org/apps">the official app directory</a>.</p>
+<h3 id="using-the-network-features">Using the network features</h3>
+<p><em>Follow and talk to anyone from any server.</em></p>
+<h4 id="browsing-content-in-live-feeds">Browsing Content in Live
+Feeds</h4>
+<p>[Image: Posts from other servers being streamed into the Live
+Feed]</p>
+<p>To allow you to discover potentially interesting content, Mastodon
+provides a way to browse all public posts. There is no global shared
+state between all servers, so there is no way to browse <em>all</em>
+public posts. When you browse <strong>Live Feeds &gt; Other
+Servers</strong>, you see public posts from across the fediverse. Your
+server shows posts it knows about through <a
+href="https://docs.joinmastodon.org/user/network/#fetching-replies">various</a>
+<a
+href="https://docs.joinmastodon.org/user/network/#search">methods</a>.
+Most posts come from accounts that other users on your server
+follow.</p>
+<p>You can also filter the Live Feeds to view only public posts created
+on your server.</p>
+<h4 id="interacting-with-posts">Interacting with Posts</h4>
+<p>[Image: An expanded view can be loaded by clicking a status in the
+timeline]</p>
+<p>You can perform quick actions on a post directly from the timeline,
+or you can click on the post to load an expanded view that shows extra
+information, such as a full timestamp, interaction counts, and threaded
+replies, if any. The following actions can be performed on a post:</p>
+<ul>
+<li><strong>Reply</strong> to a post by clicking the arrow icon. Your
+post will show up in the thread below the post you are replying to.</li>
+<li><strong>Boost</strong> a post by clicking the cycled-arrow icon. The
+post will be reshared on your profile.</li>
+<li><strong>Quote</strong> a post by choosing this option from the
+<strong>Boost</strong> button menu. <a
+href="https://docs.joinmastodon.org/../quote-posts/">Learn more about
+Quote posts</a>.</li>
+<li><strong>Favourite</strong> a post by clicking the star icon. The
+post will be added to your favourites list, and a favourite notification
+will be delivered to its author.</li>
+<li><strong>Bookmark</strong> a post by clicking the ribbon icon. The
+post will be privately added to your bookmarks list without generating a
+notification.</li>
+<li>Access a <strong>menu</strong> of additional options by clicking the
+ellipsis icon.</li>
+</ul>
+<h5 id="fetching-replies">Fetching Replies</h5>
+<p>When a status is expanded<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>, <a href="">if
+enabled</a>, your server will attempt to fetch any replies that it does
+not already know about from other servers. This process checks each
+server in the conversation thread to gather any missing replies, which
+may take some time, especially for posts with many replies or when
+viewing a post for the first time on your server. Try refreshing the
+page after a few moments if you suspect you aren’t seeing all replies.<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></p>
+<p>Some replies won’t be fetched. These include followers-only
+posts,private mentions, and posts from servers that <a href="">require
+authorization</a>. The only exception is if you or someone on your
+server already follows the author.</p>
+<p>By <a
+href="https://docs.joinmastodon.org/user/network/#search">searching</a>
+for a post and then expanding it, you can effectively “import” a tree of
+replies to your instance, helping you and others on your server meet new
+people and other fediverse creatures!</p>
+<h4 id="notifications-1">Notifications</h4>
+<p>[Image: Notifications column with grouping feature enabled]</p>
+<p>When other people interact with you or your posts, you will receive a
+notification depending on the type of the event. Your notifications
+column allows you to view all notifications in the same stream, or to
+filter for specific types of notifications:</p>
+<ul>
+<li><strong>Mentions:</strong> received when someone has mentioned you
+in a post.</li>
+<li><strong>Favourites:</strong> received when someone has favourited
+one of your posts.</li>
+<li><strong>Boosts:</strong> received when someone has boosted one of
+your posts.</li>
+<li><strong>Polls:</strong> Received when a poll that you have voted in
+or created has ended.</li>
+<li><strong>Statuses:</strong> Received when a user you have enabled
+notifications for posts a status.</li>
+<li><strong>Follows:</strong> Received when someone has followed your
+profile.</li>
+</ul>
+<p>When unread notifications are present, a checkmark will appear in the
+column header. Clicking this checkmark will mark notifications as
+read.</p>
+<h4 id="following-profiles">Following Profiles</h4>
+<p>[Image: Profile card with the Follow button shown]</p>
+<p>When you see someone in your app’s interface (e.g. the web interface
+on your home server, or your mobile app), you can simply click “follow.”
+It works the same way whether they’re on your server or another
+server.</p>
+<p>If you come across someone’s public profile hosted on a different
+server and you’re not in your own app’s interface, there’s an obstacle:
+That server sees you as just another anonymous visitor. Not to worry!
+You can copy the URL of that profile, or of one of their posts, and then
+paste that URL into the search function.</p>
+<p>If you are visiting a public page on another Mastodon site, see <a
+href="https://docs.joinmastodon.org/../external/#interact">Using
+Mastodon outside of your site</a>.</p>
+<h4 id="enabling-notifications">Enabling Notifications</h4>
+<p>[Image: An example of a profile that you are following]</p>
+<p>If you are following someone, you also have the option to receive a
+notification every time they post. To opt into this functionality, click
+the bell icon.</p>
+<h4 id="search">Search</h4>
+<p>[Image: The search function with modifier options exposed, see the
+section on prefixes below for description]</p>
+<p>Mastodon’s basic search allows logged-in users to find posts
+containing a specific hashtag, or to load a user or status directly if
+they know the URL or address. Searching for a term will show profiles
+whose username or display name contains that term, as well as hashtags
+that match or contain that term. Searching for a remote post or
+account’s full URL will cause the server to fetch it if it is not
+already in the database so it can be viewed locally.</p>
+<p>[Image: An example of a post being loaded directly by its URL]</p>
+<p>[Image: An example of results when searching for "arstechnica"
+including an account validated by the domain]</p>
+<p>[Image: An example of hashtags returned when searching for
+"friday"]</p>
+<p>Admins may optionally install full-text search. Mastodon’s full-text
+search allows logged-in users to find results from their own posts,
+their favourites, their bookmarks, and their mentions. Full-text search
+is limited for safety reasons. You can’t search for any text across the
+entire database. This prevents people from searching for controversial
+terms to find and harass others.</p>
+<p>The following operators are supported:</p>
+<ul>
+<li><strong>“exact phrases”</strong> will try to find the term inside
+the quote marks. This allows looking only for direct matches, such as
+<code>"look at my cluckers"</code> to find posts explicitly telling you
+to look at someone’s cluckers.</li>
+<li><strong>-exclude</strong> will exclude the term prepended by a minus
+sign. This allows filtering out certain terms, such as
+<code>animals -cats</code> to find posts about animals without posts
+about cats.</li>
+<li><strong>+include</strong> will include the term after the plus sign.
+This allows searching for multiple terms that must be included, such as
+<code>cat +dog</code> to find posts about both cats and dogs.</li>
+</ul>
+<p>The following <code>prefix:value</code> pairs are also supported:</p>
+<ul>
+<li><code>has:</code> (<code>media</code>, <code>poll</code>,
+<code>embed</code>) - posts that contain the specified attachment
+type</li>
+<li><code>is:</code> (<code>reply</code>, <code>sensitive</code>) -
+posts that are either a reply or marked sensitive.</li>
+<li><code>language:</code> (<code>{language_code}</code>) - posts made
+in a specific language, indicated by its <a
+href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">ISO
+639-1 language code</a></li>
+<li><code>from:</code> (<code>@{username}</code>,
+<code>@{username}@{domain}</code>, <code>me</code>) - posts from a
+specified author</li>
+<li><code>before:</code> (<code>{date}</code>) - posts created before an
+ISO8601 formatted date, e.g. “<code>2025-03-01</code>”. If the account
+has a timezone set, searches using their local timezone - otherwise in
+UTC.</li>
+<li><code>after:</code> (<code>{date}</code>) - posts created after an
+ISO8601 formatted date</li>
+<li><code>during:</code> (<code>{date}</code>) - posts created during an
+ISO8601 formatted date</li>
+<li><code>in:</code> (<code>library</code>, <code>public</code>) -
+<code>library</code> is the collection of posts that you have interacted
+with in some way: favourited, reblogged, bookmarked, etc.
+<code>public</code> is the global full text search index. The default is
+to search both, if this option is omitted.</li>
+</ul>
+<p>Each can be used in combination with a text search, for example to
+find all posts from yourself about cryptids, you could search for
+<code>from:me "cryptids"</code>.</p>
+<p>Prefixes can be combined, though they are combined with
+<code>AND</code>, so e.g. one can’t search for all posts from multiple
+languages.</p>
+<p>Prefixes can be negated with <code>-</code> as with string queries,
+so one can search for posts from anyone else about cryptids like
+<code>-from:me "cryptids"</code>.</p>
+<h4 id="private-mentions">Private Mentions</h4>
+<p>[Image: A list of conversations containing private mentions]</p>
+<p>In Mastodon, private mentions are just posts that have the “mention
+only” visibility selected. Visibility can be selected per-post, which
+allows changing the privacy level later in a thread. The private
+mentions column currently shows a list of all conversations containing a
+mention only post. Clicking on a conversation will load the associated
+thread.</p>
+<h4 id="list-timelines">List Timelines</h4>
+<p>Lists are subsets of your home timeline. You can create a list, give
+it a name, and add users that you follow to that list.</p>
+<p>[Image: A list of lists]</p>
+<p>Opening a list will load that list’s timeline. List timelines contain
+only posts by members of that list, as well as replies to you or to
+other members of the list. This can be changed to show replies to all
+people you follow, or to no one.</p>
+<h4 id="syndication-feeds">Syndication Feeds</h4>
+<p>Every account and tag page provide an RSS feed for syndication onto
+other platforms. Those feeds are auto-discoverable from the account and
+tag pages.</p>
+<h4 id="translation">Translation</h4>
+<p>When a post is in a language other than what your account is set to
+understand, a “Translate” button will appear next to the post content.
+Clicking this button issues a request to translate the content to the
+server, and will replace that content with translated results. This
+feature requires the server to have configured support for a translation
+service, and so may not be available on all servers.</p>
+<h3 id="welcome-to-mastodon">Welcome to Mastodon</h3>
+<p><em>Welcome to the Mastodon documentation!</em></p>
+<h4 id="what-is-a-microblog">What is a microblog?</h4>
+<p>Similar to how blogging is the act of publishing updates to a
+website, <strong>microblogging</strong> is the act of publishing small
+updates to a stream of updates on your profile. You can publish text
+posts and optionally attach media such as pictures, audio, video, or
+polls. Mastodon lets you follow friends and discover new ones.</p>
+<h4 id="what-is-federation">What is federation?</h4>
+<p><strong>Federation</strong> is a form of decentralization. Instead of
+a single central service that all people use, there are multiple
+services, that any number of people can use.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Grade of centralization</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Centralized</td>
+<td style="text-align: left;">Twitter, Facebook, Instagram</td>
+</tr>
+<tr>
+<td style="text-align: left;">Federated</td>
+<td style="text-align: left;">Email, XMPP, phone networks, physical
+mail</td>
+</tr>
+<tr>
+<td style="text-align: left;">Distributed</td>
+<td style="text-align: left;">BitTorrent, IPFS, Scuttlebutt</td>
+</tr>
+</tbody>
+</table>
+<p>A Mastodon website can operate alone. Just like a traditional
+website, people sign up on it, post messages, upload pictures and talk
+to each other. <em>Unlike</em> a traditional website, Mastodon websites
+can interoperate, letting their users communicate with each other; just
+like you can send an email from your Gmail account to someone from
+Outlook, Fastmail, Protonmail, or any other email provider, as long as
+you know their email address, <strong>you can mention or message anyone
+on any website using their address</strong>.</p>
+<p>[Image: From left to right: Centralized, Federated, Distributed]</p>
+<h4 id="what-is-activitypub">What is ActivityPub?</h4>
+<p>Mastodon uses a standardized, open protocol to implement federation.
+It is called <strong>ActivityPub</strong>. Any software that likewise
+implements federation via ActivityPub can seamlessly communicate with
+Mastodon, just like Mastodon websites communicate with one another.</p>
+<p>The <strong>fediverse</strong> (“federated universe”) is the name for
+all websites that can communicate with each other over ActivityPub and
+the World Wide Web. That includes all Mastodon servers, but also other
+implementations:</p>
+<ul>
+<li>Pleroma, a modular microblogging engine</li>
+<li>Pixelfed, federated image sharing platform, which lets you share and
+consume media posts</li>
+<li>Misskey, which includes microblogging alongside a customizable
+dashboard</li>
+<li>PeerTube, which lets you upload videos to channels</li>
+<li>Plume, which lets you publish longer-form articles</li>
+<li>And many more, including individual and personal websites!</li>
+</ul>
+<p>The fediverse does not have its own brand, so you might more often
+hear “follow me on Mastodon” than “follow me on the fediverse”, but
+technically the latter is more correct.</p>
+<h4 id="practical-implications">Practical implications</h4>
+<h5 id="choice-of-service-provider-and-policy">Choice of service
+provider and policy</h5>
+<p>Because Mastodon is just software that can be used to power any
+website, potential users of Mastodon have the option of choosing a
+service provider from already-existing Mastodon websites, or to create
+their own Mastodon website if they wish. The Mastodon project maintains
+a list of recommended service providers at <a
+href="https://joinmastodon.org">joinmastodon.org</a>, sortable by
+category and/or language. Some websites may have moderation policies
+that go beyond this, such as requiring the use of certain tags on
+potentially sensitive content, and some websites may have more relaxed
+moderation policies, but websites listed in the picker all agree to
+adopt the <a href="https://joinmastodon.org/covenant">Mastodon Server
+Covenant</a>, meaning that they pledge to actively moderate against hate
+speech, to take daily backups, to have at least one emergency admin, and
+to provide at least 3 months advance notice in case of shutdown.</p>
+<blockquote>
+<p>Maintaining communities that feel safe for all of its members is not
+easy. Mastodon provides a lot of foundational framework and tools for
+doing it, and shifts the power to effect change from one commercial
+entity to the communities themselves.</p>
+<p>– Eugen Rochko, Jul 6 2018, <a
+href="https://blog.joinmastodon.org/2018/07/cage-the-mastodon/">“Cage
+the Mastodon”</a></p>
+</blockquote>
+<blockquote>
+<p>A centralized social media platform has a hierarchical structure
+where rules and their enforcement, as well as the development and
+direction of the platform, are decided by the CEO […] A decentralized
+network deliberately relinquishes control of the platform owner, by
+essentially not having one.</p>
+<p>– Eugen Rochko, Dec 30 2018, <a
+href="https://blog.joinmastodon.org/2018/12/why-does-decentralization-matter/">“Why
+does decentralization matter?”</a></p>
+</blockquote>
+<h5 id="funding-and-monetization">Funding and monetization</h5>
+<p>Mastodon websites are operated by different people or organizations
+completely independently. Mastodon does not implement any monetization
+strategies in the software.</p>
+<p>Some server operators choose to offer paid accounts, some server
+operators are companies who can utilize their existing infrastructure,
+some server operators rely on crowdfunding from their users via Patreon
+and similar services, and some server operators are just paying
+out-of-pocket for a personal server for themselves and maybe some
+friends. So if you want to support the server hosting your account,
+check if it offers a way to donate.</p>
+<p>Mastodon development is likewise crowdfunded via <a
+href="https://patreon.com/mastodon">Patreon</a> and via <a
+href="https://opencollective.com/mastodon">OpenCollective</a>.
+<strong>No venture capital is involved.</strong></p>
+<blockquote>
+<p>In my opinion, “instant, public, global messaging and conversation”
+should, in fact, be <em>global</em>. Distributed between independent
+organizations and actors who can self-govern. A public utility, without
+incentives to exploit the conversations for profit.</p>
+<p>– Eugen Rochko, Mar 3 2018, <a
+href="https://blog.joinmastodon.org/2018/03/twitter-is-not-a-public-utility/">“Twitter
+is not a public utility”</a></p>
+</blockquote>
+<h5 id="interoperability-between-different-software">Interoperability
+between different software</h5>
+<p>In practical terms: Imagine if you could follow an Instagram user
+from your Twitter account and comment on their photos without leaving
+your account. If Twitter and Instagram were federated services that used
+the same protocol, that would be possible. With a Mastodon account,
+<strong>you can communicate with any other compatible website,</strong>
+<em><strong>even if it is not running on Mastodon</strong></em>. All
+that is necessary is that the software support the same subset of the
+ActivityPub protocol that allows for creating and interacting with
+status updates. To find out more about the technical specifications
+required to interoperate with Mastodon, see <a
+href="https://docs.joinmastodon.org/spec/activitypub/">ActivityPub</a>,
+<a href="https://docs.joinmastodon.org/spec/webfinger/">WebFinger</a>,
+and <a href="https://docs.joinmastodon.org/spec/security/">Security</a>.
+To read more about what ActivityPub allows us to do, see <a
+href="https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/">Why
+ActivityPub is the future</a>.</p>
+<blockquote>
+<p>All of these platforms are different and they focus on different
+needs. And yet, the foundation is all the same: people subscribing to
+receive posts from other people. And so, they are all compatible.</p>
+<p>– Eugen Rochko, Jun 27 2018, <a
+href="https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/">“Why
+ActivityPub is the future”</a></p>
+</blockquote>
+<h5 id="freelibre-software">Free/libre software</h5>
+<p>Unlike proprietary services, <strong>anyone has the complete freedom
+to run, examine, inspect, copy, modify, distribute, and reuse the
+Mastodon source code, provided they guarantee the same freedoms for any
+derivative work.</strong> Just like how users of Mastodon can choose
+their service provider, you as an individual are free to contribute
+features to Mastodon or publish a modified version of Mastodon that
+includes different features. These modified versions, also known as
+software forks, are required to also uphold the same freedoms as the
+original Mastodon project. For example, <a
+href="https://glitch-soc.github.io/docs/">glitch-soc</a> is a software
+distribution that adds various experimental features. Many individual
+forks exist as well, perhaps themed slightly differently or including
+small modifications to the codebase. Because Mastodon is libre software
+that respects your freedom, personalizations like these are not only
+allowed but encouraged.</p>
+<blockquote>
+<p>The ultimate power is in giving people the ability to create their
+own spaces, their own communities, to modify the software as they see
+fit, but without sacrificing the ability of people from different
+communities to interact with each other.</p>
+<p>– Eugen Rochko, Feb 20 2017, <a
+href="https://blog.joinmastodon.org/2017/02/the-power-to-build-communities/">“The
+power to build communities: A response to Mark Zuckerberg”</a></p>
+</blockquote>
+<blockquote>
+<p>Decentralization is biodiversity of the digital world, the hallmark
+of a healthy ecosystem. A decentralized network like the fediverse
+allows different user interfaces, different software, different forms of
+government to co-exist and cooperate.</p>
+<p>– Eugen Rochko, Dec 30 2018, <a
+href="https://blog.joinmastodon.org/2018/12/why-does-decentralization-matter/">“Why
+does decentralization matter?”</a></p>
+</blockquote>
+<h4 id="choose-your-path">Choose your path</h4>
+<p>Learn how to use Mastodon:</p>
+<p>Learn how to install Mastodon:</p>
+<p>Learn how to write an app for Mastodon:</p>
+<p>Learn about the Mastodon backend and how to contribute:</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>“Expanded” in the sense used above, meaning clicking on
+it to display the detailed view, not e.g. expanding content warnings or
+unfiltering posts.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Refreshing the page will not retrigger a fetch within
+some cooldown period, so don’t worry about overdoing it!<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

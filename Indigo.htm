@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Indigo Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Indigo Help Guide</h1>
+<p class="subtitle">The official help for Indigo, APH’s accessible GPS
+app, gathered into one screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="indigo-help-guide">Indigo Help Guide</h1>
+<p>This guide gathers the official help material for Indigo, the free
+accessible GPS app from the American Printing House for the Blind.
+Indigo gives blind and low-vision travellers turn-by-turn routing
+together with the running commentary about surroundings that sighted
+travellers get by looking: nearby businesses, intersections, and points
+of interest, announced as you go.</p>
+<p>Indigo runs on iPhone and Android only. There is no Windows program,
+no web application, and no Alexa skill, so the usual four-interface
+scope of these guides narrows to the mobile app. APH publishes no help
+articles on the web either: the guidance lives in downloadable
+documents, and this compendium is built from them. Everything here comes
+from APH’s own files, taken on 28 July 2026 — the User Guide dated 26
+June 2026, the Highlights sheet, the release notes for version 6.2, and
+the product page’s own description.</p>
+<p>Two notes on what is left out. APH also publishes a Spanish
+translation of the User Guide and an audio tutorial in both languages;
+neither is reproduced here, and both remain available from the product
+page. Screenshots and decorative images in the source documents are not
+carried over, since this document is meant to be read aloud.</p>
+<p>Headings run three deep: this title, then a chapter, then a topic,
+with the User Guide’s own subsections nested beneath. Every topic is
+listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#about-indigo">About Indigo</a>
+<ul>
+<li><a href="#what-indigo-is">What Indigo is</a></li>
+<li><a href="#notable-features-of-indigo">Notable features of
+Indigo</a></li>
+<li><a href="#what-is-new-in-indigo-nav-62">What is new in Indigo Nav
+6.2</a></li>
+<li><a
+href="#important-notice-limitations-and-the-apps-history">Important
+notice, limitations, and the app’s history</a></li>
+</ul></li>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#getting-started-overview">Getting Started
+overview</a></li>
+<li><a href="#setting-expectations">Setting Expectations</a></li>
+<li><a href="#general-app-info">General App Info</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#about-maps">About Maps</a></li>
+</ul></li>
+<li><a href="#indigo-functions">Indigo™ Functions</a>
+<ul>
+<li><a href="#indigo-functions-overview">Indigo™ Functions
+overview</a></li>
+<li><a href="#lookaround">LookAround</a></li>
+<li><a href="#routes-tab">Routes Tab</a></li>
+<li><a href="#locationwhere-am-i">Location/Where Am I?</a></li>
+<li><a href="#points-of-interest-pois">Points of Interest
+(POIs)</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#visual-map">Visual Map</a></li>
+</ul></li>
+<li><a href="#indigo-general-settings-notes">Indigo™ General Settings
+Notes</a>
+<ul>
+<li><a href="#indigo-general-settings-notes-overview">Indigo™ General
+Settings Notes overview</a></li>
+<li><a href="#battery-consumption">Battery Consumption</a></li>
+<li><a href="#interrupting-the-app">Interrupting the App</a></li>
+</ul></li>
+<li><a href="#haptics-list">Haptics list</a>
+<ul>
+<li><a href="#haptics-list-overview">Haptics list overview</a></li>
+<li><a href="#position-accuracy">Position Accuracy</a></li>
+</ul></li>
+<li><a href="#contact-aph">Contact APH</a>
+<ul>
+<li><a href="#contact-aph-2">Contact APH</a></li>
+</ul></li>
+</ul>
+<h2 id="about-indigo">About Indigo</h2>
+<h3 id="what-indigo-is">What Indigo is</h3>
+<p>Indigo is a fully accessible turn-by-turn GPS app designed to support
+independent outdoor navigation for blind and low vision users. With a
+simple interface and four easily accessible tabs—Routes, Location,
+Points of Interest, and Settings—users can easily navigate the app.
+Indigo provides audio tones and vibrations that offer real-time
+feedback, alerting you to upcoming turns, critical intersections, and
+when a search is in progress.</p>
+<p>What sets Indigo apart is its verbosity, delivering detailed spoken
+instructions that offer more context than other GPS apps. Choosing a
+destination is flexible and user-friendly, whether you’re starting from
+a point of interest, selecting an address from your contacts, or
+revisiting a previous route. For those who like more travel data, a
+simple tap on the More Info button reveals your current altitude and
+speed. Indigo combines powerful navigation features with thoughtful
+accessibility, making it the perfect companion for confident and safe
+independent travel. A user guide and highlights document are available
+for free download under the Manuals &amp; Downloads section below.</p>
+<p>Indigo supports English, French, German, Hebrew, Serbian, and Spanish
+and is available in Argentina, Australia, Austria, Bolivia, Brazil,
+British Virgin Islands, Canada, Chile, Columbia, Costa Rica, Denmark,
+France, Germany, India, Ireland, Israel, Italy, Lithuania, Mexico,
+Netherlands, New Zealand, Panama, Peru, Romania, Singapore, Slovakia,
+South Africa, Spain, Switzerland, Ukraine, UAE, UK, and the United
+States.</p>
+<p>Originally developed in 2012 by Sendero Group as Seeing Eye GPS, RNIB
+Navigator and Guide Dogs AU GPS.</p>
+<p>With the support of The Seeing Eye and the Independent Society of the
+Blind (Singapore), APH is able to offer Indigo for free. Thank you to
+our sponsors!</p>
+<h3 id="notable-features-of-indigo">Notable features of Indigo</h3>
+<p>While walking around, a blind traveler is often provided directions
+from point a to point B, but mainstream navigation apps do not provide
+the location information that sighted people receive visually as they
+follow the routes.  Indigo offers choices for both pedestrian and
+vehicle travel and provides ongoing announcements about what’s around,
+both nearby businesses and intersections.  In addition, the traveler can
+utilize the look around wand, to point</p>
+<p>their phone in a specific direction and hear the points of interest
+that are in that direction, further indicating where these points of
+interest are located.  These tools combined to support “free
+exploration” where a traveler does not always have to have a destination
+in mind.  They can simply go out for a stroll and enjoy their
+surroundings.</p>
+<p>Indigo is available for free in iOS and Android for dozens of
+countries.</p>
+<p>Indigo has built-in route creation with options for pedestrian,
+vehicle, Virtual, Transit, bicycle and getting warmer directions, unlike
+other apps, which switch to Google or Apple for routing. Detailed verbal
+routing takes place within the Indigo app with announcements for
+approaching turn, direction to turn and a “continue straight” message to
+confirm you are headed in the correct direction.</p>
+<p>Many of the announcements have unique sound events.</p>
+<p>Haptics augment the sound events like Turn Left, Turn Right, Continue
+Straight and arrived at destination.</p>
+<p>Indigo is simple! There are four tabs along the bottom of the screen:
+Routes, Location, POIs, and Settings.</p>
+<p>The Lookaround Wand on the top right of the screen allows the user to
+point the phone while stationary to hear POIs and intersections in that
+direction, complete with haptics and compass directions.</p>
+<p>There are three gesture shortcuts:</p>
+<ul>
+<li><p>Use your voice to launch the app and be prompted for the
+destination and route mode.</p></li>
+<li><p>Create a User POI wherever you are.</p></li>
+<li><p>Generate a list of all nearby POIs in all categories.</p></li>
+</ul>
+<p>You can share your user points of interest by Airdrop or Email.</p>
+<p>Routes menu: You have a list of ways you can choose your destination
+by POI, Street address, address from contact list, Waypoint, and History
+of the past ten route destinations.</p>
+<p>The selection Waypoint Route under the Routes Menu refers to
+recording a route using breadcrumbs. You can add waypoints with the Add
+button or you can shake the phone to create a Waypoint. It automatically
+records a point every 160 feet.</p>
+<p>A Virtual mode allows you to set your position to a POI or address
+and then explore or create virtual routes from that location. You can
+also virtually explore turning points on a route to find out about
+nearby restaurants when you make that turn.</p>
+<p>There is an option to use transit in a route. You can hear nearby
+transit stops and create a combination walking transit route.</p>
+<p>Settings: These are organized by topic like General, Routes and
+LookAround. There are several low vision contrasts and color
+settings.</p>
+<p>You can adjust parameters for routes, intersections, POIs and
+Lookaround.</p>
+<p>There is a nearby free Aira location button and a button for the
+nearest GoodMaps indoor venues. Tap on Aira or Be My Eyes from the
+Routes menus for visual assistance.</p>
+<p>There are multiple ways to announce things around you like Left/Right
+or clockface.</p>
+<p>The user guide and audio tutorial in English and Spanish are
+available on the Indigo page at
+<code>https://</code>www.aph.org/product/indigo/``</p>
+<h3 id="what-is-new-in-indigo-nav-62">What is new in Indigo Nav 6.2</h3>
+<p>Find the free Indigo Nav in the app stores. Make sure to use both
+words, Indigo Nav when searching.</p>
+<p>There are several improvements in Indigo under the hood in addition
+to the following new features:</p>
+<p>You now have a choice of Google Places for Points of Interest.
+Foursquare POIs is the default. You can change to Google POIs in the
+Settings LookAround menu.</p>
+<p>In addition to calling Aira for visual assistance, you now have the
+option to call a Be My Eyes volunteer. These buttons are at the top of
+the Routes screen. When Indigo gets you near your final destination, you
+have both services for visual assistance to pinpoint your
+destination.</p>
+<p>Location, intersection and turn-around announcements have been
+improved. You will get one intersection announcement when approaching an
+intersection and another when you are near it. You can shake the phone
+to trigger the Location screen announcements.</p>
+<p>You can “favorite” a point of interest by flicking up on the action
+list. You also have “set as Virtual Position” and Activate in this
+action list. There is now a Favorite POIs category where these favorites
+can be found. Tap on Favorite to add it to the list.</p>
+<p>When you create a User point of interest, the city where you are
+located is automatically added to that User POI name.</p>
+<p>A few reminders:</p>
+<p>You can find the Indigo User Guide and Audio Tutorial in English and
+Spanish at <code>http://</code>www.APH.org/Indigo`` under the downloads
+section. Links in English are also under Indigo Settings, Help in the
+app.</p>
+<p>You can launch Indigo routes using Siri. It is essential to use exact
+language in your prompt based on the Siri Configuration under Settings.
+Important! If you check your Settings Siri Configuration and the
+shortcuts refer to GoodMaps Outdoors, remove those old versions , close
+and reopen Indigo and check that the shortcuts now say Indigo.</p>
+<p>The shortcut to create a User POI is to double tap and hold with one
+finger on the Location screen Info button.</p>
+<p>The shortcut to generate a full list of nearby POIs in all categories
+is double tap and hold with one finger on the POI Tab.</p>
+<p>To contact Customer Service about Indigo,</p>
+<p>Email support@aph.org</p>
+<h3 id="important-notice-limitations-and-the-apps-history">Important
+notice, limitations, and the app’s history</h3>
+<p><strong>User Guide, June 26, 2026</strong></p>
+<p><strong>American Printing House</strong></p>
+<p><strong>Louisville, KY</strong></p>
+<p><strong>E-mail: Support@APH.org</strong></p>
+<p><strong>Web:</strong> <strong><code>www.APH.org</code></strong></p>
+<p>© APH, 2025</p>
+<p>Indigo Nav was created by Sendero Group in 2012. It was originally
+called Seeing Eye GPS in North America, RNIB Navigator in the UK and
+Europe and Guide Dogs NSW in Australia and New Zealand. It was taken
+over by AIRA in 2019 and an Android version was created. It was then
+acquired by GoodMaps from Aira in 2021 and launched as GoodMaps
+Outdoors. The app was acquired from GoodMaps by APH in 2024 and released
+as Indigo in 2025.</p>
+<p><strong>IMPORTANT NOTICE FOR ALL USERS</strong></p>
+<p>Indigo™ is designed to convey similar information as displayed on
+commercial global positioning system (GPS) products and location
+databases to people who are blind or visually impaired. Indigo™ products
+have similar limitations as commercial GPS products. These limitations
+include:</p>
+<ul>
+<li><p>Lack of information about the physical road characteristics such
+as elevation, overpasses/underpasses, bridges, sidewalks, traffic
+controls, unsafe neighborhoods, construction and other hazards.</p></li>
+<li><p>Map accuracy in newly developed areas.</p></li>
+<li><p>Traffic and weather conditions.</p></li>
+<li><p>Loss of GPS signals and map data due to poor cell coverage, tall
+buildings or other interference.</p></li>
+<li><p>Routes may not be safe or possible to follow.</p></li>
+</ul>
+<p>The individual user is wholly responsible for all issues related to
+personal safety and mobility. American Printing House (APH) and its
+representatives advise all users that GPS is not a substitute for
+orientation and mobility with a cane or guide dog and recommend that
+users have good mobility skills before using GPS orientation information
+to travel. Extreme caution should be used when operating GPS as a
+pedestrian and should never be actively used while navigating busy
+traffic situations. APH and its representatives assume no liability for
+accidents or injuries that occur to users while using any GPS
+product.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="getting-started-overview">Getting Started overview</h3>
+<h3 id="setting-expectations">Setting Expectations</h3>
+<p>Indigo™ is a fully accessible turn-by-turn GPS app, available on iOS
+and Android for free. It is available in many countries. If not
+available in your country, contact APH to request that it is added. At
+this time, this user guide is available in English only. Language
+localization will expand to other countries over time. There may be
+minor differences between Android and iOS versions. Indigo works with
+Android 10 and above and IOS 15 and above.</p>
+<p>An audio tutorial is available on the Indigo webpage under the
+Manuals &amp; Downloads section.</p>
+<p><code>https://</code>www.aph.org/product/indigo/<code>#main</code></p>
+<p>When you launch the Indigo app, you will hear the audio logo at the
+same time as the visual Indigo logo. You may hear, “loading User data,
+please wait.” After several seconds, the Indigo voice will announce the
+where-am-I location information. VoiceOver may announce the last Virtual
+position used. The Location Tab is selected. Flick through this screen
+to become familiar with its contents.</p>
+<p>Indigo has the common navigation features plus features unique to
+blind users, such as:</p>
+<ul>
+<li><p>four important tabs on the bottom of most screens: Routes,
+Location, POIs and Settings.</p></li>
+<li><p>At intersections, the street name and your direction of travel
+are announced.</p></li>
+<li><p>Intersections are described (e.g. four-way) with the clock face
+orientation of the streets.</p></li>
+<li><p>POI data is provided by Foursquare or Google, and you can add
+your own user points.</p>
+<ul>
+<li>Directions are announced for Walking and Driving routes, including
+heads-up announcements and tones for approaching turns, turn now with
+the blinker sound, continue straight and announcement of the subsequent
+turn.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>Unique haptics accompany the verbal announcements for Approaching,
+Left, Right and Continue Straight.</p>
+<p>Right turn, three long vibrations, (Morse Code, O) repeated three
+times</p>
+<p>Left turn, four short vibrations, (Morse Code, H)repeated three
+times</p>
+<p>Continue Straight, Long/short/long/short, one time, (Morse Code
+C)</p>
+<p>Approaching turn uses the same pattern but vibrating once rather than
+repeating three times.</p>
+<p>Destination, three short/one long (Morse Code, V)</p>
+<p>If one wanders off the route, you are asked if you want to
+recalculate. You have about five seconds to respond or the app
+automatically recalculates the route.</p>
+<p>The LookAround Wand in the upper right corner works when you are
+stationary, under 1.5 MPH. Lay the phone flat and point it in a given
+direction to hear what is nearby. Haptics will trigger at North, East,
+South and West when you rotate the phone. North is long/short, East is
+one short vibration, South is three short vibrations, and West is
+short/long/long.</p>
+</blockquote>
+<p>Up to five points of interest or intersections will be announced to a
+maximum of ten miles in a given direction. The wand is searching with a
+30 degree angle. If you are pointed North at zero degrees, the wand will
+be looking from 345 degrees to 15 degrees. When you rotate the phone, a
+new swath of 30 degrees will be searched and announced. Note that a
+maximum number of POIs will be searched as you rotate the phone. It is
+possible that a POI near you might be missed.</p>
+<h3 id="general-app-info">General App Info</h3>
+<p>The map and POI data may change over time. Because the apps are
+currently server-based, customers will have instantaneous access to the
+data provided by the map and POI suppliers.</p>
+<h3 id="installation">Installation</h3>
+<p>Select the installation link after finding the app in the store and
+tap to install Indigo™ on your device. Note that the app is called
+Indigo Nav in the store and Indigo on the phone screen. You will be
+prompted to confirm that you would like to install Indigo™, swipe to the
+Install button and follow the prompts.</p>
+<p>Registering Indigo</p>
+<p>Under the Account Creation page, you can continue as a guest or
+register as a user. Note, if you register as a guest, you will not have
+access to User points of interest. When you are registered, your user
+points of interest will be remembered. The Account Creation page may
+occasionally come up even when you are already registered. Just enter
+your information to regain access.</p>
+<p>You have two options for registration, by phone number or by email.
+If you choose by email address, make sure to check your Spam folder for
+the verification email if you don’t find it in your email Inbox. Click
+on the verification link in that email. If you don’t find an email,
+switch to the phone registration. If you choose the phone number, you
+will first hear a country code button; click on that if you need to
+change it. Otherwise, choose the text field and enter your phone number
+on the virtual number pad. bbThen click on the Send Code button. Enter
+that 6-digit verification code and tap the Submit Button. bbbbYou will
+need to register if you wish to maintain and share a user database of
+points you create.</p>
+<p>The Welcome to Indigo™ page is where you can read the license
+agreement and useful tips. Once you have read this information, you need
+to select the Accept button to proceed into the app. If you do not agree
+with the terms, you can select the Exit button to exit the
+application.</p>
+<p>You are prompted to confirm that you allow Indigo™ to use your
+current position. After hearing the loading jingle and User POI loading
+message, the Location screen will open. It may take a few seconds before
+Indigo™ announces the heading, nearest address, and nearest POI on the
+Location screen, especially if you have a large number of User points of
+interest to load.</p>
+<p>Now, select the Settings Menu so you can set your Indigo application
+preferences. If you enter the program and receive a notice that Location
+Services are not enabled in this device, you will need to enable that in
+your phone’s settings. Go to Settings, select Privacy, select Location
+Services and select On. Also, under the Main heading Settings is a
+listing of all the apps. You can turn Location Services on and off there
+too.</p>
+<h3 id="about-maps">About Maps</h3>
+<p>Maps are an integral part of the GPS software's capabilities. The map
+data is developed and maintained by the map supplier. Because the maps
+from Indigo™ are stored on a server, there are a few items to keep in
+mind. The advantage of having maps stored on the server is that you get
+real-time map and POI data updates.</p>
+<p>If you lose cell coverage, you temporarily lose access to the online
+map and POI data. If you have a route loaded, it will continue to work
+with the Getting Warmer indications if you stay on that route, but you
+will not be able to recalculate a route until the cell data connection
+has been reestablished. The Indigo app caches one square mile of
+intersections, including railroad crossings, on your phone. However,
+automatic LookAround announcements such as intersections and POIs
+(Points Of Interest) will not be announced.</p>
+<p>The next turn and destination as well as the route ETA will update
+even when there is no phone service. It will not recalculate if you go
+off-route but if you stay on the route, the information is updated.</p>
+<p>The POI system will query the server by default every 10 seconds. The
+timer can be increased if there are too many POIs being announced.</p>
+<h2 id="indigo-functions">Indigo™ Functions</h2>
+<h3 id="indigo-functions-overview">Indigo™ Functions overview</h3>
+<p>On the top of the Indigo™ location screen, there are two buttons,
+LookAround Wand and GPS/Virtual position On/Off.</p>
+<p>Next is the Where-Am-I information in the top third of the screen
+showing the compass facing direction of the phone, the nearby address,
+and the nearest POI. A shake of the phone repeats this “Where-Am-I”
+information . The last virtual position used is below this on the
+screen.</p>
+<p>In the bottom third of the screen, you find the button to set your
+Virtual Position to the current GPS position. Then, there is a More Info
+button before the Routes tab, which contains GPS speed, accuracy and
+altitude. Finally, there are four tabs on the bottom of most screens,
+Routes, Location, POIs and Settings.</p>
+<p>Now that you have access to the Global Positioning System with the
+streets and POIs using your device, what can you do with it? Here is
+where the fun begins!</p>
+<p>For example:</p>
+<p>I am a blind person in a car or bus, with minimal knowledge about
+environmental information whizzing by my vehicle. I load Indigo™ app and
+the Point of Interest “look-around” feature automatically announces a
+sampling of Points of Interest I am passing.  When I am stationary, I
+can turn on the LookAround wand and point in any direction to hear about
+POIs and intersections.</p>
+<p>If I happen to pass an Aira Access point, the app will notify me. If
+I choose to enter that business, I can call an Aira agent for visual
+assistance. So, for example, if I need sighted assistance while
+completing my ATM withdrawal or finding the orange juice, I can call an
+Aira agent and get assistance reading print signs or text.</p>
+<p>I want to meet up with my friends at a restaurant called Lakeside
+Grill. I selected the POI Menu on the bottom of the screen. I input
+“Lakeside” in the text field and select the Search button. bUsing Smart
+Search, the app is able to provide a list of suggested matches using
+your search text. bbbbbbbbAfter the POI list is created, I locate
+Lakeside Grill in the list of POIs then select it to hear details about
+Lakeside Grill, call them, view the menu (if available), or create a
+route to get me there. Flick up to set the POI as a Virtual
+position.</p>
+<p>You can explore a turning point virtually in a route as follows.
+Create a route; go to Route details; tap on the route point you want to
+explore; you will hear a tone indicating you have switched to virtual;
+go to the POI tab and do a nearby search; the nearest POIs will come up
+relative to that route turning point. You can tap on the button in the
+upper right corner to switch from Virtual back to GPS. In this way, you
+could search for a lunch spot on your route ahead of your GPS position
+and it is saved for future reference. Note that when you are in Virtual
+mode, you will hear a reminder periodically, so you don’t confuse it
+with GPS mode.</p>
+<p>Should you wish to explore a route virtually, here are the steps.
+Choose the address or POI for the starting point and choose Virtual from
+the route list. You will now be in Virtual mode at that address. Set a
+destination by POI name or address. Choose the route type from the list.
+Choose the Route details to hear the turning points in the route.</p>
+<p>As you can see from reading these scenarios, there are two general
+ways to use Indigo™. The first and probably most popular use of the GPS
+information is simply to be aware of one’s environment with the
+“look-around” options. Traditionally, a blind person might get one
+percent of location information through a “sighted-person filter.” With
+Indigo™, a blind user can independently “look around” and hear what
+businesses, addresses and intersections are nearby.</p>
+<p>The second general use of Indigo™ is to navigate to a specific
+destination along a route created by the program.</p>
+<p>These routes can of course be used in conjunction with the
+Look-Around information.</p>
+<p>Indigo™ provides the opportunity for users to get information beyond
+the reach of their other senses. Visually impaired users will understand
+how valuable it is to know the names on signs they might see but cannot
+read.</p>
+<p>Tap the Aira button to launch the Aira app and you will be connected
+to an Aira agent if you have the Aira app installed.</p>
+<p>If you do not have Aira installed, it will take you to the App Store
+so that you can download the app. Note that there are many free Aira
+access locations so you can use Aira even if you do not have a
+subscription.</p>
+<h3 id="lookaround">LookAround</h3>
+<p>There are two distinct LookAround modes of Indigo™, the Automatic
+LookAround mode and the LookAround Wand. They both tell you what is
+around, but the LookAround Wand provides the option to search your
+surroundings by pointing your phone in a specific direction while
+stationary. Note, LookAround announcements will not work if you lose
+your network connection.</p>
+<p>Comprehensive intersection announcements may not be available in all
+countries where the app is authorized. If you wish a country
+intersection database to be added, please submit a request. The more
+requests we receive, the more likely that country will be added. All
+other POI and street data should work fine.</p>
+<h4 id="automatic-lookaround-mode">Automatic LookAround mode</h4>
+<p>The Automatic LookAround mode is on by default and works if you are
+moving or if you are stationary. It searches in all directions every 10
+seconds or in your choice of several intervals up to 60 seconds, and it
+reports the nearest POI or intersection to you. In a dense area, it
+doesn't have to look very far. You can of course search for all points
+of interest manually and can expand the search if nothing nearby is
+found up to 62 miles.</p>
+<p>In addition to the nearest POI and intersection announcements, you
+will also get automatic announcements to let you know when you have
+changed direction or changed streets if you have set your speed in
+LookAround settings to under 5MPH.</p>
+<h4 id="lookaround-wand">LookAround Wand</h4>
+<p>When stationary, the LookAround Wand allows you to find out a
+sampling of what is in the direction you point the phone. For example,
+if you want to know what is to the right, point your phone to the right
+and the intersection and a sampling of points of interest will be
+announced.</p>
+<p>The LookAround Wand button is on the top right of the screen. You can
+toggle it off and on. When the LookAround Wand is turned on, you will
+hear a rising chime, the button will light up, and Voiceover will
+confirm that the LookAround Wand is on. When the LookAround Wand is
+turned off, you will hear a descending chime, the button will turn gray,
+and Voiceover will confirm that the LookAround Wand is off. Remember
+that if you are moving and turning it on, no information will be given
+until you stop moving for 15 seconds or so. Also, if you switch screens,
+the LookAround wand will automatically turn off. The wand will announce
+up to five points in the direction you are pointing, including an
+intersection in that direction to a maximum of 62 miles. There is a
+haptic vibration every 90 degrees. As you rotate your phone, you will
+feel the vibration along with a verbal announcement of the compass
+direction, North, East, South, West . For best results, wait a few
+seconds when you point the phone in a new direction.</p>
+<h3 id="routes-tab">Routes Tab</h3>
+<p>There are four buttons at the top of the Routes screen, Aira, and Be
+My Eyes to get human visual assistance followed by the LookAround Wand
+and GPS/Virtual buttons. If you reach the end of your route and need
+assistance finding the specific business or door, visual assistance can
+help. You need to have these 3<sup>rd</sup> party apps loaded to benefit
+from their functions. Tapping on the button will call the Aira agent or
+Be My Eyes volunteer.</p>
+<p>Next on the screen is the Choose Mode Heading:</p>
+<p>You have six options:</p>
+<ol type="1">
+<li><p><strong>Home</strong> – If you have set your home address in the
+Settings screen, that address will be used when you choose this button.
+If you haven’t yet set your Home Address, you will be prompted to do so.
+You can enter your home address by manually typing the Address, using
+your Current Position, or Selecting your address from your phone’s
+contacts database. We recommend setting your home address based on your
+current position. So, stand outside your front door or at the top of the
+driveway, make sure you have a good position and then set the address
+from within the Settings General menu.</p></li>
+<li><p><strong>Points of Interest</strong> – If you select this button,
+the POI Search screen will load. You can either enter text in the search
+field or select User POIs, Indoor, or a POI category. On iPhones, the
+search field is powered by Apple MapIt Smart Search. The POI data is
+provided by Foursquare or Google as selected in Settings LookAround.
+Once you start typing, it will provide suggested matches. Next, select
+the Search button to start searching for POIs for the closest match to
+what you typed. If you need to clear the search text field, there is a
+Clear-text button. If you want to search for a POI within a specific
+category, select a category from the list presented in the lower half of
+the screen (i.e. Food, Lodging, Entertainment, etc.). Once you select a
+category, you will hear nearby POIs in that category sorted by
+proximity. If you would like to search for a specific POI enter it into
+the POI Search Text field. Once you have entered the POI Search text,
+select the Search button. If there are matching POIs containing the text
+you have entered, you will be presented with a list of POIs from which
+to choose. If you do not find your POI within that list, you can select
+the More button which enables you to continue searching over a greater
+distance.<br />
+Once you select the correct POI from the list, the POI Details screen
+will load. The POI address and phone will be listed if they are in the
+database. The POI distance will be listed along with up to ten action
+buttons:</p>
+<ol type="i">
+<li><p>The Walk <strong>button</strong> will create a pedestrian route
+to the POI.</p></li>
+<li><p>The Drive <strong>button</strong> will create a vehicular route
+to the POI.</p></li>
+<li><p>The <strong>Getting Warmer button</strong> announces
+line-of-sight distance and direction to the POI.</p></li>
+<li><p>Set as Virtual position. This will both set and move you to the
+virtual position. You can switch back to GPS position with the button in
+the upper right of the screen.</p></li>
+<li><p>Transit will create combined directions of walking and transit to
+the POI.</p></li>
+<li><p>The <strong>Bicycle button</strong> will create a bicycle route
+to the POI.</p></li>
+<li><p>The <strong>Uber button</strong> will launch Uber if you have it
+installed on your phone and the POI you chose will populate the Uber
+destination field. You can then request a ride from within the Uber app
+to the POI.</p></li>
+<li><p>The <strong>Call Button</strong> (if available) will call the
+POI</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>. You will be asked to confirm that you want to place the call,
+select Yes to place the call. Note, the call button is omitted when
+there is no phone number and if you are running the app on an iPad.</p>
+</blockquote>
+<ol start="9" type="i">
+<li><p>Some restaurant POIs will have a food Menu button.</p></li>
+<li><p>The POI Feedback button has options to remove or flag a
+Foursquare POI. This does not apply to Google POIs.</p></li>
+</ol>
+<!-- -->
+<ol start="3" type="1">
+<li><strong>Street Address</strong> – Select this button to create a
+route to a specific address. The search field is powered by Apple MapIt
+Smart Search on iPhones, so once you start typing it will provide
+suggested matches. Start by typing the street number, then the street
+name. Once you double tap on the search field, the number keyboard will
+load onto the bottom portion of your screen, type the Street Address
+number. Once you press the Space key, the Letter keyboard will replace
+the number keyboard so you can type the Street name. You can usually get
+a match without entering Street, Avenue, Lane, Way, etc. Next, select
+the Search button to start searching for addresses matching what you
+typed. Once you select the desired address, you will need to choose your
+preferred route mode. Choose from Walk, Drive, Getting Warmer, Virtual,
+Transit, Bicycle, or Uber. If the address matches exactly, you will hear
+a summary of the route beginning with which direction to start heading.
+If the address is not an exact match, Indigo will prompt you with the
+address it found. Make sure the address displayed is exactly what you
+want like Street verses Drive verses Lane. Once you select the address,
+you will progress to the route loaded screen where you will hear a
+summary of how to begin the route.</li>
+</ol>
+<blockquote>
+<p><strong>Caution!</strong> If you use dictation to enter POI or
+address text, be careful what text actually is inserted in the fields.
+For example, if you use the words, 22 11 Bush Street, thinking you would
+be inserting the 4 numbers 2211, you end up with number 20 on 11th
+street. It is the ambiguities that give dictation a problem. Be very
+precise and very literal if you are using dictation. Stating a location
+name such as “Starbucks” is not as ambiguous and should not be a problem
+with dictation.</p>
+</blockquote>
+<ol start="4" type="1">
+<li><p><strong>Contact Address –</strong> Select this button to create a
+route to an address in your Contacts database. Simply select the Contact
+that you want to be routed to and then choose your route type; Walking,
+Driving, Getting Warmer, Virtual, Transit, Bicycle, or Uber if
+available. Note that you can only create a route to the first address
+listed with this contact. If you have multiple addresses for a contact
+(i.e. home, work, etc.) only the first one will be used.</p></li>
+<li><p><strong>Waypoint Route –</strong> Waypoint (also called
+breadcrumb) routes can be created in areas with maps in a situation when
+you do not want to use the automatically created route. More often,
+waypoint routes are most useful when you are somewhere where maps are
+not available – perhaps on a university campus, hiking trail, park,
+large parking lot, or campground. To begin recording a new waypoint
+route, go to the Routs tab, choose Waypoint Route from the list, select
+Record New Waypoint Route button. You will be prompted to enter the name
+of the first waypoint. The nearest address is automatically placed in
+the text field, but you can enter your own name. For example, if you are
+creating a route from your car to the end of a hiking trail, you could
+name the first waypoint “car” and your last waypoint “trail end.” When
+the waypoint route is saved, it will automatically be named “car to
+trail end.” Once the first waypoint is saved, you can travel your route
+while waypoints are automatically placed at regular intervals as you
+walk along your route (every 160 feet at pedestrian speeds and every
+half mile at vehicle speeds). You can also add your own waypoints
+manually by either shaking the phone or selecting the Add Waypoint
+button at the bottom of the screen. If you add Waypoints by shaking the
+phone the nearest address or intersection, if available, will be added
+to the name of that Waypoint. If you add Waypoints using the Add
+Waypoint button, you have the option to either accept the auto-populated
+text or enter your own text and select the Save button. This waypoint
+will be added sequentially to the list of waypoints in your route. When
+you exit your route by selecting the Back button, it is automatically
+closed and saved using the name of the 1st and last waypoint. Note: Make
+sure you are done adding waypoints to your route when you select the
+Back button because it is not yet possible to add to a waypoint route
+once you exit. To hear about your location without leaving your route,
+select the Location Announce button in the upper right corner of the
+screen.</p></li>
+</ol>
+<blockquote>
+<p>To load an existing route again, select the Load Existing Waypoint
+Route button. A list of all your previously created waypoint routes will
+be presented. Simply select the route you want to load. When your route
+loads, it will automatically place you at the nearest Waypoint and
+determine which way to load the route. So, if you are at the last
+Waypoint in your route, it will load the route in reverse order, so
+Waypoint 1 is your destination. While in the route, you will hear
+automatic direction and distance announcements about your next
+Waypoint.</p>
+<p>To delete a waypoint route, perform a one-finger double tap, hold,
+and release on the route that you want to delete. You will be prompted
+to press OK if you want to delete.</p>
+<p>To edit or delete a waypoint within a route, select it from the list
+of waypoints with a one-finger double tap. To edit the name of the
+waypoint, input the desired waypoint name into the text field, then
+select the Save button. To delete the waypoint, select the Delete
+button. If you want to change the name of the Waypoint Route, edit the
+text in Waypoint 1.</p>
+</blockquote>
+<ol start="6" type="1">
+<li><strong>History</strong> – Once you have created a route, the last
+25 destinations you have created will be listed so you can quickly
+initiate another route to that location. If you wish to have a
+destination ready to go, create a route and then close the route. That
+destination will then be available on the History list when you want to
+initiate the route.</li>
+</ol>
+<h4 id="route-loaded-screen">Route loaded screen</h4>
+<p>Once you have chosen your destination and selected a route type, the
+route loaded screen will load. Initially the route loaded screen will
+announce various bits of information. So, for example, if you created a
+route to the Fairmont Hotel in San Francisco using the address of 950
+Mason Street, when your route loads you will hear:</p>
+<p>“X miles to destination, estimated time X hours/minutes, facing
+direction is north, proceed straight, start going west on current
+street, in X feet, turn on next street.” The route instructions will
+automatically trigger as you approach the turning points.</p>
+<p>If you would like to navigate the Route loaded screen, you can swipe
+through the different items on the screen. For example, you will find
+the route name (“Route to 950 Mason Street, San Francisco, CA”) followed
+by the Aira launch button and the LookAround Wand button at the top
+right. As you continue to swipe through the screen you will find:</p>
+<ol type="1">
+<li><p>First turn into your loaded route</p></li>
+<li><p>Route Details button - select this button if you would like to
+hear a list of all the route turns.</p></li>
+<li><p>Cancel button– select this button if you would like to cancel
+your route.</p></li>
+<li><p>Recalculate Route button– select this button if you would like to
+recalculate your route.</p></li>
+<li><p>Distance to your destination</p></li>
+<li><p>Estimated Time of Arrival (ETA) or the number of minutes to your
+destination, and</p></li>
+<li><p>Repeat button, which will repeat the route information
+summary.</p></li>
+</ol>
+<p>If you have chosen the Getting Warmer or Waypoint route type, you
+will not hear any route directions, instead you will hear “Proceed to
+Clock-face direction, Compass heading, X distance to your destination.
+This information will repeat every minute when you are over 1000 feet
+from your destination, every 30 seconds when you are 500-1000 feet from
+your destination and every 15 seconds when you are within 500 feet of
+your destination. The Getting Warmer auto announcement will be every 5
+minutes over 5 miles from your destination no matter the speed at which
+you are moving.</p>
+<h4 id="magic-tap-gesture">Magic Tap Gesture</h4>
+<p>As you may already know, while using Voiceover, you can perform a
+two-finger double tap gesture, which activates different functions
+depending on what app you are in, and where you are in that app. This
+gesture is called the Magic Tap gesture. In Indigo, while you are
+traveling on a route, you can use this gesture to repeat the route
+instruction which was last spoken. To perform this gesture, simply tap
+twice with two fingers, anywhere on the screen, and the app will repeat
+the last route instruction for you. You may use this gesture at any time
+while you are traveling on a route.</p>
+<p>TIP: When performing the Magic Tap gesture, remember to keep your two
+fingers apart just a bit. It will not work to interrupt the Indigo
+voice.</p>
+<h4 id="route-shake-feature">Route Shake Feature</h4>
+<p>While you are on the Route Loaded Screen, if you shake your phone,
+you will hear the distance, street name and direction of the next turn,
+distance and direction of destination, and Estimated Time of Arrival, or
+ETA. You will not hear the next intersection announcements, available on
+the Location screen. The Shake activation is designed to operate when
+you are holding the phone roughly upright. The Shake should not trigger
+when the phone is upside down. The shake is intended to be conducted
+roughly in a vertical to horizontal orientation. Experiment to learn how
+to activate the shake function and how to keep it from triggering in
+your pocket, purse or on a belt. A vibration and bell sound will
+indicate Shake is in process. Adjustments between Shake Off, Medium or
+Hard are under settings, General. If you find that the information is
+triggered when in your pocket or on a belt, change the setting to
+Hard.</p>
+<h4 id="getting-warmer">Getting Warmer</h4>
+<p>On the Getting Warmer Screen, you will hear distance to your
+destination, the direction to your destination, Estimated Time of
+Arrival, and a Cancel Button. Select Cancel to exit the route and return
+to the Route Creation Screen.</p>
+<p>If you have chosen one of the route modes with turns, the Getting
+Warmer function takes over once you are near your destination just in
+case it is a sizable distance off the street. Once you have arrived
+within the default arrival distance of 50 feet, the program will
+automatically turn on the Getting Warmer mode which will run up to two
+minutes before it closes. While in this mode, you will hear the distance
+and compass direction to your destination every 15 seconds.</p>
+<p>In summary, Getting Warmer on its own provides distance and direction
+to a destination without turns. It is also used when a route with turns
+ends short of the destination, so you have some indication of where that
+destination is located in the final distance to the destination, for
+example, in a large parking lot.</p>
+<p>Note that the ETA, when Getting Warmer is selected, is based on
+either your speed at the time of the reading or a default speed if not
+moving. For example, 2.5 miles per hour assuming you are walking. The
+estimate does not include the extra time of stop lights at
+intersections, time for getting lost or time stopping to chat.</p>
+<h4 id="create-a-route-using-blind-square">Create a Route using Blind
+Square</h4>
+<p>To provide another route creation option, we have partnered with
+Blind Square so that you can perform your POI search in Blind Square and
+then transition directly into route creation in the Indigo app.</p>
+<p>To create a route from the Blind Square app, search as you normally
+would using Blind Square to determine your destination point of
+interest. Once you select a point of interest, you will go to the
+details page. Swipe until you reach Plan a Route, double tap to select
+this option. The Select Navigation app screen will offer several
+external routing apps including Indigo. Select Indigo and you will hear
+“POI Name is selected as a destination, starting navigation application
+Indigo.” You will then be prompted to select a route type, Walking,
+Driving, Getting Warmer, Virtual, Transit or Bicycle.</p>
+<h3 id="locationwhere-am-i">Location/Where Am I?</h3>
+<p>The Location screen gives you a list of your location details. Along
+the top of the screen, you will find the LookAround Wand and GPS/Virtual
+buttons. In the main screen, the following items are listed:</p>
+<p><strong>Heading</strong> – If you are moving, this announces the
+compass direction based on your movement, Heading Northeast for example.
+Walk at least ten yards or more in the same direction before relying on
+the new heading.</p>
+<p><strong>Direction</strong> – If you are stationary, this announces
+the compass direction, Facing Northeast for example. Wait a few seconds
+after changing direction with the phone flat for best results.</p>
+<p><strong>Intersection Ahead</strong> – announces the street name and
+direction of the intersection ahead of your current location.</p>
+<p><strong>Near</strong> – announces the nearest address to your current
+location.</p>
+<p><strong>Nearest POI</strong> – announces the nearest POI</p>
+<p>Virtual – announces the distance and direction to the last virtual
+position you set. This position is remembered when you leave and reenter
+Indigo.</p>
+<p><strong>The Info button</strong> includes the following:</p>
+<p><strong>Location Accuracy</strong> – announces the approximate
+position accuracy in the number of feet, yards or meters, as you wish.
+Accuracy can vary from a few feet in the open to hundreds of feet if you
+are inside a building or among tall buildings.</p>
+<p><strong>Altitude</strong> – announces your approximate Altitude in
+feet, meters, or yards. Under 100 feet, it will say “Sea Level.”</p>
+<p>When a route is loaded the Location Screen will also display and
+announce your next turn, direction to your destination and the Estimated
+Time of Arrival. This is the result of the number of minutes to your
+destination based on the speeds associated with each road in your route.
+For example, if you have created a route that will take 15 minutes, and
+it is now 12:30PM. The estimated arrival will be 12:45PM. Note that on
+the Route screen, the Estimated Time of Arrival, ETA, will be the amount
+of time of the route and not the time on the clock for your arrival.</p>
+<p><strong>GPS Speed</strong> – announces the tracked speed of your
+movement. While you are standing still, this announcement should not
+report anything, but if the GPS accuracy is poor, it might report a
+slight speed while you are standing still.</p>
+<h4 id="location-shake-feature">Location Shake Feature</h4>
+<p>A firm shake of your device will refresh the Location information and
+announce the items on the screen including the compass direction, nearby
+address, nearest intersection and POI. You will hear a ding and
+vibration indicating this update is in process. The Shake activation is
+designed to operate when you are holding the phone roughly upright. The
+Shake should not trigger when the phone is upside down.</p>
+<h3 id="points-of-interest-pois">Points of Interest (POIs)</h3>
+<p>[]The Points of Interest (POIs) screen allows you to search for:</p>
+<ol type="1">
+<li><p><strong>A nearby POI</strong> - If you do not know the exact name
+of the POI you want to find or just want to know what is around, use
+this search. To do a nearby POI search:</p>
+<ol type="a">
+<li><p>If you are on the POI Search screen, you can use the Shake
+Feature. Simply shake the phone firmly and you will go directly to the
+Nearby POI List screen.</p></li>
+<li><p>if you are on any other screen, perform the Nearby POI List
+Shortcut Gesture by navigating to the POI Tab button, once you hear
+“POIs Tab,” you can perform a one-finger double tap, hold and release.
+You will go directly to a list of all POIs nearby, no matter the
+category .</p></li>
+</ol></li>
+<li><p><strong>Finding a specific POI</strong>, e.g. “UPS Store” – To do
+this search double tap on the text field, then use the keyboard on the
+bottom portion of the screen to type in the text of the POI you want to
+find and select Search. If you enter the text, a Clear Text button will
+appear next to the text field. Use this to quickly erase the text if
+need be.</p></li>
+<li><p><strong>A nearby POI in a specific category</strong>, e.g. Food,
+Lodging, etc. - If you want to search for a POI within a specific
+category, scroll down the page to the list of Categories. Select one of
+the categories listed. Then a list of nearby POIs from the category you
+have selected will be displayed. We have enabled food menu viewing for
+Foursquare restaurants. To see if the restaurant you are going to has a
+menu available, perform a Food category search. When the POI details
+screen loads, there will be a link to the food menu if there is one
+available. There are no food menu options with Google POIs.</p></li>
+<li><p><strong>Finding a specific POI in a specific category</strong>,
+e.g. “Mel’s Diner” in Food - select one of the categories listed, then
+when that screen loads, open the text field and type the text you wish
+to search. Nearby POIs in that category are listed just below the search
+field.</p></li>
+<li><p><strong>Transit Near Me will generate a list of transit stops in
+your vicinity. If you wish to navigate to that transit stop, click on it
+and a Walking route will be created to the stop.</strong></p></li>
+<li><p><strong>Create a User POI based on the GPS position where you are
+located. You can name, categorize, and even share it.</strong> You can
+even find points inside airports and malls, which you can somewhat
+navigate to with marginal indoor GPS position accuracy.</p></li>
+</ol>
+<p>Since some Foursquare points are created by users, you will run
+across some questionable points along with mostly good ones. Use the
+Action list to suggest removal or flagging of a questionable Foursquare
+POI. You can send feedback either by flicking on the POI name or by
+finding the option under the Choose Mode list. You must choose a reason
+for removing the POI; you can optionally add a text explanation. Then
+hit submit.</p>
+<h4 id="poi-action-buttons">POI Action Buttons</h4>
+<p>After searching for a POI, you will be presented with a list of
+matching POIs from which to choose. Use the Flick Up or Down to set the
+POI as your virtual position or set as a Favorite. Choose Activate to
+open the POI. Note that the Favorite POI category is listed
+alphabetically in the POI category list.</p>
+<p>If there is no POI name match, you will be presented with the choice
+of expanding the distance of your search or cancelling your search. Once
+you select the POI you want from the list, the Route creation screen
+will load. The POI address, phone and distance will be listed along with
+up to ten options:</p>
+<ol type="1">
+<li><p>The Walk B<strong>utton</strong> will create a pedestrian route
+to the POI.</p></li>
+<li><p>The Drive <strong>Button</strong> will create a vehicular route
+to the POI.</p></li>
+<li><p>The <strong>Getting Warmer</strong> button will provide Getting
+Warmer (also known as line of sight) distance and direction to the
+POI.</p></li>
+<li><p>The Virtual Button will set the POI to a virtual position.
+Subsequent POI searches will be relative to that Virtual position until
+you switch back to GPS position in the top right of the screen.</p></li>
+<li><p>The Transit button will create a combined Walking and Transit
+route.</p></li>
+<li><p>The <strong>Bicycle</strong> button will create a Bicycle route
+to the POI.</p></li>
+<li><p>The <strong>Uber button</strong> will launch Uber if you have it
+installed on your phone. You can then request an Uber ride to the POI,
+which populates the Uber Destination field.</p></li>
+<li><p>Send Feedback provides options to remove or flag the
+POI.</p></li>
+<li><p>The <strong>Call Button</strong> will call the highlighted phone
+number if there is one. You will be asked to confirm that you want to
+place the call, select Yes to place the call. Note: This button will not
+appear if the phone number is not available or if you are running the
+app on an iPad.</p></li>
+<li><p>A Menu button for food will appear if the restaurant POI has
+one.</p></li>
+</ol>
+<h4 id="poi-shake-feature">POI Shake Feature</h4>
+<p>While you are on the POI Search results screen, if you shake your
+phone, you will hear a list of nearby POIs. The Shake activation is
+designed to operate when you are holding the phone roughly upright. The
+Shake should not trigger when the phone is upside down like in your
+pocket. A ding and vibration will indicate that a query for nearby POIs
+is in process.</p>
+<h4 id="user-pois">User POIs</h4>
+<p>It is very helpful to create your own user Points of Interest. Your
+user point at the front door of a building can be more accurate than the
+general address for that building. You can customize the information for
+these POIs by providing the name, category and tag to make this POI as
+detailed and relevant as you need it to be.</p>
+<p>The User POIs are automatically sorted by proximity along with the
+commercial POIs when you use the POI Find commands. In order to
+differentiate between commercial POIs and User POIs when they
+automatically trigger, we have added a crackling sound preceding the
+User POI announcement of its category, tag and name.</p>
+<h5 id="adding-user-pois">Adding User POIs</h5>
+<p>To add a User POI, go to the relevant location, try to be in clear
+view of satellites for several seconds. Choose the User POI button and
+then the Add button. First input the Name of the POI. Then select an
+appropriate category, the default is User, but you can also choose from
+Hotel/Accommodation, Pedestrian, Restaurant, Shops and Services, Travel,
+Transportation &amp; Entertainment or Undefined. Then you can select a
+Tag (e.g. Door Main, Driveway, House, Bench, Door Alternate, Automatic,
+Inset, Revolving, Elevator, etc.) You can choose to create your own tag
+to add further information about the User POI. Note that the most
+popular categories are at the top of the list and the others are
+alphabetical afterwards. Since not all of these will fit on the screen,
+you will need to scroll down to expose the lower part of the category
+list.</p>
+<p>Same with the Tag list, which defaults on Door Main. Press the Save
+button when finished. Note that the GPS location of your point will be
+established when you press Add before filling in the fields and not when
+you press Save at the end.</p>
+<h5 id="shortcut-gesture-to-add-user-pois">Shortcut Gesture to Add User
+POIs</h5>
+<p>You can go directly from the Location Screen to the Record User POI
+name field. Perform a one-finger double tap and hold on the Location
+screen other than on the Menu tab buttons. You can now fill in the name,
+category and tags for a User POI.</p>
+<h5 id="editing-or-deleting-user-pois">Editing or Deleting User
+POIs</h5>
+<p>You can subsequently edit a User POI by choosing it and changing the
+fields accordingly. There is no need to press safe again. There is also
+a Delete button within the User POI details or you can flick up on the
+Action list to delete the User POI.</p>
+<h5 id="sharing-user-pois">Sharing User POIs</h5>
+<p>There are two Sharing options, share all your User POIs or share a
+specific User POI. To share all User POIS, select the sharing button
+from the User POIs list screen, this will export all of your user
+points. To share a specific User POI, go to that User POI details, the
+sharing button will share only that point, not the whole list. When you
+select the Sharing button, you have two options to export your points.
+One is Airdrop and the other is Email. It is a good idea to email the
+points to yourself as a back-up, especially after you have created a lot
+of User POIs. You may also want to email your user points to another
+user.</p>
+<p>To import User points, click on the attachment from your phone’s
+email. It will have a .SENX extension. You will be presented with
+several sharing buttons. Choose the button with the name of the app you
+wish to import the user points into, i.e. Indigo. When you choose it,
+the app will open, and the points are imported and merged with any new
+points you might have created. If there are points with exactly the same
+position and name, the duplicate will be deleted.</p>
+<p>You must have a registered account in order to have User points of
+interest. You do this from Settings if you didn’t do it when initially
+installing the app. You cannot add User points without a registered
+account. If for some reason a User POI category does not show up in the
+POI category list, try logging out and back in again.</p>
+<p>Make sure before updating the app that you have emailed your User
+POIs to yourself in case they are erased during the update. Then you can
+click on the attachment within your phone’s email client to copy them
+into the app. Also, you may need to close and open Indigo after adding
+User POIs before they show in the list.</p>
+<h3 id="settings">Settings</h3>
+<p>There are three toggles at the top of the Settings screen, LookAround
+Wand, GPS Virtual toggle, and Background Operation on/off.</p>
+<p>These are followed by nine buttons. They are: General Menu, Routing
+Menu, LookAround Menu, Visual Map, Speech Menu, About Menu, Log Out, and
+Delete account.</p>
+<h4 id="background-operation-onoff">Background Operation, On/Off</h4>
+<p>The default is On. When Background Operation is On, routes and other
+announcements will remain active when you exit the app or lock the
+phone. The status of this selection will remain the same until you
+change it. You will hear verbal announcements in the background but no
+haptics. The Shake feature does not function in the background. If you
+have Background Operation on, remember to use the App Switcher to close
+the app when not using it, as all GPS apps can drain your phone’s
+battery when in constant use. Another benefit of not having the focus on
+Indigo is that you will not accidentally trigger the app if it is locked
+and in the background.</p>
+<p>Automatic announcements work in the background when you leave the app
+or lock the screen with the following limitations.</p>
+<p>You can lock the screen by pressing the power button momentarily. Be
+aware that if it isn't talking or playing alerts, you may forget it is
+in the background and it will continue to drain the battery. If you
+don't want the app to run in the background, either go to the app's
+Settings and turn off the Background Operation or use the App Switcher
+to Close the app.</p>
+<p>Do not rely on Indigo™ if you are in a call. Normally, most sounds
+and verbal prompts should work properly when in the background. Phone
+calls or other events may interfere. You can make a phone call with Siri
+or receive a phone call and still hear the app's prompts. However, it
+may lag behind or miss the occasional prompt. Do not rely on Indigo if
+you are in a call. If you are walking, it isn't safe to multitask .</p>
+<p>Note, the app's built-in human voice prompts like Continue Straight
+and Arrived at Destination augment route instructions.</p>
+<h4 id="general-menu-settings">General Menu Settings</h4>
+<p>Contains the following items:</p>
+<ul>
+<li><p><strong>Units</strong>: Choose from Feet, Meters or Yards. You
+will hear “Selected, Feet button” if that is the one chosen. To change
+this, navigate to your preferred units and select.</p></li>
+<li><p><strong>Home Address</strong>: Enter your home address here to
+save time when you want to be routed home. Select the Set button and you
+can choose between Type Address, Current Position or Select from
+Contacts.</p></li>
+</ul>
+<blockquote>
+<p><strong>Shake:</strong> The Shake Feature is active on the Location
+screen, Route Loaded screen and POI Results Screen. You can choose
+either Off, Medium or Hard. Under this selection, you will hear “Shake
+Medium”, which is the default. If you find that the Shake feature is
+activating too much, you can select the Hard setting. To deactivate
+Shake throughout the application, select Shake, Off.</p>
+</blockquote>
+<ul>
+<li><p><strong>Low Vision:</strong> The Low Vision options offer three
+choices for background and text themes, Black/White, White/Black, and
+Yellow/Black. Black/White, or Black text on a white background is the
+default, so when you navigate through the choices, you will hear
+“Selected, Black/White, 1 of 3.” To change this, navigate to your
+preferred Low Vision settings and select.</p></li>
+<li><p><strong>Notifications:</strong> Enable Aira Access notifications
+means that when you are in the vicinity of an Aira Access Point, the app
+will notify you. The default is ON.</p></li>
+</ul>
+<p>Announce GoodMaps indoor venue notifications, toggle On or Off. If
+you opt to use the indoor maps, you must load the GoodMaps app. You will
+continue to hear notification of the GoodMaps venue every five minutes
+in Indigo when you are in its vicinity.</p>
+<h4 id="routing-menu-settings">Routing Menu Settings</h4>
+<p><strong>Contains the following features:</strong></p>
+<ul>
+<li><p><strong>Send Indigo App Log Button:</strong> If you encounter a
+problem in the app, use this feature to send your recent logs to the
+development team. You do not have to be on a route for these logs to
+capture data. There is a text box where you can specify the problem you
+are reporting. Once you press the Done button, wait a few seconds to
+hear a prompt indicating the logs were uploaded successfully. If they
+don’t go through, make sure you have a good network connection and try
+sending them again.</p></li>
+<li><p><strong>Auto Repeat: The default for this toggle is on.</strong>
+An Auto Repeat function helps to ensure that you hear important
+information automatically. This applies to the next turn and destination
+information. As you get closer to your destination, the turning
+announcements automatically repeat more frequently based on the same
+parameters as the Getting Warmer function. This is every 15 seconds
+under 500 feet, every 30 seconds from 500 to 1,000 feet, every minute
+from 1,000 feet to 5 miles and every 5 minutes beyond 5 miles. The
+destination information is also repeated under 1,000 feet.</p></li>
+<li><p><strong>Vibration Alerts:</strong> When the vibration alerts are
+on (the default setting), you will receive a vibration along with the
+audio alert for “Turn now" and "arrived at destination."</p></li>
+<li><p><strong>Arrival Distance</strong>: Choose from the default 50
+feet, 75 feet or 100 feet. This distance controls how far away from
+turns, intersections and your destination that these items will be
+announced. Be careful when expanding this trigger beyond the default 50
+feet. When you navigate through the choices, you will hear “Selected, 50
+feet button, 1 of 3.” If you have chosen your Units to announce in
+meters, your choices will be 15 meters, 25 meters or 30 meters. If you
+have chosen your Units to announce in yards, your choices will be 15
+yards, 25 yards or 35 yards.</p></li>
+<li><p><strong>Route Avoidances</strong>: Select the following items if
+you would like to avoid them on your routes: Highways and Toll Road. As
+you navigate through the various items from this list you will hear the
+item and whether or not it is selected. If you hear there is an accident
+on the highway for example, it can be handy to force the route to avoid
+the highway and to force the route to use local or frontage roads.
+Remember to change this back once you are finished.</p></li>
+<li><p><strong>Direction to POI</strong>: Choose from Clock Face &amp;
+Right/Left, Clock Face, or Right/Left. The combination of Clock Face
+&amp; Right/Left is the default. This setting allows you to choose how
+your directions are announced, e.g. POI is at 12 O’clock, or POI is
+Ahead.</p></li>
+</ul>
+<h4 id="lookaround-menu-settings">LookAround Menu Settings</h4>
+<p>Contains the following options:</p>
+<ul>
+<li><strong>POI Source: Foursquare is the default POI database. Google
+Places is an option.</strong></li>
+</ul>
+<!-- -->
+<ul>
+<li><p><strong>Intersection Level</strong>: Choose between Simple or
+Full detail. Full is the default, so when you navigate through the
+choices, you will hear “Selected, Full button.” Simple describes an
+intersection by the street names without their orientation. Full will
+give you the clock face or left/right directions of the intersecting
+streets.</p></li>
+<li><p><strong>LookAround Update Interval</strong>: 10 Seconds is the
+default and the lowest interval you can select. If you would like to
+change the number of seconds between POI searches, select the “update
+interval slider, adjustable” button, and swipe upwards to increase or
+downwards to decrease. When increasing the interval, each upwards swipe
+will increase the interval by 4-5 seconds, i.e. 19 seconds, 24 seconds,
+28 seconds, 33 seconds, etc. You can increase the interval up to 60
+seconds.</p></li>
+<li><p><strong>LookAround Configuration</strong> allows you to set the
+movement speed at which you want to trigger your LookAround
+announcements:</p></li>
+</ul>
+<blockquote>
+<p>Points of Interest: By default, the POI announcements will trigger
+when you are travelling under 15 MPH.</p>
+</blockquote>
+<ul>
+<li><p>Intersections: By default, the Intersection announcements will
+trigger when you are travelling Under 40 MPH.</p></li>
+<li><p>Beta: Street Change: By default, the street name change
+announcements are set to Never. The other option for this announcement
+is Under 5 MPH. This feature is still in Beta and may not always
+announce the correct street, the announcement becomes unreliable at
+higher speeds.</p></li>
+<li><p>Heading Change: By default, the heading change announcements will
+trigger when you are travelling Under 15 MPH.</p></li>
+</ul>
+<p>If you would like to change either of these settings, say you want to
+turn the announcements off or perhaps you want POIs or intersections to
+announce when travelling at higher speeds you can change this setting.
+The options are Under 15 MPH, under 40 MPH, Always Announce or Never. If
+you have chosen your Units to announce in meters, your choices will be
+Under 25 KM/H, under 80 KM/H, Always Announce or Never. Note that if you
+are in a highly populated area with lots of POIs and close
+intersections, increasing these announcements might result in constant
+announcements and overall sluggishness of the program.</p>
+<ul>
+<li><strong>LookAround Wand</strong> – This feature, which works only
+when you are stationary, allows you to include intersections in your
+LookAround information. Intersections default On.</li>
+</ul>
+<h3 id="visual-map">Visual Map</h3>
+<p>The Map button under the Settings menu will load a visual map of your
+current location, with a blue dot, marking your current location. Since
+this is a visual image, Voiceover will only announce the buttons and
+heading on the screen, Back button, LookAround Wand, Map Heading, and
+the Repeat button. With Voiceover turned off, you can use the standard
+scroll, zoom in and out touch screen gestures.</p>
+<p><strong>Siri Configuration Menu</strong></p>
+<p>There are three default Siri shortcuts under Settings where you can
+edit the Siri prompt.</p>
+<p>To use the shortcut, give the exact Siri prompt. For example, Create
+a route to Home in Indigo. You are then asked “by what mode do you want
+to go?” Answer Walk or Drive. The route should then be created, and a
+prompt will confirm the address and the route information will be
+displayed. VoiceOver may say Done depending on whether you are prompting
+Siri from within Indigo or from the home screen.</p>
+<p>Be careful with the phrasing of your prompts. You can also say Create
+a Route using Indigo without a destination and you will be asked for it.
+Ambiguous words like Home can generate multiple results like Home Depot.
+It seems to be more reliable to use the sequence of “create a route to
+xxx using Indigo.</p>
+<p>It is possible that Apple Maps are triggered instead of Indigo
+depending on your prompt. Use the exact wording from the Siri
+Configuration under the Indigo Settings.</p>
+<p>Important! If you check your Settings Siri Configuration and the
+shortcuts refer to GoodMaps Outdoors, remove those from within the Siri
+Configuration, close and reopen Indigo and check that the shortcuts now
+say Indigo.</p>
+<p>Speech Menu</p>
+<p>This is where you can choose and adjust the voice for the Indigo
+announcements. Click on the chosen voice and language to find a list of
+other languages and voices. The chosen voice will be displayed followed
+by the adjustments for that voice. If you wish to choose a different
+voice, click on the name and scroll through the list to choose a
+different default voice. The voices are organized by language. You can
+press the Play Button to hear what the voice sounds like and then select
+the voice name to activate it. The Play button to sample the voice is
+before it.</p>
+<h4 id="about-menu-settings">About Menu Settings</h4>
+<p>Contains seven items, the Application version number, a link to the
+Indigo™ Nav web page, a link to APH Privacy statement, Partners and
+Credits, POI Provider, Map Provider and Help. You can find the Indigo
+User Guide and Audio tutorial under downloads on the Indigo page or
+directly under Help.</p>
+<p>There are also Log out and Delete Account options at the bottom of
+the Settings page.</p>
+<h2 id="indigo-general-settings-notes">Indigo™ General Settings
+Notes</h2>
+<h3 id="indigo-general-settings-notes-overview">Indigo™ General Settings
+Notes overview</h3>
+<h3 id="battery-consumption">Battery Consumption</h3>
+<p>As with any GPS application, the phone's battery will drain
+significantly when the GPS app is active. If you are using Bluetooth
+headphones and have Wi-Fi also on, the battery drains even more, as much
+as 30 percent per hour. This may be less with the app in the background
+and the screen locked. The best solution is to always have an auxiliary
+battery with you.</p>
+<p>Using an external GPS receiver may improve the phone's battery
+consumption slightly as well as improving position accuracy. Bluetooth
+must of course be on in order to connect to an external receiver. Check
+to make sure an external receiver is compatible; not all are.</p>
+<p>Note also if you are using a Bluetooth headset, Voiceover will
+sometimes cut off the first bit of a word. It is not the program that is
+cutting out, it is the Bluetooth headset not reacting quickly enough
+when audio is sent to it after a period of silence. The first syllable
+of an announcement may be clipped when the Bluetooth headset wakes up.
+There is an option in the iPhone Accessibility Settings under Hearing to
+generate a silent pulse to eliminate this problem. This setting
+currently times-out after about a minute.</p>
+<h3 id="interrupting-the-app">Interrupting the App</h3>
+<p>If you make a phone call while Indigo™ is running, you may need to
+tap on the app again after the call is over. If you receive a call, the
+Indigo app should resume when you disconnect. If you had a route
+running, it should pick up again where you are now located after 10
+seconds or so depending on the position acquisition.</p>
+<h2 id="haptics-list">Haptics list</h2>
+<h3 id="haptics-list-overview">Haptics list overview</h3>
+<blockquote>
+<p>Note that Indigo™ uses Morse code patterns for the vibrations when
+possible. You do not need to know Morse code to learn the common haptic
+patterns.</p>
+</blockquote>
+<ul>
+<li><p>LookAround Wand</p>
+<ul>
+<li><p>North, Short/long (Morse Code, N)</p></li>
+<li><p>East, Short (Morse Code, E)</p></li>
+<li><p>South, Short/short/short (Morse Code, S)</p></li>
+<li><p>West, Short/long/long (Morse Code, W)</p></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>Note that Indigo™ will indicate an approaching turn by one sequence
+of the pattern, whereas the actual turn will repeat the pattern three
+times to correspond with the audio cues.</p>
+</blockquote>
+<ul>
+<li>Turning Haptics</li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Left Turn, Short/short/short/short (Morse Code, h)</p></li>
+<li><p>Right, Long/long/long (Morse Code, O)</p></li>
+<li><p>Continue Straight, Long/short/long/short (Morse Code, C)</p></li>
+</ul>
+<h3 id="position-accuracy">Position Accuracy</h3>
+<p>The Indigo™ app announces location accuracy on the Location/Info
+screen, like 33 feet or 16 feet, etc. This is a rough estimate. The
+position on a mobile phone is a combination of GPS, cell towers and
+Wi-Fi. Many apps just call it GPS position but in fact it is a
+combination of these factors. Audio alerts will occur when you lose and
+gain GPS positioning. Indigo uses the highest Android and IOS accuracy
+settings available, which increases battery drain. Note, you can get a
+position inside an airport where GPS signals are poor. POIs can be found
+and navigated to with the Getting Warmer method, but the accuracy may be
+100 feet or more.</p>
+<p>Address and POI accuracy can vary a lot. Four square points are quite
+prolific and can be right at the door of a business. You can request to
+remove Foursquare points with the Send Feedback option.</p>
+<p>Address matching can be precise or sometimes hundreds of feet off.
+For example, an outdoor mall may have one common address for all the
+businesses when in fact individual stores may be deep in a parking lot
+and away from the actual street address. User recorded points may help
+in this matter as opposed to routing to the street number. It is wise to
+always be skeptical when it comes to the last 50 feet or so of any
+route. This is where access to a live visual agent like AIRA can be the
+most efficient way to find an entrance of a building, specific store in
+a shopping mall, etc.</p>
+<p>Note that the side of the street in a route may sometimes be
+indicated and other times not. At the last turn in a route, Indigo may
+not tell you to cross the street if your destination is on the opposite
+side of the last street. For example, Indigo may say turn left,
+destination is on the right. In fact, you need to cross before you make
+the left in order to be on the right side of the street. Same with the
+right turn. Cross first before turning right. If the side of the street
+is not given, use getting warmer to figure that out once you are
+close.</p>
+<p>[]</p>
+<p><strong>IOS voices</strong></p>
+<p>There are two separate voices in iOS: The Primary voice is the
+VoiceOver voice you hear for most applications. Indigo uses a background
+voice for announcements. You may want to choose a different background
+voice to more easily distinguish it from the Primary voice. One could be
+Allison and the other Alex in IOS. Most Indigo announcements will be
+using the background voice. You can make these voice adjustments under
+Indigo Settings, Speech.</p>
+<p><strong>Audio Events</strong></p>
+<p>There are a number of audio events that augment Voiceover in the
+Indigo app. If you have your mute button switched on, no app sound
+effects, i.e. Continue Straight, Blinker Turn, LookAround Wand, route
+recalculation, background timer, chime, etc., will be played.  Also
+since these are “Alert Sounds” the volume of this is adjustable in your
+main system’s Sounds settings page which is “Ringer and Alerts.”  So, if
+you go into your sounds setting’s page and increase the ringer and
+Alert’s volume, the sound effects will also be played louder.</p>
+<p>Here is a list of audio cues: (Your phone must not be in silent mode
+to hear them. Make sure sounds are not muted).</p>
+<ul>
+<li><p>Chimes audio logo when loading the app.</p></li>
+<li><p>Two-tone beep near LookAround Intersections plus the speech
+announcement of the street names.</p></li>
+<li><p>Trill tone within 250 feet or so when approaching a turn and
+announcement of the turn.</p></li>
+<li><p>Sound of a car blinker and vibration when it is time to turn
+followed by the turning announcement. You get the same turning
+indications if the street name changes but you are continuing
+straight.</p></li>
+<li><p>Ding sound when recalculating a route.</p></li>
+<li><p>Ding sound and vibration for Shake queries.</p></li>
+<li><p>Continue Straight human voice after completing a turn and in line
+with a subsequent turn.</p></li>
+<li><p>Arrived at destination human voice and vibration when within the
+arrival distance.</p></li>
+<li><p>Drip sound when GPS signal is lost or poor, meaning it will occur
+when accuracy is worse than 15 meters / 30 feet and will regain better
+than 15 meters / 30 feet.</p></li>
+<li><p>Trill tone for GPS position acquired.</p></li>
+<li><p>Crackle sound indicating a User POI.</p></li>
+</ul>
+<h2 id="contact-aph">Contact APH</h2>
+<h3 id="contact-aph-2">Contact APH</h3>
+<p>** There are many ways to stay in touch, get help and be informed
+about the Indigo app:</p>
+<ol type="1">
+<li><p>Visit: <code>www.APH.org/</code></p></li>
+<li><p>Send an e-mail tosupport@APH.org</p></li>
+<li><p>Follow @APH on X/twitter.</p></li>
+<li><p>Like APH on Facebook
+<code>www.facebook.org/APH.io</code></p></li>
+</ol>
+</body>
+</html>
