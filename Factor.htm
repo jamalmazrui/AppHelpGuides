@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Factor Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Factor Help Guide</h1>
+<p class="subtitle">What Factor publishes in writing about its
+prepared-meal service, gathered into one screen-reader-friendly
+document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="factor-help-guide">Factor Help Guide</h1>
+<p>This guide gathers what Factor publishes in writing about its
+prepared-meal service: how the service works, menus and plans, the
+add-on range, the app, its nutrition and ingredient philosophy,
+nutrition coaching, and its sustainability programme. It was taken from
+Factor’s own site on 29 July 2026.</p>
+<p>This is a short volume, and the reason is worth stating plainly.
+Factor keeps no help centre. Its Frequently Asked Questions page is not
+a page of answers but a chooser — five headings, Getting Started,
+Managing my Subscription, Nutrition and Ingredients, Receiving My Meals
+and Enjoying My Meals, with the answers appearing only when one is
+selected. Those answers are not in the page as delivered, so they are
+not here. What is here is the guidance Factor does publish as ordinary
+pages, and a good deal of it is genuinely useful: how the weekly cycle
+works, cut-off times, skipping and pausing, how meals arrive and how
+long they keep, portioning and heating, and what the dietary preferences
+mean.</p>
+<p>Two more notes on the gathering. Factor serves every page under
+dozens of query variations — search terms, marketing test names,
+tracking parameters — so 141 saved files held only thirteen distinct
+pages; the fullest copy of each was kept. And the corporate pages, the
+press page, the careers page and the business-sales pages were left out:
+they are about the company rather than about using the service.</p>
+<p>If you want the FAQ answers as well, they can be had, but it needs a
+script that opens each of those five headings in a browser rather than
+reading the page as delivered. Say the word and I will write it.</p>
+<p>Headings run two deep here rather than three: this title, then a
+page. There are too few pages to justify sections.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#how-factor-works">How Factor works</a></li>
+<li><a href="#menus-and-plans">Menus and plans</a></li>
+<li><a href="#add-ons-snacks-sides-and-drinks">Add-ons: snacks, sides
+and drinks</a></li>
+<li><a href="#add-on-bundles-and-variety-packs">Add-on bundles and
+variety packs</a></li>
+<li><a href="#the-factor-app">The Factor app</a></li>
+<li><a href="#nutrition-and-ingredient-philosophy">Nutrition and
+ingredient philosophy</a></li>
+<li><a href="#nutrition-coaching">Nutrition coaching</a></li>
+<li><a href="#sustainability-and-social-impact">Sustainability and
+social impact</a></li>
+<li><a href="#frequently-asked-questions">Frequently asked
+questions</a></li>
+</ul>
+<h2 id="how-factor-works">How Factor works</h2>
+<h4 id="how-factor-works-1">How Factor Works</h4>
+<p>No prep, no cooking. Just dietitian-approved, chef-prepared meals
+delivered to your door and ready to eat in 2 minutes.</p>
+<p>No prep, no cooking. Just dietitian-approved, chef-prepared meals
+delivered to your door and ready to eat in 2 minutes.</p>
+<p>Pause or cancel anytime</p>
+<h5 id="heres-how-factor-works">Here’s How Factor Works</h5>
+<ul>
+<li><p><strong>Choose your preference</strong><br />
+Pick from 6 meal preferences to support your wellness goals—including
+High Protein, Calorie Smart, and Keto.</p></li>
+<li><p><strong>Pick your ready-made meals</strong><br />
+Choose from a menu of 100+ dietitian-designed meals and 70+ add-on
+options like pancakes, shakes, and snacks.</p></li>
+<li><p><strong>Get Your Delivery</strong><br />
+No prep. No mess. Our meals arrive in an insulated, recyclable box ready
+to heat and eat in 2 minutes.</p></li>
+</ul>
+<h5 id="clean-eating-without-the-hassle">Clean Eating, Without the
+Hassle</h5>
+<p>Meal Plans for Any Lifestyle</p>
+<p>Our chef-crafted, dietitian-approved meals make it easy to eat
+however you like—and enjoy it. Choose from <strong>100+ weekly menu
+items</strong> that include <strong>Keto, Calorie Smart, High
+Protein,</strong> and <strong>Vegan + Veggie</strong> options.</p>
+<p>Heat &amp; Eat in 2 Minutes</p>
+<p>No prep, no mess—really. We shop, prep, cook, and deliver
+ready-to-eat meals so you can experience the <strong>benefits of clean
+eating</strong> without any of the extra effort.</p>
+<p>Chef-Prepared Meals, Dietitian-Approved Recipes</p>
+<p>Leave the calorie counting to our dietitians and the chopping to our
+chefs. While you’re out there crushing it, we’re making sure each Factor
+meal has the <strong>nutrition you need</strong> and the <strong>flavor
+you’re looking for.</strong></p>
+<p>FRESH, NEVER FROZEN MEALS</p>
+<p>All Factor meals are <strong>prepared fresh</strong> using the best
+ingredients and delivered straight to you.</p>
+<p>SUSTAINABILITY</p>
+<p>We source <strong>100% renewable electricity</strong> for all of our
+production sites and offices.</p>
+<p>AND MORE</p>
+<p>We’re more than just meals. Stay fueled 24/7 with a selection of
+<strong>70+</strong> breakfast items, smoothies, juices, snacks, and
+more available every day in our Add-Ons section.</p>
+<h5 id="meals-designed-to-support-your-health-goals">Meals Designed to
+Support Your Health Goals</h5>
+<h5 id="high-protein">High Protein</h5>
+<p>Meals with up to 50g+ of protein to fuel your ambitions</p>
+<h5 id="calorie-smart">Calorie Smart</h5>
+<p>Perfectly-portioned with ca. 550 kcal or less</p>
+<h5 id="keto">Keto</h5>
+<p>Keto-friendly with ca. 15 grams of net carbs or less</p>
+<h5 id="chefs-choice">Chef’s Choice</h5>
+<p>With whole-food ingredients to fit any lifestyle</p>
+<h5 id="vegan-veggie">Vegan + Veggie</h5>
+<p>Meat-free meals that make veggies the hero</p>
+<h5 id="breakfast">Breakfast</h5>
+<p>Pancakes, Egg Bites, Frittata &amp; more</p>
+<h5 id="snacks-desserts">Snacks &amp; Desserts</h5>
+<p>Satisfy your sweet tooth &amp; cravings</p>
+<h5 id="shakes-smoothies">Shakes &amp; Smoothies</h5>
+<p>To have while you’re on-the-go</p>
+<h5 id="extra-proteins">Extra Proteins</h5>
+<p>Add extra proteins to your meal</p>
+<h5 id="add-ons-for-all-day-energy">ADD-ONS FOR ALL-DAY ENERGY</h5>
+<h5 id="sweet-treats">Sweet Treats</h5>
+<p>Wholesome, ready-to-savor desserts.</p>
+<h5 id="breakfast-1">Breakfast</h5>
+<p>Start your day off strong with ready-to-eat breakfast options.</p>
+<h5 id="snacks">Snacks</h5>
+<p>Fuel up on the go.</p>
+<h5 id="packs">Packs</h5>
+<p>No microwave? No problem.</p>
+<h5 id="faqs">FAQs</h5>
+<p>Do I have to commit?</p>
+<p>Nope. You can skip your weekly delivery, pause or cancel any time.
+Just be sure to do so by your cutoff: 11:59 pm CT 5 days before your
+delivery.</p>
+<p>Do I have to cook anything?</p>
+<p>None at all. All of our meals are dietitian-approved and
+chef-prepared so all you have to do is heat, eat, and enjoy.</p>
+<p>Can I personalize my meals to suit my lifestyle?</p>
+<p>Yes. You choose your Factor meals every week. What’s more, our plans
+are flexible, so you can switch your meals to suit your current
+lifestyle.</p>
+<p>Will I receive my delivery if I’m not home?</p>
+<p>We take steps to accommodate your busy schedule. Delivery times are
+from 8 am to 8 pm on the day you choose. And if you’re not at home,
+don’t worry—you can always add special delivery instructions to your
+account. You can also change your delivery day online if you need
+to.</p>
+<p>How does my food stay fresh?</p>
+<p>We carefully handpack all ingredients with special ice packs and
+insulation, so your meals keep cool—but do not freeze—on their way to
+you.</p>
+<p>What if I have allergies or restrictions?</p>
+<p>We make sure to post detailed nutritional information, including
+allergens, with every one of our meal descriptions. You can find this
+info online when you choose your meals.</p>
+<p>What if I don’t need meals every week?</p>
+<p>No worries. You can easily skip a week (or several) when you need to.
+Just be sure to do so by your cutoff: 11:59 pm CT, 5 days prior to your
+delivery.</p>
+<h4 id="easy.-nutritious.-tasty.">Easy. Nutritious. Tasty.</h4>
+<p>Get Factor and enjoy fully prepared, dietitian-approved meals
+delivered to your doorstep. No commitment necessary—skip or cancel at
+any time.</p>
+<p>Get Factor and enjoy fully prepared, dietitian-approved meals
+delivered to your doorstep. No commitment necessary—skip or cancel at
+any time.</p>
+<h2 id="menus-and-plans">Menus and plans</h2>
+<p>Factor Menus &amp; Meal<br />
+Plans: Customize Your<br />
+Culinary Experience</p>
+<p>Explore Factor’s diverse menus and personalized meal plans tailored
+to your preferences, providing a delightful culinary experience with
+convenience and flexibility.</p>
+<p>Explore Factor’s diverse menus and personalized meal plans tailored
+to your preferences, providing a delightful culinary experience with
+convenience and flexibility.</p>
+<h5 id="check-out-our-meal-plans">Check out our meal plans!</h5>
+<h5 id="calorie-smart-1">Calorie Smart</h5>
+<p>~550kcal or less per serving</p>
+<h5 id="keto-1">Keto</h5>
+<p>Deliciously low carb, high fat meals</p>
+<h5 id="vegan-veggie-1">Vegan + Veggie</h5>
+<p>Meat-free meals that make veggies the hero</p>
+<h5 id="protein">Protein +</h5>
+<p>Meals with extra protein to keep your strength up</p>
+<h5 id="chefs-choice-1">Chef’s Choice</h5>
+<p>Widest variety of clean, chef-crafted meals</p>
+<h5 id="snacks-desserts-1">Snacks &amp; Desserts</h5>
+<p>Satisfy your sweet tooth &amp; cravings</p>
+<h5 id="shakes-smoothies-1">Shakes &amp; Smoothies</h5>
+<p>To have while you’re on-the-go</p>
+<h5 id="extra-proteins-1">Extra Proteins</h5>
+<p>Add extra proteins to your meal</p>
+<h6 id="check-out-our-weekly-menus">Check out our weekly menus!</h6>
+<p>Chef’s Choice Meals Menu</p>
+<p>Keto Meals Menu</p>
+<p>Calorie Smart Meals Menu</p>
+<p>High Protein Meals Menu</p>
+<p>Low Carb Meals Menu</p>
+<p>GLP-1 Balance Meals Menu</p>
+<p>Flexitarian Meals Menu</p>
+<p>Fiber Filled Meals Menu</p>
+<h5 id="why-factor">WHY FACTOR?</h5>
+<p>MORE TASTINESS</p>
+<p>Choose from a wide variety of menu of 100+ dietitian-designed meals
+and add-on options each week.</p>
+<p>MORE FLEXIBILITY</p>
+<p>We make life on the go even easier—change your delivery date, skip a
+week, or cancel anytime.</p>
+<p>MORE CONVENIENCE</p>
+<p>Simply heat and eat our meals in two minutes—no shopping or cooking
+required!</p>
+<p>MORE NUTRITION</p>
+<p>Enjoy dietitian-designed meals packed with premium, nutritional
+quality.</p>
+<h5 id="learn-more-about-factor-menus-and-plans">Learn More About Factor
+Menus and Plans</h5>
+<p>Discover answers to all your questions about delivery options,
+pricing, and the current week’s menu offerings at Factor. Get all the
+information you need regarding meals and plans FAQs.</p>
+<p>How do I select meals from the Factor menu?</p>
+<p>Once you complete your purchase, you’ll gain access to a menu
+consisting of menu of 100+ dietitian-designed meals and add-on options
+each week. Regardless of your preferences, you can easily choose and
+combine recipes to suit your taste.</p>
+<p>Will the Factor meals accommodate my diet based on the plans?</p>
+<p>Absolutely! Factor has options for everyone, including low carb,
+vegan &amp; vegetarian, high protein, meals under 550 calories, and
+more. You can conveniently preview the menu for the upcoming week to
+ensure it aligns with your specific dietary needs and plans.</p>
+<p>Can I modify my plan or meal preferences?</p>
+<p>Certainly. We understand that life is unpredictable. If you require
+more or fewer meals or desire different options on a weekly basis,
+simply adjust your meal quantity and menu preferences in your account
+settings and plans.</p>
+<p>How can I access ingredient and nutritional information?</p>
+<p>Each recipe on our menu includes FDA nutritional information. To view
+this information for any meal of interest, click on the thumbnail image,
+and the meal details, including ingredients and nutritional facts, will
+appear on the screen.</p>
+<p>Will I be locked into a contract?</p>
+<p>Never. At Factor, we prioritize flexibility. You have the freedom to
+skip a week, pause your subscription, or cancel your account at any time
+within your account settings and plans. Just remember to do so before
+the weekly cutoff to halt your next order.</p>
+<h2 id="add-ons-snacks-sides-and-drinks">Add-ons: snacks, sides and
+drinks</h2>
+<h4 id="mains-snacks-sides-and-desserts-that-fit-your-diet">MAINS,
+SNACKS, SIDES, AND DESSERTS THAT FIT YOUR DIET</h4>
+<p>Think your lifestyle means that phrases like “eating well” and
+“delicious snacks” can’t go together? Think again.</p>
+<p>Think your lifestyle means that phrases like “eating well” and
+“delicious snacks” can’t go together? Think again.</p>
+<p>Valid for new subscribers only. Once you subscribe, don’t forget to
+check out our other add-ons and bundles!</p>
+<h5 id="bundles">BUNDLES</h5>
+<p>Breakfast Tostada Bake + Blueberry Pancakes</p>
+<p>Breakfast Bundle</p>
+<p>Keto Shakes - Chocolate Brownie + Vanilla Cake</p>
+<p>Shake Bundle</p>
+<p>Smoothie Variety Pack - Strawberry Banana + Tropical Fruit</p>
+<p>Smoothie Bundle</p>
+<p>Herb and Black Pepper Pork Chop + Herb-Roasted Chicken</p>
+<p>Protein Bundle</p>
+<h5 id="keto-snacks-sides">KETO SNACKS &amp; SIDES</h5>
+<h5 id="oven-roasted-mahi-mahi">Oven Roasted Mahi Mahi</h5>
+<h5 id="keto-cheesecake-strawberry-mascarpone">Keto Cheesecake –
+Strawberry Mascarpone</h5>
+<h5 id="keto-cookies---snickerdoodle">Keto Cookies - Snickerdoodle</h5>
+<h5 id="herb-black-pepper-pork-chops">Herb &amp; Black Pepper Pork
+Chops</h5>
+<h5 id="carb-smart-snacks-sides">CARB SMART SNACKS &amp; SIDES</h5>
+<h5 id="keto-cheesecake---peanut-butter-chocolate">Keto Cheesecake -
+Peanut Butter Chocolate</h5>
+<h5 id="poblano-cauliflower-mash-and-cheesy-zucchini">Poblano
+Cauliflower Mash And Cheesy Zucchini</h5>
+<h5 id="cinnamon-roll-fat-bombs">Cinnamon Roll Fat Bombs</h5>
+<h5 id="herb-roasted-chicken">Herb Roasted Chicken</h5>
+<h5 id="veggie-and-vegan-snacks-sides">VEGGIE AND VEGAN SNACKS &amp;
+SIDES</h5>
+<h5 id="keto-gouda-cauliflower-grits-and-green-bean-casserole">Keto
+Gouda Cauliflower Grits and Green Bean Casserole</h5>
+<h5 id="brownie-energy-bites">Brownie Energy Bites</h5>
+<h5 id="tropical-fruit-smoothie">Tropical Fruit Smoothie</h5>
+<h5 id="apple-kale-wheatgrass-juice">Apple Kale Wheatgrass Juice</h5>
+<h4 id="let-your-favorite-sides-snacks-and-desserts-fuel-your-day">LET
+YOUR FAVORITE SIDES, SNACKS, AND DESSERTS FUEL YOUR DAY</h4>
+<p>Order today and light up your tastebuds</p>
+<p>Order today and light up your tastebuds</p>
+<p>Valid for new subscribers only. Once you subscribe, don’t forget to
+check out our other add-ons and bundles!</p>
+<h2 id="add-on-bundles-and-variety-packs">Add-on bundles and variety
+packs</h2>
+<h4 id="by-the-bundle">By the Bundle</h4>
+<p>Perfect pairings, holiday bundles, breakfasts and more — make life
+more convenient with bundles from Factor.</p>
+<p>Perfect pairings, holiday bundles, breakfasts and more — make life
+more convenient with bundles from Factor.</p>
+<p>Valid for new subscribers only. Once you subscribe, don’t forget to
+check out our other add-ons and bundles!</p>
+<h5 id="perfect-pairings">PERFECT PAIRINGS</h5>
+<p>Herb and Black Pepper Pork Chop + Herb-Roasted Chicken</p>
+<p>Protein Bundle</p>
+<p>Breakfast Tostada Bake + Blueberry Pancakes</p>
+<p>Breakfast Bundle</p>
+<p>Pan-Seared Salmon + Herb-Roasted Chicken</p>
+<p>Protein Bundle</p>
+<p>Herb and Black Pepper Pork Chop + Herb-Roasted Chicken</p>
+<p>Protein Bundle</p>
+<p>Breakfast Tostada Bake + Blueberry Pancakes</p>
+<p>Breakfast Bundle</p>
+<p>Pan-Seared Salmon + Herb-Roasted Chicken</p>
+<p>Protein Bundle</p>
+<h5 id="keto-shakes">KETO SHAKES</h5>
+<p>Keto Shake - Chocolate Brownie</p>
+<p>Shake Bundle</p>
+<p>Keto Shake - Variety Pack</p>
+<p>Shake Bundle</p>
+<p>Keto Shake - Vanilla Cake</p>
+<p>Shake Bundle</p>
+<p>Keto Shake - Chocolate Brownie</p>
+<p>Shake Bundle</p>
+<p>Keto Shake - Variety Pack</p>
+<p>Shake Bundle</p>
+<p>Keto Shake - Vanilla Cake</p>
+<p>Shake Bundle</p>
+<h5 id="smoothies">SMOOTHIES</h5>
+<p>Strawberry Banana Smoothie</p>
+<p>Smoothie Bundle</p>
+<p>Smoothie Variety Pack</p>
+<p>Smoothie Bundle</p>
+<p>Tropical Fruit Smoothie</p>
+<p>Smoothie Bundle</p>
+<p>Strawberry Banana Smoothie</p>
+<p>Smoothie Bundle</p>
+<p>Smoothie Variety Pack</p>
+<p>Smoothie Bundle</p>
+<p>Tropical Fruit Smoothie</p>
+<p>Smoothie Bundle</p>
+<h5 id="learn-more-about-factor-bundles">Learn More About Factor
+Bundles</h5>
+<p>Where can I find Factor’s bundles for purchase?</p>
+<p>All of our bundles can be found with the Add-Ons. You must have a
+Factor meal subscription to purchase Add-Ons. Once you choose your
+meals, head over to the Add-Ons section and you can select and add a
+bundle to your cart.</p>
+<p>Are Factor’s bundles always available?</p>
+<p>We offer seasonal bundles that change every couple of weeks, so what
+you see today may not be available at a later time.</p>
+<p>Can I purchase multiple bundles?</p>
+<p>Of course! Just select the number that best meets your needs and add
+to your box.</p>
+<p>Is it possible to have my bundle shipped to a different address than
+normal?</p>
+<p>Yes. Your bundle will get delivered with the rest of your Factor
+meals, so it will ship to the address you have on file. Make sure your
+address is updated within your account by Wednesday before the menu
+closes. If you have any questions or need confirmation, please contact
+our Customer Support team by dialing 888.573.5727 from 6am-11pm ET
+Monday-Friday and 7am-7pm ET on Saturday and Sunday.</p>
+<h4 id="let-your-favorite-sides-snacks-and-desserts-fuel-your-day-1">LET
+YOUR FAVORITE SIDES, SNACKS, AND DESSERTS FUEL YOUR DAY</h4>
+<p>Order today and light up your tastebuds</p>
+<p>Order today and light up your tastebuds</p>
+<p>Valid for new subscribers only. Once you subscribe, don’t forget to
+check out our other add-ons and bundles!</p>
+<h2 id="the-factor-app">The Factor app</h2>
+<h4 id="get-readytoeat-meals-online-with-the-factor-app">Get
+Ready‑to‑Eat Meals Online with the Factor App</h4>
+<p>Choose your meals, manage deliveries, adjust your plan, and more!</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Choose your meals, manage deliveries, adjust your plan, and more!</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="need-more-reasons-to-download-our-app">Need More Reasons to
+Download Our App?</h5>
+<p>Dinner Done in Minutes</p>
+<p>From chef-prepared to table-ready in no time. Enjoy high-protein,
+fresh meals that deliver flavor and convenience.</p>
+<p>Order Anytime, Anywhere</p>
+<p>Browse 100+ weekly options and build your menu wherever you
+are—direct from the app, with total flexibility.</p>
+<p>Built to Match Your Macros</p>
+<p>Set your nutrition preferences—keto, calorie-smart, high-protein—and
+let the app tailor the menu to your lifestyle.</p>
+<p>See Every Ingredient &amp; Macro</p>
+<p>Access full ingredient details, calories, macros and allergen info,
+empowering you to make informed dining choices.</p>
+<p>Dinner Done in Minutes</p>
+<p>From chef-prepared to table-ready in no time. Enjoy high-protein,
+fresh meals that deliver flavor and convenience.</p>
+<p>Order Anytime, Anywhere</p>
+<p>Browse 100+ weekly options and build your menu wherever you
+are—direct from the app, with total flexibility.</p>
+<p>Built to Match Your Macros</p>
+<p>Set your nutrition preferences—keto, calorie-smart, high-protein—and
+let the app tailor the menu to your lifestyle.</p>
+<p>See Every Ingredient &amp; Macro</p>
+<p>Access full ingredient details, calories, macros and allergen info,
+empowering you to make informed dining choices.</p>
+<p>Plan Ahead — Weeks In Advance</p>
+<p>Schedule, swap or preview meals well in advance. Dtay ahead of your
+routine and never worry about what’s next.</p>
+<p>Flexible Subscription, Your Schedule</p>
+<p>Your subscription adapts to you: pause, skip a week, change box size
+or delivery date within minutes via the app.</p>
+<p>Track &amp; Earn Rewards</p>
+<p>Earn points for every meal, track your progress and unlock perks as
+you go.</p>
+<p>Swift Delivery and Fresh Arrival</p>
+<p>Get steak-house quality that arrives fresh, fast and ready when you
+are.</p>
+<p>Plan Ahead — Weeks In Advance</p>
+<p>Schedule, swap or preview meals well in advance. Dtay ahead of your
+routine and never worry about what’s next.</p>
+<p>Flexible Subscription, Your Schedule</p>
+<p>Your subscription adapts to you: pause, skip a week, change box size
+or delivery date within minutes via the app.</p>
+<p>Track &amp; Earn Rewards</p>
+<p>Earn points for every meal, track your progress and unlock perks as
+you go.</p>
+<p>Swift Delivery and Fresh Arrival</p>
+<p>Get steak-house quality that arrives fresh, fast and ready when you
+are.</p>
+<h5 id="clean-eating-without-the-hassle-1">Clean Eating, Without the
+Hassle</h5>
+<p>Meal Plans for Any Lifestyle</p>
+<p>Our chef-crafted, dietitian-approved meals make it easy to eat
+however you like—and enjoy it. Choose from <strong>100+ weekly menu
+items</strong> that include <strong>Keto, Calorie Smart, High
+Protein,</strong> and <strong>Vegan + Veggie</strong> options.</p>
+<p>Heat &amp; Eat in 2 Minutes</p>
+<p>No prep, no mess—really. We shop, prep, cook, and deliver
+ready-to-eat meals so you can experience the <strong>benefits of clean
+eating</strong> without any of the extra effort.</p>
+<p>Chef-Prepared Meals, Dietitian-Approved Recipes</p>
+<p>Leave the calorie counting to our dietitians and the chopping to our
+chefs. While you’re out there crushing it, we’re making sure each Factor
+meal has the <strong>nutrition you need</strong> and the <strong>flavor
+you’re looking for.</strong></p>
+<p>FRESH, NEVER FROZEN MEALS</p>
+<p>All Factor meals are <strong>prepared fresh</strong> using the best
+ingredients and delivered straight to you.</p>
+<p>SUSTAINABILITY</p>
+<p>We source <strong>100% renewable electricity</strong> for all of our
+production sites and offices.</p>
+<p>AND MORE</p>
+<p>We’re more than just meals. Stay fueled 24/7 with a selection of
+<strong>70+</strong> breakfast items, smoothies, juices, snacks, and
+more available every day in our Add-Ons section.</p>
+<h4 id="app-solutely-cant-wait-anymore">App-solutely can’t wait
+anymore?</h4>
+<p>Download the Factor mobile app and start ordering food for a
+healthier lifestyle today!</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Download the Factor mobile app and start ordering food for a
+healthier lifestyle today!</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nutrition-and-ingredient-philosophy">Nutrition and ingredient
+philosophy</h2>
+<h4 id="we-believe-wellness-starts-with-real-food">We Believe Wellness
+Starts With Real Food</h4>
+<h5 id="our-ingredient-philosophy">Our Ingredient Philosophy</h5>
+<h5 id="what-we-keep-out">What We Keep Out</h5>
+<p>The following artificial ingredients, sweeteners, colors,
+preservatives, and additives will not be found within our recipe
+dishes.</p>
+<ul>
+<li>2,4,5-trihydroxybutyrophenone</li>
+<li>Acesulfame-K</li>
+<li>Acetoin</li>
+<li>Activated Charcoal</li>
+<li>Advantame</li>
+<li>Agave Syrup</li>
+<li>Aluminum Ammonium Sulfate</li>
+<li>Aluminum Potassium Sulfate</li>
+<li>Aluminum Sulfate</li>
+<li>Ammonium Alum</li>
+<li>Ammonium Chloride</li>
+<li>Ammonium Saccharin</li>
+<li>Anoxomer</li>
+<li>Apricot Kernel</li>
+<li>Aspartame</li>
+<li>Aspartame-Acesulfame Salt</li>
+<li>Azo Dyes</li>
+<li>Azodicarbonamide</li>
+<li>Bacopa</li>
+<li>Beet Sugar</li>
+<li>Benzoates</li>
+<li>Benzophenone</li>
+<li>Benzoyl Peroxide</li>
+<li>Benzyl alcohol</li>
+<li>Benzyl Benzoate</li>
+<li>Bleached All Purpose Flour</li>
+<li>Bleached Whole Wheat Flour</li>
+<li>Bromated Flour</li>
+<li>Brominated Vegetable Oil</li>
+<li>Brown Sugar</li>
+<li>Butane Glycol</li>
+<li>Butylated Hydroxyanisole</li>
+<li>Butylated Hydroxytoluene</li>
+<li>Butylparaben</li>
+<li>Calcium Benzoate</li>
+<li>Calcium Bromate</li>
+<li>Calcium Peroxide</li>
+<li>Calcium Saccharin</li>
+<li>Calcium Sorbate</li>
+<li>Cane Sugar</li>
+<li>Canthaxanthin</li>
+<li>Caprenin</li>
+<li>Caramel Coloring</li>
+<li>Carbon Monoxide</li>
+<li>Carmine</li>
+<li>Carnauba wax</li>
+<li>Carnauba Wax</li>
+<li>Carrageenan Gum</li>
+<li>Charcoal Powder</li>
+<li>Citrus Red 2</li>
+<li>Corn Oil</li>
+<li>Corn Syrup</li>
+<li>Cottonseed Oil</li>
+<li>Cultured Dextrose</li>
+<li>Cultured Sulfate</li>
+<li>Cyclamate</li>
+<li>Dextrose</li>
+<li>Diacetyl Tartaric Acid Esters of Monoglycerides</li>
+<li>Dimethyl Silicone</li>
+<li>Dimethylamylamine (DMAA)</li>
+<li>Dioctyl sodium sulfosuccinate (DSS)</li>
+<li>Disodium Guanylate</li>
+<li>Disodium Inosinate</li>
+<li>Distilled Monoglycerides</li>
+<li>Dodecyl Gallate</li>
+<li>Edipee</li>
+<li>Eleuthero</li>
+<li>Esterified Propoxylated Glycerol</li>
+<li>Ethoxyquin</li>
+<li>Ethyl Acrylate</li>
+<li>Ethyl Vanillin (Synthetic)</li>
+<li>Eugenyl Methyl Ether (Methyl Eugenol)</li>
+<li>FD&amp;C Blue No. 1</li>
+<li>FD&amp;C Blue No. 2</li>
+<li>FD&amp;C Colors</li>
+<li>FD&amp;C Green No. 3</li>
+<li>FD&amp;C Red No. 3</li>
+<li>FD&amp;C Red No. 40</li>
+<li>FD&amp;C Yellow No. 5</li>
+<li>FD&amp;C Yellow No. 5 (Tartrazine)</li>
+<li>FD&amp;C Yellow No. 6</li>
+<li>FD&amp;C Yellow No. 6 (Sunset Yellow FCF)</li>
+<li>Fructose</li>
+<li>Gardenia Blue</li>
+<li>Glucose</li>
+<li>Glyceryl Triacetate</li>
+<li>Grapeseed Oil</li>
+<li>Heptylparaben</li>
+<li>High Fructose Corn Syrup</li>
+<li>Hydrogenated Oil</li>
+<li>Hydrolyzed Soy Protein</li>
+<li>Interesterified palm oil</li>
+<li>Invert Sugar</li>
+<li>Iron Oxide</li>
+<li>Isomaltitol</li>
+<li>Isomaltulose</li>
+<li>Kava Root</li>
+<li>L-cysteine</li>
+<li>Lactitol</li>
+<li>Lard</li>
+<li>Maltitol</li>
+<li>Maltodextrin</li>
+<li>Mannitol</li>
+<li>Methyl Silicone</li>
+<li>Methylparaben</li>
+<li>Modified Rice Starch</li>
+<li>Monoammonium Glutamate</li>
+<li>Monopotassium Glutamate</li>
+<li>Monosodium Glutamate</li>
+<li>Neotame</li>
+<li>Orange B</li>
+<li>Palm Kernel Oil</li>
+<li>Partially Hydrogenated Oil</li>
+<li>Phosphoric Acid</li>
+<li>Polydextrose</li>
+<li>Polyesters (Olestra)</li>
+<li>Polysorbate 60</li>
+<li>Polysorbate 65</li>
+<li>Polysorbate 80</li>
+<li>Polysorbates</li>
+<li>Potassium Alum</li>
+<li>Potassium Benzoate</li>
+<li>Potassium Bisulfite</li>
+<li>Potassium Bromate</li>
+<li>Potassium Hydroxide</li>
+<li>Potassium iodate</li>
+<li>Potassium Metabisulfite</li>
+<li>Potassium Nitrate/Potassium Nitrite</li>
+<li>Potassium Propionate</li>
+<li>Potassium Sorbate</li>
+<li>Prebiotic IMO</li>
+<li>Propionic Acid</li>
+<li>Propyl Gallate</li>
+<li>Propylene Glycol</li>
+<li>Propylene oxide</li>
+<li>Propylparaben</li>
+<li>Pulegone</li>
+<li>Pyridine</li>
+<li>Raw Sugar</li>
+<li>Refined Sugar</li>
+<li>Rice Bran Butter</li>
+<li>Rice Bran Oil</li>
+<li>Rice Syrup</li>
+<li>Saccharin</li>
+<li>Saccharin Sodium Salt</li>
+<li>Safflower Oil</li>
+<li>Salatrim</li>
+<li>Sodium Acid Sulfate</li>
+<li>Sodium Aluminum Phosphate</li>
+<li>Sodium Benzoate</li>
+<li>Sodium Bisulfate</li>
+<li>Sodium Bisulfite</li>
+<li>Sodium Carbonate</li>
+<li>Sodium Cyclamate</li>
+<li>Sodium Diacetate</li>
+<li>Sodium Erythorbate</li>
+<li>Sodium Hydroxide</li>
+<li>Sodium Lauryl Sulfate</li>
+<li>Sodium Nitrate/Sodium Nitrite</li>
+<li>Sodium Phosphate</li>
+<li>Sodium Propionate</li>
+<li>Sodium Saccharin</li>
+<li>Sodium Sorbate</li>
+<li>Sodium stearoyl-2-lactylate (SSL)</li>
+<li>Sodium stearyl fumarate</li>
+<li>Sodium Tripolyphosphate</li>
+<li>Sorbic Acid</li>
+<li>Sorbitol</li>
+<li>Soybean Oil</li>
+<li>Stearyl tartrate</li>
+<li>Sucralose</li>
+<li>Sucroglycerides</li>
+<li>Sucrose</li>
+<li>Sucrose Esters</li>
+<li>Sulfur Dioxide</li>
+<li>Sulfurous Acid</li>
+<li>Synthetic Smoke Flavor</li>
+<li>Tapioca Fiber Syrup</li>
+<li>Tapioca Syrup</li>
+<li>Tara Flour</li>
+<li>Tara Gum</li>
+<li>Tertiary Butylhydroquinone</li>
+<li>Thiodipropionic Acid</li>
+<li>Titanium Dioxide</li>
+<li>Toluene</li>
+<li>Tonka Beans</li>
+<li>Turbinado</li>
+<li>Vanillin (Synthetic)</li>
+<li>Vegetable Shortening</li>
+<li>Xylitol</li>
+</ul>
+<p>Your browser does not support the video tag.</p>
+<h5 id="dietitian-designed">Dietitian-Designed</h5>
+<p>Your browser does not support the video tag.</p>
+<h5 id="health-shouldnt-come-at-the-expense-of-taste">Health Shouldn’t
+Come at the Expense of Taste</h5>
+<h5 id="looking-for-expert-nutrition-advice">Looking for Expert
+Nutrition Advice?</h5>
+<h4 id="more-time-for-living.-more-energy-for-you.">More time for
+living. More energy for you.</h4>
+<p>Thrive on chef-crafted, dietitian-designed meals<br />
+delivered weekly and ready in minutes.</p>
+<p>Thrive on chef-crafted, dietitian-designed meals delivered weekly and
+ready in minutes.</p>
+<p>Skip or cancel at any time.</p>
+<h4 id="frequently-asked-questions">Frequently Asked Questions</h4>
+<p>Carbohydrates come from fruits, grains, vegetables, and dairy, and
+generally fall into simple and complex categories. Simple carbs are
+digested quickly, while complex carbs — especially those rich in fiber,
+like whole grains and legumes — break down more slowly to provide
+steadier energy throughout the day.</p>
+<p>Protein supports everything from hair growth to enzyme function,
+organ health, and hormone production. When digested, it breaks down into
+amino acids — the building blocks your body depends on. Of the 20 types
+of amino acids, nine are “essential,“ meaning your body can’t produce
+them on its own and they must come from food.</p>
+<p>Healthy fats benefit both your heart and your brain. Unsaturated
+fats—including monounsaturated and polyunsaturated varieties— help
+support healthy cholesterol levels and cardiovascular function. Great
+sources include salmon, tuna, eggs, avocado, chia seeds, flaxseed, nuts,
+seeds, olives, and olive oil</p>
+<p>Micronutrients are vitamins and minerals — like vitamin A, vitamin C,
+potassium, and magnesium — that your body needs in small amounts to
+function. They support the brain, muscles, skin, bones, nerves,
+circulation, and immune system. Many are “essential,“ meaning your body
+can’t make them on its own. Together, they keep you healthy and
+performing at your best. Deficiencies are associated with heart disease,
+diabetes, certain cancers, osteoporosis, and more.</p>
+<p>Factor offers a rotating weekly menu of ready-made,
+dietitian-designed meals designed for maximum flavor and nutrition.
+Options include, high-protein, low carb, fiber filled, calorie-smart,
+and vegetarian — all fully prepared by our chefs, so there’s no cooking
+required.</p>
+<p>Yes — all Factor meals are delivered fresh, never frozen. Every meal
+is sealed for freshness and shipped in insulated packaging with ice
+packs to ensure it arrives safely chilled.</p>
+<p>Yes, your body absolutely needs sodium because it is an essential
+nutrient that your cells, nerves, and muscles cannot function without.
+This mineral plays a critical role in regulating your internal fluid
+balance and maintaining proper blood volume. It also acts as an
+electrical conductor that allows your brain to communicate with the rest
+of your body and signals your muscles to contract properly. Since your
+body cannot produce sodium on its own and constantly loses it through
+daily sweat and urine, you must replenish it through the foods you eat.
+The key is finding the right balance, as getting the small amount your
+body requires supports optimal daily performance, while routinely
+getting too much can strain your cardiovascular system.</p>
+<p>Sodium serves two important purposes in Factor meals. It’s an
+essential nutrient your body needs to support fluid balance, nerve
+function, and muscle contraction, and it also helps preserve the safety,
+quality, and flavor of our meals. Because Factor meals are delivered
+fresh rather than frozen, we use carefully measured amounts of sodium
+alongside vacuum-sealed packaging to maintain freshness while delivering
+restaurant quality taste. Sodium varies by recipe, and the nutrition
+facts for every meal are available on our weekly menu. For those looking
+to limit sodium, we also offer lower-sodium meal options that contain
+700mg of sodium or less per serving, making it easy to choose meals that
+fit your individual nutrition goals.</p>
+<h2 id="nutrition-coaching">Nutrition coaching</h2>
+<h4 id="nutrition-coaching-by-factor">Nutrition Coaching by Factor</h4>
+<p>✓ Free one-on-one access to your expert<br />
+✓ Personalized meal guidance<br />
+✓ Nutrition &amp; lifestyle recommendations</p>
+<p>✓ Free one-on-one access to your expert<br />
+✓ Personalized meal guidance<br />
+✓ Nutrition &amp; lifestyle recommendations</p>
+<p><a
+href="https://factornutritioncoaching.as.me/schedule.php?brand=Factor&amp;locale=en-US&amp;prefix=pages&amp;search=hydration%20foods%20to%20eat">link</a></p>
+<h5 id="what-to-expect">What To Expect</h5>
+<p>Free 1:1 Coaching Session</p>
+<p>Whether you are thinking about Factor or are already a customer
+looking for nutrition guidance, schedule a free 20 minute phone call
+with one of our expert dietitians!</p>
+<p>Nutrition &amp; Lifestyle Recommendations</p>
+<p>Reach your goals with science-based nutrition guidance - whether it’s
+weight management, a diet revamp or supporting athletic performance.</p>
+<p>Personalized Factor Meal Guidance</p>
+<p>We can help you choose meals that fit your nutrition goals,
+lifestyle, and dietary preferences.</p>
+<p>Free 1:1 Coaching Session</p>
+<p>Whether you are thinking about Factor or are already a customer
+looking for nutrition guidance, schedule a free 20 minute phone call
+with one of our expert dietitians!</p>
+<p>Nutrition &amp; Lifestyle Recommendations</p>
+<p>Reach your goals with science-based nutrition guidance - whether it’s
+weight management, a diet revamp or supporting athletic performance.</p>
+<p>Personalized Factor Meal Guidance</p>
+<p>We can help you choose meals that fit your nutrition goals,
+lifestyle, and dietary preferences.</p>
+<p><a
+href="https://factornutritioncoaching.as.me/schedule.php?brand=Factor&amp;locale=en-US&amp;prefix=pages&amp;search=hydration%20foods%20to%20eat">link</a></p>
+<h5 id="meet-the-team-thats-here-to-support-your-goals">Meet The Team
+That’s Here to Support Your Goals</h5>
+<p>Valentina, RD, LDN, CSSD</p>
+<p>Valentina is a registered dietitian with experience in sports
+nutrition and weight management. She believes that all foods can fit in
+a nutritious diet and that habit change is at the core of long-term
+success.</p>
+<p>DeAndrea MS, RDN, LDN, ACSM-CPT</p>
+<p>DeAndrea is a registered dietitian nutritionist who promotes a
+flexible approach to eating by encouraging individuals to enjoy diverse
+foods without rigid restrictions, focusing on a balanced intake to
+maintain a healthy lifestyle.</p>
+<p>Jordan, MS, RDN, LDN</p>
+<p>Jordan is a registered dietitian with experience in weight management
+and bariatric surgery. She believes that small changes in diet and
+lifestyle can lead to sustainable progress towards health-related
+goals.</p>
+<p>Valentina, RD, LDN, CSSD</p>
+<p>Valentina is a registered dietitian with experience in sports
+nutrition and weight management. She believes that all foods can fit in
+a nutritious diet and that habit change is at the core of long-term
+success.</p>
+<p>DeAndrea MS, RDN, LDN, ACSM-CPT</p>
+<p>DeAndrea is a registered dietitian nutritionist who promotes a
+flexible approach to eating by encouraging individuals to enjoy diverse
+foods without rigid restrictions, focusing on a balanced intake to
+maintain a healthy lifestyle.</p>
+<p>Jordan, MS, RDN, LDN</p>
+<p>Jordan is a registered dietitian with experience in weight management
+and bariatric surgery. She believes that small changes in diet and
+lifestyle can lead to sustainable progress towards health-related
+goals.</p>
+<p><a
+href="https://factornutritioncoaching.as.me/schedule.php?search=hydration%20foods%20to%20eat">link</a></p>
+<h5 id="testimonials">Testimonials</h5>
+<p>I’m on my second box and I’m very pleased! Portioned, healthy meals
+readily available within 3 minutes. Such a time saver and the peace of
+mind is priceless! I definitely see myself reaching my weight loss goals
+even faster because of this service. I also love how there are updated
+options on a weekly basis so I can try meals I haven’t tried before.</p>
+<p>- Amanda</p>
+<p>My dietitian was very helpful, and stuck closely to what my goals for
+the call were. She clearly knew what she was talking about and I walked
+away feeling like I have an idea of what to try next!</p>
+<p>- Devon</p>
+<p>I had a few questions and she was able to quickly and clearly answer
+them for me. I feel more confident in placing my next week’s order that
+it will be perfect for my family!</p>
+<p>- Holly</p>
+<h5 id="get-in-touch">Get In Touch</h5>
+<p>Ask Us Anything</p>
+<p>Connect with your Registered Dietitian via email and get your
+nutrition questions answered</p>
+<h4 id="frequently-asked-questions-1">Frequently Asked Questions</h4>
+<p>Your RD will provide science-backed nutrition advice for any goal you
+might have. They can also provide assistance with ordering meals that
+fit your nutrition goals, lifestyle and dietary preferences. There is no
+set agenda for this call so your RD will tailor the session to your
+specific needs and questions. Note: Medical nutrition therapy is
+counseling used to treat medical conditions, such as providing specific
+nutrient recommendations to improve or cure disease. Our dietitians
+currently do not provide any medical nutrition therapy. They only
+provide general nutrition recommendations and guidance.</p>
+<p>At the time of the coaching session, your dietitian will be calling
+you via phone call from 888.573.5727. Please ensure that your phone’s
+spam settings allow for this call.</p>
+<p>You must be at least 18 years of age and reside in the US in order to
+participate in coaching sessions.</p>
+<p>Coaching sessions are 20 minutes long.</p>
+<p>We offer 1 free nutrition coaching session at this time.</p>
+<h4 id="book-a-free-20-minute-nutrition-coaching-session">BOOK A FREE
+20-MINUTE NUTRITION COACHING SESSION</h4>
+<p><a
+href="https://factornutritioncoaching.as.me/?appointmentType=64033782&amp;search=hydration%20foods%20to%20eat">link</a></p>
+<h2 id="sustainability-and-social-impact">Sustainability and social
+impact</h2>
+<h4 id="sustainability-social-impact">Sustainability &amp; Social
+Impact</h4>
+<p>We are committed to promoting sustainability and giving back to the
+community. Learn more about our efforts, programs and partners.</p>
+<p>We are committed to promoting sustainability and giving back to the
+community. Learn more about our efforts, programs and partners.</p>
+<h5 id="fuel-for-change">Fuel for Change</h5>
+<h5
+id="ronald-mcdonald-house-charities-of-chicagoland-northwest-indiana">Ronald
+McDonald House Charities of Chicagoland &amp; Northwest Indiana</h5>
+<h5 id="american-cancer-society">American Cancer Society</h5>
+<h5 id="food-banks-and-pantries">Food Banks and Pantries</h5>
+<h5 id="factors-sustainability-efforts">Factor’s Sustainability
+Efforts</h5>
+<p>Renewable Electricity &amp; Carbon</p>
+<p>Factor is committed to sustainability every day of the year. We
+source 100% renewable electricity for our production sites and offices,
+and we offset 100% of the delivery emissions to your door</p>
+<p>Sustainable Seafood</p>
+<p>We are committed to seafood procurement in line with Monterey Bay
+Aquarium Seafood Watch rankings of Certified, Best Choice, or Good
+Alternative. Our Barramundi is Fair Trade Certified™.</p>
+<p>Meal Donations</p>
+<p>We donate plated meals and cooked surplus to minimize food waste and
+make our product available to those who are food insecure. In 2023, we
+donated more than 11.5 MM lbs of fresh surplus food to our food rescue
+partners.</p>
+<h4 id="easy.-nutritious.-tasty.-1">Easy. Nutritious. Tasty.</h4>
+<p>Get Factor and enjoy fully prepared, dietitian-approved meals
+delivered to your doorstep. No commitment necessary—skip or cancel at
+any time.</p>
+<p>Get Factor and enjoy fully prepared, dietitian-approved meals
+delivered to your doorstep. No commitment necessary—skip or cancel at
+any time.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h5 id="frequently-asked-questions-2">Frequently Asked Questions</h5>
+<p>What can we help you with?</p>
+<h6 id="getting-started">Getting Started</h6>
+<h6 id="managing-my-subscription">Managing my Subscription</h6>
+<h6 id="nutrition-ingredients">Nutrition &amp; Ingredients</h6>
+<h6 id="receiving-my-meals">Receiving My Meals</h6>
+<h6 id="enjoying-my-meals">Enjoying My Meals</h6>
+<h5 id="cant-find-your-answer">Can’t find your answer?</h5>
+<h5 id="americas-1-ready-to-eat-meal-delivery-service">America’s #1
+Ready-to-Eat Meal Delivery Service</h5>
+<p>Enjoy the convenience of our prepared meal delivery services and
+choose from 35 weekly pre-made meals and 60+ add-ons, including snacks,
+smoothies, and more.</p>
+</body>
+</html>

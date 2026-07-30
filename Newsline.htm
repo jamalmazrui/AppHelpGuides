@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>NFB-NEWSLINE Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">NFB-NEWSLINE Help Guide</h1>
+<p class="subtitle">The National Federation of the Blind’s official
+documentation for NFB-NEWSLINE, gathered into one screen-reader-friendly
+document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="nfb-newsline-help-guide">NFB-NEWSLINE Help Guide</h1>
+<p>This guide gathers the National Federation of the Blind’s official
+documentation for NFB-NEWSLINE, its free service that reads newspapers,
+magazines, job listings, television schedules and weather aloud to blind
+and print-disabled subscribers. It was taken from the Federation’s own
+pages on 29 July 2026.</p>
+<p>NFB-NEWSLINE reaches further across surfaces than anything else in
+this collection, and every one of them is documented here or named: a
+touch-tone telephone, an iPhone app, an Amazon Alexa skill, a text-only
+website, email delivery in DAISY format, and digital talking book
+players including the Victor Reader Stream.</p>
+<p>The telephone instructions are the fullest part, and worth reading
+even if you use the app — the keypad commands, favourites, spell mode,
+search mode and the television listings are all set out in detail. The
+Alexa instructions cover enabling the skill, signing in, moving between
+sections and articles, and altering the reading voice and speed.</p>
+<p>Two lists of publications are included as their own sections: the
+national and international titles, and the state-by-state listings. They
+are long, and they are exactly the sort of thing that is miserable to
+read through a web page one state at a time.</p>
+<p>This is the only product in the collection whose help was written for
+blind readers from the start, which shows: the Federation’s pages are
+already clean, already well-headed, and needed almost nothing done to
+them.</p>
+<p>Headings run three deep: this title, then a section, then a topic.
+Every topic is listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#about-nfb-newsline-and-how-to-sign-up">About NFB-NEWSLINE
+and how to sign up</a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#access-accounts-and-content">Access Accounts and
+Content</a></li>
+<li><a href="#how-to-sign-up-for-nfb-newsline">How to Sign Up for
+NFB-NEWSLINE</a></li>
+<li><a href="#ways-to-access-nfb-newsline">Ways to Access
+NFB-NEWSLINE</a></li>
+<li><a href="#more-information">More Information</a></li>
+</ul></li>
+<li><a href="#reading-by-telephone">Reading by telephone</a>
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#main-menu-choices">Main Menu Choices</a></li>
+<li><a href="#keypad-commands">Keypad Commands</a></li>
+<li><a href="#your-favorites">Your Favorites</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#spell-mode">Spell Mode</a></li>
+<li><a href="#tv-listings">TV Listings</a></li>
+<li><a href="#search-mode">Search Mode</a></li>
+</ul></li>
+<li><a href="#reading-with-amazon-alexa">Reading with Amazon Alexa</a>
+<ul>
+<li><a href="#overview-2">Overview</a></li>
+<li><a href="#enable-the-nfb-newsline-skill">Enable the NFB-NEWSLINE
+Skill</a></li>
+<li><a href="#log-in-to-nfb-newsline">Log in to NFB-NEWSLINE</a></li>
+<li><a href="#select-content-and-navigate-sections-and-articles">Select
+Content and Navigate Sections and Articles</a></li>
+<li><a href="#alter-reader-voice-and-speed">Alter Reader Voice and
+Speed</a></li>
+<li><a href="#save-an-article">Save an Article</a></li>
+<li><a href="#general-help-command">General Help Command</a></li>
+</ul></li>
+<li><a href="#national-and-international-publications">National and
+international publications</a>
+<ul>
+<li><a href="#overview-3">Overview</a></li>
+<li><a href="#national-news">National News</a></li>
+<li><a href="#breaking-news-online">Breaking News Online</a></li>
+<li><a href="#magazines">Magazines</a></li>
+<li><a href="#international-publications">International
+Publications</a></li>
+</ul></li>
+<li><a href="#publications-state-by-state">Publications state by
+state</a>
+<ul>
+<li><a href="#overview-4">Overview</a></li>
+<li><a href="#alabama">Alabama</a></li>
+<li><a href="#arizona">Arizona</a></li>
+<li><a href="#arkansas">Arkansas</a></li>
+<li><a href="#california">California</a></li>
+<li><a href="#colorado">Colorado</a></li>
+<li><a href="#connecticut">Connecticut</a></li>
+<li><a href="#delaware">Delaware</a></li>
+<li><a href="#district-of-columbia">District of Columbia</a></li>
+<li><a href="#florida">Florida</a></li>
+<li><a href="#georgia">Georgia</a></li>
+<li><a href="#hawaii">Hawaii</a></li>
+<li><a href="#idaho">Idaho</a></li>
+<li><a href="#illinois">Illinois</a></li>
+<li><a href="#indiana">Indiana</a></li>
+<li><a href="#iowa">Iowa</a></li>
+<li><a href="#kansas">Kansas</a></li>
+<li><a href="#kentucky">Kentucky</a></li>
+<li><a href="#louisiana">Louisiana</a></li>
+<li><a href="#maine">Maine</a></li>
+<li><a href="#maryland">Maryland</a></li>
+<li><a href="#massachusetts">Massachusetts</a></li>
+<li><a href="#michigan">Michigan</a></li>
+<li><a href="#minnesota">Minnesota</a></li>
+<li><a href="#mississippi">Mississippi</a></li>
+<li><a href="#missouri">Missouri</a></li>
+<li><a href="#montana">Montana</a></li>
+<li><a href="#nebraska">Nebraska</a></li>
+<li><a href="#nevada">Nevada</a></li>
+<li><a href="#new-hampshire">New Hampshire</a></li>
+<li><a href="#new-jersey">New Jersey</a></li>
+<li><a href="#new-mexico">New Mexico</a></li>
+<li><a href="#new-york">New York</a></li>
+<li><a href="#north-carolina">North Carolina</a></li>
+<li><a href="#north-dakota">North Dakota</a></li>
+<li><a href="#ohio">Ohio</a></li>
+<li><a href="#oklahoma">Oklahoma</a></li>
+<li><a href="#oregon">Oregon</a></li>
+<li><a href="#pennsylvania">Pennsylvania</a></li>
+<li><a href="#south-carolina">South Carolina</a></li>
+<li><a href="#south-dakota">South Dakota</a></li>
+<li><a href="#tennessee">Tennessee</a></li>
+<li><a href="#texas">Texas</a></li>
+<li><a href="#utah">Utah</a></li>
+<li><a href="#vermont">Vermont</a></li>
+<li><a href="#virginia">Virginia</a></li>
+<li><a href="#washington">Washington</a></li>
+<li><a href="#west-virginia">West Virginia</a></li>
+<li><a href="#wisconsin">Wisconsin</a></li>
+</ul></li>
+</ul>
+<h2 id="about-nfb-newsline-and-how-to-sign-up">About NFB-NEWSLINE and
+how to sign up</h2>
+<h3 id="overview">Overview</h3>
+<p>NFB-NEWSLINE^(®) is a free audio news service for anyone who is
+blind, low-vision, deafblind, or otherwise print-disabled that offers
+access to more than 500 publications, emergency weather alerts, job
+listings, and more.</p>
+<blockquote>
+<p>“I always enjoy listening to magazines and newspapers on my Victor
+Reader Stream Trek. I’ve also enjoyed getting to learn how to access
+NFB-NEWSLINE on the Amazon Echo Dot. It’s important to be up-to-date
+with local and national news and because of NFB-NEWSLINE I know that I
+can access this anytime I want.” – Rosetta from Georgia, Subscriber</p>
+</blockquote>
+<h3 id="access-accounts-and-content">Access Accounts and Content</h3>
+<p>NFB-NEWSLINE now offers two types of accounts. The traditional full
+access account or a new limited access account</p>
+<p>Content for NFB-NEWSLINE subscribers of the full access account:</p>
+<ul>
+<li>National newspapers, including the <em>Wall Street Journal</em> and
+<em>USA Today </em></li>
+<li>Breaking news sources, including CNN, BBC, and ESPN Online</li>
+<li>International newspapers, including <em>Financial Times</em> and
+<em>Vancouver Sun </em></li>
+<li>Magazines, including <em>Time, Consumer Reports, Guideposts</em>,
+and <em>Smithsonian </em></li>
+<li>State newspapers</li>
+<li>Emergency weather alerts and seven-day forecasts localized to your
+zip code or GPS location</li>
+<li>The information that scrolls along the bottom of your television
+screen during emergency alerts</li>
+<li>More than 100,000 job listings from two national job sources<br />
+</li>
+<li>TV listings localized to your zip code and provider</li>
+<li>Retail ads</li>
+<li>NFB’s national channel, including the ebook <em>Building the Lives
+We Want,</em> the <em>Braille Monitor, Future Reflections,</em> and
+presidential releases</li>
+</ul>
+<h5
+id="new-nfb-newsline-now-offers-a-limited-access-account-for-children">NEW:
+NFB-NEWSLINE now offers a limited access account for children</h5>
+<p>NFB-NEWSLINE is a valuable resource for blind children to access
+content for leisure or educational purposes. The NFB-NEWSLINE limited
+access account provides a restricted level of publications and content.
+It is a structured set of materials and features recommended for
+children twelve years old and under. Currently, the limited access
+account type can only be accessed via the touch-tone phone access
+method.</p>
+<p>Content for Subscribers of the NFB-NEWSLINE Limited Access
+Account:</p>
+<ul>
+<li>National Federation of the Blind Channel</li>
+<li>Their state specific local channel</li>
+<li>State publications, including their state newspapers</li>
+<li>Animal Tales</li>
+<li>Girl’s Life</li>
+<li>Highlights</li>
+<li>J-14</li>
+<li>National Geographic for Kids</li>
+<li>Stone Soup</li>
+<li>Additional services: retail ads, TV listings, job listings</li>
+</ul>
+<p>With the start of the new limited access account, NFB-NEWSLINE now
+requires parents of subscribers under the age of 18 to complete the
+account setup process. The parent must select which type of account,
+either full or limited access (including the Kids Reading Corner), they
+want their child to have. Parents can change the type of their child’s
+account at any time. When their child turns 18 years old, the parent
+will need to contact NFB-NEWSLINE to have the child’s account switched
+to the full access account.</p>
+<h3 id="how-to-sign-up-for-nfb-newsline">How to Sign Up for
+NFB-NEWSLINE</h3>
+<p>Anyone who cannot read printed publications due to vision loss,
+dyslexia, or a physical disability is eligible to receive NFB-NEWSLINE.
+Please register by calling your state’s <a
+href="https://www.loc.gov/nls/braille-audio-reading-materials/find-a-local-library/">Library
+for the Blind and Print-Disabled</a> or the National Federation of the
+Blind at 866-504-7300 to request an application. You may also download
+and mail an application or complete our <a
+href="https://www.nfbnewsline.net/Nl2/NL2NewUserReqInput.jsp">online
+application</a>. After your registration is processed, you will receive
+a message containing your activation codes and instructions.</p>
+<h3 id="ways-to-access-nfb-newsline">Ways to Access NFB-NEWSLINE</h3>
+<p>After you sign up for NFB-NEWSLINE, you will be able to access it in
+any of the following ways. If you are a current subscriber, you do not
+need to create a new account or obtain new codes to use additional
+methods. Your current codes will allow you to access NFB-NEWSLINE using
+any method you choose. If you’ve forgotten your codes, please call us
+for assistance.</p>
+<h5 id="ios-mobile-app-3.0-with-knfb-reader-basic">iOS Mobile App 3.0
+with KNFB Reader Basic</h5>
+<p>NFB-NEWSLINE Mobile includes these features and much more:</p>
+<ul>
+<li>KNFB Reader Basic, a free version of KNFB Reader with the core
+functions necessary to quickly scan any printed text – just point,
+shoot, and read</li>
+<li>The ability to share articles from publications in the breaking news
+category to social media channels</li>
+<li>Multiple customization options to organize, save, and manage both
+NFB-NEWSLINE content and documents scanned with KNFB Reader Basic</li>
+</ul>
+<p>NFB-NEWSLINE Mobile 3.0 is fully accessible with VoiceOver so that
+users can hear content read aloud or read it in Braille with a connected
+refreshable Braille display or notetaker, making the app ideal for blind
+and deafblind users.</p>
+<h5 id="phone">Phone</h5>
+<ul>
+<li>Access NFB-NEWSLINE through your phone with the touch of a few
+buttons</li>
+<li>Create your own favorites list, skip articles or sections, and
+repeat items you wish to re-read</li>
+<li>Enable the continuous reading mode which allows you to start, stop,
+and skip articles</li>
+<li>Alter the reading voice by changing the volume, speed, and
+pitch</li>
+</ul>
+<p>For more information, please visit our NFB-NEWSLINE phone
+instructions page.</p>
+<h5 id="amazon-alexa">Amazon Alexa</h5>
+<ul>
+<li>Access NFB-NEWSLINE hands-free on any Amazon Alexa product,
+including Echo and Echo Dot</li>
+<li>Alter the reading voice by changing the volume, speed, and the voice
+itself</li>
+<li>Use dozens of voice commands to navigate to sections and articles
+that interest you</li>
+</ul>
+<p>Learn more about the <a
+href="http://www.amazon.com/Amazon-Echo-And-Alexa-Devices/b?ie=UTF8&amp;node=9818047011">Amazon
+Alexa family of devices</a> and enable the <a
+href="http://www.amazon.com/National-Federation-the-Blind-NFB-NEWSLINE/dp/B07KZZZ8C9/ref=sr_1_1?s=digital-skills&amp;ie=UTF8&amp;qid=1545945092&amp;sr=1-1&amp;keywords=national+federation+of+the+blind">NFB-NEWSLINE
+Alexa skill</a> today. For more information, please visit our Alexa
+instructions page or check out <a
+href="https://www.youtube.com/watch?v=tu-Q4VgBSJw">our training
+video</a> on YouTube.</p>
+<h5 id="ios-mobile-app">iOS Mobile App</h5>
+<ul>
+<li>Access NFB-NEWSLINE on your iPhone, iPod, or iPad</li>
+<li>Global search function allows you to find articles on specific
+topics</li>
+<li>Immediate access to breaking news stories</li>
+</ul>
+<p>Download the free <a
+href="https://itunes.apple.com/us/app/nfb-newsline-mobile/id530470425?mt=8">“NFB-NEWSLINE
+Mobile” app in the Apple App Store</a>.</p>
+<h5 id="website">Website</h5>
+<ul>
+<li>Access NFB-NEWSLINE on a secure, text-only website that is
+screen-reader friendly</li>
+<li>Easily navigate and search every available publication</li>
+<li>Email a full publication, a section, or single article to your
+inbox</li>
+</ul>
+<p>Visit <a
+href="http://www.nfbnewslineonline.org/">nfbnewslineonline.org</a> to
+access NFB-NEWSLINE online.</p>
+<h5 id="email">Email</h5>
+<ul>
+<li>NFB-NEWSLINE can email your news, customized job listings, and
+information directly to your inbox</li>
+<li>Provide us with an email address, choose your favorites, and select
+frequency (once daily or updates throughout the day)</li>
+</ul>
+<p>Please call us at 1-866-504-7300 to set up your NFB-NEWSLINE email
+service.</p>
+<h5 id="portable-players">Portable Players</h5>
+<ul>
+<li>Access NFB-NEWSLINE through many popular digital talking book
+players</li>
+<li>Portable, plug and play, wireless download for Victor Reader Stream
+2^(nd) Generation</li>
+<li>Easily navigate sections and articles with the use of DAISY-standard
+formatting</li>
+</ul>
+<p>Visit <a
+href="http://www.nfbnewslineonline.org/">nfbnewslineonline.org</a> to
+learn more.</p>
+<h3 id="more-information">More Information</h3>
+<p>For more information, please call us at 866-504-7300 or 410-659-9314,
+extension 2317, or email us at [email protected].</p>
+<h2 id="reading-by-telephone">Reading by telephone</h2>
+<h3 id="getting-started">Getting Started</h3>
+<p>From any touch-tone telephone, call NFB-NEWSLINE^(® )at 888-882-1629
+or use a <a
+href="http://www.nfbnewsline.net/Nl2/NL2LocalAccessLookup.jsp"
+title="Look up your local telephone number">local number</a> if
+available. Using the telephone keypad, enter your ID number and the
+security code that you were given when you first became a subscriber.
+After the initial call, the system will remember your codes. You will
+need to enter your codes the first time you call from a different
+telephone number, however.</p>
+<h3 id="main-menu-choices">Main Menu Choices</h3>
+<p>1 - for NFB-NEWSLINE tutorials and announcements<br />
+2 - for your state’s information channel<br />
+3 - for newspapers in your state<br />
+4 - for your favorites<br />
+5 - for newspapers from a different state<br />
+6 - for advertising circulars from national retail chains<br />
+7 - for magazines<br />
+8 - for television listings<br />
+9 - for job listings<br />
+0 - for subscriber’s control panel (within this area, for local
+telephone look up, press 1; for voice control, press 2; to resume
+reading where you last left off, press 3; to enter a global search,
+press 4)</p>
+<p>If you find you need more detail or clarification of the
+instructions, you can call NFB-NEWSLINE and press 1 from the main menu
+for the complete tutorial. The complete tutorial is divided into ten
+sections. Navigate to your lesson of interest by pressing 3 to advance
+to the next lesson or 1 to go back. You may also request NFB-NEWSLINE
+instructions in an audio format.</p>
+<p>After selecting a category from the main menu, you can choose from
+newspapers, magazines, or topics, and then follow the prompts. The
+NFB-NEWSLINE service holds today’s, yesterday’s, and the most recent
+Sunday edition, if one is published.</p>
+<p>After selecting the paper or magazine you wish to read, the system
+will prompt you to select the section you wish to read (for example,
+sports, editorial, news, etc.).</p>
+<h3 id="keypad-commands">Keypad Commands</h3>
+<p>When in an article, use these key commands to navigate through
+NFB-NEWSLINE:</p>
+<p>1 - return to previous article<br />
+2 - return to beginning of current article<br />
+3 - move to next article<br />
+4 - read previous line<br />
+5 - return to beginning of line<br />
+6 - read next line<br />
+7 - slow down speaking speed<br />
+8 - change speaking voice<br />
+9 - speed up speaking speed<br />
+* - go back one menu<br />
+# - help mode for the current menu<br />
+#, 5 - spell (follow the directions)<br />
+#, # - search for a word or phrase (follow the directions)<br />
+#, 3 - hang up<br />
+0 - pause for 1 minute<br />
+0, 0 - speech control: 1 or 3 - adjust the volume; 4 or 6 - change the
+pitch; 7 or 9 - change the speed; 8 - change the voice</p>
+<h3 id="your-favorites">Your Favorites</h3>
+<p>To personalize your reading choices, take advantage of the favorites
+option and save as many newspapers and magazines as you’d like.</p>
+<p>0 - to enter subscriber’s control panel<br />
+6 - to begin the process of adding newspapers and magazines to your
+favorites; a list of publications will be presented in categories,
+including national, Spanish, and magazines, and then states will be
+presented in alphabetical order in groups of six; select the desired
+state where the paper is published and follow the instructions to select
+the paper you wish to add<br />
+9 - during the list of states, to advance to the next group of states in
+alphabetical order</p>
+<p>After following the prompt to select the state of interest, listen
+for the available list of newspapers and press the appropriate key to
+add your selection to the list.</p>
+<p>The system will then return to the list of favorites you have
+selected. You can choose to read one or continue the process by
+pressing:</p>
+<p>1 - to add another favorite<br />
+2 - to delete an item in your favorites list<br />
+3 - to delete all selections from your favorites<br />
+4 - to explore your favorites list</p>
+<p>If you sign up for email delivery, the publications in your favorites
+list will be the ones that are emailed to you.</p>
+<h3 id="help">Help</h3>
+<p>If you need help at any time while in an article or TV listing, press
+the pound key. You will hear NFB-NEWSLINE say:</p>
+<p>“Press the star key to exit help, press any other key to learn about
+its function.” When you press a key, NFB-NEWSLINE will tell you what
+that key does within the current feature.</p>
+<h3 id="spell-mode">Spell Mode</h3>
+<p>While reading an article, if you hear a word you would like to spell,
+press the pound key and 5. NFB-NEWSLINE will pause when you do this, and
+read the word on which you have paused. Use the keypad to select the
+word you’d like to spell and then press 2.</p>
+<p>1 - to go to the first word of the previous sentence<br />
+2 - to spell your chosen word<br />
+3 - to go to the first word of the next sentence<br />
+4 - go to the previous word<br />
+5 - re-read the word on which you’ve paused<br />
+6 - go to the next word</p>
+<p>Once you press 2, NFB-NEWSLINE will read your chosen word one letter
+at a time. Pressing 2 for a second time will spell the same word again.
+You can continue to spell other words by using the spell mode navigation
+keys or press the star key to go back to your article.</p>
+<h3 id="tv-listings">TV Listings</h3>
+<p>Pressing 8 from the main menu will bring you into TV listings. The
+first time you must tell us where you are located and how you receive
+your television signal. Go through the prompts and enter your zip code,
+then select your service provider from the menu, and then select your
+time zone. After you complete these steps, NFB-NEWSLINE will retrieve
+your programming information. It will start at the first channel in your
+lineup at the current time. You then navigate through the listings by
+pressing different commands on the keypad. For help with these commands
+at any time, press the pound key, and then use this menu.</p>
+<p>1 - to go back one channel<br />
+2 - to jump to a different time, date, or channel<br />
+3 - to go forward one channel<br />
+4 - to go back in time to the previous program on the current
+channel<br />
+5 - to repeat the current program listing including the date<br />
+6 - to go forward to the next program on the current channel</p>
+<p>After your initial call, the menu for TV listings will offer you the
+following:</p>
+<p>1 - to change your setup<br />
+2 - to go directly to TV listings<br />
+3 - to create a temporary setup that will not be saved<br />
+4 - to go directly to your favorite TV listings<br />
+5 - to manage your favorite channels list</p>
+<p>To personalize your TV listing choices, you may want to take
+advantage of the favorites option. At the first menu in the TV listings,
+you can press 5 to create your favorite channels list. The system will
+then bring up the channel lineup. You navigate through the channels to
+find the favorite ones you wish to add by pressing 1 to go back one
+channel and 3 to go forward one channel. You may also press 2 to jump
+straight to the channel number you desire. Press 4 to add the channel to
+your favorite channels list. At this point, you will be prompted to keep
+the channel number assignment or to change it. After you have initially
+set up your favorites list, you can then go directly to your favorites
+list by pressing 4 on the TV listings menu.</p>
+<p>2 - to jump to a particular channel<br />
+4 - to add a favorite<br />
+6 - to delete</p>
+<p>Press the pound key for help managing TV favorites.</p>
+<p>For those of you who receive your television signal with an antenna,
+you can retrieve your listings. However, you will want to create a
+favorites list in order to assign the proper channel number to your
+channel. Listen for the call letters of your local channel and then add
+that channel to your favorites list. You will then have the opportunity
+to assign a number to that channel.</p>
+<p>If you have a satellite company for your service provider, the local
+antennae channels will be imported into the beginning of your lineup
+automatically. You can also do a favorites list to assign a channel
+number to these channels.</p>
+<h3 id="search-mode">Search Mode</h3>
+<p>To use the search feature, press the pound key twice while reading an
+article within the publication you wish to search. NFB-NEWSLINE will
+prompt you to enter your search word or phrase. There is a two-digit
+numeric code for all letters, numbers, and punctuation marks (see search
+codes below). After entering the appropriate codes, it will search the
+entire publication you are reading to find your keyword or phrase.</p>
+<p>As you enter each character, it will read your entry back to ensure
+accuracy. When you have finished entering the word or phrase you would
+like to search for, press 99. NFB-NEWSLINE will begin reading the first
+article in which your search word occurs.</p>
+<p>To hear what you have entered so far, press 96. To backspace to
+delete one character, press 97. To erase the entire word or phrase to
+start over, enter 98.</p>
+<p>To skip to the next occurrence, press 3. Keep in mind that your
+keyword or phrase may appear in an article more than once. NFB-NEWSLINE
+may tell you there are ten matches for your search, but all ten could be
+in the same article.</p>
+<h5 id="search-codes">Search Codes</h5>
+<h6 id="letters">Letters</h6>
+<p>A: 0, 1<br />
+B: 0, 2<br />
+C: 0, 3<br />
+D: 0, 4<br />
+E: 0, 5<br />
+F: 0, 6<br />
+G: 0, 7<br />
+H: 0, 8<br />
+I: 0, 9<br />
+J: 1, 0<br />
+K: 1, 1<br />
+L: 1, 2<br />
+M: 1, 3<br />
+N: 1, 4<br />
+O: 1, 5<br />
+P: 1, 6<br />
+Q: 1, 7<br />
+R: 1, 8<br />
+S: 1, 9<br />
+T: 2, 0<br />
+U: 2, 1<br />
+V: 2, 2<br />
+W: 2, 3<br />
+X: 2, 4<br />
+Y: 2, 5<br />
+Z: 2, 6</p>
+<h6 id="numerals">Numerals</h6>
+<p>0: 3, 0<br />
+1: 3, 1<br />
+2: 3, 2<br />
+3: 3, 3<br />
+4: 3, 4<br />
+5: 3, 5<br />
+6: 3, 6<br />
+7: 3, 7<br />
+8: 3, 8<br />
+9: 3, 9</p>
+<h6 id="special-characters">Special Characters</h6>
+<p>Space: 0, 0<br />
+Colon: 2, 7<br />
+Period: 2, 8<br />
+Slash: 2, 9<br />
+Double-quote: 4, 0<br />
+Single-quote: 4, 1<br />
+Comma: 4, 2<br />
+Asterisk: 4, 3<br />
+At sign: 4, 4<br />
+Dash: 4, 5<br />
+Left parenthesis: 4, 6<br />
+Right parenthesis: 4, 7<br />
+Pound sign: 4, 8<br />
+Dollar sign: 4, 9<br />
+Question mark: 5, 0<br />
+Exclamation point: 5, 1<br />
+Semicolon: 5, 2<br />
+Percent: 5, 3<br />
+Plus sign: 5, 4<br />
+Equals: 5, 5<br />
+Less than: 5, 6<br />
+Greater than: 5, 7<br />
+Underscore: 5, 8<br />
+Ampersand: 5, 9<br />
+Clear phrase: 9, 8<br />
+Delete character: 9, 7<br />
+Start search: 9, 9</p>
+<p>As you enter each pair of digits, NFB-NEWSLINE will announce the
+entered letter or number. If NFB-NEWSLINE does find the keyword you have
+entered, it will start reading at the beginning of the article in which
+it found your keyword. To go to the next search result press 3. Repeat
+this step to proceed through all the results. NFB-NEWSLINE will tell you
+the section and the article with the keyword or phrase. If it does not
+find your keyword, it will resume reading where you were.</p>
+<h2 id="reading-with-amazon-alexa">Reading with Amazon Alexa</h2>
+<h3 id="overview-2">Overview</h3>
+<p>NFB-NEWSLINE^(®) subscribers can access NFB-NEWSLINE hands-free on
+any Amazon Alexa product, including Echo and Echo Dot. Below are some
+sample commands for accessing and using the skill.</p>
+<h3 id="enable-the-nfb-newsline-skill">Enable the NFB-NEWSLINE
+Skill</h3>
+<ul>
+<li>Say, “Alexa open National Federation.”</li>
+<li>To hear instructions about the skill say, “Alexa ask National
+Federation to give me instructions.”</li>
+</ul>
+<h3 id="log-in-to-nfb-newsline">Log in to NFB-NEWSLINE</h3>
+<p>You will need to log in the first time you open the skill.</p>
+<ul>
+<li>Say, “Alexa open National Federation.”</li>
+<li>Then say, “Alexa ask National Federation to log in.”</li>
+<li>State clearly, “Log in.”</li>
+<li>Provide your subscriber identification number and security
+code.</li>
+</ul>
+<h3 id="select-content-and-navigate-sections-and-articles">Select
+Content and Navigate Sections and Articles</h3>
+<p>Alexa can help you select and move through publications easily with a
+variety of commands. Here are a few to get you started:</p>
+<ul>
+<li>“Alexa ask National Federation to read The New York Times.”</li>
+<li>“Alexa ask National Federation to read The Wall Street
+Journal.”</li>
+<li>“Alexa ask National Federation to read next section.”</li>
+<li>“Alexa ask National Federation to go to previous section.”</li>
+<li>Move from article to article by simply saying “Next” or “Previous.”
+(Please note: all other commands need to begin with “Alexa ask National
+Federation.”)</li>
+</ul>
+<h3 id="alter-reader-voice-and-speed">Alter Reader Voice and Speed</h3>
+<ul>
+<li>“Alexa ask National Federation to change voice.”</li>
+<li>“Alexa ask National Federation to read a little faster.”</li>
+<li>“Alexa ask National Federation to read a little slower.”</li>
+<li>“Alexa ask National Federation to read much faster.”</li>
+<li>“Alexa ask National Federation to read much slower.”</li>
+</ul>
+<h3 id="save-an-article">Save an Article</h3>
+<ul>
+<li>“Alexa ask National Federation to email me this article.”</li>
+</ul>
+<h3 id="general-help-command">General Help Command</h3>
+<ul>
+<li>“Alexa ask National Federation to give me instructions.”</li>
+</ul>
+<p>Learn more about the <a
+href="http://www.amazon.com/Amazon-Echo-And-Alexa-Devices/b?ie=UTF8&amp;node=9818047011">Amazon
+Alexa family of devices</a> and enable the <a
+href="http://www.amazon.com/National-Federation-the-Blind-NFB-NEWSLINE/dp/B07KZZZ8C9/ref=sr_1_1?s=digital-skills&amp;ie=UTF8&amp;qid=1545945092&amp;sr=1-1&amp;keywords=national+federation+of+the+blind">NFB-NEWSLINE
+Alexa skill</a> today. For more assistance, please call
+866-504-7300.</p>
+<h2 id="national-and-international-publications">National and
+international publications</h2>
+<h3 id="overview-3">Overview</h3>
+<p>NFB-NEWSLINE^(®) subscribers have access to more than one hundred
+national and international publications.</p>
+<h3 id="national-news">National News</h3>
+<ul>
+<li>Associated Press</li>
+<li>Christian Science Monitor</li>
+<li>Forward</li>
+<li>The Hill</li>
+<li>Information Week</li>
+<li>Investors Business Daily</li>
+<li>Navajo Times</li>
+<li>Reuters</li>
+<li>Roll Call</li>
+<li>Stars and Stripes</li>
+<li>UPI</li>
+<li>USA Today</li>
+<li>USA Today Online</li>
+<li>Wall Street Journal</li>
+</ul>
+<h3 id="breaking-news-online">Breaking News Online</h3>
+<ul>
+<li>19th News</li>
+<li>ABC News</li>
+<li>The Advocate</li>
+<li>Al Jazeera</li>
+<li>All Politics</li>
+<li>Android Central</li>
+<li>Apple Insider</li>
+<li>Axios</li>
+<li>Babylon Bee</li>
+<li>BBC</li>
+<li>Black America Web</li>
+<li>Bloomberg</li>
+<li>Breitbart News</li>
+<li>Business Insider</li>
+<li>CBS News</li>
+<li>Chicago Defender</li>
+<li>CNBC</li>
+<li>CNet</li>
+<li>CNN</li>
+<li>Courthouse News Service</li>
+<li>The Daily Beast</li>
+<li>The Daily Caller</li>
+<li>ESPN Online</li>
+<li>FiveThirtyEight</li>
+<li>Fox News</li>
+<li>Hollywood Reporter</li>
+<li>Huffington Post</li>
+<li>International Business Times</li>
+<li>Lifehacker</li>
+<li>Mashable</li>
+<li>Medical Xpress</li>
+<li>Mental Floss</li>
+<li>Native News Online</li>
+<li>NBC NEWS</li>
+<li>Newser</li>
+<li>Newsmax</li>
+<li>New York Times Online</li>
+<li>NPR (National Public Radio)</li>
+<li>The Onion</li>
+<li>Politico</li>
+<li>Pop Matters</li>
+<li>PR Newswire</li>
+<li>Quartz</li>
+<li>The Root</li>
+<li>Salon</li>
+<li>Scientific American Online</li>
+<li>Science Daily</li>
+<li>Science X</li>
+<li>Sky News</li>
+<li>Slate</li>
+<li>TechXplore</li>
+<li>The Verge</li>
+<li>The Wrap</li>
+<li>UPI (RSS)</li>
+<li>Vox</li>
+</ul>
+<h3 id="magazines">Magazines</h3>
+<ul>
+<li>AARP Bulletin</li>
+<li>AARP the Magazine</li>
+<li>ACB Braille Forum</li>
+<li>Access World</li>
+<li>Air and Space</li>
+<li>All Recipes</li>
+<li>Allure</li>
+<li>Amac Advantage</li>
+<li>Animal Tales</li>
+<li>Atlantic Monthly</li>
+<li>Architectural Digest</li>
+<li>Baltimore Magazine</li>
+<li>Barron’s</li>
+<li>Better Homes and Gardens</li>
+<li>Bon Appetit</li>
+<li>Bookmarks</li>
+<li>Braille Book Review</li>
+<li>Braille Monitor</li>
+<li>Car and Driver</li>
+<li>Chronicle of Higher Education</li>
+<li>Chronicle of Philanthropy</li>
+<li>CondeNast Traveler</li>
+<li>Consumer Reports</li>
+<li>Cooking Light</li>
+<li>Discover</li>
+<li>Downbeat</li>
+<li>Ebony</li>
+<li>Economist</li>
+<li>Fast Company</li>
+<li>Forbes</li>
+<li>Foreign Policy</li>
+<li>Future Reflections</li>
+<li>GQ</li>
+<li>Guideposts</li>
+<li>Harpers</li>
+<li>Harvard Business Review</li>
+<li>Highlights</li>
+<li>Inc. </li>
+<li>Information Week</li>
+<li>Journal of Blindness Innovation and Research</li>
+<li>Lion</li>
+<li>Mac World</li>
+<li>Maxim</li>
+<li>Men’s Journal</li>
+<li>Midwest Living</li>
+<li>MIT Technology Review</li>
+<li>Mother Jones</li>
+<li>National Active and Retired Federal Employees (NARFE)</li>
+<li>Nation</li>
+<li>The New Republic</li>
+<li>New Yorker</li>
+<li>New York Review of Books</li>
+<li>Non Profit Quarterly</li>
+<li>OK!</li>
+<li>PC World</li>
+<li>Poets &amp; Writers</li>
+<li>Popular Science</li>
+<li>Prevention</li>
+<li>Reacter</li>
+<li>Reader’s Digest</li>
+<li>Real Simple</li>
+<li>Relish</li>
+<li>Rolling Stone</li>
+<li>Runner’s World</li>
+<li>Science News</li>
+<li>Smithsonian</li>
+<li>Sporting News</li>
+<li>Successful Farming</li>
+<li>Talking Book Topics</li>
+<li>Time</li>
+<li>Toastmaster</li>
+<li>Us Weekly</li>
+<li>Vanity Fair</li>
+<li>Vending Times</li>
+<li>VFW Magazine</li>
+<li>Vogue</li>
+<li>Web MD the Magazine</li>
+<li>Whole Dog Journal</li>
+<li>Wired</li>
+</ul>
+<h5 id="kids-reading-corner">Kids’ Reading Corner</h5>
+<p>The following magazines are geared toward children and
+adolescents.</p>
+<ul>
+<li>Science News Explores</li>
+<li>Highlights</li>
+<li>Girls’ Life</li>
+<li>Stone Soup</li>
+<li>J-14</li>
+<li>National Geographic Kids</li>
+<li>Time for Kids</li>
+</ul>
+<h3 id="international-publications">International Publications</h3>
+<ul>
+<li>Asahi Shimbun</li>
+<li>Daily Mail (UK)</li>
+<li>Financial Times</li>
+<li>Globes Israel</li>
+<li>Guardian</li>
+<li>India Times</li>
+<li>Irish Times</li>
+<li>Jerusalem Post</li>
+<li>Kathimerini</li>
+<li>Kathmandu Post</li>
+<li>Kyiv Independent</li>
+<li>London Telegraph</li>
+<li>Mainichi</li>
+<li>Manila Bulletin</li>
+<li>Montreal Gazette</li>
+<li>Moscow Times</li>
+<li>New Zealand Herald</li>
+<li>Royal Gazette</li>
+<li>Shanghai Daily</li>
+<li>Taipei Times</li>
+<li>Toronto Globe and Mail</li>
+<li>Vancouver Sun</li>
+<li>World Politics Review</li>
+</ul>
+<h2 id="publications-state-by-state">Publications state by state</h2>
+<h3 id="overview-4">Overview</h3>
+<p>NFB-NEWSLINE^(®) subscribers have access to hundreds of state
+publications.</p>
+<h3 id="alabama">Alabama</h3>
+<ul>
+<li>Birmingham News</li>
+<li>Dothan Eagle</li>
+<li>Huntsville Times</li>
+<li>Mobile Register</li>
+<li>Montgomery Advertiser</li>
+<li>Opelika Auburn News</li>
+<li>Talladega Daily Home Web Feed</li>
+<li>Tuscaloosa News</li>
+</ul>
+<h3 id="arizona">Arizona</h3>
+<ul>
+<li>Arizona Daily Star</li>
+<li>Arizona Republic</li>
+<li>East Valley Tribune</li>
+</ul>
+<h3 id="arkansas">Arkansas</h3>
+<ul>
+<li>Arkansas Democrat-Gazette</li>
+<li>Baxter Bulletin</li>
+<li>Northwest Arkansas Morning News</li>
+<li>River Valley Democrat-Gazette</li>
+</ul>
+<h3 id="california">California</h3>
+<ul>
+<li>Bakersfield Californian</li>
+<li>Chico Enterprise-Record</li>
+<li>Contra Costa Times</li>
+<li>Eureka Times-Standard</li>
+<li>Fort Bragg Advocate-News</li>
+<li>Fremont Argus</li>
+<li>Fresno Bee</li>
+<li>La Opinion</li>
+<li>La Prensa</li>
+<li>Lake County Record Bee</li>
+<li>Los Angeles Daily News</li>
+<li>Los Angeles Magazine</li>
+<li>Los Angeles Times</li>
+<li>Mendocino Beacon</li>
+<li>Merced Sun Star</li>
+<li>Modesto Bee</li>
+<li>Monterey County Herald</li>
+<li>Oakland Tribune</li>
+<li>Orange Coast Magazine</li>
+<li>Orange County Register</li>
+<li>Oroville Mercury Register</li>
+<li>Palm Springs Desert Sun</li>
+<li>Paradise Post</li>
+<li>Riverside Press Enterprise</li>
+<li>Red Bluff Daily News</li>
+<li>Redding Record Searchlight</li>
+<li>Sacramento Bee</li>
+<li>San Diego Union-Tribune</li>
+<li>San Francisco Chronicle</li>
+<li>San Jose Mercury News</li>
+<li>San Luis Obispo Tribune</li>
+<li>San Mateo County Times</li>
+<li>Tri-Valley Herald</li>
+<li>Ukiah Daily Journal</li>
+<li>Vacaville Reporter</li>
+<li>Ventura County Star</li>
+<li>Willits News</li>
+</ul>
+<h3 id="colorado">Colorado</h3>
+<ul>
+<li>Colorado Springs Gazette</li>
+<li>Colorado Springs Indy</li>
+<li>Denver Post</li>
+<li>Fort Collins Coloradoan</li>
+<li>Grand Junction Daily Sentinel</li>
+</ul>
+<h3 id="connecticut">Connecticut</h3>
+<ul>
+<li>Bridgeport Connecticut Post</li>
+<li>Darien News Review</li>
+<li>Fairfield Citizen News</li>
+<li>Greenwich Time</li>
+<li>Hartford Courant</li>
+<li>Nashoba Valley Voice</li>
+<li>New Canaan Advertiser</li>
+<li>New Haven Register</li>
+<li>New London Day</li>
+<li>Stamford Advocate</li>
+<li>Westport News</li>
+</ul>
+<h3 id="delaware">Delaware</h3>
+<ul>
+<li>Delaware State News</li>
+<li>Dover Post</li>
+<li>Wilmington News Journal</li>
+</ul>
+<h3 id="district-of-columbia">District of Columbia</h3>
+<ul>
+<li>Washington Examiner</li>
+<li>Washington Post</li>
+<li>Washington Times</li>
+</ul>
+<h3 id="florida">Florida</h3>
+<ul>
+<li>Bradenton Herald</li>
+<li>Daytona Beach News Journal</li>
+<li>El Nuevo Herald</li>
+<li>El Sentinel</li>
+<li>Florida Times Union</li>
+<li>Florida Phoenix</li>
+<li>Miami Herald</li>
+<li>Naples Daily News</li>
+<li>Ocala Star Banner</li>
+<li>Orlando Sentinel</li>
+<li>Palm Beach Post</li>
+<li>Pensacola News Journal</li>
+<li>Sarasota Herald Tribune</li>
+<li>South Florida Sun Sentinel</li>
+<li>Tallahassee Democrat</li>
+<li>Tampa Bay Times</li>
+<li>Treasure Coast Newspapers</li>
+</ul>
+<h3 id="georgia">Georgia</h3>
+<ul>
+<li>Atlanta Journal-Constitution</li>
+<li>Atlanta Magazine</li>
+<li>Columbus Ledger-Enquirer</li>
+<li>The Macon Telegraph</li>
+<li>Rome News Tribune</li>
+<li>Savannah Morning News</li>
+</ul>
+<h3 id="hawaii">Hawaii</h3>
+<ul>
+<li>Star Advertiser</li>
+<li>The Garden Island</li>
+</ul>
+<h3 id="idaho">Idaho</h3>
+<ul>
+<li>Idaho Statesman</li>
+<li>Idaho Falls Post Register</li>
+<li>Spokesman Review</li>
+<li>Times News</li>
+</ul>
+<h3 id="illinois">Illinois</h3>
+<ul>
+<li>Belleville News-Democrat</li>
+<li>Chicago Sun Times</li>
+<li>Chicago Tribune</li>
+<li>Daily Herald</li>
+<li>Illinois Telegraph</li>
+<li>Kankakee Daily Journal</li>
+<li>Moline Dispatch</li>
+<li>The Pantagraph</li>
+</ul>
+<h3 id="indiana">Indiana</h3>
+<ul>
+<li>Anderson Herald Bulletin</li>
+<li>Evansville Courier &amp; Press</li>
+<li>Fort Wayne Journal Gazette</li>
+<li>Henderson Gleaner</li>
+<li>Herald Times</li>
+<li>Indiana Capital Chronicle</li>
+<li>Indianapolis Business Journal</li>
+<li>Indianapolis Monthly</li>
+<li>Indianapolis Recorder</li>
+<li>Indianapolis Star</li>
+<li>Jeffersonville News and Tribune</li>
+<li>Journal Review</li>
+<li>Kokomo Tribune</li>
+<li>Lafayette Journal and Courier</li>
+<li>Muncie Star Press</li>
+<li>Northwest Indiana Hammond Times</li>
+<li>Palladium-Item</li>
+<li>Republic</li>
+<li>South Bend Tribune</li>
+<li>Terre Haute Tribune-Star</li>
+</ul>
+<h3 id="iowa">Iowa</h3>
+<ul>
+<li>Cedar Rapids Gazette</li>
+<li>Daily Nonpareil</li>
+<li>Des Moines Register</li>
+<li>Iowa City Press Citizen</li>
+<li>Iowa Shopping Cart</li>
+<li>Muscatine Journal</li>
+<li>Quad City Times</li>
+<li>Waterloo Courier</li>
+</ul>
+<h3 id="kansas">Kansas</h3>
+<ul>
+<li>Garden City Telegram</li>
+<li>The Hutchinson News</li>
+<li>Salina Journal</li>
+<li>Topeka Capital Journal</li>
+<li>Wichita Eagle</li>
+</ul>
+<h3 id="kentucky">Kentucky</h3>
+<ul>
+<li>Bench and Bar</li>
+<li>Bowling Green Daily News</li>
+<li>Cats’ Pause</li>
+<li>Corbin Times-Tribune</li>
+<li>Kentucky New Era</li>
+<li>Lexington Herald Leader</li>
+<li>Louisville Courier-Journal</li>
+<li>Maysville Ledger Independent</li>
+<li>Owensboro Messenger Inquirer</li>
+<li>Paducah Sun</li>
+</ul>
+<h3 id="louisiana">Louisiana</h3>
+<ul>
+<li>Acadiana Advocate</li>
+<li>Alexandria Daily Town Talk</li>
+<li>Baton Rouge Advocate</li>
+<li>Beauregard Daily News</li>
+<li>Daily Advertiser</li>
+<li>Monroe News Star</li>
+<li>New Orleans Advocate</li>
+<li>New Orleans Times-Picayune</li>
+<li>Opelousas Daily World</li>
+<li>Shreveport Times</li>
+</ul>
+<h3 id="maine">Maine</h3>
+<ul>
+<li>Bangor Daily News</li>
+<li>Kennebec Journal</li>
+<li>Portland Press Herald</li>
+<li>Sun Journal</li>
+</ul>
+<h3 id="maryland">Maryland</h3>
+<ul>
+<li>Baltimore Sun</li>
+<li>Capital Gazette</li>
+<li>Cumberland Times News</li>
+<li>Easton Star Democrat</li>
+<li>Herald-Mail</li>
+<li>Salisbury Daily Times</li>
+<li>The Baltimore Banner</li>
+</ul>
+<h3 id="massachusetts">Massachusetts</h3>
+<ul>
+<li>Berkshire Eagle</li>
+<li>Boston Globe</li>
+<li>Boston Herald</li>
+<li>Cape Cod Times</li>
+<li>Eagle Tribune</li>
+<li>Fitchburg Sentinel and Enterprise</li>
+<li>Lowell Sun</li>
+<li>Metro West Daily</li>
+<li>Nashoba Valley Voice</li>
+<li>Patriot Ledger</li>
+<li>Salem News</li>
+<li>Springfield Republican</li>
+<li>Standard-Times</li>
+<li>Watertown Tab and Press</li>
+<li>Worcester Telegram &amp; Gazette</li>
+</ul>
+<h3 id="michigan">Michigan</h3>
+<ul>
+<li>Battle Creek Enquirer</li>
+<li>Detroit Free Press</li>
+<li>Detroit News</li>
+<li>Flint Journal</li>
+<li>Grand Rapids Press</li>
+<li>Huron Daily Tribune</li>
+<li>Lansing State Journal</li>
+<li>Michigan Advance</li>
+<li>Mining Journal</li>
+<li>Times Herald</li>
+</ul>
+<h3 id="minnesota">Minnesota</h3>
+<ul>
+<li>Duluth News Tribune</li>
+<li>Faribault Daily News</li>
+<li>Forum of Fargo Moorhead</li>
+<li>Minneapolis Star Tribune</li>
+<li>Rochester Post-Bulletin</li>
+<li>Saint Cloud Times</li>
+<li>Saint Paul Pioneer Press</li>
+<li>Winona Daily News</li>
+</ul>
+<h3 id="mississippi">Mississippi</h3>
+<ul>
+<li>Biloxi Sun Herald</li>
+<li>Hattiesburg American</li>
+<li>Jackson Clarion Ledger</li>
+<li>Northeast Mississippi Daily Journal</li>
+</ul>
+<h3 id="missouri">Missouri</h3>
+<ul>
+<li>Columbia Daily Tribune</li>
+<li>Fulton Sun</li>
+<li>Jefferson City News Tribune</li>
+<li>Kansas City Star</li>
+<li>Saint Joseph News Press</li>
+<li>Saint Louis American</li>
+<li>Saint Louis Post-Dispatch</li>
+<li>Southeast Missourian</li>
+<li>Springfield News Leader</li>
+</ul>
+<h3 id="montana">Montana</h3>
+<ul>
+<li>Billings Gazette</li>
+<li>Bozeman Daily Chronicle</li>
+<li>Daily Montanan</li>
+<li>Great Falls Tribune</li>
+<li>Helena Independent Record</li>
+<li>Missoulian</li>
+<li>Montana Standard</li>
+</ul>
+<h3 id="nebraska">Nebraska</h3>
+<ul>
+<li>Beatrice Daily Sun</li>
+<li>Grand Island Independent</li>
+<li>Lincoln Journal Star</li>
+<li>Omaha World Herald</li>
+</ul>
+<h3 id="nevada">Nevada</h3>
+<ul>
+<li>Las Vegas Review-Journal</li>
+<li>Nevada Current</li>
+<li>Reno Gazette Journal</li>
+</ul>
+<h3 id="new-hampshire">New Hampshire</h3>
+<ul>
+<li>Concord Monitor</li>
+<li>Manchester Union Leader</li>
+<li>New Hampshire Bulletin</li>
+<li>Seacoast</li>
+</ul>
+<h3 id="new-jersey">New Jersey</h3>
+<ul>
+<li>Asbury Park Press</li>
+<li>Bergen Record</li>
+<li>Burlington County Times</li>
+<li>Courier Post</li>
+<li>New Jersey Grocery Ads</li>
+<li>Newark Star Ledger</li>
+<li>Press of Atlantic City</li>
+<li>Vineland Daily Journal</li>
+</ul>
+<h3 id="new-mexico">New Mexico</h3>
+<ul>
+<li>Albuquerque Journal</li>
+<li>Deming Headlight</li>
+<li>Farmington Daily Times</li>
+<li>Native News Online</li>
+<li>Navajo Times</li>
+<li>Las Cruces Sun-News</li>
+<li>Roswell Daily Record</li>
+</ul>
+<h3 id="new-york">New York</h3>
+<ul>
+<li>Amsterdam News</li>
+<li>Buffalo News</li>
+<li>El Diario</li>
+<li>Journal News</li>
+<li>New York Daily News</li>
+<li>New York Post</li>
+<li>New York Times</li>
+<li>Newsday</li>
+<li>Post Journal</li>
+<li>Post-Standard</li>
+<li>Rochester Democrat and Chronicle</li>
+<li>Times Union</li>
+</ul>
+<h3 id="north-carolina">North Carolina</h3>
+<ul>
+<li>Asheville Citizen Times</li>
+<li>Charlotte Observer</li>
+<li>Daily Reflector</li>
+<li>Greensboro News &amp; Record</li>
+<li>Herald Sun</li>
+<li>Hickory Daily Record</li>
+<li>Raleigh News and Observer</li>
+<li>Statesville Record &amp; Landmark</li>
+<li>Winston-Salem Journal</li>
+</ul>
+<h3 id="north-dakota">North Dakota</h3>
+<ul>
+<li>Bismarck Tribune</li>
+<li>Forum of Fargo-Moorhead</li>
+</ul>
+<h3 id="ohio">Ohio</h3>
+<ul>
+<li>Akron Beacon Journal</li>
+<li>Bucyrus Telegraph-Forum</li>
+<li>Canton Repository</li>
+<li>Chillicothe Gazette</li>
+<li>Cincinnati Enquirer</li>
+<li>Cincinnati Magazine</li>
+<li>Cleveland Plain Dealer</li>
+<li>Columbus Dispatch</li>
+<li>Coshocton Tribune</li>
+<li>Dayton Daily News</li>
+<li>Dover Times Reporter</li>
+<li>Findlay Courier</li>
+<li>Fremont News-Messenger</li>
+<li>Independent</li>
+<li>Lake County News Herald</li>
+<li>Lancaster Eagle-Gazette</li>
+<li>Mansfield News Journal</li>
+<li>Marion Star</li>
+<li>Newark Advocate</li>
+<li>Port Clinton News Herald</li>
+<li>Toledo Blade</li>
+<li>The Vindicator</li>
+<li>Warren Tribune Chronicle</li>
+<li>Zanesville Times Recorder</li>
+</ul>
+<h3 id="oklahoma">Oklahoma</h3>
+<ul>
+<li>Oklahoma City Daily Oklahoman</li>
+<li>Tulsa World</li>
+</ul>
+<h3 id="oregon">Oregon</h3>
+<ul>
+<li>Albany Democrat Herald</li>
+<li>Corvallis Gazette-Times</li>
+<li>Eugene Register Guard</li>
+<li>The Oregonian</li>
+<li>Salem Statesman Journal</li>
+<li>Source Weekly</li>
+</ul>
+<h3 id="pennsylvania">Pennsylvania</h3>
+<ul>
+<li>Allentown Morning Call</li>
+<li>Altoona Mirror</li>
+<li>Beaver County Times</li>
+<li>Bucks County Courier Times</li>
+<li>Butler Eagle</li>
+<li>Centre Daily Times (State College)</li>
+<li>Citizens’ Voice</li>
+<li>Daily American</li>
+<li>Erie Times News</li>
+<li>Hanover Evening Sun</li>
+<li>Harrisburg Magazine</li>
+<li>Intelligencer</li>
+<li>LNP Always Lancaster Online</li>
+<li>Lebanon Daily News</li>
+<li>Patriot News</li>
+<li>Philadelphia Daily News</li>
+<li>Philadelphia Inquirer</li>
+<li>Pittsburgh Post-Gazette</li>
+<li>Pittsburgh Tribune Review</li>
+<li>Pocono Record</li>
+<li>Reading Eagle</li>
+<li>Republican Herald</li>
+<li>Sharon Herald</li>
+<li>Standard Speaker</li>
+<li>Times Tribune</li>
+<li>Wilkes Barre Times Leader</li>
+<li>Williamsport Sun Gazette</li>
+<li>York Dispatch</li>
+</ul>
+<h3 id="south-carolina">South Carolina</h3>
+<ul>
+<li>Anderson Independent Mail</li>
+<li>Columbia State</li>
+<li>Greenville News</li>
+<li>Island Packet</li>
+<li>Morning News</li>
+<li>Myrtle Beach Sun News</li>
+<li>The Herald</li>
+<li>The Post and Courier</li>
+</ul>
+<h3 id="south-dakota">South Dakota</h3>
+<ul>
+<li>Aberdeen American News</li>
+<li>Argus Leader</li>
+<li>Rapid City Journal</li>
+</ul>
+<h3 id="tennessee">Tennessee</h3>
+<ul>
+<li>Chattanooga Times Free Press</li>
+<li>Clarksville Leaf-Chronicle</li>
+<li>Knoxville News Sentinel</li>
+<li>Memphis Commercial Appeal</li>
+<li>Nashville Tennessean</li>
+<li>Tennessee Lookout</li>
+</ul>
+<h3 id="texas">Texas</h3>
+<ul>
+<li>Abilene Reporter News</li>
+<li>Amarillo Globe News</li>
+<li>Austin American Statesman</li>
+<li>Beaumont Enterprise</li>
+<li>Corpus Christi Caller Times</li>
+<li>Dallas Morning News</li>
+<li>El Paso Times</li>
+<li>Fort Worth Star-Telegram</li>
+<li>Houston Chronicle</li>
+<li>Lubbock Avalanche-Journal</li>
+<li>Midland Area Grocery Ads</li>
+<li>Monitor</li>
+<li>Plainview Herald</li>
+<li>San Antonio Express-News</li>
+<li>Texas Monthly</li>
+<li>Texas Observer</li>
+<li>Tyler Morning Telegraph</li>
+<li>Victoria Advocate</li>
+<li>Waco Times</li>
+</ul>
+<h3 id="utah">Utah</h3>
+<ul>
+<li>Deseret News</li>
+<li>Park City Park Record</li>
+<li>Provo Daily Herald</li>
+<li>Salt Lake Tribune</li>
+<li>Standard-Examiner</li>
+<li>St. George Spectrum</li>
+<li>Utah News Dispatch</li>
+</ul>
+<h3 id="vermont">Vermont</h3>
+<ul>
+<li>Bennington Banner</li>
+<li>Brattleboro Reformer</li>
+<li>Burlington Free Press</li>
+<li>Manchester Journal</li>
+<li>Rutland Herald</li>
+<li>Seven Days Vermont</li>
+<li>Times Argus</li>
+<li>Vermont Digger</li>
+</ul>
+<h3 id="virginia">Virginia</h3>
+<ul>
+<li>Bristol Herald Courier</li>
+<li>Daily Progress</li>
+<li>Free Lance Star</li>
+<li>News Virginian</li>
+<li>Richmond Times Dispatch</li>
+<li>Roanoke Times</li>
+<li>Staunton News Leader</li>
+<li>Virginia Mercury</li>
+<li>Virginian Pilot</li>
+</ul>
+<h3 id="washington">Washington</h3>
+<ul>
+<li>Bellingham Herald</li>
+<li>Columbian</li>
+<li>Daily News</li>
+<li>Kitsap Sun</li>
+<li>Olympian</li>
+<li>Seattle Post Intelligencer</li>
+<li>Seattle Times</li>
+<li>Spokesman Review</li>
+<li>Tacoma News Tribune</li>
+<li>Tri-City Herald</li>
+</ul>
+<h3 id="west-virginia">West Virginia</h3>
+<ul>
+<li>Beckley Register-Herald</li>
+<li>Charleston Gazette</li>
+<li>Elkins Inter-Mountain</li>
+<li>Hampshire Review</li>
+<li>Huntington Herald Dispatch</li>
+<li>The Martinsburg Journal</li>
+<li>The Morgantown Dominion Post</li>
+<li>Parkersburg News Sentinel</li>
+<li>State Journal West Virginia</li>
+<li>Times West Virginia</li>
+<li>Wheeling News-Register and The Intelligencer</li>
+</ul>
+<h3 id="wisconsin">Wisconsin</h3>
+<ul>
+<li>Appleton Post-Crescent</li>
+<li>Fond du Lac Reporter</li>
+<li>Green Bay Press-Gazette</li>
+<li>Herald Times Reporter</li>
+<li>Hudson Star Observer</li>
+<li>Janesville Gazette</li>
+<li>La Crosse Tribune</li>
+<li>Marshfield News-Herald</li>
+<li>Milwaukee Journal Sentinel</li>
+<li>Oshkosh Northwestern</li>
+<li>Racine Journal Times</li>
+<li>Sheboygan Press</li>
+<li>Stevens Point Journal</li>
+<li>Wausau Daily Herald</li>
+<li>Wisconsin Rapids Daily Tribune</li>
+<li>Wisconsin State Journal</li>
+</ul>
+</body>
+</html>

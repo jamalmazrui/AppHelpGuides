@@ -237,18 +237,21 @@ so following a “see also” never leaves the file.</p>
 </ul>
 <p><strong>Operating systems and platforms</strong></p>
 <ul>
-<li>Windows</li>
+<li>Windows, including its built-in apps and accessibility settings</li>
 <li>macOS</li>
 <li>iOS iPhone User Guide</li>
-<li>Android</li>
+<li>Android, including Photos, Messages, Contacts, Gboard and Files</li>
 <li>Amazon Alexa</li>
 </ul>
-<p><strong>Browsers and developer tools</strong></p>
+<p><strong>Browsers, extensions and developer tools</strong></p>
 <ul>
 <li>Google Chrome</li>
 <li>Microsoft Edge</li>
 <li>Visual Studio Code, with a separate volume for its API</li>
 <li>GitHub</li>
+<li>Accessibility Insights for Web, Microsoft’s accessibility testing
+extension</li>
+<li>IBM Equal Access Accessibility Checker</li>
 </ul>
 <p><strong>Social and communication</strong></p>
 <ul>
@@ -269,6 +272,7 @@ so following a “see also” never leaves the file.</p>
 <li>Meta AI Glasses</li>
 <li>Indigo, the accessible GPS app from APH</li>
 <li>VoiceVista, the Soundscape successor</li>
+<li>Voice Dream Reader</li>
 <li>Merlin Bird ID</li>
 </ul>
 <p><strong>Reading and libraries</strong></p>
@@ -277,6 +281,10 @@ so following a “see also” never leaves the file.</p>
 <li>Bookshare</li>
 <li>NLS, the National Library Service for the Blind and Print
 Disabled</li>
+<li>NLS BARD, BARD Mobile, BARD Express and the My Talking Books Alexa
+skill</li>
+<li>NFB-NEWSLINE</li>
+<li>Libby, the public library reading app</li>
 </ul>
 <p><strong>Work and careers</strong></p>
 <ul>
@@ -297,18 +305,30 @@ Disabled</li>
 <p><strong>News and media</strong></p>
 <ul>
 <li>BBC</li>
+<li>The Guardian</li>
 <li>Google News</li>
 <li>SmartNews</li>
 <li>Netflix</li>
+<li>Amazon Prime Video</li>
+<li>SiriusXM</li>
 </ul>
-<p><strong>Travel and delivery</strong></p>
+<p><strong>Travel</strong></p>
 <ul>
 <li>Amtrak</li>
+<li>Greyhound</li>
+<li>Uber</li>
 <li>Lyft</li>
-<li>DoorDash</li>
-<li>Instacart</li>
-<li>Grubhub</li>
 <li>Waymo</li>
+</ul>
+<p><strong>Delivery, groceries and meals</strong></p>
+<ul>
+<li>DoorDash</li>
+<li>Uber Eats</li>
+<li>Instacart</li>
+<li>Shipt</li>
+<li>Grubhub</li>
+<li>CookUnity</li>
+<li>Factor</li>
 </ul>
 <h2 id="how-the-guides-are-made">How the guides are made</h2>
 <p>Each product follows the same cycle:</p>
@@ -364,10 +384,14 @@ preamble. Help centres change; a guide does not update itself.</li>
 <li><strong>Where a publisher offers no categories</strong>, the
 grouping is editorial, and the preamble says so rather than passing my
 arrangement off as theirs.</li>
-<li><strong>Some estates could not be gathered.</strong> Where a
-publisher’s help is closed to automated reading, or exists only inside
-an app, that is recorded rather than papered over with third-party
-writing.</li>
+<li><strong>Some estates could not be gathered</strong>, and are
+recorded rather than papered over with third-party writing. The reasons
+vary: a publisher’s help may sit behind a check that refuses automated
+reading; it may exist only inside the app or the extension, with nothing
+published on the web at all; or a company may simply publish no written
+guidance, answering through a chat assistant or a telephone line
+instead. Several products in this collection are thin for exactly that
+reason, and their preambles say which reason applies.</li>
 <li><strong>Some guides are thin because the help is thin.</strong> A
 product that answers through a chat assistant has little written
 guidance, and the guide says so instead of padding.</li>
@@ -390,8 +414,10 @@ product’s help at once — often faster than any help centre’s own search
 box.</li>
 <li>An HTML rendering of this file sits beside it as
 <code>README.htm</code>, and any guide can be rendered the same way with
-Pandoc:
-<code>pandoc -s -o Netflix_Help_Guide.htm Netflix_Help_Guide.md</code></li>
+Pandoc: <code>pandoc -s -o Netflix.htm Netflix_Help_Guide.md</code></li>
+<li><code>HowTheseGuidesWereMade.md</code>, also in this repository,
+explains how to build a guide for an app that is not here yet, and
+includes a prompt you can copy.</li>
 </ul>
 <h2 id="copyright-and-attribution">Copyright and attribution</h2>
 <p>The help text in these guides belongs to the companies and

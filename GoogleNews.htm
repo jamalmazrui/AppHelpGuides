@@ -1,0 +1,3077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Google News Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Google News Help Guide</h1>
+<p class="subtitle">Google’s official help for Google News, gathered
+into one screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="google-news-help-guide">Google News Help Guide</h1>
+<p>This guide gathers Google’s official help for Google News, the news
+reader that assembles headlines, local coverage, full coverage of a
+story from many outlets, and newspaper and magazine subscriptions. It
+was taken from Google’s own help centre on 28 July 2026.</p>
+<p>Google News runs in a browser on a computer and as an app on iPhone,
+iPad and Android. There is no Windows program and no Alexa skill.</p>
+<p>One feature of Google’s writing shapes this guide. Google writes a
+separate copy of each article for each platform and chooses which to
+show by a parameter on the address, so the same article arrives three
+times over — computer, Android, and iPhone and iPad. Rather than pick
+one and discard the others, or repeat the article three times, each
+article here holds all the versions Google publishes, one after another
+under a heading naming the platform. Where Google publishes a single
+version for all devices, there is just the one.</p>
+<p>The sections below are mine, not Google’s. Google News files its
+articles under topics inside its help centre, but those topic pages do
+not survive being taken out of it, so the grouping here is by subject
+and that choice is my own.</p>
+<p>Publisher material is excluded: Google keeps a separate Publisher
+Help Center for news organisations, which is a different audience. The
+community forum is excluded too — that is other readers talking rather
+than Google’s guidance.</p>
+<p>Headings run three deep: this title, then a section, then an article,
+with the platform versions and each article’s own subheadings nested
+beneath. Every article is listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#getting-started">Getting started</a>
+<ul>
+<li><a href="#add-customize-your-google-news-widget">Add &amp; customize
+your Google News widget</a></li>
+<li><a href="#get-started-with-google-news">Get started with Google
+News</a></li>
+<li><a href="#manage-your-google-news-notifications">Manage your Google
+News notifications</a></li>
+</ul></li>
+<li><a href="#reading-and-following-the-news">Reading and following the
+news</a>
+<ul>
+<li><a href="#get-local-news-for-cities-youre-interested-in">Get local
+news for cities you’re interested in</a></li>
+<li><a href="#save-stories-from-google-news">Save stories from Google
+News</a></li>
+</ul></li>
+<li><a href="#subscriptions-and-payments">Subscriptions and payments</a>
+<ul>
+<li><a
+href="#cancel-pause-or-change-a-subscription-on-google-play">Cancel,
+pause, or change a subscription on Google Play</a></li>
+<li><a href="#get-a-digital-subscription-for-newspapers">Get a digital
+subscription for newspapers</a></li>
+<li><a href="#subscribe-to-services-or-content">Subscribe to services or
+content</a></li>
+<li><a href="#subscribe-with-google">Subscribe with Google</a></li>
+</ul></li>
+<li><a href="#your-account-and-privacy">Your account and privacy</a>
+<ul>
+<li><a href="#check-or-change-your-google-news-settings">Check or change
+your Google News settings</a></li>
+<li><a href="#shared-data-with-news-publishers">Shared data with news
+publishers</a></li>
+</ul></li>
+<li><a href="#fixing-problems">Fixing problems</a>
+<ul>
+<li><a href="#fix-problems-with-google-news">Fix problems with Google
+News</a></li>
+</ul></li>
+<li><a href="#other-help-articles">Other help articles</a>
+<ul>
+<li><a href="#customize-what-you-find-on-google-news">Customize what you
+find on Google News</a></li>
+<li><a href="#find-what-you-want-on-google-news">Find what you want on
+Google News</a></li>
+<li><a href="#how-google-news-stories-are-selected">How Google News
+stories are selected</a></li>
+<li><a href="#share-stories-from-google-news">Share stories from Google
+News</a></li>
+</ul></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="add-customize-your-google-news-widget">Add &amp; customize your
+Google News widget</h3>
+<h4 id="android">Android</h4>
+<p>Get the latest news with the Google News app widget on your Home
+screen.</p>
+<h6 id="add-the-google-news-app-widget">Add the Google News app
+widget</h6>
+<ol type="1">
+<li>On your Android device, touch and hold the Home screen.</li>
+<li>Tap Widgets .</li>
+<li>If there are multiple widgets available, tap the Down arrow in the
+Google News section to get the whole widget list.</li>
+<li>Touch and hold the chosen Google News widget.
+<ul>
+<li>Images of your Home screens appear.</li>
+</ul></li>
+<li>Slide the widget to where you want it and lift your finger.</li>
+</ol>
+<p><strong>Tip:</strong> You can change the shape and size of the Google
+News widget. Learn more about how to resize a widget.</p>
+<h6 id="remove-the-google-news-widget">Remove the Google News
+widget</h6>
+<ol type="1">
+<li>Touch and hold the Google News widget.</li>
+<li>Under the List view, tap Remove .</li>
+</ol>
+<p>You might find options to Remove or Uninstall. To take the widget off
+your Home screen only, remove it. To take the widget off your phone,
+uninstall it. Learn how to remove an app, shortcut, widget, or
+group.</p>
+<p>Android iPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad">iPhone &amp; iPad</h4>
+<p>Get the latest news with the Google News app widget on your Home
+screen.</p>
+<p><strong>Tip:</strong> Be sure to update to the latest version of
+iOS.</p>
+<h6 id="add-the-google-news-app-widget-1">Add the Google News app
+widget</h6>
+<p><strong>Important:</strong> This feature is available for iPhone on
+iOS 14 and up and iPadOS 14 and up. If you recently installed the Google
+News app, you may need to open the app before the widget appears in the
+widget gallery.</p>
+<p>To add the Google News Briefing widget on your iPhone or iPad:</p>
+<ol type="1">
+<li>Touch and hold the home screen.</li>
+<li>At the top right, tap <strong>Edit</strong> <strong>Add
+Widget</strong>.</li>
+<li>Search for the Google News app and tap it.</li>
+<li>To select the widget size, swipe right or left.</li>
+<li>Tap <strong>Add widget</strong>.</li>
+<li>Place the widget on your home screen.</li>
+<li>At the top right, tap <strong>Done</strong> or the home screen.</li>
+</ol>
+<p><strong>Tip:</strong> To add the Google News Briefing widget on your
+iPad, go to Today View. On your home screen, swipe all the way to the
+right.</p>
+<p>iPhone &amp; iPad Android</p>
+<p>More</p>
+<h3 id="get-started-with-google-news">Get started with Google News</h3>
+<h4 id="on-a-computer">On a computer</h4>
+<p>Google News helps you organize, find, and understand the news. You
+can change your settings to find more stories you want.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="customize-your-for-you-following-feed">Customize your For you
+&amp; Following feed</h6>
+<h6 id="find-more-stories-about-your-favorite-subjects">Find more
+stories about your favorite subjects</h6>
+<ul>
+<li><strong>To find stories based on a location: </strong>
+<ol type="1">
+<li>In the top search bar, search for a location.</li>
+<li>Click Follow .</li>
+</ol></li>
+<li><strong>To find stories based on a publication: </strong>
+<ol type="1">
+<li>In the top search bar, search for the publication source.</li>
+<li>Click Follow .</li>
+</ol></li>
+</ul>
+<h6 id="personalize-your-google-news-content">Personalize your Google
+News content</h6>
+<ul>
+<li><strong>To find content based on your interests:</strong> At the
+top, click <strong>For you</strong>.</li>
+<li><strong>To read a story with various perspectives and
+context:</strong> Click See more headlines &amp; perspectives .</li>
+</ul>
+<h6 id="improve-what-shows-for-you-on-google-news">Improve what shows
+for you on Google News</h6>
+<p>When you customize your Google News, you can find more stories you
+want. <em>Learn how to improve your Google News</em>.</p>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-1">Android</h4>
+<p>Google News helps you organize, find, and understand the news. You
+can change your settings to find more stories you want.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="open-google-news">Open Google News</h6>
+<p>To get started, <a
+href="https://play.google.com/store/apps/details?id=com.google.android.apps.magazines">download
+the Google News app for Android</a>.</p>
+<h6 id="countries-without-the-google-news-app">Countries without the
+Google News app</h6>
+<p>In selected countries, the Google News app isn’t available but Google
+Play Newsstand is available.</p>
+<p>For example, the Google News app isn’t available in Denmark or
+Finland.</p>
+<h6 id="customize-your-for-you-following-feed-1">Customize your For you
+&amp; Following feed</h6>
+<p><strong>Important:</strong></p>
+<ul>
+<li><p>Some features are available if you’re signed in to your Google
+Account.</p></li>
+<li><p>If you share a paid story, others may not access it until they
+pay for it.</p></li>
+<li><p>To find the latest top stories, tap Home
+<strong>Headlines</strong>.</p></li>
+<li><p>To listen to recent top stories, tap Listen .</p></li>
+<li><p>To read a story with various perspectives and context, tap Full
+coverage of this story .</p></li>
+<li><p>To follow topics, sources, and locations, search for your
+interests. Then, tap Follow .</p></li>
+</ul>
+<p>You can find, read, and catch up on your favorite topics,
+subscriptions, and sources in Following .</p>
+<h6 id="improve-what-shows-for-you-on-google-news-1">Improve what shows
+for you on Google News</h6>
+<p>When you customize your Google News, you can find more stories you
+want. <em>Learn how to improve your Google News</em>.</p>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-1">iPhone &amp; iPad</h4>
+<p>Google News helps you organize, find, and understand the news. You
+can change your settings to find more stories you want.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="open-google-news-1">Open Google News</h6>
+<p>To get started, <a
+href="https://apps.apple.com/us/app/google-news/id459182288">download
+the Google News app</a>.</p>
+<h6 id="countries-without-the-google-news-app-1">Countries without the
+Google News app</h6>
+<p>In selected countries, the Google News app isn’t available but Google
+Play Newsstand is available.</p>
+<p>For example, the Google News app isn’t available in Denmark or
+Finland.</p>
+<h6 id="customize-your-for-you-following-feed-2">Customize your For you
+&amp; Following feed</h6>
+<p><strong>Important:</strong></p>
+<ul>
+<li><p>Some features are available if you’re signed in to your Google
+Account.</p></li>
+<li><p>If you share a paid story, others may not access it until they
+pay for it.</p></li>
+<li><p>To find the latest top stories, tap Home
+<strong>Headlines</strong>.</p></li>
+<li><p>To listen to recent top stories, tap Listen .</p></li>
+<li><p>To read a story with various perspectives and context, tap Full
+coverage of this story .</p></li>
+<li><p>To follow topics, sources, and locations, search for your
+interests. Then, tap Follow .</p></li>
+</ul>
+<p>You can find, read, and catch up on your favorite topics,
+subscriptions, and sources in Following .</p>
+<h6 id="improve-what-shows-for-you-on-google-news-2">Improve what shows
+for you on Google News</h6>
+<p>When you customize your Google News, you can find more stories you
+want. <em>Learn how to improve your Google News</em>.</p>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h3 id="manage-your-google-news-notifications">Manage your Google News
+notifications</h3>
+<h4 id="android-2">Android</h4>
+<p>You can choose the amount and types of notifications you receive from
+Google News. In the Google News app, you can manage your
+notifications.</p>
+<h6 id="check-your-notifications">Check your notifications</h6>
+<ol type="1">
+<li>On your mobile device, open the Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap Notifications .</li>
+</ol>
+<h6 id="change-your-notifications">Change your notifications</h6>
+<ol type="1">
+<li>On your mobile device, open the Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap News settings .</li>
+<li>Under “Alerts,” tap <strong>Notifications</strong>.
+<ul>
+<li>To get notifications, turn on <strong>Get
+notifications</strong>.</li>
+<li>To stop all notifications, turn off <strong>Get
+notifications</strong>.</li>
+</ul></li>
+<li>To control the amount of notifications you get, under “Number of
+notifications” tap an amount between “Low” and “High.”
+<ul>
+<li>To choose what type of notifications you get, next to each
+notification type, turn notifications on or off.</li>
+</ul></li>
+</ol>
+<h6 id="update-your-daily-briefing-emails-notifications">Update your
+daily briefing emails &amp; notifications</h6>
+<ol type="1">
+<li>On your mobile device, open the Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap News settings .</li>
+<li>To get your daily briefing, under “Alerts,” turn on <strong>Daily
+briefing emails</strong>.</li>
+</ol>
+<p><strong>Tip</strong>: To receive daily briefing emails and
+notifications, you must sign in to your Google Account.</p>
+<p>Android iPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-2">iPhone &amp; iPad</h4>
+<p>You can choose the amount and types of notifications you receive from
+Google News. In the Google News app, you can manage your
+notifications.</p>
+<h6 id="check-your-notifications-1">Check your notifications</h6>
+<ol type="1">
+<li>On your mobile device, open the Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap Notifications &amp; shared .</li>
+</ol>
+<p><strong>Tip:</strong> To check your notifications, you must sign in
+to your Google Account.</p>
+<h6 id="change-your-notifications-1">Change your notifications</h6>
+<ol type="1">
+<li>On your mobile device, open the Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap News settings .</li>
+<li>Tap <strong>Notifications</strong>.
+<ul>
+<li>To get notifications, turn on <strong>Get
+notifications</strong>.</li>
+<li>To stop all notifications, turn off <strong>Get
+notifications</strong>.</li>
+</ul></li>
+<li>To control the amount of notifications you get, under “Number of
+notifications” tap an amount between “Low” and “High.”
+<ul>
+<li>To choose what type of notifications you get, next to each
+notification type, turn notifications on or off.</li>
+</ul></li>
+</ol>
+<p><strong>Tip:</strong> To change your notifications, you must sign in
+to your Google Account.</p>
+<h6 id="update-your-daily-briefing-emails-notifications-1">Update your
+daily briefing emails &amp; notifications</h6>
+<ol type="1">
+<li>On your mobile device, open the Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap News settings .</li>
+<li>To get your daily briefing emails, turn on <strong>Daily briefing
+emails</strong>.</li>
+</ol>
+<p><strong>Tip</strong>: To receive daily briefing emails and
+notifications, you must sign in to your Google Account.</p>
+<p>iPhone &amp; iPad Android</p>
+<p>More</p>
+<h2 id="reading-and-following-the-news">Reading and following the
+news</h2>
+<h3 id="get-local-news-for-cities-youre-interested-in">Get local news
+for cities you’re interested in</h3>
+<h4 id="on-a-computer-1">On a computer</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can change your settings on Google News to get local news about
+specific cities.</p>
+<ol type="1">
+<li>On your computer, go to <a href="http://news.google.com">Google
+News</a>.</li>
+<li>At the top, click <strong>Local</strong>.</li>
+<li>At the top, under “Your local news,” click Manage .</li>
+<li>From here you can:
+<ul>
+<li><strong>Add a city</strong>: Search for a city. Next to it, click
+Follow .</li>
+<li><strong>Get more stories about your favorite city</strong>: Next to
+a city, click More <strong>Set as primary</strong>.</li>
+</ul></li>
+</ol>
+<h6 id="where-suggestions-come-from">Where suggestions come from</h6>
+<p>To make it easier to access local news for the places you’re most
+interested in, Google News may suggest locations. Location suggestions
+come from:</p>
+<ul>
+<li><p><strong>The home and work addresses you set in Google
+Maps</strong>. Learn how to set or change your home and work
+address.</p></li>
+<li><p><strong>The device location from your IP address or device
+settings</strong>. Learn how to update your location on Google and
+manage your Android device’s location settings for Google News and other
+apps.</p></li>
+</ul>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-3">Android</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can change your settings on Google News to get local news about
+specific cities.</p>
+<ol type="1">
+<li>Open the Google News app .</li>
+<li>At the bottom, tap Following .</li>
+<li>Under “Recently followed,” tap <strong>Library</strong>.</li>
+<li>Under “Local,” tap <strong>View all and manage</strong>.
+<ul>
+<li>From here you can:
+<ul>
+<li><strong>Add a city:</strong>
+<ol type="1">
+<li>Search for a city.</li>
+<li>Tap Follow .</li>
+</ol></li>
+<li><strong>Find more stories about your favorite city:</strong> Next to
+a city, tap <strong>Set as primary</strong>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<h6 id="where-suggestions-come-from-1">Where suggestions come from</h6>
+<p>To make it easier to access local news for the places you’re most
+interested in, Google News may suggest locations. Location suggestions
+come from:</p>
+<ul>
+<li><p><strong>The home and work addresses you set in Google
+Maps</strong>. Learn how to set or change your home and work
+address.</p></li>
+<li><p><strong>The device location from your IP address or device
+settings</strong>. Learn how to update your location on Google and
+manage your Android device’s location settings for Google News and other
+apps.</p></li>
+</ul>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-3">iPhone &amp; iPad</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can change your settings on Google News to get local news about
+specific cities.</p>
+<ol type="1">
+<li>Open the Google News app .</li>
+<li>At the bottom, tap Following .</li>
+<li>Under “Recently followed,” tap <strong>Library</strong>.</li>
+<li>Under “Local,” tap <strong>View all and manage</strong>.
+<ul>
+<li>From here you can:
+<ul>
+<li><strong>Add a city:</strong>
+<ol type="1">
+<li>Search for a city.</li>
+<li>Tap Follow .</li>
+</ol></li>
+<li><strong>Find more stories about your favorite city:</strong> Next to
+a city, tap <strong>Set as primary</strong>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<h6 id="where-suggestions-come-from-2">Where suggestions come from</h6>
+<p>To make it easier to access local news for the places you’re most
+interested in, Google News may suggest locations. Location suggestions
+come from:</p>
+<ul>
+<li><p><strong>The home and work addresses you set in Google
+Maps</strong>. Learn how to set or change your home and work
+address.</p></li>
+<li><p><strong>The device location from your IP address or device
+settings</strong>. Learn how to update your location on Google and
+manage your Android device’s location settings for Google News and other
+apps.</p></li>
+</ul>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h3 id="save-stories-from-google-news">Save stories from Google
+News</h3>
+<h4 id="on-a-computer-2">On a computer</h4>
+<p>You can save stories on Google News to read later.</p>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<h6 id="save-stories-to-read-later">Save stories to read later</h6>
+<ol type="1">
+<li><a href="https://news.google.com/">Go to Google News</a>.</li>
+<li>Under a story you want to save, click More Save for later .</li>
+</ol>
+<h6 id="read-stories-youve-saved">Read stories you’ve saved</h6>
+<ol type="1">
+<li>At the top, click <strong>Following</strong>.</li>
+<li>At the top, click <strong>Saved stories</strong>.</li>
+<li>Click the story you want to read.</li>
+</ol>
+<h6 id="remove-stories-youve-saved">Remove stories you’ve saved</h6>
+<ol type="1">
+<li>At the top, click <strong>Following</strong>.</li>
+<li>At the top, click <strong>Saved stories</strong>.</li>
+<li>Under the story you want to remove, click <strong>Remove from saved
+stories</strong>.</li>
+</ol>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-4">Android</h4>
+<p>You can save stories on Google News to read later.</p>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<h6 id="save-stories-to-read-later-1">Save stories to read later</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>Next to the story you want to save, tap More Save for later .</li>
+</ol>
+<h6 id="read-stories-youve-saved-1">Read stories you’ve saved</h6>
+<ol type="1">
+<li>At the bottom, tap Following .</li>
+<li>Scroll down to “Saved stories.”</li>
+<li>Tap the story you want to read.</li>
+</ol>
+<h6 id="remove-stories-youve-saved-1">Remove stories you’ve saved</h6>
+<ol type="1">
+<li>At the bottom, tap Following .</li>
+<li>Scroll down to “Saved stories.”</li>
+<li>Under the story you want to remove, tap More Remove from saved
+stories .</li>
+</ol>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-4">iPhone &amp; iPad</h4>
+<p>You can save stories on Google News to read later.</p>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<h6 id="save-stories-to-read-later-2">Save stories to read later</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>Next to the story you want to save, tap More Save for later .</li>
+</ol>
+<h6 id="read-stories-youve-saved-2">Read stories you’ve saved</h6>
+<ol type="1">
+<li>At the bottom, tap Following .</li>
+<li>Scroll down to “Saved stories.”</li>
+<li>Tap the story you want to read.</li>
+</ol>
+<h6 id="remove-stories-youve-saved-2">Remove stories you’ve saved</h6>
+<ol type="1">
+<li>At the bottom, tap Following .</li>
+<li>Scroll down to “Saved stories.”</li>
+<li>Under the story you want to remove, tap More Remove from saved
+stories .</li>
+</ol>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h2 id="subscriptions-and-payments">Subscriptions and payments</h2>
+<h3 id="cancel-pause-or-change-a-subscription-on-google-play">Cancel,
+pause, or change a subscription on Google Play</h3>
+<h4 id="on-a-computer-3">On a computer</h4>
+<p>Subscriptions on Google Play are for an indefinite term, and you’ll
+be charged at the beginning of each billing cycle according to your
+subscription terms (for example, weekly, annually, or another period),
+unless you unsubscribe.</p>
+<p>Make sure to sign in to the Google Account that has your
+subscriptions.</p>
+<h6 id="cancel-a-subscription">Cancel a subscription</h6>
+<p>You can use our self-help flow to cancel a subscription.</p>
+<p>Cancel a subscription</p>
+<h6 id="cancel-a-subscription-on-play.google.com">Cancel a subscription
+on play.google.com</h6>
+<p><strong>Important</strong>: When you uninstall an app, your
+subscription won’t cancel.</p>
+<ol type="1">
+<li>On your computer, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+in Google Play</a>.</li>
+<li>For the subscription you want to cancel, click
+<strong>Manage</strong>.</li>
+<li>Click <strong>Cancel subscription</strong>.</li>
+<li>Within the confirmation pop-up, select a reason.</li>
+<li>Click <strong>Continue</strong>.</li>
+</ol>
+<p><strong>Tip:</strong> If you have a subscription with an app and it’s
+removed from Google Play, your future subscription will be cancelled.
+Your past subscriptions can’t be refunded, with some exceptions as
+specified in this article or in <em>Google Play’s refund
+policies</em>.</p>
+<p>What happens after you cancel</p>
+<p><strong>Important:</strong> If you’ve committed to multiple payments
+for your subscription by purchasing with a payment plan, refer to the
+section below titled “What happens after you stop renewal on a payment
+plan” for information about canceling.</p>
+<p>When you cancel a subscription, you’ll still be able to use your
+subscription for the time you’ve already paid. In some instances, you
+may be eligible for a refund. For more information, learn more about
+refunds on Google Play.</p>
+<p>For example, if you buy a one-year subscription on January 1 for $10
+and decide to cancel your subscription on July 1:</p>
+<ul>
+<li>You’ll have access to the subscription until December 31.</li>
+<li>You won’t be charged another yearly subscription of $10 the
+following January 1.</li>
+</ul>
+<p>What happens after you cancel Play Pass</p>
+<p>Any apps you installed from Play Pass and their data will remain on
+your device.</p>
+<p>For content you obtained via Play Pass:</p>
+<ul>
+<li>Paid apps will prompt you to buy the app or subscribe to Play
+Pass.</li>
+<li>In-app purchases will be removed, but available for individual
+purchase.</li>
+<li>Ads will reappear in apps where they were removed.</li>
+<li>If you join Play Pass again, all this content will be unlocked
+again.</li>
+</ul>
+<p>What happens after you cancel a prepaid plan</p>
+<p>Prepaid plans last for a limited time, so you don’t need to cancel
+them. They automatically expire at the end of the billing period.</p>
+<p>If your prepaid plan hasn’t been used, you can request a refund.
+Learn more about refunds on Google Play.</p>
+<p>To cancel an unused prepaid subscription plan:</p>
+<ol type="1">
+<li>On your computer, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription or prepaid plan you want to cancel.</li>
+<li>Click <strong>Cancel subscription</strong>.</li>
+<li>Follow the on-screen instructions.</li>
+</ol>
+<h6 id="what-happens-after-you-stop-renewal-on-a-payment-plan">What
+happens after you stop renewal on a payment plan</h6>
+<p>Once your payment method is charged for a payment plan, you can’t
+cancel any remaining payments for that payment plan. However, you can
+choose to stop your payment plan from auto-renewing. This means you
+won’t be charged on your next subscription renewal date (which you can
+view in <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or on your email receipt), and you can continue to
+access your content until then. If you choose to stop your payment plan
+from renewing, you’ll still be responsible for any remaining payments on
+your current payment plan. Google Play will not issue refunds except as
+otherwise provided in Google Play’s Refund Policy.</p>
+<p>See Subscribe to services or content for more information.</p>
+<h6 id="manage-your-subscriptions-on-google-play">Manage your
+subscriptions on Google Play</h6>
+<p>Restart or resubscribe to a cancelled subscription</p>
+<p><strong>Important</strong>: Some subscriptions may not be available
+to resubscribe. In this case, set up your subscription again.</p>
+<ol type="1">
+<li>On your computer, go to<a href="https://play.google.com/">link</a><a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>For the subscription you want to restart, click
+<strong>Resubscribe</strong>.</li>
+</ol>
+<p><strong>Tip</strong>: If you can’t find your subscription, it may be
+on a different account. You may try to switch between accounts.</p>
+<p>Get a refund for subscriptions</p>
+<p>For information on subscription refunds, including prepaid plans,
+learn more about refunds on Google Play.</p>
+<p>Refunds for Split Payment purchases</p>
+<p>If you receive a refund for a subscription that was initially
+purchased with Split Payment, the funds return to your Google Play
+balance and the original payment method(s) used. For partial refunds,
+the value returns in a prioritized order. First, to your Google Play
+balance, and then to your primary payment method.</p>
+<p>Pause a subscription</p>
+<p>Some apps let you pause your subscription. When you pause a
+subscription, your subscription pauses at the end of your current
+billing period. Depending on the app and subscription, the available
+pause durations can range from one week to three months.</p>
+<ol type="1">
+<li>On your computer, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription you want to pause.</li>
+<li>Click <strong>Manage</strong> <strong>Pause payments</strong>.</li>
+<li>Select the time period you want to pause payments.</li>
+<li>Click <strong>Confirm</strong>.</li>
+</ol>
+<p><strong>Tip</strong>: If you can’t find your subscription, it may be
+on a different account. You may try to switch between accounts.</p>
+<p>Restart payments for a paused subscription</p>
+<p>You can resume your subscription anytime.</p>
+<ol type="1">
+<li>On your computer, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription you want to start again.</li>
+<li>Click <strong>Manage</strong> <strong>Resume</strong>.
+<ul>
+<li>Your subscription will restart immediately.</li>
+</ul></li>
+</ol>
+<p><strong>Tip</strong>: If you can’t find your subscription, it may be
+on a different account. You may try to switch between accounts.</p>
+<p>Change the payment method for a subscription</p>
+<p>When your subscription renews, the same payment method you used to
+buy the subscription will be charged. An authorization hold may be
+placed on your form of payment up to 48 hours prior to the beginning of
+the next renewal period, or up to 5 days before the next renewal period
+if you’re based in India or Brazil.</p>
+<ol type="1">
+<li>On your computer, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Next to the subscription you want to update, click
+<strong>Manage</strong>.</li>
+<li>Next to the primary payment method, click
+<strong>Update</strong>.</li>
+</ol>
+<p><strong>Important:</strong> If your payment method is declined or has
+insufficient funds, your subscription may be cancelled. If this happens,
+set up your subscription again.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>The Split Payment option, which allows you to combine your Google
+Play balance with another payment method, applies only to the initial
+subscription sign up charge or an upgrade charge.</li>
+<li>If you don’t use Split Payment at sign up, the full amount of all
+subsequent renewals of your subscription is charged entirely to the
+primary payment method or any backups you’ve configured.</li>
+<li>Your email receipt for the initial subscription sign up or upgrade
+charge lists both payment methods used and reminds you that future
+renewals will use your primary payment method.</li>
+</ul>
+<p>Change between subscriptions &amp; prepaid plans</p>
+<p>If the app developers allow, you can switch from a prepaid plan to a
+recurring subscription or from a recurring subscription to a prepaid
+plan.</p>
+<p>When you switch, payments are processed immediately. Any days left on
+active subscriptions or plans are added to the new subscription.</p>
+<p><strong>Tip:</strong> You can check if you subscription is recurring
+or a prepaid plan when you <a
+href="https://play.google.com/store/account/subscriptions">sign in to
+Subscriptions</a>.</p>
+<p>To change a prepaid subscription plan:</p>
+<ol type="1">
+<li>Go to <a href="https://play.google.com">play.google.com</a>.</li>
+<li>Check if you’re signed in to the correct Google Account.</li>
+<li>Select the app that offers to upgrade from a prepaid plan to a
+subscription or downgrade from a subscription to a prepaid plan.</li>
+<li>Click <strong>Manage</strong>.</li>
+<li>Select the plan you want to change to.</li>
+<li>When a confirmation pop-up appears, click <strong>Yes</strong>.</li>
+</ol>
+<p>Change between subscription plans or billing cycles</p>
+<p>If the app developer allows, you may change between different types
+of subscription plans or billing periods such as:</p>
+<ul>
+<li>Weekly</li>
+<li>Monthly</li>
+<li>Yearly</li>
+</ul>
+<p>To change your subscription:</p>
+<ol type="1">
+<li>Open the app.</li>
+<li>Select a new plan.</li>
+<li>Based on the subscription, you may have to pay the full price or the
+price difference of the new plan.</li>
+</ol>
+<p>To learn about alternative subscription plans and how the remainder
+of your current plan is credited after you switch plans, contact an
+Android app’s developer.</p>
+<h6 id="related-resources">Related resources</h6>
+<ul>
+<li>Subscribe to services or content</li>
+<li>Subscribe with Google</li>
+<li>Fix problems with subscriptions</li>
+</ul>
+<p>Computer Android</p>
+<p>More</p>
+<h4 id="android-5">Android</h4>
+<p>Subscriptions on Google Play are for an indefinite term, and you’ll
+be charged at the beginning of each billing cycle according to your
+subscription terms (for example, weekly, annually, or another period),
+unless you unsubscribe.</p>
+<p>Make sure to sign in to the Google Account that has your
+subscriptions.</p>
+<h6 id="cancel-a-subscription-1">Cancel a subscription</h6>
+<p>You can use our self-help flow to cancel a subscription.</p>
+<p>Cancel a subscription</p>
+<h6 id="cancel-a-subscription-on-the-google-play-app">Cancel a
+subscription on the Google Play app</h6>
+<p>For this same video with audio descriptions: <a
+href="https://youtu.be/3ClJD6Y32XE">Cancel, pause, or change a
+subscription</a>.</p>
+<p><strong>Important:</strong> When you uninstall the app, your
+subscription won’t cancel.</p>
+<ol type="1">
+<li>On your Android device, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+in Google Play</a>.</li>
+<li>Select the subscription you want to cancel.</li>
+<li>Tap <strong>Cancel subscription</strong>.</li>
+<li>Follow the instructions.</li>
+</ol>
+<p><strong>Tip:</strong> If you have a subscription with an app and the
+app gets removed from Google Play, your future subscription will be
+canceled. Your past subscriptions can’t be refunded, with some
+exceptions as specified in this article or in Google Play’s refund
+policies.</p>
+<p>What happens after you cancel</p>
+<p><strong>Important:</strong> If you’ve committed to multiple payments
+for your subscription by purchasing with a payment plan, refer to the
+section below titled “What happens after you stop renewal on a payment
+plan” for information about canceling.</p>
+<p>When you cancel a subscription you’ll still be able to use your
+subscription for the time you’ve already paid.</p>
+<p>For example, if you buy a one-year subscription on January 1 for $10
+and decide to cancel your subscription on July 1:</p>
+<ul>
+<li>You’ll have access to the subscription until December 31.</li>
+<li>You won’t be charged another yearly subscription of $10 the
+following January 1.</li>
+</ul>
+<p>What happens after you cancel Play Pass</p>
+<p>Any apps you installed from Play Pass and their data will remain on
+your device.</p>
+<p>For content you obtained via Play Pass:</p>
+<ul>
+<li>Paid apps will prompt you to buy the app or subscribe to Play
+Pass.</li>
+<li>In-app purchases will be removed, but available for individual
+purchase.</li>
+<li>Ads will reappear in apps where they were removed.</li>
+<li>If you join Play Pass again, all this content will be unlocked
+again.</li>
+</ul>
+<p>What happens after you cancel a prepaid plan</p>
+<p>Prepaid plans last for a limited time, so you don’t need to cancel
+them. They automatically expire at the end of the billing period.</p>
+<p>If your prepaid plan hasn’t been used, you can request a refund for
+it. Learn more about refunds on Google Play.</p>
+<p>To cancel an unused prepaid subscription plan:</p>
+<ol type="1">
+<li>On your Android device, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription or prepaid plan you want to cancel.</li>
+<li>Tap <strong>Cancel subscription</strong>.</li>
+<li>Follow the on-screen instructions.</li>
+</ol>
+<h6 id="what-happens-after-you-stop-renewal-on-a-payment-plan-1">What
+happens after you stop renewal on a payment plan</h6>
+<p>Once your payment method is charged for a payment plan, you can’t
+cancel any remaining payments for that payment plan. However, you can
+choose to stop your payment plan from auto-renewing. This means you
+won’t be charged on your next subscription renewal date (which you can
+view in <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or on your email receipt), and you can continue to
+access your content until then. If you choose to stop your payment plan
+from renewing, you’ll still be responsible for any remaining payments on
+your current payment plan. Google Play will not issue refunds except as
+otherwise provided in Google Play’s Refund Policy.</p>
+<p>See Subscribe to services or content for more information.</p>
+<h6 id="manage-your-subscriptions-on-google-play-1">Manage your
+subscriptions on Google Play</h6>
+<p>Restart or resubscribe to a cancelled subscription</p>
+<p><strong>Important</strong>: Some subscriptions may not be available
+to resubscribe. In this case, set up your subscription again.</p>
+<ol type="1">
+<li>On your Android device, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>For the subscription you want to restart, tap
+<strong>Resubscribe</strong>.</li>
+</ol>
+<p><strong>Tip</strong>: If you can’t find your subscription, it may be
+on a different account. You may try to switch between accounts.</p>
+<p>Get a refund on subscriptions</p>
+<p>For information on subscription refunds, including prepaid plans,
+learn more about refunds on Google Play.</p>
+<p>Refunds for Split Payment purchases</p>
+<p>If you receive a refund for a subscription that was initially
+purchased with Split Payment, the funds return to your Google Play
+balance and the original payment method(s) used. For partial refunds,
+the value returns in a prioritized order. First, to your Google Play
+balance, and then to your primary payment method.</p>
+<p>Pause a subscription</p>
+<p>Some apps let you pause your subscription. When you pause a
+subscription, your subscription pauses at the end of your current
+billing period. Depending on the app and subscription, the available
+pause durations can range from one week to three months.</p>
+<ol type="1">
+<li>On your Android device, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription you want to pause.</li>
+<li>Tap <strong>Manage</strong> <strong>Pause payments</strong>.</li>
+<li>Set the time period to pause payments.</li>
+<li>Tap <strong>Confirm</strong>.</li>
+</ol>
+<p>Restart payments for a paused subscription</p>
+<p>You can resume your subscription anytime.</p>
+<ol type="1">
+<li>On your Android device, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription you want to restart.</li>
+<li>Tap <strong>Resume</strong>.</li>
+<li>Follow the on screen instructions.</li>
+</ol>
+<p>Change the payment method for a subscription</p>
+<p>When your subscription renews, the same payment method you used to
+buy the subscription will be charged. An authorization hold may be
+placed on your form of payment up to 48 hours prior to the beginning of
+the next renewal period, or up to 5 days before the next renewal period
+if you’re based in India or Brazil.</p>
+<ol type="1">
+<li>On your Android device, go to <a
+href="https://play.google.com/store/account/subscriptions">subscriptions
+on Google Play</a>.</li>
+<li>Select the subscription you want to update.</li>
+<li>Tap <strong>Manage</strong> <strong>Update</strong>.</li>
+<li>To update your payment method, follow the on screen
+instructions.</li>
+</ol>
+<p>If your payment method is declined or has insufficient funds, your
+subscription may be cancelled. Add a backup payment method or set up
+your subscription again.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>The Split Payment option, which allows you to combine your Google
+Play balance with another payment method, applies only to the initial
+subscription sign up charge or an upgrade charge.</li>
+<li>If you don’t use Split Payment at sign up, the full amount of all
+subsequent renewals of your subscription is charged entirely to the
+primary payment method or any backups you’ve configured.</li>
+<li>Your email receipt for the initial subscription sign up or upgrade
+charge lists both payment methods used and reminds you that future
+renewals will use your primary payment method.</li>
+</ul>
+<p>Change between subscriptions &amp; prepaid plans</p>
+<p>If the app developers allow, you can switch from a prepaid plan to a
+recurring subscription or from a recurring subscription to a prepaid
+plan.</p>
+<p>When you switch, payments are processed immediately. Any days left on
+active subscriptions or plans are added on to the new subscription.</p>
+<p><strong>Tip:</strong> You can check if your subscription is recurring
+or a prepaid plan when you <a
+href="https://pay.google.com/#subscriptionsAndServices">sign in to
+Subscriptions</a>.</p>
+<p>To change a prepaid subscription plan if allowed by developers:</p>
+<ol type="1">
+<li>Open the Google Play app .</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open the app that offers to upgrade from a prepaid plan to
+a subscription or downgrade from a subscription to a prepaid plan.</li>
+<li>Tap <strong>Manage subscription</strong>.</li>
+<li>Select the new plan you want to change to.</li>
+<li>Select a supported payment method.</li>
+<li>Tap <strong>Buy</strong> or <strong>Subscribe</strong>.</li>
+</ol>
+<p>Change between subscription plans or billing cycles</p>
+<p>If the app developer allows, you may change between different types
+of subscription plans or billing periods such as:</p>
+<ul>
+<li>Weekly</li>
+<li>Monthly</li>
+<li>Yearly</li>
+</ul>
+<p>To change your subscription:</p>
+<ol type="1">
+<li>Open the app.</li>
+<li>Select a new plan.</li>
+<li>Based on subscription, you may have to pay the full price or the
+price difference of the new plan.</li>
+</ol>
+<p>To learn about alternative subscription plans and how the remainder
+of your current plan is credited after you switch plans, contact an
+Android app’s developer.</p>
+<h6 id="related-resources-1">Related resources</h6>
+<ul>
+<li>Subscribe to services or content</li>
+<li>Subscribe with Google</li>
+<li>Fix problems with subscriptions</li>
+</ul>
+<p>Android Computer</p>
+<p>More</p>
+<h3 id="get-a-digital-subscription-for-newspapers">Get a digital
+subscription for newspapers</h3>
+<h4 id="on-a-computer-4">On a computer</h4>
+<p>If you already subscribe to the print version of a publication, you
+could be eligible for a digital subscription at no charge on Google
+News. Some publishers offer digital subscriptions to existing
+subscribers.</p>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<ol type="1">
+<li>On your computer, go to <a href="https://news.google.com">Google
+News</a>.</li>
+<li>Search for the newspaper and visit its detail page.</li>
+<li>Click <strong>Subscribe</strong>.</li>
+</ol>
+<h6 id="fix-issues-with-subscription-verifications">Fix issues with
+subscription verifications</h6>
+<p>When you verify your subscription, make sure that you:</p>
+<ul>
+<li>Have an active, existing subscription to the source.</li>
+<li>Enter your account information correctly.​
+<ul>
+<li><strong>Tip:</strong> If you need to give your mailing address,
+enter your name and address exactly as they show on your print
+subscription.</li>
+</ul></li>
+</ul>
+<p>Help with error messages</p>
+<h6 id="invalid-e-mail-or-password.-please-try-again.">“Invalid e-mail
+or password. Please try again.”</h6>
+<p>Make sure to type the email address and password that you use to sign
+in to your online account. If you haven’t made an online account, first
+click <strong>Set up your account</strong>.</p>
+<h6
+id="the-subscription-info-provided-did-not-verify.-please-try-again.">“The
+subscription info provided did not verify. Please try again.”</h6>
+<p>This message usually shows when part of your verification information
+isn’t the same as what the publisher has for your account. Make sure to
+give your account number, name, and address as they show on your print
+subscription. For help with your account information, contact the
+publisher’s support team.</p>
+<h6
+id="we-were-unable-to-verify-that-you-have-an-active-subscription-to-this-publication.">“We
+were unable to verify that you have an active subscription to this
+publication.”</h6>
+<p>To verify that you have an active subscription and your account
+information is correct, contact the publisher’s support team.</p>
+<p>Some Google Play products and features aren’t available in all
+countries. See what’s available in your country.</p>
+<h6 id="get-help-with-a-subscription">Get help with a subscription</h6>
+<p>To get more help with a paid subscription or other Google News
+purchases, you can contact us.</p>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-6">Android</h4>
+<p>If you already subscribe to the print version of a publication, you
+could be eligible for a digital subscription at no charge on Google
+News. Some publishers offer digital subscriptions to existing
+subscribers.</p>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>To find out if your existing print subscription offers a digital
+version at no charge:</p>
+<ol type="1">
+<li>On your Android phone or tablet, open your Google News app .</li>
+<li>Open an article from your subscribed source.</li>
+<li>Select <strong>Already a subscriber? Activate your
+account</strong>.</li>
+<li>If the source offers a subscription option on the Google News app,
+you’ll find subscription options.
+<ul>
+<li>To verify your subscription, sign in.</li>
+<li>Your digital subscription expires when your original print
+subscription ends.</li>
+</ul></li>
+</ol>
+<h6 id="fix-issues-with-subscription-verifications-1">Fix issues with
+subscription verifications</h6>
+<p>When you verify your subscription, make sure that you:</p>
+<ul>
+<li>Have an active, existing subscription to the source.</li>
+<li>Enter your account information correctly.​
+<ul>
+<li><strong>Tip:</strong> If you need to give your mailing address,
+enter your name and address exactly as they show on your print
+subscription.</li>
+</ul></li>
+</ul>
+<p>Help with error messages</p>
+<h6 id="invalid-e-mail-or-password.-please-try-again.-1">“Invalid e-mail
+or password. Please try again.”</h6>
+<p>Make sure to type the email address and password that you use to sign
+in to your online account. If you haven’t made an online account, first
+click <strong>Set up your account</strong>.</p>
+<h6
+id="the-subscription-info-provided-did-not-verify.-please-try-again.-1">“The
+subscription info provided did not verify. Please try again.”</h6>
+<p>This message usually shows when part of your verification information
+isn’t the same as what the publisher has for your account. Make sure to
+give your account number, name, and address as they show on your print
+subscription. For help with your account information, contact the
+publisher’s support team.</p>
+<h6
+id="we-were-unable-to-verify-that-you-have-an-active-subscription-to-this-publication.-1">“We
+were unable to verify that you have an active subscription to this
+publication.”</h6>
+<p>To verify that you have an active subscription and your account
+information is correct, contact the publisher’s support team.</p>
+<p>Some Google Play products and features aren’t available in all
+countries. See what’s available in your country.</p>
+<h6 id="get-help-with-a-subscription-1">Get help with a
+subscription</h6>
+<p>To get more help with a paid subscription or other Google News
+purchases, you can contact us.</p>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-5">iPhone &amp; iPad</h4>
+<p>If you already subscribe to the print version of a publication, you
+could be eligible for a digital subscription at no charge on Google
+News. Some publishers offer digital subscriptions to existing
+subscribers.</p>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>To find out if your existing print subscription offers a digital
+version at no charge:</p>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>Open an article from your subscribed source.</li>
+<li>Select <strong>Verify subscriptions</strong>.</li>
+</ol>
+<h6 id="fix-issues-with-subscription-verifications-2">Fix issues with
+subscription verifications</h6>
+<p>When you verify your subscription, make sure that you:</p>
+<ul>
+<li>Have an active, existing subscription to the source.</li>
+<li>Enter your account information correctly.​
+<ul>
+<li><strong>Tip:</strong> If you need to give your mailing address,
+enter your name and address exactly as they show on your print
+subscription.</li>
+</ul></li>
+</ul>
+<p>Help with error messages</p>
+<h6 id="invalid-e-mail-or-password.-please-try-again.-2">“Invalid e-mail
+or password. Please try again.”</h6>
+<p>Make sure to type the email address and password that you use to sign
+in to your online account. If you haven’t made an online account, first
+click <strong>Set up your account</strong>.</p>
+<h6
+id="the-subscription-info-provided-did-not-verify.-please-try-again.-2">“The
+subscription info provided did not verify. Please try again.”</h6>
+<p>This message usually shows when part of your verification information
+isn’t the same as what the publisher has for your account. Make sure to
+give your account number, name, and address as they show on your print
+subscription. For help with your account information, contact the
+publisher’s support team.</p>
+<h6
+id="we-were-unable-to-verify-that-you-have-an-active-subscription-to-this-publication.-2">“We
+were unable to verify that you have an active subscription to this
+publication.”</h6>
+<p>To verify that you have an active subscription and your account
+information is correct, contact the publisher’s support team.</p>
+<p>Some Google Play products and features aren’t available in all
+countries. See what’s available in your country.</p>
+<h6 id="get-help-with-a-subscription-2">Get help with a
+subscription</h6>
+<p>To get more help with a paid subscription or other Google News
+purchases, you can contact us.</p>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h3 id="subscribe-to-services-or-content">Subscribe to services or
+content</h3>
+<h4 id="on-a-computer-5">On a computer</h4>
+<p>You can subscribe for paid premium services and features on certain
+apps with Google Play.</p>
+<p><strong>When you subscribe:</strong></p>
+<ul>
+<li>The subscription is for an indefinite term, and you’ll be charged at
+the start of each billing period, according to your subscription terms,
+for example, weekly, annually, or another period.</li>
+<li>If you accept a trial offer, you’ll get an email when your trial is
+about to end.
+<ul>
+<li>At the end of your trial period, the first billing period begins and
+you automatically get charged the amount in your subscriptions
+terms.</li>
+<li>To avoid charges, cancel the subscription before the trial period
+expires.</li>
+</ul></li>
+<li>An authorization hold may be placed on your form of payment up to 48
+hours prior to the beginning of the next renewal period, or up to 5 days
+before the next renewal period if you’re based in India or Brazil. To
+remove the payment authorization, cancel the subscription before your
+next billing cycle begins.</li>
+<li>You can cancel your subscription at any time in <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a>. When you cancel, you’ll lose access to the
+subscription at the end of your current billing period, unless you
+purchased your subscription with a payment plan. Refer to “Stop
+auto-renewal of a payment plan” below to understand how cancellation
+works for payment plans.</li>
+<li></li>
+<li>For certain jurisdictions, you have these options:
+<ul>
+<li>Cancel your subscription with immediate effect and lose access.</li>
+<li>Cancel the subscription at the end of the current billing cycle.
+Learn how to cancel your subscription.</li>
+</ul></li>
+<li>You can also add a second payment method to your Google Play account
+to help prevent interruptions to your subscription service in case your
+primary payment method expires or fails. Learn how to add a backup
+payment method.</li>
+<li>If your payment is unsuccessful, you may have a grace period to
+update your payment method. During the grace period, you may still be
+able to use your subscription. When the grace period ends, or if there’s
+no grace period, your account may be placed on hold for up to 60 days
+during which you can’t use the subscription. During any grace period and
+account hold period, Play will periodically retry the payment. If the
+payment issue isn’t resolved before any grace period and account hold
+period ends, the subscription is automatically canceled.</li>
+<li>Some apps and games are restricted based on the content rating
+because they target only users who are 18 and above or because app
+developers have chosen not to make them available to users under 18.
+This means app visibility and purchases, including subscription
+sign-ups, are limited to users who meet the age criteria. Developers may
+change their age criteria at any time and subscriptions are subject to
+cancellation if your account or developer settings change and no longer
+fit the criteria.
+<ul>
+<li>Learn more about Apps &amp; Games content ratings on Google Play and
+how to set up parental controls on Google Play.</li>
+</ul></li>
+<li>Google may share subscription data that doesn’t personally identify
+you with developers to help them offer subscriptions.</li>
+<li>Promotional discounts tied to a subscription will be lost on
+subscription cancellation.</li>
+</ul>
+<p><strong>Tip:</strong> If you use a Chromebook and have the Google
+Play Store installed, tap Android.</p>
+<h6 id="subscribe-to-services-content-on-apps">Subscribe to services
+&amp; content on apps</h6>
+<ol type="1">
+<li>Go to <a href="https://play.google.com">play.google.com</a>.</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open the app that offers premium services for a fee.</li>
+<li>Click <strong>Subscribe.</strong></li>
+<li>Choose your subscription option and review your subscription and
+plan details.</li>
+<li>Select a payment method.</li>
+<li>Click <strong>Subscribe.</strong></li>
+</ol>
+<p><strong>Tip:</strong> To cancel a trial subscription, cancel your
+subscription before the trial period ends.</p>
+<h6 id="subscribe-to-an-app-with-a-promo-code">Subscribe to an app with
+a promo code</h6>
+<p>There are 2 types of promo codes.</p>
+<p>If your code uses words &amp; numbers, like HAPPYHOLIDAYS2020</p>
+<ol type="1">
+<li><p>Go to <a
+href="https://play.google.com/">play.google.com</a>.</p></li>
+<li><p>Find the subscription your code applies to.</p></li>
+<li><p>Go through the checkout process until you reach the payment
+method listed.</p>
+<ul>
+<li><strong>If you don’t have a payment method:</strong> add one.</li>
+</ul></li>
+<li><p>Next to the payment method, click the Right arrow .</p></li>
+<li><p>Click <strong>Redeem code</strong>.</p></li>
+<li><p>Enter your code, then follow the on-screen instructions.</p></li>
+<li><p>Confirm that your purchase uses the promotion.</p></li>
+<li><p>Click <strong>Subscribe</strong>.</p></li>
+<li><p>Go to <a
+href="https://play.google.com/">play.google.com</a>.</p></li>
+<li><p>At the top right, click the <strong>profile
+icon</strong>.</p></li>
+<li><p>Click <strong>Payments &amp; subscriptions</strong>
+<strong>Redeem</strong>.</p></li>
+<li><p>Enter the code.</p></li>
+<li><p>Click <strong>Redeem</strong>.</p></li>
+<li><p>On your Android device, download and install the app for your
+subscription.</p></li>
+<li><p>In the app, find the type of subscription that your code applies
+to.</p></li>
+<li><p>To confirm that your purchase uses the promo code, check your
+cart.</p></li>
+<li><p>Follow the in-app steps.</p></li>
+<li><p>To complete your subscription, open the app.</p></li>
+</ol>
+<p>If you can’t redeem or subscribe with your promo code, learn how to
+fix problems with codes.</p>
+<h6 id="pay-with-split-payment-for-subscriptions">Pay with Split Payment
+for subscriptions</h6>
+<p>What is Split Payment for subscriptions?</p>
+<p>When you initially subscribe to services or content or upgrade your
+subscription tier on Google Play, “Split Payment” allows you to combine
+your current Google Play balance with another payment method like a
+credit card or PayPal to cover the cost of your initial subscription
+sign up or upgrade payment. This allows you to use any remaining Google
+Play balance towards your purchase.</p>
+<p>Applying your Google Play balance</p>
+<p>If the cost of your initial subscription sign up or upgrade payment
+is greater than your available Google Play balance, your current Google
+Play balance will be applied by default to the initial payment. The
+remaining amount due will be charged to another payment method of your
+choice.</p>
+<p>Payment combinations</p>
+<p>You can combine your Google Play balance with any other accepted
+payment method. However, it isn’t possible to split a payment between
+two non-Google Play balance payment methods. You can’t choose to apply
+only a portion of your Google Play balance. You must apply the entire
+remaining balance.</p>
+<p>Initial payment vs. renewals</p>
+<p>The Split Payment option applies only to the initial subscription
+sign up or upgrade payment. For all subsequent subscription renewal
+payments, only your primary payment method and any backups you’ve
+configured will be charged without using the split payment method
+again.</p>
+<p>How to use Split Payment</p>
+<ol type="1">
+<li>Go to <a href="https://play.google.com/">play.google.com</a>.</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open an app that you want to subscribe to.</li>
+<li>Click <strong>Subscribe</strong>.</li>
+<li>Choose your subscription option.</li>
+<li>Review your subscription and plan details.</li>
+<li>If you have an available Google Play balance, your Google Play
+balance should automatically show up as one of the two payment methods
+in your purchase cart.</li>
+<li>If your available Google Play balance doesn’t show and you’d like to
+use Split Payment:
+<ol type="1">
+<li>To open the Payment Methods selection screen, click on the displayed
+payment method.</li>
+<li>Toggle on <strong>Google Play balance</strong>.</li>
+<li>If you don’t wish to use your Google Play balance, toggle it
+off.</li>
+</ol></li>
+<li>To complete checkout, click <strong>Subscribe</strong>.</li>
+</ol>
+<p>When you can’t use Split Payment</p>
+<p>Split Payment isn’t available for subscriptions that include a trial
+at no cost or other discount or promotion, or for prepaid subscription
+plans.</p>
+<h6 id="subscribe-with-a-season-pass">Subscribe with a season pass</h6>
+<p>A season pass is a recurring or non-recurring subscription that
+grants you access to a season of content. If you purchase a recurring
+season pass, it’ll automatically renew at the start of the next season,
+on the date set by the developer. Some season passes may be purchased
+with a payment plan.</p>
+<p>You can cancel a season pass anytime. When you cancel your season
+pass, you’ll lose access to the subscription at the end of the current
+billing period or, if you purchased your subscription with a monthly
+payment plan, at the end of your payment plan. See section titled “Stop
+auto-renewal of a payment plan” below for more information on
+cancellation behavior for season passes on payment plans.</p>
+<p>For more details on your season pass, visit <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or contact the app developer.</p>
+<h6 id="subscribe-with-a-payment-plan">Subscribe with a payment
+plan</h6>
+<p>When you subscribe to content using a payment plan, you commit to
+multiple payments over a specified period of time. If you purchase a
+recurring payment plan, it’ll automatically renew on your renewal date.
+You also have the flexibility to prepay your full outstanding amount
+anytime.</p>
+<p>For information on payment plan availability, go to Location
+eligibility for subscription payment plans. If you are on a payment
+plan, visit <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or review your email receipt for information about
+your plan. Payment Plans are subject to the <a
+href="https://play.google.com/about/payment-plan-terms">Google Play
+Payment Plan Terms of Service</a>.</p>
+<h6 id="stop-auto-renewal-of-a-payment-plan">Stop auto-renewal of a
+payment plan</h6>
+<p>Once your payment method is charged for a payment plan, you can’t
+cancel any remaining payments for that payment plan. However, you can
+choose to stop your payment plan from auto-renewing. This means you
+won’t be charged on your next subscription renewal date which you can
+view in <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or on your email receipt, and you can continue to
+access your content until then. If you choose to stop your payment plan
+from renewing, you’ll still be responsible for any remaining payments on
+your current payment plan. Google Play will not issue refunds except as
+otherwise provided in Google Play’s Refund Policy.</p>
+<h6 id="subscribe-with-a-prepaid-plan">Subscribe with a prepaid
+plan</h6>
+<p>Prepaid plans are subscriptions for a fixed duration of time offered
+by some apps, and they don’t automatically renew. If your payment method
+doesn’t support recurring subscriptions, a prepaid plan might be a good
+option for you.</p>
+<p>Unlike regular subscriptions, prepaid plans are used to purchase
+access to subscriptions for a set amount of time. When the term ends,
+you lose access to the subscription.</p>
+<p>If you want to continue your access to the subscription after the
+prepaid period ends, you can:</p>
+<ul>
+<li>Extend the prepaid plan.</li>
+<li>Switch the plan to a recurring subscription.</li>
+</ul>
+<p>Not all apps have a prepaid plan option available. Prepaid plans
+don’t support trials at no cost.</p>
+<ol type="1">
+<li>Go to <a href="https://play.google.com/">play.google.com</a>.</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open an app that offers prepaid plans for a fee.</li>
+<li>Click <strong>Subscribe</strong>.</li>
+<li>Choose the prepaid plan you want to purchase.</li>
+<li>Select a supported payment method.</li>
+<li>Click <strong>Buy</strong>.</li>
+</ol>
+<h6 id="automatic-balance-based-purchases">Automatic, balance-based
+purchases</h6>
+<p>As an alternative to making individual purchases of an item, some
+developers may offer a plan that automatically purchases the item based
+on your usage. You can cancel these automatic purchase plans at any time
+in <a
+href="https://play.google.com/store/account/subscriptions?pli=1">Subscriptions
+on Google Play</a>. Learn more about automatic, balance-based
+purchases.</p>
+<h6 id="start-a-subscription-from-a-website">Start a subscription from a
+website</h6>
+<ol type="1">
+<li>On the website that offers a subscription, select <strong>Subscribe
+with your Google Account</strong> or <strong>Subscribe with
+Google.</strong></li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Select a subscription offer, like yearly or monthly. This may depend
+on the types of subscription the website offers.</li>
+<li>Confirm your payment method and billing address.</li>
+</ol>
+<p>Learn how to add an existing subscription to your Google Account.</p>
+<p>Computer Android</p>
+<p>More</p>
+<h4 id="android-7">Android</h4>
+<p>You can subscribe for paid premium services and features on certain
+apps with Google Play.</p>
+<p><strong>When you subscribe:</strong></p>
+<ul>
+<li>The subscription is for an indefinite term, and you’ll be charged at
+the start of each billing period, according to your subscription terms,
+for example, weekly, annually, or another period.</li>
+<li>If you accept a trial offer, you’ll get an email when your trial is
+about to end.
+<ul>
+<li>At the end of your trial period, the first billing period begins and
+you automatically get charged the amount in your subscriptions
+terms.</li>
+<li>To avoid charges, cancel the subscription before the trial period
+expires.</li>
+</ul></li>
+<li>An authorization hold may be placed on your form of payment up to 48
+hours prior to the beginning of the next renewal period, or up to 5 days
+before the next renewal period if you’re based in India or Brazil. To
+remove the payment authorization, cancel the subscription before your
+next billing cycle begins.</li>
+<li>You can cancel your subscription at any time in <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a>. When you cancel, you’ll lose access to the
+subscription at the end of your current billing period, unless you
+purchased your subscription with a payment plan. Refer to “Stop
+auto-renewal of a payment plan” below to understand how cancellation
+works for payment plans.</li>
+<li></li>
+<li>For certain jurisdictions, you have these options:
+<ul>
+<li>Cancel your subscription with immediate effect and lose access.</li>
+<li>Cancel the subscription at the end of the current billing cycle.
+Learn how to cancel your subscription.</li>
+</ul></li>
+<li>You can also add a second payment method to your Google Play account
+to help prevent interruptions to your subscription service in case your
+primary payment method expires or fails. Learn how to add a backup
+payment method.</li>
+<li>If your payment is unsuccessful, you may have a grace period to
+update your payment method. During the grace period, you may still be
+able to use your subscription. When the grace period ends, or if there’s
+no grace period, your account may be placed on hold for up to 60 days
+during which you can’t use the subscription. During any grace period and
+account hold period, Play will periodically retry the payment. If the
+payment issue isn’t resolved before any grace period and account hold
+period ends, the subscription is automatically canceled.</li>
+<li>Some apps and games are restricted based on the content rating
+because they target only users who are 18 and above or because app
+developers have chosen not to make them available to users under 18.
+This means app visibility and purchases, including subscription
+sign-ups, are limited to users who meet the age criteria. Developers may
+change their age criteria at any time and subscriptions are subject to
+cancellation if your account or developer settings change and no longer
+fit the criteria.
+<ul>
+<li>Learn more about Apps &amp; Games content ratings on Google Play and
+how to set up parental controls on Google Play.</li>
+</ul></li>
+<li>Google may share subscription data that doesn’t personally identify
+you with developers to help them offer subscriptions.</li>
+<li>Promotional discounts tied to a subscription will be lost on
+subscription cancellation.</li>
+</ul>
+<p><strong>Tip:</strong> If you use a Chromebook and have the Google
+Play Store installed, tap Android.</p>
+<h6 id="subscribe-to-services-content-on-apps-1">Subscribe to services
+&amp; content on apps</h6>
+<ol type="1">
+<li>On your Android phone or tablet, open your Google Play Store app
+.</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open the app that offers premium services for a fee.</li>
+<li>Tap <strong>Subscribe.</strong></li>
+<li>Choose your subscription option and review your subscription and
+plan details.</li>
+<li>Select a payment method.</li>
+<li>Tap <strong>Subscribe.</strong></li>
+</ol>
+<p><strong>Tip:</strong> To cancel a trial subscription and avoid
+charges, cancel your subscription before the trial period ends.</p>
+<h6 id="subscribe-to-an-app-with-a-promo-code-1">Subscribe to an app
+with a promo code</h6>
+<p>There are 2 types of promo codes.</p>
+<p>If your code uses words &amp; numbers, like HAPPYHOLIDAYS2020</p>
+<ol type="1">
+<li><p>On your Android phone or tablet, download and install the
+app.</p></li>
+<li><p>In the app for your subscription, find the subscription your code
+applies to.</p></li>
+<li><p>Go through the checkout process until you reach the payment
+method listed.</p>
+<ul>
+<li><strong>If you don’t have a payment method:</strong> add one.</li>
+</ul></li>
+<li><p>Next to the payment method, tap the Right arrow .</p></li>
+<li><p>Tap <strong>Redeem code</strong>.</p></li>
+<li><p>Enter your code, then follow the on-screen instructions.</p></li>
+<li><p>Confirm that your purchase uses the promotion.</p></li>
+<li><p>Tap <strong>Subscribe</strong>.</p></li>
+<li><p>Open the Google Play app .</p></li>
+<li><p>At the top right, tap the <strong>profile icon</strong>.</p></li>
+<li><p>Tap <strong>Payments &amp; subscriptions</strong> <strong>Redeem
+code</strong>.</p></li>
+<li><p>Enter the code</p></li>
+<li><p>Tap <strong>Redeem</strong>.</p></li>
+<li><p>Download and install the app for your subscription.</p></li>
+<li><p>In the app, find the type of subscription that your code applies
+to.</p></li>
+<li><p>To confirm that your purchase uses the promo code, check your
+cart.</p></li>
+<li><p>Follow the in-app steps.</p></li>
+<li><p>To complete your subscription, open the app.</p></li>
+</ol>
+<p>If you can’t redeem or subscribe with your promo code, learn how to
+fix problems with codes.</p>
+<h6 id="pay-with-split-payment-for-subscriptions-1">Pay with Split
+Payment for subscriptions</h6>
+<p>What is Split Payment for subscriptions?</p>
+<p>When you initially subscribe to services or content or upgrade your
+subscription tier on Google Play, “Split Payment” allows you to combine
+your current Google Play balance with another payment method like a
+credit card or PayPal to cover the cost of your initial subscription
+sign up or upgrade payment. This allows you to use any remaining Google
+Play balance towards your purchase.</p>
+<p>Applying your Google Play balance</p>
+<p>If the cost of your initial subscription sign up or upgrade payment
+is greater than your available Google Play balance, your current Google
+Play balance will be applied by default to the initial payment. The
+remaining amount due will be charged to another payment method of your
+choice.</p>
+<p>Payment combinations</p>
+<p>You can combine your Google Play balance with any other accepted
+payment method. However, it isn’t possible to split a payment between
+two non-Google Play balance payment methods. You can’t choose to apply
+only a portion of your Google Play balance. You must apply the entire
+remaining balance.</p>
+<p>Initial payment vs. renewals</p>
+<p>The Split Payment option applies only to the initial subscription
+sign up or upgrade payment. For all subsequent subscription renewal
+payments, only your primary payment method and any backups you’ve
+configured will be charged without using the split payment method
+again.</p>
+<p>How to use Split Payment</p>
+<ol type="1">
+<li>Go to the Google Play app .</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open an app that you want to subscribe to.</li>
+<li>Tap <strong>Subscribe</strong>.</li>
+<li>Choose your subscription option.</li>
+<li>Review your subscription and plan details.</li>
+<li>If you have an available Google Play balance, your Google Play
+balance should automatically show up as one of the two payment methods
+in your purchase cart.</li>
+<li>If your available Google Play balance doesn’t show and you’d like to
+use Split Payment:
+<ol type="1">
+<li>To open the Payment Methods selection screen, tap on the
+<strong>displayed payment method</strong>.</li>
+<li>Toggle on <strong>Google Play balance</strong>.</li>
+<li>If you don’t wish to use your Google Play balance, toggle it
+off.</li>
+</ol></li>
+<li>To complete checkout, tap <strong>Subscribe</strong>.</li>
+</ol>
+<p>When you can’t use Split Payment</p>
+<p>Split Payment isn’t available for subscriptions that include a trial
+at no cost or other discount or promotion, or for prepaid subscription
+plans.</p>
+<h6 id="subscribe-with-a-season-pass-1">Subscribe with a season
+pass</h6>
+<p>A season pass is a recurring or non-recurring subscription that
+grants you access to a season of content. If you purchase a recurring
+season pass, it’ll automatically renew at the start of the next season,
+on the date set by the developer. Some season passes may be purchased
+with a payment plan.</p>
+<p>You can cancel a season pass anytime. When you cancel your season
+pass, you’ll lose access to the subscription at the end of the current
+billing period or, if you purchased your subscription with a monthly
+payment plan, at the end of your payment plan. See section titled “Stop
+auto-renewal of a payment plan” below for more information on
+cancellation behavior for season passes on payment plans.</p>
+<p>For more details on your season pass, visit <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or contact the app developer.</p>
+<h6 id="subscribe-with-a-payment-plan-1">Subscribe with a payment
+plan</h6>
+<p>When you subscribe to content using a payment plan, you commit to
+multiple payments over a specified period of time. If you purchase a
+recurring payment plan, it’ll automatically renew on your renewal date.
+You also have the flexibility to prepay your full outstanding amount
+anytime.</p>
+<p>For information on payment plan availability, go to Location
+eligibility for subscription payment plans. If you are on a payment
+plan, visit <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or review your email receipt for information about
+your plan. Payment Plans are subject to the <a
+href="https://play.google.com/about/payment-plan-terms">Google Play
+Payment Plan Terms of Service</a>.</p>
+<h6 id="stop-auto-renewal-of-a-payment-plan-1">Stop auto-renewal of a
+payment plan</h6>
+<p>Once your payment method is charged for a payment plan, you can’t
+cancel any remaining payments for that payment plan. However, you can
+choose to stop your payment plan from auto-renewing. This means you
+won’t be charged on your next subscription renewal date which you can
+view in <a
+href="https://play.google.com/store/account/subscriptions">Subscriptions
+on Google Play</a> or on your email receipt, and you can continue to
+access your content until then. If you choose to stop your payment plan
+from renewing, you’ll still be responsible for any remaining payments on
+your current payment plan. Google Play will not issue refunds except as
+otherwise provided in Google Play’s Refund Policy.</p>
+<h6 id="subscribe-with-a-prepaid-plan-1">Subscribe with a prepaid
+plan</h6>
+<p>Prepaid plans are subscriptions for a fixed duration of time offered
+by some apps, and they don’t automatically renew. If your payment method
+doesn’t support recurring subscriptions, a prepaid plan might be a good
+option for you.</p>
+<p>Unlike regular subscriptions, prepaid plans are used to purchase
+access to subscriptions for a set amount of time. When the term ends,
+you lose access to the subscription.</p>
+<p>If you want to continue your access to the subscription after the
+prepaid period ends, you can:</p>
+<ul>
+<li>Extend the prepaid plan.</li>
+<li>Switch the plan to a recurring subscription.</li>
+</ul>
+<p>Not all apps have a prepaid plan option available. Prepaid plans
+don’t support trials at no cost.</p>
+<p>To sign up for a prepaid subscription plan:</p>
+<ol type="1">
+<li>Open the Google Play app .</li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Find and open the app that offers prepaid plans for a fee.</li>
+<li>Tap <strong>Subscribe</strong>.</li>
+<li>Choose the prepaid plan you want to purchase.</li>
+<li>Select a supported payment method.</li>
+<li>Tap <strong>Buy</strong>.</li>
+</ol>
+<h6 id="automatic-balance-based-purchases-1">Automatic, balance-based
+purchases</h6>
+<p>As an alternative to making individual purchases of an item, some
+developers may offer a plan that automatically purchases the item based
+on your usage. You can cancel these automatic purchase plans at any time
+in <a
+href="https://play.google.com/store/account/subscriptions?pli=1">Subscriptions
+on Google Play</a>. Learn more about automatic, balance-based
+purchases.</p>
+<h6 id="start-a-subscription-from-a-website-1">Start a subscription from
+a website</h6>
+<ol type="1">
+<li>On the website that offers a subscription, select <strong>Subscribe
+with your Google Account</strong> or <strong>Subscribe with
+Google.</strong></li>
+<li>Make sure you’re signed in to the correct Google Account.</li>
+<li>Select a subscription offer, like yearly or monthly. This may depend
+on the types of subscription the website offers.</li>
+<li>Confirm your payment method and billing address.</li>
+</ol>
+<p>Learn how to add an existing subscription to your Google Account.</p>
+<p>Android Computer</p>
+<p>More</p>
+<h3 id="subscribe-with-google">Subscribe with Google</h3>
+<p>You can subscribe to online content from select newspapers directly
+from a browser on your mobile device or computer.</p>
+<h5 id="start-a-subscription-with-google">Start a subscription with
+Google</h5>
+<p>If you’re reading content that requires a subscription, select
+<strong>Subscribe with your Google Account</strong> or <strong>Subscribe
+with Google</strong> to start one. You could be asked to choose a
+subscription offer and confirm your payment method and billing
+address.</p>
+<h5 id="add-an-existing-subscription-to-your-google-account">Add an
+existing subscription to your Google Account</h5>
+<p>If you already have a subscription but are asked to subscribe on a
+Google product like Google News, Newsstand, or Search, select
+<strong>Already a subscriber?</strong>. Then, sign in with the email
+address you used to buy it. You could see the option to add your
+subscription to your Google Account, which lets you see your
+subscription content anywhere you’re signed into your Google
+Account.</p>
+<p>You can also add digital versions of your print subscriptions to
+Google Play or the Google News and Newsstand apps.Learn about digital
+subscriptions for print subscribers.</p>
+<p>Learn how to see all your linked subscriptions in <a
+href="https://myaccount.google.com/">My Account</a>. Subscriptions can
+include Google products, outside services, and those in the Play
+Store.</p>
+<p>If you don’t want a subscription to show up in your Google
+Account:</p>
+<ol type="1">
+<li>In your Google Account, go to the <a
+href="https://myaccount.google.com/subscriptions">Subscriptions
+page</a>.</li>
+<li>Select <strong>Unlink</strong>.</li>
+</ol>
+<p>Your subscription won’t be canceled or changed. But you’ll no longer
+see content based on your subscription in Google.</p>
+<h6 id="subscriptions-in-search-results">Subscriptions in search
+results</h6>
+<p>You may see content from your linked subscriptions in your Google
+search results. You can turn this off in Search Settings.</p>
+<h5 id="get-help-with-a-subscription-3">Get help with a
+subscription</h5>
+<p>To get more help with a paid subscription or other Google News
+purchases, you can contact us.</p>
+<h5 id="related-articles">Related articles</h5>
+<ul>
+<li>Add, edit, or remove a payment method</li>
+<li>Subscriptions on Google Play</li>
+<li>Cancel or change a subscription on Google Play</li>
+</ul>
+<h2 id="your-account-and-privacy">Your account and privacy</h2>
+<h3 id="check-or-change-your-google-news-settings">Check or change your
+Google News settings</h3>
+<h4 id="on-a-computer-6">On a computer</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can change your Google News settings, like your:</p>
+<ul>
+<li>Language and region</li>
+<li>Text size</li>
+<li>Color scheme</li>
+<li>Video playback options</li>
+</ul>
+<p>You can change some settings on the web. You can change more settings
+in your Google News app, including notifications.</p>
+<h6 id="change-your-language-region">Change your language &amp;
+region</h6>
+<ol type="1">
+<li><a href="https://news.google.com/">Go to Google News</a>.</li>
+<li>Click Settings <strong>Language &amp; region</strong>.</li>
+<li>Select your language.</li>
+</ol>
+<h6 id="change-your-color-scheme">Change your color scheme</h6>
+<p>Dark theme lets you tone down your screen’s glare and use Google News
+with a dark background.</p>
+<ol type="1">
+<li><a href="https://news.google.com/">Go to Google News</a>.</li>
+<li>At the top right, click Settings <strong>Settings</strong>.</li>
+<li>Next to “Dark theme,” choose from these options:
+<ul>
+<li><strong>System default (when available):</strong> Based on your
+device’s system theme, the Google News color scheme will be light or
+dark. The availability of this feature depends on your browser.</li>
+<li><strong>Always:</strong> The Google News color scheme will always be
+dark.</li>
+<li><strong>Never:</strong> The Google News color scheme will never be
+dark.</li>
+</ul></li>
+</ol>
+<h6 id="personalize-your-google-news-content-1">Personalize your Google
+News content</h6>
+<p>You can have Google News show more stories that you’ll like and fewer
+that you won’t.</p>
+<p>Learn how to customize what you find on Google Search.</p>
+<h6 id="find-your-google-activity-adjust-what-gets-saved">Find your
+Google activity &amp; adjust what gets saved</h6>
+<p>You can find your searches and other activity saved to your Google
+Account in <a href="https://myactivity.google.com/">My Activity</a>.
+Google News can personalize based on some of those activities.</p>
+<p>Learn more how to do access and control my Google activity.</p>
+<h6 id="related-articles-1">Related articles</h6>
+<ul>
+<li>Improve what shows for you on Google News</li>
+<li>Manage your Google News notifications</li>
+<li>Save stories from Google News</li>
+<li>How Google News stories are selected</li>
+<li>View &amp; control activity on your Google Account</li>
+</ul>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-8">Android</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can change your Google News settings, like your:</p>
+<ul>
+<li>Language and region</li>
+<li>Text size</li>
+<li>Color scheme</li>
+<li>Video playback options</li>
+</ul>
+<h6 id="change-settings-through-the-app">Change settings through the
+app</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong> News settings .</li>
+<li>Tap the setting you want to change.</li>
+</ol>
+<h6 id="change-story-display-settings">Change story display
+settings</h6>
+<p>You can change your settings to find more headlines at once and make
+story thumbnails smaller.</p>
+<ol type="1">
+<li>On your Android phone or tablet, open your Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong> News settings .</li>
+<li>Turn on <strong>Mini cards</strong>.</li>
+</ol>
+<h6 id="available-general-settings">Available general settings</h6>
+<p>Depending on your device and app version, you can set your:</p>
+<ul>
+<li><strong>Daily briefing emails:</strong> Get your personalized daily
+briefing in your inbox.</li>
+<li><strong>Product updates emails:</strong> Stay connected with the
+latest updates and features related to your Google News.</li>
+<li><strong>Languages and regions of interest:</strong> Pick up to 2
+languages and places of interest.</li>
+<li><strong>Dark theme:</strong> Use dark colors in place of light
+colors. Turn on or off in device settings. Learn how to use a dark color
+scheme.</li>
+<li><strong>Mini cards:</strong> List stories with smaller images and
+words.</li>
+<li><strong>Sources and topics to get less of:</strong> If you’ve chosen
+not to get a publication, you can choose to get it again.</li>
+<li><strong>Data Saver mode:</strong> Pick when to save mobile
+data.</li>
+<li><strong>Temperature units:</strong> Pick Fahrenheit, Celsius, or
+Kelvin.</li>
+</ul>
+<p>Learn how to update your location on Google. For Google News and
+other apps, choose which apps use your Android phone’s location.</p>
+<h6 id="find-and-control-your-web-app-activity">Find and control your
+Web &amp; App Activity</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong> <strong>My Activity.</strong></li>
+</ol>
+<p>Learn how to check &amp; control your Web &amp; App Activity.</p>
+<h6 id="available-notification-settings">Available notification
+settings</h6>
+<p>You can control your Google News app notifications and daily briefing
+emails. Learn about Google News notifications.</p>
+<h6 id="save-stories-to-read-later-3">Save stories to read later</h6>
+<p>To read news articles later, you can save them. Learn how to save
+stories.</p>
+<h6 id="personalize-your-google-news-content-2">Personalize your Google
+News content</h6>
+<p>You can have Google News show more stories that you’ll like and fewer
+that you won’t. Learn how to improve what shows for you.</p>
+<h6 id="related-articles-2">Related articles</h6>
+<ul>
+<li>Improve what shows for you on Google News</li>
+<li>Manage your Google News notifications</li>
+<li>Save stories from Google News</li>
+<li>How Google News stories are selected</li>
+<li>View &amp; control activity on your Google Account</li>
+</ul>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-6">iPhone &amp; iPad</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can change your Google News settings, like your:</p>
+<ul>
+<li>Language and region</li>
+<li>Text size</li>
+<li>Color scheme</li>
+<li>Video playback options</li>
+</ul>
+<h6 id="change-settings-through-the-app-1">Change settings through the
+app</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>In the top right, tap your <strong>Profile picture or
+initial</strong> News settings .</li>
+<li>Tap the setting you want to change.</li>
+</ol>
+<h6 id="settings-you-can-change">Settings you can change</h6>
+<p><strong>Important</strong>: You can change settings like Dark theme
+from your device’s settings app.</p>
+<p>Based on your device and app version, you can change settings
+like:</p>
+<ul>
+<li><strong>Languages &amp; regions of interest:</strong> Find news for
+up to 2 languages and regions.</li>
+<li><strong>Temperature units:</strong> Choose Fahrenheit or
+Celsius.</li>
+<li><strong>Autoplay videos</strong>: Choose if and how often you want
+to play videos automatically. You can autoplay videos always, never, or
+only on Wi-Fi.</li>
+<li><strong>Sources and topics you get less of</strong>: If you chose
+not to get a source or topic, you can choose to get it again.</li>
+<li><strong>Default apps:</strong> Pick your default apps like browser,
+email app, and maps app.</li>
+<li><strong>Notifications:</strong> Manage the type of notifications you
+want to get and their frequency. Learn how to manage your News
+notification settings.</li>
+<li><strong>Daily briefing emails:</strong> Get your personalized daily
+briefing in your inbox.</li>
+<li><strong>Product updates emails:</strong> Stay connected with the
+latest updates and features related to your Google News.</li>
+</ul>
+<h6 id="find-control-your-web-app-activity">Find &amp; control your Web
+&amp; App Activity</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>In the top right, tap your <strong>Profile picture or
+initial</strong> <strong>My Activity</strong>.</li>
+</ol>
+<p>Learn how to control your Web &amp; App Activity.</p>
+<h6 id="personalize-your-google-news-content-3">Personalize your Google
+News content</h6>
+<p>You can set Google News to show more stories that you like and fewer
+that you don’t. Learn how to customize what you find on Google News.</p>
+<h6 id="save-stories-to-read-later-4">Save stories to read later</h6>
+<p>To read news articles later, you can save them. Learn how to save
+stories.</p>
+<h6 id="related-articles-3">Related articles</h6>
+<ul>
+<li>Improve what shows for you on Google News</li>
+<li>Manage your Google News notifications</li>
+<li>Save stories from Google News</li>
+<li>How Google News stories are selected</li>
+<li>View &amp; control activity on your Google Account</li>
+</ul>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h3 id="shared-data-with-news-publishers">Shared data with news
+publishers</h3>
+<p><strong>Important</strong>: Paid content isn’t available in all
+regions.</p>
+<h5 id="subscriptions">Subscriptions</h5>
+<p>When you become a digital subscriber to a source, publishers may ask
+you to provide your name, address, and email address. The publisher’s
+privacy policy governs the publisher’s use of your information. When you
+provide your information, you can choose if you want to receive
+information about additional products or services from the publisher or
+from third parties.</p>
+<h5 id="get-help-with-a-subscription-4">Get help with a
+subscription</h5>
+<p>To get more help with a paid subscription or other Google News
+purchases, you can contact us.</p>
+<h2 id="fixing-problems">Fixing problems</h2>
+<h3 id="fix-problems-with-google-news">Fix problems with Google
+News</h3>
+<h4 id="on-a-computer-7">On a computer</h4>
+<p>If you have problems with Google News, try these solutions. You can
+also get help on <a
+href="https://productforums.google.com/forum/#!forum/news">the Google
+News Help Forum</a> where readers share tips and knowledge about Google
+News.</p>
+<h6 id="open-google-news-2">Open Google News</h6>
+<p>After each step, try again to <a href="https://news.google.com/">open
+Google News</a>.</p>
+<ol type="1">
+<li>Restart your computer.</li>
+<li>Check whether you can open other websites.</li>
+<li>Quit your browser, like Chrome or Safari. Then re-open it.</li>
+<li>Learn how to clear your browsing data.
+<ul>
+<li><strong>Note:</strong> If you delete your site data, you’ll also
+delete any saved settings.</li>
+</ul></li>
+</ol>
+<h6 id="cant-access-google-news">Can’t access Google News</h6>
+<p>If you’re signed in to a Google Workspace account:</p>
+<ul>
+<li>Your administrator might have turned off access to Google News. For
+more info, contact your account administrator.</li>
+<li><a href="http://news.google.com">News.google.com</a> won’t be
+accessible unless you sign out of the account.</li>
+<li>To access Google News, sign out of the account or switch to a
+personal Gmail account.</li>
+</ul>
+<h6 id="find-your-personalized-content">Find your personalized
+content</h6>
+<ol type="1">
+<li>Make sure you’re signed in to your <a
+href="https://www.google.com/accounts/Login?hl%3Den%26continue%3Dhttp://news.google.com/">Google
+Account</a>.</li>
+<li>If you recently renamed a conflicting account, try to sign in with
+the new name.</li>
+<li>Reset your Google News interests. Learn how to improve what you
+find.</li>
+</ol>
+<h6 id="block-or-unblock-people-who-share">Block or unblock people who
+share</h6>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>If you’d like to stop someone who directly shares stories with you on
+Google News, you can block their account. Learn how to block or unblock
+people.</p>
+<h6 id="report-spam-or-inappropriate-content">Report spam or
+inappropriate content</h6>
+<h6 id="spam-or-inappropriate-content">Spam or inappropriate
+content</h6>
+<p>If you think sites violate our quality guidelines for spam,
+offensive, or inappropriate content, you can send us feedback.</p>
+<ol type="1">
+<li>Go to <a href="http://news.google.com">Google News</a>.</li>
+<li>At the top right, click Help <strong>Send feedback</strong>.</li>
+</ol>
+<h6 id="inaccurate-or-outdated-content">Inaccurate or outdated
+content</h6>
+<p>News organizations publish the stories and images you find on Google
+News.</p>
+<ul>
+<li><strong>For content problems:</strong> Contact the publisher.</li>
+<li>To share other feedback about Google News:
+<ol type="1">
+<li>Go to <a href="http://news.google.com">Google News</a>.</li>
+<li>At the top right, click Help <strong>Send feedback</strong>.</li>
+</ol></li>
+</ul>
+<h6 id="related-articles-4">Related articles</h6>
+<ul>
+<li>Report content that could violate your legal rights</li>
+<li>Learn about our copyright policy</li>
+</ul>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-9">Android</h4>
+<p>If you have problems with Google News, try these solutions. You can
+also get help on <a
+href="https://productforums.google.com/forum/#!forum/news">the Google
+News Help Forum</a> where readers share tips and knowledge about Google
+News.</p>
+<h6 id="cant-open-google-news-app">Can’t open Google News app</h6>
+<p>Try updating your Google News app . <a
+href="https://play.google.com/store/apps/details?id=com.google.android.apps.magazines">Get
+app updates from Google Play</a>.</p>
+<h6 id="cant-access-google-news-1">Can’t access Google News</h6>
+<p>If you’re signed in to a Google Workspace account:</p>
+<ul>
+<li>Your administrator might have turned off access to Google News. For
+more info, contact your account administrator.</li>
+<li>You won’t be able to use the app because there’s no signed-out
+mode.</li>
+<li>To access Google News, switch to a personal Gmail account.</li>
+<li>If you’re under 13 (or the applicable age in your country), you
+might not have access to Google News.</li>
+</ul>
+<h6 id="app-doesnt-refresh">App doesn’t refresh</h6>
+<ul>
+<li>To get new stories, open your app and swipe down on the screen.</li>
+<li>Check that you’re connected to Wi-Fi or mobile data.</li>
+<li>If the app closes or specific content is blank, learn how to clear
+your app’s cache and data.</li>
+</ul>
+<h6 id="audio-briefing-doesnt-play">Audio Briefing doesn’t play</h6>
+<ul>
+<li>Make sure you’re connected to Wi-Fi or mobile data.</li>
+<li>Close the player and open it again.</li>
+</ul>
+<p><strong>Tip:</strong> Try again later if you can’t play the Audio
+Briefing despite taking the above steps.</p>
+<h6 id="purchased-content-doesnt-show-up">Purchased content doesn’t show
+up</h6>
+<p>If your issue or subscription doesn’t show in your “Following,” check
+that you’re signed in with the account that bought it.</p>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>By your username, tap the Down arrow .</li>
+</ol>
+<h6 id="cant-play-youtube-videos-inside-app">Can’t play YouTube videos
+inside app</h6>
+<p>Try updating your YouTube app . <a
+href="https://play.google.com/store/apps/details?id=com.google.android.youtube">Get
+app updates from Google Play</a>.</p>
+<h6 id="find-your-personalized-content-1">Find your personalized
+content</h6>
+<ol type="1">
+<li>Make sure you’re signed in to your <a
+href="https://www.google.com/accounts/Login?hl%3Den%26continue%3Dhttp://news.google.com/">Google
+Account</a>.</li>
+<li>If you recently renamed a conflicting account, try to sign in with
+the new name.</li>
+<li>Reset your Google News interests. Learn how to improve what you
+find.</li>
+</ol>
+<h6 id="block-or-unblock-people-who-share-1">Block or unblock people who
+share</h6>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>If you’d like to stop someone who directly shares stories with you on
+Google News, you can block their account. Learn how to block or unblock
+people.</p>
+<h6 id="report-spam-or-inappropriate-content-1">Report spam or
+inappropriate content</h6>
+<h6 id="spam-or-inappropriate-content-1">Spam or inappropriate
+content</h6>
+<p>If you believe sites violate our quality guidelines for spam,
+offensive, or inappropriate content, you can send us feedback.</p>
+<p><strong>To report spam or inappropriate content</strong>: In your
+app, in the top right, tap your <strong>Profile picture or initial
+</strong> <strong>Help &amp; feedback</strong> ** Send feedback**.</p>
+<h6 id="inaccurate-or-outdated-content-1">Inaccurate or outdated
+content</h6>
+<p>News organizations publish the stories and images you find on Google
+News.</p>
+<p><strong>For content problems</strong>: Contact the publisher.</p>
+<p><strong>To share other feedback about Google News</strong>:</p>
+<ol type="1">
+<li>In your app, in the top right, tap your <strong>Profile picture or
+initial </strong> <strong>Help &amp; feedback</strong>.</li>
+<li>Tap <strong>Send feedback</strong>.</li>
+</ol>
+<p>You can also go to <a
+href="https://news.google.com/">news.google.com</a>, and in the bottom
+left, click <strong>Send feedback</strong>.</p>
+<h6 id="related-articles-5">Related articles</h6>
+<ul>
+<li>Report content that could violate your legal rights</li>
+<li>Learn about our copyright policy</li>
+</ul>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-7">iPhone &amp; iPad</h4>
+<p>If you have problems with Google News, try these solutions. You can
+also get help on <a
+href="https://productforums.google.com/forum/#!forum/news">the Google
+News Help Forum</a> where readers share tips and knowledge about Google
+News.</p>
+<h6 id="cant-open-google-news-app-1">Can’t open Google News app</h6>
+<p>Try updating your Google News app . <a
+href="https://itunes.apple.com/us/app/google-play-newsstand/id459182288?mt=8">Check
+for app updates on the App Store</a>.</p>
+<h6 id="cant-access-google-news-2">Can’t access Google News</h6>
+<p>If you’re signed in to a Google Workspace account:</p>
+<ul>
+<li>Your administrator might have turned off access to Google News. For
+more info, contact your account administrator.</li>
+<li>You can still use the app while in signed-out mode.</li>
+<li>To access Google News, sign out of the account or switch to a
+personal Gmail account.</li>
+</ul>
+<h6 id="app-doesnt-refresh-1">App doesn’t refresh</h6>
+<ul>
+<li>To get new stories, open your app and swipe down on the screen.</li>
+<li>Check that you’re connected to Wi-Fi or mobile data.</li>
+<li>If your app closes or specific content is blank, remove the app and
+then <a
+href="https://itunes.apple.com/us/app/google-play-newsstand/id459182288?mt=8">get
+it again from the App Store</a>.<br />
+<strong>Note:</strong> You’ll need to save any saved content again.</li>
+</ul>
+<h6 id="purchased-content-doesnt-show-up-1">Purchased content doesn’t
+show up</h6>
+<p>If your issue or subscription doesn’t show in your “Following,” check
+that you’re signed in with the account that bought it.</p>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>By your username, tap the Down arrow .</li>
+</ol>
+<h6 id="cant-play-youtube-videos-inside-app-1">Can’t play YouTube videos
+inside app</h6>
+<p>Try updating your YouTube app .<a
+href="https://itunes.apple.com/us/app/youtube-watch-listen-stream/id544007664?mt=8">Check
+for app updates on the App Store</a>.</p>
+<h6 id="find-your-personalized-content-2">Find your personalized
+content</h6>
+<ol type="1">
+<li>Make sure you’re signed in to your <a
+href="https://www.google.com/accounts/Login?hl%3Den%26continue%3Dhttp://news.google.com/">Google
+Account</a>.</li>
+<li>If you recently renamed a conflicting account, try to sign in with
+the new name.</li>
+<li>Reset your Google News interests. Learn how to improve what you
+find.</li>
+</ol>
+<h6 id="block-or-unblock-people-who-share-2">Block or unblock people who
+share</h6>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>If you’d like to stop someone who directly shares stories with you on
+Google News, you can block their account. Learn how to block or unblock
+people.</p>
+<h6 id="report-spam-or-inappropriate-content-2">Report spam or
+inappropriate content</h6>
+<h6 id="spam-or-inappropriate-content-2">Spam or inappropriate
+content</h6>
+<p>If you believe sites violate our quality guidelines for spam,
+offensive, or inappropriate content, you can send us feedback.</p>
+<p><strong>To report spam or inappropriate content</strong>: In your
+app, in the top right, tap your <strong>Profile picture or initial
+</strong> <strong>Help &amp; feedback</strong> ** Send feedback**.</p>
+<h6 id="inaccurate-or-outdated-content-2">Inaccurate or outdated
+content</h6>
+<p>News organizations publish the stories and images you find on Google
+News.</p>
+<p><strong>For content problems</strong>: Contact the publisher.</p>
+<p><strong>To share other feedback about Google News</strong>:</p>
+<ol type="1">
+<li>In your app, in the top right, tap your <strong>Profile picture or
+initial </strong> <strong>Help &amp; feedback</strong>.</li>
+<li>Tap <strong>Send feedback</strong>.</li>
+</ol>
+<p>You can also go to <a
+href="https://news.google.com/">news.google.com</a>, and in the bottom
+left, click <strong>Send feedback</strong>.</p>
+<h6 id="related-articles-6">Related articles</h6>
+<ul>
+<li>Report content that could violate your legal rights</li>
+<li>Learn about our copyright policy</li>
+</ul>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h2 id="other-help-articles">Other help articles</h2>
+<h3 id="customize-what-you-find-on-google-news">Customize what you find
+on Google News</h3>
+<h4 id="on-a-computer-8">On a computer</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can customize Google News to get stories about specific topics,
+like sports teams, technology, or space exploration. The updates from
+the interests you follow show up in the “Following” tab’s content
+feed.</p>
+<p>To get more or less stories you want:</p>
+<ul>
+<li>Follow or unfollow an interest like a topic, location, or
+source.</li>
+<li>Like or unlike specific stories about a topic or from a source.</li>
+<li>Hide stories from a source.</li>
+</ul>
+<h6 id="choose-what-stories-to-get">Choose what stories to get</h6>
+<h6 id="follow-an-interest">Follow an interest</h6>
+<ol type="1">
+<li>At the top, search for the topic, location, or source you want to
+follow.
+<ul>
+<li>You can also select a topic from the menu at the top.</li>
+</ul></li>
+<li>At the top right, click <strong>Follow</strong>.</li>
+</ol>
+<p><strong>Tip</strong>: To find all the interests you follow, from the
+menu at the top, click <strong>Following</strong>.</p>
+<h6 id="unfollow-an-interest">Unfollow an interest</h6>
+<p>If you no longer want to get updates or news about a topic, location,
+or source:</p>
+<ol type="1">
+<li>At the top, use the search bar to find the interest you want to
+unfollow.</li>
+<li>At the top, click <strong>Following</strong>.</li>
+</ol>
+<p>Or</p>
+<ol type="1">
+<li>From the menu on the left, click <strong>Following</strong>.</li>
+<li>Next to the interest you want to unfollow, click More <strong>Remove
+from library</strong>.</li>
+</ol>
+<h6 id="like-or-unlike-a-story">Like or unlike a story</h6>
+<p>If you want to get more or less stories about a certain topic or
+source:</p>
+<ol type="1">
+<li>Point to a story’s headline.</li>
+<li>Under the headline, next to the name of the source, click More .
+<ul>
+<li><strong>To get more stories like it</strong>: Click <strong>More
+stories like this</strong>.</li>
+<li><strong>To get fewer stories like it</strong>: Click <strong>Fewer
+stories like this</strong>.</li>
+</ul></li>
+</ol>
+<h6 id="hide-stories-from-a-source">Hide stories from a source</h6>
+<ol type="1">
+<li>Find a story from the source you no longer want to get updates
+from.</li>
+<li>Point to the story’s headline or title and click More Hide all
+stories from [source] .</li>
+</ol>
+<h6 id="how-google-news-uses-your-web-app-activity">How Google News uses
+your Web &amp; App Activity</h6>
+<p>Your Google Account saves your searches and other activity across
+Google products to <a href="https://myactivity.google.com/">My
+Activity</a>. Google News can personalize your news based on some of
+those activities. Learn how to customize what you find on Google
+Search.</p>
+<h6 id="related-articles-7">Related articles</h6>
+<ul>
+<li>Find what you want on Google News</li>
+<li>How Google News stories are selected</li>
+<li>Check or change your Google News settings</li>
+</ul>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-10">Android</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can customize Google News to get stories about specific topics,
+like sports teams, technology, or space exploration. The updates from
+the interests you follow show up in the “Following” tab’s content
+feed.</p>
+<p>To get more or less stories you want:</p>
+<ul>
+<li>Follow or unfollow an interest like a topic, location, or
+source.</li>
+<li>Like or unlike specific stories about a topic or from a source.</li>
+<li>Hide stories from a source.</li>
+</ul>
+<h6 id="choose-what-stories-to-get-1">Choose what stories to get</h6>
+<h6 id="follow-an-interest-1">Follow an interest</h6>
+<ol type="1">
+<li>On your Android phone or tablet, open Google News .</li>
+<li>At the top, tap Search .</li>
+<li>Search for a topic, location, or source, or tap a listed
+interest.</li>
+<li>Tap Follow .</li>
+</ol>
+<p><strong>Tip:</strong> To explore new topics, locations, and sources,
+tap Newsstand .</p>
+<h6 id="unfollow-an-interest-1">Unfollow an interest</h6>
+<p>If you no longer want to get updates or news about a topic, location,
+or source:</p>
+<ol type="1">
+<li>Open the topic, location, or source and tap Following .</li>
+<li>At the bottom, tap <strong>Following</strong>
+<strong>Library</strong>:
+<ul>
+<li><strong>Topics:</strong> Under “Topics,” tap <strong>View all and
+manage</strong> <strong>More</strong> <strong>Stop following this
+topic</strong>.</li>
+<li><strong>Sources:</strong> Under “Sources,” tap <strong>View all and
+manage</strong> <strong>More</strong> <strong>Stop following this
+source</strong>.</li>
+<li><strong>Locations:</strong> Under “Local,” tap <strong>View all and
+manage</strong> <strong>More</strong> <strong>Stop following this
+location</strong>.</li>
+</ul></li>
+</ol>
+<h6 id="like-or-unlike-a-story-1">Like or unlike a story</h6>
+<p><strong>Important:</strong> You may not be able to like or unlike a
+story. For example, you won’t be able to like stories labeled
+“Headlines” in the “Briefing” section or any story in the “Headlines”
+chip.</p>
+<ol type="1">
+<li>Under a story you like or don’t like, tap More .</li>
+<li>If you want:
+<ul>
+<li><strong>To get fewer stories like it:</strong> Tap Fewer stories
+like this .</li>
+<li><strong>To get fewer stories about a topic:</strong> Tap Fewer
+stories about a topic .</li>
+</ul></li>
+</ol>
+<h6 id="hide-stories-from-a-source-1">Hide stories from a source</h6>
+<ol type="1">
+<li>Find a story from the source you no longer want to get updates
+from.</li>
+<li>To no longer get stories from that source, tap More Hide all stories
+from [source] .</li>
+</ol>
+<h6 id="how-google-news-uses-your-web-app-activity-1">How Google News
+uses your Web &amp; App Activity</h6>
+<p>Your Google Account saves your searches and other activity across
+Google products to <a href="https://myactivity.google.com/">My
+Activity</a>. Google News can personalize your news based on some of
+those activities. Learn how to customize what you find on Google
+Search.</p>
+<h6 id="related-articles-8">Related articles</h6>
+<ul>
+<li>Find what you want on Google News</li>
+<li>How Google News stories are selected</li>
+<li>Check or change your Google News settings</li>
+</ul>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-8">iPhone &amp; iPad</h4>
+<p><strong>Important</strong>: This feature is only available if you’re
+signed in to your Google Account.</p>
+<p>You can customize Google News to get stories about specific topics,
+like sports teams, technology, or space exploration. The updates from
+the interests you follow show up in the “Following” tab’s content
+feed.</p>
+<p>To get more or less stories you want:</p>
+<ul>
+<li>Follow or unfollow an interest like a topic, location, or
+source.</li>
+<li>Like or unlike specific stories about a topic or from a source.</li>
+<li>Hide stories from a source.</li>
+</ul>
+<h6 id="choose-what-stories-to-get-2">Choose what stories to get</h6>
+<h6 id="follow-an-interest-2">Follow an interest</h6>
+<ol type="1">
+<li>On your iPhone or iPad, open Google News .</li>
+<li>In the top left, tap Search .</li>
+<li>Search for a topic, location, or source, or tap a listed
+interest.</li>
+<li>Tap Follow .</li>
+</ol>
+<p><strong>Tip:</strong> To explore new topics, locations, and sources,
+tap Newsstand .</p>
+<h6 id="unfollow-an-interest-2">Unfollow an interest</h6>
+<p>If you no longer want to get updates or news about a topic, location,
+or source:</p>
+<ol type="1">
+<li>Open the topic, location, or source and tap Following .</li>
+<li>At the bottom, tap <strong>Following</strong>
+<strong>Library</strong>:
+<ul>
+<li><strong>Topics:</strong> Under “Topics,” tap <strong>View all and
+manage</strong> <strong>More</strong> <strong>Stop following this
+topic</strong>.</li>
+<li><strong>Sources:</strong> Under “Sources,” tap <strong>View all and
+manage</strong> <strong>More</strong> <strong>Stop following this
+source</strong>.</li>
+<li><strong>Locations:</strong> Under “Local,” tap <strong>View all and
+manage</strong> <strong>More</strong> <strong>Stop following this
+location</strong>.</li>
+</ul></li>
+</ol>
+<h6 id="like-or-unlike-a-story-2">Like or unlike a story</h6>
+<p><strong>Important:</strong> You may not be able to like or unlike a
+story. For example, you won’t be able to like stories labeled
+“Headlines” in the “Briefing” section or any story in the “Headlines”
+chip.</p>
+<ol type="1">
+<li>Under a story you like or don’t like, tap More .</li>
+<li>If you want:
+<ul>
+<li><strong>To get more stories like it</strong>: Tap More stories like
+this .</li>
+<li><strong>To get fewer stories like it</strong>: Tap Fewer stories
+like this .</li>
+</ul></li>
+</ol>
+<h6 id="hide-stories-from-a-source-2">Hide stories from a source</h6>
+<ol type="1">
+<li>Find a story from the source you no longer want to get updates
+from.</li>
+<li>To no longer get stories from that source, tap More Hide all stories
+from [source] .</li>
+</ol>
+<h6 id="how-google-news-uses-your-web-app-activity-2">How Google News
+uses your Web &amp; App Activity</h6>
+<p>Your Google Account saves your searches and other activity across
+Google products to <a href="https://myactivity.google.com/">My
+Activity</a>. Google News can personalize your news based on some of
+those activities. Learn how to customize what you find on Google
+Search.</p>
+<h6 id="related-articles-9">Related articles</h6>
+<ul>
+<li>Find what you want on Google News</li>
+<li>How Google News stories are selected</li>
+<li>Check or change your Google News settings</li>
+</ul>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h3 id="find-what-you-want-on-google-news">Find what you want on Google
+News</h3>
+<h4 id="on-a-computer-9">On a computer</h4>
+<p>On Google News, you can find different kinds of news, and audio
+stories. Some sections cover the same subjects for readers. Some pick
+stories based on your interests.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="get-more-headlines-perspectives">Get more headlines &amp;
+perspectives</h6>
+<p>A computer algorithm finds and lists stories for you in Google News.
+If you’re interested in a story, you can click <strong>See more
+headlines &amp; perspectives</strong> to get the full coverage available
+in Google News with more resources, perspectives, and context. The story
+page isn’t personalized for you, except for your language, region, and
+subscriptions.</p>
+<p><strong>To find all available sources for a story or topic:</strong>
+At the bottom of a story, click See more headlines &amp; perspectives
+.</p>
+<p><strong>To find sources on “See more headlines &amp; perspectives”
+that you subscribe to:</strong> Scroll to “From your subscribed
+sources.”</p>
+<h6 id="search-for-specific-content">Search for specific content</h6>
+<ol type="1">
+<li><a href="https://news.google.com">Go to Google News</a>.</li>
+<li>At the top, click Search .</li>
+<li>Enter your search, like a topic to read about, place to follow, or
+source to read from.</li>
+</ol>
+<p><strong>Tip:</strong> To narrow your search results, click the Down
+arrow . You can enter an exact phrase, include or exclude words, pick a
+date range, or enter a publisher site (like nytimes.com).</p>
+<h6 id="find-content-based-on-your-interests">Find content based on your
+interests</h6>
+<p>You can find stories picked by an algorithm that are based on your
+settings and past activity. Algorithms personalize your Google News
+settings based on your interests, sources, and past activity on Google,
+like in Google Search and YouTube. Learn how stories are selected or how
+to change settings and see past activity.</p>
+<ol type="1">
+<li><a href="https://news.google.com">Go to Google News</a>.</li>
+<li>At the top, click <strong>For you</strong>.</li>
+</ol>
+<h6 id="read-your-saved-stories-or-subscriptions">Read your saved
+stories or subscriptions</h6>
+<ol type="1">
+<li><a href="https://news.google.com">Go to Google News</a>.</li>
+<li>At the top, click <strong>Following</strong>.</li>
+<li>At the top, click the content you want. For example:
+<ul>
+<li>Topics &amp; sources</li>
+<li>Saved searches</li>
+<li>Saved stories</li>
+</ul></li>
+</ol>
+<h6 id="improve-what-stories-show-for-you">Improve what stories show for
+you</h6>
+<p>You can personalize Google News to show more of the kinds of stories
+you want. Learn how to personalize Google News.</p>
+<h6 id="related-resources-2">Related resources</h6>
+<ul>
+<li>Improve what shows for you on Google News</li>
+<li>Check or change your Google News settings</li>
+<li>How Google News stories are selected</li>
+</ul>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-11">Android</h4>
+<p>On Google News, you can find different kinds of news, and audio
+stories. Some sections cover the same subjects for readers. Some pick
+stories based on your interests.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="get-more-headlines-perspectives-1">Get more headlines &amp;
+perspectives</h6>
+<p>A computer algorithm finds and lists stories for you in Google News.
+If you’re interested in a story, you can select “Full Coverage” to get
+more resources, perspectives, and context. Full Coverage has no
+personalization other than your language, region, and subscriptions.</p>
+<p><strong>To find all available sources for a subject:</strong> At the
+bottom of a story, tap Full Coverage of this story .</p>
+<p><strong>To find sources on “Full Coverage” that you subscribe
+to:</strong> Scroll to “From your subscribed sources.”</p>
+<p><strong>To find more available sources for an audio story:</strong>
+In the full player, tap <strong>See article links</strong>.</p>
+<h6 id="search-for-specific-content-1">Search for specific content</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the top left, tap Search .</li>
+<li>Enter your search, like a:
+<ul>
+<li>Topic to read about</li>
+<li>Place to follow</li>
+<li>Source to read from</li>
+</ul></li>
+</ol>
+<h6 id="find-content-based-on-your-interests-1">Find content based on
+your interests</h6>
+<p>You can find stories picked by an algorithm that are based on your
+settings and past activity. Algorithms personalize your Google News
+settings based on your interests, sources, and past activity on Google,
+like in Google Search and YouTube. Learn how stories are selected or how
+to change settings and find past activity.</p>
+<ol type="1">
+<li>On your Android phone or tablet, open the Google News app .</li>
+<li>Tap <strong>Top stories</strong>, <strong>Local news</strong>, or
+<strong>Picks for you</strong>.
+<ul>
+<li>If you don’t find “Local news,” there are no local results.</li>
+</ul></li>
+<li>To find your personalized feed based on your interests, tap
+Following .</li>
+<li>To add interests to your “Following” tab:
+<ul>
+<li>At the bottom, tap Following .</li>
+<li>In the interest picker, tap on the suggested interests.
+<ul>
+<li>This shows up if you have fewer than 5 interests in your
+library.</li>
+</ul></li>
+<li>To search for any topic, source, or location, tap Add .</li>
+<li>At the top, tap the search bar.</li>
+</ul></li>
+</ol>
+<h6 id="listen-to-recent-top-stories">Listen to recent top stories</h6>
+<ol type="1">
+<li>On your Android phone, open the Google News app .</li>
+<li>At the bottom, tap Listen .</li>
+</ol>
+<h6 id="read-your-saved-stories-or-subscriptions-1">Read your saved
+stories or subscriptions</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the bottom, tap Following .</li>
+<li>To browse your followings and saved stories, tap
+<strong>Library</strong>.</li>
+</ol>
+<h6 id="improve-what-stories-show-for-you-1">Improve what stories show
+for you</h6>
+<p>You can personalize Google News to show more of the kinds of stories
+you want. Learn how to personalize Google News.</p>
+<h6 id="related-resources-3">Related resources</h6>
+<ul>
+<li>Improve what shows for you on Google News</li>
+<li>Check or change your Google News settings</li>
+<li>How Google News stories are selected</li>
+</ul>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-9">iPhone &amp; iPad</h4>
+<p>On Google News, you can find different kinds of news, and audio
+stories. Some sections cover the same subjects for readers. Some pick
+stories based on your interests.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="get-more-headlines-perspectives-2">Get more headlines &amp;
+perspectives</h6>
+<p>A computer algorithm finds and lists stories for you in Google News.
+If you’re interested in a story, you can select “Full Coverage” to get
+more resources, perspectives, and context. Full Coverage has no
+personalization other than your language, region, and subscriptions.</p>
+<p><strong>To find all available sources for a subject:</strong> At the
+bottom of a story, tap Full Coverage of this story .</p>
+<p><strong>To find sources on “Full Coverage” that you subscribe
+to:</strong> Scroll to “From your subscribed sources.”</p>
+<p><strong>To find more available sources for an audio story:</strong>
+In the full player, tap <strong>See article links</strong>.</p>
+<h6 id="search-for-specific-content-2">Search for specific content</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the top left, tap Search .</li>
+<li>Enter your search, like a:
+<ul>
+<li>Topic to read about</li>
+<li>Place to follow</li>
+<li>Source to read from</li>
+</ul></li>
+</ol>
+<h6 id="find-content-based-on-your-interests-2">Find content based on
+your interests</h6>
+<p>You can find stories picked by an algorithm that are based on your
+settings and past activity. Algorithms personalize your Google News
+settings based on your interests, sources, and past activity on Google,
+like in Google Search and YouTube. Learn how stories are selected or how
+to change settings and find past activity.</p>
+<ol type="1">
+<li>On your iPhone or iPad, open the Google News app .</li>
+<li>Find “Your briefing.”</li>
+<li>To find your personalized feed based on your interests, tap
+Following .</li>
+<li>To add interests to your “Following” tab:
+<ul>
+<li>At the bottom, tap Following .</li>
+<li>In the interest picker, tap on the suggested
+interests<strong>.</strong>
+<ul>
+<li>This shows up if you have fewer than 5 interests in your
+library.</li>
+</ul></li>
+<li>To search for any topic, source, or location, tap Add .</li>
+<li>At the top, tap the search bar.</li>
+</ul></li>
+</ol>
+<h6 id="read-your-saved-stories-or-subscriptions-2">Read your saved
+stories or subscriptions</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>At the bottom, tap Following .</li>
+<li>To browse your followings and saved stories, tap
+<strong>Library</strong>.</li>
+</ol>
+<h6 id="improve-what-stories-show-for-you-2">Improve what stories show
+for you</h6>
+<p>You can personalize Google News to show more of the kinds of stories
+you want. Learn how to personalize Google News.</p>
+<h6 id="related-resources-4">Related resources</h6>
+<ul>
+<li>Improve what shows for you on Google News</li>
+<li>Check or change your Google News settings</li>
+<li>How Google News stories are selected</li>
+</ul>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+<h3 id="how-google-news-stories-are-selected">How Google News stories
+are selected</h3>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<p>Computer algorithms determine which stories show up on Google News
+and in what order.</p>
+<p>Google News shows some content in a personalized way. Personalization
+helps Google News quickly and easily show you stories that interest
+you.</p>
+<h5 id="chosen-by-computers">Chosen by computers</h5>
+<p>Based on your language and region, algorithms pick subjects for these
+sections:</p>
+<ul>
+<li>Audio Briefing</li>
+<li>Full Coverage</li>
+<li>Sources in Newsstand</li>
+<li>Search results</li>
+<li>Your topics</li>
+<li>Local news</li>
+<li>Notifications about top news stories</li>
+<li>Headline news stories, which show up as:
+<ul>
+<li><strong>In your app:</strong> Headlines or “Headlines” stories in
+your briefing.</li>
+<li><strong>On</strong> <a
+href="https://news.google.com/news/"><strong>Google News</strong></a>
+<strong>on desktop:</strong> “Top Stories” stories in your
+briefing.</li>
+<li><strong>On</strong> <a
+href="https://news.google.com/news/"><strong>Google News</strong></a>
+<strong>on mobile:</strong> “Headlines” stories in Top stories .</li>
+</ul></li>
+</ul>
+<p>In these sections, people who use the same language and region get
+news for the same subjects.</p>
+<h6 id="personalized-news">Personalized news</h6>
+<p>Algorithms personalize your news based on your:</p>
+<ul>
+<li><p><strong>Google News settings:</strong> Your interests and
+sources</p></li>
+<li><p><strong>Past activity:</strong> Your activity on Google services
+and YouTube</p></li>
+</ul>
+<p>Algorithms personalize your news for these sections:</p>
+<ul>
+<li>“For you” in Home</li>
+<li>Topics, sources, and locations in Following</li>
+<li>“Picks for you” stories in your briefing</li>
+<li>Your topics</li>
+<li>Local news</li>
+<li>Notifications</li>
+<li>The last story in the Audio Briefing</li>
+</ul>
+<p><strong>Tip:</strong> The Audio Briefing is only available in Android
+app.</p>
+<p>In these sections, people get stories that cover different subjects.
+Learn how to change settings and find past activity.</p>
+<h6 id="news-showcase">News Showcase</h6>
+<p><strong>Important:</strong> This feature is available in some
+languages and countries.</p>
+<p>When you read stories on Google News, you might find content from
+News Showcase publishers. Stories in a Showcase panel are curated by
+publishers to give you a deeper understanding and more context. For
+example, News Showcase publishers may choose the images to appear in a
+Showcase panel. You can find these stories in the For you section. These
+stories may come from publishers you don’t follow. Learn more about the
+News Showcase feature.</p>
+<ul>
+<li><strong>To follow suggested publishers:</strong> Click or tap Follow
+.</li>
+<li><strong>To unfollow publishers:</strong> Click or tap Follow . You
+can also go to the Following tab and click or tap
+<strong>Manage</strong>.</li>
+</ul>
+<p><strong>Tip:</strong> Publishers can select the stories inside their
+publications.</p>
+<h3 id="share-stories-from-google-news">Share stories from Google
+News</h3>
+<h4 id="on-a-computer-10">On a computer</h4>
+<p>You can share stories you find on Google News through your Google
+News app or other apps.</p>
+<p><strong>Tip:</strong> Shared stories are only available through
+apps.</p>
+<ol type="1">
+<li><a href="https://news.google.com/">Go to Google News</a>.</li>
+<li>Under a story you want to share, click More Share .</li>
+<li>Select and click how you want to share. For example:
+<ul>
+<li><strong>Copy link</strong></li>
+<li><strong>Facebook</strong></li>
+<li><strong>Twitter</strong></li>
+</ul></li>
+</ol>
+<p>Computer AndroidiPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="android-12">Android</h4>
+<p>You can share stories you find on Google News through your Google
+News app or other apps.</p>
+<p><strong>Tip:</strong> Shared stories are only available through
+apps.</p>
+<h6 id="share-a-story">Share a story</h6>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="share-through-other-apps">Share through other apps</h6>
+<p>You can share through other apps like social media.</p>
+<ol type="1">
+<li>Open Google News .</li>
+<li>Under a story you want to share, tap More Share .</li>
+<li>Tap the app or contact you want.
+<ul>
+<li>If it doesn’t show up, scroll to the left.</li>
+</ul></li>
+</ol>
+<p>Android ComputeriPhone &amp; iPad</p>
+<p>More</p>
+<h4 id="iphone-ipad-10">iPhone &amp; iPad</h4>
+<p>You can share stories you find on Google News through your Google
+News app or other apps.</p>
+<p><strong>Tip:</strong> Shared stories are only available through
+apps.</p>
+<h6 id="share-a-story-1">Share a story</h6>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Some features are available if you’re signed in to your Google
+Account.</li>
+<li>If you share a paid story, others may not access it until they pay
+for it.</li>
+</ul>
+<h6 id="share-directly-from-the-google-news-app">Share directly from the
+Google News app</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>Under a story you want to share, tap More Share .</li>
+<li>Select one or more people.
+<ul>
+<li>If you share with a phone number or email address, it sends a link
+to the story.</li>
+</ul></li>
+<li>Tap <strong>Send</strong>.</li>
+</ol>
+<h6 id="share-through-other-apps-1">Share through other apps</h6>
+<p>You can share through other apps like social media.</p>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>Under a story you want to share, tap More Share .</li>
+<li>Tap the app you want.
+<ul>
+<li>If it doesn’t show up, scroll to the left.</li>
+</ul></li>
+</ol>
+<h6 id="manage-stories-shared-through-google-news">Manage stories shared
+through Google News</h6>
+<p>You can find or remove stories that you shared with others and were
+shared with you.</p>
+<h6 id="find-stories-shared-through-google-news">Find stories shared
+through Google News</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>In the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap Notifications &amp; shared <strong>Shared</strong>.</li>
+</ol>
+<h6 id="remove-shared-stories">Remove shared stories</h6>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>In the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap Notifications &amp; shared <strong>Shared</strong>.</li>
+<li>Under a story you want to remove, tap More Remove share .</li>
+</ol>
+<h6 id="block-or-unblock-people-who-share-3">Block or unblock people who
+share</h6>
+<p>If you want to stop someone who directly shares stories with you, you
+can block their account.</p>
+<ol type="1">
+<li>Open your Google News app .</li>
+<li>In the top right, tap your <strong>Profile picture or
+initial</strong>.</li>
+<li>Tap Notifications &amp; shared <strong>Shared</strong>.</li>
+<li>Under a story shared by someone you want to block, tap More Block
+user .</li>
+</ol>
+<p><strong>Tip</strong>: You can unblock accounts that you’ve blocked.
+Learn more about how to block or unblock people.</p>
+<p>iPhone &amp; iPad AndroidComputer</p>
+<p>More</p>
+</body>
+</html>

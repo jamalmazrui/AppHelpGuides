@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-29" />
+  <title>Libby Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Libby Help Guide</h1>
+<p class="subtitle">OverDrive’s official help for Libby, the library
+reading app, gathered into one screen-reader-friendly document</p>
+<p class="date">2026-07-29</p>
+</header>
+<h1 id="libby-help-guide">Libby Help Guide</h1>
+<p>This guide gathers Libby’s official help. Libby is the public library
+reading app from OverDrive: with a library card you can borrow and read
+ebooks, digital audiobooks and magazines, stream them or download them
+for offline reading, and send many ebooks to a Kindle. It was taken from
+OverDrive’s own help site on 29 July 2026.</p>
+<p>Libby reaches three of the four surfaces these guides usually look
+for. It runs in a browser at libbyapp.com, which is what OverDrive
+recommends for Windows and Mac computers; there are apps for iPhone and
+iPad; and there are apps for Android and Fire tablets. There is no
+installed Windows program and no Alexa skill.</p>
+<p>One thing to be straight about: the sections below are mine, not
+Libby’s. Libby’s help site does have categories, but its category pages
+list their articles through script rather than in the page itself, so
+nothing survives being taken out of the site. The articles are therefore
+grouped here by subject, and that choice is mine.</p>
+<p>Two notes. Libby’s help videos page is included, but it is a list of
+videos rather than reading matter, and the videos themselves are only in
+English. And the Libby Life blog is not here: it is community and
+marketing writing rather than help.</p>
+<p>Headings run three deep: this title, then a category, then an
+article. Every article is listed in the table of contents below.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#getting-started">Getting started</a>
+<ul>
+<li><a href="#adding-library-cards">Adding library cards</a></li>
+<li><a href="#getting-started-with-content-controls">Getting started
+with content controls</a></li>
+<li><a href="#getting-started-with-libby">Getting started with
+Libby</a></li>
+<li><a href="#how-do-i-get-a-library-card">How do I get a library
+card?</a></li>
+<li><a href="#labeling-the-navigation-icons-in-libby">Labeling the
+navigation icons in Libby</a></li>
+<li><a href="#libby-quick-start-guide">Libby quick-start guide</a></li>
+<li><a href="#navigating-the-app">Navigating the app</a></li>
+<li><a href="#removing-a-card">Removing a card</a></li>
+<li><a href="#setting-up-libby-on-another-device">Setting up Libby on
+another device</a></li>
+<li><a href="#verifying-your-library-card-in-libby">Verifying your
+library card in Libby</a></li>
+<li><a href="#what-is-libby">What is Libby?</a></li>
+</ul></li>
+<li><a href="#finding-and-borrowing-titles">Finding and borrowing
+titles</a>
+<ul>
+<li><a href="#changing-your-loan-period">Changing your loan
+period</a></li>
+<li><a href="#finding-details-about-a-title">Finding details about a
+title</a></li>
+<li><a href="#pinning-filters-and-sorts">Pinning filters and
+sorts</a></li>
+<li><a href="#searching-for-titles">Searching for titles</a></li>
+<li><a
+href="#sharing-interest-in-titles-not-offered-by-your-library">Sharing
+interest in titles not offered by your library</a></li>
+<li><a href="#what-are-extras">What are Extras?</a></li>
+<li><a href="#why-cant-i-add-or-remove-some-filters">Why can’t I add or
+remove some filters?</a></li>
+<li><a href="#why-do-i-need-to-wait-for-a-copy-of-a-digital-title">Why
+do I need to wait for a copy of a digital title?</a></li>
+</ul></li>
+<li><a href="#reading-and-listening">Reading and listening</a>
+<ul>
+<li><a href="#downloading-a-magazine">Downloading a magazine</a></li>
+<li><a href="#finding-and-keeping-an-issue-of-a-magazine">Finding and
+keeping an issue of a magazine</a></li>
+<li><a href="#help-videos">Help videos</a></li>
+<li><a href="#reading-kindle-books-on-a-kindle-ereader">Reading Kindle
+Books on a Kindle ereader</a></li>
+<li><a href="#subscribing-to-magazines">Subscribing to
+magazines</a></li>
+<li><a href="#what-do-the-icons-and-the-icon-colors-mean-in-libby">What
+do the icons and the icon colors mean in Libby?</a></li>
+</ul></li>
+<li><a href="#tags-and-organising">Tags and organising</a>
+<ul>
+<li><a href="#changing-a-regular-tag-into-a-smart-tag">Changing a
+regular tag into a smart tag</a></li>
+<li><a href="#creating-a-new-tag">Creating a new tag</a></li>
+<li><a href="#deleting-tags">Deleting tags</a></li>
+<li><a href="#removing-tags-from-titles">Removing tags from
+titles</a></li>
+<li><a href="#renaming-tags">Renaming tags</a></li>
+<li><a href="#saving-titles-to-tags">Saving titles to tags</a></li>
+<li><a href="#what-are-smart-tags-and-what-do-they-do">What are smart
+tags and what do they do?</a></li>
+</ul></li>
+<li><a href="#notifications-and-settings">Notifications and settings</a>
+<ul>
+<li><a href="#adding-your-overdrive-wish-lists-to-libby">Adding your
+OverDrive wish lists to Libby</a></li>
+<li><a href="#backing-up-your-data-in-libby">Backing up your data in
+Libby</a></li>
+<li><a href="#can-i-use-libby-on-my-amazon-fire-tablet">Can I use Libby
+on my Amazon Fire tablet?</a></li>
+<li><a href="#locking-content-controls-in-libby">Locking content
+controls in Libby</a></li>
+<li><a
+href="#locking-content-controls-using-a-passkey-on-another-device">Locking
+content controls using a passkey on another device</a></li>
+<li><a href="#managing-notifications">Managing notifications</a></li>
+<li><a href="#setting-up-content-controls-in-libby">Setting up content
+controls in Libby</a></li>
+<li><a href="#viewing-in-app-notifications-in-libby">Viewing in-app
+notifications in Libby</a></li>
+<li><a href="#what-do-the-audience-categories-in-libby-mean">What do the
+audience categories in Libby mean?</a></li>
+</ul></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="adding-library-cards">Adding library cards</h3>
+<h4 id="libby-help">Libby Help</h4>
+<p>To add a library card to Libby, tap <strong>Library</strong> , then
+follow the prompts at the top of the screen.</p>
+<p>Adding additional cards for a library in Libby</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>, then <strong>Manage Cards</strong> (under
+“Your Libraries”).</li>
+<li>If needed, switch libraries.<br />
+</li>
+<li>Tap <strong>Add Card</strong>.</li>
+<li>Follow the prompts to add your card.</li>
+</ol>
+<p>Adding a card for a partner library</p>
+<p>Some libraries have partnerships with other libraries, which let you
+borrow titles from a partner library using your home library card.</p>
+<p>If your library has one of these partnerships, you’ll see a list of
+partner libraries when you sign into your home library.</p>
+<p>Then, to add your card for a partner library:</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>, then <strong>Add Library</strong> (under
+“Your Libraries”).</li>
+<li>Search for the partner library and open it.</li>
+<li>Tap <strong>Sign In With My Card</strong>.</li>
+<li>Under “Partner Libraries,” choose your home library from the list
+and sign in.</li>
+</ol>
+<p><em><strong>Note:</strong> Some partner libraries may place limits on
+visiting library cards. For example, when you visit a partner library,
+you may have a lower checkout limit, lower priority for holds, or the
+inability to place holds.</em></p>
+<p>Watch a short video about adding library cards</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: July 20 2026</strong></p>
+<h3 id="getting-started-with-content-controls">Getting started with
+content controls</h3>
+<h4 id="libby-help-1">Libby Help</h4>
+<p>Content controls manage access to titles in Libby based on the
+audience categories assigned to them. By default, all users are assigned
+the “Libby for Everyone” preset, where no titles are restricted or
+hidden.</p>
+<p>You can set content controls by going to <em>Menu &gt; Content
+Controls (under “Settings”) &gt; Audience</em>.</p>
+<p>There are three presets to choose from:</p>
+<ul>
+<li><strong>Libby for Everyone</strong> (default). With this preset, you
+choose how each audience category is handled in Libby, starting with
+mature content. Choose whether those titles appear in deep search; if
+they can be sampled, borrowed, or placed on hold; and if their cover
+images are shown.<br />
+When you disable a toggle (like <strong>allow samples</strong>) for an
+audience category, you’ll see the same toggle appear for the next
+audience category. <strong>Show cover images</strong> is an exception;
+it only applies to mature content.<br />
+</li>
+<li><strong>Libby for Kids</strong>. With this preset, general content
+and mature content is hidden in the <strong>Library</strong> and
+<strong>Search</strong> screens of the app. No titles are hidden from
+the <strong>Shelf</strong> or <strong>Tags</strong> screens.</li>
+<li><strong>Libby for Grown-ups</strong>. With this preset, juvenile and
+young adult titles are hidden in the <strong>Library</strong> and
+<strong>Search</strong> screens.</li>
+</ul>
+<p>See this help article to learn about common uses for content
+controls.</p>
+<p>If you use Libby on multiple devices, you’ll need to set up content
+controls on each one. Content controls don’t sync between devices.</p>
+<p>Watch a short video about content controls</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: July 10 2026</strong></p>
+<h3 id="getting-started-with-libby">Getting started with Libby</h3>
+<h4 id="libby-help-2">Libby Help</h4>
+<p>With Libby, you can enjoy free ebooks, digital audiobooks, and
+magazines from your library. All you need is a library card.</p>
+<p>Watch the getting started video</p>
+<p>Your browser does not support HTML video.</p>
+<p>Transcript</p>
+<p>Meet Libby, the library reading app.</p>
+<p>With Libby, you can borrow and enjoy free ebooks, digital audiobooks,
+and magazines from your library. All you need is a library card.</p>
+<p>When you open Libby for the first time, you’ll search for your
+library. Then, you can explore the collection and borrow titles or place
+holds instantly.</p>
+<p>On your <strong>Shelf</strong> , you’ll find your loans, holds,
+timeline, notices, and magazines.</p>
+<p>By default in the mobile app, loans are automatically downloaded for
+offline use when you’re on Wi-Fi, and your loans are always returned
+automatically on their due date, so you never need to worry about late
+fees.</p>
+<p>Tap <strong>Manage Loan</strong> to see more options and information,
+like the Return Early button and the title’s due date.</p>
+<p>Tap a title to open it and start reading.</p>
+<p>At US libraries, you’ll see the option to send most ebooks to Kindle
+or to start reading in Libby.</p>
+<p>Use the buttons in the footer to navigate the app.</p>
+<p>You can search for a title, visit your library, open the menu, access
+your <strong>Shelf</strong> , and view your tags. You can also open the
+title you were most recently reading.</p>
+<p>In the Libby menu, you can add a library, manage your cards, adjust
+app settings, get help, and more.</p>
+<p>Download Libby to start borrowing today. Happy reading!</p>
+<p>Looking for more in-depth videos about using Libby? Visit our videos
+page.</p>
+<h5 id="step-1">Step 1</h5>
+<p>Download or open Libby on your device:</p>
+<ul>
+<li>iOS devices: <a
+href="https://itunes.apple.com/app/libby-by-overdrive/id1076402606?pt=211483&amp;ct=Help_libby&amp;mt=8">Apple
+App Store</a></li>
+<li>Android devices: <a
+href="https://play.google.com/store/apps/details?id=com.overdrive.mobile.android.libby&amp;utm_source=help_libby&amp;utm_medium=article&amp;utm_campaign=libby">Google
+Play</a></li>
+<li>Amazon Fire tablets: <a
+href="https://www.amazon.com/dp/B072K3231D">Amazon Appstore</a></li>
+<li>Windows, Mac, and Chromebooks: libbyapp.com<br />
+<em><strong>Note:</strong> libbyapp.com works best in up-to-date
+versions of Chrome, Safari, Firefox, and Edge.</em></li>
+</ul>
+<h5 id="step-2">Step 2</h5>
+<p>In Libby, follow the prompts to find your library and sign in with a
+library card.</p>
+<h5 id="step-3">Step 3</h5>
+<p>Find something to borrow:</p>
+<ul>
+<li>Tap <strong>Search</strong> to find a specific title, author,
+series, etc.</li>
+<li>Tap <strong>Library</strong> to browse your library’s catalog.
+You’ll find helpful filters, catalog guides, campaigns, and curated
+lists created by your library.</li>
+</ul>
+<p>Your selection will vary based on your library, since each library
+chooses what titles and formats to offer in Libby.</p>
+<p><em><strong>Tip:</strong> Not ready to read a title, but want to keep
+track of it? Tag it for later.</em></p>
+<h5 id="step-4">Step 4</h5>
+<p>Your loans and magazines appear on your <strong>Shelf</strong> . By
+default, all book and audiobook loans are downloaded for offline use
+when you have a Wi-Fi connection.</p>
+<p>On your <strong>Shelf</strong>:</p>
+<ul>
+<li>Tap <strong>Loans</strong> to read or manage your borrowed
+titles.</li>
+<li>Tap <strong>Holds</strong> to see your place in line and manage your
+holds.</li>
+<li>Tap <strong>Timeline</strong> to see your Libby activity
+history.</li>
+<li>Tap <strong>Notices</strong> to see in-app notifications for your
+loans and holds. Choose what you want to be notified about under
+<em>Menu &gt; Notifications</em>.</li>
+<li>Tap a magazine on your Magazine Rack to start reading.</li>
+</ul>
+<p>Happy reading!</p>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="how-do-i-get-a-library-card">How do I get a library card?</h3>
+<h4 id="libby-help-3">Libby Help</h4>
+<p>If you don’t have a library card yet, your library may have
+instructions or an easy way to get one directly from Libby. At the top
+of the library’s home screen in Libby, tap <strong>I Would Like A
+Card</strong> then <strong>Visit Library Website</strong> or <strong>Use
+My Phone Number</strong> and follow the prompts.</p>
+<p>If you’re still not sure how to get a card or can’t use your phone
+number to sign up for one, ask at your nearest public library.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="labeling-the-navigation-icons-in-libby">Labeling the navigation
+icons in Libby</h3>
+<h4 id="libby-help-4">Libby Help</h4>
+<p>To label the navigation icons (like and ) in Libby:</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>.</li>
+<li>Under “Settings,” select <strong>Navigation</strong>.</li>
+<li>Turn on <strong>Labeled Icons</strong>.</li>
+</ol>
+<p>Watch a short video about labeling navigation icons</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="libby-quick-start-guide">Libby quick-start guide</h3>
+<p>Explore the following key topics and tips about getting the most out
+of Libby.</p>
+<h5 id="set-up-the-app">Set up the app</h5>
+<p>Use a supported device or browser</p>
+<p>You can download the Libby app on your mobile device or use Libby in
+your computer’s web browser.</p>
+<p>You can download Libby on:</p>
+<ul>
+<li>iOS 10+ (get it from the <a
+href="https://itunes.apple.com/app/apple-store/id1076402606?pt=211483&amp;ct=Help_libby&amp;mt=8">Apple
+App Store</a>)</li>
+<li>Android 7.1+ (get it on <a
+href="https://play.google.com/store/apps/details?id=com.overdrive.mobile.android.libby&amp;utm_source=help_libby&amp;utm_medium=article&amp;utm_campaign=libby">Google
+Play</a>)</li>
+<li>Newer Fire tablets (get it from the <a
+href="https://www.amazon.com/dp/B072K3231D">Amazon Appstore</a>)</li>
+</ul>
+<p>If you have a Windows computer, Mac computer, or a Chromebook, you
+can use Libby in your web browser at libbyapp.com. We suggest using the
+latest version of Chrome, Safari, Firefox, or Edge.</p>
+<p>Add your library card</p>
+<p>When you open Libby for the first time, follow the prompts to find
+your library and add your library card. If you have more library cards,
+you can add them to Libby at this point, too.</p>
+<p>If you have trouble adding your library card, you’ll need to reach
+out to your library. When prompted, tap <strong>get in touch</strong> or
+<strong>ask your library</strong> for instructions and contact
+information.</p>
+<p>Learn more about adding library cards.</p>
+<p><em><strong>Tip:</strong> Need a library card? Your library might
+offer instant digital cards in Libby. If so, you’ll see an <strong>I
+Would Like A Card</strong> option below the <strong>Sign In With My
+Card</strong> button. If they don’t offer this option, visit your local
+library’s website or a branch near you for help signing up.</em></p>
+<p>Explore the app</p>
+<p>Use the navigation bar in the footer to access key areas of Libby,
+like your <strong>Library</strong> and <strong>Shelf</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 2%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr>
+<th>Name</th>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search</td>
+<td></td>
+<td>Search for books, audiobooks, and magazines at your library.</td>
+</tr>
+<tr>
+<td>Library</td>
+<td></td>
+<td>Browse lists, campaigns, and guides created by your library.</td>
+</tr>
+<tr>
+<td>Menu</td>
+<td></td>
+<td>Switch libraries, add library cards, set up notifications, access
+Inspire Me, customize your settings, and get help.</td>
+</tr>
+<tr>
+<td>Shelf</td>
+<td></td>
+<td>See your loans, holds, and magazines from all your libraries, view
+your borrowing history on the timeline, and check your notices to see
+important info about your loans, holds, and tags.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td></td>
+<td>See the tags you’ve created and all the titles you’ve saved to each
+one.</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Tip:</strong> If you’d like, you can turn on labels for
+the footer icons. This setting is only available if you use Libby in
+English.</em></p>
+<h5 id="customize-libby">Customize Libby</h5>
+<p>Here are a few settings you might want to customize right away.</p>
+<p>Update your download settings</p>
+<p>In the Libby mobile app, you can stream titles using an internet
+connection or download them to enjoy offline. By default, all book and
+audiobook loans are downloaded for offline use when you have a Wi-Fi
+connection.</p>
+<p>To customize your download settings in the mobile app, open the
+<strong>Menu</strong>, then tap <strong>Downloads</strong> (under
+“Settings”).</p>
+<p><strong><em>Notes:</em></strong></p>
+<ul>
+<li><em>The download settings don’t apply to magazines. Magazines are
+never automatically downloaded.</em></li>
+<li><em>These settings aren’t available at libbyapp.com. Website users
+always need an internet connection to use Libby.</em></li>
+</ul>
+<p>Set up notifications</p>
+<p>Libby can notify you about your loans, holds, and magazine
+subscriptions with push, in-app, or email notifications.</p>
+<p>By default, the Android and iOS mobile apps use push notifications,
+and libbyapp.com and the Fire tablet app use email notifications.</p>
+<p>To customize your notification settings, open the
+<strong>Menu</strong>, then tap <strong>Notifications</strong> (under
+“Settings”).</p>
+<p>Learn more about managing notifications.</p>
+<p>Filter your library’s catalog based on your interests</p>
+<p>By default, your library’s entire Libby catalog is shown in the app.
+Use these options to help you find what you want to read more
+quickly.</p>
+<h6 id="using-content-controls">Using content controls</h6>
+<p>Content controls filter titles in Libby based on audience
+categories.</p>
+<p>To change content controls, go to <em>Menu &gt; Content Controls &gt;
+Audience</em> and choose a preset.</p>
+<p>You can use content controls in lots of ways. For example, if you’re
+setting up Libby for a child, pick <strong>Libby for Kids</strong>.</p>
+<p>Learn more about content controls, available presets, and example
+scenarios.</p>
+<h6 id="using-pinned-filters">Using pinned filters</h6>
+<p>Pin filters to automatically filter what appears while browsing and
+searching. You can filter based on format, availability, audience,
+language, and if the book can be read on Kindle devices (U.S. libraries
+only).</p>
+<p>For example, if you’re only interested in audiobooks in Spanish, pin
+the <strong>audiobooks</strong> format filter and the
+<strong>Spanish</strong> language filter.</p>
+<p>Pinned filters are active until you remove them.</p>
+<p>Set up more devices</p>
+<p>If you want to use Libby on multiple devices, you can keep them all
+in sync by setting up Libby on your other devices using a recovery
+passkey or setup code.</p>
+<p>Back up your data</p>
+<p>We recommend creating a recovery passkey to back up your Libby data.
+Recovery passkeys are stored in your device’s password manager.</p>
+<p>If you reset Libby or install Libby on another device, you can use
+your passkey to quickly recover your library cards, loans, holds, and
+tags.</p>
+<p><em><strong>Note:</strong> If your device doesn’t support passkeys,
+you can use a setup code to copy your data to another device.</em></p>
+<h5 id="find-borrow-and-enjoy">Find, borrow, and enjoy</h5>
+<p>Browse the library</p>
+<p>Tap <strong>Library</strong> to start browsing your library’s
+collection. There you’ll find:</p>
+<ul>
+<li>Filters to browse new, popular, and currently available titles in
+your library’s catalog.</li>
+<li>Curated lists of titles with common themes, like summer reading
+books, autobiographies, or library staff picks.</li>
+<li>Featured titles chosen by your library, or by staff librarians at
+OverDrive (the makers of Libby).</li>
+<li>Guides featuring segments of the library’s catalog, like kids’
+content, magazines, language-specific collections, and more.</li>
+<li>Extras, which are additional learning or entertainment resources
+from the library. These may include providers like Kanopy, Craftsy, and
+others. Learn more about Extras.</li>
+</ul>
+<p>Search for titles</p>
+<ol type="1">
+<li>Tap <strong>Search</strong> in the footer.</li>
+<li>Enter your search term in the search bar.<br />
+<em><strong>Tip:</strong> To search for an exact phrase, put your search
+terms in quotation marks.</em></li>
+<li>Tap , <strong>search</strong>, or <strong>Enter</strong> (depending
+on your device) to see all results, or tap a search suggestion.</li>
+</ol>
+<p>After searching, you can sort and filter your results:</p>
+<ol type="1">
+<li>In a list or search results, tap to apply filters.<br />
+</li>
+<li>Adjust your filters and default sorting option, then tap
+<strong>Show Titles</strong>.</li>
+</ol>
+<p>Tap the applied sort or filter to:</p>
+<ul>
+<li>Quickly change it.</li>
+<li>Pin it.</li>
+<li>Remove it.<br />
+<em><strong>Note:</strong> Not all filters can be removed (or
+added).</em></li>
+</ul>
+<p>Borrow titles and place holds</p>
+<p>When you find a title you’re interested in, tap it to see its details
+screen. You’ll see a brief description, the title’s format, the number
+of copies in the library, and more.</p>
+<p>To borrow an available title:</p>
+<ol type="1">
+<li>Tap <strong>Borrow</strong>.</li>
+<li>On the confirmation screen, tap the loan period next to “Borrowing
+for…” if you want to change it.<br />
+</li>
+<li>Tap <strong>Borrow</strong> again to check out the title.</li>
+</ol>
+<p>If no copies are available, tap <strong>Place Hold</strong> to be
+added to the title’s wait list. You’ll receive a notification when your
+hold is ready to borrow.</p>
+<p>Read books and listen to audiobooks</p>
+<p>To see your borrowed titles, tap <strong>Shelf</strong> , then
+<strong>Loans</strong> at the top of the screen.</p>
+<ul>
+<li>To read a book: Tap <strong>Read With…</strong> and choose whether
+you’d like to read it in Libby or Kindle (U.S. libraries only).</li>
+<li>To listen to an audiobook: Tap <strong>Open Audiobook</strong>.</li>
+</ul>
+<p>Read magazines</p>
+<p>If your library offers magazines, they’re always available and don’t
+count against your borrowing limit.</p>
+<p>You can search for magazines on the <strong>Search</strong> screen
+and browse your library’s curated lists of magazines on the
+<strong>Library</strong> screen like you can with books and
+audiobooks.</p>
+<p>When you find a magazine you’re interested in, tap <strong>Open
+Magazine</strong> to start reading.</p>
+<p>To browse all magazines at your library, visit the
+<strong>Newsstand</strong> from the Magazine Rack on your
+<strong>Shelf</strong> .</p>
+<p>Keep track of titles you want to read</p>
+<p>In Libby, you can save titles to tags to easily find them again.</p>
+<p>To save a title to a tag, tap <strong>Save</strong> while browsing
+your library or on a title’s details screen, then select or create a
+tag.</p>
+<p>To see all titles you’ve saved to a tag, tap <strong>Tags</strong> in
+the footer.</p>
+<h6 id="share-interest-in-titles-your-library-doesnt-offer">Share
+interest in titles your library doesn’t offer</h6>
+<p>If you discover a title your library doesn’t offer, it will have a
+<strong>Notify Me</strong> button instead of a <strong>Borrow</strong>
+button.</p>
+<p>When you press this button and add the title to a Notify Me tag,
+you’ll let your library know you’re interested in the title and be
+notified if it’s added to the collection.</p>
+<p><em><strong>Important note:</strong> Not all libraries offer this
+feature.</em></p>
+<h3 id="navigating-the-app">Navigating the app</h3>
+<h4 id="libby-help-5">Libby Help</h4>
+<p>In Libby, use the navigation bar in the footer to access key areas of
+the app, like your <strong>Library</strong> and <strong>Shelf</strong>.
+Use the table below to learn more about each area.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 2%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr>
+<th>Name</th>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search</td>
+<td></td>
+<td>Search for books, audiobooks, and magazines at your library.</td>
+</tr>
+<tr>
+<td>Library</td>
+<td></td>
+<td>Browse lists, campaigns, and guides created by your library.</td>
+</tr>
+<tr>
+<td>Menu</td>
+<td></td>
+<td>Switch libraries, add library cards, set up notifications, access
+Inspire Me, customize your settings, and get help.</td>
+</tr>
+<tr>
+<td>Shelf</td>
+<td></td>
+<td>See your loans, holds, and magazines from all your libraries, view
+your borrowing history on the timeline, and check your notices to see
+important info about your loans, holds, and tags.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td></td>
+<td>See the tags you’ve created and all the titles you’ve saved to each
+one.</td>
+</tr>
+</tbody>
+</table>
+<p>Watch a short video about navigating the app</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="removing-a-card">Removing a card</h3>
+<h4 id="libby-help-6">Libby Help</h4>
+<p>Removing a card deletes its loans and holds from your
+<strong>Shelf</strong> and removes that library from your current
+device. If you ever add your card to Libby again, any active loans and
+holds will reappear.</p>
+<p>To remove a library card:</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>, then <strong>Manage Cards</strong> (under
+“Your Libraries”).<br />
+</li>
+<li>If needed, switch libraries.<br />
+</li>
+<li>Tap (on your card).<br />
+</li>
+<li>Tap <strong>Remove Card</strong>, then <strong>Yes, Remove
+Card</strong>.</li>
+</ol>
+<p>If you set Libby up on other devices with a recovery passkey or setup
+code, the library card will automatically be removed from those as
+well.</p>
+<p><strong>Last updated: July 20 2026</strong></p>
+<h3 id="setting-up-libby-on-another-device">Setting up Libby on another
+device</h3>
+<h4 id="libby-help-7">Libby Help</h4>
+<p>If you already use Libby on one device, you can use a recovery
+passkey or setup code to copy your library cards, loans, holds, and tags
+to another device and keep your devices in sync.</p>
+<p>The recommended way to copy your data to a new device is using a
+recovery passkey. Learn how to create a recovery passkey on your
+original device. If your device doesn’t support passkeys, you can still
+copy your Libby data to another device using a setup code.</p>
+<p>Use the steps below to copy your data to another device:</p>
+<ol type="1">
+<li>On the “Welcome” screen, tap <strong>Yes</strong> when asked if you
+have a library card.</li>
+<li>Select <strong>Recover Your Data</strong>.
+<ul>
+<li>If you created a passkey, select <strong>Recover With
+Passkey</strong>. Then, follow the prompts to verify your passkey and
+recover your data.</li>
+<li>If you couldn’t create a passkey, select <strong>Display Setup
+Code</strong>. On your original device, navigate to <em>Menu &gt; Copy
+To Another Device</em> (under “Your Information”) and enter the
+code.</li>
+</ul></li>
+<li>Select one of your saved libraries to start browsing.</li>
+</ol>
+<p>Watch a short video about setting up Libby on another device</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="verifying-your-library-card-in-libby">Verifying your library
+card in Libby</h3>
+<h4 id="libby-help-8">Libby Help</h4>
+<p>Libby may occasionally prompt you to verify your library card before
+you can borrow or place a hold. To do so:</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>.</li>
+<li>Tap <strong>Verify Card</strong> under “For Your Attention.”<br />
+</li>
+<li>Tap <strong>Verify Card</strong> again, then sign in with your
+library card.</li>
+</ol>
+<p>If you’re still having trouble, contact your library. They can check
+the status of your card and confirm your PIN/password.</p>
+<p><strong>Last updated: July 20 2026</strong></p>
+<h3 id="what-is-libby">What is Libby?</h3>
+<h4 id="libby-help-9">Libby Help</h4>
+<p>Libby is a free app where you can enjoy ebooks, digital audiobooks,
+and magazines from your public library. You can stream titles with Wi-Fi
+or mobile data, or download them for offline use and read anytime,
+anywhere. All you need to get started is a library card.</p>
+<p>Is Libby free to use?</p>
+<p>Yes, Libby is completely free. The Libby app is free to install, and
+all the digital content from your library in Libby is free to borrow
+with a valid library card. There are no subscription costs, no in-app
+purchases, and no late fees. (Digital titles are automatically returned
+on their due dates.)</p>
+<p>What devices are compatible with Libby?</p>
+<p>You can download the Libby app on:</p>
+<ul>
+<li>iOS 10+ (get it from the <a
+href="https://itunes.apple.com/app/apple-store/id1076402606?pt=211483&amp;ct=Help_libby&amp;mt=8">Apple
+App Store</a>)</li>
+<li>Android 7.1+ (get it on <a
+href="https://play.google.com/store/apps/details?id=com.overdrive.mobile.android.libby&amp;utm_source=help_libby&amp;utm_medium=article&amp;utm_campaign=libby">Google
+Play</a>)</li>
+<li>Newer Fire tablets (get it from the <a
+href="https://www.amazon.com/dp/B072K3231D">Amazon Appstore</a>)</li>
+</ul>
+<p>If you have a Windows computer, Mac computer, or a Chromebook, you
+can use Libby in your web browser at libbyapp.com. We suggest using the
+latest version of Chrome, Safari, Firefox, or Edge.</p>
+<p>Is Libby the same as OverDrive?</p>
+<p>Libby is developed by OverDrive, so you’ll find the same free digital
+content in Libby, your library’s <a
+href="https://help.overdrive.com/en-us/categories/library-overdrive-sites.htm">OverDrive
+website</a>, or the legacy OverDrive app.</p>
+<p>Libby is designed to make finding, borrowing, and enjoying digital
+content easier than ever.</p>
+<p>Does my library work with Libby?</p>
+<p>Libby works with public libraries that use OverDrive (the makers of
+Libby) to lend digital titles. If you can’t find your library in Libby,
+it might be because they haven’t developed a collection with OverDrive.
+If that’s the case, we encourage you to reach out to your library and
+let them know you’re interested in using Libby.</p>
+<p>What titles does Libby have?</p>
+<p>Your library chooses which digital titles they’d like to provide in
+Libby. They also set lending policies, like how long you can borrow
+titles and how many you can borrow at a time.</p>
+<p>Libby is only for digital titles. It doesn’t include any physical
+materials from your library.</p>
+<p>How do I use Libby?</p>
+<p>Visit this help article to learn how to get started with Libby.</p>
+<p><strong>Last updated: April 13 2026</strong></p>
+<h2 id="finding-and-borrowing-titles">Finding and borrowing titles</h2>
+<h3 id="changing-your-loan-period">Changing your loan period</h3>
+<h4 id="libby-help-10">Libby Help</h4>
+<p>You can change your loan period for each title when you borrow or
+renew it. Loan periods vary by library and by format.</p>
+<p>When you borrow or renew a title, tap the loan period on the
+confirmation screen. Then, select a new loan period for that title.</p>
+<p>When you pick a new loan period, it becomes your default loan period
+for future checkouts in that format at that library.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="finding-details-about-a-title">Finding details about a
+title</h3>
+<h4 id="libby-help-11">Libby Help</h4>
+<p>On a title’s details screen, you’ll see a brief description of the
+title, its author (creator), the format, the number of copies in the
+collection, and more.</p>
+<p>You can get to a title’s details in several ways, including:</p>
+<ul>
+<li>While browsing or searching your library’s catalog, tap any title’s
+cover image.</li>
+<li>From your <strong>Shelf</strong> , tap <strong>Manage Loan</strong>,
+<strong>Manage Hold</strong>, or . Then, tap the title’s name.</li>
+<li>From your <strong>Tags</strong> , select a tag, then tap the title’s
+name.</li>
+<li>In an audiobook, tap the title’s cover image, then <strong>View
+Title Details</strong>.</li>
+<li>In a book or magazine, tap the center of the screen, tap the title’s
+cover image, then <strong>View Title Details</strong>.</li>
+</ul>
+<p>Watch a short video about finding a title’s details</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="pinning-filters-and-sorts">Pinning filters and sorts</h3>
+<h4 id="libby-help-12">Libby Help</h4>
+<p>You can use pins to automatically apply filters and sorts when you’re
+browsing and searching your library. For example, you can pin the
+“available now” filter to only find titles you can borrow right
+away.</p>
+<p>To pin a filter or sort:</p>
+<ol type="1">
+<li>Tap <strong>Library</strong> or <strong>Search</strong> in the
+footer.</li>
+<li>Tap .</li>
+<li>Select a filter or sort, then <strong>Show Titles</strong>.</li>
+<li>Select the applied filter or sort.</li>
+<li>Tap <strong>Pin Filter</strong> or <strong>Pin Sort</strong>.<br />
+<em><strong>Note:</strong> Some filters or sort options, including
+subjects, can’t be pinned.</em></li>
+</ol>
+<p>Pinned filters and sorts will be applied to the library home screen
+(at all of your libraries), all lists, and all searches until you
+manually remove them.</p>
+<p>To unpin a filter or sort: Tap the pin, then select <strong>Remove
+Filter</strong> or <strong>Remove Sort</strong>.</p>
+<p>Watch a short video about pinning filters</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="searching-for-titles">Searching for titles</h3>
+<h4 id="libby-help-13">Libby Help</h4>
+<p>In Libby, you can search for a book title, author, narrator, subject,
+series name, award, publisher, or keyword.</p>
+<p>To search for titles:</p>
+<ol type="1">
+<li>Tap <strong>Search</strong> in the footer.</li>
+<li>Enter your search term in the search bar.<br />
+<em><strong>Tip:</strong> To search for an exact phrase, put your search
+terms in quotation marks.</em></li>
+<li>Tap , <strong>search</strong>, or <strong>Enter</strong> (depending
+on your device) to see all results, or tap a search suggestion.</li>
+</ol>
+<h5 id="refining-your-search">Refining your search</h5>
+<p>To refine your search results:</p>
+<ol type="1">
+<li>Tap above your results.</li>
+<li>Add a sort or filter, or adjust your search terms in the “Search
+Within Results” box.<br />
+<em><strong>Tip:</strong> To search for an exact phrase, put your search
+terms in quotation marks.</em></li>
+<li>If you adjusted your search terms, tap or press Enter on your
+keyboard.</li>
+<li>Tap <strong>Show Titles</strong>.</li>
+</ol>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="sharing-interest-in-titles-not-offered-by-your-library">Sharing
+interest in titles not offered by your library</h3>
+<h4 id="libby-help-14">Libby Help</h4>
+<p><em><strong>Note:</strong> Not all libraries offer this
+feature.</em></p>
+<p>When searching a library in Libby, you may discover titles that
+aren’t in their collection. These titles will have a <strong>Notify
+Me</strong> button (instead of <strong>Borrow</strong> or <strong>Place
+Hold</strong>).</p>
+<p>To share your interest in any of these titles, select <strong>Notify
+Me</strong> to set up a smart tag that alerts you if one of your
+libraries purchases it.</p>
+<p>Here’s how it works:</p>
+<ol type="1">
+<li><p>Search for a specific title, author, or series.<br />
+</p></li>
+<li><p>Scroll to the bottom of the search results screen, then tap
+<strong>deep search</strong>.<br />
+If your search has more than 100 results, you’ll need to try a more
+specific search (like the book’s full title <em>and</em> the author’s
+name) before you’ll see this button.</p>
+<p><em><strong>Tip:</strong> You can also find the <strong>deep
+search</strong> button in the filters list by tapping .</em></p></li>
+<li><p>In the updated search results, look for the title you’re
+interested in.<br />
+<em><strong>Note:</strong> Some books have never been published
+digitally, and some digital titles may not be available for purchase by
+your library.</em></p></li>
+<li><p>Tap <strong>Notify Me</strong>. You’ll be prompted to set up a
+Notify Me smart tag or use one you’ve already set up.</p></li>
+</ol>
+<p>If one of your libraries purchases the title, you’ll be notified and
+have the option to borrow or place the title on hold (depending on its
+availability).</p>
+<p>Watch a video about sharing interest in titles not offered by your
+library</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="what-are-extras">What are Extras?</h3>
+<h4 id="libby-help-15">Libby Help</h4>
+<p>Some libraries offer extra learning or entertainment resources
+through Libby.</p>
+<p>If your library offers any of these resources, you’ll find them in
+the <strong>Library</strong> under “Extras” (you may need to scroll down
+to see this section). If your library offers several extra resources,
+tap <strong>See all extras</strong> to explore all of your options.</p>
+<p>To get started with an Extra, tap a provider, then tap
+<strong>Get</strong>. This will take you out of Libby to get access to
+the service. Your library card gives you free access, but some providers
+may require you to create an account before you can use their
+service.</p>
+<p><em><strong>Note:</strong> You may see prompts for discounts and
+other promotions while accessing providers’ services. These can be
+safely ignored.</em></p>
+<p>How borrowing or accessing Extras works:</p>
+<ul>
+<li>For all extra resources except <a
+href="https://www.kanopy.com/">Kanopy</a>, you borrow access to the
+service for a set amount of time. Borrowed services appear on your
+<strong>Shelf</strong> so you can easily get back to them during your
+access period. Access periods vary by provider, but you can use the
+service as much as you’d like during your access period.</li>
+<li>For Kanopy, you don’t borrow access to the service. Instead, tapping
+<strong>Get</strong> takes you directly to the Kanopy app (once it’s
+installed), where you can borrow as many titles per month as your
+library allows. Since you’re not borrowing the service, Kanopy doesn’t
+appear on your <strong>Shelf</strong> , and you can access your account
+any time directly in the Kanopy app. <a
+href="https://help.kanopy.com/">Get more help with Kanopy</a>.</li>
+</ul>
+<p>Extras don’t count against your borrowing limit in Libby.</p>
+<p>A note about TV access</p>
+<p>Some video providers, like Kanopy, offer apps for smart TVs and
+streaming devices. If you create an account when accessing these
+providers through Libby, you can enjoy free access to their TV apps by
+signing into your account.</p>
+<p>You may be able to cast other providers’ content from your device to
+a TV; please consult your device help for casting instructions.</p>
+<p>Watch a short video about accessing Extras</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="why-cant-i-add-or-remove-some-filters">Why can’t I add or remove
+some filters?</h3>
+<h4 id="libby-help-16">Libby Help</h4>
+<p>Some filters can’t be added or removed from lists or search results
+in your library’s collection.</p>
+<p>Filters that can’t be removed have a purple background and a funnel
+icon .</p>
+<p>If you’re unsure about a filter, tap it to learn more. If the filter
+can’t be removed, the pop-up in Libby lets you know.</p>
+<p>You can always tap <strong>Library</strong> to go back to your
+library’s home screen or tap <strong>Search</strong> to look for
+something else.</p>
+<h5 id="common-scenarios-where-filters-cant-be-added-or-removed">Common
+scenarios where filters can’t be added or removed</h5>
+<h6 id="the-list-is-defined-by-specific-filters">The list is defined by
+specific filters</h6>
+<p>Your library may create lists based on specific filters. For example,
+a “New &amp; Available Now - Books” list may use “available now” and
+“books” as defining filters, which can’t be removed.</p>
+<p>You can’t add filters that are incompatible with those defining the
+list (like “audiobooks,” in this example). You also can’t add filters
+that conflict with filters you’ve pinned.</p>
+<h6 id="your-search-criteria-match-your-librarys-offerings-exactly">Your
+search criteria match your library’s offerings exactly</h6>
+<p>If all of your search results have the same format or language,
+filters matching your results (e.g., “English” or “books”) are
+automatically applied and can’t be removed from the results.</p>
+<p>You’ll also see this behavior in lists when all titles are the same
+format, subject, audience, etc.</p>
+<h6 id="your-library-doesnt-own-what-you-searched-for">Your library
+doesn’t own what you searched for</h6>
+<p>If deep search is available at your library, search results may have
+the “deep search” filter automatically applied to include titles that
+your library doesn’t own. This happens when your search would otherwise
+get no results. In these circumstances, the “deep search” filter can’t
+be removed.</p>
+<p>You also can’t apply the “deep search” filter when one of the
+following is true:</p>
+<ul>
+<li>Your library has deep search turned off.</li>
+<li>Your search has more than 100 results.</li>
+</ul>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="why-do-i-need-to-wait-for-a-copy-of-a-digital-title">Why do I
+need to wait for a copy of a digital title?</h3>
+<h4 id="libby-help-17">Libby Help</h4>
+<p>In most cases, libraries buy individual “copies” of digital titles
+from publishers. Publishers often require that each digital copy is only
+loaned to one person at a time (just like physical library books). This
+ensures that authors, narrators, and other creators are paid fairly for
+their work, even if it’s consumed digitally.</p>
+<p>The number of copies the library buys depends on a few factors, like
+demand and budget. Even if there’s a lot of demand, the library’s budget
+might not allow for more digital copies of a popular title. Most
+libraries have limited budgets that cover their physical collection,
+programming, and more, in addition to digital titles.</p>
+<p>If all copies of a digital title are checked out, you can place a
+hold and wait for it to become available. If the wait list is long, let
+your library know. They may be able to purchase more copies, if their
+budget allows.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h2 id="reading-and-listening">Reading and listening</h2>
+<h3 id="downloading-a-magazine">Downloading a magazine</h3>
+<h4 id="libby-help-18">Libby Help</h4>
+<p>You can download magazines in the Libby mobile app for offline
+reading:</p>
+<ol type="1">
+<li>Tap <strong>Shelf</strong> .</li>
+<li>On your Magazine Rack, tap next to the magazine you want to
+download.</li>
+<li>Scroll to the bottom of the panel and tap
+<strong>Download</strong>.</li>
+</ol>
+<p>Magazines with a checkmark icon next to them are downloaded to your
+device.</p>
+<p>The download is deleted when the magazine issue is removed from the
+Magazine Rack (when the issue expires or is replaced by a new issue of a
+subscription).</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="finding-and-keeping-an-issue-of-a-magazine">Finding and keeping
+an issue of a magazine</h3>
+<h4 id="libby-help-19">Libby Help</h4>
+<p>When you find a magazine issue you want to come back to, you can keep
+it on the Magazine Rack on your <strong>Shelf</strong> for 7 days. If
+you want to access the magazine when you’re offline, you’ll need to
+manually download it.</p>
+<p><em><strong>Note:</strong> Magazines are only kept on your current
+device. You’ll need to repeat the steps below if you have multiple
+devices you want to keep the magazine on.</em></p>
+<p>To find and keep an issue of a magazine:</p>
+<ol type="1">
+<li>Tap <strong>Shelf</strong> , then tap the <strong>Newsstand</strong>
+tile (at the end of the Magazine Rack).<br />
+</li>
+<li>Tap next to a magazine, then:
+<ul>
+<li>To keep the newest issue: Tap <strong>Keep Issue For 7 Days</strong>
+to add it to the Magazine Rack.</li>
+<li>To keep an older issue: Tap the series name, tap next to the issue
+you’re interested in, then tap <strong>Keep Issue For 7
+Days</strong>.</li>
+</ul></li>
+</ol>
+<p>If you’d like more time with a kept issue, tap next to the magazine’s
+name and select <strong>Keep For Another 7 Days</strong>. This option
+appears when the issue has less than 7 days left on your Magazine Rack.
+You can do this as many times as you’d like.</p>
+<p>You can also keep a magazine when you:</p>
+<ul>
+<li>Close a magazine you’re reading.</li>
+<li>Browse or search for a magazine and tap next to it.</li>
+<li>Browse the issues on a magazine’s details screen and select .</li>
+</ul>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="help-videos">Help videos</h3>
+<p><em><strong>Note:</strong> Libby Help videos are only available in
+English.</em></p>
+<h5 id="getting-started-1">Getting started</h5>
+<p>Libby overview</p>
+<p>Your browser does not support HTML video.</p>
+<p>Access Libby</p>
+<p>Your browser does not support HTML video.</p>
+<p>Sign in for the first time</p>
+<p>Your browser does not support HTML video.</p>
+<p>Set up Libby on multiple devices</p>
+<p>Your browser does not support HTML video.</p>
+<p>Sync your OverDrive wish list</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="managing-libraries-and-cards">Managing libraries and cards</h5>
+<p>Add a library</p>
+<p>Your browser does not support HTML video.</p>
+<p>Add a library card</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="navigating-in-the-app">Navigating in the app</h5>
+<p>Navigate Libby</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate Shelf</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate Timeline</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate Tags</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate Notices</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="browsing-and-searching">Browsing and searching</h5>
+<p>Browse the library</p>
+<p>Your browser does not support HTML video.</p>
+<p>Search for titles</p>
+<p>Your browser does not support HTML video.</p>
+<p>Filter and sort search results</p>
+<p>Your browser does not support HTML video.</p>
+<p>Pin filters to save browsing preferences</p>
+<p>Your browser does not support HTML video.</p>
+<p>View title details</p>
+<p>Your browser does not support HTML video.</p>
+<p>Search between libraries</p>
+<p>Your browser does not support HTML video.</p>
+<p>Find titles not offered by the library</p>
+<p><em><strong>Note:</strong> Not all libraries offer this
+feature.</em></p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="kanopy-and-other-extras">Kanopy and other Extras</h5>
+<p>Access Extras</p>
+<p>Your browser does not support HTML video.</p>
+<p>Discover Kanopy</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="borrowing-and-managing-loans">Borrowing and managing loans</h5>
+<p>Borrow a title</p>
+<p>Your browser does not support HTML video.</p>
+<p>Manage loans (including returning and renewing)</p>
+<p>Your browser does not support HTML video.</p>
+<p>Download or stream titles</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="holds">Holds</h5>
+<p>Holds overview</p>
+<p>Your browser does not support HTML video.</p>
+<p>Place holds</p>
+<p>Your browser does not support HTML video.</p>
+<p>Manage holds</p>
+<p>Your browser does not support HTML video.</p>
+<p>Take action on available holds</p>
+<p>Your browser does not support HTML video.</p>
+<p>Suspend holds</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="tags">Tags</h5>
+<p>Saving a title to a tag</p>
+<p>Your browser does not support HTML video.</p>
+<p>Using smart tags</p>
+<p>Your browser does not support HTML video.</p>
+<p>Manage tags</p>
+<p>Your browser does not support HTML video.</p>
+<p>Creating a wish list smart tag</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="kindles-and-other-ereaders">Kindles and other ereaders</h5>
+<p>Read with a Kindle (U.S. only)</p>
+<p>Your browser does not support HTML video.</p>
+<p>Set a Kindle preference (U.S. only)</p>
+<p>Your browser does not support HTML video.</p>
+<p>Send ebooks to an ereader</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="reading-ebooks">Reading ebooks</h5>
+<p>Begin reading</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate an ebook</p>
+<p>Your browser does not support HTML video.</p>
+<p>Define words</p>
+<p>Your browser does not support HTML video.</p>
+<p>Add bookmarks, notes, and highlights</p>
+<p>Your browser does not support HTML video.</p>
+<p>Export notes and highlights</p>
+<p>Your browser does not support HTML video.</p>
+<p>Customize reading settings</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="listening-to-audiobooks">Listening to audiobooks</h5>
+<p>Begin listening</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate an audiobook</p>
+<p>Your browser does not support HTML video.</p>
+<p>Add bookmarks, notes, and highlights</p>
+<p>Your browser does not support HTML video.</p>
+<p>Customize listening settings</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="finding-and-reading-magazines">Finding and reading
+magazines</h5>
+<p>Subscribe to magazines</p>
+<p>Your browser does not support HTML video.</p>
+<p>Begin reading</p>
+<p>Your browser does not support HTML video.</p>
+<p>Navigate a magazine</p>
+<p>Your browser does not support HTML video.</p>
+<p>Customize reading settings</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="app-settings">App settings</h5>
+<p>Customize Libby to meet your needs</p>
+<p>Your browser does not support HTML video.</p>
+<p>Manage notifications</p>
+<p>Your browser does not support HTML video.</p>
+<p>Setting up content controls</p>
+<p>Your browser does not support HTML video.</p>
+<p>Adjust app settings</p>
+<p>Your browser does not support HTML video.</p>
+<p>Download or stream titles</p>
+<p>Your browser does not support HTML video.</p>
+<p>Turn on labels for navigation bar</p>
+<p>Your browser does not support HTML video.</p>
+<p>Sign out</p>
+<p>Your browser does not support HTML video.</p>
+<h5 id="troubleshooting">Troubleshooting</h5>
+<p>Step 1: Troubleshoot your device – iOS users</p>
+<p>Your browser does not support HTML video.</p>
+<p>Step 1: Troubleshoot your device – Android users</p>
+<p>Your browser does not support HTML video.</p>
+<p>Step 1: Troubleshoot your device – Web users</p>
+<p>Your browser does not support HTML video.</p>
+<p>Troubleshoot the Libby app</p>
+<p>Your browser does not support HTML video.</p>
+<p>Get more help and contact Libby Support</p>
+<p>Your browser does not support HTML video.</p>
+<h3 id="reading-kindle-books-on-a-kindle-ereader">Reading Kindle Books
+on a Kindle ereader</h3>
+<h4 id="libby-help-20">Libby Help</h4>
+<p>You can read most Libby books on a Kindle ereader (available in the
+U.S. only). If you’re using a Fire tablet, we recommend installing and
+reading with Libby instead.</p>
+<ol type="1">
+<li>Tap <strong>Shelf</strong> .</li>
+<li>Tap <strong>Loans</strong> at the top of the screen.<br />
+</li>
+<li>Tap <strong>Read With…</strong>.</li>
+<li>Tap <strong>Kindle</strong>.</li>
+<li>You’ll be taken to Amazon’s website. If prompted, sign into your
+Amazon account.</li>
+<li>Tap <strong>Get Library Book</strong>. The book will appear in all
+Kindle apps and devices associated with your Amazon account.</li>
+</ol>
+<p>Watch a short video about reading with Kindle</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="subscribing-to-magazines">Subscribing to magazines</h3>
+<h4 id="libby-help-21">Libby Help</h4>
+<p>Subscribing to magazines in Libby gives you easy access to new and
+current issues.</p>
+<p>When you subscribe to a magazine:</p>
+<ul>
+<li>The latest issue of the magazine is added to the Magazine Rack on
+your <strong>Shelf</strong> .</li>
+<li>You’ll receive a notification when a new issue is released based on
+your notification settings.</li>
+</ul>
+<p>You can subscribe:</p>
+<ul>
+<li>When you close a magazine and choose <strong>Yes, and notify me for
+every new issue</strong>.</li>
+<li>In search results, in library lists, and on a magazine’s details
+screen by tapping <strong>Subscribe</strong>.</li>
+<li>When you’re browsing the Newsstand and tap (next to a magazine’s
+name), then <strong>Subscribe</strong>.</li>
+</ul>
+<p>Example: Subscribing to a magazine in the Newsstand</p>
+<p>Here’s one of the ways you can subscribe to a magazine in Libby:</p>
+<ol type="1">
+<li>Tap <strong>Shelf</strong> .</li>
+<li>Tap the <strong>Newsstand</strong> tile (at the end of the Magazine
+Rack).<br />
+</li>
+<li>Tap next to the name of a magazine you’re interested in.</li>
+<li>Tap <strong>Subscribe</strong> and make sure your preferred tag is
+selected. If it is, tap <strong>Subscribe</strong> to confirm. If it’s
+not, select <strong>choose another tag…</strong> and choose or create
+another tag.</li>
+<li>(If prompted) Select how you’d like to get notifications in Libby:
+<ul>
+<li><strong>Ignore</strong>, i.e., get no notification</li>
+<li><strong>Shelf notice</strong>, i.e., get a <strong>Notice</strong>
+on your <strong>Shelf</strong> only</li>
+<li><strong>Push notification</strong> (available in the Android and iOS
+mobile apps only)</li>
+<li><strong>Email</strong> (available on desktop or when push
+notifications are disabled in the mobile app)</li>
+</ul></li>
+</ol>
+<p>Watch a short video about subscribing to magazines</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="what-do-the-icons-and-the-icon-colors-mean-in-libby">What do the
+icons and the icon colors mean in Libby?</h3>
+<h4 id="libby-help-22">Libby Help</h4>
+<p>Many icons in Libby show your library’s colors. If you belong to
+multiple libraries, the colors can help you quickly identify which
+library you can borrow a title from or which library has the shortest
+wait list. When you borrow or place a hold on a title, you’ll see an
+icon with that library’s colors next to the title on your
+<strong>Shelf</strong> .</p>
+<p>The icon next to a title shows additional information about it. Here
+are some icons you’ll encounter in Libby and what they mean:</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>The title is available to borrow.</td>
+</tr>
+<tr>
+<td></td>
+<td>The title needs to be placed on hold.</td>
+</tr>
+<tr>
+<td></td>
+<td>Your library purchased more copies of the title since you placed the
+hold.</td>
+</tr>
+<tr>
+<td></td>
+<td>The title is borrowed and downloaded.</td>
+</tr>
+<tr>
+<td></td>
+<td>The title is borrowed but not downloaded.</td>
+</tr>
+</tbody>
+</table>
+<p>Tap an icon next to a title to see your options or get more details
+about it.</p>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h2 id="tags-and-organising">Tags and organising</h2>
+<h3 id="changing-a-regular-tag-into-a-smart-tag">Changing a regular tag
+into a smart tag</h3>
+<h4 id="libby-help-23">Libby Help</h4>
+<p>In Libby, you can change a regular tag into a smart tag. A smart tag
+can automatically keep track of certain titles for you.</p>
+<p>For example, if you have a tag in Libby for titles you want to read,
+you can add “OverDrive Wish List” smarts to it. When you do, the smart
+tag will contain both your OverDrive wish list items <em>plus</em> the
+titles from your “want to read” tag.</p>
+<p>To change a regular tag into a smart tag:</p>
+<ol type="1">
+<li>Tap <strong>Tags</strong> .</li>
+<li>Select a tag.<br />
+</li>
+<li>Tap <strong>Change</strong>.<br />
+</li>
+<li>Select the smarts you want.<br />
+</li>
+<li>Slide the panel down to close it and save your selection.</li>
+</ol>
+<p><em><strong>Note:</strong> You can only have one of each smart tag,
+except Notify Me. You can have as many Notify Me smart tags as you
+want.</em></p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="creating-a-new-tag">Creating a new tag</h3>
+<h4 id="libby-help-24">Libby Help</h4>
+<p>Tags are a flexible way to organize titles in Libby. You can use tags
+to make lists of things you want to read, your favorite titles, what
+you’ve borrowed, and more.</p>
+<p>To create a new tag:</p>
+<ol type="1">
+<li>Tap <strong>Tags</strong> .</li>
+<li>Tap <strong>Actions</strong>, then <strong>New Tag</strong>.</li>
+<li>Name your new tag, add a description (optional), then tap
+<strong>Create</strong>.<br />
+</li>
+<li>(Optional) Turn the tag into a smart tag, like an OverDrive Wish
+List or Notify Me smart tag.<br />
+</li>
+<li>Tap <strong>Done</strong>.</li>
+</ol>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="deleting-tags">Deleting tags</h3>
+<h4 id="libby-help-25">Libby Help</h4>
+<p>Deleting a tag permanently removes it from Libby. Deleted tags can’t
+be recovered.</p>
+<p>To delete a tag:</p>
+<ol type="1">
+<li>Tap <strong>Tags</strong> .</li>
+<li>Select the tag you’d like to delete.</li>
+<li>Tap <strong>Actions</strong>.</li>
+<li>Tap <strong>Delete Tag</strong>, then <strong>Yes, Delete
+Tag</strong>.</li>
+</ol>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="removing-tags-from-titles">Removing tags from titles</h3>
+<h4 id="libby-help-26">Libby Help</h4>
+<ol type="1">
+<li>Tap <strong>Tags</strong> .</li>
+<li>Select a tag.</li>
+<li>Tap (or a similar icon on the right), scroll to the bottom, and
+select the tag you want to remove.</li>
+<li>Tap <strong>Remove From Title</strong>.</li>
+</ol>
+<p>Tags can also be removed from titles:</p>
+<ul>
+<li>On mobile, by swiping right to left on a title in a tags list, then
+tapping <strong>Delete</strong> .</li>
+<li>On the title’s details screen by tapping a tag name, then the
+checkmark .</li>
+<li>On your <strong>Shelf</strong> by selecting <strong>Manage
+Loan</strong> or <strong>Manage Hold</strong> under the title, then
+tapping the tag name and <strong>Remove From Title</strong>.</li>
+</ul>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="renaming-tags">Renaming tags</h3>
+<h4 id="libby-help-27">Libby Help</h4>
+<ol type="1">
+<li>Tap <strong>Tags</strong> .</li>
+<li>Select a tag.<br />
+</li>
+<li>Tap <strong>Actions</strong>, then <strong>Rename
+Tag</strong>.<br />
+</li>
+<li>Enter a new tag name, then slide the panel down to save it.</li>
+</ol>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="saving-titles-to-tags">Saving titles to tags</h3>
+<h4 id="libby-help-28">Libby Help</h4>
+<p>To save a title to a tag:</p>
+<ol type="1">
+<li><p>Open a list, open a title’s details page, or search for a
+title.</p></li>
+<li><p>Tap <strong>Save</strong> .<br />
+</p></li>
+<li><p>Select as many tags as you’d like.</p>
+<p><em><strong>Tip:</strong> Turn on the <strong>Quick Saving</strong>
+toggle (at the bottom of the panel) if you want to save lots of titles
+to the same tag.</em></p></li>
+<li><p>Slide down the panel to close it.</p></li>
+</ol>
+<p>On your <strong>Shelf</strong> , you can also save titles to tags on
+your <strong>Loans</strong>, <strong>Holds</strong>, and
+<strong>Timeline</strong>.</p>
+<p>Watch a short video about saving titles to tags</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="what-are-smart-tags-and-what-do-they-do">What are smart tags and
+what do they do?</h3>
+<h4 id="libby-help-29">Libby Help</h4>
+<p>In Libby, a smart tag is a special kind of tag that can automatically
+keep track of certain titles for you.</p>
+<p>Smart tags have a lot in common with regular tags:</p>
+<ul>
+<li>Find them by tapping <strong>Tags</strong></li>
+<li>Manually save individual titles to them</li>
+<li>Rename or edit them</li>
+<li>Remove them from individual titles, or delete them entirely</li>
+</ul>
+<p>However, smart tags can do more than regular tags, and each smart tag
+works a little differently:</p>
+<h5 id="borrowed-smart-tag">Borrowed smart tag</h5>
+<p>Libby automatically creates this smart tag after you borrow your
+first title in the app.</p>
+<p>When you borrow a book or audiobook, Libby saves the title to this
+tag automatically.</p>
+<p>You can also manually save titles to this tag, remove this tag from
+any title, or delete the entire tag.</p>
+<h5 id="sampled-smart-tag">Sampled smart tag</h5>
+<p>Libby automatically creates this smart tag after you open your first
+sample in the app.</p>
+<p>When you read or listen to a sample of a title, Libby saves the title
+to this tag automatically.</p>
+<p>You can also manually save titles to this tag, remove this tag from
+any title, or delete the entire tag.</p>
+<h5 id="notify-me-smart-tag">Notify Me smart tag</h5>
+<p>You can use the Notify Me smart tag to get notifications when:</p>
+<ul>
+<li>New issues of a tagged magazine come out. When you subscribe to a
+magazine, you’ll be prompted to create a new Notify Me smart tag or save
+the magazine to an existing tag.</li>
+<li>Your library adds titles you’ve saved to the Notify Me tag. You’ll
+be prompted to create a Notify Me smart tag when you find a title your
+library doesn’t offer.</li>
+<li>Your library adds titles by an author or in a book series you saved
+to a Notify Me smart tag.<br />
+<em><strong>Note:</strong> Only in-app notifications are supported for
+this type of Notify Me smart tag.</em></li>
+</ul>
+<p>When you create a Notify Me smart tag (or two), make sure to adjust
+your notification settings in Libby.</p>
+<p>If you aren’t prompted to create a Notify Me smart tag, you can:</p>
+<ul>
+<li>Manually create one</li>
+<li>Change an existing regular tag into a Notify Me smart tag</li>
+</ul>
+<h5 id="overdrive-wish-list-smart-tag">OverDrive Wish List smart
+tag</h5>
+<p>You’ll need to set up this smart tag in Libby. Visit our dedicated
+help article to learn how.</p>
+<p>This smart tag syncs with your wish lists from the legacy OverDrive
+app or OverDrive library websites. Wish lists from all of your library
+cards are merged into a single tag.</p>
+<p>Once all your wish list items are saved to this tag, you can manually
+save or remove titles. Changes you make in Libby will be reflected on
+OverDrive library websites.</p>
+<p>Watch a short video overview of available smart tags</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h2 id="notifications-and-settings">Notifications and settings</h2>
+<h3 id="adding-your-overdrive-wish-lists-to-libby">Adding your OverDrive
+wish lists to Libby</h3>
+<h4 id="libby-help-30">Libby Help</h4>
+<p>If you created wish lists in the legacy OverDrive app or OverDrive
+library websites, you can import them into Libby as an OverDrive Wish
+List smart tag.</p>
+<p>If you already use a tag in Libby to track your wish list, you can
+change it into an OverDrive Wish List smart tag. Otherwise, we recommend
+creating a new tag with “OverDrive Wish List” smarts:</p>
+<ol type="1">
+<li>Tap <strong>Tags</strong> .</li>
+<li>Tap <strong>Actions</strong>, then <strong>New Tag</strong>.</li>
+<li>Name your new tag, add a description (optional), then tap
+<strong>Create</strong>. We recommend a name like “wish list” or “want
+to read.”</li>
+<li>Tap <strong>OverDrive Wish List</strong> when prompted about the
+type of tag you’d like.<br />
+<em><strong>Note:</strong> If none of your library cards in Libby have
+an OverDrive wish list, you won’t see this option.</em></li>
+<li>Slide the panel down to close it and save your selection.</li>
+</ol>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="backing-up-your-data-in-libby">Backing up your data in
+Libby</h3>
+<h4 id="libby-help-31">Libby Help</h4>
+<p>The best way to back up your Libby data is to create a passkey.
+Passkeys let you securely store your Libby data in your device’s
+password manager. Unlike passwords, passkeys use your existing device
+PIN or biometrics (like Face ID or your fingerprint) to verify who you
+are. Note that Libby does not get access to your biometric information
+or device PIN.</p>
+<p>Passkeys can be created in Libby (version 7.0 or higher) on Android
+9+, iOS 17+, and some desktop computers.</p>
+<p>To create a passkey in Libby:</p>
+<ol type="1">
+<li>Make sure you’re using the latest version of Libby by checking your
+device’s app store.</li>
+<li>In Libby, open the <strong>Menu</strong>.</li>
+<li>Under “Your Information,” tap <strong>Back Up Your
+Data</strong>.</li>
+<li>Tap <strong>Create Recovery Passkey</strong>.<br />
+<em><strong>Note:</strong> If your device doesn’t support passkeys, you
+won’t see this option.</em></li>
+<li>Follow the prompts to use Face ID, a fingerprint, PIN, or another
+method to create the passkey.</li>
+<li>Tap <strong>Done</strong>.</li>
+</ol>
+<p>If you ever need to reset the app or install Libby on another device,
+you can use this passkey to recover your data.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="can-i-use-libby-on-my-amazon-fire-tablet">Can I use Libby on my
+Amazon Fire tablet?</h3>
+<h4 id="libby-help-32">Libby Help</h4>
+<p>Yes, you can install Libby from the <a
+href="https://www.amazon.com/dp/B072K3231D">Amazon Appstore</a> on
+compatible Fire tablets. Libby is compatible with Fire tablets from 2020
+or later, plus some earlier models. You can use <a
+href="https://www.amazon.com/gp/help/customer/display.html?nodeId=G4JTV3J2UKA7JFCS#:~:text=Open%20the%20Settings%20menu.,Model%20or%20About%20Fire%20Tablet">Amazon’s
+steps to find your Fire tablet model</a>.</p>
+<p>See all compatible Fire tablet models</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fire HD 8</td>
+<td>2018</td>
+</tr>
+<tr>
+<td>Fire HD 10</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>Fire HD 8</td>
+<td>2020</td>
+</tr>
+<tr>
+<td>Fire HD 10</td>
+<td>2021</td>
+</tr>
+<tr>
+<td>Fire HD 10 Plus</td>
+<td>2021</td>
+</tr>
+<tr>
+<td>Fire 7</td>
+<td>2022</td>
+</tr>
+<tr>
+<td>Fire HD 8</td>
+<td>2022</td>
+</tr>
+<tr>
+<td>Fire HD 8 Plus</td>
+<td>2022</td>
+</tr>
+<tr>
+<td>Fire HD 10</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>Fire Max 11</td>
+<td>2023</td>
+</tr>
+</tbody>
+</table>
+<p>A note about reading: When you borrow a book on your Fire tablet,
+you’ll have the option to read it in Libby itself, or, if you belong to
+a U.S. library, to send it to the Kindle reading app on your Fire
+tablet. Follow our “Reading with Kindle” instructions for more help.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="locking-content-controls-in-libby">Locking content controls in
+Libby</h3>
+<h4 id="libby-help-33">Libby Help</h4>
+<p>On supported devices, you can use a passkey to lock Libby’s content
+controls so only you can change them.</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>, then <strong>Content Controls</strong>
+(under “Settings”).</li>
+<li>Select <strong>Lock With A Passkey</strong>.</li>
+<li>Verify your passkey. If you don’t already have a Libby passkey,
+you’ll be prompted to create one.</li>
+</ol>
+<p>This locks Libby’s content controls on the device you’re currently
+using. Your content control settings don’t sync to Libby on other
+devices.</p>
+<p>To unlock and modify content controls, select <strong>remove this
+requirement</strong> and verify your passkey.</p>
+<p><em><strong>Tip:</strong> If you want to lock content controls more
+securely, use a passkey stored in another password manager or on another
+supported device.</em></p>
+<p><strong>Last updated: July 10 2026</strong></p>
+<h3
+id="locking-content-controls-using-a-passkey-on-another-device">Locking
+content controls using a passkey on another device</h3>
+<h4 id="libby-help-34">Libby Help</h4>
+<p>To more securely lock content controls in Libby, use a passkey saved
+to another device. This can be useful if you want to lock down content
+controls on a child’s device or a shared device.</p>
+<p>Passkeys can be created in Libby on Android 9+ and iOS 17+.</p>
+<p>To lock Libby’s content controls using a passkey on another
+device:</p>
+<p>Using iOS devices</p>
+<ol type="1">
+<li>Open Libby on the device you want to lock.</li>
+<li>Tap <strong>Menu</strong>, then <strong>Back Up Your
+Data</strong>.</li>
+<li>Tap <strong>Create Recovery Passkey</strong>.<br />
+<em><strong>Note:</strong> If this device already has a passkey for
+Libby, instead tap <strong>Manage Passkeys</strong>, then <strong>Add
+Passkey</strong>. Pick a name for the passkey, tap
+<strong>Next</strong>, then tap <strong>Create Recovery
+Passkey</strong>.</em></li>
+<li>Select <strong>Save on another device</strong>.</li>
+<li>Using another device, scan the QR code that appears.</li>
+<li>Select <strong>Save a Passkey</strong>, then
+<strong>Continue</strong>.</li>
+<li>Enter your passcode or use Face ID.</li>
+<li>Return to the device you want to lock and tap
+<strong>Done</strong>.</li>
+<li>On that device, tap <strong>Menu</strong>, then <strong>Content
+Controls</strong>.</li>
+<li>Tap <strong>Lock With A Passkey</strong>.<br />
+<em><strong>Note</strong>: If this device has multiple passkeys for
+Libby, select the passkey you just created.</em></li>
+<li>Scan the QR code with your second device and select <strong>Sign in
+with a passkey</strong>.</li>
+<li>Tap <strong>continue</strong> and enter your passcode or use Face
+ID.</li>
+</ol>
+<p>To remove the content controls lock, tap <strong>remove this
+requirement</strong>, then scan the QR code with the other device.</p>
+<p>Using Android devices</p>
+<ol type="1">
+<li>On the device you want to lock, <a
+href="https://support.google.com/android/answer/7664951?sjid=13110362603853986806">sign
+in with another Google account</a>. You’ll remove it from the device in
+the last step.</li>
+<li>Open Libby.</li>
+<li>Tap <strong>Menu</strong>, then <strong>Back Up Your
+Data</strong>.</li>
+<li>Tap <strong>Create Recovery Passkey</strong>.<br />
+<em><strong>Note:</strong> If this device already has a passkey for
+Libby, instead tap <strong>Manage Passkeys</strong>, then <strong>Add
+Passkey</strong>. Pick a name for the passkey, tap
+<strong>Next</strong>, and complete any additional prompts.</em></li>
+<li>When prompted to chose a Google account for the passkey, select the
+account you added in step one.</li>
+<li>Tap <strong>Continue</strong>.</li>
+<li>Complete any prompts to verify your account.</li>
+<li>Tap <strong>Done</strong>.</li>
+<li>Tap <strong>Menu</strong>, then <strong>Content
+Controls</strong>.</li>
+<li>Tap <strong>Lock With A Passkey</strong>.<br />
+<em><strong>Note</strong>: If this device has multiple passkeys for
+Libby, select the passkey you just created.</em></li>
+<li>Complete the prompts to verify your passkey.</li>
+<li>Remove the Google account you added in step one.</li>
+</ol>
+<p>To remove the content controls lock:</p>
+<ul>
+<li>Tap <strong>remove this requirement</strong> on the locked device,
+then scan the QR code on a device signed in with the Google account from
+step one.</li>
+<li>Or, add the Google account from step one to the locked device again,
+then return to <strong>Content Controls</strong> and tap <strong>remove
+this requirement</strong>.</li>
+<li>Or, from an iOS device, sign into the Chrome app with your Google
+account and enable Chrome in <a
+href="https://support.apple.com/guide/iphone/automatically-fill-in-strong-passwords-iphf9219d8c9/ios#iphcf5334667">AutoFill
+&amp; Passwords</a>.</li>
+</ul>
+<p><strong>Last updated: July 10 2026</strong></p>
+<h3 id="managing-notifications">Managing notifications</h3>
+<h4 id="libby-help-35">Libby Help</h4>
+<p>To manage which push notifications you get:</p>
+<ol type="1">
+<li>Tap <strong>Menu</strong>, then <strong>Notifications</strong>
+(under “Settings”).</li>
+<li>If prompted, allow Libby to send push notifications.</li>
+<li>Choose how to be notified for each event: <strong>Ignore</strong>
+(no notification), <strong>Shelf notice</strong> (in-app notification),
+or <strong>Notification</strong> (push notification).</li>
+</ol>
+<p><em><strong>Note:</strong> Push notifications aren’t available in
+Libby on Fire tablets. You can use email or in-app notifications
+instead.</em></p>
+<p>If you use Libby in your web browser</p>
+<p>If you’re using Libby in your web browser, you can get in-app or
+email notifications for your loans and holds. Push notifications aren’t
+supported.</p>
+<p>By default, you’ll get in-app notices, which appear on your
+<strong>Shelf</strong> .</p>
+<p>If you’d like to receive email notifications instead, here’s how to
+set them up:</p>
+<ol type="1">
+<li>Select <strong>Menu</strong>, then <strong>Notifications</strong>
+(under “Settings”).</li>
+<li>Select <strong>Email</strong> for any event you’d like an email
+about.</li>
+<li>Select <strong>Fix this?</strong> next to “You need to specify an
+email address…” (at the bottom of the menu), then enter your email and
+select <strong>Next</strong>.</li>
+</ol>
+<p>Watch a short video about managing notifications</p>
+<p>Your browser does not support HTML video.</p>
+<p><strong>Last updated: February 26 2026</strong></p>
+<h3 id="setting-up-content-controls-in-libby">Setting up content
+controls in Libby</h3>
+<h4 id="libby-help-36">Libby Help</h4>
+<p>Content controls manage access to titles in Libby based on their
+audience categories. With content controls, you can customize what
+titles you see, search for, borrow, and place on hold at your libraries
+in Libby.</p>
+<p>Content controls are useful in a variety of situations. Explore the
+sections below to learn how they could be helpful for you.</p>
+<h5 id="you-only-want-libby-to-show-titles-intended-for-children">You
+only want Libby to show titles intended for children</h5>
+<p>If you only want Libby to show titles intended for children, go to
+<em>Menu &gt; Content Controls &gt; Audience</em> and choose the
+<strong>Libby for Kids</strong> preset. You may want to configure Libby
+this way if you plan to let a child use the app unsupervised.</p>
+<p>This preset hides all titles with the general content and mature
+content audience categories from the <strong>Library</strong> and
+<strong>Search</strong> screens of the app. In other words, this preset
+shows only juvenile and young adult titles when you browse and
+search.</p>
+<p>However, <strong>Libby for Kids</strong> doesn’t hide any titles on
+your <strong>Shelf</strong> or <strong>Tags</strong> screens. All loans
+can still be opened, too, regardless of their audience category or your
+content controls setup.</p>
+<p>If you have a family device with multiple library cards added to
+Libby, you may want to consider:</p>
+<ul>
+<li>Removing adults’ library cards to remove adult-oriented loans from
+the <strong>Shelf</strong></li>
+<li>Locking your selected content controls with a passkey so only you
+can change them</li>
+<li>Disabling the “young adult” content toggle for very young readers
+(ages 0-12)</li>
+</ul>
+<h5
+id="youre-an-adult-reader-only-interested-in-titles-intended-for-adults">You’re
+an adult reader only interested in titles intended for adults</h5>
+<p>If you’re an adult reader only interested in reading titles for
+adults, go to <em>Menu &gt; Content Controls &gt; Audience</em> and
+choose the <strong>Libby for Grown-ups</strong> preset. This preset
+hides all titles in juvenile and young adult audience categories from
+the <strong>Library</strong> and <strong>Search</strong> screens of the
+app.</p>
+<p>If you also enjoy young adult titles, enable the <strong>…but allow
+young adult content!</strong> toggle.</p>
+<h5
+id="youre-an-adult-reader-who-doesnt-want-to-see-or-read-mature-content">You’re
+an adult reader who doesn’t want to see or read mature content</h5>
+<p>If you’re an adult reader who doesn’t want to read mature content, go
+to <em>Menu &gt; Content Controls &gt; Audience</em> and choose the
+<strong>Libby for Everyone</strong> preset. When you do, consider
+disabling the provided toggles for mature content: <strong>Allow in deep
+search</strong>, <strong>Allow samples</strong>, <strong>Allow loans
+&amp; holds</strong>, and <strong>Show cover images</strong>.</p>
+<p>While this preset won’t hide any content at your libraries, disabling
+these toggles minimizes the mature content in your library’s collection
+and helps prevent you from borrowing those titles.</p>
+<p>If you only want to see general content in your library, consider
+pinning an audience filter to hide titles in all other audience
+categories.</p>
+<p><strong>Last updated: July 10 2026</strong></p>
+<h3 id="viewing-in-app-notifications-in-libby">Viewing in-app
+notifications in Libby</h3>
+<h4 id="libby-help-37">Libby Help</h4>
+<p>In Libby, in-app notifications are called
+<strong>Notices</strong>.</p>
+<p>To read your notices, go to your <strong>Shelf</strong> , then tap
+<strong>Notices</strong>. From there, you can tap an action button (like
+<strong>Borrow</strong> or <strong>Renew Loan</strong>) to act on a
+notice. Tap to see additional options like <strong>Title
+Details</strong>, or to pin or dismiss the notice.</p>
+<p>Notices are automatically dismissed 72 hours after you view them,
+unless they’re pinned. Pinned notices are kept indefinitely. When you
+unpin a notice, it’s dismissed after 72 hours.</p>
+<p>Tap next to a month to delete all notices from that month. To delete
+all notices, tap <strong>Actions</strong>, then <strong>Dismiss
+Notices</strong>.</p>
+<p><strong>Last updated: May 14 2026</strong></p>
+<h3 id="what-do-the-audience-categories-in-libby-mean">What do the
+audience categories in Libby mean?</h3>
+<h4 id="libby-help-38">Libby Help</h4>
+<p>Libby’s content controls are based on titles’ audience categories.
+There are four audience categories in Libby:</p>
+<ul>
+<li><strong>Juvenile:</strong> Titles intended for readers ages
+0-12.</li>
+<li><strong>Young adult:</strong> Titles written for readers ages
+13-18.</li>
+<li><strong>General content:</strong> Titles written for adult readers
+or a general audience. This is the audience category for most
+titles.</li>
+<li><strong>Mature content:</strong> Titles intended only for mature
+audiences due to the nature of their content.</li>
+</ul>
+<p><strong>Last updated: February 26 2026</strong></p>
+</body>
+</html>
