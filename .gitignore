@@ -22,6 +22,8 @@ ZoomHelpSmall*/
 *.cmd
 *.ps1
 temp.txt
+./tmp
+./tmp/*
 *.md
 *.log
 
@@ -41,3 +43,13 @@ desktop.ini
 
 # Harvested pages holding sample credentials, which GitHub blocks.
 GitHub.htm
+# added by fixRepo.ps1
+tmp/
+temp/
+*.tar.gz
+*.tgz
+*.7z
+*.iso
+*.exe
+*.dmg
+fixRepo.log

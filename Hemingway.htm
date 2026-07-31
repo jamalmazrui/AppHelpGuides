@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-30" />
+  <title>Hemingway Editor Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Hemingway Editor Help Guide</h1>
+<p class="subtitle">Hemingway Editor’s official help, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-07-30</p>
+</header>
+<h1 id="hemingway-editor-help-guide">Hemingway Editor Help Guide</h1>
+<p>This guide gathers Hemingway Editor’s official help. Hemingway Editor
+highlights the places where writing is harder to read than it needs to
+be — long sentences, passive voice, adverbs, complicated words — and
+gives the piece a readability grade. It was taken from Hemingway’s own
+help site on 30 July 2026.</p>
+<p>Hemingway comes in two forms and both are covered here: the editor in
+a web browser, and the desktop application for Windows and Mac. There is
+no phone app and no Alexa skill.</p>
+<p>This is a short volume, and honestly so. Hemingway’s published help
+is eight pages: an introduction, a quick start guide, logging in, the
+highlighted issues and what each colour means, readability and the
+document statistics, the detailed feedback panel, rewriting text with
+the AI tools, and importing and exporting files. That is all of it, and
+all of it is here.</p>
+<p>A note for a screen reader user. Hemingway’s whole method is colour —
+yellow for a hard sentence, red for very hard, blue for an adverb,
+purple for a simpler alternative, green for passive voice. The
+Highlighted issues page explains what each colour means, and the
+detailed feedback panel lists the same findings as text rather than as
+colour, which is the part of the application worth knowing about.</p>
+<p>Gathering this needed a real browser: the site sends a page and fills
+it in afterwards.</p>
+<p>Headings run three deep: this title, then a section, then a page,
+with each page’s own subheadings nested beneath.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#getting-started">Getting started</a>
+<ul>
+<li><a href="#intro-to-hemingway-editor">Intro to Hemingway
+Editor</a></li>
+<li><a href="#quick-start-guide">Quick Start Guide</a></li>
+<li><a href="#log-in-to-your-hemingway-editor-account">Log in to your
+Hemingway Editor account</a></li>
+</ul></li>
+<li><a href="#editing-your-writing">Editing your writing</a>
+<ul>
+<li><a href="#highlighted-issues-in-your-writing">Highlighted issues in
+your writing</a></li>
+<li><a href="#readability-and-document-stats">Readability and document
+stats</a></li>
+<li><a href="#detailed-feedback-on-your-writing">Detailed feedback on
+your writing</a></li>
+<li><a href="#rewriting-text-with-ai-tools">Rewriting text with AI
+tools</a></li>
+</ul></li>
+<li><a href="#getting-text-in-and-out">Getting text in and out</a>
+<ul>
+<li><a href="#importing-and-exporting-text-from-hemingway">Importing and
+exporting text from Hemingway</a></li>
+</ul></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="intro-to-hemingway-editor">Intro to Hemingway Editor</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p><strong>Intro to Hemingway Editor</strong></p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles">How-to Articles</h6>
+<ul>
+<li><p><strong>Intro to Hemingway Editor</strong></p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>What is Hemingway Editor?</p></li>
+<li><p>What is Hemingway Editor Plus?</p></li>
+<li><p>What is Hemingway Editor?</p></li>
+<li><p>What is Hemingway Editor Plus?</p></li>
+</ul>
+<h5 id="what-is-hemingway-editor">What is Hemingway Editor?</h5>
+<p>Hemingway Editor is the fastest way to make your writing clear and
+correct. Using our online editor, you can spot common writing errors
+that make your writing more complicated than it needs to be.</p>
+<p>Hemingway is like a spellchecker, but for style. It makes sure that
+your reader will focus on your message, not your prose. Hemingway scores
+your writing for readability, which measures how easily readers can
+follow your sentence structures. It highlights which sentences are the
+worst offenders, and also points out issues that weaken your
+message.</p>
+<p>Too often, our words are like our thoughts — innumerable and
+disorganized. Almost any bit of writing could use some cutting. Less is
+more. That’s where Hemingway helps.</p>
+<h5 id="what-is-hemingway-editor-plus">What is Hemingway Editor
+Plus?</h5>
+<p>Hemingway Editor Plus is an optional, paid add-on that supercharges
+Hemingway. With Editor Plus, you get access to extra features:</p>
+<ul>
+<li><strong>Advanced grammar checker</strong>: ensure your writing is
+free of any errors with a grammar checker that can find more issues than
+others on the market.</li>
+<li><strong>Fix readability issues instantly</strong>: Editor Plus’s AI
+can suggest ways to simplify your prose to remove issues with wordy
+sentences, phrases that weaken your writing, and more.</li>
+<li><strong>Adjust the tone, length, and formality of your
+writing</strong>: Editor Plus’s AI can also rewrite a passage to make it
+shorter or longer, more or less casual, more friendly, and more.</li>
+</ul>
+<p>Next Article</p>
+<h6 id="quick-start-guide">Quick Start Guide</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h3 id="quick-start-guide">Quick Start Guide</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p><strong>Quick Start Guide</strong></p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles-1">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p><strong>Quick Start Guide</strong></p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>Step 1. Log in to your Hemingway Editor Plus account</p></li>
+<li><p>Step 2. Create your first draft</p></li>
+<li><p>Step 3. Check your readability score and counts of common writing
+errors</p>
+<ul>
+<li>Readability score</li>
+<li>Document statistics</li>
+<li>Highlights of common writing issues</li>
+</ul></li>
+<li><p>Step 4: Simplify your writing with AI</p></li>
+<li><p>Step 5. Find better ways to express an idea</p></li>
+<li><p>Step 6. Adjust tone, formality, or length</p></li>
+<li><p>Step 7. Get feedback on your writing</p></li>
+<li><p>Step 8. Export your work</p></li>
+<li><p>Next steps</p></li>
+<li><p>Step 1. Log in to your Hemingway Editor Plus account</p></li>
+<li><p>Step 2. Create your first draft</p></li>
+<li><p>Step 3. Check your readability score and counts of common writing
+errors</p>
+<ul>
+<li>Readability score</li>
+<li>Document statistics</li>
+<li>Highlights of common writing issues</li>
+</ul></li>
+<li><p>Step 4: Simplify your writing with AI</p></li>
+<li><p>Step 5. Find better ways to express an idea</p></li>
+<li><p>Step 6. Adjust tone, formality, or length</p></li>
+<li><p>Step 7. Get feedback on your writing</p></li>
+<li><p>Step 8. Export your work</p></li>
+<li><p>Next steps</p></li>
+</ul>
+<p>Hemingway Editor Plus is the fastest way to make your writing clear
+and correct. Using our online editor, you can spot common writing errors
+and fix them in a click with AI.</p>
+<p>Let’s get started composing and editing a piece of writing:</p>
+<h5 id="step-1.-log-in-to-your-hemingway-editor-plus-account">Step 1.
+Log in to your Hemingway Editor Plus account</h5>
+<p>You’ll need an active Hemingway Editor Plus subscription or a free
+trial to get started. Learn how to sign up or log in.</p>
+<h5 id="step-2.-create-your-first-draft">Step 2. Create your first
+draft</h5>
+<p>When you first log into Hemingway, you may see some example text in
+the center of the screen explaining our various features. Select all of
+this text and delete it to start a fresh document. From there you
+can:</p>
+<ul>
+<li><strong>Use the distraction-free writing mode.</strong> Hint: you
+can click the <strong>Write</strong> button in the top right corner of
+the app to hide our highlights and stats as you draft.</li>
+<li><strong>Paste in text written in another program</strong></li>
+<li><strong>Import a file</strong></li>
+</ul>
+<h5
+id="step-3.-check-your-readability-score-and-counts-of-common-writing-errors">Step
+3. Check your readability score and counts of common writing errors</h5>
+<p>If you’re in <strong>Write</strong> mode, click the
+<strong>Edit</strong> button in the top-right corner of the app to
+switch to editing mode. It will display:</p>
+<h6 id="readability-score">Readability score</h6>
+<p>Hemingway displays an overall <strong>readability score</strong>. In
+general, lower scores mean your text is easier to comprehend. The
+average adult reads at a 9th-grade level, so we target it by
+default.</p>
+<ul>
+<li><em>Note</em>: It’s a common misconception that lower readability
+scores mean your writing is childish or less professional. This
+<strong>is not</strong> true. Clear writing makes your prose easier for
+all readers and demonstrates mastery of the information. You can adjust
+the readability target to make Hemingway Editor more or less
+strict.</li>
+</ul>
+<h6 id="document-statistics">Document statistics</h6>
+<p>Hemingway also shows statistics about your writing, like word counts
+and reading time. You can expand or collapse the full set of stats.</p>
+<h6 id="highlights-of-common-writing-issues">Highlights of common
+writing issues</h6>
+<p>Hemingway highlights issues like wordy sentences, passive voice, and
+grammar issues.</p>
+<p>Treat these as a guide to the sections of your text that could use
+some extra attention. On the right side of the screen, you’ll see
+reminders for what each color designates and how many times they
+occur.</p>
+<ul>
+<li><em>Note</em><strong>:</strong> we recommend focusing on achieving
+your target readability score versus trying to remove every red or
+yellow highlight. If a long sentence is written well, it can add variety
+and rhythm to your text.</li>
+<li><em>Pro-tip</em><strong>:</strong> You can click the small eye icon
+next to each highlight count toggle the highlight on and off.</li>
+</ul>
+<h5 id="step-4-simplify-your-writing-with-ai">Step 4: Simplify your
+writing with AI</h5>
+<p>Hemingway Editor Plus makes editing a breeze with our AI tools for
+simplifying writing. Here’s how we like to use them:</p>
+<ul>
+<li>Scan through your text paragraph by paragraph looking for
+highlights. If a paragraph has several <strong>red or yellow
+highlights</strong>, highlight the entire paragraph and then click
+<strong>Simplify</strong> from the floating toolbar. Hemingway will
+rewrite the text to be simpler while maintaining your tone and details.
+If needed, click <strong>Get another suggestion</strong> to load a new
+option. You can use the arrow buttons that appear above your suggestion
+to toggle between them. You’ll use up one of your monthly AI sentence
+credits for each sentence you simplify this way.</li>
+</ul>
+<p>Your browser does not support the video tag.</p>
+<ul>
+<li>Fix individual highlights by clicking on them and then selecting
+<strong>Simplify it for me</strong> If needed, click <strong>Get another
+suggestion</strong> to load a new option. You can use the arrow buttons
+that appear above your suggestion to toggle between them. You’ll spend 1
+AI sentence credit each time you use the AI to fix a highlight.
+<em>Note</em>: <strong>Qualifiers</strong> and <strong>words with
+simpler alternatives</strong> won’t charge you an AI credit to fix!</li>
+</ul>
+<h5 id="step-5.-find-better-ways-to-express-an-idea">Step 5. Find better
+ways to express an idea</h5>
+<p>Hemingway Editor Plus also helps you find the right way to express a
+concept. For smaller changes, try getting synonyms for words or whole
+phrases. Select a word or phrase, then click <strong>AI
+synonyms</strong> in the toolbar that appears. This will generate up to
+8 alternative phrasings.</p>
+<p>To fix awkward phrasing in a sentence or paragraph, highlight it and
+select <strong>Polish.</strong> This will generate a new suggestion that
+keeps your language, tone, and meaning intact. If you want more creative
+changes, try clicking <strong>Rephrase</strong> instead. It rewords and
+restructures your text to express the same idea in a new way.</p>
+<h5 id="step-6.-adjust-tone-formality-or-length">Step 6. Adjust tone,
+formality, or length</h5>
+<p>Hemingway Editor Plus features several other tools that you can use
+to change the tone, formality, or length of your writing. Select some
+text you’d like to rewrite, then click <strong>More</strong> from the
+toolbar that appears. You’ll see options to:</p>
+<ul>
+<li><strong>Shorten or Add detail</strong></li>
+<li><strong>Adjust the tone to be more:</strong> confident, friendly,
+casual, formal, or persuasive</li>
+<li><strong>Add headings, bullets, and bolding:</strong> this is a great
+way to make your text easy to skim.</li>
+</ul>
+<h5 id="step-7.-get-feedback-on-your-writing">Step 7. Get feedback on
+your writing</h5>
+<p>Our Feedback tool analyzes your writing to find what’s working well,
+and then suggests ways to improve what’s not. To give it a try, click
+the <strong>Feedback</strong> button in the top right corner, next to
+Write and Edit. Then, click the button to get a new report.</p>
+<h5 id="step-8.-export-your-work">Step 8. Export your work</h5>
+<p>While you can always copy and paste into another program, Hemingway
+can export your writing as a Word doc (.docx), Markdown (.md) or HTML.
+Just click the <strong>File</strong> menu and select
+<strong>Export</strong>, and then choose your desired file type.</p>
+<h5 id="next-steps">Next steps</h5>
+<p>Now you know the basics. Read on if you want to get further detail on
+any of these steps.</p>
+<p>Next Article</p>
+<h6 id="readability-and-document-stats">Readability and document
+stats</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h3 id="log-in-to-your-hemingway-editor-account">Log in to your
+Hemingway Editor account</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p><strong>Log in to your Hemingway Editor account</strong></p></li>
+</ul>
+<h6 id="how-to-articles-2">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p><strong>Log in to your Hemingway Editor account</strong></p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>Logging in to Hemingway Editor Plus</p></li>
+<li><p>Logging in with your Google Account</p></li>
+<li><p>Logging in with your email address</p></li>
+<li><p>Logging in to Hemingway Editor Plus</p></li>
+<li><p>Logging in with your Google Account</p></li>
+<li><p>Logging in with your email address</p></li>
+</ul>
+<p>You can access the free, online version of Hemingway. To use our AI
+tools, you’ll need to be logged in with an active Hemingway Editor Plus
+account. If you haven’t already, you can sign up for a free two-week
+trial (no credit card required).</p>
+<h5 id="logging-in-to-hemingway-editor-plus">Logging in to Hemingway
+Editor Plus</h5>
+<p>If you’re already signed into your account, you’ll see your email
+address listed in the top right corner of the app’s interface alongside
+how many AI sentence rewrites you have remaining:</p>
+<p>If you don’t see it, you’ll need to log in with either your email
+address or Google Account. If you haven’t created an account, logging in
+will create one for you.</p>
+<h5 id="logging-in-with-your-google-account">Logging in with your Google
+Account</h5>
+<ol type="1">
+<li>Head to our login page.</li>
+<li>Click the <strong>Log in with Google</strong> button</li>
+<li>On the next page, click on your Google Account. If you have multiple
+Google Accounts, make sure you always choose the same one each time you
+log in to Hemingway.</li>
+<li>You’ll be redirected to the the app. If it’s your first time logging
+in, you may need to click to accept our Terms of Service and Privacy
+Policy first.</li>
+<li>In the future, you’ll stay logged into your account for several
+weeks at a time. So, you can just head to HemingwayApp.com and start
+editing. If you ever need to log back in, just start over at step
+one.</li>
+</ol>
+<h5 id="logging-in-with-your-email-address">Logging in with your email
+address</h5>
+<ol type="1">
+<li>Head to our login page.</li>
+<li>Enter your email into the text box and click the <strong>Log in with
+email</strong> button.</li>
+<li>Now, head over to your email client and open our login email. If you
+don’t see it, try searching your spam folder for an email from Hemingway
+Editor.</li>
+<li>Click the <strong>Log In</strong> button in the body of the email.
+If the button doesn’t work for any reason, you can copy the long URL
+address below it and paste it into your browser’s address bar
+instead.</li>
+<li>You’ll be redirected to another page where you can click to finish
+logging in. If it’s your first time logging in, you may need to click to
+accept our Terms of Service and Privacy Policy first.</li>
+<li>You’ll now be logged into your account and redirected to the
+app.</li>
+<li>In the future, you’ll stay logged into your account for several
+weeks at a time. So, you can just head to HemingwayApp.com and start
+editing. If you ever need to log back in, just start over at step
+one.</li>
+</ol>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h2 id="editing-your-writing">Editing your writing</h2>
+<h3 id="highlighted-issues-in-your-writing">Highlighted issues in your
+writing</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p><strong>Highlighted issues in your writing</strong></p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles-3">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p><strong>Highlighted issues in your writing</strong></p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>Hard-to-read sentences</p>
+<ul>
+<li>Fixing hard-to-read sentences with AI</li>
+</ul></li>
+<li><p>Grammar, spelling, and punctuation issues</p></li>
+<li><p>Weakeners and passive voice</p></li>
+<li><p>Words with simpler alternatives</p>
+<ul>
+<li>Fixing words with simpler alternatives</li>
+</ul></li>
+<li><p>Hiding types of highlighted issues</p></li>
+<li><p>But what if I want to break the rules?</p></li>
+<li><p>Hard-to-read sentences</p>
+<ul>
+<li>Fixing hard-to-read sentences with AI</li>
+</ul></li>
+<li><p>Grammar, spelling, and punctuation issues</p></li>
+<li><p>Weakeners and passive voice</p></li>
+<li><p>Words with simpler alternatives</p>
+<ul>
+<li>Fixing words with simpler alternatives</li>
+</ul></li>
+<li><p>Hiding types of highlighted issues</p></li>
+<li><p>But what if I want to break the rules?</p></li>
+</ul>
+<p>After you paste in text, import a document, or start composing
+something new, Hemingway Editor will highlight the most common writing
+and grammar issues. Here’s an easy guide to our the different kinds of
+issues:</p>
+<h5 id="hard-to-read-sentences">Hard-to-read sentences</h5>
+<p>You’ll see red and yellow highlights whenever Hemingway finds
+sentences that are more complex than your target readability score.
+Readers may have trouble understanding them, so you should make them
+more clear or simplify them with our AI tools. You can make these
+sentences more clear by:</p>
+<ul>
+<li><strong>Using shorter sentences</strong>. Writers often add too much
+detail, and combining too many thoughts together with conjunctions
+(“and”, “but”, etc.). You can often split a long sentence into two or
+more shorter ones, which makes the sentence structure easier for the
+reader to keep up with.</li>
+<li><strong>Using simpler words</strong>. Hemingway also detects when
+the word choice you’re using is too complex. Use simpler alternatives to
+make sure you aren’t confusing readers.</li>
+</ul>
+<p>We highlight sentences in two different colors, based on how hard
+they are to read:</p>
+<ul>
+<li><strong>Red sentences</strong>: these are the hardest to read and
+are far more complex than your target score.</li>
+<li><strong>Yellow sentences</strong>: these are still hard to read, but
+not as bad as the red ones.</li>
+</ul>
+<h6 id="fixing-hard-to-read-sentences-with-ai">Fixing hard-to-read
+sentences with AI</h6>
+<h6 id="premium-feature">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>Our powerful AI tools make fixing highlights a breeze. Just follow
+these steps:</p>
+<ol type="1">
+<li>Click on a highlighted sentence.</li>
+<li>Click <strong>Simplify it for me.</strong></li>
+</ol>
+<p>That will open our AI assistant with a suggested rewrite:</p>
+<p>Here’s how to use the AI assistant:</p>
+<ol type="1">
+<li>When the AI assistant first opens, it will load an AI suggestion,
+which uses up 1 AI sentence credit. If you want to see more ideas to
+simplify the sentence, click <strong>Get another suggestion</strong> at
+the bottom of the screen (this uses another AI sentence credit).
+<em>Note</em>: if a rewrite doesn’t lower the grade level of your text,
+you won’t be charged a credit.</li>
+<li>Once you’re satisfied, click <strong>Use suggestion</strong> to
+replace the original sentence with your new AI rewrite.</li>
+</ol>
+<p>Your browser does not support the video tag.</p>
+<h6 id="simplify-larger-amounts-of-text-at-once">Simplify larger amounts
+of text at once</h6>
+<h6 id="premium-feature-1">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>With Hemingway Editor Plus, you don’t have to edit
+once-highlight-at-a-time. Follow these steps to simplify whole
+paragraphs, or even your entire document, at once.</p>
+<ol type="1">
+<li>Use your cursor to highlight the section of text you’d like to
+simplify.</li>
+<li>Click the <strong>Simplify</strong> button in the floating toolbar
+that appears above your text. Alternatively, you can click the
+<strong>AI tools</strong> button in the top bar and then select
+<strong>Simplify and Clarify</strong> from the dropdown menu. With
+either option, you’ll spend one AI credit for each sentence in your
+highlighted text. <em>Note:</em> There’s a limit to how much you can
+highlight at one time. If the button is disabled, try highlighting a
+smaller amount of text.</li>
+<li>Hemingway will open the AI assistant and will load a suggestion for
+how to rewrite the passage. The AI window will show you the grade levels
+of your original text and the AI suggestion. If you want another option,
+click the <strong>Get another suggestion</strong> button at the bottom.
+You’ll spend one AI credit for each sentence in your original text when
+generating a new suggestion. You can toggle back and forth between the
+different options using the arrow buttons above you suggestion.</li>
+<li>Once you’re satisfied, click <strong>Use suggestion</strong> to
+replace the input text in your document with the new suggestion.</li>
+</ol>
+<p>Your browser does not support the video tag.</p>
+<h5 id="grammar-spelling-and-punctuation-issues">Grammar, spelling, and
+punctuation issues</h5>
+<h6 id="premium-feature-2">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>Hemingway Editor Plus goes far beyond traditional spellcheck tools.
+It can detect even the most complex grammar and punctuation issues,
+including many that other grammar checkers miss. These issues are shown
+in green. <em>Note:</em> you must have Hemingway Editor Plus to see any
+green highlights.</p>
+<h6 id="fixing-grammar-issues">Fixing grammar issues</h6>
+<p>Click a green highlight to see our recommendation to fix the issue.
+Click the recommendation to use it to fix the issue. <em>Note:</em> You
+do not use any AI sentence credits when fixing grammar issues.</p>
+<p>Your browser does not support the video tag.</p>
+<h5 id="weakeners-and-passive-voice">Weakeners and passive voice</h5>
+<p>In blue, we highlight three different errors that weaken your
+writing. By default, we show a total count of weakeners in your text,
+but you can click <strong>View details</strong> to see individual counts
+of each one:</p>
+<ul>
+<li><strong>Adverbs</strong> - Adverbs are descriptions of a verb, like
+“quickly.” They aren’t a huge issue, but often mean you could use a more
+interesting verb instead. Replace them with different phrasing or
+stronger verbs (i.e. using “She sprinted” instead of “She ran
+quickly.”)</li>
+<li><strong>Passive Voice</strong> - Passive voice makes events seem
+like they’re happening to your subject, like they have no agency.
+Instead, rewrite sentences in active voice, where your subject is doing
+the action (i.e., “He threw the ball” instead of “The ball was thrown by
+him”).</li>
+<li><strong>Qualifiers</strong> - These are words like “maybe” or “I
+think” that make your writing sound less confident. In most cases, we’ll
+recommend removing the qualifier if you click on one.</li>
+</ul>
+<p>Your browser does not support the video tag.</p>
+<h6 id="fixing-weakeners-with-ai">Fixing weakeners with AI</h6>
+<h6 id="premium-feature-3">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>You can fix passive voice and weakeners instantly using Hemingway
+Editor Plus:</p>
+<ol type="1">
+<li>Click on a blue-highlighted phrase to reveal the type of writing
+error.</li>
+<li>In the pop-up window, you’ll see a button to either remove a
+qualifier or to <strong>Fix it for me</strong> if the error is for
+passive voice or adverbs.</li>
+<li>For passive voice and adverbs, clicking the <strong>Fix it for
+me</strong> button spends one AI credit to generate a new
+suggestion.</li>
+<li>If you need another option, click the <strong>Get another
+suggestion</strong> button to spend an AI credit and generate a new
+one.</li>
+<li>Once you’re satisfied, click the <strong>Use suggestion</strong>
+button to replace the original text with your new option.</li>
+</ol>
+<p><em>Note</em>: Removing qualifiers does not use one of your AI
+credits.</p>
+<p>Your browser does not support the video tag.</p>
+<h5 id="words-with-simpler-alternatives">Words with simpler
+alternatives</h5>
+<p>In purple, Hemingway highlights words have simpler exact synonyms.
+Using simpler synonyms makes your writing sound more natural and makes
+sure you’re not confusing anyone.</p>
+<h6 id="fixing-words-with-simpler-alternatives">Fixing words with
+simpler alternatives</h6>
+<p>Click on a purple highlight to see a recommended substitution, such
+as changing “utilize” to “use.” Click on the synonym you’d like to
+use.</p>
+<p><em>Note:</em> in some cases, we’ll recommend removing a complex word
+entirely.</p>
+<h5 id="hiding-types-of-highlighted-issues">Hiding types of highlighted
+issues</h5>
+<p>While you can use the <strong>Write</strong> button to hide all
+Hemingway Editor Plus highlights and stats, we also make it simple to
+hide individual highlights. It’s perfect for writers who are less
+concerned with issues like complicated sentences, passive voice, or
+adverbs.</p>
+<ol type="1">
+<li>Next to each highlight, you’ll see an icon that looks like an open
+eye.</li>
+<li>Click the eye icon to toggle the highlight on or off.</li>
+<li>When the eye is open, highlights are visible. When it’s closed, the
+highlight is turned off.</li>
+</ol>
+<h5 id="but-what-if-i-want-to-break-the-rules"><strong>But what if I
+want to break the rules?</strong></h5>
+<p>Rules are meant to be broken. If you know what you’re doing, don’t
+let us stop you. View our suggestions as just that.</p>
+<p>But, don’t think you’re above sloppy sentences. They happen to all of
+us, and a helpful nudge can be all we need to get it right.</p>
+<p>Next Article</p>
+<h6 id="rewriting-text-with-ai-tools">Rewriting text with AI tools</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h3 id="readability-and-document-stats">Readability and document
+stats</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p><strong>Readability and document stats</strong></p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles-4">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p><strong>Readability and document stats</strong></p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>Readability</p></li>
+<li><p>Adjusting your target readability level</p></li>
+<li><p>Seeing statistics about your writing</p></li>
+<li><p>Readability</p></li>
+<li><p>Adjusting your target readability level</p></li>
+<li><p>Seeing statistics about your writing</p></li>
+</ul>
+<p>When you insert text into Hemingway Editor, you instantly get an
+analysis and statistics about your writing. You’ll see a readability
+score that judges how complex your writing is, alongside metrics about
+your document.</p>
+<h5 id="readability">Readability</h5>
+<p>What makes writing understandable? Researchers have explored this
+question in a field called “readability.” Part of their work focuses on
+the average grade level needed to understand a piece of writing.
+Hemingway Editor builds on these insights to help you produce text that
+is bold and clear.</p>
+<p>A common mistake is thinking that grade level defines your target
+audience. This couldn’t be more wrong. In fact, writers like Ernest
+Hemingway produced novels for adults that score at a 5th-grade reading
+level. After all, straightforward writing appeals to everyone,
+regardless of their education level. Skilled authors prioritize
+accessibility without sacrificing depth or sophistication.</p>
+<p>At the same time, writing at a 15th-grade level doesn’t make your
+work more intelligent. Rambling phrases and run-ons inflate grade
+levels, but they confuse readers. Dense sentences overwhelm your working
+memory like trying to remember a long phone number. You might have to
+reread a line several times to figure out what it’s saying.</p>
+<p>Using long, pretentious words is another way to make your writing
+less readable. People use complex words to seem intelligent, but it
+often backfires instead. You don’t want to sound like you spent too much
+time with a thesaurus.</p>
+<p>To help you notice sentences that are difficult to read, Hemingway
+highlights them in yellow. For even more difficult sentences, it uses a
+red highlight. Don’t fret if your text lights up like a Christmas tree,
+though. With a few changes, you can get your writing ready for even the
+toughest critics. And, Hemingway Editor’s AI can suggest fixes with a
+single click.</p>
+<p>Remember: our highlights and scores are only a guide. They show areas
+that might be an issue, but you don’t need to fix every yellow or red
+sentence. Instead, focus on the worst offenders and try to bring your
+overall score down. Some long sentences work well, especially when
+they’re describing a narrative or a chain of logic. Our brains are good
+at following those structures. Don’t feel like you have to aim for
+conciseness at all costs. Your writing might end up sounding choppy like
+a news headline. Instead, write clearly and save longer sentences for
+emphasis or to add a pleasing bit of variety and rhythm to your
+writing.</p>
+<h5 id="adjusting-your-target-readability-level">Adjusting your target
+readability level</h5>
+<h6 id="premium-feature-4">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>By default, Hemingway Editor Plus targets a grade 9 reading level,
+which is the average for adults in the United States. However, we make
+it easy to raise or lower the target score:</p>
+<ul>
+<li>Click on the button showing three sliders located next to the
+Readability score in the top right corner of the app.</li>
+<li>Select between three different options: <strong>Accessible</strong>
+- Lower grade level for accessibility and for young audiences.
+<strong>Default</strong> (most popular) - For most audiences. Average
+adult reading level. <strong>Technical</strong> - Higher grade level for
+technical and academic writing.</li>
+</ul>
+<p>Your browser does not support the video tag.</p>
+<h5 id="seeing-statistics-about-your-writing">Seeing statistics about
+your writing</h5>
+<p>By default, Hemingway Editor displays the total word count of your
+text. However, you can click <strong>Show more stats</strong> to see
+additional information, including:</p>
+<ul>
+<li>Total Letters</li>
+<li>Total Characters</li>
+<li>Word Count</li>
+<li>Sentence Count</li>
+<li>Paragraph Count</li>
+<li>Reading Time</li>
+</ul>
+<p>Your browser does not support the video tag.</p>
+<p>Next Article</p>
+<h6 id="highlighted-issues-in-your-writing-1">Highlighted issues in your
+writing</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h3 id="detailed-feedback-on-your-writing">Detailed feedback on your
+writing</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p><strong>Detailed feedback on your writing</strong></p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles-5">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p><strong>Detailed feedback on your writing</strong></p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>How to use the Feedback tool</p></li>
+<li><p>How to use the Feedback tool</p></li>
+</ul>
+<p>Even the best writers rely on a second pair of eyes to spot mistakes
+and provide insights about their text. You can use Hemingway to give you
+feedback, just like a human editor.</p>
+<p>The <strong>Feedback</strong> tool analyzes your writing to find
+what’s working well, and then suggests ways to improve what’s not. The
+tool gives you a written review of every aspect of your prose: its
+structure, logic, flow, clarity, tone, and more.</p>
+<h5 id="how-to-use-the-feedback-tool">How to use the Feedback tool</h5>
+<p>Your browser does not support the video tag.</p>
+<ol type="1">
+<li>Click the <strong>Feedback</strong> tab in the top-right of the
+Editor, next to the <strong>Write</strong> and <strong>Edit</strong>
+tabs.</li>
+<li>Click <strong>Get Feedback</strong> to start generating the
+analysis</li>
+<li>Review the feedback and make changes as necessary</li>
+<li>When you’re ready for another review, click the
+<strong>Regenerate</strong> button at the top of the feedback. This will
+generate a new analysis.</li>
+</ol>
+<p>Next Article</p>
+<h6 id="importing-and-exporting-text-from-hemingway">Importing and
+exporting text from Hemingway</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h3 id="rewriting-text-with-ai-tools">Rewriting text with AI tools</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p><strong>Rewriting text with AI tools</strong></p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles-6">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p><strong>Rewriting text with AI tools</strong></p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p>Importing and exporting text from Hemingway</p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>Creatively rephrase your text</p></li>
+<li><p>Polish your prose</p></li>
+<li><p>Find synonyms for words and phrases</p></li>
+<li><p>Adjust the tone of your text</p></li>
+<li><p>Shorten or summarize your text</p></li>
+<li><p>Add details to your text</p></li>
+<li><p>Make text skimmable by automatically adding headings and bullet
+points</p></li>
+<li><p>Give Hemingway instructions on how to rewrite your
+writing</p></li>
+<li><p>Creatively rephrase your text</p></li>
+<li><p>Polish your prose</p></li>
+<li><p>Find synonyms for words and phrases</p></li>
+<li><p>Adjust the tone of your text</p></li>
+<li><p>Shorten or summarize your text</p></li>
+<li><p>Add details to your text</p></li>
+<li><p>Make text skimmable by automatically adding headings and bullet
+points</p></li>
+<li><p>Give Hemingway instructions on how to rewrite your
+writing</p></li>
+</ul>
+<h6 id="premium-feature-5">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>Hemingway Editor Plus comes with a full toolkit of AI tools you can
+use to tweak your writing.</p>
+<h5 id="creatively-rephrase-your-text">Creatively rephrase your
+text</h5>
+<p>Need a better way to say something? Hemingway Editor Plus includes a
+powerful tool for paraphrasing and rephrasing text.</p>
+<ol type="1">
+<li>Select the text you’d like to rephrase. It can be a single sentence
+or multiple paragraphs.</li>
+<li>Click <strong>Rephrase</strong> from the toolbar menu that appears
+above or below your highlighted text. Alternatively, you can click
+<strong>AI tools</strong> in the top menu bar and then select
+<strong>Creative rephrase</strong> from the dropdown menu. You’ll spend
+one AI credit for each sentence in your selected text.</li>
+<li>Hemingway will suggest a new way to rephrase your text in the bottom
+box of the pop-up screen. If you want another option, click the
+<strong>Get another suggestion</strong> button at the bottom. You’ll
+spend one AI credit for each sentence included in your original text
+when generating a new suggestion. You can toggle back and forth between
+the different options using the arrow buttons above your
+suggestion.</li>
+<li>Once you’re satisfied with a suggestion, click <strong>Use
+Suggestion</strong> to add it to your document.</li>
+</ol>
+<h5 id="polish-your-prose">Polish your prose</h5>
+<p>Use the <strong>Polish</strong> tool to clarify your writing and
+eliminate awkward phrasing. It’s a great way to improve text without
+changing its meaning or length. Here’s how:</p>
+<ol type="1">
+<li>Select the text you’d like to polish. It can be a single sentence or
+multiple paragraphs.</li>
+<li>Click <strong>Polish</strong> from the toolbar menu that appears
+above or below your highlighted text. Alternatively, you can click
+<strong>AI tools</strong> in the top menu bar and then select
+<strong>Polish &amp; clarify</strong> from the dropdown menu. You’ll
+spend one AI credit for each sentence in your selected text.</li>
+<li>Hemingway will suggest a way to improve the clarity of your text in
+the bottom box of the pop-up screen. If you want another option, click
+the <strong>Get another suggestion</strong> button at the bottom. You’ll
+spend one AI credit for each sentence included in your original text
+when generating a new suggestion. You can toggle back and forth between
+the different options using the arrow buttons above your
+suggestion.</li>
+<li>Once you’re satisfied with a suggestion, click <strong>Use
+Suggestion</strong> to add it to your document.</li>
+</ol>
+<h5 id="find-synonyms-for-words-and-phrases">Find synonyms for words and
+phrases</h5>
+<p>Want a synonym for a single word or an entire phrase? Hemingway
+Editor Plus makes it easy.</p>
+<ol type="1">
+<li>Select a single word or an entire phrase.</li>
+<li>Click the <strong>AI synonyms</strong> button from the floating
+toolbar.</li>
+<li>Wait for the list of synonyms to appear and then select your
+favorite.</li>
+</ol>
+<h5 id="adjust-the-tone-of-your-text">Adjust the tone of your text</h5>
+<p>Hemingway allows you to adjust the tone of your text to be more
+professional, friendly, and more.</p>
+<ol type="1">
+<li>Select the text you’d like to alter. It can be a single sentence or
+multiple paragraphs.</li>
+<li>Click the <strong>More</strong> button from the floating toolbar
+that appears above or below your selected text. Then select the tone
+you’d like to use from the dropdown menu. You’ll spend one AI credit for
+each sentence within your selected text.</li>
+<li>Hemingway will load a new suggestion into the bottom box of the
+pop-up screen. You can also click the <strong>Get another
+suggestion</strong> to generate a new option. You’ll spend one credit
+per sentence in the input text for each new generation. You can use the
+arrow buttons that appear above each suggestion to cycle through
+them.</li>
+<li>Once you’re satisfied with the suggestion, click <strong>Use
+suggestion</strong> to add it into your document.</li>
+</ol>
+<h5 id="shorten-or-summarize-your-text">Shorten or summarize your
+text</h5>
+<ol type="1">
+<li>Select the text you’d like to alter. It can be a single sentence or
+multiple paragraphs.</li>
+<li>Click the <strong>More</strong> button from the floating toolbar
+that appears above or below your selected text. Then click
+<strong>Shorten it</strong> from the dropdown menu. You’ll spend one AI
+credit for each sentence within your selected text.</li>
+<li>Hemingway will load a new suggestion into the bottom box of the
+pop-up screen. You can also click the <strong>Get another
+suggestion</strong> to generate a new option. You’ll spend one credit
+per sentence in the input text for each new generation. You can use the
+arrow buttons that appear above each suggestion to cycle through
+them.</li>
+<li>Once you’re satisfied with the suggestion, click <strong>Use
+suggestion</strong> to add it into your document.</li>
+</ol>
+<h5 id="add-details-to-your-text">Add details to your text</h5>
+<p>Need help fleshing out a document? Hemingway Editor Plus makes it
+easy to add extra details.</p>
+<ol type="1">
+<li>Select the text you’d like to alter. It can be a single sentence or
+multiple paragraphs.</li>
+<li>Click the <strong>More</strong> button from the floating toolbar
+that appears above or below your selected text. Then click <strong>Add
+detail</strong> from the dropdown menu. You’ll spend one AI credit for
+each sentence within your selected text.</li>
+<li>Hemingway will load a new suggestion into the bottom box of the
+pop-up screen. You can also click the <strong>Get another
+suggestion</strong> to generate a new option. You’ll spend one credit
+per sentence in the input text for each new generation. You can use the
+arrow buttons that appear above each suggestion to cycle through
+them.</li>
+<li>Once you’re satisfied with the suggestion, click <strong>Use
+suggestion</strong> to add it into your document.</li>
+</ol>
+<h5
+id="make-text-skimmable-by-automatically-adding-headings-and-bullet-points">Make
+text skimmable by automatically adding headings and bullet points</h5>
+<p>Want your text to be as readable as possible? Hemingway Editor Plus
+allows you to rewrite it using headings and bullet points to be concise,
+clear and easy to skim.</p>
+<ol type="1">
+<li>Select the text you’d like to alter. It can be a single sentence or
+multiple paragraphs.</li>
+<li>Click the <strong>More</strong> button from the floating toolbar
+that appears above or below your selected text. Then click <strong>Add
+headings, bullets, and bolding</strong> from the dropdown menu. You’ll
+spend one AI credit for each sentence within your selected text.</li>
+<li>Hemingway will load a new suggestion into the bottom box of the
+pop-up screen. You can also click the <strong>Get another
+suggestion</strong> to generate a new option. You’ll spend one credit
+per sentence in the input text for each new generation. You can use the
+arrow buttons that appear above each suggestion to cycle through
+them.</li>
+<li>Once you’re satisfied with the suggestion, click <strong>Use
+suggestion</strong> to add it into your document.</li>
+</ol>
+<h5 id="give-hemingway-instructions-on-how-to-rewrite-your-writing">Give
+Hemingway instructions on how to rewrite your writing</h5>
+<p>Alongside our specialized tools, Hemingway Editor Plus also allows
+you to request a bespoke edit to your text. Follow these steps:</p>
+<ol type="1">
+<li>Select the portion of text you’d like to alter. It can be a single
+sentence or multiple paragraphs.</li>
+<li>When the floating toolbar pops up, describe the change you want and
+hit Enter. For example, “make it funnier” or “insert a metaphor.”
+Hemingway Editor Plus will edit the selected text according to your
+instructions.</li>
+<li>If needed, click “Get another suggestion” to try a different
+rewrite.</li>
+<li>Click “Use suggestion” to add the rewrite to your document.</li>
+</ol>
+<p>Your browser does not support the video tag.</p>
+<h6 id="tips-for-the-best-results"><strong>Tips for the best
+results</strong></h6>
+<p>Prompting AI systems can be an art form, but a few easy tips can get
+you pro-level results:</p>
+<ul>
+<li>Be as clear and direct as you can. Short, simple instructions like
+“make this text happier” or “remove all gendered language” tend to work
+best.</li>
+<li>Try not to include too many instructions at one time. It may work
+better to break them up into different requests.</li>
+<li>The AI won’t always respond at the exact grade level you specify,
+but it often gets close. Try our <strong>Simplify</strong> button
+instead for the best results.</li>
+<li>Don’t forget to try another suggestion. For difficult prompts, give
+the <strong>Custom Rewrite</strong> tool a few tries and then pick your
+favorite.</li>
+<li>If you notice a common error in your rewrites, try rephrasing your
+request. It may help to add another instruction, like “write in active
+voice.”</li>
+</ul>
+<h6 id="example-prompts">Example prompts</h6>
+<p>Here are some examples of instructions to illustrate the broad
+possibilities with <strong>Custom Rewrite:</strong></p>
+<p><strong>Change tone</strong></p>
+<ul>
+<li>“Make it more X” — where X could be professional, diplomatic,
+humorous, serious, etc.</li>
+</ul>
+<p><strong>Correct issues</strong></p>
+<ul>
+<li>“Clarify vague phrasing”</li>
+<li>“Remove gendered language”</li>
+<li>“Define acronyms”</li>
+<li>“Remove regional idioms” or “Remove jargon”</li>
+</ul>
+<p><strong>Add or remove information</strong></p>
+<ul>
+<li>“Add some specific examples” — use this to clarify a vague point by
+example</li>
+<li>“Expand on this point” — ask for more elaboration or details.</li>
+<li>“Remove unnecessary details” — request a streamlined version
+focusing on key elements.</li>
+<li>“Append some ideas for X” — Uses the context of what you’ve
+selected, and then adds more ideas to the end</li>
+</ul>
+<p><strong>Add rhetorical flourish</strong></p>
+<ul>
+<li>“Add a joke”</li>
+<li>“Revise this to show, not tell” — to use more descriptive
+language</li>
+<li>“Rewrite this as a conversation” — turn an paragraph into a dialogue
+between characters</li>
+</ul>
+<p><strong>Fun</strong></p>
+<ul>
+<li>“Rewrite this in pirate speak”</li>
+<li>“Say this in pig latin”</li>
+</ul>
+<p>Next Article</p>
+<h6 id="detailed-feedback-on-your-writing-1">Detailed feedback on your
+writing</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+<h2 id="getting-text-in-and-out">Getting text in and out</h2>
+<h3 id="importing-and-exporting-text-from-hemingway">Importing and
+exporting text from Hemingway</h3>
+<p>How-to Articles</p>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p><strong>Importing and exporting text from
+Hemingway</strong></p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<h6 id="how-to-articles-7">How-to Articles</h6>
+<ul>
+<li><p>Intro to Hemingway Editor</p></li>
+<li><p>Quick Start Guide</p></li>
+<li><p>Readability and document stats</p></li>
+<li><p>Highlighted issues in your writing</p></li>
+<li><p>Rewriting text with AI tools</p></li>
+<li><p>Detailed feedback on your writing</p></li>
+<li><p><strong>Importing and exporting text from
+Hemingway</strong></p></li>
+<li><p>Log in to your Hemingway Editor account</p></li>
+</ul>
+<p>In this article</p>
+<ul>
+<li><p>Delete any existing text to get started</p></li>
+<li><p>Importing text into Hemingway</p>
+<ul>
+<li>Pasting text into Hemingway</li>
+<li>Importing a file into Hemingway</li>
+</ul></li>
+<li><p>Exporting text from Hemingway</p></li>
+<li><p>Delete any existing text to get started</p></li>
+<li><p>Importing text into Hemingway</p>
+<ul>
+<li>Pasting text into Hemingway</li>
+<li>Importing a file into Hemingway</li>
+</ul></li>
+<li><p>Exporting text from Hemingway</p></li>
+</ul>
+<p>Hemingway Editor is used to draft and especially to edit your
+writing. Thankfully, it’s easy to get writing into and out of the
+editor, so it’s easy to integrate into your workflow.</p>
+<h5 id="delete-any-existing-text-to-get-started">Delete any existing
+text to get started</h5>
+<p>If it’s your first time opening Hemingway Editor Plus, you’ll see
+sample text in the center of the screen outlining our editing
+highlights. If you’ve used it before, you’ll see the last text you
+edited with the app.</p>
+<p>Select all this text and delete it to start a fresh document.</p>
+<h5 id="importing-text-into-hemingway">Importing text into
+Hemingway</h5>
+<p>There are three ways to get text into Hemingway:</p>
+<ul>
+<li>Pasting text</li>
+<li>Importing a file</li>
+<li>Writing in Hemingway</li>
+</ul>
+<h6 id="pasting-text-into-hemingway">Pasting text into Hemingway</h6>
+<p>Want to edit text you started in another program? Copy your text and
+paste it into the center text box with one of these methods:</p>
+<ul>
+<li>Click into the editor and then use the keyboard command for pasting
+(Ctrl+V on Windows or Command+V on Mac)</li>
+<li>Right-click on the editor and choose “Paste”</li>
+<li>Click into the editor and then use the <strong>Edit</strong> menu at
+the top of your browser and choose to <strong>Paste</strong></li>
+</ul>
+<h6 id="importing-a-file-into-hemingway">Importing a file into
+Hemingway</h6>
+<h6 id="premium-feature-6">Premium feature</h6>
+<p>You’ll need to subscribe to Hemingway Editor Plus to use this
+feature.</p>
+<p>Hemingway Editor Plus allows you to import the text from Word
+documents (.docx), Markdown files (.md) and HTML files (.html). Just
+follow these steps:</p>
+<p>Your browser does not support the video tag.</p>
+<ol type="1">
+<li>Click the <strong>File</strong> button in Hemingway’s top
+toolbar.</li>
+<li>Select <strong>Import File</strong> from the list.</li>
+<li>Click the <strong>Choose File</strong> button from the pop-up window
+in the center of the editor.</li>
+<li>Select the file you’d like to open from your computer’s file
+browser. Your file will need to be a .docx, .md or .html file.</li>
+</ol>
+<h6 id="writing-using-hemingways-distraction-free-mode">Writing using
+Hemingway’s distraction-free mode</h6>
+<p>Want to compose a document without seeing Hemingway’s stats and
+highlights? Just click the <strong>Write</strong> button in the top
+right corner of the Editor to toggle on our distraction-free writing
+mode. You can click <strong>Edit to</strong> toggle highlights and stats
+back on at any time.</p>
+<p>Your browser does not support the video tag.</p>
+<h5 id="exporting-text-from-hemingway">Exporting text from
+Hemingway</h5>
+<p>Hemingway Editor Plus allows you to export your text as a Word
+document (.docx), Markdown file (.md) or as HTML (.html). Just follow
+these steps:</p>
+<ol type="1">
+<li>Click the <strong>File</strong> button in Hemingway’s top
+toolbar</li>
+<li>Select <strong>Export File</strong> from the list.</li>
+<li></li>
+</ol>
+<p>Your browser does not support the video tag.</p>
+<p>Next Article</p>
+<h6 id="log-in-to-your-hemingway-editor-account-1">Log in to your
+Hemingway Editor account</h6>
+<p>© 2013-2026 <a href="https://boondoggle.studio">Boondoggle Studio,
+LLC</a></p>
+</body>
+</html>
