@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-31" />
+  <title>Downcast Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Downcast Help Guide</h1>
+<p class="subtitle">Downcast’s own knowledge base, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-07-31</p>
+</header>
+<h1 id="downcast-help-guide">Downcast Help Guide</h1>
+<p>This guide gathers the Downcast knowledge base. The text was taken
+from support.downcast.fm on 31 July 2026 and is Downcast’s own; nothing
+has been summarised or rewritten.</p>
+<p>Downcast is a podcast player for iPhone, iPad, Mac, Apple Watch,
+Apple TV and CarPlay. There is no Windows program, no Android app and no
+Alexa skill, so those surfaces do not appear here.</p>
+<p><strong>Read this before judging the guide’s size.</strong>
+Downcast’s fullest instructions ship inside the app itself, in its own
+user guide, and are not published on the web. What the knowledge base
+carries is the settings explained one at a time, the syncing and
+importing and exporting, and the troubleshooting. That is what is here,
+in full: the estate is sixty pages and all sixty were read.</p>
+<p>The sections are <strong>Downcast’s own</strong> categories, taken
+from the pages that list the articles they hold, in alphabetical order
+with Miscellaneous last.</p>
+<p>Illustrations do not survive as pictures; where one carried a
+description it is kept as a short italic note. Tables have become
+lists.</p>
+<p>Headings run six deep at most. Level one is this title, level two is
+a section, level three is an article, and anything below that came from
+inside the article itself.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#cat-general">General</a>
+<ul>
+<li><a href="#airplay-mac">AirPlay (Mac)</a></li>
+<li><a href="#background-refresh-ios">Background Refresh (iOS)</a></li>
+<li><a href="#bookmark-storage-inaccessible-resources-mac">Bookmark
+Storage &amp; Inaccessible Resources (Mac)</a></li>
+<li><a href="#custom-podcast-artwork">Custom Podcast Artwork</a></li>
+<li><a href="#episode-lock">Episode Lock</a></li>
+<li><a href="#file-locations-mac">File Locations (Mac)</a></li>
+<li><a href="#frequent-crashing">Frequent crashing?</a></li>
+<li><a href="#gestures">Gestures</a></li>
+<li><a href="#headphone-commands">Headphone Commands</a></li>
+<li><a href="#how-to-submit-your-log-file">How to submit your log
+file</a></li>
+<li><a href="#icons">Icons</a></li>
+<li><a href="#ios-beta">iOS Beta</a></li>
+<li><a href="#locating-crash-logs-ios">Locating Crash Logs
+(iOS)</a></li>
+<li><a href="#manually-populated-playlists">Manually Populated
+Playlists</a></li>
+<li><a href="#media-backup-ios">Media Backup (iOS)</a></li>
+<li><a href="#media-keys">Media Keys</a></li>
+<li><a href="#new-episodes">New Episodes</a></li>
+<li><a href="#non-local-episodes">Non-local Episodes</a></li>
+<li><a href="#playback-rates">Playback Rates</a></li>
+<li><a href="#playlist-priority">Playlist Priority</a></li>
+<li><a href="#podcast-list">Podcast List</a></li>
+<li><a href="#priority-play">Priority Play</a></li>
+<li><a href="#privacy-policy">Privacy Policy</a></li>
+<li><a href="#reset-preferences-mac">Reset Preferences (Mac)</a></li>
+<li><a href="#running-in-the-background-ios">Running in the Background
+(iOS)</a></li>
+<li><a href="#sonos-support">Sonos Support</a></li>
+<li><a href="#streaming-password-protected-media-files">Streaming
+Password-Protected Media Files</a></li>
+<li><a href="#supported-versions-of-ios-macos-and-watchos">Supported
+versions of iOS, macOS, and watchOS</a></li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#toggling-podcast-episode-artwork-size">Toggling
+Podcast/Episode Artwork Size</a></li>
+<li><a href="#url-schemes-opening-feed-urls-mac">URL Schemes &amp;
+Opening Feed URLs (Mac)</a></li>
+</ul></li>
+<li><a href="#cat-importing-exporting">Importing &amp; Exporting</a>
+<ul>
+<li><a href="#exporting-media-files-ios">Exporting Media Files
+(iOS)</a></li>
+<li><a href="#exporting-media-files-mac">Exporting Media Files
+(Mac)</a></li>
+<li><a href="#exporting-podcast-subscriptions">Exporting Podcast
+Subscriptions</a></li>
+<li><a href="#importing-media-files">Importing Media Files</a></li>
+<li><a href="#importing-podcast-subscriptions">Importing Podcast
+Subscriptions</a></li>
+<li><a href="#send-to-computer">Send to Computer</a></li>
+</ul></li>
+<li><a href="#cat-preferences">Preferences</a>
+<ul>
+<li><a href="#automatic-downloading">Automatic Downloading</a></li>
+<li><a href="#automatic-feed-refreshing-ios">Automatic Feed Refreshing
+(iOS)</a></li>
+<li><a href="#automatic-screen-locking">Automatic Screen
+Locking</a></li>
+<li><a href="#continuous-play">Continuous Play</a></li>
+<li><a href="#episode-start-finish-times">Episode Start &amp; Finish
+Times</a></li>
+<li><a href="#episodes-to-keep">Episodes to Keep</a></li>
+<li><a href="#loop-lists">Loop Lists</a></li>
+<li><a href="#new-episodes-action">New Episodes Action</a></li>
+<li><a href="#playable-downloads">Playable Downloads</a></li>
+<li><a href="#remote-media-skip">Remote Media Skip</a></li>
+<li><a href="#sorting-podcast-subscriptions-and-playlists-lists">Sorting
+Podcast Subscriptions and Playlists Lists</a></li>
+</ul></li>
+<li><a href="#cat-syncing">Syncing</a>
+<ul>
+<li><a href="#episode-syncing">Episode Syncing</a></li>
+<li><a href="#icloud-syncing-as-pseudo-backup">iCloud Syncing as Pseudo
+Backup</a></li>
+<li><a href="#playlist-syncing">Playlist Syncing</a></li>
+<li><a href="#podcast-syncing">Podcast Syncing</a></li>
+<li><a href="#resetting-icloud-syncing">Resetting iCloud
+Syncing</a></li>
+<li><a href="#settings-syncing">Settings Syncing</a></li>
+</ul></li>
+<li><a href="#cat-miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#password-protected-feeds">Password Protected
+Feeds</a></li>
+</ul></li>
+</ul>
+<h2 id="cat-general">General</h2>
+<h3 id="airplay-mac">AirPlay (Mac)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ AirPlay (Mac)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Currently, Downcast for macOS does not have built in support for
+Airplay. However, you can change your Mac’s audio output to output to an
+airplay device by option + clicking the volume icon in macOS’ menu bar
+and selecting an output device.</p>
+<p>Additionally, Downcast’s audio, video and interface can be used over
+AirPlay through OS X’s AirPlay mirroring: <a
+href="http://support.apple.com/kb/ht5404">ht5404</a></p>
+<p>Built-in Airplay support is coming in the next major version,
+v3.0</p>
+<hr />
+<h4 id="how-did-we-do">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="background-refresh-ios">Background Refresh (iOS)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Background Refresh (iOS)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast can periodically refresh your feeds while running in the
+background. When background fetch is enabled, iOS will frequently[1]
+wake Downcast while in the background. When this happens, it has 30
+seconds to refresh as many of your feeds that are pending refresh.
+Whether feeds are pending refresh is determined by your
+<strong>Automatic Feed Refreshing</strong> setting.</p>
+<p>During background refreshing, Downcast can display local
+notifications about new episodes, download new episodes, and update sync
+data. Given the extremely limited amount of time that iOS affords apps
+to perform background fetching, it’s possible that multiple fetch
+sessions may be required to refresh all feeds.</p>
+<p><strong>Background App Refresh</strong> must be enabled for Downcast
+in the Settings app <em>(Settings &gt; General &gt; Background App
+Refresh).</em></p>
+<p><strong>Note:</strong> Refreshing of feeds will soon be moved
+server-side. This is under development now. This will improve
+performance, battery life, allow for push notifications for new
+episodes, and make many other features possible.</p>
+<ol type="1">
+<li>iOS is in complete control of the frequency of Background App
+Refresh. Under normal circumstances, this will happen several times per
+hour. However, Apple does not publish the heuristics that control this.
+There are times where Background App Refresh happens infrequently. If
+you feel this is happening to you, our best suggestion is to try opening
+Downcast several times throughout the day for a day or two. This seems
+to have a positive affect on the frequency.</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-1">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="bookmark-storage-inaccessible-resources-mac">Bookmark Storage
+&amp; Inaccessible Resources (Mac)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Bookmark Storage &amp; Inaccessible
+Resources (Mac)</p>
+<p>Updated 8 years ago by George Cox</p>
+<h4 id="overview">Overview</h4>
+<p>Downcast uses a bookmarking feature of Mac OS to store bookmarks for
+downloaded and imported content. This allows Downcast to maintain
+persistent access to your content even if you move or rename it.</p>
+<p>Though bookmarks are a major improvement over storing static paths,
+they still have limitations <em>(described below),</em>that can be
+resolved using a resource resolution tool we’ve added to Downcast.</p>
+<h4 id="limitations">Limitations</h4>
+<h5
+id="downcast-can-only-access-content-in-locations-it-has-permission-to-access"><em>Downcast
+can only access content in locations it has permission to
+access</em></h5>
+<p>This is a limitation caused by Apple’s sandboxing. When a resource is
+moved or renamed, Downcast needs to generate a new bookmark in order to
+keep accessing that content. This isn’t possible if the content is moved
+to a location Downcast doesn’t have permission to access. By default,
+Downcast only has permission to access resources located inside of its
+container folder
+<em>(~/Library/Containers/com.jamawkinaw.downcast.mac)</em>. If you
+change your media library’s location in Preferences, Downcast also has
+permission to access that location.</p>
+<p><strong>To resolve this</strong>, we recommend that you grant
+Downcast permission to access any volume you will store media files on.
+This allows Downcast to automatically restore access to moved or renamed
+files. However, you can also resolve problems individually if you wish.
+For both options, you’ll use the resource resolution tool (File -&gt;
+Resource Resolution).</p>
+<h5
+id="bookmarks-cannot-be-renewed-when-content-is-moved-to-a-different-volume"><em>Bookmarks
+cannot be renewed when content is moved to a different volume</em></h5>
+<p>This is a limitation of the bookmarking feature of Mac OS. When a
+file is moved from one volume to another, the bookmark has for that file
+becomes unusable. This prevents Downcast from maintaining access to the
+file even if you’ve granted it permission to access the volume the file
+was moved to.</p>
+<p><strong>To resolve this</strong>, you will need to tell Downcast
+where to search for your relocated content. Any content that Downcast
+manages is marked with a special attribute. Downcast uses this attribute
+to restore access to the relocated content. To do this, you’ll use the
+resource resolution tool (File -&gt; Resource Resolution).</p>
+<hr />
+<h4 id="how-did-we-do-2">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="custom-podcast-artwork">Custom Podcast Artwork</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Custom Podcast Artwork</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast supports assigning custom artwork to podcast feeds.</p>
+<p><strong>iOS</strong></p>
+<ul>
+<li>Tap the podcast in the Podcasts list</li>
+<li>Tap the Info icon in the bottom toolbar</li>
+<li>Tap &amp; hold the existing artwork at the top of the view</li>
+<li>That will allow you to choose an image from your photo library or
+clear the previously assigned custom image</li>
+</ul>
+<p><strong>macOS</strong></p>
+<ul>
+<li>Right-click the podcast in the Podcasts list</li>
+<li>Expand Files &amp; Folders</li>
+<li>Click Assign Custom Artwork</li>
+<li>Choose an image</li>
+</ul>
+<hr />
+<h4 id="how-did-we-do-3">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="episode-lock">Episode Lock</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Episode Lock</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Locking a podcast episode prevents the respective episode from ever
+being auto-deleted by your episode retention settings or iCloud syncing.
+Episodes can be locked by either viewing episode details (tap the ‘info’
+button on the episode row) and tapping the lock icon in the toolbar or
+by tapping and holding on an episode in a playlist or podcast episode
+list, which will display a list of quick actions that includes options
+for locking and unlocking episodes.</p>
+<p>The episode locking feature can also be used to “favorite” podcast
+episodes and access them quickly by creating a playlist that includes
+only locked episodes.</p>
+<p>Note: Downcast will auto-lock episodes that you request to download
+or stream if those episodes would be auto-deleted based on your
+“Episodes to Keep” settings.</p>
+<hr />
+<h4 id="how-did-we-do-4">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="file-locations-mac">File Locations (Mac)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ File Locations (Mac)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p><strong>Downloaded Media:</strong></p>
+<p>~/Library/Containers/com.jamawkinaw.downcast.mac/Data/Library/Application
+Support/com.jamawkinaw.downcast.mac/.Downloaded_Media</p>
+<p><strong>PLIST File:</strong></p>
+<p>~/Library/Containers/com.jamawkinaw.downcast.mac/Data/Library/Preferences/
+com.jamawkinaw.downcast.mac.plist</p>
+<p>Note: The “~/Library” directory is hidden by default. It can be
+accessed using Terminal or in Finder:</p>
+<ol type="1">
+<li>Open Finder</li>
+<li>Click Go menu</li>
+<li>Hold Option key</li>
+<li>Click the Library menu item</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-5">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="frequent-crashing">Frequent crashing?</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Frequent crashing?</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>I try my best to fix any bugs that cause crashes, but some take
+longer than others to diagnose. Sometimes a crash can be caused by
+memory pressure, especially if you have gigantic podcast library. If
+you’re experiencing seemingly random crashes that seem to occur after a
+semi-predictable amount of time, you’re probably suffering from a memory
+pressure related issue causing iOS to terminate Downcast.</p>
+<p>Memory related terminations are certainly a bug and I’m always trying
+to make Downcast as efficient as it can be. That said, there are certain
+things you can do to improve the situation by yourself. Some users have
+enormous libraries of podcasts that they maintain. By that, I mean
+hundreds of feeds and thousands of local episodes. There are even users
+with well over <strong><em>a thousand feeds</em></strong> and at least
+one that I’m aware of with over <strong><em>two thousand
+feeds</em></strong>! My goal is to not have any limits on anything, but
+there are reasonable limits for everything.</p>
+<p><strong>Tips for reducing memory usage</strong>:</p>
+<ul>
+<li>If you don’t need to keep a feed on your device, delete it.</li>
+<li>If you have thousands of local episodes, consider reducing this to
+the episodes you actually need.</li>
+<li>If you have any playlists that include non-local episodes, consider
+not having such playlist or, at least, limiting such playlists so they
+only include episodes from certain feeds.</li>
+<li>Clean up your iCloud data by carefully following the <a
+href="#resetting-icloud-syncing">Resetting iCloud Syncing</a>
+instructions.</li>
+</ul>
+<p>Of course, if you continue to experience crashes, please contact <a
+href="http://mailto:support@downcastapp.com">contact support</a> and
+I’ll do my best to figure it out!</p>
+<p>The next major version should do a much better job with using the
+least amount of memory as possible, reducing the need for such manual
+nonsense.</p>
+<hr />
+<h4 id="how-did-we-do-6">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="gestures">Gestures</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Gestures</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>The following gestures are available while playing audio or video
+podcasts:</p>
+<ul>
+<li>Double tap (one or two fingers) toggles play/pause</li>
+<li>Two finger swipe left/right for forward/backward</li>
+<li>One finger left/right swipe skips forward or backward X
+seconds*</li>
+<li>Two finger swipe up/down marks episode as unplayed/played</li>
+</ul>
+<p>The skip time interval is configurable within Settings (Media-Skip
+Forward Interval &amp; Media-Skip Backward Interval)</p>
+<hr />
+<h4 id="how-did-we-do-7">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="headphone-commands">Headphone Commands</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Headphone Commands</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast supports playback control via headphone buttons.</p>
+<p>The volume buttons always control volume but the middle button’s
+behavior differs based on whether you have Downcast’s “Remote Media
+Skip” setting enabled.</p>
+<ul>
+<li><strong>Command</strong></li>
+<li>Remote Media Skip Disabled</li>
+<li>Remote Media Skip Enabled</li>
+<li><strong>Single Click</strong></li>
+<li>Toggle Play/Pause</li>
+<li>Toggle Play/Pause</li>
+<li><strong>Double Click</strong></li>
+<li>Skip to next chapter/episode</li>
+<li>Skip ahead by Media-Skip Forward Interval setting</li>
+<li><strong>Double Click + Hold</strong></li>
+<li>Fast Forward</li>
+<li>Skip to next episode on release</li>
+<li><strong>Triple Click</strong></li>
+<li>Skip to previous chapter/episode</li>
+<li>Skip back by Media-Skip Forward Interval setting</li>
+<li><strong>Triple Click + Hold</strong></li>
+<li>Fast Reverse</li>
+<li>Skip to previous episode on release</li>
+</ul>
+<hr />
+<h4 id="how-did-we-do-8">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="how-to-submit-your-log-file">How to submit your log file</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ How to submit your log file</p>
+<p>Updated 8 years ago by George Cox</p>
+<p><strong>iOS</strong></p>
+<ul>
+<li>Tap the <strong>More</strong> tab</li>
+<li><strong>v2.9.23 and up</strong></li>
+<li>Tap the <strong>Support</strong>button</li>
+<li><strong>Earlier versions</strong></li>
+<li>Tap <strong>Help &amp; Feedback</strong></li>
+<li>Tap <strong>Submit Log File</strong></li>
+</ul>
+<p><strong>macOS</strong></p>
+<ul>
+<li>Click the <strong>Help</strong> menu</li>
+<li>Click <strong>Submit Log File</strong></li>
+<li>This prompts you to save the zipped log file to disk and then opens
+your mail client with a new message. For now, <strong>you must manually
+attach the zipped log file</strong>.</li>
+</ul>
+<p>A non-email based log submission process is coming in v3.0</p>
+<hr />
+<h4 id="how-did-we-do-9">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="icons">Icons</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Icons</p>
+<p>Updated 8 years ago by George Cox</p>
+<ul>
+<li><ul>
+<li>Info icon (shown when there are additional details to view)</li>
+</ul></li>
+<li><ul>
+<li>Continuous Play (red when enabled)</li>
+</ul></li>
+<li><ul>
+<li>Share relevant information with services such as Twitter, Facebook,
+Instapaper, etc.</li>
+</ul></li>
+<li><ul>
+<li>Sleep timer</li>
+</ul></li>
+<li><ul>
+<li>Content is audio-only</li>
+</ul></li>
+<li><ul>
+<li>Content is video</li>
+</ul></li>
+<li><ul>
+<li>Episode is downloaded</li>
+</ul></li>
+<li><ul>
+<li>Episode is a stream (not downloaded)</li>
+</ul></li>
+<li><ul>
+<li>Episode is “New”</li>
+</ul></li>
+<li><ul>
+<li>Episode is available for downloading or streaming</li>
+</ul></li>
+<li><ul>
+<li>Episode is the “Now Playing” episode</li>
+</ul></li>
+<li><ul>
+<li>Episode is partially played (solid circle = unplayed, empty circle =
+played)</li>
+</ul></li>
+<li><ul>
+<li>Episode lock indicator</li>
+</ul></li>
+<li><ul>
+<li>Automatic feed refreshing for the podcast subscription is
+disabled</li>
+</ul></li>
+</ul>
+<hr />
+<h4 id="how-did-we-do-10">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="ios-beta">iOS Beta</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ iOS Beta - Unsubscribe</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>If you’re looking to unsubscribe from the iOS beta program, you can
+do this without contacting us.</p>
+<p><strong>How to unsubscribe</strong></p>
+<ul>
+<li>Open TestFlight</li>
+<li>Tap Downcast</li>
+<li>Scroll down to the bottom</li>
+<li>To control the notifications you receive for new builds, tap
+Notifications</li>
+<li>To stop testing completely, tap Stop Testing</li>
+</ul>
+<hr />
+<h4 id="how-did-we-do-11">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="locating-crash-logs-ios">Locating Crash Logs (iOS)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Locating Crash Logs (iOS)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>While troubleshooting a reported issue, Downcast support may request
+that you send crash logs for Downcast for iOS. The following
+instructions will help you locate these crash logs:</p>
+<h4 id="mac">Mac</h4>
+<ol type="1">
+<li>Sync your iOS device with iTunes</li>
+<li>Open the Finder from the Dock</li>
+<li>Click “Go” in the menu bar</li>
+<li>Hold down the Option button and click “Library”</li>
+<li>Navigate to Logs =&gt; CrashReporter =&gt; MobileDevice =&gt; [Your
+Device’s Name]</li>
+</ol>
+<p>Windows</p>
+<ol type="1">
+<li>Sync your iOS device with iTunes</li>
+<li>Open Windows Explorer (i.e., File Explorer)</li>
+<li>Click in the address bar and paste the following: C:\Users\[Your
+Username]\AppData (replacing [Your Username] with your actual
+username)</li>
+<li>Navigate to Roaming =&gt; Apple Computer =&gt; Logs =&gt;
+CrashReporter =&gt; MobileDevice =&gt; [Your Device’s Name]</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-12">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="manually-populated-playlists">Manually Populated Playlists</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Manually Populated Playlists</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>This feature is coming in the next major version, v3.0.</p>
+<p>Downcast does not yet support manually populated (“on the go”)
+playlists.</p>
+<p>However, there are a couple of ways to simulate one while we
+implement the feature.</p>
+<p><strong>Option 1</strong></p>
+<ul>
+<li>Create a playlist that includes only locked episodes</li>
+<li>Lock episodes that you want to include in the playlist</li>
+<li>That catch with this option is that Downcast does not synchronize
+the locked status of episodes.</li>
+</ul>
+<p><strong>Option 2</strong></p>
+<ul>
+<li>Create a playlist that includes only partially played episodes</li>
+<li>Briefly play each episode you want included in the playlist so that
+they are considered partially played</li>
+<li>The advantage of this option is that play position is synchronized,
+so the playlist should stay in sync across devices.</li>
+<li>One thing to keep in mind with this option is that should you wish
+to remove an episode from a playlist that only includes partially played
+episodes is that marking an episode as “Unplayed” does not reset the
+play position to zero. That only happens if you manually change the play
+position to the start of the episode and when an episode is marked as
+“Played”.</li>
+</ul>
+<hr />
+<h4 id="how-did-we-do-13">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="media-backup-ios">Media Backup (iOS)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Media Backup (iOS)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Beginning with version 2.5.2, Downcast’s default behavior is to
+prevent iOS from including podcast media files and images when backing
+up your device to iCloud or iTunes. This allows users to backup Downcast
+to retain settings, playlists and subscriptions while not using
+excessive space in their iCloud account or on their computer.</p>
+<p>A “Media Backup” option is available Settings that will allow iOS
+backups to include media files and images in the backup. While these
+backups may take up more space, media files will be included when
+restoring Downcast. This is very useful for podcasts that do not allow
+the downloading of old or archived episodes.</p>
+<hr />
+<h4 id="how-did-we-do-14">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="media-keys">Media Keys</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Media Keys - macOS</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Currently, macOS offers no reasonable method for sandboxed
+applications to use the built-in media keys. Downcast supports two
+methods of working around this problem:</p>
+<p><strong>Option 1 - Install BeardedSpice</strong> (Recommended)</p>
+<p>BeardedSpice is a menu bar application that intelligently manages
+delivery of media key events to supported applications. It allows
+Downcast, iTunes, and other AV apps to peacefully coexist and share the
+media keys.</p>
+<p><a href="http://beardedspice.github.io">Download BeardedSpice</a></p>
+<p><strong>Option 2 - Hotkeys</strong></p>
+<p>Downcast supports setting up global hotkeys as an alternative to
+using the standard media keys. While you cannot create a hotkey for
+media keys alone, you can do so for <em>modified</em> media keys. An
+example would be <em>F9 (by pressing fn, then F9)</em> for playing &amp;
+pausing. Hotkeys can be created for Play/Pause, Previous, Next, Skip
+Back, and Skip Forward. The Skip Back and Skip Forward hotkeys are used
+to skip by the corresponding <em>Skip Forward Interval</em>and <em>Skip
+Back Interval</em>preferences.</p>
+<p>Downcast already has various shortcuts for all of these functions
+when the app is the focused app (see the Now Playing menu). Hotkeys are
+in addition to these and are active when Downcast is running.</p>
+<p>To setup hotkeys, open Downcast’s Preferences window and select the
+Hotkeys tab.</p>
+<hr />
+<h4 id="how-did-we-do-15">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="new-episodes">New Episodes</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ New Episodes</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>An episode is considered “New” when it is initially discovered during
+a podcast feed refresh. It will keep this status until the next feed
+refresh, after which its “New” status will be cleared, regardless of
+whether the feed refresh discovered any newer episodes.</p>
+<hr />
+<h4 id="how-did-we-do-16">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="non-local-episodes">Non-local Episodes</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Non-local Episodes</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>“Non-local” is used to describe podcast episodes that exist in a
+podcast’s feed but have not been downloaded or marked for streaming.</p>
+<hr />
+<h4 id="how-did-we-do-17">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="playback-rates">Playback Rates</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Playback Rates</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast supports several playback rates between 0.5x and 3x.</p>
+<p><strong>To jump to a specific playback rate</strong> - Tap and hold
+the playback speed button on the player view. This will present a list
+allowing you to choose the playback rate to jump to.</p>
+<p><strong>To cycle through playback rates</strong> - Tap and release
+the playback speed button on the player view. This will step through the
+configured playback rates one at a time. The playback rates that are
+cycled through can be configured in Downcast’s settings both globally
+and per-podcast.</p>
+<p>To configure the global playback rates to cycle through: <strong>More
+-&gt; Settings -&gt; Playback Speed -&gt; Playback Speed Cycling
+Options</strong></p>
+<p>To configure the playback rates to cycle through for a particular
+podcast: <strong>Tap the Podcast -&gt; Tap the Gear Icon -&gt; Playback
+Speed -&gt; Playback Speed Cycling Options</strong></p>
+<hr />
+<h4 id="how-did-we-do-18">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="playlist-priority">Playlist Priority</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Playlist Priority</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Playlist priority is a podcast-specific setting that influences the
+sort order of the respective podcast’s episodes within playlists.
+Episodes whose podcast has a higher playlist priority will sort higher
+within playlists than those with lower priorities. This setting also
+affects the order in which podcast feeds are updated during an
+auto-refresh.</p>
+<p>Note: Playlists can be set to ignore playlist priorities.</p>
+<hr />
+<h4 id="how-did-we-do-19">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="podcast-list">Podcast List</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Podcast List</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>The main podcast list is divided into two sections: (1) podcasts that
+have local unplayed episodes and (2) podcasts that have no local
+unplayed episodes. This list cannot be manually reordered but the
+played/empty section can be hidden by tapping the episode count at the
+bottom of the list. Tap it again to unhide the section.</p>
+<hr />
+<h4 id="how-did-we-do-20">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="priority-play">Priority Play</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Priority Play</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When priority play is enabled within Settings, Downcast will attempt
+to play episodes in priority order within playlists. Rather than playing
+the next episode in the playlist, Downcast will search for the highest
+priority podcast episode and play it instead.</p>
+<hr />
+<h4 id="how-did-we-do-21">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="privacy-policy">Privacy Policy</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Privacy Policy</p>
+<p>Updated 5 years ago by George Cox</p>
+<h4 id="what-downcast-does-not-collect">What Downcast Does Not
+Collect</h4>
+<h6
+id="personally-identifying-or-sensitive-information"><strong>Personally
+Identifying or Sensitive Information</strong></h6>
+<p>This means Downcast does not collect your name, email address,
+location, physical address, financial information, passwords,
+information about your contacts, or any other personal or sensitive
+information.</p>
+<h4 id="what-downcast-does-collect">What Downcast Does Collect</h4>
+<h6 id="a-random-identifier"><strong>A Random Identifier</strong></h6>
+<p>A random identifier is generated, using Apple’s `NSUUID`, when
+Downcast is installed. This identifier is stored in Downcast’s
+`NSUserDefaults` on your device. It is associated with Downcast’s
+diagnostic logs and any crash reports you choose to submit. If you
+delete Downcast from a device and reinstall it, a new identifier is
+generated.</p>
+<p>Since Downcast does not collect any personally identifying or
+sensitive information, the identifier is never associated with such
+information.</p>
+<p>The identifier is exposed in Downcast’s Settings UI under “Help &amp;
+Feedback” / “Crash Reporting”.</p>
+<p>The identifier is used:</p>
+<ul>
+<li>To look up related crash reports when you manually provide the
+identifier to Downcast’s customer support by copying &amp; pasting it
+from Downcast’s Settings UI or by submitting your log file.</li>
+<li>To estimate how many devices may be affected by a particular
+crash.</li>
+</ul>
+<h6 id="diagnostic-information"><strong>Diagnostic
+Information</strong></h6>
+<p>Downcast stores a sparse log of recent diagnostic information on your
+device. This information is used to assist in diagnosing crashes and
+troubleshooting user reported bugs in Downcast. Typically, the period of
+time covered by the log file is the most recent few days.</p>
+<p>This diagnostic information only leaves your device in three
+scenarios:</p>
+<ul>
+<li>You manually submit your log file from within Downcast.</li>
+<li>After a crash if you have configured Downcast to always send crash
+reports.</li>
+<li>After a crash if you have configured Downcast to always ask before
+sending crash reports and you manually choose to submit a crash report
+when prompted.</li>
+</ul>
+<p>Downcast’s crash reporting behavior is configurable in Downcast’s
+settings view under “Help &amp; Feedback” / “Crash Reporting”.</p>
+<h6 id="crash-reports"><strong>Crash Reports</strong></h6>
+<p>Crash reports may be submitted and stored by Apple and/or Microsoft
+App Center depending on how you have configured your device and
+Downcast.</p>
+<p>Crash reports are submitted and stored by Apple if you have
+configured iOS to share crash reports with developers in the iOS
+Settings app.</p>
+<p>Crash reports are submitted and stored by Microsoft App Center, for
+up to 90 days, if:</p>
+<ul>
+<li>You have configured Downcast to always send crash reports.</li>
+<li>You have configured Downcast to always ask before sending crash
+reports and you manually choose to submit a crash report when
+prompted.</li>
+</ul>
+<p>We do not have access to any crashes generated by any app besides
+Downcast.</p>
+<h4 id="handling-of-collected-data">Handling of Collected Data</h4>
+<p>We use Microsoft App Center to manage crash reports that you’ve
+allowed Downcast to collect. We do not share any collected data with any
+other third party.</p>
+<p>We do not sell any collected data to any third party.</p>
+<hr />
+<h4 id="how-did-we-do-22">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="reset-preferences-mac">Reset Preferences (Mac)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Reset Preferences (Mac)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>As of Mac OS 10.9 preferences files are cached by Mac OS. Prior to
+Mac OS 10.9 you may have been advised to delete your preferences file to
+recover from various issues. This will no longer work as of Mac OS 10.9
+and will in fact cause you problems if you simply delete the file.</p>
+<p>The correct and safe way to reset your preferences is the
+following:</p>
+<ul>
+<li>Open Terminal.app</li>
+<li>Run: defaults delete com.jamawkinaw.downcast.mac</li>
+</ul>
+<p>If you’re reading this article because you already deleted your file
+manually and your preferences won’t stick following a restart of
+Downcast you will need to log out and restart your Mac to recover.
+You’ll know you are in this state if you find that your preferences
+reset each time you restart Downcast.</p>
+<hr />
+<h4 id="how-did-we-do-23">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="running-in-the-background-ios">Running in the Background
+(iOS)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Running in the Background (iOS)</p>
+<p>Updated 3 years ago by George Cox</p>
+<p>For iOS devices that support multitasking (iPhone 3Gs and later, iPod
+Touch 3rd Generation and later and all iPads), Downcast has limited
+support for running in the background, based on restrictions imposed by
+Apple on third party apps.</p>
+<h4 id="audio-playback">Audio Playback</h4>
+<p>Downcast has the ability to play audio in the background
+indefinitely. If audio is paused or stopped while in the background, iOS
+may terminate Downcast at any time based on system resources.</p>
+<h4 id="scheduled-feed-refreshing">Scheduled Feed Refreshing</h4>
+<p>Scheduled feed refreshes will continue while Downcast is in the
+background as long as episode playback is in progress and for up to 3
+minutes after playback ends. If Downcast is moved into the background
+while episode playback is not in progress, scheduled feed refreshes can
+continue via <a href="#background-refresh-ios">Background App
+Refresh</a>.</p>
+<h4 id="location-based-feed-refreshing">Location Based Feed
+Refreshing</h4>
+<p>Some iOS devices support Downcast’s location-based feed refreshing.
+When leaving or arriving at specified locations, podcast feeds can be
+auto-refreshed and the download queue can download episodes, even if
+Downcast has been in the background for over 3 minutes and even if
+Downcast is completely terminated. See the <a
+href="http://support.downcastapp.com/customer/portal/articles/677062-automatic-feed-refreshing">Automatic
+Feed Refreshing Help article</a> for details.</p>
+<h4 id="episode-downloads">Episode Downloads</h4>
+<p>iOS allows third party apps to perform miscellaneous background tasks
+for up to 3 minutes. This means that episodes can continue to download
+for up to 3 minutes after episode playback ends while Downcast is in the
+background (Downcast can continue downloading episodes as long as
+episode playback is in progress). Once the background time limit is
+reached, the download queue will be paused. Episode can also downloading
+during <a href="#background-refresh-ios">Background App Refresh</a>.</p>
+<hr />
+<h4 id="how-did-we-do-24">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="sonos-support">Sonos Support</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Sonos Support</p>
+<p>Updated 8 years ago by George Cox</p>
+<h4 id="how-can-i-use-downcast-with-my-sonos-system"><strong>How can I
+use Downcast with my Sonos system?</strong></h4>
+<p>Currently, the recommended way is to connect your Sonos system to an
+Airport Express device on your WIFI network. This will allow you to play
+audio through your Sonos system via Airplay. It’s unfortunate that an
+Airport Express is required but including direct support for Airplay in
+a non-Apple device such as Sonos would require a direct agreement with
+Apple.</p>
+<p>Instructions for making Sonos available via Airplay: <a
+href="https://sonos.custhelp.com/app/answers/detail/a_id/1241">a
+id</a></p>
+<h4
+id="if-i-can-access-spotify-pandora-etc-through-sonos-why-cant-i-access-downcast"><strong>If
+I can access Spotify, Pandora, etc through Sonos why can’t I access
+Downcast?</strong></h4>
+<p>These apps are all web-based services, which is what Sonos supports
+when it comes to 3rd party systems. Downcast is not web-based, it is a
+stand alone app. Your subscriptions, settings, and downloaded content
+are stored directly on your iOS device or Mac so there is simply no
+service for your Sonos system to connect.</p>
+<h4 id="will-downcast-ever-work-on-sonos"><strong>Will Downcast ever
+work on Sonos?</strong></h4>
+<p>That’s the plan! The next major version of Downcast will have some
+significant changes, one of those being server-side functionality that
+would make it possible to add support for Sonos. Stay tuned!</p>
+<p>Sonos claims to be adding AirPlay 2 support sometime in 2018. That
+would allow Downcast to stream directly to your Sonos speaker(s) from
+your iOS device.</p>
+<hr />
+<h4 id="how-did-we-do-25">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="streaming-password-protected-media-files">Streaming
+Password-Protected Media Files</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Streaming Password-Protected Media
+Files</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Although Downcast supports password-protected podcast subscriptions,
+it cannot stream password-protected episodes. These episodes must first
+be downloaded before Downcast can play them.</p>
+<hr />
+<h4 id="how-did-we-do-26">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="supported-versions-of-ios-macos-and-watchos">Supported versions
+of iOS, macOS, and watchOS</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Supported versions of iOS, macOS,
+and watchOS</p>
+<p>Updated 8 years ago by George Cox</p>
+<p><strong>iOS</strong> - 9.3.5+</p>
+<p>Support for iOS 9 &amp; iOS 10 will likely be dropped in 2018</p>
+<p><strong>macOS</strong>- 10.11+</p>
+<p>Support for macOS 10.11 will be dropped in 2018</p>
+<p><strong>watchOS -</strong>2.0+</p>
+<p>Only so many versions of an operating system can be reasonably
+supported without interfering with development of new features and
+maintenance. Apple is more than generous when it comes to supporting new
+versions of their operating systems on old hardware. It is always
+recommend that you run the latest public release that can run on your
+device.</p>
+<hr />
+<h4 id="how-did-we-do-27">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="tips">Tips</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Tips - A Way to Support Downcast</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>As of <a
+href="https://itunes.apple.com/us/app/downcast/id393858566?mt=8">v2.9.8
+of Downcast for iOS</a> a new feature has been added that will allow you
+to provide Downcast with additional financial support.</p>
+<p>Downcast has always been one of the most inexpensive podcast clients
+available despite its long list of features. I’d like to keep it that
+way but it needs to generate more revenue in order to continue adding
+the features podcast listeners want and expand to other platforms.</p>
+<p>Some of Downcast’s competitors have switched to a shareware model
+they’re calling patronage. I think products like Downcast, which require
+a staggering time commitment to create and maintain, deserve a
+reasonable minimum price. So, I’m going with an alternative model with
+Downcast where it will remain a low-priced paid app but will also allow
+users to leave tips.</p>
+<p>Over the years, many of Downcast’s users have offered additional
+financial support. Tips, in the form of in-app purchases, will finally
+facilitate this. I’m hoping it will be enough to secure Downcast’s
+future and allow me to take it to the next level.</p>
+<p>If you use Downcast on a daily basis it’s probably worth far more to
+you than the sales price anyway. With that in mind, please consider
+leaving a tip to help ensure Downcast’s continued growth.</p>
+<p>Leaving a tip doesn’t get you anything extra right now. This may
+change in the future as Downcast expands. For now, it’s just a way to
+directly support the ongoing development of Downcast.</p>
+<p>Thanks for your consideration!</p>
+<hr />
+<h4 id="how-did-we-do-28">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="toggling-podcast-episode-artwork-size">Toggling Podcast/Episode
+Artwork Size</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ Toggling Podcast/Episode Artwork
+Size</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Tapping the podcast/episode image on the podcast player, podcast
+details or episode details views will toggle the size of the image.</p>
+<hr />
+<h4 id="how-did-we-do-29">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="url-schemes-opening-feed-urls-mac">URL Schemes &amp; Opening
+Feed URLs (Mac)</h3>
+<p>All Categories ​&gt;​ ​General ​&gt;​ URL Schemes &amp; Opening Feed URLs
+(Mac)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p><strong>Supported URL Schemes</strong></p>
+<p>Downcast supports the following podcast feed URL schemes</p>
+<ul>
+<li>itpc://</li>
+<li>podcast://</li>
+<li>feed://</li>
+<li>downcast://</li>
+</ul>
+<p>When navigating to a URL which uses any of the above URL schemes,
+Downcast will attempt to import a subscription to the podcast at that
+URL. If Downcast is closed, it will be launched by Mac OS and will then
+attempt to import the subscription.</p>
+<p><strong>Google Chrome RSS Subscription Extension</strong></p>
+<p>There is a popular reader extension for Google Chrome called RSS
+Subscription Extension. To have this extension open Downcast:</p>
+<ul>
+<li>Open the extension’s options</li>
+<li>Click Add to create an entry for Downcast</li>
+<li>Enter whatever you’d like in the Description field</li>
+<li>For the URL field, copy and paste this value:
+downcast://feed-url=%s</li>
+</ul>
+<p>You should then be able to choose Downcast as your reader when
+subscribing to a podcast in Google Chrome.</p>
+<hr />
+<h4 id="how-did-we-do-30">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h2 id="cat-importing-exporting">Importing &amp; Exporting</h2>
+<h3 id="exporting-media-files-ios">Exporting Media Files (iOS)</h3>
+<p>All Categories ​&gt;​ ​Importing &amp; Exporting ​&gt;​ Exporting Media
+Files (iOS)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>You can export downloaded episode media files by navigating to the
+episode’s “details” view by tapping the info button on the right side of
+an episode row in any list. Then tap the first button in the bottom
+toolbar to export the episode’s media file to other iOS apps or a
+computer.</p>
+<p>Additionally, from a podcast’s episode list, you can tap the “Edit”
+button, select episodes and then use the middle button in the bottom
+toolbar to share multiple media files with your computer.</p>
+<p>If you use the “Share with Computer” option, the exported files will
+be available via <a href="http://support.apple.com/kb/HT4094">iTunes
+File Sharing</a>. After accessing the exported files from your computer,
+you should clear these shared files from Downcast by tapping the “More”
+tab (or the gear icon in the upper-right of the screen if running
+Downcast on an iPad), “Tools” and then “Clear Shared Files”.</p>
+<hr />
+<h4 id="how-did-we-do-31">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="exporting-media-files-mac">Exporting Media Files (Mac)</h3>
+<p>All Categories ​&gt;​ ​Importing &amp; Exporting ​&gt;​ Exporting Media
+Files (Mac)</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>To export episode media files, select episodes in a podcast episode
+list or playlist, right click (or Control + Click) on one of the
+selected episodes and then tap the “export” option in the context
+menu.</p>
+<p>Note: Media files can only be exported for downloaded episodes</p>
+<hr />
+<h4 id="how-did-we-do-32">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="exporting-podcast-subscriptions">Exporting Podcast
+Subscriptions</h3>
+<p>All Categories ​&gt;​ ​Importing &amp; Exporting ​&gt;​ Exporting Podcast
+Subscriptions</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Navigate to the “More” view (tap the gear icon in the upper-right on
+the iPad) and then tap on the “Tools” row. Tap “Export Podcast
+Subscriptions”.</p>
+<hr />
+<h4 id="how-did-we-do-33">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="importing-media-files">Importing Media Files</h3>
+<p>All Categories ​&gt;​ ​Importing &amp; Exporting ​&gt;​ Importing Media
+Files</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast offers the ability to import audio and video files that may
+exist outside of any podcast feed. There are three ways to import these
+files:</p>
+<ul>
+<li><strong>iTunes File Sharing:</strong> Using Apple’s <a
+href="http://support.apple.com/kb/HT4094">file sharing instructions</a>
+you can sync media files to your iOS device. Then navigate to the “More”
+view (tap the gear icon in the upper-right if using an iPad), choose
+“Tools” and finally, “Import Media Files”. You can then choose to import
+any of the synced media files into a new “podcast” or select an existing
+one.</li>
+<li><strong>URL:</strong> You can import a media file into Downcast via
+URL by navigating to the “Import” view (Tap the “More” tab (the gear
+icon in the upper-right on the iPad), choose “Tools” and finally,
+“Import Media Files”) and selecting “URL” at the top of the screen. Then
+paste or type the URL to the media file and tap the “Import” button. The
+file at the specified URL will be added to the selected podcast as a new
+episode and immediately queued for download.</li>
+<li><strong>iOS Media Library:</strong> Navigate to the “More” view (tap
+the gear icon in the upper-right on the iPad), choose “Tools”, “Import
+Media Files” and then tap “Extract from Media Library” in the bottom
+toolbar. Choose the media items you’d like to extract and tap the “Done”
+button. After the items are extracted (which can take some time since
+some items may need to be converted to a supported file type), the items
+will show up in the import list. You can then choose to import any of
+them into a new “podcast” or select an existing one.</li>
+<li><strong>“Open With” from another iOS App:</strong> Many iOS apps
+offer the ability to share files with other apps. If the app supports
+it, when viewing a file it will display a “share” icon that, when
+tapped, will present a list of installed apps that can open the file in
+question. Downcast will be included in this list if the file is an audio
+or video file. When you tap Downcast in the list, you will be taken to
+an import view where you can select to import the file into a new
+“podcast” or add it to an existing one.</li>
+</ul>
+<p>Note: Downcast cannot play media files protected by <a
+href="http://en.wikipedia.org/wiki/Digital_rights_management">DRM</a></p>
+<hr />
+<h4 id="how-did-we-do-34">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="importing-podcast-subscriptions">Importing Podcast
+Subscriptions</h3>
+<p>All Categories ​&gt;​ ​Importing &amp; Exporting ​&gt;​ Importing Podcast
+Subscriptions</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>To import your feeds from another podcast application, you will need
+to export your feeds to an OPML file from that application.For example,
+to export podcast feeds from iTunes, navigate to the Podcasts section,
+then click File -&gt; Library -&gt; Export Playlist. Ensure the export
+format is set to “OPML”.You will then need to make this OPML file
+available to your iOS device in one of three ways:</p>
+<ol type="1">
+<li>Email the OPML file to yourself, making it availble to the Mail app
+on your iOS device</li>
+<li>Make the OPML file available to a third party application on your
+iOS device, such as Dropbox</li>
+<li>Place the OPML file on a publicly available web server</li>
+</ol>
+<p>For options #1 and #2 above, open the OPML file from the respective
+application and you will be provided an option to open the OPML file in
+another application on your device. Downcast should be displayed in the
+list of applications with which you can open the file. Select Downcast
+from the list and the podcasts subscriptions will be automatically
+imported.For option #3 above, tap the “Add Podcasts” tab within
+Downcast. Then tap “Add Podcast Manually”. You can then type in the URL
+to the OPML file located on a web server. Tap the “Subscribe” button and
+your podcast subscriptions will be imported.</p>
+<hr />
+<h4 id="how-did-we-do-35">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="send-to-computer">Send to Computer</h3>
+<p>All Categories ​&gt;​ ​Importing &amp; Exporting ​&gt;​ Send to
+Computer</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast allows you to share your podcast subscriptions (OPML file)
+and podcast episode media files to your computer through iTunes by
+tapping the “Send to Computer” option when exporting. After choosing
+“Send to Computer” the respective file will be made available to your
+computer through iTunes the next time you connect your iOS device to
+your computer: <a href="http://support.apple.com/kb/HT4094">Instructions
+for how to access the files from within iTunes</a></p>
+<hr />
+<h4 id="how-did-we-do-36">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h2 id="cat-preferences">Preferences</h2>
+<h3 id="automatic-downloading">Automatic Downloading</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Automatic Downloading</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>This setting controls when Downcast will enable the episode download
+queue. You can choose to never automatically enable the queue, enable it
+only when connected to the Internet via Wi-Fi or always enable the
+queue.</p>
+<p>When the download queue is not enabled, you can manually enable it by
+tapping on the “Enable Download Queue” button on the downloads view.</p>
+<hr />
+<h4 id="how-did-we-do-37">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="automatic-feed-refreshing-ios">Automatic Feed Refreshing
+(iOS)</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Automatic Feed Refreshing
+(iOS)</p>
+<p>Updated 8 years ago by George Cox</p>
+<h4 id="scheduled">Scheduled</h4>
+<p>Podcast feeds can be refreshed automatically based on time intervals
+(“Every hour”, “Every 3 hours”, etc.). These scheduled refreshes can
+also occur while Downcast is running in the background (while episode
+playback is in progress, for up to 3 minutes after playback ends as well
+as via <a href="#background-refresh-ios">Background App
+Refresh</a>).</p>
+<h4 id="at-locations">At Locations</h4>
+<p>Podcast feeds can be refreshed automatically based on your location.
+When you leave or arrive at specified locations, Downcast will
+automatically refresh your podcast feeds and begin downloading episodes
+(or mark them for streaming as your settings dicate). These location
+based refreshes will occur if Downcast is running in the foreground,
+background or not running at all. If Downcast is not in the foreground,
+the refreshing and downloading of episodes can continue for up to 3
+minutes, per the iOS background time limit.</p>
+<p>You can add up to 10 locations to be monitored and you’re offered
+convenient methods for adding your current location and locations of
+contacts.</p>
+<hr />
+<h4 id="how-did-we-do-38">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="automatic-screen-locking">Automatic Screen Locking</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Automatic Screen Locking</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>You can use this setting to have Downcast prevent your iOS device’s
+screen from automatically locking. Choosing “Prevent” or “Prevent When
+Plugged In” will keep your iOS device’s screen unlocked until you
+manually lock it or open another app.</p>
+<p>In addition to obeying this setting, there two additional situations
+where Downcast will prevent the screen from automatically locking:</p>
+<ol type="1">
+<li>When there are episodes in the download queue</li>
+<li>When a video episode is playing or displayed</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-39">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="continuous-play">Continuous Play</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Continuous Play</p>
+<p>Updated 8 years ago by Leigh</p>
+<p>When enabled, this setting causes Downcast to automatically move to
+the next episode at the end of the current episode.</p>
+<hr />
+<h4 id="how-did-we-do-40">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="episode-start-finish-times">Episode Start &amp; Finish
+Times</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Episode Start &amp; Finish
+Times</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast allows you to configure a time interval to skip at the
+beginning and/or end of each episode. These settings can be useful for
+skipping intros or outros and are available to configure both globally
+and per podcast.</p>
+<p>By default, episodes will start at 00:00 and finish at their natural
+ends.</p>
+<p>When you set a start time, let’s say 30 seconds, each episode will
+start at 00:30. When you set a finish time, let’s say 45 seconds, the
+episode will be considered finished 45 seconds prior to the natural end
+of the episode.</p>
+<hr />
+<h4 id="how-did-we-do-41">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="episodes-to-keep">Episodes to Keep</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Episodes to Keep</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>The “Episodes to Keep” setting allows you to define which episodes
+Downcast should keep downloaded or marked for streaming and which
+episodes should be automatically deleted. Downcast will automatically
+delete episodes based on this setting at the following times:</p>
+<ol type="1">
+<li>When the respective episode’s podcast feed is refreshed</li>
+<li>When an episode from the respective episode’s podcast feed is
+downloaded</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-42">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="loop-lists">Loop Lists</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Loop Lists</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When enabled along with “Continuous Play”, this setting will cause
+Downcast to loop to the top of the current episode list or playlist
+after completing playback of the last episode in the list.</p>
+<hr />
+<h4 id="how-did-we-do-43">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="new-episodes-action">New Episodes Action</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ New Episodes Action</p>
+<p>Updated 8 years ago by Leigh</p>
+<p>Customizable per podcast</p>
+<p>When a podcast feed is refreshed and new episodes are detected, this
+setting dictates what Downcast should do with the newly detected
+episodes. For example, should all new episodes be downloaded? Should the
+most recent episode be marked for stream?</p>
+<p><strong>New Episodes Action Options:</strong></p>
+<ul>
+<li><p><strong>Do Nothing</strong>: New episodes won’t be downloaded or
+marked for streaming, but they will show up in the <em>Other available
+episodes</em> list.</p></li>
+<li><p><strong>Download All New</strong>: All new episodes will be
+downloaded.</p></li>
+<li><p><strong>Download Most Recent</strong>: Only the most recent
+episode will be downloaded.[1]</p></li>
+<li><p><strong>Mark All for Streaming</strong>: All new episodes will be
+marked for streaming.</p></li>
+<li><p><strong>Mark Most Recent for Streaming</strong>: Only the most
+recent new episode will be marked for streaming.[1]</p></li>
+<li><p><strong>Playable Downloads</strong> - When enabled, episodes in
+the download queue can be streamed.</p></li>
+</ul>
+<ol type="1">
+<li>When using either of the <em>Most Recent</em> options, if multiple
+episodes are detected when refreshing a podcast feed, only the newest of
+those episodes will be acted on.</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-44">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="playable-downloads">Playable Downloads</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Playable Downloads</p>
+<p>Updated 8 years ago by Leigh</p>
+<p>When enabled, episodes in the download queue can be streamed until
+they finish downloading. You may want to disable this if you’re trying
+to limit Downcast’s use of cellular data without completely disabling
+cellular data for Downcast.</p>
+<hr />
+<h4 id="how-did-we-do-45">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="remote-media-skip">Remote Media Skip</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Remote Media Skip</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Enabling “Remote Media Skip” will cause the next/previous playback
+buttons on the iOS lock screen, in “Control Center” and from external
+devices to skip forward/backward within the currently playing episode
+(rather than moving to the next/previous episode).</p>
+<p>The “Media-Skip Forward Interval” and “Media-Skip Backward Interval”
+settings control the intervals for “Remote Media Skip”.</p>
+<p>Please note that with “Remote Media Skip” enabled, fast forward and
+fast reverse commands from external devices will move to the
+next/previous episode in the list. To prevent accidentally triggering a
+media skip, you must fast forward/reverse for 3 seconds or more to move
+to the next/previous episode.</p>
+<p><strong>Update:</strong> We now have a <a
+href="https://youtu.be/Eow5Wkjw67Q">Video Tutorial</a> for this
+feature.</p>
+<hr />
+<h4 id="how-did-we-do-46">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="sorting-podcast-subscriptions-and-playlists-lists">Sorting
+Podcast Subscriptions and Playlists Lists</h3>
+<p>All Categories ​&gt;​ ​Preferences ​&gt;​ Sorting Podcast Subscriptions
+and Playlists Lists</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>To sort either the podcast subscriptions list or the playlists list,
+tap the “Edit” button in the upper-left corner of the list, which will
+reveal a “Sort” button in the upper-right corner for the list. Tap the
+“Sort” button to choose your desired sorting method for the list.</p>
+<hr />
+<h4 id="how-did-we-do-47">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h2 id="cat-syncing">Syncing</h2>
+<h3 id="episode-syncing">Episode Syncing</h3>
+<p>All Categories ​&gt;​ ​Syncing ​&gt;​ Episode Syncing</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When on, the following episode information will be synced between
+devices: current play position, “played” status, and whether the episode
+is “local” or deleted. Similar to podcast syncing, if an episode is
+deleted or downloaded, that episode will be deleted or downloaded on all
+other devices1.</p>
+<p>Note: episode media files are not synchronized.</p>
+<p>If an episode is downloaded on one device but that episode has not
+yet been “discovered” by other devices through a feed refresh, it will
+not auto-download on those devices. In that case, it will be downloaded
+on the next feed refresh.</p>
+<p>1Episodes in the process of downloading will not be deleted by a
+synchronization from another device. Additionally, “locked” episodes
+will never be deleted based on a synchronization from another
+device.</p>
+<hr />
+<h4 id="how-did-we-do-48">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="icloud-syncing-as-pseudo-backup">iCloud Syncing as Pseudo
+Backup</h3>
+<p>All Categories ​&gt;​ ​Syncing ​&gt;​ iCloud Syncing as Pseudo Backup</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When enabled, the files used by Downcast for iCloud syncing can serve
+as a backup of your podcast subscriptions and settings, playlists and
+global settings. This allows users who backup their iOS devices via
+iCloud to disable Downcast backup and rely on the existing iCloud
+syncing files for restoring podcast subscriptions, playlists and global
+settings.</p>
+<hr />
+<h4 id="how-did-we-do-49">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="playlist-syncing">Playlist Syncing</h3>
+<p>All Categories ​&gt;​ ​Syncing ​&gt;​ Playlist Syncing</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When on, playlists will be synchronized with all devices. Playlists
+created or deleted on one device will be created or deleted on all other
+devices. If podcast synchronization is not enabled, the “Included
+podcasts” setting will not be synchronized.</p>
+<hr />
+<h4 id="how-did-we-do-50">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="podcast-syncing">Podcast Syncing</h3>
+<p>All Categories ​&gt;​ ​Syncing ​&gt;​ Podcast Syncing</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When on, podcast subscriptions (including podcast-specific settings)
+will be synced through iCloud. If a podcast is unsubscribed (deleted) on
+a device, it will be deleted from all other devices1. When a new podcast
+subscription is added on a device, it will be added to all other
+devices.</p>
+<p>1Podcast subscriptions with episodes in the process of downloading
+will not be deleted by a synchronization from another device.
+Additionally, “locked” episodes will never be deleted based on a
+synchronization from another device.</p>
+<hr />
+<h4 id="how-did-we-do-51">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="resetting-icloud-syncing">Resetting iCloud Syncing</h3>
+<p>All Categories ​&gt;​ ​Syncing ​&gt;​ Resetting iCloud Syncing</p>
+<p>Updated 3 years ago by George Cox</p>
+<h5 id="for-v2.9.13"><strong>For v2.9.13+</strong></h5>
+<p>Most problems with iCloud syncing are due to conflicts and throttling
+by iCloud.</p>
+<p>Conflicts occur when the same thing is changed on multiple devices
+without those devices knowing of each others changes. This can happen
+when you switch between devices quickly before one device has finished
+uploading changes it has made. This issue is compounded by aggressive
+throttling that iCloud imposes.</p>
+<p>Throttling occurs when several changes are made in rapid succession.
+This delays uploading of those changes to iCloud. This is not imposed by
+Downcast, it is imposed by iOS or OS X.</p>
+<p>If something isn’t syncing as you expect, please check Downcast’s
+iCloud Syncing setting view to see if any option is stuck on “Uploading
+(some %)”. If so, iCloud is throttling you. The only thing to do here is
+wait patiently for the upload to complete. There is absolutely nothing
+Downcast or support can do to about this, it is a behavior enforced by
+iOS &amp; Mac OS.</p>
+<p>If nothing is stuck uploading, check the last known upload/download
+dates on the same view, but on the device that hasn’t yet received the
+changes you expected it to. If those dates are far out of date, iCloud
+most likely isn’t working correctly. If this is the case, then please
+follow the instructions for below:</p>
+<ol type="1">
+<li>Disable all of Downcast’s syncing options on all of your devices
+(iOS &amp; Mac included)</li>
+<li>Restart all of your devices (iOS &amp; Mac included)</li>
+<li>Make sure that you are signed in to iCloud, using the same account
+on all devices, and that iCloud Drive is enabled on all those
+devices.</li>
+<li>Switch to the device containing the most correct information in
+Downcast.</li>
+<li>If an iOS device, go to iOS’ Settings &gt; Tap your Apple ID &gt;
+iCloud &gt; Manage Account Storage</li>
+<li>Find Downcast in the list of apps. <strong>For each Downcast
+entry</strong> (there may be two):</li>
+<li>Tap Downcast</li>
+<li>Tap Delete Data…</li>
+<li>Confirm by tapping Delete again.</li>
+<li>If a Mac, go to System Preferences &gt; Tap your Apple ID &gt;
+iCloud -&gt; Manage</li>
+<li>Find Downcast in the list of apps. <strong>For each Downcast
+entry</strong>(there may be two)<strong>:</strong></li>
+<li>Click Downcast</li>
+<li>Click Delete all Files… and confirm by clicking Delete in the
+alert.</li>
+<li>Go to Downcast’s iCloud Syncing options view and wait for each
+option’s state to change from
+<em>Uploading</em><strong><em>to</em></strong><em>Up to Date</em></li>
+<li>One by one, open Downcast on each of your other devices and
+re-enable its iCloud Syncing options and, <strong>before moving
+on</strong>, wait for each option’s state to change from
+<em>Downloading</em><strong><em>to</em></strong><em>Up to Date.</em>It’s
+possible they’ll also change to Uploading, that’s okay, just try to wait
+until they stabilize at Up to Date. This shouldn’t be necessary but it
+should ensure everything gets initially in sync by not causing
+unnecessary conflicts to occur.</li>
+</ol>
+<h5 id="prior-to-v2.9.13"><strong>Prior to v2.9.13</strong></h5>
+<p>If you are encountering recurring issues related to syncing, it is
+possible that some data in iCloud has become corrupted and needs to be
+reset. To do this, please follow these steps exactly:</p>
+<ol type="1">
+<li>Disable all of Downcast’s syncing options on all of your devices
+(iOS &amp; Mac included)</li>
+<li>Restart all of your devices (iOS &amp; Mac included)</li>
+<li>Make sure that you are signed in to iCloud, using the same account
+on all devices, and that iCloud Drive is enabled on all those
+devices.</li>
+<li>Switch to the device containing the most correct information in
+Downcast.</li>
+<li>If an iOS device, go to iOS’ Settings &gt; iCloud &gt; Storage &gt;
+Manage Storage</li>
+<li>Find Downcast in the list of apps. <strong>For each Downcast
+entry</strong> (there may be 2):</li>
+<li>Tap Downcast</li>
+<li>Tap Edit</li>
+<li>Tap Delete All and confirm by tapping Delete All again.</li>
+<li>If a Mac, go to System Preferences &gt; iCloud &gt; Manage</li>
+<li>Find Downcast in the list of apps. <strong>For each Downcast
+entry</strong>(there may be 2)<strong>:</strong></li>
+<li>Click Downcast</li>
+<li>Click Delete Documents and Data and confirm by clicking Delete in
+the alert.</li>
+</ol>
+<hr />
+<h4 id="how-did-we-do-52">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h3 id="settings-syncing">Settings Syncing</h3>
+<p>All Categories ​&gt;​ ​Syncing ​&gt;​ Settings Syncing</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>When on, all global settings will synchronize with all devices.</p>
+<hr />
+<h4 id="how-did-we-do-53">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+<h2 id="cat-miscellaneous">Miscellaneous</h2>
+<h3 id="password-protected-feeds">Password Protected Feeds</h3>
+<p>All Categories ​&gt;​ ​ ​&gt;​ Password Protected Feeds</p>
+<p>Updated 8 years ago by George Cox</p>
+<p>Downcast happily supports password protected feeds. You can subscribe
+to a password protected feed by adding the feed manually and entering
+your credentials at the same time. You can also enter or change your
+credentials later in the podcast’s settings.</p>
+<h4 id="authentication-problems">Authentication Problems</h4>
+<p>If you’re having an issue with a password protected feed, it is
+almost certainly due to authentication issues. This can be caused by
+entering invalid credentials, account related issues with the publisher,
+or, on macOS, Keychain issues.</p>
+<h6 id="fixing-authentication-issues">Fixing Authentication Issues</h6>
+<p><strong>iOS</strong></p>
+<ul>
+<li>Tap the Podcast</li>
+<li>Tap the Settings button (gear icon)</li>
+<li>Carefully re-enter your credentials</li>
+<li>That is usually enough. But, if you are still having problems,
+delete the feed and resubscribe, making sure to enter the correct
+credentials.</li>
+<li>If you’re *still* having a problem, contact the publisher to make
+sure your account isn’t locked and that they don’t need you to use an
+alternative feed URL.</li>
+<li>If you’re **still** having a problem, submit your log file and a
+detailed explanation of the problem, along with the name of the affected
+feed: <a href="#how-to-submit-your-log-file">How to submit your log
+file</a></li>
+</ul>
+<p><strong>macOS</strong></p>
+<ul>
+<li>Right-click the podcast and then click Preferences</li>
+<li>Carefully re-enter your credentials</li>
+<li>That is usually enough. But, if you are still having problems,
+delete the feed and resubscribe, making sure to enter the correct
+credentials.</li>
+<li>Sometimes the macOS Keychain doesn’t cooperate with Downcast. This
+is where we store your credentials for password protected podcasts. To
+make sure Keychain has the right info. We suggest the following:</li>
+<li>Open Keychain Access</li>
+<li>On the left, under “Category”, select “Passwords”</li>
+<li>Search for part of the feed URL for podcast that isn’t working for
+you</li>
+<li>There should be at least one result.</li>
+<li>The easiest thing to do is delete all the results, then re-enter
+your credentials in Downcast one more time.</li>
+<li>An alternative is to manually inspect each entry to make sure each
+entry has an “Account” that matches your username for the feed, that the
+“Where” field matches the feed URL exactly, and that, after clicking
+“Show password” that the password is correct.</li>
+<li>If you’re **still** having a problem, submit your log file and a
+detailed explanation of the problem, along with the name of the affected
+feed: <a href="#how-to-submit-your-log-file">How to submit your log
+file</a></li>
+</ul>
+<hr />
+<h4 id="how-did-we-do-54">How did we do?</h4>
+<p><a href="https://www.helpdocs.io?ref=hd">(opens in a new tab)</a></p>
+</body>
+</html>
