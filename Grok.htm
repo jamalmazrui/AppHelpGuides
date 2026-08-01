@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-07-31" />
+  <title>Grok Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Grok Help Guide</h1>
+<p class="subtitle">xAI’s own documentation for Grok, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-07-31</p>
+</header>
+<h1 id="grok-help-guide">Grok Help Guide</h1>
+<p>This guide gathers xAI’s own documentation for Grok, its assistant
+for the web, iPhone and Android. The text was taken from docs.x.ai on 31
+July 2026 and is xAI’s own; nothing has been summarised or
+rewritten.</p>
+<p>Grok runs in a browser at grok.com and in apps for iPhone and
+Android. There is no Windows program and no Alexa skill. Grok also
+appears inside X, but that is X’s own service with its own help centre,
+and xAI says plainly that it does not have operational oversight of it,
+so it is not covered here.</p>
+<p><strong>Built from the publisher’s own source.</strong> docs.x.ai
+serves every page twice: once as a web page and once as the Markdown it
+was written in, at the same address with <code>.md</code> on the end.
+This guide is built from the Markdown, so nothing was converted out of
+HTML and nothing inferred. The site also publishes
+<code>llms.txt</code>, a list of every page it holds, which is how the
+estate was found rather than crawled for.</p>
+<p><strong>What was left out.</strong> The REST and gRPC interface
+references under docs.x.ai/developers are developer documentation, which
+this collection leaves out everywhere. Everything else xAI publishes for
+people using Grok is here.</p>
+<p>The sections are <strong>editorial</strong>: xAI groups these pages
+in a sidebar rather than in named categories, so they are grouped by
+subject, alphabetically, with Miscellaneous last.</p>
+<p>xAI’s own note at the top of its questions page is worth repeating:
+the documentation is mainly meant for people using the interface, and
+that one page collects the most common questions about the Grok website
+and apps.</p>
+<p>Headings run six deep at most. Level one is this title, level two is
+a section, level three is an article, and anything below that came from
+inside the article itself.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#cat-connecting-grok-to-your-own-files-and-mail">Connecting
+Grok to your own files and mail</a>
+<ul>
+<li><a href="#about-connectors">About connectors</a></li>
+<li><a href="#connectors-custom-mcp-tunneling">Connectors Custom Mcp
+Tunneling</a></li>
+<li><a href="#connectors-gmail-google-calendar">Connectors Gmail Google
+Calendar</a></li>
+<li><a href="#connectors-google-drive">Connectors Google Drive</a></li>
+<li><a href="#connectors-microsoft-teams">Connectors Microsoft
+Teams</a></li>
+<li><a href="#connectors-onedrive">Connectors Onedrive</a></li>
+<li><a href="#connectors-outlook">Connectors Outlook</a></li>
+<li><a href="#connectors-salesforce">Connectors Salesforce</a></li>
+<li><a href="#connectors-sharepoint">Connectors Sharepoint</a></li>
+</ul></li>
+<li><a href="#cat-getting-started">Getting started</a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#user-guide">User Guide</a></li>
+</ul></li>
+<li><a href="#cat-managing-a-team-s-licences">Managing a team’s
+licences</a>
+<ul>
+<li><a href="#connector-management">Connector Management</a></li>
+<li><a href="#management">Management</a></li>
+<li><a href="#organization">Organization</a></li>
+</ul></li>
+<li><a href="#cat-miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#faq">Faq</a></li>
+</ul></li>
+</ul>
+<h2 id="cat-connecting-grok-to-your-own-files-and-mail">Connecting Grok
+to your own files and mail</h2>
+<h3 id="about-connectors">About connectors</h3>
+<h6 id="grok">Grok</h6>
+<p>Connectors are available to all Grok users and let Grok access your
+external tools and data sources directly within a conversation. Search
+your email, browse files in cloud storage, check your calendar, and more
+without leaving the chat.</p>
+<p>For Grok Business and Enterprise users, a team admin must first
+provision a connector in the <a href="#connector-management">cloud
+console</a> before it is available to members of the organization.</p>
+<p>There are three kinds of connectors:</p>
+<h4 id="built-in-connectors">Built-in connectors</h4>
+<p>Built-in connectors are maintained by xAI and integrate natively with
+Grok. Each one authenticates via OAuth, so you connect once and Grok can
+access your data on demand. No configuration beyond the initial sign-in
+is required.</p>
+<p>The following built in connectors are available:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Connector</th>
+<th>What it connects</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gmail &amp; Google Calendar</strong></td>
+<td>Gmail messages and Google Calendar events</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Google Drive</strong></td>
+<td>Google Drive files, Docs, Sheets, and Slides</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>OneDrive</strong></td>
+<td>Microsoft OneDrive personal storage</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Outlook Mail &amp; Calendar</strong></td>
+<td>Outlook email and calendar events</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Microsoft Teams</strong></td>
+<td>Microsoft Teams messages, channels, and chats</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SharePoint</strong></td>
+<td>Microsoft SharePoint sites and document libraries</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Salesforce</strong></td>
+<td>Salesforce CRM - explore objects, query records, create and
+update</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>To add a builtin connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select the service you want
+to connect.</li>
+<li>Complete the OAuth sign-in flow. Grok will request only the
+permissions it needs.</li>
+</ol>
+<p>Once connected, Grok can use the connector’s tools automatically
+whenever your questions relate to that service.</p>
+<h4 id="connector-catalog">Connector catalog</h4>
+<p>In addition to the built-in connectors, Grok provides a catalog of
+pre-configured OAuth connectors for many popular third-party services.
+These require no extra setup beyond signing in.</p>
+<p>Browse the full catalog at <a
+href="#about-connectors">grok.com/connectors</a>.</p>
+<h4 id="custom-mcp-connectors">Custom MCP connectors</h4>
+<p>If you need to connect Grok to a service not available in the
+catalog, you can bring your own <a
+href="https://modelcontextprotocol.io">Model Context Protocol (MCP)</a>
+server. MCP is an open standard that lets AI assistants interact with
+external tools and data sources through a unified protocol.</p>
+<p>With a custom MCP connector you can:</p>
+<ul>
+<li>Expose any internal API, database, or SaaS tool to Grok.</li>
+<li>Define your own tools with custom schemas and logic.</li>
+<li>Control authentication and access on your own infrastructure.</li>
+</ul>
+<p>To add a custom MCP connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong>, then select
+<strong>Custom</strong>.</li>
+<li>Enter the MCP server URL and complete any required
+authentication.</li>
+</ol>
+<p>Grok will discover the tools your MCP server exposes and make them
+available in conversations, just like the built-in and catalog
+connectors.</p>
+<p>Your MCP server must be reachable over the public internet. If it is
+running on your local machine, you will need a tunneling service to make
+it accessible. See <a
+href="/grok/connectors/custom-mcp-tunneling">Custom MCP Server
+Tunneling</a> for setup instructions.</p>
+<h3 id="connectors-custom-mcp-tunneling">Connectors Custom Mcp
+Tunneling</h3>
+<h6 id="connectors">Connectors</h6>
+<p>When you add a <a href="#about-connectors">custom MCP connector</a>,
+Grok’s servers need to reach your MCP server over the public internet.
+Servers running on <code>localhost</code> or a private network address
+(such as <code>127.0.0.1</code>, <code>10.x.x.x</code>,
+<code>172.16.x.x</code>, or <code>192.168.x.x</code>) are not directly
+reachable, and Grok will reject these URLs.</p>
+<p>A <strong>tunneling service</strong> solves this by exposing your
+local server through a public URL that Grok can connect to.</p>
+<h4 id="how-tunneling-works">How tunneling works</h4>
+<p>A tunnel creates a secure, temporary public URL that forwards traffic
+to a port on your machine. When Grok calls your MCP server, the request
+travels through the tunnel provider’s infrastructure and arrives at your
+local process as if it were a local request.</p>
+<pre class="text"><code>Grok ──► https://your-tunnel.example.com ──► tunnel provider ──► localhost:3001</code></pre>
+<p>Your MCP server code requires no changes; only the URL you provide to
+Grok differs.</p>
+<h4 id="setting-up-a-tunnel">Setting up a tunnel</h4>
+<p>Several tunneling services work well with MCP servers. Below are two
+popular options.</p>
+<h5 id="ngrok">ngrok</h5>
+<p><a href="https://ngrok.com">ngrok</a> provides stable URLs and a
+dashboard for inspecting traffic. ngrok is a third-party service and is
+not affiliated with xAI or Grok.</p>
+<ol type="1">
+<li>Install ngrok and authenticate:</li>
+</ol>
+<p><strong>customLanguage=“bash”</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install ngrok</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install ngrok <span class="at">-s</span> msstore</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Authenticate (free account required)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ngrok</span> config add-authtoken YOUR_AUTH_TOKEN</span></code></pre></div>
+<ol start="2" type="1">
+<li>Start a tunnel pointing to your MCP server’s port:</li>
+</ol>
+<p><strong>customLanguage=“bash”</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ngrok</span> http 3001</span></code></pre></div>
+<ol start="3" type="1">
+<li>Copy the <code>Forwarding</code> URL from the output (e.g.,
+<code>https://a1b2c3d4.ngrok-free.app</code>) and use it as the server
+URL in Grok’s custom connector dialog.</li>
+</ol>
+<h5 id="cloudflare-tunnel">Cloudflare Tunnel</h5>
+<p><a
+href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">Cloudflare
+Tunnel</a> is a free alternative that does not require account signup
+for quick tunnels.</p>
+<p><strong>customLanguage=“bash”</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install cloudflared</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install <span class="at">--id</span> Cloudflare.cloudflared</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Start a quick tunnel</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> tunnel <span class="at">--url</span> http://localhost:3001</span></code></pre></div>
+<p>Copy the generated <code>*.trycloudflare.com</code> URL and use it as
+the server URL in Grok.</p>
+<blockquote>
+<p>[!CAUTION]</p>
+<p> Cloudflare quick tunnels do not support Server-Sent Events (SSE). If
+your MCP server uses the SSE transport, use ngrok instead. Servers using
+the newer Streamable HTTP transport work fine with Cloudflare.</p>
+</blockquote>
+<h4 id="things-to-keep-in-mind">Things to keep in mind</h4>
+<ul>
+<li><strong>Tunnels are temporary.</strong> Most free-tier tunnel URLs
+change each time you restart the tunnel. If you restart, you will need
+to remove the old connector in Grok and add a new one with the updated
+URL.</li>
+<li><strong>Keep your MCP server running.</strong> Grok calls your
+server on demand during conversations. If the tunnel or the local server
+is stopped, tool calls will fail.</li>
+<li><strong>Authentication still applies.</strong> If your MCP server
+requires OAuth or API keys, you will still complete that flow in Grok
+after providing the tunnel URL. The tunnel only handles network
+reachability.</li>
+</ul>
+<h3 id="connectors-gmail-google-calendar">Connectors Gmail Google
+Calendar</h3>
+<h6 id="connectors-1">Connectors</h6>
+<p>Gmail and Google Calendar are connected as separate connectors, each
+with its own OAuth sign-in and permissions. Together they let Grok
+manage your email and schedule from within a conversation.</p>
+<h4 id="gmail">Gmail</h4>
+<h5 id="capabilities">Capabilities</h5>
+<ul>
+<li><strong>Search emails</strong> using Gmail search operators
+(<code>from:</code>, <code>to:</code>, <code>subject:</code>,
+<code>newer_than:</code>, <code>has:attachment</code>, etc.).</li>
+<li><strong>Read full messages</strong> including body text, headers,
+and attachments.</li>
+<li><strong>Compose and manage drafts</strong> so you can review before
+sending.</li>
+<li><strong>Send messages</strong>, reply, and forward when write
+permissions are enabled.</li>
+<li><strong>Organize mail</strong> by modifying labels, creating labels,
+trashing, or deleting messages.</li>
+</ul>
+<h5 id="required-permissions">Required permissions</h5>
+<p>Gmail uses a tiered permission model. The base connection is
+read-only; write and send capabilities are enabled progressively by your
+organization’s administrators.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+<th>When requested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gmail.readonly</code></td>
+<td>Search and read emails</td>
+<td>Always (base)</td>
+</tr>
+<tr>
+<td><code>gmail.modify</code></td>
+<td>Drafts, trash, label changes</td>
+<td>When write tools are enabled</td>
+</tr>
+<tr>
+<td><code>gmail.send</code></td>
+<td>Send messages, reply, forward</td>
+<td>When send tools are enabled</td>
+</tr>
+<tr>
+<td><code>gmail.labels</code></td>
+<td>Create and delete labels</td>
+<td>When label management tools are enabled</td>
+</tr>
+<tr>
+<td><code>userinfo.email</code></td>
+<td>Identify your Google account</td>
+<td>Always</td>
+</tr>
+</tbody>
+</table>
+<p>Note: <strong>gmail.modify</strong> is a superset of
+<strong>gmail.readonly</strong>. When write tools are enabled, only the
+modify scope is requested to avoid duplicate permission prompts.</p>
+<h5 id="how-to-connect">How to connect</h5>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select
+<strong>Gmail</strong>.</li>
+<li>Sign in with your Google account and approve the requested
+permissions.</li>
+</ol>
+<h4 id="google-calendar">Google Calendar</h4>
+<h5 id="capabilities-1">Capabilities</h5>
+<ul>
+<li><strong>Search events</strong> by date range and keyword.</li>
+<li><strong>View event details</strong> including attendees, location,
+and description.</li>
+<li><strong>Check availability</strong> with free/busy lookups.</li>
+<li><strong>Create, update, and delete events</strong> when write
+permissions are enabled.</li>
+<li><strong>RSVP to events</strong> (accept, decline, tentative).</li>
+<li><strong>List calendars</strong> the account has access to.</li>
+</ul>
+<h5 id="required-permissions-1">Required permissions</h5>
+<p>Like Gmail, Google Calendar uses a tiered permission model.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+<th>When requested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>calendar.readonly</code></td>
+<td>Search and read calendar events</td>
+<td>Always (base)</td>
+</tr>
+<tr>
+<td><code>calendar.events</code></td>
+<td>Create, update, and delete events</td>
+<td>When write tools are enabled</td>
+</tr>
+<tr>
+<td><code>calendar.freebusy</code></td>
+<td>Check availability / free-busy status</td>
+<td>When availability tool is enabled</td>
+</tr>
+<tr>
+<td><code>calendar.calendarlist.readonly</code></td>
+<td>List accessible calendars</td>
+<td>When calendar list tool is enabled</td>
+</tr>
+<tr>
+<td><code>userinfo.email</code></td>
+<td>Identify your Google account</td>
+<td>Always</td>
+</tr>
+</tbody>
+</table>
+<h5 id="how-to-connect-1">How to connect</h5>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select <strong>Google
+Calendar</strong>.</li>
+<li>Sign in with your Google account and approve the requested
+permissions.</li>
+</ol>
+<h4 id="privacy-and-security">Privacy and security</h4>
+<p><strong>We do not train on your data.</strong> xAI does not use your
+Gmail or Google Calendar data for model training.</p>
+<p><strong>Nothing is stored.</strong> Conversations that use your
+Google connectors do not result in any of your email or calendar data
+being stored on xAI servers. Grok accesses your data in real time when
+you ask a question, and does not retain it afterward.</p>
+<p><strong>You control access.</strong> Disconnect at any time to
+immediately revoke Grok’s access to your Google account.</p>
+<h4 id="disconnecting">Disconnecting</h4>
+<p>To disconnect either connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find the connector and click <strong>Disconnect</strong>.</li>
+</ol>
+<p>You can also revoke the app’s access from your Google account at <a
+href="https://myaccount.google.com/permissions">permissions</a>.</p>
+<h3 id="connectors-google-drive">Connectors Google Drive</h3>
+<h6 id="connectors-2">Connectors</h6>
+<p>The Google Drive connector lets Grok search, read, and manage files
+in your Google Drive. Find documents by content or title, read their
+contents inline, create new files, organize folders, and upload
+artifacts Grok generates.</p>
+<h4 id="capabilities-2">Capabilities</h4>
+<ul>
+<li><strong>Search files</strong> by content keywords or title across
+Docs, Sheets, Slides, and other file types.</li>
+<li><strong>Read file contents</strong> to summarize or analyze
+documents directly in the conversation.</li>
+<li><strong>Create and write files</strong> including new Google
+Docs.</li>
+<li><strong>Manage folders</strong> by creating new folders, listing
+folder contents, and trashing files.</li>
+<li><strong>Upload artifacts</strong> that Grok generates (spreadsheets,
+reports, etc.) to any folder in your Drive.</li>
+<li><strong>Filter by attributes</strong> such as starred files, shared
+files, files modified after a date, or files within a specific
+folder.</li>
+</ul>
+<h4 id="required-permissions-2">Required permissions</h4>
+<p>The Google Drive connector uses Google OAuth and requests the
+following scopes during sign-in:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>drive.metadata.readonly</code></td>
+<td>View metadata for files in your Drive (titles, dates, folder
+structure)</td>
+</tr>
+<tr>
+<td><code>drive.readonly</code></td>
+<td>Read the content of files in your Drive</td>
+</tr>
+<tr>
+<td><code>drive</code></td>
+<td>Create and modify files in your Drive (write operations,
+optional)</td>
+</tr>
+<tr>
+<td><code>userinfo.email</code></td>
+<td>Identify your Google account</td>
+</tr>
+</tbody>
+</table>
+<p>Google will show a consent screen listing these permissions. Grok can
+only access files that the signed-in Google account has access to.</p>
+<h4 id="how-to-connect-2">How to connect</h4>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select <strong>Google
+Drive</strong>.</li>
+<li>Sign in with your Google account.</li>
+<li>Review the requested permissions and click
+<strong>Allow</strong>.</li>
+</ol>
+<h4 id="privacy-and-security-1">Privacy and security</h4>
+<p><strong>We do not train on your data.</strong> xAI does not use your
+Google Drive data for model training.</p>
+<p><strong>Nothing is stored.</strong> Conversations that use your
+Google Drive connector do not result in any of your files or documents
+being stored on xAI servers. Grok accesses your data in real time when
+you ask a question, and does not retain it afterward.</p>
+<p><strong>You control access.</strong> Disconnect at any time to
+immediately revoke Grok’s access to your Google account.</p>
+<h4 id="disconnecting-1">Disconnecting</h4>
+<p>To disconnect the Google Drive connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find Google Drive in your connected list and click
+<strong>Disconnect</strong>.</li>
+</ol>
+<p>You can also revoke the app’s access from your Google account at <a
+href="https://myaccount.google.com/permissions">permissions</a>.</p>
+<h3 id="connectors-microsoft-teams">Connectors Microsoft Teams</h3>
+<h6 id="connectors-3">Connectors</h6>
+<p>The Microsoft Teams connector gives Grok full access to your Teams
+conversations. Search across channels and chats, read messages, send new
+messages, reply to threads, and create chats — all without leaving
+Grok.</p>
+<h4 id="capabilities-3">Capabilities</h4>
+<ul>
+<li><strong>Search messages</strong> across all your channels and chats
+by keyword.</li>
+<li><strong>Read channel messages</strong> including threaded replies,
+reactions, and <span class="citation"
+data-cites="mentions">@mentions</span>.</li>
+<li><strong>Read chat messages</strong> from one-on-one and group
+chats.</li>
+<li><strong>Send channel messages</strong> and reply to existing message
+threads.</li>
+<li><strong>Send chat messages</strong> in one-on-one and group
+chats.</li>
+<li><strong>Create chats</strong> to start new one-on-one or group
+conversations.</li>
+<li><strong>Browse teams and channels</strong> to discover what
+conversations are happening.</li>
+<li><strong>View team and channel members</strong> including roles and
+membership types.</li>
+</ul>
+<h4 id="required-permissions-3">Required permissions</h4>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Team.ReadBasic.All</code></td>
+<td>List the teams the user belongs to</td>
+</tr>
+<tr>
+<td><code>Channel.ReadBasic.All</code></td>
+<td>List channels within those teams</td>
+</tr>
+<tr>
+<td><code>ChannelMessage.Read.All</code></td>
+<td>Read messages in channels the user has access to</td>
+</tr>
+<tr>
+<td><code>ChannelMessage.Send</code></td>
+<td>Send messages and replies in channels</td>
+</tr>
+<tr>
+<td><code>ChannelMember.Read.All</code></td>
+<td>View channel membership</td>
+</tr>
+<tr>
+<td><code>TeamMember.Read.All</code></td>
+<td>View team membership</td>
+</tr>
+<tr>
+<td><code>Chat.Read</code></td>
+<td>Read one-on-one and group chat messages</td>
+</tr>
+<tr>
+<td><code>Chat.Create</code></td>
+<td>Create new one-on-one and group chats</td>
+</tr>
+<tr>
+<td><code>ChatMessage.Send</code></td>
+<td>Send messages in chats</td>
+</tr>
+<tr>
+<td><code>User.Read</code></td>
+<td>Read the signed-in user’s profile</td>
+</tr>
+<tr>
+<td><code>offline_access</code></td>
+<td>Maintain access without repeated sign-in prompts</td>
+</tr>
+</tbody>
+</table>
+<p>These are delegated permissions. Grok can only access teams,
+channels, and chats that the signed-in user already has access to.</p>
+<h4 id="how-to-connect-3">How to connect</h4>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select <strong>Microsoft
+Teams</strong>.</li>
+<li>Sign in with your Microsoft work or school account.</li>
+<li>Review the requested permissions and click
+<strong>Accept</strong>.</li>
+</ol>
+<p>Once connected, Grok can search, read, and send messages in your
+Teams conversations whenever your questions or requests relate to
+Teams.</p>
+<h4 id="admin-consent">Admin consent</h4>
+<p>Some organizations require an Azure AD administrator to approve
+application permissions before users can sign in. If you see a “need
+admin approval” error, contact your IT administrator and ask them to
+grant consent for the xAI Grok application in the Azure AD admin portal
+under <strong>Enterprise applications</strong>.</p>
+<h4 id="privacy-and-security-2">Privacy and security</h4>
+<p><strong>We do not train on your data.</strong> xAI does not use your
+Microsoft Teams data for model training.</p>
+<p><strong>Nothing is stored.</strong> Conversations that use your Teams
+connector do not result in any of your Teams data being stored on xAI
+servers. Grok accesses your data in real time when you ask a question,
+and does not retain it afterward.</p>
+<p><strong>Scoped to your account.</strong> Teams permissions are
+delegated to the signed-in user. Grok can only access teams, channels,
+and chats you are already a member of.</p>
+<p><strong>You control access.</strong> Disconnect at any time to
+immediately revoke Grok’s access to your Microsoft account.</p>
+<h4 id="disconnecting-2">Disconnecting</h4>
+<p>To disconnect:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find the Microsoft Teams connector and click
+<strong>Disconnect</strong>.</li>
+</ol>
+<p>You can also revoke the app’s access from your Microsoft account at
+<code>myapps.microsoft.com</code>.</p>
+<h3 id="connectors-onedrive">Connectors Onedrive</h3>
+<h6 id="connectors-4">Connectors</h6>
+<p><strong>Available on Grok Business and Enterprise plans
+only.</strong></p>
+<p>The OneDrive connector gives Grok access to your personal Microsoft
+OneDrive storage. Browse your files, read documents, and upload
+artifacts Grok generates directly to your OneDrive.</p>
+<h4 id="prerequisites">Prerequisites</h4>
+<p>Before team members can use OneDrive in Grok, a <strong>team
+admin</strong> must add the connector through the <a
+href="https://console.x.ai">console</a>. The setup requires:</p>
+<ol type="1">
+<li><strong>Provide the Azure AD Tenant ID</strong> – The organization’s
+Microsoft Entra (Azure AD) tenant identifier (e.g.,
+<code>xai.onmicrosoft.com</code> or a GUID), found in the Azure portal
+under <strong>Azure Active Directory &gt; Overview</strong>.</li>
+<li><strong>Grant admin consent</strong> – A Microsoft 365 administrator
+must approve Grok’s access to OneDrive. This is a one-time
+authorization. The admin can approve directly, copy the consent link for
+their IT team, or skip and complete it later.</li>
+</ol>
+<p>After admin consent is complete, individual team members can connect
+their own Microsoft accounts on <a
+href="#about-connectors">grok.com</a>.</p>
+<h4 id="capabilities-4">Capabilities</h4>
+<ul>
+<li><strong>Browse files and folders</strong> in your OneDrive,
+including nested directory structures.</li>
+<li><strong>Upload files</strong> that Grok generates (spreadsheets,
+PDFs, reports, etc.) straight to your OneDrive.</li>
+</ul>
+<p>For full-text search across your OneDrive files, connect the <a
+href="#connectors-sharepoint">SharePoint connector</a> as well. OneDrive
+for Business files are stored on SharePoint infrastructure and are
+searchable through the SharePoint document search.</p>
+<h4 id="required-permissions-4">Required permissions</h4>
+<p>The OneDrive connector uses Microsoft Graph API and requests the
+following OAuth scopes during sign-in:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Files.ReadWrite</code></td>
+<td>Read and write files in the user’s OneDrive</td>
+</tr>
+<tr>
+<td><code>User.Read</code></td>
+<td>Read the signed-in user’s profile (used to identify the
+account)</td>
+</tr>
+<tr>
+<td><code>offline_access</code></td>
+<td>Maintain access without repeated sign-in prompts</td>
+</tr>
+</tbody>
+</table>
+<p>These permissions are delegated and scoped to the signed-in user’s
+own OneDrive. Grok cannot access files belonging to other users.</p>
+<h4 id="how-to-connect-team-members">How to connect (team members)</h4>
+<p>Once your admin has completed the prerequisites above, each team
+member connects their own account:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find <strong>OneDrive</strong> and click
+<strong>Connect</strong>.</li>
+<li>Sign in with your Microsoft work or school account.</li>
+<li>Review the requested permissions and click
+<strong>Accept</strong>.</li>
+</ol>
+<h4 id="privacy-and-security-3">Privacy and security</h4>
+<p><strong>Your data stays yours.</strong> Grok only accesses OneDrive
+content when needed to answer your questions. xAI does not use your
+OneDrive data for model training.</p>
+<p><strong>Scoped to your account.</strong> OneDrive permissions are
+delegated to the signed-in user. Grok can only see files in your own
+OneDrive, not files belonging to other users.</p>
+<p><strong>Data removal on disconnect.</strong> When you disconnect your
+account, any indexed data associated with it is deleted. If an admin
+removes the OneDrive connector, all indexed data for the organization is
+deleted.</p>
+<h4 id="disconnecting-3">Disconnecting</h4>
+<p>To disconnect the OneDrive connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find OneDrive in your connected list and click
+<strong>Disconnect</strong>.</li>
+</ol>
+<p>You can also revoke the app’s access from your Microsoft account at
+<code>myapps.microsoft.com</code>.</p>
+<h3 id="connectors-outlook">Connectors Outlook</h3>
+<h6 id="connectors-5">Connectors</h6>
+<p>Outlook Mail and Outlook Calendar are connected as separate
+connectors, each with its own OAuth sign-in and permissions. Together
+they give Grok full access to your Microsoft email and schedule.</p>
+<h4 id="outlook-mail">Outlook Mail</h4>
+<h5 id="capabilities-5">Capabilities</h5>
+<ul>
+<li><strong>Search emails</strong> across your mailbox with keyword and
+filter queries.</li>
+<li><strong>Read full messages</strong> including body, headers, and
+attachments.</li>
+<li><strong>Compose and manage drafts</strong> with support for To, Cc,
+Bcc, and HTML body.</li>
+<li><strong>Send messages</strong>, reply-all, and forward emails.</li>
+<li><strong>Organize mail</strong> by moving messages between folders,
+creating folders, and batch operations.</li>
+<li><strong>Upload attachments</strong> from Grok-generated artifacts
+directly to a draft.</li>
+</ul>
+<h5 id="required-permissions-5">Required permissions</h5>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Mail.ReadWrite</code></td>
+<td>Read, create, update, and delete mail and drafts</td>
+</tr>
+<tr>
+<td><code>Mail.Send</code></td>
+<td>Send mail on behalf of the user</td>
+</tr>
+<tr>
+<td><code>User.Read</code></td>
+<td>Read the signed-in user’s profile</td>
+</tr>
+<tr>
+<td><code>offline_access</code></td>
+<td>Maintain access without repeated sign-in prompts</td>
+</tr>
+</tbody>
+</table>
+<p>These are delegated permissions. Grok can only access the mailbox of
+the signed-in user.</p>
+<h5 id="how-to-connect-4">How to connect</h5>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select
+<strong>Outlook</strong>.</li>
+<li>Sign in with your Microsoft work or school account.</li>
+<li>Review the requested permissions and click
+<strong>Accept</strong>.</li>
+</ol>
+<h4 id="outlook-calendar">Outlook Calendar</h4>
+<h5 id="capabilities-6">Capabilities</h5>
+<ul>
+<li><strong>Search events</strong> by date range and keyword.</li>
+<li><strong>View event details</strong> including attendees, location,
+and body.</li>
+<li><strong>Check availability</strong> across multiple attendees.</li>
+<li><strong>Create and update events</strong> with attendees, location,
+recurrence, and reminders.</li>
+<li><strong>RSVP to events</strong> (accept, decline, tentative) with
+optional comments.</li>
+</ul>
+<h5 id="required-permissions-6">Required permissions</h5>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Calendars.ReadWrite</code></td>
+<td>Read, create, update, and delete calendar events</td>
+</tr>
+<tr>
+<td><code>User.Read</code></td>
+<td>Read the signed-in user’s profile</td>
+</tr>
+<tr>
+<td><code>offline_access</code></td>
+<td>Maintain access without repeated sign-in prompts</td>
+</tr>
+</tbody>
+</table>
+<h5 id="how-to-connect-5">How to connect</h5>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and select <strong>Outlook
+Calendar</strong>.</li>
+<li>Sign in with your Microsoft work or school account.</li>
+<li>Review the requested permissions and click
+<strong>Accept</strong>.</li>
+</ol>
+<h4 id="admin-consent-1">Admin consent</h4>
+<p>Some organizations require an Azure AD administrator to approve
+application permissions before users can sign in. If you see a “need
+admin approval” error, contact your IT administrator and ask them to
+grant consent for the xAI Grok application in the Azure AD admin portal
+under <strong>Enterprise applications</strong>.</p>
+<h4 id="privacy-and-security-4">Privacy and security</h4>
+<p><strong>We do not train on your data.</strong> xAI does not use your
+Outlook email or calendar data for model training.</p>
+<p><strong>Nothing is stored.</strong> Conversations that use your
+Outlook connectors do not result in any of your email or calendar data
+being stored on xAI servers. Grok accesses your data in real time when
+you ask a question, and does not retain it afterward.</p>
+<p><strong>Scoped to your account.</strong> Outlook permissions are
+delegated to the signed-in user. Grok can only access your own mailbox
+and calendar, not those belonging to other users.</p>
+<p><strong>You control access.</strong> Disconnect at any time to
+immediately revoke Grok’s access to your Microsoft account.</p>
+<h4 id="disconnecting-4">Disconnecting</h4>
+<p>To disconnect either connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find the connector and click <strong>Disconnect</strong>.</li>
+</ol>
+<p>You can also revoke the app’s access from your Microsoft account at
+<code>myapps.microsoft.com</code>.</p>
+<h3 id="connectors-salesforce">Connectors Salesforce</h3>
+<h6 id="connectors-6">Connectors</h6>
+<p>The Salesforce connector gives Grok powerful, real-time access to
+your Salesforce org. Everything Grok does respects your user
+permissions, field-level security, and sharing rules — exactly as if you
+were using Salesforce yourself.</p>
+<h4 id="salesforce">Salesforce</h4>
+<h5 id="capabilities-7">Capabilities</h5>
+<ul>
+<li><strong>Explore your data model</strong> - See all the objects in
+your Salesforce org (standard and custom).</li>
+<li><strong>Find information quickly</strong> - Search across multiple
+objects at once or instantly pull up your recently viewed and recently
+modified records (for example, “my recent Opportunities” or “Show top 10
+closed deals for this week”).</li>
+<li><strong>Ask detailed questions about your data</strong> - Retrieve
+exactly the records you need, with filters, sorting, summaries, and
+related information across parent-child relationships — without writing
+queries yourself.</li>
+<li><strong>Create new records</strong> - Add Leads, Opportunities,
+Accounts, Cases, or records on custom objects directly from chat.</li>
+<li><strong>Update records</strong> - Change fields on existing records
+by ID or by context.</li>
+</ul>
+<h5 id="required-permissions-7">Required permissions</h5>
+<p>The Salesforce connector uses standard Salesforce OAuth 2.0 scopes to
+access the API on your behalf.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+<th>When requested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mcp_api</code></td>
+<td>Access the Salesforce REST and SOAP APIs to read and write data</td>
+<td>Always</td>
+</tr>
+<tr>
+<td><code>refresh_token</code></td>
+<td>Maintain access and refresh tokens between sessions</td>
+<td>Always</td>
+</tr>
+</tbody>
+</table>
+<p>All actions are further restricted by your Salesforce profile, role,
+sharing rules, and field-level security. Grok can never access more than
+your connected Salesforce user is allowed to see or modify.</p>
+<h5 id="how-to-connect-6">How to connect</h5>
+<p>Step 1: Company Admin Setup (xAI Console)</p>
+<ol type="1">
+<li>Go to <code>https://console.x.ai/</code></li>
+<li>Navigate to Grok Enterprise → Connectors</li>
+<li>Add the Salesforce connector and provide the OAuth credentials
+(Client ID, Client Secret) during the setup flow.</li>
+</ol>
+<p>Step 2: Install and Configure the Salesforce DX MCP Server Reference:
+<a
+href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_mcp_server.htm">Install
+and Configure the Salesforce DX MCP Server (Beta)</a></p>
+<p>Step 3: Team Member Connection</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Click <strong>New Connector</strong> and search for
+<strong>Salesforce</strong>.</li>
+<li>Sign in with your Salesforce credentials and approve the requested
+permissions.</li>
+</ol>
+<p>Once connected, just ask Grok anything about your Salesforce data in
+normal conversation.</p>
+<h5 id="common-examples">Common examples</h5>
+<ul>
+<li>“Show me the top 10 closed deals for this week”</li>
+<li>“What Opportunities are closing this month over $50k?”</li>
+<li>“Create a new Lead for Jane Smith at Acme Corp”</li>
+<li>“Show my recent cases that are still open”</li>
+<li>“Summarize the Account history for Globex Corporation”</li>
+</ul>
+<h4 id="privacy-and-security-5">Privacy and security</h4>
+<p><strong>We do not train on your data.</strong> xAI does not use your
+Salesforce data for model training.</p>
+<p><strong>Your data never leaves Salesforce.</strong> Grok queries
+Salesforce in real time and does not copy or store your records on xAI
+servers.</p>
+<p><strong>Your permissions are always enforced.</strong> If you cannot
+see a record or field in Salesforce, Grok cannot see it either. The same
+applies to create and update operations.</p>
+<p><strong>Disconnect anytime.</strong> Revoking access immediately
+stops Grok from reaching your org.</p>
+<h4 id="disconnecting-5">Disconnecting</h4>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find Salesforce in your connected list and click
+<strong>Disconnect</strong>.</li>
+</ol>
+<h4 id="limitation">Limitation</h4>
+<p>Currently only one Salesforce org/instance is supported per team.</p>
+<h3 id="connectors-sharepoint">Connectors Sharepoint</h3>
+<h6 id="connectors-7">Connectors</h6>
+<p><strong>Available on Grok Business and Enterprise plans
+only.</strong></p>
+<p>The SharePoint connector lets Grok access files and documents across
+your organization’s SharePoint sites and document libraries. Search for
+documents, read file contents, and browse folder structures directly
+from a conversation.</p>
+<h4 id="prerequisites-1">Prerequisites</h4>
+<p>Before team members can use SharePoint in Grok, a <strong>team
+admin</strong> must add the connector through the <a
+href="https://console.x.ai">console</a>. This is a one-time setup that
+involves three steps:</p>
+<h5 id="choose-an-access-mode">1. Choose an access mode</h5>
+<p>The admin selects how Grok should access SharePoint:</p>
+<ul>
+<li><strong>Delegated permissions</strong> <em>(recommended)</em> – Grok
+accesses SharePoint on behalf of the signed-in user, scoped by the
+<code>Sites.Read.All</code> permission. The recommended approach is to
+create a dedicated user account with access limited to specific
+SharePoint sites, then connect using that account. Because delegated
+permissions are bounded by the connecting account’s own access, this
+limits Grok to only the sites that account can see. No additional Azure
+portal configuration is needed.</li>
+<li><strong>Application-level permissions</strong> – Uses
+<code>Sites.Selected</code> to grant Grok access to specific sites
+chosen during setup. This provides fine-grained, least-privilege access
+at the application level. After admin consent, the console prompts the
+admin to <a
+href="https://learn.microsoft.com/en-us/graph/permissions-reference#sites-permissions">select
+the allowed sites</a> (see step 4 below).</li>
+</ul>
+<h5 id="provide-the-azure-ad-tenant-id">2. Provide the Azure AD Tenant
+ID</h5>
+<p>The admin enters the organization’s Microsoft Entra (Azure AD) tenant
+identifier. This is either a domain like
+<code>xai.onmicrosoft.com</code> or a GUID, and can be found in the
+Azure portal under <strong>Azure Active Directory &gt;
+Overview</strong>.</p>
+<h5 id="grant-admin-consent">3. Grant admin consent</h5>
+<p>A Microsoft 365 administrator must approve Grok’s access to
+SharePoint. This is a one-time authorization for the entire
+organization. The console provides three options:</p>
+<ul>
+<li><strong>Approve as admin</strong> – Opens a Microsoft consent popup
+for the logged-in admin to approve directly.</li>
+<li><strong>Copy link for your IT admin</strong> – Copies the consent
+URL so the admin can share it with the appropriate person.</li>
+<li><strong>Skip</strong> – The admin can complete this step later, but
+team members will not be able to authenticate until consent is
+granted.</li>
+</ul>
+<p>After admin consent is complete, individual team members can connect
+their own Microsoft accounts on <a
+href="#about-connectors">grok.com</a>.</p>
+<h5 id="select-sites-application-permissions-only">4. Select sites
+(Application permissions only)</h5>
+<p>If the admin chose <strong>Application-level permissions</strong> in
+step 1, the console displays a site picker after consent is granted.
+Search for each SharePoint site that Grok should be able to access and
+add it to the allow list. Only sites added here will be reachable
+through the connector – sites can be added or removed later from the
+connector settings. This step is skipped entirely when using delegated
+permissions, since access is bounded by the connecting user account
+instead.</p>
+<h5 id="enable-write-access-optional">5. Enable write access
+(optional)</h5>
+<p>Write access (uploading and creating files in SharePoint) uses a
+separate Microsoft Entra application with its own permissions. To enable
+it, click the <strong>Enable Write Access</strong> button in the console
+and complete the admin consent flow for the write application. This
+grants the <code>Files.ReadWrite.All</code> scope and is independent of
+the read-only consent from step 3.</p>
+<h4 id="capabilities-8">Capabilities</h4>
+<ul>
+<li><strong>Search documents</strong> across all SharePoint sites you
+have access to.</li>
+<li><strong>Read files</strong> by downloading content from any
+accessible document library.</li>
+<li><strong>Browse folders</strong> and list drives to navigate your
+SharePoint hierarchy.</li>
+<li><strong>Upload files</strong> <em>(opt-in)</em> upload artifacts
+generated by Grok (spreadsheets, PDFs, reports) directly to a SharePoint
+drive. This capability requires write access to be enabled for your
+organization.</li>
+</ul>
+<h4 id="required-permissions-8">Required permissions</h4>
+<p>The SharePoint connector uses Microsoft Graph API and requests the
+following OAuth scopes during sign-in:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sites.Read.All</code></td>
+<td>Read items in all SharePoint site collections the user can
+access</td>
+</tr>
+<tr>
+<td><code>Files.Read.All</code></td>
+<td>Read all files the user can access (required for cross-site document
+search)</td>
+</tr>
+<tr>
+<td><code>User.Read</code></td>
+<td>Read the signed-in user’s profile (used to identify the
+account)</td>
+</tr>
+<tr>
+<td><code>offline_access</code></td>
+<td>Maintain access without repeated sign-in prompts</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!WARNING]</p>
+<p>When write capabilities are enabled for your organization, the
+connector requests <strong>Files.ReadWrite.All</strong> instead of the
+read-only scopes above. This allows Grok to upload and overwrite files
+on your behalf.</p>
+</blockquote>
+<p>These permissions are delegated, meaning Grok can only access content
+the signed-in user already has access to.</p>
+<h5 id="sync-permissions">Sync permissions</h5>
+<p>In addition to the per-user OAuth scopes above, Grok runs a
+background sync that indexes SharePoint content so it can be searched
+quickly. The sync uses a separate set of scopes determined by the access
+mode the admin picked in step 1 — exactly one of the two sets below
+applies.</p>
+<p><strong>Delegated mode.</strong> The sync runs as a dedicated user
+account, usually specifically created for this purpose and giving it
+access only to the SharePoint sites that should be indexed:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sites.Read.All</code></td>
+<td>Delegated</td>
+<td>Enumerate and read items from every site the account can
+access.</td>
+</tr>
+<tr>
+<td><code>Files.Read.All</code></td>
+<td>Delegated</td>
+<td>Download file content for indexing across those sites.</td>
+</tr>
+<tr>
+<td><code>User.Read</code></td>
+<td>Delegated</td>
+<td>Read the signed-in user’s profile (used to identify the
+account)</td>
+</tr>
+<tr>
+<td><code>offline_access</code></td>
+<td>Delegated</td>
+<td>Maintain access without repeated sign-in prompts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Application mode.</strong> The sync runs as the Microsoft
+Entra application itself, using a separate app registration with
+application permissions:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sites.Selected</code></td>
+<td>Application</td>
+<td>Read items only in the sites explicitly granted to the application
+in step 4. The sync cannot discover or index any site that has not been
+selected.</td>
+</tr>
+</tbody>
+</table>
+<p>Indexed content is access-checked against the querying user on every
+request, so regardless of which sync mode is in use, team members still
+only see results they are individually authorized to view in
+SharePoint.</p>
+<h4 id="how-to-connect-team-members-1">How to connect (team
+members)</h4>
+<p>Once your admin has completed the prerequisites above, each team
+member connects their own account:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find <strong>SharePoint</strong> and click
+<strong>Connect</strong>.</li>
+<li>Sign in with your Microsoft work or school account.</li>
+<li>Review the requested permissions and click
+<strong>Accept</strong>.</li>
+</ol>
+<p>Once connected, Grok can search and read your SharePoint files
+whenever you ask about documents, reports, or files stored in
+SharePoint.</p>
+<p>If your admin has enabled write access (step 5 above), you can opt in
+to writes individually from the connectors page. <strong>Write access is
+not enabled by default for team members, even when the admin has
+approved the write application.</strong></p>
+<h4 id="privacy-and-security-6">Privacy and security</h4>
+<p><strong>Your data stays yours.</strong> Grok only indexes SharePoint
+content when needed to answer your questions. xAI does not use your
+SharePoint data for model training.</p>
+<p><strong>Per-user access controls.</strong> Every time you search or
+request a file, Grok verifies that your Microsoft account has permission
+to access it. If you cannot see a file in SharePoint, you cannot see it
+through Grok either. This check happens on every request.</p>
+<p><strong>Data removal on disconnect.</strong> When a team member
+disconnects their account, any indexed data that only they had access to
+is deleted. If an admin removes the SharePoint connector entirely, all
+indexed data for the organization is deleted.</p>
+<h4 id="disconnecting-6">Disconnecting</h4>
+<p>To disconnect the SharePoint connector:</p>
+<ol type="1">
+<li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
+<li>Find SharePoint in your connected list and click
+<strong>Disconnect</strong>.</li>
+</ol>
+<p>You can also revoke the app’s access from your Microsoft account at
+<code>myapps.microsoft.com</code>.</p>
+<h2 id="cat-getting-started">Getting started</h2>
+<h3 id="overview">Overview</h3>
+<h6 id="grok-1">Grok</h6>
+<p>Grok is xAI’s assistant, available on the web at
+<code>grok.com</code> and in the iOS and Android apps. Sign in once and
+your conversations, settings, and subscription stay in sync across every
+platform.</p>
+<h4 id="what-you-can-do">What you can do</h4>
+<ul>
+<li><strong>Chat</strong> — ask questions, brainstorm, write, and work
+through problems in a natural back-and-forth.</li>
+<li><strong>Create images and video</strong> with Grok Imagine.</li>
+<li><strong>Talk to Grok</strong> hands-free with voice.</li>
+<li><strong>Upload files</strong> — PDFs, images, spreadsheets, code,
+audio, and more — for analysis, extraction, and summarization.</li>
+<li><strong>Connect your tools</strong> so Grok can reach your email,
+files, and calendar right inside a chat. See <a
+href="#about-connectors">Connectors</a>.</li>
+</ul>
+<h4 id="plans-and-usage">Plans and usage</h4>
+<p>Grok is free to start. Paid SuperGrok plans raise your limits and
+unlock more across every product, drawing from a single weekly usage
+allowance you can spend however you like. For how limits, Extra Usage
+Credits, and billing work, see the <a href="#faq">FAQ</a>.</p>
+<h4 id="where-to-go-next">Where to go next</h4>
+<ul>
+<li><strong><a href="#faq">Help &amp; FAQ</a></strong> — billing and
+subscriptions, accounts, image and video generation, file uploads, and
+weekly usage limits.</li>
+<li><strong><a href="#about-connectors">Connectors</a></strong> — link
+Grok to the apps and data you already use.</li>
+<li><strong><a href="#user-guide">Business &amp; Enterprise</a></strong>
+— team workspaces, licenses, and organization controls.</li>
+</ul>
+<h3 id="user-guide">User Guide</h3>
+<h6 id="grok-business-enterprise">Grok Business / Enterprise</h6>
+<p><strong>Grok Business provides dedicated workspaces for personal and
+team use, with enhanced privacy and sharing controls.</strong> Switch
+between workspaces to access team-specific features and ensure your
+conversations are protected under business plan terms.</p>
+<p>A team workspace offers:</p>
+<ul>
+<li>Privacy guarantees as outlined in xAI’s <a
+href="https://x.ai/legal/terms-of-service-enterprise">terms of
+service</a>.</li>
+<li>Full benefits of SuperGrok (or SuperGrok Heavy for upgraded
+licenses).</li>
+<li>Secure sharing of conversations limited to active team members.</li>
+</ul>
+<h4 id="workspaces-overview">Workspaces Overview</h4>
+<p>Grok Business features two types of workspaces:</p>
+<ul>
+<li><strong>Personal Workspace:</strong> For individual use, available
+unless disabled by your organization.</li>
+<li><strong>Team Workspace:</strong> For collaborative work within your
+team, accessible only with an active license.</li>
+</ul>
+<p>To switch between workspaces, use the workspace selector in the
+bottom left navigation on grok.com. Ensure you are in the correct
+workspace before starting new conversations.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> You can only access the team workspace when you have an active
+license. If you lack access, contact your team admin.</p>
+</blockquote>
+<h4 id="privacy-and-benefits">Privacy and Benefits</h4>
+<p>In your team workspace, enjoy enterprise-grade privacy protections as
+detailed in xAI’s <a
+href="https://x.ai/legal/terms-of-service-enterprise">terms of
+service</a>. This includes data handling and, for the Enterprise tier,
+custom retention policies tailored for business use.</p>
+<p>Additionally, unlock the full capabilities of SuperGrok, including
+higher usage quotas and advanced features. If your organization has an
+upgraded license, you may access SuperGrok Heavy for even more powerful
+performance.</p>
+<blockquote>
+<p>[!CAUTION]</p>
+<p>Some users may not see a personal workspace. This indicates your
+organization has disabled personal workspaces via an enterprise license.
+To enable or disable personal workspaces, reach out to xAI sales for an
+Enterprise plan.</p>
+</blockquote>
+<h4 id="sharing-conversations">Sharing Conversations</h4>
+<p>Sharing is restricted to your team for security:</p>
+<ul>
+<li>Share conversations only with team members who have active
+licenses.</li>
+<li>Share links are only accessible to licensed team members.</li>
+<li>If sent to non-team members or unlicensed team members, the link
+will not open.</li>
+</ul>
+<p>To share a conversation:</p>
+<ol type="1">
+<li>Open the conversation in your team workspace.</li>
+<li>Click the share button and select team members.</li>
+<li>Generate and distribute the secure link.</li>
+</ol>
+<p>View all shared conversations in your history at <a
+href="https://grok.com/history?tab=shared-with-me">tab=shared with
+me</a>.</p>
+<h4 id="activating-your-license">Activating Your License</h4>
+<p>To activate or manage your license:</p>
+<ol type="1">
+<li>Visit your Grok Business overview at <code>console.x.ai</code>.</li>
+<li>Press “Assign license” and select your license type.</li>
+<li>If you encounter access issues or lack permissions, contact your
+team admin for assistance.</li>
+</ol>
+<p>Once activated, your team workspace will become available on
+grok.com.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> For white-glove support and Enterprise features, contact xAI sales
+at .</p>
+</blockquote>
+<h2 id="cat-managing-a-team-s-licences">Managing a team’s licences</h2>
+<h3 id="connector-management">Connector Management</h3>
+<h6 id="grok-business-enterprise-1">Grok Business / Enterprise</h6>
+<p><strong>On Grok Business and Enterprise plans, a team admin must add
+a connector in the cloud console before team members can connect and use
+it.</strong> This gives your organization control over which external
+services Grok can access.</p>
+<p>Access the connectors page by logging into <code>console.x.ai</code>,
+selecting your team, and navigating to <strong>Grok Business →
+Connectors</strong>. Actions like adding or removing connectors require
+team management permissions—see the Permissions section for details.</p>
+<h4 id="adding-connectors">Adding connectors</h4>
+<p>Team admins can provision connectors from the catalog or add a custom
+MCP server.</p>
+<p>To add a connector from the catalog:</p>
+<ol type="1">
+<li>On the connectors page, click <strong>+ Add Connector</strong>.</li>
+<li>Select the service you want to enable for your team.</li>
+<li>Complete any required setup steps—some connectors need additional
+configuration, such as admin consent for Microsoft services. See the
+connector-specific docs linked below for details.</li>
+</ol>
+<p>Once added, the connector appears in your team’s available connectors
+list. Team members can then connect their own accounts on <a
+href="#about-connectors">grok.com/connectors</a>.</p>
+<p>To add a custom MCP server:</p>
+<ol type="1">
+<li>On the connectors page, click <strong>+ Add Connector</strong>.</li>
+<li>Select <strong>Other</strong> and enter your MCP server URL.</li>
+<li>Complete any required authentication.</li>
+</ol>
+<p>See <a href="/grok/connectors/custom-mcp-tunneling">Custom MCP
+Tunneling</a> if your server runs on a local machine.</p>
+<h4 id="managing-connectors">Managing connectors</h4>
+<p>After a connector is provisioned, admins can manage it from the
+connectors page:</p>
+<ul>
+<li><strong>Configure</strong> — Open a connector’s settings to adjust
+access controls, allowed sites, or other service-specific options.</li>
+<li><strong>Remove</strong> — Delete a connector from your team. Team
+members will no longer be able to connect or use it, and any indexed
+data associated with the connector may be removed.</li>
+</ul>
+<p>Some connectors require additional admin setup beyond the initial add
+step. Refer to the dedicated guides for service-specific
+instructions:</p>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th>Setup guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SharePoint</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>OneDrive</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Salesforce</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>For a full list of available connectors, see the <a
+href="#about-connectors">Connectors overview</a>.</p>
+<h4 id="permissions">Permissions</h4>
+<p>Adding and removing connectors requires <strong>Team
+Read-Write</strong> permissions. This is typically granted to team
+admins.</p>
+<p>If you lack permissions, contact your team admin to provision the
+connectors your organization needs.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> For white-glove support, Enterprise upgrades, or connector setup
+assistance, contact xAI sales at .</p>
+</blockquote>
+<h3 id="management">Management</h3>
+<h6 id="grok-business-enterprise-2">Grok Business / Enterprise</h6>
+<p><strong>The Grok Business overview page at <code>console.x.ai</code>
+is your central hub for handling team licenses and user
+invitations.</strong> As a team admin or user with appropriate
+permissions, you can buy licenses, invite new members, and manage access
+to ensure smooth collaboration.</p>
+<p>Access this page by logging into <code>console.x.ai</code> and
+navigating to the overview section. Note that actions like purchasing or
+provisioning require specific permissions—see the Permissions section
+for details.</p>
+<h4 id="purchasing-licenses">Purchasing Licenses</h4>
+<p>Expand your team’s capabilities by buying additional licenses
+directly from the overview page.</p>
+<p>Available license types:</p>
+<ul>
+<li><strong>SuperGrok:</strong> Standard business access with enhanced
+quotas and features.</li>
+<li><strong>SuperGrok Heavy:</strong> Upgraded performance for demanding
+workloads.</li>
+</ul>
+<p>To purchase:</p>
+<ol type="1">
+<li>On the overview page, select the license type and quantity.</li>
+<li>Enter payment details if prompted .</li>
+<li>Confirm the purchase—licenses will be added to your available pool
+for assignment.</li>
+</ol>
+<p>Purchased licenses become immediately available for provisioning to
+users.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> Ensure your team’s billing is set up correctly to avoid
+interruptions. Visit <a
+href="https://console.x.ai/team/default/billing">Billing Settings</a>
+for more details.</p>
+</blockquote>
+<h4 id="inviting-users">Inviting Users</h4>
+<p>Invite new team members to join your Grok Business workspace with a
+simple email invitation process.</p>
+<p>To invite:</p>
+<ol type="1">
+<li>On the overview page, click “Invite users to Grok Business”.</li>
+<li>Enter the users’ email addresses.</li>
+<li>Select a license type to auto-provision upon acceptance .</li>
+<li>Send the invitation—the user will receive an email with a link to
+activate their account.</li>
+</ol>
+<p>Invited users gain access to the team workspace and basic team read
+permissions. (the latter is to allow for sharing conversations with your
+team members)</p>
+<p>View invited users in the “Pending invitations” list on the overview
+page. As long as you have unassigned licenses available, they will be
+automatically provisioned when the user accepts.</p>
+<h4 id="assigning-and-revoking-licenses">Assigning and Revoking
+Licenses</h4>
+<p>Once licenses are purchased or available, assign them to users for
+full team workspace access.</p>
+<p>To assign:</p>
+<ol type="1">
+<li>From the overview page, select a user from your team list.</li>
+<li>Choose an available license and assign it—access activates
+immediately.</li>
+</ol>
+<p>To revoke:</p>
+<ol type="1">
+<li>Click the “…” for the user and choose “Unassign License” from the
+dropdown.</li>
+<li>Confirm the action—the license returns to your available pool, and
+the user will no longer have access to your team’s workspace.</li>
+</ol>
+<p>Revocations take effect instantly, so ensure that you communicate
+changes to affected users.</p>
+<blockquote>
+<p>[!CAUTION]</p>
+<p> Revoking a license removes team workspace access. Users will retain
+personal workspace functionality.</p>
+</blockquote>
+<h4 id="canceling-licenses">Canceling Licenses</h4>
+<p>Reduce your team’s commitment by canceling unused licenses.</p>
+<p>To cancel:</p>
+<ol type="1">
+<li>On the overview page, select the license type and quantity to
+cancel.</li>
+<li>Submit the cancellation request .</li>
+</ol>
+<p>Cancellations may take a few days to process, and eligible refunds
+will be issued to your billing method. Canceled licenses are removed
+from your pool once processed.</p>
+<h4 id="sharing-policy">Sharing policy</h4>
+<p>Team admins decide how widely members can share Grok Business
+resources. A sharing policy sets the widest audience a member may pick
+for a given resource; members can always share more narrowly, never more
+broadly.</p>
+<p>Configure these policies in <code>console.x.ai</code> under your
+team’s <strong>Sharing &amp; Retention</strong> settings, in the
+<strong>Product Sharing</strong> section. Each resource type carries its
+own policy: conversations, projects, and skills.</p>
+<p>The levels form a ladder from most to least restrictive:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Level</th>
+<th>What members can do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Private</td>
+<td>Sharing is turned off for that resource.</td>
+</tr>
+<tr>
+<td>Team</td>
+<td>Share with individual teammates and with the member’s own team.
+Organization-wide and cross-team sharing are blocked.</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>Everything Team allows, plus sharing across teams and with everyone
+in the organization.</td>
+</tr>
+<tr>
+<td>Public</td>
+<td>Everything Organization allows, plus public links that anyone can
+open, including people outside the team.</td>
+</tr>
+</tbody>
+</table>
+<p>Public links apply to conversations only; projects and skills cap at
+Organization. By default, conversations and projects can be shared
+organization-wide, and skills start at Private.</p>
+<p>Tightening a policy applies right away. Members can no longer create
+shares wider than the new ceiling, and access to existing shares beyond
+it is restricted to match.</p>
+<h4 id="permissions-and-troubleshooting">Permissions and
+Troubleshooting</h4>
+<p>Most management actions require specific role-based permissions:</p>
+<ul>
+<li><strong>Billing Read-Write:</strong> Needed to purchase or cancel
+licenses.</li>
+<li><strong>Team Read-Write:</strong> Needed to invite users or
+assign/revoke licenses.</li>
+</ul>
+<p>These are typically granted only to team admins. If you lack
+permissions:</p>
+<ul>
+<li>Contact your team admin to request actions like license assignment
+or purchases.</li>
+<li>Admins can adjust permissions via the overview page’s role
+settings.</li>
+</ul>
+<p>If you encounter issues, such as invitations not provisioning due to
+insufficient licenses, purchase more or revoke unused ones first.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> For white-glove support, Enterprise upgrades, or permission issues,
+contact xAI sales at .</p>
+</blockquote>
+<h3 id="organization">Organization</h3>
+<h6 id="grok-business-enterprise-3">Grok Business / Enterprise</h6>
+<p><strong>Organizations provide a higher-level governance structure for
+enterprise customers, encompassing multiple console teams under unified
+IT controls.</strong> Available only to Enterprise tier subscribers,
+organizations enable centralized management of users, teams, and
+security features like SSO.</p>
+<p>Access the organization dashboard by visiting <a
+href="#organization">console.x.ai/organization</a>. This page is
+restricted to organization admins.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> Organizations are exclusive to the Enterprise tier. Contact xAI
+sales to upgrade if needed.</p>
+</blockquote>
+<h4 id="understanding-organizations">Understanding Organizations</h4>
+<p>An organization acts as an overarching entity that groups related
+console teams, ideal for large enterprises with multiple business units
+or departments.</p>
+<p>Key features:</p>
+<ul>
+<li><strong>Domain Association:</strong> Link your organization to a
+specific email domain (e.g., <span class="citation"
+data-cites="yourcompany.com">@yourcompany.com</span>). Any user signing
+up or logging in with an email from this domain is automatically
+associated with the organization.</li>
+<li><strong>User Visibility:</strong> Organization admins can view a
+comprehensive list of all associated users across teams on the
+<code>/organization</code> page.</li>
+<li><strong>Team Association:</strong> Teams created by organization
+members are automatically linked to the organization and displayed in
+the dashboard for oversight.</li>
+</ul>
+<p>This structure supports a multi-team architecture, allowing
+independent Grok Business or API teams while maintaining centralized
+governance, such as uniform access controls and auditing.</p>
+<h4 id="viewing-users-and-teams">Viewing Users and Teams</h4>
+<p>To view users:</p>
+<ol type="1">
+<li>Navigate to <a
+href="#organization">console.x.ai/organization</a>.</li>
+<li>Scroll to the “Users” section for a list of all domain-associated
+users, including their team affiliations and access status.</li>
+</ol>
+<p>To view teams:</p>
+<ol type="1">
+<li>In the same dashboard, access the “Teams” section.</li>
+<li>Review associated console teams, their members, and high-level usage
+metrics.</li>
+</ol>
+<p>Use these views to ensure compliance, spot inactive accounts, or
+identify growth needs.</p>
+<h4 id="setting-up-sso">Setting Up SSO</h4>
+<p>Secure and streamline logins by integrating Single Sign-On (SSO) with
+your preferred Identity Provider (IdP).</p>
+<p>To configure SSO:</p>
+<ol type="1">
+<li>On the <code>/organization</code> page, click “Configure SSO”.</li>
+<li>Choose your IdP from the supported list (e.g., Okta, Azure AD,
+Google Workspace).</li>
+<li>Follow the self-guided, IdP-specific instructions provided—each
+includes step-by-step setup, metadata exchange, and attribute mapping
+details.</li>
+<li>Save your configuration and test SSO to confirm the
+functionality.</li>
+</ol>
+<p>SSO setup is straightforward and tailored to common providers,
+ensuring quick deployment.</p>
+<h4 id="activating-sso-and-user-impact">Activating SSO and User
+Impact</h4>
+<p>Once configured, SSO will be activated and enforced
+organization-wide.</p>
+<p>Post-activation:</p>
+<ul>
+<li>Users must log in via SSO on their next access.</li>
+<li>If a user selects “Log in with email” and enters a domain-associated
+address, (e.g., <span class="citation"
+data-cites="yourcompany.com">@yourcompany.com</span>) the system
+automatically detects it and redirects to your IdP for
+authentication.</li>
+<li>Non-domain emails (e.g., <span class="citation"
+data-cites="differentcompany.com">@differentcompany.com</span>) fall
+back to standard login methods.</li>
+</ul>
+<p>This ensures seamless, secure access without disrupting
+workflows.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p> Notify your users in advance about the SSO rollout to minimize
+support queries.</p>
+</blockquote>
+<h4 id="setting-up-scim">Setting up SCIM</h4>
+<p>Automate user provisioning and deprovisioning by integrating System
+for Cross-domain Identity Management (SCIM) with your Identity Provider
+(IdP). Follow these steps to set up SCIM effectively.</p>
+<h5 id="step-1-configure-directory-sync-in-your-idp">Step 1: Configure
+directory sync in your IdP</h5>
+<ol type="1">
+<li>On the <code>/organization</code> page, click “Setup SCIM”.</li>
+<li>Follow the IdP-specific steps provided to connect your
+directory.</li>
+<li>Create groups in your IdP that correspond to how you want to
+organize access in xAI—for example, <code>xai-engineering</code>,
+<code>xai-data-science</code>, or whatever fits your organizational
+structure.</li>
+</ol>
+<p>This step ensures your directory is synced and your groups are ready
+for mapping.</p>
+<h5 id="step-2-create-roles">Step 2: Create roles</h5>
+<p>Define the roles your organization needs directly in the xAI
+console.</p>
+<ul>
+<li>Click <strong>“Create Role”</strong> to add a new role. Each role
+gets a name, a slug (used as a unique identifier), and an optional
+description.</li>
+<li>Create as many roles as you need to match your organizational
+structure—there is no limit.</li>
+<li><strong>Drag to reorder</strong> roles by priority. Higher-priority
+roles take precedence when a user belongs to multiple groups.</li>
+<li>The <strong>Member</strong> role is always present at the bottom of
+the list as the default role assigned to users without any specified
+group.</li>
+</ul>
+<p>You can also create and reorder roles later from the Provisioning tab
+on the organization page.</p>
+<h5 id="step-3-map-groups-to-roles">Step 3: Map groups to roles</h5>
+<p>Map your IdP groups to the roles you created in the previous
+step.</p>
+<ol type="1">
+<li>On this step, click <strong>“Assign Groups”</strong> to open the
+management portal at <strong>sso.x.ai</strong>.</li>
+<li>Click <strong>“Configure role assignment”</strong> to set up
+group-to-role mappings.</li>
+<li>For each IdP group, select the corresponding xAI role.</li>
+</ol>
+<p>This mapping aligns your IdP groups with xAI’s role-based access
+controls so that users are automatically assigned the correct role when
+provisioned.</p>
+<h5 id="step-4-configure-roles-with-teams-permissions-and-licenses">Step
+4: Configure roles with teams, permissions, and licenses</h5>
+<p>Assign your roles to the appropriate resources.</p>
+<ul>
+<li><strong>Teams:</strong> Map each role to one or more console
+teams.</li>
+<li><strong>Permissions:</strong> Assign the access control lists (ACLs)
+each role should have.</li>
+<li><strong>Licenses:</strong> Associate the appropriate product license
+(e.g., Grok Business) with the role.</li>
+</ul>
+<p>This step customizes access and entitlements based on your
+organizational needs.</p>
+<h5 id="step-5-preview-and-activate-scim">Step 5: Preview and activate
+SCIM</h5>
+<p>Before finalizing, review the changes.</p>
+<ul>
+<li>We provide a preview of what your organization will look like after
+activation.</li>
+<li>Confirm that members are assigned to the correct roles, those roles
+have the appropriate level of authorization, and the right licenses are
+applied.</li>
+<li>Once you feel confident everything is correct, click
+<strong>“Activate”</strong> to make SCIM your default provisioning
+system.</li>
+</ul>
+<p>This verification ensures a smooth transition.</p>
+<blockquote>
+<p>[!WARNING]</p>
+<p> SCIM is very disruptive. Users might lose or gain access to
+resources they did not have before. Notify your organization that you
+are undergoing this transition and <strong>verify everything is correct
+during the preview stage before proceeding.</strong></p>
+</blockquote>
+<h5 id="managing-roles-after-activation">Managing roles after
+activation</h5>
+<p>After SCIM is activated, you can continue to manage roles from the
+<strong>Provisioning</strong> tab on the organization page:</p>
+<ul>
+<li><strong>Create new roles</strong> using the “Create Role” button in
+the SCIM Roles section header.</li>
+<li><strong>Reorder role priority</strong> using the “Reorder Priority”
+button.</li>
+<li><strong>Configure roles</strong> by clicking the overflow menu on
+any role to update its teams, permissions, and licenses.</li>
+</ul>
+<h4 id="need-help">Need Help?</h4>
+<p>For assistance with organization setup, SSO troubleshooting, or
+Enterprise features, contact xAI sales at <a
+href="https://x.ai/grok/business/enquire">enquire</a>.</p>
+<h2 id="cat-miscellaneous">Miscellaneous</h2>
+<h3 id="faq">Faq</h3>
+<h6 id="faq-1">FAQ</h6>
+<p>While the documentation is mainly meant for our API users, this page
+collects the most common questions about our consumer-facing Grok
+website and apps (grok.com, iOS, and Android).</p>
+<h4 id="billing-subscriptions">Billing &amp; Subscriptions</h4>
+<h5 id="how-do-i-cancel-or-manage-my-supergrok-subscription">How do I
+cancel or manage my SuperGrok subscription?</h5>
+<p>Where you manage it depends on where you subscribed:</p>
+<ul>
+<li><strong>Web (grok.com):</strong> Visit <a
+href="https://grok.com/?_s=billing">s=billing</a> while logged in to
+manage your billing directly from the website (change plan, update
+payment, or cancel). If the <strong>Manage Subscription</strong> button
+doesn’t open, ad-blockers or other apps/extensions can block it — try an
+incognito window or a different browser. If you still can’t complete it,
+support can escalate the cancellation to the billing team.</li>
+<li><strong>Apple App Store (iOS):</strong> Apple handles the
+transaction. <a href="https://support.apple.com/en-us/118428">Cancel</a>
+· <a href="https://support.apple.com/en-us/118223">Refund</a>.</li>
+<li><strong>Google Play (Android):</strong> <a
+href="https://support.google.com/googleplay/answer/7018481">Cancel</a>
+via Google Play. Refunds are handled by xAI — use the <a
+href="https://accounts.x.ai/refund">xAI Refund Request form</a>.</li>
+</ul>
+<h5 id="how-do-i-unsubscribe">How do I unsubscribe?</h5>
+<p>If you have subscribed to SuperGrok, you can go to
+<code>https://grok.com</code> -&gt; Settings -&gt; Billing to manage
+your subscription (purchased from Grok Website), <a
+href="https://support.apple.com/118223">Request a refund for app</a>
+(purchased from Apple App Store), or <a
+href="https://support.google.com/googleplay/answer/7018481">Cancel,
+pause or change a subscription on Google Play</a> (purchased from Google
+Play).</p>
+<p>If you have subscribed to X Premium, X (not xAI) would be responsible
+for processing refund where required by law. You can <a
+href="https://help.x.com/forms/x-refund-request">submit a refund request
+from X</a>. See more details regarding X Premium subscriptions on <a
+href="https://help.x.com/using-x/x-premium">X Help Center</a>.</p>
+<h5 id="how-do-i-update-my-credit-card-or-payment-method">How do I
+update my credit card or payment method?</h5>
+<p>Manage your billing on the web at <a
+href="https://grok.com/?_s=billing">s=billing</a> (logged in). If the
+<strong>Manage Subscription</strong> button doesn’t open the billing
+portal, the usual cause is an ad-blocker or another app/extension
+blocking it — try an incognito window or a different browser. If you
+still can’t reach payment options, contact support to update the
+card.</p>
+<h5 id="can-i-get-a-refund-for-my-grok-or-supergrok-subscription">Can I
+get a refund for my Grok or SuperGrok subscription?</h5>
+<p>Refunds depend on where you originally purchased the
+subscription:</p>
+<ul>
+<li><strong>Web (grok.com) or Google Play:</strong> handled by xAI.
+Submit your refund request using the <a
+href="https://accounts.x.ai/refund">xAI Refund Request form</a> (sign in
+with the account used for the subscription). Our team will review the
+request. Approved refunds are typically issued to your original payment
+method within 5–10 business days.</li>
+<li><strong>Apple App Store:</strong> Apple handles all refunds for
+purchases made through the App Store. Please <a
+href="https://support.apple.com/en-us/118223">request your refund
+directly through Apple</a>.</li>
+</ul>
+<h5 id="are-api-credits-refundable">Are API credits refundable?</h5>
+<p>No — xAI API credits are non-refundable.</p>
+<h5 id="i-got-a-large-invoice-i-dont-recognize-is-it-api-usage">I got a
+large invoice I don’t recognize — is it API usage?</h5>
+<p>Not necessarily. Large unexpected invoices are often a
+<strong>SuperGrok Heavy</strong> yearly subscription, not API usage.
+Check the purchase date and your subscription history before disputing —
+contact support with the invoice number and they can confirm what the
+charge was for.</p>
+<h5
+id="i-subscribed-on-the-web-but-it-doesnt-show-in-the-iosandroid-app-or-vice-versa.-did-i-pay-twice">I
+subscribed on the web but it doesn’t show in the iOS/Android app (or
+vice versa). Did I pay twice?</h5>
+<p>Your subscription is tied to the account you bought it with, so it
+may not appear if you’re signed in with a different login — this is a
+common mix-up, not necessarily a double charge. Make sure you’re signed
+in with the same account everywhere (e.g. an Apple/X/Google login). For
+example, X Premium+ access only applies to the account linked with your
+X account. If you genuinely have a charge on two platforms, contact
+support to sort out a refund.</p>
+<h4 id="usage-limits">Usage &amp; Limits</h4>
+<h5 id="how-do-supergroks-weekly-usage-limits-work">How do SuperGrok’s
+weekly usage limits work?</h5>
+<p>Rolling out in June 2026, Grok will now use a simpler, more flexible
+system for paid users. Instead of separate daily limits for each product
+(like Chat, Imagine, Voice, or Build), you get one shared weekly usage
+pool that you can spend however you like across any Grok product.</p>
+<p>Previously, each Grok product had its own daily limits. This often
+meant running out of usage in one product (for example, Imagine) while
+still having usage left in another (for example, Chat).</p>
+<p>Now, for most usage patterns, you’ll be able to go longer using your
+favorite product before hitting usage limits. Once you do hit limits,
+you’ll have the option to pay as you go or upgrade to a higher
+subscription tier – whichever you prefer.</p>
+<ul>
+<li>One flexible weekly usage pool that works across all Grok
+products.</li>
+<li>The freedom to consume your entire weekly usage pool on a single or
+across multiple products.</li>
+<li>Clear visibility of your usage in one place.</li>
+</ul>
+<p>The usage pool limit resets every week on a schedule shown in the
+Usage tab in Settings.</p>
+<h5 id="how-is-my-weekly-usage-measured">How is my weekly usage
+measured?</h5>
+<p>When you pay for a Grok plan, you receive a weekly usage allowance
+included with your subscription.</p>
+<ul>
+<li>The usage pool is shown as a percentage used and will be broken down
+by product.</li>
+<li>You can use the weekly usage pool across any combination of Grok
+products.</li>
+<li>Different products cost different amounts depending on how much
+compute that product requires. A chat message uses little compute;
+generating a high-quality video or running a long coding task uses far
+more.</li>
+<li>You decide how to spend your usage pool – there’s no restriction on
+which products you use.</li>
+</ul>
+<h5 id="how-do-i-check-my-usage">How do I check my usage?</h5>
+<p>Go to Settings → Usage (available on web and mobile). You’ll see:</p>
+<ul>
+<li>A progress bar showing your current usage percentage.</li>
+<li>A percentage breakdown by product (API, Build, Chat, Imagine,
+Voice).</li>
+<li>Your weekly reset date and time.</li>
+<li>Your Extra Usage Credits balance (if any).</li>
+</ul>
+<h5 id="what-happens-when-i-reach-my-weekly-limit">What happens when I
+reach my weekly limit?</h5>
+<p>When your weekly usage limit is met, paid features will pause until
+your weekly limit resets. You will still have access to Grok’s free tier
+limits on Chat and Voice (these are separate from your weekly usage
+limit and resets on their own schedule). Hitting the weekly usage limit
+is not a hard stop. You also have the following additional options:</p>
+<ul>
+<li>You can purchase Extra Usage Credits to instantly continue
+usage.</li>
+<li>You can upgrade to a higher plan for a larger weekly allowance.</li>
+<li>You can turn on Auto Top Up.</li>
+</ul>
+<h5 id="how-do-extra-usage-credits-and-top-ups-work">How do Extra Usage
+Credits and top-ups work?</h5>
+<p>You can purchase Extra Usage Credits to continue using paid features
+after your weekly included usage is exhausted.</p>
+<blockquote>
+<p>[!WARNING]</p>
+<p>Important! Extra Usage Credits can currently only be purchased on the
+web. In-app purchases on mobile will be available in the future.</p>
+</blockquote>
+<p>When you buy Extra Usage Credits:</p>
+<ul>
+<li>They are added to your account immediately.</li>
+<li>They are used after your plan’s included weekly usage is
+exhausted.</li>
+<li>Top up credits expire one year after purchase (unless otherwise
+stated).</li>
+<li>You can buy as little as $5 from the Usage tab on web.</li>
+</ul>
+<p><strong>Note:</strong> Extra Usage Credits are priced at standard
+rates, which means the cost per action is higher than the effective rate
+you get from the included weekly usage in your plan.</p>
+<h5 id="what-is-auto-top-up">What is Auto Top Up?</h5>
+<p>You can set up automatic top-ups so your account automatically adds
+credits when your balance gets low. You choose the amount and monthly
+cap. This setup is an easy way to avoid usage interruptions.</p>
+<h5 id="should-i-upgrade-my-plan-or-buy-credits">Should I upgrade my
+plan or buy credits?</h5>
+<p>Upgrading to a higher plan provides significantly more weekly usage
+at a lower cost per action compared to repeatedly buying Extra Usage
+Credits.</p>
+<p>On lower tier plans, top ups are convenient for occasional extra
+usage. If you regularly go beyond your current weekly usage limit,
+upgrading your plan is likely better value in the long-term.</p>
+<h5 id="how-do-i-get-the-most-from-my-weekly-usage">How do I get the
+most from my weekly usage?</h5>
+<ul>
+<li>Use the product breakdown in the Usage tab to see your
+activity.</li>
+<li>Set up Auto Top Up for uninterrupted access.</li>
+<li>Consider upgrading to a higher plan if you frequently hit limits
+since it is better value.</li>
+</ul>
+<h5 id="still-have-questions">Still have questions?</h5>
+<p>If something doesn’t look right or you need help with top ups,
+upgrades, or your usage, please contact support through the app or
+grok.com.</p>
+<h4 id="accounts-login">Accounts &amp; Login</h4>
+<h5
+id="how-can-i-link-my-x-account-sign-insubscription-to-my-xai-account">How
+can I link my X account sign-in/subscription to my xAI account?</h5>
+<p>On <a href="https://grok.com">Grok Website</a>, go to Settings -&gt;
+Account. Click on Connect your X Account button. This will take you to
+X’s SSO page to add X account as a sign-in method for xAI.</p>
+<p>xAI will be able to retrieve your X subscription status and grant
+relevant benefits after linking.</p>
+<p>You can manage your sign-in methods at
+<code>https://accounts.x.ai</code>.</p>
+<h5
+id="my-subscription-isnt-active-because-i-signed-up-with-an-apple-hide-my-email-private-relay-address.">My
+subscription isn’t active because I signed up with an Apple “Hide My
+Email” / private relay address.</h5>
+<p>If you created the subscription using Apple’s private relay email,
+you must sign in with Apple (not with the relay email via Google/email)
+for it to be recognized. Use the same Apple sign-in you originally
+subscribed with.</p>
+<h5
+id="my-subscription-shows-active-in-the-app-but-i-keep-getting-activateupgrade-prompts.">My
+subscription shows active in the app but I keep getting
+“activate/upgrade” prompts.</h5>
+<p>If you’re on an active subscription, those prompts shouldn’t appear.
+Restarting the app (or deleting and reinstalling it), logging out, and
+clearing the cache resolves most of these mismatches. Make sure the app
+is updated to the latest version, and confirm the subscription is active
+both in the app and in your app store’s Subscriptions list.</p>
+<h5 id="how-do-i-change-the-email-i-log-in-with">How do I change the
+email I log in with?</h5>
+<p>Update or add your sign-in email at <code>accounts.x.ai</code>. If
+your subscription is through <strong>Apple</strong>, the login is tied
+to your Apple ID, so manage that email through Apple. If you’ve lost
+access to your original address (e.g. a university email after
+graduation), sign in with a new personal email / Google / X account and
+link it at accounts.x.ai.</p>
+<h5
+id="my-account-was-hacked-an-attacker-changed-my-email.-what-can-support-do">My
+account was hacked / an attacker changed my email. What can support
+do?</h5>
+<p>Support can cancel the subscription on a compromised account. If your
+identity can’t be verified via email (because the attacker changed it),
+they can delete the account so you can sign up again. Note: compromised
+usage generally can’t be refunded if the purchase location matches your
+usual location, and a subscription fee that was never actually charged
+can’t be refunded. Contact support immediately and provide your user ID
+and any details that prove ownership.</p>
+<h5
+id="what-login-or-app-troubleshooting-does-support-recommend-first">What
+login or app troubleshooting does support recommend first?</h5>
+<p>Restarting the app (or deleting and reinstalling it), logging out,
+and clearing the cache resolves most login/activation issues. On the
+web, trying Chrome/Edge in an incognito window helps isolate
+browser-specific failures.</p>
+<h5 id="how-can-i-delete-my-account">How can I delete my account?</h5>
+<p>Your xAI account can be deleted by following the steps at <a
+href="https://accounts.x.ai/account">xAI Accounts</a>. If you are using
+the same account to access our API, your API access will be removed as
+well.</p>
+<p>You can restore your account within 30 days by logging in again and
+confirming restoration.</p>
+<h4 id="image-video-generation-grok-imagine">Image &amp; Video
+Generation (Grok Imagine)</h4>
+<h5
+id="why-do-my-generated-imagesvideos-have-a-grok-watermark-can-i-remove-it">Why
+do my generated images/videos have a “grok” watermark? Can I remove
+it?</h5>
+<p>Generated images and videos include a Grok watermark to indicate that
+the content was created with AI. There is no setting to remove the
+watermark. In some jurisdictions, labeling AI-generated content is also
+legally required. Removing, altering, or obscuring the watermark or
+other provenance signals is prohibited under our Acceptable Use
+Policy.</p>
+<h5
+id="i-enabled-nsfw-but-content-is-still-being-blocked-or-moderated.">I
+enabled NSFW but content is still being blocked or moderated.</h5>
+<p>Enabling NSFW does not turn off moderation. Grok applies safety
+protections at all times, and some categories of content are never
+permitted—regardless of your settings or subscription. These include,
+among others, child sexual abuse material or any sexual content
+involving minors, and non-consensual intimate imagery. These protections
+cannot be disabled.</p>
+<p>Because our safety systems are updated continuously to prevent
+misuse, we don’t publish specific moderation rules, and support can’t
+provide them. If the prompt is blocked, it falls outside what Grok is
+allowed to generate. Please don’t attempt to circumvent or work around
+our safeguards. Repeated attempts to generate prohibited content may
+lead to enforcement action against your account, up to and including
+suspension, and certain content is reported to authorities as required
+by law (for example, apparent child sexual abuse material is reported to
+the National Center for Missing &amp; Exploited Children and may result
+in your prosecution).</p>
+<h5 id="why-did-my-720p-video-come-out-at-480p">Why did my 720p video
+come out at 480p?</h5>
+<p>720p videos automatically fall back to 480p once you hit the 720p cap
+for your tier.</p>
+<h4 id="products-models">Products &amp; Models</h4>
+<h5 id="where-did-grok-studio-go-i-cant-access-grok-studio.">Where did
+Grok Studio go? / I can’t access Grok Studio.</h5>
+<p><strong>Grok Studio</strong> is no longer supported. Use <strong>Grok
+Build</strong> instead. If you’re reaching a “Studio” view through a
+third-party app that uses your Grok credentials, revoke and change those
+credentials for safety.</p>
+<h5 id="are-companions-available-on-the-web-or-android">Are Companions
+available on the web or Android?</h5>
+<p>No — Companions are available on the iOS app only, and there are no
+plans to bring them to the web or Android.</p>
+<h5 id="whats-the-correct-web-address-grok.com-or-grok.x.ai">What’s the
+correct web address — grok.com or grok.x.ai?</h5>
+<p>Use <strong>grok.com</strong> in a standard Chrome/Chromium browser
+for the web app. (Some users on grok.x.ai or other hosts run into
+missing features like Projects.)</p>
+<h4 id="files-data">Files &amp; Data</h4>
+<h5 id="how-do-i-upload-files-to-grok">How do I upload files to
+Grok?</h5>
+<p>Grok supports uploading a wide variety of file types directly in
+chats on the web, iOS, and Android apps — enabling analysis,
+summarization, data extraction, code processing, image understanding,
+audio/video handling, and more.</p>
+<p><strong>To upload a file:</strong></p>
+<ol type="1">
+<li>In any chat, click or tap the <strong>+</strong> icon next to the
+message input.</li>
+<li>Select files from your device (or drag-and-drop on the web).</li>
+<li>You can attach multiple files in a single message.</li>
+<li>Grok processes them and confirms a successful upload before
+responding.</li>
+</ol>
+<p><strong>How many files at once:</strong></p>
+<ul>
+<li><strong>Web:</strong> up to ~100 files.</li>
+<li><strong>Android:</strong> up to 20 files.</li>
+<li><strong>iOS:</strong> multiple files supported.</li>
+</ul>
+<h5 id="what-file-types-can-i-upload-to-grok">What file types can I
+upload to Grok?</h5>
+<p>Grok handles common documents, data files, code, images, audio, and
+video. Support is broad but can vary slightly by platform — the web
+often has wider document support.</p>
+<p><strong>Documents &amp; data</strong></p>
+<ul>
+<li>PDF, DOCX, TXT, CSV, XLSX, PPTX</li>
+<li>HTML, XML, JSON, MD (Markdown)</li>
+<li>LaTeX (.tex / .latex), ODT, RTF</li>
+<li>Code files (.py, .cpp, .java, .html, .css)</li>
+</ul>
+<p><strong>Images</strong></p>
+<ul>
+<li>JPEG / JPG, PNG, WebP, HEIC, BMP</li>
+<li>GIF and SVG support varies by platform — some uploads succeed,
+others may fail.</li>
+</ul>
+<p><strong>Audio</strong></p>
+<ul>
+<li>MP3, WAV, M4A, OGG, FLAC, AAC</li>
+</ul>
+<p><strong>Video</strong></p>
+<ul>
+<li>MP4, MOV</li>
+</ul>
+<p>We’re actively expanding supported formats.</p>
+<h5 id="what-are-the-file-size-and-upload-limits">What are the file size
+and upload limits?</h5>
+<ul>
+<li><strong>Most files</strong> (documents, images, code, audio): up to
+150 MB per file.</li>
+<li><strong>Conversation context:</strong> Grok extracts and processes
+content intelligently (text from documents, visual reasoning from images
+and PDFs, and so on). Very long files may be summarized or handled in
+sections for the best results.</li>
+<li>Limits can vary slightly by platform or subscription. Grok shows a
+clear error message if a file exceeds a limit.</li>
+</ul>
+<p><strong>Tips for best results:</strong></p>
+<ul>
+<li>Use high-resolution images (≥1000×1000 pixels preferred) for
+detailed visual analysis.</li>
+<li>For large PDFs (over 100 pages), Grok focuses on text and key
+visuals — reference specific pages by their actual page numbers.</li>
+<li>Break extremely large documents into smaller chunks if needed.</li>
+<li>Mixed uploads (e.g. TXT + PDF + PPTX + images + code) work well
+together.</li>
+</ul>
+<h5 id="what-can-grok-do-with-uploaded-files">What can Grok do with
+uploaded files?</h5>
+<p>Grok excels at:</p>
+<ul>
+<li><strong>Synthesis:</strong> combine insights from multiple files,
+compare and contrast documents, analyze spreadsheets, or generate new
+content.</li>
+<li><strong>Transformation:</strong> summarize complex papers, rewrite
+in different styles, turn presentations into outlines, or simplify
+technical docs.</li>
+<li><strong>Extraction:</strong> pull specific data, quotes, metadata,
+tables, or sections from PDFs and spreadsheets.</li>
+<li><strong>Analysis:</strong> understand images and charts, debug or
+run code, transcribe and interpret audio/video, or visualize data from
+CSVs and XLSXs.</li>
+<li><strong>Multimodal reasoning:</strong> discuss visuals inside PDFs,
+describe photos, or reason across text, images, and code together.</li>
+</ul>
+<p>Just ask naturally — for example: “Summarize this PDF and extract the
+key tables,” “What trends are in this CSV?,” “Describe the image and fix
+the code in the attached file,” or “Compare these two DOCX files.”</p>
+<h5
+id="what-are-the-limitations-and-best-practices-for-uploaded-files">What
+are the limitations and best practices for uploaded files?</h5>
+<ul>
+<li>Grok extracts text from most documents, but embedded images inside
+non-PDF files may not be processed visually.</li>
+<li>Some audio and video files upload successfully but have variable
+transcription quality.</li>
+<li>Deleted chats and files are removed from systems within standard
+retention windows unless we are required to retain them longer for
+legal, compliance, or safety purposes.</li>
+</ul>
+<h5 id="how-do-i-troubleshoot-file-upload-issues">How do I troubleshoot
+file upload issues?</h5>
+<ul>
+<li><strong>“File type not supported”</strong> — convert to a supported
+format (e.g. PDF or TXT), or try on a different platform.</li>
+<li><strong>Upload fails / “Tap to retry”</strong> — check the file
+size; try a smaller version or a different format.</li>
+<li><strong>“An attachment couldn’t be loaded”</strong> — this is often
+platform-specific (e.g. certain audio/video). Switch platforms or
+convert the file.</li>
+<li><strong>Slow performance with large or mixed uploads</strong> — Grok
+can handle them, but very complex requests may work better if you break
+them into follow-up questions.</li>
+<li>Still stuck? Ask for help in <strong>Help</strong>.</li>
+</ul>
+<h5 id="how-do-i-free-up-storage-delete-files-and-assets">How do I free
+up storage / delete files and assets?</h5>
+<p>On the web, go to <a href="https://grok.com/files">files</a> to
+delete content and free up space. For more ways to control your data, go
+to <strong>Profile → Settings → Data Controls</strong>.</p>
+<h4 id="team-management">Team Management</h4>
+<h5 id="what-are-teams">What are teams?</h5>
+<p>Teams are the level at which xAI tracks API usage, processes billing,
+and issues invoices.</p>
+<ul>
+<li>If you’re the team creator and don’t need a new team, you can rename
+your Personal Team and add members instead of creating a new one.</li>
+<li>Each team has <strong>roles</strong>:
+<ul>
+<li><strong>Admin</strong>: Can modify team name, billing details, and
+manage members.</li>
+<li><strong>Member</strong>: Cannot make these changes.</li>
+<li>The team creator is automatically an Admin.</li>
+</ul></li>
+</ul>
+<h5 id="which-team-am-i-on">Which team am I on?</h5>
+<p>When you sign up for xAI, you’re automatically assigned to a
+<strong>Personal Team</strong>, which you can view in the top bar of <a
+href="https://console.x.ai">xAI Console</a>.</p>
+<h5 id="how-can-i-manage-teams-and-team-members">How can I manage teams
+and team members?</h5>
+<h6 id="create-a-team">Create a Team</h6>
+<ol type="1">
+<li>Click the dropdown menu in the xAI Console.</li>
+<li>Select <strong>+ Create Team</strong>.</li>
+<li>Follow the on-screen instructions. You can edit these details
+later.</li>
+</ol>
+<h6 id="rename-or-describe-a-team">Rename or Describe a Team</h6>
+<p>Admins can update the team name and description on the <a
+href="https://console.x.ai/team/default/settings">Settings page</a>.</p>
+<h6 id="manage-team-members">Manage Team Members</h6>
+<p>Admins can add or remove members by email on the <a
+href="https://console.x.ai/team/default/users">Users page</a>.</p>
+<ul>
+<li>Assign members as <strong>Admin</strong> or
+<strong>Member</strong>.</li>
+<li>If a user is removed, their API keys remain with the team.</li>
+</ul>
+<h6 id="delete-a-team">Delete a Team</h6>
+<blockquote>
+<p>[!WARNING]</p>
+<p>Deleting a team removes its prepaid credits.</p>
+</blockquote>
+<p>To permanently delete a team:</p>
+<ol type="1">
+<li>Go to the <a
+href="https://console.x.ai/team/default/settings">Settings
+page</a>.</li>
+<li>Follow the instructions under <strong>Delete Team</strong>.</li>
+</ol>
+<h5
+id="how-to-automatically-add-users-to-team-with-my-organizations-email-domain">How
+to automatically add users to team with my organization’s email
+domain?</h5>
+<p>Admins can enable automatic team joining for users with a shared
+email domain:</p>
+<ol type="1">
+<li>Go to the <a
+href="https://console.x.ai/team/default/settings">Settings
+page</a>.</li>
+<li>Add the domain under <strong>Verified Domains</strong>.</li>
+<li>Add a <code>domain-verification</code> key to your domain’s DNS TXT
+record to verify ownership.</li>
+</ol>
+<p>Users signing up with a verified domain email will automatically join
+the team.</p>
+<h4 id="getting-help">Getting Help</h4>
+<h5 id="how-do-i-report-a-bug-or-reach-a-human">How do I report a bug or
+reach a human?</h5>
+<p>Use the <strong>Report an issue</strong> feature in the product (or
+reply to your receipt email for billing matters), and include your
+account email, the platform (Web / iOS / Android), your browser/OS, the
+invoice/receipt number for billing issues, and a screenshot or
+conversation share link. Reported bugs are shared with the engineering
+team; there’s no guaranteed timeline, but fixes often ship in updates
+released every few days, so keep your app/browser updated.</p>
+<h5 id="i-have-issues-using-x-can-i-reach-out-to-xai-for-help">I have
+issues using X, can I reach out to xAI for help?</h5>
+<p>While xAI provides the Grok in X service on X.com and X apps, it does
+not have operational oversight of X’s service. You can contact X via
+their <a href="https://help.x.com/">Help Center</a> or message <a
+href="https://x.com/premium"><span class="citation"
+data-cites="premium">@premium</span> on X</a>.</p>
+</body>
+</html>
