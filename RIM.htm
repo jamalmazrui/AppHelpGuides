@@ -1,0 +1,3468 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-02" />
+  <title>Remote Incident Manager Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Remote Incident Manager Help Guide</h1>
+<p class="subtitle">Pneuma Solutions’ own manual for RIM, gathered into
+one document</p>
+<p class="date">2026-08-02</p>
+</header>
+<h1 id="remote-incident-manager-help-guide">Remote Incident Manager Help
+Guide</h1>
+<p>This guide gathers Pneuma Solutions’ own documentation for Remote
+Incident Manager,it stood on 2 August 2026. RIM is a fully accessible
+remote desktop application: aand an end user share one desktop session,
+and either of them may be blind.*Windows and macOS are handled by
+measurement, not assumption.** Pneuma publishes atree for each platform,
+and the two are not simply re-badged. 4 topics arefor word identical and
+appear once here, under a category that says so. 7differ and appear
+twice, once per platform – most sharply Installation, wheretwo versions
+share only a quarter of their wording, because macOS demandsWindows does
+not.*The company FAQ is included, and it is not padding.** It carries
+the security answersmanual does not: that sessions are encrypted end to
+end with DTLS, that Pneumadecipher traffic passing through its own
+relays, that the network-facing code isin memory-safe languages, and
+which ports a network must allow. It also explainsfree thirty minutes a
+day, and how passes and prepaid hours work.*The Change Log is set
+aside.** A changelog records what changed; it does not explainto do
+anything.’s manual is published in nine languages. This is the English
+one.to be confused with Scribe, Pneuma’s document remediation service,
+which has its ownin this collection – and neither has anything to do
+with Scribd.document holds 4 categories, 20 articles and about 24,291
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#the-same-on-windows-and-macos">The Same on Windows and
+macOS</a>
+<ul>
+<li><a href="#known-issues">Known Issues</a></li>
+<li><a href="#localization">Localization</a></li>
+<li><a href="#the-management-dashboard">The Management
+Dashboard</a></li>
+<li><a href="#welcome">Welcome</a></li>
+</ul></li>
+<li><a href="#on-windows">On Windows</a>
+<ul>
+<li><a href="#frequently-asked-questions-from-the-manual">Frequently
+Asked Questions from the Manual</a></li>
+<li><a href="#getting-connected">Getting Connected</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#key-command-reference">Key Command Reference</a></li>
+<li><a href="#plans-and-purchasing">Plans and Purchasing</a></li>
+<li><a href="#system-requirements">System Requirements</a></li>
+<li><a href="#working-within-a-session">Working within a
+Session</a></li>
+</ul></li>
+<li><a href="#on-macos">On macOS</a>
+<ul>
+<li><a href="#frequently-asked-questions-from-the-manual-2">Frequently
+Asked Questions from the Manual</a></li>
+<li><a href="#getting-connected-2">Getting Connected</a></li>
+<li><a href="#installation-2">Installation</a></li>
+<li><a href="#key-command-reference-2">Key Command Reference</a></li>
+<li><a href="#plans-and-purchasing-2">Plans and Purchasing</a></li>
+<li><a href="#system-requirements-2">System Requirements</a></li>
+<li><a href="#working-within-a-session-2">Working within a
+Session</a></li>
+</ul></li>
+<li><a href="#remote-incident-manager-rim-faqs-not-in-the-manual">Remote
+Incident Manager (RIM) FAQs (not in the manual)</a>
+<ul>
+<li><a href="#can-i-use-rim-without-a-subscription">Can I use RIM
+without a subscription?</a></li>
+<li><a
+href="#how-do-passes-work-does-the-clock-start-immediately-upon-payment-or-on-the-day-i-initiate-the-session-do-the-passes-expire">How
+do passes work? Does the clock start immediately upon payment, or on the
+day I initiate the session? Do the passes expire?</a></li>
+</ul></li>
+</ul>
+<h2 id="the-same-on-windows-and-macos">The Same on Windows and
+macOS</h2>
+<h3 id="known-issues">Known Issues</h3>
+<p>At Pneuma Solutions, we’re committed to providing a stable and
+reliable experience with Remote Incident Manager (RIM). In rare cases,
+however, there are operating system-level issues that can get in the
+way. With that in mind, We will outline any current issues with Remote
+Incident Manager at time of writing, along with any available interim
+solutions to use while the issues are resolved.</p>
+<h4 id="macos">MacOS</h4>
+<h5
+id="issues-with-remote-accessibility-module-on-macos-sequoia-targets">Issues
+with Remote Accessibility Module on macOS Sequoia Targets</h5>
+<p>due to changes in macOS Sequoia, some functionality related to our
+Remote Accessibility Module is currently impacted.</p>
+<h6 id="the-issue">The Issue:</h6>
+<p>The Remote Accessibility Module enables a visually impaired
+technician to remotely assist a sighted user without activating a screen
+reader on the user’s machine. However, macOS Sequoia introduces changes
+to VoiceOver’s settings management, which prevent us from reliably
+adjusting the necessary settings when enabling the module. As a result,
+visually impaired technicians may encounter the following issues when
+working with macOS Sequoia targets:</p>
+<ul>
+<li>The remote speech module may fail, resulting in VoiceOver’s default
+voice being heard by the target user, revealing the technician’s
+disability without consent.</li>
+<li>VoiceOver’s sound effects, highlight cursor, and caption panel may
+not be properly disabled, again exposing the technician’s use of
+VoiceOver.</li>
+<li>In some cases, VoiceOver may not revert back to its default
+settings, potentially causing problems for future visually impaired
+users of the target machine.</li>
+</ul>
+<h6 id="impacted-users">Impacted Users:</h6>
+<p>Any RIM controller (on either Mac or Windows) attempting to use the
+Remote Accessibility Module on a Mac target running Sequoia may be
+affected by these issues. This could also impact any future users of
+VoiceOver on the target Mac if these settings are not properly
+reset.</p>
+<h6 id="interim-solution">Interim Solution:</h6>
+<p>Unfortunately, there is no direct workaround for this solution. We
+encourage all impacted users to reach out to Apple’s Accessibility
+department to request a reliable and future-proof API that allows RIM to
+adjust VoiceOver settings safely. Your advocacy helps preserve the
+dignity and privacy of visually impaired technicians, ensuring these
+features function correctly without unintentionally exposing their
+disability.</p>
+<h3 id="localization">Localization</h3>
+<p>Remote Incident Manager currently ships with 6 major languages, with
+more being added over time. If your system locale is among RIM’s
+supported languages, RIM will use the language you specified.</p>
+<h4 id="switching-languages">Switching languages</h4>
+<p>Whether you are in controller or target mode, Remote Incident Manager
+displays a language selector button at the bottom of the screen.
+Clicking this will display a list of languages. Select the desired
+language, and then click the “Switch language” button.</p>
+<h4 id="additional-languages">additional Languages</h4>
+<p>We welcome contributions of additional languages from individuals and
+entities alike. For information on how to contribute languages, <a
+href="https://github.com/PneumaSolutions/rim-localization">Visit the
+Localization repository on Github</a></p>
+<h3 id="the-management-dashboard">The Management Dashboard</h3>
+<p>RIM features a web-based dashboard to facilitate various machine and
+account management tasks. You can manage your existing unattended
+computers, create preconfigured installers for target computers, and
+much more. It should be noted that the feature set of the dashboard is
+largely dependent on which subscription tier your account is under. For
+example, enterprise users can assign machines to target groups, as well
+as create silent installers. On the other hand, anyone (including
+personal users) can create custom installers for their unattended
+machines.</p>
+<h4 id="locating-the-dashboard">Locating the Dashboard</h4>
+<p>If you’re a controller, the easiest way to get to the dashboard is
+through the main RIM interface. Clicking the “RIM Dashboard” button will
+automatically open the dashboard in your default browser, with the login
+already taken care of. If you are a network administrator who does not
+have RIM installed, you can simply log into your account on the RIM
+website and your dashboard will appear.</p>
+<h4 id="managing-organization-members-enterprise">Managing Organization
+Members (Enterprise)</h4>
+<p>Activating the “Organization” button on the RIM dashboard will reveal
+a menu of options related to organization and member management. The
+“Members” page will list all the members in your organization. All
+members can have their role, department and name modified, and any
+member can be deactivated or removed from an organization except for the
+organization owner. Note that deactivating a member will render their
+account inoperable while retaining its record.</p>
+<p>Adding members is as simple as entering their email address,
+selecting their role (user or administrator), optionally entering their
+name, and selecting their department if one has been created. If you
+have multiple members to add, you can use the “Members” edit field to
+perform a bulk add. This edit field accepts multiple lines of text,
+allowing you to enter each member’s information on a separate line. On
+each line, you may enter either a single email address, or an email
+address and a name in the format: * John Doe*</p>
+<p>Once you are finished, click the “Add” button.</p>
+<h5 id="departments">Departments</h5>
+<p>Departments allow you to organize members according to the various
+groups of your organization.</p>
+<p>To add a department, enter its name in the “Name” edit box under the
+“Create department” heading.</p>
+<h5 id="member-data-export">Member Data export</h5>
+<p>The member list in your organization can be exported as a CSV file.
+In order to download the export:</p>
+<ol type="1">
+<li>Choose the field separator that will separate the columns of the
+file. The available options include:
+<ul>
+<li>comma</li>
+<li>Semicolon</li>
+<li>Tab</li>
+</ul></li>
+<li>Activate the “Download” button.</li>
+</ol>
+<h5 id="restrictions">Restrictions</h5>
+<p>Depending on the nature of your organization, there may be certain
+features you do not want your staff to have access to. As such,
+organization admins can choose the features they wish to allow
+controllers access to. The “Restrictions” screen, accessed via the
+“Organization” menu, allows you to configure these permissions.</p>
+<p>The permissions that can be toggled include:</p>
+<ul>
+<li>Allow the controller to flip the session
+<ul>
+<li>If this option is unchecked, the “Flip Session” option will
+disappear from the session menu, and the keyboard shortcut will not
+work.</li>
+</ul></li>
+<li>Allow the controller to start a voice conversation
+<ul>
+<li>If this option is unchecked, the “Start Voice Conversation” checkbox
+will disappear from the “Provide Remote Help” screen, as will the menu
+option in the session menu.</li>
+</ul></li>
+<li>Allow the controller to request unattended access
+<ul>
+<li>If this option is unchecked, the option to request unattended access
+will disappear from the session menu.</li>
+</ul></li>
+<li>Allow text and files to be transferred between machines via the
+clipboard
+<ul>
+<li>If this option is unchecked, RIM will ignore any and all clipboard
+activity.</li>
+</ul></li>
+<li>Allow the controller to lock the target machine
+<ul>
+<li>If this option is unchecked, the option to lock the target machine
+will disappear from the session menu.</li>
+</ul></li>
+<li>Allow the controller to record the session
+<ul>
+<li>This option is disabled by default, making session recording a
+strictly opt-in feature for enterprise organizations and/or pro
+customers with the enterprise addon.</li>
+<li>If this option is unchecked, the option to record the session will
+disappear from the session menu.</li>
+<li>This restriction additionally vetos the client-side auto_start in
+the config.toml file</li>
+</ul></li>
+<li>Allow text chat during the session
+<ul>
+<li>This option is disabled by default, making session chat a strictly
+opt-in feature for enterprise organizations and/or pro customers with
+the enterprise addon.</li>
+<li>If this option is unchecked, the option to open the chat will
+disappear from the session menu.</li>
+</ul></li>
+</ul>
+<p>Once you have configured the permissions to your satisfaction,
+activate the “Update” button. Changes will not affect any active
+sessions at the time the permissions are changed. They will however take
+effect for any and all future sessions without requiring a reboot of the
+client.</p>
+<h4 id="managing-targets">Managing Targets</h4>
+<p>When you click the “Configure Targets” link, you will arrive at a
+page that allows you to manage all the machines you have configured for
+unattended access. You can click on any one of these machines in order
+to manage it. Once inside, you will be able to:</p>
+<ul>
+<li>Rename the target</li>
+<li>Move the target to a different group (more on target groups
+later)</li>
+<li>Launch a remote session with the target</li>
+<li>Delete the target</li>
+</ul>
+<h4 id="target-groups-for-pro-accounts-and-above">Target Groups (for Pro
+Accounts and Above)</h4>
+<p>Say for instance your workgroup is spread out among several different
+locations. Or maybe you want to designate groups of machines to your
+routine maintenance techs. Target groups allow you to do just that. In
+order to do this, simply click the “Create Target Group” button, name
+your group, and submit. You may have as many target groups as is needed
+for your use case.</p>
+<h5 id="access-control-for-enterprise-organizations">Access Control (for
+Enterprise Organizations)</h5>
+<p>If your organizations assign a support technician to a specific set
+of machines, you probably want to ensure they only have access to that
+specific set. This is where the access control setting for target groups
+comes in. When you click on a target group, you are given options to
+manage the machines in the group, as well as the group itself. The
+access control section is where you may grant access to this group on a
+per-account basis. Simply enter the email address of the account you
+wish to add, then click the “Give Access” button. Note that this account
+can exist outside of your enterprise organization’s domain. Once this is
+done, you will be presented with a table of accounts that are given
+access to this group. Below each account is a “Revoke Access” button.
+This button does not require further confirmation. It should be noted
+that all organization administrators are automatically granted access to
+manage any and all groups that are created under the organization.
+Additionally, any email addresses under your organization’s domains will
+be added to your organization in RIM by default. Should you require more
+granular control over who gets onboarded, you can disable this in your
+organization’s main members area. What’s more, when in the members area
+you can add email addresses in bulk by way of commas, spaces or line
+breaks in between the email addresses.</p>
+<h4 id="setting-up-a-preconfigured-rim-installer-pro-or-above">Setting
+up a Preconfigured RIM Installer (Pro or above)</h4>
+<p>One of the easiest ways to set up a machine for unattended or
+prompted connections is by creating a custom installer. This is
+incredibly useful if you are configuring mass deployments, or even as a
+simpler way to get RIM up and running on an end user’s computer you plan
+on providing support for on the regular.</p>
+<p>IN order to do this:</p>
+<ol type="1">
+<li>In the target management screen, click the “Build Target Installer”
+button.</li>
+<li>You will first be asked if you want this machine to be configured
+for fully unattended access, or for prompted access in which the user
+has to accept a prompt to initiate the connection.</li>
+<li>You will then be asked for a target group assignment. Note that the
+target group selection will automatically go to your chosen target group
+if you initiate the installer configuration from your group’s page.</li>
+<li>You will be asked how long you want this installer to be valid for.
+It can be valid for anywhere between 7 to 30 days, or permanently valid
+for enterprise plans by setting the expiration to never.</li>
+<li>You are then given the option to assign a bass name. Any machine
+provisioned via this installation package will have this base name
+assigned to it.</li>
+<li>You will then be presented with a checkbox that lets you opt into an
+email notification when a user installs RIM via this installer.</li>
+<li>If you are an enterprise admin, you will see a checkbox that allows
+you to build the installer as an MSI package. This option is useful for
+mass deployment of a custom installer to a machine cluster that will be
+designated to the given target group.</li>
+<li>You will be asked to provide an installer name, and optionally some
+notes. These are for internal records and will not appear within the
+created installer.</li>
+<li>Click on “Build Installer.” You will be presented with the download
+link that you can either copy to the clipboard and send to your end
+user. Alternatively, you may download the installer directly for use in
+mass deployments. You may delete the installer from this screen should
+you choose to render it inoperable prematurely.</li>
+</ol>
+<p>Now that you have your installer, it can be run in one of two ways.
+In either case, the installer will query the server to check the
+validity of the installer. If the installer is valid, the machine will
+be added to your list of machines in both your account as well as the
+RIM client after the installer is complete. An invalid installer will
+not run.</p>
+<h5 id="normal-execution">Normal Execution</h5>
+<p>The user will get a prompt when running the installer, containing the
+following information:</p>
+<ul>
+<li>The technician’s name along with their organization, if
+applicable</li>
+<li>the nature of the connection, I.E whether a prompt is required or
+not</li>
+</ul>
+<p>The user can choose to either answer yes or no to the installation.
+Answering no will cancel the installation. After the installer finishes,
+the user will get a prompt informing them that their machine is now set
+up for remote access.</p>
+<h5 id="silent-install-enterprise-installers-only">Silent Install
+(Enterprise Installers Only)</h5>
+<p>A silent install can be initiated by running the executable installer
+with the <em>/S</em> command line parameter. This is useful when
+installing RIM as part of a mass deployment routine.</p>
+<h4 id="session-history">Session History</h4>
+<p>You can view your entire history of past sessions through the RIM
+dashboard. The session history currently contains the date and time of
+each session, the name of the computer you connected to, and the
+duration of the session. You may also choose to add comments to a
+session via the “Add Comment” link within the session row. This is
+useful for adding notes on the current status of an incident for your
+own sake as well as for the sake of organization administrators.</p>
+<p>Your entire session history can be exported for later viewing via a
+spreadsheet application. Activate the “Download session history as CSV”
+button located below the session history table to reveal a customization
+page for your data export. On this page, you can choose the timespan of
+the export, as well as the symbol used to separate the fields.</p>
+<h4 id="managing-your-subscription-personal-and-pro-plans">Managing your
+Subscription (Personal and Pro Plans)</h4>
+<p>The dashboard allows you to easily view and manage your RIM
+subscription details. Upon clicking the “manage subscription” link, you
+can:</p>
+<ul>
+<li>Upgrade your plan</li>
+<li>Update your payment method</li>
+<li>Cancel recurring payments</li>
+</ul>
+<h5 id="upgrading-your-plan">Upgrading your Plan</h5>
+<p>You can easily upgrade your subscription. If you are on a monthly
+plan, you will be prorated the remaining charge from the new amount,
+with the full new amount being charged for subsequent months. Clicking
+“Upgrade Subscription” reveals a page nearly identical to the initial
+plan selection page. There are a few notable differences which we will
+outline below:</p>
+<ul>
+<li>You cannot downgrade your plan to one with fewer machines. You can,
+however, upgrade from a monthly to a yearly plan with the same number of
+machines as your current plan. In order to downgrade, you would need to
+cancel your plan, wait for it to expire, then initiate a new plan with
+fewer machines.</li>
+<li>Enterprise plans, including the enterprise addon, cannot be acquired
+directly through this page.</li>
+</ul>
+<h5 id="canceling-recurring-payments">Canceling Recurring Payments</h5>
+<p>When you click “Cancel Automatic Renewal,” you will be asked for
+confirmation, after which your subscription will be set to expire at the
+end of the current term.</p>
+<h3 id="welcome">Welcome</h3>
+<p>Copyright © 2023 <a href="https://www.pneumasolutions.com">Pneuma
+Solutions</a> <em>Remote Incident Manager</em> (RIM) is a powerful,
+cross-platform fully accessible remote desktop application used to
+provide technical support, training, and system administration to
+clients both visually impaired and sighted alike. In addition to
+providing a streamlined remote desktop experience, RIM has a few unique
+qualities previously unseen in other remote desktop applications</p>
+<h4 id="why-rim">Why RIM?</h4>
+<p>If you are coming from previous remote desktop applications or screen
+reader-based assistance tools, you will find that RIM significantly
+streamlines your workflow.</p>
+<h5 id="inclusive-design">Inclusive Design</h5>
+<p>Remote Incident Manager is truly a first of its kind. It is the first
+<em>fully accessible</em> remote support solution that can be used by
+both blind and sighted support pros and end users. Thus, RIM can fully
+replace an existing solution, as it provides everything you could ask
+for in a secure remote support solution, plus complete
+accessibility.</p>
+<h5 id="easy-to-install-and-deploy">Easy to Install and Deploy</h5>
+<p>In a one-to-one situation, the installation could not be simpler. A
+one-click instant install ensures that the end user’s process for
+setting up their machine to receive assistance will be quick and
+painless. What’s more, the installation process launches RIM after it
+finishes, so they will be instantly ready to connect. Technicians can
+easily manage their machines via an easy to use web-based interface.
+Enterprise users can use this dashboard to deploy RIM to machines in
+their workplace. Ready-made installers can be issued to end users in
+seconds. The installer itself can be further customized via command line
+arguments which can in turn be utilized in an automated deployment.</p>
+<h5 id="shared-session">Shared Session</h5>
+<p>Unlike Windows Remote Desktop or other similar applications, a remote
+session sandbox is not created; what the end user’s machine is doing is
+what you’ll be seeing. This means that you can easily troubleshoot a
+problem they are having while keeping their existing configuration
+intact. This further allows you to work collaboratively on a project,
+send files to and from via the clipboard, etc.</p>
+<h5 id="fast-and-stable-connections">Fast and Stable Connections</h5>
+<p>Because RIM uses the latest advancements in direct
+computer-to-computer connections, the responsiveness is head and
+shoulders above other solutions. While RIM’s central service initiates
+the connection, it gets out of your way once the connection is
+established. All this without the need to make cumbersome and invasive
+changes to network configurations.</p>
+<h5 id="high-quality-audio">High Quality Audio</h5>
+<p>RIM uses the latest advancements in real-time audio encoding
+technology to provide extremely responsive, high-fidelity stereo audio.
+You will hear any and all audio that is playing on the end user’s
+machine during the session.</p>
+<h5 id="high-quality-visual-output">High-Quality Visual Output</h5>
+<p>Again, Remote Incident Manager is an all-inclusive solution designed
+to replace previous infrastructures, rather than be used alongside them.
+As such, RIM’s screen output is equally as responsive and stable. Using
+the mouse is fully supported as well.</p>
+<h5 id="voice-communication">Voice Communication</h5>
+<p>Gone are the days of having to place a separate phone call or web
+conference alongside the remote session. RIM provides crystal clear,
+low-latency voice communication right inside your session.</p>
+<h5 id="accessible-in-all-use-cases">Accessible in <em>All</em> Use
+Cases</h5>
+<p>RIM is the first remote access solution that provides unparalleled
+accessibility, irrespective of the screen reader (or lack thereof) that
+either party is using.</p>
+<h6 id="differences-in-screen-readers-are-now-irrelevant">Differences in
+Screen Readers are now Irrelevant</h6>
+<p>Before RIM, it used to be difficult to assist someone running a
+different screen reader than your own. With RIM, this is now a thing of
+the past. RIM doesn’t care what either party is running. RIM will work
+seamlessly with JAWS, NVDA, Narrator, or VoiceOver on the side of both
+the techhnician and the end user. Not only will you be able to hear the
+end user’s speech irrespective of their screen reader, RIM’s keyboard
+handling will be stable and reliable irrespective of screen reader
+configuration. This is a significant advantage of a screen
+reader-independent solution.</p>
+<h6 id="no-screen-reader-no-problem">No Screen Reader? No Problem!</h6>
+<p>A blind IT professional can now easily help a sighted end user, even
+if they do not have a screen reader installed on their computer. In the
+absence of a screen reader on the remote computer, RIM will see to it
+that you will still be able to get speech provided you are using either
+the free <a href="https://nvaccess.org">NVDA Screen Reader</a> or
+VoiceOver on Mac OS. Remote incident Manager will initiate its
+accessibility module which allows you to control the client’s machine
+with speech as if they had a screen reader. Not only does the end user
+not have to worry about installing a screen reader, they don’t even hear
+the speech that you’re now hearing while you control their computer.</p>
+<h4 id="documentation-conventions-and-terminology">Documentation
+Conventions and Terminology</h4>
+<ul>
+<li>Because Remote Incident Manager is cross-platform, many sections of
+this documentation will tailor their contents to the operating system
+that you are running.
+<ul>
+<li>In most cases, the manual will recognize whether you are running
+Windows or Mac, and adjust the content accordingly.</li>
+<li>In the event the platform recognition fails or you are reading the
+documentation on a different device such as a phone or tablet, the
+manual will fall back to the windows version. You will find buttons on
+both the top and bottom of the page that can be used to show the content
+for your platform of choice.</li>
+</ul></li>
+<li>Switching the language will take you to the Welcome section of the
+manual for your chosen language.</li>
+<li>RIM connections occur between a target and a controller.
+<ul>
+<li>A target computer is the computer that will be receiving remote
+support.</li>
+<li>A controller connects to a target computer for remote support.</li>
+</ul></li>
+</ul>
+<h2 id="on-windows">On Windows</h2>
+<h3 id="frequently-asked-questions-from-the-manual">Frequently Asked
+Questions from the Manual</h3>
+<p>Here are answers to some common questions concerning RIM. When faced
+with an issue, please refer to this document whenever possible. If your
+question is not covered in this document, please <a
+href="https://pneumasolutions.com/contact/">Contact us.</a></p>
+<h4 id="compatibility">Compatibility</h4>
+<h5 id="what-windows-versions-are-supported">What Windows versions are
+supported?</h5>
+<p>We support Windows10 and above, as well as Windows Server2016 and
+up.</p>
+<h5 id="what-mac-os-versions-are-supported">What Mac OS versions are
+supported?</h5>
+<p>RIM supports all builds of Mac OS Ventura and Sonoma, be they Intel
+or Apple Silicon. You as a Mac user can provide support to Windows
+targets, and Windows users can provide support to your Mac.</p>
+<h5 id="what-about-mac-os-versions-before-ventura">What about Mac OS
+versions before Ventura?</h5>
+<p>Some features of RIM depend on functionality newly introduced in
+Ventura, making compatibility with previous versions difficult to
+implement.</p>
+<h4 id="installation">Installation</h4>
+<h5 id="why-so-many-permissions-requests-on-mac-os">Why so many
+permissions requests on Mac OS?</h5>
+<p>This is unfortunately beyond our control, as Mac OS requires that we
+use their avenues for requesting the necessary permissions needed for
+RIM. We have no control over the UX, so can only go as far as providing
+as much instruction as we can.</p>
+<h4 id="connection-information">Connection Information</h4>
+<h5 id="generally-speaking-how-responsive-is-rim">Generally speaking,
+how responsive is RIM?</h5>
+<p>The roundtrip latency during a RIM session is extremely minimal.
+Because we make every effort to not rely on the central service to keep
+the connection running, most of the time your connections are direct
+from one computer to another - this is what is known as peer-to-peer. If
+your network configuration doesn’t allow for peer-to-peer connections,
+we fall back to any number of relays located around the world rather
+than relying on one central server. Thus, even then your latency will
+still be farely minimal.</p>
+<h5 id="where-are-your-relays-located">Where are your relays
+located?</h5>
+<p>Currently, we offer relays in the following locations:</p>
+<ul>
+<li>U.S.
+<ul>
+<li>Virginia</li>
+<li>California</li>
+</ul></li>
+<li>Teronto, Canada</li>
+<li>London, England</li>
+<li>Warsaw, Poland</li>
+<li>Bangalore, India</li>
+<li>Singapore</li>
+<li>Sidney, Australia</li>
+<li>Sao Paulo, Brazil</li>
+</ul>
+<h4 id="general-session-troubleshooting">General Session
+Troubleshooting</h4>
+<h5
+id="the-target-machine-to-which-i-am-connected-doesnt-respond-properly-to-keyboard-commands-that-work-fine-on-my-keyboard.-whats-going-on">The
+target machine to which I am connected doesn’t respond properly to
+keyboard commands that work fine on my keyboard. What’s going on?</h5>
+<p>This could be due to either one of these possibilities:</p>
+<ul>
+<li>A conflict in keyboard layouts: On rare occasions, if a keyboard
+layout is different enough from your own it may confuse RIM. Should that
+occur, please contact us with a report containing information about the
+keyboard layout of both machines.</li>
+<li>If the target machine is using JAWS 2024, its unified keyboard
+processing sometimes interferes with use of the CTRL key for silencing
+speech. Although this was fixed in JAWS2025, unified keyboard processing
+interferes with proper use of the capslock key.
+<ul>
+<li>These issues can be resolved by disabling unified keyboard
+processing in the JAWS settings center.</li>
+<li>Unified keyboard processing is not necessary if the target user is
+not also using ZoomText or Fusion.</li>
+</ul></li>
+<li>If the target machine is using NVDA and has “Handle keys from other
+applications” unchecked, RIM will not be able to process keyboard input
+from the controller.
+<ul>
+<li>Note that this setting is on by default, and in most cases it is
+advisable to leave it on.</li>
+</ul></li>
+<li>If the target machine has a number-pad and your machine’s numlock is
+out of state with their own, you may notice odd behavior target-side.
+<ul>
+<li>Depending on which state you want the target’s numlock to be in,
+ensure it matches controller-side as well.</li>
+</ul></li>
+</ul>
+<h5
+id="upon-flipping-a-session-windowsshiftf-is-not-working-to-reverse-the-flip.-why-is-this">Upon
+flipping a session, Windows+Shift+F is not working to reverse the flip.
+Why is this?</h5>
+<p>Recent editions of Windows 11 have introduced an Edge Bar, which
+unfortunately causes a conflict with our Windows+Shift+F keyboard
+command anywhere where RIM is not directly processing your keyboard
+input. Reversing a flip can currently be done most effectively via the
+session menu.</p>
+<h5
+id="when-starting-a-voice-conversation-on-windows-rim-uses-the-internal-microphone-no-matter-which-microphone-i-select-in-sound-settings.-whats-wrong">When
+starting a voice conversation on Windows, RIM uses the internal
+microphone no matter which microphone I select in sound settings. What’s
+wrong?</h5>
+<p>This may be due to the Intel® Smart Sound Technology for Digital
+Microphones on some newer Intel processors. Disabling this should fix
+the issue. In order to disable Intel® Smart Sound Technology for Digital
+Microphones, do the following:</p>
+<ol type="1">
+<li>Go to the run box (Windows+R).</li>
+<li>Type devmgmt.msc</li>
+<li>In the devices tree, expand “Sound, Video and Game
+Controllers.”</li>
+<li>Right click on “Intel® Smart Sound Technology for Digital
+Microphones.” Choose “Disable Device” from the context menu.</li>
+</ol>
+<h5
+id="the-target-is-using-zoom-text.-how-do-i-experience-the-visual-output-as-rendered-by-this-magnification">The
+target is using Zoom Text. How do I experience the visual output as
+rendered by this magnification?</h5>
+<p>This is accomplished by switching ZoomText to compatibility mode.
+This mode allows screen enhancements to be shared via tools like Teams
+or Zoom, as well as RIM. You can activate it via the ZoomText menu: Help
+&gt; Advance &gt; Display adapter. In the open dialog, select
+compatibility mode, and ZoomText will restart. We recommend switching
+the Display adapter back to its regular mode after the RIM session is
+complete for optimal performance and magnification quality.</p>
+<h5
+id="after-a-computer-is-reimaged-and-has-been-reconfigured-with-the-same-computer-name-is-there-anything-that-needs-to-be-done-to-get-rim-up-and-running-again">After
+a computer is reimaged and has been reconfigured with the same computer
+name, is there anything that needs to be done to get RIM up and running
+again?</h5>
+<p>Simply remove the machine from your account, reinstall RIM, then add
+the machine back into your account.</p>
+<h4 id="pricing-and-payments">Pricing and Payments</h4>
+<h5
+id="so-getting-help-from-a-person-over-rim-is-totally-free-right">So,
+getting help from a person over RIM is totally free, right?</h5>
+<p>You bet! The subscriptions and/or one-off payments are for
+individuals and organizations seeking to offer remote assistance. No
+need to worry about getting a subscription if you’re the person
+receiving help. In fact, you do not even have to set up an account if
+you are merely receiving help.</p>
+<h5
+id="i-dont-really-do-remote-assistance-regularly-but-i-may-be-helping-a-friend-or-family-member-on-occasion.-are-there-any-options-that-dont-involve-a-subscription">I
+don’t really do remote assistance regularly, but I may be helping a
+friend or family member on occasion. Are there any options that don’t
+involve a subscription?</h5>
+<p>Certainly! We do accommodate as many use cases as we can.</p>
+<ul>
+<li>Anyone can assist a user over RIM for free for up to 30 minutes a
+day. So if you need to help someone install some software, fix a problem
+real quick, or send over a few files, we’ve got you covered. These
+minutes don’t have to be used in one sitting.</li>
+<li>There are, of course, going to be situations where a particular
+issue requires a little more time. Or maybe you’re assisting someone
+learning a new piece of software and might be connecting on and off over
+the next few days or weeks. That’s where our passes come in.
+<ul>
+<li>Incident passes allow you to connect to a single target as many
+times as is needed over a 24 hour period.</li>
+<li>Day passes allow you to connect to multiple targets over a 24 hour
+period.</li>
+<li>Pro passes allow you to leverage all of RIM’s pro capabilities with
+non-recurring 1 week, 2 week, or month-long terms.</li>
+<li>Packages of prepaid hours allow you to have a set number of hours
+available to be used entirely on your own time.</li>
+</ul></li>
+<li>You can accumulate several of these passes and hourly packages and
+use them whenever the time calls for them. If you have multiple day
+passes, for instance, you do not need to use them consecutively.
+Similarly, You don’t need to use your prepaid hours in one session or 24
+hour period.</li>
+</ul>
+<h5
+id="i-purchased-a-package-of-prepaid-hours.-what-happens-to-my-free-daily-allotment">I
+purchased a package of prepaid hours. What happens to my free daily
+allotment?</h5>
+<p>Good news: Your free 30 minute daily allotment is not going anywhere!
+When you start a keyword-based session, RIM will start off by using your
+free 30 minute daily allotment. Your prepaid time will be used after
+your free 30 minutes is up.</p>
+<h5
+id="how-long-will-my-prepaid-hours-last-are-they-tied-in-with-my-subscription">How
+long will my prepaid hours last? Are they tied in with my
+subscription?</h5>
+<p>Prepaid hours are entirely separate from your subscription. That
+being said, your prepaid hours will remain in your account for one (1)
+year past the date they were first used.</p>
+<h5
+id="how-do-i-go-about-bringing-rim-to-the-attention-of-my-place-of-work">How
+do I go about bringing RIM to the attention of my place of work?</h5>
+<p>We’ve assembled a <a href="https://sak.getrim.app">Self-Advocacy
+Kit</a> (SAK). A packet of e-mail formatted letters you can send to
+appropriate individuals on behalf of yourself or an employee. For the
+record, RIM provides the same functionality as less accessible
+mainstream solutions. As such, RIM can replace an existing
+infrastructure, rather than be used alongside one. It is therefore
+considered a reasonable accessibility accommodation and should be
+provided to you by your organization. Accessibility isn’t a favor, it’s
+a right to inclusivity.</p>
+<h5 id="what-payment-methods-do-you-accept">What payment methods do you
+accept?</h5>
+<p>We process payments through FastSpring, so we are able to directly
+accept a variety of international payment methods including major credit
+cards, PayPal, Alipay, and many more.</p>
+<h5
+id="how-do-these-passes-work-does-the-clock-start-immediately-upon-payment-or-on-the-day-i-initiate-the-session">How
+do these passes work? Does the clock start immediately upon payment, or
+on the day I initiate the session?</h5>
+<p>Passes only begin when the controller initiates the session. So if
+the target’s machine fails on them requiring a trip to the shop and a
+same-day turnaround is not possible, you can simply hold off until the
+machine is back in good shape and your day pass will still be waiting
+for you.</p>
+<h5 id="so-this-means-these-passes-dont-expire">So this means these
+passes don’t expire?</h5>
+<p>No. Rest assured that your accumulation of day passes will be waiting
+patiently for you to activate them whenever you’re ready.</p>
+<h5
+id="what-happens-if-i-connect-to-another-machine-on-the-day-an-incident-pass-has-been-used">What
+happens if I connect to another machine on the day an incident pass has
+been used?</h5>
+<p>That depends. If the machine is within your subscription, I.E. if
+you’re accessing your home machine while on the road, then it’s business
+as usual. Any other connections that aren’t the initial target you
+connected to will work under the usual 30 minute allotment.</p>
+<h5
+id="i-hold-an-active-personal-subscription.-would-i-still-be-able-to-assist-a-user-outside-the-group-of-targets-for-up-to-30-minutes-or-via-a-pass">I
+hold an active personal subscription. Would I still be able to assist a
+user outside the group of targets for up to 30 minutes, or via a
+pass?</h5>
+<p>Yes! Your 30 minute daily allotment is still present for any machine
+outside of your subscription. Additionally, acquiring a subscription
+does not replace any existing passes you may have.</p>
+<h5
+id="i-have-a-personal-subscription-and-the-target-computer-underwent-a-hardware-upgrade.-will-rim-count-this-as-a-machine-switch">I
+have a personal subscription, and the target computer underwent a
+hardware upgrade. Will Rim count this as a machine switch?</h5>
+<p>Only if RIM needs to be reinstalled. So, while a hard drive upgrade
+or any other situation requiring a Windows reinstallation would be
+considered a machine switch, upgrading the ram would not.</p>
+<h5
+id="our-company-bought-the-pro-subscription-but-we-have-two-techs---one-that-does-help-desk-during-the-day-and-a-system-maintenance-tech-that-works-in-the-evening.-would-we-be-able-to-assign-the-evening-sysadmin-a-controller-seat">Our
+company bought the pro subscription, but we have two techs - one that
+does help-desk during the day, and a system maintenance tech that works
+in the evening. Would we be able to assign the evening sysadmin a
+controller seat?</h5>
+<p>Definitely. In situations where multiple technitions will be using
+RIM, we offer up to two (2) additional controller seats for $50 a month
+per seat - $500 a year per seat - to accompany the pro plan if needed.
+This will make it easier for multiple controllers at different
+workstations or offices to provide remote support. If you have multiple
+controller seats, you can purchase additional channels for them so that
+sessions can run simultaneously. Each additional channel is $50 a month,
+or $500 a year.</p>
+<h5 id="why-is-there-a-setup-fee-for-rim-enterprise-accounts">Why is
+there a setup fee for RIM Enterprise accounts?</h5>
+<p>The setup fee for RIM Enterprise accounts covers the administrative,
+technical, and security-related work required to configure your
+organization’s environment. This includes:</p>
+<ul>
+<li>Custom Configuration: We tailor your RIM Enterprise deployment to
+fit your organization’s needs, including user roles, permissions, and
+security settings.</li>
+<li>Unattended Access Setup: If your organization requires unattended
+access to targets, we help configure this feature properly to ensure
+seamless and secure remote access.</li>
+<li>Infrastructure and Security Preparations: We verify secure
+connections, compliance requirements, and system optimizations to ensure
+your deployment is reliable and meets industry standards.</li>
+<li>Initial Training and Support: Our team assists IT teams and
+administrators with onboarding, helping them maximize RIM’s
+capabilities.</li>
+<li>Private Consultation with Development Team: We provide direct access
+to our development team for addressing security documentation requests,
+discussing custom integration needs, or reviewing specific technical
+concerns.</li>
+<li>Exclusive Access to the RIM Insiders Slack Channel: Enterprise
+customers gain access to a dedicated Slack channel where they can
+communicate with our team, receive updates, and collaborate with other
+RIM power users.</li>
+</ul>
+<p>This one-time setup fee ensures a smooth, secure, and customized
+deployment, giving your organization everything it needs to fully
+leverage RIM from day one.</p>
+<h4 id="security">Security</h4>
+<h5 id="are-rim-sessions-encrypted">Are RIM sessions encrypted?</h5>
+<p>Yes. All sessions across all platforms, be they direct peer-to-peer
+connections or connections using a relay, are encrypted end to end using
+Datagram Transport Layer Security (DTLS). This is the same technology
+seen in the HTTPS protocol that modern websites implement for
+security.</p>
+<h5
+id="can-pneuma-solutions-eavesdrop-on-sessions-relayed-by-the-public-cloud">Can
+Pneuma Solutions eavesdrop on sessions relayed by the public cloud?</h5>
+<p>No. Session key negotiation and encryption are performed end to end
+between the controller and the target. In other words, everything is
+encrypted before it even leaves your device. That way, the cloud service
+merely relays the data as is, making it impossible for the service to
+decipher the data. Note that RIM will always attempt a direct
+peer-to-peer connection whenever possible. Relays are only used in
+situations where a direct peer-to-peer connection proves impossible,
+even with NAT traversal.</p>
+<h5 id="what-about-the-session-recordings">What about the session
+recordings?</h5>
+<p>The cloud is never used throughout the processing of session
+recordings. Recordings are stored on the local hard-drive of hte
+controller’s computer, and distribution to the end-user is left entirely
+up to the controller.</p>
+<h5
+id="what-measures-have-been-taken-to-prevent-remote-code-execution-rce-vulnerabilities">What
+measures have been taken to prevent remote code execution (RCE)
+vulnerabilities?</h5>
+<p>All RIM code which is exposed to input from the network is written in
+<a href="https://www.memorysafety.org/docs/memory-safety/">memory-safe
+programming languages</a> including Rust and JavaScript.</p>
+<h5 id="is-rim-hipaa-compliant">Is RIM HIPAA-compliant?</h5>
+<p>Yes. The best configuration in this case would be an on-premises
+deployment, so please <a href="https://pneumasolutions.com/contact/">get
+in touch with us</a> if your use case depends on this.</p>
+<h5 id="do-any-ports-need-to-be-opened-on-the-target-or-controller">Do
+any ports need to be opened on the target or controller?</h5>
+<p>No and no.</p>
+<h5
+id="what-connections-would-need-to-be-allowed-on-a-network-in-order-for-rim-to-function">What
+connections would need to be allowed on a network in order for RIM to
+function?</h5>
+<p>When utilizing the public cloud, an https connection to <a
+href="https://getrim.app">getrim.app</a> is required. In optimal cases
+this is enough for RIM to establish a peer-to-peer connection between
+the controller and the target. However, it helps to allow UDP
+connections through ports 19302 and 3478 (the standard STUN and TURN
+ports). This ensures that if a relay is being utilized, RIM will not
+have to fall back to a tcp connection on port 443.</p>
+<h5
+id="does-rim-run-in-the-background-and-if-so-will-it-appear-in-my-alttab-list">Does
+RIM run in the background, and if so will it appear in my Alt+Tab
+list?</h5>
+<p>RIM runs in the background in order to process automatic updates,
+receive unattended/prompted connection requests, and enable use of the
+global Windows+Shift+Backspace keyboard command. It will not phone home
+for any other purpose, and no personally identifiable information is
+transferred. RIM will not appear in your Alt+Tab list, but it will
+appear in the system tray.</p>
+<h4 id="remote-accessibility-module">Remote Accessibility Module</h4>
+<h5
+id="is-there-anything-the-target-machine-needs-to-configure-for-first-time-use-of-the-remote-accessibility-module">Is
+there anything the target machine needs to configure for first-time use
+of the Remote Accessibility Module?</h5>
+<p>Not at all! There are no dialogue boxes, permission request screens
+or anything of the sort.</p>
+<h5
+id="does-the-remote-accessibility-module-work-on-secure-screens-such-as-the-lock-screen">Does
+the Remote Accessibility Module work on secure screens such as the lock
+screen?</h5>
+<p>Yes! Since the RIM host runs with elevated privileges, this allows us
+to leverage the Remote Accessibility Module for secure screens.</p>
+<p>The only exception to this is when RIM is installed without
+administrator privileges target-side.</p>
+<h4 id="unattended-sessions">Unattended Sessions</h4>
+<h5
+id="are-voice-conversations-supported-during-unattended-sessions">Are
+voice conversations supported during unattended sessions?</h5>
+<p>Yes. However, they cannot be initiated unless the end user is
+physically present to accept a permission request. This allows for voice
+conversations while ensuring maximum privacy and security.</p>
+<h5
+id="if-i-delete-an-unattended-machine-from-my-controller-account-will-it-automatically-revoke-permission-on-the-target">If
+I delete an unattended machine from my controller account, will it
+automatically revoke permission on the target?</h5>
+<p>Yes. Once an unattended target is removed, the change will be
+effective immediately. If the target machine is powered down or
+otherwise not connected to the internet, the change will be effective as
+soon as an internet connection is established on their machine.</p>
+<h5
+id="the-target-machine-rebooted-after-installing-updates-and-drivers-and-it-requires-a-password-to-log-in.-how-does-the-session-continue-from-here">The
+target machine rebooted after installing updates and drivers, and it
+requires a password to log in. How does the session continue from
+here?</h5>
+<p>While RIM will run on the Windows logon screen, logging in is still a
+task that must be done manually by the target user. In other words, RIM
+<em>will not</em> automatically log the user in.</p>
+<h5
+id="i-have-multiple-machines-playing-the-part-of-the-controller.-will-the-list-of-machines-set-up-for-unattended-access-populate-across-all-machines">I
+have multiple machines playing the part of the controller. Will the list
+of machines set up for unattended access populate across all
+machines?</h5>
+<p>Yes. The list of machines configured for unattended access is stored
+within your account, so it will populate automatically.</p>
+<h5
+id="why-am-i-prompted-for-user-confirmation-after-a-one-click-install-on-the-pro-plan-whereas-the-enterprise-plan-allows-for-unattended-installs">Why
+am I prompted for user confirmation after a one-click install on the Pro
+plan, whereas the Enterprise plan allows for unattended installs?</h5>
+<p>The key difference lies in the ownership and control of the machines
+being managed.</p>
+<ul>
+<li>Enterprise Plan:
+<ul>
+<li>It is assumed that the organization owns the machines being
+managed.</li>
+<li>As such, the enterprise plan allows for mass deployment of RIM
+without requiring interaction from individual users. This is because the
+organization has full control over these devices, eliminating the need
+for user confirmation.</li>
+</ul></li>
+<li>Pro Plan:
+<ul>
+<li>It is assumed that the machines being controlled belong to
+individual end users.</li>
+<li>We prioritize transparency and user consent. After a one-click
+install, the end user is prompted to confirm the installation of RIM.
+This ensures that they are aware of the software being installed on
+their device and provides an opportunity for them to agree to it.</li>
+<li>This approach helps maintain trust and compliance with privacy
+standards, respecting the ownership and autonomy of the end user’s
+machine.</li>
+</ul></li>
+</ul>
+<h4 id="tips-and-tricks">Tips and Tricks</h4>
+<p>Welcome to the Tips and Tricks section of our FAQ! We’re thrilled to
+share some handy insights and nuggets of wisdom to enhance your RIM
+experience. That said, as with all great adventures, there are a few
+caveats to keep in mind:</p>
+<ol type="1">
+<li>The tech world is like a box of chocolates – always full of
+surprises. Our tips are based on a number of factors, including but not
+limited to the version of RIM and operating system version used by the
+creator of the tip. As RIM evolves, some of these tips might become less
+relevant. Stay updated with the latest version for the best
+experience!</li>
+<li>One Size Doesn’t Fit All. Our software is designed to cater to a
+diverse range of needs, but every user’s journey is unique. What works
+like a charm for one might be less enchanting for another. Feel free to
+adapt these tips to your specific needs and preferences.</li>
+<li>While some of these tips may come from us, many of these tips come
+straight from our vibrant community of users (like you!). While we
+celebrate this shared knowledge, remember that these suggestions are
+based on personal experiences and might not have been vetted by our tech
+wizards.</li>
+</ol>
+<p>If you’re ever in doubt or have questions, our support team is <a
+href="https://pneumasolutions.com/contact/">just a message away.</a> We
+don’t bite, we promise!</p>
+<p>By using these tips, you acknowledge and agree to the above
+disclaimer. Now, go forth and explore the potential of RIM with these
+tricks up your sleeve!</p>
+<h5
+id="listening-to-the-microphone-audio-of-one-of-your-personal-machines-windows">Listening
+to the microphone audio of one of your personal machines (Windows)</h5>
+<p>In the interest of ensuring maximum privacy, RIM does not support
+voice conversations during fully unattended sessions unless the target
+user is physically present to agree to them. There however may be times
+where you may want to hear audio coming from a device near one of your
+remote computers. For example, you may have a clock radio near your
+desktop, and you may be using your laptop on the porch. While the
+quality may not be the greatest, RIM can make for an excellent makeshift
+wireless audio solution!</p>
+<p>Setting up your target machine to listen to its microphone audio will
+involve piping the microphone audio through to its speakers. As you’re
+aiming to hear the microphone from within a remote session, we first
+need to lower your speaker volume to avoid a feedback loop. In order to
+do that:</p>
+<ol type="1">
+<li>Open the run box (Windows+R).</li>
+<li>Type sndvol, then press enter.</li>
+<li>Press the end key to reach 0%, then press up arrow once to reach 1%.
+As you can see, RIM does not take the actual volume of the target
+machine into consideration when outputting its audio.</li>
+<li>Exit out of volume mixer.</li>
+</ol>
+<p>With your volume now lowered, it’s time to enable your microphone’s
+listen function.</p>
+<ol type="1">
+<li>Open Windows Settings (Windows+I). Search for microphone. Locate
+Microphone Privacy in the list and press Enter. Make sure that
+“Microphone Access” and “Let apps Access your microphone” are both
+toggled on.</li>
+<li>Press Windows+R again, and this time, type mmsys.cpl to open the
+sound settings.</li>
+<li>Once in sound settings, access the recording tab (Ctrl+Tab).</li>
+<li>Select the microphone or line-in device you want to listen to, then
+access the properties with Alt+P.</li>
+<li>Once in the properties, CTRL+Tab to the listen tab, and check the
+“Listen to this Device” checkbox.</li>
+<li>CTRL+Tab one more time to the Levels section, and adjust the gain of
+the microphone to a level that will be sufficient for you. Press enter
+when done.</li>
+</ol>
+<p>That’s it! You should now hear the microphone’s audio along with the
+rest of the remote machine’s output.</p>
+<h3 id="getting-connected">Getting Connected</h3>
+<p>Remote Incident Manager’s connection process is designed with speed
+and simplicity in mind, both for the person receiving assistance as well
+as for the person providing it.</p>
+<h4 id="connecting-to-a-controller">Connecting to a Controller</h4>
+<p>When you first launch Remote Incident Manager, you will be in target
+mode by default. This means that you are going to be connecting to a
+person who has set up a remote support session for you. You will land in
+an edit box labeled “keyword.” Enter the keyword issued to you by the
+person assisting you once they give you the go ahead, and then simply
+hit enter. That’s it, you’re connected!</p>
+<h4 id="accepting-a-request-to-connect">Accepting a Request to
+Connect</h4>
+<p>If a technician provides support to you on the regular, your machine
+may be set up to receive a request to connect without either of you
+having to enter a keyword. RIM will play a chime, then announce that
+your technician is attempting to connect.</p>
+<p>In order to accept the connection, press
+<strong>Windows+Shift+Y</strong> and the session will begin
+momentarily.</p>
+<h4 id="connecting-to-a-target">Connecting to a Target</h4>
+<p>The process for setting up the session is fairly similar. Rather than
+entering the keyword, you will want to navigate to the “Provide help
+instead” button. When doing this for the first time, you will be asked
+to set up an account.</p>
+<ol type="1">
+<li>Enter your email address.</li>
+<li>Check your email for a verification code, and then enter it into
+RIM.</li>
+<li>You will then be asked to enter your name, location and phone
+number.</li>
+<li>Lastly, you will receive another verification code on your phone.
+Enter this code into RIM.
+<ol type="1">
+<li>If you do not have a mobile phone capable of receiving text
+messages, please fill out <a
+href="https://pneumasolutions.com/account-verification/">this form</a>.
+We will assist you in getting your account verified.</li>
+<li>A note for international numbers: If your verification code doesn’t
+come through, make sure the country code before your number is denoted
+by the plus sign, rather than 00.</li>
+</ol></li>
+</ol>
+<p>Now that you’re logged in, enter the keyword that the target will use
+to connect to you. When you navigate past the edit box, you will come
+across two checkboxes which determine whether or not to start a voice
+conversation or disable remote computer audio during the session (these
+options can be toggled on or off during the session as well). After
+that, you will find the “Start” button. When you click this, you will be
+in the waiting room until your target connects. At this point, you will
+want to send the keyword you just entered to the person you’ll be
+connecting to. The keyword is valid for 5 minutes or until a successful
+connection is established, whichever comes first. Once they have
+connected, you will receive an alert informing you that the remote
+session is about to begin.</p>
+<p>Take note of the mentioned <strong>Windows+Shift+Backspace</strong>
+shortcut as that will bring up the RIM menu on your machine. If you rely
+on the keyboard exclusively, this is the only way to direct keyboard
+input back to your own system.</p>
+<p>After you dismiss this dialogue, the remote session will be
+initiated.</p>
+<h3 id="installation">Installation</h3>
+<p>How you acquire and install Remote Incident Manager depends on your
+use case and configuration, but in any case the process is quite
+straight forward.</p>
+<h4 id="typical-installation-for-individuals">Typical Installation for
+Individuals</h4>
+<p>There is only one installation package to use, whether you are
+offering or receiving assistance.</p>
+<ol type="1">
+<li><a href="https://getrim.app/win">Download Remote Incident
+Manager</a></li>
+<li>Run the downloaded file.</li>
+<li>If you have user account control enabled, press Alt+Y to approve the
+installation.</li>
+<li>Once the file is launched, the installation will automatically
+commence. There are no next buttons to worry about. Just sit back,
+relax, and let it do its thing. Within seconds, the program will be
+installed and will launch automatically.
+<ol type="1">
+<li>The Welcome screen will allow you to choose how you will primarily
+use RIM. If you only plan on receiving support, press the “Receive Help
+Now” button. If you plan on providing support, click the “Provide Help
+Now” button. This decision is not final, as the mode can always be
+changed from within the application.</li>
+</ol></li>
+</ol>
+<p>That’s all there is to it! A desktop shortcut will be automatically
+created to aid in subsequent launches of RIM. Additionally, RIM sets up
+a multipurpose global hotkey (Windows+Shift+Backspace) which, among
+other things, automatically launches the program from wherever you
+are.</p>
+<h4 id="unattended-or-prompted-access-installer">Unattended or Prompted
+Access Installer</h4>
+<p>If the person providing assistance has provided you a custom
+installer, you will be advised of this when the installer launches. This
+is because this installer will automatically configure RIM for what is
+known as either unattended or prompted access. This is what will allow
+the person helping you to initiate a session with your computer without
+you having to enter a keyword. We will cover these types of sessions
+indepth later on in this manual.</p>
+<h4 id="installing-without-administrative-privileges">Installing without
+Administrative Privileges</h4>
+<p>The Remote Incident Manager installer will always attempt to obtain
+administrator privileges. In environments where administrator privileges
+are unable to be obtained, the installation of RIM will be performed
+within the scope of the current user account, rather than at the system
+level.</p>
+<p>Running without admin does not result in any limitations on the
+controller side of RIM. There are, however, limitations you will
+encounter on the target machine.</p>
+<ul>
+<li>RIM only runs when the Windows user that installed it is signed
+in.</li>
+<li>RIM doesn’t run on the Windows sign-in screen.</li>
+<li>RIM has no access to the secure desktop; this means no access to UAC
+prompts, or to the sign-in screen when unlocking the machine.</li>
+<li>Remote keyboard input doesn’t work if the focus on the target is in
+an elevated application, or even an application running with the Windows
+UI Access flag, such as an installed copy of a screen reader.</li>
+<li>The option to press Ctrl+Alt+Delete doesn’t work.</li>
+</ul>
+<p>As a controller, you will be able to attempt a re-installation of RIM
+with admin privileges during a session.</p>
+<h4 id="silent-installation">Silent Installation</h4>
+<p>You’ll want to do this when deploying RIM to multiple machines.
+Simply use the <strong>/S</strong> command line parameter in your
+deployment script. Note that it is case-sensitive, so a capital S is
+required.</p>
+<h4 id="installing-a-server-profile">Installing a Server Profile</h4>
+<p>If you are receiving remote support from an organization who has a
+private RIM server, they will have sent you a link to a configuration
+page on that server. Once you click this link, you will arrive on a page
+that will provide instructions on how to install this server profile
+into your copy of RIM. Note that RIM must be installed in order for the
+profile to be added, thus the page will provide links to the installers
+if you have not yet installed RIM.</p>
+<h4 id="additional-considerations-for-windows-servers">Additional
+Considerations for Windows Servers</h4>
+<p>To install RIM on your Windows Server, connect to the server via RDP.
+In order to get the most stable connection experience, we recommend
+using the Remote Desktop app from the Microsoft Store.</p>
+<h5 id="obtaining-sound-and-running-narrator">Obtaining Sound and
+running Narrator</h5>
+<p>For Windows Server distributions prior to 2022, you will need to
+manually enable sound before launching Narrator. Do the following once
+connected:</p>
+<ol type="1">
+<li>Press windows key+r.</li>
+<li>Type cmd and hit enter. Wait about ten seconds.</li>
+<li>Type: <strong>net start audiosrv</strong> and hit enter.</li>
+</ol>
+<p>In any case, press CTRL+Windows+Enter to enable Narrator. If
+everything worked properly, you should get speech. You can now follow
+the install procedure as described above. Please note that for Windows
+Server distributions prior to 2022, if you need sound for subsequent
+connections via RIM, you will need to install a virtual sound output
+device on your server. The free version of <a
+href="https://vac.muzychenko.net/en/download.htm">Virtual Audio
+Cable</a> should suffice.</p>
+<h3 id="key-command-reference">Key Command Reference</h3>
+<p>Following is a complete keyboard command reference for RIM. We will
+list all the commands that have global shortcuts, along with the
+respective Windows-friendly shortcuts.</p>
+<ul>
+<li><strong>Action</strong>: Command</li>
+<li><strong>Access the RIM Menu</strong>: Windows+Shift+Backspace</li>
+<li><strong>Minimize Session</strong>: Windows+Shift+M</li>
+<li><strong>Flip Session</strong>: Windows+Shift+F</li>
+<li><strong>Disconnect Session (Controller or Target)</strong>:
+Windows+Shift+D</li>
+</ul>
+<h3 id="plans-and-purchasing">Plans and Purchasing</h3>
+<p>Remote Incident Manager is useful in a wide array of scenarios of
+varying frequency. Thus, our multi-tier plan structure makes every
+reasonable attempt to meet you where you are. Additionally, remember
+that RIM is always free for the person receiving help.</p>
+<h4 id="free-tier">Free Tier</h4>
+<p>Anyone can use RIM to assist another user for up to 30 minutes a day.
+These minutes do not need to be used in one sitting, and a usage meter
+will keep tabs on how many minutes you have on any given day. Throughout
+your 30 minutes, you may connect to any number of people, over any
+number of interactive sessions. After each session, RIM will display a
+popup reminder with your remaining time, as well as a “Sign up for paid
+RIM services” button.</p>
+<h4 id="consumer-plans">Consumer Plans</h4>
+<h5 id="passes">Passes</h5>
+<p>Passes are useful if you’re providing assistance on an as needed
+basis. When you pay for a pass, that pass will wait patiently for you to
+activate it whenever you are able. This also means that you can hold
+several passes in storage and use them whenever they’re needed.</p>
+<h6 id="incident-pass">Incident Pass</h6>
+<p>An incident pass will allow you to assist a single user for as long
+as is needed over a 24 hour period. At any point during the 24 hour
+period, reconnections can be made. So let’s say you start out by setting
+up an overnight Windows re-installation. Once that machine is able to
+use RIM, you can come back and configure the end user’s system as they
+see fit.</p>
+<h6 id="day-pass">Day Pass</h6>
+<p>A day pass will allow you to assist several users over a 24 hour
+period. So if you have multiple errands to run, you’ll want one of
+these.</p>
+<h6 id="pro-passes">Pro Passes</h6>
+<p>These 1 week, 2 week, or 1 month passes allow you to leverage all of
+RIM Pro’s capabilities on a non-subscription basis.</p>
+<h5 id="hourly-prepaid-packages">Hourly Prepaid Packages</h5>
+<p>These packages allow you to have a designated amount of hours on your
+account. These hours will last for a year from the date of their initial
+use, or a year from the date of purchase if not used. These hours can be
+used for any interactive sessions, and RIM will only deduct the exact,
+down-to-the-minute amount of time you used. For example, if you have 5
+hours and you use 12 minutes, you will have 4 hours, 48 minutes
+remaining. Of further note is the fact that your free daily 30 minute
+allotment is prioritized before your prepaid time is used. If you run
+out of time, be it prepaid time or your free daily allotment, you will
+receive a 5 minute and 1 minute warning. If you are about to run out of
+paid time and you refill your account before the clock runs out, your
+session will be uninterrupted.</p>
+<h5 id="personal-unattended-access-subscriptions">Personal Unattended
+Access Subscriptions</h5>
+<p>These plans allow you, as AN individual controller, to configure a
+set number of physical machines for unattended access. These plans are
+scalable (up to ten targets) in order to meet your needs. Whether you’re
+simply looking to control your desktop from the road, or you’re the
+go-to tech support for a few folks in your family, these plans have you
+covered. Note that the subscriptions do not concern interactive
+sessions, I.E. those initiated via a keyword. The incident passes and
+day passes described above can be used alongside a subscription to
+facilitate interactive sessions. If you don’t have any passes, the daily
+30 minute allotment is used.</p>
+<h5 id="personal-community-support-package">Personal Community Support
+Package</h5>
+<p>The personal community support package is useful if you occasionally
+provide technical support for tasks that run longer than the free daily
+allotment. This package gets you three (3) hours a day in addition to
+the free 30 minute daily allotment. IN short, you will get 3.5 hours per
+day. As with the free 30 minute daily allotment, these hours do not need
+to be used in one sitting and can be used across many different
+connections throughout the day. However these hours do not roll over,
+and unattended connections are not included in the base package.
+However, this package is available as an addon for personal unattended
+subscriptions. This package is only available as an annual
+subscription.</p>
+<h5 id="personal-weekend-plan">Personal Weekend Plan</h5>
+<p>The RIM Personal Weekend Support subscription is designed for people
+who want to provide remote support for family, friends, or community
+members on the weekend. It provides unlimited RIM connection time for
+keyword sessions on Saturday and Sunday, in addition to the 30 minutes
+per day on weekdays provided by the free tier. Note that this
+subscription does not include unattended access.</p>
+<h4 id="rim-pro">RIM Pro</h4>
+<p>RIM Pro is suitable for either a single support person or trainer, or
+a small support team. Each pro plan allows connections to an unlimited
+number of targets, as well as target group configuration.</p>
+<h5 id="rim-pro-base-package">RIM Pro Base Package</h5>
+<p>This allows a single controller to control an unlimited amount of
+targets.</p>
+<h5 id="upgrades">Upgrades</h5>
+<p>We offer upgrades to the number of controller seats and/or channels,
+as well as the feature set available to you.</p>
+<h6 id="multi-seat-and-multichannel-setups">Multi-seat and Multichannel
+Setups</h6>
+<p>Additional controllers and channels are available under separate
+additional charges added onto your base subscription. This allows you to
+choose whether or not you would like additional channels - simultaneous
+connections - equal to the number of additional controllers. Should you
+choose not to add additional channels, only one of your controllers may
+be engaged in a session at any given time.</p>
+<h6 id="rim-pro-enterprise-addon">RIM Pro Enterprise Addon</h6>
+<p>This addon brings the features of RIM Enterprise to individual
+support reps or small units. Features include:</p>
+<ul>
+<li>Unattended mass deployment to Windows servers</li>
+<li>Completely silent mode for pre-configured unattended target
+installers</li>
+<li>Optional integration with your organization’s single-sign-on (SSO)
+system (requires an additional setup fee).</li>
+</ul>
+<p>Note: Identity verification may be required for this add-on.</p>
+<h4 id="rim-enterprise-public-cloud-edition">RIM Enterprise Public Cloud
+Edition</h4>
+<p>The enterprise edition offers an unlimited amount of controllers and
+targets, along with the features described above. The price of each plan
+is determined by the number of simultaneous channels that can run at any
+given time.</p>
+<p>There is an additional one-time fee for setup and onboarding,
+irrespective of which plan you choose.</p>
+<h4 id="activating-a-subscription-or-pass">activating a subscription or
+pass</h4>
+<p>When you make a purchase through RIM, you will be issued an
+activation link. Upon clicking the link, your pass or subscription will
+be activated and ready for use. In the case of day/incident passes,
+remember that the time period for a pass only begins when you initiate a
+remote session using said pass.</p>
+<p>If you purchase multiple prepaid items such as passes or hour
+packages, you will receive a separate activation link for each item.
+This means that, for example, two separate passes can be activated on
+two separate accounts. This is useful in situations where you wish to
+gift one of the items of a larger purchase.</p>
+<h3 id="system-requirements">System Requirements</h3>
+<p>In order to run Remote Incident Manager, your system must meet or
+exceed the following requirements:</p>
+<ul>
+<li>Windows 10 (X64) or later</li>
+<li>Windows Server 2016 (X64) or later</li>
+<li>At least 4GB of RAM</li>
+<li>Admin privileges for full functionality (not required for initial
+installation or automatic updates)</li>
+</ul>
+<h3 id="working-within-a-session">Working within a Session</h3>
+<h4 id="things-to-know-before-you-begin">Things to Know before you
+Begin</h4>
+<p>A few things will happen immediately after the connection is
+established.</p>
+<ul>
+<li>The remote control window for the session will appear. This window
+can be moved and resized across a single display, as well as a
+multi-monitor setup.</li>
+<li>You will be informed about the status of the running screen reader,
+or lack thereof, on the client’s machine.</li>
+<li>If the client is running a screen reader, a toast notification
+informing the user that the remote session has begun will provide
+instant confirmation that the user’s system audio is working.</li>
+<li>A Mac target will pop up the keyboard setup assistant if this is the
+first time a controller has connected to it.
+<ul>
+<li>This is for the Karabiner virtual keyboard, which listens to
+keyboard commands sent to it by a controller.</li>
+<li>As such, you will want to walk the target computer through the setup
+assistant, because it will be listening for remote keyboard presses in
+the identification process, not the Mac’s own keyboard.</li>
+</ul></li>
+<li>Last but not least, all keyboard and mouse input will immediately be
+directed to the target computer. To direct control back to your machine,
+do either of the following:
+<ul>
+<li>Press Windows+Shift+Backspace.</li>
+<li>Right-click the RIM window’s title bar.</li>
+<li>Left-click the RIM icon in the middle of the title bar.</li>
+</ul></li>
+</ul>
+<h4 id="remote-control-zone">Remote Control Zone</h4>
+<p>At this point, you’re all set to perform whatever tasks need doing on
+the client side. Should you need to switch back to controlling your own
+machine, bring up the RIM menu, then select the “Minimize session”
+option. You will be taken back to your machine until you switch back
+into the session window or press Windows+Shift+Backspace again. When you
+go back into the session window, keyboard and mouse input will once
+again be directed to the client computer.</p>
+<p>Once you’re done, either the controller or the target can go into the
+RIM menu and choose the “Disconnect Session” option. When the session
+ends, the target machine will get a toast notification informing them of
+this.</p>
+<h4 id="the-rim-menu">The RIM Menu</h4>
+<p>As mentioned earlier, accessing the RIM menu directs you back to your
+machine. There are a number of options in this menu. They include:</p>
+<ul>
+<li>Update RIM on Target: Forces an update of RIM on the target computer
+<ul>
+<li>This option shows if the target’s machine is running an older
+version of RIM.</li>
+</ul></li>
+<li>Re-install RIM as Administrator on Target: This option will attempt
+to reinstall RIM as admin on a Windows target, requiring the target user
+to accept the admin permission request by themselves and/or with the
+help of their company IT.</li>
+<li>Minimize Session (<strong>Windows+Shift+M</strong>): brings control
+back to your machine as described above</li>
+<li>Open Chat: Opens the text chat for a given session
+<ul>
+<li>Note that this option additionally appears in the target-side
+session menu.</li>
+</ul></li>
+<li>Transfer File to Target: Appears if a file is on the clipboard.
+<ul>
+<li>Although this alternate method of completing a file transfer is
+always available, it is only necessary for transferring files to Mac
+targets.</li>
+</ul></li>
+<li>Flip Session (<strong>Windows+Shift+F</strong>): Allows your client
+to remote control your machine and hear its audio. As the original
+controller, you can flip the session back by selecting this option a
+second time.</li>
+<li>Start/stop Voice Conversation: Allows you to toggle the voice chat
+on or off for your session.
+<ul>
+<li>During an unattended session, this option will present a permissions
+dialogue that the user must be present to respond to. However, prompted
+sessions still initiate voice conversations upon activation by the
+controller.</li>
+</ul></li>
+<li>Start Session Recording: Begins recording the contents of the active
+session - more on this later
+<ul>
+<li>When session recording is engaged, this option is replaced with the
+following:
+<ul>
+<li>Pause/Resume Session Recording (toggle)</li>
+<li>Stop Session Recording: Ends and saves the recording</li>
+</ul></li>
+</ul></li>
+<li>Start Remote Accessibility: This option appears when no screen
+reader is running on the remote computer. This will enable speech on
+your end, but the client will not need to worry about hearing speech.
+<ul>
+<li>If a screen reader (including Remote Accessibility) is running, this
+option turns into a force quit for the running screen reader. This is
+useful when a target’s screen reader stops responding to the extent you
+are unable to restart it normally.</li>
+</ul></li>
+<li>Mute Target Audio Output: Allows you to silence the system audio
+output of the remote computer.
+<ul>
+<li>Note that a running voice conversation will remain active while this
+setting is in effect, allowing you to talk with the person you are
+connected to while their system audio is inaudible to you.</li>
+</ul></li>
+<li>Reboot and Reconnect: Allows you to reboot the computer and
+automatically reconnect the session.
+<ul>
+<li>Note that a Mac target cannot start RIM pre-login due to platform
+limitations, notably FileVault.</li>
+<li>As such, RIM will reconnect once the user logs in.</li>
+</ul></li>
+<li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.
+<ul>
+<li>An equivalent for this option is not yet implemented for Mac
+targets.</li>
+</ul></li>
+<li>Request Unattended or Prompted Access: Allows you to send a request
+for unattended access to the client computer. This is useful if you are
+a sysadmin and need to perform routine maintenance, or even for
+something as simple as controlling your home machine while on the
+go.</li>
+<li>Lock the Target Machine: Locks the target machine.</li>
+<li>View Connection Details: Provides a detailed lowdown on your
+connection, as well as the target machine. Information includes:
+<ul>
+<li>Connection statistics</li>
+<li>Information about the computer, including operating system version,
+available RAM, etc.</li>
+<li>Running processes</li>
+<li>Installed packages</li>
+</ul></li>
+<li>AI Tools: Allows you to chat with a number of Accessibility-geared
+chatbots.
+<ul>
+<li>This option is only available to controlers who have pro passes or
+are on the personal community, weekend support, or pro/enterprise
+subscriptions.</li>
+</ul></li>
+<li>Disconnect Session (<strong>Windows+Shift+D</strong>): Terminates
+the session.
+<ul>
+<li>Remember that this option is available to both sides of the
+session.</li>
+</ul></li>
+</ul>
+<h5 id="session-chat">Session Chat</h5>
+<p>Text communication via RIM’s built-in session chat capability can be
+a useful option in situations where a voice conversation isn’t possible
+or practical. It can even be used to supplement an existing voice
+conversation, I.E. to send links, instructions, or the like.</p>
+<h6 id="starting-a-chat">Starting a Chat</h6>
+<p>A session chat can be initiated in one of the following ways:</p>
+<ul>
+<li>Controller-side
+<ul>
+<li>A controller can select the “Open Chat” option off the session
+menu.</li>
+<li>When the chat window appears on the controlling computer, focus
+lands in the edit box wherein a message can be typed and sent using the
+enter key.</li>
+<li>A message sent to the target user will trigger a chat window on
+their machine. At this point, back-and-forth chat is now possible.</li>
+<li>Note that it is not possible to control the target computer while
+the user’s chat window is in focus. Control of the target will resume if
+any of the following conditions are met:
+<ul>
+<li>The target user shifts focus away from the chat window, in which
+case control may resume until they shift focus back to the chat
+window.</li>
+<li>The target user closes the chat window by pressing escape.</li>
+<li>If the chat window on the controlling computer is closed and 30
+seconds have passed, the target user’s chat window will automatically
+disengage, at which point control resumes.</li>
+</ul></li>
+</ul></li>
+<li>Target-side:
+<ul>
+<li>The target user can select the “Open Chat” option off the session
+menu. Doing so will immediately trigger a chat window on the controlling
+computer.</li>
+<li>At this point, back-and-forth chat is now possible.</li>
+<li>If the target user closes the chat window on their side, the chat
+window will remain open on the controlling computer. A subsequent
+message from the controller will revive the chat window on the target
+computer.</li>
+</ul></li>
+</ul>
+<h6 id="working-within-a-chat">Working within a Chat</h6>
+<p>While the chat window is in focus, messages will be presented in both
+speech and Braille as they arrive. A machine that does not have the chat
+window in focus will be alerted of chat messages through standard
+Windows toast notifications. While outside the message box, the chat can
+be navigated like a standard webpage. Messages sent by the party
+opposite from the one viewing the message can be copied to the clipboard
+via the “Copy” button adjacent to the message in question.</p>
+<h6 id="chat-transcripts">Chat Transcripts</h6>
+<p>Chat transcripts are saved in a user-configurable directory. By
+default, this is the “documents/Remote Incident Manager/Chat” directory
+in your user folder.</p>
+<p>Currently, the only way to modify the directory is via a
+configuration file, thus the procedure is only available in English.</p>
+<p>The configuration file can be accessed via the run dialog by pasting
+the following: %appdata%\remote-incident-manager\config.toml</p>
+<p>Once inside the configuration file, look for the directory line under
+the Chat line, and modify the directory to one of your choosing. Note
+that backslashes must be properly escaped in the case of Windows
+directories. Once you save the configuration, the changes will take
+effect for subsequent sessions. There is no need to restart the
+application.</p>
+<h5 id="file-transfers">File Transfers</h5>
+<p>RIM provides a simple avenue for transferring files, irrespective of
+the platform used.</p>
+<ol type="1">
+<li>Bring up the RIM menu, and click on “Minimize Session.” Control will
+be directed back to your computer.</li>
+<li>Select the file(s) and/or folder(s) you want to transfer using your
+file manager.</li>
+<li>Copy the selected contents to the clipboard in the usual way. You
+will receive a notification that a file is ready to be transferred. You
+have two options.</li>
+<li><strong>If the target is a Mac:</strong>
+<ul>
+<li>Activate the RIM session menu and click on the “Transfer File to
+Target” option.</li>
+<li>Upon completion of the transfer, the target Mac will generate a
+temporary directory containing the transferred contents. These should
+then be copied and pasted to their intended directories.</li>
+</ul></li>
+<li><strong>If the target is a Windows machine:</strong>
+<ul>
+<li>Switch back to the remote session and locate the folder on the
+target machine where you wish to paste the content.</li>
+<li>Last but not least, paste as you normally would.</li>
+</ul></li>
+</ol>
+<p>Note that the transfer time will depend entirely on the size of the
+content being sent as well as your network speed.</p>
+<h5 id="session-recording">Session Recording</h5>
+<p>RIM’s session recording ability allows you, as the controller, to
+conveniently record the content of your session to a file on your
+computer. This file can then be later distributed to the individual to
+which you are providing remote support. The session recording’s contents
+will include the audiovisual output of the target computer, as well as
+the audio from a running voice conversation. To facilitate a session
+recording:</p>
+<ol type="1">
+<li>Access the “Start Session Recording” option off the session menu.
+The following actions will occur as a result:
+<ul>
+<li>During a keyword session:
+<ul>
+<li>The target user will get a permissions dialog asking if they wish to
+consent to the session being recorded. The controller’s keyboard input
+will be suspended while this dialog appears.</li>
+<li>If the target user agrees, then recording begins. If the target user
+denies recording, then the entire session terminates.</li>
+</ul></li>
+<li>For prompted/unattended sessions:
+<ul>
+<li>The recording will instantly commense</li>
+</ul></li>
+<li>Regardless, both parties will receive a notification that the
+recording has started once recording initiates in earnest.</li>
+</ul></li>
+<li>To pause or resume the recording, access the “Pause/Resume Session
+Recording” toggle off the session menu.
+<ul>
+<li>The recording will be paused or resumed accordingly</li>
+<li>A notification will be delivered to both parties as such</li>
+</ul></li>
+<li>The recording can be stopped via the “Stop Session Recording” option
+off the session menu.
+<ul>
+<li>By default, you will receive a confirmation dialog asking if you
+wish to stop the recording. This dialog is designed to prevent
+accidental deactivation of the session recording, however it can
+optionally be disabled.</li>
+<li>Both parties will receive a notification following completion of the
+recording.</li>
+<li>The recording will then be saved to the directory in which RIM is
+configured to save your recordings (This is the “Videos” folder in your
+user directory by default). For added convenience, you will be
+automatically dropped into this folder via Explorer, allowing you to
+send the recording to the user if desired.</li>
+<li>Note that disconnecting the session stops the recording
+automatically.</li>
+</ul></li>
+</ol>
+<p>Recordings are a completely free feature, available to any user on
+any tier. In addition, recordings are processed entirely locally,
+without any involvement from the cloud service.</p>
+<h6 id="note-regarding-the-remote-accessibility-module">Note regarding
+the Remote Accessibility Module</h6>
+<p>Since the Remote Accessibility Module outputs its speech to your
+running copy of NVDA, RIM must accommodate for that in order to capture
+this speech on a recording. Therefore, whenever remote accesibility is
+active during a recording, RIM initiates a capture of your system’s full
+audio output. This allows the speech heard through the remote
+accessibility module to be captured exactly as it was heard during the
+session. While this may result in some notification sounds from your
+controlling computer being caught in the recording, this will not cause
+any audio from the target computer to be doubled.</p>
+<h6 id="note-for-enterprise-usage">Note for Enterprise Usage</h6>
+<p>IN order to align with a typical enterprise security posture, session
+recording is a strictly opt-in capability within enterprise setups.
+Therefore, unless the ability to record has been enabled by an
+organization admin, all mechanisms for recording will be unavailable to
+RIM controllers within the organization.</p>
+<h6 id="advanced-configuration-for-session-recordings">Advanced
+Configuration for Session Recordings</h6>
+<p>RIM features a number of advanced configuration options for session
+recording. These include the ability to auto-start recordings upon
+session initiation, store recordings in an alternate path (I.E. a
+network share), and determine the state of the confirmation dialog when
+stopping a recording. Currently, the only way to modify these settings
+is via a configuration file, thus the procedure is only available in
+English.</p>
+<p>The configuration file can be accessed via the run dialog by pasting
+the following: %appdata%\remote-incident-manager\config.toml</p>
+<p>Once inside the configuration file, the following options will be
+available to you:</p>
+<ul>
+<li>directory: Sets the directory for storing recordings.
+<ul>
+<li>Backslashes must be properly escaped in the case of Windows
+directories.</li>
+</ul></li>
+<li>auto_start: Determines whether session recording starts immediately
+upon session initiation. This is set to false by default.</li>
+<li>suppress_stop_confirmation: Controls whether the confirmation dialog
+is shown when manually stopping a recording. Default is false.
+<ul>
+<li>Note that disconnecting a session will always stop recording without
+the confirmation, irrespective of this setting.</li>
+</ul></li>
+</ul>
+<p>Once you save the configuration, the changes will take effect for
+subsequent sessions. There is no need to restart the application.</p>
+<h5 id="remote-accessibility-module-1">Remote Accessibility Module</h5>
+<p>Whether you’re assisting a user who doesn’t use a screen reader, or
+you’re diagnosing an issue with a malfunctioning screen reader, RIM is
+fully prepared to come to your aid.</p>
+<p>The remote accessibility module consists of two components:</p>
+<ul>
+<li>An addon for the NVDA screen reader that enables the screen reader
+to receive output from the remote computer</li>
+<li>A self-contained accessibility module initiated on the target
+computer at the request of the controller. The advantage to this
+approach is that the end user does not hear speech on their computer
+while you’re controlling it. Instead, the Remote Accessibility Module
+pipes the speech output through to the running copy of NVDA on the
+controller side. This way, you can accessibly assist an end user without
+them having to install or even download a screen reader.</li>
+</ul>
+<h5 id="setup-procedure">Setup Procedure</h5>
+<p>For first-time initialization of the accessibility module, here is
+what you will need to do:</p>
+<ol type="1">
+<li>Connect to a computer that does not have a screen reader
+running.</li>
+<li>If NVDA is currently running, you will be asked to install an addon
+that will allow your copy of NVDA to communicate with the remote
+computer during the session. Accept the installation prompts, and wait
+for NVDA to restart.</li>
+<li>By now, the remote accessibility module will be fully initialized,
+and you will hear speech output as you control the remote computer. To
+mute the speech output temporarily, simply press Insert or Capslock+S
+once to turn it off, then press that command twice to re-enable it.</li>
+</ol>
+<p>From this point forward, if you are running a screen reader on the
+controling computer, the remote accessibility module will automatically
+start during remote sessions in which the remote computer does not have
+a screen reader running. Should you be running a screen reader other
+than NVDA, RIM will disengage that screen reader and then switch you
+over to NVDA. If you need to stop the remote accessibility module on the
+remote machine in order to start another screen reader, simply access
+the “Stop Remote Accessibility” option off the RIM menu.</p>
+<h4 id="rebooting-and-reconnecting">Rebooting and Reconnecting</h4>
+<p>Whether you’re installing system updates or working your way out of a
+system hang, RIM has got you covered during the reboot process.
+Selecting the “Reboot and Reconnect” option off the RIM menu will allow
+you to either perform a graceful reboot or an emergency reboot,
+depending on what state the computer is in. While the computer is
+rebooting, RIM will inform you that reconnection attempts are being
+made. Note that if the computer is rebooted by a software installation
+or manually rebooted in the usual way, you will be asked if you wish to
+reconnect the session. Of further note is that in either case, Mac
+targets will only reconnect once the user logs in. This is due to the
+fact that RIM cannot start automatically on the login screen due to
+platform limitations, most notably FileVault disk encryption.</p>
+<h5 id="unattended-or-prompted-access">Unattended or Prompted
+Access</h5>
+<p>RIM allows you, as the controller, to configure machines for
+unattended or prompted access. This allows you to provide remote
+assistance without the user having to launch RIM, enter a keyword, or
+even be near the computer. This is useful if you are a sysadmin
+performing routine maintenance on computers in your workgroup, or for
+clients you provide support to on the regular. You may also want to
+allow unattended access for your home computer should you need to access
+it from someplace else. There are a few ways to configure machines for
+unattended access.</p>
+<h6 id="during-an-interactive-session">During an Interactive
+Session</h6>
+<ol type="1">
+<li>Bring up the RIM menu.</li>
+<li>Select “Request Unattended or Prompted Access.”</li>
+<li>You will be asked what kind of connection you want to configure.
+Your options are:
+<ol type="1">
+<li>Unattended: Allows sessions to be initiated without any intervention
+whatsoever from the end user.</li>
+<li>Prompted: This configuration presents the user with a prompt
+informing them that you are conecting to their machine. They will need
+to press Option+Shift+Y on macOS, or Windows+Shift+Y on Windows, should
+they wish to accept the connection.</li>
+</ol></li>
+<li>You will be asked to give this machine a name. Enter a personal name
+for the machine, or if applicable, the machine ID as it appears in your
+workgroup.</li>
+<li>Press enter.</li>
+<li>On the client machine, a dialogue pops up asking the user if they’re
+fine with their computer being set up for the access you requested. If
+they answer yes, then you will get a prompt informing you that the
+access has been approved.</li>
+</ol>
+<h6 id="note-for-personal-unattended-account-holders">Note for Personal
+Unattended Account Holders</h6>
+<p>If you have used all the machine slots allocated to your account, RIM
+will not perform the request. In this situation, you have two options,
+both possible via the RIM Dashboard:</p>
+<ol type="1">
+<li>Deregister one of your machines, freeing up a slot.</li>
+<li>Upgrade your subscription with more slots.</li>
+</ol>
+<h6 id="registering-a-machine-to-your-rim-account">Registering a Machine
+to your RIM account</h6>
+<p>Should you wish to register one of your own machines for unattended
+access, you can do so without having to start an interactive session
+with the machine.</p>
+<ol type="1">
+<li>Start RIM in Receive Help Mode.</li>
+<li>Click on the “Add this machine to your RIM account” button.</li>
+<li>Enter your email, then click next.</li>
+<li>Wait for the two-step login code to arrive, enter it, then you
+should be logged in.</li>
+<li>You will be asked what type of access you would like configured for
+this machine. Your options are:
+<ol type="1">
+<li>Unattended: Allows sessions to be initiated without any intervention
+whatsoever from the end user.</li>
+<li>Prompted: This configuration presents the user with a prompt
+informing them that you are conecting to their machine.</li>
+</ol></li>
+<li>Give the machine a name, then activate the “Add Machine”
+button.</li>
+<li>The machine will be registered to your account, which will allow any
+controller machines logged into your RIM account to connect to this
+machine.</li>
+</ol>
+<h6 id="note-for-personal-unattended-account-holders-1">Note for
+Personal Unattended Account Holders</h6>
+<p>If you have used all the machine slots allocated to your account, RIM
+will not perform the request. In this situation, you have two options,
+both possible via the RIM Dashboard:</p>
+<ol type="1">
+<li>Deregister one of your machines, freeing up a slot.</li>
+<li>Upgrade your subscription with more slots.</li>
+</ol>
+<h6 id="getting-connected-1">Getting Connected</h6>
+<p>Now that we’ve registered the machine for unattended access, here is
+how we will start a session.</p>
+<ol type="1">
+<li>Start RIM in controller mode.</li>
+<li>Rather than entering a keyword, locate and activate the”Choose a
+machine” button.</li>
+<li>When you click this, a list of machines will appear. Choose the one
+you want, then hit enter. You may also use the search bar to narrow the
+list down to a specific machine.</li>
+</ol>
+<p>If the target machine is configured for prompted access, the end user
+will get a prompt. Once they answer yes, you’ll be connected. If the
+session is unattended, you will immediately be connected and dropped
+into the remote control zone.</p>
+<p>Please note: Voice conversations require the target user to approve
+them during fully unattended sessions. This is however not required for
+prompted sessions.</p>
+<h6 id="creating-a-shortcut-for-an-unattended-session">Creating a
+Shortcut for an Unattended Session</h6>
+<p>For extra convenience, you can create desktop shortcuts that allow
+you to automatically launch unattended sessions. In order to do
+this:</p>
+<ol type="1">
+<li>Access the list of unattended computers, and select the one you want
+to create a shortcut for.</li>
+<li>Click on the “Create Shortcut” button.</li>
+<li>A shortcut will be automatically added to your desktop.</li>
+</ol>
+<p>Now, when you activate this shortcut, you will either automatically
+land in the remote session, or send a prompt to the user’s machine that
+they can accept.</p>
+<h6 id="more-ways-to-use-unattended-session-shortcuts">More Ways to use
+Unattended Session Shortcuts</h6>
+<p>Unattended session shortcuts, like any other shortcuts, can have
+global hotkeys associated with them. This can be extremely useful if you
+are a maintenance tech managing multiple computers in a workgroup. For
+example, if your workgroup consists of 6 computers that you perform
+routine maintenance on, you could configure Alt+Control+1 through 6 as
+hotkeys for each respective machine. This ought to significantly speed
+up your workflow. In addition, you can call up an unattended session via
+the run box if you copy the shortcut into your user directory. Once
+you’ve copied the shortcut, you may start an unattended session by
+typing your-session-name.url in the run box.</p>
+<h6 id="revoking-unattended-access">Revoking Unattended Access</h6>
+<p>If you no longer want your machine to be controlled unattended, you
+can revoke the controller’s access. You do not need to be in a session
+in order to do this.</p>
+<ol type="1">
+<li>Access the Remote Incident Manager icon in your system tray.
+<ol type="1">
+<li>If using the keyboard, press windows+b, then space, then left or
+right arrow until you find the icon.</li>
+</ol></li>
+<li>Right click this icon, or press the applications or shift+f10
+key.</li>
+<li>Select the “Revoke Unattended Access” option.</li>
+<li>You will arrive at a list of computers, select the one you want to
+revoke.</li>
+<li>You will be asked if you wish to revoke the machine; answer
+yes.</li>
+</ol>
+<p>That’s it! The controller will receive a message stating that this
+machine is no longer available for unattended access. Should they need
+unattended access again, they can reinitiate the procedure to request
+permission for unattended access as described above.</p>
+<h5 id="ai-tools">AI Tools</h5>
+<p>The AI Tools menu is a convenient aggregator of accessibility-focused
+chatbots. All of these bots allow you to quickly gain answers on various
+subject matters related to assistive technology, operating systems, etc.
+Any users with a pro pass, personal community subscription, personal
+weekend support subscription, or pro/enterprise subscription will have
+access to this capability. Note that many of these bots - including our
+own - are in beta, and as such should be used with caution in the same
+way you shouldn’t consider GPS directions as undisputed fact. More on
+this later.</p>
+<p>The currrently available bots are as follows:</p>
+<ul>
+<li>RIMBot (beta)</li>
+<li>Ask Microsoft Accessibility</li>
+<li>FSCompanion (Beta)</li>
+</ul>
+<p>These bots are currently available in English exclusively. Each bot
+will open in a contained window. While each bot has its own interface
+conventions, Pressing escape will always bring you back to your remote
+session.</p>
+<h6 id="disclaimers">Disclaimers</h6>
+<p>The AI Tools feature within Remote Incident Manager (RIM) provides an
+accessible interface for utilizing the Pneuma Solutions RIMBot and other
+third-party services. Pneuma Solutions expressly disclaims all
+warranties, whether express or implied, regarding the reliability,
+availability, or long-term support of these third-party tools. Tools
+designated as beta, including those developed by Pneuma Solutions, will
+be clearly labeled as such within the AI Tools interface of the RIM
+application or its associated dashboard.</p>
+<p>The RIMBot support chatbot is partially trained using publicly
+available data covering various technologies. This training is conducted
+to enhance the bot’s ability to deliver accurate and useful responses
+while adhering to copyright and privacy standards. Pneuma Solutions
+endeavors to ensure the bot’s responses maintain a reasonable degree of
+accuracy. However, due to the inherent limitations of large language
+models, Pneuma Solutions cannot guarantee that all responses will be
+entirely accurate.</p>
+<p>Although extensive testing has been conducted to ensure the bot’s
+safety and reliability, inaccuracies may occur. In the event of a
+verifiably incorrect response, users are encouraged to report the issue
+by providing a detailed copy of the relevant chat log via the RIM
+application or our <a
+href="https://pneumasolutions.com/contact/">contact page</a>.</p>
+<p>This disclaimer shall govern the use of AI Tools and RIMBot and is
+subject to the <a href="https://pneumasolutions.com/terms-of-use/">terms
+and conditions</a> of use provided by Pneuma Solutions.</p>
+<h2 id="on-macos">On macOS</h2>
+<h3 id="frequently-asked-questions-from-the-manual-2">Frequently Asked
+Questions from the Manual</h3>
+<p>Here are answers to some common questions concerning RIM. When faced
+with an issue, please refer to this document whenever possible. If your
+question is not covered in this document, please <a
+href="https://pneumasolutions.com/contact/">Contact us.</a></p>
+<h4 id="compatibility-1">Compatibility</h4>
+<h5 id="what-windows-versions-are-supported-1">What Windows versions are
+supported?</h5>
+<p>We support Windows10 and above, as well as Windows Server2016 and
+up.</p>
+<h5 id="what-mac-os-versions-are-supported-1">What Mac OS versions are
+supported?</h5>
+<p>RIM supports all builds of Mac OS Ventura and Sonoma, be they Intel
+or Apple Silicon. You as a Mac user can provide support to Windows
+targets, and Windows users can provide support to your Mac.</p>
+<h5 id="what-about-mac-os-versions-before-ventura-1">What about Mac OS
+versions before Ventura?</h5>
+<p>Some features of RIM depend on functionality newly introduced in
+Ventura, making compatibility with previous versions difficult to
+implement.</p>
+<h4 id="installation-1">Installation</h4>
+<h5 id="why-so-many-permissions-requests-on-mac-os-1">Why so many
+permissions requests on Mac OS?</h5>
+<p>This is unfortunately beyond our control, as Mac OS requires that we
+use their avenues for requesting the necessary permissions needed for
+RIM. We have no control over the UX, so can only go as far as providing
+as much instruction as we can.</p>
+<h4 id="connection-information-1">Connection Information</h4>
+<h5 id="generally-speaking-how-responsive-is-rim-1">Generally speaking,
+how responsive is RIM?</h5>
+<p>The roundtrip latency during a RIM session is extremely minimal.
+Because we make every effort to not rely on the central service to keep
+the connection running, most of the time your connections are direct
+from one computer to another - this is what is known as peer-to-peer. If
+your network configuration doesn’t allow for peer-to-peer connections,
+we fall back to any number of relays located around the world rather
+than relying on one central server. Thus, even then your latency will
+still be farely minimal.</p>
+<h5 id="where-are-your-relays-located-1">Where are your relays
+located?</h5>
+<p>Currently, we offer relays in the following locations:</p>
+<ul>
+<li>U.S.
+<ul>
+<li>Virginia</li>
+<li>California</li>
+</ul></li>
+<li>Teronto, Canada</li>
+<li>London, England</li>
+<li>Warsaw, Poland</li>
+<li>Bangalore, India</li>
+<li>Singapore</li>
+<li>Sidney, Australia</li>
+<li>Sao Paulo, Brazil</li>
+</ul>
+<h4 id="general-session-troubleshooting-1">General Session
+Troubleshooting</h4>
+<h5
+id="the-target-machine-to-which-i-am-connected-doesnt-respond-properly-to-keyboard-commands-that-work-fine-on-my-keyboard.-whats-going-on-1">The
+target machine to which I am connected doesn’t respond properly to
+keyboard commands that work fine on my keyboard. What’s going on?</h5>
+<p>This could be due to either one of these possibilities:</p>
+<ul>
+<li>A conflict in keyboard layouts: On rare occasions, if a keyboard
+layout is different enough from your own it may confuse RIM. Should that
+occur, please contact us with a report containing information about the
+keyboard layout of both machines.</li>
+<li>If the target machine is using JAWS 2024, its unified keyboard
+processing sometimes interferes with use of the CTRL key for silencing
+speech. Although this was fixed in JAWS2025, unified keyboard processing
+interferes with proper use of the capslock key.
+<ul>
+<li>These issues can be resolved by disabling unified keyboard
+processing in the JAWS settings center.</li>
+<li>Unified keyboard processing is not necessary if the target user is
+not also using ZoomText or Fusion.</li>
+</ul></li>
+<li>If the target machine is using NVDA and has “Handle keys from other
+applications” unchecked, RIM will not be able to process keyboard input
+from the controller.
+<ul>
+<li>Note that this setting is on by default, and in most cases it is
+advisable to leave it on.</li>
+</ul></li>
+<li>If the target machine has a number-pad and your machine’s numlock is
+out of state with their own, you may notice odd behavior target-side.
+<ul>
+<li>Depending on which state you want the target’s numlock to be in,
+ensure it matches controller-side as well.</li>
+</ul></li>
+</ul>
+<h5
+id="upon-flipping-a-session-windowsshiftf-is-not-working-to-reverse-the-flip.-why-is-this-1">Upon
+flipping a session, Windows+Shift+F is not working to reverse the flip.
+Why is this?</h5>
+<p>Recent editions of Windows 11 have introduced an Edge Bar, which
+unfortunately causes a conflict with our Windows+Shift+F keyboard
+command anywhere where RIM is not directly processing your keyboard
+input. Reversing a flip can currently be done most effectively via the
+session menu.</p>
+<h5
+id="when-starting-a-voice-conversation-on-windows-rim-uses-the-internal-microphone-no-matter-which-microphone-i-select-in-sound-settings.-whats-wrong-1">When
+starting a voice conversation on Windows, RIM uses the internal
+microphone no matter which microphone I select in sound settings. What’s
+wrong?</h5>
+<p>This may be due to the Intel® Smart Sound Technology for Digital
+Microphones on some newer Intel processors. Disabling this should fix
+the issue. In order to disable Intel® Smart Sound Technology for Digital
+Microphones, do the following:</p>
+<ol type="1">
+<li>Go to the run box (Windows+R).</li>
+<li>Type devmgmt.msc</li>
+<li>In the devices tree, expand “Sound, Video and Game
+Controllers.”</li>
+<li>Right click on “Intel® Smart Sound Technology for Digital
+Microphones.” Choose “Disable Device” from the context menu.</li>
+</ol>
+<h5
+id="the-target-is-using-zoom-text.-how-do-i-experience-the-visual-output-as-rendered-by-this-magnification-1">The
+target is using Zoom Text. How do I experience the visual output as
+rendered by this magnification?</h5>
+<p>This is accomplished by switching ZoomText to compatibility mode.
+This mode allows screen enhancements to be shared via tools like Teams
+or Zoom, as well as RIM. You can activate it via the ZoomText menu: Help
+&gt; Advance &gt; Display adapter. In the open dialog, select
+compatibility mode, and ZoomText will restart. We recommend switching
+the Display adapter back to its regular mode after the RIM session is
+complete for optimal performance and magnification quality.</p>
+<h5
+id="after-a-computer-is-reimaged-and-has-been-reconfigured-with-the-same-computer-name-is-there-anything-that-needs-to-be-done-to-get-rim-up-and-running-again-1">After
+a computer is reimaged and has been reconfigured with the same computer
+name, is there anything that needs to be done to get RIM up and running
+again?</h5>
+<p>Simply remove the machine from your account, reinstall RIM, then add
+the machine back into your account.</p>
+<h4 id="pricing-and-payments-1">Pricing and Payments</h4>
+<h5
+id="so-getting-help-from-a-person-over-rim-is-totally-free-right-1">So,
+getting help from a person over RIM is totally free, right?</h5>
+<p>You bet! The subscriptions and/or one-off payments are for
+individuals and organizations seeking to offer remote assistance. No
+need to worry about getting a subscription if you’re the person
+receiving help. In fact, you do not even have to set up an account if
+you are merely receiving help.</p>
+<h5
+id="i-dont-really-do-remote-assistance-regularly-but-i-may-be-helping-a-friend-or-family-member-on-occasion.-are-there-any-options-that-dont-involve-a-subscription-1">I
+don’t really do remote assistance regularly, but I may be helping a
+friend or family member on occasion. Are there any options that don’t
+involve a subscription?</h5>
+<p>Certainly! We do accommodate as many use cases as we can.</p>
+<ul>
+<li>Anyone can assist a user over RIM for free for up to 30 minutes a
+day. So if you need to help someone install some software, fix a problem
+real quick, or send over a few files, we’ve got you covered. These
+minutes don’t have to be used in one sitting.</li>
+<li>There are, of course, going to be situations where a particular
+issue requires a little more time. Or maybe you’re assisting someone
+learning a new piece of software and might be connecting on and off over
+the next few days or weeks. That’s where our passes come in.
+<ul>
+<li>Incident passes allow you to connect to a single target as many
+times as is needed over a 24 hour period.</li>
+<li>Day passes allow you to connect to multiple targets over a 24 hour
+period.</li>
+<li>Pro passes allow you to leverage all of RIM’s pro capabilities with
+non-recurring 1 week, 2 week, or month-long terms.</li>
+<li>Packages of prepaid hours allow you to have a set number of hours
+available to be used entirely on your own time.</li>
+</ul></li>
+<li>You can accumulate several of these passes and hourly packages and
+use them whenever the time calls for them. If you have multiple day
+passes, for instance, you do not need to use them consecutively.
+Similarly, You don’t need to use your prepaid hours in one session or 24
+hour period.</li>
+</ul>
+<h5
+id="i-purchased-a-package-of-prepaid-hours.-what-happens-to-my-free-daily-allotment-1">I
+purchased a package of prepaid hours. What happens to my free daily
+allotment?</h5>
+<p>Good news: Your free 30 minute daily allotment is not going anywhere!
+When you start a keyword-based session, RIM will start off by using your
+free 30 minute daily allotment. Your prepaid time will be used after
+your free 30 minutes is up.</p>
+<h5
+id="how-long-will-my-prepaid-hours-last-are-they-tied-in-with-my-subscription-1">How
+long will my prepaid hours last? Are they tied in with my
+subscription?</h5>
+<p>Prepaid hours are entirely separate from your subscription. That
+being said, your prepaid hours will remain in your account for one (1)
+year past the date they were first used.</p>
+<h5
+id="how-do-i-go-about-bringing-rim-to-the-attention-of-my-place-of-work-1">How
+do I go about bringing RIM to the attention of my place of work?</h5>
+<p>We’ve assembled a <a href="https://sak.getrim.app">Self-Advocacy
+Kit</a> (SAK). A packet of e-mail formatted letters you can send to
+appropriate individuals on behalf of yourself or an employee. For the
+record, RIM provides the same functionality as less accessible
+mainstream solutions. As such, RIM can replace an existing
+infrastructure, rather than be used alongside one. It is therefore
+considered a reasonable accessibility accommodation and should be
+provided to you by your organization. Accessibility isn’t a favor, it’s
+a right to inclusivity.</p>
+<h5 id="what-payment-methods-do-you-accept-1">What payment methods do
+you accept?</h5>
+<p>We process payments through FastSpring, so we are able to directly
+accept a variety of international payment methods including major credit
+cards, PayPal, Alipay, and many more.</p>
+<h5
+id="how-do-these-passes-work-does-the-clock-start-immediately-upon-payment-or-on-the-day-i-initiate-the-session-1">How
+do these passes work? Does the clock start immediately upon payment, or
+on the day I initiate the session?</h5>
+<p>Passes only begin when the controller initiates the session. So if
+the target’s machine fails on them requiring a trip to the shop and a
+same-day turnaround is not possible, you can simply hold off until the
+machine is back in good shape and your day pass will still be waiting
+for you.</p>
+<h5 id="so-this-means-these-passes-dont-expire-1">So this means these
+passes don’t expire?</h5>
+<p>No. Rest assured that your accumulation of day passes will be waiting
+patiently for you to activate them whenever you’re ready.</p>
+<h5
+id="what-happens-if-i-connect-to-another-machine-on-the-day-an-incident-pass-has-been-used-1">What
+happens if I connect to another machine on the day an incident pass has
+been used?</h5>
+<p>That depends. If the machine is within your subscription, I.E. if
+you’re accessing your home machine while on the road, then it’s business
+as usual. Any other connections that aren’t the initial target you
+connected to will work under the usual 30 minute allotment.</p>
+<h5
+id="i-hold-an-active-personal-subscription.-would-i-still-be-able-to-assist-a-user-outside-the-group-of-targets-for-up-to-30-minutes-or-via-a-pass-1">I
+hold an active personal subscription. Would I still be able to assist a
+user outside the group of targets for up to 30 minutes, or via a
+pass?</h5>
+<p>Yes! Your 30 minute daily allotment is still present for any machine
+outside of your subscription. Additionally, acquiring a subscription
+does not replace any existing passes you may have.</p>
+<h5
+id="i-have-a-personal-subscription-and-the-target-computer-underwent-a-hardware-upgrade.-will-rim-count-this-as-a-machine-switch-1">I
+have a personal subscription, and the target computer underwent a
+hardware upgrade. Will Rim count this as a machine switch?</h5>
+<p>Only if RIM needs to be reinstalled. So, while a hard drive upgrade
+or any other situation requiring a Windows reinstallation would be
+considered a machine switch, upgrading the ram would not.</p>
+<h5
+id="our-company-bought-the-pro-subscription-but-we-have-two-techs---one-that-does-help-desk-during-the-day-and-a-system-maintenance-tech-that-works-in-the-evening.-would-we-be-able-to-assign-the-evening-sysadmin-a-controller-seat-1">Our
+company bought the pro subscription, but we have two techs - one that
+does help-desk during the day, and a system maintenance tech that works
+in the evening. Would we be able to assign the evening sysadmin a
+controller seat?</h5>
+<p>Definitely. In situations where multiple technitions will be using
+RIM, we offer up to two (2) additional controller seats for $50 a month
+per seat - $500 a year per seat - to accompany the pro plan if needed.
+This will make it easier for multiple controllers at different
+workstations or offices to provide remote support. If you have multiple
+controller seats, you can purchase additional channels for them so that
+sessions can run simultaneously. Each additional channel is $50 a month,
+or $500 a year.</p>
+<h5 id="why-is-there-a-setup-fee-for-rim-enterprise-accounts-1">Why is
+there a setup fee for RIM Enterprise accounts?</h5>
+<p>The setup fee for RIM Enterprise accounts covers the administrative,
+technical, and security-related work required to configure your
+organization’s environment. This includes:</p>
+<ul>
+<li>Custom Configuration: We tailor your RIM Enterprise deployment to
+fit your organization’s needs, including user roles, permissions, and
+security settings.</li>
+<li>Unattended Access Setup: If your organization requires unattended
+access to targets, we help configure this feature properly to ensure
+seamless and secure remote access.</li>
+<li>Infrastructure and Security Preparations: We verify secure
+connections, compliance requirements, and system optimizations to ensure
+your deployment is reliable and meets industry standards.</li>
+<li>Initial Training and Support: Our team assists IT teams and
+administrators with onboarding, helping them maximize RIM’s
+capabilities.</li>
+<li>Private Consultation with Development Team: We provide direct access
+to our development team for addressing security documentation requests,
+discussing custom integration needs, or reviewing specific technical
+concerns.</li>
+<li>Exclusive Access to the RIM Insiders Slack Channel: Enterprise
+customers gain access to a dedicated Slack channel where they can
+communicate with our team, receive updates, and collaborate with other
+RIM power users.</li>
+</ul>
+<p>This one-time setup fee ensures a smooth, secure, and customized
+deployment, giving your organization everything it needs to fully
+leverage RIM from day one.</p>
+<h4 id="security-1">Security</h4>
+<h5 id="are-rim-sessions-encrypted-1">Are RIM sessions encrypted?</h5>
+<p>Yes. All sessions across all platforms, be they direct peer-to-peer
+connections or connections using a relay, are encrypted end to end using
+Datagram Transport Layer Security (DTLS). This is the same technology
+seen in the HTTPS protocol that modern websites implement for
+security.</p>
+<h5
+id="can-pneuma-solutions-eavesdrop-on-sessions-relayed-by-the-public-cloud-1">Can
+Pneuma Solutions eavesdrop on sessions relayed by the public cloud?</h5>
+<p>No. Session key negotiation and encryption are performed end to end
+between the controller and the target. In other words, everything is
+encrypted before it even leaves your device. That way, the cloud service
+merely relays the data as is, making it impossible for the service to
+decipher the data. Note that RIM will always attempt a direct
+peer-to-peer connection whenever possible. Relays are only used in
+situations where a direct peer-to-peer connection proves impossible,
+even with NAT traversal.</p>
+<h5 id="what-about-the-session-recordings-1">What about the session
+recordings?</h5>
+<p>The cloud is never used throughout the processing of session
+recordings. Recordings are stored on the local hard-drive of hte
+controller’s computer, and distribution to the end-user is left entirely
+up to the controller.</p>
+<h5
+id="what-measures-have-been-taken-to-prevent-remote-code-execution-rce-vulnerabilities-1">What
+measures have been taken to prevent remote code execution (RCE)
+vulnerabilities?</h5>
+<p>All RIM code which is exposed to input from the network is written in
+<a href="https://www.memorysafety.org/docs/memory-safety/">memory-safe
+programming languages</a> including Rust and JavaScript.</p>
+<h5 id="is-rim-hipaa-compliant-1">Is RIM HIPAA-compliant?</h5>
+<p>Yes. The best configuration in this case would be an on-premises
+deployment, so please <a href="https://pneumasolutions.com/contact/">get
+in touch with us</a> if your use case depends on this.</p>
+<h5 id="do-any-ports-need-to-be-opened-on-the-target-or-controller-1">Do
+any ports need to be opened on the target or controller?</h5>
+<p>No and no.</p>
+<h5
+id="what-connections-would-need-to-be-allowed-on-a-network-in-order-for-rim-to-function-1">What
+connections would need to be allowed on a network in order for RIM to
+function?</h5>
+<p>When utilizing the public cloud, an https connection to <a
+href="https://getrim.app">getrim.app</a> is required. In optimal cases
+this is enough for RIM to establish a peer-to-peer connection between
+the controller and the target. However, it helps to allow UDP
+connections through ports 19302 and 3478 (the standard STUN and TURN
+ports). This ensures that if a relay is being utilized, RIM will not
+have to fall back to a tcp connection on port 443.</p>
+<h5
+id="does-rim-run-in-the-background-and-if-so-will-it-appear-in-my-commandtab-list">Does
+RIM run in the background, and if so will it appear in my Command+Tab
+list?</h5>
+<p>RIM runs in the background in order to process automatic updates,
+receive unattended/prompted connection requests, and enable use of the
+global Option+Shift+Backspace keyboard command. It will not phone home
+for any other purpose, and no personally identifiable information is
+transferred. RIM will not appear in your Command+Tab list, but it will
+appear in the status menus that contain your battery, WiFi connection
+information, etc.</p>
+<h4 id="remote-accessibility-module-2">Remote Accessibility Module</h4>
+<h5
+id="is-there-anything-the-target-machine-needs-to-configure-for-first-time-use-of-the-remote-accessibility-module-1">Is
+there anything the target machine needs to configure for first-time use
+of the Remote Accessibility Module?</h5>
+<p>Not at all! There are no dialogue boxes, permission request screens
+or anything of the sort.</p>
+<h5
+id="does-the-remote-accessibility-module-work-on-secure-screens-such-as-the-lock-screen-1">Does
+the Remote Accessibility Module work on secure screens such as the lock
+screen?</h5>
+<p>Yes! Since the RIM host runs with elevated privileges, this allows us
+to leverage the Remote Accessibility Module for secure screens.</p>
+<p>The only exception to this is FileVault’s logon window.</p>
+<h4 id="unattended-sessions-1">Unattended Sessions</h4>
+<h5
+id="are-voice-conversations-supported-during-unattended-sessions-1">Are
+voice conversations supported during unattended sessions?</h5>
+<p>Yes. However, they cannot be initiated unless the end user is
+physically present to accept a permission request. This allows for voice
+conversations while ensuring maximum privacy and security.</p>
+<h5
+id="if-i-delete-an-unattended-machine-from-my-controller-account-will-it-automatically-revoke-permission-on-the-target-1">If
+I delete an unattended machine from my controller account, will it
+automatically revoke permission on the target?</h5>
+<p>Yes. Once an unattended target is removed, the change will be
+effective immediately. If the target machine is powered down or
+otherwise not connected to the internet, the change will be effective as
+soon as an internet connection is established on their machine.</p>
+<h5
+id="the-target-machine-rebooted-after-installing-updates-and-drivers-and-it-requires-a-password-to-log-in.-how-does-the-session-continue-from-here-1">The
+target machine rebooted after installing updates and drivers, and it
+requires a password to log in. How does the session continue from
+here?</h5>
+<p>In most instances, particularly when FileVault disk encryption is
+enabled, the target user will need to be physically present to manually
+enter the password. RIM cannot start on an encrypted Mac before it has
+been fully logged in.</p>
+<h5
+id="i-have-multiple-machines-playing-the-part-of-the-controller.-will-the-list-of-machines-set-up-for-unattended-access-populate-across-all-machines-1">I
+have multiple machines playing the part of the controller. Will the list
+of machines set up for unattended access populate across all
+machines?</h5>
+<p>Yes. The list of machines configured for unattended access is stored
+within your account, so it will populate automatically.</p>
+<h5
+id="why-am-i-prompted-for-user-confirmation-after-a-one-click-install-on-the-pro-plan-whereas-the-enterprise-plan-allows-for-unattended-installs-1">Why
+am I prompted for user confirmation after a one-click install on the Pro
+plan, whereas the Enterprise plan allows for unattended installs?</h5>
+<p>The key difference lies in the ownership and control of the machines
+being managed.</p>
+<ul>
+<li>Enterprise Plan:
+<ul>
+<li>It is assumed that the organization owns the machines being
+managed.</li>
+<li>As such, the enterprise plan allows for mass deployment of RIM
+without requiring interaction from individual users. This is because the
+organization has full control over these devices, eliminating the need
+for user confirmation.</li>
+</ul></li>
+<li>Pro Plan:
+<ul>
+<li>It is assumed that the machines being controlled belong to
+individual end users.</li>
+<li>We prioritize transparency and user consent. After a one-click
+install, the end user is prompted to confirm the installation of RIM.
+This ensures that they are aware of the software being installed on
+their device and provides an opportunity for them to agree to it.</li>
+<li>This approach helps maintain trust and compliance with privacy
+standards, respecting the ownership and autonomy of the end user’s
+machine.</li>
+</ul></li>
+</ul>
+<h4 id="tips-and-tricks-1">Tips and Tricks</h4>
+<p>Welcome to the Tips and Tricks section of our FAQ! We’re thrilled to
+share some handy insights and nuggets of wisdom to enhance your RIM
+experience. That said, as with all great adventures, there are a few
+caveats to keep in mind:</p>
+<ol type="1">
+<li>The tech world is like a box of chocolates – always full of
+surprises. Our tips are based on a number of factors, including but not
+limited to the version of RIM and operating system version used by the
+creator of the tip. As RIM evolves, some of these tips might become less
+relevant. Stay updated with the latest version for the best
+experience!</li>
+<li>One Size Doesn’t Fit All. Our software is designed to cater to a
+diverse range of needs, but every user’s journey is unique. What works
+like a charm for one might be less enchanting for another. Feel free to
+adapt these tips to your specific needs and preferences.</li>
+<li>While some of these tips may come from us, many of these tips come
+straight from our vibrant community of users (like you!). While we
+celebrate this shared knowledge, remember that these suggestions are
+based on personal experiences and might not have been vetted by our tech
+wizards.</li>
+</ol>
+<p>If you’re ever in doubt or have questions, our support team is <a
+href="https://pneumasolutions.com/contact/">just a message away.</a> We
+don’t bite, we promise!</p>
+<p>By using these tips, you acknowledge and agree to the above
+disclaimer. Now, go forth and explore the potential of RIM with these
+tricks up your sleeve!</p>
+<h5
+id="listening-to-the-microphone-audio-of-one-of-your-personal-machines-windows-1">Listening
+to the microphone audio of one of your personal machines (Windows)</h5>
+<p>In the interest of ensuring maximum privacy, RIM does not support
+voice conversations during fully unattended sessions unless the target
+user is physically present to agree to them. There however may be times
+where you may want to hear audio coming from a device near one of your
+remote computers. For example, you may have a clock radio near your
+desktop, and you may be using your laptop on the porch. While the
+quality may not be the greatest, RIM can make for an excellent makeshift
+wireless audio solution!</p>
+<p>Setting up your target machine to listen to its microphone audio will
+involve piping the microphone audio through to its speakers. As you’re
+aiming to hear the microphone from within a remote session, we first
+need to lower your speaker volume to avoid a feedback loop. In order to
+do that:</p>
+<ol type="1">
+<li>Open the run box (Windows+R).</li>
+<li>Type sndvol, then press enter.</li>
+<li>Press the end key to reach 0%, then press up arrow once to reach 1%.
+As you can see, RIM does not take the actual volume of the target
+machine into consideration when outputting its audio.</li>
+<li>Exit out of volume mixer.</li>
+</ol>
+<p>With your volume now lowered, it’s time to enable your microphone’s
+listen function.</p>
+<ol type="1">
+<li>Open Windows Settings (Windows+I). Search for microphone. Locate
+Microphone Privacy in the list and press Enter. Make sure that
+“Microphone Access” and “Let apps Access your microphone” are both
+toggled on.</li>
+<li>Press Windows+R again, and this time, type mmsys.cpl to open the
+sound settings.</li>
+<li>Once in sound settings, access the recording tab (Ctrl+Tab).</li>
+<li>Select the microphone or line-in device you want to listen to, then
+access the properties with Alt+P.</li>
+<li>Once in the properties, CTRL+Tab to the listen tab, and check the
+“Listen to this Device” checkbox.</li>
+<li>CTRL+Tab one more time to the Levels section, and adjust the gain of
+the microphone to a level that will be sufficient for you. Press enter
+when done.</li>
+</ol>
+<p>That’s it! You should now hear the microphone’s audio along with the
+rest of the remote machine’s output.</p>
+<h3 id="getting-connected-2">Getting Connected</h3>
+<p>Remote Incident Manager’s connection process is designed with speed
+and simplicity in mind, both for the person receiving assistance as well
+as for the person providing it.</p>
+<h4 id="connecting-to-a-controller-1">Connecting to a Controller</h4>
+<p>When you first launch Remote Incident Manager, you will be in target
+mode by default. This means that you are going to be connecting to a
+person who has set up a remote support session for you. You will land in
+an edit box labeled “keyword.” Enter the keyword issued to you by the
+person assisting you once they give you the go ahead, and then simply
+hit enter. That’s it, you’re connected!</p>
+<h4 id="accepting-a-request-to-connect-1">Accepting a Request to
+Connect</h4>
+<p>If a technician provides support to you on the regular, your machine
+may be set up to receive a request to connect without either of you
+having to enter a keyword. RIM will play a chime, then announce that
+your technician is attempting to connect.</p>
+<p>In order to accept the connection, press
+<strong>Option+Shift+Y</strong> and the session will begin
+momentarily.</p>
+<h4 id="connecting-to-a-target-1">Connecting to a Target</h4>
+<p>The process for setting up the session is fairly similar. Rather than
+entering the keyword, you will want to navigate to the “Provide help
+instead” button. When doing this for the first time, you will be asked
+to set up an account.</p>
+<ol type="1">
+<li>Enter your email address.</li>
+<li>Check your email for a verification code, and then enter it into
+RIM.</li>
+<li>You will then be asked to enter your name, location and phone
+number.</li>
+<li>Lastly, you will receive another verification code on your phone.
+Enter this code into RIM.
+<ol type="1">
+<li>If you do not have a mobile phone capable of receiving text
+messages, please fill out <a
+href="https://pneumasolutions.com/account-verification/">this form</a>.
+We will assist you in getting your account verified.</li>
+<li>A note for international numbers: If your verification code doesn’t
+come through, make sure the country code before your number is denoted
+by the plus sign, rather than 00.</li>
+</ol></li>
+</ol>
+<p>Now that you’re logged in, enter the keyword that the target will use
+to connect to you. When you navigate past the edit box, you will come
+across two checkboxes which determine whether or not to start a voice
+conversation or disable remote computer audio during the session (these
+options can be toggled on or off during the session as well). After
+that, you will find the “Start” button. When you click this, you will be
+in the waiting room until your target connects. At this point, you will
+want to send the keyword you just entered to the person you’ll be
+connecting to. The keyword is valid for 5 minutes or until a successful
+connection is established, whichever comes first. Once they have
+connected, you will receive an alert informing you that the remote
+session is about to begin.</p>
+<p>Take note of the mentioned <strong>Option+Shift+Backspace</strong>
+shortcut as that will bring up the RIM menu on your machine. If you rely
+on the keyboard exclusively, this is the only way to direct keyboard
+input back to your own system.</p>
+<p>After you dismiss this dialogue, the remote session will be
+initiated.</p>
+<h3 id="installation-2">Installation</h3>
+<p>How you acquire and install Remote Incident Manager depends on your
+use case and configuration, but in any case the process is quite
+straight forward.</p>
+<h4 id="typical-installation-for-individuals-1">Typical Installation for
+Individuals</h4>
+<p>There is only one installation package to use, whether you are
+offering or receiving assistance.</p>
+<ol type="1">
+<li><a href="https://getrim.app/mac">Download Remote Incident
+Manager</a></li>
+<li>Go to your downloads folder via Finder (Option+command+L). Locate
+the downloaded .pkg file and open it with Command+O.</li>
+<li>An installation wizard will appear. Follow the onscreen
+instructions. You are all set to run Remote Incident Manager for the
+first time! You may run it from your applications folder, accessed via
+Command+Shift+A while located in Finder. You will be greeted with a
+welcome screen at first launch, allowing you to choose whether you would
+like to provide or receive remote help. This screen will only appear
+once. Additionally, RIM sets up a multipurpose global hotkey
+(Option+Shift+Backspace) which, among other things, automatically
+launches the program from wherever you are.</li>
+</ol>
+<h5 id="installation-troubleshooting">Installation Troubleshooting</h5>
+<p>While every effort is made to ensure a smooth installation, sometimes
+problems do occur. The installer has a facility for us to be able to
+easily provide support for these rare and occasional errors. Should you
+encounter an error during the installation, press <em>Command+L</em> to
+go to the log viewer, engage with the toolbar, and then click “Save”.
+You will be asked where you would like to save the log output; save it
+where you will be able to easily locate it. The resulting text file can
+then be sent to our support address, at which point it can be reviewed
+in order to locate a potential solution.</p>
+<h4 id="permissions">Permissions</h4>
+<p>Due to macOS’s precautionary behavior when dealing with applications
+of this nature for the first time, you will need to grant some
+permissions to Remote Incident Manager upon first launch. The number of
+permissions will vary depending on whether or not your Mac will be
+providing or receiving remote help.</p>
+<h5 id="karabiner-hid-driver-target-only">Karabiner HID driver (Target
+only)</h5>
+<p>This is the driver that processes input from a controlling computer
+that is received by RIM. This is a system extension, thus you must
+manually approve it. Rim will bring up a system dialogue that will take
+you to the Privacy and Security section of system settings. You will
+then want to scroll until you locate the Allow button. Clicking this
+will prompt you for your password or touch ID.</p>
+<h5 id="notifications">Notifications</h5>
+<p>The next permission request from RIM will be for notifications. RIM
+will notify you when a session starts and ends. The procedure for
+granting this permission is slightly different.</p>
+<ol type="1">
+<li>Access the notification center. If using VoiceOver, the notification
+center is accessed by pressing <strong>VO+N</strong>.</li>
+<li>Locate the notification from Remote Incident Manager, then activate
+it (<em>VO+Space</em>).</li>
+<li>Press <strong>VO+Command+Space</strong>, then activate the Allow
+option in the popup menu that appears.</li>
+</ol>
+<h5 id="receiving-input">Receiving Input</h5>
+<p>RIM needs permission to receive all the input directed to it over a
+remote connection. Click “Continue” in the RIM window, at which point a
+system dialogue requesting accessibility service permissions will
+appear. If VoiceOver does not immediately focus it, press
+<strong>VO+F1</strong> twice quickly. Then, down arrow to “System
+dialogues,” press right arrow, and then down to the input permissions
+request. Pressing enter on that will open the alert box, at which point
+you will want to follow it to System Settings and check the Remote
+Incident Manager box in the list of applications.</p>
+<h5 id="capturing-screen-output-target-only">Capturing Screen Output
+(Target only)</h5>
+<p>The final permission request from RIM will be for capturing the
+screen output which will be piped across the remote connection. The
+procedure for this is similar to the previous procedure.</p>
+<h5 id="local-network-discovery-permissions">Local Network Discovery
+Permissions</h5>
+<p>This optional permission will only appear when you initiate a session
+involving a Mac on your local area network. Simply click the “Allow”
+button in the resulting dialog that appears, and this permission will be
+permanently granted.</p>
+<h4 id="installing-a-server-profile-1">Installing a Server Profile</h4>
+<p>If you are receiving remote support from an organization who has a
+private RIM server, they will have sent you a link to a configuration
+page on that server. Once you click this link, you will arrive on a page
+that will provide instructions on how to install this server profile
+into your copy of RIM. Note that RIM must be installed in order for the
+profile to be added, thus the page will provide links to the installers
+if you have not yet installed RIM.</p>
+<h4 id="uninstalling-rim">Uninstalling RIM</h4>
+<p>Should you encounter any show-stopping problems with your
+installation of RIM, you may wish to perform a clean reinstall of the
+app. Due to the complex nature of the RIM distribution for Mac OS,
+simply moving the app to the trash will not uninstall it, and thus may
+not fully resolve your issue.</p>
+<p>RIM provides an easy method to fully uninstall itself. When you click
+the “About” button in the main window, you will see an uninstall button
+in the About screen that appears. Clicking this button will result in a
+confirmation dialogue, afterwhich you will be prompted for your password
+or touch ID in order to proceed with uninstallation. You will be given a
+confirmation message once the uninstallation is complete.</p>
+<h3 id="key-command-reference-2">Key Command Reference</h3>
+<p>Following is a complete keyboard command reference for RIM. We will
+list all the commands that have global shortcuts, along with the
+respective macOS-friendly shortcuts.</p>
+<ul>
+<li><strong>Action</strong>: Command</li>
+<li><strong>Access the RIM Menu</strong>: Option+Shift+Backspace</li>
+<li><strong>Minimize Session</strong>: Option+Shift+M</li>
+<li><strong>Flip Session</strong>: Option+Shift+F</li>
+<li><strong>Disconnect Session (Controller or Target)</strong>:
+Option+Shift+D</li>
+</ul>
+<h3 id="plans-and-purchasing-2">Plans and Purchasing</h3>
+<p>Remote Incident Manager is useful in a wide array of scenarios of
+varying frequency. Thus, our multi-tier plan structure makes every
+reasonable attempt to meet you where you are. Additionally, remember
+that RIM is always free for the person receiving help.</p>
+<h4 id="free-tier-1">Free Tier</h4>
+<p>Anyone can use RIM to assist another user for up to 30 minutes a day.
+These minutes do not need to be used in one sitting, and a usage meter
+will keep tabs on how many minutes you have on any given day. Throughout
+your 30 minutes, you may connect to any number of people, over any
+number of interactive sessions. After each session, RIM will display a
+popup reminder with your remaining time, as well as a “Sign up for paid
+RIM services” button.</p>
+<p>In some cases, pressing escape out of this popup may result in an
+empty screen in which VoiceOver will announce that Remote Incident
+Manager has no windows. Should this occur, simply <em>Command+Tab</em>
+to any application. Be careful not to hit Command+Q, otherwise you will
+not be able to relaunch RIM with the <em>Option+Shift+Backspace</em>
+keyboard command until you manually relaunch RIM.</p>
+<h4 id="consumer-plans-1">Consumer Plans</h4>
+<h5 id="passes-1">Passes</h5>
+<p>Passes are useful if you’re providing assistance on an as needed
+basis. When you pay for a pass, that pass will wait patiently for you to
+activate it whenever you are able. This also means that you can hold
+several passes in storage and use them whenever they’re needed.</p>
+<h6 id="incident-pass-1">Incident Pass</h6>
+<p>An incident pass will allow you to assist a single user for as long
+as is needed over a 24 hour period. At any point during the 24 hour
+period, reconnections can be made. So let’s say you start out by setting
+up an overnight Windows re-installation. Once that machine is able to
+use RIM, you can come back and configure the end user’s system as they
+see fit.</p>
+<h6 id="day-pass-1">Day Pass</h6>
+<p>A day pass will allow you to assist several users over a 24 hour
+period. So if you have multiple errands to run, you’ll want one of
+these.</p>
+<h6 id="pro-passes-1">Pro Passes</h6>
+<p>These 1 week, 2 week, or 1 month passes allow you to leverage all of
+RIM Pro’s capabilities on a non-subscription basis.</p>
+<h5 id="hourly-prepaid-packages-1">Hourly Prepaid Packages</h5>
+<p>These packages allow you to have a designated amount of hours on your
+account. These hours will last for a year from the date of their initial
+use, or a year from the date of purchase if not used. These hours can be
+used for any interactive sessions, and RIM will only deduct the exact,
+down-to-the-minute amount of time you used. For example, if you have 5
+hours and you use 12 minutes, you will have 4 hours, 48 minutes
+remaining. Of further note is the fact that your free daily 30 minute
+allotment is prioritized before your prepaid time is used. If you run
+out of time, be it prepaid time or your free daily allotment, you will
+receive a 5 minute and 1 minute warning. If you are about to run out of
+paid time and you refill your account before the clock runs out, your
+session will be uninterrupted.</p>
+<h5 id="personal-unattended-access-subscriptions-1">Personal Unattended
+Access Subscriptions</h5>
+<p>These plans allow you, as AN individual controller, to configure a
+set number of physical machines for unattended access. These plans are
+scalable (up to ten targets) in order to meet your needs. Whether you’re
+simply looking to control your desktop from the road, or you’re the
+go-to tech support for a few folks in your family, these plans have you
+covered. Note that the subscriptions do not concern interactive
+sessions, I.E. those initiated via a keyword. The incident passes and
+day passes described above can be used alongside a subscription to
+facilitate interactive sessions. If you don’t have any passes, the daily
+30 minute allotment is used.</p>
+<h5 id="personal-community-support-package-1">Personal Community Support
+Package</h5>
+<p>The personal community support package is useful if you occasionally
+provide technical support for tasks that run longer than the free daily
+allotment. This package gets you three (3) hours a day in addition to
+the free 30 minute daily allotment. IN short, you will get 3.5 hours per
+day. As with the free 30 minute daily allotment, these hours do not need
+to be used in one sitting and can be used across many different
+connections throughout the day. However these hours do not roll over,
+and unattended connections are not included in the base package.
+However, this package is available as an addon for personal unattended
+subscriptions. This package is only available as an annual
+subscription.</p>
+<h5 id="personal-weekend-plan-1">Personal Weekend Plan</h5>
+<p>The RIM Personal Weekend Support subscription is designed for people
+who want to provide remote support for family, friends, or community
+members on the weekend. It provides unlimited RIM connection time for
+keyword sessions on Saturday and Sunday, in addition to the 30 minutes
+per day on weekdays provided by the free tier. Note that this
+subscription does not include unattended access.</p>
+<h4 id="rim-pro-1">RIM Pro</h4>
+<p>RIM Pro is suitable for either a single support person or trainer, or
+a small support team. Each pro plan allows connections to an unlimited
+number of targets, as well as target group configuration.</p>
+<h5 id="rim-pro-base-package-1">RIM Pro Base Package</h5>
+<p>This allows a single controller to control an unlimited amount of
+targets.</p>
+<h5 id="upgrades-1">Upgrades</h5>
+<p>We offer upgrades to the number of controller seats and/or channels,
+as well as the feature set available to you.</p>
+<h6 id="multi-seat-and-multichannel-setups-1">Multi-seat and
+Multichannel Setups</h6>
+<p>Additional controllers and channels are available under separate
+additional charges added onto your base subscription. This allows you to
+choose whether or not you would like additional channels - simultaneous
+connections - equal to the number of additional controllers. Should you
+choose not to add additional channels, only one of your controllers may
+be engaged in a session at any given time.</p>
+<h6 id="rim-pro-enterprise-addon-1">RIM Pro Enterprise Addon</h6>
+<p>This addon brings the features of RIM Enterprise to individual
+support reps or small units. Features include:</p>
+<ul>
+<li>Unattended mass deployment to Windows servers</li>
+<li>Completely silent mode for pre-configured unattended target
+installers</li>
+<li>Optional integration with your organization’s single-sign-on (SSO)
+system (requires an additional setup fee).</li>
+</ul>
+<p>Note: Identity verification may be required for this add-on.</p>
+<h4 id="rim-enterprise-public-cloud-edition-1">RIM Enterprise Public
+Cloud Edition</h4>
+<p>The enterprise edition offers an unlimited amount of controllers and
+targets, along with the features described above. The price of each plan
+is determined by the number of simultaneous channels that can run at any
+given time.</p>
+<p>There is an additional one-time fee for setup and onboarding,
+irrespective of which plan you choose.</p>
+<h4 id="activating-a-subscription-or-pass-1">activating a subscription
+or pass</h4>
+<p>When you make a purchase through RIM, you will be issued an
+activation link. Upon clicking the link, your pass or subscription will
+be activated and ready for use. In the case of day/incident passes,
+remember that the time period for a pass only begins when you initiate a
+remote session using said pass.</p>
+<p>If you purchase multiple prepaid items such as passes or hour
+packages, you will receive a separate activation link for each item.
+This means that, for example, two separate passes can be activated on
+two separate accounts. This is useful in situations where you wish to
+gift one of the items of a larger purchase.</p>
+<h3 id="system-requirements-2">System Requirements</h3>
+<p>In order to run Remote Incident Manager, your system must meet or
+exceed the following requirements:</p>
+<ul>
+<li>Intel or Apple Silicon</li>
+<li>macOS Ventura or later</li>
+<li>At least 4GB of RAM</li>
+<li>Admin privileges for initial installation (not required for
+automatic updates)</li>
+</ul>
+<h3 id="working-within-a-session-2">Working within a Session</h3>
+<h4 id="things-to-know-before-you-begin-1">Things to Know before you
+Begin</h4>
+<p>A few things will happen immediately after the connection is
+established.</p>
+<ul>
+<li>The remote control window for the session will appear. This window
+can be moved and resized across a single display, as well as a
+multi-monitor setup.</li>
+<li>You will be informed about the status of the running screen reader,
+or lack thereof, on the client’s machine.</li>
+<li>If the client is running a screen reader, a toast notification
+informing the user that the remote session has begun will provide
+instant confirmation that the user’s system audio is working.</li>
+<li>A Mac target will pop up the keyboard setup assistant if this is the
+first time a controller has connected to it.
+<ul>
+<li>This is for the Karabiner virtual keyboard, which listens to
+keyboard commands sent to it by a controller.</li>
+<li>As such, you will want to walk the target computer through the setup
+assistant, because it will be listening for remote keyboard presses in
+the identification process, not the Mac’s own keyboard.</li>
+</ul></li>
+<li>Last but not least, all keyboard and mouse input will immediately be
+directed to the target computer. To direct control back to your machine,
+do either of the following:
+<ul>
+<li>Press Option+Shift+Backspace.</li>
+<li>Right-click the RIM window’s title bar.</li>
+<li>Left-click the RIM icon in the middle of the title bar.</li>
+</ul></li>
+</ul>
+<h4 id="remote-control-zone-1">Remote Control Zone</h4>
+<p>At this point, you’re all set to perform whatever tasks need doing on
+the client side. Should you need to switch back to controlling your own
+machine, bring up the RIM menu, then select the “Minimize session”
+option. You will be taken back to your machine until you switch back
+into the session window or press Option+Shift+Backspace again. When you
+go back into the session window, keyboard and mouse input will once
+again be directed to the client computer.</p>
+<p>Once you’re done, either the controller or the target can go into the
+RIM menu and choose the “Disconnect Session” option. When the session
+ends, the target machine will get a toast notification informing them of
+this.</p>
+<h4 id="the-rim-menu-1">The RIM Menu</h4>
+<p>As mentioned earlier, accessing the RIM menu directs you back to your
+machine. There are a number of options in this menu. They include:</p>
+<ul>
+<li>Update RIM on Target: Forces an update of RIM on the target computer
+<ul>
+<li>This option shows if the target’s machine is running an older
+version of RIM.</li>
+</ul></li>
+<li>Re-install RIM as Administrator on Target: This option will attempt
+to reinstall RIM as admin on a Windows target, requiring the target user
+to accept the admin permission request by themselves and/or with the
+help of their company IT.</li>
+<li>Minimize Session (<strong>Option+Shift+M</strong>): brings control
+back to your machine as described above</li>
+<li>Open Chat: Opens the text chat for a given session
+<ul>
+<li>Note that this option additionally appears in the target-side
+session menu.</li>
+</ul></li>
+<li>Transfer File to Target: Appears if a file is on the clipboard.
+<ul>
+<li>Although this alternate method of completing a file transfer is
+always available, it is only necessary for transferring files to Mac
+targets.</li>
+</ul></li>
+<li>Flip Session (<strong>Option+Shift+F</strong>): Allows your client
+to remote control your machine and hear its audio. As the original
+controller, you can flip the session back by selecting this option a
+second time.</li>
+<li>Start/stop Voice Conversation: Allows you to toggle the voice chat
+on or off for your session.
+<ul>
+<li>During an unattended session, this option will present a permissions
+dialogue that the user must be present to respond to. However, prompted
+sessions still initiate voice conversations upon activation by the
+controller.</li>
+</ul></li>
+<li>Start Session Recording: Begins recording the contents of the active
+session - more on this later
+<ul>
+<li>When session recording is engaged, this option is replaced with the
+following:
+<ul>
+<li>Pause/Resume Session Recording (toggle)</li>
+<li>Stop Session Recording: Ends and saves the recording</li>
+</ul></li>
+</ul></li>
+<li>Start Remote Accessibility: This option appears when no screen
+reader is running on the remote computer. This will enable speech on
+your end, but the client will not need to worry about hearing speech.
+<ul>
+<li>If a screen reader (including Remote Accessibility) is running, this
+option turns into a force quit for the running screen reader. This is
+useful when a target’s screen reader stops responding to the extent you
+are unable to restart it normally.</li>
+</ul></li>
+<li>Mute Target Audio Output: Allows you to silence the system audio
+output of the remote computer.
+<ul>
+<li>Note that a running voice conversation will remain active while this
+setting is in effect, allowing you to talk with the person you are
+connected to while their system audio is inaudible to you.</li>
+</ul></li>
+<li>Reboot and Reconnect: Allows you to reboot the computer and
+automatically reconnect the session.
+<ul>
+<li>Note that a Mac target cannot start RIM pre-login due to platform
+limitations, notably FileVault.</li>
+<li>As such, on a Mac target, RIM will reconnect once the user logs
+in.</li>
+</ul></li>
+<li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.
+<ul>
+<li>An equivalent for this option is not yet implemented for Mac
+targets.</li>
+</ul></li>
+<li>Request Unattended or Prompted Access: Allows you to send a request
+for unattended access to the client computer. This is useful if you are
+a sysadmin and need to perform routine maintenance, or even for
+something as simple as controlling your home machine while on the
+go.</li>
+<li>Lock the Target Machine: Locks the target machine.</li>
+<li>View Connection Details: Provides a detailed lowdown on your
+connection, as well as the target machine. Information includes:
+<ul>
+<li>Connection statistics</li>
+<li>Information about the computer, including operating system version,
+available RAM, etc.</li>
+<li>Running processes</li>
+<li>Installed packages</li>
+</ul></li>
+<li>AI Tools: Allows you to chat with a number of Accessibility-geared
+chatbots.
+<ul>
+<li>This option is only available to controlers who have pro passes or
+are on the personal community, weekend support, or pro/enterprise
+subscriptions.</li>
+</ul></li>
+<li>Disconnect Session (<strong>Option+Shift+D</strong>): Terminates the
+session.
+<ul>
+<li>Remember that this option is available to both sides of the
+session.</li>
+</ul></li>
+</ul>
+<h5 id="session-chat-1">Session Chat</h5>
+<p>Text communication via RIM’s built-in session chat capability can be
+a useful option in situations where a voice conversation isn’t possible
+or practical. It can even be used to supplement an existing voice
+conversation, I.E. to send links, instructions, or the like.</p>
+<h6 id="starting-a-chat-1">Starting a Chat</h6>
+<p>A session chat can be initiated in one of the following ways:</p>
+<ul>
+<li>Controller-side
+<ul>
+<li>A controller can select the “Open Chat” option off the session
+menu.</li>
+<li>When the chat window appears on the controlling computer, focus
+lands in the edit box wherein a message can be typed and sent using the
+enter key.</li>
+<li>A message sent to the target user will trigger a chat window on
+their machine. At this point, back-and-forth chat is now possible.</li>
+<li>Note that it is not possible to control the target computer while
+the user’s chat window is in focus. Control of the target will resume if
+any of the following conditions are met:
+<ul>
+<li>The target user shifts focus away from the chat window, in which
+case control may resume until they shift focus back to the chat
+window.</li>
+<li>The target user closes the chat window by pressing escape.</li>
+<li>If the chat window on the controlling computer is closed and 30
+seconds have passed, the target user’s chat window will automatically
+disengage, at which point control resumes.</li>
+</ul></li>
+</ul></li>
+<li>Target-side:
+<ul>
+<li>The target user can select the “Open Chat” option off the session
+menu. Doing so will immediately trigger a chat window on the controlling
+computer.</li>
+<li>At this point, back-and-forth chat is now possible.</li>
+<li>If the target user closes the chat window on their side, the chat
+window will remain open on the controlling computer. A subsequent
+message from the controller will revive the chat window on the target
+computer.</li>
+</ul></li>
+</ul>
+<h6 id="working-within-a-chat-1">Working within a Chat</h6>
+<p>While the chat window is in focus, messages will be presented in both
+speech and Braille as they arrive. A machine that does not have the chat
+window in focus will be alerted of chat messages through standard
+Windows toast notifications. While outside the message box, the chat can
+be navigated like a standard webpage. Messages sent by the party
+opposite from the one viewing the message can be copied to the clipboard
+via the “Copy” button adjacent to the message in question.</p>
+<h6 id="chat-transcripts-1">Chat Transcripts</h6>
+<p>Chat transcripts are saved in a user-configurable directory. By
+default, this is the “documents/Remote Incident Manager/Chat” directory
+in your user folder.</p>
+<p>Currently, the only way to modify the directory is via a
+configuration file, thus the procedure is only available in English.</p>
+<p>The config.toml file will be under $HOME/Library/Application
+Support/remote-incident-manager</p>
+<p>Once inside the configuration file, look for the directory line under
+the Chat line, and modify the directory to one of your choosing. Note
+that backslashes must be properly escaped in the case of Windows
+directories. Once you save the configuration, the changes will take
+effect for subsequent sessions. There is no need to restart the
+application.</p>
+<h5 id="file-transfers-1">File Transfers</h5>
+<p>RIM provides a simple avenue for transferring files, irrespective of
+the platform used.</p>
+<ol type="1">
+<li>Bring up the RIM menu, and click on “Minimize Session.” Control will
+be directed back to your computer.</li>
+<li>Select the file(s) and/or folder(s) you want to transfer using your
+file manager.</li>
+<li>Copy the selected contents to the clipboard in the usual way. You
+will receive a notification that a file is ready to be transferred. You
+have two options.</li>
+<li><strong>If the target is a Mac:</strong>
+<ul>
+<li>Activate the RIM session menu and click on the “Transfer File to
+Target” option.</li>
+<li>Upon completion of the transfer, the target Mac will generate a
+temporary directory containing the transferred contents. These should
+then be copied and pasted to their intended directories.</li>
+</ul></li>
+<li><strong>If the target is a Windows machine:</strong>
+<ul>
+<li>Switch back to the remote session and locate the folder on the
+target machine where you wish to paste the content.</li>
+<li>Last but not least, paste as you normally would.</li>
+</ul></li>
+</ol>
+<p>Note that the transfer time will depend entirely on the size of the
+content being sent as well as your network speed.</p>
+<h5 id="session-recording-1">Session Recording</h5>
+<p>RIM’s session recording ability allows you, as the controller, to
+conveniently record the content of your session to a file on your
+computer. This file can then be later distributed to the individual to
+which you are providing remote support. The session recording’s contents
+will include the audiovisual output of the target computer, as well as
+the audio from a running voice conversation. To facilitate a session
+recording:</p>
+<ol type="1">
+<li>Access the “Start Session Recording” option off of the session menu.
+The following actions will occur as a result:
+<ul>
+<li>During a keyword session:
+<ul>
+<li>The target user will get a permissions dialog asking if they wish to
+consent to the session being recorded. The controller’s keyboard input
+will be suspended while this dialog appears.</li>
+<li>If the target user agrees, then recording begins. If the target user
+denies recording, then the entire session terminates.</li>
+</ul></li>
+<li>For prompted/unattended sessions:
+<ul>
+<li>The recording will instantly commense</li>
+</ul></li>
+<li>Regardless, both parties will receive a notification that the
+recording has started once recording initiates in earnest.</li>
+</ul></li>
+<li>To pause or resume the recording, access the “Pause/Resume Session
+Recording” toggle off the session menu.
+<ul>
+<li>The recording will be paused or resumed accordingly</li>
+<li>A notification will be delivered to both parties as such</li>
+</ul></li>
+<li>The recording can be stopped via the “Stop Session Recording” option
+off the session menu.
+<ul>
+<li>By default, you will receive a confirmation dialog asking if you
+wish to stop the recording. This dialog is designed to prevent
+accidental deactivation of the session recording, however it can
+optionally be disabled.</li>
+<li>Both parties will receive a notification following completion of the
+recording.</li>
+<li>The recording will then be saved to the directory in which RIM saves
+your recordings (This is the “Movies” folder in your user directory by
+default). For added convenience, you will be automatically dropped into
+this folder via Finder, allowing you to send the recording to the user
+if desired.</li>
+<li>Note that disconnecting the session stops the recording
+automatically.</li>
+</ul></li>
+</ol>
+<p>Recordings are a completely free feature, available to any user on
+any tier. In addition, recordings are processed entirely locally,
+without any involvement from the cloud service.</p>
+<h6 id="note-regarding-the-remote-accessibility-module-1">Note regarding
+the Remote Accessibility Module</h6>
+<p>Since the Remote Accessibility Module outputs its speech to your
+running copy of NVDA, RIM must accommodate for that in order to capture
+this speech on a recording. Therefore, whenever remote accesibility is
+active during a recording, RIM initiates a capture of your system’s full
+audio output. This allows the speech heard through the remote
+accessibility module to be captured exactly as it was heard during the
+session. While this may result in some notification sounds from your
+controlling computer being caught in the recording, this will not cause
+any audio from the target computer to be doubled.</p>
+<h6 id="note-for-enterprise-usage-1">Note for Enterprise Usage</h6>
+<p>IN order to align with a typical enterprise security posture, session
+recording is a strictly opt-in capability within enterprise setups.
+Therefore, unless the ability to record has been enabled by an
+organization admin, all mechanisms for recording will be unavailable to
+RIM controllers within the organization.</p>
+<h6 id="advanced-configuration-for-session-recordings-1">Advanced
+Configuration for Session Recordings</h6>
+<p>RIM features a number of advanced configuration options for session
+recording. These include the ability to auto-start recordings upon
+session initiation, store recordings in an alternate path (I.E. a
+network share), and determine the state of the confirmation dialog when
+stopping a recording. Currently, the only way to modify these settings
+is via a configuration file, thus the procedure is only available in
+English.</p>
+<p>The config.toml file will be under $HOME/Library/Application
+Support/remote-incident-manager</p>
+<p>Once inside the configuration file, the following options will be
+available to you:</p>
+<ul>
+<li>directory: Sets the directory for storing recordings.
+<ul>
+<li>Backslashes must be properly escaped in the case of Windows
+directories.</li>
+</ul></li>
+<li>auto_start: Determines whether session recording starts immediately
+upon session initiation. This is set to false by default.</li>
+<li>suppress_stop_confirmation: Controls whether the confirmation dialog
+is shown when manually stopping a recording. Default is false.
+<ul>
+<li>Note that disconnecting a session will always stop recording without
+the confirmation, irrespective of this setting.</li>
+</ul></li>
+</ul>
+<p>Once you save the configuration, the changes will take effect for
+subsequent sessions. There is no need to restart the application.</p>
+<h5 id="remote-accessibility-module-3">Remote Accessibility Module</h5>
+<p>Whether you’re assisting a user who doesn’t use a screen reader, or
+you’re diagnosing an issue with a malfunctioning screen reader, RIM is
+fully prepared to come to your aid.</p>
+<p>The remote accessibility module is a special configuration initiated
+on the target Mac at the request of a Windows or Mac controller. The
+advantage to this approach is that the end user does not hear speech on
+their computer while you’re controlling it. Instead, the Remote
+Accessibility Module pipes the speech output through to the speech
+system on the controller side. This way, you can accessibly assist an
+end user without them having to enable a screen reader. If you are
+running VoiceOver on the controling Mac, the remote accessibility module
+will automatically start during remote sessions in which the remote
+computer does not have a screen reader running.</p>
+<h4 id="rebooting-and-reconnecting-1">Rebooting and Reconnecting</h4>
+<p>Whether you’re installing system updates or working your way out of a
+system hang, RIM has got you covered during the reboot process.
+Selecting the “Reboot and Reconnect” option off the RIM menu will allow
+you to either perform a graceful reboot or an emergency reboot,
+depending on what state the computer is in. While the computer is
+rebooting, RIM will inform you that reconnection attempts are being
+made. Note that if the computer is rebooted by a software installation
+or manually rebooted in the usual way, you will be asked if you wish to
+reconnect the session. Of further note is that in either case, Mac
+targets will only reconnect once the user logs in. This is due to the
+fact that RIM cannot start automatically on the login screen due to
+platform limitations, most notably FileVault disk encryption.</p>
+<h5 id="unattended-or-prompted-access-1">Unattended or Prompted
+Access</h5>
+<p>RIM allows you, as the controller, to configure machines for
+unattended or prompted access. This allows you to provide remote
+assistance without the user having to launch RIM, enter a keyword, or
+even be near the computer. This is useful if you are a sysadmin
+performing routine maintenance on computers in your workgroup, or for
+clients you provide support to on the regular. You may also want to
+allow unattended access for your home computer should you need to access
+it from someplace else. There are a few ways to configure machines for
+unattended access.</p>
+<h6 id="during-an-interactive-session-1">During an Interactive
+Session</h6>
+<ol type="1">
+<li>Bring up the RIM menu.</li>
+<li>Select “Request Unattended or Prompted Access.”</li>
+<li>You will be asked what kind of connection you want to configure.
+Your options are:
+<ol type="1">
+<li>Unattended: Allows sessions to be initiated without any intervention
+whatsoever from the end user.</li>
+<li>Prompted: This configuration presents the user with a prompt
+informing them that you are conecting to their machine. They will need
+to press Option+Shift+Y on macOS, or Windows+Shift+Y on Windows, should
+they wish to accept the connection.</li>
+</ol></li>
+<li>You will be asked to give this machine a name. Enter a personal name
+for the machine, or if applicable, the machine ID as it appears in your
+workgroup.</li>
+<li>Press enter.</li>
+<li>On the client machine, a dialogue pops up asking the user if they’re
+fine with their computer being set up for the access you requested. If
+they answer yes, then you will get a prompt informing you that the
+access has been approved.</li>
+</ol>
+<h6 id="note-for-personal-unattended-account-holders-2">Note for
+Personal Unattended Account Holders</h6>
+<p>If you have used all the machine slots allocated to your account, RIM
+will not perform the request. In this situation, you have two options,
+both possible via the RIM Dashboard:</p>
+<ol type="1">
+<li>Deregister one of your machines, freeing up a slot.</li>
+<li>Upgrade your subscription with more slots.</li>
+</ol>
+<h6 id="registering-a-machine-to-your-rim-account-1">Registering a
+Machine to your RIM account</h6>
+<p>Should you wish to register one of your own machines for unattended
+access, you can do so without having to start an interactive session
+with the machine.</p>
+<ol type="1">
+<li>Start RIM in Receive Help Mode.</li>
+<li>Click on the “Add this machine to your RIM account” button.</li>
+<li>Enter your email, then click next.</li>
+<li>Wait for the two-step login code to arrive, enter it, then you
+should be logged in.</li>
+<li>You will be asked what type of access you would like configured for
+this machine. Your options are:
+<ol type="1">
+<li>Unattended: Allows sessions to be initiated without any intervention
+whatsoever from the end user.</li>
+<li>Prompted: This configuration presents the user with a prompt
+informing them that you are conecting to their machine.</li>
+</ol></li>
+<li>Give the machine a name, then activate the “Add Machine”
+button.</li>
+<li>The machine will be registered to your account, which will allow any
+controller machines logged into your RIM account to connect to this
+machine.</li>
+</ol>
+<h6 id="note-for-personal-unattended-account-holders-3">Note for
+Personal Unattended Account Holders</h6>
+<p>If you have used all the machine slots allocated to your account, RIM
+will not perform the request. In this situation, you have two options,
+both possible via the RIM Dashboard:</p>
+<ol type="1">
+<li>Deregister one of your machines, freeing up a slot.</li>
+<li>Upgrade your subscription with more slots.</li>
+</ol>
+<h6 id="getting-connected-3">Getting Connected</h6>
+<p>Now that we’ve registered the machine for unattended access, here is
+how we will start a session.</p>
+<ol type="1">
+<li>Start RIM in controller mode.</li>
+<li>Rather than entering a keyword, locate and activate the”Choose a
+machine” button.</li>
+<li>When you click this, a list of machines will appear. Choose the one
+you want, then hit enter. You may also use the search bar to narrow the
+list down to a specific machine.</li>
+</ol>
+<p>If the target machine is configured for prompted access, the end user
+will get a prompt. Once they answer yes, you’ll be connected. If the
+session is unattended, you will immediately be connected and dropped
+into the remote control zone.</p>
+<p>Please note: Voice conversations require the target user to approve
+them during fully unattended sessions. This is however not required for
+prompted sessions.</p>
+<h6 id="creating-a-shortcut-for-an-unattended-session-1">Creating a
+Shortcut for an Unattended Session</h6>
+<p>For extra convenience, you can create desktop shortcuts that allow
+you to automatically launch unattended sessions. In order to do
+this:</p>
+<ol type="1">
+<li>Access the list of unattended computers, and select the one you want
+to create a shortcut for.</li>
+<li>Click on the “Create Shortcut” button.</li>
+<li>A shortcut will be automatically added to your desktop.</li>
+</ol>
+<p>Now, when you activate this shortcut, you will either automatically
+land in the remote session, or send a prompt to the user’s machine that
+they can accept.</p>
+<h6 id="revoking-unattended-access-1">Revoking Unattended Access</h6>
+<p>If you no longer want your machine to be controlled unattended, you
+can revoke the controller’s access. You do not need to be in a session
+in order to do this.</p>
+<ol type="1">
+<li>Access the Remote Incident Manager icon in your menu extras/status
+menus.
+<ol type="1">
+<li>If using VoiceOver, press VO+M twice, then locate the Remote
+Incident Manager menu icon.</li>
+<li>Click this icon, or press VO+Space.</li>
+</ol></li>
+<li>Select the “Revoke Unattended Access” option.</li>
+<li>You will arrive at a list of computers, select the one you want to
+revoke.</li>
+<li>You will be asked if you wish to revoke the machine; answer
+yes.</li>
+</ol>
+<p>That’s it! The controller will receive a message stating that this
+machine is no longer available for unattended access. Should they need
+unattended access again, they can reinitiate the procedure to request
+permission for unattended access as described above.</p>
+<h5 id="ai-tools-1">AI Tools</h5>
+<p>The AI Tools menu is a convenient aggregator of accessibility-focused
+chatbots. All of these bots allow you to quickly gain answers on various
+subject matters related to assistive technology, operating systems, etc.
+Any users with a pro pass, personal community subscription, personal
+weekend support subscription, or pro/enterprise subscription will have
+access to this capability. Note that many of these bots - including our
+own - are in beta, and as such should be used with caution in the same
+way you shouldn’t consider GPS directions as undisputed fact. More on
+this later.</p>
+<p>The currrently available bots are as follows:</p>
+<ul>
+<li>RIMBot (beta)</li>
+<li>Ask Microsoft Accessibility</li>
+<li>FSCompanion (Beta)</li>
+</ul>
+<p>These bots are currently available in English exclusively. Each bot
+will open in a contained window. While each bot has its own interface
+conventions, Pressing escape will always bring you back to your remote
+session.</p>
+<h6 id="disclaimers-1">Disclaimers</h6>
+<p>The AI Tools feature within Remote Incident Manager (RIM) provides an
+accessible interface for utilizing the Pneuma Solutions RIMBot and other
+third-party services. Pneuma Solutions expressly disclaims all
+warranties, whether express or implied, regarding the reliability,
+availability, or long-term support of these third-party tools. Tools
+designated as beta, including those developed by Pneuma Solutions, will
+be clearly labeled as such within the AI Tools interface of the RIM
+application or its associated dashboard.</p>
+<p>The RIMBot support chatbot is partially trained using publicly
+available data covering various technologies. This training is conducted
+to enhance the bot’s ability to deliver accurate and useful responses
+while adhering to copyright and privacy standards. Pneuma Solutions
+endeavors to ensure the bot’s responses maintain a reasonable degree of
+accuracy. However, due to the inherent limitations of large language
+models, Pneuma Solutions cannot guarantee that all responses will be
+entirely accurate.</p>
+<p>Although extensive testing has been conducted to ensure the bot’s
+safety and reliability, inaccuracies may occur. In the event of a
+verifiably incorrect response, users are encouraged to report the issue
+by providing a detailed copy of the relevant chat log via the RIM
+application or our <a
+href="https://pneumasolutions.com/contact/">contact page</a>.</p>
+<p>This disclaimer shall govern the use of AI Tools and RIMBot and is
+subject to the <a href="https://pneumasolutions.com/terms-of-use/">terms
+and conditions</a> of use provided by Pneuma Solutions.</p>
+<h2 id="remote-incident-manager-rim-faqs-not-in-the-manual">Remote
+Incident Manager (RIM) FAQs (not in the manual)</h2>
+<h3 id="can-i-use-rim-without-a-subscription">Can I use RIM without a
+subscription?</h3>
+<ul>
+<li>Anyone can assist a user over RIM for free for up to 30 minutes a
+day. So if you need to help someone install some software, fix a problem
+real quick, or send over a few files, we’ve got you covered. These
+minutes don’t have to be used in one sitting.</li>
+<li>There are, of course, going to be situations where a particular
+issue requires a little more time. Or maybe you’re assisting someone
+learning a new piece of software and might be connecting on and off over
+the next few days or weeks. That’s where our passes come in.
+<ul>
+<li>Incident passes allow you to connect to a single target as many
+times as is needed over a 24 hour period.</li>
+<li>Day passes allow you to connect to multiple targets over a 24 hour
+period.</li>
+<li>Pro passes allow you to leverage all of RIM’s pro capabilities with
+non-recurring 1 week, 2 week, or month-long terms.</li>
+<li>Packages of prepaid hours allow you to have a set number of hours
+available to be used entirely on your own time.</li>
+</ul></li>
+<li>You can accumulate several of these passes and hourly packages and
+use them whenever the time calls for them. If you have multiple day
+passes, for instance, you do not need to use them consecutively.
+Similarly, You don’t need to use your prepaid hours in one session or 24
+hour period.</li>
+</ul>
+<h3
+id="how-do-passes-work-does-the-clock-start-immediately-upon-payment-or-on-the-day-i-initiate-the-session-do-the-passes-expire">How
+do passes work? Does the clock start immediately upon payment, or on the
+day I initiate the session? Do the passes expire?</h3>
+<p>Passes only begin when the controller initiates the session. So if
+the target’s machine fails on them requiring a trip to the shop and a
+same-day turnaround is not possible, you can simply hold off until the
+machine is back in good shape and your day pass will still be waiting
+for you. Accumulation of day passes do not expire and you can activate
+them whenever you’re ready.</p>
+</body>
+</html>

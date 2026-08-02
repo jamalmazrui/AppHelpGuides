@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-02" />
+  <title>MyChart Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">MyChart Help Guide</h1>
+<p class="subtitle">Epic’s own help for MyChart, gathered into one
+document</p>
+<p class="date">2026-08-02</p>
+</header>
+<h1 id="mychart-help-guide">MyChart Help Guide</h1>
+<p>This guide gathers Epic’s own help for MyChart, as it stood on 2
+August 2026.</p>
+<p><strong>Whose MyChart this is.</strong> Every healthcare organisation
+runs its own MyChart, with its own web address, its own help desk and
+its own rules. This guide is not any one of those. It is Epic’s own
+documentation for the product itself, which applies wherever MyChart is
+used, and it is what you need before you ever reach a hospital’s help
+desk.</p>
+<p><strong>A limit worth knowing in advance.</strong> A great many of
+these articles end by telling you to contact your healthcare
+organisation. That is not evasion on Epic’s part: your record lives with
+your hospital, Epic cannot see it and cannot reset your password, and
+each organisation decides its own rules on proxy access, self-signup and
+much else. This guide tells you what MyChart can do; only your own
+organisation can tell you what it has switched on.</p>
+<p><strong>The arrangement is Epic’s own.</strong> Its help index lists
+every article under twelve headings, and those are the categories here,
+unchanged.</p>
+<p>MyChart is published in several languages. This is the United States
+English edition.</p>
+<p>This document holds 12 categories, 76 articles and about 9,113
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#accessing-mychart">Accessing MyChart</a>
+<ul>
+<li><a href="#can-i-access-mychart-from-outside-of-the-country">Can I
+access MyChart from outside of the country?</a></li>
+<li><a href="#how-do-i-download-the-mychart-app">How do I download the
+MyChart app?</a></li>
+<li><a href="#how-do-i-sign-up-for-mychart">How do I sign up for
+MyChart?</a></li>
+<li><a href="#what-if-i-can-t-find-my-healthcare-organization">What if I
+can’t find my healthcare organization?</a></li>
+<li><a href="#what-s-required-to-use-mychart">What’s required to use
+MyChart?</a></li>
+</ul></li>
+<li><a href="#logging-in-to-mychart">Logging in to MyChart</a>
+<ul>
+<li><a
+href="#how-do-i-change-my-email-address-or-phone-number-on-file">How do
+I change my email address or phone number on file?</a></li>
+<li><a href="#how-do-i-change-my-username-or-password">How do I change
+my username or password?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-using-a-passcode">How do I log
+in to MyChart using a passcode?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-using-a-passkey">How do I log
+in to MyChart using a passkey?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-using-biometrics">How do I log
+in to MyChart using biometrics?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-with-my-username">How do I log
+in to MyChart with my username?</a></li>
+<li><a href="#i-forgot-my-username-or-password-what-should-i-do">I
+forgot my username or password. What should I do?</a></li>
+<li><a
+href="#i-m-not-receiving-codes-for-two-step-verification-what-should-i-do">I’m
+not receiving codes for two-step verification. What should I
+do?</a></li>
+<li><a href="#what-should-i-do-if-i-m-locked-out-of-my-account">What
+should I do if I’m locked out of my account?</a></li>
+</ul></li>
+<li><a href="#using-mychart">Using MyChart</a>
+<ul>
+<li><a href="#how-do-i-prepare-for-my-upcoming-appointment">How do I
+prepare for my upcoming appointment?</a></li>
+<li><a href="#how-do-i-schedule-an-appointment-in-mychart">How do I
+schedule an appointment in MyChart?</a></li>
+<li><a
+href="#what-should-i-do-if-some-of-my-information-in-mychart-is-incorrect">What
+should I do if some of my information in MyChart is incorrect?</a></li>
+</ul></li>
+<li><a href="#sharing-your-data">Sharing Your Data</a>
+<ul>
+<li><a
+href="#can-i-give-an-app-access-to-a-family-member-s-health-information">Can
+I give an app access to a family member’s health information?</a></li>
+<li><a href="#can-i-share-my-health-information-with-another-app">Can I
+share my health information with another app?</a></li>
+<li><a
+href="#how-can-i-use-mychart-central-to-give-an-app-access-to-my-data">How
+can I use MyChart Central to give an app access to my data?</a></li>
+<li><a
+href="#how-do-i-give-an-app-access-to-my-health-information-or-my-family-member-s-health-information">How
+do I give an app access to my health information or my family member’s
+health information?</a></li>
+<li><a
+href="#how-do-i-see-which-apps-have-access-to-my-health-information">How
+do I see which apps have access to my health information?</a></li>
+<li><a
+href="#what-do-i-need-to-know-about-security-and-sharing-my-health-information">What
+do I need to know about security and sharing my health
+information?</a></li>
+<li><a
+href="#what-does-it-mean-if-an-app-is-affiliated-with-my-healthcare-organization">What
+does it mean if an app is affiliated with my healthcare
+organization?</a></li>
+<li><a href="#what-happens-if-i-deny-or-revoke-access-to-an-app">What
+happens if I deny or revoke access to an app?</a></li>
+</ul></li>
+<li><a href="#linking-accounts-and-sharing-your-record">Linking accounts
+and sharing your record</a>
+<ul>
+<li><a
+href="#how-do-i-request-or-provide-proxy-access-to-another-person-s-mychart-account">How
+do I request or provide proxy access to another person’s MyChart
+account?</a></li>
+<li><a href="#how-do-i-share-my-medical-record-with-other-providers">How
+do I share my medical record with other providers?</a></li>
+<li><a
+href="#i-have-two-or-more-mychart-accounts-from-different-organizations-can-i-link-them-together">I
+have two or more MyChart accounts from different organizations. Can I
+link them together?</a></li>
+<li><a href="#why-can-t-i-see-my-child-s-information-in-mychart">Why
+can’t I see my child’s information in MyChart?</a></li>
+</ul></li>
+<li><a href="#mychart-central">MyChart Central</a>
+<ul>
+<li><a
+href="#can-i-view-my-family-s-health-information-in-mychart-central">Can
+I view my family’s health information in MyChart Central?</a></li>
+<li><a href="#how-do-i-delete-my-mychart-central-account">How do I
+delete my MyChart Central account?</a></li>
+<li><a href="#how-do-i-link-mychart-accounts-to-mychart-central">How do
+I link MyChart accounts to MyChart Central?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-central-using-a-passkey">How do
+I log in to MyChart Central using a passkey?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-central">How do I log in to
+MyChart Central?</a></li>
+<li><a href="#how-do-i-log-in-to-mychart-with-my-epic-id">How do I log
+in to MyChart with my Epic ID?</a></li>
+<li><a href="#how-do-i-sign-up-for-mychart-central">How do I sign up for
+MyChart Central?</a></li>
+<li><a href="#how-does-mychart-central-keep-my-information-secure">How
+does MyChart Central keep my information secure?</a></li>
+<li><a href="#i-forgot-my-mychart-central-password-what-should-i-do">I
+forgot my MyChart Central password. What should I do?</a></li>
+<li><a
+href="#i-lost-access-to-my-email-address-and-or-phone-number-what-should-i-do">I
+lost access to my email address and/or phone number. What should I
+do?</a></li>
+<li><a href="#i-m-not-receiving-a-two-step-verification-code-why">I’m
+not receiving a two-step verification code. Why?</a></li>
+<li><a
+href="#i-m-trying-to-make-a-mychart-central-account-why-can-t-i-find-my-organization">I’m
+trying to make a MyChart Central account. Why can’t I find my
+organization?</a></li>
+<li><a
+href="#i-m-worried-that-someone-else-might-have-accessed-my-mychart-central-account-what-should-i-do">I’m
+worried that someone else might have accessed my MyChart Central
+account. What should I do?</a></li>
+<li><a
+href="#what-do-i-do-if-my-mychart-account-failed-to-link-to-my-mychart-central-account">What
+do I do if my MyChart account failed to link to my MyChart Central
+account?</a></li>
+<li><a
+href="#what-happens-when-i-update-my-personal-information-in-mychart-central">What
+happens when I update my personal information in MyChart
+Central?</a></li>
+<li><a href="#what-is-an-epic-id">What is an Epic ID?</a></li>
+<li><a href="#what-is-mychart-central">What is MyChart Central?</a></li>
+<li><a href="#what-should-i-do-if-i-m-locked-out-of-my-account-2">What
+should I do if I’m locked out of my account?</a></li>
+</ul></li>
+<li><a href="#message-your-care-team-in-mychart">Message your care team
+in MyChart</a>
+<ul>
+<li><a href="#how-do-i-request-a-referral-to-see-another-provider">How
+do I request a referral to see another provider?</a></li>
+<li><a href="#how-do-i-send-messages-to-my-care-team-in-mychart">How do
+I send messages to my care team in MyChart?</a></li>
+<li><a href="#if-i-send-a-mychart-message-when-can-i-expect-a-reply">If
+I send a MyChart message, when can I expect a reply?</a></li>
+<li><a href="#why-can-t-i-message-more-than-one-person-at-once">Why
+can’t I message more than one person at once?</a></li>
+<li><a href="#why-can-t-i-message-the-provider-i-m-looking-for">Why
+can’t I message the provider I’m looking for?</a></li>
+</ul></li>
+<li><a href="#viewing-test-results">Viewing test results</a>
+<ul>
+<li><a href="#how-do-i-download-a-pdf-of-my-test-results-over-time">How
+do I download a PDF of my test results over time?</a></li>
+<li><a
+href="#how-do-i-view-immunization-records-and-covid-19-information-in-mychart">How
+do I view immunization records and COVID-19 information in
+MyChart?</a></li>
+<li><a href="#how-do-i-view-test-results-in-mychart">How do I view test
+results in MyChart?</a></li>
+</ul></li>
+<li><a href="#have-a-video-visit-with-your-provider">Have a video visit
+with your provider</a>
+<ul>
+<li><a href="#how-do-i-invite-someone-to-join-my-video-visit">How do I
+invite someone to join my video visit?</a></li>
+<li><a href="#how-do-i-join-the-next-available-video-visit">How do I
+join the next available video visit?</a></li>
+<li><a href="#how-do-i-prepare-for-my-video-visit">How do I prepare for
+my video visit?</a></li>
+<li><a href="#how-do-i-schedule-a-future-video-visit">How do I schedule
+a future video visit?</a></li>
+<li><a href="#how-do-i-schedule-a-video-visit-with-my-provider">How do I
+schedule a video visit with my provider?</a></li>
+</ul></li>
+<li><a href="#billing-and-payments">Billing and payments</a>
+<ul>
+<li><a href="#how-can-i-view-my-insurance-claims">How can I view my
+insurance claims?</a></li>
+<li><a href="#how-do-i-get-a-price-estimate-for-medical-care">How do I
+get a price estimate for medical care?</a></li>
+<li><a href="#how-do-i-pay-a-bill-in-mychart">How do I pay a bill in
+MyChart?</a></li>
+<li><a
+href="#how-do-i-request-financial-assistance-for-my-medical-bills">How
+do I request financial assistance for my medical bills?</a></li>
+<li><a href="#how-do-i-review-and-update-my-insurance-information">How
+do I review and update my insurance information?</a></li>
+<li><a href="#how-do-i-sign-up-for-automatic-payments">How do I sign up
+for automatic payments?</a></li>
+<li><a href="#how-do-i-sign-up-for-paperless-billing-communications">How
+do I sign up for paperless billing communications?</a></li>
+</ul></li>
+<li><a href="#keeping-your-data-secure">Keeping your data secure</a>
+<ul>
+<li><a href="#how-do-i-protect-myself-from-mychart-scams-and-fraud">How
+do I protect myself from MyChart scams and fraud?</a></li>
+<li><a href="#how-is-mychart-secure">How is MyChart secure?</a></li>
+<li><a href="#what-can-my-provider-see">What can my provider
+see?</a></li>
+<li><a href="#what-is-two-step-verification">What is two-step
+verification?</a></li>
+<li><a href="#where-is-my-data-stored">Where is my data stored?</a></li>
+</ul></li>
+<li><a href="#deleting-and-deactivating-your-account">Deleting and
+deactivating your account</a>
+<ul>
+<li><a href="#how-do-i-deactivate-my-account">How do I deactivate my
+account?</a></li>
+<li><a href="#how-do-i-reactivate-my-mychart-account">How do I
+reactivate my MyChart account?</a></li>
+<li><a href="#what-happens-if-i-deactivate-my-account">What happens if I
+deactivate my account?</a></li>
+<li><a href="#why-can-t-i-delete-my-account">Why can’t I delete my
+account?</a></li>
+</ul></li>
+</ul>
+<h2 id="accessing-mychart">Accessing MyChart</h2>
+<h3 id="can-i-access-mychart-from-outside-of-the-country">Can I access
+MyChart from outside of the country?</h3>
+<p>Each healthcare organization hosts their own MyChart servers and
+therefore decides which IP addresses in the world can access their
+databases, websites, and app content. It is up to the healthcare
+organization to decide how much security they want to have and which
+countries to allow.</p>
+<p>If you are having trouble accessing MyChart while traveling
+internationally, contact your healthcare organization directly to ask
+about using MyChart in your current country. You can usually find their
+contact information on the FAQ page, which is linked at the bottom of
+their MyChart website.</p>
+<h3 id="how-do-i-download-the-mychart-app">How do I download the MyChart
+app?</h3>
+<p>On your mobile device, download MyChart from the Apple’s App Store or
+the Google Play Store using these links:</p>
+<p><code>https://itunes.apple.com/us/app/mychart/id382952264?mt=8</code></p>
+<p><code>https://play.google.com/store/apps/details?id=epic.mychart.android&amp;hl=en</code></p>
+<p>Some healthcare organizations have their own version of the MyChart
+mobile app. If you are seen at one of these healthcare organizations,
+you need to download their app instead.</p>
+<h3 id="how-do-i-sign-up-for-mychart">How do I sign up for MyChart?</h3>
+<p>You can create an account through your healthcare organization to
+access your information through MyChart. If your organization gave you
+an activation code on your After Visit Summary or in an email or text
+message, follow the instructions provided to create your MyChart
+account.</p>
+<p>If you don’t have an activation code:</p>
+<ol type="1">
+<li>On your healthcare organization’s MyChart login page, select
+<strong>Sign up</strong>.</li>
+<li>Follow the steps to verify your identity and create your MyChart
+account.</li>
+</ol>
+<h3 id="what-if-i-can-t-find-my-healthcare-organization">What if I can’t
+find my healthcare organization?</h3>
+<p>You can see a full list of the healthcare organizations available in
+MyChart by selecting <strong>Find your MyChart</strong> at the top of
+this screen. From there, you can search by state or enter the name of
+your organization.</p>
+<p>If your organization is not on the list, they might not use MyChart.
+They might offer a different patient portal, and you can contact them
+directly about accessing your account.</p>
+<p>If you’re looking for your healthcare organization’s contact
+information, you might find it by:</p>
+<ul>
+<li>Selecting <strong>Find your MyChart</strong> and searching for your
+organization. After navigating to your organization’s MyChart login
+page, select <strong>FAQ</strong> at the bottom of the screen.</li>
+<li>Selecting <strong>Need help?</strong> at the bottom of this screen
+and selecting <strong>Other</strong> &gt; <strong>Other</strong>. In the
+search box under <strong>What is your healthcare organization’s
+name?</strong>, enter the name of the organization you’re seen at and
+select it. If your organization provided their contact information, it
+might appear. If not, you can select the button to take you to their
+MyChart site.</li>
+</ul>
+<h3 id="what-s-required-to-use-mychart">What’s required to use
+MyChart?</h3>
+<p>You need access to one of the following:</p>
+<ul>
+<li>A computer connected to the internet and an up-to-date browser (such
+as Edge, Chrome, Firefox, or Safari)</li>
+<li>A mobile device or tablet with the MyChart mobile app</li>
+</ul>
+<p>You also need an email address or a phone number that can receive
+text messages.</p>
+<h2 id="logging-in-to-mychart">Logging in to MyChart</h2>
+<h3 id="how-do-i-change-my-email-address-or-phone-number-on-file">How do
+I change my email address or phone number on file?</h3>
+<p>You might be able to update the information yourself. To change the
+email address or phone number associated with your MyChart account, log
+in to MyChart and go to the Personal Information activity from the
+MyChart menu. </p>
+<p>For help with changes you are not able to make yourself, contact your
+healthcare organization’s MyChart help desk. You can usually find their
+contact information on the FAQ page, which is linked at the bottom of
+their MyChart website.</p>
+<h3 id="how-do-i-change-my-username-or-password">How do I change my
+username or password?</h3>
+<p>To change your username, contact your healthcare organization’s
+MyChart help desk. You can usually find their contact information on the
+FAQ page, which is linked at the bottom of their MyChart website.
+Depending on the organization’s policies, an administrator might be able
+to change it for you.</p>
+<p>If you forgot your username, select <strong>Forgot login
+information?</strong> on the MyChart login screen to recover it. </p>
+<p>You can change your password in MyChart after logging in by going to
+<strong>Account Settings</strong>. If you are not able to log in, you
+can reset your password by selecting <strong>Forgot login
+information?</strong> on the login screen.</p>
+<h3 id="how-do-i-log-in-to-mychart-using-a-passcode">How do I log in to
+MyChart using a passcode?</h3>
+<p>You can log in to the MyChart mobile app using a 4-digit passcode
+instead of your username and password.</p>
+<p>To set up a passcode:</p>
+<ol type="1">
+<li>Log in to the MyChart app on your device, using your existing
+username and password.</li>
+<li>Go to <strong>Account Settings</strong>, which you can find under
+the menu.</li>
+<li>Select the <strong>Use Passcode</strong> option to toggle it
+on.</li>
+<li>Enter a passcode.</li>
+</ol>
+<p>The next time you log in on the mobile app, you will see an option to
+<strong>Log in with passcode</strong> instead of your username and
+password.</p>
+<h3 id="how-do-i-log-in-to-mychart-using-a-passkey">How do I log in to
+MyChart using a passkey?</h3>
+<p>You can log in to MyChart without a password by adding a passkey to
+your account. Passkeys are encrypted digital keys that allow you to log
+in to MyChart with your fingerprint, face, or personal identification
+number (PIN). They can be saved on your desktop computer, in your
+phone’s password manager, or in a security key, a small external device
+that looks like a thumb drive. You can use passkeys to log in across
+devices, such as by scanning a QR code on your laptop with your mobile
+device.  </p>
+<h4 id="create-a-passkey">Create a Passkey:</h4>
+<ol type="1">
+<li>Log in to your MyChart account on a web browser.</li>
+<li>Go to <strong>Account Settings</strong>, which you can find by
+searching the menu.</li>
+<li>Go to <strong>Manage passkeys</strong> at the top of the page.</li>
+<li>Select <strong>Add new passkey</strong>.  </li>
+</ol>
+<p>Follow the prompts from your operating system or browser to add a
+passkey.  </p>
+<h4 id="rename-a-passkey">Rename a Passkey:</h4>
+<ol type="1">
+<li>Log in to your MyChart account on a web browser.</li>
+<li>Go to <strong>Account Settings</strong>, which you can find by
+searching the menu.</li>
+<li>Go to <strong>Manage passkeys</strong> at the top of the page.</li>
+<li>Select the pencil icon next to the passkey you want to rename.
+ </li>
+<li>Enter your desired name.</li>
+</ol>
+<h4 id="remove-a-passkey">Remove a Passkey:</h4>
+<ol type="1">
+<li>Log in to your MyChart account on a web browser.</li>
+<li>Go to <strong>Account Settings</strong>, which you can find by
+searching the menu.</li>
+<li>Go to <strong>Manage passkeys</strong> at the top of the page.</li>
+<li>Select <strong>Remove passkey</strong> on the passkey you want to
+remove.  </li>
+</ol>
+<h4 id="log-in-with-a-passkey">Log In with a Passkey:</h4>
+<ol type="1">
+<li>Select the <strong>Username</strong> field to see the auto-fill
+prompt with your username and the associated passkey.</li>
+<li>Alternatively, select <strong>Log in with passkey</strong> next to
+<strong>Sign up</strong>, below the login fields.</li>
+</ol>
+<h3 id="how-do-i-log-in-to-mychart-using-biometrics">How do I log in to
+MyChart using biometrics?</h3>
+<p>You can log in to the MyChart mobile app using your fingerprint or
+facial recognition instead of your username and password.</p>
+<h4 id="set-up-fingerprint-login">Set Up Fingerprint Login:</h4>
+<ol type="1">
+<li>Log in to the MyChart app on your device, using your existing
+username and password.</li>
+<li>Go to <strong>Account Settings</strong> from the menu.</li>
+<li>Select the <strong>Use Biometric Login</strong> or
+<strong>Fingerprint</strong> option to toggle it on. </li>
+</ol>
+<p>The next time you try to log in on the mobile app, you see an option
+<strong>Log in with biometrics</strong> or <strong>Log in with Touch
+ID</strong> instead of your username and password.</p>
+<h4 id="set-up-face-id">Set Up Face ID:</h4>
+<ol type="1">
+<li>Log in to the MyChart app on your device, using your existing
+username and password.</li>
+<li>Go to <strong>Account Settings</strong> from the menu.</li>
+<li>Select the <strong>Face ID</strong> option and toggle it on. </li>
+</ol>
+<p>The next time you try to log in on the mobile app, you see an option
+to <strong>Log in with Face ID</strong> instead of your username and
+password.</p>
+<h3 id="how-do-i-log-in-to-mychart-with-my-username">How do I log in to
+MyChart with my username?</h3>
+<p>MyChart might look a little different depending on if you are using a
+web browser on your computer or the MyChart mobile app on your
+phone.</p>
+<h4 id="web-browser">Web Browser</h4>
+<ol type="1">
+<li>Go to your healthcare organization’s MyChart website.</li>
+<li>Enter your MyChart username.</li>
+<li>Select <strong>Continue</strong>.</li>
+<li>Enter your password and select <strong>Log in</strong>. </li>
+</ol>
+<h4 id="mobile-app">Mobile App</h4>
+<ol type="1">
+<li>Open the MyChart app and search for your healthcare organization by
+location or name.</li>
+<li>Enter your MyChart username.</li>
+<li>Select <strong>Continue</strong>.</li>
+<li>Enter your password and select <strong>Log in</strong>.</li>
+</ol>
+<h3 id="i-forgot-my-username-or-password-what-should-i-do">I forgot my
+username or password. What should I do?</h3>
+<p>On the MyChart login screen for your healthcare organization, select
+<strong>Forgot login information?</strong> and follow the instructions
+below based on what you see:</p>
+<ul>
+<li>If you see <strong>What account do you want to recover?</strong>,
+select <strong>Recover your MyChart account</strong> and follow the
+prompts to recover your username and password.</li>
+<li>If you see <strong>Recover your account</strong>, enter the email
+address or phone number you previously used for two-step verification
+for your account. Enter the code sent to you and follow the prompts to
+recover your account.</li>
+<li>If you see <strong>I forgot my username</strong> and <strong>I
+forgot my password</strong>, choose the option that fits your situation.
+If you forgot both your username and password, start with <strong>I
+forgot my username</strong> first. Answer some security questions to
+verify your identity and recover your username or password. </li>
+</ul>
+<p>If you still need help, contact your healthcare organization’s
+MyChart help desk. You can usually find their contact information on the
+account recovery page you were on or on their MyChart website’s FAQ
+page.</p>
+<h3
+id="i-m-not-receiving-codes-for-two-step-verification-what-should-i-do">I’m
+not receiving codes for two-step verification. What should I do?</h3>
+<p>If you are having trouble receiving emails or text messages, the
+email address or phone number on your account might be incorrect or
+outdated. Contact your healthcare organization’s MyChart help desk to
+update it. You can usually find the contact information on their FAQ
+page, which is linked at the bottom of their MyChart website.</p>
+<h3 id="what-should-i-do-if-i-m-locked-out-of-my-account">What should I
+do if I’m locked out of my account?</h3>
+<p>If you try to log in unsuccessfully too many times, you might be
+locked out of the account. In this case, you won’t be able to reset your
+password yourself. For help resetting passwords and regaining access to
+your account, contact your healthcare organization’s MyChart help desk.
+You can usually find the contact information on their FAQ page, which is
+linked at the bottom of their MyChart website.</p>
+<h2 id="using-mychart">Using MyChart</h2>
+<h3 id="how-do-i-prepare-for-my-upcoming-appointment">How do I prepare
+for my upcoming appointment?</h3>
+<p>You can save time and minimize contact by verifying your information
+and answering appointment-related questions before you arrive. Log in to
+MyChart and look for the <strong>Get Ready</strong> option for your
+upcoming appointment.</p>
+<h3 id="how-do-i-schedule-an-appointment-in-mychart">How do I schedule
+an appointment in MyChart?</h3>
+<p>To schedule or request an appointment, go to <strong>Find
+Care</strong> &gt; <strong>Schedule an Appointment</strong>.</p>
+<p>Depending on your reason for scheduling or the type of appointment
+you choose, you either schedule the appointment yourself or request to
+have your healthcare organization contact you.</p>
+<h3
+id="what-should-i-do-if-some-of-my-information-in-mychart-is-incorrect">What
+should I do if some of my information in MyChart is incorrect?</h3>
+<p>The information you see in MyChart comes directly from your medical
+record at your provider’s office. Your information is reviewed and
+updated after each visit.</p>
+<p>If something looks wrong, ask your provider to update any incorrect
+information at your next visit. You can also contact the medical records
+department at your healthcare organization to request a correction to
+your chart.</p>
+<h2 id="sharing-your-data">Sharing Your Data</h2>
+<h3
+id="can-i-give-an-app-access-to-a-family-member-s-health-information">Can
+I give an app access to a family member’s health information?</h3>
+<p>Yes. If you have proxy access to another person’s MyChart account,
+you might be able to give an app access to their health information.
+During the sharing process, you select whose information to share. The
+app can access information for only the person you select.</p>
+<h3 id="can-i-share-my-health-information-with-another-app">Can I share
+my health information with another app?</h3>
+<p>Yes. You can share your health information, such as lab results,
+medications, allergies, and immunization records, with another app.
+Before any information is shared, you must approve the sharing, usually
+by logging in to your MyChart account. Review the app’s terms and
+conditions, and privacy policy before you share. </p>
+<h4 id="what-health-information-can-apps-access">What health information
+can apps access?</h4>
+<p>Apps can ask to see certain parts of your health record, such as your
+medications, allergies, test results, or visit history. Apps can only
+request a standard set of information called the United States Core Data
+for Interoperability (USCDI). Different apps might request different
+information types based on the app’s use case. For more information on
+USCDI, go to the HealthIT.gov website:
+<code>https://isp.healthit.gov/united-states-core-data-interoperability-uscdi</code>.</p>
+<h4 id="can-i-choose-what-information-to-share-with-an-app">Can I choose
+what information to share with an app?</h4>
+<p>Yes. You can select or clear individual information types before you
+share your health information. The app receives only the information
+types you approve. </p>
+<h4
+id="can-i-choose-how-long-an-app-has-access-to-my-health-information">Can
+I choose how long an app has access to my health information?</h4>
+<p>Yes. You select how long the app has access, such as one hour, one
+day, or one year. During this time, the app might also receive any new
+information added to your record.  </p>
+<p>After access ends, the app cannot receive new information from your
+health record unless you share access to the app again. The app can
+still see information you already shared. Review the app’s privacy
+policy to learn how it handles your health information after you stop
+sharing information.</p>
+<h4
+id="why-cant-i-find-my-healthcare-organization-when-trying-to-share-access-with-an-app">Why
+can’t I find my healthcare organization when trying to share access with
+an app?</h4>
+<p>Your healthcare organization might not have turned on support for the
+app, or the name you are searching for might not match exactly. Confirm
+you are searching for the correct organization name or contact the app’s
+support team.</p>
+<h3
+id="how-can-i-use-mychart-central-to-give-an-app-access-to-my-data">How
+can I use MyChart Central to give an app access to my data?</h3>
+<p>You might be able to use MyChart Central to give an app access to
+your health information across multiple healthcare organizations at the
+same time. This is useful if you receive care from more than one
+organization and want to share your information from all of them with a
+single app. </p>
+<p>To give an app access to your health information using MyChart
+Central: </p>
+<ol type="1">
+<li>When a supported app requests access to your information, log in to
+MyChart with your Epic ID. </li>
+<li>If you want to edit what information types to share, select
+<strong>Edit what will be shared</strong>.</li>
+<li>You can also remove any organizations you don’t want to share your
+health information from by selecting the <strong>Edit your healthcare
+organizations</strong> button. </li>
+<li>The default sharing period is one year. To choose a different
+sharing period, select the <strong>Edit access time</strong>
+button. </li>
+<li>To confirm, select <strong>Share Data</strong> button. The app can
+then access your information from all of the organizations you chose to
+share information from. </li>
+</ol>
+<p>Sharing your information from multiple organizations using MyChart
+Central might not be supported by your app or organization. You can
+still use your Epic ID to share information from each linked
+organization one at a time if the workflow is not supported. </p>
+<h4
+id="can-i-choose-different-information-types-or-access-times-for-different-organizations">Can
+I choose different information types or access times for different
+organizations?</h4>
+<p>To edit information or access time settings to be different for each
+organization you are sharing information from, log in using your
+organization’s username and password instead of your Epic ID in the
+app’s sharing workflow.   </p>
+<h4
+id="why-cant-i-see-all-of-my-organizations-when-sharing-health-information-through-mychart-central">Why
+can’t I see all of my organizations when sharing health information
+through MyChart Central?</h4>
+<p>Only organizations that are linked to your MyChart Central account
+and support the app appear in the list. If an organization is missing,
+it might not support this feature. Make sure all of your MyChart
+accounts are linked by going to the <strong>Link My Accounts</strong>
+activity in MyChart Central.</p>
+<h3
+id="how-do-i-give-an-app-access-to-my-health-information-or-my-family-member-s-health-information">How
+do I give an app access to my health information or my family member’s
+health information?</h3>
+<p>To authorize an app: </p>
+<ol type="1">
+<li>Start the sharing process. This might happen from inside the app, or
+from your organization’s MyChart. </li>
+<li>When prompted, log in to your MyChart account. You can use your Epic
+ID if your organization participates in MyChart Central. Your MyChart
+password is never shared with the app.</li>
+<li>If you have access to another person’s account, such as a child,
+select whose information to share.</li>
+<li>Review how the app uses the information.</li>
+<li>Choose which types of information to share and how long the app has
+access.</li>
+<li>Confirm you want to share the information.</li>
+</ol>
+<h3
+id="how-do-i-see-which-apps-have-access-to-my-health-information">How do
+I see which apps have access to my health information?</h3>
+<p>In MyChart, go to the <strong>Linked Apps and Devices</strong>
+activity to see the apps that can access your health information. This
+page shows each app’s name, what information it can access, and when its
+access expires. You can also manage apps for your linked organizations
+in MyChart Central if your organization supports this feature.   </p>
+<p>The <strong>Who’s Accessed My Record?</strong> page in MyChart shows
+a history of each app’s access. You can see the name of each app, the
+date and time of access, and the type of information accessed. </p>
+<p>To see access history: </p>
+<ol type="1">
+<li>Go to <strong>Document Center</strong>.</li>
+<li>Select <strong>Who’s Accessed My Record</strong>?</li>
+<li>From the dropdown menu, select <strong>Third-Party
+Apps</strong>.  </li>
+</ol>
+<p>If you shared your information with an app using MyChart Central,
+access records appear at each organization from which you shared your
+health information.  </p>
+<h4
+id="how-do-i-know-which-apps-have-access-to-my-family-members-health-information">How
+do I know which apps have access to my family member’s health
+information?</h4>
+<p>If you have proxy access, you can view that family
+member’s <strong>Linked Apps and Devices</strong> activity to see which
+apps have access to their information. You can also check the
+<strong>Who’s Accessed My Record?</strong> activity for their account to
+see a history of app access. </p>
+<p>To see access history:</p>
+<ol type="1">
+<li>Log in to MyChart.</li>
+<li>Switch to your family member’s view by selecting them from the list
+in the top right corner of MyChart. </li>
+<li>In the MyChart menu, select <strong>Linked Apps and Devices</strong>
+or <strong>Who’s Accessed My Record? </strong></li>
+<li>To remove an app’s access, select <strong>Stop
+sharing</strong>.</li>
+</ol>
+<h4
+id="what-should-i-do-if-i-do-not-recognize-an-app-that-has-access-to-my-health-information">What
+should I do if I do not recognize an app that has access to my health
+information?</h4>
+<ol type="1">
+<li>Go to the <strong>Linked Apps and Devices</strong> activity in
+MyChart and revoke the app’s access immediately.</li>
+<li>Contact your healthcare organization’s help desk to report the issue
+so they can secure your MyChart account.</li>
+<li>Review the <strong>Who’s Accessed My Record?</strong> page to see
+what information the app might have accessed.</li>
+</ol>
+<h3
+id="what-do-i-need-to-know-about-security-and-sharing-my-health-information">What
+do I need to know about security and sharing my health information?</h3>
+<p>An app you choose to share your health information with never sees
+your username or password. When you share your information with another
+app, you log in on your healthcare organization’s secure login page.
+ </p>
+<h4
+id="what-should-i-do-if-i-think-another-app-has-misused-my-information">What
+should I do if I think another app has misused my information?</h4>
+<p>Revoke the app’s access from the <strong>Linked Apps and
+Devices</strong> activity in MyChart. To remove an app’s access:</p>
+<ol type="1">
+<li>Log in to your MyChart account.</li>
+<li>In the MyChart menu, search for <strong>Linked Apps and
+Devices</strong>. </li>
+<li>Find the app you want to remove and select <strong>Stop
+sharing</strong>. </li>
+</ol>
+<p>You can also file a complaint with the app developer, or if you
+believe the app has violated your rights, contact the U.S. Department of
+Health and Human Services or your country’s data protection
+authority.</p>
+<h3
+id="what-does-it-mean-if-an-app-is-affiliated-with-my-healthcare-organization">What
+does it mean if an app is affiliated with my healthcare
+organization?</h3>
+<p>An affiliated app is one your healthcare organization has a formal
+agreement with. If an app is affiliated, you’ll see a banner on the
+review page when you share your information that says the app is
+affiliated. </p>
+<p>You should still review the privacy policy and terms and conditions
+before sharing information.</p>
+<h3 id="what-happens-if-i-deny-or-revoke-access-to-an-app">What happens
+if I deny or revoke access to an app?</h3>
+<p>If you deny access, the app cannot see any of your health
+information. If you change your mind, you can go back to the app later
+and give it access again. Denying access does not affect your MyChart
+account or your care. </p>
+<p>If you revoke access, the app stops receiving new information from
+your health record. However, the app might still have information it
+already received. To request deletion of that information, contact the
+app directly. The app’s information practices might be available on the
+review page you saw when you first authorized the app.  </p>
+<h4 id="how-do-i-revoke-an-apps-access-to-my-health-information">How do
+I revoke an app’s access to my health information?</h4>
+<p>To revoke access: </p>
+<ol type="1">
+<li>Go to the <strong>Linked Apps and Devices</strong> activity in
+MyChart or MyChart Central.</li>
+<li>Find the app you want to remove and select <strong>Stop
+sharing</strong>.</li>
+</ol>
+<p>After access has been revoked, the app can no longer receive new
+information from your health record.</p>
+<h2 id="linking-accounts-and-sharing-your-record">Linking accounts and
+sharing your record</h2>
+<h3
+id="how-do-i-request-or-provide-proxy-access-to-another-person-s-mychart-account">How
+do I request or provide proxy access to another person’s MyChart
+account?</h3>
+<p>You can request proxy access to your family member’s account. With
+proxy access, you can see their health information and your own from
+within the same MyChart account. </p>
+<p>You can also give a family member or friend access to your medical
+records when you need help managing your appointments or other medical
+needs.</p>
+<p>Each healthcare organization sets their own policies around proxy
+access, including who can have it, how access changes based on the
+patient’s age, and what a proxy can see and do in MyChart. </p>
+<h4 id="get-or-give-proxy-access">Get or Give Proxy Access</h4>
+<p>To give someone access to your medical record: </p>
+<ol type="1">
+<li>Go to the Sharing Hub activity and select <strong>Manage friends and
+family access</strong>.</li>
+<li>Select <strong>Invite friends or family</strong> and enter the name
+and email address for the person you want to invite.</li>
+<li>After they receive the email and confirm that they know you, they
+can access your information through their own MyChart account. </li>
+</ol>
+<p>When you view someone’s account as a proxy, the name of the account
+you are viewing appears at the top of the activity. You can switch
+between MyChart accounts by selecting the <strong>Switch</strong> menu
+in the top right corner.</p>
+<p>If this option isn’t available, contact your healthcare organization
+to find out how to get or give proxy access. Some organizations require
+you to contact them directly rather than setting it up yourself in
+MyChart. For example, some organizations require you to sign a paper
+form before getting proxy access.</p>
+<h3 id="how-do-i-share-my-medical-record-with-other-providers">How do I
+share my medical record with other providers?</h3>
+<p>There are several ways to share your medical record, depending on who
+needs to access it.   </p>
+<p>You can use the <strong>Share Everywhere</strong> feature in MyChart
+to give any provider temporary access to basic information in your
+chart. For example, this can be helpful if you are away from home on a
+trip and need medical care. Just go to the <strong>Share
+Everywhere</strong> activity and follow the prompts to give someone
+access. </p>
+<p><strong>Care Everywhere</strong> lets your healthcare provider
+securely access and update your record from other healthcare
+organizations so that they can provide the best care for you. If you
+want to opt out of sharing your information through <strong>Care
+Everywhere</strong>, you can discuss that with your healthcare provider
+at your next visit or contact the medical records department at your
+healthcare organization. </p>
+<p>For more detailed information about sharing your record, refer
+to this page.</p>
+<h3
+id="i-have-two-or-more-mychart-accounts-from-different-organizations-can-i-link-them-together">I
+have two or more MyChart accounts from different organizations. Can I
+link them together?</h3>
+<p>MyChart accounts can be linked so you can see all your information in
+one view. We call this Happy Together. Depending on your healthcare
+provider’s version of Epic, Happy Together might not be available to you
+yet. If your organizations both participate, you should be able to link
+them by going to the <strong>Link My Accounts</strong> page in your
+MyChart account.</p>
+<p>For more information about Happy Together, go to this page.</p>
+<h3 id="why-can-t-i-see-my-child-s-information-in-mychart">Why can’t I
+see my child’s information in MyChart?</h3>
+<p>Proxy access to a child’s account changes as they get older. Because
+each organization has their own interpretation of state and federal
+legislation that guarantees privacy rights to adolescents, each
+organization determines the ages at which proxy access might become
+limited or be removed. </p>
+<p>If you have questions about limited access to your child’s MyChart
+account, contact your healthcare organization directly to address your
+concerns. You can usually find the contact information on their FAQ
+page, which is linked at the bottom of their MyChart website.</p>
+<h2 id="mychart-central">MyChart Central</h2>
+<h3
+id="can-i-view-my-family-s-health-information-in-mychart-central">Can I
+view my family’s health information in MyChart Central?</h3>
+<p>MyChart Central is focused on providing a single login experience to
+your linked MyChart accounts. It does not display your family’s health
+information directly.</p>
+<p>If you have proxy access to a family member’s account, a
+<strong>Friends and family</strong> option appears on the account card
+for any linked accounts. Selecting <strong>Friends and family</strong>
+shows the MyChart accounts for any family members or friends that you
+can access at that healthcare organization. To view a family member’s or
+friend’s health information, select the arrow to go to your MyChart
+account for that organization.</p>
+<h3 id="how-do-i-delete-my-mychart-central-account">How do I delete my
+MyChart Central account?</h3>
+<p>Deleting your MyChart Central account does not delete any of your
+health information at your linked MyChart accounts. Your data is stored
+and managed by your healthcare organization.</p>
+<p>You can delete your MyChart Central account at any time:  </p>
+<ol type="1">
+<li>Log in to your MyChart Central account. </li>
+<li>Go to <strong>Account Settings</strong>. </li>
+<li>At the bottom of the page, select <strong>Delete Your
+Account</strong>. </li>
+<li>Confirm your choice when prompted. </li>
+</ol>
+<p>Your MyChart Central account stops working immediately. Your linked
+MyChart accounts remain active. If you want to delete your individual
+MyChart accounts, contact each healthcare organization separately.</p>
+<p><strong>Important</strong>: If your Epic ID was the only way you
+could access a healthcare organization’s MyChart, you need to set up a
+new username and password with that organization to log in to MyChart.
+To set up new login credentials, reach out to your healthcare
+organization’s MyChart support team.</p>
+<h3 id="how-do-i-link-mychart-accounts-to-mychart-central">How do I link
+MyChart accounts to MyChart Central?</h3>
+<p>To link your MyChart accounts to your MyChart Central account:</p>
+<ol type="1">
+<li>Log in to your MyChart Central account on a web browser or the
+MyChart mobile app.</li>
+<li>Select Link new account on the home page.</li>
+</ol>
+<p>If you cannot find your healthcare organization, your organization
+might not have joined the MyChart Central network yet.  You can view a
+list of participating organizations here and select the <strong>MyChart
+Central only</strong> checkbox. If your healthcare organization is not
+participating yet, check back later.</p>
+<h3 id="how-do-i-log-in-to-mychart-central-using-a-passkey">How do I log
+in to MyChart Central using a passkey?</h3>
+<p>A passkey is like a password, but it is securely stored on your phone
+or computer so that you do not have to remember it. If you are used to
+using biometric login options, like fingerprint or face ID, you might
+want to try using a passkey to log in to MyChart Central. When you use a
+passkey, your device verifies your identity in a secure way without
+sharing your password. This makes logging in faster, easier, and
+safer. </p>
+<p>To set up a passkey for your Epic ID: </p>
+<ol type="1">
+<li>Log in to MyChart Central on your personal device.</li>
+<li>Go to <strong>Account Settings</strong>.</li>
+<li>Select <strong>Manage passkeys</strong>.</li>
+<li>Select <strong>Add new passkey</strong>.</li>
+<li>Follow the prompts to create your passkey. </li>
+</ol>
+<p>The next time you log in on that device, select <strong>Log in with
+passkey</strong> and follow the prompts.</p>
+<h3 id="how-do-i-log-in-to-mychart-central">How do I log in to MyChart
+Central?</h3>
+<h4 id="web-browser-1">Web Browser:</h4>
+<ol type="1">
+<li>In your web browser, go to <a
+href="https://central.mychart.org/">central.mychart.org</a> to access
+MyChart Central’s login page.</li>
+<li>Enter your Epic ID and password.</li>
+<li>Select <strong>Log in</strong>.</li>
+</ol>
+<h4 id="mobile-app-1">Mobile App:</h4>
+<ol type="1">
+<li>Open the MyChart mobile app and search for MyChart Central.</li>
+<li>Enter your Epic ID and password.</li>
+<li>Select <strong>Log in</strong>.</li>
+</ol>
+<h3 id="how-do-i-log-in-to-mychart-with-my-epic-id">How do I log in to
+MyChart with my Epic ID?</h3>
+<p>Your Epic ID and the password you choose for your MyChart Central
+account can log you in to any MyChart account that you have linked to
+MyChart Central.</p>
+<h4 id="web-browser-2">Web Browser:</h4>
+<ol type="1">
+<li>On your healthcare organization’s MyChart website, enter your Epic
+ID.</li>
+<li>Select <strong>Continue</strong>. You are redirected to MyChart
+Central.</li>
+<li>Enter your MyChart Central password and select <strong>Log
+in</strong>. </li>
+</ol>
+<h4 id="mobile-app-2">Mobile App:</h4>
+<ol type="1">
+<li>Open the MyChart mobile app and search for your healthcare
+organization. You can search by location or by organization name.</li>
+<li>Enter your Epic ID.</li>
+<li>Select <strong>Continue</strong>.</li>
+<li>Enter your password and select <strong>Log in</strong>.</li>
+</ol>
+<h3 id="how-do-i-sign-up-for-mychart-central">How do I sign up for
+MyChart Central?</h3>
+<p>To sign up for MyChart Central, you must:</p>
+<ul>
+<li>Be at least 18 years old and live in the United States.</li>
+<li>Have an existing MyChart account at an organization that
+participates in MyChart Central.</li>
+</ul>
+<p>To check if your healthcare organization participates in MyChart
+Central:</p>
+<ol type="1">
+<li>Select <strong>Find your MyChart</strong> at the top of this
+page.</li>
+<li>Select the checkbox to show only healthcare organizations that
+participate in MyChart Central.</li>
+</ol>
+<p>If your healthcare organization is not participating yet, check back
+later. If your healthcare organization is participating, sign up for
+MyChart Central using either option below:</p>
+<ul>
+<li>In your MyChart account, go to <strong>Link My Accounts</strong> and
+select <strong>Get Started</strong> on the One login for your MyChart
+accounts card.</li>
+<li>Visit <a
+href="https://central.mychart.org/">central.mychart.org</a> and select
+<strong>Sign up</strong>.</li>
+</ul>
+<h3 id="how-does-mychart-central-keep-my-information-secure">How does
+MyChart Central keep my information secure?</h3>
+<p>MyChart Central is designed to keep your information secure and
+private through: </p>
+<ul>
+<li><strong>Strong encryption</strong>. MyChart Central uses secure
+encryption technology to keep your information protected and
+private.</li>
+<li><strong>Two-step verification</strong>. Each time you log in, you
+enter your password and a verification code sent to your phone or email
+address. You can also use a passkey or authenticator app to verify your
+identity.</li>
+<li><strong>Regular security audits</strong>. A team of security experts
+monitors and evaluates the system to identify and address potential
+risks.</li>
+<li><strong>Our commitment to privacy</strong>. MyChart Central follows
+strict HIPAA Privacy and Security standards. The <a
+href="https://www.epic.com/en-us/privacypolicies/">mobile and web
+privacy policies</a> explain how your data stays safe.</li>
+<li><strong>Industry security standards</strong>. MyChart Central has
+undergone a thorough evaluation of security measures per industry
+standards.</li>
+</ul>
+<h3 id="i-forgot-my-mychart-central-password-what-should-i-do">I forgot
+my MyChart Central password. What should I do?</h3>
+<p>If you forget your password to log in to your MyChart Central
+account, complete the following steps. <em>These steps apply only to
+your MyChart Central account, not your MyChart accounts with your
+healthcare organizations. </em></p>
+<ol type="1">
+<li>Go to the <a href="https://central.mychart.org/">MyChart Central
+login page</a>. </li>
+<li>Select <strong>Forgot login information?</strong> under the Epic ID
+and password fields.</li>
+<li>Enter the email address or phone number linked to your MyChart
+Central account. </li>
+<li>Check your email or text messages for a two-step verification
+code. </li>
+<li>Follow the prompts to reset your password.</li>
+</ol>
+<h3
+id="i-lost-access-to-my-email-address-and-or-phone-number-what-should-i-do">I
+lost access to my email address and/or phone number. What should I
+do?</h3>
+<p>If you still have access to one of these contact methods, you can log
+in to MyChart Central and go to the <strong>Personal
+Information</strong> activity to update your contact information. </p>
+<p>If you no longer have access to your email address or phone number
+and cannot log in, contact the MyChart help desk for each of your linked
+healthcare organizations. Each organization manages its own MyChart
+accounts separately, so only their help desk can update your information
+for their MyChart.</p>
+<h3 id="i-m-not-receiving-a-two-step-verification-code-why">I’m not
+receiving a two-step verification code. Why?</h3>
+<p>Two-factor authentication (2FA) codes are sent to the verified email
+address or phone number on file for your MyChart Central account, not
+just any email or phone number you enter. <strong>If you have a MyChart
+Central account</strong>, make sure you are entering the email address
+or phone number you used to sign up for MyChart Central. This could be
+the reason why you are not receiving codes even though you are entering
+the email and/or phone number associated with your MyChart account.</p>
+<p><strong>If you do not have a MyChart Central account</strong>, select
+<strong>Forgot login information?</strong> from your healthcare
+organization’s MyChart login page and follow the instructions based on
+what you see:</p>
+<ul>
+<li>If you see <strong>What account do you want to recover?</strong>,
+select Recover your MyChart account and follow the prompts to recover
+your username and password.</li>
+<li>If you see <strong>Recover your account</strong>, enter the email
+address or phone number on file for your account, enter the code sent to
+you, and follow the prompts.</li>
+<li>If you see <strong>I forgot my username</strong> and I forgot my
+password, choose the option that fits your situation. If you forgot
+both, start with I forgot my username. Answer the security questions to
+verify your identity and recover your login information.</li>
+</ul>
+<p>If you still need help, contact your healthcare organization’s
+MyChart help desk. Their contact information is usually listed on the
+<strong>Recover your account</strong> screen or on their MyChart
+website.</p>
+<h3
+id="i-m-trying-to-make-a-mychart-central-account-why-can-t-i-find-my-organization">I’m
+trying to make a MyChart Central account. Why can’t I find my
+organization?</h3>
+<p>Your organization might not have joined the MyChart Central network
+yet. If your healthcare organization is not participating yet, check
+back later.</p>
+<p>To check if your healthcare organization participates in MyChart
+Central:</p>
+<ol type="1">
+<li>Select <strong>Find your MyChart</strong> at the top of this
+page.</li>
+<li>Select the checkbox to show only healthcare organizations that
+participate in MyChart Central.</li>
+</ol>
+<h3
+id="i-m-worried-that-someone-else-might-have-accessed-my-mychart-central-account-what-should-i-do">I’m
+worried that someone else might have accessed my MyChart Central
+account. What should I do?</h3>
+<p>If you think your MyChart Central account might be compromised, take
+these steps right away:</p>
+<ol type="1">
+<li><strong>Change your password</strong>. Go to the <a
+href="https://central.mychart.org/">MyChart Central login page</a> and
+select Forgot login information? to reset your password.</li>
+<li><strong>Review your account activity</strong>. After logging in,
+check for anything unusual, like new linked accounts or changes to your
+personal information.</li>
+<li><strong>Remove Remembered Devices</strong>. After logging in, go to
+<strong>Account Settings</strong> and select <strong>Remembered
+devices</strong>. Remove any devices you do not recognize.</li>
+</ol>
+<h3
+id="what-do-i-do-if-my-mychart-account-failed-to-link-to-my-mychart-central-account">What
+do I do if my MyChart account failed to link to my MyChart Central
+account?</h3>
+<p>When linking accounts to MyChart Central, we verify your identity by
+matching the contact information, such as your name, email address,
+phone number, and address, across your linked MyChart accounts.</p>
+<p>If your account fails to link, make sure your contact information is
+up to date and accurate at both your MyChart Central account and your
+healthcare organization’s MyChart account. If you continue to have
+problems linking your accounts, contact your healthcare organization’s
+MyChart help desk. You can usually find the contact information on their
+FAQ page, which is linked at the bottom of their MyChart website.</p>
+<h3
+id="what-happens-when-i-update-my-personal-information-in-mychart-central">What
+happens when I update my personal information in MyChart Central?</h3>
+<p>When you update your contact information in MyChart Central, those
+updates are automatically sent to all your linked MyChart accounts. You
+only need to update your information once. Some organizations might not
+accept automatic updates. If a sync fails, you see a notification in
+MyChart Central.</p>
+<p>To manage which healthcare organizations receive updates, go to
+<strong>Auto-Update Settings</strong> in MyChart Central.</p>
+<h3 id="what-is-an-epic-id">What is an Epic ID?</h3>
+<p>When you sign up for a MyChart Central account, you create an Epic
+ID, which is the email address you use to log in to MyChart Central.
+Your Epic ID and the password you choose for your MyChart Central
+account can log you in to any MyChart account that you have linked to
+MyChart Central.</p>
+<p>With MyChart Central and your Epic ID, you can set up a passkey to
+make logging in to your linked MyChart accounts even easier. If you are
+interested in creating a passkey for your Epic ID, <a
+href="#how-do-i-log-in-to-mychart-central-using-a-passkey">learn more
+about passkeys and MyChart Central here</a>.</p>
+<h4 id="to-change-the-email-address-you-use-as-your-epic-id">To change
+the email address you use as your Epic ID:</h4>
+<ol type="1">
+<li>Log in to your MyChart Central account.</li>
+<li>Go to the Personal Information activity.</li>
+<li>Update the email address on your account. </li>
+</ol>
+<p>Next time you log in to MyChart Central, use your updated email
+address as your Epic ID. </p>
+<h4 id="to-change-your-password">To change your password:</h4>
+<ol type="1">
+<li>Log in to your MyChart Central account.</li>
+<li>Go to Account Settings from the menu.</li>
+<li>Select Change password at the top of the page.</li>
+</ol>
+<h3 id="what-is-mychart-central">What is MyChart Central?</h3>
+<p>MyChart Central gives you the ability to link your MyChart accounts
+from different healthcare organizations so you can use a single login to
+access them all. MyChart Central is available to patients who are at
+least 18 years old and live in the United States. You can access MyChart
+Central from your phone in the MyChart mobile app or from your
+computer. </p>
+<p>To learn more about MyChart Central, visit this page.</p>
+<h3 id="what-should-i-do-if-i-m-locked-out-of-my-account-2">What should
+I do if I’m locked out of my account?</h3>
+<p>Your account locks automatically after too many failed login
+attempts. Accounts unlock on their own after a period of time, but how
+long depends on how many attempts were made. If you receive an email
+saying your account is locked, check your email for next steps.</p>
+<p>You can also:</p>
+<ul>
+<li>Log in on a computer or mobile device that you have logged in to
+before</li>
+<li>Select <strong>Forgot Login Information?</strong> on the login
+screen to recover your account</li>
+</ul>
+<h2 id="message-your-care-team-in-mychart">Message your care team in
+MyChart</h2>
+<h3 id="how-do-i-request-a-referral-to-see-another-provider">How do I
+request a referral to see another provider?</h3>
+<p>To request a referral:</p>
+<ol type="1">
+<li>Go to <strong>Communication</strong> &gt; <strong>Request a
+Referral</strong>.</li>
+<li>Enter the provider you want to see, a reason for the referral, and a
+brief message explaining your request.</li>
+<li>When you are finished, select <strong>Send</strong>.</li>
+</ol>
+<p>If you opted to receive email or text notification for new messages
+in your MyChart account, you receive a message when your healthcare
+organization has responded to your request.</p>
+<h3 id="how-do-i-send-messages-to-my-care-team-in-mychart">How do I send
+messages to my care team in MyChart?</h3>
+<p>You can use MyChart to send messages for non-urgent medical questions
+to your care team. This message is secure, meaning your information
+stays private. If you’re having trouble sending messages, you can use
+the instructions and videos below to get started.</p>
+<p>You might send a message if you’re not sure whether you should come
+in for an appointment, if you need clarification on the dosage of one of
+your medications or something that was discussed in a recent visit, or
+if you just want advice about a common illness. </p>
+<ol type="1">
+<li>Go to <strong>Messages</strong>.</li>
+<li>Select <strong>Send a message</strong>.</li>
+<li>Select <strong>Ask a medical question</strong>. Review any
+disclaimers that appear and select <strong>Next</strong>.</li>
+<li>Select the topic that best matches your medical question.</li>
+<li>Select the recipient for the question. If you choose the same topic
+and recipient as a recent MyChart conversation, choose whether to
+continue that conversation or to start a new one.</li>
+<li>Enter a <strong>Subject</strong> for the message and type your
+question in the text box below.</li>
+<li>When you are finished, select <strong>Send</strong>.</li>
+</ol>
+<p>If you’ve opted to receive notifications for new messages in your
+MyChart account, you receive a message or push notification letting you
+know that the organization has responded to your request. You can read
+any messages sent by your provider or care team by going to your Message
+Center (<strong>Communication</strong> &gt;
+<strong>Messages</strong>).</p>
+<p>The Message Center includes four folders:</p>
+<ul>
+<li>The <strong>Conversations</strong> folder is the primary folder and
+includes messages between you and your care team or other clinic staff.
+The list of messages in this folder is organized by conversation to keep
+messages and replies together.
+<ul>
+<li>To flag a conversation for easy access in the future, open the
+conversation and bookmark it. The conversation then appears in the
+<strong>Bookmarked</strong> folder.</li>
+<li>If you’re interrupted when writing a message, your message is saved
+in the Conversations folder and marked as a Draft. Select the message to
+reopen it so you can finish and send it. If you no longer need the
+draft, select the message to reopen it and select
+<strong>Discard</strong>.</li>
+</ul></li>
+<li>The <strong>Appointments</strong> folder includes appointment
+reminders and confirmations.</li>
+<li>The <strong>Automated Messages</strong> folder includes system
+messages automatically sent to and from your account, like payment
+confirmations and questionnaire submissions.</li>
+<li>The <strong>Trash</strong> folder includes any conversations you’ve
+deleted from your main folders. If you realize you need a message again,
+you can restore it to its original folder.</li>
+</ul>
+<p>For more information about connecting with your doctor virtually, go
+to this page.</p>
+<h3 id="if-i-send-a-mychart-message-when-can-i-expect-a-reply">If I send
+a MyChart message, when can I expect a reply?</h3>
+<p>Most healthcare organizations respond to MyChart messages within
+three business days, but each organization has their own policies around
+responding to MyChart messages. MyChart messages should be used for
+non-urgent medical questions.</p>
+<p><strong>If you are experiencing a medical emergency and need
+immediate attention, dial 911 or your local emergency services number,
+if you are located outside the United States.</strong></p>
+<p>To set up notifications to receive an email or text message when new
+MyChart messages are available:</p>
+<ol type="1">
+<li>Go to <strong>Account Settings</strong> &gt; <strong>Communication
+Preferences</strong>.</li>
+<li>Expand the <strong>Messages</strong> section.</li>
+<li>Select a notification option.</li>
+<li>If needed, update your email address and mobile phone number at the
+bottom of the page.</li>
+</ol>
+<h3 id="why-can-t-i-message-more-than-one-person-at-once">Why can’t I
+message more than one person at once?</h3>
+<p>MyChart does not allow you to message more than one recipient because
+messages with multiple recipients make it less clear who should follow
+up and respond to you. This helps make sure the right person on your
+care team responds to you.</p>
+<p>To share the same information with multiple providers, you should
+send individual messages to each one. You can copy and paste your
+message to save time.</p>
+<h3 id="why-can-t-i-message-the-provider-i-m-looking-for">Why can’t I
+message the provider I’m looking for?</h3>
+<p>Each healthcare organization chooses which providers are available
+for MyChart messaging. In most cases, you can only message providers you
+have seen recently or have an upcoming visit with. Keeping messages
+between you and your care team helps your providers spend more time
+seeing patients and keeps the focus on your health.</p>
+<p>If the provider you are looking for is not available, contact your
+healthcare organization directly.</p>
+<h2 id="viewing-test-results">Viewing test results</h2>
+<h3 id="how-do-i-download-a-pdf-of-my-test-results-over-time">How do I
+download a PDF of my test results over time?</h3>
+<p>To download a PDF file of your past test results over time:</p>
+<ol type="1">
+<li>Go to <strong>Test Results</strong>.</li>
+<li>Select the test result you want to download.</li>
+<li>Select <strong>Compare result trends</strong>.</li>
+<li>At the bottom of the page, in the <strong>Download results</strong>
+section, select <strong>Download</strong>.</li>
+</ol>
+<h3
+id="how-do-i-view-immunization-records-and-covid-19-information-in-mychart">How
+do I view immunization records and COVID-19 information in MyChart?</h3>
+<p>Go to <strong>My Record</strong> &gt; <strong>Health Summary</strong>
+and select the <strong>Immunizations</strong> tab. Here, you can see the
+immunizations you’ve received and the dates on which you received them.
+Select the immunization’s name to learn more. If your immunizations are
+not up to date, contact your healthcare organization to have your
+information updated.</p>
+<p>In the United States, your state might maintain a vaccination
+registry. For more information, go to this website:
+<code>https://www.cdc.gov/vaccines-adults/recommended-vaccines/keeping-vaccine-records-up-to-date.html</code></p>
+<p>View COVID-19 testing and vaccination information in the COVID-19
+activity in MyChart. In the MyChart mobile app, select the COVID-19 icon
+in the top right of the home screen.</p>
+<h3 id="how-do-i-view-test-results-in-mychart">How do I view test
+results in MyChart?</h3>
+<p>With MyChart, you can view test results as soon as they become
+available, rather than waiting for a phone call or letter from your
+healthcare provider. To view test results, go to <strong>Test
+Results</strong>. Select a test to see more information about it, such
+as:</p>
+<ul>
+<li>The standard range for the result</li>
+<li>Any additional comments your provider entered about your
+results</li>
+</ul>
+<p>To receive emails or text messages when new results are available in
+MyChart:</p>
+<ol type="1">
+<li>Go to <strong>Account Settings</strong> &gt; <strong>Communication
+Preferences</strong>.</li>
+<li>Under <strong>Details</strong>, expand the <strong>Health</strong>
+section.</li>
+<li>Select <strong>Advanced Settings</strong>.</li>
+<li>Under the <strong>Test Result</strong> section, toggle the slider
+next to the communication option you prefer. When it is green with a
+checkmark, the communication type is enabled for test result
+notifications.</li>
+<li>Select <strong>Save Changes</strong>.</li>
+</ol>
+<h2 id="have-a-video-visit-with-your-provider">Have a video visit with
+your provider</h2>
+<h3 id="how-do-i-invite-someone-to-join-my-video-visit">How do I invite
+someone to join my video visit?</h3>
+<p>To invite your family member, caregiver, or another guest to
+your scheduled video visit:</p>
+<ol type="1">
+<li>Go to the appointment details page for your video visit.</li>
+<li>Select<strong> View and invite participants</strong>.</li>
+<li>Select <strong>Invite a new guest</strong>.</li>
+<li>Select one of your existing contacts or <strong>Invite a new
+guest</strong>.</li>
+<li>Enter the following information for the guest:
+<ul>
+<li>First name</li>
+<li>Last name</li>
+<li>Relationship to you</li>
+<li>Phone number or email address</li>
+</ul></li>
+<li>Select <strong>Send text message</strong> or <strong>Send Email
+invitation</strong>.</li>
+</ol>
+<h3 id="how-do-i-join-the-next-available-video-visit">How do I join the
+next available video visit?</h3>
+<p>If you need to be seen right away, you can join the queue for an
+on-demand video visit.</p>
+<ol type="1">
+<li>From the menu in MyChart, search <strong>Talk to a Doctor</strong>
+or <strong>On-Demand Video Visits</strong>.</li>
+<li>Confirm the state you’re currently in. Your device might request
+access to location services.</li>
+<li>Select your reason for visit from the list of options.</li>
+<li>After you’ve provided this information, select <strong>Put me in
+Line</strong> to be seen by the next available provider. You can choose
+to receive a notification when your provider is ready to see you.</li>
+</ol>
+<h3 id="how-do-i-prepare-for-my-video-visit">How do I prepare for my
+video visit?</h3>
+<p>To help your video visit go smoothly, complete the following steps
+before your video visit:</p>
+<ul>
+<li>If you join the video visit on your mobile device, make sure the
+camera app is up-to-date and your microphone works.</li>
+<li>If you join the video visit on your desktop computer:
+<ul>
+<li>Make sure you have a webcam set up. This can be a webcam that’s part
+of a laptop or a separate USB webcam.</li>
+<li>Make sure you’ve installed any required browser plug-ins, software,
+or apps with the most recent updates.</li>
+<li>Make sure your microphone permissions are enabled, or that you know
+where to find them in your computer’s settings.</li>
+</ul></li>
+</ul>
+<p>Before joining your video visit, log in to MyChart and navigate to
+the visit details page. Select <strong>Test hardware</strong> to make
+sure your camera, microphone, and speakers work. It’s also a good idea
+to repeat these steps at least 30 minutes before your video visit
+begins.</p>
+<h3 id="how-do-i-schedule-a-future-video-visit">How do I schedule a
+future video visit?</h3>
+<p>To schedule a future video visit:</p>
+<ol type="1">
+<li>Go to <strong>Find Care</strong> &gt; <strong>Schedule an
+Appointment</strong>.</li>
+<li>Select video visit as your reason for visit.</li>
+<li>Choose which provider and time slot you want and then select
+<strong>Schedule</strong>.</li>
+<li>At least fifteen minutes prior to your video visit appointment, log
+in to MyChart and go to the visits list (<strong>My Record</strong> &gt;
+<strong>Visits</strong>).</li>
+<li>Select <strong>eCheck-In</strong> to complete the necessary steps
+prior to beginning your visit.</li>
+<li>After you’ve completed eCheck-In, select <strong>Begin
+Visit</strong> to ensure you’re able to connect.</li>
+<li>If the connection was successful, you are placed in a virtual
+waiting room. Your provider will be with you shortly!</li>
+</ol>
+<h3 id="how-do-i-schedule-a-video-visit-with-my-provider">How do I
+schedule a video visit with my provider?</h3>
+<p>Meeting with a provider by video visit is a convenient way to receive
+care without coming to the hospital or clinic in person.</p>
+<p>You can use a web browser on your desktop computer or a mobile
+application to start a video visit. Mobile devices are preferred because
+most already have the appropriate camera and microphone setup for video
+visits.</p>
+<p>For more information on connecting with your doctor virtually, go to
+this page.</p>
+<h2 id="billing-and-payments">Billing and payments</h2>
+<h3 id="how-can-i-view-my-insurance-claims">How can I view my insurance
+claims?</h3>
+<ol type="1">
+<li>Go to <strong>Insurance</strong> &gt; <strong>Claims</strong>.</li>
+<li>Select a claim to view details for it, such as the servicing
+provider and claim status. </li>
+</ol>
+<p>If you have a question regarding the claim, select <strong>Customer
+Service Request</strong> to send a message to customer service
+staff.</p>
+<h3 id="how-do-i-get-a-price-estimate-for-medical-care">How do I get a
+price estimate for medical care?</h3>
+<p>To help you plan for upcoming care, such as a surgery or other
+procedures, you can get an estimate from MyChart. The estimate is based
+on your insurance and what other patients have been charged in the
+past.</p>
+<ol type="1">
+<li>Go to the Estimates activity and select Create a New Estimate.</li>
+<li>Select where you want to have the procedure done and look up the
+kind of service you want to receive. You can search for the service or
+look through services by category.</li>
+<li>After you select the service and see the estimate, select Save so
+that you can refer to it later.</li>
+</ol>
+<h3 id="how-do-i-pay-a-bill-in-mychart">How do I pay a bill in
+MyChart?</h3>
+<p>To see the outstanding account balance for any of your accounts, go
+to <strong>Billing</strong> &gt; <strong>Billing Summary</strong>. To
+view additional information about an account, including past statements,
+select <strong>View balance details</strong>. If you have any issues or
+questions about your bill, contact your healthcare organization for more
+information, as Epic does not obtain or hold your financial
+information. </p>
+<p>To make a payment for an outstanding balance: </p>
+<p>Go to <strong>Billing Summary</strong> by using the Billing shortcut
+at the top of the home page or by searching for it. Under
+<strong>Accounts you are responsible for</strong>, you can see billing
+information for yourself.  Under <strong>Other accounts you are
+authorized for</strong>, you can see billing information for anyone for
+whom you are an authorized billing user.  Select <strong>Make a
+Payment</strong> for the account on which you want to make a payment.
+Enter the amount you would like to pay. Select <strong>Choose payment
+method</strong> and enter your credit card or bank account information
+or select a saved payment method, if applicable. Select the
+<strong>Pay</strong> button.</p>
+<h3 id="how-do-i-request-financial-assistance-for-my-medical-bills">How
+do I request financial assistance for my medical bills?</h3>
+<p>If you need help paying your medical bills, you can submit a
+financial assistance application to see if any resources are available
+to you. Go to <strong>Billing</strong> &gt; <strong>Financial
+Assistance</strong> to get started. You’ll need to provide the following
+information to complete the application: </p>
+<ul>
+<li>How many people live in your household</li>
+<li>How much money you receive from all sources of income</li>
+<li>Your household expenses (such as mortgage, rent, and auto loan)</li>
+<li>Your assets (such as your bank account and vehicle)</li>
+<li>Supporting documents to verify the information you provide </li>
+</ul>
+<p>After you submit your application, a financial counselor will contact
+you to follow up.</p>
+<h3 id="how-do-i-review-and-update-my-insurance-information">How do I
+review and update my insurance information?</h3>
+<p>To review the insurance information your clinic has on file for you,
+go to <strong>Insurance</strong> &gt; <strong>Insurance
+Summary</strong>. Select <strong>View coverage details</strong> for the
+payer or plan to see more information about the coverage, such as your
+deductible and maximum out-of-pocket expenses. </p>
+<p>To update your insurance information, you can make any of the
+following changes from the <strong>Insurance Summary</strong>
+activity: </p>
+<ul>
+<li>Request a change to an existing coverage.</li>
+<li>Remove a coverage.</li>
+<li>Add a new coverage. New coverages are submitted for verification
+when you log out of MyChart.</li>
+</ul>
+<h3 id="how-do-i-sign-up-for-automatic-payments">How do I sign up for
+automatic payments?</h3>
+<p>Reduce your balance before your billing statement comes due by
+signing up for Visit Auto Pay. You can sign up while preparing for your
+appointment in MyChart or during in-person check-in. Visit Auto Pay
+means that you put a credit card or bank account on file and agree to
+automatically pay up to a certain amount for your visit. You can receive
+emails or text messages to let you know when your payment method is
+going to be charged and for how much.</p>
+<p>To sign up while preparing for your appointment, on the
+<strong>Payment</strong> step, select the <strong>Sign up</strong> under
+<strong>Visit Auto Pay</strong>.</p>
+<h3 id="how-do-i-sign-up-for-paperless-billing-communications">How do I
+sign up for paperless billing communications?</h3>
+<ol type="1">
+<li>From the home page or the Billing Summary page, select the
+<strong>Get started</strong> button on the paperless billing banner. If
+you do not see a banner, search for the <strong>Paperless
+Preferences</strong> activity.</li>
+<li>In the <strong>Contact information</strong> card, verify that the
+information displayed is accurate. If you have no contact information on
+file, select the <strong>Review contact information</strong> link to
+enter your information.</li>
+<li>You can choose to go paperless for your billing documents and for
+your explanation of benefits documents. Select the toggle button within
+the corresponding card to receive paperless documents. When it is green
+and shows a checkmark, you are opting to receive those documents
+electronically.</li>
+<li>Select <strong>Save changes</strong>.</li>
+</ol>
+<h2 id="keeping-your-data-secure">Keeping your data secure</h2>
+<h3 id="how-do-i-protect-myself-from-mychart-scams-and-fraud">How do I
+protect myself from MyChart scams and fraud?</h3>
+<p>Scammers sometimes try to trick patients by using the MyChart name or
+logo to make emails, text messages, phone calls, and websites look
+official. Some might try to steal your login information or promise free
+gifts if you enter payment details. A few simple habits go a long way
+toward keeping you safe. Always remember: stop and check if it doesn’t
+feel right.</p>
+<h4 id="how-to-protect-yourself"><strong>How to protect
+yourself</strong></h4>
+<ul>
+<li><strong>Check the sender and the web address.</strong> Before you
+click a link, enter login information, or provide payment details, look
+closely at the sender’s full email address and the complete website URL.
+Small misspellings and extra words are common signs of a fake. Each
+healthcare organization has its own URL for MyChart. You can look up
+your healthcare organization’s official MyChart website using the search
+tool at mychart.org. MyChart.com, MyChart.org, and Epic.com are all
+official Epic websites.</li>
+<li><strong>When in doubt, ask.</strong> Not sure if a message or
+website is real? Don’t enter your login or payment info yet. Call your
+healthcare organization’s help desk first and ask.</li>
+<li><strong>Guard your password and verification codes.</strong> Epic
+and your healthcare organization will never ask for your password or
+verification codes. The only safe place to enter them is the MyChart
+website or app. No one should ask for them by phone, text, or
+email.</li>
+<li><strong>Keep your communications private.</strong> Epic and your
+healthcare organization will never ask you to change your email address
+or phone number to one you don’t control. Don’t forward messages from
+MyChart to others.</li>
+<li><strong>Be skeptical of “free” offers.</strong> Some messages
+promise free gifts or prizes, such as a “free first aid kit,” in
+exchange for your info. These are most likely scams. MyChart does not
+run giveaways.</li>
+<li><strong>Never run commands on your computer.</strong> MyChart will
+never tell you to press keyboard shortcuts or to run a command to
+“verify,” “fix,” or “unlock” your account.</li>
+</ul>
+<h4 id="if-you-suspect-you-were-a-victim-of-fraud"><strong>If you
+suspect you were a victim of fraud</strong></h4>
+<ul>
+<li>Report the email as spam in your email client. This helps protect
+others!</li>
+<li>Reset your MyChart password for <a
+href="#how-do-i-change-my-username-or-password">your healthcare
+organization</a> or for your <a href="#what-is-an-epic-id">Epic ID with
+MyChart Central</a>.</li>
+<li>Review the email address, phone number, and other contact
+information on file in MyChart.
+<ul>
+<li><a
+href="#how-do-i-change-my-email-address-or-phone-number-on-file">How do
+I change my email address or phone number on file?</a></li>
+</ul></li>
+<li>Contact your healthcare organization’s help desk.
+<ul>
+<li>Find your MyChart</li>
+</ul></li>
+</ul>
+<h3 id="how-is-mychart-secure">How is MyChart secure?</h3>
+<p>Your healthcare organization takes great care to keep your health
+information private and secure. Access to your information in MyChart is
+controlled through secure activation codes and personal login
+credentials, like a username and password.  </p>
+<p>If you use the MyChart mobile app, after you have logged in with your
+password, you can also turn on additional ways to log in, such as by
+using a four-digit passcode (PIN), facial recognition, or fingerprint
+login. MyChart also supports passkeys, which can be saved to your device
+and allow you to log in without needing to remember your username and
+password. </p>
+<p>MyChart also uses two-step verification to help ensure that your
+account stays secure even if someone else has your username or password.
+When you log in, you must enter a code that is sent to you by email or
+text message, in addition to using your username and password.</p>
+<p>You might receive email or text notifications that contain links to
+MyChart. These notifications allow you to log in to MyChart securely
+using a link that expires after a short time. Keeping your MyChart
+account secure means keeping your phone number and email account secure.
+If you think that your phone number or email account might be
+compromised, you can change the phone number or email account on file on
+the <strong>Personal Information</strong> activity in MyChart. </p>
+<p>When you need to contact your healthcare organization, all MyChart
+messaging is done while you are logged in to the website or mobile app,
+which keeps your information more secure than conventional email.</p>
+<h3 id="what-can-my-provider-see">What can my provider see?</h3>
+<p>Your healthcare provider has access to your full medical record so
+they can provide the best care for you. If you are seen at more than one
+organization, your provider might be able to see information from your
+record at another organization if both organizations participate in Care
+Everywhere.</p>
+<p>MyChart is a window that shows you what is in your medical record.
+Your MyChart information comes directly from your electronic medical
+record at your provider’s office.</p>
+<h3 id="what-is-two-step-verification">What is two-step
+verification?</h3>
+<p>MyChart uses two-step verification to keep your account secure even
+if someone else has your username or password. After entering your login
+information, you receive an email or text message with a code to enter
+to log in to MyChart.</p>
+<p>You can also use an authenticator app instead. An authenticator app
+is a phone app that generates a unique code every few seconds. You enter
+this code to verify your identity when you log in.</p>
+<p>To change your verification method: </p>
+<ol type="1">
+<li>From the MyChart menu, go to <strong>Account Settings</strong> &gt;
+<strong>Two-step verification</strong>.</li>
+<li>Select <strong>Verify with email</strong> or <strong>text
+message</strong> or <strong>Verify with authenticator app</strong> and
+follow the instructions on the screen.  </li>
+</ol>
+<p>The next time you log in to MyChart, you receive a text message or
+email with a code to enter (if you selected <strong>Verify with email
+address</strong>) or you enter a code from your authenticator app (if
+you chose <strong>Verify with authenticator app</strong>).</p>
+<h3 id="where-is-my-data-stored">Where is my data stored?</h3>
+<p>Your data is stored with your healthcare organization. Epic does not
+have access to your medical data and cannot reset your passwords for
+you. To update your information outside of MyChart, contact your
+healthcare organization directly. You can usually find their contact
+information on their FAQ page, which is linked on the bottom of their
+MyChart website.</p>
+<h2 id="deleting-and-deactivating-your-account">Deleting and
+deactivating your account</h2>
+<h3 id="how-do-i-deactivate-my-account">How do I deactivate my
+account?</h3>
+<p>If you deactivate your MyChart account, you are automatically logged
+out and can’t log back in.</p>
+<p>To deactivate your account:</p>
+<ol type="1">
+<li>Go to Account settings &gt; Account management.</li>
+<li>Select Deactivate account.</li>
+<li>Select Deactivate on the Deactivate Your Account page.</li>
+</ol>
+<p>Alternatively, call or email your healthcare organization’s MyChart
+help desk. You can find their contact information on their FAQ page,
+which is linked on the bottom of their MyChart website, or by searching
+for them using the Need help? button below.</p>
+<h3 id="how-do-i-reactivate-my-mychart-account">How do I reactivate my
+MyChart account?</h3>
+<p>If your account is deactivated and you’d like to reactivate it,
+contact your healthcare organization’s MyChart help desk. You can find
+their contact information on their FAQ page, which is linked on the
+bottom of their MyChart website.</p>
+<h3 id="what-happens-if-i-deactivate-my-account">What happens if I
+deactivate my account?</h3>
+<p>If you deactivate your account, you lose access to your MyChart
+account. You are logged out automatically and can no longer log in. You
+also stop receiving communications directing you to log in to MyChart.
+ </p>
+<ul>
+<li>If you have connected your account to any other organizations, you
+can no longer see information from your deactivated account.</li>
+<li>Other MyChart users who have access to your medical information keep
+that access even after you deactivate your account.</li>
+<li>Your medical information is not deleted. Your healthcare
+organization may keep your information on file to ensure you continue to
+receive the best possible care.</li>
+</ul>
+<p>You can deactivate your account without being logged in. If you do
+not remember your username or password and want to deactivate your
+MyChart account, contact your healthcare organization’s MyChart help
+desk. You can usually find the contact information on their FAQ page,
+which is linked on the bottom of their MyChart website. </p>
+<p>You can sign up for MyChart again in the future. To reactivate your
+account, contact your healthcare organization.</p>
+<h3 id="why-can-t-i-delete-my-account">Why can’t I delete my
+account?</h3>
+<p>MyChart is just a window that allows you to see your legal medical
+record at your healthcare organization. Epic does not store any of your
+medical information. Your information is always with your healthcare
+organization, and there are laws and regulations for them to keep
+it. </p>
+<p>You can deactivate your MyChart account in <strong>Account
+Settings</strong> in the MyChart mobile app or by contacting your
+healthcare organization’s MyChart help desk. You can find their contact
+information on their FAQ page, which is linked on the bottom of their
+MyChart website.</p>
+</body>
+</html>

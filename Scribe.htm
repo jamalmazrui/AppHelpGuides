@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-02" />
+  <title>Scribe for Documents Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Scribe for Documents Help Guide</h1>
+<p class="subtitle">Pneuma Solutions’ own manual for Scribe, gathered
+into one document</p>
+<p class="date">2026-08-02</p>
+</header>
+<h1 id="scribe-for-documents-help-guide">Scribe for Documents Help
+Guide</h1>
+<p>80This guide gathers Pneuma Solutions’ own documentation for Scribe
+for Documents, as iton 2 August 2026. Scribe converts inaccessible
+documents into formats a screen, a braille display or a text-to-speech
+voice can use.*A note on the platform switch.** Scribe’s manual offers a
+Windows version and a macOS, and every topic in them is word for word
+identical. Scribe is a web service, sois nothing for the platforms to
+differ about. Publishing both would have doubledguide’s length without
+adding a sentence, so each topic appears once.*The company FAQ is
+included for a specific reason.** It is the only place Pneumathe LIMITS
+of its own remediation: roughly 95 per cent accuracy when reading,
+automatic image descriptions that may be generic, unreliable language
+detectionmixed-language documents, headings and complex tables sometimes
+missed, and visualdeliberately sacrificed for accessibility. A guide
+carrying only the manualleave you to discover those for yourself.to be
+confused with Scribd, the document sharing library, which is a
+differententirely – nor with Scribe for Meetings, a separate Pneuma
+product not covered.document holds 2 categories, 12 articles and about
+9,698 words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#the-same-on-windows-and-macos">The Same on Windows and
+macOS</a>
+<ul>
+<li><a href="#disclaimers">Disclaimers</a></li>
+<li><a href="#frequently-asked-questions-from-the-manual">Frequently
+Asked Questions from the Manual</a></li>
+<li><a href="#localization">Localization</a></li>
+<li><a href="#the-management-dashboard">The Management
+Dashboard</a></li>
+<li><a href="#plans-and-purchasing">Plans and Purchasing</a></li>
+<li><a href="#remediation">Remediation</a></li>
+<li><a href="#system-requirements">System Requirements</a></li>
+<li><a href="#welcome">Welcome</a></li>
+</ul></li>
+<li><a href="#scribe-faqs-not-in-the-manual">Scribe FAQs (not in the
+manual)</a>
+<ul>
+<li><a href="#are-documents-safe-to-process-in-the-cloud">Are documents
+safe to process in the cloud?</a></li>
+<li><a href="#do-you-offer-a-free-trial">Do you offer a free
+trial?</a></li>
+<li><a href="#is-scribe-available-in-languages-other-than-english">Is
+Scribe available in languages other than English?</a></li>
+<li><a href="#what-are-scribe-s-limitations">What are Scribe’s
+limitations?</a></li>
+</ul></li>
+</ul>
+<h2 id="the-same-on-windows-and-macos">The Same on Windows and
+macOS</h2>
+<h3 id="disclaimers">Disclaimers</h3>
+<p>Scribe For Documents complies with current copyright regulations,
+converting digital content solely to enhance accessibility for users
+with disabilities who have a legal right to access the material. Scribe
+does not infringe on content owners’ intellectual property rights,
+allowing customers to use it within copyright laws. Users may only
+convert documents if they own the copyright, have permission from the
+holder, or the copyright has expired. The end user is fully responsible
+for document content and any potential copyright violations. Pneuma
+Solutions holds no liability for misuse of the service.</p>
+<h3 id="frequently-asked-questions-from-the-manual">Frequently Asked
+Questions from the Manual</h3>
+<p>Here are answers to some common questions concerning Scribe. When
+faced with an issue, please refer to this document whenever possible.
+Note that some of these questions concern Scribe’s use throughout an
+organization. Don’t see your question? <a
+href="https://pneumasolutions.com/contact/">Contact us</a>, and let’s
+get you squared away.</p>
+<h4 id="why-scribe">Why Scribe?</h4>
+<p>Before Scribe, print-disabled individuals faced barriers in accessing
+online documents. Scanned documents often remained inaccessible, and new
+formats didn’t cater to assistive technologies. Scribe, with its
+Augmented Document Remediation (ADR) technology, eliminates these
+challenges. Previously, document remediation was a costly,
+labor-intensive process, requiring human translation, tagging, and
+testing. Scribe’s ADR technology makes this unnecessary for most
+documents, saving time and money. Many organizations struggle to make
+their entire document library accessible. Ignoring the issue can lead to
+expensive litigation. Scribe swiftly provides high-quality,
+cost-effective accessible documents without human intervention. With
+Scribe, 100% of your documents are accessible 100% of the time, meeting
+the needs of print-disabled individuals <a
+href="https://pneumasolutions.com/products/scribe/">Find out
+if Scribe is for your organization, here.</a> Or reach out to us via our
+<a href="https://pneumasolutions.com/contact/">contact page.</a></p>
+<h4 id="what-is-the-unique-gap-scribe-fills-in">What is the unique gap
+Scribe fills in?</h4>
+<p>Not every document requires costly human remediation for
+print-disabled access. Scribe bridges the gap for documents like
+invoices, financial statements, and more, which often remain
+inaccessible due to high costs. There is a shortage of certified human
+document remediators, creating a backlog of inaccessible documents.
+Scribe’s ADR technology reduces this backlog, providing nearly instant
+access for print-disabled individuals. For documents requiring human
+remediation, Scribe offers a cost-effective solution, providing
+certified remediated documents for under $10 per page.</p>
+<h4 id="what-is-augmented-document-remediation">What is Augmented
+Document Remediation?</h4>
+<p>Scribe’s Augmented Document Remediation combines automated efficiency
+with human expertise to tackle complex documents. Our proprietary
+pipeline blends machine learning and heuristics to significantly reduce
+the need for manual intervention. When human remediation is necessary,
+it’s focused on refining output, creating a powerful solution for a wide
+range of materials.</p>
+<h4 id="who-is-pneuma-solutions-llc">Who is Pneuma Solutions, LLC?</h4>
+<p>Pneuma Solutions stands at the forefront as the leader in cloud-based
+accessible solutions. Our primary mission is to provide products and
+services that empower individuals with disabilities by making online
+information accessible to them. We specialize in crafting accessible
+cloud-based tools designed to improve the lives of online users living
+with disabilities. Our tools are instrumental in assisting schools,
+municipalities, and businesses worldwide in delivering information that
+is accessible to people with disabilities. We take pride in offering
+information in multiple formats, tailored to the diverse needs of
+print-disabled individuals, who may be using various operating systems
+and platforms. <a href="https://pneumasolutions.com/about/">Learn more
+about Pneuma Solutions here.</a></p>
+<h4 id="what-organizations-benefit-from-scribe">What organizations
+benefit from Scribe?</h4>
+<p>Scribe offers substantial benefits to a wide range of organizations
+that maintain extensive libraries of printable materials, whether in the
+public or private sector. Typically, those who benefit from Scribe’s
+Augmented Document Remediation (ADR) technology, which ensures documents
+are accessible to print-disabled individuals, include:</p>
+<ul>
+<li>Online Information Providers</li>
+<li>Newspapers</li>
+<li>Banks</li>
+<li>Consumer Electronics Manufacturers</li>
+<li>Legal Firms</li>
+<li>Educational Facilities</li>
+<li>Municipalities</li>
+<li>Public Utilities</li>
+<li>Law Enforcement Agencies</li>
+<li>Not-for-Profit Organizations</li>
+<li>Libraries</li>
+<li>Insurance Companies</li>
+<li>Restaurants</li>
+<li>Other Businesses, Both Large and Small</li>
+</ul>
+<p>If your organization hosts a substantial volume of documents online
+and is committed to making this information accessible to individuals
+with print disabilities, Scribe offers invaluable solutions to meet your
+needs and objectives.</p>
+<h4 id="how-do-i-know-scribe-is-right-for-our-organization">How do I
+know Scribe is right for our organization?</h4>
+<p>If your organization publicly provides documents on its website, it
+is well-suited to leverage the advantages of Scribe’s Augmented Document
+Remediation technology. Moreover, if your organization is concerned
+about the risk of litigation due to the exclusion of print-disabled
+individuals from accessing the information you offer to the public,
+Scribe can be a valuable solution. The good news is that Scribe is
+available for a completely free trial, allowing you to test it in
+real-time with access to all its features. There are no obligations
+attached to this trial. If you are interested, please reach out to us to
+arrange your free trial. We are eager to provide you with the
+opportunity to discover how Scribe can benefit your organization. If you
+are interested, simply <a
+href="https://pneumasolutions.com/contact/">get in touch with us to
+arrange your free trial.</a> We’ll be happy to give you an opportunity
+to learn how Scribe will benefit your organization. You can <a
+href="https://pneumasolutions.com/products/scribe/">find out more
+about Scribe here.</a></p>
+<h4 id="how-much-can-scribe-save-my-organization">How much can Scribe
+save my organization?</h4>
+<p>The potential savings your organization can achieve with Scribe
+depend on several factors, including the number of documents you
+currently have online, the volume of documents you plan to provide in
+the future, and the extent of remediation needed. It’s important to
+consider that if your organization doesn’t offer documents in an
+accessible format, there’s a risk of litigation to consider. Manual
+document remediation typically costs between $15 to $20 per page. In
+contrast, Scribe can generate well-formatted alternative documents for
+just pennies per page. While we can’t provide an exact dollar amount of
+savings, the significant cost difference between Scribe and manual
+document remediation is evident. With Scribe, you also save valuable
+time by eliminating the need to upload individual documents for
+certified human document remediation quotes. Accessibility is achieved
+in seconds, and if a human-remediated version is necessary, users can
+easily request one with just a few clicks. Scribe streamlines the
+process, allowing you to provide accessible documents seamlessly in the
+background. To help you make an informed decision, we offer a fully
+functional trial. Simply <a href="https://scribeit.io/">click here to
+initiate your trial</a> and experience the potential savings
+firsthand.</p>
+<h4 id="do-you-offer-a-trial">Do you offer a trial?</h4>
+<p>Certainly! We offer a comprehensive trial for Scribe, giving you the
+opportunity to experience its seamless document remediation ability.</p>
+<p>The trial, immediately available upon visiting <a
+href="https://scribeit.io">scribeit.io</a>, will allow you to preview
+the first two pages of any document you send through Scribe. This fully
+compliant HTML preview will give you a taste of Scribe’s document
+remediation ability. If you like what you see, you can remediate the
+document via one of our purchasing options.</p>
+<p>If you are an organization interested in acquiring Scribe, please do
+not hesitate to <a href="https://pneumasolutions.com/contact/">contact
+us</a> to arrange a trial to meet your specific needs.</p>
+<h4 id="how-long-is-the-trial-period">How long is the trial period?</h4>
+<p>The trial period for Scribe is not constrained by a fixed number of
+days. Instead, you have the freedom to utilize Scribe to preview as many
+documents as you desire. The only restriction is an inability to
+remediate the full document.</p>
+<h4 id="does-scribe-produce-fully-remediated-documents">Does Scribe
+produce fully remediated documents?</h4>
+<p>Scribe is designed to produce highly accurate remediated documents
+through its unique Augmented Document Remediation technology. As a
+result, most documents no longer require certified human document
+remediation. Print-disabled individuals can promptly access the
+information they need directly from the accessible documents generated
+by Scribe, typically in a matter of seconds. Currently, Scribe’s
+Augmented Document Remediation technology achieves an average accuracy
+rate of 96%. Our developers continuously enhance its capabilities and
+machine learning functions to improve accuracy even further. Scribe For
+Documents empowers print-disabled individuals to obtain the information
+they require precisely when they need it, simplifying their access to
+content. If your goal is to achieve a 99% accuracy level with certified
+human document remediation, we are more than willing to collaborate with
+your preferred remediation service. Alternatively, you can choose to
+work with one of our partners to reach this goal for less than $10 per
+page. Using a Scribe generated document as the source file for certified
+human document remediation reduces both cost and processing time. We
+invite you to explore the capabilities of Scribe through our free
+trial.</p>
+<h4
+id="why-does-the-remediated-.pdf-look-like-the-original-but-all-the-other-formats-look-different-visually">Why
+does the remediated .PDF look like the original but all the other
+formats look different visually?</h4>
+<p>If you’re wondering why your document looks different after processed
+by Scribe compared to its original appearance, there’s a straightforward
+explanation. Scribe is meticulously designed to optimize every aspect of
+document display for maximum accessibility and usability, catering to
+users with various types of print impairments. It empowers users to
+easily customize font styles, text sizes, and colors, ensuring that the
+document is presented in a layout that’s easy to read, regardless of the
+user’s chosen font size. However, when it comes to Scribe’s PDF output,
+the primary goal is to preserve the original appearance of the document
+while still meeting accessibility requirements. This approach may make
+it less user-friendly for individuals with low vision who wish to
+customize the visual elements. Scribe’s PDF output aims to provide a
+single version of your document that is both accessible and identical in
+appearance to the original. If you encounter a situation where Scribe’s
+PDF output differs from the original, we consider it a potential issue
+and kindly request that you inform us about it. We are committed to
+continuously improving the accuracy and consistency of our PDF output to
+ensure it aligns closely with the original document.</p>
+<h4 id="what-do-you-consider-a-print-disability">What do you consider a
+print disability?</h4>
+<p>Pneuma Solutions defines a print disability as an individual who is
+legally or medically documented as unable to effectively read printed
+material due to various factors, including but not limited to the
+following:</p>
+<ul>
+<li>A visual disability, listed as blind or visually impaired.</li>
+<li>A physical disability or injury unable to hold or manipulate printed
+material.</li>
+<li>A cognitive disability due to injury or developmental
+conditions.</li>
+<li>A learning disability which impedes comprehension of printed
+materials.</li>
+</ul>
+<p>Individuals with a print disability typically require the use of
+adaptive or specialized equipment to access printed or digital
+materials. This includes individuals who cannot access printed or
+digital information without the assistance of desktop and mobile
+devices, screen readers, screen and text magnification software, Braille
+notetakers, Braille displays or printers, and various other audible,
+tactile, or digital technologies.</p>
+<h4
+id="how-do-print-disabled-individuals-read-documents-made-accessible-with-scribe">How
+do print disabled individuals read documents made accessible with
+Scribe?</h4>
+<p>Print-disabled individuals employ a variety of technology solutions
+to access digital information. Scribe ensures that the accessible
+documents it generates are compatible with a range of assistive
+technologies, including:</p>
+<ul>
+<li>Desktop and mobile devices</li>
+<li>Screen readers</li>
+<li>Screen and text magnification software</li>
+<li>Braille notetakers</li>
+<li>Braille displays</li>
+<li>Braille printers</li>
+<li>And numerous other audible, tactile, or digital technologies</li>
+</ul>
+<p>With its diverse array of accessible document choices, Scribe
+empowers print-disabled individuals to access and consume information
+using the specific technologies that best suit their needs and
+preferences.</p>
+<h4 id="how-many-types-of-accessible-formats-can-scribe-create">How many
+types of accessible formats can Scribe create?</h4>
+<p>Scribe can currently convert your printable source file into eight
+different accessible formats in over 140 different languages:</p>
+<ol type="1">
+<li>HTML</li>
+<li>Tagged PDF</li>
+<li>MP3 (via text-to-speech in about a dozen languages).</li>
+<li>DAISY (text plus audio)</li>
+<li>EPUB</li>
+<li>Microsoft Word DOCX</li>
+<li>Braille (Grade 1, Grade 2, and Unified English Braille)</li>
+<li>Large print</li>
+</ol>
+<h4 id="what-types-of-printable-source-files-can-scribe-convert">What
+types of printable source files can Scribe convert?</h4>
+<p>Scribe can convert a wide array of file types.</p>
+<ul>
+<li>HTML</li>
+<li>HTM</li>
+<li>PDF</li>
+<li>DOC</li>
+<li>DOCX</li>
+<li>RTF</li>
+<li>XLS</li>
+<li>XLSX</li>
+<li>PPT</li>
+<li>PPTX</li>
+<li>ODT</li>
+<li>ODS</li>
+<li>ODP</li>
+<li>TXT</li>
+<li>TIF</li>
+<li>GIF</li>
+<li>JPG</li>
+<li>PNG</li>
+</ul>
+<h4
+id="why-should-i-choose-scribe-over-a-certified-document-remediation-service">Why
+should I choose Scribe over a certified document remediation
+service?</h4>
+<p>Choosing Scribe over a certified document remediation service offers
+numerous advantages, and it goes beyond the significant cost savings.
+Here’s why Scribe is a compelling choice:</p>
+<ol type="1">
+<li>Efficiency and Cost Savings: Not every document requires costly and
+labor-intensive human remediation for print-disabled individuals to
+access information promptly. Scribe’s Augmented Document Remediation
+technology is highly accurate and efficient, reducing the need for
+manual remediation and lowering expenses.</li>
+<li>Addressing Backlogs: There is a substantial backlog of inaccessible
+documents globally, and there simply aren’t enough certified human
+document remediators to handle them all. Scribe plays a crucial role in
+addressing this backlog, ensuring print-disabled individuals gain swift
+access to vital information.</li>
+<li>Collaboration: Scribe collaborates seamlessly with manual
+remediation services when necessary. It’s a versatile tool that can
+complement and enhance the work of certified human document
+remediators.</li>
+<li>Affordable Human Remediation: For cases where full remediation is
+needed, Scribe provides its own certified Human Remediation Service at a
+cost of under $10 per page. This offers a cost-effective solution
+compared to traditional manual remediation.</li>
+<li>Accuracy and Speed: Scribe’s Augmented Document Remediation
+technology is highly accurate and speeds up the remediation process.
+Print-disabled individuals no longer must wait days or weeks to access
+information, which improves their user experience.</li>
+<li>Budget Savings: By reducing the need for expensive certified human
+document remediation or litigation costs, Scribe helps organizations
+save a considerable amount of budget dollars.</li>
+<li>Reduced Waiting Times: Print-disabled individuals with legitimate
+remediation requests benefit from reduced waiting times to access the
+information they need.</li>
+<li>High-Quality Source Documents: Even when 100% remediation is
+necessary, Scribe aids manual processing by providing high-quality
+source documents, streamlining the remediation process.</li>
+</ol>
+<p>In essence, Scribe offers a win-win solution for organizations and
+print-disabled individuals. It combines cost-effectiveness, speed, and
+accuracy to provide accessible documents efficiently and
+comprehensively, ensuring that everyone benefits from its
+capabilities.</p>
+<h4
+id="what-if-we-are-requested-to-provide-a-fully-remediated-document">What
+if we are requested to provide a fully remediated document?</h4>
+<p>Scribe’s Augmented Document Remediation (ADR) technology consistently
+achieves an average accuracy rate of 96%, based on feedback from our
+users and internal testing. Our commitment to perfection means we are
+continually enhancing and fine-tuning our ADR technology until we reach
+the goal of 100% automated document remediation. However, in situations
+where certified human document remediation is required, we offer this
+service for less than $10 per page. This presents a significant
+budget-saving opportunity, especially when using Scribed documents as
+the source file. We aim to provide cost-effective solutions that align
+with your organization’s needs and objectives.</p>
+<h4 id="is-scribe-a-document-remediation-product">Is Scribe a document
+remediation product?</h4>
+<p>Scribe is more than just a document remediation product; it is a
+fully automated cloud-based remediation service powered by Augmented
+Document Remediation (ADR) technology. Our automated processes are
+exceptionally accurate, often eliminating the need for expensive
+certified human document remediation in most cases. Scribe’s ADR
+technology consistently achieves an average accuracy rate of 96%, based
+on feedback from our users and internal testing. We are committed to
+continuous improvement and are tirelessly working to achieve 100%
+automated document remediation. In situations where certified human
+document remediation remains necessary, we offer this service at a cost
+of under $10 per page. This presents a significant budget-saving
+opportunity, especially when using Scribed documents as the source file.
+Scribe is designed to provide efficient and cost-effective solutions for
+document accessibility needs.</p>
+<h4 id="how-can-we-start-using-scribe-in-our-organization">How can we
+start using Scribe in our organization?</h4>
+<p>Getting started with Scribe is easy.</p>
+<ol type="1">
+<li><a href="https://scribeit.io/">Register here.</a></li>
+<li>Once your account is activated, you can upload individual documents
+from your computer or a URL to the Scribe platform. We can also supply
+you with a few lines of HTML code you can actually embed in to your
+website for automation.</li>
+<li>Simply upload a file or drop the HTML into your site template, and
+you’re ready to go.</li>
+</ol>
+<h4 id="is-there-a-lot-of-setup-to-get-scribe-up-and-running">Is there a
+lot of setup to get Scribe up and running?</h4>
+<p>Setting up Scribe is remarkably straightforward, requiring minimal
+effort, especially if you opt for the cloud-based service. Here’s how it
+works:</p>
+<ul>
+<li>Account Activation: Once your account is activated, the setup
+process is streamlined.</li>
+<li>Integration: It’s as simple as embedding a few lines of code into
+your website template. Conversions are conducted either remotely from
+our distributed cloud infrastructure or, if you choose the On-Premises
+Scribe Server option, on your local network.</li>
+<li>Security: Scribe ensures the highest level of encryption for
+end-to-end security during source document conversions.</li>
+<li>Ease of Use: After setup, you can essentially “set it and forget
+it.” Scribe manages file conversions and offers a range of accessible
+options for users to download. If a certified human remediated document
+is required, we handle every step of the process, from user request to
+document delivery within days—not weeks or months. We keep you informed
+at every stage with detailed reports.</li>
+</ul>
+<p>In summary, Scribe offers a hassle-free setup process, allowing you
+to focus on providing accessible documents to your users without the
+complexities of extensive configuration or maintenance.</p>
+<h4 id="how-soon-after-set-up-can-we-start-using-scribe">How soon after
+set up can we start using Scribe?</h4>
+<p>You can begin using Scribe immediately after setting up your account
+and embedding the code into your Content Management System (CMS) or
+website, which includes links to your printable content. It’s a
+straightforward process, and once it’s complete, you can offer
+print-disabled users’ access to all your accessible documents directly
+from your website, on-demand, without delay.</p>
+<h4 id="are-there-any-on-going-maintenance-requirements-on-our-end">Are
+there any on-going maintenance requirements on our end?</h4>
+<p>There are no ongoing maintenance requirements on your end, provided
+you opt for the cloud-based service. All application updates and
+processing are securely conducted remotely from our distributed cloud
+infrastructure. This means that everything happens off-site, ensuring
+there is no interruption to your operations or your end-users’
+experience. If you choose the on-premises option, we will collaborate
+with you to facilitate any necessary updates through your maintenance
+plan. Regardless of the chosen option, we strive to make the maintenance
+process as seamless as possible, allowing you to focus on providing
+accessible documents without the burden of continuous upkeep.</p>
+<h4 id="does-scribe-come-in-just-one-option">Does Scribe come in just
+one option?</h4>
+<p>Scribe offers three distinct options to cater to different
+organizational needs:</p>
+<ol type="1">
+<li>Scribe Cloud Edition: This option provides unlimited use of Scribe
+to dynamically convert your documents on-demand whenever an end-user
+requires access.</li>
+<li>Scribe On-Premises Edition: Ideal for organizations that need to
+adhere to stringent security practices such as HIPAA. Scribe operates
+behind a firewall on your network, utilizing virtual images supplied by
+us.</li>
+<li>Scribe Full Library Conversion: This comprehensive option covers
+full document processing, whether on-site or cloud-based conversions,
+for your entire document library. It includes conversion to all eight
+accessible document formats for a single, all-inclusive price. Once
+processed, these documents become part of your library, ready for
+distribution at any time.</li>
+</ol>
+<p>Our goal is to provide configurable solutions that seamlessly
+integrate with your system and ensure information accessibility for
+print-disabled individuals 100% of the time. While the Scribe Cloud
+Edition is well-suited for many public-facing situations, we understand
+that specific requirements may lead you to consider one of our other
+options. Feel free to contact us at any time, and we’ll be delighted to
+discuss which option aligns best with your organization’s needs.</p>
+<h4 id="which-scribe-option-is-best-for-our-organization">Which Scribe
+option is best for our organization?</h4>
+<p>The choice of the best Scribe option for your organization depends on
+your specific requirements and considerations. Here’s a summary of the
+basic differences between the three available options:</p>
+<ol type="1">
+<li>Scribe Cloud Edition: This option is suitable for most public-facing
+situations. It offers unlimited use of Scribe to dynamically convert
+documents on-demand. It’s easy to implement and cost-effective.</li>
+<li>Scribe On-Premises Edition: Ideal for organizations with strict
+security and privacy policy requirements, such as those governed by
+HIPAA. Scribe operates behind a firewall on your network using software
+provided by us.</li>
+<li>Scribe Full Library Conversion: This comprehensive option covers
+both on-site and cloud-based conversions for your entire document
+library. It includes processing documents into all eight accessible
+document formats for a single, all-inclusive price.</li>
+</ol>
+<p>Your organization’s unique technical and privacy considerations will
+guide the choice of the most suitable Scribe option. If you need more
+detailed information or assistance in making a decision, don’t hesitate
+to reach out to us. We’re here to help you find the best fit for your
+needs.</p>
+<h4 id="can-you-supply-me-with-product-datasheets">Can you supply me
+with product datasheets?</h4>
+<p>Absolutely. Feel free to download and share any or all of the
+following datasheets:</p>
+<ul>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-cloud-datasheet-r.pdf">Scribe Cloud
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-desktop-datasheet-r.pdf">Scribe Desktop
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-server-appliance-datasheet-r.pdf">Scribe Server
+Appliance Datasheet</a></li>
+</ul>
+<h4 id="can-scribe-be-used-in-languages-other-than-english">Can Scribe
+be used in languages other than English?</h4>
+<p>Certainly! Scribe is a global solution that supports multiple
+languages. It can convert documents written in over 140 different
+languages. This includes the ability to produce audio files with
+human-sounding text-to-speech in a dozen different languages and braille
+conversions in more than 30 formats. It’s important to note that Scribe
+is not a translation service. Instead, it converts your source document
+within its original language, maintaining advanced formatting and
+accessibility features regardless of the language used. If you have any
+questions about whether your specific language is supported, please feel
+free to get in touch with us at any time. Additionally, you can try
+Scribe For Documents free to see how it handles documents written in
+your native language, as our trial is fully functional and allows you to
+explore its capabilities.</p>
+<h4 id="what-if-i-have-a-document-in-multiple-languages">What if I have
+a document in multiple languages?</h4>
+<p>Certainly! Scribe can handle documents that contain multiple
+languages. Here’s how it works:</p>
+<ul>
+<li>Scribe will not translate from one language to another. It will
+produce accessible documents according to the original languages in the
+source document.</li>
+<li>In situations where you have a multi-language document and you want
+all the languages processed in one document, Scribe can handle that. It
+will create an accessible document that includes all the original
+languages present in the source document.</li>
+<li>If you need dual or multiple languages to parallel each other in the
+accessible document, Scribe can accommodate this as well. It can ensure
+that the content in multiple languages is presented in a way that is
+easy for users to navigate and understand.</li>
+</ul>
+<p>Scribe’s flexibility allows it to work with documents that contain
+multiple languages, helping you provide accessible content to a diverse
+audience.</p>
+<h4
+id="doesnt-scribe-use-the-same-ocr-processing-as-other-document-processing">Doesn’t
+Scribe use the same OCR processing as other document processing?</h4>
+<p>Scribe sets itself apart by using AI and the most advanced and
+highest-quality OCR (Optical Character Recognition) tools available
+today. It goes beyond standard OCR processing by incorporating
+additional graphic cleansing processes that may not be available in your
+organization’s current workflow. Scribe is unique in that it utilizes a
+proprietary technology called Augmented Document Remediation (ADR). ADR
+is specially designed to format your source document as it was
+originally meant to be read, providing an accessible output that
+preserves the document’s intended formatting and structure. Through
+machine learning algorithms, Scribe continually improves its performance
+over time, without the need for manual updates or additional
+configuration. Properly formatted source files processed by Scribe are
+readable using various technologies, specifically designed to assist
+print-disabled individuals. Scribe’s combination of advanced OCR,
+graphic cleansing, and ADR technology makes it stand out as a digital
+document remediation tool that delivers exceptional quality, speed, and
+a simplified user experience. This unique combination sets Scribe apart
+from other document processing tools on the market.</p>
+<h4 id="what-platforms-will-scribe-work-on">What platforms will Scribe
+work on?</h4>
+<p>Scribe is a versatile product that can be used on any platform, and
+it only requires the end-user to have a web browser. Here are some key
+points:</p>
+<ul>
+<li>Scribe is platform-agnostic, making it compatible with a wide range
+of platforms and systems.</li>
+<li>It works seamlessly on any HTML-based platform you use, including
+Content Management Systems (CMS), Learning Management Systems (LMS), and
+internal intranets.</li>
+<li>Scribe leverages API technology and other technical specifications
+to ensure smooth integration and accessibility across various
+platforms.</li>
+</ul>
+<p>For more detailed technical information, you can download our
+datasheets, which provide comprehensive information about how Scribe
+works and its technical specifications.</p>
+<ul>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-cloud-datasheet-r.pdf">Scribe Cloud
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-desktop-datasheet-r.pdf">Scribe Desktop
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-server-appliance-datasheet-r.pdf">Scribe Server
+Appliance Datasheet</a></li>
+</ul>
+<h4
+id="what-is-the-difference-between-scribes-adr-and-traditional-ocr-packages">What
+is the difference between Scribe’s ADR and traditional OCR
+packages?</h4>
+<p>Scribe utilizes proprietary technology called Augmented Document
+Remediation (ADR) to transform documents into accessible formats. Here’s
+a simplified explanation:</p>
+<ul>
+<li>Traditional processes typically print documents to a file and
+attempt optical character recognition (OCR).</li>
+<li>Scribe’s ADR technology, on the other hand, goes beyond OCR. It
+intelligently extracts text from the document and employs a special
+graphical cleansing process to enhance content clarity.</li>
+<li>ADR incorporates machine learning to identify both tagged and
+untagged elements in the source document. For example, it can recognize
+headers, lists, tables, and various formatting elements even if they
+lack explicit tags or font attributes.</li>
+<li>Scribe’s machine learning analyzes the content to determine its
+specific use and format in the source document. Then, it swiftly
+transforms the content into an accessible document format in just
+seconds.</li>
+<li>Importantly, this entire process is automated, requiring no human
+intervention.</li>
+<li>Scribe also offers the capability for content producers to create
+custom document profiles or templates. This is particularly useful for
+documents with repetitive structures, such as invoices or statements, as
+it ensures consistent and efficient formatting every time.</li>
+</ul>
+<p>In essence, Scribe’s ADR technology provides an advanced and
+automated way to make documents accessible without the need for manual
+intervention, and it can be further optimized using document templates
+for specific document types.</p>
+<h4 id="how-will-documents-be-available-to-my-end-users">How will
+documents be available to my end-users?</h4>
+<p>To make documents accessible to your end-users, all they need is a
+web browser. Here’s how it works:</p>
+<ol type="1">
+<li>You will receive a dynamic link from us, which you can embed into
+your website or content management system.</li>
+<li>When your end-users click on this link, they will be presented with
+eight different accessible formatted document options.</li>
+<li>Your end-users can choose the formats that work best for their
+adaptive equipment, making it easy for them to access the content.</li>
+<li>Scribe produces documents that are compatible with various assistive
+technologies, including screen readers, screen and text magnification
+software, Braille displays or printers, and other audible, tactile, or
+digital technologies.</li>
+</ol>
+<p>This means that your end-users can access the documents in a format
+that suits their specific needs and preferences, ensuring a seamless and
+accessible experience.</p>
+<h4
+id="does-scribe-handle-multiple-document-types-such-as-invoices-statements-reports-and-account-summaries">Does
+Scribe handle multiple document types such as invoices, statements,
+reports, and account summaries?</h4>
+<p>Certainly, Scribe is versatile and can handle various document types
+such as invoices, statements, reports, and account summaries.</p>
+<h4 id="how-long-does-it-take-to-scribe-a-document">How long does it
+take to Scribe a document?</h4>
+<p>The time it takes to Scribe a document can vary depending on the
+specific scenario:</p>
+<ul>
+<li>On-Demand Conversion (Cloud Service): When using Scribe’s cloud
+service for on-demand conversion, it takes just a few seconds for
+end-users to get the information they need with a single click.</li>
+<li>Library Conversion (Super Compute Cloud Infrastructure): If you are
+converting an entire library of documents, the time required will depend
+on the size of your library. Using Scribe’s Super Compute cloud
+infrastructure for dynamic conversions, it’s possible to convert
+thousands of documents in an afternoon or a day.</li>
+<li>On-Premises Installations: If you choose an on-premises installation
+and use your own network resources, the conversion time will depend on
+the performance of your network. It may take longer compared to the
+cloud-based Super Compute infrastructure.</li>
+</ul>
+<p>In any case, once the document is converted, it will be available to
+end-users within seconds through a web browser, making it convenient and
+efficient for them to access the information they need.</p>
+<h4
+id="how-long-would-it-take-to-get-a-fully-remediated-document-if-we-needed-one">How
+long would it take to get a fully remediated document if we needed
+one?</h4>
+<p>The time it takes to get a fully remediated document, if needed, will
+depend on several factors, including the complexity of the document and
+the specific requirements for remediation. However, with Scribe’s
+Augmented Document Remediation (ADR) technology providing a highly
+accessible starting point, the process can be expedited:</p>
+<ul>
+<li>Highly Accessible Starting Point: Scribe’s ADR technology
+significantly reduces the need for extensive manual remediation. This
+means that the initial accessibility of the document is quite high.</li>
+<li>Certified Document Remediation Team: If certified human document
+remediation is necessary for documents that require 99% accuracy, such
+as legal documents or textbooks, Scribe can provide this service. The
+certified document remediation team will work on the document.</li>
+<li>Faster Processing: Thanks to the quality of the starting point
+provided by Scribe’s ADR technology, the certified document remediation
+team can process your documents more quickly than the standard time
+allowance.</li>
+</ul>
+<p>The exact time frame for fully remediated documents will depend on
+the specific document and your organization’s requirements. However,
+Scribe aims to provide efficient and timely remediation services when
+necessary.</p>
+<h4
+id="what-is-the-difference-between-dynamic-and-static-accessible-documents">What
+is the difference between dynamic and static accessible documents?</h4>
+<p>The difference between dynamic and static accessible documents lies
+in how they are generated and stored: Dynamic Accessible Documents:</p>
+<ul>
+<li>These documents are converted on demand.</li>
+<li>Your source file remains on your network.</li>
+<li>When an end-user requests an accessible document, it is dynamically
+converted from the source file each time.</li>
+<li>This approach ensures that the document is always up-to-date and
+reflects any changes made to the source file.</li>
+<li>It is a “just-in-time” conversion process.</li>
+</ul>
+<p>Static Accessible Documents:</p>
+<ul>
+<li>In this case, your entire library of documents has been converted
+into accessible formats.</li>
+<li>The converted documents, available in multiple formats, reside on
+your network.</li>
+<li>When an end-user requests an accessible version of a document from
+your website, it is downloaded directly from your library.</li>
+<li>These documents are pre-converted and stored for immediate
+access.</li>
+<li>It provides a quicker response to user requests but may require
+periodic updates if the source documents change.</li>
+</ul>
+<p>The choice between dynamic and static accessible documents depends on
+your organization’s specific needs and preferences for document
+accessibility delivery.</p>
+<h4
+id="wouldnt-i-want-to-pay-for-converting-our-library-one-time-and-be-done-with-scribe">Wouldn’t
+I want to pay for converting our library one-time and be done with
+Scribe?</h4>
+<p>While converting your entire document library to accessible formats
+might seem like a one-time solution, it’s important to consider ongoing
+document creation and changes. Here’s why it’s not recommended to
+convert your library once and be done with Scribe:</p>
+<ul>
+<li>New Documents: As your organization continues to create new
+documents, they will also need to be made accessible. Converting your
+library one-time won’t address this ongoing need.</li>
+<li>Accessibility on Demand: To address new documents and changes to
+existing ones, you can utilize Scribe’s dynamic accessibility options
+like the Scribe Cloud Addition or Scribe On-Premises Addition. These
+plans allow you to generate accessible documents on-demand as
+needed.</li>
+<li>HIPAA and Security Concerns: If you have concerns about security and
+need to keep documents behind a firewall and on-site for compliance
+reasons, you can purchase a package of scribes that do not expire. This
+ensures that the accessible versions of your documents are available
+locally for users while maintaining security.</li>
+</ul>
+<p>In summary, while converting your library is a valuable step, ongoing
+document creation and accessibility requirements make it necessary to
+have dynamic accessibility solutions in place, like those offered by
+Scribe, to meet the needs of your organization and users.</p>
+<h4
+id="what-about-security-are-documents-safe-to-process-on-the-cloud">What
+about security? Are documents safe to process on the cloud?</h4>
+<p>Security is a top priority for us at Pneuma Solutions. We have
+implemented robust security measures to ensure the safety of your
+documents when processing them in the cloud:</p>
+<ul>
+<li>High-Grade Encryption: We utilize the highest end-to-end encryption
+protocols available. This level of encryption is trusted by banks,
+medical institutions, and government organizations, ensuring that your
+documents remain secure throughout the process.</li>
+<li>VPN Technology: We employ Virtual Private Network (VPN) technology
+to establish secure connections for document uploads, processing, and
+returns to your platform. VPNs add an extra layer of security to protect
+your data during transmission.</li>
+</ul>
+<p>With these security measures in place, you can have confidence that
+Scribe is committed to safeguarding your documents and sensitive
+information throughout the processing and delivery process.</p>
+<h4
+id="our-organization-complies-with-hipaa-and-client-privacy-standards.-is-there-an-option-to-provide-this-service-in-house">Our
+organization complies with HIPAA and client privacy standards. Is there
+an option to provide this service in-house?</h4>
+<p>Certainly! We understand the importance of complying with HIPAA and
+client privacy standards. To cater to organizations with strict privacy
+requirements, we offer the Scribe On-Premises Addition or desktop
+option. This option allows you to:</p>
+<ul>
+<li>Restrict Access: You can restrict access to Scribe from the public
+domain, ensuring that all conversions are performed within your in-house
+network.</li>
+<li>Updates Control: When updates are available, we will notify you. You
+have the flexibility to choose when to open Port 80 for updates,
+ensuring that you have control over the process.</li>
+</ul>
+<p>By choosing the Scribe For Documents On-Premises Addition or desktop
+option, you can maintain compliance with HIPAA and other privacy best
+practices while still benefiting from the accessibility and convenience
+that Scribe provides for print-disabled individuals or employees. For
+more detailed technical information, you can download the Scribe
+datasheets:</p>
+<ul>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-cloud-datasheet-r.pdf">Scribe Cloud
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-desktop-datasheet-r.pdf">Scribe Desktop
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-server-appliance-datasheet-r.pdf">Scribe Server
+Appliance Datasheet</a></li>
+</ul>
+<h4
+id="does-pneuma-solutions-keep-any-source-or-alternative-format-documents-processed-by-scribe">Does
+Pneuma Solutions keep any source or alternative format documents
+processed by Scribe?</h4>
+<p>Pneuma Solutions does not retain source or alternative format
+documents processed by Scribe long-term or permanently. However, we do
+temporarily cache the encrypted versions for 72 hours as part of our
+processing service. If you require adjustments to this caching period,
+you have the option to increase it or have it removed entirely. You can
+configure this setting in your account settings for your
+convenience.</p>
+<p>###Is Scribe only for blind and visually impaired people?</p>
+<p>Scribe is not exclusively for blind and visually impaired
+individuals. It is designed to assist anyone with a print disability. A
+print-disabled person is defined as “a person who cannot effectively
+read print due to a visual, physical, perceptual, developmental,
+cognitive, or learning disability.” Scribe aims to make information
+accessible to individuals with various forms of print disabilities,
+ensuring that a wide range of users can benefit from its services.</p>
+<h4 id="does-scribe-help-people-with-dyslexia">Does Scribe help people
+with dyslexia?</h4>
+<p>Yes, Scribe can be beneficial for individuals with dyslexia. It
+offers various formats, including DAISY, Epub, and audio formats, which
+can assist people with dyslexia in accessing and comprehending content.
+The DAISY option, for example, allows individuals with dyslexia to
+listen to the document while following along visually in print,
+providing them with an alternative way to consume information. The
+natural-sounding text-to-speech audio format used by Scribe can make
+content more accessible to individuals with dyslexia by providing them
+with an alternative way to access and comprehend written
+information.</p>
+<h4
+id="does-pneuma-solutions-have-experience-in-print-disabled-products">Does
+Pneuma Solutions have experience in print disabled products?</h4>
+<p>Yes, Pneuma Solutions has a wealth of experience in creating products
+and services for print-disabled individuals. While the company’s name
+may be relatively new, its founders, Mike Calvo and Matt Campbell, and a
+team of experienced developers have a long history of developing
+solutions for people with print disabilities. Serotek Corporation,
+another company founded by Mike Calvo and where Matt was the lead
+developer and CTO, has two decades of experience in this field,
+demonstrating a strong commitment to serving individuals with print
+disabilities. You can find out more by going to our <a
+href="https://pneumasolutions.com/about/">About Us page.</a></p>
+<h4 id="how-much-does-scribe-cost">How much does Scribe cost?</h4>
+<p><a href="./plans">Click here for information on consumer plans and
+pricing.</a> Enterprise pricing varies depending on the edition and
+features that best suit your organization’s needs. Each of the three
+editions comes with different features and associated pricing
+structures. Some options are based on a monthly or annual fee for
+unlimited usage, while others offer a limited number of scribes that do
+not expire over time. The pricing may also depend on whether you need
+dynamic or static document processing. Moreover, Pneuma Solutions offers
+configurable pricing to meet your specific requirements. Discounts may
+be available for multiple domains and not-for-profit organizations. To
+get precise pricing details tailored to your organization, it’s
+recommended to contact Pneuma Solutions directly.</p>
+<h4 id="is-there-a-discount-for-more-than-one-domain">Is there a
+discount for more than one domain?</h4>
+<p>Yes, Pneuma Solutions does offer a discount for multiple domains.
+When you discuss your organization’s needs with a representative, be
+sure to mention the number of domains you’d like to include, as your
+discount quote may depend on the specific number of domains you want to
+incorporate.</p>
+<h4 id="how-are-scribe-updates-delivered">How are Scribe updates
+delivered?</h4>
+<p>Scribe updates are delivered automatically if you use Scribe For
+Documents on Pneuma Solutions’ distributed cloud infrastructure. We
+handle all the updates for you. If you choose an option where Pneuma
+Solutions supplies you with Scribe’s conversion software, you can
+download it, or we can arrange to send it to you if your organization
+follows industry best practices and has a firewall. Regardless of the
+delivery method, they ensure that your maintenance plan allows you to
+receive the latest advances and features that Scribe offers. You can
+find more information about this in the downloadable Scribe
+datasheets:</p>
+<ul>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-cloud-datasheet-r.pdf">Scribe Cloud
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-desktop-datasheet-r.pdf">Scribe Desktop
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-server-appliance-datasheet-r.pdf">Scribe Server
+Appliance Datasheet</a></li>
+</ul>
+<h4 id="does-pneuma-solutions-offer-support">Does Pneuma Solutions offer
+support?</h4>
+<p>Yes, Pneuma Solutions offers email support to your team at any time.
+However, Scribe is designed to require very little support. If you
+choose dynamic conversion options using our distributed cloud
+infrastructure, all maintenance is handled on our end. The only thing
+residing on your network is a small snippet of HTML code. Scribe is
+designed to be user-friendly and require minimal support from your end.
+We are available to assist with document profiling and configuration
+settings to get you up and running smoothly. If you opt for the Scribe
+On-Premises Addition, you will also have direct email access to one of
+our developers for server configuration and setup.</p>
+<h4
+id="so-what-gives-where-does-scribe-currently-have-some-limitations">So,
+what gives? Where does Scribe currently have some limitations?</h4>
+<p>Scribe’s Augmented Document Remediation technology is designed to
+transform inaccessible printed material into highly accurate and usable
+document formats. However, like any technology, it does have some
+limitations as it continues to learn and improve its capabilities. Here
+are the known limitations of Scribe:</p>
+<ul>
+<li>Images without alternate tags:
+<ul>
+<li>Scribe automatically adds descriptions to images that lack alternate
+text tags.</li>
+<li>The automatically generated descriptions may not always be perfect
+or may be generic, depending on the complexity of the image.</li>
+</ul></li>
+<li>Multilingual documents:
+<ul>
+<li>Scribe attempts to detect the language of each text block in the
+document.</li>
+<li>Language detection may sometimes be incorrect, especially for very
+short text blocks.</li>
+<li>Scribe does not perform fine-grained language detection within a
+single paragraph containing multiple languages.</li>
+</ul></li>
+<li>Uncommon typographical conventions:
+<ul>
+<li>Scribe attempts to tag all document headings for efficient
+navigation with assistive technology.</li>
+<li>In cases where the document formatting deviates significantly from
+common conventions, Scribe may report heading text as a false positive
+or miss a heading.</li>
+</ul></li>
+<li>Complex tables:
+<ul>
+<li>Scribe aims to tag all document tables, but in complex page layouts,
+some tables may be missed or incorrectly tagged.</li>
+<li>It may not accurately detect header cells, cells spanning multiple
+columns or rows, or properly distinguish between cells in complex
+tables.</li>
+</ul></li>
+<li>Running OCR on scanned documents:
+<ul>
+<li>When Scribe needs to perform optical character recognition (OCR) on
+a scanned document, the OCR results may not be perfect, with an accuracy
+rate of about 95% as of the last update.</li>
+</ul></li>
+<li>Visual format preservation:
+<ul>
+<li>Scribe’s primary goal is to make content accessible to
+print-disabled users, and it may sacrifice formatting accuracy in some
+cases.</li>
+<li>While it preserves font sizes, colors, indentation, and text
+justification, it does not retain finer details of page layout, such as
+margins, vertical spacing, headers, footers, or page breaks.</li>
+</ul></li>
+</ul>
+<p>It’s important to note that Scribe’s focus is on accessibility and
+providing information to print-disabled individuals efficiently. For
+preserving the original formatting, it’s recommended to keep the
+original document version alongside the accessible versions generated by
+Scribe, as Scribe may not perfectly preserve all visual formatting
+details.</p>
+<h4 id="what-is-the-advantage-of-scribes-digital-remediation">What is
+the advantage of Scribe’s digital remediation?</h4>
+<p>Scribe harnesses the power of machine learning technology. Alongside
+its remarkable speed and cost-effective conversion model, it continually
+enhances its accuracy with each use. Should you encounter the situations
+mentioned above, consider revisiting Scribe later. You may be pleasantly
+surprised as it continues to evolve and improve. At Pneuma Solutions,
+our unwavering commitment is to attain 100% accurate digital document
+remediation. While we work tirelessly towards this goal, we’ve made 100%
+certified human document remediation just one click away when necessary.
+Our mission is crystal clear: To ensure that print-disabled individuals
+have 100% access to the information they need, 100% of the time.</p>
+<h4 id="does-scribe-convert-math-nemeth-code-or-music-notation">Does
+Scribe convert math, Nemeth Code, or music notation?</h4>
+<p>As you’ve discovered in this FAQ, Scribe is a highly potent and rapid
+digital document remediation tool. However, there is a current
+limitation in digital remediation technology when it comes to accurately
+processing mathematical equations, music scores, tablature notation, or
+any form of music notation in Braille or print. The intricacies of these
+formats, including special characters and the unique nature of their
+composition, have not yet been fully integrated into OCR and machine
+learning technology. However, it’s essential to note that this doesn’t
+rule out the possibility of such capabilities in the future. For now, we
+encourage you to explore our certified human document remediation
+options to determine if they can address your specific needs.</p>
+<h4
+id="we-are-a-small-website-or-not-for-profit-organization-do-you-offer-any-special-pricing">We
+are a small website or not-for-profit organization, do you offer any
+special pricing?</h4>
+<p>Yes, we do offer discounts for small businesses or not-for-profit
+organizations. Please call 305-720-3639 to arrange a time to consult
+with one of our team members to see how we can get you the best price
+for Scribe.</p>
+<h4 id="what-if-i-have-more-questions">What if I have more
+questions?</h4>
+<p>Feel free to download a copy of the Scribe datasheets:</p>
+<ul>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-cloud-datasheet-r.pdf">Scribe Cloud
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-desktop-datasheet-r.pdf">Scribe Desktop
+Datasheet</a></li>
+<li><a
+href="https://pneumasolutions.com/wp-content/uploads/2021/06/scribe-server-appliance-datasheet-r.pdf">Scribe Server
+Appliance Datasheet</a></li>
+</ul>
+<p>You can <a href="https://pneumasolutions.com/contact/">contact us
+here</a> anytime or call us at 305-720-3639. We are happy to answer any
+questions you have regarding which option fits your need, pricing, or
+anything related to how Scribe can benefit your organization. You can
+also <a href="https://pneumasolutions.com/scribe/">find out more
+here.</a></p>
+<h3 id="localization">Localization</h3>
+<p>Scribe currently ships with 9 major languages, with more being added
+over time. If your system locale is among the supported languages in
+Scribe, the user interface will use your chosen language.</p>
+<h4 id="switching-languages">Switching languages</h4>
+<p>Scribe displays a language selector button at the bottom of the
+screen. Clicking this will display a list of languages. Select the
+desired language, and then click the “Switch language” button. Note that
+this language switcher will not change the default document remediation
+language set via the document defaults panel, however, it will impact
+the language of the image descriptions. For example, if you upload an
+English document while your Scribe language is French, you will receive
+image descriptions in French.</p>
+<h3 id="the-management-dashboard">The Management Dashboard</h3>
+<p>Scribe features a settings panel to facilitate various document
+remediation adjustments, as well as an organization page for managing
+the members under your organization.</p>
+<h4 id="document-defaults">Document Defaults</h4>
+<p>The Document Defaults page, located under the Settings menu, allows
+you to set global defaults that persist across all remediations. They
+include:</p>
+<h5 id="document-retention">Document Retention</h5>
+<p>This can be set to a value between 1 to 30 days, or indefinite if a
+subscription is Active.</p>
+<ul>
+<li>Note that with the exception of indefinite configuration, that this
+settings change affects current and future uploads equally.
+<ul>
+<li>If you upload a document with a 30 day retention, then set the
+retention period to 15 days on day 16 of that document’s lifespan, that
+document will be deleted prematurely upon saving the setting.</li>
+<li>On the other hand, if you upload a document with a 15 day retention
+span and later set the retention to a greater value, then that document
+will remain online until the newly configured expiration date.</li>
+<li>Should your subscription lapse, Scribe will retain any documents
+uploaded with indefinite retention for a period of 90 days following
+subscription termination. Scribe will send an email both 30 and 60 days
+following subscription termination advising you of this fact.
+Reactivating your subscription within the 90 day window will immediately
+terminate the countdown, making your document retention indefinite once
+again.</li>
+</ul></li>
+<li>If your account belongs to an organization, Scribe will inform you
+of the value that is currently set, instructing you to contact your org
+admin should you wish for this to be changed.</li>
+</ul>
+<h5 id="large-print">Large Print</h5>
+<p>This toggle allows you to determine whether documents are converted
+to large print by default.</p>
+<h5 id="add-image-descriptions">Add image descriptions</h5>
+<p>This toggle controls whether or not Scribe attempts generation of
+alt-text for images.</p>
+<h5 id="process-mathematical-notation-beta">Process mathematical
+notation (Beta)</h5>
+<p>This toggle controls whether mathematical notation is processed and
+converted by default.</p>
+<h5 id="language">Language</h5>
+<p>This controls the preferred language for documents. scribe attempts
+automatic language detection unless a language is specifically
+chosen.</p>
+<h5 id="text-to-speech-preferences">Text to speech preferences</h5>
+<p>These will be remembered across languages. Available settings
+include:</p>
+<ul>
+<li>Gender (Shows when the language is set to Automatically Detect)</li>
+<li>Dialect</li>
+<li>Default voice (A sample button is provided)</li>
+<li>Default speed</li>
+</ul>
+<h5 id="braille-options">Braille Options</h5>
+<p>These options control the default behavior for Braille formatting.
+Available settings include:</p>
+<ul>
+<li>Braille translation table</li>
+<li>Braille cells per line (paper width)</li>
+<li>A toggle for splitting Braille into pages
+<ul>
+<li>The “Braille lines per page” setting appears if this option is
+selected.</li>
+</ul></li>
+</ul>
+<h4 id="organization-controls-enterprise">Organization Controls
+(Enterprise)</h4>
+<p>Activating the “Organization” button in the dashboard’s navigation
+bar will reveal a menu of options related to member management as well
+as organization-wide document defaults.</p>
+<h5 id="managing-organization-members">Managing Organization
+Members</h5>
+<p>The “Members” page will list all the members in your organization.
+All members can have their role, department and name modified, and any
+member can be deactivated or removed from an organization except for the
+organization owner. Note that deactivating a member will render their
+account inoperable while retaining its record.</p>
+<h6 id="adding-members">Adding Members</h6>
+<p>Adding members is as simple as entering their email address,
+selecting their role (user or administrator), optionally entering their
+name, and selecting their department if one has been created. If you
+have multiple members to add, you can use the “Members” edit field to
+perform a bulk add. This edit field accepts multiple lines of text,
+allowing you to enter each member’s information on a separate line. On
+each line, you may enter either a single email address, or an email
+address and a name in the format: * John Doe*</p>
+<p>Once you are finished, click the “Add” button.</p>
+<h6 id="departments">Departments</h6>
+<p>Departments allow you to organize members according to the various
+groups of your organization.</p>
+<p>To add a department, enter its name in the “Name” edit box under the
+“Create department” heading.</p>
+<h6 id="member-data-export">Member Data export</h6>
+<p>The member list in your organization can be exported as a CSV file.
+In order to download the export:</p>
+<ol type="1">
+<li>Choose the field separator that will separate the columns of the
+file. The available options include:
+<ul>
+<li>comma</li>
+<li>Semicolon</li>
+<li>Tab</li>
+</ul></li>
+<li>Activate the “Download” button.</li>
+</ol>
+<h5 id="document-retention-1">Document Retention</h5>
+<p>The “Document retention” page under the “Organization” menu allows
+you to control how long Scribe will retain documents uploaded by members
+within your organization. Accessing this page will allow you to set the
+value anywhere from 1 to 30 days.</p>
+<h6 id="notes">Notes</h6>
+<p>Note that there is currently no way for an enterprise organization to
+set the value to indefinite.</p>
+<h3 id="plans-and-purchasing">Plans and Purchasing</h3>
+<p>Scribe has a variety of plans and on-demand purchase options to suit
+your needs.</p>
+<p>The <a href="https://scribeit.io/signup/documents_upsell">Learn how
+you can save money with Scribe Augmented Document Remediation
+packages</a> link on your account dashboard will take you to a page
+allowing you to purchase a plan or prepaid package of pages. You can
+also choose to <a
+href="https://scribeit.io/signup/account_credit?state=%7B%22return_to%22%3A%22%2F%22%7D">Add
+funds to someone else’s Scribe account.</a></p>
+<h4 id="prepaid-pages">Prepaid Pages</h4>
+<p>Pages can be purchased a la carte at a per-page fixed rate. 200 is
+the minimum amount of pages that can be purchased via this method. The
+per-page rate, as well as the minimum purchase price, is determined by
+the local currency. Pages purchasedin this way will never expire.</p>
+<h4 id="yearly-subscription">Yearly Subscription</h4>
+<p>A yearly subscription offers 10000 page credits, as well as a 30%
+discount on human-remediation. These credits do not roll over.</p>
+<h3 id="remediation">Remediation</h3>
+<p>Remediating a document through Scribe is an extremely simple and
+efficient procedure.</p>
+<ol type="1">
+<li>Visit <a href="https://scribeit.io">scribeit.io</a></li>
+<li>For best results, we recommend logging in before remediating a
+document. Click on the “Log in” link.
+<ol type="1">
+<li>Enter your email address. You will receive an email with a
+verification link that will log you in.</li>
+</ol></li>
+<li>Once logged in, there are two ways to send a document to Scribe
+<ol type="1">
+<li>Click on the “File Browse…” button, locate the file on your
+computer, then click the “Start” button on the Scribe webpage.
+<ol type="1">
+<li>Supported filetypes include PDF, jpg, png, docx, or any other file
+that can stand on its own, I.E. is not dependent on additional
+components. As such, html files are not supported.</li>
+</ol></li>
+<li>Enter the URL of the document, then press enter or click on the
+“Preview” button.
+<ol type="1">
+<li>Note that this must be the URL to a direct file download, I.E. a URL
+that ends with a file extension such as .pdf, .jpg, etc. Scribe does not
+support URL’s for protected downloads that require login information.
+Protected files must be downloaded manually and then uploaded to
+Scribe.</li>
+</ol></li>
+</ol></li>
+<li>Once the document is loaded, you will be presented with the first
+two pages of the document, or the entire document if you have page
+credit.
+<ol type="1">
+<li>Note that the entire document goes through what is known as a
+streaming conversion, which means that the document’s content will
+gradually fill the page until the conversion is complete.</li>
+</ol></li>
+<li>Below the document content, you will find a “Remediate Full
+Document” button. Activating this button will allow you to select a
+conversion format via a menu, as well as customize conversion settings
+that depend on your chosen format. Regardless of conversion format, the
+basic conversion settings allow you to determine whether a document
+should have image descriptions generated in your currently chosen
+application language, or whether or not to have math content converted
+into accessible MathML. The available conversion formats include:
+<ul>
+<li>Accessible webpage viewed directly on Scribe</li>
+<li>Tagged PDF
+<ul>
+<li>Supports large print</li>
+</ul></li>
+<li>MP3, via text-to-speech in about a dozen languages
+<ul>
+<li>Additional settings for dialect, voice and/or gender, and speaking
+rate are offered with this conversion.</li>
+</ul></li>
+<li>Braille
+<ul>
+<li>Supported Tables include:
+<ul>
+<li>Grade 1 (EBAE)</li>
+<li>Grade 2 (EBAE)</li>
+<li>Unified English Braille (UEB)</li>
+<li>Computer Braille</li>
+<li>and many other languages</li>
+</ul></li>
+<li>Additional settings include:
+<ul>
+<li>Braille cells per line (40 by default)</li>
+<li>Whether to split Braille into pages
+<ul>
+<li>Number of lines per page (only shows if page splitting is
+enabled)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Downloadable web page</li>
+<li>EPUB</li>
+<li>Microsoft Word
+<ul>
+<li>Supports large print and language dialect options</li>
+</ul></li>
+<li>DAISY, text plus audio
+<ul>
+<li>Additional settings for voice and speaking rate are offered with
+this conversion.</li>
+</ul></li>
+<li>MOBI</li>
+</ul></li>
+<li>Once you have selected your format and configured any additional
+settings for the chosen format, do one of the following:
+<ol type="1">
+<li>Activate the “Next: Pricing Options” button to begin the payment
+process.
+<ul>
+<li>You can choose to purchase pages À la carte, or buy an annual
+subscription. The <a href="../plans">Plans and Purchasing</a> section
+will cover the plans in more detail.</li>
+</ul></li>
+<li>If you already have a subscription or account credit, activate the
+“Convert” button to begin the automated remediation process.</li>
+</ol></li>
+</ol>
+<p>That’s all there is to it! The final landing page will usually offer
+a download link to your file within seconds. Certain remediations,
+however, may take more time to process. This is standard issue for audio
+and daisy conversions due to the generation of the text to speech,
+however this may also happen if the document being remediated is quite
+large. In these cases, you can either leave the page open and wait for
+the link to appear, or look for an email to arrive with your file
+downloads. On this landing page, you can convert the document to another
+format. However, the initially chosen format will not show up in the
+list of format options as that format has already been used.</p>
+<h4 id="text-to-speech-conversion">Text to speech conversion</h4>
+<p>Scribe for Documents features an extensive, natural text-to-speech
+system, offering unprecidented control over how your audio conversions
+are presented. When you select the DAISY or Audio conversion options,
+the speech options will appear upon pressing “Customize Settings”. The
+available settings are as follows:</p>
+<ul>
+<li>Language</li>
+<li>Gender: When the language is set to automatically detect, you are
+able to choose whether the document is read with a male, female or
+neutral voice.</li>
+<li>Dialect: Upon choosing a specific language, several dialect options
+become available.</li>
+<li>Voice: Each dialect comes with several voices to choose from. The
+“Play Sample” button allows you to instantly generate a sample of the
+chosen voice.</li>
+<li>Speech Rate: 1X, 1.5X, and 2X options are available</li>
+</ul>
+<p>When a document is converted into any of the speech-supporting
+formats, an estimated time to completion will begin to display once the
+process reaches the speech conversion stage. Note that this time is
+merely an estimate, and the actual time to completion may vary based on
+a number of factors. As such, the actual time may be faster than the
+estimate, but every effort has been made to ensure Scribe does not
+underestimate the time to completion.</p>
+<h5 id="note-on-multilingual-voices">Note on Multilingual voices</h5>
+<p>The multilingual voices have been found to occasionally change
+language completely unprompted. In other words, if you have a document
+using only one language, with no indications of the need to switch
+languages, the multilingual voices may still decide to switch on their
+own for no clear reason. This is unfortunately a known issue beyond our
+control. As such, for documents known to be single-language, we
+recommend using the single-language voices for best results. These
+voices will still provide extremely natural inflection, but will not run
+the risk of unexpectedly switching languages.</p>
+<h4 id="remediating-math-content">Remediating Math content</h4>
+<p>Scribe for Documents offers the ability to convert print math content
+into an accessible format that can be read via speech and Braille. The
+resulting format will be the web-friendly MathML specification. MathML
+is readily supported by all modern web browsers, as well as most, if not
+all screen readers. These include:</p>
+<ul>
+<li>NVDA: via the free <a
+href="https://addons.nvda-project.org/addons/MathCAT.en.html">MathCAT</a>
+addon</li>
+<li>JAWS: built-in support via Direct embedding of the MathCAT
+library</li>
+<li>VoiceOver: Built-in support</li>
+<li>ChromeVox: Built-in support</li>
+</ul>
+<p>Follow these steps to remediate a document containing math
+content:</p>
+<ol type="1">
+<li>Choose your desired conversion format.</li>
+<li>from within the customization screen, check the “Process
+mathematical notation (beta)” checkbox.</li>
+<li>Make any further setting adjustments, then click “Convert”.</li>
+</ol>
+<p>The resulting output will include the mathematical notation rendered
+in a fully accessible format.</p>
+<h4 id="accessing-documents-on-a-later-date">Accessing Documents on a
+Later Date</h4>
+<p>Once logged into your Scribe account, a “Previously Scribed
+Documents” section will display the documents that you have already
+remediated. Clicking on one of them will pull up its preview along with
+any existing conversion downloads.</p>
+<h3 id="system-requirements">System Requirements</h3>
+<p>Scribe for Documents runs entirely on the web, thus it will work on
+any operating system with a modern web browser.</p>
+<h3 id="welcome">Welcome</h3>
+<p>Copyright © 2024 <a href="https://www.pneumasolutions.com">Pneuma
+Solutions</a></p>
+<h4 id="introducing-scribe-for-documents">Introducing Scribe for
+Documents</h4>
+<p>Thank you for choosing Scribe for Documents for your document
+remediation needs. Scribe for Documents is a cross-platform, affordable,
+one-click solution to on-demand document remediation!</p>
+<p>Gone are the days of expensive, platform-specific, difficult to
+maintain remediation solutions. Through the power of machine learning
+and the cross-platform capabilities brought about in modern web
+applications, Scribe takes document remediation to the cloud of near
+limitless possibilities.</p>
+<h5 id="why-scribe-1">Why Scribe?</h5>
+<p>If you’re coming from an older document remediation package, you may
+be wondering how an upgrade to Scribe can benefit you.</p>
+<h6 id="say-goodbye-to-platform-lock-in">Say Goodbye to Platform
+Lock-in</h6>
+<p>Most stand-alone document remediation packages are only available for
+the Windows platform, with macOS and mobile users left behind. What
+happens when you need to remediate a document and you’re away from your
+desktop?</p>
+<p>With previous solutions, you would be pretty well dead in the water
+until you get back to your computer. With Scribe being a fully web-based
+application, all it takes is a simple login and a file upload to
+generate a near instant result!</p>
+<h6 id="fully-modernized-conversions">Fully modernized Conversions</h6>
+<p>Scribe is aligned with the latest document and web content
+accessibility standards, ensuring fully compliant accessibility.</p>
+<h6 id="future-proof">Future Proof</h6>
+<p>Many document remediation packages would come shipped to you on a
+CD-ROM with lots of data, and the only available downloads would be
+update patches. With most computers not having a CDRom drive anymore,
+these solutions are already behind. Scribe addresses this by skipping
+the need for a downloadable application altogether. This cuts down on
+the need to follow a manual update process as Scribe improves. And
+improve it does, thanks to the power of machine learning!</p>
+<h2 id="scribe-faqs-not-in-the-manual">Scribe FAQs (not in the
+manual)</h2>
+<h3 id="are-documents-safe-to-process-in-the-cloud">Are documents safe
+to process in the cloud?</h3>
+<p>At Pneuma Solutions, security is a top priority. We ensure your
+documents are safe with high-grade end-to-end encryption, trusted by
+banks and government institutions, and VPN technology to secure all data
+transfers. These measures guarantee the protection of your documents
+throughout the processing and delivery process.</p>
+<h3 id="do-you-offer-a-free-trial">Do you offer a free trial?</h3>
+<p>We offer a comprehensive, unlimited-time trial of Scribe, allowing
+you to experience its full range of features. You can upload source
+files and download accessible formats just like a paid account. The
+trial includes up to 100 pages, with additional pages available upon
+request. Click <a href="https://scribeit.io/">here</a> or call
+612-246-4818 to begin your free trial and explore the benefits of
+Scribe. At the end of your Scribe trial, you’ll be notified when the
+page limit is reached, and the account administrator will receive an
+email. After experiencing Scribe’s cost-saving benefits, we’re happy to
+help you seamlessly transition to one of our active plans tailored to
+your organization’s needs.</p>
+<h3 id="is-scribe-available-in-languages-other-than-english">Is Scribe
+available in languages other than English?</h3>
+<p>Scribe supports over 140 languages, offering text-to-speech in a
+dozen languages and braille in 30+ formats. While it’s not a translation
+service, it converts documents in their original language, preserving
+formatting and accessibility features. Contact us to confirm if your
+language is supported.</p>
+<h3 id="what-are-scribe-s-limitations">What are Scribe’s
+limitations?</h3>
+<p>Scribe’s Augmented Document Remediation (ADR) technology transforms
+inaccessible documents into highly usable formats, but it has a few
+limitations:</p>
+<ul>
+<li><strong>Images without alt tags</strong>: Scribe adds automatic
+descriptions, which may be generic.</li>
+<li><strong>Multilingual documents</strong>: Language detection can be
+inaccurate, especially with mixed languages.</li>
+<li><strong>Uncommon formatting</strong>: May miss or misidentify
+headings and complex tables.</li>
+<li><strong>OCR on scans</strong>: Accuracy is around 95%.</li>
+<li><strong>Visual format</strong>: Scribe prioritizes accessibility
+over preserving fine visual details like margins or page breaks.</li>
+</ul>
+<p>Despite these limitations, Scribe continually improves with machine
+learning. For perfect formatting, retain the original document. If
+needed, certified human remediation is available. Scribe’s mission is to
+ensure print-disabled individuals have full access to information.</p>
+</body>
+</html>
