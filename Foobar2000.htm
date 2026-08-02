@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-02" />
+  <title>foobar2000 Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">foobar2000 Help Guide</h1>
+<p class="subtitle">foobar2000’s own documentation, gathered into one
+document</p>
+<p class="date">2026-08-02</p>
+</header>
+<h1 id="foobar2000-help-guide">foobar2000 Help Guide</h1>
+<p>This guide gathers foobar2000’s own documentation, as it stood on 2
+August 2026.</p>
+<p><strong>This is a small volume, and it is small because the
+documentation is small.</strong> Most of it is foobar2000’s own FAQ,
+which runs to eight sections and thirty-eight questions. The rest of the
+site contributes a page each on the platforms, the audio formats, the
+components and the licence. Nothing has been padded to make it look
+larger.</p>
+<p><strong>Two things are not here, and cannot be.</strong></p>
+<p>Title formatting – foobar2000’s scripting language for naming and
+displaying tracks – is documented INSIDE the program, under
+Titleformatting Help on its Help menu. It is not published on the web at
+all, so no guide assembled from the web can include it.</p>
+<p>The Hydrogenaudio Knowledgebase is not here either. foobar2000 links
+to it twice, for two specific answers, and that is a citation rather
+than an endorsement; it is written by the community rather than by
+foobar2000’s author. Where an article points there, the pointer is kept
+and the destination is not.</p>
+<p><strong>Changelogs and release notes are set aside.</strong> The
+harvest contained eight changelog pages and four release-note pages, and
+between them they held most of its words. A changelog is a record of
+what changed, not an explanation of how to do anything.</p>
+<p><strong>One article is much larger than the rest.</strong> The
+Components Repository page is foobar2000’s own directory of add-on
+components, and it accounts for roughly two fifths of this guide’s words
+on its own. It is kept because foobar2000 publishes it; the individual
+component pages beneath it are not, because they are written by the
+people who make those components.</p>
+<p>foobar2000 supports no translations, so there is no question of
+language here.</p>
+<p>This document holds 10 categories, 51 articles and about 7,487
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#about-foobar2000">About foobar2000</a>
+<ul>
+<li><a href="#foobar2000">foobar2000</a></li>
+<li><a href="#foobar2000-license-and-credits">foobar2000 License and
+Credits</a></li>
+<li><a href="#foobar2000-mobile-license-and-credits">foobar2000 Mobile
+License and Credits</a></li>
+<li><a href="#support-and-community">Support and community</a></li>
+</ul></li>
+<li><a href="#foobar2000-on-each-platform">foobar2000 on Each
+Platform</a>
+<ul>
+<li><a href="#foobar2000-for-android">foobar2000 for Android</a></li>
+<li><a href="#foobar2000-for-ios">foobar2000 for iOS</a></li>
+<li><a href="#foobar2000-for-mac">foobar2000 for Mac</a></li>
+<li><a href="#foobar2000-for-windows">foobar2000 for Windows</a></li>
+</ul></li>
+<li><a href="#formats-components-and-encoding">Formats, Components and
+Encoding</a>
+<ul>
+<li><a href="#audio-formats">Audio Formats</a></li>
+<li><a href="#components-repository">Components Repository</a></li>
+<li><a href="#ffmpeg-source-code-downloads">ffmpeg Source Code
+Downloads</a></li>
+<li><a href="#foobar2000-equalizer-supereq-source-code">foobar2000
+Equalizer / SuperEQ Source Code</a></li>
+<li><a href="#free-encoder-pack">Free Encoder Pack</a></li>
+</ul></li>
+<li><a href="#installing-and-upgrading">Installing and Upgrading</a>
+<ul>
+<li><a href="#how-do-i-install-additional-components">How do I install
+additional components?</a></li>
+<li><a href="#how-do-i-make-foobar2000-my-default-player">How do I make
+foobar2000 my default player?</a></li>
+<li><a href="#how-will-upgrading-affect-my-settings">How will upgrading
+affect my settings?</a></li>
+<li><a
+href="#i-have-updated-from-a-very-old-foobar2000-version-to-the-latest-and-now-i-am-experiencing-major-problems">I
+have updated from a very old foobar2000 version to the latest and now I
+am experiencing major problems…</a></li>
+<li><a
+href="#i-ve-downloaded-foobar2000-from-another-site-and-i-m-experiencing-problems">I’ve
+downloaded foobar2000 from another site and I’m experiencing
+problems…</a></li>
+</ul></li>
+<li><a href="#other-questions">Other Questions</a>
+<ul>
+<li><a
+href="#are-specifications-of-foobar2000-s-configuration-file-format-cfg-available-why-doesn-t-foobar2000-use-some-user-editable-xml-based-configuration-file-format-instead">Are
+specifications of foobar2000’s configuration file format (.cfg)
+available? Why doesn’t foobar2000 use some user-editable XML-based
+configuration file format instead?</a></li>
+<li><a
+href="#are-specifications-of-the-fpl-playlist-format-available-why-doesn-t-foobar2000-use-some-user-editable-xml-based-playlist-file-format-instead">Are
+specifications of the FPL playlist format available? Why doesn’t
+foobar2000 use some user-editable XML-based playlist file format
+instead?</a></li>
+<li><a href="#does-foobar2000-sound-better-than-other-players">Does
+foobar2000 sound better than other players?</a></li>
+<li><a
+href="#how-do-i-enable-volume-display-or-playlist-selection-total-time-display-in-my-status-bar">How
+do I enable volume display or playlist selection total time display in
+my status bar?</a></li>
+<li><a
+href="#how-do-i-make-the-currently-playing-track-to-be-selected-highlighted-and-stay-always-in-view">How
+do I make the currently playing track to be selected (highlighted) and
+stay always in view?</a></li>
+<li><a href="#how-do-i-use-title-formatting-strings">How do I use title
+formatting strings?</a></li>
+<li><a
+href="#i-can-t-find-some-command-in-my-playlist-context-right-click-menu-what-do-i-do">I
+can’t find some command in my playlist context (right-click) menu. What
+do I do?</a></li>
+<li><a
+href="#is-foobar2000-available-in-languages-other-than-english-can-i-contribute-a-translation">Is
+foobar2000 available in languages other than English? Can I contribute a
+translation?</a></li>
+<li><a href="#what-is-replaygain">What is ReplayGain?</a></li>
+<li><a
+href="#why-do-some-menu-commands-not-work-when-bound-to-global-keyboard-shortcuts">Why
+do some menu commands not work when bound to global keyboard
+shortcuts?</a></li>
+</ul></li>
+<li><a href="#random-shuffle-playback-order">Random / Shuffle Playback
+Order</a>
+<ul>
+<li><a
+href="#random-mode-why-do-i-hear-the-same-track-more-than-once-a-day-in-a-very-long-playlist">Random
+mode: Why do I hear the same track more than once a day in a very long
+playlist?</a></li>
+<li><a
+href="#shuffle-mode-why-do-i-hear-the-same-tracks-regularly-played-in-the-same-order">Shuffle
+mode: Why do I hear the same tracks regularly, played in the same
+order?</a></li>
+<li><a
+href="#what-s-the-difference-between-shuffle-and-random-playback-order-modes">What’s
+the difference between Shuffle and Random playback order modes?</a></li>
+<li><a
+href="#what-s-the-purpose-of-shuffle-albums-and-shuffle-directories-modes">What’s
+the purpose of Shuffle (albums) and Shuffle (directories)
+modes?</a></li>
+</ul></li>
+<li><a href="#renaming-files">Renaming Files</a>
+<ul>
+<li><a
+href="#how-can-i-rename-files-based-on-information-from-the-tags">How
+can I rename files based on information from the tags?</a></li>
+<li><a
+href="#why-can-t-i-use-replace-to-create-custom-substitution-schemes-for-characters-that-can-t-be-used-in-file-names">Why
+can’t I use $replace() to create custom substitution schemes for
+characters that can’t be used in file names?</a></li>
+</ul></li>
+<li><a href="#tagging-files">Tagging Files</a>
+<ul>
+<li><a
+href="#can-i-have-previous-next-buttons-in-the-properties-dialog-to-go-to-properties-of-previous-next-track-in-my-playlist">Can
+I have ‘Previous’ / ‘Next’ buttons in the Properties dialog, to go to
+properties of previous / next track in my playlist?</a></li>
+<li><a
+href="#how-can-i-add-id3v1-id3v2-or-apev2-tags-to-my-mp3-files-or-how-can-i-remove-them">How
+can I add ID3v1, ID3v2, or APEv2 tags to my MP3 files, or how can I
+remove them?</a></li>
+<li><a href="#how-do-i-edit-tags-of-my-files">How do I edit tags of my
+files ?</a></li>
+<li><a href="#what-tag-types-does-foobar2000-write-to-my-mp3-files">What
+tag types does foobar2000 write to my MP3 files?</a></li>
+<li><a
+href="#why-does-foobar2000-write-question-marks-to-my-id3v1-tags">Why
+does foobar2000 write question marks to my ID3v1 tags?</a></li>
+<li><a
+href="#why-is-tagging-mp3-tag-types-missing-from-the-context-menu">Why
+is ‘Tagging -&gt; MP3 tag types’ missing from the context menu?</a></li>
+</ul></li>
+<li><a href="#troubleshooting">Troubleshooting</a>
+<ul>
+<li><a
+href="#i-am-experiencing-high-system-resource-usage-memory-or-cpu-while-playing">I
+am experiencing high system resource usage (memory or CPU) while
+playing.</a></li>
+<li><a
+href="#i-am-using-asio-wasapi-etc-output-and-i-am-experiencing-issues">I
+am using ASIO/WASAPI/etc output and I am experiencing issues…</a></li>
+<li><a href="#i-have-a-problem-with-one-of-the-third-party-components">I
+have a problem with one of the third-party components…</a></li>
+<li><a href="#i-have-an-asus-xonar-card-and-i-m-experiencing-problems">I
+have an Asus Xonar card and I’m experiencing problems…</a></li>
+<li><a href="#some-of-my-files-are-not-seen-by-the-media-library">Some
+of my files are not seen by the Media Library…</a></li>
+<li><a href="#what-should-i-do-before-reporting-a-problem">What should I
+do before reporting a problem?</a></li>
+<li><a
+href="#what-should-i-do-if-foobar2000-refuses-to-load-a-component-dll">What
+should I do if foobar2000 refuses to load a component DLL?</a></li>
+<li><a
+href="#where-s-the-file-types-page-in-preferences-i-can-t-find-it">Where’s
+the File Types page in Preferences? I can’t find it…</a></li>
+<li><a href="#why-is-seeking-so-slow-while-playing-mp3-files">Why is
+seeking so slow while playing MP3 files?</a></li>
+</ul></li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#how-do-i-convert-my-audio-files-to-another-format">How do
+I convert my audio files to another format?</a></li>
+<li><a href="#what-is-the-official-foobar2000-web-site">What is the
+official foobar2000 web site?</a></li>
+</ul></li>
+</ul>
+<h2 id="about-foobar2000">About foobar2000</h2>
+<h3 id="foobar2000">foobar2000</h3>
+<p>foobar2000 is an advanced freeware audio player.</p>
+<h4 id="main-features">Main features</h4>
+<ul>
+<li>Plays <a href="#audio-formats">all mainstream audio formats</a> out
+of the box.</li>
+<li>Additional decoder components enable even more formats.</li>
+<li><a
+href="https://wiki.hydrogenaudio.org/index.php?title=Gapless">Gapless</a>
+playback.</li>
+<li>Stream music on your local network; foobar2000 can be used to
+control network audio players or foobar2000 running on another
+device.</li>
+<li>Easily customizable user interface layout on <a
+href="https://wiki.hydrogenaudio.org/index.php?title=Foobar2000:Layout_Editing_Mode">Windows</a>
+and <a
+href="https://wiki.hydrogenaudio.org/index.php?title=Foobar2000%3AMac%3ALayout">macOS</a>.</li>
+<li>Advanced <a
+href="https://wiki.hydrogenaudio.org/index.php?title=Foobar2000redirect:C16D48EE-39BE-4C91-9A35-441BEFA286D2">tagging
+capabilities</a>.</li>
+<li>Support for ripping Audio CDs as well as transcoding all supported
+audio formats.</li>
+<li>Full <a
+href="https://wiki.hydrogenaudio.org/index.php?title=Replaygain">ReplayGain</a>
+support.</li>
+<li>Customizable keyboard shortcuts.</li>
+<li>Many built-in DSP effects, additional available through DSP
+components; can load VST effects via VST adapter on Windows, Audio Units
+on macOS.</li>
+<li>Internet radio support, including integration with <a
+href="https://radio-browser.info">Radio Browser</a>.</li>
+<li>Open component architecture allowing third-party developers to
+extend functionality of the player - <a
+href="#components-repository">browse add-on components</a></li>
+<li>Available on: <a href="#foobar2000-for-windows">Windows</a>, <a
+href="#foobar2000-for-mac">macOS</a>, <a
+href="#foobar2000-for-android">Android</a> and <a
+href="#foobar2000-for-ios">iOS</a>. Windows version works on Linux via
+Wine.</li>
+<li>No strings attached, no telemetry, no data collection.</li>
+</ul>
+<h4 id="latest-news">Latest news</h4>
+<h5 id="section">2026-06-17</h5>
+<p>Introducing new website section: Blog &amp; rants.</p>
+<h5 id="view-all-news">View all news</h5>
+<h3 id="foobar2000-license-and-credits">foobar2000 License and
+Credits</h3>
+<h4
+id="foobar2000-audio-player-copyright-peter-pawlowski-installer-script-and-icons-copyright-janne-hyvärinen-all-rights-reserved.">foobar2000
+audio player Copyright © Peter Pawlowski Installer script and icons
+copyright © Janne Hyvärinen All rights reserved.</h4>
+<p>Redistribution and use in binary form, without modification, are
+permitted provided that the following conditions are met:</p>
+<ul>
+<li>Only unmodified installers can be redistributed; redistribution of
+foobar2000 binaries in any other form is not permitted.</li>
+<li>Neither the name of the author nor the names of its contributors may
+be used to endorse or promote products derived from this software
+without specific prior written permission.</li>
+</ul>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+“AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>Online tagger component, CDDB/freedb/gnudb support © 2005-2006 Holger
+Stenger</p>
+<p>Dithering implementation © 2003-2005 Gian-Carlo Pascutto</p>
+<p>FFmpeg This software uses code of <a
+href="http://ffmpeg.org">FFmpeg</a> licensed under the <a
+href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a>
+and its source can be downloaded <a
+href="#ffmpeg-source-code-downloads">here</a>.</p>
+<p>Musepack decoding library Copyright © 1999-2011
+Buschmann/Klemm/Piecha/Wolf/MDT</p>
+<p>WAVPACK Hybrid Lossless Wavefile Compressor Copyright © 1998-2022
+David Bryant</p>
+<p>libogg, libspeex and libopus libraries Copyright © 2002-2023 Xiph.Org
+Foundation</p>
+<p>FLAC - Free Lossless Audio Codec Copyright © 2000-2009 Josh Coalson,
+2011-2023 Xiph.Org Foundation</p>
+<p>SuperEQ library Copyright © Naoki Shibata, <a
+href="http://shibatch.sourceforge.net/">home page</a> Distributed under
+the terms of LGPL v2.1 - <a
+href="#foobar2000-equalizer-supereq-source-code">download source
+code</a></p>
+<p>libebur128 Copyright © 2011 Jan Kokemüller</p>
+<p>zlib general purpose compression library Copyright © 1995-2022
+Jean-loup Gailly and Mark Adler</p>
+<p>UnRAR © Alexander L. Roshal</p>
+<p>7-zip © Igor Pavlov</p>
+<p>RetroArch resampler Copyright © 2010-2018 The RetroArch team
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+“Software”), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions: The above copyright notice and this permission
+notice shall be included in all copies or substantial portions of the
+Software.</p>
+<p>Monkey’s Audio Copyright © 2000-2023 by Matthew T. Ashland</p>
+<p>Libsmb2: SMB2/SMB3 network share client</p>
+<h3 id="foobar2000-mobile-license-and-credits">foobar2000 Mobile License
+and Credits</h3>
+<h4
+id="foobar2000-audio-player-copyright-peter-pawlowski-all-rights-reserved.">foobar2000
+audio player Copyright © Peter Pawlowski All rights reserved.</h4>
+<p>Redistribution and use in binary form, without modification, are
+permitted provided that the following conditions are met:</p>
+<ul>
+<li>Only unmodified installers can be redistributed; redistribution of
+foobar2000 binaries in any other form is not permitted.</li>
+<li>Neither the name of the author nor the names of its contributors may
+be used to endorse or promote products derived from this software
+without specific prior written permission.</li>
+</ul>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+“AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>Dithering implementation © 2003-2005 Gian-Carlo Pascutto</p>
+<p>FFmpeg This software uses code of <a
+href="http://ffmpeg.org">FFmpeg</a> licensed under the <a
+href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a>
+and its source can be downloaded <a
+href="#ffmpeg-source-code-downloads">here</a>.</p>
+<p>Musepack decoding library Copyright © 1999-2011
+Buschmann/Klemm/Piecha/Wolf/MDT</p>
+<p>WAVPACK Hybrid Lossless Wavefile Compressor Copyright © 1998-2022
+David Bryant</p>
+<p>libogg, libspeex and libopus libraries Copyright © 2002-2023 Xiph.Org
+Foundation</p>
+<p>FLAC - Free Lossless Audio Codec Copyright © 2000-2009 Josh Coalson,
+2011-2023 Xiph.Org Foundation</p>
+<p>SuperEQ library Copyright © Naoki Shibata, <a
+href="http://shibatch.sourceforge.net/">home page</a> Distributed under
+the terms of LGPL v2.1 - <a
+href="#foobar2000-equalizer-supereq-source-code">download source
+code</a></p>
+<p>libebur128 Copyright © 2011 Jan Kokemüller</p>
+<p>zlib general purpose compression library Copyright © 1995-2022
+Jean-loup Gailly and Mark Adler</p>
+<p>UnRAR © Alexander L. Roshal</p>
+<p>7-zip © Igor Pavlov</p>
+<p>Monkey’s Audio Copyright © 2000-2023 by Matthew T. Ashland</p>
+<p>DEAF Module Decoder Based on DUMB Module Decoder (foo_dumb) by
+Christopher Snowhill Using DUMB v2.0.0, with several modifications</p>
+<p>Using playptmod &amp; modplay libraries by 8bitbubsy</p>
+<p>Game Music Emu Decoder Based on Game Emu Player (foo_gep) by
+Christopher Snowhill Using Game Music Emu library by Blargg, with
+several modifications</p>
+<p>Push the Tempo DSP Powered by AUDIO-STRETCH, Time Domain Harmonic
+Scaler © David Bryant, All Rights Reserved.</p>
+<p>Subsampling Scale Image View for Android © 2018 David Morrissey</p>
+<p>Additional DSP effects © mudlord</p>
+<p>Libsmb2: SMB2/SMB3 network share client</p>
+<p>Google Material Icons © Google</p>
+<h3 id="support-and-community">Support and community</h3>
+<h4 id="help-articles">Help articles</h4>
+<p>Frequently Asked Questions Legacy hardware support</p>
+<h4 id="foobar2000-forums">foobar2000 forums</h4>
+<p>Forums</p>
+<h4 id="foobar2000-wiki">foobar2000 wiki</h4>
+<p><a
+href="https://wiki.hydrogenaudio.org/index.php?title=Foobar2000:Foobar2000">Wiki</a></p>
+<h4 id="linking-to-foobar2000-on-the-web">Linking to foobar2000 on the
+web</h4>
+<p>If you want to link to the foobar2000 on your website, you can use
+the following officially endorsed buttons.</p>
+<p>The HTML code for each button is under the image.</p>
+<h5 id="small-button">Small button</h5>
+<pre><code>  &lt;img
+  src=&quot;`https://www.foobar2000.org/button-small.png&quot;` alt=&quot;foobar2000 audio player&quot; width=&quot;80&quot; height=&quot;15&quot; /&gt;</code></pre>
+<h5 id="medium-sized-button">Medium-sized button</h5>
+<pre><code>  &lt;img
+  src=&quot;`https://www.foobar2000.org/button.png&quot;` alt=&quot;foobar2000 audio player&quot; width=&quot;88&quot; height=&quot;31&quot; /&gt;</code></pre>
+<h5 id="large-button">Large button</h5>
+<pre><code>  &lt;img
+  src=&quot;`https://www.foobar2000.org/button-large.png&quot;` alt=&quot;foobar2000 audio player&quot; width=&quot;110&quot; height=&quot;32&quot; /&gt;</code></pre>
+<h2 id="foobar2000-on-each-platform">foobar2000 on Each Platform</h2>
+<h3 id="foobar2000-for-android">foobar2000 for Android</h3>
+<h4 id="foobar2000-for-android-1">foobar2000 for Android</h4>
+<h5 id="latest-stable-version">Latest stable version</h5>
+<p>2.25.8 log] notes]</p>
+<p>32-bit 64-bit 32-bit x86 64-bit x86</p>
+<h5 id="latest-preview-version">Latest preview version</h5>
+<p>2.26 preview 2026-08-01 log]</p>
+<p>32-bit 64-bit</p>
+<h5 id="system-requirements">System requirements</h5>
+<p>Android 7.0 or newer. All form factors (phone/tablet/TV) supported.
+Check legacy hardware support for additional details.</p>
+<h5 id="license">License</h5>
+<p>Released under the <a
+href="#foobar2000-mobile-license-and-credits">foobar2000 mobile
+license</a>.</p>
+<h3 id="foobar2000-for-ios">foobar2000 for iOS</h3>
+<h4 id="foobar2000-for-ios-1">foobar2000 for iOS</h4>
+<h5 id="latest-stable-version-1">Latest stable version</h5>
+<p>2.25.8 log] notes]</p>
+<p>IPA</p>
+<h5 id="latest-preview-version-1">Latest preview version</h5>
+<p>2.26 preview 2026-08-01 log]</p>
+<h5 id="system-requirements-1">System requirements</h5>
+<p>iOS / iPadOS 12.1 or newer. Version 2.26 preview requires iOS /
+iPadOS 18.6 or newer.</p>
+<h5 id="license-1">License</h5>
+<p>Released under the <a
+href="#foobar2000-mobile-license-and-credits">foobar2000 mobile
+license</a>.</p>
+<h3 id="foobar2000-for-mac">foobar2000 for Mac</h3>
+<h4 id="foobar2000-for-macos">foobar2000 for macOS</h4>
+<h5 id="latest-stable-version-2">Latest stable version</h5>
+<p>2.25.10 log] notes]</p>
+<p>Download</p>
+<h5 id="latest-preview-version-2">Latest preview version</h5>
+<p>2.26 preview 2026-07-23 log]</p>
+<p>Download</p>
+<h5 id="add-on-components">Add-on components</h5>
+<p>Browse macOS-compatible components</p>
+<h5 id="system-requirements-2">System requirements</h5>
+<p>macOS 11 “Big Sur” or newer. Intel or Apple Silicon processor.</p>
+<p>Check legacy hardware support for additional details.</p>
+<h5 id="license-2">License</h5>
+<p>Released under the <a
+href="#foobar2000-license-and-credits">foobar2000 license</a>.</p>
+<h5 id="old-versions">Old versions</h5>
+<p>Old releases compatible with older macOS versions are available in
+old foobar2000 versions archive.</p>
+<h3 id="foobar2000-for-windows">foobar2000 for Windows</h3>
+<h4 id="foobar2000-for-windows-1">foobar2000 for Windows</h4>
+<h5 id="latest-stable-version-3">Latest stable version</h5>
+<p>2.25.10 log] notes]</p>
+<p>32-bit 64-bit ARM</p>
+<h5 id="latest-preview-version-3">Latest preview version</h5>
+<p>2.26 preview 2026-07-23 log]</p>
+<p>32-bit 64-bit</p>
+<h5 id="system-requirements-3">System requirements</h5>
+<p>A computer not older than 20 years, running Windows 7 or newer.</p>
+<p>Check legacy hardware support for additional details.</p>
+<h5 id="license-3">License</h5>
+<p>Released under the <a
+href="#foobar2000-license-and-credits">foobar2000 license</a>.</p>
+<h5 id="additional-downloads">Additional downloads</h5>
+<p>Browse official components <a href="#components-repository">Browse
+all components</a> <a href="#free-encoder-pack">Free Encoder Pack:
+encoder binaries for the Converter component</a> Old versions of
+foobar2000</p>
+<h2 id="formats-components-and-encoding">Formats, Components and
+Encoding</h2>
+<h3 id="audio-formats">Audio Formats</h3>
+<h4 id="audio-file-formats-supported-natively">Audio file formats
+supported natively</h4>
+<ul>
+<li>MP3, MP2, MP1</li>
+<li>M4A, including AAC and Apple Lossless</li>
+<li>AAC</li>
+<li>Ogg Vorbis</li>
+<li>Opus</li>
+<li>Musepack</li>
+<li>Speex</li>
+<li>AC3</li>
+<li>DTS</li>
+<li>WMA</li>
+<li>FLAC &amp; Ogg FLAC</li>
+<li>WavPack</li>
+<li>Monkey’s Audio</li>
+<li>TAK</li>
+<li>WAV</li>
+<li>Wave64</li>
+<li>RF64</li>
+<li>AIFF</li>
+<li>AU/SND</li>
+<li>Matroska/WebM</li>
+<li>MPEG Transport Stream (.ts)</li>
+<li>Audio CD (Windows only)</li>
+</ul>
+<h4 id="internet-radio-formats-supported-natively">Internet radio
+formats supported natively</h4>
+<ul>
+<li>MP3</li>
+<li>AAC</li>
+<li>Ogg Vorbis</li>
+<li>Ogg FLAC</li>
+<li>Opus</li>
+<li>HLS</li>
+</ul>
+<h4 id="add-more-formats-using-ffmpeg">Add more formats using <a
+href="https://www.ffmpeg.org/">FFmpeg</a></h4>
+<ul>
+<li>Windows: Install FFmpeg Decoder Wrapper.</li>
+<li>macOS: Built-in functionality.</li>
+<li><a
+href="https://wiki.hydrogenaudio.org/index.php?title=Foobar2000:Components_0.9/foo_input_ffmpeg">Usage
+instructions</a></li>
+</ul>
+<h4 id="install-additional-decoders">Install additional decoders</h4>
+<ul>
+<li>Browse decoder components</li>
+</ul>
+<h3 id="components-repository">Components Repository</h3>
+<h4 id="system-windows-32-bit-windows-64-bit-windows-arm-macos">System:
+Windows 32-bit Windows 64-bit Windows ARM macOS</h4>
+<h4
+id="tags-all-dsp-decoder-columns-ui-panel-default-ui-element-playback-control-game-music-visualization-tagging-utility-diagnostic-resampler-untagged-converter-media-library-viewer-output-demoscene-playback-statistics-browser-console-output-replaygain-search-sql-synthesizer-user-interface-amiga-atari-bpm-commodore-html-javascript-lyrics-nintendo-playlist-queue-remote-control-skip">Tags:
+all DSP decoder Columns UI panel Default UI element playback control
+game music visualization tagging utility diagnostic resampler untagged
+converter media library viewer output demoscene playback statistics
+Browser console output ReplayGain search SQL synthesizer user interface
+Amiga Atari BPM Commodore HTML JavaScript lyrics Nintendo playlist queue
+remote control skip</h4>
+<ul>
+<li>Name: <strong>Last UpdateDescription</strong></li>
+<li><strong>ABX Comparator 2.2.3 Tags: ABX, comparator,
+utility</strong>: 2025-09-19 Performs a double-blind listening test
+between two tracks.</li>
+<li><strong>AdPlug 1.56 Tags: AdLib, decoder, game music, OPL2</strong>:
+2023-10-25 This component decodes several old MSDOS and game formats
+specific to the AdLib / OPL2 sound chip. This …</li>
+<li><strong>Advanced Visualization Studio (AVS) 0.0.4-alpha0 Tags:
+Columns UI panel, Default UI element, visualization</strong>: 2026-07-21
+Advanced Visualization Studio (AVS) is a music visualization plugin for
+Winamp. It was designed by Winamp …</li>
+<li><strong>Affix silence 0.0.12 Tags: DSP</strong>: 2023-03-18 Inserts
+a configurable amount of silence after and/or before each track to help
+external devices like …</li>
+<li><strong>Album list panel 2.2.0 Tags: Columns UI panel, media library
+viewer</strong>: 2026-07-30 A Columns UI panel version of album list.
+Allows you to browse your music library in a hierarchical
+structure.</li>
+<li><strong>Amplify 1.1 Tags: DSP</strong>: 2026-05-20 A simple volume
+adjustment DSP allowing the signal amplitude to be both boosted and
+lowered.</li>
+<li><strong>Analog VU Meter Visualisation 0.12.12 Tags: Columns UI
+panel, Default UI element, visualization</strong>: 2026-06-21
+foo_vis_vumeter is modern reimplementation of the analog VU meter
+component by DRON. It renders using …</li>
+<li><strong>ART Resampler 0.3.10 Tags: DSP, resampler</strong>:
+2026-04-27 Resampler based on David Bryant’s Audio Resampling Engine
+&amp; Command-Line Tool.</li>
+<li><strong>ASAP Decoder 8.0.0 Tags: Atari, decoder, game
+music</strong>: 2026-02-16 Decodes Atari 8-bit chiptunes in the
+following formats: SAP, CMC, MPT, RMT, TMC, TM8, CM3, CMR, CMS, …</li>
+<li><strong>ASIO Output 2.2.4 Tags: output</strong>: 2025-01-03 Provides
+ASIO output support. …</li>
+<li><strong>Audio CD Writer 3.1.1 Tags: audio cd, utility</strong>:
+2022-09-25 Allows you to burn audio CDs from any of supported audio
+formats, through context menu commands.</li>
+<li><strong>Audio MD5 0.7.1 Tags: diagnostic, tagging</strong>:
+2026-02-13 Generic audio integrity verification tool. Uses ffmpeg.exe to
+compute a checksum of the compressed audio …</li>
+<li><strong>Audio-Stretch 0.2 Tags: DSP</strong>: 2023-04-21 A
+foobar2000 component utilizing David Bryant’s Audio-Stretch library for
+speeding up / slowing down …</li>
+<li><strong>Audioscrobbler 1.5.0 Tags: playback statistics</strong>:
+2022-09-06 foo_audioscrobbler is a Last.fm/Audioscrobbler component for
+foobar2000. …</li>
+<li><strong>Beefweb Remote Control 0.10 Tags: remote control, user
+interface</strong>: 2025-02-28 Provides web interface and REST-like API
+for controlling player remotely. …</li>
+<li><strong>BPM Analyser 0.2.4.8 Tags: BPM, tagging</strong>: 2026-04-04
+A component for automatically analysing the BPM of audio files. …</li>
+<li><strong>Classic User Interface 2.0.3 Tags: nostalgia, user
+interface</strong>: 2023-04-25 The Default User Interface from early
+foobar2000 versions is back! …</li>
+<li><strong>Columns UI 3.6.0 Tags: user interface</strong>: 2026-07-23
+[url=“<code>https://www.buymeacoffee.com/reupen"\</code>]Buy the
+developer a coffee[/url] …</li>
+<li><strong>Command-Line Decoder Wrapper 0.8 Tags: decoder,
+utility</strong>: 2026-05-25 This component allows you to comfortably
+play or convert any audio format with a standalone command-line …</li>
+<li><strong>Console panel 3.1.0 Tags: Columns UI panel,
+diagnostic</strong>: 2025-11-22 A Columns UI panel version of console.
+Displays diagnostic messages.</li>
+<li><strong>Crossmix DSP 0.6.1 Tags: DSP</strong>: 2025-05-18 Mixes the
+beginning of the next track over the ending of the previous track
+without any fading.</li>
+<li><strong>CUE fixer 1.3.3</strong>: 2025-09-28 After installation
+remove (if it exists) the *.cue exclusion from the list at Preferencess
+-&gt; Shell Integration …</li>
+<li><strong>DEAF Module Decoder 0.5 Tags: decoder, game music</strong>:
+2023-06-14 A quick rebuild of kode54’s DUMB decoder, with support for
+new 64-bit foobar2000.</li>
+<li><strong>Discord Rich Presence 2.0.2 Tags: Discord</strong>:
+2024-08-11 Displays information about currently played track via Discord
+Rich Presence. …</li>
+<li><strong>DR Meter 1.0.8 Tags: diagnostic, tagging</strong>:
+2026-06-14 A simple Dynamic Range meter based on DR estimation formula
+published by <code>https://dr.loudness-war.info/</code>.</li>
+<li><strong>EBU R128 Normalizer 1.13 Tags: DSP</strong>: 2023-03-05 This
+component provides a simple DSP for normalizing audio tracks using a
+running windowed calculation …</li>
+<li><strong>Effect DSP 0.56 Tags: DSP, echo, pitch shift,
+reverb</strong>: 2026-02-02 Includes the following effects: …</li>
+<li><strong>Enhanced Playback Statistics 5.0.3 Tags: last.fm, playback
+statistics</strong>: 2025-10-04 This component collects and maintains
+enhanced statistics for played songs; primarily it records the …</li>
+<li><strong>Equalizer split 0.0.2 Tags: DSP</strong>: 2023-01-15 A
+meta-DSP that feeds each channel into a separate equalizer
+instance.</li>
+<li><strong>External Tags 1.5.18 Tags: tagging</strong>: 2026-02-16 Adds
+tagging support for non-taggable file formats. The tags can be stored in
+SQLite database or written …</li>
+<li><strong>Fade In/Out DSP 1.1 Tags: DSP, fade</strong>: 2025-12-31
+Allows adding linear, sine, cosine, or logarithmic shaped fade-in and
+fade-out effects.</li>
+<li><strong>Fake Gapless DSP 0.6 Tags: converter, DSP, gapless</strong>:
+2023-03-16 Briefly fades track changes to silence to avoid glitches with
+gapless tracks when encoded with some lossy …</li>
+<li><strong>FDK AAC Packet Decoder 1.24.5 Tags: decoder, packet
+decoder</strong>: 2025-10-16 This component supplements the stock AAC
+decoder with Fraunhofer FDK AAC Codec Library for Android, to …</li>
+<li><strong>Feature Watcher 1.1.2 Tags: diagnostic</strong>: 2023-05-04
+Watches available features and reports changes. …</li>
+<li><strong>FFmpeg Decoder Wrapper 0.9.2 Tags: decoder</strong>:
+2026-01-28 This component allows foobar2000 to read arbitrary file
+formats via user-supplied ffmpeg.exe and ffprobe.exe.</li>
+<li><strong>FreeSurround Decoder 0.1.2 Tags: DSP</strong>: 2025-09-26
+FreeSurround Decoder decodes surround information from stereo music, and
+produces multichannel output …</li>
+<li><strong>Game Music Emu Decoder 0.5.4 Tags: decoder, game music,
+Nintendo</strong>: 2024-03-08 Restoration of kode54’s Game Emu Player
+component from the available source code. …</li>
+<li><strong>Graphic Equalizer 0.4.8 Tags: DSP</strong>: 2025-10-25 A
+graphic equalizer featuring …</li>
+<li><strong>HDCD decoder 1.22 Tags: decode postprocessor,
+decoder</strong>: 2025-09-08 This component automatically decodes HDCD
+streams contained in several supported lossless containers …</li>
+<li><strong>Hively Tracker decoder 2.0 Tags: decoder,
+demoscene</strong>: 2023-03-09 This component decodes .AHX format files,
+and the advanced derivative format, .HVL.</li>
+<li><strong>LCC (Localization Cue Correction) DSP 0.2 Tags:
+DSP</strong>: 2025-01-21 LCC (Localization Cue Correction) is a solution
+for spatialized audio through stereo speakers. LCC is …</li>
+<li><strong>Logitech LCD Display &amp; Visualization 1.0.2
+(Resurrection) Tags: display, visualization</strong>: 2023-10-06 A
+component to display visualisations and track information on a variety
+of Logitech LCD screens. …</li>
+<li><strong>Loop 1.6 Tags: playback control</strong>: 2023-04-30 Repeat
+part of track. …</li>
+<li><strong>Loop play with loop tags 1.1 Tags: converter, DSP, playback
+control</strong>: 2025-03-22 This is a foobar2000 component/plugin for
+gapless/seamless looping play of tracks with loop tags/metadata/points.
+…</li>
+<li><strong>Loudness Compensation DSP 1.1.0 Tags: DSP</strong>:
+2026-05-09 Adds a DSP plugin for automatic
+[url=“<code>https://en.wikipedia.org/wiki/Loudness_compensation"\</code>]loudness
+compensation[/url] …</li>
+<li><strong>Lyric Show Panel 3 0.6 Tags: Columns UI panel, Default UI
+element, lyrics</strong>: 2023-11-18 A UI element which can download and
+display both timestamped and text only lyrics. Compatible with both
+…</li>
+<li><strong>Masstagger 1.9.3 Tags: tagging</strong>: 2025-04-28
+Automates various tag editing operations.</li>
+<li><strong>MathAudio Headphone EQ 2.0.5 Tags: crossfeed, DSP,
+headphones</strong>: 2026-05-07 - Helps to detect and compensate for the
+unwanted resonances in high-quality headphones and earphones. …</li>
+<li><strong>MathAudio Room EQ 3.0.7 Tags: DSP</strong>: 2026-04-07
+Corrects deficiencies of room acoustics (multipoint compensation).
+…</li>
+<li><strong>mda Dither 0.4.3 Tags: converter, DSP</strong>: 2026-05-21
+Dither component converted from mda VST plug-in. Includes a few
+different dither types for word-length …</li>
+<li><strong>Metronome 1.2 Tags: BPM, console output</strong>: 2022-10-31
+A simple console metronome. …</li>
+<li><strong>MIDI Player 3.2.3.0 Tags: decoder, game music,
+synthesizer</strong>: 2025-10-04 foo_midi is a foobar2000 component that
+adds playback of MIDI files to foobar2000. …</li>
+<li><strong>MIDI Visualizer 0.1.0.0 Tags: Default UI element, MIDI,
+visualization</strong>: 2023-12-24 foo_vis_midi is a foobar2000
+component to visualize MIDI events.</li>
+<li><strong>MilkDrop 2 Visualisation 0.8.16 Tags: Columns UI panel,
+Default UI element, visualization</strong>: 2026-07-19 foo_vis_milk2 is
+a port for foobar2000 of Winamp’s MilkDrop 2 music visualizer. It
+additionally migrates …</li>
+<li><strong>Monkey’s Audio Decoder 10.07 Tags: decoder</strong>:
+2023-03-23 Provides decoding support for Monkey’s Audio files (.APE) as
+well as APE Link files (.APL). …</li>
+<li><strong>MusicBrainz Tagger 0.5.0 Tags: MusicBrainz,
+tagging</strong>: 2023-02-23 Allows tagging files using data from
+MusicBrainz. …</li>
+<li><strong>Navidrome / Subsonic Browser 1.3.0 Tags: Browser, media
+library viewer, network</strong>: 2026-07-21 Browse and stream music
+from a Navidrome server — or any Subsonic API compatible server directly
+inside …</li>
+<li><strong>New Named Playlist 1.1</strong>: 2023-01-15 Replicates the
+regular “New playlist” command with a customizable pattern in advanced
+configuration using …</li>
+<li><strong>No Display Standby 1.1.4 Tags: utility</strong>: 2023-03-16
+Disables monitor power saving feature while music is playing.</li>
+<li><strong>Noise Sharpening 1.0 Tags: DSP</strong>: 2023-03-16 The
+Noise Sharpening DSP boosts high frequencies. The effect depends on the
+signal’s sample rate.</li>
+<li><strong>OpenLyrics 1.13 Tags: Columns UI Panel, Default UI element,
+lyrics</strong>: 2026-01-17 An open-source lyrics plugin that includes
+its own UI panel for displaying timed and untimed lyrics as …</li>
+<li><strong>OpenMPT Module Decoder 0.8.3 Tags: Amiga, decoder,
+demoscene, game music</strong>: 2025-09-23 This component decodes
+modules, or music files combining both samples and sequence data and
+effects, …</li>
+<li><strong>Oscilloscope Visualisation 2.5.0 Tags: Columns UI panel,
+Default UI element, visualization</strong>: 2026-07-21
+foo_vis_oscilloscope is an oscilloscope visualization implemented with
+Direct2D. It is a modernized version …</li>
+<li><strong>PGGB-RT Real Time Upsampling 7.2.0.4 Tags: playback,
+resampler</strong>: 2025-12-06 PGGB-RT offers high accuracy upsampling
+using renowned PGGB technology. It operates as a stream renderer …</li>
+<li><strong>Play Next 0.2.3 Tags: playback control, queue</strong>:
+2023-03-16 Adds the selected track to the beginning of the playback
+queue to be played next.</li>
+<li><strong>Playback Statistics 3.1.10 Tags: playback
+statistics</strong>: 2026-04-16 This component collects and maintains
+statistics for played songs. …</li>
+<li><strong>Playlist Attributes 1.0.6 Tags: playlist</strong>:
+2024-07-28 foo_playlist_attributes is a foobar2000 component for
+assigning various attributes to a playlist. …</li>
+<li><strong>Playlist Push 1.0.0 Tags: playlist</strong>: 2024-02-16
+foo_pl_push automatically saves playlists when changed to help publish
+playlists to other players including …</li>
+<li><strong>Playlist Tree 1.4.2.0 Tags: Columns UI panel, Default UI
+element, playlist management</strong>: 2026-08-02 foo_uie_playlist_tree
+is a foobar2000 component to organize playlists in a tree view. …</li>
+<li><strong>PMD Decoder 0.5.0.0 Tags: decoder, game music, PC98, PMD,
+synthesizer</strong>: 2026-01-08 foo_input_pmd is a foobar2000 component
+that adds playback of Professional Music Driver (PMD) files to …</li>
+<li><strong>Popup Panels 1.0.2 Tags: Columns UI panel host</strong>:
+2023-05-21 This component allows displaying ColumnsUI panels in a popup
+window. …</li>
+<li><strong>Preview 1.24 Tags: playback control</strong>: 2023-05-27
+Play first seconds of consecutive tracks. …</li>
+<li><strong>projectM - The most advanced open-source music visualizer
+0.0.5 Tags: visualization</strong>: 2022-08-18 projectM is an
+open-source project that reimplements the esteemed
+[url=<code>https://en.wikipedia.org/wiki/MilkDrop\</code>]Winamp …</li>
+<li><strong>PSF Decoder 2.5.0 Tags: decoder, game music, Sony
+Playstation, Sony Playstation 2</strong>: 2026-07-26 foo_input_psf is a
+decoder component that adds playback support for PSF, PSF2, miniPSF and
+miniPSF2 files …</li>
+<li><strong>QOA Decoder 0.2 Tags: decoder</strong>: 2025-11-05 A decoder
+for Quite OK Audio Format (QOA). Supports any channel count, the
+specification documented streaming …</li>
+<li><strong>Quick Search Toolbar 3.9 Tags: Columns UI panel, Default UI
+element, Media Library Viewer, search</strong>: 2024-06-18 Basic search
+toolbar that will send results of the search to a playlist of your
+choice. Includes various …</li>
+<li><strong>Quick Tagger 1.1.1 Tags: tagging</strong>: 2022-09-22 Adds
+customizable context menu commands for quickly setting tag fields to
+preconfigured values (for rating …</li>
+<li><strong>Quite OK Audio (QOA) Decoder 0.3.0 Tags: decoder</strong>:
+2023-04-04 Decodes the Quite OK Audio (QOA) format.</li>
+<li><strong>r8brain Resampler 0.1.4</strong>: 2026-07-31 Resampler based
+on r8brain-free-src.</li>
+<li><strong>Random Pools 2.0.3 Tags: random, SQL</strong>: 2023-05-21
+foo_random_pools is a foobar2000 component for creating random playlist
+entries selected and grouped …</li>
+<li><strong>Recorder 0.2.8 Tags: decoder, line-in, microphone,
+recorder</strong>: 2026-07-03 Record audio from selected sound card
+input.</li>
+<li><strong>Remove Playing Track 1.3</strong>: 2023-01-15 Removes the
+playing track from the playing playlist and optionally advances
+playback.</li>
+<li><strong>Renamer 0.3.6 Tags: utility</strong>: 2026-01-20 File
+renamer with custom illegal character replacement rules.</li>
+<li><strong>ReplayGain DSP 0.3.10 Tags: DSP, ReplayGain</strong>:
+2026-06-15 An alternative way to apply ReplayGain adjustment with
+support for smarter automatic mode selection. …</li>
+<li><strong>Replaygain Override 0.1.5 Tags: playback control,
+ReplayGain</strong>: 2023-03-18 Provides a way to specify which
+replaygain modes to use for each playback order. Track gain is probably
+…</li>
+<li><strong>Run Services 0.4.5</strong>: 2022-09-19 foo_run runs
+external applications from within foobar2000</li>
+<li><strong>Scheduler mod 4.21 Tags: automation, scheduler</strong>:
+2023-10-23 Plugin for scheduling actions like play, stop, system
+shutdown/wake up and many more. The schedule for …</li>
+<li><strong>Scrobble 1.6.0 Tags: playback statistics</strong>:
+2022-09-06 foo_scrobble is a foobar2000 component for scrobbling to
+<code>https://www.last.fm/</code>. …</li>
+<li><strong>Seekbox 0.0.5 Tags: playback control</strong>: 2023-03-18
+Main menu item that pops up a box for seeking to a particular hh:mm:ss
+time in the current track.</li>
+<li><strong>Session 1.4 Tags: console output</strong>: 2023-04-22 Prints
+every hour session time to console.</li>
+<li><strong>SETI@home Visualization 0.0.4-beta0 Tags: Columns UI panel,
+Default UI element, visualization</strong>: 2026-07-21 foo_vis_seti
+hosts the SETI@home screensaver inside foobar2000. The screensaver
+renders using OpenGL. …</li>
+<li><strong>SID Player 2.0.0.0 Tags: Commodore, decoder, demoscene, game
+music</strong>: 2026-05-03 foo_sid is a foobar2000 component that adds
+playback of SID and MUS files to foobar2000. …</li>
+<li><strong>Signal Generator 0.2.0.0 Tags: Csound, decoder,
+synthesizer</strong>: 2025-10-04 foo_input_signal is a component that
+generates synthesized signals. …</li>
+<li><strong>Skip Count 2.0.5 Tags: skip, skip statistics</strong>:
+2024-04-16 A component to track skip statistics for foobar2000 audio
+files. …</li>
+<li><strong>Skip Track 1.42.1 Tags: bookmark, converter, DSP, playback
+control, skip</strong>: 2025-05-19 Allows you to skip tracks that match
+a specified search query. By default the component will skip all …</li>
+<li><strong>Smart Dither DSP 1.1 Tags: converter, DSP</strong>:
+2026-05-14 TPDF dither DSP that leaves digital silence untouched.</li>
+<li><strong>SoX Resampler 0.8.9 Tags: DSP, resampler</strong>:
+2025-12-30 Good quality and fast resampler based on code from SoX ‘rate’
+effect. …</li>
+<li><strong>SoX Resampler 1.0.13 Tags: DSP, resampler</strong>:
+2026-04-24 Alternative SoX Resampler using libsoxr.</li>
+<li><strong>Spatial Audio Output 0.2 Tags: output</strong>: 2024-05-22
+An alternative output component that uses the Microsoft Spatial Sound
+API.</li>
+<li><strong>Spectrum Analyzer 0.10.0.0 Tags: Columns UI panel, Default
+UI element, Peak Meter, visualization</strong>: 2026-03-15
+foo_vis_spectrum_analyzer is a foobar2000 component that implements a
+spectrum analyzer panel. …</li>
+<li><strong>Spectrum Analyzer Visualisation 0.0.6 Tags: Columns UI
+panel, Default UI element, visualization</strong>: 2026-07-21
+foo_vis_wispan is a spectrum analyzer visualization implemented with
+GDI. It is a port of the Classic …</li>
+<li><strong>Speex Resampler 1.0.5 Tags: DSP, resampler</strong>:
+2026-04-27 Resampler using the engine from Speex audio codec. …</li>
+<li><strong>SQL Tree 4.0.6 Tags: Columns UI panel, Default UI element,
+media library viewer, search, SQL</strong>: 2023-05-21 foo_uie_sql_tree
+is a foobar2000 component for viewing the media library in a tree
+structure using SQL …</li>
+<li><strong>SQLite Utilities 3.0.4 Tags: media library viewer,
+SQL</strong>: 2023-05-01 foo_sqlite is a foobar2000 component for
+viewing and changing the contents of the media library and the …</li>
+<li><strong>SRC Resampler 1.0.22 Tags: DSP, resampler</strong>:
+2026-07-27 Secret Rabbit Code resampler. Uses libsamplerate 0.2.2.</li>
+<li><strong>SSF/DSF Decoder 2.1.0 Tags: decoder, game music, Sega
+Dreamcast, Sega Saturn</strong>: 2026-07-26 foo_input_ssf is a decoder
+component that adds playback support for SSF, DSF, DCSF, miniSSF,
+miniDSF …</li>
+<li><strong>Statistics 1.2 Tags: console output, diagnostic</strong>:
+2022-10-31 Collects all kind of foobar2000 statistics and prints them to
+console. …</li>
+<li><strong>Stop after album 1.5 Tags: playback control</strong>:
+2023-04-29 Activate stop after current, if TRACKNUMBER = TOTALTRACKS.
+…</li>
+<li><strong>Stop After Focused Track 0.3 Tags: playback
+control</strong>: 2025-05-22 Allows stopping playback after the
+currently focused item finishes playing. …</li>
+<li><strong>Stop After Queue 1.2.5 Tags: playback control,
+queue</strong>: 2025-05-26 Stops playback at the end of the playback
+queue.</li>
+<li><strong>Stop After Track 0.1 Tags: playback control</strong>:
+2025-05-22 Stops playback after the selected item finishes playing.</li>
+<li><strong>Stop on Current 0.6.3 Tags: playback control</strong>:
+2023-03-16 Acts like the built-in “Stop after current” function except
+playback cursor stays on the current track.</li>
+<li><strong>Stop on Error 0.6.2 Tags: playback control</strong>:
+2023-03-16 Stops playback after user configurable number of tracks that
+fail to be decoded.</li>
+<li><strong>SVG services 0.5.0 Tags: svg</strong>: 2026-02-01 SVG
+services allows other compatible foobar2000 components to render SVG
+files. …</li>
+<li><strong>TagBox 0.222 Tags: tagging</strong>: 2025-06-12 Tag editing
+UI element and standalone window.</li>
+<li><strong>Tagger Panel 2.0.0 Tags: Columns UI panel, tagging</strong>:
+2023-04-22 foo_uie_tagger_mod is a foobar2000 component for quick
+tagging defined metadata fields. It can be used …</li>
+<li><strong>TAK Decoder 0.5.9 Tags: decoder</strong>: 2025-11-05 Adds
+decoding support for TAK, (T)om’s lossless (A)udio (K)ompressor. …</li>
+<li><strong>Text Tools 1.1 Tags: clipboard, utility</strong>: 2022-09-16
+Adds customizable context menu commands for copying information about
+the selected tracks to Windows …</li>
+<li><strong>Timebomb 0.0.4 Tags: playback control</strong>: 2023-03-18
+Menu item to terminate or stop playback after a configurable period of
+time.</li>
+<li><strong>Timebomb2 1.5 Tags: playback control</strong>: 2022-10-31
+Stop playing after predefined time. …</li>
+<li><strong>Trifield LR→LRC Decoder DSP 1.1.4 Tags: DSP</strong>:
+2023-03-16 An implementation of Michael Gerzon’s Trifield decoder.
+…</li>
+<li><strong>True Peak Scanner 0.7.24 Tags: diagnostic, ReplayGain,
+tagging</strong>: 2026-07-02 ITU-R BS.1770-5 compliant True Peak
+scanner. Can also scan ReplayGain, Loudness Range (LRA), Dynamic …</li>
+<li><strong>TTA Audio Decoder 4.0.5 Tags: decoder</strong>: 2025-11-05
+This component decodes the True Audio / .TTA lossless compression
+format. …</li>
+<li><strong>Typefind panel 0.5.0-beta.1 Tags: Columns UI panel,
+search</strong>: 2025-09-24 Provides a Columns UI search bar to search
+the active playlist.</li>
+<li><strong>UPnP MediaRenderer Output 1.4 Tags: output, remote control,
+streaming</strong>: 2022-08-29 This component presents any UPnP
+MediaRenderer devices present on your home network as foobar2000 output
+…</li>
+<li><strong>Utility DSP Array 1.3.2 Tags: DSP, utility</strong>:
+2023-02-23 Contains the following utility DSP modules: …</li>
+<li><strong>V2M Decoder 0.2.8 Tags: decoder, demoscene</strong>:
+2023-07-27 Farbrausch V2 module decoder. You can find modules in this
+format at [url=“<code>https://modland.com/pub/modules/V2/"\</code>]https
+…</li>
+<li><strong>vgmstream decoder r2117 Tags: decoder, game music</strong>:
+2026-05-19 A component for playback of hundreds of streamed
+(prerecorded) audio formats used in video games.</li>
+<li><strong>VLevel 20230827 Tags: DSP</strong>: 2023-08-27 VLevel is a
+dynamic compressor which amplifies the quiet parts of music. It tries to
+level playback volume. …</li>
+<li><strong>Vocal Exciter DSP 1.0.3 Tags: DSP</strong>: 2023-03-16 Adds
+harmonically related distortion to high frequencies to give more
+presence. Based on similarly named …</li>
+<li><strong>VST 2.x/3.x Adapter 0.15 Tags: DSP</strong>: 2025-12-31
+Allows VST effects to be used as DSPs in foobar2000. …</li>
+<li><strong>WASAPI shared output 0.6.25 Tags: output</strong>:
+2025-11-06 Shared mode WASAPI output for Vista and newer Windows
+versions. …</li>
+<li><strong>Waveform Minibar (mod) 1.2.59 Tags: Columns UI panel,
+Default UI element, playback control</strong>: 2026-02-16 Seekbar that
+shows the waveform of the track. Lighter, fully software implemented
+version of the original …</li>
+<li><strong>WebView 0.2.1.0 Tags: Browser, Columns UI panel, Default UI
+element, HTML, JavaScript, visualization</strong>: 2024-12-15
+foo_uie_webview is a component that exposes the Microsoft Edge WebView2
+control as UI panel. The component …</li>
+<li><strong>WebView2 0.3.15 Tags: browser, Columns UI panel, CSS,
+Default UI element, HTML, JavaScript</strong>: 2026-07-21 foo_webview2
+is a foobar2000 component that exposes the Microsoft Edge WebView2
+control as a UI element …</li>
+<li><strong>What a GOOM! Visualisation 0.0.15 Tags: Columns UI panel,
+Default UI element, visualization</strong>: 2026-07-21 foo_vis_goom is a
+port for foobar2000 of the “What a GOOM!” music visualizer. It renders
+the library-provided …</li>
+<li><strong>XAudio2 output 0.4.2 Tags: output</strong>: 2024-03-14
+Output component for XAudio2 API. Uses the latest XAudio v2.9
+redistributable allowing it to support …</li>
+<li><strong>Youtube Source 3.12 Tags: decoder</strong>: 2025-12-31 This
+component adds possibility to play Youtube videos and playlists directly
+by their URL.</li>
+<li><strong>ZXTune Player 0.0.10 Tags: Acorn, Amiga, Amstrad CPC, Atari,
+Commodore, decoder, game music, GameBoy, MSX, Nintendo, Sam Coupe,
+TurboGrafX, ZX Spectrum</strong>: 2026-04-23 Player of computer music
+from ZX Spectrum, Amstrad, Sam Coupe, PC, Amiga, Atari, Acorn, C64,
+SNES, Nes …</li>
+</ul>
+<p><a
+href="https://wiki.hydrogenaudio.org/index.php?title=Foobar2000:How_to_install_a_component">How
+to install a component?</a></p>
+<h3 id="ffmpeg-source-code-downloads">ffmpeg Source Code Downloads</h3>
+<h4 id="ffmpeg">FFmpeg</h4>
+<p>foobar2000 uses FFmpeg under the <a
+href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU LGPL v2.1</a>. <a
+href="http://ffmpeg.org/">FFmpeg home page</a></p>
+<h4 id="downloads">Downloads</h4>
+<p>FFmpeg source code with build scripts used by foobar2000 can be
+obtained from the link below:</p>
+<h5 id="ffmpeg-3.4.5">FFmpeg 3.4.5</h5>
+<p>Used in foobar2000 v1.4.3 and newer Download source code</p>
+<h5 id="ffmpeg-3.2.4">FFmpeg 3.2.4</h5>
+<p>Used in foobar2000 v1.3.15 and newer Download source code</p>
+<h5 id="ffmpeg-3.2.2">FFmpeg 3.2.2</h5>
+<p>Used in foobar2000 v1.3.14 Download source code</p>
+<h5 id="ffmpeg-3.1.4">FFmpeg 3.1.4</h5>
+<p>Used in foobar2000 v1.3.13 Download source code</p>
+<h5 id="ffmpeg-3.1.2">FFmpeg 3.1.2</h5>
+<p>Used in foobar2000 v1.3.11 Download source code</p>
+<h3 id="foobar2000-equalizer-supereq-source-code">foobar2000 Equalizer /
+SuperEQ Source Code</h3>
+<h4 id="foobar2000-equalizer-supereq-library">foobar2000 Equalizer /
+SuperEQ Library</h4>
+<p>foobar2000 equalizer is based on the SuperEQ library and licensed
+under the <a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU LGPL
+v2.1</a>. <a href="http://shibatch.sourceforge.net/">SuperEQ home
+page</a></p>
+<h4 id="downloads-1">Downloads</h4>
+<p>Source code can be obtained from the link below:</p>
+<h5 id="equalizer-component-v1.1">Equalizer component v1.1</h5>
+<p>As distributed with foobar2000 v1.3.11 beta 5 Download source
+code</p>
+<h3 id="free-encoder-pack">Free Encoder Pack</h3>
+<h4 id="what-is-this">What is this?</h4>
+<p>This pack includes every natively supported free encoder binary for
+use with the Converter foobar2000 component. The binaries are
+conveniently installed into a subfolder of the foobar2000 installation
+folder. Current versions of foobar2000 will automatically recognize
+these encoders and no longer ask you for encoder binary location.</p>
+<h5 id="included-encoders">Included encoders:</h5>
+<ul>
+<li>FLAC</li>
+<li>Ogg Vorbis</li>
+<li>Opus</li>
+<li>Musepack</li>
+<li>WavPack</li>
+<li>AAC + Apple Lossless (qaac) - requires iTunes to be installed (<a
+href="https://sites.google.com/site/qaacpage/">read more…</a>)</li>
+<li>AAC (fhgaacenc) - requires Winamp to be installed (<a
+href="https://github.com/tmkk/fhgaacenc/">read more…</a>)</li>
+<li>Apple Lossless (refalac)</li>
+<li>MP3 (LAME)</li>
+</ul>
+<p>Please note that this pack includes only encoders that we are legally
+allowed to distribute; that excludes AAC encoders (included AAC encoders
+require external applications providing actual encoding
+functionality).</p>
+<h4 id="download-foobar2000-free-encoder-pack">Download foobar2000 Free
+Encoder Pack</h4>
+<h5 id="latest-version">Latest version</h5>
+<p>2026-03-13 log]</p>
+<p>Download</p>
+<h5 id="system-requirements-4">System requirements</h5>
+<p>Windows 7 or newer. foobar2000 v1.1.14 or newer, with the Converter
+component installed.</p>
+<h2 id="installing-and-upgrading">Installing and Upgrading</h2>
+<h3 id="how-do-i-install-additional-components">How do I install
+additional components?</h3>
+<p>To install components from the foobar2000 installer that you did not
+choose to install during the initial installation, just rerun the
+installer and select them; your settings will be kept intact. Please
+read on to learn about installing other components.</p>
+<p><em>Note that this content applies to foobar2000 versions 1.1 and
+newer. If you’re using an older version, please upgrade now to utilize
+the new interface.</em></p>
+<ul>
+<li>Step 1: Open the foobar2000 preferences dialog.</li>
+<li>Step 2: Go to the Components page.</li>
+<li>Step 3: Click the “Install…” button and select the component
+archive, or simply drag it to the list.</li>
+<li>Step 4: Press “OK”, you will be prompted to restart foobar2000 in
+order to load the newly installed component.</li>
+</ul>
+<h3 id="how-do-i-make-foobar2000-my-default-player">How do I make
+foobar2000 my default player?</h3>
+<p>You can associate foobar2000 with different file types at
+‘Preferences → File types’ (Windows XP only) or access relevant control
+panel from ‘Preferences → Shell Integration’.</p>
+<h3 id="how-will-upgrading-affect-my-settings">How will upgrading affect
+my settings?</h3>
+<p>Upgrading from any 0.9.x or 1.x version to the latest version will
+leave your settings intact, provided you install the new version on top
+of the old one.</p>
+<h3
+id="i-have-updated-from-a-very-old-foobar2000-version-to-the-latest-and-now-i-am-experiencing-major-problems">I
+have updated from a very old foobar2000 version to the latest and now I
+am experiencing major problems…</h3>
+<p>Many old third party components no longer cooperate with newer
+foobar2000 versions. If you have any third party components installed,
+you should update them to their latest versions, or remove them one by
+one until you find the problematic component.</p>
+<h3
+id="i-ve-downloaded-foobar2000-from-another-site-and-i-m-experiencing-problems">I’ve
+downloaded foobar2000 from another site and I’m experiencing
+problems…</h3>
+<p>You should always download foobar2000 from its home page
+(foobar2000.org) and not from other sites. If you’re experiencing
+suspicious activities after installing, we strongly recommend that you
+uninstall it immediately and scan your computer for viruses/malware.</p>
+<p>There have been many reported cases of modified foobar2000 setups
+with pre-configured visuals and additional plugins included, which is -
+for good reasons - against the foobar2000 license. We have no control
+over such installers and can’t provide much help regarding problems that
+you run into when using them. Many of them include outdated foobar2000
+versions with known security vulnerabilities. People creating such
+installers are often only harming the community by scaring new users
+away with “pretty” user interfaces that are hard to use and ridden with
+bugs.</p>
+<p>Please note that people affiliated with foobar2000 development
+<em>never</em> post announcements or files to other forums, software
+download or file sharing sites. As a result, we have no control over
+foobar2000 files that get posted to popular software download sites, and
+we have no intention of wasting our resources on verifying each case. If
+you’ve been led to believe that foobar2000 files on some site have been
+posted by the author himself, you’re being lied to and this site should
+not be trusted.</p>
+<h2 id="other-questions">Other Questions</h2>
+<h3
+id="are-specifications-of-foobar2000-s-configuration-file-format-cfg-available-why-doesn-t-foobar2000-use-some-user-editable-xml-based-configuration-file-format-instead">Are
+specifications of foobar2000’s configuration file format (.cfg)
+available? Why doesn’t foobar2000 use some user-editable XML-based
+configuration file format instead?</h3>
+<p>The configuration file format is not meant to be interchangeable with
+other software or editable by users. Making it user-editable would
+result in third party component developers using it as an excuse not to
+provide proper user interface to change their components’ settings, just
+like many components use title formatting as an excuse not to provide a
+more accessible way to customize them. Additionally, keeping the entire
+configuration file structure human-readable would result in slower
+startup/shutdown and code bloat as well as break compatibility with
+existing configuration files (or require even more bloat to import old
+settings).</p>
+<h3
+id="are-specifications-of-the-fpl-playlist-format-available-why-doesn-t-foobar2000-use-some-user-editable-xml-based-playlist-file-format-instead">Are
+specifications of the FPL playlist format available? Why doesn’t
+foobar2000 use some user-editable XML-based playlist file format
+instead?</h3>
+<p>The FPL format is not meant to be interchangeable with other software
+or editable by users. Its primary design goals are carrying all
+necessary track information (metadata, last seen modification time,
+etc.) between foobar2000 sessions while remaining as fast to read and
+write as possible, since reading/writing FPL files bottlenecks app
+startup and shutdown with large Media Library or playlists. Making the
+FPL format user-editable would introduce massive startup/shutdown delays
+for certain users.</p>
+<p>Additionally, the format is strictly tied to foobar2000 track
+information caching architecture; potential design changes in that area
+in future foobar2000 versions will inevitably require a new
+non-backwards-compatible revision of the FPL format.</p>
+<h3 id="does-foobar2000-sound-better-than-other-players">Does foobar2000
+sound better than other players?</h3>
+<p>No. Most of “sound quality differences” people “hear” are placebo
+effect (at least with real music), as actual differences in produced
+sound data are below their noise floor (1 or 2 last bits in 16bit
+samples). foobar2000 has sound processing features such as software
+resampling or 24bit output on new high-end soundcards, but most of the
+other mainstream players are capable of doing the same by now.</p>
+<h3
+id="how-do-i-enable-volume-display-or-playlist-selection-total-time-display-in-my-status-bar">How
+do I enable volume display or playlist selection total time display in
+my status bar?</h3>
+<p>Right-click the status bar, toggle relevant option.</p>
+<h3
+id="how-do-i-make-the-currently-playing-track-to-be-selected-highlighted-and-stay-always-in-view">How
+do I make the currently playing track to be selected (highlighted) and
+stay always in view?</h3>
+<p>Enable “Cursor Follows Playback” under main window’s “Playback”
+menu.</p>
+<h3 id="how-do-i-use-title-formatting-strings">How do I use title
+formatting strings?</h3>
+<p>Please choose ‘Titleformatting Help’ from foobar2000’s ‘Help’
+menu.</p>
+<h3
+id="i-can-t-find-some-command-in-my-playlist-context-right-click-menu-what-do-i-do">I
+can’t find some command in my playlist context (right-click) menu. What
+do I do?</h3>
+<p>Go to ‘Preferences → Display → Context Menu’, right-click a group you
+want to add an entry to, select ‘Insert item → Command…’, choose the
+command you’re looking for from the list. If the command you need can’t
+be found, you’re missing a component that provides it.</p>
+<p>If the command you’re looking for is already in the context menu
+structure tree under Context Menu Preferences yet you can’t see it in
+your context menus, it might be context-sensitive and available only for
+specific tracks; for an example, MP3-specific utility commands are
+available only when all selected tracks are MP3 files.</p>
+<h3
+id="is-foobar2000-available-in-languages-other-than-english-can-i-contribute-a-translation">Is
+foobar2000 available in languages other than English? Can I contribute a
+translation?</h3>
+<p>foobar2000 <em>does not</em> support any kind of translations. If you
+want a lightweight player with full multilanguage support, we recommend
+<a href="http://perkele.cc/software/boom">Boom</a>.</p>
+<h3 id="what-is-replaygain">What is ReplayGain?</h3>
+<p>Please see the <a
+href="http://wiki.hydrogenaudio.org/index.php?title=Replaygain">Replaygain</a>
+page on the <a
+href="http://wiki.hydrogenaudio.org/index.php">Hydrogenaudio
+Knowledgebase</a>.</p>
+<h3
+id="why-do-some-menu-commands-not-work-when-bound-to-global-keyboard-shortcuts">Why
+do some menu commands not work when bound to global keyboard
+shortcuts?</h3>
+<p>Context menu commands require a list of tracks on which to operate.
+If you execute them from the context menu or using a normal (non-global)
+keyboard shortcut, this list is provided by part of the program where
+you used the context menu or the keyboard shortcut (the context). For
+global keyboard shortcuts there is no way to chose a list of tracks
+automatically when they are used, so you have to chose a context when
+you bind the command. To do so, select a command from the [context / now
+playing] or [context / playlist] branch to make the command use the
+playing track or the selected items on the active playlist when you
+press the global keyboard shortcut.</p>
+<h2 id="random-shuffle-playback-order">Random / Shuffle Playback
+Order</h2>
+<h3
+id="random-mode-why-do-i-hear-the-same-track-more-than-once-a-day-in-a-very-long-playlist">Random
+mode: Why do I hear the same track more than once a day in a very long
+playlist?</h3>
+<p>See <a href="http://en.wikipedia.org/wiki/Birthday_paradox">Birthday
+paradox</a>. Random mode doesn’t prevent track repetitions other than
+the same track played twice in a row. You probably want to use ‘Shuffle
+(tracks)’ mode instead.</p>
+<h3
+id="shuffle-mode-why-do-i-hear-the-same-tracks-regularly-played-in-the-same-order">Shuffle
+mode: Why do I hear the same tracks regularly, played in the same
+order?</h3>
+<p>Shuffle modes keep an internal reordered list of tracks in your
+playlist. If you manually start playback from some track that you’ve
+already played, you’ll get the same tracks played after it as last time.
+Use the ‘Playback → Random’ menu command to pick a random track in your
+playlist to resume from.</p>
+<h3
+id="what-s-the-difference-between-shuffle-and-random-playback-order-modes">What’s
+the difference between Shuffle and Random playback order modes?</h3>
+<ul>
+<li>Random mode picks tracks randomly, without special measures to
+prevent track repetitions other than a simple check to prevent the same
+track from playing twice in a row.</li>
+<li>Shuffle modes keep an internal randomized list of tracks in your
+playlist and play tracks according to their order in that list, so you
+don’t get repetitions until all tracks in your playlist have been
+played. Shuffle’s randomized track lists for each playlist are
+re-created on foobar2000 restart or when starting/advancing playback
+with another shuffle mode. Note that manually selecting a track to play
+in your playlist will result in shuffle playback continuing from that
+track’s location on the randomized list, which is often perceived as
+repetitions: each time you manually choose a track to play (by
+doubleclicking it in playlist, etc.), shuffle plays the same tracks
+after that track; use ‘Play → Random’ menu command or the ‘Random’
+button when you want to continue playback from a random track
+instead.</li>
+</ul>
+<h3
+id="what-s-the-purpose-of-shuffle-albums-and-shuffle-directories-modes">What’s
+the purpose of Shuffle (albums) and Shuffle (directories) modes?</h3>
+<p>These modes can be used to reorder your playlist on album basis
+rather than track basis and play tracks in each album in sequential
+order. Shuffle (albums) is usable when your files are tagged properly
+(”%album artist% | %date% | %album%” evaluates to unique value for each
+of your album and doesn’t vary between tracks in one album); Shuffle
+(directories) is meant as a fallback when your tagging scheme renders
+Shuffle (albums) useless but you keep each album in a separate folder.
+Note that the album identification pattern can be customized in
+‘Preferences → Advanced → Playback → Shuffle → Album grouping
+pattern’.</p>
+<h2 id="renaming-files">Renaming Files</h2>
+<h3 id="how-can-i-rename-files-based-on-information-from-the-tags">How
+can I rename files based on information from the tags?</h3>
+<p>You can find this feature at ‘File operations’ from the context menu
+(you need to enable the ‘Optional features → Tools → File operations’
+during installation).</p>
+<h3
+id="why-can-t-i-use-replace-to-create-custom-substitution-schemes-for-characters-that-can-t-be-used-in-file-names">Why
+can’t I use $replace() to create custom substitution schemes for
+characters that can’t be used in file names?</h3>
+<p>Invalid file name characters - such as slashes or backslashes - are
+replaced before metadata originating from the file is processed by title
+formatting functions. This is necessary to allow slash or backslash
+characters placed by you in your file name formatting pattern to be
+interpreted as path delimiters without the side effect of each slash
+contained in metadata fields included in your file name formatting
+pattern being interpreted as a path delimiter as well.</p>
+<h2 id="tagging-files">Tagging Files</h2>
+<h3
+id="can-i-have-previous-next-buttons-in-the-properties-dialog-to-go-to-properties-of-previous-next-track-in-my-playlist">Can
+I have ‘Previous’ / ‘Next’ buttons in the Properties dialog, to go to
+properties of previous / next track in my playlist?</h3>
+<p>No. If you want to edit tags of multiple tracks, you can do it more
+efficiently by just selecting them all and opening the Properties dialog
+for them.</p>
+<h3
+id="how-can-i-add-id3v1-id3v2-or-apev2-tags-to-my-mp3-files-or-how-can-i-remove-them">How
+can I add ID3v1, ID3v2, or APEv2 tags to my MP3 files, or how can I
+remove them?</h3>
+<p>Just use the ‘Tagging → MP3 tag types’ feature from the context menu.
+The dialog appearing is not an option dialog. The changes you are doing
+there are applied to the selected files only.</p>
+<h3 id="how-do-i-edit-tags-of-my-files">How do I edit tags of my files
+?</h3>
+<p>Right-click one or more tracks, choose ‘Properties’ from the context
+menu. Various additional functionality can be accessed by selecting one
+or more fields in the Properties dialog and right-clicking them.</p>
+<p>Note that you can mass-edit tags of a group of track by opening the
+Properties dialog on multiple items.</p>
+<h3 id="what-tag-types-does-foobar2000-write-to-my-mp3-files">What tag
+types does foobar2000 write to my MP3 files?</h3>
+<p>foobar2000 maintains the existing tags present in the file when it is
+possible to fit the information being written within these.</p>
+<p>If the file does not already have tags that can hold the information
+being written, foobar2000 will add the ID3 tags necessary to store
+it.</p>
+<h3 id="why-does-foobar2000-write-question-marks-to-my-id3v1-tags">Why
+does foobar2000 write question marks to my ID3v1 tags?</h3>
+<p>Only ASCII characters are allowed in ID3v1. Any other characters are
+replaced by question marks on rewrites.</p>
+<h3 id="why-is-tagging-mp3-tag-types-missing-from-the-context-menu">Why
+is ‘Tagging -&gt; MP3 tag types’ missing from the context menu?</h3>
+<p>You have probably selected one or more non-MP3 files. The feature is
+only available for MP3 files.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3
+id="i-am-experiencing-high-system-resource-usage-memory-or-cpu-while-playing">I
+am experiencing high system resource usage (memory or CPU) while
+playing.</h3>
+<p>Please disable any unneeded DSPs (such as resampler). Some of them
+require a lot of resources to operate.</p>
+<p>Some DSPs such as crossfader or gap remover need extra memory buffers
+to operate; you can reduce the memory usage by changing their settings.
+Also, certain output modes (Kernel Streaming) have been reported to use
+excessive amounts of CPU time on certain systems.</p>
+<p>Finally, some third-party components are known to use high amounts of
+CPU time.</p>
+<h3
+id="i-am-using-asio-wasapi-etc-output-and-i-am-experiencing-issues">I am
+using ASIO/WASAPI/etc output and I am experiencing issues…</h3>
+<p>Do not use alternate output modes unless you must. There is NO
+benefit in terms of audio quality to using these, as far as music
+playback is concerned ( <a
+href="http://wiki.hydrogenaudio.org/index.php?title=Bypassing_Windows_Mixer">read
+more on the subject</a> ).</p>
+<p>Additionally, on most systems, WASAPI (if available) is known to be
+more stable than ASIO.</p>
+<h3 id="i-have-a-problem-with-one-of-the-third-party-components">I have
+a problem with one of the third-party components…</h3>
+<p>Please post your question on <a
+href="http://www.hydrogenaudio.org/forums/index.php?showforum=33">the
+third-party component forum</a>. As we don’t take responsibility for
+components other people make, this FAQ can’t help you any further.</p>
+<h3 id="i-have-an-asus-xonar-card-and-i-m-experiencing-problems">I have
+an Asus Xonar card and I’m experiencing problems…</h3>
+<p>Asus Xonar cards are infamous for their buggy drivers. We recommend
+getting a soundcard from another manufacturer instead.</p>
+<p><em>If you’re running foobar2000 older than 1.1.10, please update -
+version 1.1.10 introduces workarounds for certain known Xonar
+bugs.</em></p>
+<h3 id="some-of-my-files-are-not-seen-by-the-media-library">Some of my
+files are not seen by the Media Library…</h3>
+<ul>
+<li>Make sure that neither the folders containing the files nor the
+files themselves have hidden attribute set.</li>
+<li>If those files are not in one of formats natively supported by
+foobar2000, such as Monkey’s Audio, you need to download and install
+relevant decoder component in order to be able to see and play them. If
+you’ve already installed it, you may need to remove affected folders
+from Media Library configuration and add them back for those files to
+become visible.</li>
+</ul>
+<h3 id="what-should-i-do-before-reporting-a-problem">What should I do
+before reporting a problem?</h3>
+<p>Most technical problems can be solved by removing any third-party
+components and resetting the configuration (or doing a fresh reinstall).
+It is recommended that you backup your foobar2000 directory before doing
+that, so you can try to restore your old settings/components later, or
+help us with identifying the exact source of the problem.</p>
+<h3
+id="what-should-i-do-if-foobar2000-refuses-to-load-a-component-dll">What
+should I do if foobar2000 refuses to load a component DLL?</h3>
+<p>There are multiple reasons why this could happen. If there is no
+error message, the component has been banned - most likely for violating
+the foobar2000 SDK license. Otherwise please see the following list of
+error messages and the possible solutions for each.</p>
+<ul>
+<li><strong>“Multiple instances of DLL with the same file name
+found.”</strong> This is probably the result of a manual component
+installation gone wrong. foobar2000 has found multiple component DLLs
+with the same file name (in different subfolders of its application
+folder), but only one has been loaded. You should remove the redundant
+copy.</li>
+</ul>
+<p> </p>
+<ul>
+<li><strong>“This component is missing a required dependency, or was
+made for a different version of foobar2000.”</strong> This component DLL
+requires one or more other DLL files that can not be found on your
+system. This error may also occur as a result of trying to load
+components made for a different major version of foobar2000, such as
+0.8.x components under 0.9.x / 1.x.</li>
+</ul>
+<p> </p>
+<ul>
+<li><strong>“Wrong version number; this component appears to have been
+built with a newer version of the foobar2000 SDK. Please download the
+latest version of foobar2000 in order to use it.”</strong> The error
+message already says what you should do.</li>
+</ul>
+<p> </p>
+<ul>
+<li><strong>“Wrong version number; this component appears to have been
+build with an outdated version of the foobar2000 SDK. It needs to be
+updated to a newer SDK version in order to load. Please contact the
+author of the component to obtain an updated version.”</strong> The
+error message already says what you should do.</li>
+</ul>
+<p> </p>
+<ul>
+<li><strong>“This application has failed to start because the
+application configuration is incorrect. Reinstalling the application may
+fix this problem.”</strong> This error message is not related to the
+component’s configuration data that is stored in the foobar2000
+configuration file. Rather, the error message is returned by Windows
+when foobar2000 tries to load a component DLL and Windows cannot find a
+DLL that the component requires. Often this is a particular version of
+the Visual C++ runtime that is not installed on your computer. Please
+check the component’s documentation – especially the installation
+instructions – for information about any required DLLs.</li>
+</ul>
+<h3
+id="where-s-the-file-types-page-in-preferences-i-can-t-find-it">Where’s
+the File Types page in Preferences? I can’t find it…</h3>
+<p>You have installed foobar2000 in portable mode. The portable mode
+does not support Windows shell integration. You need to reinstall in
+standard mode in order to access relevant functionality.</p>
+<h3 id="why-is-seeking-so-slow-while-playing-mp3-files">Why is seeking
+so slow while playing MP3 files?</h3>
+<p>The MP3 format doesn’t natively support sample-accurate seeking, and
+sample accurate seeking is absolutely required by some features of
+foobar2000 (such as .CUE playback). MP3 seeking can’t be optimized
+neither for CBR files (frame sizes aren’t really constant because of
+padding used), nor for VBR files (both Xing and VBRI headers in those
+files contain only approximated info and are useless for sample-exact
+seeking). Therefore MP3 seeking works by bruteforce-walking the MPEG
+stream chain and is appropriately slow (this gets faster when you pass
+through the same point of file for the second time because seektables
+have been built in the RAM).</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="how-do-i-convert-my-audio-files-to-another-format">How do I
+convert my audio files to another format?</h3>
+<p>Load tracks you want to convert into a playlist, right click, choose
+‘Convert’ from the context menu, click one of sub-options. Converting
+functionality requires the Converter component to be installed
+(‘Optional Features → Tools → Converter’ during installation).</p>
+<p>Note that converting to most supported formats requires external
+command-line encoders. Encoders for various popular formats can be
+easily installed with the <a href="#free-encoder-pack">foobar2000 free
+encoder pack</a>. For the remaining formats, we recommend obtaining
+encoders from <a href="http://www.rarewares.org/">RareWares</a>.</p>
+<h3 id="what-is-the-official-foobar2000-web-site">What is the official
+foobar2000 web site?</h3>
+<p>The only official web site is at <a
+href="#foobar2000">www.foobar2000.org</a>; the official forum is at
+forums.foobar2000.org - a part of <a
+href="http://www.hydrogenaudio.org">Hydrogenaudio Forums</a>.</p>
+<p>There are certain other sites claiming to be “official” foobar2000
+sites in languages other than English. These sites are in no way
+affiliated with us. As we have no power over content of those sites, you
+should avoid using them as they may contain other misinformation or even
+malware.</p>
+</body>
+</html>
