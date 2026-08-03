@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-03" />
+  <title>No change logs, and the script fetches the manual</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">No change logs, and the script fetches the manual</h1>
+<p class="subtitle">One new rule, applied backwards as well as
+forwards</p>
+<p class="date">2026-08-03</p>
+</header>
+<h1 id="no-change-logs">No change logs</h1>
+<p><strong>Your rule, taken as absolute: an app’s change-log history
+never goes in a help guide.</strong> A release note says what changed in
+a version, not how to do anything, and it is stale the moment the next
+version ships.</p>
+<p>It is now enforced in three places — at harvest, at build, and
+retrospectively on everything already shipped.</p>
+<h2 id="two-lists-because-one-is-not-enough">Two lists, because one is
+not enough</h2>
+<ul>
+<li><strong>Certain terms</strong> mean a change log wherever they
+appear: <em>release notes</em>, <em>changelog</em>, <em>what’s new</em>,
+<em>new in version</em>, <em>update history</em>, <em>version
+notes</em>. Refused in an article title as readily as in a
+category.</li>
+<li><strong>Ambiguous terms</strong> mean a change log only when they
+name a <strong>whole category</strong>: <em>version history</em>,
+<em>recent changes</em>, <em>latest updates</em>, <em>product
+updates</em>, <em>announcements</em>.</li>
+</ul>
+<p>That second list exists because of Dropbox. <strong>“Dropbox version
+history overview” is about a feature of Dropbox</strong> — keeping
+earlier copies of a file — and is exactly the sort of article a reader
+wants. A <em>category</em> called “Version history” is a change log.
+Same words, opposite verdicts, and only the level tells them apart.</p>
+<p><strong>And every match is on whole words.</strong> “What is News and
+Flash Briefing for Alexa?” contains the letters of “what is new” and is
+not a change log. My first attempt flagged it. That substring fault has
+cost this project eight previous corrections; this makes nine, and it
+was caught before anything was deleted because I checked the report
+before running the removal.</p>
+<h2 id="what-it-found-in-the-collection">What it found in the
+collection</h2>
+<p><strong>Six whole categories and 171 articles across 28
+guides.</strong></p>
+<ul>
+<li><strong>AndroidStudio — 70 articles and a whole category</strong>,
+“Release notes and known issues”. Comfortably the largest.</li>
+<li><strong>Audacity 18, Zoom 17, WordPress 13, SmartNews 12, ChatGPT
+8.</strong> Zoom’s were release notes for Zoom Hub, Zoom Rooms and
+Revenue Accelerator; WordPress’s were theme changelogs — Twenty Eleven,
+Twenty Fifteen and the rest.</li>
+<li>Then a long tail of one or two apiece: Teams, macOS, Squarespace,
+Dragon, Slack, OneDrive, YouTube, iOS, Goodreads, Indeed and
+others.</li>
+</ul>
+<p>All removed, contents entries with them, and every guide re-ordered
+and re-audited afterwards. <strong>All 127 still pass every structural
+gate</strong> — no ordering broken, no heading skips, no contents entry
+pointing at anything gone.</p>
+<p><code>dropChangeLog.py</code> runs in report mode first —
+<code>python dropChangeLog.py &lt;folder&gt; --report</code> — which is
+how the two false positives were caught. Use that before the removal on
+anything new.</p>
+<h1 id="the-script-fetches-the-manual">The script fetches the
+manual</h1>
+<p><strong>A publisher’s documentation is not always a page.</strong>
+PiccyBot’s whole manual is a PDF; SOUND FORGE’s is a 520-page one. A
+harvester that only understands pages walks straight past the thing it
+came for.</p>
+<p><code>getBrowserHelp.py</code> <strong>version 10</strong> collects
+any link to a document — <code>.pdf</code>, <code>.docx</code>,
+<code>.doc</code>, <code>.epub</code>, <code>.rtf</code>,
+<code>.txt</code>, <code>.md</code> — and fetches it alongside the
+pages, into the same harvest folder, recorded in
+<code>manifest.txt</code> as a <code>file</code> rather than a
+<code>page</code>. The log says so loudly:</p>
+<blockquote>
+<p><code>FETCHED A DOCUMENT: piccybot-manual.pdf (1,284,332 bytes) from ...</code></p>
+</blockquote>
+<p>and the estate’s summary adds: <em>“A document was fetched. It is
+very likely the real guide.”</em></p>
+<p>Two details worth knowing:</p>
+<ul>
+<li><strong>The file is fetched over plain HTTP, not through the
+browser.</strong> A browser asked to open a PDF may render it, save it
+somewhere of its own choosing, or do nothing at all — and none of those
+hands the bytes back. The browser finds the link; ordinary HTTP fetches
+it.</li>
+<li><strong>Sixty megabytes is the ceiling</strong>, and anything larger
+is named in the log rather than downloaded, so a run cannot be derailed
+by an installer someone linked from a help page.</li>
+</ul>
+<p>Three predicates cover it, including one proving an ordinary page
+link is not mistaken for a document. 36 of 36 pass.</p>
+<p><strong>So run
+<code>python getBrowserHelp.py piccybot</code>.</strong> If the manual
+is linked anywhere on piccybot.com once rendered, that run will bring it
+back and we will have the guide. If it is only offered from inside the
+app, the run will say so by finding nothing — and then I would still
+like the file from you.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Change-log history is now refused at harvest, at build, and
+retrospectively: six whole categories and 171 articles removed from 28
+shipped guides.</li>
+<li>Two term lists, because “version history” is a Dropbox feature and a
+change-log category depending only on which level it sits at.</li>
+<li>Whole-word matching throughout — “What is News” is not “what is
+new”, and the report mode caught it before anything was deleted.</li>
+<li>All 127 guides re-ordered and re-audited; every structural gate
+still passes.</li>
+<li><code>getBrowserHelp.py</code> v10 fetches documents as well as
+pages, over plain HTTP, capped at 60 MB, and says loudly when it has
+found one.</li>
+<li>Run <code>python getBrowserHelp.py piccybot</code> — it may bring
+back the manual by itself.</li>
+</ul>
+</body>
+</html>
