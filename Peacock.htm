@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-03" />
+  <title>Peacock Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Peacock Help Guide</h1>
+<p class="subtitle">Peacock’s own help, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-08-03</p>
+</header>
+<h1 id="peacock-help-guide">Peacock Help Guide</h1>
+<p>This guide gathers Peacock’s own help as it stood on 3 August 2026.
+The text is Peacock’s; nothing has been summarised or rewritten.</p>
+<p><strong>This is not television listings.</strong> Nothing here tells
+you what is on or when. It is the documentation for <em>using</em>
+Peacock: what a subscription costs, which devices work, signing in,
+payment and billing, and getting the app onto a Roku, a Fire Stick, a
+Chromecast or a smart TV.</p>
+<p><strong>This is a first edition, and it is incomplete. Here is
+exactly what is missing and why.</strong> Peacock draws its help centre
+in the browser and loads each category’s article list only as a reader
+scrolls down it. Two of its six categories – <strong>Video
+Playback</strong> and <strong>Technical Assistance</strong> – never gave
+up their lists to an automated reader, and <strong>Device Setup and
+Login</strong> gave up only part of its own. So this edition is strong
+on plans, payment and getting started, and holds <strong>nothing at all
+about playback problems, captions, audio description, or what to do when
+a video will not start</strong>. Those are exactly the articles most
+worth having, and they are the ones not here. A later edition should
+carry them.</p>
+<p><strong>The arrangement is Peacock’s own</strong>, taken from the
+trail at the top of each article rather than invented here.</p>
+<p>This document holds 2 categories, 16 articles and about 2,295
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a
+href="#can-i-use-chromecast-to-stream-peacock-from-my-mobile-device-to-my-tv">Can
+I use Chromecast to stream Peacock from my mobile device to my
+TV?</a></li>
+<li><a href="#how-can-i-access-peacock-on-my-smart-tv">How can I access
+Peacock on my Smart TV?</a></li>
+<li><a
+href="#how-can-i-use-peacock-on-my-amazon-firestick-or-fire-tv">How can
+I use Peacock on my Amazon Firestick or Fire TV?</a></li>
+<li><a href="#how-can-i-use-peacock-on-roku">How can I use Peacock on
+Roku?</a></li>
+<li><a href="#how-much-does-a-peacock-subscription-cost">How much does a
+Peacock subscription cost?</a></li>
+<li><a href="#using-peacock-with-verizon-play">Using Peacock with
+Verizon +play</a></li>
+<li><a href="#what-devices-and-platforms-are-supported-by-peacock">What
+devices and platforms are supported by Peacock?</a></li>
+</ul></li>
+<li><a href="#managing-my-account">Managing My Account</a>
+<ul>
+<li><a href="#forgot-peacock-password-reset-instructions">Forgot Peacock
+Password: Reset Instructions</a></li>
+<li><a
+href="#how-do-i-change-my-payment-method-or-billing-address-on-peacock">How
+do I change my payment method or billing address on Peacock?</a></li>
+<li><a href="#how-do-i-change-my-peacock-plan">How do I change my
+Peacock plan?</a></li>
+<li><a href="#how-do-i-check-charges-on-my-peacock-account">How do I
+check charges on my Peacock account?</a></li>
+<li><a
+href="#how-do-i-check-that-my-promotional-code-was-successfully-applied">How
+do I check that my promotional code was successfully applied?</a></li>
+<li><a
+href="#how-do-i-find-out-if-my-credit-card-is-associated-with-multiple-peacoc">How
+do I find out if my credit card is associated with multiple Peacock
+accounts?</a></li>
+<li><a
+href="#how-do-i-see-if-my-peacock-subscription-is-being-processed-through-thi">How
+do I see if my Peacock subscription is being processed through third
+party in-app billing?</a></li>
+<li><a
+href="#how-do-i-view-my-payment-history-or-upcoming-payments-on-peacock">How
+do I view my payment history or upcoming payments on Peacock?</a></li>
+<li><a
+href="#why-is-my-billing-date-changing-for-my-premium-plus-account">Why
+is my billing date changing for my Premium Plus account?</a></li>
+</ul></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3
+id="can-i-use-chromecast-to-stream-peacock-from-my-mobile-device-to-my-tv">Can
+I use Chromecast to stream Peacock from my mobile device to my TV?</h3>
+<p>If your devices have the right functionality, you can! We support
+this through Chromecast. For steps and assistance using this feature,
+please see below.</p>
+<p>Steps to use Chromecast:</p>
+<p>· Open the Peacock app.</p>
+<p>· Select the content you wish to view.</p>
+<p>· Select PLAY.</p>
+<p>· Select the Chromecast icon at the top of the screen.</p>
+<p>· Select your streaming device.</p>
+<p>· When you are connected, the Chromecast icon will change color and
+the Peacock movie, show, or series will appear on your device.<br />
+</p>
+<p>Chromecast troubleshooting:</p>
+<p>· Verify your Google Home app is installed on your mobile device.</p>
+<p>· The Google Home app is available in the iTunes Store and Google
+Play Store.</p>
+<p>· Make sure your Chromecast device is connected to your TV.</p>
+<p>· Make sure the Chromecast device and your streaming device are both
+connected to the same Wi-Fi network.<br />
+</p>
+<h3 id="how-can-i-access-peacock-on-my-smart-tv">How can I access
+Peacock on my Smart TV?</h3>
+<p>Please follow the below steps to access Peacock on your Smart TV.</p>
+<ul>
+<li>Ensure your device is supported by Peacock. You can do so by
+checking if your device is listed <a
+href="https://www.peacocktv.com/help/article/what-devices-and-platforms-are-supported-by-peacock">here</a>.</li>
+<li>From your home screen, select the search bar and type “Peacock” to
+search in your installed applications.
+<ul>
+<li>If it does not show up, or is not available, select the graphic that
+says App Store on your home screen.</li>
+<li>Select the search bar at the top of the screen and type “Peacock.”
+Press Select.</li>
+</ul></li>
+<li>Select the Peacock app icon.</li>
+<li>Select the download icon.</li>
+<li>After the Peacock app installs, press the play icon, or Open.</li>
+<li>If you have an existing account, select the “Sign In” button. If
+not, select “Pick a Plan”, you’ll then be prompted to sign up for
+Peacock.</li>
+</ul>
+<p>To locate any content in Peacock, you can search using the Search box
+with the magnifying glass icon, or by selecting the icon of the specific
+content you wish to watch.</p>
+<p>You can also browse specifically curated groups of content by
+visiting the Movies, TV Shows, Sports, or WWE hubs listed on the Home
+Screen of Peacock. To view the selection of live content available, you
+can visit the Channels section.</p>
+<h3 id="how-can-i-use-peacock-on-my-amazon-firestick-or-fire-tv">How can
+I use Peacock on my Amazon Firestick or Fire TV?</h3>
+<p>If you have not already signed up for Peacock on our website, you can
+sign up for Peacock on your Amazon Firestick or Fire TV by following the
+steps below.</p>
+<ol type="1">
+<li>From your home screen, select the magnifying glass (Find).</li>
+<li>Select the graphic that says Appstore.</li>
+<li>Select the search bar at the top of the screen and type “Peacock.”
+Press select.</li>
+<li>Select the Peacock app icon.</li>
+<li>Select the download icon (Get).</li>
+<li>After the Peacock app installs, press the play icon (Open).</li>
+<li>Select Pick a Plan. You’ll then be prompted to sign up for
+Peacock.</li>
+</ol>
+<p>After going through the sign-up process, you’ll be a Peacock
+subscriber and can start watching immediately.</p>
+<h3 id="how-can-i-use-peacock-on-roku">How can I use Peacock on
+Roku?</h3>
+<p>If you have not already signed up for Peacock on our website, you can
+sign up for Peacock on Roku or Roku TV by following the steps below.</p>
+<ol type="1">
+<li>From your Roku home screen, select Streaming Store.</li>
+<li>From the Streaming Store page, select Search.</li>
+<li>Type “Peacock” into the search and then select the Peacock
+icon.</li>
+<li>Select Add App. After it downloads, press OK.</li>
+<li>Select Open to start Peacock.</li>
+<li>Select Pick a Plan. You’ll then be prompted to sign up for
+Peacock.</li>
+</ol>
+<p>After going through the sign-up process, you’ll be a Peacock
+subscriber and can start watching immediately.</p>
+<h3 id="how-much-does-a-peacock-subscription-cost">How much does a
+Peacock subscription cost?</h3>
+<p>You can sign up for a Peacock Premium plan at $10.99 a month (+tax)
+or $109.99 per year (+tax).<br />
+</p>
+<p>If you are looking for all of our content with no ads (limited
+exclusions)*, you can sign up for a Peacock Premium Plus plan for $16.99
+a month (+tax) or $169.99 per year (+tax).</p>
+<p>*Certain pages are sponsored, and some programming will still contain
+ads (channels, live sports and events, and a few shows and movies).</p>
+<p>Additionally, the Peacock Select Tier is a new subscription tier that
+is being tested as we explore various offerings. You can sign up for the
+Peacock Select Tier for $7.99/month or $79.99/year. <a
+href="https://www.peacocktv.com/help/article/select-tier">Here is
+additional information on the Select Tier.</a></p>
+<h3 id="using-peacock-with-verizon-play">Using Peacock with Verizon
++play</h3>
+<p>If you do not already have a Peacock subscription, you may be able to
+sign up for Peacock with an <a
+href="https://www.verizon.com/support/services-and-apps/">eligible
+Verizon plan</a> through the Verizon +play store.</p>
+<p><strong>Signing Up with Verizon +play</strong></p>
+<p>To sign up for Peacock on Verizon +play, please follow these
+instructions:</p>
+<ol type="1">
+<li>Visit the <a href="https://www.verizon.com/plusplay/">+play
+sign-in</a> page and sign into your Verizon account</li>
+<li>Select your preferred Peacock plan</li>
+<li>You will be routed to Peacock to link your Verizon account to your
+new Peacock account</li>
+</ol>
+<p><strong>Subscription and Billing</strong></p>
+<p>When selecting to sign up for Peacock through Verizon, you will be
+billed by Verizon directly using the payment method you have provided
+them. If you have a billing question, you can visit Verizon at <a
+href="https://www.verizon.com/support/account-management/">verizon.com/support/entertainment-play-faqs/</a>.</p>
+<p>To manage your subscription, including updating your payment method
+on file, adjusting your selected plan, or canceling your Peacock
+subscription, please visit your Verizon account page at
+https://www.verizon.com/support/account-management/.</p>
+<p><strong>Technical Support</strong></p>
+<p>For technical questions or support with playback, please refer to the
+<a href="https://www.peacocktv.com/help/category/using-peacock">Using
+Peacock</a></p>
+<p>section of our Help Center for various articles with troubleshooting
+options.</p>
+<p>For any other support with your account, please <a
+href="https://www.verizon.com/support/contact-us/">contact Verizon
+directly</a>.</p>
+<p>You are also welcome to select a topic from the list below to learn
+more about being a Peacock subscriber:</p>
+<ol type="1">
+<li><a
+href="https://www.peacocktv.com/help/article/what-devices-and-platforms-are-supported-by-peacock">What
+devices and platforms are supported by Peacock?</a></li>
+<li><a
+href="https://www.peacocktv.com/help/article/how-can-i-access-peacock-on-my-smart-tv">How
+can I access Peacock on my Smart TV?</a></li>
+<li><a
+href="https://www.peacocktv.com/help/article/why-can-t-i-sign-in">Peacock
+Sign in Help</a></li>
+<li><a
+href="https://www.peacocktv.com/help/article/how-do-i-reset-my-password">Forgot
+Peacock Password: Reset Instructions</a></li>
+</ol>
+<h3 id="what-devices-and-platforms-are-supported-by-peacock">What
+devices and platforms are supported by Peacock?</h3>
+<p>Peacock is available across a variety of devices.</p>
+<h4 id="web-browsers">Web Browsers:</h4>
+<p>Chrome 125+ (Windows/Mac)<br />
+Firefox 127+ (Windows/Mac)<br />
+MS Edge 125+ (Windows/Mac)<br />
+Safari 17.3+ (Mac)</p>
+<h4 id="mobile-and-tablet-devices">Mobile and Tablet Devices:</h4>
+<p>Android: 7.0 or above<br />
+iOS: 16 or above</p>
+<h4 id="connected-tvs-game-consoles-and-streaming-devices">Connected
+TVs, Game Consoles and Streaming Devices:</h4>
+<h5 id="amazon">Amazon:</h5>
+<p>Peacock is supported on Fire TV and Fire Tablet devices with Fire OS
+6 and above</p>
+<ul>
+<li>Please Note: Peacock is not currently supported on the Fire Max 11
+Tablet</li>
+</ul>
+<h5 id="android-tv">Android TV:</h5>
+<p>Peacock is supported on a wide variety of Android TV-enabled Smart
+TVs, such as Sony Bravia, and set-top boxes, including NVIDIA Shield,
+running Android OS 5.1 and above</p>
+<h5 id="apple-tv">Apple TV:</h5>
+<p>Apple TV HD (4th Generation or above) with tvOS 18 or above</p>
+<h5 id="chromecast">Chromecast:</h5>
+<p>2nd Generation or above, including Chromecast with Google TV</p>
+<h5 id="google-tv">Google TV:</h5>
+<p>Peacock is supported on Google TV smart TVs and streaming devices</p>
+<h5 id="hisense-vidaa">Hisense VIDAA:</h5>
+<p>All TVs powered by the VIDAA operating system version 5.0 and above,
+including Hisense TVs.</p>
+<h5 id="lg">LG:</h5>
+<p>All TVs powered by the webOS operating system version 3.5 and above,
+including LG TVs.</p>
+<h5 id="playstation">PlayStation:</h5>
+<p>PlayStation 4<br />
+PlayStation 5</p>
+<h5 id="roku">Roku:</h5>
+<p>Roku 2 (4210X model only)<br />
+Roku 3 (model 4200X or later)<br />
+Roku Streaming Stick (model 3600X or later)<br />
+Roku Express/Express+ (model 3900X or later)<br />
+Roku Premiere/Premiere+ (model 3920X or later)<br />
+Roku Ultra/Ultra LT (model 4640X or later)<br />
+Roku TV and Smart Soundbar (model 5000X or later)</p>
+<h5 id="samsung-smart-tv">Samsung Smart TV:</h5>
+<p>Peacock is supported on models from 2017 or later. If you’re unsure,
+you can check your model number and year <a
+href="https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html">here</a></p>
+<h5 id="vizio">VIZIO:</h5>
+<p>SmartCast TV (2016 and newer)</p>
+<h5 id="xbox">Xbox:</h5>
+<p>Xbox One<br />
+Xbox Series X<br />
+Xbox Series S</p>
+<h5 id="xumo">Xumo:</h5>
+<p>Xumo TV<br />
+Xumo Stream Box</p>
+<h4 id="cable-provider-set-top-boxes">Cable Provider Set Top Boxes:</h4>
+<h5 id="cox">Cox:</h5>
+<p>Contour Box with Voice Remote<br />
+Contour Stream Player</p>
+<h5 id="directv">DirecTV:</h5>
+<p>C71KW-400<br />
+C71KW-200<br />
+P21KW-500</p>
+<h5 id="spectrum">Spectrum:</h5>
+<p>Xumo Stream Box</p>
+<h5 id="xfinity">Xfinity:</h5>
+<p>XG1v1 (Arris)<br />
+XG1v3<br />
+XG1v4<br />
+XG2v2<br />
+XiD<br />
+Xi3<br />
+Xi5<br />
+Xi6<br />
+Flex<br />
+Xumo Stream Box</p>
+<h4 id="meta-vr-devices">Meta VR Devices:</h4>
+<p>Meta Quest 2<br />
+Meta Quest Pro</p>
+<h2 id="managing-my-account">Managing My Account</h2>
+<h3 id="forgot-peacock-password-reset-instructions">Forgot Peacock
+Password: Reset Instructions</h3>
+<h4 id="how-to-reset-my-forgotten-peacock-password"><strong>How to reset
+my forgotten Peacock password?</strong></h4>
+<p>Whether you are looking to shake things up or you have just <a
+href="https://www.peacocktv.com/forgot">forgotten your password</a>,
+resetting it is easy.</p>
+<ol type="1">
+<li>Go to your account by clicking on Sign in at the top right corner of
+the <a href="https://www.peacocktv.com/">website</a> or app.</li>
+<li>Select “<a href="https://www.peacocktv.com/forgot"><strong>Forgot
+Password?</strong></a>”</li>
+<li>Enter the email address that you used when you signed up for Peacock
+and click on <strong>Continue</strong></li>
+<li>We’ll email you a link to reset your password.</li>
+<li>Once you’ve received the password reset email, simply follow the
+instructions provided. The link will be live for 3 hours and you’ll only
+be able to use it once.</li>
+</ol>
+<h4
+id="what-happens-if-i-cant-remember-my-peacock-email-address-i-signed-up-with"><strong>What
+happens if I can’t remember my Peacock email address I signed up with?
+</strong></h4>
+<p>If you are signed in on your device, you will be able to locate this
+by navigating to your account in the application. Your email address is
+in the bottom left-hand corner. If you are not signed in, that’s ok. Try
+these tips to <a
+href="https://www.peacocktv.com/help/article/how-can-i-locate-my-login-details-if-i-ve-forgotten-them">locate
+your login details</a> or <a
+href="https://www.peacocktv.com/help/get-in-touch">contact us</a> and
+we’ll investigate for you.</p>
+<h4 id="how-do-i-change-my-peacock-password">** How do I change my
+Peacock password? **</h4>
+<ol type="1">
+<li>Go to your account by clicking on Sign in at the top right corner of
+the <a href="https://www.peacocktv.com/">website</a>.</li>
+<li>Once signed in, click on the icon in the top right corner of the
+website or app and select “<strong>Account</strong>”</li>
+<li>There are three tabs along the top, click
+“<strong>Settings</strong>”</li>
+<li>Scroll down until you see “<strong>Password</strong>”, “<a
+href="https://www.peacocktv.com/forgot"><strong>Reset
+Password</strong></a>”</li>
+<li>Click and follow the prompts</li>
+</ol>
+<h4 id="tips-for-creating-your-peacock-password"><strong>Tips for
+creating your Peacock password</strong></h4>
+<ol type="1">
+<li>Passwords must be at least 10 characters long and must contain both
+letters and numbers.</li>
+<li>Use mixed characters, upper-case, lower-case, numbers, and
+symbols.</li>
+<li>Avoid using personal information such as your name or birthday.</li>
+</ol>
+<h3
+id="how-do-i-change-my-payment-method-or-billing-address-on-peacock">How
+do I change my payment method or billing address on Peacock?</h3>
+<p>Got a shiny new payment card, or fancy new billing address? You can
+change those details easily online in <a
+href="https://www.peacocktv.com/account/plans">your account</a>.<br />
+</p>
+<p>Simply go to the <a
+href="https://www.peacocktv.com/account/plans">Plans &amp; Payment
+tab</a> and then, under the Payment Method section, click on Update
+Payment Method.<br />
+</p>
+<p>To change your payment type to PayPal, click on the PayPal tab under
+“Payment Method”.<br />
+</p>
+<p>Once you’ve confirmed your new payment details, payments will be
+billed to your new payment method beginning with the next billing
+cycle.</p>
+<h3 id="how-do-i-change-my-peacock-plan">How do I change my Peacock
+plan?</h3>
+<p>At some point, you may want to switch between Premium and Premium
+Plus subscriptions. The process for doing this depends on whether you’re
+subscribed through Peacock directly, or through a third party such as
+Roku, Apple, Amazon, or Google. Please see below for the processes for
+direct billing and third-party billing.</p>
+<h4 id="changing-plans-with-direct-billing">Changing Plans With Direct
+Billing</h4>
+<p>If you’re subscribed through Peacock directly, you will need to <a
+href="https://www.peacocktv.com/account/plans">visit your Account</a> on
+the web to make any changes to your plan.</p>
+<figure>
+<img
+src="https://imageservice.disco.peacocktv.com/pcms/6141a75e-4534-11f0-9808-939fee019cee/AGG_SOURCE/710?proposition=NBCUOTT&amp;language=eng&amp;versionId=82ac76bd-4cd2-5905-a849-7da37032392a&amp;territory=US"
+alt="Image of Account Screen Your Plan" />
+<figcaption aria-hidden="true">Image of Account Screen Your
+Plan</figcaption>
+</figure>
+<p>Click on Change Plan to switch between Premium Plus and Premium
+plans.</p>
+<figure>
+<img
+src="https://imageservice.disco.peacocktv.com/pcms/8b05c2a0-4534-11f0-987d-eb6ff330882b/AGG_SOURCE/710?proposition=NBCUOTT&amp;language=eng&amp;versionId=021e2cd8-476a-5542-84af-ce8dff5d233a&amp;territory=US"
+alt="Image of Account Screen and Plan Picker" />
+<figcaption aria-hidden="true">Image of Account Screen and Plan
+Picker</figcaption>
+</figure>
+<h4 id="changing-plans-with-third-party-billing">Changing Plans With
+Third-Party Billing</h4>
+<p>If you’re subscribed through a third party, it will say so on your
+Account screen.</p>
+<figure>
+<img
+src="https://imageservice.disco.peacocktv.com/pcms/307999c0-83c4-11ee-9a6b-dbe29c5c83df/AGG_SOURCE/710?proposition=NBCUOTT&amp;language=eng&amp;versionId=34bc2be9-f805-5e08-94b5-8c80ff84692c&amp;territory=US"
+alt="Image of Account Page of Your Plan Section on Apple Device" />
+<figcaption aria-hidden="true">Image of Account Page of Your Plan
+Section on Apple Device</figcaption>
+</figure>
+<p>Click on “Change Plan” to adjust your plan or billing frequency.</p>
+<figure>
+<img
+src="https://imageservice.disco.peacocktv.com/pcms/88889792-8405-11ee-a8b5-e7f51733f132/AGG_SOURCE/710?proposition=NBCUOTT&amp;language=eng&amp;versionId=22f8fb53-6a9a-56a4-af42-0189e3b67086&amp;territory=US"
+alt="Image of Plan Picker" />
+<figcaption aria-hidden="true">Image of Plan Picker</figcaption>
+</figure>
+<p>Here, you will be able to change between Premium and Premium Plus.
+The toggle on the left will let you choose between monthly and annual
+billing for each plan.</p>
+<h3 id="how-do-i-check-charges-on-my-peacock-account">How do I check
+charges on my Peacock account?</h3>
+<h4 id="step-1">Step 1:</h4>
+<p>Go to <a href="https://www.peacocktv.com/account/plans">your
+account</a> by clicking on Sign In at the top right corner of the
+website.</p>
+<h4 id="step-2">Step 2:</h4>
+<p>Once you’ve signed in, go to the <a
+href="https://www.peacocktv.com/account/plans">Plans &amp; Payment
+section of your account</a>. You’ll see any charges associated with this
+account under View Payment History.</p>
+<h3
+id="how-do-i-check-that-my-promotional-code-was-successfully-applied">How
+do I check that my promotional code was successfully applied?</h3>
+<p>You can verify that your promotional code was successfully applied by
+going to <a href="https://www.peacocktv.com/account/plans">your
+account</a>. If you successfully applied your promotional code, you will
+see your current promotional offer under <a
+href="https://www.peacocktv.com/account/plans">Your Plan</a>.</p>
+<h3
+id="how-do-i-find-out-if-my-credit-card-is-associated-with-multiple-peacoc">How
+do I find out if my credit card is associated with multiple Peacock
+accounts?</h3>
+<p>To check if your credit card is associated with multiple Peacock
+accounts, <a href="https://www.peacocktv.com/account/plans">sign in</a>
+with your email address (or email addresses) to see if they are
+registered on Peacock.<br />
+</p>
+<p>To review your billing information, follow the steps below:</p>
+<ul>
+<li><a href="https://www.peacocktv.com/account/plans">Navigate to your
+account</a> by clicking on Sign In at the top right corner of the
+website.</li>
+<li>Once you’ve signed in, go to the <a
+href="https://www.peacocktv.com/account/plans">Plans &amp; Payment
+section</a> of your account to see if there are any charges associated
+with your account.</li>
+</ul>
+<p>If you still need assistance, we’re here to help. Select the Get in
+Touch button on this page and we’ll investigate for you.</p>
+<h3
+id="how-do-i-see-if-my-peacock-subscription-is-being-processed-through-thi">How
+do I see if my Peacock subscription is being processed through third
+party in-app billing?</h3>
+<p>You can check all these details in your account. On the Plans &amp;
+Payment tab, under Your Plan you will see your method of payment which
+will indicate if your subscription is paid through a third party like
+Apple.</p>
+<h3
+id="how-do-i-view-my-payment-history-or-upcoming-payments-on-peacock">How
+do I view my payment history or upcoming payments on Peacock?</h3>
+<p>For subscribers who have subscribed directly through Peacock, you can
+review your upcoming charges and payment history in the <a
+href="https://www.peacocktv.com/account/plans">Plans &amp; Payment
+section of our Account page</a>. For subscribers who are subscribed to
+Peacock through a third-party (e.g., Apple, Google, Roku, etc.), you
+will need to contact the third-party for your payment information.<br />
+<br />
+For direct billed subscribers to view your payment history, please
+follow these steps:<br />
+</p>
+<ol type="1">
+<li><p>Sign in to the <a
+href="https://www.peacocktv.com/account/plans">Account
+page</a>.</p></li>
+<li><p>Select View Payment History on the Plans &amp; Payment tab of
+your Account page.</p></li>
+</ol>
+<p><a href="https://www.peacocktv.com/account/plans"><img
+src="https://imageservice.disco.peacocktv.com/pcms/107b978e-8d9d-11ef-a7e9-03ef84846ca9/AGG_SOURCE/710?proposition=NBCUOTT&amp;language=eng&amp;versionId=a3db9bad-52d3-5fa0-a02a-cb2b55745d90&amp;territory=US"
+alt="Image of Account Web Page" /></a></p>
+<h3 id="why-is-my-billing-date-changing-for-my-premium-plus-account">Why
+is my billing date changing for my Premium Plus account?</h3>
+<p>We are in the process of simplifying your billing so that you will
+get fewer charges per billing cycle. Previously, your charges for
+Peacock Premium and the Plus option may have been on different
+dates.</p>
+<p>Beginning with your next billing date, we will charge you the total
+price for Premium Plus as one charge each month.</p>
+<p>Your new billing date will be the later of your two current billing
+dates. Please note, any offer pricing you have will carry over until the
+offer expires, at which point you will be billed the current retail
+price for Premium Plus.</p>
+<p>To see your billing information, please visit the <a
+href="https://www.peacocktv.com/account/plans">Plans &amp; Payment</a>
+section of your <a
+href="https://www.peacocktv.com/account/plans">Account</a>.</p>
+<p>If you have a Premium Annual subscription with the Plus Monthly
+Option, you will continue to be charged separately until further notice.
+Check your email for complete details.</p>
+<p>If you have more questions, select the Get in Touch button on this
+page and we’d be happy to help.</p>
+</body>
+</html>
