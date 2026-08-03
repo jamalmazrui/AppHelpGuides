@@ -208,7 +208,7 @@ strip at the foot of every article have been removed.</p>
 <p>Headings run six deep at most. Level one is this title, level two is
 a collection, level three is an article, and anything below that came
 from inside the article itself.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#cat-ads">Ads</a>
 <ul>
@@ -608,9 +608,8 @@ counterfeit inventory across the ecosystem. As publishers adopt ads.txt,
 buyers will be able to more easily identify the Authorized Digital
 Sellers for a participating publisher, allowing brands to have
 confidence they are buying authentic publisher inventory. ​ For more
-background see: IAB ads.txt FAQ here:
-<code>https://iabtechlab.com/ads-txt-about/</code> ​How to create an
-ads.txt file for publishers</p>
+background see: IAB ads.txt FAQ here: 0 How to create an ads.txt file
+for publishers</p>
 <p>Adding an Ads.txt file on Wordpress</p>
 <h4 id="what-problems-is-this-intended-to-address">What problems is this
 intended to address?</h4>
@@ -622,7 +621,7 @@ authorized for sale by the domain owner.</p>
 call that you send to buyers?</strong></p>
 <p>If you are already registered with Disqus, you may view your Ads.txt
 lines here. If you are not yet registered, you may view the lines at
-<code>https://disqus.com/ads.txt</code>.</p>
+0.</p>
 <h4 id="what-is-a-publisher-id">What is a Publisher ID?</h4>
 <p>Disqus has a unique Publisher ID for each ad provider that we work
 with; this helps to identify Disqus specifically as the provider of this
@@ -660,9 +659,9 @@ this will make it harder for unauthorized parties to spoof your
 inventory leading to more spend on your legitimate inventory.</p>
 <h4 id="where-can-i-find-further-information-and-documentation">Where
 can I find further information and documentation?</h4>
-<p><code>https://iabtechlab.com/blog/industry-aligns-to-adopt-ads-txt-specification/</code></p>
-<p><code>https://iabtechlab.com/ads-txt/</code> ​ ​ ​Feel free to reach out
-with any other questions about implementing Ads.txt</p>
+<p>0</p>
+<p>0 ​ ​ Feel free to reach out with any other questions about
+implementing Ads.txt</p>
 <h3 id="ads-txt-implementation-guide">Ads.txt Implementation Guide</h3>
 <p>The following is a step-by-step guide for implementing our latest <a
 href="#ads-txt-faq">ads.txt</a> file:</p>
@@ -696,7 +695,7 @@ Disqus embed on their sites. Publishers using other plans can choose to
 enable or disable Disqus advertising on their sites. Qualifying
 publishers can participate in the Disqus Ads program to earn revenue
 with Disqus. Disqus advertising is highly configurable, allowing
-publishers to choose from several ad positions and types. ​ ​<em>To
+publishers to choose from several ad positions and types. ​ <em>To
 participate in the Disqus Ads program, please refer to the</em>
 <em>Revenue Qualification</em> <em>page for more details.</em></p>
 <ul>
@@ -916,20 +915,19 @@ commenting activity via callbacks</h3>
 <p>If you would like to track new comments and replies via your own
 analytics service, such as Omniture or Google Analytics, you can do so
 via the following callback function.</p>
-<p>The following callback can be added to the <code>disqus_config</code>
-function which already exists within the universal embed code:</p>
+<p>The following callback can be added to the 0 function which already
+exists within the universal embed code:</p>
 <pre><code>var disqus_config = function () {
     this.callbacks.onNewComment = [function() { trackComment(); }];
 };</code></pre>
-<p>Make sure to replace <code>trackComment();</code> with the script you
-wish to track via your analytics service.</p>
+<p>Make sure to replace 0 with the script you wish to track via your
+analytics service.</p>
 <p><strong>NOTE:</strong> If you’re using the Wordpress plugin, you’ll
-need to edit the plugin and add your tracker to the existing
-<code>disqus_config</code> function.</p>
-<p>This callback function accepts one parameter <code>comment</code>
-which is a JavaScript object with comment ID and text. For example you
-can find the unique comment ID and comment text for further analysis the
-following way:</p>
+need to edit the plugin and add your tracker to the existing 0
+function.</p>
+<p>This callback function accepts one parameter 0 which is a JavaScript
+object with comment ID and text. For example you can find the unique
+comment ID and comment text for further analysis the following way:</p>
 <pre><code>var disqus_config = function () {
     this.callbacks.onNewComment = [function(comment) {
       alert(comment.id);
@@ -940,7 +938,7 @@ following way:</p>
 Code</h4>
 <pre><code>    /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: `https://disqus.com/admin/universalcode/#configuration-variables`
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 0
      */
 
     var disqus_config = function () {
@@ -965,7 +963,7 @@ Please enable JavaScript to view the comments powered by Disqus.</code></pre>
 <h3 id="disqus-ads-analytics">Disqus Ads Analytics</h3>
 <p><strong><em>**Note: Ads analytics are only available to publishers
 eligible for Disqus Ads. More information on Disqus Ads can be found
-here.</em></strong> ​ ​<strong><em>For commenting analytics, please see
+here.</em></strong> ​ <strong><em>For commenting analytics, please see
 our articles <a href="#disqus-basic-analytics">here</a> and <a
 href="#disqus-pro-analytics">here</a>.</em></strong></p>
 <p>Once you’ve gotten confirmation that you’ve been set up to earn
@@ -1027,7 +1025,7 @@ daily and monthly view. You can select a custom date range or select a
 shortcut date range to track commenting activity over time in your
 community. You can also export a CSV of commenting activity for
 additional processing and reporting. ​</p>
-<p>​<strong>Top Comments</strong></p>
+<p><strong>Top Comments</strong></p>
 <p>These are the comments from the last 7 days that have received the
 most positive voting ratios. This section can help you identify new and
 active users in your forum.</p>
@@ -1119,8 +1117,8 @@ estimated pay date in the payments tab.</p>
 id="why-am-i-seeing-traffic-from-disqus-com-embed-comments-in-my">Why am
 I seeing traffic from disqus.com/embed/comments in my analytics?</h3>
 <p>Disqus is fully housed in an iframe, loading from the disqus.com
-domain (<code>http://disqus.com/embed/comments/</code>). This iframe is
-the element in which Disqus loads on any Disqus-enabled webpage.</p>
+domain (0). This iframe is the element in which Disqus loads on any
+Disqus-enabled webpage.</p>
 <p>As Disqus is an interconnected platform, this iframe effectively
 allows you to see both internally-recirculated and external referral
 traffic from Disqus embeds on your and other sites.</p>
@@ -1141,9 +1139,8 @@ from Disqus?</strong></p>
 discussion and it will still count as a referral.</p>
 <p><strong>Can I see exactly which pages are referring
 traffic?</strong></p>
-<p>Not currently; all referral traffic will show as coming from
-<code>http://disqus.com/embed/comments</code>. This is something we’re
-working to improve.</p>
+<p>Not currently; all referral traffic will show as coming from 0. This
+is something we’re working to improve.</p>
 <p><strong>If I click on a link pointing back to the same discussion, is
 that a referral?</strong></p>
 <p>No. Clicking a link which stays inside the same, single Disqus embed
@@ -1207,10 +1204,10 @@ at the end of the row of formatting options. This will allow you to
 search for a gif to add to your comment.</p>
 <h4 id="rich-media-linking">Rich Media Linking</h4>
 <p>Within your comment, paste the URL of the direct image file you’d
-like to include (e.g. <code>https://helloworld.com/funny.png</code>).
-You should see a thumbnail appear if the image was detected. When you
-post the comment, the image is embedded in your comment. ​ We support
-embedding rich media links from the following services:</p>
+like to include (e.g. 0). You should see a thumbnail appear if the image
+was detected. When you post the comment, the image is embedded in your
+comment. ​ We support embedding rich media links from the following
+services:</p>
 <ul>
 <li><p>Youtube</p></li>
 <li><p>Vimeo</p></li>
@@ -1300,9 +1297,9 @@ an individual site to the Trusted list</p></li>
 <ul>
 <li><p><strong>Browser</strong>: Chrome</p></li>
 <li><p><strong>Reported</strong>: 1/6/2014</p></li>
-<li><p><strong>Resolution</strong>: Add <code>disqus.com</code> to the
-list of ignored domains. Click on the KB icon to get to the options,
-type in disqus.com, and then click ignore.</p></li>
+<li><p><strong>Resolution</strong>: Add 0 to the list of ignored
+domains. Click on the KB icon to get to the options, type in disqus.com,
+and then click ignore.</p></li>
 </ul>
 <h4 id="ie-protected-mode">IE Protected Mode</h4>
 <ul>
@@ -1348,14 +1345,14 @@ information on our Spoiler tags may be found here.</p>
 <li><p>**text** for Bold</p></li>
 <li><p>__text__ for Underline</p></li>
 <li><p>~~text~~ for Strikethrough</p></li>
-<li><p>`text` for Code</p></li>
+<li><p>\0 for Code</p></li>
 <li><blockquote>
 <p>text for Blockquote</p>
 </blockquote></li>
 </ul>
 <h4 id="syntax-highlighting">Syntax Highlighting</h4>
 <p>Disqus supports automatic syntax highlighting in a number of
-languages. To use this feature, place your code inside `` markdown
+languages. To use this feature, place your code inside \0 markdown
 symbols (this character appears on the same key as ~). Using these code
 markers will ensure that the code formatting is preserved. ​ For
 example:</p>
@@ -1486,8 +1483,8 @@ able to delete or access data through the website the profile belongs
 to.</p>
 <h4 id="how-to-delete-your-account">How to Delete Your Account</h4>
 <ol type="1">
-<li>At <code>disqus.com</code> in the upper-right, click the gear next
-to your avatar and then click Settings.</li>
+<li>At 0 in the upper-right, click the gear next to your avatar and then
+click Settings.</li>
 </ol>
 <p>2. Under the Account tab, scroll down to click the Delete button.</p>
 <p>3. You’ll then be brought to a page to confirm your account deletion.
@@ -1681,7 +1678,7 @@ before flagging comments.</p>
 <li><p>Disagreeing with the content</p></li>
 <li><p>Disputing with other commenters</p></li>
 </ul>
-<p>​<strong><em>**Moderators may be able to see if specific users are
+<p><strong><em>**Moderators may be able to see if specific users are
 abusing the flagging function</em></strong></p>
 <h4 id="report-spam-to-disqus">Report Spam to Disqus</h4>
 <p>We also appreciate reports of any spam comments you find. After
@@ -1944,8 +1941,7 @@ account?</strong></p>
 your authenticator app for 2FA authentication, you can still log in with
 your old email and password value, to update the email address on your
 account and verify the new address. If you’ve forgotten your password, a
-password reset email may be requested from
-<code>disqus.com/forgot</code>.</p>
+password reset email may be requested from 0.</p>
 <p>However, if you lose access to your 2FA authentication methods, your
 only option for access will be to use previously generated backup codes
 for access. Because of this, we strongly recommend generating and
@@ -1989,16 +1985,16 @@ you no longer want to block. The maximum number of users you can block
 is 1,000.</p>
 <h4 id="f.a.q.-1">F.A.Q.</h4>
 <p><strong>Q: If I block someone, will they be able to see my
-posts?</strong> ​<em>A: No, a blocked user will not be able to see your
+posts?</strong> <em>A: No, a blocked user will not be able to see your
 posts. If you block a user, this will hide all of your comments from
 that user’s view.</em></p>
 <p><strong>Q: If a moderator blocks someone, will they be able to see
-their comments in the moderation panel?</strong> ​<em>A: Blocking a user
+their comments in the moderation panel?</strong> <em>A: Blocking a user
 will not affect anything in the moderation panel. All comments will
 still be visible in the moderation panel, though blocks may change what
 content is visible in the embed.</em></p>
 <p><strong>Q: If I block someone, will I still see if they upvote
-me?</strong> ​<em>A: Your posts will be hidden from the blocked user, so
+me?</strong> <em>A: Your posts will be hidden from the blocked user, so
 you won’t receive additional upvotes from that account.</em></p>
 <h3 id="voting">Voting</h3>
 <p><strong>Who can vote on comments?</strong> Guests and logged out
@@ -2365,9 +2361,8 @@ trusted/banned users using the API if you have data like “subscribers”
 on your site’s end that you’d like to pass to Disqus (see the blacklists
 and whitelists endpoints).</p>
 <p>For ideas on who to add to your trusted user list, view your site’s
-top commenters in your site’s community profile at
-<code>https://disqus.com/home/forum/[FORUM_SHORTNAME]/commenters/</code>
-or in your Analytics at Community → Top Comments.</p>
+top commenters in your site’s community profile at 0 or in your
+Analytics at Community → Top Comments.</p>
 <p>After making use of the Trusted User list, you can consider toggling
 the pre-moderation setting to “All”. This will ensure that all comments
 will require moderation, with exception to your trusted users’ comments
@@ -2514,7 +2509,7 @@ your comment policy will appear formatted as below:</p>
 using our Sample Community Guidelines.</h5>
 <h3 id="connect-your-content-to-your-community">Connect Your Content to
 Your Community</h3>
-<p>​There are many factors that go into creating content that generates
+<p>There are many factors that go into creating content that generates
 great discussion –– maybe it’s a provoking photo, some well-timed
 commentary on current events, or a philosophical forray that makes your
 readers’ head explode.</p>
@@ -2531,9 +2526,9 @@ quality discussions.</p>
 <h4 id="wendys-lookbook">Wendy’s Lookbook</h4>
 <p>You can blur the content-community lines even further by asking
 people to submit their own artwork/reaction-gifs/poetry in the comments!
-Check out how contemporary art blog <code>booooooom.com</code> calls
-upon the masses every week to showcase their photography skills.</p>
-<p>​<strong>​Enough from us though, we absolutely want to hear what you
+Check out how contemporary art blog 0 calls upon the masses every week
+to showcase their photography skills.</p>
+<p><strong>Enough from us though, we absolutely want to hear what you
 have to say. :)</strong></p>
 <ul>
 <li><p>In what ways do you connect your content with your unique
@@ -2584,7 +2579,7 @@ Disqus commenter avatar, go to your Disqus admin, click the
 sub-tab. The option will be under <strong>Default commenter
 avatar</strong>. Click the Plus button to add a new image, ensure that
 it is bordered in blue, and click Save. ​</p>
-<p>​Tips</p>
+<p>Tips</p>
 <ul>
 <li><p>Keep it simple. Use an image that anyone in the community can
 associate with, and that doesn’t distract from their comment.</p></li>
@@ -2611,7 +2606,7 @@ page.</p>
 just have to:</h4>
 <ul>
 <li><p>Get the direct link to the comment</p></li>
-<li><p>Visit <code>embed.disqus.com</code></p></li>
+<li><p>Visit 0</p></li>
 <li><p>Copy the embed code into a blog post or website and
 publish</p></li>
 </ul>
@@ -2749,7 +2744,7 @@ opportunities to chime in by including a link that jumps to the comments
 section. Doing so will encourage your readers to voice their opinions.
 Consider adding a “jump to comments” link at the top of the article and
 after every question you ask your readers, or include a comment count
-after article titles. ​ ​<em>Tip: Getting more readers to visit your
+after article titles. ​ <em>Tip: Getting more readers to visit your
 comments section could improve your ad viewability and
 earnings.</em></p>
 <h4 id="highlight-the-best-comments">5. Highlight the best comments</h4>
@@ -2811,7 +2806,7 @@ href="#what-s-a-shortname">shortname</a>.</p>
 <pre><code>&lt;script&gt;
 (function() { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
 var d = document, s = d.createElement(&#39;script&#39;); // IMPORTANT: Replace EXAMPLE with your forum shortname!
-s.src = &#39;`https://EXAMPLE.disqus.com/recommendations.js`&#39;; s.setAttribute(&#39;data-timestamp&#39;, +new Date());
+s.src = &#39;0&#39;; s.setAttribute(&#39;data-timestamp&#39;, +new Date());
 (d.head || d.body).appendChild(s);
 })();
 &lt;/script&gt;
@@ -2872,15 +2867,15 @@ I manually set the images for my Recommendations?</h4>
 <p>You may want to do this if an image is not appearing automatically,
 or if you’d like a different image to appear in the window for a given
 thread. To manually set an image on the page for us to scrape, you’ll
-want to add this code (with the appropriate thread image) to the
-<code>&lt;head&gt;</code> of the page:</p>
+want to add this code (with the appropriate thread image) to the 0 of
+the page:</p>
 <pre><code>&lt;meta property=&quot;og:image&quot; content=&quot;IMAGE_URL&quot;&gt;</code></pre>
 <h3 id="sample-community-guidelines">Sample Community Guidelines</h3>
 <p>Every site on Disqus over time should develop their own community
 guidelines that considers the community they are trying to cultivate and
 reflects the types of discussions they want to encourage. Here are some
 examples active communities have created for their members: ​
-​<strong>Sites</strong></p>
+<strong>Sites</strong></p>
 <ul>
 <li><p>The Mary Sue: The Mary Sue’s Comment Policy</p></li>
 <li><p>Destructoid: Be chill. Be critical. Be you. But don’t be a
@@ -3000,19 +2995,19 @@ may:</p>
 <li><p>View active discussions created by that Site</p></li>
 <li><p>View the top commenters of the community</p></li>
 </ul>
-<h5 id="viewing-a-sites-profile"><strong>Viewing a Site’s
-Profile</strong></h5>
+<h4 id="viewing-a-sites-profile"><strong>Viewing a Site’s
+Profile</strong></h4>
 <p>When on a given site, you can visit their site profile by clicking
 the Community link in the dropdown menu.</p>
 <p>If you’ve commented on a site, a link to their Site Profile will also
 appear at the top of any comment on your user profile. ​</p>
-<h5 id="viewing-a-sites-active-discussions"><strong>Viewing a Site’s
-Active Discussions</strong></h5>
+<h4 id="viewing-a-sites-active-discussions"><strong>Viewing a Site’s
+Active Discussions</strong></h4>
 <p>Once on the Site Profile, you may view a list of active Discussions
 from that forum. This section will show all threads that have had at
 least one comment posted to them within a week of thread creation.</p>
-<h5 id="following-and-interacting-with-a-site"><strong>Following and
-interacting with a site</strong></h5>
+<h4 id="following-and-interacting-with-a-site"><strong>Following and
+interacting with a site</strong></h4>
 <p>Follow a community or a site by going to their page and clicking on
 the follow button in the top banner. Once you start following the site,
 new content will start flowing into your home feed. You may also view
@@ -3025,7 +3020,7 @@ Disqus Polls will allow you to create fully customizable polls to be
 installed anywhere on your website, complete with reporting and
 analytics so that you can monitor the additional engagement from your
 site visitors.</p>
-<p>​<em>Please note this is a separate product from Disqus Comments, and
+<p><em>Please note this is a separate product from Disqus Comments, and
 will require a separate subscription, or specific approval to join the
 Ads-Supported version of Disqus Polls. For more information on the plans
 that provide access to Disqus Polls, please check our “Gaining Access to
@@ -3033,7 +3028,7 @@ Polls” section</em> here<em>.</em></p>
 <p>Once you’ve subscribed to the correct Polls plan, new polls may be
 created from your Polls Editor Page. You can also access this page by
 clicking the “Polls” option in the header of your admin and then
-navigating to the “Editor” option appearing in the left sidebar.​ ​</p>
+navigating to the “Editor” option appearing in the left sidebar. ​</p>
 <p>The first step of creating your new poll is adding the poll name and
 date range. The date range may be entered manually, or selected from a
 calendar view by clicking the calendar icon in the right side of the
@@ -3041,14 +3036,14 @@ field. The poll name will not appear externally, and all of these header
 elements may be edited later if needed.</p>
 <p>After adding the name and date range, you’ll want to select any of
 the following options if they are applicable to this poll:
-​<em>​<strong>Require login to submit response</strong></em></p>
+<strong><em>Require login to submit response</em></strong></p>
 <p>This will prompt login with a Disqus account before the user can
-submit the poll. ​ ​<strong><em>Allow user to take poll
+submit the poll. ​ <strong><em>Allow user to take poll
 again</em></strong></p>
 <p>When checked, you’ll be given options to allow a user to take the
 poll again after 1, 7, or 30 days. This option will work even if users
 are not logged in.</p>
-<p>​<strong><em>Exclude from Universal Tag</em></strong></p>
+<p><strong><em>Exclude from Universal Tag</em></strong></p>
 <p>The Universal Tag is a single set of code to be installed on your
 site that will allow the cycling through of all active polls that do not
 have “Exclude from Universal Tag” checked. Checking this option will
@@ -3113,17 +3108,17 @@ Site</h4>
 <p>Once you’ve clicked publish and copied the tags for your poll, this
 will add the entire code block needed for poll installation to your
 clipboard. You can then go into your site code, and paste this code
-block within the <code>&lt;body&gt;</code> where you’d like the poll to
-appear. The Disqus Polls unit is responsive, and will give itself the
-best layout based on the space provided that it is installed within. ​
-When installing the poll unit, place the code block in a location
-viewable on both desktop and mobile to generate the highest engagement.
-For example, when placing the poll in a side-rail, or multi-column
-layout on desktop, ensure that portion of the site responsively comes
-into view on mobile as well. ​ We recommend not editing this code block,
-as it could affect the poll’s functionality. Tags for any poll can also
-be copied from your Polls Editor page by clicking the computer code icon
-under the Actions section:</p>
+block within the 0 where you’d like the poll to appear. The Disqus Polls
+unit is responsive, and will give itself the best layout based on the
+space provided that it is installed within. ​ When installing the poll
+unit, place the code block in a location viewable on both desktop and
+mobile to generate the highest engagement. For example, when placing the
+poll in a side-rail, or multi-column layout on desktop, ensure that
+portion of the site responsively comes into view on mobile as well. ​ We
+recommend not editing this code block, as it could affect the poll’s
+functionality. Tags for any poll can also be copied from your Polls
+Editor page by clicking the computer code icon under the Actions
+section:</p>
 If you are looking to have multiple Polls appearing simultaneously on a
 single page, we recommend using only one instance of the script portion
 of the Polls code and installing the script at the end of the body of
@@ -3132,8 +3127,7 @@ your site, preferably just before the
 <p>line. With the single script in that fixed position, you’ll still be
 able to dictate the placement of each poll on the page by moving the div
 code for each poll. ​ The div code for a single poll will look something
-like this:
-​<code>&lt;div class="disqus_poll" data-disqus-poll-id="399868400156464"&gt;&lt;/div&gt;</code></p>
+like this: 0</p>
 <h4 id="using-the-universal-tags">Using the Universal Tags</h4>
 <p>In addition to the poll-specific tags provided on Publish and on the
 Polls Editor page, we also offer a Universal Tags option. This allows
@@ -3144,8 +3138,7 @@ which have the <em>“Exclude from Universal Tags”</em> option
 selected.</p>
 <p>To implement the Universal Tags, simply click the Copy Universal Tags
 button at the top of the Polls Editor page, and paste this code into the
-<code>&lt;body&gt;</code> of your site where you’d like the Polls unit
-to appear.</p>
+0 of your site where you’d like the Polls unit to appear.</p>
 <h4 id="polls-appearance">Polls Appearance</h4>
 <p>In a similar fashion to Disqus Comments, site styling will be
 inherited automatically. This includes the background color, and the
@@ -3156,18 +3149,17 @@ width of the container it is installed within. The module will adapt to
 vertical or horizontal orientation automatically, and will format itself
 depending on the sie of the container it is installed within. If it is
 installed in a container that is too short to show all of the Answer
-options, a scrollbar will appear automatically. ​ ​<strong>Editing the
+options, a scrollbar will appear automatically. ​ <strong>Editing the
 Link Color</strong></p>
 <p>We’ll automatically pull the link color from your site’s theme, and
 use this color for the poll Answers options and the Submit button. ​ To
 manually change what color is used for this, you may add a version of
-the following to your CSS sheet: ​ ​<code>.disqus_polls a {</code></p>
-<p><code>color: blue;</code></p>
-<p><code>}</code></p>
-<p><strong>Language Overrides</strong> Using the
-<code>this.language</code> JavaScript variable, you can dynamically load
-the Disqus poll unit in different languages on a per-page basis. For
-example, to load the poll in French: ​</p>
+the following to your CSS sheet: ​ 0</p>
+<p>0</p>
+<p>0</p>
+<p><strong>Language Overrides</strong> Using the 0 JavaScript variable,
+you can dynamically load the Disqus poll unit in different languages on
+a per-page basis. For example, to load the poll in French: ​</p>
 <pre><code>var disqus_polls_config = function () { this.language = &quot;fr&quot;; };</code></pre>
 <p>For a full list of language codes, see Languages on Transifex. Note
 however that Disqus does not support all languages offered in Transifex.
@@ -3309,10 +3301,9 @@ thread.</p>
 <p>We’ll automatically pull the link color from your site’s theme, and
 use this color for the poll Answers options and the Previous and Next
 buttons. ​ To manually change what color is used for this, you may add a
-version of the following to your CSS sheet: ​
-​<code>.disqus_polls a {</code></p>
-<p><code>color: blue;</code></p>
-<p><code>}</code></p>
+version of the following to your CSS sheet: ​ 0</p>
+<p>0</p>
+<p>0</p>
 <h4 id="taking-polls">Taking Polls</h4>
 <p>When a user is taking Polls, all they need to do is click their
 response to the question, and the unit will submit this as their answer
@@ -3534,8 +3525,7 @@ site’s stylesheets. ​</p>
 determined?</h4>
 <ul>
 <li><p>The light scheme is loaded when the text color Disqus inherits
-from your site has &gt;= 50% gray contrast: between
-<code>color: #000000;</code> and <code>color: #787878;</code></p></li>
+from your site has &gt;= 50% gray contrast: between 0 and 1</p></li>
 <li><p>The dark scheme is loaded in all other instances.</p></li>
 </ul>
 <h4 id="overriding-the-color-scheme">Overriding the color scheme</h4>
@@ -3548,12 +3538,11 @@ Color Scheme option.</p></li>
 for you by selecting “Auto”.</p></li>
 </ol>
 <p><em>In your site’s stylesheets directly</em></p>
-<p>1. Locate <code>&lt;div id="disqus_thread"&gt;</code></p>
-<p>2. Insert a <code>&lt;p&gt;</code> tag into disqus_thread. This
-requires editing HTML in the web inspector. 3. Inspect the
-<code>&lt;p&gt;</code> tag &gt; expand the Computed Style dropdown &gt;
-observe the ‘color’ parameter. This is the color that is being
-inherited.</p>
+<p>1. Locate 0</p>
+<p>2. Insert a 0 tag into disqus_thread. This requires editing HTML in
+the web inspector. 3. Inspect the 0 tag &gt; expand the Computed Style
+dropdown &gt; observe the ‘color’ parameter. This is the color that is
+being inherited.</p>
 <p>4. Expand the dropdown to the left of the ‘color’ parameter to expose
 which specific stylesheet rule is setting this color. Change the color
 being passed via this rule based on the “How is the color scheme
@@ -3565,15 +3554,14 @@ buttons when clicked. In order for this to work you’ll need to make sure
 the relevant CSS rules are inheritable by Disqus.</p>
 <p>To update the color used by Disqus for these elements, you may insert
 the following code in your CSS sheet, and then update the color line
-accordingly: ​ ​<code>#disqus_thread a {</code></p>
-<p><code>color: blue;</code></p>
-<p><code>}</code> ​</p>
+accordingly: ​ 0</p>
+<p>0</p>
+<p>0 ​</p>
 <h4 id="width-margin-and-padding">Width, margin and padding</h4>
 <p>Disqus is set to fill 100% of the width of its parent HTML element
-and has no margin or padding set on its <code>&lt;div&gt;</code>. This
-means Disqus often looks best when its parent container gives it some
-margin or padding. Additionally, the width of the
-<code>disqus_thread</code> ID can be adjusted using CSS. ​</p>
+and has no margin or padding set on its 0. This means Disqus often looks
+best when its parent container gives it some margin or padding.
+Additionally, the width of the 1 ID can be adjusted using CSS. ​</p>
 <h4 id="elements-that-cant-be-edited-or-removed">Elements that can’t be
 edited or removed</h4>
 <ul>
@@ -3833,7 +3821,7 @@ Disqus.</p>
 for their Comments plugin:</p>
 <p>The comments for every URL can be accessed via the Graph API. Simply
 make an HTTP GET request to:</p>
-<pre><code>`https://graph.facebook.com/v2.6/?fields=og_object{comments`}
+<pre><code>0}
 &amp;id=&lt;YOUR_URL&gt;
 &amp;access_token=&lt;YOUR_TOKEN&gt;</code></pre>
 <p>Note that, as this is publicly-visible data, sensitive personal
@@ -3848,8 +3836,8 @@ Disqus</h4>
 <p>At the Disqus admin &gt; Tools &gt; Import &gt; Generic (WXR)
 page.</p>
 <h3 id="domain-migration-tool">Domain Migration Tool</h3>
-<p>The migration tool is meant for simple domain changes, such as from
-<code>example1.com</code> to <code>example2.com</code>.</p>
+<p>The migration tool is meant for simple domain changes, such as from 0
+to 1.</p>
 <p>Note: The Migration Tool is only designed to change the Domain (what
 appears between http:// and .com in a URL). To update slugs (
 /blog/09/2014/exampletitle.html), you’ll want to use the URL Mapper tool
@@ -3863,8 +3851,7 @@ option, verify that the base domain which you’d like to migrate
 <p>If the domain specified isn’t that which you’d like to migrate
 <strong>from</strong>, enter the correct domain manually by clicking
 “Manually override this.” <em>Note: If your site contains a www. in the
-URL, include it without the <code>http://</code>, e.g.</em>
-<code>www.example.com</code></p>
+URL, include it without the 0, e.g.</em> 1</p>
 <p>2. Enter in the new domain that you’ll be migrating your threads
 <strong>to</strong>.</p>
 <p>3. Verify that the domains you’re migrating <strong>from</strong> and
@@ -3977,7 +3964,7 @@ Disqus can be found in our Quick Start Guide.</p>
 JS-Kit or Haloscan Comments</h4>
 <p>Use the following steps to export your comments from JS-Kit:</p>
 <ol type="1">
-<li><p>Log in at <code>JS-Kit.com</code>.</p></li>
+<li><p>Log in at 0.</p></li>
 <li><p>Visit your Moderation page.</p></li>
 <li><p>Click the Sites I Manage link under General Settings.</p></li>
 </ol>
@@ -4114,7 +4101,7 @@ import to Disqus (see: Manual Import) using those file(s).</p>
 new thread. Common scenarios when you might use this are:</p>
 <ul>
 <li><p>You change your domain. Example: You change your web address from
-<code>www.old-url.com</code> to new-awesome-url.com.</p></li>
+0 to new-awesome-url.com.</p></li>
 <li><p>You change your CMS/blogging system and, as a result, the article
 URL structure is no longer the same. Example: You move from Blogger to
 Wordpress.</p></li>
@@ -4142,8 +4129,8 @@ the bottom of the navigation panel on the left). ​</p>
 <ul>
 <li><p>Domain Migration Wizard - If the base domain of your website has
 recently changed, you’ll need to migrate the URLs of your commenting
-threads to use the new base domain (ex: <code>www.old-url.com</code>
--&gt; new-awesome-url.com).</p></li>
+threads to use the new base domain (ex: 0 -&gt;
+new-awesome-url.com).</p></li>
 <li><p>URL Mapper - If the URL slug of your site’s posts has recently
 changed, you’ll need to use our URL Mapper to migrate your commenting
 threads from the old URL to the new one (ex: yourdomain.com/p=23 -&gt;
@@ -4171,10 +4158,7 @@ Blogger URL structure to their new WordPress URL structure.</p></li>
 <li><p>Install and setup the Disqus WordPress plugin on your WordPress
 installation.</p></li>
 </ol>
-<p>Sample Blogger URL:
-<code>http://samplesite.blogspot.com/2011/01/sample-post.html</code>
-Sample self-hosted WordPress URL:
-<code>http://samplesite.com/2011/01/sample-post</code></p>
+<p>Sample Blogger URL: 0 Sample self-hosted WordPress URL: 1</p>
 <h4 id="notable-differences">Notable differences:</h4>
 <ul>
 <li><p>No .blogspot in the base domain of the WordPress URL</p></li>
@@ -4186,15 +4170,14 @@ may have additional differences. Read more about the URL mapper.</p>
 <p>This migration tool will follow 301 redirects and migrate comments
 automatically. Each old permalink <strong>must</strong> redirect to the
 proper new permalink rather than the root domain.</p>
-<p>For example, <code>http://example1.com/my-post-1/</code> needs to
-redirect to <code>http://example2.com/my-post-1/</code></p>
+<p>For example, 0 needs to redirect to 1</p>
 <ul>
-<li><code>http://example.com/old-blog-post-1/</code></li>
-<li><code>http://example.com/new-blog-post-1/</code></li>
-<li><code>http://example.com/old-blog-post-2/</code></li>
-<li><code>http://example.com/new-blog-post-2/</code></li>
-<li><code>http://example.com/old-blog-post-3/</code></li>
-<li><code>http://example.com/new-blog-post-3/</code></li>
+<li>0</li>
+<li>0</li>
+<li>0</li>
+<li>0</li>
+<li>0</li>
+<li>0</li>
 </ul>
 <p>After these 301 redirects are functioning properly, you can start our
 301 redirect crawler by clicking the Start Crawler button on the Tools
@@ -4265,17 +4248,14 @@ synced?</h4>
 synced with WordPress. It supports all comment states including
 approved, pending, spam, and deleted comments. ​</p>
 <h4 id="troubleshooting-2">Troubleshooting</h4>
-<p>1. Check the webhook link here:
-<code>https://YOURSITE.com/wp-json/disqus/v1/sync/webhook</code></p>
+<p>1. Check the webhook link here: 0</p>
 <p>If that link is not returning anything or not loading, something is
 blocking outside sources like Disqus from making requests to your
 site.</p>
 <p>If the REST API is blocked for Disqus or your entire site, you’ll
 want to ensure that it is enabled. You can follow instructions here to
-enable REST API and troubleshoot why it may not be enabled:
-​<code>https://wordpress.stackexchange.com/questions/248879/is-the-wordpress-rest-api-installed-and-enabled-in-a-vanilla-wordpress-4-7-insta</code></p>
-<p>More general information on the REST API may be found here:
-<code>https://v2.wp-api.org/</code></p>
+enable REST API and troubleshoot why it may not be enabled: 0</p>
+<p>More general information on the REST API may be found here: 0</p>
 <p>2. This may also be caused by a conflict with ones of your current
 plugins (often a security plugin). You can test this by temporarily
 disabling all plugins except Disqus. (These are not permanent
@@ -4486,9 +4466,9 @@ self-hosted option which is available from wordpress.org. You’ll need to
 set up your site locally and host it yourself. A free hosting service
 may be found here.</p>
 <p>If you’d prefer to have Wordpress host your site, you can choose the
-option available at wordpress.com. Using Disqus on a
-<code>WordPress.com</code> site requires a WordPress.com Business plan
-which supports third-party plugins like Disqus.</p>
+option available at wordpress.com. Using Disqus on a 0 site requires a
+WordPress.com Business plan which supports third-party plugins like
+Disqus.</p>
 <p>To install a plugin from the Plugin Directory, head to My Site →
 Plugins, and click the Add Plugin button. Search for “Disqus” and select
 the plugin authored by Disqus. Click “Install” and the plugin will be
@@ -4588,10 +4568,9 @@ Locate the “Trusted domains” box and enter your domains there.</p>
 troubleshooting</h4>
 <ul>
 <li><p>Sub-domains are unnecessary, as everything is covered in the base
-domain. So using <code>example.com</code> will cover
-<code>blog.example.com</code> and <code>m.example.com</code> .</p></li>
-<li><p>Don’t include <code>www</code> in your trusted domain, or else
-your comments may not load.</p></li>
+domain. So using 0 will cover 1 and 2 .</p></li>
+<li><p>Don’t include 0 in your trusted domain, or else your comments may
+not load.</p></li>
 <li><p>As part of the Best Practices for staging sites you can use the
 trusted domain as a check to make sure you don’t load accidentally load
 a production Disqus shortname on a staging site and vice versa.</p></li>
@@ -4639,28 +4618,27 @@ like this:</p>
 <pre><code>&lt;b:includable id=&#39;main&#39;&gt;
   &lt;!-- only display title if it&#39;s non-empty --&gt;
   &lt;b:if cond=&#39;data:title != &amp;quot;&amp;quot;&#39;&gt;
-    &lt;h2 class=&#39;title&#39;&gt;&lt;data:title/&gt;&lt;/h2&gt;
+    &lt;data:title/&gt;
   &lt;/b:if&gt;
   &lt;div class=&#39;widget-content&#39;&gt;
     &lt;data:content/&gt;
   &lt;/div&gt;
   &lt;b:include name=&#39;quickedit&#39;/&gt;
 &lt;/b:includable&gt;</code></pre>
-<p>5. BEFORE the closing <code>&lt;/b:widget&gt;</code> tag, add the
-following Disqus code (remember to replace “<strong>EXAMPLE</strong>”
-with your forum shortname and be sure to leave ‘'’ in front of your
-shortname and ‘';’ after it.):</p>
+<p>5. BEFORE the closing 0 tag, add the following Disqus code (remember
+to replace “<strong>EXAMPLE</strong>” with your forum shortname and be
+sure to leave ’’’ in front of your shortname and ’‘;’ after it.):</p>
 <pre><code>&lt;b:includable id=&#39;main&#39;&gt;
             &lt;script type=&#39;text/javascript&#39;&gt;
-                var disqus_shortname = &amp;#39;EXAMPLE&amp;#39;;
-                var disqus_blogger_current_url = &amp;quot;&lt;data:blog.canonicalUrl/&gt;&amp;quot;;
+                var disqus_shortname = &#39;EXAMPLE&#39;;
+                var disqus_blogger_current_url = &quot;&lt;data:blog.canonicalUrl/&gt;&quot;;
 
                 if (!disqus_blogger_current_url.length) {
-                    disqus_blogger_current_url = &amp;quot;&lt;data:blog.url/&gt;&amp;quot;;
+                    disqus_blogger_current_url = &quot;&lt;data:blog.url/&gt;&quot;;
                 }
 
-                var disqus_blogger_homepage_url = &amp;quot;&lt;data:blog.homepageUrl/&gt;&amp;quot;;
-                var disqus_blogger_canonical_homepage_url = &amp;quot;&lt;data:blog.canonicalHomepageUrl/&gt;&amp;quot;;
+                var disqus_blogger_homepage_url = &quot;&lt;data:blog.homepageUrl/&gt;&quot;;
+                var disqus_blogger_canonical_homepage_url = &quot;&lt;data:blog.canonicalHomepageUrl/&gt;&quot;;
             &lt;/script&gt;
 
             &lt;b:if cond=&#39;data:blog.pageType == &amp;quot;item&amp;quot;&#39;&gt;
@@ -4670,11 +4648,11 @@ shortname and ‘';’ after it.):</p>
 
                 &lt;script type=&#39;text/javascript&#39;&gt;
                     (function() {
-                        var bloggerjs = document.createElement(&amp;#39;script&amp;#39;);
-                        bloggerjs.type = &amp;#39;text/javascript&amp;#39;;
+                        var bloggerjs = document.createElement(&#39;script&#39;);
+                        bloggerjs.type = &#39;text/javascript&#39;;
                         bloggerjs.async = true;
-                        bloggerjs.src = &amp;#39;//&amp;#39;+disqus_shortname+&amp;#39;.disqus.com/blogger_item.js&amp;#39;;
-                        (document.getElementsByTagName(&amp;#39;head&amp;#39;)[0] || document.getElementsByTagName(&amp;#39;body&amp;#39;)[0]).appendChild(bloggerjs);
+                        bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_item.js&#39;;
+                        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
                     })();
 
                 &lt;/script&gt;
@@ -4685,11 +4663,11 @@ shortname and ‘';’ after it.):</p>
 
                 &lt;script type=&#39;text/javascript&#39;&gt;
                 (function() {
-                    var bloggerjs = document.createElement(&amp;#39;script&amp;#39;);
-                    bloggerjs.type = &amp;#39;text/javascript&amp;#39;;
+                    var bloggerjs = document.createElement(&#39;script&#39;);
+                    bloggerjs.type = &#39;text/javascript&#39;;
                     bloggerjs.async = true;
-                    bloggerjs.src = &amp;#39;//&amp;#39;+disqus_shortname+&amp;#39;.disqus.com/blogger_index.js&amp;#39;;
-                    (document.getElementsByTagName(&amp;#39;head&amp;#39;)[0] || document.getElementsByTagName(&amp;#39;body&amp;#39;)[0]).appendChild(bloggerjs);
+                    bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_index.js&#39;;
+                    (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
                 })();
 
             &lt;/script&gt;
@@ -4723,17 +4701,16 @@ Appearance &gt; Editor page.</p>
 side of your screen. Backup this existing code by copy and pasting it
 into a text-file.</p>
 <p>Afterwards, replace the code in ‘comments.php’ with the code snippet
-below that includes the Universal Embed code with an <code>if</code>
-statement, which verifies that comments are enabled for the page in
-question.</p>
-<p><strong>Note</strong>: Don’t forget to change <code>EXAMPLE</code> to
-your forum’s shortname.</p>
+below that includes the Universal Embed code with an 0 statement, which
+verifies that comments are enabled for the page in question.</p>
+<p><strong>Note</strong>: Don’t forget to change 0 to your forum’s
+shortname.</p>
 <pre><code>&lt;?php if (comments_open()) :?&gt;
 &lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: `https://disqus.com/admin/universalcode/#configuration-variables`
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 0
      */
     /*
     var disqus_config = function () {
@@ -4750,13 +4727,13 @@ your forum’s shortname.</p>
         (d.head || d.body).appendChild(s);
     })();
 &lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;`http://disqus.com/?ref_noscript`&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;noscript&gt;Please enable JavaScript to view the comments powered by Disqus.&lt;/noscript&gt;
 &lt;?php endif; // comments_open ?&gt;</code></pre>
 <h4 id="using-the-wordpress-2013-theme">Using the WordPress 2013
 Theme:</h4>
 <p>In the 2013 default theme for WordPress, you’ll need to enable the
-plugin setting to output the JavaScript in the footer and also add the
-<code>entry-content</code> class to the disqus_thread div.</p>
+plugin setting to output the JavaScript in the footer and also add the 0
+class to the disqus_thread div.</p>
 <h3 id="moderation-profiles">Moderation Profiles</h3>
 <p>In completing the Installation and Setup flow with Disqus, you’ll be
 prompted to select a Moderation Profile corresponding to how strictly
@@ -4797,9 +4774,9 @@ page.</p>
 <p>To set a default language for every discussion on your site, choose a
 language in your Disqus Admin &gt; Setup &gt; Appearance.</p>
 <h4 id="language-overrides">Language overrides</h4>
-<p>Using the <code>this.language</code> JavaScript variable, you can
-dynamically load the Disqus embed in different languages on a per-page
-basis. For example, to load the embed in French:</p>
+<p>Using the 0 JavaScript variable, you can dynamically load the Disqus
+embed in different languages on a per-page basis. For example, to load
+the embed in French:</p>
 <pre><code>var disqus_config = function () {
   this.language = &quot;fr&quot;;
 };</code></pre>
@@ -4862,10 +4839,9 @@ guide for how to start growing your community.</p>
 <p>Disqus offers many tools to help you easily manage your community;
 learn more on our Moderation page. ​</p>
 <h4 id="home-feed">Home Feed</h4>
-<p>Your Home is the main page you see when you visit
-<code>disqus.com/home/</code>. For more information about how your
-site’s community will show up on Disqus, how it can be followed, and
-more, check out Your Homepage on Disqus.</p>
+<p>Your Home is the main page you see when you visit 0. For more
+information about how your site’s community will show up on Disqus, how
+it can be followed, and more, check out Your Homepage on Disqus.</p>
 <h3 id="translating-disqus">Translating Disqus</h3>
 <p>Disqus currently supports dozens of languages, ranging from Arabic to
 Ukrainian. For a full list of supported languages, see the Disqus
@@ -4974,7 +4950,7 @@ shortname.</p>
      *  PLATFORM OR CMS.
      *
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
-     *  `https://disqus.com/admin/universalcode/#configuration-variables`
+     *  0
      */
     /*
     var disqus_config = function () {
@@ -4990,7 +4966,7 @@ shortname.</p>
         var d = document, s = d.createElement(&#39;script&#39;);
 
         // IMPORTANT: Replace EXAMPLE with your forum shortname!
-        s.src = &#39;`https://EXAMPLE.disqus.com/embed.js`&#39;;
+        s.src = &#39;0&#39;;
 
         s.setAttribute(&#39;data-timestamp&#39;, +new Date());
         (d.head || d.body).appendChild(s);
@@ -5009,8 +4985,8 @@ tell Disqus how the system should work and behave. EXAMPLE is your
 (called a forum on Disqus) this system belongs to.</p>
 <p><strong>this.page.url</strong> tells Disqus the location of the page
 for permalinking purposes, this value will also uniquely identify the
-page and discussion thread if <code>identifier</code> (below) is not
-set. The url must contain a protocol (http or https).</p>
+page and discussion thread if 0 (below) is not set. The url must contain
+a protocol (http or https).</p>
 <p><strong>this.page.identifier</strong> tells Disqus a unique value,
 used to identify the page and discussion thread</p>
 <p>There are many more configuration variables available, but these are
@@ -5035,7 +5011,7 @@ version of Internet Explorer. Below are instructions on how to fix
 this.</p>
 <p>1. Go to your blog’s <strong>Template</strong> section and then click
 the “Edit template” button</p>
-2. Locate the following line within the <code>&lt;head&gt;</code>…
+2. Locate the following line within the 0…
 </head>
 <p>tags:</p>
 <pre><code>&lt;meta content=&#39;IE=EmulateIE7&#39; http-equiv=&#39;X-UA-Compatible &#39;/&gt;</code></pre>
@@ -5218,19 +5194,16 @@ emailing us at help+ISP@disqus.com.</strong></p>
 <li><p>open in an incognito (or private mode) browser</p></li>
 <li><p>try a different browser</p></li>
 <li><p>ping disqus.com and a.disquscdn.com and copy/paste the results.
-Here’s how:
-<code>http://www.wikihow.com/Ping-an-IP-Address</code></p></li>
-<li><p>copy your IP address from
-<code>http://supportdetails.com/</code></p></li>
+Here’s how: 0</p></li>
+<li><p>copy your IP address from 0</p></li>
 <li><p>try this workaround: change your routers DNS to this one provided
-by Google (8.8.8.8). Not sure how? Go to
-<code>https://developers.google.com/speed/public-dns/docs/using?hl=en</code></p></li>
+by Google (8.8.8.8). Not sure how? Go to 0</p></li>
 </ul>
 <p>Thank you for sharing this information with our team, we greatly
 appreciate it and we apologize for the inconvenience as we work to
 resolve this issue.</p>
 <p>For all other general inquires, please visit our Support Hub at
-<code>https://disqus.com/support</code>.</p>
+0.</p>
 <h3 id="security-best-practices">Security Best Practices</h3>
 <p>With recent industry-wide increases in</p>
 <ul>
@@ -5295,9 +5268,8 @@ should be selected by default.</p>
     margin: 0 auto;
     max-width: 474px;
 }</code></pre>
-<p>3. Edit the code to add , <code>#disqus_thread</code> after
-<code>.page-content</code> . It should look like this when you’re
-done:</p>
+<p>3. Edit the code to add , 0 after 1 . It should look like this when
+you’re done:</p>
 <pre><code>.site-content .entry-header,
 .site-content .entry-content,
 .site-content .entry-summary,
@@ -5339,18 +5311,18 @@ content for that category. Comments with a grading of “1” will be the
 least extreme content that still fits the content category.</p>
 <p>Below is a breakdown of the severity ratings within each category:
 ​</p>
-<p><strong>Hate Speech</strong> ​<em>3 - Hate Speech</em>: Slurs, hate
-speech, promotion of hateful ideology ​<em>2 - Slurs</em>: Negative
+<p><strong>Hate Speech</strong> <em>3 - Hate Speech</em>: Slurs, hate
+speech, promotion of hateful ideology <em>2 - Slurs</em>: Negative
 stereotypes or jokes, degrading comments, denouncing slurs, challenging
 a protected group’s morality or identity, violence against religion
-​<em>1 - Informational</em>: Positive stereotypes, informational
+<em>1 - Informational</em>: Positive stereotypes, informational
 statements, reclaimed slurs, references to hateful ideology, immorality
 of protected group’s rights</p>
 <p><strong>Violent Content</strong></p>
 <p><em>3 - Intimidation</em>: Serious and realistic threats, mentions of
-past violence ​<em>2 - Instigation</em>: Calls for violence, destruction
+past violence <em>2 - Instigation</em>: Calls for violence, destruction
 of property, calls for military action, calls for the death penalty
-outside a legal setting, mentions of self-harm/suicide ​<em>1 -
+outside a legal setting, mentions of self-harm/suicide <em>1 -
 Description</em>: Denouncing acts of violence, soft threats (kicking,
 punching, etc.), violence against non-human subjects, descriptions of
 violence, gun usage, abortion, self-defense, calls for capital
@@ -5358,23 +5330,23 @@ punishment in a legal setting, destruction of small personal belongings,
 violent jokes</p>
 <p><strong>Sexual Content</strong></p>
 <p><em>3 - Explicit</em>: Intercourse, masturbation, porn, sex toys and
-genitalia ​<em>2 - Intent &amp; nudity</em>: Sexual intent, nudity and
-lingerie ​<em>1 - Statements</em>: Informational statements that are
+genitalia <em>2 - Intent &amp; nudity</em>: Sexual intent, nudity and
+lingerie <em>1 - Statements</em>: Informational statements that are
 sexual in nature, affectionate activities (kissing, hugging, etc.),
 flirting, pet names, relationship status, sexual insults and rejecting
 sexual advances</p>
 <p><strong>Bullying</strong></p>
 <p><em>3 - Brutalizing</em>: Slurs or profane descriptors toward
 specific individuals, encouraging suicide or severe self-harm, severe
-violent threats toward specific individuals ​<em>2 - Profane</em>:
+violent threats toward specific individuals <em>2 - Profane</em>:
 Non-profane insults toward specific individuals, encouraging non-severe
 self-harm, non-severe violent threats toward specific individuals,
-silencing or exclusion ​<em>1 - Insults</em>: Profanity in a non-bullying
+silencing or exclusion <em>1 - Insults</em>: Profanity in a non-bullying
 context, playful teasing, self-deprecation, reclaimed slurs, degrading a
 person’s belongings, bullying toward organizations, denouncing
 bullying</p>
 <p><strong>Promotion</strong> (there is only one severity rating for
-Promotion) ​<em>Promotion</em>: Asking for likes/follows/shares,
+Promotion) <em>Promotion</em>: Asking for likes/follows/shares,
 advertising monthly newsletters/special promotions, asking for
 donations/payments, advertising products, selling pornography,
 giveaways</p>
@@ -5463,7 +5435,7 @@ organization owner.</p></li>
 update the username, display name, and email address to match that of
 the new desired user. All of this can be done in the Edit Profile view
 while logged-in as the organization owner. The new user can then reset
-the password at <code>https://disqus.com/forgot/</code>.</p></li>
+the password at 0.</p></li>
 </ol>
 <h4 id="full-ownership-transfer">Full Ownership Transfer</h4>
 <p>Full Site and Organization ownership can only be transferred to a
@@ -5544,9 +5516,8 @@ at the bottom of this page.</p>
 registered as Disqus users before being added to your community as
 moderators. If the moderator you’d like to add doesn’t already have a
 Disqus user account, they can register with their email and password. ​
-​Single Sign-on (SSO) accounts can be added as moderators too by entering
-their SSO username (e.g., <code>cnn-4e24e88607ab41b791fd0b80c0</code>).
-​</p>
+Single Sign-on (SSO) accounts can be added as moderators too by entering
+their SSO username (e.g., 0). ​</p>
 <h4
 id="there-are-3-different-roles-when-it-comes-to-administration-and-moderation-on-disqus">There
 are 3 different roles when it comes to administration and moderation on
@@ -5758,7 +5729,7 @@ ensure that unwanted content is removed or sent to pending for moderator
 review. You may access all of the tools in the Settings -&gt; Moderation
 page of your moderation panel. For instructions on moderating comments
 and using the moderation panel itself, please go <a
-href="#moderating-101">here</a>. ​ ​<em>In addition to what’s listed here,
+href="#moderating-101">here</a>. ​ <em>In addition to what’s listed here,
 Pro and Business publishers will have access to additional AI filtering
 and tooling covered in <a href="#advanced-moderation">Advanced
 Moderation</a>.</em></p>
@@ -5800,8 +5771,8 @@ filter, it will be sent to the Pending queue. We pre-populate this list
 with a recommended set of words, which can be edited at any time. You
 may access the list from the left-side menu in your main moderation
 panel page, or may visit it directly here. Up to 2,000 words may be
-added to the list. ​ You may use wildcards by entering a <code>.*</code>,
-but be careful where you use it; for example,</p>
+added to the list. ​ You may use wildcards by entering a 0, but be
+careful where you use it; for example,</p>
 <p>s.*ck will match suck, but also sock and stack.</p>
 <p>In addition to being set as Pending, Comments containing a Restricted
 Word will highlight the trigger word with yellow background and will
@@ -5971,7 +5942,7 @@ I enable reactions to appear in all existing articles when turning on
 Reactions?</strong></h5>
 <p>No, Reactions will only appear on newly published articles after you
 enable Reactions.</p>
-<p>​<strong>CUSTOM REACTIONS IMAGE SPECIFICATIONS:</strong></p>
+<p><strong>CUSTOM REACTIONS IMAGE SPECIFICATIONS:</strong></p>
 <ul>
 <li><p>size restriction is up to 5mb</p></li>
 <li><p>file format is jpeg, png, gif</p></li>
@@ -6053,15 +6024,15 @@ comments are labelled as toxic. Publishers can also sort by “toxic” to
 see all toxic comments. Comments that are labelled as “toxic” are not
 moderated, or pre-moderated. At this time, the toxicity label is just
 another piece of information to help publishers moderate more
-effectively. ​ ​<strong>If a comment is not Toxic, can I remove the
+effectively. ​ <strong>If a comment is not Toxic, can I remove the
 “Toxic” tag?</strong> No. While this ability currently isn’t available,
 we are looking into methods of improving its use in the future. ​
-​<strong>Will commenters see this?</strong> No. Only site moderators can
-see this within the Moderation Panel. ​ ​<strong>Will you show a numeric
+<strong>Will commenters see this?</strong> No. Only site moderators can
+see this within the Moderation Panel. ​ <strong>Will you show a numeric
 score for toxic comments?</strong> No. This only tags a comment with the
-label “Toxic” within your Moderation Panel. ​ ​<strong>What happens when a
+label “Toxic” within your Moderation Panel. ​ <strong>What happens when a
 user edits their comments?</strong> The filter re-checks their comment. ​
-​<strong>What languages does the filter support?</strong> Currently, only
+<strong>What languages does the filter support?</strong> Currently, only
 English. We hope to expand support for non-English languages in the near
 future. ​</p>
 <h3 id="user-reporting">User Reporting</h3>
@@ -6184,16 +6155,15 @@ and/or <strong>IP address</strong> directly to your forum’s master
 Banned User or Trusted User list.</p>
 <h4 id="banningtrusting-email-domains">Banning/trusting email
 domains</h4>
-<p>Email domains like <code>example.com</code> can also be
-banned/trusted at Settings &gt; Access Control by selecting Domain in
-the Add item &gt; Type dropdown.</p>
+<p>Email domains like 0 can also be banned/trusted at Settings &gt;
+Access Control by selecting Domain in the Add item &gt; Type
+dropdown.</p>
 <p><em>Keep in mind</em>: Banning an email domain will block anyone
 using that domain from posting comments to your site, whether
-intentional or not. For example, banning the
-<code>gmail.com</code>domain will block all users with an email address
-ending in <code>@gmail.com</code> from posting comments to your site.
-When possible, we recommend blocking individual users before blocking
-domains.</p>
+intentional or not. For example, banning the 0domain will block all
+users with an email address ending in 1 from posting comments to your
+site. When possible, we recommend blocking individual users before
+blocking domains.</p>
 <h4 id="finding-bannedtrusted-items">Finding Banned/Trusted Items</h4>
 <p>You can search your Trusted/Banned Users lists at Disqus Admin &gt;
 Community &gt; Banned Users.</p>
@@ -6227,8 +6197,7 @@ Instructions</h3>
 site before installing.</p>
 <h4 id="to-install-disqus-on-sitefinity">To install Disqus on
 Sitefinity:</h4>
-<p>1. Visit this link to download Random Site Controls:
-<code>http://www.sitefinitysteve.com/downloads/randomsitecontrols</code></p>
+<p>1. Visit this link to download Random Site Controls: 0</p>
 <p>2. Copy the RandomSiteControls.dll to the bin folder of your
 project.</p>
 <p>3. Add in the Toolbox entries from the included
@@ -6259,11 +6228,8 @@ Installation Instructions</h3>
 <p>For displaying Disqus on your site, typically on individual article
 or post pages.</p>
 <p>1. In Tumblr, visit Settings &gt; Edit theme 2. Select “Edit HTML”.
-3. Copy and paste the following code anywhere between the
-<code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags:
-<code>&lt;meta name='text:Disqus Shortname' content='' /&gt;</code> 4.
-Copy and paste the following code immediately after
-<code>{/block:Posts}</code>:</p>
+3. Copy and paste the following code anywhere between the 0 and 1 tags:
+2 4. Copy and paste the following code immediately after 0:</p>
 <pre><code>{block:IfDisqusShortname}
 
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -6284,8 +6250,7 @@ Please enable JavaScript to view the comments powered by Disqus.blog comments po
 <ol type="1">
 <li><p>In Tumblr, visit Settings &gt; Your Site &gt; Customize</p></li>
 <li><p>Select “Edit HTML”.</p></li>
-<li><p>Copy and paste the following code immediately before
-<code>{/block:Posts}</code>:</p>
+<li><p>Copy and paste the following code immediately before 0:</p>
 <p>{block:IndexPage}Comments</p>
 <pre><code>var disqus_shortname = &#39;{text:Disqus Shortname}&#39;;    (function () {
     var s = document.createElement(&#39;script&#39;); s.async = true;
@@ -6456,56 +6421,55 @@ id="amendment-to-disqus-terms-of-service-applicable-to-u-s-feder">Amendment
 to Disqus Terms of Service Applicable to U.S. Federal Government
 Users</h3>
 <p>This Amendment to the standard Terms of Service (“Terms”) of Disqus,
-Inc. (“Disqus” or “Company”) posted at
-<code>https://help.disqus.com/customer/portal/articles/466260-terms-of-service</code>
-is an agreement between the Company and the U.S. Government and it
-applies to the use of the Disqus Service by U.S. Government entities
-(“You” or the “Agency”). ​ The reason for this Amendment is that the
-Agency must follow federal laws, regulations, rules, and practices when
-entering into a binding agreement with a provider such as Disqus. This
-Amendment allows Agencies to use the Disqus Service under
-federal-compatible terms that respect the Agency’s legal status, its
-public mission, and other circumstances unique to the U.S. Government. ​
-A. <strong><em>Government entity</em></strong>: “You,” “Your,” and
-“User” within the Terms shall mean the Agency itself and shall not apply
-to, nor bind (i) the individual(s) who use the Services on Agency’s
-behalf, or (ii) any individual users who happen to be employed by or
-otherwise associated with the Agency. ​ B. <strong><em>Public
-purpose</em></strong>: Agency will use the Service solely in furtherance
-of Agency’s public purpose. Any provision in the Terms requiring that
-use of the Service be for private, personal and/or non-commercial
-purposes is waived. ​ C. <strong><em>Agency content serving the
-public</em></strong>: Company will allow Agency’s distribution or other
-publication via the Service of material that may contain or constitute
-promotions, advertisements or solicitations for goods or services, so
-long as the material relates to the Agency’s mission. ​ D.
-<strong><em>Advertisements</em></strong>: Neither Disqus nor the Agency
-wants the Government’s Content to be confused with other parties’
-content. To minimize that risk, Disqus agrees not to serve or display
-any commercial advertisements or solicitations on any part of the
-website displaying content uploaded by or under the control of the
-Agency. This exclusion will not extend to house ads that Company may
-serve on such pages in a non-intrusive manner. This exclusion shall also
-not extend to windows or interfaces that are part of Company’s Service
-but not specific to Agency’s site, such as global commenter profiles. ​
-E. <strong><em>No endorsement</em></strong>: Disqus agrees that Your
-name, seals, trademarks, logos, service marks, trade names, and the fact
-that You use the Service, shall not be used by Company in such a manner
-as to state or imply that Disqus’ products or services are endorsed,
-sponsored or recommended by You or by any other element of the Federal
-Government, or are considered by You or the Federal Government to be
-superior to any other products or services. Except for pages whose
-design and content is under the control of the Agency, or for links to
-or promotion of such pages, Company agrees not to display any Agency or
-government seals, trademarks, logos, service marks, and trade names on
-the Company’s homepage, elsewhere on the Service, or in Company
-advertisements and promotions, unless permission to do has been granted
-by the Agency or by other relevant Federal Government authority. Company
-may list the Agency’s name in a publicly available customer list so long
-as the name is not displayed in a more prominent fashion than that of
-any other third party name. ​ F. <strong><em>Indemnification, Liability,
-Damages, Arbitration</em></strong>: Any provisions in the Terms related
-to indemnification are waived and shall not apply except to the extent
+Inc. (“Disqus” or “Company”) posted at 0 is an agreement between the
+Company and the U.S. Government and it applies to the use of the Disqus
+Service by U.S. Government entities (“You” or the “Agency”). ​ The reason
+for this Amendment is that the Agency must follow federal laws,
+regulations, rules, and practices when entering into a binding agreement
+with a provider such as Disqus. This Amendment allows Agencies to use
+the Disqus Service under federal-compatible terms that respect the
+Agency’s legal status, its public mission, and other circumstances
+unique to the U.S. Government. ​ A. <strong><em>Government
+entity</em></strong>: “You,” “Your,” and “User” within the Terms shall
+mean the Agency itself and shall not apply to, nor bind (i) the
+individual(s) who use the Services on Agency’s behalf, or (ii) any
+individual users who happen to be employed by or otherwise associated
+with the Agency. ​ B. <strong><em>Public purpose</em></strong>: Agency
+will use the Service solely in furtherance of Agency’s public purpose.
+Any provision in the Terms requiring that use of the Service be for
+private, personal and/or non-commercial purposes is waived. ​ C.
+<strong><em>Agency content serving the public</em></strong>: Company
+will allow Agency’s distribution or other publication via the Service of
+material that may contain or constitute promotions, advertisements or
+solicitations for goods or services, so long as the material relates to
+the Agency’s mission. ​ D. <strong><em>Advertisements</em></strong>:
+Neither Disqus nor the Agency wants the Government’s Content to be
+confused with other parties’ content. To minimize that risk, Disqus
+agrees not to serve or display any commercial advertisements or
+solicitations on any part of the website displaying content uploaded by
+or under the control of the Agency. This exclusion will not extend to
+house ads that Company may serve on such pages in a non-intrusive
+manner. This exclusion shall also not extend to windows or interfaces
+that are part of Company’s Service but not specific to Agency’s site,
+such as global commenter profiles. ​ E. <strong><em>No
+endorsement</em></strong>: Disqus agrees that Your name, seals,
+trademarks, logos, service marks, trade names, and the fact that You use
+the Service, shall not be used by Company in such a manner as to state
+or imply that Disqus’ products or services are endorsed, sponsored or
+recommended by You or by any other element of the Federal Government, or
+are considered by You or the Federal Government to be superior to any
+other products or services. Except for pages whose design and content is
+under the control of the Agency, or for links to or promotion of such
+pages, Company agrees not to display any Agency or government seals,
+trademarks, logos, service marks, and trade names on the Company’s
+homepage, elsewhere on the Service, or in Company advertisements and
+promotions, unless permission to do has been granted by the Agency or by
+other relevant Federal Government authority. Company may list the
+Agency’s name in a publicly available customer list so long as the name
+is not displayed in a more prominent fashion than that of any other
+third party name. ​ F. <strong><em>Indemnification, Liability, Damages,
+Arbitration</em></strong>: Any provisions in the Terms related to
+indemnification are waived and shall not apply except to the extent
 expressly authorized by federal law. Liability and damages for any
 breach of the Terms as modified by this Amendment, or any claim arising
 from the Terms as modified by this Amendment, shall be determined under
@@ -6603,43 +6567,41 @@ days of such termination Company will provide You with all
 User-generated Content that is publicly visible on the Service. Data
 will be provided in a commonly used file or database format as Company
 deems appropriate. Company will not provide data if doing so would
-violate its privacy policy
-(<code>https://help.disqus.com/customer/en/portal/articles/466259-privacy-policy</code>).
-​T. <strong><em>Security</em></strong>: Company will, in good faith,
-exercise due diligence using generally accepted commercial business
-practices for IT security, to ensure that systems are operated and
-maintained in a secure manner, and that management, operational and
-technical controls are employed to ensure security of systems and data.
-Recognizing the changing nature of the Web, Company will continuously
-work with Users to ensure that its Site and Services meet Users’
-requirements for the security of systems and data. Company agrees to
-discuss implementing additional security controls as deemed necessary by
-Agency to conform to the Federal Information Security Management Act
-(FISMA), 44 U.S.C. 3541 et seq. ​ U. <strong><em>Federal
-Records</em></strong>: Agency acknowledges that its use of the Service
-as a public comment platform may generate federal records. If so, it is
-the Agency’s responsibility to manage those federal records in
-accordance with all applicable records management laws and regulations,
-including but not limited to the Federal Records Act (44 U.S.C. chs. 21,
-29, 31, 33), and regulations of the National Archives and Records
-Administration (NARA) at 36 CFR Chapter XII Subchapter B). Managing the
-records includes, but is not limited to, secure storage, retrievability,
-and proper disposition of all federal records including transfer of
-permanently valuable records to NARA in a format and manner acceptable
-to NARA at the time of transfer. ​ V. <strong><em>Precedence; Further
-Amendments</em></strong>: If there is a conflict between this Amendment
-and the Terms, or between this Amendment and other Disqus terms, rules
-and policies related to its Service, then this Amendment shall prevail.
-Any language in the Terms indicating it alone represents the entire
-agreement between Disqus and Agency is waived. Any further amendment
-must be agreed to by both parties. ​ W. <strong><em>Additional Items for
-discussion and possible inclusion in this Amendment</em></strong>:
-Company understands that changes in federal law, regulation and policy
-may affect Agency’s use of the Company’s Service in ways not addressed
-in the preceding clauses. Among the topics Agency may seek to discuss
-with Company, and which may lead to a mutual agreement to insert
-additional clauses in this Amendment, are the subjects of privacy and
-accessibility. ​ [July 2016]</p>
+violate its privacy policy (0). ​ T. <strong><em>Security</em></strong>:
+Company will, in good faith, exercise due diligence using generally
+accepted commercial business practices for IT security, to ensure that
+systems are operated and maintained in a secure manner, and that
+management, operational and technical controls are employed to ensure
+security of systems and data. Recognizing the changing nature of the
+Web, Company will continuously work with Users to ensure that its Site
+and Services meet Users’ requirements for the security of systems and
+data. Company agrees to discuss implementing additional security
+controls as deemed necessary by Agency to conform to the Federal
+Information Security Management Act (FISMA), 44 U.S.C. 3541 et seq. ​ U.
+<strong><em>Federal Records</em></strong>: Agency acknowledges that its
+use of the Service as a public comment platform may generate federal
+records. If so, it is the Agency’s responsibility to manage those
+federal records in accordance with all applicable records management
+laws and regulations, including but not limited to the Federal Records
+Act (44 U.S.C. chs. 21, 29, 31, 33), and regulations of the National
+Archives and Records Administration (NARA) at 36 CFR Chapter XII
+Subchapter B). Managing the records includes, but is not limited to,
+secure storage, retrievability, and proper disposition of all federal
+records including transfer of permanently valuable records to NARA in a
+format and manner acceptable to NARA at the time of transfer. ​ V.
+<strong><em>Precedence; Further Amendments</em></strong>: If there is a
+conflict between this Amendment and the Terms, or between this Amendment
+and other Disqus terms, rules and policies related to its Service, then
+this Amendment shall prevail. Any language in the Terms indicating it
+alone represents the entire agreement between Disqus and Agency is
+waived. Any further amendment must be agreed to by both parties. ​ W.
+<strong><em>Additional Items for discussion and possible inclusion in
+this Amendment</em></strong>: Company understands that changes in
+federal law, regulation and policy may affect Agency’s use of the
+Company’s Service in ways not addressed in the preceding clauses. Among
+the topics Agency may seek to discuss with Company, and which may lead
+to a mutual agreement to insert additional clauses in this Amendment,
+are the subjects of privacy and accessibility. ​ [July 2016]</p>
 <h3 id="basic-rules-for-disqus">Basic Rules for Disqus</h3>
 <p>Disqus doesn’t moderate or manage the communities that use Disqus,
 but using Disqus to do any of the following things breaks our Terms of
@@ -6743,7 +6705,7 @@ found <a href="#disqus-polls-pricing-and-plans">here</a>.</em></p>
 <p>Get all of the core Disqus features including: Comments plug-in,
 advanced spam filtering, moderation tools, basic analytics, configurable
 ads, and more.</p>
-<p>Free, ads-supported with a Top ads placement required. ​ ​<em>Note:
+<p>Free, ads-supported with a Top ads placement required. ​ <em>Note:
 Sites that cannot run ads (due to adult content or other restrictions)
 may not be eligible for the Basic plan, and will be required to run an
 ads-free subscription to remain on the Disqus network.</em></p>
@@ -6783,12 +6745,12 @@ in real-time discussions on Discuss Disqus.</p>
 <p>Get everything in Disqus Basic and the option to turn ads on and
 off.</p>
 <p>Available to organizations containing up to 3 sites and a combined
-monthly pageview total listed below: ​<strong>up to 100,000 monthly
+monthly pageview total listed below: <strong>up to 100,000 monthly
 pageviews</strong></p>
 <p>$12 per month, or $132 per year ($11/month with annual billing
-enabled) ​<strong>up to 350,000 monthly pageviews</strong></p>
+enabled) <strong>up to 350,000 monthly pageviews</strong></p>
 <p>$20 per month, or $216 per year ($18/month with annual billing
-enabled) ​<strong>up to 900,000 monthly pageviews</strong></p>
+enabled) <strong>up to 900,000 monthly pageviews</strong></p>
 <p>$35 per month, or $372 per year ($31/month with annual billing
 enabled)</p>
 <h4 id="ads-optional">Ads optional</h4>
@@ -6871,7 +6833,7 @@ notifications.</p>
 <p>Unlimited use of the Disqus API.</p>
 <h4 id="custom-reporting-optimizations">Custom Reporting &amp;
 Optimizations</h4>
-<p>​Contact us here for more info.</p>
+<p>Contact us here for more info.</p>
 <h3 id="contacting-disqus-about-a-deceased-user">Contacting Disqus about
 a deceased user</h3>
 <p>In the event of the death of a Disqus user, we can work with a person
@@ -6921,10 +6883,10 @@ policy and opt-out.</p>
 <p>We share your web browsing activity with Disqus’ parent company, Zeta
 Global, to enable personalized marketing based on your interests, also
 known as cross-context behavioral advertising. Please see Zeta’s privacy
-policy. ​ ​<strong>Disqus Data Sub-processors</strong> We may share Disqus
+policy. ​ <strong>Disqus Data Sub-processors</strong> We may share Disqus
 data with the following sub-processors to run and administer the Disqus
-service. ​Amazon Web Services ​Fastly ​Hive AI ​Hubspot ​Intercom ​Osano
-​Stripe ​</p>
+service. Amazon Web Services Fastly Hive AI Hubspot Intercom Osano
+Stripe ​</p>
 <p><strong>Other Third Party Advertising Partners</strong></p>
 <p>We work with several third party partners to serve relevant
 advertising within the Disqus comment embed on partner websites. We do
@@ -6932,17 +6894,17 @@ not share your information with these partners, however, in the course
 of serving or displaying ads through Disqus, these partners may place a
 cookie on your browser. We expect all third party partners to follow all
 relevant privacy laws and regulations when serving ads through Disqus.  ​
-​AdaptMX ​ ​Amazon ​ ​AniView</p>
-<p>Criteo ​ ​Google</p>
+AdaptMX ​ Amazon ​ AniView</p>
+<p>Criteo ​ Google</p>
 <p>Magnite</p>
 <p>Mediafuse</p>
 <p>OneTag</p>
 <p>OpenX</p>
 <p>PubMatic</p>
-<p>Revcontent ​ ​Sonobi</p>
-<p>Sovrn ​ ​Taboola</p>
+<p>Revcontent ​ Sonobi</p>
+<p>Sovrn ​ Taboola</p>
 <p>Xandr</p>
-<p>​Yahoo ​ ​Zeta Global SSP</p>
+<p>Yahoo ​ Zeta Global SSP</p>
 <p><strong>Updates to this Data Recipients Policy</strong>. Disqus may,
 in its sole discretion, modify or update this Policy from time to time,
 and so you should review this page periodically. When we change the
@@ -6967,7 +6929,7 @@ for their records. Publishers can download a pre-signed version of the
 Disqus Publisher DPA via the link below. For any questions, please
 contact us at privacy@disqus.com.</p>
 <p>Download Disqus Publisher DPA</p>
-<p>​<strong>DATA PROCESSING AddendumAddendum to the Disqus Publisher
+<p><strong>DATA PROCESSING AddendumAddendum to the Disqus Publisher
 Terms of Service Agreement</strong></p>
 <p>This Addendum to the Disqus Publisher Terms of Service Agreement (the
 “DPA Addendum” or “DPA”), effective as of the Effective Date as set
@@ -7859,7 +7821,7 @@ obligations applying to the processing in question under Regulation (EU)
 <p><strong><em>Clause 17:</em> Governing law</strong></p>
 <p>These Clauses shall be governed by the law of one of the EU Member
 States, provided such law allows for third-party beneficiary rights. The
-Parties agree that this shall be the law of ­­­­______ (<em>specify Member
+Parties agree that this shall be the law of ______ (<em>specify Member
 State</em>). ​</p>
 <p><strong><em>Clause 18</em>: Choice of forum and
 jurisdiction</strong></p>
@@ -9087,7 +9049,7 @@ is in force and shall terminate when the Agreement is terminated. ​</p>
 id="disqus-publisher-terms-of-service-agreement-for-ad-managemen">Disqus
 - Publisher Terms of Service Agreement for Ad Management Solutions</h3>
 <p><strong>PUBLISHER TERMS OF SERVICE AGREEMENT FOR AD MANAGEMENT
-SOLUTIONS</strong> ​ ​<strong>This Publisher Terms of Service Agreement
+SOLUTIONS</strong> ​ <strong>This Publisher Terms of Service Agreement
 (the, “Agreement”) is entered into by and between Disqus,
 Inc. (“Disqus”) and the publisher (“Publisher”) as of the first date the
 Disqus and Publisher execute an insertion order for ad management
@@ -9134,8 +9096,7 @@ features at any time in our sole discretion without any responsibility
 or liability to you.</p>
 <p>2.5. <em>Google Adsense.</em> Participation in Services is subject to
 your acceptance and continued compliance with this agreement and with
-the Google Adsense Advertising Policies outlined at
-<code>https://www.google.com/adsense/policies</code>. You agree that
+the Google Adsense Advertising Policies outlined at 0. You agree that
 Disqus is not, and can not, under any circumstances be held responsible
 for the removal or banning of your site by Google Adsense or any other
 online advertising program. You authorize Disqus to represent you and/or
@@ -9561,7 +9522,7 @@ Riservatezza</h3>
 utilizza, vendi, divulga e protegge i dati relativi a te (l’“Utente”) in
 relazione al nostro Servizio (come definito di seguito), nonché le tue
 scelte riguardo alla raccolta e all’uso di questi dati.</p>
-<h6 id="introduzione">1. INTRODUZIONE</h6>
+<h4 id="introduzione">1. INTRODUZIONE</h4>
 <p><strong>Panoramica</strong></p>
 <p>Disqus offre una piattaforma online di condivisione di commenti e
 opinioni pubbliche dove gli utenti accedono e creano profili per
@@ -9620,8 +9581,8 @@ altrettanta importanza sugli individui. Disqus non utilizza né vende
 dati personali dei consumatori per addestrare grandi modelli
 linguistici. I nostri sistemi di IA operano in conformità con i nostri
 impegni sulla privacy come descritto in questa politica.</p>
-<h6 id="i-dati-che-raccogliamo-su-di-te">2. I DATI CHE RACCOGLIAMO SU DI
-TE</h6>
+<h4 id="i-dati-che-raccogliamo-su-di-te">2. I DATI CHE RACCOGLIAMO SU DI
+TE</h4>
 <p>Dati personali, o informazioni personali, indicano qualsiasi
 informazione su una persona che possa ragionevolmente essere collegata,
 direttamente o indirettamente, a una persona o a un nucleo familiare
@@ -9669,8 +9630,8 @@ personali sensibili. ​</p>
 <p>Possiamo anche combinare, de-identificare o aggregare qualsiasi delle
 informazioni raccolte tramite il nostro Servizio per uno qualsiasi degli
 scopi descritti di seguito.</p>
-<h6 id="come-vengono-raccolti-i-tuoi-dati-personali">3. COME VENGONO
-RACCOLTI I TUOI DATI PERSONALI?</h6>
+<h4 id="come-vengono-raccolti-i-tuoi-dati-personali">3. COME VENGONO
+RACCOLTI I TUOI DATI PERSONALI?</h4>
 <p>Utilizziamo diversi metodi per raccogliere dati da e su di te,
 inclusi tra:</p>
 <p><strong>Interazioni dirette</strong></p>
@@ -9746,8 +9707,8 @@ preferenze sui cookie nei browser comuni:</p>
 <p>· Cookie su Internet Explorer: Cookie di Internet Explorer</p>
 <p>· Biscotti Safari: Safari Cookies</p>
 <p>· Google Analytics: Google Analytics</p>
-<h6 id="partner-pubblicitari-e-pubblicitari-mirati">4. PARTNER
-PUBBLICITARI E PUBBLICITARI MIRATI</h6>
+<h4 id="partner-pubblicitari-e-pubblicitari-mirati">4. PARTNER
+PUBBLICITARI E PUBBLICITARI MIRATI</h4>
 <p><strong>Pubblicità mirata</strong></p>
 <p>La pubblicità è il modo principale in cui Disqus guadagna. I ricavi
 pubblicitari permettono a Disqus di gestire, supportare e migliorare il
@@ -9796,10 +9757,10 @@ elettroniche;</p>
 <p>· Informazioni professionali o legate all’occupazione;</p>
 <p>· Informazioni educative; e,</p>
 <p>· Informazioni personali sensibili.</p>
-<h6
+<h4
 id="come-utilizziamo-i-dati-personali-e-la-nostra-base-legale-per-lutilizzo">5.
 COME UTILIZZIAMO I DATI PERSONALI E LA NOSTRA BASE LEGALE PER
-L’UTILIZZO</h6>
+L’UTILIZZO</h4>
 <p>Nel SEE, nel Regno Unito (UK) e in Brasile, di solito ci affidiamo al
 tuo consenso per utilizzare i dati personali. In alcuni casi,
 utilizziamo i dati quando necessario per i nostri legittimi interessi (o
@@ -9932,8 +9893,8 @@ condividere dati come consentito dalle leggi locali applicabili, il che
 potrebbe non richiedere il tuo consenso per farlo.</li>
 </ul></li>
 </ul>
-<h6 id="divulgazione-dei-tuoi-dati-personali">6. DIVULGAZIONE DEI TUOI
-DATI PERSONALI</h6>
+<h4 id="divulgazione-dei-tuoi-dati-personali">6. DIVULGAZIONE DEI TUOI
+DATI PERSONALI</h4>
 <p>Possiamo divulgare qualsiasi categoria di dati personali che
 raccogliamo da te e su di te nelle seguenti circostanze, per gli scopi
 indicati nella tabella sopra. Negli ultimi 12 mesi, abbiamo venduto e/o
@@ -9986,7 +9947,7 @@ o per indagare sulle frodi. ​</p>
 <p>Richiediamo a tutte le terze parti con cui condividiamo i dati di
 adottare le misure appropriate per garantire la sicurezza dei tuoi dati
 personali e trattarli in conformità con tutte le leggi applicabili.</p>
-<h6 id="conservazione-dei-dati">7. CONSERVAZIONE DEI DATI</h6>
+<h4 id="conservazione-dei-dati">7. CONSERVAZIONE DEI DATI</h4>
 <p>Conserveremo i tuoi dati personali solo per il tempo necessario per
 soddisfare gli scopi per cui li abbiamo raccolti, incluso il rispetto di
 eventuali requisiti legali, contabili o di rendicontazione. ​</p>
@@ -9996,7 +9957,7 @@ dei dati personali, il potenziale rischio di danni derivanti da un uso o
 divulgazione non autorizzata dei tuoi dati personali, gli scopi per cui
 trattiamo i tuoi dati personali e se possiamo raggiungere tali scopi con
 altri mezzi, nonché i requisiti legali applicabili.</p>
-<h6 id="sicurezza">8. SICUREZZA</h6>
+<h4 id="sicurezza">8. SICUREZZA</h4>
 <p>Disqus utilizza garanzie commercialmente ragionevoli per preservare
 l’integrità e la sicurezza di tutte le informazioni raccolte tramite il
 Servizio. Per proteggere la tua privacy e sicurezza, adottiamo misure
@@ -10006,7 +9967,7 @@ di mantenere la segretezza della tua password uniche e delle
 informazioni dell’account, e di controllare l’accesso alle tue
 comunicazioni email da Disqus. Disqus non è responsabile della
 funzionalità o delle misure di sicurezza di terze parti.</p>
-<h6 id="i-tuoi-diritti">9. I TUOI DIRITTI</h6>
+<h4 id="i-tuoi-diritti">9. I TUOI DIRITTI</h4>
 <p>A seconda delle leggi in cui vivi, potresti avere uno o più dei
 seguenti diritti previsti dalle leggi locali. Disqus estende questi
 diritti a tutti gli individui, indipendentemente da dove vivano, incluso
@@ -10065,8 +10026,8 @@ Ricevute: 280 | Rispettato: 280 | Negato: 0 | Tempo di risposta mediano:
 VERIFICA: 595</p>
 <p>· RICHIESTE DI CANCELLAZIONE NON SODDISFATTE IN TUTTO O IN PARTE: 0 —
 Disqus non ha negato alcuna richiesta di cancellazione nel 2025.</p>
-<h6 id="trasferimenti-internazionali-di-dati">10. TRASFERIMENTI
-INTERNAZIONALI DI DATI</h6>
+<h4 id="trasferimenti-internazionali-di-dati">10. TRASFERIMENTI
+INTERNAZIONALI DI DATI</h4>
 <p>Per gli utenti con sede nello Spazio Economico Europeo (SEE) e nel
 Regno Unito, possiamo condividere i vostri dati personali all’interno
 del Gruppo Disqus o con terze parti esterne. Questo può comportare il
@@ -10079,12 +10040,12 @@ Europea e/o le disposizioni contrattuali equivalenti approvate
 dall’Information Commissioner’s Office del Regno Unito, che garantiscono
 che i dati personali ricevano la stessa protezione che hanno in Europa,
 indipendentemente dal luogo in cui vengono trattati.</p>
-<h6 id="non-tracciare-controllo-globale-della-privacy-gpc">11. NON
-TRACCIARE / CONTROLLO GLOBALE DELLA PRIVACY (“GPC”)</h6>
+<h4 id="non-tracciare-controllo-globale-della-privacy-gpc">11. NON
+TRACCIARE / CONTROLLO GLOBALE DELLA PRIVACY (“GPC”)</h4>
 <p>Disqus riconosce ed elabora le preferenze dell’utente come impostato
 nei segnali “Non tracciare” basati su browser tramite la funzione di
 Controllo Globale della Privacy (“GPC”).</p>
-<h6 id="generale">12. GENERALE</h6>
+<h4 id="generale">12. GENERALE</h4>
 <p><strong>Contatto</strong></p>
 <p>Se hai domande su questa Informativa sulla Privacy, inviaci una mail
 al privacy@disqus.com o contattaci per posta al 3 Park Avenue, 33rd
@@ -10100,10 +10061,10 @@ modifiche. ​</p>
 <p>Click <a href="#terms-of-service">Ecco</a> per consultare i Termini
 di Servizio.</p>
 <p>La nostra Privacy Policy è disponibile anche nelle seguenti lingue:
-​<a href="#disqus-datenschutzrichtlinie">Deutsch</a></p>
-<p><a href="#disqus-privacy-policy">English</a> ​<a
-href="#politica-de-privacidad-de-disqus">Español</a> ​<a
-href="#politique-de-confidentialite-de-disqus">Français</a> ​<a
+<a href="#disqus-datenschutzrichtlinie">Deutsch</a></p>
+<p><a href="#disqus-privacy-policy">English</a> <a
+href="#politica-de-privacidad-de-disqus">Español</a> <a
+href="#politique-de-confidentialite-de-disqus">Français</a> <a
 href="#politica-de-privacidade-do-disqus">Português</a></p>
 <h3 id="disqus-privacy-policy">Disqus Privacy Policy</h3>
 <p><strong>Updated</strong> July 10, 2026</p>
@@ -10111,7 +10072,7 @@ href="#politica-de-privacidade-do-disqus">Português</a></p>
 discloses and protects data relating to you (the “User”) in connection
 with our Service (as defined below), as well as your choices regarding
 our collection and use of this data.</p>
-<h6 id="introduction">1. INTRODUCTION</h6>
+<h4 id="introduction">1. INTRODUCTION</h4>
 <p><strong>Overview</strong></p>
 <p>Disqus offers an online public comment and opinion sharing platform
 where users login and create profiles to participate in conversations
@@ -10163,8 +10124,8 @@ decisions that have legal or similarly significant effects on
 individuals. Disqus does not use or sell consumer personal data for the
 purpose of training large language models. Our AI systems operate in
 accordance with our privacy commitments as described in this policy.</p>
-<h6 id="the-data-we-collect-about-you">2. THE DATA WE COLLECT ABOUT
-YOU</h6>
+<h4 id="the-data-we-collect-about-you">2. THE DATA WE COLLECT ABOUT
+YOU</h4>
 <p>Personal data, or personal information, means any information about a
 person that can reasonably be linked, directly or indirectly, with a
 specific person or household. ​</p>
@@ -10209,10 +10170,10 @@ about you that could constitute sensitive personal information. ​</p>
 <p>We may also combine, de-identify, or aggregate any of the information
 we collect through our Service for any of the purposes described
 below.</p>
-<h6 id="how-is-your-personal-data-collected">3. HOW IS YOUR PERSONAL
-DATA COLLECTED?</h6>
+<h4 id="how-is-your-personal-data-collected">3. HOW IS YOUR PERSONAL
+DATA COLLECTED?</h4>
 <p>We use different methods to collect data from and about you including
-via: ​<strong>Direct interactions</strong></p>
+via: <strong>Direct interactions</strong></p>
 <p>This includes personal data you provide when you create an account or
 leave a comment. ​</p>
 <p><strong>Automated technologies or interactions</strong></p>
@@ -10281,8 +10242,8 @@ in common browsers:</p>
 <p>· Internet Explorer Cookies: Internet Explorer Cookies</p>
 <p>· Safari Cookies: Safari Cookies</p>
 <p>· Google Analytics: Google Analytics</p>
-<h6 id="targeted-advertising-and-ad-partners">4. TARGETED ADVERTISING
-AND AD PARTNERS</h6>
+<h4 id="targeted-advertising-and-ad-partners">4. TARGETED ADVERTISING
+AND AD PARTNERS</h4>
 <p><strong>Targeted Advertising</strong></p>
 <p>Advertising is the predominant way Disqus makes money. Advertising
 revenue allows Disqus to operate, support and improve the Service.
@@ -10327,8 +10288,8 @@ Records Statute (Cal. Civ. Code § 1798.80(e);</p>
 <p>· Professional or employment-related information;</p>
 <p>· Educational information; and,</p>
 <p>· Sensitive Personal Information.</p>
-<h6 id="how-we-use-personal-data-and-our-legal-basis-for-use">5. HOW WE
-USE PERSONAL DATA AND OUR LEGAL BASIS FOR USE</h6>
+<h4 id="how-we-use-personal-data-and-our-legal-basis-for-use">5. HOW WE
+USE PERSONAL DATA AND OUR LEGAL BASIS FOR USE</h4>
 <p>In the EEA, United Kingdom (UK), and Brazil, we typically rely on
 your consent to use personal data. In some cases, we use data as
 necessary for our legitimate interests (or those of a third party), but
@@ -10455,8 +10416,8 @@ data as allowed under applicable local laws, which may not require your
 consent for us to do so.</li>
 </ul></li>
 </ul>
-<h6 id="disclosures-of-your-personal-data">6. DISCLOSURES OF YOUR
-PERSONAL DATA</h6>
+<h4 id="disclosures-of-your-personal-data">6. DISCLOSURES OF YOUR
+PERSONAL DATA</h4>
 <p>We may disclose any of the categories of personal data that we
 collect from and about you in the following circumstances, for the
 purposes set out in the table above. In the past 12 months, we have sold
@@ -10504,7 +10465,7 @@ investigate fraud. ​</p>
 <p>We require all third parties with whom we share data to take
 appropriate steps to ensure the security of your personal data and to
 treat it in accordance with all applicable laws.</p>
-<h6 id="data-retention">7. DATA RETENTION</h6>
+<h4 id="data-retention">7. DATA RETENTION</h4>
 <p>We will only retain your personal data for as long as necessary to
 fulfill the purposes we collected it for, including for the purposes of
 satisfying any legal, accounting, or reporting requirements.</p>
@@ -10514,7 +10475,7 @@ potential risk of harm from unauthorized use or disclosure of your
 personal data, the purposes for which we process your personal data and
 whether we can achieve those purposes through other means, and the
 applicable legal requirements.</p>
-<h6 id="security">8. SECURITY</h6>
+<h4 id="security">8. SECURITY</h4>
 <p>Disqus uses commercially reasonable safeguards to preserve the
 integrity and security of all information collected through the Service.
 To protect your privacy and security, we take reasonable steps (such as
@@ -10524,7 +10485,7 @@ secrecy of your unique password and account information, and for
 controlling access to your email communications from Disqus. Disqus is
 not responsible for the functionality or security measures of any third
 party.</p>
-<h6 id="your-rights">9. YOUR RIGHTS</h6>
+<h4 id="your-rights">9. YOUR RIGHTS</h4>
 <p>Depending on the laws where you live, you may have one or more of the
 following rights under local laws. Disqus extends these rights to all
 individuals, regardless of where they live, including the right to:</p>
@@ -10579,8 +10540,8 @@ Mean response time: 1.44 days</p>
 VERIFICATION: 595</p>
 <p>· DELETION REQUESTS NOT FULFILLED IN WHOLE OR IN PART: 0 — Disqus did
 not deny any deletion requests in 2025.</p>
-<h6 id="international-data-transfers">10. INTERNATIONAL DATA
-TRANSFERS</h6>
+<h4 id="international-data-transfers">10. INTERNATIONAL DATA
+TRANSFERS</h4>
 <p>For users based in the European Economic Area (EEA) and the UK we may
 share your personal data within the Disqus Group or with external third
 parties. This may involve transferring your data outside the EEA.
@@ -10592,12 +10553,12 @@ and/or the equivalent contractual provisions approved by the UK’s
 Information Commissioner’s Office which ensures that personal data
 receives the same protection it has in Europe regardless of where it is
 processed.</p>
-<h6 id="do-not-track-global-privacy-control-gpc">11. DO NOT TRACK /
-GLOBAL PRIVACY CONTROL (“GPC”)</h6>
+<h4 id="do-not-track-global-privacy-control-gpc">11. DO NOT TRACK /
+GLOBAL PRIVACY CONTROL (“GPC”)</h4>
 <p>Disqus recognizes and processes user preferences as set in the
 browser-based “Do Not Track” signals via the Global Privacy Control
 (“GPC”) feature.</p>
-<h6 id="general">12. GENERAL</h6>
+<h4 id="general">12. GENERAL</h4>
 <p><strong>Contact</strong></p>
 <p>If you have any questions about this Privacy Policy, please email us
 at privacy@disqus.com, or contact us by mail at 3 Park Avenue, 33rd
@@ -10611,11 +10572,11 @@ following the posting of any changes to this policy means you accept
 such changes. ​</p>
 <p>Click <a href="#terms-of-service">here</a> to view the Terms of
 Service.</p>
-<p>Our Privacy Policy is also available in the following languages: ​<a
-href="#disqus-datenschutzrichtlinie">Deutsch</a> ​<a
-href="#politica-de-privacidad-de-disqus">Español</a> ​<a
-href="#politique-de-confidentialite-de-disqus">Français</a> ​<a
-href="#disqus-informativa-sulla-riservatezza">Italiano</a> ​<a
+<p>Our Privacy Policy is also available in the following languages: <a
+href="#disqus-datenschutzrichtlinie">Deutsch</a> <a
+href="#politica-de-privacidad-de-disqus">Español</a> <a
+href="#politique-de-confidentialite-de-disqus">Français</a> <a
+href="#disqus-informativa-sulla-riservatezza">Italiano</a> <a
 href="#politica-de-privacidade-do-disqus">Português</a></p>
 <h3 id="disqus-datenschutzrichtlinie">Disqus-Datenschutzrichtlinie</h3>
 <p>Datenschutzrichtlinie von Disqus</p>
@@ -10625,7 +10586,7 @@ auf Sie (den “Nutzer”) im Zusammenhang mit unserem Service (wie unten
 definiert) beziehen, sammelt, verkauft, offenlegt und schützt, sowie
 welche Entscheidungen Sie bezüglich der Sammlung und Nutzung dieser
 Daten haben.</p>
-<h6 id="einleitung">1. EINLEITUNG</h6>
+<h4 id="einleitung">1. EINLEITUNG</h4>
 <p><strong>Überblick</strong></p>
 <p>Disqus bietet eine Online-Plattform für öffentliche Kommentare und
 Meinungsaustausch, auf der Nutzer sich anmelden und Profile erstellen,
@@ -10684,8 +10645,8 @@ Einzelpersonen haben. Disqus verwendet oder verkauft keine persönlichen
 Verbraucherdaten zum Zweck des Trainings großer Sprachmodelle. Unsere
 KI-Systeme funktionieren gemäß unseren Datenschutzverpflichtungen wie in
 dieser Richtlinie beschrieben.</p>
-<h6 id="die-daten-die-wir-über-sie-sammeln">2. DIE DATEN, DIE WIR ÜBER
-SIE SAMMELN</h6>
+<h4 id="die-daten-die-wir-über-sie-sammeln">2. DIE DATEN, DIE WIR ÜBER
+SIE SAMMELN</h4>
 <p>Personenbezogene Daten oder persönliche Informationen bedeuten alle
 Informationen über eine Person, die vernünftigerweise direkt oder
 indirekt mit einer bestimmten Person oder einem bestimmten Haushalt in
@@ -10735,8 +10696,8 @@ Informationen darstellen könnten.</p>
 <p>Wir können auch alle Informationen, die wir über unseren Service
 sammeln, für die unten beschriebenen Zwecke kombinieren,
 deidentifizieren oder aggregieren.</p>
-<h6 id="wie-werden-ihre-persönlichen-daten-gesammelt">3. WIE WERDEN IHRE
-PERSÖNLICHEN DATEN GESAMMELT?</h6>
+<h4 id="wie-werden-ihre-persönlichen-daten-gesammelt">3. WIE WERDEN IHRE
+PERSÖNLICHEN DATEN GESAMMELT?</h4>
 <p>Wir verwenden verschiedene Methoden, um Daten von und über Sie zu
 sammeln, unter anderem durch:</p>
 <p><strong>Direkte Wechselwirkungen</strong></p>
@@ -10817,8 +10778,8 @@ Cookie-Präferenzen in gängigen Browsern:</p>
 <p>· Internet Explorer Cookies: Internet Explorer Cookies</p>
 <p>· Safari-Kekse: Safari-Cookies</p>
 <p>· Google Analytics: Google Analytics ​</p>
-<h6 id="gezielte-werbe--und-werbepartner">4. GEZIELTE WERBE- UND
-WERBEPARTNER</h6>
+<h4 id="gezielte-werbe--und-werbepartner">4. GEZIELTE WERBE- UND
+WERBEPARTNER</h4>
 <p><strong>Gezielte Werbung</strong></p>
 <p>Werbung ist die vorherrschende Art und Weise, wie Disqus Geld
 verdient. Werbeeinnahmen ermöglichen es Disqus, den Service zu
@@ -10867,10 +10828,10 @@ Kundenaktengesetz (Cal. Civ. Code § 1798.80(e) aufgeführt sind;</p>
 <p>· berufliche oder arbeitsbezogene Informationen;</p>
 <p>· Bildungsinformationen; und,</p>
 <p>· Sensible persönliche Informationen.</p>
-<h6
+<h4
 id="wie-wir-personenbezogene-daten-verwenden-und-unsere-rechtliche-nutzungsgrundlage">5.
 WIE WIR PERSONENBEZOGENE DATEN VERWENDEN UND UNSERE RECHTLICHE
-NUTZUNGSGRUNDLAGE</h6>
+NUTZUNGSGRUNDLAGE</h4>
 <p>Im EWR, im Vereinigten Königreich (UK) und in Brasilien verlassen wir
 uns in der Regel auf Ihre Zustimmung zur Nutzung personenbezogener
 Daten. In einigen Fällen verwenden wir Daten für unsere legitimen
@@ -11011,8 +10972,8 @@ lokalen Gesetzen erlaubt sind, was möglicherweise nicht Ihre Zustimmung
 erfordert.</li>
 </ul></li>
 </ul>
-<h6 id="offenlegung-ihrer-personenbezogenen-daten">6. OFFENLEGUNG IHRER
-PERSONENBEZOGENEN DATEN</h6>
+<h4 id="offenlegung-ihrer-personenbezogenen-daten">6. OFFENLEGUNG IHRER
+PERSONENBEZOGENEN DATEN</h4>
 <p>Wir dürfen alle Kategorien personenbezogener Daten, die wir von und
 über Sie erheben, unter den folgenden Umständen für die oben in der
 Tabelle genannten Zwecke offenlegen. In den vergangenen 12 Monaten haben
@@ -11067,7 +11028,7 @@ oder Sicherheit zu schützen oder Betrug zu untersuchen.</p>
 angemessene Maßnahmen ergreifen, um die Sicherheit Ihrer
 personenbezogenen Daten zu gewährleisten und sie gemäß allen geltenden
 Gesetzen zu behandeln.</p>
-<h6 id="datenspeicherung">7. DATENSPEICHERUNG</h6>
+<h4 id="datenspeicherung">7. DATENSPEICHERUNG</h4>
 <p>Wir bewahren Ihre persönlichen Daten nur so lange auf, wie es
 notwendig ist, um die Zwecke zu erfüllen, für die wir sie gesammelt
 haben, einschließlich der Erfüllung etwaiger rechtlicher,
@@ -11079,7 +11040,7 @@ oder Offenlegung Ihrer personenbezogenen Daten, die Zwecke, zu denen wir
 Ihre personenbezogenen Daten verarbeiten, ob wir diese Ziele auf anderem
 Wege erreichen können, sowie die geltenden gesetzlichen
 Anforderungen.</p>
-<h6 id="sicherheit">8. SICHERHEIT</h6>
+<h4 id="sicherheit">8. SICHERHEIT</h4>
 <p>Disqus nutzt kommerziell angemessene Schutzmaßnahmen, um die
 Integrität und Sicherheit aller über den Service gesammelten
 Informationen zu bewahren. Um Ihre Privatsphäre und Sicherheit zu
@@ -11090,7 +11051,7 @@ Geheimhaltung Ihres einzigartigen Passworts und Ihrer Kontoinformationen
 sowie für die Kontrolle des Zugriffs auf Ihre E-Mail-Kommunikation von
 Disqus. Disqus ist nicht verantwortlich für die Funktionalität oder
 Sicherheitsmaßnahmen eines Drittanbieters.</p>
-<h6 id="deine-rechte">9. DEINE RECHTE</h6>
+<h4 id="deine-rechte">9. DEINE RECHTE</h4>
 <p>Je nach den Gesetzen, in denen Sie wohnen, haben Sie möglicherweise
 eines oder mehrere der folgenden Rechte nach lokalen Gesetzen. Disqus
 erweitert diese Rechte auf alle Einzelpersonen, unabhängig davon, wo sie
@@ -11152,8 +11113,8 @@ DATEN: Erhalten: 280 | Erfüllt: 280 | Abgelehnt: 0 | Median Antwortzeit:
 NICHT ABGESCHLOSSEN HAT: 595</p>
 <p>· LÖSCHANFRAGEN GANZ ODER TEILWEISE NICHT ERFÜLLT: 0 — Disqus lehnte
 2025 keine Löschanfragen ab.</p>
-<h6 id="internationale-datenübertragungen">10. INTERNATIONALE
-DATENÜBERTRAGUNGEN</h6>
+<h4 id="internationale-datenübertragungen">10. INTERNATIONALE
+DATENÜBERTRAGUNGEN</h4>
 <p>Für Nutzer mit Sitz im Europäischen Wirtschaftsraum (EWR) und im
 Vereinigten Königreich können wir Ihre persönlichen Daten innerhalb der
 Disqus-Gruppe oder mit externen Dritten teilen. Dies kann bedeuten, Ihre
@@ -11166,12 +11127,12 @@ Europäischen Kommission und/oder den gleichwertigen vertraglichen
 Bestimmungen des britischen Informationskommissarbüros genehmigt wurden,
 die sicherstellen, dass personenbezogene Daten denselben Schutz genießen
 wie in Europa, unabhängig davon, wo sie verarbeitet werden.</p>
-<h6 id="nicht-verfolgen-globale-datenschutzkontrolle-gpc">11. NICHT
-VERFOLGEN / GLOBALE DATENSCHUTZKONTROLLE (“GPC”)</h6>
+<h4 id="nicht-verfolgen-globale-datenschutzkontrolle-gpc">11. NICHT
+VERFOLGEN / GLOBALE DATENSCHUTZKONTROLLE (“GPC”)</h4>
 <p>Disqus erkennt und verarbeitet Nutzerpräferenzen, wie sie in den
 browserbasierten “Do Not Track”-Signalen über die Global Privacy Control
 (“GPC”)-Funktion gesetzt sind.</p>
-<h6 id="allgemein">12. ALLGEMEIN</h6>
+<h4 id="allgemein">12. ALLGEMEIN</h4>
 <p><strong>Kontakt</strong></p>
 <p>Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, senden Sie uns
 bitte eine E-Mail an privacy@disqus.com oder kontaktieren Sie uns per
@@ -11186,10 +11147,10 @@ Richtlinie bedeutet, dass Sie diese Änderungen akzeptieren. ​</p>
 <p>Klick <a href="#terms-of-service">Hier</a> um die Nutzungsbedingungen
 einzusehen.</p>
 <p>Unsere Datenschutzrichtlinie ist auch in den folgenden Sprachen
-verfügbar: ​<a href="#disqus-privacy-policy">English</a> ​<a
-href="#politica-de-privacidad-de-disqus">Español</a> ​<a
-href="#politique-de-confidentialite-de-disqus">Français</a> ​<a
-href="#disqus-informativa-sulla-riservatezza">Italiano</a> ​<a
+verfügbar: <a href="#disqus-privacy-policy">English</a> <a
+href="#politica-de-privacidad-de-disqus">Español</a> <a
+href="#politique-de-confidentialite-de-disqus">Français</a> <a
+href="#disqus-informativa-sulla-riservatezza">Italiano</a> <a
 href="#politica-de-privacidade-do-disqus">Português</a></p>
 <h3 id="general-security-tips">General Security Tips</h3>
 <p><strong>What Government Agencies Provide ID Theft
@@ -11199,53 +11160,48 @@ Resources?</strong></p>
 information about how to avoid and protect against ID theft. Write to:
 Consumer Response Center, 600 Pennsylvania Ave., NW, H-130, Washington,
 D.C. 20580. Call Toll-Free: 1-877-IDTHEFT (438-4338); or Visit:
-<code>http://www.ftc.gov/idtheft</code></p></li>
+0</p></li>
 <li><p><em>State Attorney General Offices:</em> You may contact the
 Attorney General’s office in the state in which you reside for more
 information about preventing and managing ID theft.</p></li>
 </ul>
 <p>For IOWA Residents: You may contact local law enforcement or the Iowa
 Attorney General’s Office at 1305 E. Walnut St., Des Moines, IA 50319;
-Tel: (515) 281-5164; or <code>http://www.iowa.gov/government/ag</code> ​
-For MARYLAND Residents: You may obtain information about preventing
-identity theft from the FTC or the Maryland Attorney General’s Office at
-200 St. Paul Place, Baltimore, MD 21202; Tel: (888) 743-0023; or
-<code>http://www.oag.state.md.us</code> ​ For NEW MEXICO Residents: You
-have a right to place a security freeze on your credit report or submit
-a declaration of removal with a consumer reporting agency pursuant to
-the Fair Credit Reporting and Identity Security Act. Please see below
-for more information on security freezes. ​ For NORTH CAROLINA Residents:
-You may obtain information about preventing identity theft from the FTC
-or the North Carolina Attorney General’s Office at 9001 Mail Service
-Center, Raleigh, NC 27699-9001; Tel: (919) 716-6400; Fax: (919)
-716-6750; or <code>http://www.ncdoj.com</code> ​ For RHODE ISLAND
-Residents: You may obtain information about preventing identity theft
-from the FTC or the Rhode Island Attorney General’s Office at 150 South
-Main Street, Providence, RI 02903; Tel: (401) 274-4400; or
-<code>http://www.riag.ri.gov</code> ​ ​ ​<strong>How Do I Get A Free Credit
-Report?</strong> You may obtain one (1) free copy of your credit report
-once every 12 months, and may purchase additional copies. Call
-Toll-Free: 1-877-322-8228; or Visit:
-<code>https://www.annualcreditreport.com</code>; or contact: Equifax,
-P.O. Box 740241, Atlanta, GA 30374-0241 (800) 685-1111
-(<code>www.equifax.com</code>); Experian P.O. Box 2002, Allen, TX 75013,
-(888) 397-3742 (<code>www.experian.com</code>) TransUnion, P. O. Box
-1000, Chester, PA 19022, (800) 888-4213
-(<code>www.transunion.com</code>). ​ ​<strong>What is a “Fraud
-Alert”?</strong> You may have the right to place a fraud alert in your
-file to alert potential creditors that you may be a victim of identity
-theft. Creditors must then follow certain procedures to protect you. You
-should know that a fraud alert may delay your ability to obtain credit.
-An “initial fraud alert” stays in your file for at least 90 days. An
-“extended fraud alert” stays in your file for 7 years, and will require
-an identity theft report, which is usually a filed police report. You
-may place a fraud alert by calling any one of the three national
-consumer reporting agencies: Equifax: 1-800-525-6285; Experian:
-1-888-397-3742; TransUnion: 1-800-680-7289 ​ ​<strong>What is a “Security
-Freeze”?</strong> Certain U.S. state laws, including Massachusetts,
-allow a security freeze, which prevents approval for credit, loans or
-services in your name without your consent. A security freeze can
-interfere or delay your ability to obtain credit.</p>
+Tel: (515) 281-5164; or 0 ​ For MARYLAND Residents: You may obtain
+information about preventing identity theft from the FTC or the Maryland
+Attorney General’s Office at 200 St. Paul Place, Baltimore, MD 21202;
+Tel: (888) 743-0023; or 0 ​ For NEW MEXICO Residents: You have a right to
+place a security freeze on your credit report or submit a declaration of
+removal with a consumer reporting agency pursuant to the Fair Credit
+Reporting and Identity Security Act. Please see below for more
+information on security freezes. ​ For NORTH CAROLINA Residents: You may
+obtain information about preventing identity theft from the FTC or the
+North Carolina Attorney General’s Office at 9001 Mail Service Center,
+Raleigh, NC 27699-9001; Tel: (919) 716-6400; Fax: (919) 716-6750; or 0 ​
+For RHODE ISLAND Residents: You may obtain information about preventing
+identity theft from the FTC or the Rhode Island Attorney General’s
+Office at 150 South Main Street, Providence, RI 02903; Tel: (401)
+274-4400; or 0 ​ ​ <strong>How Do I Get A Free Credit Report?</strong> You
+may obtain one (1) free copy of your credit report once every 12 months,
+and may purchase additional copies. Call Toll-Free: 1-877-322-8228; or
+Visit: 0; or contact: Equifax, P.O. Box 740241, Atlanta, GA 30374-0241
+(800) 685-1111 (1); Experian P.O. Box 2002, Allen, TX 75013, (888)
+397-3742 (2) TransUnion, P. O. Box 1000, Chester, PA 19022, (800)
+888-4213 (3). ​ <strong>What is a “Fraud Alert”?</strong> You may have
+the right to place a fraud alert in your file to alert potential
+creditors that you may be a victim of identity theft. Creditors must
+then follow certain procedures to protect you. You should know that a
+fraud alert may delay your ability to obtain credit. An “initial fraud
+alert” stays in your file for at least 90 days. An “extended fraud
+alert” stays in your file for 7 years, and will require an identity
+theft report, which is usually a filed police report. You may place a
+fraud alert by calling any one of the three national consumer reporting
+agencies: Equifax: 1-800-525-6285; Experian: 1-888-397-3742; TransUnion:
+1-800-680-7289 ​ <strong>What is a “Security Freeze”?</strong> Certain
+U.S. state laws, including Massachusetts, allow a security freeze, which
+prevents approval for credit, loans or services in your name without
+your consent. A security freeze can interfere or delay your ability to
+obtain credit.</p>
 <ul>
 <li><p>To place a freeze, send a request by mail to each consumer
 reporting agency (addresses below) with the following (for each
@@ -11369,18 +11325,13 @@ threats of suicide or self-harm</h3>
 please contact local law enforcement as soon as possible. ​ You can
 submit reports of suicidal content to Disqus by flagging the user for
 “<strong>Threat - posted directly threatening content</strong>” by
-following:
-<code>https://help.disqus.com/customer/en/portal/articles/1774987-user-flagging</code>
-​After we have evaluated a report of self-harm or suicide, Disqus will
-contact the reported user privately via email to provide them with
-online resources where they can seek help. ​ You can also make use of the
-following online and prevention resources: ​ Crisis Text Line
-<code>http://www.crisistextline.org/</code> Live Chats:
-<code>http://www.crisischat.org</code> (2pm-2am ET) or
-<code>https://imalive.org</code> United States: National Suicide
-Prevention Lifeline at 1.800.273.TALK (8255) or
-<code>http://www.suicidepreventionlifeline.org/</code> Worldwide:
-Befrienders: <code>http://www.befrienders.org</code></p>
+following: 0 ​ After we have evaluated a report of self-harm or suicide,
+Disqus will contact the reported user privately via email to provide
+them with online resources where they can seek help. ​ You can also make
+use of the following online and prevention resources: ​ Crisis Text Line
+0 Live Chats: 0 (2pm-2am ET) or 1 United States: National Suicide
+Prevention Lifeline at 1.800.273.TALK (8255) or 0 Worldwide:
+Befrienders: 0</p>
 <h3 id="is-someone-else-posting-using-my-account">Is someone else
 posting using my account?</h3>
 <h4 id="this-can-happen-when">This can happen when…</h4>
@@ -11479,7 +11430,7 @@ collecte, utilise, vend, divulgue et protège les données vous concernant
 (l’« Utilisateur ») en lien avec notre service (tel que défini
 ci-dessous), ainsi que vos choix concernant notre collecte et notre
 utilisation de ces données.</p>
-<h6 id="introduction-1">1. INTRODUCTION</h6>
+<h4 id="introduction-1">1. INTRODUCTION</h4>
 <p><strong>Aperçu</strong></p>
 <p>Disqus propose une plateforme en ligne de partage public de
 commentaires et d’opinions où les utilisateurs se connectent et créent
@@ -11540,8 +11491,8 @@ individus. Disqus n’utilise ni ne vend de données personnelles des
 consommateurs dans le but d’entraîner de grands modèles de langage. Nos
 systèmes d’IA fonctionnent conformément à nos engagements en matière de
 confidentialité tels que décrits dans cette politique.</p>
-<h6 id="les-données-que-nous-collectons-à-votre-sujet">2. LES DONNÉES
-QUE NOUS COLLECTONS À VOTRE SUJET</h6>
+<h4 id="les-données-que-nous-collectons-à-votre-sujet">2. LES DONNÉES
+QUE NOUS COLLECTONS À VOTRE SUJET</h4>
 <p>Les données personnelles, ou informations personnelles, désignent
 toute information concernant une personne pouvant raisonnablement être
 liée, directement ou indirectement, à une personne ou un ménage
@@ -11594,8 +11545,8 @@ pouvant constituer des informations personnelles sensibles. ​</p>
 <p>Nous pouvons également combiner, désidentifier ou agréger toutes les
 informations que nous collectons via notre Service pour l’une des
 finalités décrites ci-dessous.</p>
-<h6 id="comment-vos-données-personnelles-sont-elles-collectées">3.
-COMMENT VOS DONNÉES PERSONNELLES SONT-ELLES COLLECTÉES?</h6>
+<h4 id="comment-vos-données-personnelles-sont-elles-collectées">3.
+COMMENT VOS DONNÉES PERSONNELLES SONT-ELLES COLLECTÉES?</h4>
 <p>Nous utilisons différentes méthodes pour collecter des données de
 vous et à votre sujet, notamment via:</p>
 <p><strong>Interactions directes</strong></p>
@@ -11680,8 +11631,8 @@ préférences de cookies dans les navigateurs courants :</p>
 <p>· Cookies Internet Explorer : Internet Explorer Cookies</p>
 <p>· Cookies Safari : Safari Cookies</p>
 <p>· Google Analytics : Google Analytics</p>
-<h6 id="partenaires-de-publicité-ciblée-et-publicitaires">4. PARTENAIRES
-DE PUBLICITÉ CIBLÉE ET PUBLICITAIRES</h6>
+<h4 id="partenaires-de-publicité-ciblée-et-publicitaires">4. PARTENAIRES
+DE PUBLICITÉ CIBLÉE ET PUBLICITAIRES</h4>
 <p><strong>Publicité ciblée</strong></p>
 <p>La publicité est la principale façon dont Disqus gagne de l’argent.
 Les revenus publicitaires permettent à Disqus d’exploiter, de soutenir
@@ -11736,10 +11687,10 @@ californien sur les dossiers clients (Code civil de Californie §
 <p>· Informations professionnelles ou liées à l’emploi ;</p>
 <p>· Informations éducatives ; et,</p>
 <p>· Informations personnelles sensibles.</p>
-<h6
+<h4
 id="comment-nous-utilisons-les-données-personnelles-et-notre-base-légale-pour-lutilisation">5.
 COMMENT NOUS UTILISONS LES DONNÉES PERSONNELLES ET NOTRE BASE LÉGALE
-POUR L’UTILISATION</h6>
+POUR L’UTILISATION</h4>
 <p>Dans l’EEE, le Royaume-Uni (UK) et le Brésil, nous comptons
 généralement sur votre consentement pour utiliser des données
 personnelles. Dans certains cas, nous utilisons les données selon les
@@ -11879,8 +11830,8 @@ lois locales applicables, ce qui peut ne pas nécessiter votre
 consentement pour que nous le permettez.</li>
 </ul></li>
 </ul>
-<h6 id="divulgation-de-vos-données-personnelles">6. DIVULGATION DE VOS
-DONNÉES PERSONNELLES</h6>
+<h4 id="divulgation-de-vos-données-personnelles">6. DIVULGATION DE VOS
+DONNÉES PERSONNELLES</h4>
 <p>Nous pouvons divulguer n’importe quelle catégorie de données
 personnelles que nous collectons auprès de vous et à votre sujet dans
 les circonstances suivantes, pour les objectifs évoqués dans le tableau
@@ -11939,7 +11890,7 @@ pour enquêter sur la fraude. ​</p>
 données prennent les mesures appropriées pour assurer la sécurité de vos
 données personnelles et les traiter conformément à toutes les lois
 applicables.</p>
-<h6 id="conservation-des-données">7. CONSERVATION DES DONNÉES</h6>
+<h4 id="conservation-des-données">7. CONSERVATION DES DONNÉES</h4>
 <p>Nous ne conserverons vos données personnelles que le temps nécessaire
 pour remplir les objectifs que nous avons collectés, y compris pour
 satisfaire à des exigences légales, comptables ou de rapports. ​</p>
@@ -11950,7 +11901,7 @@ lié à une utilisation ou divulgation non autorisée de vos données
 personnelles, les finalités pour lesquelles nous traitons vos données
 personnelles et la possibilité d’atteindre ces objectifs par d’autres
 moyens, ainsi que les exigences légales applicables.</p>
-<h6 id="sécurité">8. SÉCURITÉ</h6>
+<h4 id="sécurité">8. SÉCURITÉ</h4>
 <p>Disqus utilise des garanties commercialement raisonnables pour
 préserver l’intégrité et la sécurité de toutes les informations
 collectées par le Service. Pour protéger votre vie privée et votre
@@ -11961,7 +11912,7 @@ vos informations uniques de mot de passe et de votre compte, ainsi que
 de contrôler l’accès à vos communications par email depuis Disqus.
 Disqus n’est pas responsable des fonctionnalités ou des mesures de
 sécurité de tout tiers.</p>
-<h6 id="vos-droits">9. VOS DROITS</h6>
+<h4 id="vos-droits">9. VOS DROITS</h4>
 <p>Selon les lois de votre région, vous pouvez avoir un ou plusieurs des
 droits suivants en vertu des lois locales. Disqus étend ces droits à
 toutes les personnes, quel que soit leur lieu de résidence, y compris le
@@ -12024,8 +11975,8 @@ médian : 1,00 jour | Temps de réponse moyen : 1,44 jour</p>
 VÉRIFICATION : 595</p>
 <p>· DEMANDES DE SUPPRESSION NON SATISFAITES, EN TOUT OU EN PARTIE : 0 —
 Disqus n’a refusé aucune demande de suppression en 2025.</p>
-<h6 id="transferts-internationaux-de-données">10. TRANSFERTS
-INTERNATIONAUX DE DONNÉES</h6>
+<h4 id="transferts-internationaux-de-données">10. TRANSFERTS
+INTERNATIONAUX DE DONNÉES</h4>
 <p>Pour les utilisateurs basés dans l’Espace économique européen (EEE)
 et au Royaume-Uni, nous pouvons partager vos données personnelles au
 sein du groupe Disqus ou avec des tiers externes. Cela peut impliquer le
@@ -12039,12 +11990,12 @@ par la Commission européenne et/ou des dispositions contractuelles
 Royaume-Uni, qui garantissent que les données personnelles bénéficient
 de la même protection qu’en Europe, quel que soit leur lieu de
 traitement.</p>
-<h6 id="ne-pas-suivre-contrôle-global-de-la-confidentialité-gpc">11. NE
-PAS SUIVRE / CONTRÔLE GLOBAL DE LA CONFIDENTIALITÉ (« GPC »)</h6>
+<h4 id="ne-pas-suivre-contrôle-global-de-la-confidentialité-gpc">11. NE
+PAS SUIVRE / CONTRÔLE GLOBAL DE LA CONFIDENTIALITÉ (« GPC »)</h4>
 <p>Disqus reconnaît et traite les préférences des utilisateurs telles
 que définies dans les signaux « Ne pas suivre » basés sur le navigateur
 via la fonction de Contrôle Global de la Confidentialité (« GPC »).</p>
-<h6 id="général">12. GÉNÉRAL</h6>
+<h4 id="général">12. GÉNÉRAL</h4>
 <p><strong>Contact</strong></p>
 <p>Si vous avez des questions concernant cette politique de
 confidentialité, veuillez nous envoyer un e-mail à privacy@disqus.com,
@@ -12061,11 +12012,11 @@ vous acceptez ces modifications. ​</p>
 <p>Click <a href="#terms-of-service">Tiens</a> pour consulter les
 Conditions d’utilisation.</p>
 <p>Notre politique de confidentialité est également disponible dans les
-langues suivantes: ​<a
+langues suivantes: <a
 href="#disqus-datenschutzrichtlinie">Deutsch</a></p>
-<p><a href="#disqus-privacy-policy">English</a> ​<a
-href="#politica-de-privacidad-de-disqus">Español</a> ​<a
-href="#disqus-informativa-sulla-riservatezza">Italiano</a> ​<a
+<p><a href="#disqus-privacy-policy">English</a> <a
+href="#politica-de-privacidad-de-disqus">Español</a> <a
+href="#disqus-informativa-sulla-riservatezza">Italiano</a> <a
 href="#politica-de-privacidade-do-disqus">Português</a></p>
 <h3 id="politica-de-privacidad-de-disqus">Política de Privacidad de
 Disqus</h3>
@@ -12076,7 +12027,7 @@ vende, divulga y protege los datos relacionados contigo (el “Usuario”)
 en relación con nuestro Servicio (según se define a continuación), así
 como tus opciones respecto a nuestra recopilación y uso de estos
 datos.</p>
-<h6 id="introducción">1. INTRODUCCIÓN</h6>
+<h4 id="introducción">1. INTRODUCCIÓN</h4>
 <p><strong>Resumen</strong></p>
 <p>Disqus ofrece una plataforma pública online de comentarios y
 opiniones donde los usuarios inician sesión y crean perfiles para
@@ -12134,8 +12085,8 @@ individuos. Disqus no utiliza ni vende datos personales de consumidores
 con el propósito de entrenar grandes modelos de lenguaje. Nuestros
 sistemas de IA funcionan de acuerdo con nuestros compromisos de
 privacidad descritos en esta política.</p>
-<h6 id="los-datos-que-recopilamos-sobre-ti">2. LOS DATOS QUE RECOPILAMOS
-SOBRE TI</h6>
+<h4 id="los-datos-que-recopilamos-sobre-ti">2. LOS DATOS QUE RECOPILAMOS
+SOBRE TI</h4>
 <p>Datos personales, o información personal, significa cualquier
 información sobre una persona que pueda razonablemente vincularse,
 directa o indirectamente, con una persona o hogar específico.</p>
@@ -12185,8 +12136,8 @@ sensible.</p>
 <p>También podemos combinar, desidentificar o agregar cualquiera de la
 información que recopilamos a través de nuestro Servicio para cualquiera
 de los fines descritos a continuación.</p>
-<h6 id="cómo-se-recopilan-tus-datos-personales">3. ¿CÓMO SE RECOPILAN
-TUS DATOS PERSONALES?</h6>
+<h4 id="cómo-se-recopilan-tus-datos-personales">3. ¿CÓMO SE RECOPILAN
+TUS DATOS PERSONALES?</h4>
 <p>Utilizamos diferentes métodos para recopilar datos de ti y sobre ti,
 incluyendo a través de:</p>
 <p><strong>Interacciones directas</strong></p>
@@ -12264,8 +12215,8 @@ tus preferencias de cookies en navegadores comunes:</p>
 <p>· Cookies de Internet Explorer: Internet Explorer Cookies</p>
 <p>· Cookies Safari: Galletas Safari</p>
 <p>· Google Analytics: Google Analytics</p>
-<h6 id="socios-de-publicidad-y-publicidad-dirigida">4. SOCIOS DE
-PUBLICIDAD Y PUBLICIDAD DIRIGIDA</h6>
+<h4 id="socios-de-publicidad-y-publicidad-dirigida">4. SOCIOS DE
+PUBLICIDAD Y PUBLICIDAD DIRIGIDA</h4>
 <p><strong>Publicidad dirigida</strong></p>
 <p>La publicidad es la principal forma en que Disqus gana dinero. Los
 ingresos por publicidad permiten a Disqus operar, apoyar y mejorar el
@@ -12316,10 +12267,10 @@ electrónicas;</p>
 <p>· información profesional o relacionada con el empleo;</p>
 <p>· Información educativa; y,</p>
 <p>· Información personal sensible.</p>
-<h6
+<h4
 id="cómo-utilizamos-los-datos-personales-y-nuestra-base-legal-para-su-uso">5.
 CÓMO UTILIZAMOS LOS DATOS PERSONALES Y NUESTRA BASE LEGAL PARA SU
-USO</h6>
+USO</h4>
 <p>En el EEE, Reino Unido (UK) y Brasil, normalmente dependemos de tu
 consentimiento para usar datos personales. En algunos casos, utilizamos
 los datos cuando es necesario para nuestros intereses legítimos (o los
@@ -12456,8 +12407,8 @@ vender o compartir datos según lo permitan las leyes locales aplicables,
 lo que puede no requerir tu consentimiento para ello.</li>
 </ul></li>
 </ul>
-<h6 id="divulgación-de-tus-datos-personales">6. DIVULGACIÓN DE TUS DATOS
-PERSONALES</h6>
+<h4 id="divulgación-de-tus-datos-personales">6. DIVULGACIÓN DE TUS DATOS
+PERSONALES</h4>
 <p>Podemos divulgar cualquiera de las categorías de datos personales que
 recopilemos de ti y sobre ti en las siguientes circunstancias, para los
 fines establecidos en la tabla anterior. En los últimos 12 meses, hemos
@@ -12509,7 +12460,7 @@ fraudes.</p>
 <p>Exigimos a todos los terceros con los que compartimos datos que tomen
 las medidas adecuadas para garantizar la seguridad de sus datos
 personales y tratarlos conforme a todas las leyes aplicables.</p>
-<h6 id="retención-de-datos">7. RETENCIÓN DE DATOS</h6>
+<h4 id="retención-de-datos">7. RETENCIÓN DE DATOS</h4>
 <p>Solo conservaremos tus datos personales durante el tiempo necesario
 para cumplir con los fines para los que los recopilamos, incluyendo el
 cumplimiento de cualquier requisito legal, contable o de informe. ​</p>
@@ -12519,7 +12470,7 @@ mismos, el riesgo potencial de daño por el uso o divulgación no
 autorizados de sus datos personales, los fines para los cuales tratamos
 sus datos personales y si podemos lograr esos fines por otros medios,
 así como los requisitos legales aplicables.</p>
-<h6 id="seguridad">8. SEGURIDAD</h6>
+<h4 id="seguridad">8. SEGURIDAD</h4>
 <p>Disqus utiliza salvaguardas comercialmente razonables para preservar
 la integridad y seguridad de toda la información recopilada a través del
 Servicio. Para proteger tu privacidad y seguridad, tomamos medidas
@@ -12529,7 +12480,7 @@ mantener el secreto de tu contraseña y información de cuenta, así como
 de controlar el acceso a tus comunicaciones por correo electrónico desde
 Disqus. Disqus no se hace responsable de la funcionalidad ni de las
 medidas de seguridad de ningún tercero.</p>
-<h6 id="tus-derechos">9. TUS DERECHOS</h6>
+<h4 id="tus-derechos">9. TUS DERECHOS</h4>
 <p>Dependiendo de las leyes donde vivas, puedes tener uno o más de los
 siguientes derechos según las leyes locales. Disqus extiende estos
 derechos a todas las personas, independientemente de dónde vivan,
@@ -12589,8 +12540,8 @@ mediano: 1,00 día | Tiempo medio de respuesta: 1,44 días</p>
 VERIFICACIÓN: 595</p>
 <p>· SOLICITUDES DE ELIMINACIÓN NO CUMPLIDAS TOTAL O PARCIALMENTE: 0 —
 Disqus no denegó ninguna solicitud de eliminación en 2025.</p>
-<h6 id="transferencias-internacionales-de-datos">10. TRANSFERENCIAS
-INTERNACIONALES DE DATOS</h6>
+<h4 id="transferencias-internacionales-de-datos">10. TRANSFERENCIAS
+INTERNACIONALES DE DATOS</h4>
 <p>Para usuarios con base en el Espacio Económico Europeo (EEE) y el
 Reino Unido, podemos compartir sus datos personales dentro del Grupo
 Disqus o con terceros externos. Esto puede implicar transferir tus datos
@@ -12602,12 +12553,12 @@ Europea y/o las disposiciones contractuales equivalentes aprobadas por
 la Oficina del Comisionado de Información del Reino Unido, que
 garantizan que los datos personales reciban la misma protección que en
 Europa, independientemente de dónde se procesen.</p>
-<h6 id="no-rastrear-control-global-de-privacidad-gpc">11. NO RASTREAR /
-CONTROL GLOBAL DE PRIVACIDAD (“GPC”)</h6>
+<h4 id="no-rastrear-control-global-de-privacidad-gpc">11. NO RASTREAR /
+CONTROL GLOBAL DE PRIVACIDAD (“GPC”)</h4>
 <p>Disqus reconoce y procesa las preferencias del usuario tal como se
 establecen en las señales de “No rastrear” basadas en el navegador
 mediante la función de Control Global de Privacidad (“GPC”).</p>
-<h6 id="general-1">12. GENERAL</h6>
+<h4 id="general-1">12. GENERAL</h4>
 <p><strong>Contacto</strong></p>
 <p>Si tiene alguna pregunta sobre esta Política de Privacidad, por favor
 envíenos un correo electrónico a privacy@disqus.com o contáctenos por
@@ -12623,10 +12574,10 @@ esta política significa que aceptas dichos cambios. ​</p>
 de Servicio.</p>
 <p>Nuestra Política de privacidad también está disponible en los
 siguientes idiomas:</p>
-<p><a href="#disqus-privacy-policy">English</a> ​<a
-href="#disqus-datenschutzrichtlinie">Deutsch</a> ​<a
-href="#politique-de-confidentialite-de-disqus">Français</a> ​<a
-href="#disqus-informativa-sulla-riservatezza">Italiano</a> ​<a
+<p><a href="#disqus-privacy-policy">English</a> <a
+href="#disqus-datenschutzrichtlinie">Deutsch</a> <a
+href="#politique-de-confidentialite-de-disqus">Français</a> <a
+href="#disqus-informativa-sulla-riservatezza">Italiano</a> <a
 href="#politica-de-privacidade-do-disqus">Português</a></p>
 <h3 id="politica-de-privacidade-do-disqus">Política de Privacidade do
 Disqus</h3>
@@ -12637,7 +12588,7 @@ utiliza, vende, divulga e protege dados relacionados consigo (o
 “Utilizador”) em ligação com o nosso Serviço (conforme definido abaixo),
 bem como as suas escolhas relativamente à recolha e utilização destes
 dados.</p>
-<h6 id="introdução">1. INTRODUÇÃO</h6>
+<h4 id="introdução">1. INTRODUÇÃO</h4>
 <p><strong>Visão geral</strong></p>
 <p>A Disqus oferece uma plataforma online de comentários públicos e
 partilha de opiniões onde os utilizadores iniciam sessão e criam perfis
@@ -12694,8 +12645,8 @@ significativos sobre indivíduos. A Disqus não utiliza nem vende dados
 pessoais dos consumidores para fins de treino de grandes modelos de
 linguagem. Os nossos sistemas de IA funcionam de acordo com os nossos
 compromissos de privacidade, conforme descrito nesta política.</p>
-<h6 id="os-dados-que-recolhemos-sobre-si">2. OS DADOS QUE RECOLHEMOS
-SOBRE SI</h6>
+<h4 id="os-dados-que-recolhemos-sobre-si">2. OS DADOS QUE RECOLHEMOS
+SOBRE SI</h4>
 <p>Dados pessoais, ou informação pessoal, significa qualquer informação
 sobre uma pessoa que possa razoavelmente ser ligada, direta ou
 indiretamente, a uma pessoa ou agregado familiar específico. ​</p>
@@ -12743,8 +12694,8 @@ informações pessoais sensíveis.</p>
 <p>Também podemos combinar, desidentificar ou agregar qualquer uma das
 informações que recolhemos através do nosso Serviço para qualquer um dos
 fins descritos abaixo.</p>
-<h6 id="como-são-recolhidos-os-seus-dados-pessoais">3. COMO SÃO
-RECOLHIDOS OS SEUS DADOS PESSOAIS?</h6>
+<h4 id="como-são-recolhidos-os-seus-dados-pessoais">3. COMO SÃO
+RECOLHIDOS OS SEUS DADOS PESSOAIS?</h4>
 <p>Utilizamos diferentes métodos para recolher dados sobre si, incluindo
 através de:</p>
 <p><strong>Interações diretas</strong></p>
@@ -12819,8 +12770,8 @@ preferências de cookies em navegadores comuns:</p>
 <p>· Cookies do Internet Explorer: Internet Explorer Cookies</p>
 <p>· Bolachas Safari: Safari Cookies</p>
 <p>· Google Analytics: Google Analytics</p>
-<h6 id="publicidade-direcionada-e-parceiros-de-publicidade">4.
-PUBLICIDADE DIRECIONADA E PARCEIROS DE PUBLICIDADE</h6>
+<h4 id="publicidade-direcionada-e-parceiros-de-publicidade">4.
+PUBLICIDADE DIRECIONADA E PARCEIROS DE PUBLICIDADE</h4>
 <p><strong>Publicidade Direcionada</strong></p>
 <p>A publicidade é a principal forma pela qual a Disqus ganha dinheiro.
 A receita publicitária permite que a Disqus opere, apoie e melhore o
@@ -12870,9 +12821,9 @@ eletrónicas;</p>
 <p>· Informação profissional ou relacionada com o emprego;</p>
 <p>· Informação educativa; e,</p>
 <p>· Informação Pessoal Sensível.</p>
-<h6
+<h4
 id="como-utilizamos-os-dados-pessoais-e-a-nossa-base-legal-para-o-uso">5.
-COMO UTILIZAMOS OS DADOS PESSOAIS E A NOSSA BASE LEGAL PARA O USO</h6>
+COMO UTILIZAMOS OS DADOS PESSOAIS E A NOSSA BASE LEGAL PARA O USO</h4>
 <p>No EEE, Reino Unido (UK) e Brasil, normalmente dependemos do seu
 consentimento para utilizar dados pessoais. Em alguns casos, usamos os
 dados conforme necessário para os nossos interesses legítimos (ou de
@@ -13007,8 +12958,8 @@ partilhar dados conforme permitido pelas leis locais aplicáveis, o que
 pode não exigir o seu consentimento para tal.</li>
 </ul></li>
 </ul>
-<h6 id="divulgação-dos-seus-dados-pessoais">6. DIVULGAÇÃO DOS SEUS DADOS
-PESSOAIS</h6>
+<h4 id="divulgação-dos-seus-dados-pessoais">6. DIVULGAÇÃO DOS SEUS DADOS
+PESSOAIS</h4>
 <p>Podemos divulgar qualquer uma das categorias de dados pessoais que
 recolhemos de si e sobre si nas seguintes circunstâncias, para os fins
 definidos na tabela acima. Nos últimos 12 meses, vendemos e/ou
@@ -13061,7 +13012,7 @@ de outros, ou para investigar fraudes. ​</p>
 <p>Exigimos que todos os terceiros com quem partilhamos dados tomem as
 medidas adequadas para garantir a segurança dos seus dados pessoais e
 tratem-nos de acordo com todas as leis aplicáveis.</p>
-<h6 id="retenção-de-dados">7. RETENÇÃO DE DADOS</h6>
+<h4 id="retenção-de-dados">7. RETENÇÃO DE DADOS</h4>
 <p>Só reteremos os seus dados pessoais pelo tempo necessário para
 cumprir os propósitos para os quais os recolhemos, incluindo o
 cumprimento de quaisquer requisitos legais, contabilísticos ou de
@@ -13072,7 +13023,7 @@ o risco potencial de dano devido ao uso ou divulgação não autorizada dos
 seus dados pessoais, os fins para os quais tratamos os seus dados
 pessoais e se podemos alcançar esses fins por outros meios, bem como os
 requisitos legais aplicáveis.</p>
-<h6 id="segurança">8. SEGURANÇA</h6>
+<h4 id="segurança">8. SEGURANÇA</h4>
 <p>A Disqus utiliza salvaguardas comercialmente razoáveis para preservar
 a integridade e segurança de toda a informação recolhida através do
 Serviço. Para proteger a sua privacidade e segurança, tomamos medidas
@@ -13082,7 +13033,7 @@ manter o segredo da sua palavra-passe única e informações da conta, bem
 como por controlar o acesso às suas comunicações por email a partir da
 Disqus. A Disqus não é responsável pela funcionalidade ou pelas medidas
 de segurança de terceiros.</p>
-<h6 id="os-seus-direitos">9. OS SEUS DIREITOS</h6>
+<h4 id="os-seus-direitos">9. OS SEUS DIREITOS</h4>
 <p>Dependendo das leis onde vive, pode ter um ou mais dos seguintes
 direitos ao abrigo das leis locais. Disqus estende estes direitos a
 todos os indivíduos, independentemente de onde vivam, incluindo o
@@ -13141,8 +13092,8 @@ Recebido: 280 | Cumprido: 280 | Negado: 0 | Tempo mediano de resposta:
 VERIFICAÇÃO: 595</p>
 <p>· PEDIDOS DE ELIMINAÇÃO NÃO CUMPRIDOS TOTAL OU PARCIALMENTE: 0 — A
 Disqus não negou quaisquer pedidos de eliminação em 2025.</p>
-<h6 id="transferências-internacionais-de-dados">10. TRANSFERÊNCIAS
-INTERNACIONAIS DE DADOS</h6>
+<h4 id="transferências-internacionais-de-dados">10. TRANSFERÊNCIAS
+INTERNACIONAIS DE DADOS</h4>
 <p>Para utilizadores sediados no Espaço Económico Europeu (EEE) e no
 Reino Unido, podemos partilhar os seus dados pessoais dentro do Grupo
 Disqus ou com terceiros externos. Isto pode envolver a transferência dos
@@ -13154,12 +13105,12 @@ Europeia e/ou das disposições contratuais equivalentes aprovadas pelo
 Gabinete do Comissário de Informação do Reino Unido, que garantem que os
 dados pessoais recebem a mesma proteção que têm na Europa,
 independentemente do local onde são processados.</p>
-<h6 id="não-rastrear-controlo-global-de-privacidade-gpc">11. NÃO
-RASTREAR / CONTROLO GLOBAL DE PRIVACIDADE (“GPC”)</h6>
+<h4 id="não-rastrear-controlo-global-de-privacidade-gpc">11. NÃO
+RASTREAR / CONTROLO GLOBAL DE PRIVACIDADE (“GPC”)</h4>
 <p>O Disqus reconhece e processa as preferências do utilizador conforme
 definido nos sinais baseados no navegador “Não Rastrear” através da
 funcionalidade Global de Controlo de Privacidade (“GPC”).</p>
-<h6 id="geral">12. GERAL</h6>
+<h4 id="geral">12. GERAL</h4>
 <p><strong>Contacto</strong></p>
 <p>Se tiver alguma questão sobre esta Política de Privacidade, por favor
 envie-nos um email para privacy@disqus.com ou contacte-nos por correio
@@ -13174,10 +13125,10 @@ política significa que aceita essas alterações. ​</p>
 <p>Clique <a href="#terms-of-service">aqui</a> para consultar os Termos
 de Serviço.</p>
 <p>Nossa Política de Privacidade também está disponível nos seguintes
-idiomas: ​<a href="#disqus-datenschutzrichtlinie">Deutsch</a></p>
-<p><a href="#disqus-privacy-policy">English</a> ​<a
-href="#politica-de-privacidad-de-disqus">Español</a> ​<a
-href="#politique-de-confidentialite-de-disqus">Français</a> ​<a
+idiomas: <a href="#disqus-datenschutzrichtlinie">Deutsch</a></p>
+<p><a href="#disqus-privacy-policy">English</a> <a
+href="#politica-de-privacidad-de-disqus">Español</a> <a
+href="#politique-de-confidentialite-de-disqus">Français</a> <a
 href="#disqus-informativa-sulla-riservatezza">Italiano</a> ​</p>
 <h3 id="privacy-faq">Privacy FAQ</h3>
 <p><strong>How do I delete my Disqus Account?</strong> ​ You may delete
@@ -13369,8 +13320,6 @@ law and are properly provided to us as described below.</p>
 does not violate any applicable law or infringe any third party
 proprietary rights, including but not limited to, any Intellectual
 Property Rights.</p>
-<p><strong>Copyright Infringement: Digital Millennium Copyright Act of
-1998 (“DMCA”)</strong></p>
 <p>If you believe that your copyrighted work has been copied in a way
 that constitutes copyright infringement under the DMCA and is accessible
 via the Service, please notify Disqus’ copyright agent at the contact
@@ -14240,9 +14189,9 @@ Disqus from appearing on any Pages by default. ​ To enable comments on
 static WordPress Pages, you’ll want to add the comments_template() code
 below to your page template wherever you want the comment form to
 appear:</p>
-<p><code>&lt;?php comments_template(); ?&gt;</code> ​</p>
+<p>0 ​</p>
 <p>Additional information from the WordPress dev team may be found here:
-<code>https://wordpress.org/support/topic/comments-for-static-page</code></p>
+0</p>
 <h3 id="blogger-troubleshooting">Blogger Troubleshooting</h3>
 <p>Most often, the best default position for the Disqus widget is in the
 bottom slot of the bottom-most right column.</p>
@@ -14292,10 +14241,10 @@ receiving the message “We were unable to load Disqus.”</h3>
 <p><em><strong>Check our</strong>status page<strong>for updates on
 system-wide issues.</strong></em></p>
 <p>When Disqus is loaded on a page for the first time, our servers check
-the URL on which Disqus is loaded (and the <code>this.page.url</code>
-configuration variable if it is set) to make sure it’s valid and meets
-certain criteria. When this fails, we show the message <em>“We were
-unable to load Disqus. …”</em></p>
+the URL on which Disqus is loaded (and the 0 configuration variable if
+it is set) to make sure it’s valid and meets certain criteria. When this
+fails, we show the message <em>“We were unable to load Disqus.
+…”</em></p>
 <p>There are several reasons why you may be prompted with this
 message:</p>
 <p>Trusted domains are sites on which you want your forum shortname to
@@ -14303,18 +14252,16 @@ load, and are set within your admin panel. If Disqus isn’t loading on
 your site, make sure your site’s domain is in the trusted domains list
 and is in the proper format.</p>
 <p>CORRECT formats:</p>
-<p><code>example.com</code> ​<code>subdomain.example.com</code></p>
+<p>0 0</p>
 <p>INCORRECT formats:</p>
-<p><code>http://www.example.com</code>
-​<code>example.com/my-blog-name</code></p>
+<p>0 0</p>
 <h4 id="your-shortname-is-missing-or-incorrect">Your shortname is
 missing or incorrect</h4>
 <p>Disqus won’t load if you haven’t yet registered a forum shortname or
 if the shortname you have entered is incorrect (See What’s a
 shortname?). We suggest double-checking your shortname in the Disqus
-embed code, which should appear in place of EXAMPLE in this line:
-<code>s.src = '//EXAMPLE.disqus.com/embed.js';</code> of your code, or
-the settings page for your respective platform.</p>
+embed code, which should appear in place of EXAMPLE in this line: 0 of
+your code, or the settings page for your respective platform.</p>
 <h4
 id="disqus-is-being-loaded-on-a-different-domain-than-you-registered">Disqus
 is being loaded on a different domain than you registered</h4>
@@ -14342,8 +14289,7 @@ URL or title contains non-ASCII characters</h4>
 <p>For a URL to verify, it cannot contain non-ASCII “special” characters
 (e.g., ñ, å, š) which are usually exclusive to one or more languages.
 Full list of supported ASCII characters.</p>
-<p>To fix this, set the <code>this.page.url</code> or
-<code>this.page.title</code> configuration variable (whichever is
+<p>To fix this, set the 0 or 1 configuration variable (whichever is
 appropriate) and make sure to convert non-ASCII characters to ASCII
 characters in the variable (e.g., å to a, š to s). This will allow your
 site’s visitors to see the proper non-ASCII version and our system can
@@ -14352,13 +14298,10 @@ load a thread for the page.</p>
 id="incorrectly-formatted-javascript-configuration-variables">Incorrectly-formatted
 JavaScript configuration variables</h4>
 <ul>
-<li><p><code>this.page.title</code> cannot be longer than 200
-characters.</p></li>
-<li><p><code>this.page.url</code> cannot contain spaces.</p></li>
-<li><p><code>this.page.url</code> must use an absolute URL; relative
-URLs won’t work. E.g., Good — absolute URL:
-<code>this.page.url = 'http://example.com/article/1/';</code> Bad —
-relative URL: <code>this.page.url = '/article/1/';</code></p></li>
+<li><p>0 cannot be longer than 200 characters.</p></li>
+<li><p>0 cannot contain spaces.</p></li>
+<li><p>0 must use an absolute URL; relative URLs won’t work. E.g., Good
+— absolute URL: 0 Bad — relative URL: 0</p></li>
 </ul>
 <h4 id="further-assistance">Further assistance</h4>
 <p>If you cannot find your answer, you can contact our support team.</p>
@@ -14391,24 +14334,21 @@ you using the trusted domains feature in your settings?</h4>
 on. If Disqus isn’t loading on your site, make sure your site’s domain
 is in the trusted domains list, and is in the proper format.</p>
 <p>CORRECT formats:</p>
-<p><code>example.com</code> ​<code>subdomain.example.com</code></p>
+<p>0 0</p>
 <p>INCORRECT formats:</p>
-<p><code>http://www.example.com</code>
-​<code>example.com/my-blog-name</code></p>
+<p>0 0</p>
 <h4 id="are-your-thread-urls-complete"><strong>Are your thread URLs
 complete?</strong></h4>
 <p>When inserting the thread URLs in your code, you’ll want to ensure
 that the domain is present, and that you’re not using a relative URL.
 When only the tail end of a URL is present, Disqus will not be able to
 load. ​ For example, having the following value inserted as the thread
-URL will prevent Disqus from loading correctly:
-​<code>'/my-blog-name</code>’</p>
+URL will prevent Disqus from loading correctly: 0’</p>
 <p>To correct this, ensure that the complete URL value is inserted, like
 below:</p>
-<p>‘<code>http://example.com/my-blog-name</code>’</p>
-<p>If your protocol is relative, you can leave off <code>http://</code>,
-but the <code>example.com</code> section of the URL must be present for
-Disqus to load.</p>
+<p>‘0’</p>
+<p>If your protocol is relative, you can leave off 0, but the 1 section
+of the URL must be present for Disqus to load.</p>
 <h4 id="unable-to-complete-installation">Unable to complete
 installation?</h4>
 <p>Contact Disqus Support</p>
@@ -14532,8 +14472,8 @@ are not allowed to access this page. Please make sure you’re logged into
 the correct account</h4>
 <p>This error message indicates that you are not logged in to the
 moderator account for the current forum you are trying to access. This
-may happen when you click through to <code>disqus.com/admin</code> from
-WordPress. Try the following troubleshooting steps:</p>
+may happen when you click through to 0 from WordPress. Try the following
+troubleshooting steps:</p>
 <ul>
 <li><p>Log out of Disqus and Log in to the moderator account for that
 forum</p></li>
@@ -14588,7 +14528,7 @@ identifier URL:</p>
 <pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</code></pre>
 <p>This would be the <strong>correct</strong> version with the
 identifier URL:</p>
-<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;`http://www.w3.org/TR/html4/loose.dtd`&quot;&gt;</code></pre>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;0&quot;&gt;</code></pre>
 <h4 id="ie7-emulation">IE7 Emulation</h4>
 <p>Some websites force Internet Explorer to load emulating an older
 version of Internet Explorer. You can check by opening the development
@@ -14676,17 +14616,16 @@ disable the mobile layout by unchecking Customize &gt; Advanced &gt;
 <h3
 id="use-configuration-variables-to-avoid-split-threads-and-missi">Use
 Configuration Variables to Avoid Split Threads and Missing Comments</h3>
-<p>When <code>url</code> or <code>identifier</code> are not defined, the
-Disqus embed will use the window URL as the main identifier when
-creating a thread. In other words, each unique URL Disqus loads on will
-result in a new unique thread. This works well for some sites, however,
-this method of creating threads can lead to duplicate “split threads”
-for the same page of content, especially when your site accepts many
-different URLs for the same page of content.</p>
-<p>For example, one post on your blog may be accessed via
-<code>http://</code> and <code>https://</code>. See Google’s Use
-Canonical URLs for other common reasons why a site may have many URLs
-for the same content.</p>
+<p>When 0 or 1 are not defined, the Disqus embed will use the window URL
+as the main identifier when creating a thread. In other words, each
+unique URL Disqus loads on will result in a new unique thread. This
+works well for some sites, however, this method of creating threads can
+lead to duplicate “split threads” for the same page of content,
+especially when your site accepts many different URLs for the same page
+of content.</p>
+<p>For example, one post on your blog may be accessed via 0 and 1. See
+Google’s Use Canonical URLs for other common reasons why a site may have
+many URLs for the same content.</p>
 <p>When your site creates many “duplicate” Disqus threads, this can lead
 to the following unwanted results:</p>
 <ul>
@@ -14703,19 +14642,14 @@ Disqus features may be inaccurate.</p></li>
 </ul>
 <h4 id="define-url-and-identifier-to-avoid-thread-splitting">Define url
 and identifier to Avoid Thread Splitting</h4>
-<p>We recommend that you define the <code>url</code> and
-<code>identifier</code> configuration variables within the
-<code>disqus_config</code> section of your embed code. See the
-installation instructions for the complete embed code. ​ Example:</p>
-<p><code>var disqus_config = function () {</code>
-<code>this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable</code>
-<code>this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable</code>
-<code>}</code></p>
+<p>We recommend that you define the 0 and 1 configuration variables
+within the 2 section of your embed code. See the installation
+instructions for the complete embed code. ​ Example:</p>
+<p>0 0 0 0</p>
 <p>These variables should be defined by using your CMS’ or platform’s
 dynamic values, if available. For example, the Disqus WordPress plugin
 defines these variables by default using the following PHP values:</p>
-<p><code>this.page.url = '&lt;?php echo get_permalink(); ?&gt;';</code>
-<code>this.page.identifier = '&lt;?php echo dsq_identifier_for_post($post); ?&gt;';</code></p>
+<p>0 0</p>
 <p>See our full documentation on Configuration Variables for more
 information.</p>
 <ul>
@@ -14755,8 +14689,7 @@ recommend backing up your template first.</p>
 <li><p>Choose “Proceed”.</p></li>
 <li><p>Enable the “Expand Widget Templates” checkbox.</p></li>
 <li><p>Search for “disqus”.</p></li>
-<li><p>Add mobile=‘yes’ to the following:
-<b:widget id='HTML2' locked='false' title='Disqus for The Disqus Blog' type='HTML'></p></li>
+<li><p>Add mobile=‘yes’ to the following:</p></li>
 <li><p>Choose “Save template”.</p></li>
 </ol>
 <p>The result should look like:</p>
@@ -14796,16 +14729,11 @@ the other thread (with all missing comments) appears in the admin.</p>
 configuration or the Disqus configuration on your site. For example,
 this can happen after:</p>
 <ul>
-<li><p><strong>Moving domains</strong>, e.g.,
-<code>http://examplesite.blogspot.com</code> to
-<code>http://examplesite.com</code></p></li>
-<li><p><strong>Changing permalink structures</strong>, e.g.,
-<code>http://examplesite.com/sample-page.html</code> to
-<code>http://examplesite.com/sample-page/</code></p></li>
+<li><p><strong>Moving domains</strong>, e.g., 0 to 1</p></li>
+<li><p><strong>Changing permalink structures</strong>, e.g., 0 to
+1</p></li>
 <li><p><strong>Changing permalink styles</strong> such as camel-style
-slugs to all-lowercase slugs, e.g.,
-<code>http://examplesite.com/Sample-Page.html</code> to
-<code>http://examplesite.com/sample-page.html</code></p></li>
+slugs to all-lowercase slugs, e.g., 0 to 1</p></li>
 </ul>
 <p>To fix this issue, merge the affected threads using one of our
 migration tools.</p>
@@ -14837,8 +14765,7 @@ conflict causes each of these pages to show the same comments.</p>
 <h4 id="example-situations-known-to-cause-identifier-conflict">Example
 situations known to cause identifier conflict:</h4>
 <ul>
-<li><p><strong>Setting the
-same<code>this.page.identifier</code>or<code>this.page.url</code>variable</strong></p></li>
+<li><p><strong>Setting the same0or1variable</strong></p></li>
 <li><p><strong>Previewing pages</strong> before publishing: Disqus will
 associate that preview URL with the thread ID.</p></li>
 <li><p><strong>Copying pages</strong>: If Disqus is loaded on the newly
@@ -14864,12 +14791,10 @@ provided below a few example situations and solutions.</p>
 <h4 id="previewing-pages-before-publishing">Previewing pages before
 publishing</h4>
 <p>In this scenario, Disqus will associate that preview URL with the
-discussion thread. For example, say a publishing environment uses
-<code>www.samplesite.com</code> for its public-facing site and
-<code>preview.samplesite.com</code> for previewing pages before
-publishing. If Disqus is loaded in the preview environment, discussion
-threads will be associated with the <code>preview.samplesite.com</code>
-domain.</p>
+discussion thread. For example, say a publishing environment uses 0 for
+its public-facing site and 1 for previewing pages before publishing. If
+Disqus is loaded in the preview environment, discussion threads will be
+associated with the 2 domain.</p>
 <p>To fix already-affected discussions, see How can I update discussion
 URLs?</p>
 <p>To prevent this from happening further, either:</p>
@@ -14893,9 +14818,8 @@ loading on preview pages.</p>
 disqus_url variable</h4>
 <p>To fix already-affected discussions, see How can I update discussion
 URLs?</p>
-<p>Thread URLs cannot be updated by passing `disqus_url` after a thread
-has been created. `disqus_url` can only be set once, upon thread
-creation.</p>
+<p>Thread URLs cannot be updated by passing \0 after a thread has been
+created. \1 can only be set once, upon thread creation.</p>
 <h3 id="why-isn-t-the-comment-box-loading">Why isn’t the comment box
 loading?</h3>
 <p>While Disqus works most browsers, not all browsers and versions are
@@ -14948,8 +14872,8 @@ properly.</p>
 posts.</p>
 <ol type="1">
 <li><p>Check that “Allow comments” is checked on all posts you expect
-Disqus to display. You can verify this by going to
-<code>Quick Edit</code> on your either of your posts.</p></li>
+Disqus to display. You can verify this by going to 0 on your either of
+your posts.</p></li>
 <li><p>See if your Wordpress discussions are not closed, as that will
 also prevent Disqus from loading. You can do this by going to the
 discussions tab in your WP admin.</p></li>
@@ -15002,10 +14926,10 @@ Wordpress article.</em></p>
 <h4 id="wordpress-f.a.q.">WordPress F.A.Q.</h4>
 <h4 id="can-disqus-be-used-on-wordpress.com">Can Disqus be used on
 WordPress.com?</h4>
-<p>Using Disqus on a <code>WordPress.com</code> site requires a
-WordPress.com Business plan which supports third-party plugins like
-Disqus. By contrast, a site set up using Wordpress.org will be able to
-use the Disqus plugin without the WordPress.com Business plan.</p>
+<p>Using Disqus on a 0 site requires a WordPress.com Business plan which
+supports third-party plugins like Disqus. By contrast, a site set up
+using Wordpress.org will be able to use the Disqus plugin without the
+WordPress.com Business plan.</p>
 <h4 id="is-disqus-free-to-use-on-my-site">Is Disqus free to use on my
 site?</h4>
 <p>Yes! Disqus is free to use. We also provide subscription plans for
@@ -15035,8 +14959,7 @@ add-on for users with a Business subscription. Also check out our guide
 for setting up SSO on WordPress.</p>
 <h4 id="how-can-i-install-an-older-version-of-the-plugin">How can I
 install an older version of the plugin?</h4>
-<p>To install an older version (before the major 3.0+ update), go to
-<code>https://github.com/disqus/disqus-wordpress/releases/tag/2.86</code>
+<p>To install an older version (before the major 3.0+ update), go to 0
 to download version 2.6. For more information on how to install, see
 WordPress’ Managing Plugins. Use this version only if you have trouble
 with the current plugin.</p>
@@ -15054,7 +14977,7 @@ appear. Ensuring that you fill out your bio, username, display name, and
 avatar can pay off in the short time it takes to enter this information.
 This allows your community, or other communities you comment in, get to
 know a little bit about you and increases the chance that users would be
-interested in what you say and do. ​ ​<strong>Bonus Tip:</strong> Other
+interested in what you say and do. ​ <strong>Bonus Tip:</strong> Other
 commenters are more likely to interact with a user that has a custom
 username, display name, and avatar, than they are with a user without
 any of that information filled out.</p>
@@ -15074,7 +14997,7 @@ Digest Email. ​ Following users is a great way to discover new
 communities that you never knew existed. Everyone has different
 interests so following some of your favorite commenters can be a great
 way to find new and interesting communities. ​</p>
-<h4 id="where-can-i-find-interesting-people-to-follow">​Where can I find
+<h4 id="where-can-i-find-interesting-people-to-follow">Where can I find
 interesting people to follow?</h4>
 <p>To get you started, head over to Home and follow some users that are
 already using Disqus. You can follow other Disqus users the way you
@@ -15121,14 +15044,13 @@ making your account more secure.</p></li>
 keeps you connected via notifications and the Disqus community through
 Disqus Digests and other important announcements.</p></li>
 </ul>
-<p><em>To adjust notifications, go to</em>
-<em><code>disqus.com/account</code>, then click the “Notifications”
-tab.</em></p>
+<p><em>To adjust notifications, go to</em> <em>0, then click the
+“Notifications” tab.</em></p>
 <p><strong>Where did my comments go?!</strong> Accounts created via a
 Social Media log in will exist separately from a full account registered
 with Disqus by email address. If you intended to log into another
-account you already had registered, try logging in on
-<code>disqus.com</code> with your email address.</p>
+account you already had registered, try logging in on 0 with your email
+address.</p>
 <ul>
 <li>Connect Facebook, Twitter, and Google</li>
 </ul>
@@ -15140,8 +15062,8 @@ account may be found <a
 href="#registering-a-commenter-account">here</a>.</p>
 <p>To login through the embed, you may click the login dropdown in the
 top right corner, or click one of the login icons below the postbox.</p>
-<h4 id="logging-in-through-the-disqus.com-homepage">Logging in through
-the <code>Disqus.com</code> homepage</h4>
+<h4 id="logging-in-through-the-0-homepage">Logging in through the 0
+homepage</h4>
 <p>To login from the Disqus homepage, click the Login option in the top
 right corner of the page, and then select Publishers or Commenters. The
 Publishers option will bring you directly into your admin panel to begin
@@ -15188,15 +15110,14 @@ you have a bad cookie stored for Disqus, where it appears that you are
 logged in, but you are not. This can occur if you have Disqus open in
 multiple tabs, and get logged out in one of the other tabs. To fix this
 issue, clear your cookies in your browser, or search your browser
-cookies, and delete just the “<code>disqus.com</code>” cookies. After
-refreshing the page, you should be able to log in and post
-normally.</li>
+cookies, and delete just the “0” cookies. After refreshing the page, you
+should be able to log in and post normally.</li>
 </ul></li>
 <li><p>If you’re getting an error message saying “<strong>We couldn’t
 log you in. Please check what you’ve entered</strong>”, please ensure
 that you are entering the correct email and password values. If you’re
 not positive what your password was, you can request a password reset
-email at <code>disqus.com/forgot</code></p>
+email at 0</p>
 <ul>
 <li><p>If the Forgot password form states that <strong>we do not have an
 account registered with the email address you entered</strong>, your
@@ -15237,7 +15158,7 @@ longer be able see your activity via your profile or daily digest
 emails.</p></li>
 <li><p>Disqus users will no longer be able to follow your
 account.</p></li>
-<li><p>​Existing followers will still show in your stats, but they will
+<li><p>Existing followers will still show in your stats, but they will
 not be able to view your activity.</p></li>
 </ul>
 <h4 id="how-to-enable-private-activity">How to enable Private
@@ -15317,10 +15238,10 @@ site itself.</p>
 site-specific profile?</h4>
 <p>A site-specific profile can only be used on the site where it was
 created.</p>
-<p>For instance, creating an account at <code>Explore.org</code> will
-allow you to comment on that site without signing up for your own Disqus
-account, but you won’t be able to use that profile to comment on any
-other sites that use Disqus.</p>
+<p>For instance, creating an account at 0 will allow you to comment on
+that site without signing up for your own Disqus account, but you won’t
+be able to use that profile to comment on any other sites that use
+Disqus.</p>
 <h4 id="what-can-i-do-with-a-site-specific-profile">What can I do with a
 site-specific profile?</h4>
 <p>With a site-specific profile you can comment, reply, vote, share,
@@ -15359,8 +15280,7 @@ histories will be separate.</p>
 <h4 id="how-can-i-tell-if-im-using-a-site-specific-profile">How can I
 tell if I’m using a site-specific profile?</h4>
 <ul>
-<li><p>Make sure you’re logged out of Disqus at
-<code>Disqus.com</code></p></li>
+<li><p>Make sure you’re logged out of Disqus at 0</p></li>
 <li><p>Open a new browser tab and go to a site where you
 comment</p></li>
 </ul>
@@ -15390,8 +15310,7 @@ Home or through the embed out on the web.</p>
 <p>Click your name (next to the notifications bubble) to open the drop
 down menu, then click “Edit Settings”.</p>
 <p><strong>Tip:</strong> When logged into your Disqus account, your
-Settings may be accessed directly at
-<code>https://disqus.com/home/account</code></p>
+Settings may be accessed directly at 0</p>
 <h4 id="profile">Profile</h4>
 <p>Once you’ve accessed your Disqus settings and navigated to the
 Profile tab, you’ll then be able to edit your Avatar, Name, Website,
@@ -15498,9 +15417,9 @@ cookie law.</p>
 </ul>
 <h4 id="internal-cookies">Internal cookies</h4>
 <ul>
-<li><p>disqus_unique (Domain: .disqus.com) ​ <em>Internal statistics,
-used for anonymous visitors (Sigma)</em></p></li>
-<li><p>testCookie (Domain: mediacdn.disqus.com) ​ <em>Used to check
+<li><p>disqus_unique (Domain: .disqus.com) <em>Internal statistics, used
+for anonymous visitors (Sigma)</em></p></li>
+<li><p>testCookie (Domain: mediacdn.disqus.com) <em>Used to check
 whether the browser accepts 3rd-party cookies.</em></p></li>
 </ul>
 <h4 id="how-to-enable-cookies">How to enable cookies</h4>
@@ -15603,7 +15522,7 @@ Service (spam, inappropriate profile, etc.)</em></strong></p></li>
 fit different window heights</em></strong></p></li>
 <li><p><strong><em>Automatic Translations: The profile modal uses the
 same language as the embed from which it is
-launched​​</em></strong></p></li>
+launched</em></strong></p></li>
 </ul>
 <h4 id="additional-resources-1">Additional Resources</h4>
 <h4 id="your-homepage-on-disqus">Your homepage on Disqus</h4>
@@ -15659,35 +15578,35 @@ upvotes your comment, and whenever someone follows you. Also, you can
 now reply to other users and vote on their comments from within your
 Disqus Home feed. ​ With Home on Disqus, you’ll be able to find new
 content, and check out the articles and updates from people you already
-follow, all in one place. ​ ​<strong>Overview</strong> Here’s a snapshot
+follow, all in one place. ​ <strong>Overview</strong> Here’s a snapshot
 of what you can find in in Home:</p>
-<p>​<strong>Notifications:</strong> View all of your notifications in one
+<p><strong>Notifications:</strong> View all of your notifications in one
 place with the ability to reply and follow from your notifications feed.
 Get notified of replies, upvotes, discussions you’ve been invited to,
 and follows in the Disqus embed or in Home. ​
-​<strong>Recommended:</strong> Community recommendations are a central
+<strong>Recommended:</strong> Community recommendations are a central
 feature of Disqus Home. When you ♥ (“Recommend”) a discussion, it shows
 up in feeds of people following you. If you follow communities and
 people, you’ll see what discussions are getting recommended by
 others.</p>
-<p>​<strong>User profiles:</strong> A revamped user profile shows off
+<p><strong>User profiles:</strong> A revamped user profile shows off
 what Disqus users are interested in and talking about. Also, if you’re
 in a conversation with another user, you can now reply to them from
-their profile. ​ ​<strong>Where are my notifications?</strong> When you
+their profile. ​ <strong>Where are my notifications?</strong> When you
 get a new notification, your Inbox icon in the main navigation will
 change color and display the number of unread notifications that are
 waiting for you. When you click on the icon, you’ll be taken to your
 Inbox. ​ In the Replies tab you’ll find replies to your comments.
 Upvotes, invites to discussions, and follow notifications will appear in
 the Most Recent tab.</p>
-<p>​ ​<strong>How do i follow a community or site?</strong> Follow a
+<p>​ <strong>How do i follow a community or site?</strong> Follow a
 community or a site by going to their page and clicking on the follow
 button in the top banner. Once you start following the site, new content
 will start flowing into your home feed.</p>
-<p>​<strong>How do I see content from people I follow now?</strong>
+<p><strong>How do I see content from people I follow now?</strong>
 Content from people that you follow will now show up in your Recent
 Comments feed in reverse chronological order, as well as in your
-Recommended feed. ​ ​<strong>How can I find new people and communities to
+Recommended feed. ​ <strong>How can I find new people and communities to
 follow?</strong> New to Disqus? If you haven’t started following any
 communities or other Disqus users, your feed will be empty. Populate it
 by following some of the interesting communities and commenters.</p>
@@ -15743,8 +15662,7 @@ unique user milestone. As of May 2013, Disqus handles more than 7
 billion monthly pageviews. Put another way, a site with 100 million
 monthly pageviews represents a little over 1% of total Disqus traffic. ​
 With millions of sites on our network, Disqus is constantly monitoring
-the health of our network and publicly documents this at
-<code>status.disqus.com</code>.</p>
+the health of our network and publicly documents this at 0.</p>
 <h4 id="how-do-i-get-help">How do I get help?</h4>
 <p>Our support team has meticulously documented everything about Disqus,
 from installation to the Disqus API.</p>
@@ -15817,90 +15735,89 @@ definitions. ​</p>
 Disqus data from within their own applications. Our documentation
 provides further explanation on how to use our API, specifically. You
 can find more information on APIs, in general, on Wikipedia and Quora. ​
-​<strong>Ban User</strong> - The “Ban User” setting lets you block a
+<strong>Ban User</strong> - The “Ban User” setting lets you block a
 user, IP address, or email address to prevent certain people from
-posting comments on your site. ​ ​<strong>Comment Count</strong> - The
+posting comments on your site. ​ <strong>Comment Count</strong> - The
 number of comments per post. You can add a comment count link to display
 the number of comments below the title of each post. Get the how-to. ​
-​<strong>Community Guidelines</strong> - Rules of engagement for
+<strong>Community Guidelines</strong> - Rules of engagement for
 commenters on your site. Guidelines can cover topics like privacy,
 etiquette, expectations, and moderation settings. Learn more. ​
-​<strong>Configuration Variables</strong> - These are parameters for
+<strong>Configuration Variables</strong> - These are parameters for
 Disqus’s behaviors and settings. Configuration variables must be defined
 on each page that Disqus is loaded on, so be sure to include
 configuration variables in your dynamic templates that render pages. ​
-​<strong>Display name</strong> - A full name is the name carried across
+<strong>Display name</strong> - A full name is the name carried across
 the Disqus network on your profile and is the name displayed with your
 comments. Your full name does not have to be unique and can contain
 spaces. ​ Full names are optional, though highly recommended. For added
 security, we recommend choosing a full name different from your
-username. ​ ​<strong>Embed</strong> - The discussion thread powered by
+username. ​ <strong>Embed</strong> - The discussion thread powered by
 Disqus—this is the comments section that Disqus adds to your site. ​
-​<strong>Engagement</strong> - Engagement indicates how active your
+<strong>Engagement</strong> - Engagement indicates how active your
 commenters and readers are. Engagement is measured by number of comments
-and votes. ​ ​<strong>Forum</strong> - A forum is your website community
+and votes. ​ <strong>Forum</strong> - A forum is your website community
 on the Disqus network. When you register your website on Disqus, you are
 creating a forum with a unique shortname. Your shortname is different
 than your username. ​ Every website using Disqus has a unique forum which
 is moderated by their respective administrators. A forum consists of the
 comments and comment threads posted by other users. Users, a.k.a.
 community profiles, are not unique to forums since people can belong to
-any number of communities on Disqus. ​ ​<strong>Import &amp; Export
+any number of communities on Disqus. ​ <strong>Import &amp; Export
 Tools</strong> - Let you upload comments from another system into Disqus
-or download your Disqus comments onto your computer. ​ ​<strong>IP
+or download your Disqus comments onto your computer. ​ <strong>IP
 Address</strong> - A unique identifier for each computer connected to
 the network. You can ban an IP address to ensure that no commenters
-using that IP can post on your site. ​ ​<strong>Migration Tools</strong> -
+using that IP can post on your site. ​ <strong>Migration Tools</strong> -
 Let you update or move discussion threads on your site to a new thread.
 Migration tools are useful when you update your domain name, change your
 blogging system, or want to merge discussion threads. ​
-​<strong>Moderation Panel</strong> - Site owners moderate the comments
+<strong>Moderation Panel</strong> - Site owners moderate the comments
 posted to their site (approve, mark as spam, delete) from the moderation
 panel. A forums’ moderation panel can be accessed with the following
-link: <code>http://yourshortnamehere.disqus.com</code> ​
-​<strong>Moderator</strong> - A moderator is responsible for managing a
-site’s community. Moderators delete and approve comments, mark spam,
-block or unblock commenters, and handle disputes between commenters.
-There are several different moderator types, including: Site Founder
-(primary moderator who can edit settings or comments), Site Admin (can
-edit settings or comments), and Site Moderator (can edit comments). ​
-​<strong>Pre-moderation</strong> - Turn on pre-moderation controls to
-require moderator approval for all comments. ​ ​<strong>Shortname</strong>
-- A unique identifier for your site that appears in your account URL.
-Access your site’s Disqus account by visiting
-yoursitesshortname.disqus.com/admin ​ ​<strong>Thread</strong> - The
-string of comments that readers post on your site. Disqus creates
+link: 0 ​ <strong>Moderator</strong> - A moderator is responsible for
+managing a site’s community. Moderators delete and approve comments,
+mark spam, block or unblock commenters, and handle disputes between
+commenters. There are several different moderator types, including: Site
+Founder (primary moderator who can edit settings or comments), Site
+Admin (can edit settings or comments), and Site Moderator (can edit
+comments). ​ <strong>Pre-moderation</strong> - Turn on pre-moderation
+controls to require moderator approval for all comments. ​
+<strong>Shortname</strong> - A unique identifier for your site that
+appears in your account URL. Access your site’s Disqus account by
+visiting yoursitesshortname.disqus.com/admin ​ <strong>Thread</strong> -
+The string of comments that readers post on your site. Disqus creates
 comment threads for your site so that your readers can have discussions
-about your content. ​ ​<strong>Trust User</strong> - Mark a user, IP
+about your content. ​ <strong>Trust User</strong> - Mark a user, IP
 address, or email address as “trusted” so those users can bypass certain
-moderation filters (such as spam). ​ ​<strong>Trusted Domains</strong> -
+moderation filters (such as spam). ​ <strong>Trusted Domains</strong> -
 Domains set by websites to specify which domains are allowed to create
 and load new threads with the Disqus javascript embed. We recommend that
 you add a trusted domain to ensure that your comments thread is hosted
-exclusively on your site. ​ ​<strong>Username</strong> - The name you use
+exclusively on your site. ​ <strong>Username</strong> - The name you use
 to login to Disqus. A username must be unique, and cannot be in use by
 more than one commenter at a time. A username cannot contain any spaces
 or special characters. ​ Usernames are used mostly for two purposes:
-logging into Disqus, and moderation (for site owners). ​ ​<strong>Word
+logging into Disqus, and moderation (for site owners). ​ <strong>Word
 Filters</strong> - Use word filters to create a list of restricted words
 that automatically get queued for your review. Comments containing
 restricted words will not appear in the discussion until they’ve been
 approved by a moderator. ​ ​</p>
 <h4 id="ads-terms">Ads Terms</h4>
 <p><strong>Ad Revenue</strong> - The amount of money you earn from
-Disqus ads. ​ ​<strong>Below-the-fold</strong> - The area of a webpage
+Disqus ads. ​ <strong>Below-the-fold</strong> - The area of a webpage
 that is only visible after a reader scrolls down the page. ​
-​<strong>Impressions</strong> - An impression is counted every time a
-reader views a page on your site. ​ ​<strong>RPMv</strong> - Revenue per a
+<strong>Impressions</strong> - An impression is counted every time a
+reader views a page on your site. ​ <strong>RPMv</strong> - Revenue per a
 thousand viewable impressions. This is the revenue you’ll receive every
 one thousand times your readers scroll down to view the ads in your
-Disqus forum. ​ ​<strong>Sponsored Links</strong> - Ads for popular
-articles from around the web. ​ ​<strong>Sponsored Story</strong> - The
+Disqus forum. ​ <strong>Sponsored Links</strong> - Ads for popular
+articles from around the web. ​ <strong>Sponsored Story</strong> - The
 default ad type. These are cost-per-impression ads informed by reader
-engagement. ​ ​<strong>Viewable Impressions</strong> - How often a reader
+engagement. ​ <strong>Viewable Impressions</strong> - How often a reader
 scrolls down to the Disqus forum below-the-fold to see Disqus ads. Your
 Ads earnings are based in part on Viewable Impressions. ​
-​<strong>Viewability Percent</strong> - How often a reader scrolls down
+<strong>Viewability Percent</strong> - How often a reader scrolls down
 to view Disqus ads as a percentage of total pageviews. In other words,
 the percentage of viewable impressions per total impressions on your
 page.</p>
@@ -15929,20 +15846,18 @@ documentation). Because Disqus is used with blogs and other content
 management systems, using “posts” leads to ambiguity, so they are called
 comments in the frontend or when describing to end-users.</p>
 <p><strong>Threads</strong> contain comments. A thread is associated
-with a page which has Disqus embedded. For example, a page located at
-<code>http://example.com/my-blog-post.html</code> will have one unique
-thread associated with that page. This thread will contain all of the
-comments on the page, as well as everything else that is relevant to
-that instance of Disqus (such as likes, participating users, and other
-metadata). Threads are uniquely identified by either a page-provided
-identifier or a URL.</p>
+with a page which has Disqus embedded. For example, a page located at 0
+will have one unique thread associated with that page. This thread will
+contain all of the comments on the page, as well as everything else that
+is relevant to that instance of Disqus (such as likes, participating
+users, and other metadata). Threads are uniquely identified by either a
+page-provided identifier or a URL.</p>
 <p>A <strong>forum</strong> is a website’s account on Disqus. Note that
 this is not the same as the user account which registered the website. A
 forum indicates the website’s community on Disqus and is identified by
 the forum’s shortname. Take this example if your website is located at
-<code>http://example.com</code>. Your website’s name may be called
-<em>My Example Website</em>. Your forum shortname on Disqus may be
-<em>myexamplewebsite</em>.</p>
+0. Your website’s name may be called <em>My Example Website</em>. Your
+forum shortname on Disqus may be <em>myexamplewebsite</em>.</p>
 <p>For more terminology definitions, please read the <a
 href="#disqus-glossary">Disqus Glossary</a>.</p>
 <h4 id="loading-disqus">Loading Disqus</h4>

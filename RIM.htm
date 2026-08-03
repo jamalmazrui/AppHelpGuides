@@ -204,14 +204,17 @@ with Scribd.document holds 4 categories, 20 articles and about 24,291
 words.</p>
 <h2 id="contents">Contents</h2>
 <ul>
-<li><a href="#the-same-on-windows-and-macos">The Same on Windows and
-macOS</a>
+<li><a href="#on-macos">On macOS</a>
 <ul>
-<li><a href="#known-issues">Known Issues</a></li>
-<li><a href="#localization">Localization</a></li>
-<li><a href="#the-management-dashboard">The Management
-Dashboard</a></li>
-<li><a href="#welcome">Welcome</a></li>
+<li><a href="#frequently-asked-questions-from-the-manual-2">Frequently
+Asked Questions from the Manual</a></li>
+<li><a href="#getting-connected-2">Getting Connected</a></li>
+<li><a href="#installation-2">Installation</a></li>
+<li><a href="#key-command-reference-2">Key Command Reference</a></li>
+<li><a href="#plans-and-purchasing-2">Plans and Purchasing</a></li>
+<li><a href="#system-requirements-2">System Requirements</a></li>
+<li><a href="#working-within-a-session-2">Working within a
+Session</a></li>
 </ul></li>
 <li><a href="#on-windows">On Windows</a>
 <ul>
@@ -225,18 +228,6 @@ Asked Questions from the Manual</a></li>
 <li><a href="#working-within-a-session">Working within a
 Session</a></li>
 </ul></li>
-<li><a href="#on-macos">On macOS</a>
-<ul>
-<li><a href="#frequently-asked-questions-from-the-manual-2">Frequently
-Asked Questions from the Manual</a></li>
-<li><a href="#getting-connected-2">Getting Connected</a></li>
-<li><a href="#installation-2">Installation</a></li>
-<li><a href="#key-command-reference-2">Key Command Reference</a></li>
-<li><a href="#plans-and-purchasing-2">Plans and Purchasing</a></li>
-<li><a href="#system-requirements-2">System Requirements</a></li>
-<li><a href="#working-within-a-session-2">Working within a
-Session</a></li>
-</ul></li>
 <li><a href="#remote-incident-manager-rim-faqs-not-in-the-manual">Remote
 Incident Manager (RIM) FAQs (not in the manual)</a>
 <ul>
@@ -247,440 +238,18 @@ href="#how-do-passes-work-does-the-clock-start-immediately-upon-payment-or-on-th
 do passes work? Does the clock start immediately upon payment, or on the
 day I initiate the session? Do the passes expire?</a></li>
 </ul></li>
-</ul>
-<h2 id="the-same-on-windows-and-macos">The Same on Windows and
-macOS</h2>
-<h3 id="known-issues">Known Issues</h3>
-<p>At Pneuma Solutions, we’re committed to providing a stable and
-reliable experience with Remote Incident Manager (RIM). In rare cases,
-however, there are operating system-level issues that can get in the
-way. With that in mind, We will outline any current issues with Remote
-Incident Manager at time of writing, along with any available interim
-solutions to use while the issues are resolved.</p>
-<h4 id="macos">MacOS</h4>
-<h5
-id="issues-with-remote-accessibility-module-on-macos-sequoia-targets">Issues
-with Remote Accessibility Module on macOS Sequoia Targets</h5>
-<p>due to changes in macOS Sequoia, some functionality related to our
-Remote Accessibility Module is currently impacted.</p>
-<h6 id="the-issue">The Issue:</h6>
-<p>The Remote Accessibility Module enables a visually impaired
-technician to remotely assist a sighted user without activating a screen
-reader on the user’s machine. However, macOS Sequoia introduces changes
-to VoiceOver’s settings management, which prevent us from reliably
-adjusting the necessary settings when enabling the module. As a result,
-visually impaired technicians may encounter the following issues when
-working with macOS Sequoia targets:</p>
+<li><a href="#the-same-on-windows-and-macos">The Same on Windows and
+macOS</a>
 <ul>
-<li>The remote speech module may fail, resulting in VoiceOver’s default
-voice being heard by the target user, revealing the technician’s
-disability without consent.</li>
-<li>VoiceOver’s sound effects, highlight cursor, and caption panel may
-not be properly disabled, again exposing the technician’s use of
-VoiceOver.</li>
-<li>In some cases, VoiceOver may not revert back to its default
-settings, potentially causing problems for future visually impaired
-users of the target machine.</li>
-</ul>
-<h6 id="impacted-users">Impacted Users:</h6>
-<p>Any RIM controller (on either Mac or Windows) attempting to use the
-Remote Accessibility Module on a Mac target running Sequoia may be
-affected by these issues. This could also impact any future users of
-VoiceOver on the target Mac if these settings are not properly
-reset.</p>
-<h6 id="interim-solution">Interim Solution:</h6>
-<p>Unfortunately, there is no direct workaround for this solution. We
-encourage all impacted users to reach out to Apple’s Accessibility
-department to request a reliable and future-proof API that allows RIM to
-adjust VoiceOver settings safely. Your advocacy helps preserve the
-dignity and privacy of visually impaired technicians, ensuring these
-features function correctly without unintentionally exposing their
-disability.</p>
-<h3 id="localization">Localization</h3>
-<p>Remote Incident Manager currently ships with 6 major languages, with
-more being added over time. If your system locale is among RIM’s
-supported languages, RIM will use the language you specified.</p>
-<h4 id="switching-languages">Switching languages</h4>
-<p>Whether you are in controller or target mode, Remote Incident Manager
-displays a language selector button at the bottom of the screen.
-Clicking this will display a list of languages. Select the desired
-language, and then click the “Switch language” button.</p>
-<h4 id="additional-languages">additional Languages</h4>
-<p>We welcome contributions of additional languages from individuals and
-entities alike. For information on how to contribute languages, <a
-href="https://github.com/PneumaSolutions/rim-localization">Visit the
-Localization repository on Github</a></p>
-<h3 id="the-management-dashboard">The Management Dashboard</h3>
-<p>RIM features a web-based dashboard to facilitate various machine and
-account management tasks. You can manage your existing unattended
-computers, create preconfigured installers for target computers, and
-much more. It should be noted that the feature set of the dashboard is
-largely dependent on which subscription tier your account is under. For
-example, enterprise users can assign machines to target groups, as well
-as create silent installers. On the other hand, anyone (including
-personal users) can create custom installers for their unattended
-machines.</p>
-<h4 id="locating-the-dashboard">Locating the Dashboard</h4>
-<p>If you’re a controller, the easiest way to get to the dashboard is
-through the main RIM interface. Clicking the “RIM Dashboard” button will
-automatically open the dashboard in your default browser, with the login
-already taken care of. If you are a network administrator who does not
-have RIM installed, you can simply log into your account on the RIM
-website and your dashboard will appear.</p>
-<h4 id="managing-organization-members-enterprise">Managing Organization
-Members (Enterprise)</h4>
-<p>Activating the “Organization” button on the RIM dashboard will reveal
-a menu of options related to organization and member management. The
-“Members” page will list all the members in your organization. All
-members can have their role, department and name modified, and any
-member can be deactivated or removed from an organization except for the
-organization owner. Note that deactivating a member will render their
-account inoperable while retaining its record.</p>
-<p>Adding members is as simple as entering their email address,
-selecting their role (user or administrator), optionally entering their
-name, and selecting their department if one has been created. If you
-have multiple members to add, you can use the “Members” edit field to
-perform a bulk add. This edit field accepts multiple lines of text,
-allowing you to enter each member’s information on a separate line. On
-each line, you may enter either a single email address, or an email
-address and a name in the format: * John Doe*</p>
-<p>Once you are finished, click the “Add” button.</p>
-<h5 id="departments">Departments</h5>
-<p>Departments allow you to organize members according to the various
-groups of your organization.</p>
-<p>To add a department, enter its name in the “Name” edit box under the
-“Create department” heading.</p>
-<h5 id="member-data-export">Member Data export</h5>
-<p>The member list in your organization can be exported as a CSV file.
-In order to download the export:</p>
-<ol type="1">
-<li>Choose the field separator that will separate the columns of the
-file. The available options include:
-<ul>
-<li>comma</li>
-<li>Semicolon</li>
-<li>Tab</li>
-</ul></li>
-<li>Activate the “Download” button.</li>
-</ol>
-<h5 id="restrictions">Restrictions</h5>
-<p>Depending on the nature of your organization, there may be certain
-features you do not want your staff to have access to. As such,
-organization admins can choose the features they wish to allow
-controllers access to. The “Restrictions” screen, accessed via the
-“Organization” menu, allows you to configure these permissions.</p>
-<p>The permissions that can be toggled include:</p>
-<ul>
-<li>Allow the controller to flip the session
-<ul>
-<li>If this option is unchecked, the “Flip Session” option will
-disappear from the session menu, and the keyboard shortcut will not
-work.</li>
-</ul></li>
-<li>Allow the controller to start a voice conversation
-<ul>
-<li>If this option is unchecked, the “Start Voice Conversation” checkbox
-will disappear from the “Provide Remote Help” screen, as will the menu
-option in the session menu.</li>
-</ul></li>
-<li>Allow the controller to request unattended access
-<ul>
-<li>If this option is unchecked, the option to request unattended access
-will disappear from the session menu.</li>
-</ul></li>
-<li>Allow text and files to be transferred between machines via the
-clipboard
-<ul>
-<li>If this option is unchecked, RIM will ignore any and all clipboard
-activity.</li>
-</ul></li>
-<li>Allow the controller to lock the target machine
-<ul>
-<li>If this option is unchecked, the option to lock the target machine
-will disappear from the session menu.</li>
-</ul></li>
-<li>Allow the controller to record the session
-<ul>
-<li>This option is disabled by default, making session recording a
-strictly opt-in feature for enterprise organizations and/or pro
-customers with the enterprise addon.</li>
-<li>If this option is unchecked, the option to record the session will
-disappear from the session menu.</li>
-<li>This restriction additionally vetos the client-side auto_start in
-the config.toml file</li>
-</ul></li>
-<li>Allow text chat during the session
-<ul>
-<li>This option is disabled by default, making session chat a strictly
-opt-in feature for enterprise organizations and/or pro customers with
-the enterprise addon.</li>
-<li>If this option is unchecked, the option to open the chat will
-disappear from the session menu.</li>
+<li><a href="#known-issues">Known Issues</a></li>
+<li><a href="#localization">Localization</a></li>
+<li><a href="#the-management-dashboard">The Management
+Dashboard</a></li>
+<li><a href="#welcome">Welcome</a></li>
 </ul></li>
 </ul>
-<p>Once you have configured the permissions to your satisfaction,
-activate the “Update” button. Changes will not affect any active
-sessions at the time the permissions are changed. They will however take
-effect for any and all future sessions without requiring a reboot of the
-client.</p>
-<h4 id="managing-targets">Managing Targets</h4>
-<p>When you click the “Configure Targets” link, you will arrive at a
-page that allows you to manage all the machines you have configured for
-unattended access. You can click on any one of these machines in order
-to manage it. Once inside, you will be able to:</p>
-<ul>
-<li>Rename the target</li>
-<li>Move the target to a different group (more on target groups
-later)</li>
-<li>Launch a remote session with the target</li>
-<li>Delete the target</li>
-</ul>
-<h4 id="target-groups-for-pro-accounts-and-above">Target Groups (for Pro
-Accounts and Above)</h4>
-<p>Say for instance your workgroup is spread out among several different
-locations. Or maybe you want to designate groups of machines to your
-routine maintenance techs. Target groups allow you to do just that. In
-order to do this, simply click the “Create Target Group” button, name
-your group, and submit. You may have as many target groups as is needed
-for your use case.</p>
-<h5 id="access-control-for-enterprise-organizations">Access Control (for
-Enterprise Organizations)</h5>
-<p>If your organizations assign a support technician to a specific set
-of machines, you probably want to ensure they only have access to that
-specific set. This is where the access control setting for target groups
-comes in. When you click on a target group, you are given options to
-manage the machines in the group, as well as the group itself. The
-access control section is where you may grant access to this group on a
-per-account basis. Simply enter the email address of the account you
-wish to add, then click the “Give Access” button. Note that this account
-can exist outside of your enterprise organization’s domain. Once this is
-done, you will be presented with a table of accounts that are given
-access to this group. Below each account is a “Revoke Access” button.
-This button does not require further confirmation. It should be noted
-that all organization administrators are automatically granted access to
-manage any and all groups that are created under the organization.
-Additionally, any email addresses under your organization’s domains will
-be added to your organization in RIM by default. Should you require more
-granular control over who gets onboarded, you can disable this in your
-organization’s main members area. What’s more, when in the members area
-you can add email addresses in bulk by way of commas, spaces or line
-breaks in between the email addresses.</p>
-<h4 id="setting-up-a-preconfigured-rim-installer-pro-or-above">Setting
-up a Preconfigured RIM Installer (Pro or above)</h4>
-<p>One of the easiest ways to set up a machine for unattended or
-prompted connections is by creating a custom installer. This is
-incredibly useful if you are configuring mass deployments, or even as a
-simpler way to get RIM up and running on an end user’s computer you plan
-on providing support for on the regular.</p>
-<p>IN order to do this:</p>
-<ol type="1">
-<li>In the target management screen, click the “Build Target Installer”
-button.</li>
-<li>You will first be asked if you want this machine to be configured
-for fully unattended access, or for prompted access in which the user
-has to accept a prompt to initiate the connection.</li>
-<li>You will then be asked for a target group assignment. Note that the
-target group selection will automatically go to your chosen target group
-if you initiate the installer configuration from your group’s page.</li>
-<li>You will be asked how long you want this installer to be valid for.
-It can be valid for anywhere between 7 to 30 days, or permanently valid
-for enterprise plans by setting the expiration to never.</li>
-<li>You are then given the option to assign a bass name. Any machine
-provisioned via this installation package will have this base name
-assigned to it.</li>
-<li>You will then be presented with a checkbox that lets you opt into an
-email notification when a user installs RIM via this installer.</li>
-<li>If you are an enterprise admin, you will see a checkbox that allows
-you to build the installer as an MSI package. This option is useful for
-mass deployment of a custom installer to a machine cluster that will be
-designated to the given target group.</li>
-<li>You will be asked to provide an installer name, and optionally some
-notes. These are for internal records and will not appear within the
-created installer.</li>
-<li>Click on “Build Installer.” You will be presented with the download
-link that you can either copy to the clipboard and send to your end
-user. Alternatively, you may download the installer directly for use in
-mass deployments. You may delete the installer from this screen should
-you choose to render it inoperable prematurely.</li>
-</ol>
-<p>Now that you have your installer, it can be run in one of two ways.
-In either case, the installer will query the server to check the
-validity of the installer. If the installer is valid, the machine will
-be added to your list of machines in both your account as well as the
-RIM client after the installer is complete. An invalid installer will
-not run.</p>
-<h5 id="normal-execution">Normal Execution</h5>
-<p>The user will get a prompt when running the installer, containing the
-following information:</p>
-<ul>
-<li>The technician’s name along with their organization, if
-applicable</li>
-<li>the nature of the connection, I.E whether a prompt is required or
-not</li>
-</ul>
-<p>The user can choose to either answer yes or no to the installation.
-Answering no will cancel the installation. After the installer finishes,
-the user will get a prompt informing them that their machine is now set
-up for remote access.</p>
-<h5 id="silent-install-enterprise-installers-only">Silent Install
-(Enterprise Installers Only)</h5>
-<p>A silent install can be initiated by running the executable installer
-with the <em>/S</em> command line parameter. This is useful when
-installing RIM as part of a mass deployment routine.</p>
-<h4 id="session-history">Session History</h4>
-<p>You can view your entire history of past sessions through the RIM
-dashboard. The session history currently contains the date and time of
-each session, the name of the computer you connected to, and the
-duration of the session. You may also choose to add comments to a
-session via the “Add Comment” link within the session row. This is
-useful for adding notes on the current status of an incident for your
-own sake as well as for the sake of organization administrators.</p>
-<p>Your entire session history can be exported for later viewing via a
-spreadsheet application. Activate the “Download session history as CSV”
-button located below the session history table to reveal a customization
-page for your data export. On this page, you can choose the timespan of
-the export, as well as the symbol used to separate the fields.</p>
-<h4 id="managing-your-subscription-personal-and-pro-plans">Managing your
-Subscription (Personal and Pro Plans)</h4>
-<p>The dashboard allows you to easily view and manage your RIM
-subscription details. Upon clicking the “manage subscription” link, you
-can:</p>
-<ul>
-<li>Upgrade your plan</li>
-<li>Update your payment method</li>
-<li>Cancel recurring payments</li>
-</ul>
-<h5 id="upgrading-your-plan">Upgrading your Plan</h5>
-<p>You can easily upgrade your subscription. If you are on a monthly
-plan, you will be prorated the remaining charge from the new amount,
-with the full new amount being charged for subsequent months. Clicking
-“Upgrade Subscription” reveals a page nearly identical to the initial
-plan selection page. There are a few notable differences which we will
-outline below:</p>
-<ul>
-<li>You cannot downgrade your plan to one with fewer machines. You can,
-however, upgrade from a monthly to a yearly plan with the same number of
-machines as your current plan. In order to downgrade, you would need to
-cancel your plan, wait for it to expire, then initiate a new plan with
-fewer machines.</li>
-<li>Enterprise plans, including the enterprise addon, cannot be acquired
-directly through this page.</li>
-</ul>
-<h5 id="canceling-recurring-payments">Canceling Recurring Payments</h5>
-<p>When you click “Cancel Automatic Renewal,” you will be asked for
-confirmation, after which your subscription will be set to expire at the
-end of the current term.</p>
-<h3 id="welcome">Welcome</h3>
-<p>Copyright © 2023 <a href="https://www.pneumasolutions.com">Pneuma
-Solutions</a> <em>Remote Incident Manager</em> (RIM) is a powerful,
-cross-platform fully accessible remote desktop application used to
-provide technical support, training, and system administration to
-clients both visually impaired and sighted alike. In addition to
-providing a streamlined remote desktop experience, RIM has a few unique
-qualities previously unseen in other remote desktop applications</p>
-<h4 id="why-rim">Why RIM?</h4>
-<p>If you are coming from previous remote desktop applications or screen
-reader-based assistance tools, you will find that RIM significantly
-streamlines your workflow.</p>
-<h5 id="inclusive-design">Inclusive Design</h5>
-<p>Remote Incident Manager is truly a first of its kind. It is the first
-<em>fully accessible</em> remote support solution that can be used by
-both blind and sighted support pros and end users. Thus, RIM can fully
-replace an existing solution, as it provides everything you could ask
-for in a secure remote support solution, plus complete
-accessibility.</p>
-<h5 id="easy-to-install-and-deploy">Easy to Install and Deploy</h5>
-<p>In a one-to-one situation, the installation could not be simpler. A
-one-click instant install ensures that the end user’s process for
-setting up their machine to receive assistance will be quick and
-painless. What’s more, the installation process launches RIM after it
-finishes, so they will be instantly ready to connect. Technicians can
-easily manage their machines via an easy to use web-based interface.
-Enterprise users can use this dashboard to deploy RIM to machines in
-their workplace. Ready-made installers can be issued to end users in
-seconds. The installer itself can be further customized via command line
-arguments which can in turn be utilized in an automated deployment.</p>
-<h5 id="shared-session">Shared Session</h5>
-<p>Unlike Windows Remote Desktop or other similar applications, a remote
-session sandbox is not created; what the end user’s machine is doing is
-what you’ll be seeing. This means that you can easily troubleshoot a
-problem they are having while keeping their existing configuration
-intact. This further allows you to work collaboratively on a project,
-send files to and from via the clipboard, etc.</p>
-<h5 id="fast-and-stable-connections">Fast and Stable Connections</h5>
-<p>Because RIM uses the latest advancements in direct
-computer-to-computer connections, the responsiveness is head and
-shoulders above other solutions. While RIM’s central service initiates
-the connection, it gets out of your way once the connection is
-established. All this without the need to make cumbersome and invasive
-changes to network configurations.</p>
-<h5 id="high-quality-audio">High Quality Audio</h5>
-<p>RIM uses the latest advancements in real-time audio encoding
-technology to provide extremely responsive, high-fidelity stereo audio.
-You will hear any and all audio that is playing on the end user’s
-machine during the session.</p>
-<h5 id="high-quality-visual-output">High-Quality Visual Output</h5>
-<p>Again, Remote Incident Manager is an all-inclusive solution designed
-to replace previous infrastructures, rather than be used alongside them.
-As such, RIM’s screen output is equally as responsive and stable. Using
-the mouse is fully supported as well.</p>
-<h5 id="voice-communication">Voice Communication</h5>
-<p>Gone are the days of having to place a separate phone call or web
-conference alongside the remote session. RIM provides crystal clear,
-low-latency voice communication right inside your session.</p>
-<h5 id="accessible-in-all-use-cases">Accessible in <em>All</em> Use
-Cases</h5>
-<p>RIM is the first remote access solution that provides unparalleled
-accessibility, irrespective of the screen reader (or lack thereof) that
-either party is using.</p>
-<h6 id="differences-in-screen-readers-are-now-irrelevant">Differences in
-Screen Readers are now Irrelevant</h6>
-<p>Before RIM, it used to be difficult to assist someone running a
-different screen reader than your own. With RIM, this is now a thing of
-the past. RIM doesn’t care what either party is running. RIM will work
-seamlessly with JAWS, NVDA, Narrator, or VoiceOver on the side of both
-the techhnician and the end user. Not only will you be able to hear the
-end user’s speech irrespective of their screen reader, RIM’s keyboard
-handling will be stable and reliable irrespective of screen reader
-configuration. This is a significant advantage of a screen
-reader-independent solution.</p>
-<h6 id="no-screen-reader-no-problem">No Screen Reader? No Problem!</h6>
-<p>A blind IT professional can now easily help a sighted end user, even
-if they do not have a screen reader installed on their computer. In the
-absence of a screen reader on the remote computer, RIM will see to it
-that you will still be able to get speech provided you are using either
-the free <a href="https://nvaccess.org">NVDA Screen Reader</a> or
-VoiceOver on Mac OS. Remote incident Manager will initiate its
-accessibility module which allows you to control the client’s machine
-with speech as if they had a screen reader. Not only does the end user
-not have to worry about installing a screen reader, they don’t even hear
-the speech that you’re now hearing while you control their computer.</p>
-<h4 id="documentation-conventions-and-terminology">Documentation
-Conventions and Terminology</h4>
-<ul>
-<li>Because Remote Incident Manager is cross-platform, many sections of
-this documentation will tailor their contents to the operating system
-that you are running.
-<ul>
-<li>In most cases, the manual will recognize whether you are running
-Windows or Mac, and adjust the content accordingly.</li>
-<li>In the event the platform recognition fails or you are reading the
-documentation on a different device such as a phone or tablet, the
-manual will fall back to the windows version. You will find buttons on
-both the top and bottom of the page that can be used to show the content
-for your platform of choice.</li>
-</ul></li>
-<li>Switching the language will take you to the Welcome section of the
-manual for your chosen language.</li>
-<li>RIM connections occur between a target and a controller.
-<ul>
-<li>A target computer is the computer that will be receiving remote
-support.</li>
-<li>A controller connects to a target computer for remote support.</li>
-</ul></li>
-</ul>
-<h2 id="on-windows">On Windows</h2>
-<h3 id="frequently-asked-questions-from-the-manual">Frequently Asked
+<h2 id="on-macos">On macOS</h2>
+<h3 id="frequently-asked-questions-from-the-manual-2">Frequently Asked
 Questions from the Manual</h3>
 <p>Here are answers to some common questions concerning RIM. When faced
 with an issue, please refer to this document whenever possible. If your
@@ -1018,15 +587,16 @@ connections through ports 19302 and 3478 (the standard STUN and TURN
 ports). This ensures that if a relay is being utilized, RIM will not
 have to fall back to a tcp connection on port 443.</p>
 <h5
-id="does-rim-run-in-the-background-and-if-so-will-it-appear-in-my-alttab-list">Does
-RIM run in the background, and if so will it appear in my Alt+Tab
+id="does-rim-run-in-the-background-and-if-so-will-it-appear-in-my-commandtab-list">Does
+RIM run in the background, and if so will it appear in my Command+Tab
 list?</h5>
 <p>RIM runs in the background in order to process automatic updates,
 receive unattended/prompted connection requests, and enable use of the
-global Windows+Shift+Backspace keyboard command. It will not phone home
+global Option+Shift+Backspace keyboard command. It will not phone home
 for any other purpose, and no personally identifiable information is
-transferred. RIM will not appear in your Alt+Tab list, but it will
-appear in the system tray.</p>
+transferred. RIM will not appear in your Command+Tab list, but it will
+appear in the status menus that contain your battery, WiFi connection
+information, etc.</p>
 <h4 id="remote-accessibility-module">Remote Accessibility Module</h4>
 <h5
 id="is-there-anything-the-target-machine-needs-to-configure-for-first-time-use-of-the-remote-accessibility-module">Is
@@ -1040,8 +610,7 @@ the Remote Accessibility Module work on secure screens such as the lock
 screen?</h5>
 <p>Yes! Since the RIM host runs with elevated privileges, this allows us
 to leverage the Remote Accessibility Module for secure screens.</p>
-<p>The only exception to this is when RIM is installed without
-administrator privileges target-side.</p>
+<p>The only exception to this is FileVault’s logon window.</p>
 <h4 id="unattended-sessions">Unattended Sessions</h4>
 <h5
 id="are-voice-conversations-supported-during-unattended-sessions">Are
@@ -1062,9 +631,10 @@ id="the-target-machine-rebooted-after-installing-updates-and-drivers-and-it-requ
 target machine rebooted after installing updates and drivers, and it
 requires a password to log in. How does the session continue from
 here?</h5>
-<p>While RIM will run on the Windows logon screen, logging in is still a
-task that must be done manually by the target user. In other words, RIM
-<em>will not</em> automatically log the user in.</p>
+<p>In most instances, particularly when FileVault disk encryption is
+enabled, the target user will need to be physically present to manually
+enter the password. RIM cannot start on an encrypted Mac before it has
+been fully logged in.</p>
 <h5
 id="i-have-multiple-machines-playing-the-part-of-the-controller.-will-the-list-of-machines-set-up-for-unattended-access-populate-across-all-machines">I
 have multiple machines playing the part of the controller. Will the list
@@ -1173,7 +743,7 @@ when done.</li>
 </ol>
 <p>That’s it! You should now hear the microphone’s audio along with the
 rest of the remote machine’s output.</p>
-<h3 id="getting-connected">Getting Connected</h3>
+<h3 id="getting-connected-2">Getting Connected</h3>
 <p>Remote Incident Manager’s connection process is designed with speed
 and simplicity in mind, both for the person receiving assistance as well
 as for the person providing it.</p>
@@ -1191,7 +761,7 @@ may be set up to receive a request to connect without either of you
 having to enter a keyword. RIM will play a chime, then announce that
 your technician is attempting to connect.</p>
 <p>In order to accept the connection, press
-<strong>Windows+Shift+Y</strong> and the session will begin
+<strong>Option+Shift+Y</strong> and the session will begin
 momentarily.</p>
 <h4 id="connecting-to-a-target">Connecting to a Target</h4>
 <p>The process for setting up the session is fairly similar. Rather than
@@ -1228,13 +798,13 @@ connecting to. The keyword is valid for 5 minutes or until a successful
 connection is established, whichever comes first. Once they have
 connected, you will receive an alert informing you that the remote
 session is about to begin.</p>
-<p>Take note of the mentioned <strong>Windows+Shift+Backspace</strong>
+<p>Take note of the mentioned <strong>Option+Shift+Backspace</strong>
 shortcut as that will bring up the RIM menu on your machine. If you rely
 on the keyboard exclusively, this is the only way to direct keyboard
 input back to your own system.</p>
 <p>After you dismiss this dialogue, the remote session will be
 initiated.</p>
-<h3 id="installation">Installation</h3>
+<h3 id="installation-2">Installation</h3>
 <p>How you acquire and install Remote Incident Manager depends on your
 use case and configuration, but in any case the process is quite
 straight forward.</p>
@@ -1243,65 +813,77 @@ Individuals</h4>
 <p>There is only one installation package to use, whether you are
 offering or receiving assistance.</p>
 <ol type="1">
-<li><a href="https://getrim.app/win">Download Remote Incident
+<li><a href="https://getrim.app/mac">Download Remote Incident
 Manager</a></li>
-<li>Run the downloaded file.</li>
-<li>If you have user account control enabled, press Alt+Y to approve the
-installation.</li>
-<li>Once the file is launched, the installation will automatically
-commence. There are no next buttons to worry about. Just sit back,
-relax, and let it do its thing. Within seconds, the program will be
-installed and will launch automatically.
-<ol type="1">
-<li>The Welcome screen will allow you to choose how you will primarily
-use RIM. If you only plan on receiving support, press the “Receive Help
-Now” button. If you plan on providing support, click the “Provide Help
-Now” button. This decision is not final, as the mode can always be
-changed from within the application.</li>
-</ol></li>
+<li>Go to your downloads folder via Finder (Option+command+L). Locate
+the downloaded .pkg file and open it with Command+O.</li>
+<li>An installation wizard will appear. Follow the onscreen
+instructions. You are all set to run Remote Incident Manager for the
+first time! You may run it from your applications folder, accessed via
+Command+Shift+A while located in Finder. You will be greeted with a
+welcome screen at first launch, allowing you to choose whether you would
+like to provide or receive remote help. This screen will only appear
+once. Additionally, RIM sets up a multipurpose global hotkey
+(Option+Shift+Backspace) which, among other things, automatically
+launches the program from wherever you are.</li>
 </ol>
-<p>That’s all there is to it! A desktop shortcut will be automatically
-created to aid in subsequent launches of RIM. Additionally, RIM sets up
-a multipurpose global hotkey (Windows+Shift+Backspace) which, among
-other things, automatically launches the program from wherever you
-are.</p>
-<h4 id="unattended-or-prompted-access-installer">Unattended or Prompted
-Access Installer</h4>
-<p>If the person providing assistance has provided you a custom
-installer, you will be advised of this when the installer launches. This
-is because this installer will automatically configure RIM for what is
-known as either unattended or prompted access. This is what will allow
-the person helping you to initiate a session with your computer without
-you having to enter a keyword. We will cover these types of sessions
-indepth later on in this manual.</p>
-<h4 id="installing-without-administrative-privileges">Installing without
-Administrative Privileges</h4>
-<p>The Remote Incident Manager installer will always attempt to obtain
-administrator privileges. In environments where administrator privileges
-are unable to be obtained, the installation of RIM will be performed
-within the scope of the current user account, rather than at the system
-level.</p>
-<p>Running without admin does not result in any limitations on the
-controller side of RIM. There are, however, limitations you will
-encounter on the target machine.</p>
-<ul>
-<li>RIM only runs when the Windows user that installed it is signed
-in.</li>
-<li>RIM doesn’t run on the Windows sign-in screen.</li>
-<li>RIM has no access to the secure desktop; this means no access to UAC
-prompts, or to the sign-in screen when unlocking the machine.</li>
-<li>Remote keyboard input doesn’t work if the focus on the target is in
-an elevated application, or even an application running with the Windows
-UI Access flag, such as an installed copy of a screen reader.</li>
-<li>The option to press Ctrl+Alt+Delete doesn’t work.</li>
-</ul>
-<p>As a controller, you will be able to attempt a re-installation of RIM
-with admin privileges during a session.</p>
-<h4 id="silent-installation">Silent Installation</h4>
-<p>You’ll want to do this when deploying RIM to multiple machines.
-Simply use the <strong>/S</strong> command line parameter in your
-deployment script. Note that it is case-sensitive, so a capital S is
-required.</p>
+<h5 id="installation-troubleshooting">Installation Troubleshooting</h5>
+<p>While every effort is made to ensure a smooth installation, sometimes
+problems do occur. The installer has a facility for us to be able to
+easily provide support for these rare and occasional errors. Should you
+encounter an error during the installation, press <em>Command+L</em> to
+go to the log viewer, engage with the toolbar, and then click “Save”.
+You will be asked where you would like to save the log output; save it
+where you will be able to easily locate it. The resulting text file can
+then be sent to our support address, at which point it can be reviewed
+in order to locate a potential solution.</p>
+<h4 id="permissions">Permissions</h4>
+<p>Due to macOS’s precautionary behavior when dealing with applications
+of this nature for the first time, you will need to grant some
+permissions to Remote Incident Manager upon first launch. The number of
+permissions will vary depending on whether or not your Mac will be
+providing or receiving remote help.</p>
+<h5 id="karabiner-hid-driver-target-only">Karabiner HID driver (Target
+only)</h5>
+<p>This is the driver that processes input from a controlling computer
+that is received by RIM. This is a system extension, thus you must
+manually approve it. Rim will bring up a system dialogue that will take
+you to the Privacy and Security section of system settings. You will
+then want to scroll until you locate the Allow button. Clicking this
+will prompt you for your password or touch ID.</p>
+<h5 id="notifications">Notifications</h5>
+<p>The next permission request from RIM will be for notifications. RIM
+will notify you when a session starts and ends. The procedure for
+granting this permission is slightly different.</p>
+<ol type="1">
+<li>Access the notification center. If using VoiceOver, the notification
+center is accessed by pressing <strong>VO+N</strong>.</li>
+<li>Locate the notification from Remote Incident Manager, then activate
+it (<em>VO+Space</em>).</li>
+<li>Press <strong>VO+Command+Space</strong>, then activate the Allow
+option in the popup menu that appears.</li>
+</ol>
+<h5 id="receiving-input">Receiving Input</h5>
+<p>RIM needs permission to receive all the input directed to it over a
+remote connection. Click “Continue” in the RIM window, at which point a
+system dialogue requesting accessibility service permissions will
+appear. If VoiceOver does not immediately focus it, press
+<strong>VO+F1</strong> twice quickly. Then, down arrow to “System
+dialogues,” press right arrow, and then down to the input permissions
+request. Pressing enter on that will open the alert box, at which point
+you will want to follow it to System Settings and check the Remote
+Incident Manager box in the list of applications.</p>
+<h5 id="capturing-screen-output-target-only">Capturing Screen Output
+(Target only)</h5>
+<p>The final permission request from RIM will be for capturing the
+screen output which will be piped across the remote connection. The
+procedure for this is similar to the previous procedure.</p>
+<h5 id="local-network-discovery-permissions">Local Network Discovery
+Permissions</h5>
+<p>This optional permission will only appear when you initiate a session
+involving a Mac on your local area network. Simply click the “Allow”
+button in the resulting dialog that appears, and this permission will be
+permanently granted.</p>
 <h4 id="installing-a-server-profile">Installing a Server Profile</h4>
 <p>If you are receiving remote support from an organization who has a
 private RIM server, they will have sent you a link to a configuration
@@ -1310,42 +892,31 @@ that will provide instructions on how to install this server profile
 into your copy of RIM. Note that RIM must be installed in order for the
 profile to be added, thus the page will provide links to the installers
 if you have not yet installed RIM.</p>
-<h4 id="additional-considerations-for-windows-servers">Additional
-Considerations for Windows Servers</h4>
-<p>To install RIM on your Windows Server, connect to the server via RDP.
-In order to get the most stable connection experience, we recommend
-using the Remote Desktop app from the Microsoft Store.</p>
-<h5 id="obtaining-sound-and-running-narrator">Obtaining Sound and
-running Narrator</h5>
-<p>For Windows Server distributions prior to 2022, you will need to
-manually enable sound before launching Narrator. Do the following once
-connected:</p>
-<ol type="1">
-<li>Press windows key+r.</li>
-<li>Type cmd and hit enter. Wait about ten seconds.</li>
-<li>Type: <strong>net start audiosrv</strong> and hit enter.</li>
-</ol>
-<p>In any case, press CTRL+Windows+Enter to enable Narrator. If
-everything worked properly, you should get speech. You can now follow
-the install procedure as described above. Please note that for Windows
-Server distributions prior to 2022, if you need sound for subsequent
-connections via RIM, you will need to install a virtual sound output
-device on your server. The free version of <a
-href="https://vac.muzychenko.net/en/download.htm">Virtual Audio
-Cable</a> should suffice.</p>
-<h3 id="key-command-reference">Key Command Reference</h3>
+<h4 id="uninstalling-rim">Uninstalling RIM</h4>
+<p>Should you encounter any show-stopping problems with your
+installation of RIM, you may wish to perform a clean reinstall of the
+app. Due to the complex nature of the RIM distribution for Mac OS,
+simply moving the app to the trash will not uninstall it, and thus may
+not fully resolve your issue.</p>
+<p>RIM provides an easy method to fully uninstall itself. When you click
+the “About” button in the main window, you will see an uninstall button
+in the About screen that appears. Clicking this button will result in a
+confirmation dialogue, afterwhich you will be prompted for your password
+or touch ID in order to proceed with uninstallation. You will be given a
+confirmation message once the uninstallation is complete.</p>
+<h3 id="key-command-reference-2">Key Command Reference</h3>
 <p>Following is a complete keyboard command reference for RIM. We will
 list all the commands that have global shortcuts, along with the
-respective Windows-friendly shortcuts.</p>
+respective macOS-friendly shortcuts.</p>
 <ul>
 <li><strong>Action</strong>: Command</li>
-<li><strong>Access the RIM Menu</strong>: Windows+Shift+Backspace</li>
-<li><strong>Minimize Session</strong>: Windows+Shift+M</li>
-<li><strong>Flip Session</strong>: Windows+Shift+F</li>
+<li><strong>Access the RIM Menu</strong>: Option+Shift+Backspace</li>
+<li><strong>Minimize Session</strong>: Option+Shift+M</li>
+<li><strong>Flip Session</strong>: Option+Shift+F</li>
 <li><strong>Disconnect Session (Controller or Target)</strong>:
-Windows+Shift+D</li>
+Option+Shift+D</li>
 </ul>
-<h3 id="plans-and-purchasing">Plans and Purchasing</h3>
+<h3 id="plans-and-purchasing-2">Plans and Purchasing</h3>
 <p>Remote Incident Manager is useful in a wide array of scenarios of
 varying frequency. Thus, our multi-tier plan structure makes every
 reasonable attempt to meet you where you are. Additionally, remember
@@ -1358,6 +929,12 @@ your 30 minutes, you may connect to any number of people, over any
 number of interactive sessions. After each session, RIM will display a
 popup reminder with your remaining time, as well as a “Sign up for paid
 RIM services” button.</p>
+<p>In some cases, pressing escape out of this popup may result in an
+empty screen in which VoiceOver will announce that Remote Incident
+Manager has no windows. Should this occur, simply <em>Command+Tab</em>
+to any application. Be careful not to hit Command+Q, otherwise you will
+not be able to relaunch RIM with the <em>Option+Shift+Backspace</em>
+keyboard command until you manually relaunch RIM.</p>
 <h4 id="consumer-plans">Consumer Plans</h4>
 <h5 id="passes">Passes</h5>
 <p>Passes are useful if you’re providing assistance on an as needed
@@ -1472,17 +1049,17 @@ packages, you will receive a separate activation link for each item.
 This means that, for example, two separate passes can be activated on
 two separate accounts. This is useful in situations where you wish to
 gift one of the items of a larger purchase.</p>
-<h3 id="system-requirements">System Requirements</h3>
+<h3 id="system-requirements-2">System Requirements</h3>
 <p>In order to run Remote Incident Manager, your system must meet or
 exceed the following requirements:</p>
 <ul>
-<li>Windows 10 (X64) or later</li>
-<li>Windows Server 2016 (X64) or later</li>
+<li>Intel or Apple Silicon</li>
+<li>macOS Ventura or later</li>
 <li>At least 4GB of RAM</li>
-<li>Admin privileges for full functionality (not required for initial
-installation or automatic updates)</li>
+<li>Admin privileges for initial installation (not required for
+automatic updates)</li>
 </ul>
-<h3 id="working-within-a-session">Working within a Session</h3>
+<h3 id="working-within-a-session-2">Working within a Session</h3>
 <h4 id="things-to-know-before-you-begin">Things to Know before you
 Begin</h4>
 <p>A few things will happen immediately after the connection is
@@ -1509,7 +1086,7 @@ the identification process, not the Mac’s own keyboard.</li>
 directed to the target computer. To direct control back to your machine,
 do either of the following:
 <ul>
-<li>Press Windows+Shift+Backspace.</li>
+<li>Press Option+Shift+Backspace.</li>
 <li>Right-click the RIM window’s title bar.</li>
 <li>Left-click the RIM icon in the middle of the title bar.</li>
 </ul></li>
@@ -1519,7 +1096,7 @@ do either of the following:
 the client side. Should you need to switch back to controlling your own
 machine, bring up the RIM menu, then select the “Minimize session”
 option. You will be taken back to your machine until you switch back
-into the session window or press Windows+Shift+Backspace again. When you
+into the session window or press Option+Shift+Backspace again. When you
 go back into the session window, keyboard and mouse input will once
 again be directed to the client computer.</p>
 <p>Once you’re done, either the controller or the target can go into the
@@ -1539,7 +1116,7 @@ version of RIM.</li>
 to reinstall RIM as admin on a Windows target, requiring the target user
 to accept the admin permission request by themselves and/or with the
 help of their company IT.</li>
-<li>Minimize Session (<strong>Windows+Shift+M</strong>): brings control
+<li>Minimize Session (<strong>Option+Shift+M</strong>): brings control
 back to your machine as described above</li>
 <li>Open Chat: Opens the text chat for a given session
 <ul>
@@ -1552,7 +1129,7 @@ session menu.</li>
 always available, it is only necessary for transferring files to Mac
 targets.</li>
 </ul></li>
-<li>Flip Session (<strong>Windows+Shift+F</strong>): Allows your client
+<li>Flip Session (<strong>Option+Shift+F</strong>): Allows your client
 to remote control your machine and hear its audio. As the original
 controller, you can flip the session back by selecting this option a
 second time.</li>
@@ -1595,7 +1172,8 @@ automatically reconnect the session.
 <ul>
 <li>Note that a Mac target cannot start RIM pre-login due to platform
 limitations, notably FileVault.</li>
-<li>As such, RIM will reconnect once the user logs in.</li>
+<li>As such, on a Mac target, RIM will reconnect once the user logs
+in.</li>
 </ul></li>
 <li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.
 <ul>
@@ -1624,8 +1202,8 @@ chatbots.
 are on the personal community, weekend support, or pro/enterprise
 subscriptions.</li>
 </ul></li>
-<li>Disconnect Session (<strong>Windows+Shift+D</strong>): Terminates
-the session.
+<li>Disconnect Session (<strong>Option+Shift+D</strong>): Terminates the
+session.
 <ul>
 <li>Remember that this option is available to both sides of the
 session.</li>
@@ -1687,8 +1265,8 @@ default, this is the “documents/Remote Incident Manager/Chat” directory
 in your user folder.</p>
 <p>Currently, the only way to modify the directory is via a
 configuration file, thus the procedure is only available in English.</p>
-<p>The configuration file can be accessed via the run dialog by pasting
-the following: %appdata%\remote-incident-manager\config.toml</p>
+<p>The config.toml file will be under $HOME/Library/Application
+Support/remote-incident-manager</p>
 <p>Once inside the configuration file, look for the directory line under
 the Chat line, and modify the directory to one of your choosing. Note
 that backslashes must be properly escaped in the case of Windows
@@ -1732,7 +1310,7 @@ will include the audiovisual output of the target computer, as well as
 the audio from a running voice conversation. To facilitate a session
 recording:</p>
 <ol type="1">
-<li>Access the “Start Session Recording” option off the session menu.
+<li>Access the “Start Session Recording” option off of the session menu.
 The following actions will occur as a result:
 <ul>
 <li>During a keyword session:
@@ -1765,11 +1343,11 @@ accidental deactivation of the session recording, however it can
 optionally be disabled.</li>
 <li>Both parties will receive a notification following completion of the
 recording.</li>
-<li>The recording will then be saved to the directory in which RIM is
-configured to save your recordings (This is the “Videos” folder in your
-user directory by default). For added convenience, you will be
-automatically dropped into this folder via Explorer, allowing you to
-send the recording to the user if desired.</li>
+<li>The recording will then be saved to the directory in which RIM saves
+your recordings (This is the “Movies” folder in your user directory by
+default). For added convenience, you will be automatically dropped into
+this folder via Finder, allowing you to send the recording to the user
+if desired.</li>
 <li>Note that disconnecting the session stops the recording
 automatically.</li>
 </ul></li>
@@ -1803,8 +1381,8 @@ network share), and determine the state of the confirmation dialog when
 stopping a recording. Currently, the only way to modify these settings
 is via a configuration file, thus the procedure is only available in
 English.</p>
-<p>The configuration file can be accessed via the run dialog by pasting
-the following: %appdata%\remote-incident-manager\config.toml</p>
+<p>The config.toml file will be under $HOME/Library/Application
+Support/remote-incident-manager</p>
 <p>Once inside the configuration file, the following options will be
 available to you:</p>
 <ul>
@@ -1828,41 +1406,16 @@ subsequent sessions. There is no need to restart the application.</p>
 <p>Whether you’re assisting a user who doesn’t use a screen reader, or
 you’re diagnosing an issue with a malfunctioning screen reader, RIM is
 fully prepared to come to your aid.</p>
-<p>The remote accessibility module consists of two components:</p>
-<ul>
-<li>An addon for the NVDA screen reader that enables the screen reader
-to receive output from the remote computer</li>
-<li>A self-contained accessibility module initiated on the target
-computer at the request of the controller. The advantage to this
-approach is that the end user does not hear speech on their computer
-while you’re controlling it. Instead, the Remote Accessibility Module
-pipes the speech output through to the running copy of NVDA on the
-controller side. This way, you can accessibly assist an end user without
-them having to install or even download a screen reader.</li>
-</ul>
-<h5 id="setup-procedure">Setup Procedure</h5>
-<p>For first-time initialization of the accessibility module, here is
-what you will need to do:</p>
-<ol type="1">
-<li>Connect to a computer that does not have a screen reader
-running.</li>
-<li>If NVDA is currently running, you will be asked to install an addon
-that will allow your copy of NVDA to communicate with the remote
-computer during the session. Accept the installation prompts, and wait
-for NVDA to restart.</li>
-<li>By now, the remote accessibility module will be fully initialized,
-and you will hear speech output as you control the remote computer. To
-mute the speech output temporarily, simply press Insert or Capslock+S
-once to turn it off, then press that command twice to re-enable it.</li>
-</ol>
-<p>From this point forward, if you are running a screen reader on the
-controling computer, the remote accessibility module will automatically
-start during remote sessions in which the remote computer does not have
-a screen reader running. Should you be running a screen reader other
-than NVDA, RIM will disengage that screen reader and then switch you
-over to NVDA. If you need to stop the remote accessibility module on the
-remote machine in order to start another screen reader, simply access
-the “Stop Remote Accessibility” option off the RIM menu.</p>
+<p>The remote accessibility module is a special configuration initiated
+on the target Mac at the request of a Windows or Mac controller. The
+advantage to this approach is that the end user does not hear speech on
+their computer while you’re controlling it. Instead, the Remote
+Accessibility Module pipes the speech output through to the speech
+system on the controller side. This way, you can accessibly assist an
+end user without them having to enable a screen reader. If you are
+running VoiceOver on the controling Mac, the remote accessibility module
+will automatically start during remote sessions in which the remote
+computer does not have a screen reader running.</p>
 <h4 id="rebooting-and-reconnecting">Rebooting and Reconnecting</h4>
 <p>Whether you’re installing system updates or working your way out of a
 system hang, RIM has got you covered during the reboot process.
@@ -1954,7 +1507,7 @@ both possible via the RIM Dashboard:</p>
 <li>Deregister one of your machines, freeing up a slot.</li>
 <li>Upgrade your subscription with more slots.</li>
 </ol>
-<h6 id="getting-connected-1">Getting Connected</h6>
+<h6 id="getting-connected">Getting Connected</h6>
 <p>Now that we’ve registered the machine for unattended access, here is
 how we will start a session.</p>
 <ol type="1">
@@ -1986,30 +1539,18 @@ to create a shortcut for.</li>
 <p>Now, when you activate this shortcut, you will either automatically
 land in the remote session, or send a prompt to the user’s machine that
 they can accept.</p>
-<h6 id="more-ways-to-use-unattended-session-shortcuts">More Ways to use
-Unattended Session Shortcuts</h6>
-<p>Unattended session shortcuts, like any other shortcuts, can have
-global hotkeys associated with them. This can be extremely useful if you
-are a maintenance tech managing multiple computers in a workgroup. For
-example, if your workgroup consists of 6 computers that you perform
-routine maintenance on, you could configure Alt+Control+1 through 6 as
-hotkeys for each respective machine. This ought to significantly speed
-up your workflow. In addition, you can call up an unattended session via
-the run box if you copy the shortcut into your user directory. Once
-you’ve copied the shortcut, you may start an unattended session by
-typing your-session-name.url in the run box.</p>
 <h6 id="revoking-unattended-access">Revoking Unattended Access</h6>
 <p>If you no longer want your machine to be controlled unattended, you
 can revoke the controller’s access. You do not need to be in a session
 in order to do this.</p>
 <ol type="1">
-<li>Access the Remote Incident Manager icon in your system tray.
+<li>Access the Remote Incident Manager icon in your menu extras/status
+menus.
 <ol type="1">
-<li>If using the keyboard, press windows+b, then space, then left or
-right arrow until you find the icon.</li>
+<li>If using VoiceOver, press VO+M twice, then locate the Remote
+Incident Manager menu icon.</li>
+<li>Click this icon, or press VO+Space.</li>
 </ol></li>
-<li>Right click this icon, or press the applications or shift+f10
-key.</li>
 <li>Select the “Revoke Unattended Access” option.</li>
 <li>You will arrive at a list of computers, select the one you want to
 revoke.</li>
@@ -2066,8 +1607,8 @@ href="https://pneumasolutions.com/contact/">contact page</a>.</p>
 <p>This disclaimer shall govern the use of AI Tools and RIMBot and is
 subject to the <a href="https://pneumasolutions.com/terms-of-use/">terms
 and conditions</a> of use provided by Pneuma Solutions.</p>
-<h2 id="on-macos">On macOS</h2>
-<h3 id="frequently-asked-questions-from-the-manual-2">Frequently Asked
+<h2 id="on-windows">On Windows</h2>
+<h3 id="frequently-asked-questions-from-the-manual">Frequently Asked
 Questions from the Manual</h3>
 <p>Here are answers to some common questions concerning RIM. When faced
 with an issue, please refer to this document whenever possible. If your
@@ -2405,16 +1946,15 @@ connections through ports 19302 and 3478 (the standard STUN and TURN
 ports). This ensures that if a relay is being utilized, RIM will not
 have to fall back to a tcp connection on port 443.</p>
 <h5
-id="does-rim-run-in-the-background-and-if-so-will-it-appear-in-my-commandtab-list">Does
-RIM run in the background, and if so will it appear in my Command+Tab
+id="does-rim-run-in-the-background-and-if-so-will-it-appear-in-my-alttab-list">Does
+RIM run in the background, and if so will it appear in my Alt+Tab
 list?</h5>
 <p>RIM runs in the background in order to process automatic updates,
 receive unattended/prompted connection requests, and enable use of the
-global Option+Shift+Backspace keyboard command. It will not phone home
+global Windows+Shift+Backspace keyboard command. It will not phone home
 for any other purpose, and no personally identifiable information is
-transferred. RIM will not appear in your Command+Tab list, but it will
-appear in the status menus that contain your battery, WiFi connection
-information, etc.</p>
+transferred. RIM will not appear in your Alt+Tab list, but it will
+appear in the system tray.</p>
 <h4 id="remote-accessibility-module-2">Remote Accessibility Module</h4>
 <h5
 id="is-there-anything-the-target-machine-needs-to-configure-for-first-time-use-of-the-remote-accessibility-module-1">Is
@@ -2428,7 +1968,8 @@ the Remote Accessibility Module work on secure screens such as the lock
 screen?</h5>
 <p>Yes! Since the RIM host runs with elevated privileges, this allows us
 to leverage the Remote Accessibility Module for secure screens.</p>
-<p>The only exception to this is FileVault’s logon window.</p>
+<p>The only exception to this is when RIM is installed without
+administrator privileges target-side.</p>
 <h4 id="unattended-sessions-1">Unattended Sessions</h4>
 <h5
 id="are-voice-conversations-supported-during-unattended-sessions-1">Are
@@ -2449,10 +1990,9 @@ id="the-target-machine-rebooted-after-installing-updates-and-drivers-and-it-requ
 target machine rebooted after installing updates and drivers, and it
 requires a password to log in. How does the session continue from
 here?</h5>
-<p>In most instances, particularly when FileVault disk encryption is
-enabled, the target user will need to be physically present to manually
-enter the password. RIM cannot start on an encrypted Mac before it has
-been fully logged in.</p>
+<p>While RIM will run on the Windows logon screen, logging in is still a
+task that must be done manually by the target user. In other words, RIM
+<em>will not</em> automatically log the user in.</p>
 <h5
 id="i-have-multiple-machines-playing-the-part-of-the-controller.-will-the-list-of-machines-set-up-for-unattended-access-populate-across-all-machines-1">I
 have multiple machines playing the part of the controller. Will the list
@@ -2561,7 +2101,7 @@ when done.</li>
 </ol>
 <p>That’s it! You should now hear the microphone’s audio along with the
 rest of the remote machine’s output.</p>
-<h3 id="getting-connected-2">Getting Connected</h3>
+<h3 id="getting-connected">Getting Connected</h3>
 <p>Remote Incident Manager’s connection process is designed with speed
 and simplicity in mind, both for the person receiving assistance as well
 as for the person providing it.</p>
@@ -2579,7 +2119,7 @@ may be set up to receive a request to connect without either of you
 having to enter a keyword. RIM will play a chime, then announce that
 your technician is attempting to connect.</p>
 <p>In order to accept the connection, press
-<strong>Option+Shift+Y</strong> and the session will begin
+<strong>Windows+Shift+Y</strong> and the session will begin
 momentarily.</p>
 <h4 id="connecting-to-a-target-1">Connecting to a Target</h4>
 <p>The process for setting up the session is fairly similar. Rather than
@@ -2616,13 +2156,13 @@ connecting to. The keyword is valid for 5 minutes or until a successful
 connection is established, whichever comes first. Once they have
 connected, you will receive an alert informing you that the remote
 session is about to begin.</p>
-<p>Take note of the mentioned <strong>Option+Shift+Backspace</strong>
+<p>Take note of the mentioned <strong>Windows+Shift+Backspace</strong>
 shortcut as that will bring up the RIM menu on your machine. If you rely
 on the keyboard exclusively, this is the only way to direct keyboard
 input back to your own system.</p>
 <p>After you dismiss this dialogue, the remote session will be
 initiated.</p>
-<h3 id="installation-2">Installation</h3>
+<h3 id="installation">Installation</h3>
 <p>How you acquire and install Remote Incident Manager depends on your
 use case and configuration, but in any case the process is quite
 straight forward.</p>
@@ -2631,77 +2171,65 @@ Individuals</h4>
 <p>There is only one installation package to use, whether you are
 offering or receiving assistance.</p>
 <ol type="1">
-<li><a href="https://getrim.app/mac">Download Remote Incident
+<li><a href="https://getrim.app/win">Download Remote Incident
 Manager</a></li>
-<li>Go to your downloads folder via Finder (Option+command+L). Locate
-the downloaded .pkg file and open it with Command+O.</li>
-<li>An installation wizard will appear. Follow the onscreen
-instructions. You are all set to run Remote Incident Manager for the
-first time! You may run it from your applications folder, accessed via
-Command+Shift+A while located in Finder. You will be greeted with a
-welcome screen at first launch, allowing you to choose whether you would
-like to provide or receive remote help. This screen will only appear
-once. Additionally, RIM sets up a multipurpose global hotkey
-(Option+Shift+Backspace) which, among other things, automatically
-launches the program from wherever you are.</li>
-</ol>
-<h5 id="installation-troubleshooting">Installation Troubleshooting</h5>
-<p>While every effort is made to ensure a smooth installation, sometimes
-problems do occur. The installer has a facility for us to be able to
-easily provide support for these rare and occasional errors. Should you
-encounter an error during the installation, press <em>Command+L</em> to
-go to the log viewer, engage with the toolbar, and then click “Save”.
-You will be asked where you would like to save the log output; save it
-where you will be able to easily locate it. The resulting text file can
-then be sent to our support address, at which point it can be reviewed
-in order to locate a potential solution.</p>
-<h4 id="permissions">Permissions</h4>
-<p>Due to macOS’s precautionary behavior when dealing with applications
-of this nature for the first time, you will need to grant some
-permissions to Remote Incident Manager upon first launch. The number of
-permissions will vary depending on whether or not your Mac will be
-providing or receiving remote help.</p>
-<h5 id="karabiner-hid-driver-target-only">Karabiner HID driver (Target
-only)</h5>
-<p>This is the driver that processes input from a controlling computer
-that is received by RIM. This is a system extension, thus you must
-manually approve it. Rim will bring up a system dialogue that will take
-you to the Privacy and Security section of system settings. You will
-then want to scroll until you locate the Allow button. Clicking this
-will prompt you for your password or touch ID.</p>
-<h5 id="notifications">Notifications</h5>
-<p>The next permission request from RIM will be for notifications. RIM
-will notify you when a session starts and ends. The procedure for
-granting this permission is slightly different.</p>
+<li>Run the downloaded file.</li>
+<li>If you have user account control enabled, press Alt+Y to approve the
+installation.</li>
+<li>Once the file is launched, the installation will automatically
+commence. There are no next buttons to worry about. Just sit back,
+relax, and let it do its thing. Within seconds, the program will be
+installed and will launch automatically.
 <ol type="1">
-<li>Access the notification center. If using VoiceOver, the notification
-center is accessed by pressing <strong>VO+N</strong>.</li>
-<li>Locate the notification from Remote Incident Manager, then activate
-it (<em>VO+Space</em>).</li>
-<li>Press <strong>VO+Command+Space</strong>, then activate the Allow
-option in the popup menu that appears.</li>
+<li>The Welcome screen will allow you to choose how you will primarily
+use RIM. If you only plan on receiving support, press the “Receive Help
+Now” button. If you plan on providing support, click the “Provide Help
+Now” button. This decision is not final, as the mode can always be
+changed from within the application.</li>
+</ol></li>
 </ol>
-<h5 id="receiving-input">Receiving Input</h5>
-<p>RIM needs permission to receive all the input directed to it over a
-remote connection. Click “Continue” in the RIM window, at which point a
-system dialogue requesting accessibility service permissions will
-appear. If VoiceOver does not immediately focus it, press
-<strong>VO+F1</strong> twice quickly. Then, down arrow to “System
-dialogues,” press right arrow, and then down to the input permissions
-request. Pressing enter on that will open the alert box, at which point
-you will want to follow it to System Settings and check the Remote
-Incident Manager box in the list of applications.</p>
-<h5 id="capturing-screen-output-target-only">Capturing Screen Output
-(Target only)</h5>
-<p>The final permission request from RIM will be for capturing the
-screen output which will be piped across the remote connection. The
-procedure for this is similar to the previous procedure.</p>
-<h5 id="local-network-discovery-permissions">Local Network Discovery
-Permissions</h5>
-<p>This optional permission will only appear when you initiate a session
-involving a Mac on your local area network. Simply click the “Allow”
-button in the resulting dialog that appears, and this permission will be
-permanently granted.</p>
+<p>That’s all there is to it! A desktop shortcut will be automatically
+created to aid in subsequent launches of RIM. Additionally, RIM sets up
+a multipurpose global hotkey (Windows+Shift+Backspace) which, among
+other things, automatically launches the program from wherever you
+are.</p>
+<h4 id="unattended-or-prompted-access-installer">Unattended or Prompted
+Access Installer</h4>
+<p>If the person providing assistance has provided you a custom
+installer, you will be advised of this when the installer launches. This
+is because this installer will automatically configure RIM for what is
+known as either unattended or prompted access. This is what will allow
+the person helping you to initiate a session with your computer without
+you having to enter a keyword. We will cover these types of sessions
+indepth later on in this manual.</p>
+<h4 id="installing-without-administrative-privileges">Installing without
+Administrative Privileges</h4>
+<p>The Remote Incident Manager installer will always attempt to obtain
+administrator privileges. In environments where administrator privileges
+are unable to be obtained, the installation of RIM will be performed
+within the scope of the current user account, rather than at the system
+level.</p>
+<p>Running without admin does not result in any limitations on the
+controller side of RIM. There are, however, limitations you will
+encounter on the target machine.</p>
+<ul>
+<li>RIM only runs when the Windows user that installed it is signed
+in.</li>
+<li>RIM doesn’t run on the Windows sign-in screen.</li>
+<li>RIM has no access to the secure desktop; this means no access to UAC
+prompts, or to the sign-in screen when unlocking the machine.</li>
+<li>Remote keyboard input doesn’t work if the focus on the target is in
+an elevated application, or even an application running with the Windows
+UI Access flag, such as an installed copy of a screen reader.</li>
+<li>The option to press Ctrl+Alt+Delete doesn’t work.</li>
+</ul>
+<p>As a controller, you will be able to attempt a re-installation of RIM
+with admin privileges during a session.</p>
+<h4 id="silent-installation">Silent Installation</h4>
+<p>You’ll want to do this when deploying RIM to multiple machines.
+Simply use the <strong>/S</strong> command line parameter in your
+deployment script. Note that it is case-sensitive, so a capital S is
+required.</p>
 <h4 id="installing-a-server-profile-1">Installing a Server Profile</h4>
 <p>If you are receiving remote support from an organization who has a
 private RIM server, they will have sent you a link to a configuration
@@ -2710,31 +2238,42 @@ that will provide instructions on how to install this server profile
 into your copy of RIM. Note that RIM must be installed in order for the
 profile to be added, thus the page will provide links to the installers
 if you have not yet installed RIM.</p>
-<h4 id="uninstalling-rim">Uninstalling RIM</h4>
-<p>Should you encounter any show-stopping problems with your
-installation of RIM, you may wish to perform a clean reinstall of the
-app. Due to the complex nature of the RIM distribution for Mac OS,
-simply moving the app to the trash will not uninstall it, and thus may
-not fully resolve your issue.</p>
-<p>RIM provides an easy method to fully uninstall itself. When you click
-the “About” button in the main window, you will see an uninstall button
-in the About screen that appears. Clicking this button will result in a
-confirmation dialogue, afterwhich you will be prompted for your password
-or touch ID in order to proceed with uninstallation. You will be given a
-confirmation message once the uninstallation is complete.</p>
-<h3 id="key-command-reference-2">Key Command Reference</h3>
+<h4 id="additional-considerations-for-windows-servers">Additional
+Considerations for Windows Servers</h4>
+<p>To install RIM on your Windows Server, connect to the server via RDP.
+In order to get the most stable connection experience, we recommend
+using the Remote Desktop app from the Microsoft Store.</p>
+<h5 id="obtaining-sound-and-running-narrator">Obtaining Sound and
+running Narrator</h5>
+<p>For Windows Server distributions prior to 2022, you will need to
+manually enable sound before launching Narrator. Do the following once
+connected:</p>
+<ol type="1">
+<li>Press windows key+r.</li>
+<li>Type cmd and hit enter. Wait about ten seconds.</li>
+<li>Type: <strong>net start audiosrv</strong> and hit enter.</li>
+</ol>
+<p>In any case, press CTRL+Windows+Enter to enable Narrator. If
+everything worked properly, you should get speech. You can now follow
+the install procedure as described above. Please note that for Windows
+Server distributions prior to 2022, if you need sound for subsequent
+connections via RIM, you will need to install a virtual sound output
+device on your server. The free version of <a
+href="https://vac.muzychenko.net/en/download.htm">Virtual Audio
+Cable</a> should suffice.</p>
+<h3 id="key-command-reference">Key Command Reference</h3>
 <p>Following is a complete keyboard command reference for RIM. We will
 list all the commands that have global shortcuts, along with the
-respective macOS-friendly shortcuts.</p>
+respective Windows-friendly shortcuts.</p>
 <ul>
 <li><strong>Action</strong>: Command</li>
-<li><strong>Access the RIM Menu</strong>: Option+Shift+Backspace</li>
-<li><strong>Minimize Session</strong>: Option+Shift+M</li>
-<li><strong>Flip Session</strong>: Option+Shift+F</li>
+<li><strong>Access the RIM Menu</strong>: Windows+Shift+Backspace</li>
+<li><strong>Minimize Session</strong>: Windows+Shift+M</li>
+<li><strong>Flip Session</strong>: Windows+Shift+F</li>
 <li><strong>Disconnect Session (Controller or Target)</strong>:
-Option+Shift+D</li>
+Windows+Shift+D</li>
 </ul>
-<h3 id="plans-and-purchasing-2">Plans and Purchasing</h3>
+<h3 id="plans-and-purchasing">Plans and Purchasing</h3>
 <p>Remote Incident Manager is useful in a wide array of scenarios of
 varying frequency. Thus, our multi-tier plan structure makes every
 reasonable attempt to meet you where you are. Additionally, remember
@@ -2747,12 +2286,6 @@ your 30 minutes, you may connect to any number of people, over any
 number of interactive sessions. After each session, RIM will display a
 popup reminder with your remaining time, as well as a “Sign up for paid
 RIM services” button.</p>
-<p>In some cases, pressing escape out of this popup may result in an
-empty screen in which VoiceOver will announce that Remote Incident
-Manager has no windows. Should this occur, simply <em>Command+Tab</em>
-to any application. Be careful not to hit Command+Q, otherwise you will
-not be able to relaunch RIM with the <em>Option+Shift+Backspace</em>
-keyboard command until you manually relaunch RIM.</p>
 <h4 id="consumer-plans-1">Consumer Plans</h4>
 <h5 id="passes-1">Passes</h5>
 <p>Passes are useful if you’re providing assistance on an as needed
@@ -2867,17 +2400,17 @@ packages, you will receive a separate activation link for each item.
 This means that, for example, two separate passes can be activated on
 two separate accounts. This is useful in situations where you wish to
 gift one of the items of a larger purchase.</p>
-<h3 id="system-requirements-2">System Requirements</h3>
+<h3 id="system-requirements">System Requirements</h3>
 <p>In order to run Remote Incident Manager, your system must meet or
 exceed the following requirements:</p>
 <ul>
-<li>Intel or Apple Silicon</li>
-<li>macOS Ventura or later</li>
+<li>Windows 10 (X64) or later</li>
+<li>Windows Server 2016 (X64) or later</li>
 <li>At least 4GB of RAM</li>
-<li>Admin privileges for initial installation (not required for
-automatic updates)</li>
+<li>Admin privileges for full functionality (not required for initial
+installation or automatic updates)</li>
 </ul>
-<h3 id="working-within-a-session-2">Working within a Session</h3>
+<h3 id="working-within-a-session">Working within a Session</h3>
 <h4 id="things-to-know-before-you-begin-1">Things to Know before you
 Begin</h4>
 <p>A few things will happen immediately after the connection is
@@ -2904,7 +2437,7 @@ the identification process, not the Mac’s own keyboard.</li>
 directed to the target computer. To direct control back to your machine,
 do either of the following:
 <ul>
-<li>Press Option+Shift+Backspace.</li>
+<li>Press Windows+Shift+Backspace.</li>
 <li>Right-click the RIM window’s title bar.</li>
 <li>Left-click the RIM icon in the middle of the title bar.</li>
 </ul></li>
@@ -2914,7 +2447,7 @@ do either of the following:
 the client side. Should you need to switch back to controlling your own
 machine, bring up the RIM menu, then select the “Minimize session”
 option. You will be taken back to your machine until you switch back
-into the session window or press Option+Shift+Backspace again. When you
+into the session window or press Windows+Shift+Backspace again. When you
 go back into the session window, keyboard and mouse input will once
 again be directed to the client computer.</p>
 <p>Once you’re done, either the controller or the target can go into the
@@ -2934,7 +2467,7 @@ version of RIM.</li>
 to reinstall RIM as admin on a Windows target, requiring the target user
 to accept the admin permission request by themselves and/or with the
 help of their company IT.</li>
-<li>Minimize Session (<strong>Option+Shift+M</strong>): brings control
+<li>Minimize Session (<strong>Windows+Shift+M</strong>): brings control
 back to your machine as described above</li>
 <li>Open Chat: Opens the text chat for a given session
 <ul>
@@ -2947,7 +2480,7 @@ session menu.</li>
 always available, it is only necessary for transferring files to Mac
 targets.</li>
 </ul></li>
-<li>Flip Session (<strong>Option+Shift+F</strong>): Allows your client
+<li>Flip Session (<strong>Windows+Shift+F</strong>): Allows your client
 to remote control your machine and hear its audio. As the original
 controller, you can flip the session back by selecting this option a
 second time.</li>
@@ -2990,8 +2523,7 @@ automatically reconnect the session.
 <ul>
 <li>Note that a Mac target cannot start RIM pre-login due to platform
 limitations, notably FileVault.</li>
-<li>As such, on a Mac target, RIM will reconnect once the user logs
-in.</li>
+<li>As such, RIM will reconnect once the user logs in.</li>
 </ul></li>
 <li>Send Control+Alt+Delete: Sends this keystroke to the remote machine.
 <ul>
@@ -3020,8 +2552,8 @@ chatbots.
 are on the personal community, weekend support, or pro/enterprise
 subscriptions.</li>
 </ul></li>
-<li>Disconnect Session (<strong>Option+Shift+D</strong>): Terminates the
-session.
+<li>Disconnect Session (<strong>Windows+Shift+D</strong>): Terminates
+the session.
 <ul>
 <li>Remember that this option is available to both sides of the
 session.</li>
@@ -3083,8 +2615,8 @@ default, this is the “documents/Remote Incident Manager/Chat” directory
 in your user folder.</p>
 <p>Currently, the only way to modify the directory is via a
 configuration file, thus the procedure is only available in English.</p>
-<p>The config.toml file will be under $HOME/Library/Application
-Support/remote-incident-manager</p>
+<p>The configuration file can be accessed via the run dialog by pasting
+the following: %appdata%\remote-incident-manager\config.toml</p>
 <p>Once inside the configuration file, look for the directory line under
 the Chat line, and modify the directory to one of your choosing. Note
 that backslashes must be properly escaped in the case of Windows
@@ -3128,7 +2660,7 @@ will include the audiovisual output of the target computer, as well as
 the audio from a running voice conversation. To facilitate a session
 recording:</p>
 <ol type="1">
-<li>Access the “Start Session Recording” option off of the session menu.
+<li>Access the “Start Session Recording” option off the session menu.
 The following actions will occur as a result:
 <ul>
 <li>During a keyword session:
@@ -3161,11 +2693,11 @@ accidental deactivation of the session recording, however it can
 optionally be disabled.</li>
 <li>Both parties will receive a notification following completion of the
 recording.</li>
-<li>The recording will then be saved to the directory in which RIM saves
-your recordings (This is the “Movies” folder in your user directory by
-default). For added convenience, you will be automatically dropped into
-this folder via Finder, allowing you to send the recording to the user
-if desired.</li>
+<li>The recording will then be saved to the directory in which RIM is
+configured to save your recordings (This is the “Videos” folder in your
+user directory by default). For added convenience, you will be
+automatically dropped into this folder via Explorer, allowing you to
+send the recording to the user if desired.</li>
 <li>Note that disconnecting the session stops the recording
 automatically.</li>
 </ul></li>
@@ -3199,8 +2731,8 @@ network share), and determine the state of the confirmation dialog when
 stopping a recording. Currently, the only way to modify these settings
 is via a configuration file, thus the procedure is only available in
 English.</p>
-<p>The config.toml file will be under $HOME/Library/Application
-Support/remote-incident-manager</p>
+<p>The configuration file can be accessed via the run dialog by pasting
+the following: %appdata%\remote-incident-manager\config.toml</p>
 <p>Once inside the configuration file, the following options will be
 available to you:</p>
 <ul>
@@ -3224,16 +2756,41 @@ subsequent sessions. There is no need to restart the application.</p>
 <p>Whether you’re assisting a user who doesn’t use a screen reader, or
 you’re diagnosing an issue with a malfunctioning screen reader, RIM is
 fully prepared to come to your aid.</p>
-<p>The remote accessibility module is a special configuration initiated
-on the target Mac at the request of a Windows or Mac controller. The
-advantage to this approach is that the end user does not hear speech on
-their computer while you’re controlling it. Instead, the Remote
-Accessibility Module pipes the speech output through to the speech
-system on the controller side. This way, you can accessibly assist an
-end user without them having to enable a screen reader. If you are
-running VoiceOver on the controling Mac, the remote accessibility module
-will automatically start during remote sessions in which the remote
-computer does not have a screen reader running.</p>
+<p>The remote accessibility module consists of two components:</p>
+<ul>
+<li>An addon for the NVDA screen reader that enables the screen reader
+to receive output from the remote computer</li>
+<li>A self-contained accessibility module initiated on the target
+computer at the request of the controller. The advantage to this
+approach is that the end user does not hear speech on their computer
+while you’re controlling it. Instead, the Remote Accessibility Module
+pipes the speech output through to the running copy of NVDA on the
+controller side. This way, you can accessibly assist an end user without
+them having to install or even download a screen reader.</li>
+</ul>
+<h5 id="setup-procedure">Setup Procedure</h5>
+<p>For first-time initialization of the accessibility module, here is
+what you will need to do:</p>
+<ol type="1">
+<li>Connect to a computer that does not have a screen reader
+running.</li>
+<li>If NVDA is currently running, you will be asked to install an addon
+that will allow your copy of NVDA to communicate with the remote
+computer during the session. Accept the installation prompts, and wait
+for NVDA to restart.</li>
+<li>By now, the remote accessibility module will be fully initialized,
+and you will hear speech output as you control the remote computer. To
+mute the speech output temporarily, simply press Insert or Capslock+S
+once to turn it off, then press that command twice to re-enable it.</li>
+</ol>
+<p>From this point forward, if you are running a screen reader on the
+controling computer, the remote accessibility module will automatically
+start during remote sessions in which the remote computer does not have
+a screen reader running. Should you be running a screen reader other
+than NVDA, RIM will disengage that screen reader and then switch you
+over to NVDA. If you need to stop the remote accessibility module on the
+remote machine in order to start another screen reader, simply access
+the “Stop Remote Accessibility” option off the RIM menu.</p>
 <h4 id="rebooting-and-reconnecting-1">Rebooting and Reconnecting</h4>
 <p>Whether you’re installing system updates or working your way out of a
 system hang, RIM has got you covered during the reboot process.
@@ -3325,7 +2882,7 @@ both possible via the RIM Dashboard:</p>
 <li>Deregister one of your machines, freeing up a slot.</li>
 <li>Upgrade your subscription with more slots.</li>
 </ol>
-<h6 id="getting-connected-3">Getting Connected</h6>
+<h6 id="getting-connected-1">Getting Connected</h6>
 <p>Now that we’ve registered the machine for unattended access, here is
 how we will start a session.</p>
 <ol type="1">
@@ -3357,18 +2914,30 @@ to create a shortcut for.</li>
 <p>Now, when you activate this shortcut, you will either automatically
 land in the remote session, or send a prompt to the user’s machine that
 they can accept.</p>
+<h6 id="more-ways-to-use-unattended-session-shortcuts">More Ways to use
+Unattended Session Shortcuts</h6>
+<p>Unattended session shortcuts, like any other shortcuts, can have
+global hotkeys associated with them. This can be extremely useful if you
+are a maintenance tech managing multiple computers in a workgroup. For
+example, if your workgroup consists of 6 computers that you perform
+routine maintenance on, you could configure Alt+Control+1 through 6 as
+hotkeys for each respective machine. This ought to significantly speed
+up your workflow. In addition, you can call up an unattended session via
+the run box if you copy the shortcut into your user directory. Once
+you’ve copied the shortcut, you may start an unattended session by
+typing your-session-name.url in the run box.</p>
 <h6 id="revoking-unattended-access-1">Revoking Unattended Access</h6>
 <p>If you no longer want your machine to be controlled unattended, you
 can revoke the controller’s access. You do not need to be in a session
 in order to do this.</p>
 <ol type="1">
-<li>Access the Remote Incident Manager icon in your menu extras/status
-menus.
+<li>Access the Remote Incident Manager icon in your system tray.
 <ol type="1">
-<li>If using VoiceOver, press VO+M twice, then locate the Remote
-Incident Manager menu icon.</li>
-<li>Click this icon, or press VO+Space.</li>
+<li>If using the keyboard, press windows+b, then space, then left or
+right arrow until you find the icon.</li>
 </ol></li>
+<li>Right click this icon, or press the applications or shift+f10
+key.</li>
 <li>Select the “Revoke Unattended Access” option.</li>
 <li>You will arrive at a list of computers, select the one you want to
 revoke.</li>
@@ -3464,5 +3033,435 @@ same-day turnaround is not possible, you can simply hold off until the
 machine is back in good shape and your day pass will still be waiting
 for you. Accumulation of day passes do not expire and you can activate
 them whenever you’re ready.</p>
+<h2 id="the-same-on-windows-and-macos">The Same on Windows and
+macOS</h2>
+<h3 id="known-issues">Known Issues</h3>
+<p>At Pneuma Solutions, we’re committed to providing a stable and
+reliable experience with Remote Incident Manager (RIM). In rare cases,
+however, there are operating system-level issues that can get in the
+way. With that in mind, We will outline any current issues with Remote
+Incident Manager at time of writing, along with any available interim
+solutions to use while the issues are resolved.</p>
+<h4 id="macos">MacOS</h4>
+<h5
+id="issues-with-remote-accessibility-module-on-macos-sequoia-targets">Issues
+with Remote Accessibility Module on macOS Sequoia Targets</h5>
+<p>due to changes in macOS Sequoia, some functionality related to our
+Remote Accessibility Module is currently impacted.</p>
+<h6 id="the-issue">The Issue:</h6>
+<p>The Remote Accessibility Module enables a visually impaired
+technician to remotely assist a sighted user without activating a screen
+reader on the user’s machine. However, macOS Sequoia introduces changes
+to VoiceOver’s settings management, which prevent us from reliably
+adjusting the necessary settings when enabling the module. As a result,
+visually impaired technicians may encounter the following issues when
+working with macOS Sequoia targets:</p>
+<ul>
+<li>The remote speech module may fail, resulting in VoiceOver’s default
+voice being heard by the target user, revealing the technician’s
+disability without consent.</li>
+<li>VoiceOver’s sound effects, highlight cursor, and caption panel may
+not be properly disabled, again exposing the technician’s use of
+VoiceOver.</li>
+<li>In some cases, VoiceOver may not revert back to its default
+settings, potentially causing problems for future visually impaired
+users of the target machine.</li>
+</ul>
+<h6 id="impacted-users">Impacted Users:</h6>
+<p>Any RIM controller (on either Mac or Windows) attempting to use the
+Remote Accessibility Module on a Mac target running Sequoia may be
+affected by these issues. This could also impact any future users of
+VoiceOver on the target Mac if these settings are not properly
+reset.</p>
+<h6 id="interim-solution">Interim Solution:</h6>
+<p>Unfortunately, there is no direct workaround for this solution. We
+encourage all impacted users to reach out to Apple’s Accessibility
+department to request a reliable and future-proof API that allows RIM to
+adjust VoiceOver settings safely. Your advocacy helps preserve the
+dignity and privacy of visually impaired technicians, ensuring these
+features function correctly without unintentionally exposing their
+disability.</p>
+<h3 id="localization">Localization</h3>
+<p>Remote Incident Manager currently ships with 6 major languages, with
+more being added over time. If your system locale is among RIM’s
+supported languages, RIM will use the language you specified.</p>
+<h4 id="switching-languages">Switching languages</h4>
+<p>Whether you are in controller or target mode, Remote Incident Manager
+displays a language selector button at the bottom of the screen.
+Clicking this will display a list of languages. Select the desired
+language, and then click the “Switch language” button.</p>
+<h4 id="additional-languages">additional Languages</h4>
+<p>We welcome contributions of additional languages from individuals and
+entities alike. For information on how to contribute languages, <a
+href="https://github.com/PneumaSolutions/rim-localization">Visit the
+Localization repository on Github</a></p>
+<h3 id="the-management-dashboard">The Management Dashboard</h3>
+<p>RIM features a web-based dashboard to facilitate various machine and
+account management tasks. You can manage your existing unattended
+computers, create preconfigured installers for target computers, and
+much more. It should be noted that the feature set of the dashboard is
+largely dependent on which subscription tier your account is under. For
+example, enterprise users can assign machines to target groups, as well
+as create silent installers. On the other hand, anyone (including
+personal users) can create custom installers for their unattended
+machines.</p>
+<h4 id="locating-the-dashboard">Locating the Dashboard</h4>
+<p>If you’re a controller, the easiest way to get to the dashboard is
+through the main RIM interface. Clicking the “RIM Dashboard” button will
+automatically open the dashboard in your default browser, with the login
+already taken care of. If you are a network administrator who does not
+have RIM installed, you can simply log into your account on the RIM
+website and your dashboard will appear.</p>
+<h4 id="managing-organization-members-enterprise">Managing Organization
+Members (Enterprise)</h4>
+<p>Activating the “Organization” button on the RIM dashboard will reveal
+a menu of options related to organization and member management. The
+“Members” page will list all the members in your organization. All
+members can have their role, department and name modified, and any
+member can be deactivated or removed from an organization except for the
+organization owner. Note that deactivating a member will render their
+account inoperable while retaining its record.</p>
+<p>Adding members is as simple as entering their email address,
+selecting their role (user or administrator), optionally entering their
+name, and selecting their department if one has been created. If you
+have multiple members to add, you can use the “Members” edit field to
+perform a bulk add. This edit field accepts multiple lines of text,
+allowing you to enter each member’s information on a separate line. On
+each line, you may enter either a single email address, or an email
+address and a name in the format: * John Doe*</p>
+<p>Once you are finished, click the “Add” button.</p>
+<h5 id="departments">Departments</h5>
+<p>Departments allow you to organize members according to the various
+groups of your organization.</p>
+<p>To add a department, enter its name in the “Name” edit box under the
+“Create department” heading.</p>
+<h5 id="member-data-export">Member Data export</h5>
+<p>The member list in your organization can be exported as a CSV file.
+In order to download the export:</p>
+<ol type="1">
+<li>Choose the field separator that will separate the columns of the
+file. The available options include:
+<ul>
+<li>comma</li>
+<li>Semicolon</li>
+<li>Tab</li>
+</ul></li>
+<li>Activate the “Download” button.</li>
+</ol>
+<h5 id="restrictions">Restrictions</h5>
+<p>Depending on the nature of your organization, there may be certain
+features you do not want your staff to have access to. As such,
+organization admins can choose the features they wish to allow
+controllers access to. The “Restrictions” screen, accessed via the
+“Organization” menu, allows you to configure these permissions.</p>
+<p>The permissions that can be toggled include:</p>
+<ul>
+<li>Allow the controller to flip the session
+<ul>
+<li>If this option is unchecked, the “Flip Session” option will
+disappear from the session menu, and the keyboard shortcut will not
+work.</li>
+</ul></li>
+<li>Allow the controller to start a voice conversation
+<ul>
+<li>If this option is unchecked, the “Start Voice Conversation” checkbox
+will disappear from the “Provide Remote Help” screen, as will the menu
+option in the session menu.</li>
+</ul></li>
+<li>Allow the controller to request unattended access
+<ul>
+<li>If this option is unchecked, the option to request unattended access
+will disappear from the session menu.</li>
+</ul></li>
+<li>Allow text and files to be transferred between machines via the
+clipboard
+<ul>
+<li>If this option is unchecked, RIM will ignore any and all clipboard
+activity.</li>
+</ul></li>
+<li>Allow the controller to lock the target machine
+<ul>
+<li>If this option is unchecked, the option to lock the target machine
+will disappear from the session menu.</li>
+</ul></li>
+<li>Allow the controller to record the session
+<ul>
+<li>This option is disabled by default, making session recording a
+strictly opt-in feature for enterprise organizations and/or pro
+customers with the enterprise addon.</li>
+<li>If this option is unchecked, the option to record the session will
+disappear from the session menu.</li>
+<li>This restriction additionally vetos the client-side auto_start in
+the config.toml file</li>
+</ul></li>
+<li>Allow text chat during the session
+<ul>
+<li>This option is disabled by default, making session chat a strictly
+opt-in feature for enterprise organizations and/or pro customers with
+the enterprise addon.</li>
+<li>If this option is unchecked, the option to open the chat will
+disappear from the session menu.</li>
+</ul></li>
+</ul>
+<p>Once you have configured the permissions to your satisfaction,
+activate the “Update” button. Changes will not affect any active
+sessions at the time the permissions are changed. They will however take
+effect for any and all future sessions without requiring a reboot of the
+client.</p>
+<h4 id="managing-targets">Managing Targets</h4>
+<p>When you click the “Configure Targets” link, you will arrive at a
+page that allows you to manage all the machines you have configured for
+unattended access. You can click on any one of these machines in order
+to manage it. Once inside, you will be able to:</p>
+<ul>
+<li>Rename the target</li>
+<li>Move the target to a different group (more on target groups
+later)</li>
+<li>Launch a remote session with the target</li>
+<li>Delete the target</li>
+</ul>
+<h4 id="target-groups-for-pro-accounts-and-above">Target Groups (for Pro
+Accounts and Above)</h4>
+<p>Say for instance your workgroup is spread out among several different
+locations. Or maybe you want to designate groups of machines to your
+routine maintenance techs. Target groups allow you to do just that. In
+order to do this, simply click the “Create Target Group” button, name
+your group, and submit. You may have as many target groups as is needed
+for your use case.</p>
+<h5 id="access-control-for-enterprise-organizations">Access Control (for
+Enterprise Organizations)</h5>
+<p>If your organizations assign a support technician to a specific set
+of machines, you probably want to ensure they only have access to that
+specific set. This is where the access control setting for target groups
+comes in. When you click on a target group, you are given options to
+manage the machines in the group, as well as the group itself. The
+access control section is where you may grant access to this group on a
+per-account basis. Simply enter the email address of the account you
+wish to add, then click the “Give Access” button. Note that this account
+can exist outside of your enterprise organization’s domain. Once this is
+done, you will be presented with a table of accounts that are given
+access to this group. Below each account is a “Revoke Access” button.
+This button does not require further confirmation. It should be noted
+that all organization administrators are automatically granted access to
+manage any and all groups that are created under the organization.
+Additionally, any email addresses under your organization’s domains will
+be added to your organization in RIM by default. Should you require more
+granular control over who gets onboarded, you can disable this in your
+organization’s main members area. What’s more, when in the members area
+you can add email addresses in bulk by way of commas, spaces or line
+breaks in between the email addresses.</p>
+<h4 id="setting-up-a-preconfigured-rim-installer-pro-or-above">Setting
+up a Preconfigured RIM Installer (Pro or above)</h4>
+<p>One of the easiest ways to set up a machine for unattended or
+prompted connections is by creating a custom installer. This is
+incredibly useful if you are configuring mass deployments, or even as a
+simpler way to get RIM up and running on an end user’s computer you plan
+on providing support for on the regular.</p>
+<p>IN order to do this:</p>
+<ol type="1">
+<li>In the target management screen, click the “Build Target Installer”
+button.</li>
+<li>You will first be asked if you want this machine to be configured
+for fully unattended access, or for prompted access in which the user
+has to accept a prompt to initiate the connection.</li>
+<li>You will then be asked for a target group assignment. Note that the
+target group selection will automatically go to your chosen target group
+if you initiate the installer configuration from your group’s page.</li>
+<li>You will be asked how long you want this installer to be valid for.
+It can be valid for anywhere between 7 to 30 days, or permanently valid
+for enterprise plans by setting the expiration to never.</li>
+<li>You are then given the option to assign a bass name. Any machine
+provisioned via this installation package will have this base name
+assigned to it.</li>
+<li>You will then be presented with a checkbox that lets you opt into an
+email notification when a user installs RIM via this installer.</li>
+<li>If you are an enterprise admin, you will see a checkbox that allows
+you to build the installer as an MSI package. This option is useful for
+mass deployment of a custom installer to a machine cluster that will be
+designated to the given target group.</li>
+<li>You will be asked to provide an installer name, and optionally some
+notes. These are for internal records and will not appear within the
+created installer.</li>
+<li>Click on “Build Installer.” You will be presented with the download
+link that you can either copy to the clipboard and send to your end
+user. Alternatively, you may download the installer directly for use in
+mass deployments. You may delete the installer from this screen should
+you choose to render it inoperable prematurely.</li>
+</ol>
+<p>Now that you have your installer, it can be run in one of two ways.
+In either case, the installer will query the server to check the
+validity of the installer. If the installer is valid, the machine will
+be added to your list of machines in both your account as well as the
+RIM client after the installer is complete. An invalid installer will
+not run.</p>
+<h5 id="normal-execution">Normal Execution</h5>
+<p>The user will get a prompt when running the installer, containing the
+following information:</p>
+<ul>
+<li>The technician’s name along with their organization, if
+applicable</li>
+<li>the nature of the connection, I.E whether a prompt is required or
+not</li>
+</ul>
+<p>The user can choose to either answer yes or no to the installation.
+Answering no will cancel the installation. After the installer finishes,
+the user will get a prompt informing them that their machine is now set
+up for remote access.</p>
+<h5 id="silent-install-enterprise-installers-only">Silent Install
+(Enterprise Installers Only)</h5>
+<p>A silent install can be initiated by running the executable installer
+with the <em>/S</em> command line parameter. This is useful when
+installing RIM as part of a mass deployment routine.</p>
+<h4 id="session-history">Session History</h4>
+<p>You can view your entire history of past sessions through the RIM
+dashboard. The session history currently contains the date and time of
+each session, the name of the computer you connected to, and the
+duration of the session. You may also choose to add comments to a
+session via the “Add Comment” link within the session row. This is
+useful for adding notes on the current status of an incident for your
+own sake as well as for the sake of organization administrators.</p>
+<p>Your entire session history can be exported for later viewing via a
+spreadsheet application. Activate the “Download session history as CSV”
+button located below the session history table to reveal a customization
+page for your data export. On this page, you can choose the timespan of
+the export, as well as the symbol used to separate the fields.</p>
+<h4 id="managing-your-subscription-personal-and-pro-plans">Managing your
+Subscription (Personal and Pro Plans)</h4>
+<p>The dashboard allows you to easily view and manage your RIM
+subscription details. Upon clicking the “manage subscription” link, you
+can:</p>
+<ul>
+<li>Upgrade your plan</li>
+<li>Update your payment method</li>
+<li>Cancel recurring payments</li>
+</ul>
+<h5 id="upgrading-your-plan">Upgrading your Plan</h5>
+<p>You can easily upgrade your subscription. If you are on a monthly
+plan, you will be prorated the remaining charge from the new amount,
+with the full new amount being charged for subsequent months. Clicking
+“Upgrade Subscription” reveals a page nearly identical to the initial
+plan selection page. There are a few notable differences which we will
+outline below:</p>
+<ul>
+<li>You cannot downgrade your plan to one with fewer machines. You can,
+however, upgrade from a monthly to a yearly plan with the same number of
+machines as your current plan. In order to downgrade, you would need to
+cancel your plan, wait for it to expire, then initiate a new plan with
+fewer machines.</li>
+<li>Enterprise plans, including the enterprise addon, cannot be acquired
+directly through this page.</li>
+</ul>
+<h5 id="canceling-recurring-payments">Canceling Recurring Payments</h5>
+<p>When you click “Cancel Automatic Renewal,” you will be asked for
+confirmation, after which your subscription will be set to expire at the
+end of the current term.</p>
+<h3 id="welcome">Welcome</h3>
+<p><em>Remote Incident Manager</em> (RIM) is a powerful, cross-platform
+fully accessible remote desktop application used to provide technical
+support, training, and system administration to clients both visually
+impaired and sighted alike. In addition to providing a streamlined
+remote desktop experience, RIM has a few unique qualities previously
+unseen in other remote desktop applications</p>
+<h4 id="why-rim">Why RIM?</h4>
+<p>If you are coming from previous remote desktop applications or screen
+reader-based assistance tools, you will find that RIM significantly
+streamlines your workflow.</p>
+<h5 id="inclusive-design">Inclusive Design</h5>
+<p>Remote Incident Manager is truly a first of its kind. It is the first
+<em>fully accessible</em> remote support solution that can be used by
+both blind and sighted support pros and end users. Thus, RIM can fully
+replace an existing solution, as it provides everything you could ask
+for in a secure remote support solution, plus complete
+accessibility.</p>
+<h5 id="easy-to-install-and-deploy">Easy to Install and Deploy</h5>
+<p>In a one-to-one situation, the installation could not be simpler. A
+one-click instant install ensures that the end user’s process for
+setting up their machine to receive assistance will be quick and
+painless. What’s more, the installation process launches RIM after it
+finishes, so they will be instantly ready to connect. Technicians can
+easily manage their machines via an easy to use web-based interface.
+Enterprise users can use this dashboard to deploy RIM to machines in
+their workplace. Ready-made installers can be issued to end users in
+seconds. The installer itself can be further customized via command line
+arguments which can in turn be utilized in an automated deployment.</p>
+<h5 id="shared-session">Shared Session</h5>
+<p>Unlike Windows Remote Desktop or other similar applications, a remote
+session sandbox is not created; what the end user’s machine is doing is
+what you’ll be seeing. This means that you can easily troubleshoot a
+problem they are having while keeping their existing configuration
+intact. This further allows you to work collaboratively on a project,
+send files to and from via the clipboard, etc.</p>
+<h5 id="fast-and-stable-connections">Fast and Stable Connections</h5>
+<p>Because RIM uses the latest advancements in direct
+computer-to-computer connections, the responsiveness is head and
+shoulders above other solutions. While RIM’s central service initiates
+the connection, it gets out of your way once the connection is
+established. All this without the need to make cumbersome and invasive
+changes to network configurations.</p>
+<h5 id="high-quality-audio">High Quality Audio</h5>
+<p>RIM uses the latest advancements in real-time audio encoding
+technology to provide extremely responsive, high-fidelity stereo audio.
+You will hear any and all audio that is playing on the end user’s
+machine during the session.</p>
+<h5 id="high-quality-visual-output">High-Quality Visual Output</h5>
+<p>Again, Remote Incident Manager is an all-inclusive solution designed
+to replace previous infrastructures, rather than be used alongside them.
+As such, RIM’s screen output is equally as responsive and stable. Using
+the mouse is fully supported as well.</p>
+<h5 id="voice-communication">Voice Communication</h5>
+<p>Gone are the days of having to place a separate phone call or web
+conference alongside the remote session. RIM provides crystal clear,
+low-latency voice communication right inside your session.</p>
+<h5 id="accessible-in-all-use-cases">Accessible in <em>All</em> Use
+Cases</h5>
+<p>RIM is the first remote access solution that provides unparalleled
+accessibility, irrespective of the screen reader (or lack thereof) that
+either party is using.</p>
+<h6 id="differences-in-screen-readers-are-now-irrelevant">Differences in
+Screen Readers are now Irrelevant</h6>
+<p>Before RIM, it used to be difficult to assist someone running a
+different screen reader than your own. With RIM, this is now a thing of
+the past. RIM doesn’t care what either party is running. RIM will work
+seamlessly with JAWS, NVDA, Narrator, or VoiceOver on the side of both
+the techhnician and the end user. Not only will you be able to hear the
+end user’s speech irrespective of their screen reader, RIM’s keyboard
+handling will be stable and reliable irrespective of screen reader
+configuration. This is a significant advantage of a screen
+reader-independent solution.</p>
+<h6 id="no-screen-reader-no-problem">No Screen Reader? No Problem!</h6>
+<p>A blind IT professional can now easily help a sighted end user, even
+if they do not have a screen reader installed on their computer. In the
+absence of a screen reader on the remote computer, RIM will see to it
+that you will still be able to get speech provided you are using either
+the free <a href="https://nvaccess.org">NVDA Screen Reader</a> or
+VoiceOver on Mac OS. Remote incident Manager will initiate its
+accessibility module which allows you to control the client’s machine
+with speech as if they had a screen reader. Not only does the end user
+not have to worry about installing a screen reader, they don’t even hear
+the speech that you’re now hearing while you control their computer.</p>
+<h4 id="documentation-conventions-and-terminology">Documentation
+Conventions and Terminology</h4>
+<ul>
+<li>Because Remote Incident Manager is cross-platform, many sections of
+this documentation will tailor their contents to the operating system
+that you are running.
+<ul>
+<li>In most cases, the manual will recognize whether you are running
+Windows or Mac, and adjust the content accordingly.</li>
+<li>In the event the platform recognition fails or you are reading the
+documentation on a different device such as a phone or tablet, the
+manual will fall back to the windows version. You will find buttons on
+both the top and bottom of the page that can be used to show the content
+for your platform of choice.</li>
+</ul></li>
+<li>Switching the language will take you to the Welcome section of the
+manual for your chosen language.</li>
+<li>RIM connections occur between a target and a controller.
+<ul>
+<li>A target computer is the computer that will be receiving remote
+support.</li>
+<li>A controller connects to a target computer for remote support.</li>
+</ul></li>
+</ul>
 </body>
 </html>

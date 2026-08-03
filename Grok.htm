@@ -256,11 +256,10 @@ and xAI says plainly that it does not have operational oversight of it,
 so it is not covered here.</p>
 <p><strong>Built from the publisher’s own source.</strong> docs.x.ai
 serves every page twice: once as a web page and once as the Markdown it
-was written in, at the same address with <code>.md</code> on the end.
-This guide is built from the Markdown, so nothing was converted out of
-HTML and nothing inferred. The site also publishes
-<code>llms.txt</code>, a list of every page it holds, which is how the
-estate was found rather than crawled for.</p>
+was written in, at the same address with 0 on the end. This guide is
+built from the Markdown, so nothing was converted out of HTML and
+nothing inferred. The site also publishes 1, a list of every page it
+holds, which is how the estate was found rather than crawled for.</p>
 <p><strong>What was left out.</strong> The REST and gRPC interface
 references under docs.x.ai/developers are developer documentation, which
 this collection leaves out everywhere. Everything else xAI publishes for
@@ -275,7 +274,7 @@ and apps.</p>
 <p>Headings run six deep at most. Level one is this title, level two is
 a section, level three is an article, and anything below that came from
 inside the article itself.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#cat-connecting-grok-to-your-own-files-and-mail">Connecting
 Grok to your own files and mail</a>
@@ -313,7 +312,7 @@ licences</a>
 <h2 id="cat-connecting-grok-to-your-own-files-and-mail">Connecting Grok
 to your own files and mail</h2>
 <h3 id="about-connectors">About connectors</h3>
-<h6 id="grok">Grok</h6>
+<h4 id="grok">Grok</h4>
 <p>Connectors are available to all Grok users and let Grok access your
 external tools and data sources directly within a conversation. Search
 your email, browse files in cloud storage, check your calendar, and more
@@ -328,58 +327,22 @@ Grok. Each one authenticates via OAuth, so you connect once and Grok can
 access your data on demand. No configuration beyond the initial sign-in
 is required.</p>
 <p>The following built in connectors are available:</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Connector</th>
-<th>What it connects</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Gmail &amp; Google Calendar</strong></td>
-<td>Gmail messages and Google Calendar events</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Google Drive</strong></td>
-<td>Google Drive files, Docs, Sheets, and Slides</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>OneDrive</strong></td>
-<td>Microsoft OneDrive personal storage</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Outlook Mail &amp; Calendar</strong></td>
-<td>Outlook email and calendar events</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Microsoft Teams</strong></td>
-<td>Microsoft Teams messages, channels, and chats</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>SharePoint</strong></td>
-<td>Microsoft SharePoint sites and document libraries</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Salesforce</strong></td>
-<td>Salesforce CRM - explore objects, query records, create and
-update</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Connector: <strong>Gmail &amp; Google Calendar</strong>; What it
+connects: Gmail messages and Google Calendar events</li>
+<li>Connector: <strong>Google Drive</strong>; What it connects: Google
+Drive files, Docs, Sheets, and Slides</li>
+<li>Connector: <strong>OneDrive</strong>; What it connects: Microsoft
+OneDrive personal storage</li>
+<li>Connector: <strong>Outlook Mail &amp; Calendar</strong>; What it
+connects: Outlook email and calendar events</li>
+<li>Connector: <strong>Microsoft Teams</strong>; What it connects:
+Microsoft Teams messages, channels, and chats</li>
+<li>Connector: <strong>SharePoint</strong>; What it connects: Microsoft
+SharePoint sites and document libraries</li>
+<li>Connector: <strong>Salesforce</strong>; What it connects: Salesforce
+CRM - explore objects, query records, create and update</li>
+</ul>
 <p>To add a builtin connector:</p>
 <ol type="1">
 <li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
@@ -426,13 +389,11 @@ href="/grok/connectors/custom-mcp-tunneling">Custom MCP Server
 Tunneling</a> for setup instructions.</p>
 <h3 id="connectors-custom-mcp-tunneling">Connectors Custom Mcp
 Tunneling</h3>
-<h6 id="connectors">Connectors</h6>
+<h4 id="connectors">Connectors</h4>
 <p>When you add a <a href="#about-connectors">custom MCP connector</a>,
 Grok’s servers need to reach your MCP server over the public internet.
-Servers running on <code>localhost</code> or a private network address
-(such as <code>127.0.0.1</code>, <code>10.x.x.x</code>,
-<code>172.16.x.x</code>, or <code>192.168.x.x</code>) are not directly
-reachable, and Grok will reject these URLs.</p>
+Servers running on 0 or a private network address (such as 1, 2, 3, or
+4) are not directly reachable, and Grok will reject these URLs.</p>
 <p>A <strong>tunneling service</strong> solves this by exposing your
 local server through a public URL that Grok can connect to.</p>
 <h4 id="how-tunneling-works">How tunneling works</h4>
@@ -470,8 +431,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ngrok</span> http 3001</span></code></pre></div>
 <ol start="3" type="1">
-<li>Copy the <code>Forwarding</code> URL from the output (e.g.,
-<code>https://a1b2c3d4.ngrok-free.app</code>) and use it as the server
+<li>Copy the 0 URL from the output (e.g., 1) and use it as the server
 URL in Grok’s custom connector dialog.</li>
 </ol>
 <h5 id="cloudflare-tunnel">Cloudflare Tunnel</h5>
@@ -489,11 +449,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Start a quick tunnel</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> tunnel <span class="at">--url</span> http://localhost:3001</span></code></pre></div>
-<p>Copy the generated <code>*.trycloudflare.com</code> URL and use it as
-the server URL in Grok.</p>
+<p>Copy the generated 0 URL and use it as the server URL in Grok.</p>
 <blockquote>
 <p>[!CAUTION]</p>
-<p> Cloudflare quick tunnels do not support Server-Sent Events (SSE). If
+<p>Cloudflare quick tunnels do not support Server-Sent Events (SSE). If
 your MCP server uses the SSE transport, use ngrok instead. Servers using
 the newer Streamable HTTP transport work fine with Cloudflare.</p>
 </blockquote>
@@ -513,16 +472,15 @@ reachability.</li>
 </ul>
 <h3 id="connectors-gmail-google-calendar">Connectors Gmail Google
 Calendar</h3>
-<h6 id="connectors-1">Connectors</h6>
+<h4 id="connectors-1">Connectors</h4>
 <p>Gmail and Google Calendar are connected as separate connectors, each
 with its own OAuth sign-in and permissions. Together they let Grok
 manage your email and schedule from within a conversation.</p>
 <h4 id="gmail">Gmail</h4>
 <h5 id="capabilities">Capabilities</h5>
 <ul>
-<li><strong>Search emails</strong> using Gmail search operators
-(<code>from:</code>, <code>to:</code>, <code>subject:</code>,
-<code>newer_than:</code>, <code>has:attachment</code>, etc.).</li>
+<li><strong>Search emails</strong> using Gmail search operators (0, 1,
+2, 3, 4, etc.).</li>
 <li><strong>Read full messages</strong> including body text, headers,
 and attachments.</li>
 <li><strong>Compose and manage drafts</strong> so you can review before
@@ -536,47 +494,18 @@ trashing, or deleting messages.</li>
 <p>Gmail uses a tiered permission model. The base connection is
 read-only; write and send capabilities are enabled progressively by your
 organization’s administrators.</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-<th>When requested</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>gmail.readonly</code></td>
-<td>Search and read emails</td>
-<td>Always (base)</td>
-</tr>
-<tr>
-<td><code>gmail.modify</code></td>
-<td>Drafts, trash, label changes</td>
-<td>When write tools are enabled</td>
-</tr>
-<tr>
-<td><code>gmail.send</code></td>
-<td>Send messages, reply, forward</td>
-<td>When send tools are enabled</td>
-</tr>
-<tr>
-<td><code>gmail.labels</code></td>
-<td>Create and delete labels</td>
-<td>When label management tools are enabled</td>
-</tr>
-<tr>
-<td><code>userinfo.email</code></td>
-<td>Identify your Google account</td>
-<td>Always</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Search and read emails; When requested: Always
+(base)</li>
+<li>Scope: 0; Purpose: Drafts, trash, label changes; When requested:
+When write tools are enabled</li>
+<li>Scope: 0; Purpose: Send messages, reply, forward; When requested:
+When send tools are enabled</li>
+<li>Scope: 0; Purpose: Create and delete labels; When requested: When
+label management tools are enabled</li>
+<li>Scope: 0; Purpose: Identify your Google account; When requested:
+Always</li>
+</ul>
 <p>Note: <strong>gmail.modify</strong> is a superset of
 <strong>gmail.readonly</strong>. When write tools are enabled, only the
 modify scope is requested to avoid duplicate permission prompts.</p>
@@ -602,47 +531,18 @@ permissions are enabled.</li>
 </ul>
 <h5 id="required-permissions-1">Required permissions</h5>
 <p>Like Gmail, Google Calendar uses a tiered permission model.</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-<th>When requested</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>calendar.readonly</code></td>
-<td>Search and read calendar events</td>
-<td>Always (base)</td>
-</tr>
-<tr>
-<td><code>calendar.events</code></td>
-<td>Create, update, and delete events</td>
-<td>When write tools are enabled</td>
-</tr>
-<tr>
-<td><code>calendar.freebusy</code></td>
-<td>Check availability / free-busy status</td>
-<td>When availability tool is enabled</td>
-</tr>
-<tr>
-<td><code>calendar.calendarlist.readonly</code></td>
-<td>List accessible calendars</td>
-<td>When calendar list tool is enabled</td>
-</tr>
-<tr>
-<td><code>userinfo.email</code></td>
-<td>Identify your Google account</td>
-<td>Always</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Search and read calendar events; When requested:
+Always (base)</li>
+<li>Scope: 0; Purpose: Create, update, and delete events; When
+requested: When write tools are enabled</li>
+<li>Scope: 0; Purpose: Check availability / free-busy status; When
+requested: When availability tool is enabled</li>
+<li>Scope: 0; Purpose: List accessible calendars; When requested: When
+calendar list tool is enabled</li>
+<li>Scope: 0; Purpose: Identify your Google account; When requested:
+Always</li>
+</ul>
 <h5 id="how-to-connect-1">How to connect</h5>
 <ol type="1">
 <li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
@@ -669,7 +569,7 @@ immediately revoke Grok’s access to your Google account.</p>
 <p>You can also revoke the app’s access from your Google account at <a
 href="https://myaccount.google.com/permissions">permissions</a>.</p>
 <h3 id="connectors-google-drive">Connectors Google Drive</h3>
-<h6 id="connectors-2">Connectors</h6>
+<h4 id="connectors-2">Connectors</h4>
 <p>The Google Drive connector lets Grok search, read, and manage files
 in your Google Drive. Find documents by content or title, read their
 contents inline, create new files, organize folders, and upload
@@ -693,38 +593,14 @@ folder.</li>
 <h4 id="required-permissions-2">Required permissions</h4>
 <p>The Google Drive connector uses Google OAuth and requests the
 following scopes during sign-in:</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>drive.metadata.readonly</code></td>
-<td>View metadata for files in your Drive (titles, dates, folder
-structure)</td>
-</tr>
-<tr>
-<td><code>drive.readonly</code></td>
-<td>Read the content of files in your Drive</td>
-</tr>
-<tr>
-<td><code>drive</code></td>
-<td>Create and modify files in your Drive (write operations,
-optional)</td>
-</tr>
-<tr>
-<td><code>userinfo.email</code></td>
-<td>Identify your Google account</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: View metadata for files in your Drive (titles,
+dates, folder structure)</li>
+<li>Scope: 0; Purpose: Read the content of files in your Drive</li>
+<li>Scope: 0; Purpose: Create and modify files in your Drive (write
+operations, optional)</li>
+<li>Scope: 0; Purpose: Identify your Google account</li>
+</ul>
 <p>Google will show a consent screen listing these permissions. Grok can
 only access files that the signed-in Google account has access to.</p>
 <h4 id="how-to-connect-2">How to connect</h4>
@@ -755,7 +631,7 @@ immediately revoke Grok’s access to your Google account.</p>
 <p>You can also revoke the app’s access from your Google account at <a
 href="https://myaccount.google.com/permissions">permissions</a>.</p>
 <h3 id="connectors-microsoft-teams">Connectors Microsoft Teams</h3>
-<h6 id="connectors-3">Connectors</h6>
+<h4 id="connectors-3">Connectors</h4>
 <p>The Microsoft Teams connector gives Grok full access to your Teams
 conversations. Search across channels and chats, read messages, send new
 messages, reply to threads, and create chats — all without leaving
@@ -781,64 +657,21 @@ conversations are happening.</li>
 membership types.</li>
 </ul>
 <h4 id="required-permissions-3">Required permissions</h4>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Team.ReadBasic.All</code></td>
-<td>List the teams the user belongs to</td>
-</tr>
-<tr>
-<td><code>Channel.ReadBasic.All</code></td>
-<td>List channels within those teams</td>
-</tr>
-<tr>
-<td><code>ChannelMessage.Read.All</code></td>
-<td>Read messages in channels the user has access to</td>
-</tr>
-<tr>
-<td><code>ChannelMessage.Send</code></td>
-<td>Send messages and replies in channels</td>
-</tr>
-<tr>
-<td><code>ChannelMember.Read.All</code></td>
-<td>View channel membership</td>
-</tr>
-<tr>
-<td><code>TeamMember.Read.All</code></td>
-<td>View team membership</td>
-</tr>
-<tr>
-<td><code>Chat.Read</code></td>
-<td>Read one-on-one and group chat messages</td>
-</tr>
-<tr>
-<td><code>Chat.Create</code></td>
-<td>Create new one-on-one and group chats</td>
-</tr>
-<tr>
-<td><code>ChatMessage.Send</code></td>
-<td>Send messages in chats</td>
-</tr>
-<tr>
-<td><code>User.Read</code></td>
-<td>Read the signed-in user’s profile</td>
-</tr>
-<tr>
-<td><code>offline_access</code></td>
-<td>Maintain access without repeated sign-in prompts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: List the teams the user belongs to</li>
+<li>Scope: 0; Purpose: List channels within those teams</li>
+<li>Scope: 0; Purpose: Read messages in channels the user has access
+to</li>
+<li>Scope: 0; Purpose: Send messages and replies in channels</li>
+<li>Scope: 0; Purpose: View channel membership</li>
+<li>Scope: 0; Purpose: View team membership</li>
+<li>Scope: 0; Purpose: Read one-on-one and group chat messages</li>
+<li>Scope: 0; Purpose: Create new one-on-one and group chats</li>
+<li>Scope: 0; Purpose: Send messages in chats</li>
+<li>Scope: 0; Purpose: Read the signed-in user’s profile</li>
+<li>Scope: 0; Purpose: Maintain access without repeated sign-in
+prompts</li>
+</ul>
 <p>These are delegated permissions. Grok can only access teams,
 channels, and chats that the signed-in user already has access to.</p>
 <h4 id="how-to-connect-3">How to connect</h4>
@@ -879,9 +712,9 @@ immediately revoke Grok’s access to your Microsoft account.</p>
 <strong>Disconnect</strong>.</li>
 </ol>
 <p>You can also revoke the app’s access from your Microsoft account at
-<code>myapps.microsoft.com</code>.</p>
+0.</p>
 <h3 id="connectors-onedrive">Connectors Onedrive</h3>
-<h6 id="connectors-4">Connectors</h6>
+<h4 id="connectors-4">Connectors</h4>
 <p><strong>Available on Grok Business and Enterprise plans
 only.</strong></p>
 <p>The OneDrive connector gives Grok access to your personal Microsoft
@@ -893,9 +726,9 @@ admin</strong> must add the connector through the <a
 href="https://console.x.ai">console</a>. The setup requires:</p>
 <ol type="1">
 <li><strong>Provide the Azure AD Tenant ID</strong> – The organization’s
-Microsoft Entra (Azure AD) tenant identifier (e.g.,
-<code>xai.onmicrosoft.com</code> or a GUID), found in the Azure portal
-under <strong>Azure Active Directory &gt; Overview</strong>.</li>
+Microsoft Entra (Azure AD) tenant identifier (e.g., 0 or a GUID), found
+in the Azure portal under <strong>Azure Active Directory &gt;
+Overview</strong>.</li>
 <li><strong>Grant admin consent</strong> – A Microsoft 365 administrator
 must approve Grok’s access to OneDrive. This is a one-time
 authorization. The admin can approve directly, copy the consent link for
@@ -918,33 +751,13 @@ searchable through the SharePoint document search.</p>
 <h4 id="required-permissions-4">Required permissions</h4>
 <p>The OneDrive connector uses Microsoft Graph API and requests the
 following OAuth scopes during sign-in:</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Files.ReadWrite</code></td>
-<td>Read and write files in the user’s OneDrive</td>
-</tr>
-<tr>
-<td><code>User.Read</code></td>
-<td>Read the signed-in user’s profile (used to identify the
-account)</td>
-</tr>
-<tr>
-<td><code>offline_access</code></td>
-<td>Maintain access without repeated sign-in prompts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Read and write files in the user’s OneDrive</li>
+<li>Scope: 0; Purpose: Read the signed-in user’s profile (used to
+identify the account)</li>
+<li>Scope: 0; Purpose: Maintain access without repeated sign-in
+prompts</li>
+</ul>
 <p>These permissions are delegated and scoped to the signed-in user’s
 own OneDrive. Grok cannot access files belonging to other users.</p>
 <h4 id="how-to-connect-team-members">How to connect (team members)</h4>
@@ -977,9 +790,9 @@ deleted.</p>
 <strong>Disconnect</strong>.</li>
 </ol>
 <p>You can also revoke the app’s access from your Microsoft account at
-<code>myapps.microsoft.com</code>.</p>
+0.</p>
 <h3 id="connectors-outlook">Connectors Outlook</h3>
-<h6 id="connectors-5">Connectors</h6>
+<h4 id="connectors-5">Connectors</h4>
 <p>Outlook Mail and Outlook Calendar are connected as separate
 connectors, each with its own OAuth sign-in and permissions. Together
 they give Grok full access to your Microsoft email and schedule.</p>
@@ -999,32 +812,14 @@ creating folders, and batch operations.</li>
 directly to a draft.</li>
 </ul>
 <h5 id="required-permissions-5">Required permissions</h5>
-<table>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Mail.ReadWrite</code></td>
-<td>Read, create, update, and delete mail and drafts</td>
-</tr>
-<tr>
-<td><code>Mail.Send</code></td>
-<td>Send mail on behalf of the user</td>
-</tr>
-<tr>
-<td><code>User.Read</code></td>
-<td>Read the signed-in user’s profile</td>
-</tr>
-<tr>
-<td><code>offline_access</code></td>
-<td>Maintain access without repeated sign-in prompts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Read, create, update, and delete mail and
+drafts</li>
+<li>Scope: 0; Purpose: Send mail on behalf of the user</li>
+<li>Scope: 0; Purpose: Read the signed-in user’s profile</li>
+<li>Scope: 0; Purpose: Maintain access without repeated sign-in
+prompts</li>
+</ul>
 <p>These are delegated permissions. Grok can only access the mailbox of
 the signed-in user.</p>
 <h5 id="how-to-connect-4">How to connect</h5>
@@ -1049,32 +844,13 @@ recurrence, and reminders.</li>
 optional comments.</li>
 </ul>
 <h5 id="required-permissions-6">Required permissions</h5>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Calendars.ReadWrite</code></td>
-<td>Read, create, update, and delete calendar events</td>
-</tr>
-<tr>
-<td><code>User.Read</code></td>
-<td>Read the signed-in user’s profile</td>
-</tr>
-<tr>
-<td><code>offline_access</code></td>
-<td>Maintain access without repeated sign-in prompts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Read, create, update, and delete calendar
+events</li>
+<li>Scope: 0; Purpose: Read the signed-in user’s profile</li>
+<li>Scope: 0; Purpose: Maintain access without repeated sign-in
+prompts</li>
+</ul>
 <h5 id="how-to-connect-5">How to connect</h5>
 <ol type="1">
 <li>Go to <a href="#about-connectors">grok.com/connectors</a>.</li>
@@ -1109,9 +885,9 @@ immediately revoke Grok’s access to your Microsoft account.</p>
 <li>Find the connector and click <strong>Disconnect</strong>.</li>
 </ol>
 <p>You can also revoke the app’s access from your Microsoft account at
-<code>myapps.microsoft.com</code>.</p>
+0.</p>
 <h3 id="connectors-salesforce">Connectors Salesforce</h3>
-<h6 id="connectors-6">Connectors</h6>
+<h4 id="connectors-6">Connectors</h4>
 <p>The Salesforce connector gives Grok powerful, real-time access to
 your Salesforce org. Everything Grok does respects your user
 permissions, field-level security, and sharing rules — exactly as if you
@@ -1137,39 +913,19 @@ by ID or by context.</li>
 <h5 id="required-permissions-7">Required permissions</h5>
 <p>The Salesforce connector uses standard Salesforce OAuth 2.0 scopes to
 access the API on your behalf.</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-<th>When requested</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mcp_api</code></td>
-<td>Access the Salesforce REST and SOAP APIs to read and write data</td>
-<td>Always</td>
-</tr>
-<tr>
-<td><code>refresh_token</code></td>
-<td>Maintain access and refresh tokens between sessions</td>
-<td>Always</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Access the Salesforce REST and SOAP APIs to read
+and write data; When requested: Always</li>
+<li>Scope: 0; Purpose: Maintain access and refresh tokens between
+sessions; When requested: Always</li>
+</ul>
 <p>All actions are further restricted by your Salesforce profile, role,
 sharing rules, and field-level security. Grok can never access more than
 your connected Salesforce user is allowed to see or modify.</p>
 <h5 id="how-to-connect-6">How to connect</h5>
 <p>Step 1: Company Admin Setup (xAI Console)</p>
 <ol type="1">
-<li>Go to <code>https://console.x.ai/</code></li>
+<li>Go to 0</li>
 <li>Navigate to Grok Enterprise → Connectors</li>
 <li>Add the Salesforce connector and provide the OAuth credentials
 (Client ID, Client Secret) during the setup flow.</li>
@@ -1216,7 +972,7 @@ stops Grok from reaching your org.</p>
 <h4 id="limitation">Limitation</h4>
 <p>Currently only one Salesforce org/instance is supported per team.</p>
 <h3 id="connectors-sharepoint">Connectors Sharepoint</h3>
-<h6 id="connectors-7">Connectors</h6>
+<h4 id="connectors-7">Connectors</h4>
 <p><strong>Available on Grok Business and Enterprise plans
 only.</strong></p>
 <p>The SharePoint connector lets Grok access files and documents across
@@ -1232,27 +988,25 @@ involves three steps:</p>
 <p>The admin selects how Grok should access SharePoint:</p>
 <ul>
 <li><strong>Delegated permissions</strong> <em>(recommended)</em> – Grok
-accesses SharePoint on behalf of the signed-in user, scoped by the
-<code>Sites.Read.All</code> permission. The recommended approach is to
-create a dedicated user account with access limited to specific
-SharePoint sites, then connect using that account. Because delegated
-permissions are bounded by the connecting account’s own access, this
-limits Grok to only the sites that account can see. No additional Azure
-portal configuration is needed.</li>
-<li><strong>Application-level permissions</strong> – Uses
-<code>Sites.Selected</code> to grant Grok access to specific sites
-chosen during setup. This provides fine-grained, least-privilege access
-at the application level. After admin consent, the console prompts the
-admin to <a
+accesses SharePoint on behalf of the signed-in user, scoped by the 0
+permission. The recommended approach is to create a dedicated user
+account with access limited to specific SharePoint sites, then connect
+using that account. Because delegated permissions are bounded by the
+connecting account’s own access, this limits Grok to only the sites that
+account can see. No additional Azure portal configuration is
+needed.</li>
+<li><strong>Application-level permissions</strong> – Uses 0 to grant
+Grok access to specific sites chosen during setup. This provides
+fine-grained, least-privilege access at the application level. After
+admin consent, the console prompts the admin to <a
 href="https://learn.microsoft.com/en-us/graph/permissions-reference#sites-permissions">select
 the allowed sites</a> (see step 4 below).</li>
 </ul>
 <h5 id="provide-the-azure-ad-tenant-id">2. Provide the Azure AD Tenant
 ID</h5>
 <p>The admin enters the organization’s Microsoft Entra (Azure AD) tenant
-identifier. This is either a domain like
-<code>xai.onmicrosoft.com</code> or a GUID, and can be found in the
-Azure portal under <strong>Azure Active Directory &gt;
+identifier. This is either a domain like 0 or a GUID, and can be found
+in the Azure portal under <strong>Azure Active Directory &gt;
 Overview</strong>.</p>
 <h5 id="grant-admin-consent">3. Grant admin consent</h5>
 <p>A Microsoft 365 administrator must approve Grok’s access to
@@ -1286,8 +1040,8 @@ instead.</p>
 separate Microsoft Entra application with its own permissions. To enable
 it, click the <strong>Enable Write Access</strong> button in the console
 and complete the admin consent flow for the write application. This
-grants the <code>Files.ReadWrite.All</code> scope and is independent of
-the read-only consent from step 3.</p>
+grants the 0 scope and is independent of the read-only consent from step
+3.</p>
 <h4 id="capabilities-8">Capabilities</h4>
 <ul>
 <li><strong>Search documents</strong> across all SharePoint sites you
@@ -1304,39 +1058,16 @@ organization.</li>
 <h4 id="required-permissions-8">Required permissions</h4>
 <p>The SharePoint connector uses Microsoft Graph API and requests the
 following OAuth scopes during sign-in:</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Sites.Read.All</code></td>
-<td>Read items in all SharePoint site collections the user can
-access</td>
-</tr>
-<tr>
-<td><code>Files.Read.All</code></td>
-<td>Read all files the user can access (required for cross-site document
-search)</td>
-</tr>
-<tr>
-<td><code>User.Read</code></td>
-<td>Read the signed-in user’s profile (used to identify the
-account)</td>
-</tr>
-<tr>
-<td><code>offline_access</code></td>
-<td>Maintain access without repeated sign-in prompts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Purpose: Read items in all SharePoint site collections the
+user can access</li>
+<li>Scope: 0; Purpose: Read all files the user can access (required for
+cross-site document search)</li>
+<li>Scope: 0; Purpose: Read the signed-in user’s profile (used to
+identify the account)</li>
+<li>Scope: 0; Purpose: Maintain access without repeated sign-in
+prompts</li>
+</ul>
 <blockquote>
 <p>[!WARNING]</p>
 <p>When write capabilities are enabled for your organization, the
@@ -1355,70 +1086,24 @@ applies.</p>
 <p><strong>Delegated mode.</strong> The sync runs as a dedicated user
 account, usually specifically created for this purpose and giving it
 access only to the SharePoint sites that should be indexed:</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Sites.Read.All</code></td>
-<td>Delegated</td>
-<td>Enumerate and read items from every site the account can
-access.</td>
-</tr>
-<tr>
-<td><code>Files.Read.All</code></td>
-<td>Delegated</td>
-<td>Download file content for indexing across those sites.</td>
-</tr>
-<tr>
-<td><code>User.Read</code></td>
-<td>Delegated</td>
-<td>Read the signed-in user’s profile (used to identify the
-account)</td>
-</tr>
-<tr>
-<td><code>offline_access</code></td>
-<td>Delegated</td>
-<td>Maintain access without repeated sign-in prompts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Type: Delegated; Purpose: Enumerate and read items from
+every site the account can access.</li>
+<li>Scope: 0; Type: Delegated; Purpose: Download file content for
+indexing across those sites.</li>
+<li>Scope: 0; Type: Delegated; Purpose: Read the signed-in user’s
+profile (used to identify the account)</li>
+<li>Scope: 0; Type: Delegated; Purpose: Maintain access without repeated
+sign-in prompts</li>
+</ul>
 <p><strong>Application mode.</strong> The sync runs as the Microsoft
 Entra application itself, using a separate app registration with
 application permissions:</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Sites.Selected</code></td>
-<td>Application</td>
-<td>Read items only in the sites explicitly granted to the application
-in step 4. The sync cannot discover or index any site that has not been
-selected.</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Scope: 0; Type: Application; Purpose: Read items only in the sites
+explicitly granted to the application in step 4. The sync cannot
+discover or index any site that has not been selected.</li>
+</ul>
 <p>Indexed content is access-checked against the querying user on every
 request, so regardless of which sync mode is in use, team members still
 only see results they are individually authorized to view in
@@ -1462,14 +1147,13 @@ indexed data for the organization is deleted.</p>
 <strong>Disconnect</strong>.</li>
 </ol>
 <p>You can also revoke the app’s access from your Microsoft account at
-<code>myapps.microsoft.com</code>.</p>
+0.</p>
 <h2 id="cat-getting-started">Getting started</h2>
 <h3 id="overview">Overview</h3>
-<h6 id="grok-1">Grok</h6>
-<p>Grok is xAI’s assistant, available on the web at
-<code>grok.com</code> and in the iOS and Android apps. Sign in once and
-your conversations, settings, and subscription stay in sync across every
-platform.</p>
+<h4 id="grok-1">Grok</h4>
+<p>Grok is xAI’s assistant, available on the web at 0 and in the iOS and
+Android apps. Sign in once and your conversations, settings, and
+subscription stay in sync across every platform.</p>
 <h4 id="what-you-can-do">What you can do</h4>
 <ul>
 <li><strong>Chat</strong> — ask questions, brainstorm, write, and work
@@ -1498,7 +1182,7 @@ Grok to the apps and data you already use.</li>
 — team workspaces, licenses, and organization controls.</li>
 </ul>
 <h3 id="user-guide">User Guide</h3>
-<h6 id="grok-business-enterprise">Grok Business / Enterprise</h6>
+<h4 id="grok-business-enterprise">Grok Business / Enterprise</h4>
 <p><strong>Grok Business provides dedicated workspaces for personal and
 team use, with enhanced privacy and sharing controls.</strong> Switch
 between workspaces to access team-specific features and ensure your
@@ -1525,7 +1209,7 @@ bottom left navigation on grok.com. Ensure you are in the correct
 workspace before starting new conversations.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> You can only access the team workspace when you have an active
+<p>You can only access the team workspace when you have an active
 license. If you lack access, contact your team admin.</p>
 </blockquote>
 <h4 id="privacy-and-benefits">Privacy and Benefits</h4>
@@ -1566,7 +1250,7 @@ me</a>.</p>
 <h4 id="activating-your-license">Activating Your License</h4>
 <p>To activate or manage your license:</p>
 <ol type="1">
-<li>Visit your Grok Business overview at <code>console.x.ai</code>.</li>
+<li>Visit your Grok Business overview at 0.</li>
 <li>Press “Assign license” and select your license type.</li>
 <li>If you encounter access issues or lack permissions, contact your
 team admin for assistance.</li>
@@ -1575,20 +1259,20 @@ team admin for assistance.</li>
 grok.com.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> For white-glove support and Enterprise features, contact xAI sales
-at .</p>
+<p>For white-glove support and Enterprise features, contact xAI sales at
+.</p>
 </blockquote>
 <h2 id="cat-managing-a-team-s-licences">Managing a team’s licences</h2>
 <h3 id="connector-management">Connector Management</h3>
-<h6 id="grok-business-enterprise-1">Grok Business / Enterprise</h6>
+<h4 id="grok-business-enterprise-1">Grok Business / Enterprise</h4>
 <p><strong>On Grok Business and Enterprise plans, a team admin must add
 a connector in the cloud console before team members can connect and use
 it.</strong> This gives your organization control over which external
 services Grok can access.</p>
-<p>Access the connectors page by logging into <code>console.x.ai</code>,
-selecting your team, and navigating to <strong>Grok Business →
-Connectors</strong>. Actions like adding or removing connectors require
-team management permissions—see the Permissions section for details.</p>
+<p>Access the connectors page by logging into 0, selecting your team,
+and navigating to <strong>Grok Business → Connectors</strong>. Actions
+like adding or removing connectors require team management
+permissions—see the Permissions section for details.</p>
 <h4 id="adding-connectors">Adding connectors</h4>
 <p>Team admins can provision connectors from the catalog or add a custom
 MCP server.</p>
@@ -1624,28 +1308,11 @@ data associated with the connector may be removed.</li>
 <p>Some connectors require additional admin setup beyond the initial add
 step. Refer to the dedicated guides for service-specific
 instructions:</p>
-<table>
-<thead>
-<tr>
-<th>Connector</th>
-<th>Setup guide</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SharePoint</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>OneDrive</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Salesforce</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Connector: <strong>SharePoint</strong></li>
+<li>Connector: <strong>OneDrive</strong></li>
+<li>Connector: <strong>Salesforce</strong></li>
+</ul>
 <p>For a full list of available connectors, see the <a
 href="#about-connectors">Connectors overview</a>.</p>
 <h4 id="permissions">Permissions</h4>
@@ -1656,20 +1323,18 @@ admins.</p>
 connectors your organization needs.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> For white-glove support, Enterprise upgrades, or connector setup
+<p>For white-glove support, Enterprise upgrades, or connector setup
 assistance, contact xAI sales at .</p>
 </blockquote>
 <h3 id="management">Management</h3>
-<h6 id="grok-business-enterprise-2">Grok Business / Enterprise</h6>
-<p><strong>The Grok Business overview page at <code>console.x.ai</code>
-is your central hub for handling team licenses and user
-invitations.</strong> As a team admin or user with appropriate
-permissions, you can buy licenses, invite new members, and manage access
-to ensure smooth collaboration.</p>
-<p>Access this page by logging into <code>console.x.ai</code> and
-navigating to the overview section. Note that actions like purchasing or
-provisioning require specific permissions—see the Permissions section
-for details.</p>
+<h4 id="grok-business-enterprise-2">Grok Business / Enterprise</h4>
+<p><strong>The Grok Business overview page at 0 is your central hub for
+handling team licenses and user invitations.</strong> As a team admin or
+user with appropriate permissions, you can buy licenses, invite new
+members, and manage access to ensure smooth collaboration.</p>
+<p>Access this page by logging into 0 and navigating to the overview
+section. Note that actions like purchasing or provisioning require
+specific permissions—see the Permissions section for details.</p>
 <h4 id="purchasing-licenses">Purchasing Licenses</h4>
 <p>Expand your team’s capabilities by buying additional licenses
 directly from the overview page.</p>
@@ -1691,7 +1356,7 @@ for assignment.</li>
 users.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> Ensure your team’s billing is set up correctly to avoid
+<p>Ensure your team’s billing is set up correctly to avoid
 interruptions. Visit <a
 href="https://console.x.ai/team/default/billing">Billing Settings</a>
 for more details.</p>
@@ -1734,7 +1399,7 @@ the user will no longer have access to your team’s workspace.</li>
 changes to affected users.</p>
 <blockquote>
 <p>[!CAUTION]</p>
-<p> Revoking a license removes team workspace access. Users will retain
+<p>Revoking a license removes team workspace access. Users will retain
 personal workspace functionality.</p>
 </blockquote>
 <h4 id="canceling-licenses">Canceling Licenses</h4>
@@ -1753,44 +1418,23 @@ from your pool once processed.</p>
 resources. A sharing policy sets the widest audience a member may pick
 for a given resource; members can always share more narrowly, never more
 broadly.</p>
-<p>Configure these policies in <code>console.x.ai</code> under your
-team’s <strong>Sharing &amp; Retention</strong> settings, in the
-<strong>Product Sharing</strong> section. Each resource type carries its
-own policy: conversations, projects, and skills.</p>
+<p>Configure these policies in 0 under your team’s <strong>Sharing &amp;
+Retention</strong> settings, in the <strong>Product Sharing</strong>
+section. Each resource type carries its own policy: conversations,
+projects, and skills.</p>
 <p>The levels form a ladder from most to least restrictive:</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Level</th>
-<th>What members can do</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Private</td>
-<td>Sharing is turned off for that resource.</td>
-</tr>
-<tr>
-<td>Team</td>
-<td>Share with individual teammates and with the member’s own team.
-Organization-wide and cross-team sharing are blocked.</td>
-</tr>
-<tr>
-<td>Organization</td>
-<td>Everything Team allows, plus sharing across teams and with everyone
-in the organization.</td>
-</tr>
-<tr>
-<td>Public</td>
-<td>Everything Organization allows, plus public links that anyone can
-open, including people outside the team.</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Level: Private; What members can do: Sharing is turned off for that
+resource.</li>
+<li>Level: Team; What members can do: Share with individual teammates
+and with the member’s own team. Organization-wide and cross-team sharing
+are blocked.</li>
+<li>Level: Organization; What members can do: Everything Team allows,
+plus sharing across teams and with everyone in the organization.</li>
+<li>Level: Public; What members can do: Everything Organization allows,
+plus public links that anyone can open, including people outside the
+team.</li>
+</ul>
 <p>Public links apply to conversations only; projects and skills cap at
 Organization. By default, conversations and projects can be shared
 organization-wide, and skills start at Private.</p>
@@ -1818,11 +1462,11 @@ settings.</li>
 insufficient licenses, purchase more or revoke unused ones first.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> For white-glove support, Enterprise upgrades, or permission issues,
+<p>For white-glove support, Enterprise upgrades, or permission issues,
 contact xAI sales at .</p>
 </blockquote>
 <h3 id="organization">Organization</h3>
-<h6 id="grok-business-enterprise-3">Grok Business / Enterprise</h6>
+<h4 id="grok-business-enterprise-3">Grok Business / Enterprise</h4>
 <p><strong>Organizations provide a higher-level governance structure for
 enterprise customers, encompassing multiple console teams under unified
 IT controls.</strong> Available only to Enterprise tier subscribers,
@@ -1833,8 +1477,8 @@ href="#organization">console.x.ai/organization</a>. This page is
 restricted to organization admins.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> Organizations are exclusive to the Enterprise tier. Contact xAI
-sales to upgrade if needed.</p>
+<p>Organizations are exclusive to the Enterprise tier. Contact xAI sales
+to upgrade if needed.</p>
 </blockquote>
 <h4 id="understanding-organizations">Understanding Organizations</h4>
 <p>An organization acts as an overarching entity that groups related
@@ -1848,8 +1492,8 @@ data-cites="yourcompany.com">@yourcompany.com</span>). Any user signing
 up or logging in with an email from this domain is automatically
 associated with the organization.</li>
 <li><strong>User Visibility:</strong> Organization admins can view a
-comprehensive list of all associated users across teams on the
-<code>/organization</code> page.</li>
+comprehensive list of all associated users across teams on the 0
+page.</li>
 <li><strong>Team Association:</strong> Teams created by organization
 members are automatically linked to the organization and displayed in
 the dashboard for oversight.</li>
@@ -1878,7 +1522,7 @@ identify growth needs.</p>
 your preferred Identity Provider (IdP).</p>
 <p>To configure SSO:</p>
 <ol type="1">
-<li>On the <code>/organization</code> page, click “Configure SSO”.</li>
+<li>On the 0 page, click “Configure SSO”.</li>
 <li>Choose your IdP from the supported list (e.g., Okta, Azure AD,
 Google Workspace).</li>
 <li>Follow the self-guided, IdP-specific instructions provided—each
@@ -1909,7 +1553,7 @@ back to standard login methods.</li>
 workflows.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p> Notify your users in advance about the SSO rollout to minimize
+<p>Notify your users in advance about the SSO rollout to minimize
 support queries.</p>
 </blockquote>
 <h4 id="setting-up-scim">Setting up SCIM</h4>
@@ -1919,13 +1563,12 @@ for Cross-domain Identity Management (SCIM) with your Identity Provider
 <h5 id="step-1-configure-directory-sync-in-your-idp">Step 1: Configure
 directory sync in your IdP</h5>
 <ol type="1">
-<li>On the <code>/organization</code> page, click “Setup SCIM”.</li>
+<li>On the 0 page, click “Setup SCIM”.</li>
 <li>Follow the IdP-specific steps provided to connect your
 directory.</li>
 <li>Create groups in your IdP that correspond to how you want to
-organize access in xAI—for example, <code>xai-engineering</code>,
-<code>xai-data-science</code>, or whatever fits your organizational
-structure.</li>
+organize access in xAI—for example, 0, 1, or whatever fits your
+organizational structure.</li>
 </ol>
 <p>This step ensures your directory is synced and your groups are ready
 for mapping.</p>
@@ -1988,9 +1631,9 @@ system.</li>
 <p>This verification ensures a smooth transition.</p>
 <blockquote>
 <p>[!WARNING]</p>
-<p> SCIM is very disruptive. Users might lose or gain access to
-resources they did not have before. Notify your organization that you
-are undergoing this transition and <strong>verify everything is correct
+<p>SCIM is very disruptive. Users might lose or gain access to resources
+they did not have before. Notify your organization that you are
+undergoing this transition and <strong>verify everything is correct
 during the preview stage before proceeding.</strong></p>
 </blockquote>
 <h5 id="managing-roles-after-activation">Managing roles after
@@ -2011,7 +1654,7 @@ Enterprise features, contact xAI sales at <a
 href="https://x.ai/grok/business/enquire">enquire</a>.</p>
 <h2 id="cat-miscellaneous">Miscellaneous</h2>
 <h3 id="faq">Faq</h3>
-<h6 id="faq-1">FAQ</h6>
+<h4 id="faq-1">FAQ</h4>
 <p>While the documentation is mainly meant for our API users, this page
 collects the most common questions about our consumer-facing Grok
 website and apps (grok.com, iOS, and Android).</p>
@@ -2036,10 +1679,9 @@ via Google Play. Refunds are handled by xAI — use the <a
 href="https://accounts.x.ai/refund">xAI Refund Request form</a>.</li>
 </ul>
 <h5 id="how-do-i-unsubscribe">How do I unsubscribe?</h5>
-<p>If you have subscribed to SuperGrok, you can go to
-<code>https://grok.com</code> -&gt; Settings -&gt; Billing to manage
-your subscription (purchased from Grok Website), <a
-href="https://support.apple.com/118223">Request a refund for app</a>
+<p>If you have subscribed to SuperGrok, you can go to 0 -&gt; Settings
+-&gt; Billing to manage your subscription (purchased from Grok Website),
+<a href="https://support.apple.com/118223">Request a refund for app</a>
 (purchased from Apple App Store), or <a
 href="https://support.google.com/googleplay/answer/7018481">Cancel,
 pause or change a subscription on Google Play</a> (purchased from Google
@@ -2210,8 +1852,7 @@ Account. Click on Connect your X Account button. This will take you to
 X’s SSO page to add X account as a sign-in method for xAI.</p>
 <p>xAI will be able to retrieve your X subscription status and grant
 relevant benefits after linking.</p>
-<p>You can manage your sign-in methods at
-<code>https://accounts.x.ai</code>.</p>
+<p>You can manage your sign-in methods at 0.</p>
 <h5
 id="my-subscription-isnt-active-because-i-signed-up-with-an-apple-hide-my-email-private-relay-address.">My
 subscription isn’t active because I signed up with an Apple “Hide My
@@ -2231,12 +1872,11 @@ is updated to the latest version, and confirm the subscription is active
 both in the app and in your app store’s Subscriptions list.</p>
 <h5 id="how-do-i-change-the-email-i-log-in-with">How do I change the
 email I log in with?</h5>
-<p>Update or add your sign-in email at <code>accounts.x.ai</code>. If
-your subscription is through <strong>Apple</strong>, the login is tied
-to your Apple ID, so manage that email through Apple. If you’ve lost
-access to your original address (e.g. a university email after
-graduation), sign in with a new personal email / Google / X account and
-link it at accounts.x.ai.</p>
+<p>Update or add your sign-in email at 0. If your subscription is
+through <strong>Apple</strong>, the login is tied to your Apple ID, so
+manage that email through Apple. If you’ve lost access to your original
+address (e.g. a university email after graduation), sign in with a new
+personal email / Google / X account and link it at accounts.x.ai.</p>
 <h5
 id="my-account-was-hacked-an-attacker-changed-my-email.-what-can-support-do">My
 account was hacked / an attacker changed my email. What can support
@@ -2499,8 +2139,8 @@ email domain:</p>
 href="https://console.x.ai/team/default/settings">Settings
 page</a>.</li>
 <li>Add the domain under <strong>Verified Domains</strong>.</li>
-<li>Add a <code>domain-verification</code> key to your domain’s DNS TXT
-record to verify ownership.</li>
+<li>Add a 0 key to your domain’s DNS TXT record to verify
+ownership.</li>
 </ol>
 <p>Users signing up with a verified domain email will automatically join
 the team.</p>

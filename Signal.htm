@@ -546,9 +546,9 @@ Signal if needed. </li>
 </ol>
 <p><strong>Backup Folder Format</strong></p>
 <p>The new On-device backup format uses a <strong>folder
-structure</strong> instead of a single <code>.backup</code> file. Each
-backup folder is named in the following format:</p>
-<p><code>signal-backup-YYYY-MM-DD-HH-MM-SS</code></p>
+structure</strong> instead of a single 0 file. Each backup folder is
+named in the following format:</p>
+<p>0</p>
 <hr />
 <h4 id="how-to-restore-an-on-device-backup-on-android"><strong>How to
 Restore an On-device Backup on Android</strong></h4>
@@ -581,10 +581,8 @@ InformationWhere can I find the backup folder?</strong></h4>
 can find the folder containing the Signal backup file by navigating to
 <a href="#navigate-to-settings">Signal Settings</a> &gt; Backups &gt;
 On-device backups &gt; Backup folder.</li>
-<li>For older versions of Signal, the backup file
-<code>signal-year-month-date-time.backup</code> can be found at 
-<code>/Internal Storage/Signal/Backups</code> or
-<code>/sdcard/Signal/Backups</code>.</li>
+<li>For older versions of Signal, the backup file 0 can be found at 
+1 or 2.</li>
 <li>If you created a <a href="#signal-desktop-backups">Signal Desktop
 backup</a>, you can find your backup folder by going to Signal Desktop
 Settings &gt; Backups &gt; Desktop Backups (Manage) &gt; Backup
@@ -618,11 +616,9 @@ folder on your device storage.</li>
 </ul>
 <p><strong>What does the backup folder contain?</strong></p>
 <ul>
-<li><code>backup.db</code> — Your encrypted message database</li>
-<li><code>attachments/</code> — A folder containing your media
-files</li>
-<li><code>manifest.json</code> — Backup metadata and verification
-info</li>
+<li>0 — Your encrypted message database</li>
+<li>0 — A folder containing your media files</li>
+<li>0 — Backup metadata and verification info</li>
 </ul>
 <hr />
 <p> Still need help? <a
@@ -924,8 +920,7 @@ Apps &amp; Notifications &gt; Signal &gt; App Permissions or Permissions
 Settings &gt; Backups &gt; tap <a
 href="#android-on-device-backups">On-device backups</a>.</li>
 <li>Record the 30-digit passphrase.</li>
-<li>Manually move the<code>Signal</code>folder that contains the backup
-file.
+<li>Manually move the0folder that contains the backup file.
 <ul>
 <li>Same phone? Manually move the backup to a computer before you reset
 this phone.</li>
@@ -989,15 +984,12 @@ href="#navigate-to-settings">Signal Settings</a>
 &gt; <strong>Backups</strong> &gt; <strong>On-device backups</strong>
 &gt; <strong>Backupfolder</strong>. Use the files app or plug your phone
 into a computer to go to the folder.</li>
-<li>For older versions of Signal, the backup file
-<code>signal-year-month-date-time.backup</code> can be found at 
-<code>/Internal Storage/Signal/Backups</code> or
-<code>/sdcard/Signal/Backups</code></li>
+<li>For older versions of Signal, the backup file 0 can be found at 
+1 or 2</li>
 </ul>
 <h5 id="where-do-i-move-the-backup-file"><strong>Where do I move the
 backup file?</strong></h5>
-<p>Move the backup file <code>signal-year-month-date-time.backup</code>
-to a device that is not your phone.</p>
+<p>Move the backup file 0 to a device that is not your phone.</p>
 <ul>
 <li>A common method is to use a cable to plug your phone into your
 computer. Some phone’s require you to use a cable that was provided with
@@ -1011,9 +1003,9 @@ phone to change the mode to Transfer files (MTP).</li>
 id="what-do-i-do-on-my-new-phone-or-phone-that-was-reset"><strong>What
 do I do on my new phone or phone that was reset?</strong></h5>
 <ol type="1">
-<li>Manually move the<code>Signal</code>folder with the backup file to
-your phone. For older versions of Signal, move it to the top most level
-or <code>/Internal Storage/</code> on your restored or new phone.
+<li>Manually move the0folder with the backup file to your phone. For
+older versions of Signal, move it to the top most level or 1 on your
+restored or new phone.
 <ul>
 <li>A common method is to use a cable to plug your phone into your
 computer. Some phone’s require you to use a cable that was provided with
@@ -1063,8 +1055,7 @@ onto your phone that was reset.</li>
 <li>Some devices may need to power down and restart to see the backup
 file.</li>
 <li>Make sure the backup file is visible. As a reminder, backup
-filenames follow this format:
-<code>signal-year-month-date-time.backup</code></li>
+filenames follow this format: 0</li>
 <li>Enable all the <a
 href="#signal-permissions-os-notification-settings">permissions</a> for
 Signal.
@@ -1349,22 +1340,18 @@ Desktop:
 <li><strong>Windows</strong> Replace  with your Windows User in the
 steps below
 <ol type="1">
-<li>Select <strong>Uninstall Signal.exe</strong> in
-<code>C:\Users\&lt;YourName&gt;\AppData\Local\Programs\signal-desktop</code></li>
-<li>Delete
-<code>C:\Users\&lt;YourName&gt;\AppData\Roaming\Signal</code></li>
+<li>Select <strong>Uninstall Signal.exe</strong> in 0</li>
+<li>Delete 0</li>
 </ol></li>
 <li><strong>macOS</strong>
 <ol type="1">
-<li>Delete the Signal.app file from the <code>/Application</code> or
-<code>~/Application</code> directory</li>
-<li>Delete local data from
-<code>~/Library/Application Support/Signal</code></li>
+<li>Delete the Signal.app file from the 0 or 1 directory</li>
+<li>Delete local data from 0</li>
 </ol></li>
 <li><strong>Linux</strong>
 <ol type="1">
-<li>Use <code>apt-get remove signal-desktop</code></li>
-<li>Delete <code>~/.config/Signal</code></li>
+<li>Use 0</li>
+<li>Delete 0</li>
 </ol></li>
 </ul></li>
 </ol>
@@ -2527,7 +2514,6 @@ settings for who can join the call.</li>
 <li>Optional: choose to Require admin approval.</li>
 <li>Share the call link.
 <ul>
-<li>Copy link.</li>
 <li>Share link via Signal to an existing chat.</li>
 </ul></li>
 <li>Select DONE.</li>
@@ -2694,7 +2680,6 @@ your message bubble in the chat.</li>
 <li>If Signal is locked, you will see <strong>Locked message</strong> in
 place of your selection above until you unlock Signal. </li>
 </ol>
-<h5 id="section"></h5>
 <h5 id="to-hide-notifications-and-badges-mute-a-chat"><strong>To hide
 notifications and badges, mute a chat:</strong></h5>
 <ol type="1">
@@ -2716,7 +2701,6 @@ reaction they used to any messages. The reaction will still appear on
 your message bubble in the chat. </li>
 </ul></li>
 </ol>
-<h5 id="section-1"></h5>
 <h5
 id="to-set-custom-notification-sounds-per-contact-including-silent-notifications"><strong>To set
 custom notification sounds per contact including silent
@@ -2774,7 +2758,6 @@ your message bubble in the chat.</li>
 </ul></li>
 </ul></li>
 </ol>
-<h5 id="section-2"></h5>
 <h5 id="to-hide-notifications-mute-a-chat"><strong>To hide
 notifications, mute a chat:</strong></h5>
 <ol type="1">
@@ -2803,7 +2786,6 @@ your message bubble in the chat.</li>
 Conversations</strong></li>
 </ul></li>
 </ol>
-<h5 id="section-3"></h5>
 <h5 id="to-manage-the-send-message-sound"><strong>To manage the send
 message sound:</strong></h5>
 <ol type="1">
@@ -2818,7 +2800,6 @@ href="https://support.apple.com/HT208353">Apple’s support page</a>.</li>
 <li>To disable, tap the slider so it is grey.</li>
 </ul></li>
 </ol>
-<h5 id="section-4"></h5>
 <h5
 id="to-set-custom-notification-sounds-per-contact-including-silent-notifications-1"><strong>To set
 custom notification sounds per contact including silent
@@ -3456,7 +3437,7 @@ previews</strong></em></p>
 message.</p>
 <p><strong>Which sites are currently supported?</strong></p>
 <p>Link previews are available for all sites that explicitly start with
-<code>https</code>.</p>
+0.</p>
 <h3 id="linked-devices">Linked Devices</h3>
 <p>You can link a Desktop, iPad, iPhone, or Android device (tablet or
 phone) to your primary Signal Device. All Signal communication on linked
@@ -3912,7 +3893,6 @@ are visual examples for the setting who can see my number:</strong></h5>
 <p><strong>Everybody</strong></p>
 <p>Who can <strong>see</strong> my number:</p>
 <p><strong>Nobody</strong></p>
-<h5 id="section-5"></h5>
 <h5 id="who-can-find-me-by-my-number"><strong>Who can find me by my
 number?</strong></h5>
 <p>Open Signal &gt; Settings &gt; Privacy &gt; Phone Number &gt; Who can
@@ -3961,7 +3941,6 @@ number:</strong></h5>
 <p><strong>Everybody</strong></p>
 <p>Who can <strong>find</strong> me by number:</p>
 <p><strong>Nobody</strong></p>
-<h5 id="section-6"></h5>
 <h5 id="why-cant-people-find-me"><strong>Why can’t people find
 me?</strong></h5>
 <ul>
@@ -4034,7 +4013,6 @@ to share your phone number with them.</p>
 <h5 id="create-username"><strong>Create username</strong></h5>
 <p>Open Signal &gt; tap your profile icon &gt; Settings (iOS) &gt; tap
 on your profile &gt; tap by the @ symbol.</p>
-<h5 id="section-7"></h5>
 <h5 id="username-requirements"><strong>Username
 requirements</strong></h5>
 <ul>
@@ -4051,7 +4029,6 @@ unique URL. The URL does not include the text of your username.</p>
 <p>Open Signal &gt; tap your profile icon &gt; Settings (iOS) &gt; tap
 on your profile &gt; tap QR Code or Link &gt; select how you want to
 share your current username. </p>
-<h5 id="section-8"></h5>
 <h5 id="change-username"><strong>Change username</strong></h5>
 <p>Open Signal &gt; tap your profile icon &gt; Settings (iOS) &gt; tap
 on your profile &gt; tap by the @ symbol &gt; tap Edit username (Android
@@ -4081,7 +4058,6 @@ number.</li>
 </ul>
 <p>You send a message to a specific username.</p>
 <p>They see a message request.</p>
-<h5 id="section-9"></h5>
 <h5 id="receiving-a-message-request-via-username"><strong>Receiving a
 message request via username</strong></h5>
 <ul>
@@ -4101,7 +4077,6 @@ number.</li>
 <p>They accept your message request.</p>
 <p>You can now see their profile name and image in place of the
 username.</p>
-<h5 id="section-10"></h5>
 <h5 id="how-many-usernames-can-i-have"><strong>How many usernames can I
 have?</strong></h5>
 <p>You can only have one username at a time. Usernames are only to
@@ -6112,8 +6087,8 @@ on.</li>
 &gt; tell us details and send us an email.</p>
 <h3 id="text-formatting">Text Formatting</h3>
 <p>Highlight your selected text to use <strong>bold</strong>,
-<em>italics</em>, <del>strikethrough</del>, <code>monospace</code>, or a
-<em>spoiler</em> that taps to reveal.</p>
+<em>italics</em>, <del>strikethrough</del>, 0, or a <em>spoiler</em>
+that taps to reveal.</p>
 <ol type="1">
 <li>Compose a message.</li>
 <li>Before hitting send, highlight the text you want to format. A menu
@@ -7080,11 +7055,11 @@ above</a></p></li>
 <li><p>Linux Note that these instructions only work for 64 bit
 Debian-based Linux distributions such as Ubuntu, Mint etc.</p>
 <pre><code># 1. Install our official public software signing key
-wget -O- `https://updates.signal.org/desktop/apt/keys.asc` | gpg --dearmor &gt; signal-desktop-keyring.gpg
+wget -O- 0 | gpg --dearmor &gt; signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg &gt; /dev/null
 
 # 2. Add our repository to your list of repositories
-echo &#39;deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] `https://updates.signal.org/desktop/apt` xenial main&#39; |
+echo &#39;deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 0 xenial main&#39; |
 sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
 # 3. Update your package database and install signal
@@ -7680,9 +7655,7 @@ page here</a> to find hidden pages.</li>
 <li>Where is Signal saved to on your phone?
 <ul>
 <li>Is it saved to a folder that gets deleted every day?</li>
-<li>For macOS, did you save it to
-the <code>/Application</code> or <code>~/Application</code>
-directory?</li>
+<li>For macOS, did you save it to the 0 or 1 directory?</li>
 </ul></li>
 <li>Have you created a shortcut to the app?
 <ul>
@@ -7888,8 +7861,7 @@ available.</li>
 <li>You can also launch the “Software Updater” app to check for new
 updates.</li>
 <li>Or you can run the following command from a terminal window to
-update Signal: <code
-class="language-bash">sudo apt update &amp;&amp; sudo apt install signal-desktop</code></li>
+update Signal: 0{.language-bash}</li>
 <li>After the app is updated, simply restart Signal to launch the new
 version.</li>
 </ul></li>
@@ -8867,8 +8839,7 @@ potentially have been affected. We are notifying these users via SMS. We
 started notifying users on August 15th and completed notifying users by
 August 16th. The SMS message we were sending these users read: “This is
 from Signal Messenger. We’re reaching out so you can protect your Signal
-account. Open Signal and register again. More info:
-<code>https://signal.org/smshelp"</code></li>
+account. Open Signal and register again. More info: 0</li>
 <li>If you saw a banner when you opened Signal saying your device is no
 longer registered, you <strong>may</strong> have been impacted, but
 there are other reasons why you may no longer be registered such as a
@@ -9010,8 +8981,7 @@ directory</li>
 <ul>
 <li>Run the command: apt-get remove signal-desktop</li>
 <li>Delete ~/.config/Signal</li>
-<li>Reinstall Signal desktop via this link:
-<code>https://signal.org/download</code></li>
+<li>Reinstall Signal desktop via this link: 0</li>
 </ul>
 <h4 id="transfer-message-history-from-mobile-to-desktop">Transfer
 Message History from mobile to Desktop</h4>
@@ -9147,14 +9117,13 @@ to share a debug log if Signal Desktop does not open</strong></h5>
 <ol type="1">
 <li>Find the folder with your application data
 <ul>
-<li>macOS: <code>~/Library/Application Support/Signal</code></li>
-<li>Linux: <code>~/.config/Signal</code></li>
-<li>Windows:
-<code>C:\Users\&lt;YourUserName&gt;\AppData\Roaming\Signal</code></li>
+<li>macOS: 0</li>
+<li>Linux: 0</li>
+<li>Windows: 0</li>
 </ul></li>
-<li>Optional: ZIP/Compress the <code>logs</code> folder</li>
-<li>Share the <code>logs</code> folder or a specific log from within
-the <code>logs</code> folder as an attachment to .</li>
+<li>Optional: ZIP/Compress the 0 folder</li>
+<li>Share the 0 folder or a specific log from within the 1 folder as an
+attachment to .</li>
 </ol>
 <p>Please include a Signal Android debug log or Signal iOS debug log if
 this is an issue involving your mobile.</p>
@@ -9210,22 +9179,18 @@ computer:</p>
 <h6 id="windows">Windows</h6>
 <p>Replace  with your Windows User in the steps below:</p>
 <ol type="1">
-<li>Select Uninstall Signal.exe in
-<code>C:\Users\&lt;YourName&gt;\AppData\Local\Programs\signal-desktop</code>.</li>
-<li>Manually delete
-<code>C:\Users\&lt;YourName&gt;\AppData\Local\Programs\signal-desktop</code>.</li>
+<li>Select Uninstall Signal.exe in 0.</li>
+<li>Manually delete 0.</li>
 </ol>
 <h6 id="macos">macOS</h6>
 <ol type="1">
-<li>Delete the Signal.app file from the <code>/Application</code> or
-<code>~/Application</code> directory.</li>
-<li>Delete local data from
-<code>~/Library/Application Support/Signal</code>.</li>
+<li>Delete the Signal.app file from the 0 or 1 directory.</li>
+<li>Delete local data from 0.</li>
 </ol>
 <h6 id="linux-1">Linux</h6>
 <ol type="1">
-<li>Use <code>apt-get remove signal-desktop</code>.</li>
-<li>Delete <code>~/.config/Signal</code>.</li>
+<li>Use 0.</li>
+<li>Delete 0.</li>
 </ol>
 <h4 id="dont-have-the-phone-you-used-to-set-up-signal">Don’t have the
 phone you used to set up Signal?</h4>
@@ -10797,7 +10762,7 @@ device.</strong></li>
 restored.</li>
 </ul>
 <p><strong>Backup Filename Format</strong></p>
-<p><code>signal-backup-YYYY-MM-DD-HH-MM-SS</code></p>
+<p>0</p>
 <hr />
 <p><strong>4. Confirm you have your passphrase</strong></p>
 <ul>
@@ -11222,8 +11187,7 @@ use the start menu to find the file path:
 <li>Close Signal Desktop. </li>
 <li>Find the command prompt by clicking start and typing “cmd” into the
 search bar. </li>
-<li>Enter the following command. <code
-class="language-bash">start Full File Path For Signal --disable-gpu</code></li>
+<li>Enter the following command. 0{.language-bash}</li>
 <li>Replace “Full Path For Signal” with the path you copied earlier,
 then press Enter. This will start Signal Desktop without hardware
 acceleration enabled.</li>
@@ -11232,8 +11196,7 @@ acceleration enabled.</li>
 <ol type="1">
 <li>Close Signal Desktop.</li>
 <li>Open your terminal.</li>
-<li>Enter the following command. <code
-class="language-bash">open /Applications/Signal.app/ --args --disable-gpu</code> </li>
+<li>Enter the following command. 0{.language-bash} </li>
 <li>Press return. This will start Signal Desktop with hardware
 acceleration disabled. </li>
 </ol>
@@ -11242,8 +11205,7 @@ acceleration disabled. </li>
 <li><ol type="1">
 <li>Close Signal Desktop.</li>
 <li>Open your terminal.</li>
-<li>Enter the following command. <code
-class="language-bash">open /Applications/Signal.app/ --args --disable-gpu</code></li>
+<li>Enter the following command. 0{.language-bash}</li>
 <li>Press Enter. This will start Signal Desktop without hardware
 acceleration enabled.</li>
 </ol></li>
@@ -11369,11 +11331,10 @@ user specific Application folder. </p></li>
 <ol type="1">
 <li><a
 href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">Open
-the terminal</a>, enter <code class="language-bash">id -un</code> to
-determine your username.</li>
-<li>Replace USERNAME with the info from step 1 in the line <code
-class="language-bash">sudo chown USERNAME ~/Library/Caches/org.whispersystems.signal-desktop.ShipIt/*</code>
-and enter it into the terminal.</li>
+the terminal</a>, enter 0{.language-bash} to determine your
+username.</li>
+<li>Replace USERNAME with the info from step 1 in the line
+0{.language-bash} and enter it into the terminal.</li>
 <li>Open Signal Desktop and choose to update through the banner
 alert.</li>
 </ol></li>
@@ -11384,17 +11345,11 @@ alert.</li>
 href="https://en.wikipedia.org/wiki/APT_(Debian)">APT</a>.</li>
 <li>Enter the following three lines into your terminal. 
 <ol type="1">
-<li><code class="language-bash">wget -O-</code><a
-href="https://updates.signal.org/desktop/apt/keys.asc"><code
-class="language-bash">https://updates.signal.org/desktop/apt/keys.asc</code></a><code
-class="language-bash">| gpg --dearmor | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg &gt; /dev/null</code></li>
-<li><code
-class="language-bash">echo "deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg]</code><a
-href="https://updates.signal.org/desktop/apt"><code
-class="language-bash">https://updates.signal.org/desktop/apt</code></a><code
-class="language-bash">xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list &gt; /dev/null</code></li>
-<li><code
-class="language-bash">sudo apt update &amp;&amp; sudo apt install signal-desktop</code></li>
+<li>0{.language-bash}<a
+href="https://updates.signal.org/desktop/apt/keys.asc">1{.language-bash}</a>2{.language-bash}</li>
+<li>0{.language-bash}<a
+href="https://updates.signal.org/desktop/apt">1{.language-bash}</a>2{.language-bash}</li>
+<li>0{.language-bash}</li>
 </ol></li>
 <li>Some users will need to unset /tmp as noexec.</li>
 </ul></li>
@@ -11403,7 +11358,7 @@ class="language-bash">sudo apt update &amp;&amp; sudo apt install signal-desktop
 devices</h3>
 <p>Signal can only be registered on one mobile device at a time, and up
 to five secondary devices can be linked at a time. Currently supported
-linked secondary devices​ are iPads, computers, and Android smartphones
+linked secondary devices are iPads, computers, and Android smartphones
 and tablets. </p>
 <p>If you’ve set up another device, follow steps to resolve for your
 platform:</p>
@@ -11613,9 +11568,8 @@ System Webview</a> app on your phone.</li>
 <li>Upgrade your Android OS to the latest version that is available for
 your device.</li>
 <li>Confirm that the date and time settings for your phone are set
-correctly for your time zone.  Compare to the time set
-by <code>https://www.time.gov/</code> or
-by <code>https://time.is/</code>.</li>
+correctly for your time zone.  Compare to the time set by 0 or
+by 1.</li>
 <li>Check if the notification appears in your Android notification bar
 or tray.</li>
 <li>Check that you have enabled notifications on your phone.
@@ -11888,8 +11842,7 @@ href="#block-numbers-usernames-or-groups">blocked</a> the contact.</li>
 <li>Check if your linked <a href="#installing-signal">Signal
 Desktop</a> has already viewed the message.</li>
 <li>Confirm that the date and time settings for your phone are set
-correctly for your time zone.  Compare to the time set
-by <code>https://www.time.gov/</code> or <code>https://time.is/</code>.</li>
+correctly for your time zone.  Compare to the time set by 0 or 1.</li>
 <li>For sound notifications,
 <ul>
 <li>Confirm you have enabled the sound option in your notification

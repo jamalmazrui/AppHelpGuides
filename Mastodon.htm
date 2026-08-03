@@ -258,7 +258,7 @@ subheadings within it. The documentation’s separate administration,
 developer, and API reference sections are not included in this
 user-oriented volume but are available on request. Images are reduced to
 bracketed captions and embedded videos are omitted.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#cat-using-mastodon">Using Mastodon</a>
 <ul>
@@ -563,31 +563,28 @@ field. The default character limit is 500 characters.</p>
 <h5 id="links">Links</h5>
 <p>[Image: Links must start with http(s):// and are counted as 23
 characters regardless of length]</p>
-<p>If you include links in your post, they must begin with
-<code>http://</code> or <code>https://</code>. All links are counted as
-23 characters, no matter how long they actually are, so there is no need
-to use a link shortener to save characters. In fact, using a link
-shortener is actively discouraged.</p>
+<p>If you include links in your post, they must begin with 0 or 1. All
+links are counted as 23 characters, no matter how long they actually
+are, so there is no need to use a link shortener to save characters. In
+fact, using a link shortener is actively discouraged.</p>
 <h5 id="mentions">Mentions</h5>
 <p>[Image: Suggested mentions for both local and remote users]</p>
-<p>You can mention users by typing out their full address,
-e.g. <code>@alice@example.com</code>. Note that any usage
-of<code>@word</code> will be interpreted as mentioning the local user
-with the username <code>word</code>, if that user exists. Only the
-username part will count against your character limit – the domain is
-not counted.</p>
+<p>You can mention users by typing out their full address, e.g. 0. Note
+that any usage of1 will be interpreted as mentioning the local user with
+the username 2, if that user exists. Only the username part will count
+against your character limit – the domain is not counted.</p>
 <h5 id="hashtags">Hashtags</h5>
 <p>[Image: Hashtags are autosuggested with usage frequency]</p>
-<p>You can use a <code>#hashtag</code> to make your post discoverable to
-anyone searching for that hashtag. Hashtags can contain alphanumeric
-characters and underscores, but cannot contain numbers only.</p>
+<p>You can use a 0 to make your post discoverable to anyone searching
+for that hashtag. Hashtags can contain alphanumeric characters and
+underscores, but cannot contain numbers only.</p>
 <h5 id="custom-emoji">Custom emoji</h5>
 <p>[Image: An array of custom emoji are available in the selector]</p>
 <p>Each server offers a set of custom emoji you can use, similar to
-Slack or Discord. You can use an emoji using its shortcode like
-<code>:thounking:</code> or by clicking the emoji face in the compose
-box and browsing through the “Custom” category. You can also browse
-through and search for standard Unicode emoji.</p>
+Slack or Discord. You can use an emoji using its shortcode like 0 or by
+clicking the emoji face in the compose box and browsing through the
+“Custom” category. You can also browse through and search for standard
+Unicode emoji.</p>
 <p>To choose a different emoji skin tone, use the selector next to the
 emoji search box.</p>
 <h4 id="attachments">Attachments</h4>
@@ -656,50 +653,18 @@ available options for post visibility]</p>
 <p>The following table shows where posts made with a certain privacy
 setting will be visible. “Public feeds” includes search results,
 trending, and live feeds.</p>
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;">Setting</th>
-<th style="text-align: left;">Public feeds</th>
-<th style="text-align: left;">Profile view</th>
-<th style="text-align: left;">Home feeds</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Public</td>
-<td style="text-align: left;">Visible</td>
-<td style="text-align: left;">Visible</td>
-<td style="text-align: left;">Visible</td>
-</tr>
-<tr>
-<td style="text-align: left;">Quiet public</td>
-<td style="text-align: left;">Hidden</td>
-<td style="text-align: left;">Visible</td>
-<td style="text-align: left;">Visible</td>
-</tr>
-<tr>
-<td style="text-align: left;">Followers</td>
-<td style="text-align: left;">Hidden</td>
-<td style="text-align: left;">Visible for followers and mentioned
-accounts</td>
-<td style="text-align: left;">Visible for followers and mentioned
-accounts</td>
-</tr>
-<tr>
-<td style="text-align: left;">Private mention</td>
-<td style="text-align: left;">Hidden</td>
-<td style="text-align: left;">Visible for mentioned accounts</td>
-<td style="text-align: left;">Visible for mentioned accounts</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Setting: Public; Public feeds: Visible; Profile view: Visible; Home
+feeds: Visible</li>
+<li>Setting: Quiet public; Public feeds: Hidden; Profile view: Visible;
+Home feeds: Visible</li>
+<li>Setting: Followers; Public feeds: Hidden; Profile view: Visible for
+followers and mentioned accounts; Home feeds: Visible for followers and
+mentioned accounts</li>
+<li>Setting: Private mention; Public feeds: Hidden; Profile view:
+Visible for mentioned accounts; Home feeds: Visible for mentioned
+accounts</li>
+</ul>
 <blockquote>
 <p><strong>Note:</strong> Direct links (permalinks) to posts with
 “Followers” or “Private mention” visibility can only be accessed by
@@ -773,9 +738,9 @@ the sender’s and recipient’s servers may obtain access to the text.</p>
 follow both you and the person you are replying to.</p>
 <p>Some notes about this:</p>
 <ul>
-<li>A new post you make which starts with an <code>@mention</code> is
-<strong>not</strong> considered a reply, so it will show up on the Home
-feed of all your followers.</li>
+<li>A new post you make which starts with an 0 is <strong>not</strong>
+considered a reply, so it will show up on the Home feed of all your
+followers.</li>
 <li>The reply’s visibility (Public vs Unlisted vs Followers-only) does
 <strong>not</strong> affect whether it shows up on the Home feed.</li>
 <li>If your post is public and contains a followed hashtag, it will be
@@ -834,8 +799,7 @@ published status.</p>
 <h3 id="quoting-other-posts">Quoting other posts</h3>
 <p><em>All about quoting content (your own posts, or those made by other
 people).</em></p>
-<p><code>&lt;style&gt;</code> #TableOfContents ul ul ul {display:
-none}</p>
+<p>0 #TableOfContents ul ul ul {display: none}</p>
 <h4 id="what-are-quote-posts">What are quote posts?</h4>
 <p>Quote posts allow you to reference another user’s post in your own,
 while adding your own commentary.</p>
@@ -901,78 +865,77 @@ quotes already published.</p>
 followers-only posts and direct mentions can only ever be quoted by
 you.</p>
 <h4 id="additional-tips">Additional tips</h4>
-<p><strong>Power booster?</strong> You can still boost quickly using
-<code>Shift + Click</code> on the <strong>Boost</strong> button or using
-the <code>‘B’</code> hotkey.</p>
+<p><strong>Power booster?</strong> You can still boost quickly using 0
+on the <strong>Boost</strong> button or using the 1 hotkey.</p>
 <p><strong>Quote responsibly.</strong> Authors can remove their post if
 they’re uncomfortable with the way you’ve quoted them. See <a
 href="https://docs.joinmastodon.org/user/quote-posts/#remove">Removing
 your post from someone’s quote post</a> for more details.</p>
 <h4 id="frequently-asked-questions">Frequently Asked Questions</h4>
-<h6
+<h5
 id="do-quote-posts-appear-in-the-same-context-as-a-thread-or-do-they-create-a-new-context">Do
 quote posts appear in the same context as a thread, or do they create a
-new context?</h6>
+new context?</h5>
 <p>Quote posts create a new context, and do not appear in the replies.
 Replies to the quote post will only notify you if you are also
 mentioned.</p>
-<h6
+<h5
 id="i-dont-want-to-be-quoted-at-all-can-i-prevent-people-from-quoting-me">I
 don’t want to be quoted at all, can I prevent people from quoting
-me?</h6>
+me?</h5>
 <p>Yes, for every post you make, you can decide who can quote you, from
 “Anyone”, “Followers only”, and “Just me”. People you have blocked are
 not able to quote you, even if you have selected “Anyone”. You can
 select “Just me” if you don’t want to be quoted at all (note that you
 can <em>always</em> quote yourself).</p>
-<h6
+<h5
 id="will-there-be-a-setting-to-enable-quoting-for-accounts-i-follow">Will
-there be a setting to enable quoting for “Accounts I follow”?</h6>
+there be a setting to enable quoting for “Accounts I follow”?</h5>
 <p>This will not be part of the quote posts implementation in Mastodon
 4.5. We may consider this option for the future.</p>
-<h6 id="what-happens-if-the-quoted-post-is-deleted-or-edited">What
-happens if the quoted post is deleted or edited?</h6>
+<h5 id="what-happens-if-the-quoted-post-is-deleted-or-edited">What
+happens if the quoted post is deleted or edited?</h5>
 <p>If a quoted post is deleted, the contents of the quote post will
 remain, but the quoted post will be replaced with a placeholder
 explaining it is unavailable. If the quoted post is edited, this will be
 reflected when viewing the quote post.</p>
-<h6 id="i-dont-want-to-see-quote-posts-can-i-disable-them">I don’t want
-to see quote posts, can I disable them?</h6>
+<h5 id="i-dont-want-to-see-quote-posts-can-i-disable-them">I don’t want
+to see quote posts, can I disable them?</h5>
 <p>The Mastodon web interface allows you to hide quote posts from your
 own timeline, the same way it allows you to hide boosts or replies.</p>
-<h6
+<h5
 id="as-a-server-administrator-i-dont-want-my-users-to-use-and-see-quotes-can-i-disable-them">As
 a server administrator, I don’t want my users to use and see quotes, can
-I disable them?</h6>
+I disable them?</h5>
 <p>No, there is no server setting in Mastodon to disable quote display
 or authoring for their users.</p>
-<h6
+<h5
 id="i-dont-like-how-my-post-was-quoted.-can-i-remove-it-do-i-need-to-block-the-person-who-quoted-me">I
 don’t like how my post was quoted. Can I remove it? Do I need to block
-the person who quoted me?</h6>
+the person who quoted me?</h5>
 <p>Yes, you can <a
 href="https://docs.joinmastodon.org/user/quote-posts/#remove">revoke a
 quote</a> at any time. This will be irreversible though, so proceed with
 caution. You do not need to block the author to remove the quote.</p>
-<h6
+<h5
 id="i-dont-want-my-post-to-be-quoted-anymore.-can-i-stop-the-quotes-do-i-need-to-delete-the-post">I
 don’t want my post to be quoted anymore. Can I stop the quotes? Do I
-need to delete the post?</h6>
+need to delete the post?</h5>
 <p>You can change the quote policy at any time without deleting the
 post. It will only affect new quotes, existing ones will remain unless
 you manually remove them.</p>
-<h6 id="are-my-old-posts-quotable">Are my old posts quotable?</h6>
+<h5 id="are-my-old-posts-quotable">Are my old posts quotable?</h5>
 <p>Posts made in Mastodon 4.4 and earlier do not allow quotes, although
 you can make them quotable by individually <a
 href="https://docs.joinmastodon.org/user/quote-posts/#change">changing
 their quote policy</a>.</p>
-<h6 id="can-i-quote-and-reply-at-the-same-time">Can I quote and reply at
-the same time?</h6>
+<h5 id="can-i-quote-and-reply-at-the-same-time">Can I quote and reply at
+the same time?</h5>
 <p>Yes. Start writing a reply, then click the “Quote” button on the post
 you want to quote. The quote will be attached to the reply.</p>
-<h6
+<h5
 id="why-doesnt-mastodon-use-the-existing-object-links-method-for-quotes">Why
-doesn’t Mastodon use the existing “Object Links” method for quotes?</h6>
+doesn’t Mastodon use the existing “Object Links” method for quotes?</h5>
 <p>Fediverse Enhancement Proposal FEP-e232 describes the concept of
 “Object Links” for ActivityPub. This FEP is used by some other Fediverse
 platforms to provide functionality similar to quote posts. Mastodon
@@ -980,8 +943,8 @@ chose to implement additional <em>consent</em> and <em>visibility</em>
 options, via a new FEP (see <a
 href="https://docs.joinmastodon.org/user/quote-posts/#faq-consent">How
 does Mastodon enforce quote consent?</a>)</p>
-<h6 id="how-does-mastodon-enforce-quote-consent">How does Mastodon
-enforce quote consent?</h6>
+<h5 id="how-does-mastodon-enforce-quote-consent">How does Mastodon
+enforce quote consent?</h5>
 <p>Mastodon uses <a
 href="https://codeberg.org/fediverse/fep/src/branch/main/fep/044f/fep-044f.md">FEP-044f,
 Consent-respecting quote posts</a> to advertise who is expected to be
@@ -993,20 +956,20 @@ Mastodon cannot prevent other fediverse software from showing quotes
 without consent, but it won’t display such quotes itself. We encourage
 other implementers to make use of the protocol described in Fediverse
 Enhancement Proposal FEP-044f.</p>
-<h6 id="how-do-mastodon-quotes-show-up-in-other-fediverse-software">How
-do Mastodon quotes show up in other Fediverse software?</h6>
+<h5 id="how-do-mastodon-quotes-show-up-in-other-fediverse-software">How
+do Mastodon quotes show up in other Fediverse software?</h5>
 <p>Quotes authored with Mastodon should show up just like any other
 quote in Misskey, Akkoma, and most other pieces of Fediverse software
 that already have some quote implementations.</p>
-<h6
+<h5
 id="how-do-quotes-from-other-fediverse-software-show-up-in-mastodon">How
-do quotes from other Fediverse software show up in Mastodon?</h6>
+do quotes from other Fediverse software show up in Mastodon?</h5>
 <p>Only self-quotes and quotes with explicit consent will show up as
 proper quotes in Mastodon. Some quotes won’t meet these requirements.
 These include quotes from software that doesn’t support Mastodon’s
 approval system. They will appear as regular posts, not as quotes.</p>
-<h6 id="why-is-my-quote-taking-time-to-appear">Why is my quote taking
-time to appear?</h6>
+<h5 id="why-is-my-quote-taking-time-to-appear">Why is my quote taking
+time to appear?</h5>
 <p>While Mastodon will automatically approve or reject quotes according
 to your settings (see <a
 href="https://docs.joinmastodon.org/user/quote-posts/#defaults">Setting
@@ -1014,8 +977,8 @@ your default quote settings</a>), other Fediverse software might require
 manual approval of quotes. This means that when you quote posts from
 across the Fediverse, it may take time for your quote to appear. When
 the quote is approved, it will automatically update on your post.</p>
-<h6 id="how-do-quotes-interact-with-blocks">How do quotes interact with
-blocks?</h6>
+<h5 id="how-do-quotes-interact-with-blocks">How do quotes interact with
+blocks?</h5>
 <p>If you have blocked someone and see someone quoting them, the quote
 post will still appear, but the quote will be hidden. The same applies
 if they have blocked you. Blocked users cannot quote your new posts.
@@ -1171,8 +1134,8 @@ favourites, boosts, and other interactions to not be shown to you.</p>
 <p>You can also choose to not receive notifications when you receive a
 direct message from people you don’t follow.</p>
 <h4 id="miscellaneous-options">Miscellaneous options</h4>
-<p>If you opt out of search engine indexing, a <code>noindex</code> flag
-will be added to your public profile and status pages.</p>
+<p>If you opt out of search engine indexing, a 0 flag will be added to
+your public profile and status pages.</p>
 <p>You can choose to hide your network, which will make your following
 and follower lists private to you only.</p>
 <p>If you want to see posts that are boosted multiple times be
@@ -1251,32 +1214,12 @@ profiles.</p>
 <p>Profile metadata is a way to add extra information to your profile
 that is easy to skim. You have 4 rows where you can define the label and
 the value. For example:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Label</th>
-<th style="text-align: left;">Content</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Age</td>
-<td style="text-align: left;">25</td>
-</tr>
-<tr>
-<td style="text-align: left;">Country</td>
-<td style="text-align: left;">Germany</td>
-</tr>
-<tr>
-<td style="text-align: left;">Pronouns</td>
-<td style="text-align: left;">he/him</td>
-</tr>
-<tr>
-<td style="text-align: left;">Website</td>
-<td style="text-align: left;"><code>https://example.com</code></td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Label: Age; Content: 25</li>
+<li>Label: Country; Content: Germany</li>
+<li>Label: Pronouns; Content: he/him</li>
+<li>Label: Website; Content: 0</li>
+</ul>
 <p>It’s completely up to you what you put there. The content can contain
 mentions, hashtags, custom emojis and links.</p>
 <h5 id="link-verification">Link verification</h5>
@@ -1293,10 +1236,10 @@ domain, which people already trust.</p>
 </blockquote>
 <p>If you put an HTTPS link in your profile metadata, Mastodon checks if
 that link resolves to a web page that links back to your Mastodon
-profile with a special <code>rel=me</code> attribute. If so, you get a
-verification checkmark next to that link, since you are confirmed as the
-owner. Likewise, Mastodon puts <code>rel="me"</code> on the links within
-profile metadata. The link might look something like this:</p>
+profile with a special 0 attribute. If so, you get a verification
+checkmark next to that link, since you are confirmed as the owner.
+Likewise, Mastodon puts 1 on the links within profile metadata. The link
+might look something like this:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://social.example.com/@username&quot;</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;me&quot;</span><span class="dt">&gt;</span>Follow me on Mastodon!<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>It may also be embedded directly in the head of your web page:</p>
@@ -1315,35 +1258,33 @@ in transit.</li>
 <li>Since 4.0: <strong>the hostname must not change after IDN
 normalization</strong>. This is to prevent homeograph attacks where some
 Unicode character is used that looks confusingly similar to some ASCII
-character in a mixed string. For example, <code>U+0061</code> (English
-lowercase “a”) and <code>U+0430</code> (Cyrillic small letter “а”)
-appear nearly identical, but they are completely different characters.
-This similarity in appearance could be used maliciously to mislead
-people.</li>
+character in a mixed string. For example, 0 (English lowercase “a”) and
+1 (Cyrillic small letter “а”) appear nearly identical, but they are
+completely different characters. This similarity in appearance could be
+used maliciously to mislead people.</li>
 </ul>
 <p>Mastodon will then resolve the link and fetch the web page located
 there, looking for a qualified link that matches the criteria:</p>
 <ul>
-<li>The resolved page must contain at least one <code>a</code> or
-<code>link</code> tag with a <code>rel="me"</code> attribute.
+<li>The resolved page must contain at least one 0 or 1 tag with a 2
+attribute.
 <ul>
-<li>The <code>href</code> attribute on one of those elements must be
-equal to the URL for your Mastodon profile.</li>
+<li>The 0 attribute on one of those elements must be equal to the URL
+for your Mastodon profile.</li>
 </ul></li>
-<li>If no links with <code>rel="me"</code> are found, Mastodon will look
-for the <em>first</em> link, and the <code>href</code> value must
-redirect to your Mastodon profile’s URL. (This provides limited support
-for web pages that use link shorteners and do not use rel-me.)</li>
+<li>If no links with 0 are found, Mastodon will look for the
+<em>first</em> link, and the 1 value must redirect to your Mastodon
+profile’s URL. (This provides limited support for web pages that use
+link shorteners and do not use rel-me.)</li>
 <li>The HTTP response must not exceed 1 MB.</li>
 <li>The link must appear directly in the HTML response and be accessible
 without executing JavaScript.</li>
 </ul>
-<p><strong>Any such link must not be within an
-<code>iframe</code></strong>. An <code>iframe</code> effectively means
-the link is no longer on the same web page, but rather it is on some
-external web page which is being embedded in the current one. (Note that
-some “block-based” CMS software may wrap block elements within iframes,
-which prevents verification for this reason.)</p>
+<p><strong>Any such link must not be within an 0</strong>. An 1
+effectively means the link is no longer on the same web page, but rather
+it is on some external web page which is being embedded in the current
+one. (Note that some “block-based” CMS software may wrap block elements
+within iframes, which prevents verification for this reason.)</p>
 <blockquote>
 <p><strong>Note:</strong> Make sure to save your profile <em>after</em>
 adding the rel-me link to your web page! The verification process is
@@ -1356,8 +1297,8 @@ saving again.</p>
 <p>If you are an author or creator, your Mastodon account can be
 credited and linked when your articles, blog posts, and other works are
 shared on Mastodon and across the fediverse. This is possible by
-including a <code>fediverse:creator</code> tag in the HTML code of the
-websites where your work is published.</p>
+including a 0 tag in the HTML code of the websites where your work is
+published.</p>
 <p>Go to <strong>Preferences</strong> &gt; <strong>Public
 profile</strong> &gt; <strong>Verification</strong> &gt; <strong>Author
 attribution</strong> to get the code that you will need to copy and
@@ -1365,10 +1306,9 @@ paste into the head of the article’s HTML. The code might look something
 like this:</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;fediverse:creator&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;@username@social.example.com&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
-<p>Next, add the domain name of the publication, such as
-<code>example.com</code>, to the <strong>Websites allowed to credit
-you</strong> field. This protects you from false attributions in link
-previews.</p>
+<p>Next, add the domain name of the publication, such as 0, to the
+<strong>Websites allowed to credit you</strong> field. This protects you
+from false attributions in link previews.</p>
 <p>Anything that you publish on an allowed website will be attributed to
 you when it is shared to the fediverse, and the author byline will
 include the link to your Mastodon profile.</p>
@@ -1388,9 +1328,8 @@ servers by categories and languages on joinmastodon.org</a>.</p>
 policies</h5>
 <p>Before you sign up for a service, it is important to understand its
 policies and terms of use. A Mastodon website will usually have its
-policies listed on the <code>/about/more</code> page, which can be found
-by clicking “learn more” on the landing page while not logged in to that
-website.</p>
+policies listed on the 0 page, which can be found by clicking “learn
+more” on the landing page while not logged in to that website.</p>
 <h5 id="signup-modes">Signup modes</h5>
 <p>Mastodon allows website administrators to set one of three different
 signup modes: open signups, invites, and approval mode.</p>
@@ -1411,46 +1350,25 @@ before you can start using it.</p>
 domain</h4>
 <p>Mastodon usernames actually consist of two parts:</p>
 <ul>
-<li>The local username, e.g. <code>alice</code></li>
-<li>And the domain of the website, e.g. <code>example.com</code></li>
+<li>The local username, e.g. 0</li>
+<li>And the domain of the website, e.g. 0</li>
 </ul>
 <p>Just like an email address. For convenience sake, Mastodon allows you
 to skip the second part when addressing people on the same server as
 you, but you have to keep in mind when sharing your username with other
 people, you need to include the domain or they won’t be able to find you
 as easily.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Sharing your username</th>
-<th style="text-align: left;"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">I’m <code>@alice</code> on Mastodon!</td>
-<td style="text-align: left;">Wrong</td>
-</tr>
-<tr>
-<td style="text-align: left;">I’m <code>@alice@example.com</code> on
-Mastodon!</td>
-<td style="text-align: left;">Correct</td>
-</tr>
-<tr>
-<td style="text-align: left;">I’m <code>https://example.com/</code><span
-class="citation" data-cites="alice">@alice</span> on Mastodon!</td>
-<td style="text-align: left;">Correct</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Sharing your username: I’m 0 on Mastodon!; Wrong</li>
+<li>Sharing your username: I’m 0 on Mastodon!; Correct</li>
+<li>Sharing your username: I’m 0@alice on Mastodon!; Correct</li>
+</ul>
 <p>The search form in Mastodon will find people either with the above
 address form, or the link to the person’s profile, so you can share that
 instead if you prefer.</p>
 <p>The same username <em>can</em> be registered on different servers –
 there is no way to claim all of them ahead of time. Just like with
-email, you should not expect <code>alice@outlook.com</code> to be the
-same person as <code>alice@gmail.com</code> or
-<code>alice@yahoo.com</code>.</p>
+email, you should not expect 0 to be the same person as 1 or 2.</p>
 <h3 id="using-mastodon-externally">Using Mastodon externally</h3>
 <p><em>You can browse and interact on Mastodon from external apps or
 websites.</em></p>
@@ -1581,10 +1499,10 @@ that match or contain that term. Searching for a remote post or
 account’s full URL will cause the server to fetch it if it is not
 already in the database so it can be viewed locally.</p>
 <p>[Image: An example of a post being loaded directly by its URL]</p>
-<p>[Image: An example of results when searching for "arstechnica"
+<p>[Image: An example of results when searching for “arstechnica”
 including an account validated by the domain]</p>
 <p>[Image: An example of hashtags returned when searching for
-"friday"]</p>
+“friday”]</p>
 <p>Admins may optionally install full-text search. Mastodon’s full-text
 search allows logged-in users to find results from their own posts,
 their favourites, their bookmarks, and their mentions. Full-text search
@@ -1594,54 +1512,39 @@ terms to find and harass others.</p>
 <p>The following operators are supported:</p>
 <ul>
 <li><strong>“exact phrases”</strong> will try to find the term inside
-the quote marks. This allows looking only for direct matches, such as
-<code>"look at my cluckers"</code> to find posts explicitly telling you
-to look at someone’s cluckers.</li>
+the quote marks. This allows looking only for direct matches, such as 0
+to find posts explicitly telling you to look at someone’s cluckers.</li>
 <li><strong>-exclude</strong> will exclude the term prepended by a minus
-sign. This allows filtering out certain terms, such as
-<code>animals -cats</code> to find posts about animals without posts
-about cats.</li>
+sign. This allows filtering out certain terms, such as 0 to find posts
+about animals without posts about cats.</li>
 <li><strong>+include</strong> will include the term after the plus sign.
 This allows searching for multiple terms that must be included, such as
-<code>cat +dog</code> to find posts about both cats and dogs.</li>
+0 to find posts about both cats and dogs.</li>
 </ul>
-<p>The following <code>prefix:value</code> pairs are also supported:</p>
+<p>The following 0 pairs are also supported:</p>
 <ul>
-<li><code>has:</code> (<code>media</code>, <code>poll</code>,
-<code>embed</code>) - posts that contain the specified attachment
-type</li>
-<li><code>is:</code> (<code>reply</code>, <code>sensitive</code>) -
-posts that are either a reply or marked sensitive.</li>
-<li><code>language:</code> (<code>{language_code}</code>) - posts made
-in a specific language, indicated by its <a
+<li>0 (1, 2, 3) - posts that contain the specified attachment type</li>
+<li>0 (1, 2) - posts that are either a reply or marked sensitive.</li>
+<li>0 (1) - posts made in a specific language, indicated by its <a
 href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">ISO
 639-1 language code</a></li>
-<li><code>from:</code> (<code>@{username}</code>,
-<code>@{username}@{domain}</code>, <code>me</code>) - posts from a
-specified author</li>
-<li><code>before:</code> (<code>{date}</code>) - posts created before an
-ISO8601 formatted date, e.g. “<code>2025-03-01</code>”. If the account
-has a timezone set, searches using their local timezone - otherwise in
-UTC.</li>
-<li><code>after:</code> (<code>{date}</code>) - posts created after an
-ISO8601 formatted date</li>
-<li><code>during:</code> (<code>{date}</code>) - posts created during an
-ISO8601 formatted date</li>
-<li><code>in:</code> (<code>library</code>, <code>public</code>) -
-<code>library</code> is the collection of posts that you have interacted
-with in some way: favourited, reblogged, bookmarked, etc.
-<code>public</code> is the global full text search index. The default is
-to search both, if this option is omitted.</li>
+<li>0 (1, 2, 3) - posts from a specified author</li>
+<li>0 (1) - posts created before an ISO8601 formatted date, e.g. “2”. If
+the account has a timezone set, searches using their local timezone -
+otherwise in UTC.</li>
+<li>0 (1) - posts created after an ISO8601 formatted date</li>
+<li>0 (1) - posts created during an ISO8601 formatted date</li>
+<li>0 (1, 2) - 3 is the collection of posts that you have interacted
+with in some way: favourited, reblogged, bookmarked, etc. 4 is the
+global full text search index. The default is to search both, if this
+option is omitted.</li>
 </ul>
 <p>Each can be used in combination with a text search, for example to
-find all posts from yourself about cryptids, you could search for
-<code>from:me "cryptids"</code>.</p>
-<p>Prefixes can be combined, though they are combined with
-<code>AND</code>, so e.g. one can’t search for all posts from multiple
-languages.</p>
-<p>Prefixes can be negated with <code>-</code> as with string queries,
-so one can search for posts from anyone else about cryptids like
-<code>-from:me "cryptids"</code>.</p>
+find all posts from yourself about cryptids, you could search for 0.</p>
+<p>Prefixes can be combined, though they are combined with 0, so
+e.g. one can’t search for all posts from multiple languages.</p>
+<p>Prefixes can be negated with 0 as with string queries, so one can
+search for posts from anyone else about cryptids like 1.</p>
 <h4 id="private-mentions">Private Mentions</h4>
 <p>[Image: A list of conversations containing private mentions]</p>
 <p>In Mastodon, private mentions are just posts that have the “mention
@@ -1681,29 +1584,14 @@ polls. Mastodon lets you follow friends and discover new ones.</p>
 <p><strong>Federation</strong> is a form of decentralization. Instead of
 a single central service that all people use, there are multiple
 services, that any number of people can use.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Grade of centralization</th>
-<th style="text-align: left;">Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Centralized</td>
-<td style="text-align: left;">Twitter, Facebook, Instagram</td>
-</tr>
-<tr>
-<td style="text-align: left;">Federated</td>
-<td style="text-align: left;">Email, XMPP, phone networks, physical
-mail</td>
-</tr>
-<tr>
-<td style="text-align: left;">Distributed</td>
-<td style="text-align: left;">BitTorrent, IPFS, Scuttlebutt</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Grade of centralization: Centralized; Examples: Twitter, Facebook,
+Instagram</li>
+<li>Grade of centralization: Federated; Examples: Email, XMPP, phone
+networks, physical mail</li>
+<li>Grade of centralization: Distributed; Examples: BitTorrent, IPFS,
+Scuttlebutt</li>
+</ul>
 <p>A Mastodon website can operate alone. Just like a traditional
 website, people sign up on it, post messages, upload pictures and talk
 to each other. <em>Unlike</em> a traditional website, Mastodon websites
