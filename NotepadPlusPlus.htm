@@ -314,10 +314,10 @@ and Use Unicode UTF-8 for worldwide language support</a></li>
 during Upgrades</a></li>
 <li><a href="#configuration-files-location">Configuration Files
 Location</a></li>
-<li><a href="#the-context-menu-contextmenuxml">The context menu:
-0</a></li>
-<li><a href="#the-context-menu-tabcontextmenuxml">The context menu:
-0</a></li>
+<li><a href="#the-context-menu-tabcontextmenuxml">The context menu: 0
+(Starting in v8.4.8, the tab-bar context menu (the)</a></li>
+<li><a href="#the-context-menu-contextmenuxml">The context menu: 0 (The
+context menu does not have a GUI-based)</a></li>
 <li><a href="#editing-configuration-files">Editing Configuration
 Files</a></li>
 <li><a href="#highlighting-schemes-stylersxml">Highlighting schemes:
@@ -1862,7 +1862,31 @@ use the copies in the 17 hierarchy and ignore the ones in the
 application directory; this section is just here to make it more clear
 what it’s safe to delete if you’re trying to save a handful of bytes
 after leaving portable mode.</p>
-<h3 id="the-context-menu-contextmenuxml">The context menu: 0</h3>
+<h3 id="the-context-menu-tabcontextmenuxml">The context menu: 0
+(Starting in v8.4.8, the tab-bar context menu (the)</h3>
+<p>Starting in v8.4.8, the tab-bar context menu (the popup menu that you
+see when you right-click on the title of the tab in the tab bar) is
+user-configurable using the 0 config file.</p>
+<p>The format is the same as the 0 described above, except the
+“Intermediate Node” is 1 instead of 2.</p>
+<p>You may have gotten a copy of 0 when you installed, or you can
+download a copy from the Notepad++ source <a
+href="https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/PowerEditor/src/tabContextMenu_example.xml">here</a>
+(possibly needed if you have a portable or minimal copy of Notepad++, or
+if the file didn’t get created when you updated an existing Notepad++
+installation) – if you rename that example to 1 in your configuration
+directory, and restart Notepad++, then the example will be used. In that
+example, the default replicates the structure released with v8.4.7; if
+you comment that out and uncomment the second half of the file, it will
+instead replicate the Tab Context Menu found in v8.4.6 and earlier
+(useful for those who like “the old way” of doing things in the tab
+context menu).</p>
+<p>To go back to the default tab context menu, you can just rename or
+delete 0 (or download the <a
+href="https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/PowerEditor/src/tabContextMenu_example.xml">fresh
+copy</a> and save it over the current 1) then restart Notepad++.</p>
+<h3 id="the-context-menu-contextmenuxml">The context menu: 0 (The
+context menu does not have a GUI-based)</h3>
 <p>The context menu does not have a GUI-based editor; you just need to
 edit the file. As a result, the <strong>Settings &gt; Edit Popup Context
 Menu</strong> entry exists to make it easy for you to access this config
@@ -1977,28 +2001,6 @@ out”. So you can use text comments or comment out XML syntax that you
 want Notepad++ to ignore. To “uncomment” the XML, remove the 1
 surrounding that piece of code.</p></li>
 </ul>
-<h3 id="the-context-menu-tabcontextmenuxml">The context menu: 0</h3>
-<p>Starting in v8.4.8, the tab-bar context menu (the popup menu that you
-see when you right-click on the title of the tab in the tab bar) is
-user-configurable using the 0 config file.</p>
-<p>The format is the same as the 0 described above, except the
-“Intermediate Node” is 1 instead of 2.</p>
-<p>You may have gotten a copy of 0 when you installed, or you can
-download a copy from the Notepad++ source <a
-href="https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/PowerEditor/src/tabContextMenu_example.xml">here</a>
-(possibly needed if you have a portable or minimal copy of Notepad++, or
-if the file didn’t get created when you updated an existing Notepad++
-installation) – if you rename that example to 1 in your configuration
-directory, and restart Notepad++, then the example will be used. In that
-example, the default replicates the structure released with v8.4.7; if
-you comment that out and uncomment the second half of the file, it will
-instead replicate the Tab Context Menu found in v8.4.6 and earlier
-(useful for those who like “the old way” of doing things in the tab
-context menu).</p>
-<p>To go back to the default tab context menu, you can just rename or
-delete 0 (or download the <a
-href="https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/PowerEditor/src/tabContextMenu_example.xml">fresh
-copy</a> and save it over the current 1) then restart Notepad++.</p>
 <h3 id="editing-configuration-files">Editing Configuration Files</h3>
 <p><strong>ALWAYS BACKUP THE FILE TO BE EDITED</strong>. If you make a
 mistake, Notepad++ may erase the whole contents and replace it with

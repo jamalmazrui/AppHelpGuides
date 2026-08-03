@@ -505,11 +505,9 @@ Playlist Scripts</a></li>
 <li><a href="#play-howto-building-pages-for-the-http-interface">Building
 Pages for the HTTP Interface</a></li>
 <li><a href="#play-howto-format-string">Format String</a></li>
-<li><a href="#play-howto-installing-vlc">Installing VLC</a></li>
 <li><a href="#play-howto-introduction-to-vlc">Introduction to
 VLC</a></li>
 <li><a href="#play-howto">Play HowTo</a></li>
-<li><a href="#play-howto-uninstalling-vlc">Uninstalling VLC</a></li>
 </ul></li>
 <li><a href="#streaming-and-converting">Streaming and Converting</a>
 <ul>
@@ -555,7 +553,6 @@ IPv6</a></li>
 </ul></li>
 <li><a href="#using-vlc">Using VLC</a>
 <ul>
-<li><a href="#advanced-use-of-vlc">Advanced Use of VLC</a></li>
 <li><a href="#alternative-interfaces">Alternative Interfaces</a></li>
 <li><a href="#command-line">Command line</a></li>
 <li><a href="#hotkeys">Hotkeys</a></li>
@@ -16325,165 +16322,6 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="play-howto-installing-vlc">Installing VLC</h3>
-<p>There are VLC binaries available for the many OSes, but not for all
-supported ones. If there are no binaries for your OS or if you want to
-change the default settings, you can compile VLC from source.</p>
-<h4 id="windows-7">Windows</h4>
-<h5 id="me-2">95, 98, ME</h5>
-<p>You can install VLC on Windows 95, 98, or ME operating systems by
-using <a
-href="http://kernelex.sourceforge.net/wiki/Main_Page">KernelEx</a>.</p>
-<h5 id="xp-vista-7-8-10-2">2000, XP, Vista, 7, 8, 10</h5>
-<h6 id="recommended-2">Recommended</h6>
-<p>The normal and recommended way to install VLC on a Windows operating
-system is via the installer package.</p>
-<p><strong>Step 0: Download and launch the installer</strong></p>
-<p>Download the installer package from the <a
-href="https://www.videolan.org/vlc/download-windows.html">VLC download
-page for Windows</a>. After you download the installer package, double
-click on the file to begin the install process. If you’re using Windows
-Vista, 7, 8 or 10 and have UAC (User Account Control) enabled, the
-operating system may prompt you to grant VLC administrator permissions.
-Click <strong>Yes</strong> to continue the installation process.</p>
-<p><strong>Step 1: Select an installer language</strong></p>
-<p>Before you can continue, you must select the language that you want
-the installer to use to display information to you. After you select a
-language, click <strong>OK</strong>.</p>
-<p><strong>Step 2: Review the Welcome screen</strong></p>
-<p>The VLC installer recommends that you close all other applications
-before continuing the installation process. When you’re ready to proceed
-with the installation process, click <strong>Next</strong>.</p>
-<p><strong>Step 3: Read License agreement</strong></p>
-<p>Read the Terms of Service. Once you’re done reading, click
-<strong>Next</strong>.</p>
-<p><strong>Step 4: Select components</strong></p>
-<p>Use this menu to customize your install. Choose all of the components
-you wish to install and whether you want VLC to be your default media
-player or not. Once you are done, click <strong>Next</strong>.</p>
-<p><strong>Step 5: Pick a location</strong></p>
-<p>Click <strong>Browse…</strong> to choose the destination installation
-folder. After you’ve identified the desired folder, click
-<strong>Install</strong>.</p>
-<p><strong>Step 6: Now installing</strong></p>
-<p>Wait as VLC is installed on your machine. It shouldn’t take too long.
-Then click “Show details” to see more information about the progress of
-the installation.</p>
-<p><strong>Step 7: Installation complete</strong></p>
-<p>Once installation is complete, you may choose to run VLC or read
-VLC’s release notes. Click <strong>Finish</strong> to complete the
-installation process and close the installer.</p>
-<h6 id="alternative-2">Alternative</h6>
-<p>If you want to perform an unattended (or silent) installation of VLC,
-you can do so via a command-line interface. Type in “<em>filename</em>”
-/L=“<em>languagecode</em>” /S. For example, the English installation
-would look something like <strong>vlc-2.0.1-win32.exe /L=1033
-/S</strong>.</p>
-<p><strong>PowerShell</strong></p>
-<p>Installing VLC using PowerShell is as easy.</p>
-<p><strong>Command Prompt</strong></p>
-<p>You can also install VLC using the command prompt.</p>
-<h4 id="macos-6">macOS</h4>
-<ol type="1">
-<li>Download the macOS package from the <a
-href="https://www.videolan.org/vlc/download-macosx.html">VLC macOS
-download page</a>.</li>
-<li>Double-click on the icon of the package: an icon will appear on your
-Desktop, right beside your drives.</li>
-<li>Open it and drag the VLC application from the resulting window to
-the place where you want to install it (it should be
-<strong>/Applications</strong>).</li>
-</ol>
-<p>Note: You may need to delete older versions of VLC on your computer
-before you can successfully install the latest version.</p>
-<h4 id="linux-7">Linux</h4>
-<h5 id="debian-3">Debian</h5>
-<p>Download page: 0</p>
-<p><strong>A standard install without libdvdcss:</strong></p>
-<pre><code># apt-get update
-# apt-get install vlc</code></pre>
-<p>Or search for 0 with the graphical package manager you like best. It
-should be in the main Debian repository in the section <em>Video
-software</em>. Additional plugins are available and most require manual
-selection, e.g. 1, 2 and 3.</p>
-<p><strong>For a standard install with libdvdcss:</strong></p>
-<p>A simple install of the libdvdcss package can be found here: 0, but
-for future bug fixes add the following lines to your
-<strong>/etc/apt/sources.list</strong>:</p>
-<pre><code> deb 0 stable main
- deb-src 0 stable main</code></pre>
-<p>Then:</p>
-<pre><code># apt-get update
-# apt-get install vlc libdvdcss2</code></pre>
-<p>This will allow you to decrypt DVDs.</p>
-<h6 id="ubuntu-3">Ubuntu</h6>
-<p>Links: <a
-href="https://www.videolan.org/vlc/download-ubuntu.html">Download
-page</a> • Launchpad (<a
-href="https://launchpad.net/ubuntu/+source/vlc/">Source</a> • <a
-href="https://bugs.launchpad.net/ubuntu/+source/vlc/+bugs?field.searchtext=&amp;orderby=-users_affected_count&amp;search=Search&amp;field.status%3Alist=NEW&amp;field.status%3Alist=CONFIRMED&amp;field.status%3Alist=TRIAGED&amp;field.status%3Alist=INPROGRESS&amp;field.status%3Alist=FIXCOMMITTED&amp;field.status%3Alist=INCOMPLETE_WITH_RESPONSE&amp;field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&amp;assignee_option=any&amp;field.assignee=&amp;field.bug_reporter=&amp;field.bug_commenter=&amp;field.subscriber=&amp;field.tag=&amp;field.tags_combinator=ANY&amp;field.status_upstream-empty-marker=1&amp;field.upstream_target=&amp;field.has_cve.used=&amp;field.omit_dupes.used=&amp;field.omit_dupes=on&amp;field.affects_me.used=&amp;field.has_patch.used=&amp;field.has_branches.used=&amp;field.has_branches=on&amp;field.has_no_branches.used=&amp;field.has_no_branches=on&amp;field.has_blueprints.used=&amp;field.has_blueprints=on&amp;field.has_no_blueprints.used=&amp;field.has_no_blueprints=on">Bugs
-sorted by most users</a> • <a
-href="https://answers.launchpad.net/ubuntu/+source/vlc">Questions</a>)</p>
-<p>Launch the Ubuntu Software Center and go to <strong>All Software →
-Sound &amp; Video</strong> then in search VLC Player. After it will come
-click on it and it will automatically install</p>
-<p>You need to check that a universe mirror is listed in your
-<strong>/etc/apt/sources.list</strong> file.</p>
-<pre><code>$ sudo apt-get update
-$ sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc</code></pre>
-<p>As given by 0:</p>
-<pre><code>$ sudo apt install libdvd-pkg &amp;&amp; sudo dpkg-reconfigure libdvd-pkg</code></pre>
-<p>will install a packaged version of libdvdcss without the need for
-third-party repos.</p>
-<h5 id="red-hat-2">Red Hat</h5>
-<ul>
-<li></li>
-<li></li>
-</ul>
-<p>Adapted (annotated) from 0:</p>
-<p>Red Hat/CentOS/Scientific Linux have almost the same setups (they’re
-all derived from Red Hat). Red Hat and derivatives have <a
-href="https://fedoraproject.org/wiki/EPEL#Quickstart">different
-instructions</a> if EPEL (Extra Packages for Enterprise Linux) is not
-set up. Red Hat Network (RHN) users should verify that they have enabled
-the <em>optionals</em> and <em>extras</em> channels for RHN
-subscriptions.</p>
-<p>If you want to have DVD playback ability, you will need to install
-the libdvdcss package too (<a
-href="https://www.videolan.org/vlc/download-redhat.html">source</a>).</p>
-<p>For the latest version (up to the now-current version 3.0.6) use <a
-href="https://rpmfusion.org/RPM%20Fusion">RPM Fusion</a>, otherwise VLC
-branches 2.0.x and 2.2.x are available: Red Hat/CentOS/Scientific Linux
-7: (vlc-2.2.x – branch available for x86_64 architectures)</p>
-<pre><code>$&gt; su -
-    #&gt; yum install 0
-    #&gt; yum install 0
-    #&gt; yum install vlc
-    #&gt; yum install vlc-core             # (for minimal headless/server install)
-    #&gt; yum install python-vlc npapi-vlc # (optionals)</code></pre>
-<p>Red Hat/CentOS/Scientific Linux 6: (vlc-2.0.x branch – available for
-i686 and x86_64 architectures)</p>
-<pre><code>$&gt; su -
-    #&gt; yum install 0
-    #&gt; yum install 0
-    #&gt; yum install vlc
-    #&gt; yum install vlc-core             # (for minimal headless/server install)
-    #&gt; yum install python-vlc npapi-vlc # (optionals)</code></pre>
-<h5 id="suse-2">SUSE</h5>
-<p>Download page: 0</p>
-<h4 id="freebsd-2">FreeBSD</h4>
-<p>Download page: 0</p>
-<p>Install vlc from the packages collection:</p>
-<pre><code># pkg install vlc</code></pre>
-<h4 id="compile-the-sources-by-yourself-2">Compile the sources by
-yourself</h4>
-<p>For more detailed information on compiling VLC, please see Compile
-VLC.</p>
-<p><strong>Permission is granted to copy, distribute and/or modify this
-document under the terms of the <a
-href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
-License</a> as published by the Free Software Foundation; either version
-2 of the License, or (at your option) any later version.</strong></p>
 <h3 id="play-howto-introduction-to-vlc">Introduction to VLC</h3>
 <h4 id="overview-of-the-videolan-project-1">Overview of the VideoLAN
 project</h4>
@@ -16581,52 +16419,6 @@ interface and other control interface.</li>
 <li>Building Lua Playlist Scripts</li>
 <li>VLC Use 0.8. (Versions older than 0.9).</li>
 </ul>
-<p><strong>Permission is granted to copy, distribute and/or modify this
-document under the terms of the <a
-href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
-License</a> as published by the Free Software Foundation; either version
-2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="play-howto-uninstalling-vlc">Uninstalling VLC</h3>
-<h4 id="windows-8">Windows</h4>
-<p>You can uninstall VLC from <em>Add/Remove Programs</em> (<em>Programs
-and Features</em> in Windows 7) located in the <em>Control Panel</em>.
-Search for VLC media player and right click, then select
-“Uninstall/Change”. Follow the prompts to finish the uninstallation.</p>
-<p>Alternatively, you can browse to VLC’s installation directory (for a
-typical install, go to your <em>C: Drive</em> and look for Program Files
-(if 64-bit, Program Files (x86) )→VideoLAN→VLC and double-click on the
-<em>uninstall</em> link and follow the prompts to uninstall.</p>
-<h4 id="macos-7">macOS</h4>
-<p>Drag the VLC application to your trash can. You can also remove the
-configuration file and the cache files in
-<strong>~/Library/Preferences/VLC/</strong>. There is an AppleScript on
-the disk-image which lets you do this automatically.</p>
-<p>If that did not work, you can double-click on the
-<em>Applications</em> icon. This will bring up a list of all
-applications on your Mac. Scroll through the list of Applications, then
-press and hold the <em>Ctrl</em> button to bring up a table of options
-and actions. Click on “move to trash”.</p>
-<p>Finally, if the previous processes failed, you can try downloading a
-third-party uninstaller program to uninstall it, such as <a
-href="http://www.macupdate.com/app/mac/25276/appcleaner">AppCleaner</a>.</p>
-<h4 id="linux-8">Linux</h4>
-<h5 id="debian-4">Debian</h5>
-<p>Remove the packages that you installed:</p>
-<pre><code># apt-get remove --purge vlc libdvdcss2</code></pre>
-<h6 id="ubuntu-4">Ubuntu</h6>
-<p>Remove <em>VLC Media Player</em> by entering this command in the
-Terminal.</p>
-<pre><code>$  sudo apt-get remove vlc</code></pre>
-<p>Or you can also search <em>VLC</em> in the <em>Ubuntu Software
-Center</em> and click on <em>Remove</em> to uninstall it.</p>
-<h5 id="red-hat-and-suse-1">Red Hat and SuSE</h5>
-<p>Uninstall the RPM packages that you installed:</p>
-<pre><code># rpm -e vlc-version vlc-mad-version wxvlc-version libdvdcss2-version libdvdpsi1-version</code></pre>
-<h4 id="compiled-the-sources-by-yourself-1">Compiled the sources by
-yourself</h4>
-<p>Go to the directory containing VLC sources and execute</p>
-<pre><code># make uninstall</code></pre>
-<p>You can then remove the VLC sources.</p>
 <p><strong>Permission is granted to copy, distribute and/or modify this
 document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
@@ -19346,592 +19138,9 @@ href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
 <h2 id="using-vlc">Using VLC</h2>
-<h3 id="advanced-use-of-vlc">Advanced Use of VLC</h3>
-<h4 id="use-the-command-line-1">Use the command line</h4>
-<p><strong>TODO: completely outdated</strong></p>
-<p>This page is outdated and information might be incorrect.</p>
-<p>All standard operations of VLC should be available from the GUI.
-However, some complex operations can only be done from the command line
-and there are situations in which you don’t need or want a GUI. Here is
-the complete description of VLC’s command line and how to use it.</p>
-<p>You need to be quite comfortable with command line usage to use
-this.</p>
-<pre><code>Note: Windows users have to use the --option-name=&quot;value&quot; syntax instead of the --option-name value syntax.</code></pre>
-<h5 id="getting-help-1">Getting help</h5>
-<p>VLC uses a modular structure. The core mainly manages communication
-between modules. All the multimedia processing is done by modules. There
-are input modules, demultiplexers, decoders, video output modules, …</p>
-<p>This chapter will only describe the “general” options, i.e. the core
-options. Each module adds new options. For example, the HTTP input
-module will add options for caching, proxy, authentication, …</p>
-<p>By using <strong>vlc –help</strong>, you will get the basic core
-options. <strong>vlc –longhelp</strong> will give all the basic options
-(core + modules). Adding <strong>–advanced</strong> will give the
-“advanced options” (for advanced users). So <strong>vlc –longhelp
-–advanced</strong> will give you all options. You can also append
-<strong>–help-verbose</strong> if you want more detailed help.</p>
-<p>Also, you might want to get debug information. To do this, use
-<strong>-v</strong> or <strong>-vv</strong> (this will show lower
-severity messages). If your console supports it, you can add
-<strong>–color to get messages in color.</strong></p>
-<h5 id="opening-streams-1">Opening streams</h5>
-<p>The following commands start VLC and start reading the given
-element(s):</p>
-<h6 id="opening-a-file-2">Opening a file</h6>
-<p>Start VLC with:</p>
-<pre><code>% vlc my_file</code></pre>
-<p>VLC should be able to recognize the file type. If it does not, you
-can force demultiplexer and decoder (see below).</p>
-<p>A list of all video and audio codecs supported by VLC check the <a
-href="https://www.videolan.org/vlc/features.html">VLC features
-list</a>.</p>
-<h6 id="opening-a-dvd-or-vcd-or-an-audio-cd-1">Opening a DVD or VCD, or
-an audio CD</h6>
-<p>Start VLC with:</p>
-<p>For a DVD with menus:</p>
-<pre><code>% vlc dvd://[device][@raw_device][@[title][:[chapter][:angle]]]</code></pre>
-<p>In most cases, <strong>vlc dvd://</strong> or <strong>vlc
-dvd://[device]</strong> will do. [device] is for example
-<strong>/dev/dvd</strong> on GNU/Linux or <strong>D:</strong> on Windows
-(complete path to your DVD drive).</p>
-<p>or</p>
-<p>(DVD without menus):</p>
-<pre><code>% vlc dvdsimple://[device][@raw_device][@[title][:[chapter][:angle]]]</code></pre>
-<p>or</p>
-<p>(VCD):</p>
-<pre><code>% vlc vcd://[device][@{E|P|E|T|S}[number]]</code></pre>
-<p>or</p>
-<p>(Audio CD):</p>
-<pre><code>% vlc cdda://[device][@[track]]</code></pre>
-<h6 id="receiving-a-network-stream-1">Receiving a network stream</h6>
-<p>To receive an unicast RTP/UDP stream (sent by VLC’s stream output),
-start VLC with:</p>
-<pre><code>% vlc rtp://@:5004</code></pre>
-<p>If 5004 is the port to which packets are sent. 1234 is another
-commonly used port number. you use the default port (1234), <strong>vlc
-rtp://</strong> will do. For more information, look at the Streaming
-Howto.</p>
-<p>To receive an multicast UDP/RTP stream (sent by VLC’s stream output),
-start VLC with:</p>
-<pre><code>% vlc rtp://@multicast_address:port</code></pre>
-<p>To receive a SSM (source specific multicast) stream, you can use:</p>
-<pre><code>% vlc rtp://server_address@multicast_address:port</code></pre>
-<p>This only works on Operating systems that support SSM (Windows XP and
-Linux).</p>
-<p>To receive a HTTP stream, start VLC with:</p>
-<pre><code>% vlc 0</code></pre>
-<p>To receive a RTSP stream, start VLC with:</p>
-<pre><code>% vlc rtsp://www.example.org/your_stream</code></pre>
-<h5 id="modules-selection-1">Modules selection</h5>
-<p>VLC always tries to select the most appropriate interface, input and
-output modules, among the ones available on the system, according to the
-stream it is given to read. However, you may wish to force the use of a
-specific module with the following options.</p>
-<ul>
-<li>**–intf ** allows you to select the interface module.</li>
-<li>**–extraintf ** allows you to select extra interface modules that
-will be launched in addition to the main one. This is mainly useful for
-special <em>control</em> interfaces, like HTTP, RC (Remote Control), …
-(see below)</li>
-<li>**–aout ** allows you to select the audio output module.</li>
-<li>**–vout ** allows you to select the video output module.</li>
-<li>**–memcpy ** allows you to choose a memory copy module. You should
-probably never touch that.</li>
-</ul>
-<p>You can get a listing of the available modules by using <strong>vlc
--l</strong></p>
-<h5 id="stream-output-4">Stream Output</h5>
-<p>The Stream output system allows vlc to become a streaming server.</p>
-<p>For more details on the stream output system, please have a look at
-the <a href="#streaming-howto">Streaming HowTo</a>.</p>
-<h5 id="other-options-2">Other Options</h5>
-<h6 id="audio-options-1">Audio options</h6>
-<ul>
-<li><strong>–noaudio</strong> disables audio output. Note that if you
-are streaming (ex: to a file) this has no effect (streaming copies the
-audio verbatim). Use –sout-xxx instead (ex: –no-sout-audio)</li>
-<li><strong>–mono</strong> forces VLC to treat the stream in mono
-audio.</li>
-<li>**–volume ** sets the level of audio output (between 0 and 1024).
-Also only applies to local playback (like –noaudio).</li>
-<li>**–aout-rate ** sets the audio output frequency (Hz). By default,
-VLC will try to autodetect this.</li>
-<li>**–desync ** compensates desynchronization of audio (ms). (If audio
-and video streams are not synchronized, use this setting to delay the
-audio stream)</li>
-<li>**–audio-filter ** adds audio filters to the processing chain.
-Available filters are visual (visualizer with spectrum analyzer and
-oscilloscope), headphone (virtual headphone patialization) and
-normalizer (volume normalizer)</li>
-</ul>
-<h6 id="video-options-1">Video options</h6>
-<ul>
-<li><strong>–no-video</strong> disables video output.</li>
-<li><strong>–grayscale</strong> turns video output into grayscale
-mode.</li>
-<li><strong>–fullscreen</strong> ( or <strong>-f</strong>) sets
-fullscreen video.</li>
-<li><strong>–nooverlay</strong> disables hardware acceleration for the
-video output.</li>
-<li>**–width, –height ** sets the video window dimensions. By default,
-the video window size will be adjusted to match the video
-dimensions.</li>
-<li>**–start-time ** starts the video here; the integer is the number of
-seconds from the beginning (e.g. 1:30 is written as 90)</li>
-<li>**–stop-time ** stops the video here; the integer is the number of
-seconds from the beginning (e.g. 1:30 is written as 90)</li>
-<li>**–zoom ** adds a zoom factor.</li>
-<li>**–aspect-ratio ** forces source aspect ratio. Modes are 4x3, 16x9,
-…</li>
-<li>**–spumargin ** forces SPU subtitles position.</li>
-<li>**–video-filter ** adds video filters to the processing chain. You
-can add several filters, separated by commas</li>
-<li>**–sub-filter ** adds video subpictures filter to the processing
-chain.</li>
-</ul>
-<h6 id="desktopscreen-grab-options-1">Desktop/Screen grab options</h6>
-<p>You can see the various options for “grabbing the desktop” (VLC’s
-built-in screen grabber capture device) by using the GUI. See 0</p>
-<h6 id="playlist-options-1">Playlist options</h6>
-<ul>
-<li><strong>–random</strong> plays files randomly forever.</li>
-<li><strong>–loop</strong> loops playlist on end.</li>
-<li><strong>–repeat</strong> repeats current item until another item is
-forced</li>
-<li><strong>–play-and-stop</strong> stops the playlist after each played
-item.</li>
-</ul>
-<h6 id="network-options-1">Network options</h6>
-<ul>
-<li>**–server-port ** sets server port.</li>
-<li>**–iface ** specifies the network interface to use.</li>
-<li>**–iface-addr ** specifies your network interface IP address.</li>
-<li>**–mtu ** specifies the MTU of the network interface.</li>
-<li><strong>–ipv6</strong> forces IPv6.</li>
-<li><strong>–ipv4</strong> forces IPv4.</li>
-</ul>
-<h6 id="cpu-options-1">CPU options</h6>
-<p>You should probably not touch these options unless you know what you
-are doing.</p>
-<ul>
-<li><strong>–nommx</strong> disables the use of MMX CPU extensions.</li>
-<li><strong>–no3dn</strong> disables the use of 3D Now! CPU
-extensions.</li>
-<li><strong>–nommxext</strong> disables the use of MMX Ext CPU
-extensions.</li>
-<li><strong>–nosse</strong> disables the use of SSE CPU extensions.</li>
-<li><strong>–noaltivec</strong> disables the use of Altivec CPU
-extensions.</li>
-</ul>
-<h6 id="miscellaneous-options-2">Miscellaneous options</h6>
-<ul>
-<li><strong>–quiet</strong> deactivates all console messages.</li>
-<li><strong>–color</strong> displays color messages.</li>
-<li>**–search-path ** specifies interface default search path.</li>
-<li>**–plugin-path ** specifies plugin search path.</li>
-<li><strong>–no-plugins-cache</strong> disables the plugin cache
-(plugins cache speeds up startup)</li>
-<li>**–dvd ** specifies the default DVD device.</li>
-<li>**–vcd ** specifies the default VCD device.</li>
-<li>**–program ** specifies program (SID) (for streams with several
-programs, like satellite ones).</li>
-<li>**–audio-type ** specifies the default audio type to use with
-dvds.</li>
-<li>**–audio-channel ** specifies the default audio channel to use with
-dvds.</li>
-<li>**–spu-channel ** specifies the default subtitle channel to use with
-dvds.</li>
-<li><strong>–version</strong> gives you information about the current
-VLC version.</li>
-<li><strong>–module ** displays help about specified module. (Shortcut:
-</strong>-p**)</li>
-</ul>
-<h5 id="item-specific-options-1">Item-specific options</h5>
-<p>There are many options that are related to items (like
-<strong>–novideo</strong>, <strong>–codec</strong>,
-<strong>–fullscreen</strong>).</p>
-<p>For all of these, you have the possibility to make them
-item-specific, using “:” instead of “–” and putting the option just
-after the concerned item.</p>
-<p>Examples:</p>
-<pre><code>% vlc file1.mpg :fullscreen file2.mpg</code></pre>
-<p>will play file1.mpg in fullscreen mode and file2.mpg in the default
-mode (which is generally no fullscreen), whereas</p>
-<pre><code>% vlc --fullscreen file1.mpg file2.mpg</code></pre>
-<p>will play both files in fullscreen mode</p>
-<pre><code>% vlc --fullscreen file1.mpg :sub-file=file1.srt :no-fullscreen file2.mpg :filter=distort</code></pre>
-<p>will play file1.mpg in windowed (no-fullscreen) mode with the
-subtitles file file1.srt and will play file2.mpg with video filter
-distort enabled in fullscreen mode (item-specific options override
-global options).</p>
-<h4 id="advanced-use-of-filters-1">Advanced use of filters</h4>
-<h5 id="filters-2">Filters</h5>
-<p>These are the old style VLC filters. They only apply to on screen
-display and thus cannot be streamed. However, on version 1.1.11 you are
-still able to apply these filters in <em>transcode</em> module using
-parameter <em>vfilter</em>. More information can be found on
-Documentation:Streaming HowTo/Advanced Streaming Using the Command
-Line#vfilter.</p>
-<h6 id="deinterlacing-video-filter-1">Deinterlacing video filter</h6>
-<p>Module name: <strong>deinterlace</strong></p>
-<ul>
-<li><strong>–deinterlace-mode
-{discard,blend,mean,bob,linear,x,yadif,yadif
-(2x),phosophor,ivtc}</strong> choose a deinterlacing mode.</li>
-</ul>
-<h6 id="invert-video-filter-1">Invert video filter</h6>
-<p>Module name: <strong>invert</strong></p>
-<h6 id="image-properties-filter-1">Image properties filter</h6>
-<p>Module name: <strong>adjust</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/adjust</em></p>
-<ul>
-<li>**contrast ** : Contrast <em>default value: 1.0</em></li>
-<li>**brightness ** : Brightness <em>default value: 1.0</em></li>
-<li>**hue ** : Hue <em>default value: 0</em></li>
-<li>**saturation ** : Saturation <em>default value: 1.0</em></li>
-<li>**gamma ** : Gamma <em>default value: 1.0</em></li>
-<li>**brightness-threshold ** : When this mode is enabled, pixels will
-be shown as black or white. Also may invert the brightness value. The
-threshold value will be the brightness defined below <em>default value:
-disabled</em></li>
-</ul>
-<h6 id="wall-video-filter-1">Wall video filter</h6>
-<p>Module name: <strong>wall</strong> This filter splits the output in
-several windows.</p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/wall</em></p>
-<ul>
-<li>**wall-cols ** : Number of horizontal windows in which to split the
-video <em>default value: 3</em></li>
-<li>**wall-rows ** : Number of vertical windows in which to split the
-video <em>default value: 3</em></li>
-<li>**wall-active ** : Comma-separated list of active windows, defaults
-to all <em>default value: NULL</em></li>
-<li>**wall-element-aspect ** : Aspect ratio of the individual displays
-building the wall <em>default value: 4:3</em></li>
-</ul>
-<h6 id="video-transformation-filter-1">Video transformation filter</h6>
-<p>Module name: <strong>transform</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/transform</em></p>
-<ul>
-<li><strong>transform-type  { “90”, “180”, “270”, “hflip”, “vflip”,
-“transpose”, “antitranspose” }</strong> : Transformation type
-<em>default value: “90”</em></li>
-</ul>
-<h6 id="distort-video-filter-1">Distort video filter</h6>
-<p>Module name: <strong>distort</strong></p>
-<p><em>See Documentation:Modules/distort</em></p>
-<h6 id="clone-video-filter-1">Clone video filter</h6>
-<p>This filter clones the output window.</p>
-<p>Module name: <strong>clone</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/clone</em></p>
-<ul>
-<li>**clone-count ** : Number of video windows in which to clone the
-video. <em>default value: 2</em></li>
-<li>**clone-vout-list ** : You can use specific video output modules for
-the clones. Use a comma-separated list of modules. <em>default value:
-““</em></li>
-</ul>
-<h6 id="croppadd-video-filter-1">Croppadd video filter</h6>
-<p>Module name: <strong>croppadd</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/croppadd</em></p>
-<ul>
-<li><strong>croppadd-croptop &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to crop from top</li>
-<li><strong>croppadd-cropbottom &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to crop from bottom</li>
-<li><strong>croppadd-cropleft &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to crop from left</li>
-<li><strong>croppadd-cropright &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to crop from right</li>
-<li><strong>croppadd-paddtop &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to add to top</li>
-<li><strong>croppadd-paddbottom &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to add to bottom</li>
-<li><strong>croppadd-paddleft &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to add to left</li>
-<li><strong>croppadd-paddright &lt;integer [0 ..
-0{.variable}]&gt;</strong> : Pixels to add to right</li>
-</ul>
-<h6 id="motion-blur-filter-1">Motion blur filter</h6>
-<p>Module name: <strong>motionblur</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/motionblur</em></p>
-<ul>
-<li>**motionblur-factor ** : The bluring factor (1 to 127). Higher
-values mean more blurring <em>default value: 80</em></li>
-</ul>
-<h6 id="video-pictures-blending-1">Video pictures blending</h6>
-<p>Module name: <strong>blend</strong></p>
-<h6 id="video-scaling-filter-1">Video scaling filter</h6>
-<p>Module name: <strong>scale</strong></p>
-<h5 id="subpictures-filters-1">Subpictures Filters</h5>
-<p>These are the new VLC filters. They can be streamed.</p>
-<h6 id="marquee-display-sub-filter-1">Marquee display sub filter</h6>
-<p>Module name: <strong>marq</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/marq</em></p>
-<ul>
-<li>**marq-marquee ** : Marquee text to display. <em>default value:
-VLC</em></li>
-<li>**marq-file ** : File to read the marquee text from. <em>default
-value: NULL</em></li>
-<li>**marq-x ** : X offset, from the left screen edge. <em>default
-value: 0</em></li>
-<li>**marq-y ** : Y offset, down from the top. <em>default value:
-0</em></li>
-<li>**marq-position ** : Marquee position: 0=center, 1=left, 2=right,
-4=top, 8=bottom, you can also use combinations of these values, eg 6 =
-top-right. <em>default value: -1</em></li>
-<li>**marq-opacity ** : Opacity (inverse of transparency) of overlaid
-text. 0 = transparent, 255 = totally opaque. <em>default value:
-255</em></li>
-<li><strong>marq-color  { 0x000000, 0x808080, 0xC0C0C0, 0xFFFFFF,
-0x800000, 0xFF0000, 0xFF00FF, 0xFFFF00, 0x808000, 0x008000, 0x008080,
-0x00FF00, 0x800080, 0x000080, 0x0000FF, 0x00FFFF }</strong> : Color of
-the text that will be rendered on the video. This must be an hexadecimal
-(like HTML colors). The first two chars are for red, then green, then
-blue. <em>default value: 0xFFFFFF</em></li>
-<li>**marq-size ** : Font size, in pixels. 0 uses the default font size.
-<em>default value: 0</em></li>
-<li>**marq-timeout ** : Number of milliseconds the marquee must remain
-displayed. 0 means forever. <em>default value: 0</em></li>
-<li>**marq-refresh ** : Number of milliseconds between string updates.
-This is mainly useful when using meta data or time format string
-sequences. <em>default value: 1000</em></li>
-</ul>
-<h6 id="logo-video-filter-1">Logo video filter</h6>
-<p>Module name: <strong>logo</strong></p>
-<p><em><a
-href="http://en.wikipedia.org/wiki/mw:Transclusion">Transcluded</a> from
-Documentation:Modules/logo</em></p>
-<ul>
-<li>**logo-file ** : Image to display. The full format is 0.</li>
-<li>**logo-x ** : X offset from upper left corner. <em>default value:
-0</em></li>
-<li>**logo-y ** : Y offset from upper left corner. <em>default value:
-0</em></li>
-<li><strong>logo-position  { 0, 1, 2, 4, 8, 5, 6, 9, 10 }</strong> :
-Logo position. <em>default value: 5</em></li>
-<li>**logo-opacity ** : Logo opacity. 0 is transparent, 255 is fully
-opaque. <em>default value: 255</em></li>
-<li>**logo-delay ** : Global delay in <a
-href="http://en.wiktionary.org/wiki/ms#Translingual">ms</a>. Sets the
-duration each image will be displayed for in a loop iteration unless
-specified otherwise in the 0 option. <em>default value: 1000</em></li>
-<li>**logo-repeat ** : Number of loops for the logo animation. -1 for
-continuous, 0 to disable. <em>default value: -1</em></li>
-</ul>
-<p>This filter can be used both as an old style filter or a subpictures
-filter.</p>
-<p>Note: You can move the logo by left-clicking on it.</p>
-<h4 id="the-http-interface-1">The HTTP interface</h4>
-<p>VLC ships with a little HTTP server integrated. It is used both to
-stream using HTTP, and for the HTTP remote control interface.</p>
-<p>To start VLC with the HTTP interface, use:</p>
-<pre><code>% vlc -I http [--http-src /directory/] [--http-host host:port]</code></pre>
-<p>If you want to have both the “normal” interface and the HTTP
-interface, use <strong>vlc –extraintf http</strong>.</p>
-<p>The HTTP interface will start listening at host:port (:8080 if
-omitted), and will reproduce the structure of /directory at 0 (
-vlc_source_path/share/http if omitted ).</p>
-<p>Use a browser to go to 0. You should be taken to the main page.</p>
-<p>VLC is shipped with a set of files that should be enough for generic
-needs. It is also possible to customize pages. See Documentation:Play
-HowTo/Building Pages for the HTTP Interface.</p>
-<p>Available pages for 1.0.3 :</p>
-<ul>
-<li>http://host:port - Main Interface</li>
-<li>0 - VLM Interface</li>
-<li>0 - Mosaic Wizard</li>
-<li>0 - Flash based remote playback</li>
-</ul>
-<h4 id="other-control-interfaces-1">Other control interfaces</h4>
-<p>VLC includes a number of so-called interfaces that are not really
-interfaces, but means of. Nevertheless, they are enabled by setting them
-as interface or extra interface, either in the Preferences, in
-General/Interface, or using <strong>-I</strong> or
-<strong>–extraintf</strong> on the command line.</p>
-<h5 id="hotkeys-2">Hotkeys</h5>
-<p>This module allows you to control VLC and playback via hotkeys. It is
-always enabled by default. You can use hotkeys in the video output
-window, you can’t in the audio dummy interface.</p>
-<p>Hotkeys can be hacked by:</p>
-<pre><code>% vlc --key-</code></pre>
-<p>Code is composed by modifiers keys (Alt, Shift, Ctrl, Meta,Command)
-separated by a dash (-) and terminated by a key (a…z, +, =, -, ‘,’, +,
-&lt;, &gt;, `, /, ;, ’, \, [, ], *, Left, Right, Up, Down, Space, Enter,
-F1…F12, Home, End, Menu, Esc, Page Up, Page Down, Tab, Backspace, Mouse
-Wheel Up and Mouse Wheel Down). Main controls are available from
-hotkeys, such as : fullscreen, play-pause, faster, slower, next, prev,
-stop, quit, vol-up, etc. (use the <strong>–longhelp</strong> option for
-full list of functions). For example, for binding fullscreen to Ctrl-f,
-run:</p>
-<pre><code>% vlc --key-fullscreen &#39;Ctrl-f&#39;</code></pre>
-<p>The list of the default hotkeys is available here.</p>
-<h5 id="rc-and-rtci-1">RC and RTCI</h5>
-<p>These two interfaces allow you to control VLC from a command shell
-(possibly using a remote connexion or a Unix socket).</p>
-<p>Start VLC with <strong>-I rc</strong> or <strong>–extraintf
-rc</strong>. When you get the <strong>Remote control interface
-initialized, `h’ for help</strong> message, press h and Enter to get
-help about available commands.</p>
-<p>To be able to remote connect to your VLC using a TCP socket
-(telnet-like connexion), use <strong>–rc-host your_host:port</strong>.
-Then, by connecting (using telnet or netcat) to the host on the given
-port, you will get the command shell.</p>
-<p>To use a UNIX socket (local socket, this does not work for Windows),
-use <strong>–rc-unix /path/to/socket</strong>. Commands can then be
-passed using this UNIX socket.</p>
-<p>The RTCI interface gives you more advanced options, such as marquee
-control for the marquee subpicture filter (See filter section).</p>
-<h5 id="ncurses-1">Ncurses</h5>
-<p>This is a text interface, using ncurses library.</p>
-<p>Start VLC with <strong>-I ncurses</strong> or <strong>–extraintf
-ncurses</strong>.</p>
-<p>The ncurses interface</p>
-<p>Press h to get the list of all available commands, with a short
-description.</p>
-<p>There is also a filebrowser available for the ncurses interface in
-order to add playlist items. Press ‘B’ to use it.</p>
-<p>The ncurses filebrowser</p>
-<p>You can set the filebrowser starting point by launching vlc with the
-<strong>–browse-dir</strong> option:</p>
-<pre><code>% vlc -I ncurses --browse-dir /filebrowser/starting/point/</code></pre>
-<h5 id="gestures-1">Gestures</h5>
-<p>Gestures provide a simple mouse gestures control. TODO</p>
-<h4 id="the-mozilla-plugin-1">The Mozilla plugin</h4>
-<p>VLC can also be embedded in a web browser! The following browsers are
-supported: <a
-href="https://www.mozilla.org/products/firefox/">Firefox</a> and <a
-href="https://www.apple.com/macosx/features/safari">Safari</a>.</p>
-<h5 id="install-the-plugin-1">Install the plugin</h5>
-<h6 id="gnulinux-debian-ubuntu-etc.-1">GNU/Linux Debian, Ubuntu,
-etc.</h6>
-<p>Install the <em>mozilla-plugin-vlc</em> package using your preferred
-package manager. For example, at the command line enter:</p>
-<pre><code># apt-get update
-# apt-get install mozilla-plugin-vlc</code></pre>
-<h6 id="windows-9">Windows</h6>
-<p>Quit Firefox or Mozilla.</p>
-<p>Select the Mozilla Plugin option when installing VLC Media Player.
-The installer will then automatically detect your browser and install
-the plugin.</p>
-<p>Restart Firefox or Mozilla.</p>
-<h6 id="manual-install-1">Manual Install</h6>
-<p>In <a
-href="http://kb.mozillazine.org/Installation_directory">“Mozilla
-Firefox\plugins”</a></p>
-<p>Create the directory if it doesn’t exist.</p>
-<p><strong>Folders</strong> to copy:</p>
-<ul>
-<li>osdmenu</li>
-<li>plugins</li>
-</ul>
-<p><strong>Files</strong> to copy:</p>
-<ul>
-<li>vlc.exe</li>
-<li>vlc.exe.manifest</li>
-<li>vlc-cache-gen.exe</li>
-<li>npvlc.dll.manifest</li>
-<li>npvlc.dll</li>
-<li>libvlccore.dll</li>
-<li>libvlc.dll</li>
-<li>libvlc.dll.manifest</li>
-<li>axvlc.dll</li>
-<li>axvlc.dll.manifest</li>
-</ul>
-<h6 id="macos-8">macOS</h6>
-<p><em>The Mozilla/Safari plugin for macOS is only available from vlc
-version 0.8.5.1 and onwards.</em></p>
-<p>Quit Safari browser.</p>
-<p>Download the Mozilla/safari plugin package from <a
-href="https://www.videolan.org/vlc/download-macosx.html">macOS download
-page</a>.</p>
-<p>Run the installer from the dmg image.</p>
-<h6 id="compile-the-sources-yourself-1">Compile the sources
-yourself</h6>
-<p>Please look at the <a
-href="https://www.videolan.org/developers">developers page</a> for
-information on how to do this.</p>
-<h5 id="use-the-mozilla-plugin-1">Use the Mozilla plugin</h5>
-<p>If in the browser you open a link to an audio or video URL handled by
-the VLC plugin, or if a web page has HTML code that embeds audio or
-video handled by the VLC plugin, then the plugin should start and play
-the audio/video. Note the plugin (as of version 1.1.9) does not present
-any user interface — it has no default control panel and no keyboard
-shortcuts.</p>
-<p>To get the list of the media types handled by the VLC plugin, browse
-to <strong>about:plugins</strong>. Conflicts will arise if you have more
-than one plugin installed that supports the same media type.</p>
-<p>See the <a href="#webplugin">Web plugin documentation</a> to create
-HTML pages that use JavaScript to control the plugin.</p>
-<h4 id="snapshot-tool-2">Snapshot Tool</h4>
-<p>Did you know you can use special codes to automatically generate
-filenames in the Snapshot Tool?</p>
-<h4 id="specifying-streaming-options-1">Specifying Streaming
-Options</h4>
-<p><em>Further information: Documentation:Streaming HowTo New</em></p>
-<h4 id="audio-bar-graph-over-video-2">Audio Bar Graph over Video</h4>
-<p>This section specifies how to enable the audiobargraph audio filter
-and video overlay, (mostly) via the GUI. This displays an audio meter
-overlaid on the video.</p>
-<p>There are three parts - an audio filter, which sends it’s output via
-TCP to the Remote Control (RC) Interface. This information is then
-picked up and displayed by the Audio Bar Graph video subpicture filter
-(OSD).</p>
-<p>To enable this, VLC needs to be started with the
-<strong>–rc-host</strong> command-line switch - e.g.</p>
-<pre><code>% &quot;C:\Program Files\VideoLAN\VLC\vlc.exe&quot; --rc-host localhost:12345</code></pre>
-<p>In the GUI, set the following (this example from VLC v1.1.9 on
-Windows 7):</p>
-<ul>
-<li>Preferences:Show settings:All</li>
-<li>Audio/Filters &gt; Enable “Audio part of the BarGraph function”</li>
-<li>Audio/Filters/audiobargraph &gt; use defaults, change “Sends the
-barGraph information every n audio packets” to 1 to enable see a more
-accurate display</li>
-<li>Interface/Main interfaces &gt; Enable “Remote control
-interface”</li>
-<li>Interface/Main interfaces/RC &gt; Enable “Do not open a DOS command
-box interface”</li>
-<li>Video/Subtitles-OSD &gt; Enable “Audio Bar Graph Video sub
-filter”</li>
-<li>Video/Subtitles-OSD/Audio Bar Graph &gt; Set the following settings:
-<ul>
-<li>“Value of the audio channels levels” = 0 (setting this to 0:1
-crashes VLC v1.1.9)</li>
-<li>“X coordinate” = 0</li>
-<li>“Y coordinate” = 0 (this doesn’t seem to affect anything)</li>
-<li>“Transparency of the bargraph” = 128 for 50% transparency which
-looks ok</li>
-<li>“Bargraph position” = Left (seems to only work Left,Center,Right -
-can’t go top or bottom)</li>
-<li>“Alarm” = 1 (enables the silence alarm - puts a red border around
-the bargraph if silent for too long)</li>
-<li>“Bar width in pixel” = 10 (20 if you want it to be really
-visible)</li>
-</ul></li>
-</ul>
-<p><strong>Permission is granted to copy, distribute and/or modify this
-document under the terms of the <a
-href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
-License</a> as published by the Free Software Foundation; either version
-2 of the License, or (at your option) any later version.</strong></p>
 <h3 id="alternative-interfaces">Alternative Interfaces</h3>
 <p>This page is outdated and information might be incorrect.</p>
-<h4 id="the-http-interface-2">The HTTP interface</h4>
+<h4 id="the-http-interface-1">The HTTP interface</h4>
 <p>VLC ships with a little HTTP server integrated. It is used both to
 stream using HTTP, and for the HTTP remote control interface.</p>
 <p>To start VLC with the HTTP interface, use:</p>
@@ -19953,7 +19162,7 @@ HowTo/Building Pages for the HTTP Interface.</p>
 <li>0 - Mosaic Wizard</li>
 <li>0 - Flash based remote playback</li>
 </ul>
-<h4 id="ncurses-2">Ncurses</h4>
+<h4 id="ncurses-1">Ncurses</h4>
 <p>This is a text interface, using ncurses library.</p>
 <p>Start VLC with <strong>-I ncurses</strong> or <strong>–extraintf
 ncurses</strong>. You will then get something like that:</p>
@@ -19966,13 +19175,13 @@ order to add playlist items. Press ‘B’ to use it.</p>
 <p>You can set the filebrowser starting point by launching vlc with the
 <strong>–browse-dir</strong> option:</p>
 <pre><code>% vlc -I ncurses --browse-dir /filebrowser/starting/point/</code></pre>
-<h4 id="other-control-interfaces-2">Other control interfaces</h4>
+<h4 id="other-control-interfaces-1">Other control interfaces</h4>
 <p>VLC includes a number of so-called interfaces that are not really
 interfaces, but means of controlling VLC. Nevertheless, they are enabled
 by setting them as interface or extra interface, either in the
 Preferences, in General/Interface, or using <strong>-I</strong> or
 <strong>–extraintf</strong> on the command line.</p>
-<h5 id="hotkeys-3">Hotkeys</h5>
+<h5 id="hotkeys-2">Hotkeys</h5>
 <p>This module allows you to control VLC and playback via hotkeys. It is
 always enabled by default. You can use hotkeys in the video output
 window, you can’t in the audio dummy interface.</p>
@@ -20004,7 +19213,7 @@ port, you will get the command shell.</p>
 use <strong>–rc-unix /path/to/socket</strong>. Commands can then be
 passed using this UNIX socket.</p>
 <p>The RTCI interface is an old module merged into the RC interface.</p>
-<h5 id="gestures-2">Gestures</h5>
+<h5 id="gestures-1">Gestures</h5>
 <p>Gestures provide a simple mouse gestures control. TODO</p>
 <p><strong>Permission is granted to copy, distribute and/or modify this
 document under the terms of the <a
@@ -20014,7 +19223,7 @@ License</a> as published by the Free Software Foundation; either version
 <h3 id="command-line">Command line</h3>
 <p>See also: Command-line interface</p>
 <p>This page is outdated and information might be incorrect.</p>
-<h4 id="use-the-command-line-2">Use the command line</h4>
+<h4 id="use-the-command-line-1">Use the command line</h4>
 <p><strong>TODO: completely outdated</strong></p>
 <p>All standard operations of VLC should be available from the GUI.
 However, some complex operations can only be done from the command line
@@ -20023,7 +19232,7 @@ the complete description of VLC’s command line and how to use it.</p>
 <p>You need to be quite comfortable with command line usage to use
 this.</p>
 <pre><code>Note: Windows users have to use the --option-name=&quot;value&quot; syntax instead of the --option-name value syntax.</code></pre>
-<h4 id="getting-help-2">Getting help</h4>
+<h4 id="getting-help-1">Getting help</h4>
 <p>VLC uses a modular structure. The core mainly manages communication
 between <a href="#modules">modules</a>. All the multimedia processing is
 done by modules. There are input modules, demultiplexers, decoders,
@@ -20041,10 +19250,10 @@ options. <strong>vlc –longhelp</strong> will give all the basic options
 <strong>-v</strong> or <strong>-vv</strong> (this will show lower
 severity messages). If your console supports it, you can add
 <strong>–color to get messages in color.</strong></p>
-<h4 id="opening-streams-2">Opening streams</h4>
+<h4 id="opening-streams-1">Opening streams</h4>
 <p>The following commands start VLC and start reading the given
 element(s):</p>
-<h5 id="opening-a-file-3">Opening a file</h5>
+<h5 id="opening-a-file-2">Opening a file</h5>
 <p>Start VLC with:</p>
 <pre><code>% vlc my_file</code></pre>
 <p>VLC should be able to recognize the file type. If it does not, you
@@ -20052,7 +19261,7 @@ can force demultiplexer and decoder (see below).</p>
 <p>A list of all video and audio codecs supported by VLC is available on
 the <a href="http://www.videolan.org/vlc/features.html">VLC features
 list</a>.</p>
-<h5 id="opening-a-dvd-or-vcd-or-an-audio-cd-2">Opening a DVD or VCD, or
+<h5 id="opening-a-dvd-or-vcd-or-an-audio-cd-1">Opening a DVD or VCD, or
 an audio CD</h5>
 <p>Start VLC with:</p>
 <p>For a DVD with menus:</p>
@@ -20074,7 +19283,7 @@ dvd://[device]</strong> will do.</p>
 <p>or</p>
 <p>(Audio CD):</p>
 <pre><code>% vlc cdda://[device][@[track]]</code></pre>
-<h5 id="receiving-a-network-stream-2">Receiving a network stream</h5>
+<h5 id="receiving-a-network-stream-1">Receiving a network stream</h5>
 <p>To receive an unicast RTP/UDP stream (sent by VLC’s stream output),
 start VLC with:</p>
 <pre><code>% vlc rtp://@:5004</code></pre>
@@ -20092,7 +19301,7 @@ start VLC with:</p>
 <pre><code>% vlc 0</code></pre>
 <p>To receive a RTSP stream, start VLC with:</p>
 <pre><code>% vlc rtsp://www.example.org/your_stream</code></pre>
-<h4 id="modules-selection-2">Modules selection</h4>
+<h4 id="modules-selection-1">Modules selection</h4>
 <p>See also: <a href="#modules">Documentation:Modules</a></p>
 <p>VLC always tries to select the most appropriate interface, input and
 output modules, among the ones available on the system, according to the
@@ -20111,12 +19320,12 @@ probably never touch that.</li>
 </ul>
 <p>You can get a listing of the available modules by using <strong>vlc
 -l</strong></p>
-<h4 id="stream-output-5">Stream Output</h4>
+<h4 id="stream-output-4">Stream Output</h4>
 <p>The Stream output system allows vlc to become a streaming server.</p>
 <p>For more details on the stream output system, please have a look at
 the <a href="#streaming-howto">Streaming HowTo</a>.</p>
-<h4 id="other-options-3">Other Options</h4>
-<h5 id="audio-options-2">Audio options</h5>
+<h4 id="other-options-2">Other Options</h4>
+<h5 id="audio-options-1">Audio options</h5>
 <p>Note that in recent versions (3.x.x branch, possibly earlier):</p>
 <ul>
 <li>0 no longer exists: use 1 instead</li>
@@ -20166,7 +19375,7 @@ visualizations</li>
 <li><strong>–audio-resampler</strong>
 {any,samplerate,ugly,soxr,speex_resampler,none} Audio resampler</li>
 </ul>
-<h5 id="video-options-2">Video options</h5>
+<h5 id="video-options-1">Video options</h5>
 <ul>
 <li><strong>–no-video</strong> disables video output.</li>
 <li><strong>–grayscale</strong> turns video output into grayscale
@@ -20193,10 +19402,10 @@ can add several filters, separated by commas</li>
 <li>**–sub-filter ** adds video subpictures filter to the processing
 chain.</li>
 </ul>
-<h5 id="desktopscreen-grab-options-2">Desktop/Screen grab options</h5>
+<h5 id="desktopscreen-grab-options-1">Desktop/Screen grab options</h5>
 <p>You can see the various options for “grabbing the desktop” (VLC’s
 built-in screen grabber capture device) by using the GUI. See 0</p>
-<h5 id="playlist-options-2">Playlist options</h5>
+<h5 id="playlist-options-1">Playlist options</h5>
 <ul>
 <li><strong>–random</strong> plays files randomly forever.</li>
 <li><strong>–loop</strong> loops playlist on end.</li>
@@ -20207,7 +19416,7 @@ item.</li>
 <li><strong>–no-repeat –no-loop</strong> prevents the video from being
 executed again. (Useful when want to encode a file)</li>
 </ul>
-<h5 id="network-options-2">Network options</h5>
+<h5 id="network-options-1">Network options</h5>
 <ul>
 <li>**–server-port ** sets server port.</li>
 <li>**–iface ** specifies the network interface to use.</li>
@@ -20216,7 +19425,7 @@ executed again. (Useful when want to encode a file)</li>
 <li><strong>–ipv6</strong> forces IPv6.</li>
 <li><strong>–ipv4</strong> forces IPv4.</li>
 </ul>
-<h5 id="cpu-options-2">CPU options</h5>
+<h5 id="cpu-options-1">CPU options</h5>
 <p>You should probably not touch these options unless you know what you
 are doing.</p>
 <ul>
@@ -20229,7 +19438,7 @@ extensions.</li>
 <li><strong>–noaltivec</strong> disables the use of Altivec CPU
 extensions.</li>
 </ul>
-<h5 id="miscellaneous-options-3">Miscellaneous options</h5>
+<h5 id="miscellaneous-options-2">Miscellaneous options</h5>
 <ul>
 <li><strong>–quiet</strong> deactivates all console messages.</li>
 <li><strong>–color</strong> displays color messages.</li>
@@ -20252,7 +19461,7 @@ VLC version.</li>
 <li><strong>–module ** displays help about specified module. (Shortcut:
 </strong>-p**)</li>
 </ul>
-<h4 id="item-specific-options-2">Item-specific options</h4>
+<h4 id="item-specific-options-1">Item-specific options</h4>
 <p>There are many options that are related to items (like
 <strong>–novideo</strong>, <strong>–codec</strong>,
 <strong>–fullscreen</strong>).</p>
@@ -20270,13 +19479,13 @@ mode (which is generally no fullscreen), whereas</p>
 subtitles file file1.srt and will play file2.mpg with video filter
 distort enabled in fullscreen mode (item-specific options override
 global options).</p>
-<h4 id="filters-3">Filters</h4>
+<h4 id="filters-2">Filters</h4>
 <p>These are the old style VLC filters. They only apply to on screen
 display and thus cannot be streamed. However, on version 1.1.11 you are
 still able to apply these filters in <em>transcode</em> module using
 parameter <em>vfilter</em>. More information can be found on Advanced
 Streaming Using the Command Line.</p>
-<h5 id="deinterlacing-video-filter-2">Deinterlacing video filter</h5>
+<h5 id="deinterlacing-video-filter-1">Deinterlacing video filter</h5>
 <p><em>Further information: Documentation:Modules/deinterlace</em></p>
 <p>Module name: <strong>deinterlace</strong></p>
 <ul>
@@ -20305,10 +19514,10 @@ Phosphor old field dimmer strength: 1 (Off), 2 (Low), 3 (Medium), 4
 simulates CRT TV phosphor light decay for the old field in the Phosphor
 framerate <em>default value: 2</em></li>
 </ul>
-<h5 id="invert-video-filter-2">Invert video filter</h5>
+<h5 id="invert-video-filter-1">Invert video filter</h5>
 <p><em>Further information: Documentation:Modules/invert</em></p>
 <p>Module name: <strong>invert</strong></p>
-<h5 id="image-properties-filter-2">Image properties filter</h5>
+<h5 id="image-properties-filter-1">Image properties filter</h5>
 <p><em>Further information: Documentation:Modules/adjust</em></p>
 <p>Module name: <strong>adjust</strong></p>
 <ul>
@@ -20322,7 +19531,7 @@ be shown as black or white. Also may invert the brightness value. The
 threshold value will be the brightness defined below <em>default value:
 disabled</em></li>
 </ul>
-<h5 id="wall-video-filter-2">Wall video filter</h5>
+<h5 id="wall-video-filter-1">Wall video filter</h5>
 <p><em>Further information: Documentation:Modules/wall</em></p>
 <p>Module name: <strong>wall</strong></p>
 <p>This filter splits the output in several windows.</p>
@@ -20339,7 +19548,7 @@ building the wall <em>default value: 4:3</em></li>
 <p>Note: for 0, to select windows 2 and 4 you would write
 <strong>–wall-active 2,4</strong>. When this option isn’t specified, all
 windows are displayed.</p>
-<h5 id="video-transformation-filter-2">Video transformation filter</h5>
+<h5 id="video-transformation-filter-1">Video transformation filter</h5>
 <p><em>Further information: Documentation:Modules/transform</em></p>
 <p>Module name: <strong>transform</strong></p>
 <ul>
@@ -20347,10 +19556,10 @@ windows are displayed.</p>
 “transpose”, “antitranspose” }</strong> : Transformation type
 <em>default value: “90”</em></li>
 </ul>
-<h5 id="distort-video-filter-2">Distort video filter</h5>
+<h5 id="distort-video-filter-1">Distort video filter</h5>
 <p><em>Further information: Documentation:Modules/distort</em></p>
 <p>Module name: <strong>distort</strong></p>
-<h5 id="clone-video-filter-2">Clone video filter</h5>
+<h5 id="clone-video-filter-1">Clone video filter</h5>
 <p><em>Further information: Documentation:Modules/clone</em></p>
 <p>This filter clones the output window.</p>
 <p>Module name: <strong>clone</strong></p>
@@ -20389,22 +19598,22 @@ borders and crop them anyway <em>default value: 17</em></li>
 <li>**autocrop-luminance-threshold ** : Maximum luminance to consider a
 pixel as black (0-128) <em>default value: 40</em></li>
 </ul>
-<h5 id="motion-blur-filter-2">Motion blur filter</h5>
+<h5 id="motion-blur-filter-1">Motion blur filter</h5>
 <p><em>Further information: Documentation:Modules/motionblur</em></p>
 <p>Module name: <strong>motionblur</strong></p>
 <ul>
 <li>**motionblur-factor ** : The bluring factor (1 to 127). Higher
 values mean more blurring <em>default value: 80</em></li>
 </ul>
-<h5 id="video-pictures-blending-2">Video pictures blending</h5>
+<h5 id="video-pictures-blending-1">Video pictures blending</h5>
 <p><em>Further information: Documentation:Modules/blend</em></p>
 <p>Module name: <strong>blend</strong></p>
-<h5 id="video-scaling-filter-2">Video scaling filter</h5>
+<h5 id="video-scaling-filter-1">Video scaling filter</h5>
 <p><em>Further information: Documentation:Modules/scale</em></p>
 <p>Module name: <strong>scale</strong></p>
-<h4 id="subpictures-filters-2">Subpictures Filters</h4>
+<h4 id="subpictures-filters-1">Subpictures Filters</h4>
 <p>These are the new VLC filters. They can be streamed.</p>
-<h5 id="marquee-display-sub-filter-2">Marquee display sub filter</h5>
+<h5 id="marquee-display-sub-filter-1">Marquee display sub filter</h5>
 <p><em>Further information: Documentation:Modules/marq</em></p>
 <p>Module name: <strong>marq</strong></p>
 <ul>
@@ -20437,7 +19646,7 @@ This is mainly useful when using meta data or time format string
 sequences. <em>default value: 1000</em></li>
 </ul>
 <p>The time sub filter was merged into this module.</p>
-<h5 id="logo-video-filter-2">Logo video filter</h5>
+<h5 id="logo-video-filter-1">Logo video filter</h5>
 <p><em>Further information: Documentation:Modules/logo</em></p>
 <p>Module name: <strong>logo</strong></p>
 <p>This filter can be used both as an old style filter or a subpictures
@@ -22526,7 +21735,7 @@ matches the default media player behavior by allowing you to seek at the
 pace you want. Next to it, you will find a 2-mode time counter and a
 button to control aspect ratio and cropping. VLC for iOS will remember
 the last playback position for media stored on your iOS device.</p>
-<h5 id="gestures-3">Gestures</h5>
+<h5 id="gestures-2">Gestures</h5>
 <p>Version 2.2 of VLC for iOS introduces gesture-based playback controls
 in addition to the ordinary buttons.</p>
 <p>Tap the playback screen anywhere with 2 fingers to pause or play the

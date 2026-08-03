@@ -350,8 +350,9 @@ owns input and output in Vibe and Mistral’s APIs?</a></li>
 <li><a href="#cat-vibe-code-for-programming">Vibe Code, for
 programming</a>
 <ul>
-<li><a href="#agents">Agents</a></li>
-<li><a href="#agents-2">Agents</a></li>
+<li><a href="#agents">Agents (Agents are configuration overrides applied
+on top of)</a></li>
+<li><a href="#agents-2">Agents (Built-in agents)</a></li>
 <li><a href="#api-keys-and-profiles">API keys and profiles</a></li>
 <li><a href="#choose-cli-vs-code-or-web-sessions">Choose CLI, VS Code,
 or web sessions</a></li>
@@ -2634,7 +2635,8 @@ generated</strong> by you or your end users.</p>
 href="https://mistral.ai/terms#terms-of-service">Terms of Service</a>
 page.</p>
 <h2 id="cat-vibe-code-for-programming">Vibe Code, for programming</h2>
-<h3 id="agents">Agents</h3>
+<h3 id="agents">Agents (Agents are configuration overrides applied on
+top of)</h3>
 <p>Agents are <strong>configuration overrides</strong> applied on top of
 the global config. They bundle a system prompt, a compaction prompt, an
 active model, an available tool set, and approval rules.</p>
@@ -2775,7 +2777,7 @@ folders), the first 0 found is loaded.</li>
  project/ &lt;- cwd (no AGENTS.md here)</code></pre>
 <p>Additionally, the CLI will auto-discover new 0 files when reading
 files in sub-directories.</p>
-<h3 id="agents-2">Agents</h3>
+<h3 id="agents-2">Agents (Built-in agents)</h3>
 <p>Agents are <strong>configuration overrides</strong> applied on top of
 the global config. They bundle a system prompt, a compaction prompt, an
 active model, an available tool set, and approval rules. The VS Code

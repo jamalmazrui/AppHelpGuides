@@ -590,7 +590,6 @@ Menu</a></li>
 <li><a href="#edit-menu">Edit Menu</a></li>
 <li><a href="#effect-menu">Effect Menu</a></li>
 <li><a href="#extra-menu">Extra Menu</a></li>
-<li><a href="#file-menu-manual-2">File Menu (Manual)</a></li>
 <li><a href="#generate-menu">Generate Menu</a></li>
 <li><a href="#help-menu">Help Menu</a></li>
 <li><a href="#menu-reference">Menu Reference</a></li>
@@ -689,8 +688,6 @@ II</a></li>
 <li><a href="#help-menu-diagnostics">Help Menu: Diagnostics</a></li>
 <li><a href="#high-pass-filter-manual">High-Pass Filter
 (Manual)</a></li>
-<li><a href="#high-pass-filter-manual-2">High-Pass Filter
-(Manual)</a></li>
 <li><a href="#higher-speed-transfers">Higher speed transfers</a></li>
 <li><a href="#history-undo-and-redo">History - Undo and Redo</a></li>
 <li><a href="#installing-and-updating-audacity-on-linux">Installing and
@@ -704,8 +701,6 @@ to Nyquist and Lisp Programming</a></li>
 <li><a href="#license">License</a></li>
 <li><a href="#lof-files">LOF Files</a></li>
 <li><a href="#low-pass-filter-manual">Low-Pass Filter (Manual)</a></li>
-<li><a href="#low-pass-filter-manual-2">Low-Pass Filter
-(Manual)</a></li>
 <li><a href="#macros">Macros</a></li>
 <li><a href="#manage-presets">Manage Presets</a></li>
 <li><a href="#managing-audacity-projects">Managing Audacity
@@ -835,8 +830,6 @@ preferences</a>
 <li><a href="#application-preferences">Application Preferences</a></li>
 <li><a href="#audio-settings-preferences-manual">Audio Settings
 Preferences (Manual)</a></li>
-<li><a href="#audio-settings-preferences-manual-2">Audio Settings
-Preferences (Manual)</a></li>
 <li><a href="#cloud-preferences">Cloud Preferences</a></li>
 <li><a href="#directories-preferences">Directories Preferences</a></li>
 <li><a href="#extended-import-preferences">Extended Import
@@ -941,8 +934,6 @@ Panel and Vertical Scale</a></li>
 Tracks</a></li>
 <li><a href="#tracks-menu-mix">Tracks Menu: Mix</a></li>
 <li><a href="#tracks-menu-mute-unmute-manual">Tracks Menu: Mute/Unmute
-(Manual)</a></li>
-<li><a href="#tracks-menu-mute-unmute-manual-2">Tracks Menu: Mute/Unmute
 (Manual)</a></li>
 <li><a href="#tracks-menu-pan">Tracks Menu: Pan</a></li>
 <li><a href="#tracks-menu-sort-tracks">Tracks Menu: Sort Tracks</a></li>
@@ -40277,136 +40268,6 @@ Option + ⌘ + M - Mac only</h4>
 <p>On Mac only there is an extra command in this menu “<strong>Minimize
 All Projects</strong>”, shortcut Option + ⌘ + M, which minimizes all
 Audacity projects that you have open.</p>
-<h3 id="file-menu-manual-2">File Menu (Manual)</h3>
-<p>The <strong><em>File Menu</em></strong> provides commands for
-creating, opening and saving <strong><em>Audacity
-projects</em></strong>, importing and exporting audio files.</p>
-<ul>
-<li><p>In addition to storing your projects locally on your computer you
-can also use <strong><em>Muse’s Cloud</em></strong>.</p></li>
-<li><ul>
-<li>You are strongly advised not to open a project that is on networked
-storage or personal cloud storage (or an external USB stick/disk) as it
-is unlikely to be fast enough for satisfactory recording and editing.
-Instead copy the project file, the AUP3 file, to an onboard disk on your
-computer and open it from there to work on it. Audacity blocks you from
-opening a project that is on a FAT/FAT32 drive as they are limited to a
-maximum 4GB per single file and this can easily be exceeded when
-editing. See this page for more details.</li>
-</ul></li>
-</ul>
-<p><strong>Screenshot: File Menu 3-7-0.pngClick on the image to learn
-more</strong></p>
-<h4 id="new-ctrl-n-1">New Ctrl + N</h4>
-<p>Creates a new and empty project window to start working on new or
-imported Tracks. This new work environment can then be saved as an
-Audacity Project File (.AUP) for easy and full retrieval of its contents
-via the Save Project or Save Project As File menu functions.</p>
-<p>Audacity will warn on start up or when using File &gt; New to create
-a new project if you have 100 MB or less space in the temporary folder
-for recording or editing.</p>
-<p>100MB is approximately 5 minutes of stereo or 10 minutes of mono at
-default settings.</p>
-<p><strong>Screenshot: Warning Low Disk Space at
-Startup.png</strong></p>
-<h4 id="open-ctrl-o-1">Open Ctrl + O</h4>
-<p>Launches a file selection window where you can <strong>Open</strong>
-one or more Audacity AUP3 Project files.</p>
-<p>If an empty project window exists, that window will be used for the
-first project or imported file. Any subsequent opened projects or audio
-files will create new project windows.</p>
-<p>The <strong>Open</strong> command can be used to Import a set of
-audio files with with <strong>lists of files (.LOF)</strong>).</p>
-<ul>
-<li><ul>
-<li>Note carefully that this does not actually ” open ” your audio files
-for editing, rather it copies them into Audacity in Audacity’s internal
-project format where they can be worked on.</li>
-</ul></li>
-<li><ul>
-<li>Old AUP files from earlier versions of Audacity can be opened with
-File &gt; Open . Audacity will convert these into modern AUP3 format,
-you will need to Save them for them to be stored in AUP3 format. Once an
-AUP project has been converted like this it can no longer be opened in
-Audacity 2.4.2 or earlier. Note that this will leave behind the old AUP
-file and its associated _data folder which you will probably want to
-delete to recover disk space.</li>
-</ul></li>
-</ul>
-<h4 id="recent-files-open-recent-on-mac-1">Recent Files (<em>“Open
-Recent”</em> on Mac)</h4>
-<p>Lists the full path to the twelve most recently saved or opened
-projects or most recently imported audio files. The oldest item at the
-bottom is removed when a new item is added to the top. When you delete
-an Audacity project or audio file it will remain in the list, but will
-be removed from the list if you select it.</p>
-<ul>
-<li>To clear the entire list, choose “<strong>Clear</strong>” underneath
-the last item in the list.</li>
-</ul>
-<h4 id="save-project-ctrl-s-2">Save Project Ctrl + S</h4>
-<p>The Save Project submenu enables you to <strong>Save</strong> your
-project in full uncompressed mode. You can also store projects as backup
-safety copies at stages throughout your project. Note that Audacity
-projects only work in Audacity, they cannot be read and played by other
-applications.</p>
-<p>The current zoom level is saved in the project when you save the
-project. When a saved project is opened, it should automatically be
-zoomed to the same place and zoom level as when you saved it.</p>
-<ul>
-<li><ul>
-<li>It is not advisable to save your project to be on an external USB
-stick/disk as it is unlikely to be fast enough for satisfactory
-recording.</li>
-</ul></li>
-</ul>
-<h4 id="export-audio-2">Export Audio</h4>
-<p><strong>Exports</strong> audio from Audacity into audio file formats
-that can be read and played by other applications.</p>
-<h4 id="export-other-1">Export Other</h4>
-<p>The Export submenu enables you to <strong>Export</strong> label files
-or MIDI.</p>
-<h4 id="import-4">Import</h4>
-<p>The Import submenu enables you to import audio files or label files
-into your project. Files in various audio formats can be imported into
-Audacity.</p>
-<p>For details of the available imports see this page.</p>
-<h4 id="cloud-use-1">Cloud use</h4>
-<p>In addition to storing your projects locally on your PC you can make
-use of Muse’s cloud storage (<strong>audio.com</strong>) for your
-projects.</p>
-<p>Three commands are provided:</p>
-<ul>
-<li>Save To Cloud</li>
-<li>Open From Cloud</li>
-<li>Update Cloud Audio Preview</li>
-<li>Share Audio</li>
-</ul>
-<p>See <strong>Cloud Preferences</strong> for settings to control cloud
-use behaviors in Audacity.</p>
-<p>See <a
-href="#saving-and-exporting-projects-support-site-2"><strong>Saving and
-exporting projects</strong></a> on Muse’s support site for more
-details.</p>
-<h4 id="close-project-ctrl-w-1">Close Project Ctrl + W</h4>
-<p>Closes the current project window, prompting you to save your work if
-you have not already saved.</p>
-<ul>
-<li>If other projects are open then they will remain open.</li>
-<li>If this is your only open project then the project will close but
-Audacity will remain open with an empty project.</li>
-</ul>
-<h4 id="quit-audacity-ctrl-q-1">Quit Audacity Ctrl + Q</h4>
-<p>Closes <strong><em>ALL</em></strong> project windows and exits
-Audacity. If there are any unsaved changes to your project, Audacity
-will ask if you want to save them.</p>
-<p>Note that it is not necessary for you to save changes if you have
-already exported your mix as a WAV or MP3 and you are now happy with it.
-But if you are working on a mix and plan to continue later where you
-left off, saving an Audacity Project will let you restore everything,
-exactly as you left it.</p>
-<p>On a Mac, the Exit command is not in the File Menu. Instead, use
-Audacity &gt; Quit.</p>
 <h3 id="generate-menu">Generate Menu</h3>
 <p><strong><em>Generate Menu</em></strong> lets you create audio
 containing tones, noise or silence. Generated audio can be inserted at
@@ -48376,7 +48237,7 @@ the Scriptables I page for what the various fields do.</p>
 <p>Used in testing. Sends the Text string back to you.</p>
 <h4 id="help">Help</h4>
 <p>This is an extract from GetInfo Commands, with just one command.</p>
-<h4 id="import-5">Import</h4>
+<h4 id="import-4">Import</h4>
 <p>Imports from an audio file. The automation command uses a text box to
 get the file name rather than a normal file-open dialog.</p>
 <p>You have to give the <strong><em>full</em></strong> file name
@@ -49107,53 +48968,6 @@ roll-off.</li>
 <h4 id="links-75">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="high-pass-filter-manual-2">High-Pass Filter (Manual)</h3>
-<p><strong><em>High-Pass Filter</em></strong> passes frequencies above
-its cutoff frequency and attenuates frequencies below its cutoff
-frequency. This effect can therefore be used to reduce low frequency
-noise.</p>
-<ul>
-<li><ul>
-<li>Note carefully that when you apply an effect to a time-stretched
-clip the changed speed of the clip will be automatically rendered . If
-you apply an effect to a selection within a time-stretched clip then
-Audacity will split the original clip so that the selection can be
-rendered as part of applying the effect.</li>
-</ul></li>
-<li><ul>
-<li>If you apply this effect with an envelope present then there is a
-bug whereby the envelope is removed and the audio reverts to its full
-amplitude state prior to the effect being applied.</li>
-</ul></li>
-</ul>
-<p><strong>Accessed by:</strong> Effect &gt; EQ and Filters &gt;
-High-Pass Filter</p>
-<p><strong>Screenshot: High-Pass Filter 3-5-0.png</strong></p>
-<h4 id="frequency-hz-2">Frequency (Hz)</h4>
-<p>Sound below this cutoff frequency in <strong><em>Hz</em></strong> is
-not eliminated but increasingly attenuated as the frequency falls
-further below the cutoff.</p>
-<p>The cutoff frequency (sometimes also called <em>corner
-frequency</em>) defines the point at which the audio is reduced by 3 dB.
-Thus there will also be a small and decreasing amount of attenuation
-just above the cutoff frequency as in the following image.</p>
-<p><strong>Screenshot: 2kH high-pass.png</strong></p>
-<h4 id="roll-off-db-per-octave-1">Roll-off (dB per octave)</h4>
-<p>Roll-off sets the steepness of the attenuation below the corner
-frequency. Higher roll-off values give a steeper slope to the
-attenuation. For example, with a roll-off of 6 dB per octave, the sound
-decreases by 6 dB in <strong><em>amplitude</em></strong> for each octave
-below the cutoff frequency (an octave above is double the
-frequency).</p>
-<ul>
-<li><ul>
-<li>To achieve more attenuation, run the effect again or use a greater
-roll-off.</li>
-</ul></li>
-</ul>
-<h4 id="links-76">Links</h4>
-<p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
-<p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="higher-speed-transfers">Higher speed transfers</h3>
 <p>Higher speed transfers (high speed dubbing) is sometimes used to
 speed up the recording process by recording records at higher speeds
@@ -49238,7 +49052,7 @@ ploughs through the grooves, inflicting permanent damage.</p>
 else. The needle is designed to vibrate and move very accurately only in
 a narrow range. Exceed that range and the needle stops picking up the
 music.</p>
-<h4 id="links-77">Links</h4>
+<h4 id="links-76">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
 <h3 id="history-undo-and-redo">History - Undo and Redo</h3>
@@ -49648,7 +49462,7 @@ the:</p>
 <li><strong>Plug-Ins</strong> folder</li>
 </ul>
 <p>Then restart Audacity.</p>
-<h4 id="links-78">Links</h4>
+<h4 id="links-77">Links</h4>
 <p><strong>&gt; Installing plugins</strong> on the <strong>Audacity
 Support</strong> site.</p>
 <h3 id="installing-plugins-manual">Installing Plugins (Manual)</h3>
@@ -49963,7 +49777,7 @@ false-stmt</li>
 <li>Evaluate statement for the first value that matches test-expr</li>
 </ul></li>
 </ul>
-<h4 id="links-79">Links</h4>
+<h4 id="links-78">Links</h4>
 <p><strong>&gt;</strong> Programming in Nyquist</p>
 <p><strong>|&lt;</strong> Nyquist</p>
 <h3 id="invert">Invert</h3>
@@ -50010,7 +49824,7 @@ the result is silence, the track is not really stereo but <em>dual
 mono</em>, where both left and right contain completely identical
 audio.</li>
 </ul>
-<h4 id="links-80">Links</h4>
+<h4 id="links-79">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="languages">Languages</h3>
@@ -50649,7 +50463,7 @@ amplitude state prior to the effect being applied.</li>
 <p><strong>Accessed by:</strong> Effect &gt; EQ and Filters &gt;
 Low-Pass Filter</p>
 <p><strong>Screenshot: Low-Pass Filter 3-5-0.png</strong></p>
-<h4 id="frequency-hz-3">Frequency (Hz)</h4>
+<h4 id="frequency-hz-2">Frequency (Hz)</h4>
 <p>Sound above this cutoff frequency in <strong><em>Hz</em></strong> is
 not eliminated but increasingly attenuated as the frequency rises
 further above the cutoff.</p>
@@ -50658,7 +50472,7 @@ frequency</em>) defines the point at which the audio is reduced by 3 dB.
 Thus there will also be a small and decreasing amount of attenuation
 just below the cutoff frequency as in the following image.</p>
 <p><strong>Screenshot: 250Hz low-pass.png</strong></p>
-<h4 id="roll-off-db-per-octave-2">Roll-off (dB per octave)</h4>
+<h4 id="roll-off-db-per-octave-1">Roll-off (dB per octave)</h4>
 <p>Roll-off sets the steepness of the attenuation above the corner
 frequency. Higher roll-off values give a steeper slope to the
 attenuation. For example, with a roll-off of 6 dB per octave, the sound
@@ -50671,54 +50485,7 @@ frequency).</p>
 roll-off.</li>
 </ul></li>
 </ul>
-<h4 id="links-81">Links</h4>
-<p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
-<p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="low-pass-filter-manual-2">Low-Pass Filter (Manual)</h3>
-<p><strong><em>Low-Pass Filter</em></strong> passes frequencies below
-its cutoff frequency and attenuates frequencies above its cutoff
-frequency. This effect can therefore be used to reduce high pitched
-noise.</p>
-<ul>
-<li><ul>
-<li>Note carefully that when you apply an effect to a time-stretched
-clip the changed speed of the clip will be automatically rendered . If
-you apply an effect to a selection within a time-stretched clip then
-Audacity will split the original clip so that the selection can be
-rendered as part of applying the effect.</li>
-</ul></li>
-<li><ul>
-<li>If you apply this effect with an envelope present then there is a
-bug whereby the envelope is removed and the audio reverts to its full
-amplitude state prior to the effect being applied.</li>
-</ul></li>
-</ul>
-<p><strong>Accessed by:</strong> Effect &gt; EQ and Filters &gt;
-Low-Pass Filter</p>
-<p><strong>Screenshot: Low-Pass Filter 3-5-0.png</strong></p>
-<h4 id="frequency-hz-4">Frequency (Hz)</h4>
-<p>Sound above this cutoff frequency in <strong><em>Hz</em></strong> is
-not eliminated but increasingly attenuated as the frequency rises
-further above the cutoff.</p>
-<p>The cutoff frequency (sometimes also called <em>corner
-frequency</em>) defines the point at which the audio is reduced by 3 dB.
-Thus there will also be a small and decreasing amount of attenuation
-just below the cutoff frequency as in the following image.</p>
-<p><strong>Screenshot: 250Hz low-pass.png</strong></p>
-<h4 id="roll-off-db-per-octave-3">Roll-off (dB per octave)</h4>
-<p>Roll-off sets the steepness of the attenuation above the corner
-frequency. Higher roll-off values give a steeper slope to the
-attenuation. For example, with a roll-off of 6 dB per octave, the sound
-decreases by 6 dB in <strong><em>amplitude</em></strong> for each octave
-above the cutoff frequency (an octave above is double the
-frequency).</p>
-<ul>
-<li><ul>
-<li>To achieve more attenuation, run the effect again or use a greater
-roll-off.</li>
-</ul></li>
-</ul>
-<h4 id="links-82">Links</h4>
+<h4 id="links-80">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="macros">Macros</h3>
@@ -50955,7 +50722,7 @@ settings. For most built-in effects and all plugins shipped with
 Audacity, “Defaults” is the only available Factory Preset. Third-party
 plugins may offer multiple named factory presets which you can choose
 from.</p>
-<h4 id="import-6">Import</h4>
+<h4 id="import-5">Import</h4>
 <p>Imports presets which you have exported using the Export option
 (below) on this or other machines or which you have exported from other
 software that supports a compatible preset.</p>
@@ -51448,7 +51215,7 @@ set of metadata to show after importing a file, you need to save that
 set as a template then load the template after importing the
 file.</p></li>
 </ul>
-<h4 id="links-83">Links</h4>
+<h4 id="links-81">Links</h4>
 <p><strong>&gt;</strong> Importing Audio</p>
 <p><strong>&gt;</strong> Exporting Audio</p>
 <p><strong>&gt;</strong> LAME MP3 Export</p>
@@ -52833,7 +52600,7 @@ fairly smooth except for a tall peak on the right. Place the mouse’s
 cross-hair pointer over that peak. Audacity shows the peak more
 accurately to be at 18,996 Hz which will be the frequency to enter in
 Notch Filter.</p>
-<h4 id="links-84">Links</h4>
+<h4 id="links-82">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="only-in-full-set">Only in full set</h3>
@@ -53085,7 +52852,7 @@ headphone voice and your real voice are not going to match. This is
 computer or sound channel latency and there’s no adjustment for it. You
 should probably leave that setting deselected.</li>
 </ul>
-<h4 id="links-85">Links</h4>
+<h4 id="links-83">Links</h4>
 <p><strong>|&lt;</strong> Recording Multi-track Overdubs</p>
 <h3
 id="overdubbing-with-a-behringer-xc2-xae-uca202-stereo-bidirecti">Overdubbing
@@ -54569,7 +54336,7 @@ before stopping.</p>
 Recording (on/off) you can make recording pause until the input level
 exceeds the specified threshold level at Transport &gt; Transport
 Options &gt; Sound Activation Level.</p>
-<h4 id="links-86">Links</h4>
+<h4 id="links-84">Links</h4>
 <p><strong>&gt;</strong> Quick-Play</p>
 <p><strong>&gt;</strong> Scrubbing and Seeking</p>
 <p><strong>&gt;</strong> Timer Recording</p>
@@ -54602,7 +54369,7 @@ the selection can be rendered as part of applying the Generator</li>
 <h4 id="duration-6">Duration</h4>
 <p>Specifies the length of the specified pluck. The default is 1 second,
 the maximum is 1 minute.</p>
-<h4 id="links-87">Links</h4>
+<h4 id="links-85">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Generate Menu</p>
 <h3
@@ -54877,7 +54644,7 @@ combining two or more sounds.</li>
 <li>Combines two sounds so that they are played simultaneously.</li>
 </ul></li>
 </ul>
-<h4 id="links-88">Links</h4>
+<h4 id="links-86">Links</h4>
 <p><strong>&gt;</strong> Creating Nyquist Plugins</p>
 <p><strong>&lt;</strong> Introduction to Nyquist and Lisp
 Programming</p>
@@ -55034,7 +54801,7 @@ can easily find them again and listen to review your repairs.</p>
 </ul>
 <p>The Undo history will contain one recording item for each error that
 you corrected, plus one more for the original Record command.</p>
-<h4 id="links-89">Links</h4>
+<h4 id="links-87">Links</h4>
 <p><strong>&gt;</strong> Quick-Play</p>
 <p><strong>&gt;</strong> Scrubbing and Seeking</p>
 <p><strong>&gt;</strong> Timer Recording</p>
@@ -55717,7 +55484,7 @@ after all)</em>. Declick and equalization are the most important steps
 in the process. Learn to read the waveform. Sometimes an equalization
 can increase the amplitude of some frequencies to a clipping level, so
 consider reducing the amplitude slightly before equalization.</p>
-<h4 id="links-90">Links</h4>
+<h4 id="links-88">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
 <p><strong>&gt;</strong> See also tutorial on: Sample workflow for LP
@@ -56027,7 +55794,7 @@ how to:</p>
 <h4 id="troubleshooting-5">Troubleshooting</h4>
 <p>Please see Troubleshooting: Recording with USB turntables or cassette
 decks for troubleshooting advice.</p>
-<h4 id="links-91">Links</h4>
+<h4 id="links-89">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
 <h3 id="repeat">Repeat</h3>
@@ -56067,7 +55834,7 @@ Preferences is unchecked.</li>
 <li>Repeat does not copy the original or resultant selection to the
 Audacity clipboard.</li>
 </ul>
-<h4 id="links-92">Links</h4>
+<h4 id="links-90">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="reset-configuration">Reset Configuration</h3>
@@ -56196,7 +55963,7 @@ the selection can be rendered as part of applying the Generator</li>
 </ul>
 <p><strong>Accessed by:</strong> Generate &gt; Risset Drum</p>
 <p><strong>Screenshot: Risset Drum 3-5-0.png</strong></p>
-<h4 id="frequency-hz-5">Frequency (Hz)</h4>
+<h4 id="frequency-hz-3">Frequency (Hz)</h4>
 <p>The pitch of the drum note expressed in <strong><em>Hz</em></strong>.
 This tunes the “fundamental frequency” or “base note” of the sound.</p>
 <h4 id="decay-seconds">Decay (seconds)</h4>
@@ -56218,7 +55985,7 @@ at default values.</p>
 <h4 id="amplitude-0-1">Amplitude (0-1)</h4>
 <p>The peak <strong><em>amplitude</em></strong> of the generated
 sound.</p>
-<h4 id="links-93">Links</h4>
+<h4 id="links-91">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Generate Menu</p>
 <h3 id="sample-format-bit-depth">Sample Format - Bit Depth</h3>
@@ -56856,7 +56623,7 @@ restoration of CD-quality audio files. Dehiss, declick and decrackle in
 a GUI environment. It can also automatically mark song boundaries if
 required.</li>
 </ul>
-<h4 id="links-94">Links</h4>
+<h4 id="links-92">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
 <p><strong>&gt;</strong> See also tutorial on: Recording 78 rpm
@@ -57218,7 +56985,7 @@ restoration of CD-quality audio files. Dehiss, declick and decrackle in
 a GUI environment. It can also automatically mark song boundaries if
 required.</li>
 </ul>
-<h4 id="links-95">Links</h4>
+<h4 id="links-93">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
 <h3 id="saving">Saving</h3>
@@ -60729,7 +60496,7 @@ Key-Up. The menu items are needed so that the current keystrokes can be
 viewed and modified if necessary in Shortcuts Preferences .</li>
 </ul></li>
 </ul>
-<h4 id="links-96">Links</h4>
+<h4 id="links-94">Links</h4>
 <p><strong>&gt;</strong> Timeline Quick-Play</p>
 <p><strong>&gt;</strong> Timer Recording</p>
 <p><strong>&gt;</strong> Punch and Roll Recording</p>
@@ -61576,7 +61343,7 @@ project</h4>
 <p>You can select the <strong>entire length</strong> of all tracks on
 screen with Select &gt; All or use the shortcut Ctrl + A <em>(or ⌘ + A
 on a Mac)</em>.</p>
-<h4 id="links-97">Links</h4>
+<h4 id="links-95">Links</h4>
 <p><strong>&gt;</strong> Forward to: Selecting Audio</p>
 <p><strong>|&lt;</strong> Back to: Getting Started</p>
 <h3 id="selection-tool">Selection Tool</h3>
@@ -61765,14 +61532,14 @@ Filter</p>
 <li><strong>Low Shelf:</strong> to boost or cut low frequencies.</li>
 <li><strong>High Shelf:</strong> to boost or cut high frequencies.</li>
 </ul>
-<h4 id="frequency-hz-6">Frequency (Hz)</h4>
+<h4 id="frequency-hz-4">Frequency (Hz)</h4>
 <p>The “filter frequency” is the mid-point of the filter slope. This is
 also known as the <em>center frequency</em>, or <em>half gain
 frequency</em>.</p>
 <h4 id="amount-db">Amount (dB)</h4>
 <p>The maximum amount of boost or reduction that will be applied.
 Negative amounts represent a reduction.</p>
-<h4 id="links-98">Links</h4>
+<h4 id="links-96">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="size-limits-for-wav-and-aiff-files">Size limits for WAV and AIFF
@@ -61876,7 +61643,7 @@ of the processed audio.</p>
 frequency as required for the end of the processed audio.</p>
 <p>Time Tracks can be used to bend tempo more flexibly (also affecting
 pitch) using the Envelope Tool.</p>
-<h4 id="links-99">Links</h4>
+<h4 id="links-97">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="sound-finder">Sound Finder</h3>
@@ -61936,7 +61703,7 @@ dialog</li>
 <h4 id="examples-12">Examples</h4>
 <p>See Silence Finder and Sound Finder for examples comparing and
 contrasting the usage of Silence Finder and Sound Finder.</p>
-<h4 id="links-100">Links</h4>
+<h4 id="links-98">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Analyze Menu</p>
 <p><strong>&gt;</strong> Silence Finder</p>
@@ -62083,7 +61850,7 @@ changes to the frequency content of the selected audio. Among other
 purposes, spectral selection and editing can be used for cleaning up
 unwanted sound, enhancing certain resonances, changing the quality of a
 voice or removing mouth sounds from voice work.</p>
-<h4 id="links-101">Links</h4>
+<h4 id="links-99">Links</h4>
 <p><strong>|&lt;</strong> Spectrogram View</p>
 <h3 id="spectrogram-view">Spectrogram View</h3>
 <p>The <strong><em>Spectrogram</em></strong> View of an audio track
@@ -63829,10 +63596,10 @@ starts to rise from the lowest point).</p>
 <h4 id="wet-level-percent">Wet level (percent)</h4>
 <p>Sets the depth of tremolo. 0% is no tremolo, 100% sweeps between zero
 and maximum volume based on the original amplitude level.</p>
-<h4 id="frequency-hz-7">Frequency (Hz)</h4>
+<h4 id="frequency-hz-5">Frequency (Hz)</h4>
 <p>Controls the speed of the oscillation; use higher frequencies for
 faster oscillation.</p>
-<h4 id="links-102">Links</h4>
+<h4 id="links-100">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3
@@ -64295,7 +64062,7 @@ CD player will play anything other than a Red Book Standard 650 MB disc
 burned with 74 minutes of audio.</li>
 </ul></li>
 </ul>
-<h4 id="links-103">Links</h4>
+<h4 id="links-101">Links</h4>
 <p><strong>&lt;</strong> Back to: Splitting a recording into separate
 tracks</p>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
@@ -65029,7 +64796,7 @@ selected, choose Tracks &gt; Mix &gt; Mix Stereo down to Mono.</li>
 Stereo Track”. Now we have a stereo track, containing processed left and
 right channels of the original stereo voice and stereo music track.</li>
 </ol>
-<h4 id="links-104">Links</h4>
+<h4 id="links-102">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="windows-accessing-the-windows-sound-controls">Windows: accessing
@@ -65734,187 +65501,6 @@ settings.</p>
 <strong><em>NOT</em></strong> displayed by default in Audacity. To
 enable it, click on View &gt; Toolbars and check on <strong>Device
 Toolbar</strong>.</p>
-<h3 id="audio-settings-preferences-manual-2">Audio Settings Preferences
-(Manual)</h3>
-<p><strong>Accessed by:</strong> Edit &gt; Preferences &gt; Audio
-Settings <em>(on a Mac Audacity &gt; Preferences &gt; Audio Settings
-)</em></p>
-<p><strong>Screenshot: Preferences Audio Settings.png</strong></p>
-<h4 id="interface-15">Interface</h4>
-<p>Selects the particular host interface with which Audacity
-communicates with your chosen playback and recording devices.</p>
-<p>Windows: on Windows the choice is between the following host audio
-interfaces:</p>
-<ul>
-<li><p><strong><em>MME:</em></strong> This is the Audacity default and
-the most compatible with all audio devices.</p></li>
-<li><p><strong><em>Windows DirectSound:</em></strong> This is more
-recent than MME with potentially less
-<strong><em>latency</em></strong>.</p></li>
-<li><p><strong><em>Windows WASAPI:</em></strong> This host is the most
-recent Windows interface between applications (such as Audacity) and the
-audio interface driver. WASAPI was first officially released in 2007.
-WASAPI is particularly useful for “loopback” recording of computer
-playback. 24-bit recording devices are supported using this host.
-Playback is usually <em>emulated</em>. As a result, the playback slider
-in the Playback Meter will only scale the system playback slider’s
-current level up or down rather than directly manipulating that system
-slider.</p>
-<p><strong>WASAPI loopback</strong> has a <strong><em>big</em></strong>
-advantage over stereo mix or similar inputs provided by the audio
-interface. The capture is entirely digital (rather than converting to
-analog for playback, then back to digital when Audacity receives
-it).</p></li>
-</ul>
-<p>Mac: On Mac the only choice is Core Audio.</p>
-<p>Linux: On Linux there is often only one option:
-<strong><em>ALSA</em></strong>. Other options could be OSS and/or Jack
-Audio Connection Kit (also known as “Jack” or “Jackd”)<em>.</em></p>
-<h4 id="playback-3">Playback</h4>
-<ul>
-<li>Device: Selects the device used for playback.</li>
-</ul>
-<h4 id="recording-4">Recording</h4>
-<ul>
-<li>Device: Selects the device used for recording.</li>
-</ul>
-<p>On <strong>Windows</strong>, each entry for recording device consists
-of the input type (such as microphone), followed by the name of the
-audio device the input belongs to. If you have multiple audio devices,
-the list will be grouped so that inputs of each device are grouped
-together. The input level of the selected device can be adjusted in the
-Meter Toolbars, but device selection is no longer made there.</p>
-<ul>
-<li>Channels: 1 (Mono), 2 (Stereo) or the number of channels that are
-provided by the drivers of your sound device. On most inbuilt sound
-devices, especially on Windows, only mono or stereo will be available.
-For some devices on Windows, choosing Windows DirectSound in
-<strong>“Host”</strong> above may be more likely to reveal options for
-recording more than two channels. On some devices capable of recording
-more than two channels, an explicit “multi” device may appear in the
-<strong>“Device”</strong> dropdown for recording all the channels
-simultaneously.</li>
-</ul>
-<h4 id="quality-6">Quality</h4>
-<p>This panel sets the Project Sample Rate, Default Sample Rate and
-Default Sample Format. It is <strong><em>strongly</em></strong>
-recommended that you stick with the default settings.</p>
-<ul>
-<li><p>Project Sample Rate: Changing the <strong>Project Sample
-Rate</strong> immediately changes the sample rate at which new tracks
-will be recorded or generated in the current project, and at which
-existing tracks will be played or rendered. The Project Sample Rate is
-stored with your project when you save the project.</p>
-<p>The normally grayed-out figure to the right becomes active when you
-choose “<strong>Other</strong>” from the dropdown list, this enables you
-to overtype with a custom value of your choice.</p></li>
-<li><ul>
-<li>Audacity supports multiple tracks with different sample rates. The
-“Project Sample Rate” is the rate that the project is working in. If you
-have a project with two tracks, one with a sample rate of 8000 Hz and
-one with a sample rate of 48000 Hz, and the “Project Rate” is set to
-44100 Hz, then: playback will be 44100 Hz, any new tracks created by
-“Tracks menu &gt; Add track” will be 44100 Hz, any new track created by
-recording to a new track will be 44100 Hz, mixing down tracks will mix
-to 44100 Hz.</li>
-</ul></li>
-<li><p>Default Sample Rate: This is <strong><em>only</em></strong> used
-each time Audacity is launched or a new project window is opened. It
-just sets the Project Sample Rate which will be used in the project. It
-offers a choice of 13 <strong><em>Sample Rates</em></strong>.</p>
-<p>Generally you will want to use the default value of <strong>44100
-Hz</strong>, which can can reproduce all
-<strong><em>frequencies</em></strong> that humans can hear (up to 22050
-Hz) and is the standard for audio CDs. To choose some other bespoke
-rate, click “<strong>Other</strong>” in the dropdown and type your rate
-into the box to right of the dropdown.</p>
-<p>Sample rates between 44100 Hz and 96000 Hz can produce higher quality
-but the quality benefits are increasingly small compared to rapidly
-increasing consumption of disk space and increasing risk of recording
-dropouts on slower computers. 192000 Hz music recordings could have
-ultrasonic playback distortion that make them inferior to recordings at
-lower rates. Very high rates do have some specialized uses such as
-ultrasonic wildlife recordings and high-speed tape capture.</p>
-<p>The normally grayed-out figure to the right becomes active when you
-choose “<strong>Other</strong>” from the dropdown list, this enables you
-to overtype with a custom value of your choice.</p></li>
-<li><ul>
-<li>Changing this Preference setting will not change your project’s
-Project Sample Rate , so if you wish your current project to use the new
-sample rate you will need to reset that as well.</li>
-</ul></li>
-<li><p>Default Sample Format: This sets the Sample Format <em>(bit
-depth)</em> which will be used each time Audacity is launched, or each
-time a new project window or track is opened. It offers a choice of
-three <strong><em>sample formats</em></strong> or bit-depths. This
-affects both imported and newly recorded material, either in a new or
-existing project (even if the other audio in an existing project is at
-some other quality).</p>
-<p>A changed setting also acts immediately on the current project,
-affecting any subsequent new tracks you record.</p>
-<p>The current Sample Format is <strong><em>NOT</em></strong> stored
-with the project for re-use the net time you open the project</p>
-<p>The default <strong>32-bit float</strong> resolution gives the
-highest quality of the three choices, but takes twice the storage space
-on disk compared to 16-bit resolution.</p></li>
-<li><ul>
-<li>It is strongly recommended that you work with this at the default
-32-bit float resolution if you have sufficient available disk
-space.</li>
-</ul></li>
-<li><ul>
-<li>OGG will always import at 16-bit resolution using the standard OGG
-Vorbis importer, irrespective of Default Sample Format. This is due to
-the design of the OGG codec. However OGG can be imported at 32-bit
-resolution using FFmpeg , as described at Using the file type dropdown
-menu on the Importing Audio page.</li>
-</ul></li>
-</ul>
-<h4 id="latency-1">Latency</h4>
-<ul>
-<li><p>Buffer length: A “buffer” is a chunk of audio waiting for the
-computer to process it. At the default 100 milliseconds (ms) setting,
-the audio will take 0.1 seconds to travel through the audio interface
-when recording or playing. Decreasing this value means recordings will
-be laid down on disk with less latency, and playback may respond faster.
-However, the computer will have to work faster so that it is ready to
-process the shorter chunks as soon as required. Setting this value too
-low (for example to 1 ms) will mean the computer will not be able to
-keep up, and neither recording or playback will work. 100 ms is a safe
-setting for most computers.</p></li>
-<li><ul>
-<li>Settings below 20ms, or 30 ms if you are using the Audacity default
-MME host, may cause you to get clicky playback.</li>
-</ul></li>
-<li><p>Latency compensation: When recording, it takes a small amount of
-time for the sound to be converted to digital data and written to the
-track. This time delay is the <strong>recording latency</strong> and is
-typically around 130 ms (0.13 seconds) for consumer level equipment. By
-compensating for this delay, sounds are written to the track at the
-correct time relative to the Timeline, and other tracks in the project.
-The actual amount of delay depends on the hardware and audio settings,
-so for accurate synchronization in multi-track recording, this setting
-should be calibrated as described in the <a
-href="#latency-compensation"><strong>Latency Compensation</strong></a>
-page on the Muse Support site.</p></li>
-<li><ul>
-<li>See Latency Compensation on the Muse Support site for details on how
-to adjust latency on you computer set-up.</li>
-</ul></li>
-</ul>
-<h4 id="alternatives-1">Alternatives</h4>
-<h5 id="audio-setup-toolbar-1">Audio Setup Toolbar</h5>
-<p>As an alternative to using Devices Preferences, you can make and
-change all the same settings with <strong>Audio Setup
-Toolbar</strong>.</p>
-<h5 id="device-toolbar-1">Device Toolbar</h5>
-<p>With <strong>Device Toolbar</strong> you can make and change most of
-the same settings with the exception of the Quality and Latency
-settings.</p>
-<p>Note that he <strong>Device Toolbar</strong> is
-<strong><em>NOT</em></strong> displayed by default in Audacity. To
-enable it, click on View &gt; Toolbars and check on <strong>Device
-Toolbar</strong>.</p>
 <h3 id="cloud-preferences">Cloud Preferences</h3>
 <p><strong><em>Cloud Preferences</em></strong> controls settings for
 cloud based project storage.</p>
@@ -66327,7 +65913,7 @@ cannot find it, use this button to tell Audacity where it is.</li>
 <p><strong>Accessed by:</strong> Edit &gt; Preferences &gt; MIDI Devices
 <em>(on a Mac Audacity &gt; Preferences &gt; MIDI Devices )</em></p>
 <p><strong>Screenshot: Preferences MIDI Devices.png</strong></p>
-<h4 id="interface-16">Interface</h4>
+<h4 id="interface-15">Interface</h4>
 <p>The interface that Audacity should use through PortMidi. The
 available options depend on the OS, but there is only one option for
 each OS:</p>
@@ -66339,7 +65925,7 @@ each OS:</p>
 <li>On <strong>Linux</strong>, it is
 <strong><em>ALSA</em></strong>.</li>
 </ul>
-<h4 id="playback-4">Playback</h4>
+<h4 id="playback-3">Playback</h4>
 <ul>
 <li>Device: The MIDI device to play to.</li>
 <li>MIDI Synthesizer Latency (ms): The latency field enables
@@ -66733,7 +66319,7 @@ and password, then change all the “Names” required to
 “Read&amp;Write”.</li>
 </ul></li>
 </ul>
-<h4 id="links-105">Links</h4>
+<h4 id="links-103">Links</h4>
 <p><strong>|&lt;</strong> Audacity Setup and Configuration</p>
 <h3 id="preferences-settings-that-affect-edit-behavior">Preferences
 settings that affect Edit behavior</h3>
@@ -67901,7 +67487,7 @@ Devices</p>
 plus the project quality and the ability to manage the latency on your
 computer:</p>
 <p><strong>Screenshot: Audio Settings dialog.png</strong></p>
-<h4 id="quality-7">Quality</h4>
+<h4 id="quality-6">Quality</h4>
 <p>This panel sets the Project Sample Rate, Default Sample Rate and
 Default Sample Format. It is <strong><em>strongly</em></strong>
 recommended that you stick with the default settings.</p>
@@ -67976,7 +67562,7 @@ resolution using FFmpeg , as described at Using the file type dropdown
 menu on the Importing Audio page.</li>
 </ul></li>
 </ul>
-<h5 id="latency-2">Latency</h5>
+<h5 id="latency-1">Latency</h5>
 <ul>
 <li><p>Buffer length: A “buffer” is a chunk of audio waiting for the
 computer to process it. At the default 100 milliseconds (ms) setting,
@@ -68008,11 +67594,11 @@ page on the Muse Support site.</p></li>
 computer set-up.</li>
 </ul></li>
 </ul>
-<h4 id="alternatives-2">Alternatives</h4>
+<h4 id="alternatives-1">Alternatives</h4>
 <h5 id="audio-settings-preferences">Audio Settings Preferences</h5>
 <p>As an alternative to using Audio Setup, you can make and change all
 the same settings with <strong>Audio Settings Preferences</strong>.</p>
-<h5 id="device-toolbar-2">Device Toolbar</h5>
+<h5 id="device-toolbar-1">Device Toolbar</h5>
 <p>With <strong>Device Toolbar</strong> you can make and change most of
 the same settings with the exception of the latency settings.</p>
 <p>Note that he <strong>Device Toolbar</strong> is
@@ -68065,7 +67651,7 @@ isn’t applied below the threshold, but there can’t be a clear ceiling
 anymore.</li>
 </ul></li>
 </ul>
-<h4 id="links-106">Links</h4>
+<h4 id="links-104">Links</h4>
 <p><strong>|&lt;</strong> Compressor</p>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
@@ -69277,7 +68863,7 @@ Select View &gt; Toolbars &gt; Cut Copy Paste Toolbar to show the
 toolbar, which by default docks in the upper dock.</li>
 </ul>
 <hr />
-<h5 id="audio-setup-toolbar-2">Audio Setup Toolbar</h5>
+<h5 id="audio-setup-toolbar-1">Audio Setup Toolbar</h5>
 <p><strong>Screenshot: Audio Setup Toolbar 3-6-0.png</strong></p>
 <ul>
 <li>Gives a menu that manages the setup of the audio input and output
@@ -69303,7 +68889,7 @@ recording</li>
 <li>Displays playback levels</li>
 </ul>
 <hr />
-<h5 id="device-toolbar-3">Device Toolbar</h5>
+<h5 id="device-toolbar-2">Device Toolbar</h5>
 <p><strong>Screenshot: Device Toolbar 3-6-0.png</strong></p>
 <ul>
 <li><p>Selects audio host, recording device, number of recording
@@ -70416,7 +70002,7 @@ need</li>
 synchronized</li>
 <li>Zooming: seeing what you need to see</li>
 </ul>
-<h4 id="links-107">Links</h4>
+<h4 id="links-105">Links</h4>
 <p><strong>&gt;</strong> Track Control Panel and Vertical Scale</p>
 <p><strong>&gt;</strong> Label Tracks</p>
 <p><strong>&gt;</strong> Note Tracks (MIDI)</p>
@@ -70457,7 +70043,7 @@ offset correction before applying Clip Fix.</li>
 amplitude to allow for restored peaks (dB)</h4>
 <p>Reduces the amplification of the current selection (default is -9 dB)
 to provide headroom for the clip-fixed reconstruction.</p>
-<h4 id="links-108">Links</h4>
+<h4 id="links-106">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
 <h3 id="clips-examples">Clips examples</h3>
@@ -71050,7 +70636,7 @@ similar to a spreadsheet. Each row represents a single individual
 label:</p>
 <p><strong>Screenshot: EditLabelDialog - vertical
 buttons.png</strong></p>
-<h4 id="links-109">Links</h4>
+<h4 id="links-107">Links</h4>
 <p><strong>|&lt;</strong> Label Tracks</p>
 <h3 id="envelope-tool">Envelope Tool</h3>
 <p>In Audacity, every track has an “amplitude envelope” which is
@@ -71800,7 +71386,7 @@ sound</p></li>
 <li><p>The second label, “Silence 02” is collapsed down to a point
 label</p></li>
 </ul>
-<h4 id="links-110">Links</h4>
+<h4 id="links-108">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Analyze Menu</p>
 <h3 id="label-tracks">Label Tracks</h3>
@@ -72190,7 +71776,7 @@ have a selection in one track and for another track to have the
 focus.</li>
 </ul></li>
 </ul>
-<h4 id="links-111">Links</h4>
+<h4 id="links-109">Links</h4>
 <p><strong>&gt;</strong> Track Control Panel and Vertical Scale</p>
 <p><strong>&gt;</strong> Note Tracks (MIDI)</p>
 <p><strong>|&lt;</strong> Audio Tracks</p>
@@ -72381,7 +71967,7 @@ to indicate that there is something to be scrolled to.</p>
 <p>Blue vertical lines indicate measures. Note that some MIDI files do
 not have accurate tempo information, in which case the lines may not
 match actual measures in the song.</p>
-<h4 id="links-112">Links</h4>
+<h4 id="links-110">Links</h4>
 <p><strong>&gt;</strong> Track Control Panel and Vertical Scale</p>
 <p><strong>&gt;</strong> Label Tracks</p>
 <p><strong>|&lt;</strong> Audio Tracks</p>
@@ -72870,7 +72456,7 @@ displayed.</p></li>
 <li><p>None <strong>Screenshot: menu dropdown</strong></p></li>
 <li><p>No messages are displayed on completion.</p></li>
 </ul>
-<h4 id="links-113">Links</h4>
+<h4 id="links-111">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Analyze Menu</p>
 <h3 id="removing-labels-examples">Removing Labels - Examples</h3>
@@ -73079,7 +72665,7 @@ changed) like any audio track.</li>
 either close or mute the Rhythm Track, so that it is not audible in the
 exported file.</li>
 </ul>
-<h4 id="links-114">Links</h4>
+<h4 id="links-112">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Generate Menu</p>
 <h3 id="select-menu-tracks">Select Menu: Tracks</h3>
@@ -73447,7 +73033,7 @@ the labels in the Label track have been reversed this keeping everthing
 in synchronization.</p>
 <p>Note that in the audio tracks Audacity has turned both reversed audio
 sections into Clips, observe the black clip lines.</p>
-<h4 id="links-115">Links</h4>
+<h4 id="links-113">Links</h4>
 <p><strong>&gt;</strong> Forward to: Sync-Locked Track Groups - Time
 Shifting</p>
 <p><strong>|&lt;</strong> Sync-Locked Track Groups</p>
@@ -73504,7 +73090,7 @@ project, this ensuring that all audio clips move in synchronization)
 <h4 id="example-moving-a-clip">Example: Moving a clip</h4>
 <p><strong>When clicking and dragging one Clip-handle, all clips in the
 group move.Screenshot: a clip is moved by its clip handle</strong></p>
-<h4 id="links-116">Links</h4>
+<h4 id="links-114">Links</h4>
 <p><strong>&gt;</strong> Forward to: Sync-Locked Track Groups - Time
 Stretching</p>
 <p><strong>&lt;</strong> Back to: Sync-Locked Track Groups - Editing</p>
@@ -73570,7 +73156,7 @@ select track, the top track.</p>
 <p><strong>Screenshot: SLTG Stretching 4.pngResult:</strong> Silence has
 been inserted into the upper audio track and the Label track has had its
 synced “selection” repeated three times.</p>
-<h4 id="links-117">Links</h4>
+<h4 id="links-115">Links</h4>
 <p><strong>&lt;</strong> Back to: Sync-Locked Track Groups - Time
 Shifting</p>
 <p><strong>|&lt;</strong> Sync-Locked Track Groups</p>
@@ -73846,7 +73432,7 @@ toggle individual channels by left-clicking or toggle all other channels
 off by right-clicking.</li>
 </ul>
 <p>For more details please see Note Tracks.</p>
-<h4 id="links-118">Links</h4>
+<h4 id="links-116">Links</h4>
 <p><strong>&gt;</strong> Label Tracks</p>
 <p><strong>&gt;</strong> Note Tracks (MIDI)</p>
 <p><strong>|&lt;</strong> Audio Tracks</p>
@@ -74143,41 +73729,6 @@ track.</p>
 if you had used the Mute buttons from the Track Control Panel on each
 selected track.</p>
 <h4 id="unmute-tracks-ctrl-shift-u">Unmute Tracks Ctrl + Shift + U</h4>
-<p>Unmutes <strong>all selected</strong> audio tracks in the project, as
-if you had used the Mute buttons from the Track Control Panel on each
-selected track.</p>
-<p><strong>&lt;</strong> Back to: Tracks Menu</p>
-<h3 id="tracks-menu-mute-unmute-manual-2">Tracks Menu: Mute/Unmute
-(Manual)</h3>
-<p>The <strong>Mute/Unmute</strong> submenu mutes or unmutes all of the
-tracks in your project in one go, without having to use the buttons Mute
-and Unmute in each track’s Track Control Panel.</p>
-<p><strong>Screenshot: Tracks-Mute UnmuteMenu.pngClick on the image to
-learn more</strong></p>
-<h4 id="muting-1">Muting</h4>
-<p>If a track is muted, it cannot be heard in the project and is not
-exported from it.</p>
-<ul>
-<li><ul>
-<li>The track mute and solo buttons are usually used to change which
-tracks are muted, rather than these menu items.</li>
-</ul></li>
-</ul>
-<h4 id="mute-all-tracks-ctrl-u-1">Mute All Tracks Ctrl + U</h4>
-<p>Mutes <strong>all</strong> the audio tracks in the project, as if you
-had used the Mute buttons from the Track Control Panel on every
-track.</p>
-<h4 id="unmute-all-tracks-ctrl-shift-u-1">Unmute All Tracks Ctrl + Shift
-+ U</h4>
-<p>Unmutes <strong>all</strong> the audio tracks in the project, as if
-you had used the Mute buttons from the Track Control Panel on every
-track.</p>
-<h4 id="mute-tracks-ctrl-u-1">Mute Tracks Ctrl + U</h4>
-<p>Mutes <strong>all selected</strong> audio tracks in the project, as
-if you had used the Mute buttons from the Track Control Panel on each
-selected track.</p>
-<h4 id="unmute-tracks-ctrl-shift-u-1">Unmute Tracks Ctrl + Shift +
-U</h4>
 <p>Unmutes <strong>all selected</strong> audio tracks in the project, as
 if you had used the Mute buttons from the Track Control Panel on each
 selected track.</p>
@@ -74509,7 +74060,7 @@ conversion processes.</p></li>
 <li>Shift + Home to move the selection start back to zero</li>
 <li>Ctrl + T to trim to that selection.</li>
 </ol>
-<h4 id="links-119">Links</h4>
+<h4 id="links-117">Links</h4>
 <p><strong>|&lt;</strong> Tutorial: Recording Multi-track Overdubs</p>
 <h3 id="tutorial-recording-multi-track-overdubs">Tutorial - Recording
 Multi-track Overdubs</h3>
@@ -75815,7 +75366,7 @@ Mac.</p></li>
 <li><p><strong>Linux/Unix:</strong> See the <strong>LAME installation
 section</strong> on Installing and updating Audacity on Linux.</p></li>
 </ul>
-<h4 id="links-120">Links</h4>
+<h4 id="links-118">Links</h4>
 <p><strong>|&lt;</strong> FAQ:Installation, Startup and Plug-ins</p>
 <h3 id="faq-opening-and-saving-files">FAQ:Opening and Saving Files</h3>
 <p><strong>&gt;</strong> Forward To: FAQ:MP3 export problems</p>
@@ -77484,7 +77035,7 @@ audio?</li>
 <li>Can I record from two microphones (or two audio interfaces) at the
 same time?</li>
 </ol>
-<h4 id="playback-5">Playback</h4>
+<h4 id="playback-4">Playback</h4>
 <ol type="1">
 <li>Why have I lost sound after connecting a USB device on Windows?</li>
 <li>Why does playback go quiet when I record or adjust the recording
@@ -78402,7 +77953,7 @@ menu.</p>
 <p>If you have an audio interface which has digital outputs, connect
 from digital out of the MiniDisc player to the S/PDIF input of the audio
 interface.</p>
-<h4 id="links-121">Links</h4>
+<h4 id="links-119">Links</h4>
 <p><strong>&gt;</strong> Forward to: How to set up Audacity</p>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
@@ -78530,7 +78081,7 @@ you have your meters set to linear rather than dB)</em>.</li>
 clicking and dragging the resizer on the right edge of the toolbar helps
 with this task. See Customizing Toolbar Layout for more details.</li>
 </ul>
-<h4 id="links-122">Links</h4>
+<h4 id="links-120">Links</h4>
 <p><strong>&gt;</strong> Forward to: Basic Recording, Editing and
 Exporting</p>
 <p><strong>&lt;</strong> Back to: How to connect your equipment</p>
@@ -78814,7 +78365,7 @@ Preferences on Mac).</p>
 take some time to explore and understand these.</p>
 <p>For example Sample Rate and Sample Format can be changed in the Audio
 Settings section of Preferences.</p>
-<h4 id="links-123">Links</h4>
+<h4 id="links-121">Links</h4>
 <p><strong>&gt;</strong> Forward to: Tutorial - Selecting Your Recording
 Device</p>
 <p><strong>&lt;</strong> Back to: Tutorial - Connecting Up</p>
@@ -78893,7 +78444,7 @@ card, select the input device you want to use and verify that you are
 getting sound into the computer from that device.</p>
 <p>Once you have verified that you are getting sound into the computer
 you can move on to getting that sound into Audacity.</p>
-<h4 id="links-124">Links</h4>
+<h4 id="links-122">Links</h4>
 <p><strong>&gt;</strong> Forward to: Tutorial - Audacity Settings for
 Recording</p>
 <p><strong>|&lt;</strong> Tutorial - Your First Recording</p>
@@ -79042,7 +78593,7 @@ stated above, try to aim for a maximum peak of around \xe2\x80\x936 dB
 <p><strong>Tip:</strong> Enlarging the Meter Toolbar by clicking and
 dragging on the toolbar helps considerably with this task. See Resizing
 and Undocking</p>
-<h4 id="links-125">Links</h4>
+<h4 id="links-123">Links</h4>
 <p><strong>&gt;</strong> Forward to: Tutorial - Recording and
 Editing</p>
 <p><strong>&lt;</strong> Back to: Tutorial - Selecting Your Recording
@@ -79596,7 +79147,7 @@ alsamixer, you can build an attenuator to reduce the line level output
 to a level suitable for mic-in. But probably this will only provide mono
 recording, because mic-in is mono in most cases. As well, the quality
 may be questionable.</p>
-<h4 id="links-126">Links</h4>
+<h4 id="links-124">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Recording audio playing on the
 computer</p>
 <h3 id="tutorial-recording-computer-playback-on-mac">Tutorial -
@@ -79676,7 +79227,7 @@ recording.</li>
 computer playback to a file that is importable into Audacity, or that
 can provide an additional audio device from which Audacity can record
 computer playback.</p>
-<h4 id="links-127">Links</h4>
+<h4 id="links-125">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Recording audio playing on the
 computer</p>
 <h3 id="tutorial-recording-computer-playback-on-windows">Tutorial -
@@ -79893,7 +79444,7 @@ not available in that mode)</em>.</li>
 “Stereo Mix” type of option.</p>
 <p>Not all USB audio interfaces offer a Stereo Mix option, so read the
 specifications carefully before purchasing.</p>
-<h4 id="links-128">Links</h4>
+<h4 id="links-126">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Recording audio playing on the
 computer</p>
 <h3 id="tutorial-selecting-your-recording-device">Tutorial - Selecting
@@ -80007,7 +79558,7 @@ show and enable the missing inputs, then use Transport &gt; Rescan Audio
 Devices or restart Audacity.</li>
 </ul></li>
 </ul>
-<h4 id="device-toolbar-4">Device Toolbar</h4>
+<h4 id="device-toolbar-3">Device Toolbar</h4>
 <p>If you prefer, you can make the above settings in Audacity’s
 <strong>Device Toolbar</strong>.</p>
 <p>The <strong>Device Toolbar</strong>, shown below, is
@@ -80026,7 +79577,7 @@ the window area available for tracks. The advantage is that you can
 readily see at all times what your devices settings are.</li>
 </ul></li>
 </ul>
-<h4 id="links-129">Links</h4>
+<h4 id="links-127">Links</h4>
 <p><strong>&gt;</strong> Forward to: Tutorial - Making a Test
 Recording</p>
 <p><strong>&lt;</strong> Back to: Tutorial - Audacity Settings for
@@ -81269,7 +80820,7 @@ Cut/Copy/Paste</p></li>
 <li><p>0 is paste (1 on macOS)</p></li>
 </ul></li>
 </ul>
-<h4 id="device-toolbar-5">Device Toolbar</h4>
+<h4 id="device-toolbar-4">Device Toolbar</h4>
 <p>Look of the Device Toolbar</p>
 <p>The Device toolbar has been replaced by the Audio Setup button in
 version 3.2.0. However, you can re-enable it via <strong>View -&gt;

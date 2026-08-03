@@ -357,8 +357,9 @@ Claims</a></li>
 </ul></li>
 <li><a href="#cat-the-command-line">The command line</a>
 <ul>
-<li><a href="#openclaw-commitments">0</a></li>
-<li><a href="#openclaw-tasks">0</a></li>
+<li><a href="#openclaw-tasks">0 (Inspect durable background tasks and
+Task Flow state)</a></li>
+<li><a href="#openclaw-commitments">0 (ReferenceCLI commands)</a></li>
 <li><a href="#acp">ACP</a></li>
 <li><a href="#agent">Agent</a></li>
 <li><a href="#agents">Agents</a></li>
@@ -10675,73 +10676,14 @@ outside the public API surface.</li>
 </ul>
 <p>See HTTP API for endpoint details.</p>
 <h2 id="cat-the-command-line">The command line</h2>
-<h3 id="openclaw-commitments">0</h3>
-<p>ReferenceCLI commands</p>
-<p>Inspect and dismiss records left by the retired inferred commitments
-experiment. OpenClaw no longer creates or delivers new commitments, but
-keeps the maintenance command so upgrades can audit and clean up
-existing SQLite rows.</p>
-<p>With no subcommand, 0 lists pending commitments.</p>
-<h4 id="usage">Usage</h4>
-<p>bash</p>
-<pre><code>openclaw commitments [--all] [--agent &lt;id&gt;] [--status &lt;status&gt;] [--json]openclaw commitments list [--all] [--agent &lt;id&gt;] [--status &lt;status&gt;] [--json]openclaw commitments dismiss &lt;id...&gt; [--json]</code></pre>
-<h4 id="options">Options</h4>
-<ul>
-<li>0: show all statuses instead of only pending commitments.</li>
-<li>0: filter to one agent id.</li>
-<li>0: filter by status. Values: 1, 2, 3, 4, or 5. Unknown values exit
-with an error. The 6 status is reserved: no built-in flow currently
-snoozes a commitment; snoozed records can appear only when imported from
-legacy state.</li>
-<li>0: output machine-readable JSON.</li>
-</ul>
-<p>0 marks the given commitment ids as 1.</p>
-<h4 id="examples-1">Examples</h4>
-<p>List pending commitments:</p>
-<p>bash</p>
-<pre><code>openclaw commitments</code></pre>
-<p>List every stored commitment:</p>
-<p>bash</p>
-<pre><code>openclaw commitments --all</code></pre>
-<p>Filter to one agent:</p>
-<p>bash</p>
-<pre><code>openclaw commitments --agent main</code></pre>
-<p>Filter by status:</p>
-<p>bash</p>
-<pre><code>openclaw commitments --status dismissed</code></pre>
-<p>Dismiss one or more commitments:</p>
-<p>bash</p>
-<pre><code>openclaw commitments dismiss cm_abc123 cm_def456</code></pre>
-<p>Export as JSON:</p>
-<p>bash</p>
-<pre><code>openclaw commitments --all --json</code></pre>
-<h4 id="output-1">Output</h4>
-<p>Text output prints the commitment count, the shared SQLite database
-path, any active filters, and one row per commitment:</p>
-<ul>
-<li>commitment id</li>
-<li>status</li>
-<li>kind (0, 1, 2, or 3)</li>
-<li>earliest due time</li>
-<li>scope (agent/channel/target)</li>
-<li>suggested check-in text</li>
-</ul>
-<p>JSON output includes the count, the active status and agent filters,
-the shared SQLite database path, and the full stored records.</p>
-<h4 id="related-39">Related</h4>
-<ul>
-<li>Inferred commitments</li>
-<li>Memory overview</li>
-<li>Heartbeat</li>
-<li>Scheduled tasks</li>
-</ul>
-<h3 id="openclaw-tasks">0</h3>
+<h3 id="openclaw-tasks">0 (Inspect durable background tasks and Task
+Flow state)</h3>
 <p>ReferenceCLI commands</p>
 <p>Inspect durable background tasks and Task Flow state. With no
 subcommand, 0 is equivalent to 1.</p>
 <p>See Background Tasks for the lifecycle and delivery model, and its 0
 section for full finding descriptions.</p>
-<h4 id="usage-1">Usage</h4>
+<h4 id="usage">Usage</h4>
 <p>bash</p>
 <pre><code>openclaw tasksopenclaw tasks listopenclaw tasks list --runtime acpopenclaw tasks list --status runningopenclaw tasks show &lt;lookup&gt;openclaw tasks notify &lt;lookup&gt; state_changesopenclaw tasks cancel &lt;lookup&gt;openclaw tasks auditopenclaw tasks maintenanceopenclaw tasks maintenance --applyopenclaw tasks flow listopenclaw tasks flow show &lt;lookup&gt;openclaw tasks flow cancel &lt;lookup&gt;</code></pre>
 <h4 id="root-options">Root Options</h4>
@@ -10800,10 +10742,70 @@ non-cron session rows untouched.</p>
 <pre><code>openclaw tasks flow list [--status &lt;name&gt;] [--json]openclaw tasks flow show &lt;lookup&gt; [--json]openclaw tasks flow cancel &lt;lookup&gt;</code></pre>
 <p>Inspects or cancels durable Task Flow state under the task ledger. 0
 accepts 1, 2, 3, 4, 5, 6, 7, or 8.</p>
-<h4 id="related-40">Related</h4>
+<h4 id="related-39">Related</h4>
 <ul>
 <li><a href="#cli-reference">CLI reference</a></li>
 <li>Background tasks</li>
+</ul>
+<h3 id="openclaw-commitments">0 (ReferenceCLI commands)</h3>
+<p>ReferenceCLI commands</p>
+<p>Inspect and dismiss records left by the retired inferred commitments
+experiment. OpenClaw no longer creates or delivers new commitments, but
+keeps the maintenance command so upgrades can audit and clean up
+existing SQLite rows.</p>
+<p>With no subcommand, 0 lists pending commitments.</p>
+<h4 id="usage-1">Usage</h4>
+<p>bash</p>
+<pre><code>openclaw commitments [--all] [--agent &lt;id&gt;] [--status &lt;status&gt;] [--json]openclaw commitments list [--all] [--agent &lt;id&gt;] [--status &lt;status&gt;] [--json]openclaw commitments dismiss &lt;id...&gt; [--json]</code></pre>
+<h4 id="options">Options</h4>
+<ul>
+<li>0: show all statuses instead of only pending commitments.</li>
+<li>0: filter to one agent id.</li>
+<li>0: filter by status. Values: 1, 2, 3, 4, or 5. Unknown values exit
+with an error. The 6 status is reserved: no built-in flow currently
+snoozes a commitment; snoozed records can appear only when imported from
+legacy state.</li>
+<li>0: output machine-readable JSON.</li>
+</ul>
+<p>0 marks the given commitment ids as 1.</p>
+<h4 id="examples-1">Examples</h4>
+<p>List pending commitments:</p>
+<p>bash</p>
+<pre><code>openclaw commitments</code></pre>
+<p>List every stored commitment:</p>
+<p>bash</p>
+<pre><code>openclaw commitments --all</code></pre>
+<p>Filter to one agent:</p>
+<p>bash</p>
+<pre><code>openclaw commitments --agent main</code></pre>
+<p>Filter by status:</p>
+<p>bash</p>
+<pre><code>openclaw commitments --status dismissed</code></pre>
+<p>Dismiss one or more commitments:</p>
+<p>bash</p>
+<pre><code>openclaw commitments dismiss cm_abc123 cm_def456</code></pre>
+<p>Export as JSON:</p>
+<p>bash</p>
+<pre><code>openclaw commitments --all --json</code></pre>
+<h4 id="output-1">Output</h4>
+<p>Text output prints the commitment count, the shared SQLite database
+path, any active filters, and one row per commitment:</p>
+<ul>
+<li>commitment id</li>
+<li>status</li>
+<li>kind (0, 1, 2, or 3)</li>
+<li>earliest due time</li>
+<li>scope (agent/channel/target)</li>
+<li>suggested check-in text</li>
+</ul>
+<p>JSON output includes the count, the active status and agent filters,
+the shared SQLite database path, and the full stored records.</p>
+<h4 id="related-40">Related</h4>
+<ul>
+<li>Inferred commitments</li>
+<li>Memory overview</li>
+<li>Heartbeat</li>
+<li>Scheduled tasks</li>
 </ul>
 <h3 id="acp">ACP</h3>
 <p>ReferenceCLI commands</p>
