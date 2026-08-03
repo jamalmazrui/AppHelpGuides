@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-03" />
+  <title>Publix Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Publix Help Guide</h1>
+<p class="subtitle">Publix’s own help documentation, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-08-03</p>
+</header>
+<h1 id="publix-help-guide">Publix Help Guide</h1>
+<p>This guide gathers Publix’s own help as it stood on 3 August 2026.
+The text is Publix’s; nothing has been summarised or rewritten.</p>
+<p><strong>How this is arranged, and why it differs from the
+website.</strong> Publix does not publish one page per question. It
+publishes a set of topic pages, each holding many questions. Every one
+of those questions is an article here, filed under the topic Publix
+itself put it in.</p>
+<p><strong>One thing this guide fixes.</strong> On publix.com the
+questions are marked with bold text rather than headings, so a reader
+moving through the page by heading finds nothing to move between. Here
+every question is a real heading.</p>
+<p><strong>The surfaces it covers.</strong> The website and the Publix
+app. There is no application for Windows: on a Windows machine the
+website in a browser is the product, and the website help is what
+applies. No Alexa skill is documented.</p>
+<p>This document holds 11 categories, 46 articles and about 4,532
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#customer-service">Customer Service</a>
+<ul>
+<li><a href="#checks-written-after-march-1-2018">checks written after
+March 1, 2018</a></li>
+<li><a href="#checks-written-before-march-1-2018">checks written before
+March 1, 2018</a></li>
+</ul></li>
+<li><a href="#digital-coupons">Digital Coupons</a>
+<ul>
+<li><a href="#clipped-coupons">Clipped Coupons</a></li>
+<li><a href="#digital-coupons">Digital Coupons</a></li>
+<li><a href="#expiring">Expiring</a></li>
+</ul></li>
+<li><a href="#food-safety">Food Safety</a>
+<ul>
+<li><a href="#centers-for-disease-control-and-prevention-cdc">Centers
+for Disease Control and Prevention (CDC)</a></li>
+<li><a href="#execute-standards-and-measure-food-safety">Execute
+Standards and Measure Food Safety</a></li>
+<li><a href="#federal-food-safety-information">Federal Food Safety
+Information</a></li>
+<li><a href="#handling-and-storage">Handling and Storage</a></li>
+<li><a href="#how-do-i-cook-seafood">How do I cook seafood?</a></li>
+<li><a href="#improve-customer-service-and-food-safety">Improve Customer
+Service and Food Safety</a></li>
+<li><a href="#mercury-warnings-in-seafood">Mercury Warnings in
+Seafood.</a></li>
+<li><a href="#preparation">Preparation</a></li>
+<li><a href="#reduce-supply-chain-product-safety-risks">Reduce Supply
+Chain Product Safety Risks</a></li>
+<li><a href="#remove-recalled-product-from-retail">Remove Recalled
+Product from Retail</a></li>
+<li><a href="#train-associates-on-standards-and-food-safety">Train
+Associates on Standards and Food Safety</a></li>
+<li><a href="#us-food-and-drug-administration-fda">U.S. Food and Drug
+Administration (FDA)</a></li>
+<li><a href="#united-states-department-of-agriculture-usda">United
+States Department of Agriculture (USDA)</a></li>
+</ul></li>
+<li><a href="#in-store-pickup---general-policies">In-Store Pickup -
+General Policies</a>
+<ul>
+<li><a href="#favorites">Favorites</a></li>
+<li><a href="#order-history">Order History</a></li>
+</ul></li>
+<li><a href="#publix-gift-cards---physical-egift">Publix Gift Cards -
+Physical &amp; eGift</a>
+<ul>
+<li><a href="#by-phone">By phone:</a></li>
+<li><a href="#in-the-publix-app">In the Publix app:</a></li>
+<li><a href="#on-publixcom">On publix.com:</a></li>
+</ul></li>
+<li><a href="#shopping-list">Shopping List</a>
+<ul>
+<li><a href="#share-list">Share List</a></li>
+<li><a href="#shopping-list">Shopping List</a></li>
+</ul></li>
+<li><a href="#technical-assistance">Technical Assistance</a>
+<ul>
+<li><a href="#change-phone-number">Change phone number</a></li>
+<li><a href="#manage-cookies-and-site-data">Manage cookies and site
+data</a></li>
+<li><a href="#manage-website-data">Manage Website Data</a></li>
+<li><a href="#need-help-logging-in">Need help logging in?</a></li>
+<li><a href="#remove-all-website-data">Remove All Website Data</a></li>
+<li><a href="#settings-3">Settings</a></li>
+<li><a href="#share-list-2">Share List</a></li>
+<li><a href="#two-factor-authentication">two-factor
+authentication</a></li>
+<li><a href="#website-data">Website Data</a></li>
+</ul></li>
+<li><a href="#ways-to-save">Ways to Save</a>
+<ul>
+<li><a href="#digital-coupons-4">Digital Coupons</a></li>
+<li><a href="#weekly-ad">Weekly Ad</a></li>
+</ul></li>
+<li><a href="#weekly-ad---general">Weekly Ad - General</a>
+<ul>
+<li><a href="#thursday-through-wednesday">Thursday through
+Wednesday</a></li>
+<li><a href="#wednesday-through-tuesday">Wednesday through
+Tuesday</a></li>
+</ul></li>
+<li><a href="#weekly-ad-technical">Weekly Ad – Technical</a>
+<ul>
+<li><a href="#google-chrome">Google Chrome:</a></li>
+<li><a href="#internet-explorer">Internet Explorer:</a></li>
+<li><a href="#mozilla-firefox">Mozilla Firefox:</a></li>
+<li><a href="#solution-3">Solution:</a></li>
+<li><a href="#weekly-ad-2">Weekly Ad</a></li>
+</ul></li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#add-special-instructions">Add Special
+Instructions</a></li>
+<li><a href="#online-pay">Online Pay</a></li>
+<li><a href="#publixcom">publix.com</a></li>
+</ul></li>
+</ul>
+<h2 id="customer-service">Customer Service</h2>
+<h3 id="checks-written-after-march-1-2018">checks written after March 1,
+2018</h3>
+<p>, you can pay for your check by calling Certegy at
+1-800-237-3826.</p>
+<p>For</p>
+<h3 id="checks-written-before-march-1-2018">checks written before March
+1, 2018</h3>
+<p>, you can pay for your check at the store where it was presented.
+Payment for returned checks at our store locations can only be made with
+cash, money order, or cashier’s check. Payment may also be made by phone
+by calling 1-866-525-3040, Monday – Friday from 8:30 a.m. – 4:30 p.m.
+Eastern Time.</p>
+<p>Note: It may take up to 6 business days after payment is made before
+you are able to write checks again at Publix.</p>
+<p>If you have further questions, contact us at 1-866-525-3040, Monday –
+Friday from 8:30 a.m. – 4:30 p.m. Eastern Time.</p>
+<h2 id="digital-coupons">Digital Coupons</h2>
+<h3 id="clipped-coupons">Clipped Coupons</h3>
+<p>.</p>
+<p>No.</p>
+<p>No, you simply redeem coupons saved in your Club Publix account by
+entering your unique 10-digit phone number into the PIN pad at
+checkout.</p>
+<p>Your savings will be itemized on your receipt.</p>
+<p>Yes. Expiration dates appear on each coupon. Expired coupons will be
+deleted from your Club Publix account automatically.</p>
+<p>The number of times a coupon can be used is up to the manufacturer,
+but most coupons can be used only once.</p>
+<p>When a coupon can be redeemed multiple times within a single
+transaction, an icon displaying the number of times it can be redeemed
+will appear on the coupon.</p>
+<p>While the products for which we have coupons are broadly available,
+some products may not be available at all stores.</p>
+<p>Click</p>
+<h3 id="digital-coupons">Digital Coupons</h3>
+<p>then clip each coupon you want to add to your Club Publix account.
+Finally, enter your unique 10-digit phone number at checkout to identify
+yourself and purchase the item(s) using a digital coupon.</p>
+<p>You can join Club Publix by visiting the <a
+href="https://www.publix.com/myaccount/register">signup</a> page and
+entering the required information.</p>
+<p>There is no charge to join Club Publix or use digital coupons.</p>
+<p>Each Club Publix account may have only one registered user, although
+the account may be used by the entire household by entering the same
+phone number on the PIN pad at checkout.</p>
+<p>To see all the coupons you’ve saved, log in to your Club Publix
+account, navigate to the Digital Coupons page and turn on “Clipped
+Coupons.”</p>
+<p>To see all the coupons you’ve saved, log in to your Club Publix
+account and from the <a
+href="https://www.publix.com/savings/digital-coupons">Digital
+Coupons</a> page, turn on</p>
+<h3 id="expiring">Expiring</h3>
+<p>. The soon-expiring coupons will appear at the top of the page. Dates
+display in red for any digital coupons expiring within the next seven
+days.</p>
+<p>Yes, if there is a digital dollars off total order coupon loaded in
+your Club Publix account and you also have a paper dollars off total
+order coupon, you may use both in the same transaction.</p>
+<p>Yes, digital and paper coupons for private label items may be
+combined for use on the same item.</p>
+<h2 id="food-safety">Food Safety</h2>
+<h3 id="centers-for-disease-control-and-prevention-cdc">Centers for
+Disease Control and Prevention (CDC)</h3>
+<p>800-232-4636<br />
+<a href="http://www.cdc.gov/foodsafety"
+title="www.cdc.gov/foodsafety">www.cdc.gov/foodsafety</a></p>
+<figure>
+<img
+src="https://images.publixcdn.com/cms/images/retail/faq/food-safety/pfse-logo_2018.png"
+alt="Partnership for Food Safety Education" />
+<figcaption aria-hidden="true">Partnership for Food Safety
+Education</figcaption>
+</figure>
+<h3 id="execute-standards-and-measure-food-safety">Execute Standards and
+Measure Food Safety</h3>
+<p>Under the direction of our corporate quality assurance department,
+each store receives monthly visits from our sanitation specialist that
+focus on cleaning and sanitation. Additionally, our food safety
+specialists conduct regular store visits and provide support to help
+maintain food safety. Stores also have comprehensive food safety audits
+at least twice a year, conducted by an independent professional food
+safety management organization that reviews our practices and helps our
+associates understand the keys to maintaining a safe food environment.
+To support our stores, a cross-functional team of corporate associates
+conducts quarterly assessments of our food safety performance and
+recommends continuous quality improvement efforts.</p>
+<h3 id="federal-food-safety-information">Federal Food Safety
+Information</h3>
+<p><a href="http://www.foodsafety.gov"
+title="www.foodsafety.gov">www.foodsafety.gov</a></p>
+<h4 id="sources">Sources</h4>
+<p><sup>1</sup>U.S. Department of Health &amp; Human Services (HHS). “<a
+href="https://www.fda.gov/food/foodborneillnesscontaminants/buystoreservesafefood/ucm255180.htm">Safe
+Food Handling: What You Need to Know</a>.” U.S. Food &amp; Drug
+Administration (FDA). November 30, 2017.</p>
+<p><sup>2</sup>U.S. Department of Health &amp; Human Services (HHS). “<a
+href="https://www.fda.gov/forconsumers/consumerupdates/ucm274114.htm">Keep
+Listeria Out of Your Kitchen</a>.” U.S. Food &amp; Drug Administration
+(FDA). December 21, 2017.</p>
+<p><sup>3</sup>U.S. Department of Health &amp; Human Services (HHS). “<a
+href="https://www.foodsafety.gov/keep/types/eggs/">Eggs and Egg
+Products</a>.” Foodsafety.gov. Accessed March 14, 2018.</p>
+<p><sup>4</sup>U.S. Department of Agriculture (USDA). “<a
+href="https://www.fsis.usda.gov/shared/PDF/Cooking_Safely_in_the_Microwave.pdf">Cooking
+Safely in the Microwave Oven</a>.” U.S. Department of Agriculture Food
+Safety &amp; Inspection Service. June 2011.</p>
+<p><sup>5</sup>U.S. Department of Health &amp; Human Services (HHS). “<a
+href="https://www.cdc.gov/healthypets/keeping-pets-and-people-healthy/pet-food-safety.html">Pet
+Food Safety</a>.” Centers for Disease Control and Prevention (CDC).
+February 12, 2018.</p>
+<p><sup>6</sup>U.S. Department of Health &amp; Human Services (HHS). “<a
+href="https://www.foodsafety.gov/keep/charts/mintemp.html">Safe Minimum
+Cooking Temperatures</a>.” Foodsafety.gov. Accessed March 15, 2018.</p>
+<p><sup>7</sup>U.S. Department of Health &amp; Human Services (HHS). “<a
+href="https://www.foodsafety.gov/keep/charts/storagetimes.html">Storage
+Times for the Refrigerator and Freezer</a>.” Foodsafety.gov. Accessed
+March 15, 2018.</p>
+<p><sup>8</sup>U.S. Food and Drug Administration, FDA “<a
+href="https://www.fda.gov/food/consumers/advice-about-eating-fishl">Advice
+about Eating Fish</a>.” fda.gov. Accessed August 12, 2022.</p>
+<h3 id="handling-and-storage">Handling and Storage</h3>
+<ul>
+<li><p>When purchasing seafood, ask to have your product packed with
+ice.</p></li>
+<li><p>To store seafood in the refrigerator: Wash product under cool
+water and pat dry with paper towel. Wrap in plastic wrap and place in an
+air-tight container. Store in coldest part of refrigerator.</p></li>
+<li><p>Freeze fresh seafood not prepared within two days of
+purchase.</p></li>
+<li><ul>
+<li>For best results, wrap tightly in moisture-proof bag or plastic wrap
+and aluminum foil, and freeze. If home freezers do not maintain a 0°F
+temperature, prepare frozen seafood within two weeks.</li>
+</ul></li>
+<li><p>If purchasing previously frozen seafood, do not
+refreeze.</p></li>
+<li><p>Store live shellfish in a well-ventilated container covered with
+a damp cloth or paper towel; place in the refrigerator. Because live
+shellfish should remain alive until cooked, only rinse in fresh water
+prior to cooking.</p></li>
+<li><p>Achieve best results by removing fish from all packaging; cover
+fish, place in refrigerator, and thaw for 8–12 hours (or overnight).
+Thaw quickly by removing fish from outer bag and placing sealed fish
+under cold running water for approximately 15–20 minutes or until
+thawed. Prepare fish when thawed; do not refreeze.</p></li>
+<li><p>Wash hands after handling raw seafood.</p></li>
+</ul>
+<h3 id="how-do-i-cook-seafood">How do I cook seafood?</h3>
+<p>As a general rule, cook seafood 10 minutes for every inch of
+thickness. Fillets are done when meat is opaque and flakes easily with a
+fork, and the internal temperature reaches 145°F. Live shellfish such as
+clams, mussels, and oysters are fully cooked when the shell pops open
+and the internal meat temperature reaches 145°F. Throw out ones that do
+not open. Shrimp, lobster, and crab are done when meat is opaque and
+internal temperature reaches 145°F.<br />
+Consuming raw or undercooked meats, poultry, seafood, shellfish, or
+eggs, may increase your risk of foodborne illness, especially if you
+have certain medical conditions.</p>
+<h3 id="improve-customer-service-and-food-safety">Improve Customer
+Service and Food Safety</h3>
+<p>Publix works closely with the Partnership for Food Safety Education
+to help extend key food safety messaging into the homes and communities
+of the families we serve. This includes simple messages to help everyone
+maintain food safety: <a
+href="https://www.fda.gov/food/foodborneillnesscontaminants/buystoreservesafefood/ucm255180.htm">Clean,
+Separate, Cook, and Chill</a>.<sup>1</sup>*<br />
+*By clicking this link, you will leave www.publix.com and enter the FDA
+site that they operate and control.</p>
+<p>Please visit our <a
+href="https://corporate.publix.com/about-publix/newsroom/recalls">Recalls
+page</a>.</p>
+<p>Uncooked cookie dough is not safe for consumption. There are
+alternative options that use pasteurized eggs and heat-treated flour
+that are available as ready to eat foods. Otherwise, it’s important not
+to taste or eat uncooked cookie dough before baking because raw eggs and
+uncooked flour may contain bacteria, such as Salmonella and E. coli,
+that can make you sick. Check the flour in your pantry for recalls and
+expiration and throw out any stored flour that no longer has a package.
+In 2016, an outbreak of E. coli affected people in 24 states and was
+linked to consumption of uncooked flour. To help maintain food safety,
+clean your food storage containers with soap and hot water before reuse.
+Keep raw eggs separate from other ingredients, and wash hands and
+surfaces after handling.</p>
+<p>Listeria is a harmful bacterium that can cause fever and a severe
+upset stomach. It can also lead to pregnancy complications and severe
+health consequences. Follow these steps to keep it out of your
+kitchen.</p>
+<ol type="1">
+<li>Keep refrigerated foods cold.</li>
+<li>Clean your refrigerator regularly.</li>
+<li>Wash your hands and kitchen surfaces often.</li>
+<li><a
+href="https://www.fda.gov/forconsumers/consumerupdates/ucm274114.htm">Learn
+more</a>.<sup>2</sup>*<br />
+*By clicking this link, you will leave www.publix.com and enter the FDA
+site that they operate and control.</li>
+</ol>
+<p>Yes. Follow these tips to keep your food and family safe.</p>
+<ul>
+<li>Avoid eating raw eggs.</li>
+<li>Always keep shell eggs refrigerated at or below 40°F (≤ 4°C).</li>
+<li>Throw out cracked or dirty eggs.</li>
+<li>Wash hands, cooking utensils, and food preparation surfaces with
+soap and water after contact with raw eggs.</li>
+<li>Cook recipes that contain eggs mixed with other foods to an internal
+temperature of 160°F.</li>
+<li>Promptly refrigerate any leftover foods that contain eggs.</li>
+<li>Do not keep eggs warm or at room temperature for more than 2
+hours.</li>
+<li>Avoid ready-to-eat food made with raw, undercooked, or unpasteurized
+eggs. When appropriate, use pasteurized eggs for ready-to-eat recipes
+(such as Hollandaise sauce or Caesar salad dressing) that call for raw
+eggs.</li>
+<li><a href="https://www.foodsafety.gov/keep/types/eggs/">Learn more
+about egg and egg product safety here</a>.<sup>3</sup>*<br />
+*By clicking this link, you will leave www.publix.com and enter the Food
+Safety site that they operate and control.</li>
+</ul>
+<p>While microwave ovens are convenient, they vary in power and
+efficiency and sometimes cause foods to cook unevenly. These tips will
+help keep your microwaved food safe.</p>
+<ul>
+<li>Stir or rotate food midway through microwaving. Harmful bacteria can
+survive in cold spots. Always observe the standing time (the time the
+item rests after reheating) on the package, which completes the
+cooking.</li>
+<li>Use a food thermometer to verify that food has reached a safe
+minimum internal temperature.</li>
+<li>Always follow the microwave cooking instructions as indicated on the
+label.</li>
+<li>If a food is not intended to be cooked in a microwave, do not use
+it.</li>
+<li><a
+href="https://www.fsis.usda.gov/shared/PDF/Cooking_Safely_in_the_Microwave.pdf">Learn
+more about cooking safely with microwaves</a>.<sup>4</sup>*<br />
+*By clicking this link, you will leave www.publix.com and enter the USDA
+site that they operate and control.</li>
+</ul>
+<p>When pets use their mouths to carry different objects, they can
+easily contaminate their own foods, treats, and nutritional supplements.
+Follow these pet food safety tips to keep harmful germs away from you
+and your family.</p>
+<ul>
+<li><p>Wash your hands right after handling pet food or treats; this is
+the most important step to prevent illness.</p></li>
+<li><p>When possible, store pet food and treats away from where human
+food is stored or prepared, and away from reach of young
+children.</p></li>
+<li><p>If possible, store dry pet food in its original bag inside a
+clean, dedicated plastic container with a lid, keeping the top of the
+bag folded or closed.</p></li>
+<li><p>Do not use your pet’s feeding bowl to scoop food. Use a clean,
+dedicated scoop, spoon, or cup.</p></li>
+<li><p>Always follow storage instructions on pet food bags or
+containers.</p></li>
+<li><p>Keep dry pet food and treats stored in a cool, dry
+place.</p></li>
+<li><p>Promptly discard, refrigerate, or store any leftover
+food.</p></li>
+<li><p><a
+href="https://www.cdc.gov/healthypets/keeping-pets-and-people-healthy/pet-food-safety.html">Learn
+more about pet food safety</a>.<sup>5</sup>*<br />
+*By clicking this link, you will leave www.publix.com and enter the CDC
+site that they operate and control.</p></li>
+<li><p>Rule #1: Be sure to wash your hands with warm water and soap for
+20 seconds before and after handling food.</p></li>
+<li><p>Wash cutting boards, dishes, utensils, and countertops with hot,
+soapy water after preparing each food item, and before you use them
+again.</p></li>
+<li><p>Consider using paper towels to clean up kitchen surfaces. If you
+use cloth towels, wash them frequently on the hot cycle of your washing
+machine.</p></li>
+<li><p>Rinse fresh fruits and vegetables under running tap water, even
+those with rinds and skins that you don’t plan to eat. Scrub firm
+produce, such as melons and cucumbers, with a clean produce
+brush.</p></li>
+<li><p>Do not wash meat, poultry, or eggs. Washing can actually help
+bacteria spread because their juices may splash into (and contaminate)
+your sink and countertops.</p></li>
+<li><p>Be sure to clean your kitchen surfaces and tools frequently to
+prevent spreading bacteria.</p></li>
+<li><p>Use one cutting board for fresh produce and a separate one for
+raw meat, poultry, and seafood.</p></li>
+<li><p>Separate raw meat, poultry, seafood, and eggs from other foods in
+your grocery shopping cart, grocery bags, and refrigerator.</p></li>
+<li><p>Never place cooked food on a plate that previously held raw meat,
+poultry, seafood, or eggs.</p></li>
+<li><p>Keep raw meat, poultry, and seafood away from ready-to-eat
+foods.</p></li>
+<li><p>Cook ground meat or ground poultry until it reaches a safe
+internal temperature. Color is not a reliable indicator of
+doneness.</p></li>
+<li><p>Keep food hot after cooking, at 140°F or above.</p></li>
+<li><p>Bring sauces, soups, and gravy to a boil when reheating.</p></li>
+<li><p>Use a food thermometer to measure the internal temperature of
+cooked foods—particularly meat, poultry, seafood, egg dishes, leftovers,
+and casseroles. Follow the <a
+href="https://www.foodsafety.gov/keep/charts/mintemp.html">safe minimum
+cooking temperatures</a><sup>6</sup>* for these foods.<br />
+*By clicking this link, you will leave www.publix.com and enter the Food
+Safety site that they operate and control.</p></li>
+</ul>
+<p>As with any type of food, the leading cause of foodborne illness is
+improper food handling, preparation, and storage. Lessen the risks of
+cross-contamination by following these tips when cooking seafood.</p>
+<h3 id="mercury-warnings-in-seafood">Mercury Warnings in Seafood.</h3>
+<p>FDA and EPA have issued advice regarding eating fish and shellfish.
+This advice is for those who might become pregnant, are pregnant, or are
+breastfeeding as well as parents and caregivers who are feeding
+children. It can help people make informed choices about the types of
+fish and shellfish that are nutritious and safe to eat.<sup>8</sup></p>
+<ul>
+<li>Chill leftovers and takeout food within two hours. Keep your
+refrigerator at 40°F or below, and use an appliance thermometer to check
+the temperature.</li>
+<li>Refrigerate or freeze meat, poultry, eggs, and other perishables as
+soon as you get them home from the store.</li>
+<li>Never defrost food at room temperature. Food must be kept at a safe
+temperature during thawing. There are three safe ways to defrost food:
+in the refrigerator, in cold water, and in the microwave. Immediately
+cook food that has been thawed in cold water or the microwave.</li>
+<li>Know <a
+href="https://www.foodsafety.gov/keep/charts/storagetimes.html">when to
+throw food out</a>.<sup>7</sup>* You can’t tell by just looking or
+smelling.<br />
+*By clicking this link, you will leave www.publix.com and enter the USDA
+site that they operate and control.</li>
+</ul>
+<p>Right here.</p>
+<figure>
+<img
+src="https://images.publixcdn.com/cms/images/retail/faq/food-safety/usda_logo.gif"
+alt="USDA logo" />
+<figcaption aria-hidden="true">USDA logo</figcaption>
+</figure>
+<h3 id="preparation">Preparation</h3>
+<ul>
+<li>Keep raw seafood (and its juices) from coming into contact with any
+foods that are cooked or eaten raw.</li>
+<li>Thoroughly wash hands before and after handling raw seafood.</li>
+<li>Wash all utensils and dishes that have come into contact with raw
+seafood.</li>
+<li>Do not use the same utensils and dishes used to handle raw seafood
+for any cooked foods until thoroughly washed.</li>
+<li>Thoroughly cook any food that comes into contact with raw seafood or
+its juices.</li>
+<li>Prepare all raw seafood in a designated area, and if possible, after
+all other foods have been put aside.</li>
+<li>Refrigerate leftover seafood as soon as possible. Chill to under
+40°F and consume within 3–4 days.</li>
+</ul>
+<h3 id="reduce-supply-chain-product-safety-risks">Reduce Supply Chain
+Product Safety Risks</h3>
+<p>Starting with the supply chain, we conduct detailed food safety
+assessments with suppliers, including store brand products and fresh,
+perishable foods. This includes supplier visits and certified audits
+that conform to the Global Food Safety Initiative (GFSI). In fact, our
+own food processing facilities have received food safety certification
+from GFSI under the Safe Quality Foods (SQF) program.</p>
+<h3 id="remove-recalled-product-from-retail">Remove Recalled Product
+from Retail</h3>
+<p>It is the responsibility of grocery retailers to provide our
+customers with safe, high-quality products. Sometimes our suppliers or
+federal food safety authorities notify us of product recalls. We work
+quickly to remove any recalled product from our stores and warehouse
+locations. To help share recall information with our customers, we have
+a Recall Information Center inside our stores as well as <a
+href="https://corporate.publix.com/about-publix/newsroom/recalls">online
+recall communication tools</a>.</p>
+<h3 id="train-associates-on-standards-and-food-safety">Train Associates
+on Standards and Food Safety</h3>
+<p>All associates receive thorough food safety training specific to the
+tasks they perform. Store managers and associates who handle fresh foods
+in the Deli, Bakery, Meat, Seafood, and Produce departments, receive
+even more extensive training. All food safety training includes
+instruction on proper handling, hygiene, storage, cleaning and
+sanitation, and pest management. We use a nationally accredited Food
+Protection Manager Certification training program to help our management
+associates with food safety knowledge and techniques. This program
+extends beyond our stores and into training our support and leadership
+associates in our corporate offices.</p>
+<h3 id="us-food-and-drug-administration-fda">U.S. Food and Drug
+Administration (FDA)</h3>
+<p>FDA Food Information and Seafood Hotline: 888-723-3366<br />
+<a href="http://www.fda.gov" title="www.fda.gov">www.fda.gov</a></p>
+<figure>
+<img
+src="https://images.publixcdn.com/cms/images/retail/faq/food-safety/cdc_logo.gif"
+alt="CDC logo" />
+<figcaption aria-hidden="true">CDC logo</figcaption>
+</figure>
+<h3 id="united-states-department-of-agriculture-usda">United States
+Department of Agriculture (USDA)</h3>
+<p>USDA Meat and Poultry Hotline: 800-535-4555<br />
+<a href="http://www.fsis.usda.gov"
+title="www.fsis.usda.gov">www.fsis.usda.gov</a></p>
+<figure>
+<img
+src="https://images.publixcdn.com/cms/images/retail/faq/food-safety/fda_logo.gif"
+alt="FDA logo" />
+<figcaption aria-hidden="true">FDA logo</figcaption>
+</figure>
+<h2 id="in-store-pickup---general-policies">In-Store Pickup - General
+Policies</h2>
+<h3 id="favorites">Favorites</h3>
+<p>list so you can easily reorder them. You can also visit your</p>
+<h3 id="order-history">Order History</h3>
+<p>to view previous orders and add them to your</p>
+<h2 id="publix-gift-cards---physical-egift">Publix Gift Cards - Physical
+&amp; eGift</h2>
+<h3 id="by-phone">By phone:</h3>
+<ul>
+<li>Call the Publix gift card team at 1-800-830-8159, Mon.-Thurs. 8 a.m.
+to 5 p.m. and Fri. 8 a.m. to 4:30 p.m.</li>
+</ul>
+<p>The update to your balance should happen quickly after each
+transaction. Your Club Publix account should display your most recent
+update.</p>
+<p>Yes. You may order eGift cards through www.publix.com/gift-cards.</p>
+<p>Gift cards with no available balance are hidden when selecting a
+payment option. To see the card, access your Club Publix account.</p>
+<p>You can store up to 8 payment methods (including gift cards).</p>
+<p>Gift cards with no funds are automatically hidden while selecting a
+payment option. To view hidden cards, access your Club Publix account.
+You will be able to remove used-up cards and make room for additional
+ones.</p>
+<p>Gift cards have a maximum value of $500 per card. You can store up to
+8 cards, which includes any gift cards, debit cards, and credit
+cards.</p>
+<p>Yes. Gift cards with a zero balance can be removed from your Club
+Publix account.</p>
+<h3 id="in-the-publix-app">In the Publix app:</h3>
+<ol type="1">
+<li>Open the <a href="https://www.publix.com/mobile">Publix app</a> and
+log in to your Club Publix account.</li>
+<li>Tap the menu in the upper left of the screen.</li>
+<li>Tap “Payment methods”, then tap “Add gift card” in the Publix gift
+cards section.</li>
+<li>Scan the card or enter all 19 digits of your gift card number and
+the PIN.</li>
+</ol>
+<p>That’s it! Your Publix gift card is ready to use.</p>
+<p>Keep the physical gift card. Once you add a Publix gift card to your
+Club Publix account, the balance remains available on both the card and
+in the account. You can add funds to your physical gift card when you’re
+ready.</p>
+<p>Yes. A Club Publix account conveniently stores your Publix gift cards
+for future use toward online purchases or at the register.</p>
+<p>Not a member? <a
+href="https://www.publix.com/myaccount/register">Join Club Publix</a>
+today.</p>
+<p>There are several easy ways to check your physical or eGift card
+balance.</p>
+<h3 id="on-publixcom">On publix.com:</h3>
+<ol type="1">
+<li>Log in to your <a href="https://www.publix.com/myaccount">Club
+Publix account</a>.</li>
+<li>Select your profile icon in the upper right of the screen.</li>
+<li>Select “Payment methods,” then select “Add gift card.”</li>
+<li>Enter all 19 digits of your gift card number and the PIN.</li>
+</ol>
+<h2 id="shopping-list">Shopping List</h2>
+<h3 id="share-list">Share List</h3>
+<p>. From there, you can either email your list to yourself then print
+directly from your email inbox, or share to your printer through
+Bluetooth connection.</p>
+<p>No, a Club Publix account is not required for using basic shopping
+list features like adding/removing items and printing the list. A Club
+Publix account is required only for advanced and secured features, such
+as saving multiple lists or sending a list to your email.</p>
+<p>If you’ve added weekly ad items to a list but do not see them on the
+list, the issue is with the web browser’s cookies, not because you
+require an account. If you clear your web browser’s history, including
+cookies, this should reset the shopping list and allow you to build your
+list again.</p>
+<p>Yes. Once you click</p>
+<h3 id="shopping-list">Shopping List</h3>
+<p>page, you can change the font size to small, medium, or large.</p>
+<p>If the shopping list doesn’t print as expected, ensure that the zoom
+level for your browser is set to 100%. If the zoom is set to a larger or
+smaller percentage, it will affect how your shopping list prints.</p>
+<p>While you can create and save multiple lists, you can’t assign lists
+to a specific store. Your shopping list will always be set for the store
+you’ve selected as your store to shop.</p>
+<p>Yes, you can change stores and add weekly ad and product catalog
+items from multiple stores to your shopping list. All weekly ad items on
+your list display the sale icon next to the item, but only items for
+your current store will have notes listing the size and valid dates.</p>
+<p>The “Picked Up” column is very useful if you use a smartphone or
+tablet while shopping. Select the checkbox next to each item as you pick
+it up on your mobile device. The checkmarks are then automatically
+synced across all your desktop and mobile sites. including the mobile
+app. If you manage your list from a different device at home, you’ll
+still see the checkmarks next to the items you picked up.</p>
+<p>If you’re having trouble copying your shopping list, try clearing
+your internet browser’s cookies and cache.</p>
+<h2 id="technical-assistance">Technical Assistance</h2>
+<h3 id="change-phone-number">Change phone number</h3>
+<p>and enter a new phone number in the phone number field. We recommend
+turning off two-factor verification first, then turning it back on after
+you’ve changed your phone number.</p>
+<p>Go to your account at <a href="http://www.publix.com">Publix.com</a>.
+There you should see a link to</p>
+<h3 id="manage-cookies-and-site-data">Manage cookies and site data</h3>
+<p>.<br />
+</p>
+<p><img
+src="https://images.publixcdn.com/cms/images/publix/faq---technical-assistance/chromedesktop3_300w.png" /><br />
+</p>
+<p>In the “From the site you’re viewing” section, click the trash can
+icon next to each cookie containing the word “publix.” Once you’ve
+removed all Publix cookies, click</p>
+<h3 id="manage-website-data">Manage Website Data</h3>
+<p>.</p>
+<p><img
+src="https://images.publixcdn.com/cms/images/publix/faq---technical-assistance/safaridesktop2_500w.png" /><br />
+</p>
+<p>In the search bar, type “publix” then click</p>
+<h3 id="need-help-logging-in">Need help logging in?</h3>
+<p>To reset your Club Publix password on the <em>Publix app</em>,
+tap</p>
+<h3 id="remove-all-website-data">Remove All Website Data</h3>
+<p>.<br />
+</p>
+<p><img
+src="https://images.publixcdn.com/cms/images/publix/faq---technical-assistance/safari-mobile-4_300w.jpg" /><br />
+</p>
+<ul>
+<li>Help with in-store pickup can be found in our <a
+href="https://www.publix.com/faq/in-store-pickup">In-Store Pickup
+FAQs</a>.</li>
+<li>Help with Delivery or Curbside Pickup Powered by Instacart can be
+found in our <a href="https://www.publix.com/faq/instacart">Delivery
+&amp; Curbside Pickup Powered by Instacart FAQs</a>.</li>
+</ul>
+<p>Two-factor authentication adds an extra layer of security to your
+account and lets Publix know it’s really you logging in. This security
+process requires users to provide two separate authentication factors (a
+login and a code sent via email or text) rather than simply requiring a
+username or password.</p>
+<p>Two-factor authentication helps keep unwanted users out of your
+account and protects your privacy. It’s an extra level of protection
+created for your safety.</p>
+<p>Just go to <a href="http://www.publix.com">publix.com</a> and log in
+to your account. Then go to</p>
+<h3 id="settings-3">Settings</h3>
+<p>. (You may need to scroll to the right to find the</p>
+<h3 id="share-list-2">Share List</h3>
+<p>. From there, you can either email your list to yourself then print
+directly from your email inbox, or share to your printer through
+Bluetooth connection.</p>
+<p>Publix recommends using the latest versions of Apple Safari, Google
+Chrome, or Microsoft Edge when visiting Publix.com. If you are
+experiencing problems with these or other browsers, please contact our
+Customer Care team at 800-242-1227.</p>
+<p>To clear Publix cookies and cache on your desktop using Chrome,
+follow these steps.</p>
+<p>Click the padlock icon next to the address bar.<br />
+</p>
+<p><img
+src="https://images.publixcdn.com/cms/images/publix/faq---technical-assistance/chromedesktop1_300w.png" /></p>
+<p>Select</p>
+<h3 id="two-factor-authentication">two-factor authentication</h3>
+<p>. Click the link to get started. You will be asked if you want to set
+up two-factor authentication.</p>
+<p>Simply go to <a href="http://www.publix.com">Publix.com</a>, log in,
+and then go to</p>
+<h3 id="website-data">Website Data</h3>
+<p>.<br />
+</p>
+<p><img
+src="https://images.publixcdn.com/cms/images/publix/faq---technical-assistance/safari-mobile-3_300w.jpg" /><br />
+</p>
+<p>Swipe left to remove the three cookies listed below. To remove
+<em>all</em> website data, tap</p>
+<h2 id="ways-to-save">Ways to Save</h2>
+<h3 id="digital-coupons-4">Digital Coupons</h3>
+<p>then clip each coupon you want to add to your Club Publix account.
+Finally, enter your unique 10-digit phone number at checkout to identify
+yourself and purchase the item(s) using a digital coupon.</p>
+<p>If an item is out of stock in your local Publix, that store can issue
+a rain check good for 30 days for up to eight units of the item at the
+sale price. Please visit the Customer Service counter to request a rain
+check.</p>
+<p>Call Customer Care at 1-800-242-1227, email us via the <a
+href="https://www.publix.com/contact/contact-us">Contact Us form</a>, or
+write us at ATTN: Customer Care, Publix Super Markets, Inc., P.O. Box
+407, Lakeland, FL 33802 and request to be added to our mailing list.</p>
+<p>Given our various promotional methods, customers may see a variety of
+offers made to select groups at different times. We encourage you to
+regularly visit the <a href="https://www.publix.com/savings">Savings</a>
+page on the Publix website to view the weekly circular, including our
+popular buy-one-get-one-free offers, and to find coupons for products
+that may be on your grocery list.</p>
+<h3 id="weekly-ad">Weekly Ad</h3>
+<p>then choose your local store to view the weekly ad for your area.</p>
+<p>BOGOs are weekly buy-one-get-one-free offers at Publix. In some
+States, this may allow you to purchase one of the promotional item at
+half price; in other states you must purchase both items, one of which
+will be free. In all other promotions where free product is offered
+(Buy-two-get-two-free, Buy-two-get-three-free), you must purchase the
+full number of products mentioned in order to receive the free item(s).
+For example, in a Buy-two-get-two-free promotion, you must purchase all
+4 items to receive the benefit of the promotion (2 of which will be
+provided for free in that example).</p>
+<p>Publix is committed to helping you save money. We offer weekly
+specials, buy-one-get-one free promotions, and accept Publix,
+manufacturer, and competitor coupons. For details about our acceptance
+guidelines, please visit the <a
+href="https://www.publix.com/pages/policies/coupon-policy">Coupon Policy
+page</a>.</p>
+<p>Publix posts a list of competitors whose coupons we accept in each of
+our stores. Ask Customer Service at your local Publix for that list.</p>
+<p>First you must join Club Publix, if you haven’t already. Digital
+coupons are available to anyone having a Club Publix account.</p>
+<p>To view digital coupons, click</p>
+<h2 id="weekly-ad---general">Weekly Ad - General</h2>
+<h3 id="thursday-through-wednesday">Thursday through Wednesday</h3>
+<p>, we post around 12 a.m. (midnight) Eastern Time on Thursday
+morning.</p>
+<p>Please note: The process to post our weekly ads means publishing all
+the content, images, and graphics throughout the Internet across many
+different servers. It may take several hours to complete, so there’s no
+way to guarantee exactly what time the ads will appear on our
+website.</p>
+<p>Emailing the shopping list requires a <a
+href="https://www.publix.com/myaccount">Club Publix account</a>. Once
+you’ve created and logged in to your account, the</p>
+<h3 id="wednesday-through-tuesday">Wednesday through Tuesday</h3>
+<p>, we post around 12 a.m. (midnight) Eastern Time Wednesday
+morning.</p>
+<p>For ads effective</p>
+<h2 id="weekly-ad-technical">Weekly Ad – Technical</h2>
+<h3 id="google-chrome">Google Chrome:</h3>
+<p><a href="https://support.google.com/chrome/answer/96810?hl=en"
+title="How to set the page zoom for all webpages">How to set the page
+zoom for all webpages</a></p>
+<h3 id="internet-explorer">Internet Explorer:</h3>
+<p><a
+href="http://windows.microsoft.com/en-us/windows/zoom-webpage#1TC=windows-7"
+title="How to zoom in on a webpage">How to zoom in on a webpage</a></p>
+<h3 id="mozilla-firefox">Mozilla Firefox:</h3>
+<p><a
+href="http://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages"
+title="How to zoom in and out of a website">How to zoom in and out of a
+website</a></p>
+<p>If this doesn’t resolve the problem, you may need to adjust the
+resolution on your monitor. Our site is best viewed at any resolution
+above 1024x768.</p>
+<h3 id="solution-3">Solution:</h3>
+<p>Increase the screen resolution of your monitor and revisit the site.
+A monitor resolution or web browser size must be larger than 1024x768 to
+view the ad in desktop mode as shown in this <a
+href="-/media/cb6ffd91bc3146f8b3074cea26304fe9.ashx">sample</a>.</p>
+<h3 id="weekly-ad-2">Weekly Ad</h3>
+<p>at the top of the page to refresh.</p>
+<p>Here are links to instructions for setting the zoom on various
+browsers:</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="add-special-instructions">Add Special Instructions</h3>
+<p>feature. These items include some platters, subs, and cakes. Please
+be advised that some special instructions may result in additional
+charges in-store.</p>
+<p>When you’ve finished your order, choose the most convenient date/time
+for you from the options provided. The average wait time for one item is
+about 25 minutes. As your order size increases, wait time may also
+increase. During busier times, wait time may be longer than
+anticipated.</p>
+<h3 id="online-pay">Online Pay</h3>
+<p>indicator to determine if your item is eligible.</p>
+<p>Publix will charge your payment method when you submit your
+order.</p>
+<p>If you’ve already placed the order, then you will need to cancel and
+resubmit the order.</p>
+<p>The update to your balance should happen quickly after each
+transaction. Your Club Publix account should display your most recent
+update.</p>
+<h3 id="publixcom">publix.com</h3>
+<p>and enter the FAACT site that they operate and control.)</p>
+<p><a
+href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-medication-help-reduce-allergic-reactions-multiple-foods-after-accidental">FDA
+Approves First Medication to Help Reduce Allergic Reactions to Multiple
+Foods after Accidental Exposure</a>. US Food and Drug Administration.
+February 16, 2024.</p>
+<p><a
+href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-allergies">Food
+Allergies: The “Big 9.”</a> United States Department of Agriculture Food
+Safety and Inspection Service. Last updated March 21, 2024.</p>
+<p><a
+href="https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know">Food
+Allergies: What You Need to Know</a>. US Food and Drug Administration.
+Accessed March 7, 2024.</p>
+<p><a
+href="https://www.cdc.gov/nchs/pressroom/nchs_press_releases/2022/20220126.htm">More
+Than a Quarter of U.S. Adults and Children Have at Least One
+Allergy</a>. Centers for Disease Control and Prevention. January 26,
+2023.</p>
+</body>
+</html>

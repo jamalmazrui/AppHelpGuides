@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-03" />
+  <title>Kroger Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Kroger Help Guide</h1>
+<p class="subtitle">Kroger’s own help documentation, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-08-03</p>
+</header>
+<h1 id="kroger-help-guide">Kroger Help Guide</h1>
+<p>This guide gathers Kroger’s own help as it stood on 3 August 2026.
+The text is Kroger’s; nothing has been summarised or rewritten.</p>
+<p><strong>How this is arranged, and why it differs from the
+website.</strong> Kroger does not publish one page per question. It
+publishes a set of topic pages, each holding many questions. Every one
+of those questions is an article here, filed under the topic Kroger
+itself put it in.</p>
+<p><strong>The surfaces it covers.</strong> The website and the Kroger
+app. There is no application for Windows: on a Windows machine the
+website in a browser is the product, and the website help is what
+applies. No Alexa skill is documented.</p>
+<p><strong>On medicines.</strong> Where the pharmacy appears here it is
+the <em>service</em> being described – refills, transfers, insurance and
+collection. <strong>None of it is advice about a medicine.</strong> For
+anything concerning a drug itself, ask a pharmacist.</p>
+<p>This document holds 16 categories, 197 articles and about 8,915
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#account-communication">Account: Communication</a>
+<ul>
+<li><a href="#havent-found-what-youre-looking-for-12">Haven’t found what
+you’re looking for?</a></li>
+<li><a href="#how-can-i-stop-receiving-emails">How can I stop receiving
+emails?</a></li>
+<li><a href="#how-do-i-sign-up-to-receive-a-specific-type-of-email">How
+do I sign up to receive a specific type of email?</a></li>
+</ul></li>
+<li><a href="#account-general">Account: General</a>
+<ul>
+<li><a
+href="#can-i-connect-two-accounts-in-my-household-to-earn-rewards-more-quickl">Can
+I connect two accounts in my household to earn rewards more
+quickly?</a></li>
+<li><a
+href="#can-my-digital-account-shoppers-card-and-alt-id-all-be-used-to-get-fre">Can
+my digital account, Shopper’s Card and Alt ID all be used to get FREE
+member benefits?</a></li>
+<li><a href="#how-do-i-change-my-account-settings">How do I change my
+Account Settings?</a></li>
+<li><a href="#how-do-i-create-a-virtual-card-number">How do I create a
+virtual card number?</a></li>
+<li><a href="#how-do-i-delete-my-digital-account">How do I delete my
+digital account?</a></li>
+<li><a
+href="#how-do-i-log-in-to-my-digital-account-once-it-is-created">How do
+I log in to my digital account once it is created?</a></li>
+<li><a href="#how-do-i-redeem-my-fuel-points">How do I redeem my Fuel
+Points?</a></li>
+<li><a
+href="#i-created-a-new-digital-account-but-i-still-havent-received-the-confir">I
+created a new digital account but I still haven’t received the
+confirmation email, and it’s been several hours.</a></li>
+<li><a
+href="#i-have-a-digital-account-but-cannot-remember-my-password">I have
+a digital account but cannot remember my password.</a></li>
+<li><a
+href="#i-received-the-confirmation-email-but-i-cant-select-the-hyperlink-to-c">I
+received the confirmation email, but I can’t select the hyperlink to
+confirm my account. What can I do?</a></li>
+<li><a
+href="#someone-in-my-household-with-a-linked-account-is-moving-to-a-different">Someone
+in my household with a linked account is moving to a different address.
+How can I disconnect this account from my household account?</a></li>
+<li><a href="#what-are-the-benefits-of-a-digital-account">What are the
+benefits of a Digital Account?</a></li>
+<li><a href="#what-is-needed-to-create-a-digital-account">What is needed
+to create a digital account?</a></li>
+</ul></li>
+<li><a href="#account-troubleshooting">Account: Troubleshooting</a>
+<ul>
+<li><a
+href="#during-registration-im-receiving-an-error-message-stating-that-my-emai">During
+registration, I’m receiving an error message stating that my email
+address is already registered. What do I do?</a></li>
+<li><a
+href="#i-attempted-to-sign-in-but-received-the-following-message-your-login-a">I
+attempted to sign in but received the following message: “Your login
+attempt was not successful. Please try again.” What should I
+do?</a></li>
+<li><a
+href="#i-receive-emails-from-you-all-the-time-but-i-cant-log-in-using-my-emai">I
+receive emails from you all the time, but I can’t log in using my email
+address. Why?</a></li>
+<li><a
+href="#the-site-is-not-accepting-my-alternate-id-what-should-i-do">The
+site is not accepting my Alternate ID. What should I do?</a></li>
+<li><a
+href="#the-site-is-not-accepting-my-shoppers-card-what-should-i-do">The
+site is not accepting my Shopper’s Card. What should I do?</a></li>
+<li><a
+href="#the-system-is-not-accepting-the-information-that-im-using-to-create-a-">The
+system is not accepting the information that I’m using to create a new
+digital account. What do I do now?</a></li>
+<li><a
+href="#when-i-enter-my-card-number-it-says-sorry-but-we-were-not-able-to-find">When
+I enter my Card number it says “Sorry, but we were not able to find your
+Shopper’s Card using the information you provided below”. What should I
+do?</a></li>
+<li><a
+href="#when-i-try-to-enter-my-card-number-it-says-the-card-number-entered-is-">When
+I try to enter my Card number it says “The Card number entered is not a
+valid Shopper’s Card number”. What should I do?</a></li>
+</ul></li>
+<li><a href="#community-rewards-general">Community Rewards: General</a>
+<ul>
+<li><a
+href="#how-do-i-ensure-that-my-transactions-are-applied-to-the-program">How
+do I ensure that my transactions are applied to the program?</a></li>
+<li><a href="#how-do-i-select-an-organization-to-support">How do I
+select an organization to support?</a></li>
+<li><a href="#how-do-i-view-my-community-rewards-details">How do I view
+my Community Rewards details?</a></li>
+<li><a href="#what-is-community-rewards">What is Community
+Rewards?</a></li>
+</ul></li>
+<li><a href="#general">General</a>
+<ul>
+<li><a href="#how-is-my-personal-information-protected">How is my
+personal information protected?</a></li>
+<li><a
+href="#i-have-a-question-about-your-website-mobile-app-or-other-digital-servi">I
+have a question about your website, Mobile App or other digital service
+that wasn’t covered in the FAQs. How can I get help?</a></li>
+<li><a href="#what-is-the-quality-of-my-bottled-water">What is the
+quality of my bottled water?</a></li>
+</ul></li>
+<li><a href="#help">Help</a>
+<ul>
+<li><a href="#help-center">Help Center</a></li>
+<li><a href="#quick-links">Quick Links</a></li>
+</ul></li>
+<li><a href="#ratings-reviews">Ratings Reviews</a>
+<ul>
+<li><a href="#how-are-your-reviews-moderated">How are your reviews
+moderated?</a></li>
+<li><a href="#what-are-verified-purchaser-reviews">What are Verified
+Purchaser reviews?</a></li>
+<li><a href="#who-can-submit-product-reviews">Who can submit product
+reviews?</a></li>
+</ul></li>
+<li><a href="#returns-made-easy">Returns Made Easy</a>
+<ul>
+<li><a href="#are-there-any-return-exceptions">Are there any return
+exceptions?</a></li>
+<li><a href="#frequently-asked-questions-2">Frequently Asked
+Questions</a></li>
+<li><a
+href="#need-help-with-a-return-select-your-order-type-to-learn-more">Need
+help with a return? Select your order type to learn more.</a></li>
+</ul></li>
+<li><a href="#ways-to-save-cash-back">Ways to Save: Cash Back</a>
+<ul>
+<li><a
+href="#after-i-sign-in-i-no-longer-see-all-of-the-same-cash-back-offers-as-i-">After
+I sign in, I no longer see all of the same Cash Back Offers as I did
+before I signed in. Where did they go?</a></li>
+<li><a
+href="#can-i-load-the-same-cash-back-offer-onto-different-shoppers-cards">Can
+I load the same Cash Back Offer onto different Shopper’s Cards?</a></li>
+<li><a
+href="#can-i-use-cash-back-offers-as-well-as-digital-coupons-on-the-same-item">Can
+I use Cash Back Offers as well as Digital Coupons on the same
+item?</a></li>
+<li><a
+href="#can-i-use-my-cash-back-offers-and-rewards-at-any-kroger-company-family">Can
+I use my Cash Back Offers and Rewards at any Kroger Company family of
+Stores?</a></li>
+<li><a
+href="#do-i-need-to-remove-expired-cash-back-offers-from-my-shoppers-card">Do
+I need to remove expired Cash Back Offers from my Shopper’s
+Card?</a></li>
+<li><a href="#for-how-long-will-the-cash-back-program-run">For how long
+will the Cash Back program run?</a></li>
+<li><a
+href="#how-can-i-view-the-cash-back-offers-that-are-available-for-me-to-load-">How
+can I view the Cash Back Offers that are available for me to load to my
+Shopper’s Card?</a></li>
+<li><a
+href="#how-can-i-view-the-cash-back-offers-that-i-have-already-loaded-onto-my">How
+can I view the Cash Back Offers that I have already loaded onto my
+Shopper’s Card?</a></li>
+<li><a href="#how-do-i-get-a-shoppers-card">How do I get a Shopper’s
+Card?</a></li>
+<li><a href="#how-do-i-load-cash-back-offers-to-my-shoppers-card">How do
+I load Cash Back Offers to my Shopper’s Card?</a></li>
+<li><a href="#how-does-cash-back-work">How does Cash Back work?</a></li>
+<li><a
+href="#how-does-cashing-out-my-cash-back-rewards-to-my-paypal-account-work">How
+does cashing out my Cash Back Rewards to my PayPal account
+work?</a></li>
+<li><a
+href="#how-does-cashing-out-my-cash-back-rewards-to-my-shoppers-card-work">How
+does cashing out my Cash Back Rewards to my Shopper’s Card
+work?</a></li>
+<li><a href="#how-long-are-cash-back-offers-available">How long are Cash
+Back Offers available?</a></li>
+<li><a
+href="#how-long-does-it-take-until-my-cash-back-offers-and-rewards-are-active">How
+long does it take until my Cash Back Offers and Rewards are active on my
+Card?</a></li>
+<li><a
+href="#how-many-cash-back-offers-can-i-load-to-my-shoppers-card">How
+many Cash Back Offers can I load to my Shopper’s Card?</a></li>
+<li><a href="#how-often-can-i-cash-out-my-cash-back-rewards">How often
+can I cash out my Cash Back Rewards?</a></li>
+<li><a href="#what-are-cash-back-offers-and-rewards">What are Cash Back
+Offers and Rewards?</a></li>
+<li><a
+href="#what-are-the-terms-conditions-of-the-cash-back-rewards-program">What
+are the Terms &amp; Conditions of the Cash Back Rewards
+Program?</a></li>
+<li><a href="#what-are-the-terms-conditions-of-your-website">What are
+the Terms &amp; Conditions of your website?</a></li>
+<li><a
+href="#what-happens-if-my-cash-back-offer-does-not-apply-when-i-purchase-my-p">What
+happens if my Cash Back Offer does not apply when I purchase my product
+at the store?</a></li>
+<li><a
+href="#what-happens-to-cash-back-offers-on-my-account-once-the-purchase-requi">What
+happens to Cash Back Offers on my account once the purchase requirement
+has been met?</a></li>
+<li><a
+href="#what-if-my-shoppers-card-number-isnt-associated-with-my-digital-accoun">What
+if my Shopper’s Card number isn’t associated with my digital
+account?</a></li>
+<li><a
+href="#what-if-my-store-doesnt-carry-the-product-for-which-i-have-a-cash-back">What
+if my store doesn’t carry the product for which I have a Cash Back
+Offer?</a></li>
+<li><a href="#what-is-required-to-load-cash-back-offers">What is
+required to load Cash Back Offers?</a></li>
+<li><a href="#what-is-required-to-redeem-cash-back-rewards">What is
+required to redeem Cash Back Rewards?</a></li>
+<li><a href="#when-would-a-cash-back-offer-not-be-eligible">When would a
+Cash Back Offer not be eligible?</a></li>
+<li><a
+href="#where-can-i-find-assistance-with-any-issues-not-covered-above">Where
+can I find assistance with any issues not covered above?</a></li>
+<li><a
+href="#why-did-i-not-receive-my-cash-back-reward-earnings-that-were-sent-to-m">Why
+did I not receive my Cash Back Reward earnings that were sent to my
+PayPal account?</a></li>
+<li><a
+href="#why-did-i-not-receive-my-cash-back-reward-earnings-that-were-sent-to-m-2">Why
+did I not receive my Cash Back Reward earnings that were sent to my
+Shopper’s Card?</a></li>
+</ul></li>
+<li><a href="#ways-to-save-coupons">Ways to Save: Coupons</a>
+<ul>
+<li><a
+href="#can-i-load-the-same-digital-coupon-onto-different-shoppers-card">Can
+I load the same digital coupon onto different Shopper’s Card?</a></li>
+<li><a
+href="#can-i-print-a-list-of-the-digital-coupons-on-my-shoppers-card">Can
+I print a list of the digital coupons on my Shopper’s Card?</a></li>
+<li><a
+href="#can-i-remove-digital-coupons-from-my-shoppers-card-without-spending-th">Can
+I remove digital coupons from my Shopper’s Card without spending
+them?</a></li>
+<li><a
+href="#can-i-use-digital-coupons-at-any-kroger-company-family-of-stores">Can
+I use digital coupons at any Kroger company family of stores?</a></li>
+<li><a
+href="#do-i-need-to-remove-expired-digital-coupons-from-my-shoppers-card">Do
+I need to remove expired digital coupons from my Shopper’s
+Card?</a></li>
+<li><a href="#how-can-i-view-available-digital-coupons">How can I view
+available digital coupons?</a></li>
+<li><a
+href="#how-do-i-link-my-shoppers-card-number-to-my-digital-account">How
+do I link my Shopper’s Card number to my digital account?</a></li>
+<li><a href="#how-do-i-load-digital-coupons-to-my-shoppers-card">How do
+I load digital coupons to my Shopper’s Card?</a></li>
+<li><a href="#how-do-i-redeem-digital-coupons">How do I redeem digital
+coupons?</a></li>
+<li><a
+href="#how-long-are-digital-coupons-available-and-how-do-i-know-when-they-exp">How
+long are digital coupons available, and how do I know when they
+expire?</a></li>
+<li><a
+href="#how-long-does-it-take-until-my-digital-coupons-are-active-on-my-shoppe">How
+long does it take until my digital coupons are active on my Shopper’s
+Card?</a></li>
+<li><a
+href="#how-will-i-know-if-a-digital-coupon-discount-was-deducted-from-my-purc">How
+will I know if a digital coupon discount was deducted from my
+purchase?</a></li>
+<li><a
+href="#i-cant-seem-to-add-digital-coupons-to-my-shoppers-card-it-keeps-asking">I
+can’t seem to add digital coupons to my Shopper’s Card. It keeps asking
+me to log in, but I’ve already done that.</a></li>
+<li><a
+href="#i-used-some-of-my-digital-coupons-but-theyre-not-showing-up-in-my-rede">I
+used some of my digital coupons, but they’re not showing up in my
+“Redeemed Coupons” list.</a></li>
+<li><a href="#what-are-digital-coupons">What are Digital
+Coupons?</a></li>
+<li><a
+href="#what-happens-if-my-discount-does-not-apply-when-i-purchase-a-product">What
+happens if my discount does not apply when I purchase a
+product?</a></li>
+<li><a
+href="#what-if-my-store-doesnt-carry-the-product-for-which-i-have-a-digital-c">What
+if my store doesn’t carry the product for which I have a digital
+coupon?</a></li>
+<li><a
+href="#why-cant-i-remove-a-particular-digital-coupon-from-my-shoppers-card">Why
+can’t I remove a particular digital coupon from my Shopper’s
+Card?</a></li>
+</ul></li>
+<li><a href="#ways-to-save-weekly-ads">Ways to Save: Weekly Ads</a>
+<ul>
+<li><a href="#how-do-i-check-the-weekly-specials-online">How do I check
+the weekly specials online?</a></li>
+<li><a href="#how-do-i-select-a-preferred-store">How do I select a
+preferred store?</a></li>
+<li><a href="#when-is-the-weekly-ad-updated">When is the Weekly Ad
+updated?</a></li>
+</ul></li>
+<li><a href="#ways-to-shop-delivery">Ways to Shop: Delivery</a>
+<ul>
+<li><a
+href="#are-there-any-assortment-limitations-on-express-delivery">Are
+there any assortment limitations on Express Delivery?</a></li>
+<li><a href="#are-there-fees-for-using-delivery">Are there fees for
+using delivery?</a></li>
+<li><a href="#are-there-product-markups-with-express-delivery">Are there
+product markups with Express Delivery?</a></li>
+<li><a href="#are-tips-accepted">Are tips accepted?</a></li>
+<li><a href="#can-i-add-a-prescription-to-my-delivery-order">Can I add a
+prescription to my Delivery order?</a></li>
+<li><a
+href="#can-i-change-the-time-or-location-for-my-pending-order">Can I
+change the time or location for my pending order?</a></li>
+<li><a href="#can-i-order-age-restricted-items-like-alcohol">Can I order
+age-restricted items, like alcohol?</a></li>
+<li><a href="#can-i-order-alcohol-on-express-delivery">Can I order
+alcohol on Express Delivery?</a></li>
+<li><a
+href="#can-i-use-government-benefits-such-as-snap-ebt-to-pay-for-my-order-2">Can
+I use government benefits such as SNAP EBT to pay for my order?</a></li>
+<li><a href="#do-you-accept-digital-coupons-for-delivery">Do you accept
+digital coupons for Delivery?</a></li>
+<li><a href="#do-you-accept-paper-coupons-for-delivery">Do you accept
+paper coupons for Delivery?</a></li>
+<li><a href="#how-are-weighted-items-chosen-2">How are weighted items
+chosen?</a></li>
+<li><a
+href="#how-can-i-use-paper-coupons-for-my-kroger-delivery-order">How can
+I use paper coupons for my Kroger Delivery order?</a></li>
+<li><a href="#how-do-i-cancel-an-existing-order-2">How do I cancel an
+existing order?</a></li>
+<li><a href="#how-do-i-know-i-received-everything-i-ordered-2">How do I
+know I received everything I ordered?</a></li>
+<li><a href="#how-do-i-know-my-personal-information-is-secure-2">How do
+I know my personal information is secure?</a></li>
+<li><a
+href="#how-do-i-modify-a-submitted-order-for-next-day-delivery">How do I
+modify a submitted order for next day delivery?</a></li>
+<li><a href="#how-do-i-pay-for-my-order-2">How do I pay for my
+order?</a></li>
+<li><a href="#how-do-i-place-an-order">How do I place an order?</a></li>
+<li><a href="#how-do-i-place-my-express-delivery-order">How do I place
+my Express Delivery order?</a></li>
+<li><a
+href="#how-do-i-return-an-item-or-receive-a-refund-on-a-kroger-fulfilled-deli">How
+do I return an item or receive a refund on a Kroger fulfilled delivery
+order if I live in an area with no store?</a></li>
+<li><a href="#how-do-i-shop-for-delivery-products">How do I shop for
+Delivery products?</a></li>
+<li><a
+href="#how-do-products-stay-fresh-until-my-order-is-ready-for-delivery">How
+do products stay fresh until my order is ready for delivery?</a></li>
+<li><a
+href="#how-quickly-can-i-expect-to-get-my-order-with-express-delivery">How
+quickly can I expect to get my order with Express Delivery?</a></li>
+<li><a
+href="#i-like-to-pick-my-own-produce-meat-and-seafood-how-do-i-know-youll-pic-2">I
+like to pick my own produce, meat and seafood. How do I know you’ll pick
+the freshest available?</a></li>
+<li><a
+href="#if-i-am-a-boost-member-how-does-that-impact-my-express-delivery-fee">If
+I am a Boost member, how does that impact my Express Delivery
+fee?</a></li>
+<li><a
+href="#if-im-a-boost-member-how-does-this-affect-my-delivery-fee">If I’m
+a Boost member, how does this affect my delivery fee?</a></li>
+<li><a
+href="#is-there-a-maximum-number-of-items-i-can-order-with-express-delivery">Is
+there a maximum number of items I can order with Express
+Delivery?</a></li>
+<li><a href="#what-do-i-do-when-the-delivery-driver-arrives">What do I
+do when the Delivery driver arrives?</a></li>
+<li><a href="#what-if-an-item-i-want-isnt-available-online">What if an
+item I want isn’t available online?</a></li>
+<li><a
+href="#what-if-an-item-in-my-order-is-unavailable-in-the-store">What if
+an item in my order is unavailable in the store?</a></li>
+<li><a
+href="#what-if-an-item-ive-ordered-is-unavailable-in-the-store-2">What
+if an item I’ve ordered is unavailable in the store?</a></li>
+<li><a href="#what-is-delivery-and-how-does-it-work">What is Delivery
+and how does it work?</a></li>
+<li><a href="#what-is-the-fee-for-express-delivery">What is the fee for
+Express Delivery?</a></li>
+<li><a
+href="#what-kinds-of-products-can-i-buy-through-the-delivery-service">What
+kinds of products can I buy through the Delivery service?</a></li>
+<li><a href="#whats-the-fee-for-kroger-delivery">What’s the fee for
+Kroger Delivery?</a></li>
+<li><a href="#where-can-i-find-my-purchase-history-2">Where can I find
+my purchase history?</a></li>
+<li><a
+href="#who-do-i-contact-if-there-is-something-wrong-with-my-order">Who
+do I contact if there is something wrong with my order?</a></li>
+<li><a
+href="#why-am-i-seeing-different-fees-for-kroger-delivery-than-before">Why
+am I seeing different fees for Kroger Delivery than before?</a></li>
+<li><a href="#why-are-prices-estimated-versus-actual-2">Why are prices
+estimated versus actual?</a></li>
+<li><a
+href="#why-is-there-an-authorization-hold-on-my-creditdebit-card-after-i-plac-2">Why
+is there an authorization hold on my credit/debit card after I place an
+order?</a></li>
+<li><a href="#why-isnt-delivery-an-option-for-me">Why isn’t Delivery an
+option for me?</a></li>
+<li><a
+href="#will-i-pay-the-same-price-for-my-substitution-as-i-would-have-for-my-o-2">Will
+I pay the same price for my substitution as I would have for my original
+item?</a></li>
+</ul></li>
+<li><a href="#ways-to-shop-fresh">Ways to Shop: Fresh</a>
+<ul>
+<li><a href="#can-i-cancel-an-order-after-it-has-been-placed">Can I
+cancel an order after it has been placed?</a></li>
+<li><a href="#can-i-edit-my-order-after-it-has-been-placed">Can I edit
+my order after it has been placed?</a></li>
+<li><a href="#can-i-pay-for-my-order-ahead-of-time">Can I pay for my
+order ahead of time?</a></li>
+<li><a
+href="#can-i-place-an-order-and-have-it-picked-up-by-someone-else">Can I
+place an order and have it picked up by someone else?</a></li>
+<li><a href="#can-i-save-frequently-purchased-items">Can I save
+frequently purchased items?</a></li>
+<li><a href="#can-i-view-my-previous-orders">Can I view my previous
+orders?</a></li>
+<li><a href="#do-i-need-a-digital-account-to-place-an-order">Do I need a
+digital account to place an order?</a></li>
+<li><a href="#do-i-need-a-shoppers-card-to-create-an-account">Do I need
+a Shopper’s Card to create an account?</a></li>
+<li><a href="#how-do-i-know-if-my-order-is-confirmed">How do I know if
+my order is confirmed?</a></li>
+<li><a href="#how-do-i-sign-up-for-a-shoppers-card">How do I sign-up for
+a Shopper’s Card?</a></li>
+<li><a href="#i-reset-my-password-but-did-not-receive-an-email">I reset
+my password but did not receive an email</a></li>
+<li><a href="#what-if-i-cant-find-what-im-looking-for">What if I can’t
+find what I’m looking for?</a></li>
+<li><a href="#what-if-i-didnt-receive-all-the-items-in-my-order">What if
+I didn’t receive all the items in my order?</a></li>
+<li><a href="#what-if-i-received-a-wrong-item-in-my-order">What if I
+received a wrong item in my order?</a></li>
+<li><a
+href="#where-can-i-find-nutrition-information-andor-ingredient-lists">Where
+can I find nutrition information and/or ingredient lists?</a></li>
+<li><a
+href="#why-are-some-items-or-departments-marked-as-currently-unavailable">Why
+are some items or departments marked as Currently Unavailable?</a></li>
+</ul></li>
+<li><a href="#ways-to-shop-pickup-formerly-clicklist">Ways to Shop:
+Pickup (Formerly Clicklist)</a>
+<ul>
+<li><a
+href="#after-i-place-my-order-where-do-i-go-to-pick-it-up-when-its-ready">After
+I place my order, where do I go to pick it up when it’s ready?</a></li>
+<li><a href="#are-there-fees-for-using-pickup">Are there fees for using
+Pickup?</a></li>
+<li><a href="#are-tips-accepted-for-pickup">Are tips accepted for
+Pickup?</a></li>
+<li><a href="#can-i-add-a-prescription-to-my-pickup-order">Can I add a
+prescription to my Pickup order?</a></li>
+<li><a
+href="#can-i-change-my-time-slot-or-location-for-a-pending-order">Can I
+change my time slot or location for a pending order?</a></li>
+<li><a
+href="#can-i-use-government-benefits-such-as-snap-ebt-to-pay-for-my-order">Can
+I use government benefits such as SNAP EBT to pay for my order?</a></li>
+<li><a href="#can-someone-else-get-my-pickup-order-on-my-behalf">Can
+someone else get my Pickup order on my behalf?</a></li>
+<li><a href="#do-you-accept-coupons-for-pickup">Do you accept coupons
+for Pickup?</a></li>
+<li><a href="#how-are-weighted-items-chosen">How are weighted items
+chosen?</a></li>
+<li><a href="#how-can-i-order-my-groceries-online">How can I order my
+groceries online?</a></li>
+<li><a href="#how-do-i-cancel-an-existing-order">How do I cancel an
+existing order?</a></li>
+<li><a href="#how-do-i-know-i-received-everything-i-ordered">How do I
+know I received everything I ordered?</a></li>
+<li><a href="#how-do-i-know-my-personal-information-is-secure">How do I
+know my personal information is secure?</a></li>
+<li><a href="#how-do-i-modify-a-pending-order-for-next-day-pickup">How
+do I modify a pending order for next-day Pickup?</a></li>
+<li><a href="#how-do-i-modify-a-pending-order-for-same-day-pickup">How
+do I modify a pending order for same-day Pickup?</a></li>
+<li><a href="#how-do-i-pay-for-my-order">How do I pay for my
+order?</a></li>
+<li><a href="#how-do-i-reserve-a-time-slot-and-shop-for-pickup">How do I
+reserve a time slot and shop for Pickup?</a></li>
+<li><a
+href="#how-do-products-stay-fresh-until-my-order-is-ready-for-pickup">How
+do products stay fresh until my order is ready for pickup?</a></li>
+<li><a href="#how-far-in-advance-can-i-schedule-a-pickup-time">How far
+in advance can I schedule a pickup time?</a></li>
+<li><a
+href="#how-long-do-i-have-to-pick-up-my-order-and-what-happens-if-i-miss-my-t">How
+long do I have to pick up my order, and what happens if I miss my time
+slot?</a></li>
+<li><a
+href="#i-like-to-pick-my-own-produce-meat-and-seafood-how-do-i-know-youll-pic">I
+like to pick my own produce, meat and seafood. How do I know you’ll pick
+the freshest available?</a></li>
+<li><a href="#what-if-an-item-i-want-is-not-available-online">What if an
+item I want is not available online?</a></li>
+<li><a
+href="#what-if-an-item-ive-ordered-is-unavailable-in-the-store">What if
+an item I’ve ordered is unavailable in the store?</a></li>
+<li><a href="#what-if-i-dont-like-the-substitutes-given-to-me">What if I
+don’t like the substitutes given to me?</a></li>
+<li><a href="#what-is-pickup-and-how-does-it-work">What is Pickup and
+how does it work?</a></li>
+<li><a
+href="#what-kinds-of-products-can-i-buy-through-the-pickup-service">What
+kinds of products can I buy through the Pickup service?</a></li>
+<li><a href="#where-can-i-find-my-purchase-history">Where can I find my
+purchase history?</a></li>
+<li><a href="#why-are-prices-estimated-versus-actual">Why are prices
+estimated versus actual?</a></li>
+<li><a href="#why-doesnt-my-store-offer-pickup">Why doesn’t my store
+offer Pickup?</a></li>
+<li><a
+href="#why-is-there-an-authorization-hold-on-my-creditdebit-card-after-i-plac">Why
+is there an authorization hold on my credit/debit card after I place an
+order?</a></li>
+<li><a
+href="#will-i-pay-the-same-price-for-my-substitution-as-i-would-have-for-my-o">Will
+I pay the same price for my substitution as I would have for my original
+item?</a></li>
+</ul></li>
+<li><a href="#ways-to-shop-shopping-list">Ways to Shop: Shopping
+List</a>
+<ul>
+<li><a
+href="#are-backup-copies-of-my-shopping-lists-kept-in-case-i-have-problems-wi">Are
+backup copies of my Shopping Lists kept in case I have problems with my
+device?</a></li>
+<li><a href="#can-i-update-my-shopping-lists-using-multiple-devices">Can
+I update my Shopping Lists using multiple devices?</a></li>
+<li><a href="#how-do-i-add-items-to-my-shopping-lists">How do I add
+items to my Shopping Lists?</a></li>
+<li><a href="#how-do-i-manage-the-items-on-my-shopping-lists">How do I
+manage the items on my Shopping Lists?</a></li>
+</ul></li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#havent-found-what-youre-looking-for">Haven’t found what
+you’re looking for?</a></li>
+<li><a href="#ways-to-save">Ways to Save</a></li>
+<li><a href="#ways-to-shop">Ways to Shop</a></li>
+</ul></li>
+</ul>
+<h2 id="account-communication">Account: Communication</h2>
+<h3 id="havent-found-what-youre-looking-for-12">Haven’t found what
+you’re looking for?</h3>
+<p>Visit our <a href="https://www.kroger.com/hc/help">Help Center</a>
+for additional assistance. If you would like to speak with us directly,
+or if this is urgent, please call us at: <a
+href="tel:+1(800)576–4377">800–576–4377</a> (1-800-KRO-GERS)</p>
+<h3 id="how-can-i-stop-receiving-emails">How can I stop receiving
+emails?</h3>
+<p>If you no longer wish to receive emails from us, please go to your
+account and update your preferences on the Communications tab.</p>
+<p>It may take up to two weeks for all email communications to cease.
+Alternatively, you can unsubscribe from our email program by clicking
+the Unsubscribe link in one of our emails.</p>
+<h3 id="how-do-i-sign-up-to-receive-a-specific-type-of-email">How do I
+sign up to receive a specific type of email?</h3>
+<p>Updating your email preferences is quick and easy.</p>
+<ol type="1">
+<li>Sign into your digital account.</li>
+<li>Select “Communications”.</li>
+<li>Make the appropriate updates to your preferences.</li>
+</ol>
+<h2 id="account-general">Account: General</h2>
+<h3
+id="can-i-connect-two-accounts-in-my-household-to-earn-rewards-more-quickl">Can
+I connect two accounts in my household to earn rewards more
+quickly?</h3>
+<p>Yes. We offer household Shopper’s Card account linking. This will
+allow you to combine your coupons, Fuel Points and rewards with others
+that reside in your household. Shoppers must share the same address and
+purchase items for that household. Please call us at <a
+href="tel:+1(800)576–4377">800–576–4377</a> (1-800-576-4377) to have
+your accounts linked.</p>
+<h3
+id="can-my-digital-account-shoppers-card-and-alt-id-all-be-used-to-get-fre">Can
+my digital account, Shopper’s Card and Alt ID all be used to get FREE
+member benefits?</h3>
+<p>Yes. Your digital account, Shopper’s Card and Alt ID are connected.
+You can shop on our app or website using your digital account, or
+in-store with your Shopper’s Card or Alt ID to get all of your FREE
+member benefits.</p>
+<h3 id="how-do-i-change-my-account-settings">How do I change my Account
+Settings?</h3>
+<ol type="1">
+<li>Select “Sign In”.</li>
+<li>Select “My Account”.</li>
+<li>Select “Edit” under the settings you wish to change.</li>
+</ol>
+<h3 id="how-do-i-create-a-virtual-card-number">How do I create a virtual
+card number?</h3>
+<p>If you don’t have a Shopper’s Card number or it’s no longer
+available, you can create a virtual card number instantly during the
+account creation process.</p>
+<ul>
+<li>During Account Creation, choose Create a new Alt ID to use in
+store.</li>
+<li>Enter a 10 digit Alt ID number. (Typically, our customers use their
+mobile phone number for their Alt ID, but any 10 digit number may be
+used, as long as it is not already in use. This number cannot start with
+“0”)</li>
+<li>Select “Save”.</li>
+</ul>
+<p>The Alternate ID that you entered is what you’ll use as your virtual
+card number online &amp; in-store.</p>
+<h3 id="how-do-i-delete-my-digital-account">How do I delete my digital
+account?</h3>
+<p>In order to delete your digital account online, <a
+href="https://www.kroger.com/account/delete/">click here</a>. If you
+decide to delete your digital account, you will no longer be able to
+sign in to <a href="https://www.kroger.com">Kroger.com</a> or the Kroger
+app. The following information will also be removed:</p>
+<ul>
+<li>My Pharmacy account</li>
+<li>Email preferences</li>
+<li>My Lists</li>
+<li>Any items currently in your cart</li>
+<li>My Recipes</li>
+</ul>
+<p>The following information will remain on your account, which you can
+access and update by calling Customer Service or visiting the in-store
+Customer Service desk:</p>
+<ul>
+<li>Kroger Plus Card</li>
+<li>Fuel Points</li>
+<li>Purchase History</li>
+<li>Digital coupons you’ve already added to your account</li>
+<li>Digital coupon credits</li>
+<li>Reward points</li>
+<li>Community Rewards</li>
+<li>Store credit</li>
+<li>SMS texts</li>
+<li>Boost membership benefits</li>
+</ul>
+<p>Please keep in mind this is not a “Do Not Sell My Personal
+Information” privacy request. If you decide to delete your digital
+account we’d be happy to assist.</p>
+<h3 id="how-do-i-log-in-to-my-digital-account-once-it-is-created">How do
+I log in to my digital account once it is created?</h3>
+<ol type="1">
+<li>Enter your email address and password.</li>
+<li>Select “Sign In”.</li>
+</ol>
+<h3 id="how-do-i-redeem-my-fuel-points">How do I redeem my Fuel
+Points?</h3>
+<p>Once you’ve shopped and earned your Fuel Points using your digital
+account, Shopper’s Card or Alt ID, use your Shopper’s Card or Alt ID to
+redeem your Fuel Points at our Fuel Centers or partner fuel
+stations.</p>
+<h3
+id="i-created-a-new-digital-account-but-i-still-havent-received-the-confir">I
+created a new digital account but I still haven’t received the
+confirmation email, and it’s been several hours.</h3>
+<p>Certain email providers (such as Yahoo!) may take up to 24 hours to
+deliver our confirmation emails. If this time period has passed, please
+contact our digital account team via their contact information
+below.</p>
+<h3 id="i-have-a-digital-account-but-cannot-remember-my-password">I have
+a digital account but cannot remember my password.</h3>
+<p>Either select the “Forgot my Password” hyperlink below the User ID
+&amp; Password or click here. Once you enter the email address
+associated with your digital account, you will be sent a password reset
+email.</p>
+<p>This will allow you to create and confirm your new password.
+Passwords need to be at least 6 digits long and contain at least 1
+number.</p>
+<h3
+id="i-received-the-confirmation-email-but-i-cant-select-the-hyperlink-to-c">I
+received the confirmation email, but I can’t select the hyperlink to
+confirm my account. What can I do?</h3>
+<p>This is typically caused by email client software blocking hyperlinks
+in an attempt to protect you. Please modify the security settings of
+this software to allow hyperlinks to be selected.</p>
+<p>Additionally, you may check your email online via the website of your
+email provider (www.AOL.com, etc.) instead of through the desktop email
+client software (Outlook, Thunderbird, AOL, Verizon, etc.). This will
+bypass any interference from the email client software, so the
+confirmation hyperlink should work without issue.</p>
+<p>If the problem persists, please contact our digital account team via
+their contact information below.</p>
+<h3
+id="someone-in-my-household-with-a-linked-account-is-moving-to-a-different">Someone
+in my household with a linked account is moving to a different address.
+How can I disconnect this account from my household account?</h3>
+<p>If someone in your household is moving to a different address, please
+call us at <a href="tel:+1(800)576–4377">800–576–4377</a>
+(1-800-576-4377) to have the account disconnected.</p>
+<h3 id="what-are-the-benefits-of-a-digital-account">What are the
+benefits of a Digital Account?</h3>
+<p>With a digital account, you can:</p>
+<ul>
+<li>Save time and money with Digital Coupons</li>
+<li>Order your groceries online</li>
+<li>Sign up to receive our email, the weekly circular, personalized
+offers, special promotions and the monthly newsletter</li>
+<li>View fuel points and annual savings</li>
+<li>Create and maintain your Shopping List</li>
+<li>Manage your prescriptions</li>
+<li>And much more!</li>
+</ul>
+<p>You can get started <a
+href="https://www.kroger.com/account/create/">here</a>.</p>
+<h3 id="what-is-needed-to-create-a-digital-account">What is needed to
+create a digital account?</h3>
+<p>To create your digital account, you need an email address and your
+Shopper’s Card number (if you have one). If you don’t have a Shopper’s
+Card, you can create an Alt ID instantly online. During account
+creation, you will also be prompted to select a preferred store.</p>
+<p>If you don’t have a card number or it’s no longer available, you can
+create a virtual card number during the registration process.</p>
+<p>You can create a virtual Alt ID instantly <a
+href="https://www.kroger.com/account/create/">here</a>.</p>
+<h2 id="account-troubleshooting">Account: Troubleshooting</h2>
+<h3
+id="during-registration-im-receiving-an-error-message-stating-that-my-emai">During
+registration, I’m receiving an error message stating that my email
+address is already registered. What do I do?</h3>
+<p>If you have already created an account online previously, but can’t
+remember the password, simply select “<a
+href="https://www.kroger.com/account/forgot-password">Forgot My
+Password</a>” and enter your email address. You’ll receive a password
+reset email shortly that will allow you to update your password.</p>
+<p>If you have not created an account previously, please contact our <a
+href="https://www.kroger.com/help">Customer Service Center</a>.</p>
+<h3
+id="i-attempted-to-sign-in-but-received-the-following-message-your-login-a">I
+attempted to sign in but received the following message: “Your login
+attempt was not successful. Please try again.” What should I do?</h3>
+<p>You may have entered the wrong information. Please double check the
+information and try again.</p>
+<h3
+id="i-receive-emails-from-you-all-the-time-but-i-cant-log-in-using-my-emai">I
+receive emails from you all the time, but I can’t log in using my email
+address. Why?</h3>
+<p>It’s possible for you to receive emails from us without having a
+digital account. If your email address was provided on your Card
+application, you will receive email messages from us without having a
+digital account. Please create a new digital account.</p>
+<h3 id="the-site-is-not-accepting-my-alternate-id-what-should-i-do">The
+site is not accepting my Alternate ID. What should I do?</h3>
+<p>This may happen when the Alternate ID and last name provided do not
+match what we have on file. Typically, this happens because the
+information that we have on file is out of date (e.g., customer signed
+up for a Shopper’s Card using her maiden name and is now entering her
+married name). Please contact our Customer Service Center to have them
+update this information.</p>
+<h3 id="the-site-is-not-accepting-my-shoppers-card-what-should-i-do">The
+site is not accepting my Shopper’s Card. What should I do?</h3>
+<p>There are multiple reasons that this could happen. Make sure that you
+entered the entire card number with no spaces or dashes. Make sure you
+are entering the 11, 12, or 13-digit number on the back of your Card,
+starting with the number 4. Or, enter your 10-digit Alt ID instead.”</p>
+<p>It’s possible that your card number is associated with another
+digital account. Please contact our <a
+href="https://www.kroger.com/help">Customer Service Center</a> to have
+them assist with this concern.</p>
+<h3
+id="the-system-is-not-accepting-the-information-that-im-using-to-create-a-">The
+system is not accepting the information that I’m using to create a new
+digital account. What do I do now?</h3>
+<p>Please contact our Website Support team via their contact information
+below for further assistance.</p>
+<h3
+id="when-i-enter-my-card-number-it-says-sorry-but-we-were-not-able-to-find">When
+I enter my Card number it says “Sorry, but we were not able to find your
+Shopper’s Card using the information you provided below”. What should I
+do?</h3>
+<p>The last name and ZIP code that we have on file are used to verify
+that you are the correct cardholder. Unfortunately this information is
+sometimes out of date. When this happens, the error message above will
+display. Please contact our Web Support team via their contact
+information below in order to update your information and complete the
+digital account registration process.</p>
+<h3
+id="when-i-try-to-enter-my-card-number-it-says-the-card-number-entered-is-">When
+I try to enter my Card number it says “The Card number entered is not a
+valid Shopper’s Card number”. What should I do?</h3>
+<p>Please check the Card number that you entered. Make sure that it’s 12
+digits long with no additional spacing or symbols and that all digits
+were entered correctly. If the problem persists, please contact our
+Website Support team via their contact information below for further
+assistance.</p>
+<h2 id="community-rewards-general">Community Rewards: General</h2>
+<h3
+id="how-do-i-ensure-that-my-transactions-are-applied-to-the-program">How
+do I ensure that my transactions are applied to the program?</h3>
+<p>You must present your Shopper’s Card or provide your Alternate ID at
+the register during the transaction in order for it to count toward the
+program.</p>
+<h3 id="how-do-i-select-an-organization-to-support">How do I select an
+organization to support?</h3>
+<p>Selecting the organization that you wish to support is as simple as
+updating the Community Rewards selection on your digital account.</p>
+<ol type="1">
+<li>Sign in to your digital account.</li>
+<li>Go <a
+href="https://www.kroger.com/account/communityrewards/enroll">here</a>
+to search for your organization</li>
+<li>Enter the name or NPO number of the organization that you wish to
+support.</li>
+<li>Select the appropriate organization from the list and click
+“Save.”</li>
+</ol>
+<p>Your selected organization will now display in the Community Rewards
+section of your account. If you need to review or revisit your
+organization, you can always find these details under your <a
+href="https://www.kroger.com/account">Account</a> details.</p>
+<p>Any transactions moving forward using the Shopper’s Card number
+associated with your digital account will be applied to the program. It
+takes approximately 10 days for the Community Rewards total to begin
+displaying on your receipt.</p>
+<h3 id="how-do-i-view-my-community-rewards-details">How do I view my
+Community Rewards details?</h3>
+<p>Wondering how much you’ve earned toward your selected organization?
+You can view the total you earned during the last quarter in your
+account details.</p>
+<h3 id="what-is-community-rewards">What is Community Rewards?</h3>
+<p>Community Rewards makes fund-raising easy by donating to local
+organizations based on the shopping you do everyday. Once you link your
+card to an organization, all you have to do is shop our store and swipe
+your Shopper’s Card!</p>
+<p>A digital account is needed to participate in Community Rewards. If
+you already have a digital account, you will need to ensure you have a
+Plus Card linked to your account. Then, go <a
+href="https://www.kroger.com/communityrewards">here</a> to select an
+organization.</p>
+<p>Please note, a Shopper’s Card is required for the Community Rewards
+program so that your transactions apply toward the organization you
+choose.</p>
+<h2 id="general">General</h2>
+<h3 id="how-is-my-personal-information-protected">How is my personal
+information protected?</h3>
+<p>We implement and maintain reasonable security procedures and
+practices appropriate to the nature of the information we maintain,
+including appropriate technical, administrative, and physical measures
+designed to protect information from unauthorized or illegal access,
+destruction, use, modification, or disclosure You also play an important
+role in protecting your information. It is your responsibility to select
+a strong password, change it regularly, not reuse or share your
+password, and alert us if you have any concerns about unauthorized use
+of your account.</p>
+<h3
+id="i-have-a-question-about-your-website-mobile-app-or-other-digital-servi">I
+have a question about your website, Mobile App or other digital service
+that wasn’t covered in the FAQs. How can I get help?</h3>
+<p>We’re always happy to help. Please contact our <a
+href="https://www.kroger.com/help">Customer Service Center</a>.</p>
+<h3 id="what-is-the-quality-of-my-bottled-water">What is the quality of
+my bottled water?</h3>
+<p>To find out more about our standards and quality of bottled water,
+view our <a
+href="https://www.kroger.com/asset/bottled-water-info-sheet">Bottled
+Water Information Statement</a> and our <a
+href="https://www.kroger.com/asset/2018_water_report">Annual Water
+Report</a>. For more information, click <a
+href="https://www.kroger.com/customercomments">here</a> or call
+1-800-KRO-GERS (1-800-576-4377).</p>
+<h2 id="help">Help</h2>
+<h3 id="help-center">Help Center</h3>
+<p><a href="/hc/help/contact-us" title="Contact Us"><img
+src="https://www.kroger.com/content/v2/binary/image/7736794_24_p12w2_d_helpcenter_contactus_330.png" /></a><a
+href="/hc/help/contact-us" title="Contact Us">Contact Us</a></p>
+<p><a href="/hc/help/faqs" title="FAQ&#39;s"><img
+src="https://www.kroger.com/content/v2/binary/image/7736794_24_p12w2_d_helpcenter_faq_330.png" /></a><a
+href="/hc/help/faqs" title="FAQ&#39;s">FAQ’s</a></p>
+<p><a href="/hc/help/returns" title="Request a Refund"><img
+src="https://www.kroger.com/content/v2/binary/image/7736794_24_p12w2_d_helpcenter_refund_330.png" /></a><a
+href="/hc/help/returns" title="Request a Refund">Request a
+Refund</a></p>
+<h3 id="quick-links">Quick Links</h3>
+<h4 id="general-1">General</h4>
+<p><a href="https://www.kroger.com/i/recall-alerts">View Product
+Recalls</a><br />
+<a href="https://www.kroger.com/stores/search">Find a Local
+Store</a><br />
+<a href="https://www.kroger.com/i/terms/return-policy">View Our Return
+Policy</a><br />
+<a href="https://www.kroger.com/mypurchases">Check the Status of Open
+Orders</a></p>
+<h4 id="account">Account</h4>
+<p><a href="https://www.kroger.com/account/dashboard/">Manage
+account</a><br />
+<a href="https://www.kroger.com/account/update/">Update Your
+Profile</a><br />
+<a href="https://www.kroger.com/account/addresses/">Update Your Address
+Book</a><br />
+<a href="https://www.kroger.com/account/emailSubscriptions/">Update Your
+Store and Communication Preferences</a><br />
+<a href="https://www.kroger.com/mypurchases">View Your Purchase
+History</a><br />
+<a href="https://www.kroger.com/mywallet/">Update Payment Methods Linked
+to Your Account</a></p>
+<h4 id="ways-to-shop-and-save">Ways to Shop and Save</h4>
+<p><a
+href="https://play.google.com/store/apps/details?id=com.kroger.mobile">Download
+the Mobile App for Android</a><br />
+<a href="https://apps.apple.com/us/app/kroger/id403901186">Download the
+Mobile App for Apple</a><br />
+<a href="https://www.kroger.com/i/ways-to-shop">Choose Your Way to
+Shop</a><br />
+<a href="https://www.kroger.com/shopping/list">View Your Shopping
+List</a><br />
+<a href="https://www.kroger.com/savings/cl/mycoupons/">View Your
+Coupons</a><br />
+<a href="https://www.kroger.com/pr/boost">Enroll in Our Boost Membership
+Program</a></p>
+<h4 id="rewards">Rewards</h4>
+<p><a href="https://www.kroger.com/account/pointssummary/">Check Your
+Fuel Point Balance</a><br />
+<a href="https://www.kroger.com/account/communityrewards">Check Your
+Community Rewards Summary</a></p>
+<h2 id="ratings-reviews">Ratings Reviews</h2>
+<h3 id="how-are-your-reviews-moderated">How are your reviews
+moderated?</h3>
+<p>All reviews submitted by our customers are independently moderated by
+our third-party review partner. They use fraud detection technology as
+well as manual analysis to monitor review content.</p>
+<p>We’ll never reject a customer’s review solely on the basis of a low
+star rating or negative sentiment, and we don’t edit or correct customer
+reviews, so the words you see are those of the reviewer.</p>
+<h3 id="what-are-verified-purchaser-reviews">What are Verified Purchaser
+reviews?</h3>
+<p>Where an item has been purchased using a Kroger Loyalty ID and this
+same purchaser has left a review, we apply a “Kroger Verified Purchaser”
+label. This helps customers identify reviews by customers who have
+actually bought or used the product provided specifically by the Kroger
+Co. Family of Stores.</p>
+<p>Reviews that are not marked “Kroger Verified Purchaser” are also
+valuable. It just means we couldn’t confirm if the reviewer had
+purchased the product at one of the Kroger Co. Family of Stores at the
+price available to most of our shoppers or used the product before
+leaving their review. This is the case with reviews that were not
+originally submitted through a Kroger Co. Family of Stores site.</p>
+<h3 id="who-can-submit-product-reviews">Who can submit product
+reviews?</h3>
+<p>Customers must log in to their account to leave a review, helping us
+ensure that they’re real people and not bots.</p>
+<p>We ask our customers to be upfront if they received any promotion
+that incentivized them to review. We also ask associates,
+contractors,vendors or anyone with a relationship to or pecuniary
+interest in Kroger to be up front about this in their review.</p>
+<h2 id="returns-made-easy">Returns Made Easy</h2>
+<h3 id="are-there-any-return-exceptions">Are there any return
+exceptions?</h3>
+<p>Gift cards, taxes and fees are not refundable. The return and refund
+of tobacco, beer, wine and alcohol is governed by local law. Online EBT
+refunds are not available at this time. Please call 1-800-KROGERS for
+assistance with EBT purchases.</p>
+<p><a href="https://www.kroger.com/hc/help/faqs">View All FAQs</a></p>
+<p><a href="/i/guaranteed-fresh"
+title="Our Fresh &amp; Quality Guarantee"><img
+src="https://www.kroger.com/content/v2/binary/image/8241468_25_p4_returnfaqslaunch_icon_groceries_330.png"
+alt="Grocery Bag" /></a><a href="/i/guaranteed-fresh"
+title="Our Fresh &amp; Quality Guarantee">Our Fresh &amp; Quality
+Guarantee</a></p>
+<p><a href="/i/terms/return-policy" title="View our Return Policy"><img
+src="https://www.kroger.com/content/v2/binary/image/8241468_25_p4_returnfaqslaunch_icon_policies_330.png"
+alt="Receipt" /></a><a href="/i/terms/return-policy"
+title="View our Return Policy">View our Return Policy</a></p>
+<p><a href="/hc/help/contact-us" title="Chat with Customer Service"><img
+src="https://www.kroger.com/content/v2/binary/image/8241468_25_p4_returnfaqslaunch_icon_account_330.png"
+alt="Customer Service" /></a><a href="/hc/help/contact-us"
+title="Chat with Customer Service">Chat with Customer Service</a></p>
+<h3 id="frequently-asked-questions-2">Frequently Asked Questions</h3>
+<h4 id="how-will-i-be-refunded">How will I be refunded?</h4>
+<p>Items will be refunded via the payment method used for the purchase,
+with the exception of purchases placed via EBT and gift cards.</p>
+<h4 id="how-long-does-it-take-to-process-a-refund">How long does it take
+to process a refund?</h4>
+<p>Once your refund is confirmed, it will take 5-7 business days to
+receive the refund via your original payment method.</p>
+<h3
+id="need-help-with-a-return-select-your-order-type-to-learn-more">Need
+help with a return? Select your order type to learn more.</h3>
+<ul>
+<li><h3 id="in-store">In-Store</h3>
+<p>All purchases made inside our stores should be returned to your
+nearest store for a refund. At this time, we can only complete refunds
+in-store. Please view our <a
+href="https://www.kroger.com/i/terms/return-policy">Return Policy</a> to
+learn more.</p></li>
+<li><h3 id="pickup-delivery">Pickup &amp; Delivery</h3>
+<p>We want you to be 100% satisfied with your purchase. We take pride in
+the quality of our products. All Kroger Co. Family Stores accept returns
+of items purchased at any Kroger Co. Family of Stores location within a
+30-day window of purchase. To request a refund, follow the below
+steps.</p>
+<ol type="1">
+<li>Navigate to <a href="https://www.kroger.com/mypurchases">My
+Purchases</a> on the website or mobile app.</li>
+<li>Select the relevant order to initiate the return.</li>
+<li>Select “Request a Refund” and follow the options to complete a
+return.</li>
+</ol></li>
+</ul>
+<h2 id="ways-to-save-cash-back">Ways to Save: Cash Back</h2>
+<h3
+id="after-i-sign-in-i-no-longer-see-all-of-the-same-cash-back-offers-as-i-">After
+I sign in, I no longer see all of the same Cash Back Offers as I did
+before I signed in. Where did they go?</h3>
+<p>After you sign in, only the Cash Back Offers that are currently
+available to you (or your household) will be displayed. Any Cash Back
+Offers that have already been loaded or redeemed will no longer
+display.</p>
+<p>Cash Back Rules</p>
+<h3
+id="can-i-load-the-same-cash-back-offer-onto-different-shoppers-cards">Can
+I load the same Cash Back Offer onto different Shopper’s Cards?</h3>
+<p>Most Cash Back Offers are available for loading one time per
+household.</p>
+<h3
+id="can-i-use-cash-back-offers-as-well-as-digital-coupons-on-the-same-item">Can
+I use Cash Back Offers as well as Digital Coupons on the same item?</h3>
+<p>Digital Coupons and Cash Back Offers may not be combined and are
+limited to one per item. Cash Back Offers and paper coupons may also not
+be combined on the purchase of a single item.</p>
+<h3
+id="can-i-use-my-cash-back-offers-and-rewards-at-any-kroger-company-family">Can
+I use my Cash Back Offers and Rewards at any Kroger Company family of
+Stores?</h3>
+<p>Yes, your Cash Back Offers and Rewards can be used at any Kroger
+Company store assuming:</p>
+<ol type="1">
+<li>The product is carried at that store.</li>
+<li>The store uses a Shopper’s Card or loyalty card.</li>
+</ol>
+<h3
+id="do-i-need-to-remove-expired-cash-back-offers-from-my-shoppers-card">Do
+I need to remove expired Cash Back Offers from my Shopper’s Card?</h3>
+<p>No. Once a Cash Back Offer has expired, it will be moved to the
+“Expired Cash Back Offers” section of the My Cash Back Offers page.
+These offers will no longer be active on your Card. The maximum amount
+of offers allowed on your Card does not include expired or redeemed
+offers.</p>
+<h3 id="for-how-long-will-the-cash-back-program-run">For how long will
+the Cash Back program run?</h3>
+<p>The Cash Back program is currently a pilot we’re testing, and may be
+terminated at any time. In the event that the program is terminated, any
+available cash balance will automatically be transferred to your
+Shopper’s Card to be used on future purchases.</p>
+<p>Cash Back Guidelines</p>
+<h3
+id="how-can-i-view-the-cash-back-offers-that-are-available-for-me-to-load-">How
+can I view the Cash Back Offers that are available for me to load to my
+Shopper’s Card?</h3>
+<p>Simply sign in to your digital account, navigate to “Savings &amp;
+Rewards” in the main navigation and then the “Cash Back Offers” page.
+All the Cash Back Offers available to load to your Card will be
+displayed.</p>
+<h3
+id="how-can-i-view-the-cash-back-offers-that-i-have-already-loaded-onto-my">How
+can I view the Cash Back Offers that I have already loaded onto my
+Shopper’s Card?</h3>
+<p>After you’ve signed in to your digital account, click the “My Cash
+Back Offers” tab on the Cash Back Offers page to view the Cash Back
+Offers that have already been loaded to your Card. Currently, you can
+only view your Cash Back offers through our website, not our mobile
+app.</p>
+<h3 id="how-do-i-get-a-shoppers-card">How do I get a Shopper’s
+Card?</h3>
+<p>A Shopper’s Card can be obtained at any of The Kroger Co. Family of
+Stores. You can also instantly create an Alt ID online <a
+href="https://www.kroger.com/account/update">here</a>.</p>
+<h3 id="how-do-i-load-cash-back-offers-to-my-shoppers-card">How do I
+load Cash Back Offers to my Shopper’s Card?</h3>
+<p>To load Cash Back Offers to Card, just click on the “Load to Card”
+button underneath each Cash Back Offer.</p>
+<h3 id="how-does-cash-back-work">How does Cash Back work?</h3>
+<ol type="1">
+<li>View and select Cash Back Offers from our website</li>
+<li>Purchase the qualifying item(s) in-store or online</li>
+<li>Be sure to scan your Shopper’s Card at the register in the
+store!</li>
+</ol>
+<p>Once you have purchased the item, the Cash Back balance will be
+available for you to cash out. To cash out:</p>
+<ol type="1">
+<li>Select the Cash Back amount you would like to cash out</li>
+<li>Redeem via your Shopper’s Card or PayPal account</li>
+</ol>
+<h3
+id="how-does-cashing-out-my-cash-back-rewards-to-my-paypal-account-work">How
+does cashing out my Cash Back Rewards to my PayPal account work?</h3>
+<p>Your Cash Back Reward earnings can be transferred to your desired
+PayPal account as soon as you’ve earned $20.00. Please note, you cannot
+cash out more than $99.99 per day.</p>
+<h3
+id="how-does-cashing-out-my-cash-back-rewards-to-my-shoppers-card-work">How
+does cashing out my Cash Back Rewards to my Shopper’s Card work?</h3>
+<p>Your Cash Back Reward earnings can be transferred to your Shopper’s
+Card and you can choose the amount to load to your card up to $99.99 per
+day. The Cash Back Reward amount can be redeemed on your next shopping
+trip. If you do not use the full Cash Back Reward amount in one shopping
+trip, you can continue to use it in future shopping trips until you use
+all of the remaining amount. Cash Back Reward earnings cannot be applied
+to the purchase of fuel, gift cards, alcohol, pharmacy purchases,
+tobacco products, lottery, money services and fees.</p>
+<h3 id="how-long-are-cash-back-offers-available">How long are Cash Back
+Offers available?</h3>
+<p>Cash Back Offer start and end dates vary based on the offer. Each
+Cash Back Offer shows the corresponding expiration date. Our Cash Back
+Offers expire at different times depending on many factors. The
+expiration date is displayed next to the Cash Back image on the Cash
+Back Offers page.</p>
+<h3
+id="how-long-does-it-take-until-my-cash-back-offers-and-rewards-are-active">How
+long does it take until my Cash Back Offers and Rewards are active on my
+Card?</h3>
+<p>Cash Back Offers are available as soon as you load them to your Card.
+Cash Back Rewards are available within a week of meeting the Cash Back
+Offer’s purchase requirement(s) (after you purchase the product).</p>
+<h3 id="how-many-cash-back-offers-can-i-load-to-my-shoppers-card">How
+many Cash Back Offers can I load to my Shopper’s Card?</h3>
+<p>A limit of 150 Cash Back Offers and Digital Coupons per household can
+be loaded at one time.</p>
+<h3 id="how-often-can-i-cash-out-my-cash-back-rewards">How often can I
+cash out my Cash Back Rewards?</h3>
+<p>You are only allowed to cash out once within a 24-hour period for
+both your Shopper’s Card and PayPal account.</p>
+<h3 id="what-are-cash-back-offers-and-rewards">What are Cash Back Offers
+and Rewards?</h3>
+<p>Cash Back is a new program where you can earn money on the items you
+buy everyday! Simply load the Cash Back Offer to your Shopper’s Card to
+redeem on qualifying purchases. Once you purchase the qualifying item
+for the Cash Back Offer, your balance will begin to accrue. You can then
+cash out your Cash Back Reward to your Shopper’s Card or PayPal
+account.</p>
+<h3
+id="what-are-the-terms-conditions-of-the-cash-back-rewards-program">What
+are the Terms &amp; Conditions of the Cash Back Rewards Program?</h3>
+<p>Please see the Terms and Conditions posted <a
+href="https://www.kroger.com/i/terms/cash-back-offer-rewards">here</a>.</p>
+<h3 id="what-are-the-terms-conditions-of-your-website">What are the
+Terms &amp; Conditions of your website?</h3>
+<p>Please see the Terms and Conditions posted <a
+href="https://www.kroger.com/i/terms">here</a>.</p>
+<h3
+id="what-happens-if-my-cash-back-offer-does-not-apply-when-i-purchase-my-p">What
+happens if my Cash Back Offer does not apply when I purchase my product
+at the store?</h3>
+<p>Occasionally this may happen for a variety of reasons. If you notice
+this while you are at the register, please ask the cashier for
+assistance. Or, contact our <a
+href="https://www.kroger.com/help">Customer Care Center.</a></p>
+<h3
+id="what-happens-to-cash-back-offers-on-my-account-once-the-purchase-requi">What
+happens to Cash Back Offers on my account once the purchase requirement
+has been met?</h3>
+<p>Once the Cash Back Reward is earned, the Cash Back Offer will appear
+in the “My Cash Back Offers” tab with a message indicating the Cash Back
+offer value has been sent to your balance. When you’re ready, you can
+cash out to your Shopper’s Card or PayPal account.</p>
+<h3
+id="what-if-my-shoppers-card-number-isnt-associated-with-my-digital-accoun">What
+if my Shopper’s Card number isn’t associated with my digital
+account?</h3>
+<p>To associate your Shopper’s Card with your digital account, simply
+sign in to your digital account, navigate to the My Account page, select
+“Shopper’s Card” and select “Edit”. Once your Shopper’s Card information
+has been added to your digital account, you’ll be able to load Cash Back
+Offers and Rewards directly to your Card.</p>
+<h3
+id="what-if-my-store-doesnt-carry-the-product-for-which-i-have-a-cash-back">What
+if my store doesn’t carry the product for which I have a Cash Back
+Offer?</h3>
+<p>Store inventories vary. We strive to provide as wide of a variety of
+products as possible at all of our locations. However, we cannot
+guarantee that every store will carry all products.</p>
+<h3 id="what-is-required-to-load-cash-back-offers">What is required to
+load Cash Back Offers?</h3>
+<p>To take advantage of a Cash Back Offer, you just need to create an
+account on our website and register your Shopper’s Card. If you don’t
+have a digital account, <a
+href="https://www.kroger.com/account/create/">click here</a>.</p>
+<h3 id="what-is-required-to-redeem-cash-back-rewards">What is required
+to redeem Cash Back Rewards?</h3>
+<p>To redeem Cash Back Rewards, you’ll need to log in to your account
+and cash out your available Cash Back Rewards via Shopper’s Card or
+PayPal. Please note, other members of your household cannot cash out
+your Cash Back Rewards. However, if cashing out to your Shopper’s Card,
+please be advised that other members of your household may be able to
+use your Cash Back Rewards on their next shopping trip.</p>
+<h3 id="when-would-a-cash-back-offer-not-be-eligible">When would a Cash
+Back Offer not be eligible?</h3>
+<p>Cash Back Offers are not eligible on close-out sale items such as a
+“Manager’s Special,” or if the value of the Cash Back exceeds the price
+of the item. Cash Back Rewards for amounts “off order” are not eligible
+on fuel, gift cards, alcohol, pharmacy purchases, tobacco products,
+lottery, money services and fees.</p>
+<p>Contact Us</p>
+<h3
+id="where-can-i-find-assistance-with-any-issues-not-covered-above">Where
+can I find assistance with any issues not covered above?</h3>
+<p>We have a Customer Service team that would be happy to assist you
+with any issues encountered while using our Cash Back service. Please
+provide as much detail as possible when contacting these teams so that
+they may assist you as quickly and efficiently as possible.</p>
+<p>Customer Service Center: 1-800-576-4377 (Monday through Friday
+8:00am-9:00pm EST) | <a
+href="https://www.kroger.com/customercomments">Web form</a></p>
+<p>Privacy and Terms of Use</p>
+<h3
+id="why-did-i-not-receive-my-cash-back-reward-earnings-that-were-sent-to-m">Why
+did I not receive my Cash Back Reward earnings that were sent to my
+PayPal account?</h3>
+<p>If you sent your Cash Back Reward earnings to PayPal and are not
+seeing your transfer, please check the following:</p>
+<p>1. Is your PayPal account registered and verified?</p>
+<ul>
+<li>If you have not fully completed registering your PayPal account,
+your transfer may enter an unclaimed state, <a
+href="https://www.paypal.com/us/selfhelp/home">click here.</a></li>
+</ul>
+<p>2. Did you enter and verify the correct PayPal email address when
+cashing out?</p>
+<ul>
+<li>Please ensure the correct email address is linked to your PayPal
+account when cashing out your Cash Back Rewards.</li>
+</ul>
+<h3
+id="why-did-i-not-receive-my-cash-back-reward-earnings-that-were-sent-to-m-2">Why
+did I not receive my Cash Back Reward earnings that were sent to my
+Shopper’s Card?</h3>
+<p>If you sent your Cash Back Reward earnings to your Shopper’s Card and
+did not see them redeem during your shopping trip, please check the
+following:</p>
+<ol type="1">
+<li>Did someone else in your household use your account information
+during their shopping trip after you cashed out your Cash Back Reward
+earnings to your Shopper’s Card?</li>
+<li>Please be advised that other members of your household may be able
+to use your Cash Back Rewards on their next shopping trip.</li>
+</ol>
+<h2 id="ways-to-save-coupons">Ways to Save: Coupons</h2>
+<h3
+id="can-i-load-the-same-digital-coupon-onto-different-shoppers-card">Can
+I load the same digital coupon onto different Shopper’s Card?</h3>
+<p>Most offers can only be loaded one time per household.</p>
+<h3
+id="can-i-print-a-list-of-the-digital-coupons-on-my-shoppers-card">Can I
+print a list of the digital coupons on my Shopper’s Card?</h3>
+<p>Yes, after logging in and going to the Digital Coupons page, click on
+My Coupons tab, then click the “Print My Coupons” button to print a list
+of coupons you’ve selected.</p>
+<h3
+id="can-i-remove-digital-coupons-from-my-shoppers-card-without-spending-th">Can
+I remove digital coupons from my Shopper’s Card without spending
+them?</h3>
+<p>Yes, most coupons can be removed once they have been added to your
+Shopper’s Card by clicking the My Coupons tab within the Digital Coupons
+section. From here, simply select “Remove from Card” at the bottom of
+each offer.</p>
+<h3
+id="can-i-use-digital-coupons-at-any-kroger-company-family-of-stores">Can
+I use digital coupons at any Kroger company family of stores?</h3>
+<p>Yes, your digital coupons can be used at any Kroger family of stores
+assuming the product is in stock. Rain checks or “make good” offers are
+available at your manager’s discretion.</p>
+<h3
+id="do-i-need-to-remove-expired-digital-coupons-from-my-shoppers-card">Do
+I need to remove expired digital coupons from my Shopper’s Card?</h3>
+<p>Once a coupon has expired, it will move to the “Expired Coupons”
+section of the “My Coupons” page. These coupons will no longer be active
+on your Card. The maximum amount of coupons allowed on your Card does
+not include expired or redeemed coupons.</p>
+<h3 id="how-can-i-view-available-digital-coupons">How can I view
+available digital coupons?</h3>
+<p>Sign in to your digital account, go to “Save” in the main navigation
+and then to the “Digital Coupons” page. All digital coupons that are
+available to load to your Card will be displayed.</p>
+<h3 id="how-do-i-link-my-shoppers-card-number-to-my-digital-account">How
+do I link my Shopper’s Card number to my digital account?</h3>
+<p>To link your Shopper’s Card to your digital account, sign in to your
+digital account and go to the “Profile Information” section. Next, under
+“Shopper’s Card Number,” select”Edit.” Once your Shopper’s Card
+information has been added to your digital account, you’ll be able to
+load offers directly to your Card.</p>
+<p>Don’t have a Shopper’s Card? Go <a
+href="https://www.kroger.com/account/create">here</a> to create one!</p>
+<h3 id="how-do-i-load-digital-coupons-to-my-shoppers-card">How do I load
+digital coupons to my Shopper’s Card?</h3>
+<p>You can start by creating an account or through our mobile app, and
+add your Shopper’s Card to your account. To load coupons to your
+Shopper’s Card, click the “Load to Card” button on each coupon.</p>
+<h3 id="how-do-i-redeem-digital-coupons">How do I redeem digital
+coupons?</h3>
+<ol type="1">
+<li>Add coupons from our website or mobile app.</li>
+<li>Purchase the qualifying item(s) in-store or online. </li>
+<li>If you’re purchasing in-store, scan your Shopper’s Card or enter
+your Alt ID at the register.</li>
+<li>The discount will automatically be applied to your purchase and will
+appear on your receipt underneath the qualifying item. Digital coupons
+are identified as “ecpn” on your receipt.</li>
+</ol>
+<h3
+id="how-long-are-digital-coupons-available-and-how-do-i-know-when-they-exp">How
+long are digital coupons available, and how do I know when they
+expire?</h3>
+<p>Coupon start and end dates vary based on the offer. Each coupon shows
+an expiration date below the offer details.</p>
+<h3
+id="how-long-does-it-take-until-my-digital-coupons-are-active-on-my-shoppe">How
+long does it take until my digital coupons are active on my Shopper’s
+Card?</h3>
+<p>Coupons are available as soon as you load the offers to your
+Card. Please note, connectivity or network issues may impact your
+ability to successfully load a digital coupon.</p>
+<h3
+id="how-will-i-know-if-a-digital-coupon-discount-was-deducted-from-my-purc">How
+will I know if a digital coupon discount was deducted from my
+purchase?</h3>
+<p>Digital offer deductions/discounts will appear on your receipt below
+the qualifying item(s). Digital coupons are identified as “ecpn” on your
+receipt.</p>
+<h3
+id="i-cant-seem-to-add-digital-coupons-to-my-shoppers-card-it-keeps-asking">I
+can’t seem to add digital coupons to my Shopper’s Card. It keeps asking
+me to log in, but I’ve already done that.</h3>
+<p>Check to ensure your Shopper’s Card number is listed in the Shopper’s
+Card field within “Account Profile.” If it is not, please add your
+Shopper’s Card or Alt ID. You can also create a new virtual card number
+or virtual Alt ID. If you’re still having issues, please contact
+our Customer Service Center.</p>
+<h3
+id="i-used-some-of-my-digital-coupons-but-theyre-not-showing-up-in-my-rede">I
+used some of my digital coupons, but they’re not showing up in my
+“Redeemed Coupons” list.</h3>
+<p>When a digital coupon is used, it will appear on your receipt right
+underneath the qualifying item(s). Active coupons that have been
+redeemed will be removed from “Active Coupons” immediately, and will
+appear in “Redeemed Coupons” by the next business day.</p>
+<h3 id="what-are-digital-coupons">What are Digital Coupons?</h3>
+<p>Digital coupons are just like paper coupons, only easier! They’re
+loaded directly to your Shopper’s Card and you redeem them automatically
+when purchasing qualifying items.</p>
+<p>View our Digital Coupon Policy <a
+href="https://www.kroger.com/topic/digital-coupons-policy">here</a>.</p>
+<p><a href="https://www.kroger.com/digitalcoupons">Download Digital
+Coupons Now</a>.</p>
+<h3
+id="what-happens-if-my-discount-does-not-apply-when-i-purchase-a-product">What
+happens if my discount does not apply when I purchase a product?</h3>
+<p>Occasionally, this may happen for a variety of reasons. If you notice
+this while you’re at the register, ask the cashier for assistance.
+Otherwise, please contact our Customer Service Center.</p>
+<h3
+id="what-if-my-store-doesnt-carry-the-product-for-which-i-have-a-digital-c">What
+if my store doesn’t carry the product for which I have a digital
+coupon?</h3>
+<p>We strive to provide as wide a variety of products as possible at all
+locations. However, store inventories vary, and we cannot guarantee that
+every store will carry all products.</p>
+<h3
+id="why-cant-i-remove-a-particular-digital-coupon-from-my-shoppers-card">Why
+can’t I remove a particular digital coupon from my Shopper’s Card?</h3>
+<ul>
+<li>The coupon or offer was loaded through another program such as an
+email or targeted promotion. Such offers will say “Special Offer Type”
+on the coupon.</li>
+<li>The coupon or offer was loaded from another partner site and is not
+available on our website.</li>
+<li>The offers were loaded by someone else in your household.</li>
+</ul>
+<h2 id="ways-to-save-weekly-ads">Ways to Save: Weekly Ads</h2>
+<h3 id="how-do-i-check-the-weekly-specials-online">How do I check the
+weekly specials online?</h3>
+<p>If you already have a digital account and a preferred store selected
+under Communications, you can view the Weekly Ad by clicking “Weekly Ad”
+in the quick links bar at the top of the website. You can also find the
+Weekly Ad under the Savings and Rewards Save drop-down menu within the
+site navigation.</p>
+<p>If you do not have a digital account, visit our <a
+href="https://www.kroger.com/account/create">Account Creation</a> page
+to sign up.</p>
+<h3 id="how-do-i-select-a-preferred-store">How do I select a preferred
+store?</h3>
+<p>If it is your first time visiting our site or you have cleared your
+browser history, you will need to select a preferred store. If you have
+a digital account already, signing in will set your preferred store
+automatically.</p>
+<p>You will be taken to the weekly ad for this store automatically
+moving forward.</p>
+<h3 id="when-is-the-weekly-ad-updated">When is the Weekly Ad
+updated?</h3>
+<p>The new <a href="https://www.kroger.com/weeklyad">Weekly Ad</a> is
+available at midnight ET on Wednesday. For stores located in Indiana
+(except SE Indiana and Evansville), Illinois and Eastern Missouri, the
+new weekly ad is available at midnight ET on Thursday.</p>
+<h2 id="ways-to-shop-delivery">Ways to Shop: Delivery</h2>
+<h3 id="are-there-any-assortment-limitations-on-express-delivery">Are
+there any assortment limitations on Express Delivery?</h3>
+<p>There are no assortment limitations for Express Delivery. Any item
+that can be ordered through standard eCommerce channels can be ordered
+through Express Delivery.</p>
+<h3 id="are-there-fees-for-using-delivery">Are there fees for using
+delivery?</h3>
+<p>Yes. Delivery fees vary based on the day and time slot selected and
+whether your order is placed using Kroger Delivery or a third-party
+delivery service. Delivery fees are displayed clearly at time slot
+selection and applied when your order is placed.</p>
+<h3 id="are-there-product-markups-with-express-delivery">Are there
+product markups with Express Delivery?</h3>
+<p>No, there are no product markups. Customers will pay the same
+in-store prices they enjoy with other eCommerce services.</p>
+<h3 id="are-tips-accepted">Are tips accepted?</h3>
+<p>With Kroger Delivery, your smile is our reward. No tipping please.
+Third-party partners like Instacart can accept tips. These drivers are
+paid a flat rate per delivery by our third-party partners, but 100% of
+any tip you provide goes directly to the driver. If you’d prefer, you
+also have the option to tip your third-party driver after the delivery
+is completed.</p>
+<h3 id="can-i-add-a-prescription-to-my-delivery-order">Can I add a
+prescription to my Delivery order?</h3>
+<p>At this time, prescriptions cannot be added to Delivery orders.
+However, we are working to add this capability in the future.</p>
+<h3 id="can-i-change-the-time-or-location-for-my-pending-order">Can I
+change the time or location for my pending order?</h3>
+<p>We’re sorry, but once you place your order, you cannot change your
+time or location.</p>
+<h3 id="can-i-order-age-restricted-items-like-alcohol">Can I order
+age-restricted items, like alcohol?</h3>
+<p>At this time, our ability to deliver beer, wine and spirits varies by
+state. Please check product availability for delivery on our site. If
+adult beverage items are available, be ready to present your ID when
+your delivery arrives.</p>
+<h3 id="can-i-order-alcohol-on-express-delivery">Can I order alcohol on
+Express Delivery?</h3>
+<p>Yes, alcohol can be ordered on Express Delivery (if local laws allow
+age-restricted items to be ordered online). Any items that can be
+ordered through standard eCommerce services can be ordered.</p>
+<h3
+id="can-i-use-government-benefits-such-as-snap-ebt-to-pay-for-my-order-2">Can
+I use government benefits such as SNAP EBT to pay for my order?</h3>
+<p>SNAP EBT payments for delivery orders are now accepted online through
+Kroger.com and the Kroger mobile app. When placing your delivery order,
+choose “Add SNAP EBT Card.” Please see the <a
+href="https://www.kroger.com/i/snap-ebt-faq">SNAP EBT FAQs</a> for more
+information on how to add your SNAP EBT card to your order or your
+Kroger wallet. At this time, we cannot accept WIC.</p>
+<h3 id="do-you-accept-digital-coupons-for-delivery">Do you accept
+digital coupons for Delivery?</h3>
+<p>We do accept digital coupons for all delivery orders! Digital coupons
+can be clipped online and are automatically applied to your order.
+You’ll see discounts either at the time of delivery or in the form of an
+online payment adjustment within 48 hours. Orders placed through
+Delivery online will earn points towards fuel rewards.</p>
+<h3 id="do-you-accept-paper-coupons-for-delivery">Do you accept paper
+coupons for Delivery?</h3>
+<p>Kroger Delivery drivers can now accept and scan Kroger paper coupons
+at delivery checkout, helping you SAVE even more. Paper coupons must be
+affiliated with Kroger and can be used only 1 time. We do not currently
+accept paper coupons for third party delivery orders.</p>
+<h3 id="how-are-weighted-items-chosen-2">How are weighted items
+chosen?</h3>
+<p>For weighted items, such as produce, deli, meat and seafood, our
+associates will choose the items that most closely match what you’ve
+ordered, down to the weight or count.</p>
+<h3 id="how-can-i-use-paper-coupons-for-my-kroger-delivery-order">How
+can I use paper coupons for my Kroger Delivery order?</h3>
+<p>Place your online order as you normally would. Once the driver
+arrives at your door, hand your coupons over to be scanned. Using a
+checkout app, the driver will scan your coupons and your savings will be
+reflected immediately on your final receipt.</p>
+<h3 id="how-do-i-cancel-an-existing-order-2">How do I cancel an existing
+order?</h3>
+<p>You can cancel an existing order at any point until the shopper has
+started picking the order. To cancel, visit My Purchases to cancel the
+order. Once the shopper has started picking, the order can no longer be
+canceled.</p>
+<h3 id="how-do-i-know-i-received-everything-i-ordered-2">How do I know I
+received everything I ordered?</h3>
+<p>Your delivery associate will carefully check your order to ensure
+that all items are included. For questions regarding an ordered
+fulfilled by Instacart, please contact Instacart’s Customer Happiness
+Center by email at help@instacart.com or by phone at 1-(888)-2-INSTACART
+or 1-(888)-246-7822. For questions regarding an order fulfilled by
+Kroger, please call 1-800-KROGERS or 1-800-576-4377</p>
+<h3 id="how-do-i-know-my-personal-information-is-secure-2">How do I know
+my personal information is secure?</h3>
+<p>We recognize that privacy is very important to our customers, and we
+pledge to protect the security and privacy of any personal information
+they provide. This includes customers’ names, addresses, telephone
+numbers, email addresses, credit/debit cards and checking account
+information, and any information that can be linked to an individual. We
+collect and securely store this personal information.</p>
+<p>For more information, please see our <a
+href="https://www.kroger.com/i/privacy-policy/">Privacy Policy</a>.</p>
+<h3 id="how-do-i-modify-a-submitted-order-for-next-day-delivery">How do
+I modify a submitted order for next day delivery?</h3>
+<p>You may modify your order at any point until the shopper has started
+picking the order. For Instacart fulfilled delivery, you will need to
+chat with them directly for assistance once they have started shopping
+your order. To chat with the Instacart shopper directly, you will need
+to modify your delivery account settings to enable notifications about
+your order.</p>
+<h3 id="how-do-i-pay-for-my-order-2">How do I pay for my order?</h3>
+<p>From your cart, proceed to checkout. Here you’ll add your payment
+information. (At this time, we can only accept credit cards, debit cards
+and SNAP benefits – no cash, check, gift cards, or WIC.) You’ll see an
+estimated total in checkout. This estimated total will be used by your
+bank or financial institution as a hold on your account for 3 to 7
+business days. The final price may change due to coupons, substitutions,
+taxes (if applicable), or weighted items. You’ll need to show a
+government-issued ID if your order contains alcohol.</p>
+<h3 id="how-do-i-place-an-order">How do I place an order?</h3>
+<p>Once you’re ready to check out, start by going to your cart. This is
+where you’ll enter your address and choose your delivery window.</p>
+<p>After this step you can add your payment information. You’ll see an
+estimated total in checkout, but you won’t be charged for your order
+until it’s delivered. The final price may change due to coupons,
+substitutions, taxes (if applicable), or weighted items.</p>
+<p>(TIP: After placing an order, enable notifications or opt in to SMS
+notifications so you can be notified of about substitutions or
+out-of-stock items, if necessary.)</p>
+<h3 id="how-do-i-place-my-express-delivery-order">How do I place my
+Express Delivery order?</h3>
+<p>You build your order as you normally would and then at checkout look
+for the Express icon.</p>
+<h3
+id="how-do-i-return-an-item-or-receive-a-refund-on-a-kroger-fulfilled-deli">How
+do I return an item or receive a refund on a Kroger fulfilled delivery
+order if I live in an area with no store?</h3>
+<p>Visit the Contact Us page to submit item or experience issues via
+chat, email, or phone. Contact number is specific for this region
+1-833-KRO-FRSH (<a href="tel:+1(833)576–3774">833–576–3774</a>).</p>
+<p>Changing or Cancelling Orders</p>
+<h3 id="how-do-i-shop-for-delivery-products">How do I shop for Delivery
+products?</h3>
+<p>Start by signing in to your digital account. Next you’ll enter your
+zip code from the home page and choose “delivery” as your way to shop.
+(You can enter your full address later.) From here, simply search or
+browse the items you need and add them to your cart.</p>
+<h3
+id="how-do-products-stay-fresh-until-my-order-is-ready-for-delivery">How
+do products stay fresh until my order is ready for delivery?</h3>
+<p>Perishable items like meat and produce are selected shortly before
+your order is scheduled for delivery. Your items will be stored for
+maximum freshness, including refrigeration for items that require
+it.</p>
+<h3
+id="how-quickly-can-i-expect-to-get-my-order-with-express-delivery">How
+quickly can I expect to get my order with Express Delivery?</h3>
+<p>Express Delivery is our quickest delivery available. During checkout
+you will be provided with an estimated time for your delivery,
+reflecting the fastest delivery available. Instacart will refund the
+Express Delivery surcharge ($5) for any express order that they are more
+than 15 minutes late.</p>
+<h3
+id="i-like-to-pick-my-own-produce-meat-and-seafood-how-do-i-know-youll-pic-2">I
+like to pick my own produce, meat and seafood. How do I know you’ll pick
+the freshest available?</h3>
+<p>Quality is our top priority. Rest assured that Delivery associates
+will hand-select produce, meat and seafood items with great care.</p>
+<h3
+id="if-i-am-a-boost-member-how-does-that-impact-my-express-delivery-fee">If
+I am a Boost member, how does that impact my Express Delivery fee?</h3>
+<p>Boost members will pay for the Express Delivery surcharge of $4.95.
+Boost99 members will only pay the surcharge. Boost59 members will pay
+14.95 total (the standard delivery fee + express surcharge), because
+their membership does not include same-day services for free.</p>
+<h3 id="if-im-a-boost-member-how-does-this-affect-my-delivery-fee">If
+I’m a Boost member, how does this affect my delivery fee?</h3>
+<p>As a Boost member, you’ll receive free delivery on all orders
+$35+.</p>
+<p>Item Issues or Refunds</p>
+<h3
+id="is-there-a-maximum-number-of-items-i-can-order-with-express-delivery">Is
+there a maximum number of items I can order with Express Delivery?</h3>
+<p>There is not a maximum number of items; however, number of items in
+your order does change delivery time estimates. Fewer items in an order
+will get the shorter delivery time windows.</p>
+<h3 id="what-do-i-do-when-the-delivery-driver-arrives">What do I do when
+the Delivery driver arrives?</h3>
+<p>Not much! You’ll receive a notification when your order is on its
+way. If you’ve opted for your driver to leave your groceries at your
+door, you can receive your items at a safe distance with no contact.</p>
+<h3 id="what-if-an-item-i-want-isnt-available-online">What if an item I
+want isn’t available online?</h3>
+<p>While some items are currently only available in-store, we’re always
+looking to expand our online product offerings. In fact, if you have a
+product suggestion, let us know! Simply fill out a <a
+href="https://www.kroger.com/customercomments">Customer Comment</a> form
+and we’ll do our best to add your suggestion to our product catalog.</p>
+<h3 id="what-if-an-item-in-my-order-is-unavailable-in-the-store">What if
+an item in my order is unavailable in the store?</h3>
+<p>While we strive to keep all items in stock, an item you’ve selected
+may occasionally be unavailable. Our teams are trained to make proper
+substitutions for out-of-stock items, so your order will always have the
+items you need, as close to your original order as possible.</p>
+<p>When you place your order, you can indicate whether you’d like to
+allow substitutions. You can also opt in at checkout to receive
+substitution notifications and approve or reject those
+substitutions.</p>
+<h3 id="what-if-an-item-ive-ordered-is-unavailable-in-the-store-2">What
+if an item I’ve ordered is unavailable in the store?</h3>
+<p>While we strive to keep all items in stock, an item you’ve selected
+may occasionally become unavailable. Our Delivery associates are trained
+to make satisfactory substitutions for out-of-stock items that are as
+close as possible to your original request.</p>
+<p>When you place your order online, you can indicate whether you’d like
+to allow substitutions. If a substitution is necessary, we’ll follow the
+steps below to fill your order as best we can. Here’s how it works:</p>
+<ul>
+<li>If the same type of out-of-stock item is available in a larger
+quantity, your order will be upgraded to the larger item.</li>
+<li>If a larger quantity isn’t available but the same brand and item is
+available in different packaging (like boxed sugar instead of bagged
+sugar), that item will be substituted.</li>
+<li>If the same brand isn’t available, the same type of item from a
+different brand may be substituted.</li>
+<li>Any special dietary items (gluten-free, sugar-free, lactose-free,
+vegan) will always be substituted with items that meet the same dietary
+requirements.</li>
+</ul>
+<h3 id="what-is-delivery-and-how-does-it-work">What is Delivery and how
+does it work?</h3>
+<p>Delivery is one of our online ordering services. You can shop online
+for the products you need and get them delivered to your doorstep the
+same day. Planning ahead? You can also choose a time slot for the next
+day or later.</p>
+<p>Here’s how: place your order online, and the shopping will be done
+for you. Once the order is shopped and ready, you’ll get an alert that
+it’s on its way. A delivery driver will drop your groceries off on your
+doorstep. <a href="https://www.kroger.com/i/ways-to-shop/delivery">Start
+your delivery order here</a>.</p>
+<h3 id="what-is-the-fee-for-express-delivery">What is the fee for
+Express Delivery?</h3>
+<p>There is an Express Delivery surcharge of $4.95. This is in addition
+to the standard delivery fee of $9.95.</p>
+<h3
+id="what-kinds-of-products-can-i-buy-through-the-delivery-service">What
+kinds of products can I buy through the Delivery service?</h3>
+<p>You can shop for over 70,000 items online! And we’re adding more
+products all the time.</p>
+<h3 id="whats-the-fee-for-kroger-delivery">What’s the fee for Kroger
+Delivery?</h3>
+<p>Kroger Delivery fees vary based on the day and time slot
+selected.</p>
+<h3 id="where-can-i-find-my-purchase-history-2">Where can I find my
+purchase history?</h3>
+<p>Log in to your digital account and visit “My Purchases” to review
+your purchase history.</p>
+<h3 id="who-do-i-contact-if-there-is-something-wrong-with-my-order">Who
+do I contact if there is something wrong with my order?</h3>
+<p>You will contact Kroger (1-800-KROGERS / 1-800-576-4377) if you have
+any issues with your order.</p>
+<p>Delivery Products and Pricing</p>
+<h3
+id="why-am-i-seeing-different-fees-for-kroger-delivery-than-before">Why
+am I seeing different fees for Kroger Delivery than before?</h3>
+<p>We’ve recently updated our fee structure to make delivery even more
+flexible. Instead of a fixed service fee, you’ll now see a range of fees
+based on the delivery time slot and day of the week. This change allows
+you to choose the time and day that work best for you.</p>
+<h3 id="why-are-prices-estimated-versus-actual-2">Why are prices
+estimated versus actual?</h3>
+<p>Prices of products offered for sale through Kroger delivery online
+from the store you have designated as your preferred store may differ
+from prices offered for the same products at a different preferred store
+and/or may differ from prices offered for the same products in brick and
+mortar (physical) stores due to such reasons as preferred store
+location, fulfillment store location, day of pick up/delivery, in-store
+promotions, or digital coupons. In the event that the total amount of
+your order when fulfilled is less than the total amount of your order
+when placed due to a net increase and/or decrease in prices but not due
+to out of stocks or substitutions, a refund for the difference may be
+applied to the card used for payment within 24 – 48 hours of the
+delivery. Certain promotions and coupons, including paper coupons, may
+not be available or accepted online. In the event of a pricing error, an
+order may be cancelled and the price corrected. Price and availability
+of products may change without notice. Additional delivery and service
+fees may apply.</p>
+<h3
+id="why-is-there-an-authorization-hold-on-my-creditdebit-card-after-i-plac-2">Why
+is there an authorization hold on my credit/debit card after I place an
+order?</h3>
+<p>Your checkout total is an estimate and may change due to coupons,
+substitutions, taxes, weighted items, or price updates. We may request
+an authorization hold for the estimated total. The hold is not the final
+charge but may reduce your available funds or credit. We’ll charge the
+final total after it is determined. Your bank or card issuer decides
+when any hold is released.</p>
+<p>Delivery Fees</p>
+<h3 id="why-isnt-delivery-an-option-for-me">Why isn’t Delivery an option
+for me?</h3>
+<p>Unfortunately, we’re not able to provide Delivery to all our
+customers at this time but we’re always evaluating new locations. We do
+our best to inform customers if and when new locations become
+available.</p>
+<p>Express Delivery</p>
+<h3
+id="will-i-pay-the-same-price-for-my-substitution-as-i-would-have-for-my-o-2">Will
+I pay the same price for my substitution as I would have for my original
+item?</h3>
+<p>Your substitution will be added to your order the same price as the
+original item. Customers shopping at Fry’s Food will be charged the cost
+of the substitution.</p>
+<h2 id="ways-to-shop-fresh">Ways to Shop: Fresh</h2>
+<h3 id="can-i-cancel-an-order-after-it-has-been-placed">Can I cancel an
+order after it has been placed?</h3>
+<p>If you order has not been processed, yes. Please call the store you
+placed your order with to make that request.</p>
+<h3 id="can-i-edit-my-order-after-it-has-been-placed">Can I edit my
+order after it has been placed?</h3>
+<p>No, you are not able to edit your order after it has been placed.</p>
+<h3 id="can-i-pay-for-my-order-ahead-of-time">Can I pay for my order
+ahead of time?</h3>
+<p>Currently this feature is not available. Items must be paid for at
+the checkout lines at the front of the store.</p>
+<p>Shopping Tips</p>
+<h3 id="can-i-place-an-order-and-have-it-picked-up-by-someone-else">Can
+I place an order and have it picked up by someone else?</h3>
+<p>Yes. Put their name in the Contact Information on the checkout
+screen.</p>
+<h3 id="can-i-save-frequently-purchased-items">Can I save frequently
+purchased items?</h3>
+<p>You can view your Recent Order activity and place a previous order,
+but you are not able to save frequently purchased items. For customers
+who have regularly purchased items, please use our app to set up
+Lists.</p>
+<h3 id="can-i-view-my-previous-orders">Can I view my previous
+orders?</h3>
+<p>You can view your previous orders that were placed while you were
+logged into your digital account. Just log in again and tap on Recent
+Orders.</p>
+<h3 id="do-i-need-a-digital-account-to-place-an-order">Do I need a
+digital account to place an order?</h3>
+<p>No, a digital account is not required to place an order, you may
+check out as guest. However, if you place an order as a Guest it will
+not appear under Recent Orders when you are logged into your digital
+account.</p>
+<h3 id="do-i-need-a-shoppers-card-to-create-an-account">Do I need a
+Shopper’s Card to create an account?</h3>
+<p>No, a Shopper’s Card is not required to create an account or place an
+order. You will pay for your order at the cash register and can use your
+Shopper’s Card at that point to receive any sale pricing</p>
+<h3 id="how-do-i-know-if-my-order-is-confirmed">How do I know if my
+order is confirmed?</h3>
+<p>After placing your order, you’ll get a confirmation order number. If
+you were logged into your digital account when you placed the order, you
+will also receive an email or text message confirmation within a few
+minutes of placing your order. You can also view your order status
+within the app.</p>
+<h3 id="how-do-i-sign-up-for-a-shoppers-card">How do I sign-up for a
+Shopper’s Card?</h3>
+<p>If you already have an account set up, you can sign up for a
+Shopper’s Card by visiting the customer service desk next time you shop
+at in-store. If you do not have an account set up, you can get a
+Shopper’s Card when registering for your account.</p>
+<h3 id="i-reset-my-password-but-did-not-receive-an-email">I reset my
+password but did not receive an email</h3>
+<p>If you did not receive an email please check your spam folder</p>
+<p>Order Management</p>
+<h3 id="what-if-i-cant-find-what-im-looking-for">What if I can’t find
+what I’m looking for?</h3>
+<p>You can search in the search box at the top right. If you still don’t
+see an item that you would like to see available, you can submit via
+Request a Product.</p>
+<p>Account Management</p>
+<h3 id="what-if-i-didnt-receive-all-the-items-in-my-order">What if I
+didn’t receive all the items in my order?</h3>
+<p>If you did not receive all the items in your order, let the person
+behind the counter where you picked up your items know. They can correct
+your order for you.</p>
+<h3 id="what-if-i-received-a-wrong-item-in-my-order">What if I received
+a wrong item in my order?</h3>
+<p>If you received a wrong item in your order, let the person behind the
+counter where you picked up your items know. They can correct your order
+for you.</p>
+<h3
+id="where-can-i-find-nutrition-information-andor-ingredient-lists">Where
+can I find nutrition information and/or ingredient lists?</h3>
+<p>This information is not yet available through the application.</p>
+<h3
+id="why-are-some-items-or-departments-marked-as-currently-unavailable">Why
+are some items or departments marked as Currently Unavailable?</h3>
+<p>If a department is closed it will appear as Unavailable. If an item
+appears as Unavailable it’s temporarily out of stock.</p>
+<h2 id="ways-to-shop-pickup-formerly-clicklist">Ways to Shop: Pickup
+(Formerly Clicklist)</h2>
+<h3
+id="after-i-place-my-order-where-do-i-go-to-pick-it-up-when-its-ready">After
+I place my order, where do I go to pick it up when it’s ready?</h3>
+<p>When you arrive at your store, follow the signs to the Pickup area
+and park in one of the marked spaces. Next, scan the QR code on the sign
+to let the Pickup associates know you’ve arrived. (TIP: If you’re using
+the app, turn location services on. Our associates will automatically be
+notified when you’ve arrived!) An associate will bring your order out
+and load it into your vehicle, then you can be on your way!</p>
+<h3 id="are-there-fees-for-using-pickup">Are there fees for using
+Pickup?</h3>
+<p>Pickup is FREE on orders of $35 or more, otherwise there’s a service
+fee of $4.95. Restrictions may apply.</p>
+<h3 id="are-tips-accepted-for-pickup">Are tips accepted for Pickup?</h3>
+<p>While the gesture is appreciated, our associates do not accept
+tips.</p>
+<h3 id="can-i-add-a-prescription-to-my-pickup-order">Can I add a
+prescription to my Pickup order?</h3>
+<p>At this time, prescriptions cannot be added to Pickup orders.
+However, we are working to add this capability in the future.</p>
+<h3 id="can-i-change-my-time-slot-or-location-for-a-pending-order">Can I
+change my time slot or location for a pending order?</h3>
+<p>Once you place your order you cannot change your pickup time or
+location.</p>
+<h3
+id="can-i-use-government-benefits-such-as-snap-ebt-to-pay-for-my-order">Can
+I use government benefits such as SNAP EBT to pay for my order?</h3>
+<p>SNAP EBT payments for pickup orders are now accepted at all pickup
+locations online through HarrisTeeter.com and the Harris Teeter mobile
+app. When placing your pickup order, choose “Add SNAP EBT Card.” Please
+see the <a href="https://www.kroger.com/i/snap-ebt-faq">SNAP EBT
+FAQs</a> for more information on how to add your SNAP EBT card to your
+order or your Kroger wallet. At this time, we cannot accept WIC.</p>
+<h3 id="can-someone-else-get-my-pickup-order-on-my-behalf">Can someone
+else get my Pickup order on my behalf?</h3>
+<p>Yes, another person can get your Pickup order for you. They just need
+to provide a valid ID for any age-restricted items.</p>
+<h3 id="do-you-accept-coupons-for-pickup">Do you accept coupons for
+Pickup?</h3>
+<p>We sure do! Digital coupons can be loaded to your Shopper’s Card and
+are automatically applied to your order. Coupon discounts are applied at
+the time of pickup.</p>
+<p>For Pickup orders, paper coupons can only be applied in-person at
+time of pickup and this may increase your pickup time. At this time,
+paper coupons can only be used at Kroger Co. family of stores pickup
+locations. (TIP: Use digital coupons for the quickest Pickup
+experience.)</p>
+<h3 id="how-are-weighted-items-chosen">How are weighted items
+chosen?</h3>
+<p>For weighted items, such as produce, deli, meat and seafood, our
+associates will choose the items that most closely match what you’ve
+ordered, down to the weight or count.</p>
+<p>If you have special instructions (like ripe avocados), please feel
+free to note them when you go to checkout.</p>
+<h3 id="how-can-i-order-my-groceries-online">How can I order my
+groceries online?</h3>
+<p>We offer several ways to shop for groceries online. Pickup and
+delivery let you order your groceries from home using our website or
+mobile app. <a
+href="https://www.kroger.com/pr/pickup-delivery-savings-4">Click
+here</a> to learn more about our different ways to shop.</p>
+<h3 id="how-do-i-cancel-an-existing-order">How do I cancel an existing
+order?</h3>
+<p>If you’d like to cancel a pending order, please sign in and visit “My
+Purchases.” Select the order you’d like to cancel and choose
+“Cancel.”</p>
+<p>If you have trouble canceling an order, please contact Customer
+Service at <a href="tel:+1(800)576–4377">800–576–4377</a>, Monday
+through Friday, 8am to Midnight EST, and Saturday and Sunday, 8am to
+9:30pm EST.</p>
+<h3 id="how-do-i-know-i-received-everything-i-ordered">How do I know I
+received everything I ordered?</h3>
+<p>Your Pickup associate will carefully check your order to ensure that
+all items are included. If you have a question about your order once you
+unpack your items, please contact us at <a
+href="tel:+1(800)576–4377">800–576–4377</a>, Monday through Friday, 8am
+to Midnight EST, and Saturday and Sunday, 8am to 9:30pm EST.</p>
+<h3 id="how-do-i-know-my-personal-information-is-secure">How do I know
+my personal information is secure?</h3>
+<p>We recognize that privacy is very important to our customers, and we
+pledge to protect the security and privacy of any personal information
+they provide. This includes customers’ names, addresses, telephone
+numbers, email addresses, credit/debit cards and checking account
+information, and any information that can be linked to an individual. We
+collect and securely store this personal information.</p>
+<p>For more information, please see our <a
+href="https://www.kroger.com/i/privacy-policy/">Privacy Policy</a>.</p>
+<p>Pickup Products and Pricing</p>
+<h3 id="how-do-i-modify-a-pending-order-for-next-day-pickup">How do I
+modify a pending order for next-day Pickup?</h3>
+<p>If you’ve placed an order for next-day Pickup, you can add or edit
+items until Midnight of the day before your scheduled pickup. Visit “My
+Purchases” to modify your order – we’ll email an order status update
+shortly after. (TIP: If you submit changes to your order, wait a few
+minutes before making any additional changes.)</p>
+<h3 id="how-do-i-modify-a-pending-order-for-same-day-pickup">How do I
+modify a pending order for same-day Pickup?</h3>
+<p>Once you submit an order for same-day Pickup, you can no longer make
+changes to it. If you forgot an item or need to make changes, you can
+cancel your order and place it again, but you may lose your reserved
+time slot.</p>
+<h3 id="how-do-i-pay-for-my-order">How do I pay for my order?</h3>
+<p>From your cart, proceed to checkout. Here you’ll add your payment
+information. At this time, we can only accept credit, debit, and gift
+cards – no cash or checks. Government benefits such as SNAP EBT are now
+accepted at all pickup locations. You’ll see an estimated total in
+checkout. This estimated total will be used by your bank or financial
+institution as a hold on your account for 3 to 7 business days. The
+final price may change due to coupons, substitutions, taxes (if
+applicable), or weighted items. Please bring the form of payment you
+used online to pick up your order, as well as a backup credit or debit
+card. You’ll also need to bring a government-issued ID if your order
+contains alcohol.</p>
+<h3 id="how-do-i-reserve-a-time-slot-and-shop-for-pickup">How do I
+reserve a time slot and shop for Pickup?</h3>
+<p>Start by signing in to your digital account. We have auto selected a
+method for you to receive your groceries. If it is not already Pickup
+and the store you want, then enter the zip code where you want to get
+your groceries. Next, select Change Store next to the Pickup method.
+Select the store where you’d like to pick up your order, then start
+shopping.</p>
+<p>Once you’re ready to check out, start by going to your cart. Once you
+are in the checkout flow, you will be asked to schedule your Pickup
+order by selecting a timeslot.</p>
+<h3
+id="how-do-products-stay-fresh-until-my-order-is-ready-for-pickup">How
+do products stay fresh until my order is ready for pickup?</h3>
+<p>Perishable items like meat and produce are selected by associates
+shortly before your scheduled pickup time. Your items will be stored for
+maximum freshness, including refrigeration for items that require
+it.</p>
+<h3 id="how-far-in-advance-can-i-schedule-a-pickup-time">How far in
+advance can I schedule a pickup time?</h3>
+<p>You can schedule a time slot up to seven days in advance.</p>
+<h3
+id="how-long-do-i-have-to-pick-up-my-order-and-what-happens-if-i-miss-my-t">How
+long do I have to pick up my order, and what happens if I miss my time
+slot?</h3>
+<p>Your time slot is a one-hour window in which you can arrive to pick
+up your groceries. (TIP: Arrive in the middle of your time slot to beat
+the rush!) Typical Pickup hours are from 8am to 8pm, seven days a week.
+Some hours may vary by location. Check local store listing for
+details.</p>
+<p>If you’re unable to pick up your order on the scheduled date, the
+items in your order will be restocked in the store, and you’ll need to
+place your order again.</p>
+<h3
+id="i-like-to-pick-my-own-produce-meat-and-seafood-how-do-i-know-youll-pic">I
+like to pick my own produce, meat and seafood. How do I know you’ll pick
+the freshest available?</h3>
+<p>Quality is our top priority. Rest assured that Pickup associates will
+hand-select produce, meat and seafood items with great care. And
+remember, we’ll follow any special instructions you leave to make sure
+we get it right!</p>
+<h3 id="what-if-an-item-i-want-is-not-available-online">What if an item
+I want is not available online?</h3>
+<p>While some items are currently only available in-store, we’re always
+looking to expand our online product offerings.</p>
+<h3 id="what-if-an-item-ive-ordered-is-unavailable-in-the-store">What if
+an item I’ve ordered is unavailable in the store?</h3>
+<p>While we strive to keep all items in stock, an item you’ve selected
+may occasionally become unavailable. Our Pickup associates are trained
+to make satisfactory substitutions for out-of-stock items that are as
+close as possible to your original request.</p>
+<p>When you place your order online, you can indicate whether you’d like
+to allow substitutions. If a substitution is necessary, we’ll follow the
+steps below to fill your order as best we can. Here’s how it works:</p>
+<ul>
+<li>If the same type of out-of-stock item is available in a larger
+quantity, your order will be upgraded to the larger item.</li>
+<li>If a larger quantity isn’t available but the same brand and item is
+available in different packaging (like boxed sugar instead of bagged
+sugar), that item will be substituted.</li>
+<li>If the same brand isn’t available, the same type of item from a
+different brand may be substituted.</li>
+<li>Any special dietary items (gluten-free, sugar-free, lactose-free,
+vegan) will always be substituted with items that meet the same dietary
+requirements.</li>
+</ul>
+<h3 id="what-if-i-dont-like-the-substitutes-given-to-me">What if I don’t
+like the substitutes given to me?</h3>
+<p>When your Pickup associate greets you, he or she will review any
+substitutions they’ve made. If you aren’t satisfied with these choices,
+you may refuse these items before your order is completed and loaded
+into your car.</p>
+<p>If you receive substitutes and are unsatisfied with them upon
+returning home, you’re welcome to return them to a store at any time for
+a full refund.</p>
+<p>Changing or Cancelling Orders</p>
+<h3 id="what-is-pickup-and-how-does-it-work">What is Pickup and how does
+it work?</h3>
+<p>Pickup is our online ordering service. Simply shop online for the
+products you need and pick up your order at the store you choose! Our
+associates will even bring out your purchases and load them into your
+car. <a href="https://www.kroger.com/i/ways-to-shop/pickup">Start your
+pickup order here</a>.</p>
+<h3
+id="what-kinds-of-products-can-i-buy-through-the-pickup-service">What
+kinds of products can I buy through the Pickup service?</h3>
+<p>You can shop for over 70,000 items across the entire store! And we’re
+adding more products all the time.</p>
+<h3 id="where-can-i-find-my-purchase-history">Where can I find my
+purchase history?</h3>
+<p>Log in to your digital account and visit “My Purchases” to review
+your order history.</p>
+<h3 id="why-are-prices-estimated-versus-actual">Why are prices estimated
+versus actual?</h3>
+<p>Online prices reflect the in-store price on the day you place your
+order. Some prices may change between the time you place your order, and
+the time you pick it up. The exact price of each item will be printed on
+your receipt. If you have a concern about a specific price, please bring
+it to your Pickup associate’s attention.</p>
+<h3 id="why-doesnt-my-store-offer-pickup">Why doesn’t my store offer
+Pickup?</h3>
+<p>Unfortunately, we’re not able to provide Pickup at all our stores
+currently, but we’re always evaluating new locations. We do our best to
+inform customers if and when new locations become available.</p>
+<h3
+id="why-is-there-an-authorization-hold-on-my-creditdebit-card-after-i-plac">Why
+is there an authorization hold on my credit/debit card after I place an
+order?</h3>
+<p>Your checkout total is an estimate and may change due to coupons,
+substitutions, taxes, weighted items, or price updates. We may request
+an authorization hold for the estimated total. The hold is not the final
+charge but may reduce your available funds or credit. We’ll charge the
+final total after it is determined. Your bank or card issuer decides
+when any hold is released.</p>
+<p>Item Issues or Refunds</p>
+<h3
+id="will-i-pay-the-same-price-for-my-substitution-as-i-would-have-for-my-o">Will
+I pay the same price for my substitution as I would have for my original
+item?</h3>
+<p>For orders placed for Pickup or Delivery, If you accept the
+substitution, you will be charged the price of the substituted item.</p>
+<h2 id="ways-to-shop-shopping-list">Ways to Shop: Shopping List</h2>
+<h3
+id="are-backup-copies-of-my-shopping-lists-kept-in-case-i-have-problems-wi">Are
+backup copies of my Shopping Lists kept in case I have problems with my
+device?</h3>
+<p>Your Shopping Lists are always stored with your digital account. If
+your device crashes or you upgrade to a new one, simply sign into your
+digital account on your new device. Your Shopping Lists will appear
+automatically.</p>
+<h3 id="can-i-update-my-shopping-lists-using-multiple-devices">Can I
+update my Shopping Lists using multiple devices?</h3>
+<p>Yes! When you use your digital account on multiple devices, your
+Shopping Lists will synchronize automatically between all of your
+devices.</p>
+<p>Note that synchronization between your devices can only occur when
+internet connectivity is available.</p>
+<h3 id="how-do-i-add-items-to-my-shopping-lists">How do I add items to
+my Shopping Lists?</h3>
+<p>We’ve made adding items to your list quick and easy. Select the “Add
+to List” button to add individual items to your Shopping List.</p>
+<p>You can also manually add items to your list. In your Shopping List,
+simply enter the item name select an “Item Category” and select “Add
+Item” to complete.</p>
+<h3 id="how-do-i-manage-the-items-on-my-shopping-lists">How do I manage
+the items on my Shopping Lists?</h3>
+<p>You can use the plus and minus signs to adjust the quantity of the
+item up or down. Or, simply enter a number for the quantity you need.
+You can use the “Remove” link to remove items from your list.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="havent-found-what-youre-looking-for">Haven’t found what you’re
+looking for?</h3>
+<p>Email us at <strong><a
+href="mailto:customerservice@kroger.com">customerservice@kroger.com</a></strong>
+with any questions you have, and we will do our best to respond within
+5-7 business days. If you need immediate assistance, please contact us
+<strong><a
+href="https://www.kroger.com/hc/help/contact-us">here</a>.</strong></p>
+<h3 id="ways-to-save">Ways to Save</h3>
+<ul>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-save/coupons">Coupons</a></li>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-save/weekly-ads">Weekly
+Ads</a></li>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-save/cash-back">Cash
+Back</a></li>
+<li><a href="https://www.kroger.com/pr/boost/faq">Boost
+Membership</a></li>
+</ul>
+<h3 id="ways-to-shop">Ways to Shop</h3>
+<ul>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-shop/pickup">Pickup
+(formerly Clicklist)</a></li>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-shop/delivery">Delivery</a></li>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-shop/shopping-list">Shopping
+List</a></li>
+<li><a
+href="https://www.kroger.com/hc/help/faqs/ways-to-shop/fresh">Fresh</a></li>
+</ul>
+</body>
+</html>

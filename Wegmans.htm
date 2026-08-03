@@ -1,0 +1,3404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-03" />
+  <title>Wegmans Help Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Wegmans Help Guide</h1>
+<p class="subtitle">Wegmans’s own help documentation, gathered into one
+screen-reader-friendly document</p>
+<p class="date">2026-08-03</p>
+</header>
+<h1 id="wegmans-help-guide">Wegmans Help Guide</h1>
+<p>This guide gathers Wegmans’s own help as it stood on 3 August 2026.
+The text is Wegmans’s; nothing has been summarised or rewritten.</p>
+<p><strong>How this is arranged, and why it differs from the
+website.</strong> Wegmans does not publish one page per question. It
+publishes a set of topic pages, each holding many questions. Every one
+of those questions is an article here, filed under the topic Wegmans
+itself put it in.</p>
+<p><strong>The surfaces it covers.</strong> The website and the Wegmans
+app. There is no application for Windows: on a Windows machine the
+website in a browser is the product, and the website help is what
+applies. No Alexa skill is documented.</p>
+<p>This document holds 18 categories, 221 articles and about 13,826
+words.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#about-wegmans">About Wegmans</a>
+<ul>
+<li><a href="#am-i-allowed-to-take-picturesvideos-in-your-store">Am I
+allowed to take pictures/videos in your store?</a></li>
+<li><a href="#can-i-get-an-annual-report-from-wegmans">Can I get an
+annual report from Wegmans?</a></li>
+<li><a
+href="#does-wegmans-have-electronic-coupons-and-where-can-i-find-them">Does
+Wegmans have electronic coupons and where can I find them?</a></li>
+<li><a href="#how-do-i-give-feedback-about-an-employeestore">How do I
+give feedback about an employee/store?</a></li>
+<li><a
+href="#how-many-stores-do-you-have-and-where-are-they-located">How many
+stores do you have, and where are they located?</a></li>
+<li><a href="#what-are-your-holiday-hours">What are your holiday
+hours?</a></li>
+<li><a href="#where-is-wegmans-corporate-headquarters">Where is Wegmans
+corporate headquarters?</a></li>
+<li><a
+href="#where-will-wegmans-be-building-new-stores-in-the-future">Where
+will Wegmans be building new stores in the future?</a></li>
+<li><a href="#why-is-there-no-apostrophe-in-wegmans">Why is there no
+apostrophe in Wegmans?</a></li>
+<li><a href="#will-my-information-be-shared-with-other-vendors">Will my
+information be shared with other vendors?</a></li>
+<li><a
+href="#will-wegmans-donate-to-my-not-for-profit-organization">Will
+Wegmans donate to my not-for-profit organization?</a></li>
+<li><a
+href="#will-wegmans-help-with-research-for-a-student-project">Will
+Wegmans help with research for a student project?</a></li>
+</ul></li>
+<li><a href="#delivery-pickup-online-grocery-ordering">Delivery &amp;
+Pickup – Online Grocery Ordering</a>
+<ul>
+<li><a
+href="#can-i-designate-products-for-substitutionsreplacements">Can I
+designate products for substitutions/replacements?</a></li>
+<li><a href="#can-i-save-a-form-of-payment-for-later-use">Can I save a
+form of payment for later use?</a></li>
+<li><a
+href="#can-i-use-my-instacart-membership-when-ordering-on-wegmanscom-or-the-w">Can
+I use my Instacart+ membership when ordering on wegmans.com or the
+Wegmans app?</a></li>
+<li><a href="#how-can-i-cancel-an-order">How can I cancel an
+order?</a></li>
+<li><a href="#how-can-i-modify-an-order-to-add-or-delete-items">How can
+I modify an order to add or delete items?</a></li>
+<li><a href="#how-can-i-share-my-listcart-with-someone-else">How can I
+share my list/cart with someone else?</a></li>
+<li><a
+href="#how-do-i-place-an-order-for-grocery-pickup-or-delivery">How do I
+place an order for grocery pickup or delivery?</a></li>
+<li><a
+href="#how-do-i-request-a-refund-for-an-item-that-i-ordered-online">How
+do I request a refund for an item that I ordered online?</a></li>
+<li><a href="#how-do-i-review-the-status-of-my-order">How do I review
+the status of my order?</a></li>
+<li><a
+href="#how-far-in-advance-can-i-place-my-order-for-delivery-what-is-the-deliv">How
+far in advance can I place my order for delivery? What is the delivery
+window?</a></li>
+<li><a href="#how-much-does-wegmans-delivery-cost">How much does Wegmans
+delivery cost?</a></li>
+<li><a href="#how-much-does-wegmans-grocery-pickup-cost">How much does
+Wegmans grocery pickup cost?</a></li>
+<li><a
+href="#i-share-an-account-with-someone-else-can-we-share-the-same-list-and-ha">I
+share an account with someone else. Can we share the same list and have
+it update as we make changes?</a></li>
+<li><a href="#what-are-the-delivery-hours">What are the delivery
+hours?</a></li>
+<li><a href="#what-are-the-grocery-pickup-hours">What are the grocery
+pickup hours?</a></li>
+<li><a
+href="#what-are-the-restrictions-for-purchasing-alcohol-for-delivery-or-groce">What
+are the restrictions for purchasing alcohol for delivery or grocery
+pickup?</a></li>
+<li><a href="#what-if-i-cant-make-my-grocery-pickup-time">What if I
+can’t make my grocery pickup time?</a></li>
+<li><a href="#what-is-the-long-distance-delivery-fee">What is the
+long-distance delivery fee?</a></li>
+<li><a
+href="#what-products-are-not-available-for-delivery-or-grocery-pickup-with-in">What
+products are not available for delivery or grocery pickup with
+Instacart?</a></li>
+<li><a href="#which-methods-of-payment-are-acceptednot-accepted">Which
+methods of payment are accepted/not accepted?</a></li>
+<li><a href="#who-is-doing-the-shopping-and-delivery">Who is doing the
+shopping and delivery?</a></li>
+<li><a
+href="#why-is-my-estimated-total-when-i-place-my-order-different-from-my-comp">Why
+is my estimated total when I place my order different from my completed
+order receipt?</a></li>
+<li><a
+href="#why-is-the-amount-of-my-order-different-from-the-amount-pending-on-my-">Why
+is the amount of my order different from the amount pending on my form
+of payment?</a></li>
+</ul></li>
+<li><a href="#digital-coupons">Digital Coupons</a>
+<ul>
+<li><a
+href="#can-a-digital-coupon-be-used-in-conjunction-with-other-coupons-or-a-sh">Can
+a digital coupon be used in conjunction with other coupons or a Shoppers
+Club discount?</a></li>
+<li><a href="#can-a-digital-coupon-be-used-more-than-once">Can a digital
+coupon be used more than once?</a></li>
+<li><a href="#can-i-clip-all-digital-coupons-at-once">Can I clip all
+digital coupons at once?</a></li>
+<li><a href="#can-i-see-the-coupons-that-i-have-redeemed">Can I see the
+coupons that I have redeemed?</a></li>
+<li><a href="#can-i-share-a-digital-coupon-with-someone-else">Can I
+share a digital coupon with someone else?</a></li>
+<li><a href="#can-i-unclip-a-coupon">Can I unclip a coupon?</a></li>
+<li><a
+href="#can-i-use-digital-coupons-for-orders-placed-through-catering">Can
+I use digital coupons for orders placed through Catering?</a></li>
+<li><a
+href="#can-i-use-digital-coupons-on-grocery-delivery-and-curbside-pickup-orde">Can
+I use digital coupons on Grocery Delivery and Curbside Pickup orders
+placed through wegmans.com / the Wegmans App?</a></li>
+<li><a
+href="#can-i-use-digital-coupons-when-placing-an-order-through-the-instacart-">Can
+I use digital coupons when placing an order through the Instacart
+Marketplace?</a></li>
+<li><a
+href="#can-shoppers-club-for-business-customers-use-digital-coupons">Can
+Shoppers Club for Business customers use digital coupons?</a></li>
+<li><a href="#do-digital-coupons-expire">Do digital coupons
+expire?</a></li>
+<li><a href="#does-everyone-get-the-same-coupons">Does everyone get the
+same coupons?</a></li>
+<li><a href="#how-do-i-clip-a-digital-coupon">How do I clip a digital
+coupon?</a></li>
+<li><a href="#how-do-i-get-wegmans-digital-coupons">How do I get
+Wegmans’ digital coupons?</a></li>
+<li><a href="#how-do-i-know-that-i-used-a-digital-coupon">How do I know
+that I used a digital coupon?</a></li>
+<li><a
+href="#how-do-i-know-when-i-have-satisfied-the-product-requirements-to-use-a-">How
+do I know when I have satisfied the product requirements to use a
+digital coupon?</a></li>
+<li><a
+href="#how-do-i-print-my-digital-coupons-to-bring-to-the-store-so-i-can-know-">How
+do I print my digital coupons to bring to the store so I can know what
+I’ve clipped?</a></li>
+<li><a href="#how-do-i-redeem-a-digital-coupon">How do I redeem a
+digital coupon?</a></li>
+<li><a href="#how-do-i-see-my-coupons-that-are-going-to-expire">How do I
+see my coupons that are going to expire?</a></li>
+<li><a href="#how-do-i-sign-up-for-shoppers-club">How do I sign up for
+Shoppers Club?</a></li>
+<li><a href="#how-frequently-will-new-digital-coupons-be-issued">How
+frequently will new digital coupons be issued?</a></li>
+<li><a
+href="#i-dont-have-a-smartphone-can-i-still-get-digital-coupons">I don’t
+have a smartphone – can I still get digital coupons?</a></li>
+<li><a
+href="#should-i-enter-my-shoppers-club-at-checkout-even-if-i-dont-have-any-it">Should
+I enter my Shoppers Club at checkout even if I don’t have any items on
+sale with Shoppers Club?</a></li>
+<li><a href="#what-are-digital-coupons">What are digital
+coupons?</a></li>
+<li><a
+href="#what-does-digital-coupon-completed-mean-under-the-offers-applicable-to">What
+does “Digital Coupon Completed” mean under the Offers Applicable to your
+Order section of my list/cart?</a></li>
+<li><a href="#what-happens-when-a-coupon-expires">What happens when a
+coupon expires?</a></li>
+<li><a href="#where-can-i-find-my-digital-coupons">Where can I find my
+digital coupons?</a></li>
+<li><a
+href="#who-do-i-contact-with-questions-about-my-account-or-digital-coupons">Who
+do I contact with questions about my account or digital
+coupons?</a></li>
+<li><a href="#why-dont-i-see-any-digital-coupon-offers">Why don’t I see
+any digital coupon offers?</a></li>
+<li><a
+href="#why-not-just-offer-the-savings-through-shoppers-club-discounts">Why
+not just offer the savings through Shoppers Club discounts?</a></li>
+<li><a
+href="#will-digital-coupons-be-offered-for-national-brand-products-too">Will
+digital coupons be offered for national brand products, too?</a></li>
+<li><a
+href="#will-i-still-be-able-to-use-national-brand-paper-coupons-at-wegmans">Will
+I still be able to use national brand paper coupons at Wegmans?</a></li>
+<li><a href="#will-shoppers-club-discounts-go-away">Will Shoppers Club
+discounts go away?</a></li>
+<li><a
+href="#will-wegmans-still-offer-paper-coupons-in-mailers-or-by-mail">Will
+Wegmans still offer paper coupons in mailers or by mail?</a></li>
+</ul></li>
+<li><a href="#ebt-snap-as-payment-online">EBT SNAP as Payment Online</a>
+<ul>
+<li><a
+href="#can-i-designate-the-amount-to-pay-with-an-ebt-snap-card">Can I
+designate the amount to pay with an EBT SNAP card?</a></li>
+<li><a href="#can-i-use-my-ebt-snap-card-to-order-groceries-online">Can
+I use my EBT SNAP card to order groceries online?</a></li>
+<li><a
+href="#do-i-need-to-also-use-a-credit-card-when-paying-with-my-ebt-snap-card">Do
+I need to also use a credit card when paying with my EBT SNAP
+card?</a></li>
+<li><a
+href="#how-are-weighted-items-that-go-over-the-pre-authorized-amount-charged">How
+are weighted items that go over the pre-authorized amount
+charged?</a></li>
+<li><a href="#how-can-i-add-my-ebt-snap-card-online">How can I add my
+EBT SNAP card online?</a></li>
+<li><a
+href="#how-do-i-know-that-my-ebt-card-has-been-entered-correctly-and-will-be-">How
+do I know that my EBT card has been entered correctly and will be
+charged?</a></li>
+<li><a href="#how-do-i-know-which-items-are-snap-eligible">How do I know
+which items are SNAP eligible?</a></li>
+<li><a
+href="#how-will-my-order-be-charged-if-i-add-an-item-after-i-placed-the-order">How
+will my order be charged if I add an item after I placed the
+order?</a></li>
+<li><a
+href="#my-credit-card-was-charged-but-not-my-ebt-card-can-you-charge-my-ebt-c">My
+credit card was charged but not my EBT card. Can you charge my EBT card
+instead?</a></li>
+<li><a
+href="#what-do-i-do-if-i-have-a-problem-after-receiving-my-grocery-order-will">What
+do I do if I have a problem after receiving my grocery order? Will you
+refund my SNAP funds?</a></li>
+</ul></li>
+<li><a href="#farm-raised-seafood">Farm-Raised Seafood</a>
+<ul>
+<li><a href="#are-antibiotics-and-hormones-used-in-aquaculture">Are
+antibiotics and hormones used in aquaculture?</a></li>
+<li><a href="#arent-the-ponds-crowded-with-large-numbers-of-fish">Aren’t
+the ponds crowded with large numbers of fish?</a></li>
+<li><a
+href="#do-aquaculture-operations-consume-more-wild-fish-than-they-produce">Do
+aquaculture operations consume more wild fish than they
+produce?</a></li>
+<li><a href="#does-aquaculture-damage-the-environment">Does aquaculture
+damage the environment?</a></li>
+<li><a href="#dont-farms-pollute-local-waterways">Don’t farms pollute
+local waterways?</a></li>
+<li><a href="#is-farmed-salmon-injected-with-dye">Is farmed salmon
+injected with dye?</a></li>
+<li><a
+href="#isnt-it-true-that-farmed-fish-can-escape-the-pens-and-mate-with-wild-f">Isn’t
+it true that farmed fish can escape the pens and mate with wild
+fish?</a></li>
+<li><a
+href="#ive-heard-that-farmed-fish-are-contaminated-with-mercury-is-that-true">I’ve
+heard that farmed fish are contaminated with mercury. Is that
+true?</a></li>
+</ul></li>
+<li><a href="#fresh-news-email">Fresh News Email</a>
+<ul>
+<li><a href="#do-you-sell-email-addresses">Do you sell email
+addresses?</a></li>
+<li><a href="#how-can-i-sign-up-to-receive-fresh-news-emails">How can I
+sign up to receive Fresh News emails?</a></li>
+<li><a href="#how-can-i-unsubscribe-from-fresh-news">How can I
+unsubscribe from Fresh News?</a></li>
+<li><a href="#what-is-fresh-news">What is Fresh News?</a></li>
+</ul></li>
+<li><a href="#gmos">GMOs</a>
+<ul>
+<li><a href="#does-wegmans-carry-gmo-salmon">Does Wegmans carry GMO
+salmon?</a></li>
+<li><a href="#how-do-i-learn-more-about-gmos">How do I learn more about
+GMOs?</a></li>
+<li><a href="#is-there-an-easy-way-to-avoid-gmos">Is there an easy way
+to avoid GMOs?</a></li>
+<li><a href="#what-are-gmos">What are GMOs?</a></li>
+<li><a href="#what-are-the-most-common-gmo-crops">What are the most
+common GMO crops?</a></li>
+<li><a
+href="#why-do-some-wegmans-brand-products-state-that-they-contain-bioengineer">Why
+do some Wegmans Brand products state that they contain bioengineered
+ingredients?</a></li>
+</ul></li>
+<li><a href="#meals-2go-catering-cakes">Meals 2GO Catering &amp;
+Cakes</a>
+<ul>
+<li><a href="#are-all-image-and-message-requests-accepted">Are all image
+and message requests accepted?</a></li>
+<li><a href="#are-gluten-free-options-available">Are gluten-free options
+available?</a></li>
+<li><a href="#are-utensils-included-with-catering-orders">Are utensils
+included with Catering orders?</a></li>
+<li><a href="#can-i-change-my-cake-order-on-meals-2go">Can I change my
+cake order on Meals 2GO?</a></li>
+<li><a href="#can-i-customize-my-meals-2go-order">Can I customize my
+Meals 2GO order?</a></li>
+<li><a href="#can-i-get-my-meals-2go-order-delivered">Can I get my Meals
+2GO order delivered?</a></li>
+<li><a href="#can-i-order-a-cake-with-a-photo-online">Can I order a cake
+with a photo online?</a></li>
+<li><a href="#how-do-i-place-an-order">How do I place an order?</a></li>
+<li><a
+href="#how-far-ahead-can-i-order-meals-2go-a-cake-or-catering-online">How
+far ahead can I order Meals 2GO, a cake or Catering online?</a></li>
+<li><a href="#i-am-a-501c3-organization-can-i-order-tax-exempt">I am a
+501c3 organization. Can I order tax exempt?</a></li>
+<li><a
+href="#in-stores-with-bag-legislation-what-bags-are-used-for-meals-2go-and-ca">In
+stores with bag legislation, what bags are used for Meals 2GO and
+Catering orders?</a></li>
+<li><a href="#is-there-a-fee-to-order-on-meals-2go">Is there a fee to
+order on Meals 2GO?</a></li>
+<li><a href="#is-tipping-required-for-delivery-orders">Is tipping
+required for delivery orders?</a></li>
+<li><a href="#meals-2go-and-catering-delivery-pricing">Meals 2GO and
+Catering Delivery Pricing</a></li>
+<li><a href="#what-forms-of-payment-are-accepted">What forms of payment
+are accepted?</a></li>
+<li><a href="#what-happens-if-i-do-not-select-leave-at-door">What
+happens if I do not select “Leave at Door”?</a></li>
+<li><a href="#what-is-the-cancellation-policy">What is the cancellation
+policy?</a></li>
+<li><a href="#what-is-the-maximum-wine-purchase-amount">What is the
+maximum wine purchase amount?</a></li>
+<li><a href="#what-is-true-color-frosting">What is true color
+frosting?</a></li>
+<li><a
+href="#where-do-i-find-allergen-nutrition-and-calorie-information">Where
+do I find allergen, nutrition, and calorie information?</a></li>
+<li><a href="#why-cant-i-find-an-item-ive-ordered-before">Why can’t I
+find an item I’ve ordered before?</a></li>
+<li><a href="#will-any-items-require-reheating">Will any items require
+reheating?</a></li>
+</ul></li>
+<li><a href="#my-orders-and-receipts">My Orders and Receipts</a>
+<ul>
+<li><a
+href="#how-long-do-i-have-to-wait-until-i-can-view-my-receipts-online">How
+long do I have to wait until I can view my receipts online?</a></li>
+<li><a
+href="#what-do-i-need-to-do-so-that-im-able-to-view-my-receipts-online">What
+do I need to do so that I’m able to view my receipts online?</a></li>
+</ul></li>
+<li><a href="#pharmacy">Pharmacy</a>
+<ul>
+<li><a href="#at-home-covid-19-test-kits">At-Home COVID-19 Test
+Kits</a></li>
+<li><a
+href="#can-i-ask-questions-of-a-pharmacist-via-wegmans-pharmacy-online-or-spe">Can
+I ask questions of a pharmacist via Wegmans Pharmacy Online, or speak to
+a pharmacist about prescriptions that are mailed to me?</a></li>
+<li><a
+href="#how-can-i-obtain-a-copy-of-my-pharmacy-records-from-wegmans">How
+can I obtain a copy of my Pharmacy records from Wegmans?</a></li>
+<li><a
+href="#how-can-i-obtain-a-medical-expense-report-for-myself-or-a-family-membe">How
+can I obtain a medical expense report for myself or a family
+member?</a></li>
+<li><a
+href="#how-can-i-obtain-authorization-to-access-another-adults-pharmacy-recor">How
+can I obtain authorization to access another adult’s Pharmacy
+records?</a></li>
+<li><a
+href="#how-can-i-receive-text-messages-for-another-adults-pharmacy-orders">How
+can I receive text messages for another adult’s Pharmacy
+orders?</a></li>
+<li><a
+href="#how-do-i-file-a-complaint-if-i-feel-that-my-privacy-has-been-compromis">How
+do I file a complaint if I feel that my privacy has been
+compromised?</a></li>
+<li><a
+href="#how-does-wegmans-ensure-its-employees-properly-handle-my-health-inform">How
+does Wegmans ensure its employees properly handle my health
+information?</a></li>
+<li><a href="#how-will-medication-shipped-to-my-home-be-packaged">How
+will medication shipped to my home be packaged?</a></li>
+<li><a
+href="#if-i-create-a-wegmans-pharmacy-online-profile-will-i-still-be-able-to-">If
+I create a Wegmans Pharmacy Online profile, will I still be able to call
+in refills?</a></li>
+<li><a href="#pharmacy-online-legal-notes">Pharmacy Online Legal
+Notes</a></li>
+<li><a
+href="#what-devices-and-browsers-can-i-use-to-access-wegmans-pharmacy-online">What
+devices and browsers can I use to access Wegmans Pharmacy
+Online?</a></li>
+<li><a href="#what-if-i-couldnt-make-it-to-pick-up-my-prescription">What
+if I couldn’t make it to pick up my prescription?</a></li>
+<li><a href="#what-is-hipaa-and-how-does-it-pertain-to-pharmacy">What is
+HIPAA and how does it pertain to pharmacy?</a></li>
+<li><a href="#what-is-the-delivery-area-for-prescriptions">What is the
+delivery area for prescriptions?</a></li>
+<li><a
+href="#what-security-features-exist-to-ensure-the-privacy-of-my-pharmacy-reco">What
+security features exist to ensure the privacy of my pharmacy records
+online?</a></li>
+<li><a href="#when-can-i-pick-up-my-prescription">When can I pick up my
+prescription?</a></li>
+<li><a
+href="#where-can-i-find-wegmans-notice-of-privacy-practices">Where can I
+find Wegmans Notice of Privacy Practices?</a></li>
+<li><a
+href="#where-do-i-find-information-about-healthcare-pricing">Where do I
+find information about healthcare pricing?</a></li>
+<li><a
+href="#where-will-they-leave-my-prescriptions-if-my-mailbox-is-too-smalli-don">Where
+will they leave my prescriptions if my mailbox is too small/I don’t have
+a mailbox and my mail is delivered through a slot in my front
+door?</a></li>
+<li><a
+href="#why-do-i-have-to-share-my-date-of-birth-and-address-when-picking-up-a-">Why
+do I have to share my date-of-birth and address when picking up a
+prescription?</a></li>
+<li><a
+href="#will-i-still-receive-my-text-reminders-that-my-prescription-is-readyfi">Will
+I still receive my text reminders that my prescription is
+ready/filled?</a></li>
+<li><a
+href="#will-wegmans-contact-my-doctor-for-me-when-i-have-no-refills-left-or-m">Will
+Wegmans contact my doctor for me when I have no refills left or my
+prescription is expired?</a></li>
+</ul></li>
+<li><a href="#product-information">Product Information</a>
+<ul>
+<li><a href="#can-i-order-products-online">Can I order products
+online?</a></li>
+<li><a href="#can-i-refreeze-meat-if-i-decide-not-to-cook-it">Can I
+refreeze meat if I decide not to cook it?</a></li>
+<li><a
+href="#can-i-special-order-a-product-that-wegmans-has-discontinued">Can
+I special order a product that Wegmans has discontinued?</a></li>
+<li><a href="#does-wegmans-sell-kegs-of-beer">Does Wegmans sell kegs of
+beer?</a></li>
+<li><a
+href="#how-can-i-decipher-code-dates-on-canned-and-other-packaged-food-produc">How
+can I decipher code dates on canned and other packaged food
+products?</a></li>
+<li><a
+href="#how-does-wegmans-know-that-the-produce-they-carry-is-safe">How
+does Wegmans know that the produce they carry is safe?</a></li>
+<li><a href="#how-long-can-eggs-be-stored">How long can eggs be
+stored?</a></li>
+<li><a href="#how-long-can-i-keep-canned-goods-in-the-cupboard">How long
+can I keep canned goods in the cupboard?</a></li>
+<li><a
+href="#how-long-can-i-safely-store-cooked-meats-in-the-refrigerator">How
+long can I safely store cooked meats in the refrigerator?</a></li>
+<li><a href="#i-want-you-to-start-carrying-this-product">I want you to
+start carrying this product.</a></li>
+<li><a
+href="#our-company-makes-a-product-that-wed-like-to-introduce-to-wegmans-what">Our
+company makes a product that we’d like to introduce to Wegmans. What is
+the process to follow?</a></li>
+<li><a
+href="#what-is-wegmans-position-on-the-welfare-of-the-animals-raised-for-wegm">What
+is Wegmans position on the welfare of the animals raised for Wegmans
+products?</a></li>
+<li><a
+href="#where-can-i-find-information-on-your-floral-delivery-service">Where
+can I find information on your floral delivery service?</a></li>
+<li><a href="#why-do-products-get-discontinued">Why do products get
+discontinued?</a></li>
+<li><a
+href="#why-is-holiday-merchandise-like-christmas-trees-and-lights-displayed-s">Why
+is holiday merchandise, like Christmas trees and lights, displayed so
+early?</a></li>
+</ul></li>
+<li><a href="#recipes">Recipes</a>
+<ul>
+<li><a href="#how-do-i-add-ingredients-to-my-listcart-on-wegmanscom">How
+do I add ingredients to my list/cart on wegmans.com?</a></li>
+<li><a
+href="#how-do-i-add-recipe-ingredients-to-my-listcart-on-the-wegmans-app">How
+do I add recipe ingredients to my list/cart on the Wegmans App?</a></li>
+<li><a
+href="#how-do-i-find-recipes-that-fit-my-special-diet-ex-low-sodium-in-the-we">How
+do I find recipes that fit my special diet (ex. Low Sodium) in the
+Wegmans App?</a></li>
+<li><a
+href="#how-do-i-find-recipes-that-fit-my-special-diet-ex-low-sodium-on-wegman">How
+do I find recipes that fit my special diet (ex. Low Sodium) on
+wegmans.com?</a></li>
+<li><a href="#how-do-i-print-a-recipe">How do I print a recipe?</a></li>
+<li><a href="#how-do-i-view-my-saved-recipes-on-the-wegmans-app">How do
+I view my saved recipes on the Wegmans App?</a></li>
+<li><a href="#how-do-i-view-my-saved-recipes-on-wegmanscom">How do I
+view my saved recipes on wegmans.com?</a></li>
+<li><a
+href="#why-werent-all-of-the-ingredients-added-to-my-shopping-list-from-a-rec">Why
+weren’t all of the ingredients added to my shopping list from a
+recipe?</a></li>
+</ul></li>
+<li><a href="#shoppers-club">Shoppers Club</a>
+<ul>
+<li><a href="#how-do-i-sign-up-for-shoppers-club-2">How do I sign up for
+Shoppers Club?</a></li>
+<li><a href="#if-i-have-additional-questions-who-do-i-contact">If I have
+additional questions, who do I contact?</a></li>
+<li><a
+href="#if-i-update-my-information-online-will-it-automatically-update-my-shop">If
+I update my information online will it automatically update my Shoppers
+Club account?</a></li>
+</ul></li>
+<li><a href="#store-policies">Store Policies</a>
+<ul>
+<li><a href="#do-you-accept-ebt-cards-for-purchases">Do you accept EBT
+cards for purchases?</a></li>
+<li><a href="#what-is-your-check-cashing-policy">What is your check
+cashing policy?</a></li>
+<li><a href="#what-is-your-coupon-policy">What is your coupon
+policy?</a></li>
+<li><a href="#what-is-your-credit-debit-card-policy">What is your credit
+&amp; debit card policy?</a></li>
+<li><a href="#what-is-your-internet-coupon-policy">What is your internet
+coupon policy?</a></li>
+<li><a href="#what-is-your-pricing-guarantee">What is your pricing
+guarantee?</a></li>
+<li><a href="#what-is-your-purchases-and-adjustments-policy">What is
+your purchases and adjustments policy?</a></li>
+<li><a href="#what-is-your-raincheck-policy">What is your raincheck
+policy?</a></li>
+<li><a href="#what-is-your-replacement-and-refund-policy">What is your
+replacement and refund policy?</a></li>
+</ul></li>
+<li><a href="#website">Website</a>
+<ul>
+<li><a href="#can-i-print-my-shopping-list">Can I print my shopping
+list?</a></li>
+<li><a
+href="#does-wegmans-ship-to-locations-across-the-us-or-abroad">Does
+Wegmans ship to locations across the US or abroad?</a></li>
+<li><a href="#how-do-i-create-a-shopping-list-for-in-store-shopping">How
+do I create a shopping list for in-store shopping?</a></li>
+<li><a href="#how-do-i-view-my-list-by-aisle">How do I view my list by
+aisle?</a></li>
+<li><a href="#is-there-a-way-to-see-if-anything-is-on-sale">Is there a
+way to see if anything is on sale?</a></li>
+<li><a
+href="#why-are-some-of-the-items-displayed-under-the-organic-filter-not-usda-">Why
+are some of the items displayed under the organic filter not USDA
+certified organic?</a></li>
+<li><a href="#will-i-see-the-total-as-im-building-my-list">Will I see
+the total as I’m building my list?</a></li>
+</ul></li>
+<li><a href="#wegmans-app">Wegmans App</a>
+<ul>
+<li><a href="#can-i-create-multiple-shopping-lists">Can I create
+multiple shopping lists?</a></li>
+<li><a href="#can-i-share-a-list-with-someone">Can I share a list with
+someone?</a></li>
+<li><a href="#do-i-have-to-sign-in-or-can-i-use-the-app-as-a-guest">Do I
+have to sign in or can I use the app as a guest?</a></li>
+<li><a
+href="#how-do-i-add-ingredients-for-a-recipe-to-my-shopping-list">How do
+I add ingredients for a recipe to my shopping list?</a></li>
+<li><a href="#how-do-i-scan-an-item">How do I scan an item?</a></li>
+<li><a href="#how-do-i-view-my-list-by-aisle-2">How do I view my list by
+aisle?</a></li>
+<li><a href="#is-my-mobile-device-supported">Is my mobile device
+supported?</a></li>
+<li><a href="#mobile-app">MOBILE APP:</a></li>
+<li><a
+href="#whats-the-difference-between-the-wegmans-app-and-the-wegmans-meals-2go">What’s
+the difference between the Wegmans app and the Wegmans Meals 2GO
+app?</a></li>
+<li><a
+href="#why-am-i-receiving-the-message-your-account-is-already-in-use-when-try">Why
+am I receiving the message “Your account is already in use” when trying
+to create an account on the Wegmans app?</a></li>
+<li><a href="#why-do-i-need-to-verify-my-phone-number">Why do I need to
+verify my phone number?</a></li>
+</ul></li>
+<li><a href="#wegmans-for-business">Wegmans for Business</a>
+<ul>
+<li><a
+href="#can-i-order-gift-cards-using-my-wegmans-for-business-charge-account">Can
+I order gift cards using my Wegmans for Business Charge
+account?</a></li>
+<li><a
+href="#can-i-use-a-purchase-order-for-my-wegmans-for-business-purchase">Can
+I use a purchase order for my Wegmans for Business purchase?</a></li>
+<li><a
+href="#can-i-use-a-wegmans-gift-card-to-pay-for-my-charge-bill">Can I
+use a Wegmans gift card to pay for my Charge bill?</a></li>
+<li><a href="#can-i-use-my-wegmans-charge-cards-at-other-stores">Can I
+use my Wegmans Charge cards at other stores?</a></li>
+<li><a
+href="#can-i-use-my-wegmans-for-business-cards-in-more-than-one-state">Can
+I use my Wegmans for Business cards in more than one state?</a></li>
+<li><a
+href="#can-i-use-my-wegmans-for-business-charge-card-to-pay-my-billing-statem">Can
+I use my Wegmans for Business Charge card to pay my billing
+statement?</a></li>
+<li><a
+href="#do-i-need-to-have-a-membership-account-to-apply-for-a-charge-account">Do
+I need to have a Membership account to apply for a Charge
+account?</a></li>
+<li><a
+href="#do-i-need-to-use-both-my-membership-and-wegmans-for-business-charge-ca">Do
+I need to use both my Membership and Wegmans for Business Charge
+cards?</a></li>
+<li><a
+href="#how-do-i-activate-my-charge-card-once-it-arrives-in-the-mail">How
+do I activate my Charge card once it arrives in the mail?</a></li>
+<li><a
+href="#how-long-will-it-take-for-my-wegmans-for-business-cards-to-arrive">How
+long will it take for my Wegmans for Business cards to arrive?</a></li>
+<li><a href="#how-many-wegmans-for-business-cards-can-i-get">How many
+Wegmans for Business cards can I get?</a></li>
+<li><a
+href="#is-there-a-fee-to-sign-up-for-a-wegmans-for-business-membership">Is
+there a fee to sign up for a Wegmans for Business Membership?</a></li>
+<li><a href="#no-a-pin-number-will-not-be-required">No, a PIN number
+will not be required.</a></li>
+<li><a
+href="#what-are-the-benefits-of-having-a-wegmans-for-business-charge-account">What
+are the benefits of having a Wegmans for Business Charge
+account?</a></li>
+<li><a
+href="#what-are-the-benefits-of-having-a-wegmans-for-business-membership-acco">What
+are the benefits of having a Wegmans for Business Membership
+account?</a></li>
+<li><a
+href="#what-are-the-terms-and-conditions-of-the-membership-program-or-optiona">What
+are the terms and conditions of the Membership program or optional
+Charge feature?</a></li>
+<li><a
+href="#what-is-the-yearly-fee-for-a-wegmans-for-business-charge-account">What
+is the yearly fee for a Wegmans for Business Charge account?</a></li>
+<li><a href="#what-is-wegmans-for-business">What is Wegmans for
+Business?</a></li>
+<li><a
+href="#who-do-i-contact-if-i-have-questions-andor-concerns-regarding-my-wegma">Who
+do I contact if I have questions and/or concerns regarding my Wegmans
+for Business Membership and Charge accounts?</a></li>
+<li><a
+href="#will-there-be-a-pin-number-associated-with-my-charge-card">Will
+there be a PIN number associated with my Charge card?</a></li>
+</ul></li>
+<li><a href="#wegmans-online-account">Wegmans Online Account</a>
+<ul>
+<li><a
+href="#can-i-have-two-shoppers-club-accounts-registered-under-one-email-addre">Can
+I have two Shoppers Club accounts registered under one email
+address?</a></li>
+<li><a href="#does-wegmans-have-a-privacy-policy">Does Wegmans have a
+privacy policy?</a></li>
+<li><a href="#how-do-i-create-a-wegmans-online-account">How do I create
+a Wegmans Online Account?</a></li>
+</ul></li>
+</ul>
+<h2 id="about-wegmans">About Wegmans</h2>
+<h3 id="am-i-allowed-to-take-picturesvideos-in-your-store">Am I allowed
+to take pictures/videos in your store?</h3>
+<p>Because our stores are private property, we reserve the right to
+limit photography/videography. However, if you’re an out-of-town
+visitor, or your child is doing something amazingly cute, or you’re just
+enjoying lunch with friends in our Market Café, feel free to capture the
+memory.</p>
+<p>The answer isn’t as clear cut for others, such as a Wegmans vendor, a
+student working on a project, or an outside organization with no
+connection to Wegmans. We encourage you to speak with the store manager
+or call the Customer Care Center at 1-800-WEGMANS (934-6267) if you have
+a question.</p>
+<p>News media must have permission from Wegmans’ Public Relations
+Department before taking photos or video in our stores or on our
+property. Please call 1-800-WEGMANS (934-6267). Members of the media may
+also visit our <a
+href="https://www.wegmans.com/news-media/photo-logo-gallery">Photo
+Gallery</a> for downloadable images.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-get-an-annual-report-from-wegmans">Can I get an annual
+report from Wegmans?</h3>
+<p>Since our company is privately owned, we don’t offer an annual
+report.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="does-wegmans-have-electronic-coupons-and-where-can-i-find-them">Does
+Wegmans have electronic coupons and where can I find them?</h3>
+<p>Wegmans offers digital coupons to customers who have a Wegmans online
+account linked to their Shoppers Club. Digital coupons are paperless
+coupons that customers can clip to their Shoppers Club account from
+wegmans.com or the Wegmans App for simple redemption at checkout. Visit
+our <a
+href="https://www.wegmans.com/service/faq/digital-coupons">Digital
+Coupon FAQs</a>for more information.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-give-feedback-about-an-employeestore">How do I give
+feedback about an employee/store?</h3>
+<p>We look forward to hearing from you. You can use our <a
+href="https://www.wegmans.com/service/contact-us">contact us</a> page to
+send any feedback you may have.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-many-stores-do-you-have-and-where-are-they-located">How many
+stores do you have, and where are they located?</h3>
+<p>We have 110 stores located in New York, Pennsylvania, New Jersey,
+Virginia, Maryland, Massachusetts, North Carolina, Delaware, and
+Washington, D.C. For a complete list of our store locations, please
+visit our <a href="https://www.wegmans.com/stores">store
+locator</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-are-your-holiday-hours">What are your holiday hours?</h3>
+<p>Our store holiday hours vary based on location and region. Please
+check with your <a href="https://www.wegmans.com/stores">store</a> for
+updated hours.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="where-is-wegmans-corporate-headquarters">Where is Wegmans
+corporate headquarters?</h3>
+<p>Wegmans Food Markets, Inc. is located at 1500 Brooks Avenue, PO Box
+30844, Rochester, NY 14603-0844, and you may reach our Customer Care
+Center by telephone at 1-800-WEGMANS (934-6267), available daily from
+8am to 7pm. ET. Danny Wegman is chairman: his daughter, Colleen, is
+president and CEO.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="where-will-wegmans-be-building-new-stores-in-the-future">Where
+will Wegmans be building new stores in the future?</h3>
+<p>Check out our “<a
+href="https://www.wegmans.com/about-us/future-store-locations">Here We
+Grow</a>” page to see where our newest locations will be.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="why-is-there-no-apostrophe-in-wegmans">Why is there no
+apostrophe in Wegmans?</h3>
+<p>It’s been missing in action since 1931, when the company
+incorporated, and we simplified the logo. Believe it or not, adding an
+apostrophe to the sign on the front of each of our stores would cost
+more than a half million dollars! Not to mention changing the logo on
+all our products, bags, etc. Just think of it as the plural Wegmans, as
+in the many generations of Wegman family members that have built the
+company! Check <a
+href="https://www.wegmans.com/wp-content/uploads/6623167_tmg_GrandOpeningHistory.pdf">here</a>
+for more information on Wegmans history.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="will-my-information-be-shared-with-other-vendors">Will my
+information be shared with other vendors?</h3>
+<p>We may provide purchase information to vendors in aggregate form
+(i.e., customer non-specific) in order to bring you special offers on
+products and services. We may also provide a list of names and addresses
+to a mail house so that they can send a direct mail offer from us to
+you. The mail house would be required to sign a strict Non-Disclosure
+Agreement, which prohibits them from disclosing the information to
+anyone else or using the information for a purpose that we have not
+specifically authorized. We provide customer phone numbers to a vendor
+when there is a need for a product recall notification. That vendor is
+also required to sign a Non-Disclosure Agreement.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="will-wegmans-donate-to-my-not-for-profit-organization">Will
+Wegmans donate to my not-for-profit organization?</h3>
+<p>Wegmans focuses our community support in four giving priority
+categories: feeding the hungry, enriching neighborhoods, supporting
+education, and assisting youth and families. For more information on
+Wegmans giving priorities and how to submit a proposal, please visit our
+<a
+href="https://www.wegmans.com/values-in-action/community-giving">Making
+a Difference page</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="will-wegmans-help-with-research-for-a-student-project">Will
+Wegmans help with research for a student project?</h3>
+<p>We wish there was time to personally help every student who seeks our
+input, but we simply cannot. In recent years, we have been inundated
+with requests from both teachers and students. It would be a
+time-consuming effort to answer the many requests we receive, and so
+often, the information requested is proprietary.</p>
+<p>Our website has historical and other information about our company.
+These links in particular might be helpful: the <a
+href="https://www.wegmans.com/about-us">Company Overview &amp; History
+page</a> and <a
+href="https://www.wegmans.com/news-media">Newsroom</a>.</p>
+<p>The Food Marketing Institute is also a good source for industry
+information. They can be reached at 202-452-8444 or at <a
+href="http://www.fmi.org/">fmi.org</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="delivery-pickup-online-grocery-ordering">Delivery &amp; Pickup –
+Online Grocery Ordering</h2>
+<h3 id="can-i-designate-products-for-substitutionsreplacements">Can I
+designate products for substitutions/replacements?</h3>
+<p>Yes! You can choose your replacements after you click “Place Order.”
+If an item is running low at the store, you will see the option to
+select replacements (or substitutions). You can approve the replacement
+shown by clicking “Approve.” Or you can choose a different replacement
+by clicking “Other Options” and searching for a different item.</p>
+<p>NOTE: The replacement item will only be shopped if the item you
+initially selected is not available at your store.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-save-a-form-of-payment-for-later-use">Can I save a form of
+payment for later use?</h3>
+<p>Yes. When checking out, you will have the option to “Save to
+Profile.” When you select this, it means that next time you go to check
+out, you don’t have to reenter your credit card information.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-my-instacart-membership-when-ordering-on-wegmanscom-or-the-w">Can
+I use my Instacart+ membership when ordering on wegmans.com or the
+Wegmans app?</h3>
+<p>Yes. You can link your existing Instacart+ membership to your Wegmans
+account by <strong>signing into your Wegmans account with the same email
+address you use for Instacart</strong>.</p>
+<p>On wegmans.com, sign in, then click on your name in the top right
+corner of the screen to view the drop-down menu and select “Profile.”
+From there, click the button that says “Link Instacart Account.”</p>
+<p>On the Wegmans app, tap the “More” menu in the bottom right corner,
+then select “Account Settings” and finally “Profile.” From there, tap
+the button that says “Link Instacart Account.”</p>
+<p>Since Wegmans delivery is fulfilled through Instacart, you can use
+your existing Instacart+ membership to order groceries directly through
+wegmans.com or the Wegmans app. You will still be billed directly by
+Instacart though.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-cancel-an-order">How can I cancel an order?</h3>
+<p>To cancel an order, simply log back into wegmans.com or the Wegmans
+app and find your pending order under “My Orders &amp; Receipts,” then
+select “Manage Order” on the website or “Cancel Order” from the “More”
+menu on the app.</p>
+<p>You can cancel an online order up to the time your shopper starts
+shopping the order in the store.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-modify-an-order-to-add-or-delete-items">How can I
+modify an order to add or delete items?</h3>
+<ol type="1">
+<li>Log back into wegmans.com or the Wegmans app and select “My Orders
+&amp; Receipts.”</li>
+<li>Click on the order you want to modify and select “Add to
+Order.”</li>
+<li>You will be directed to a new window to add items to your current
+order. Within the “Add to Order” screen, select the items to add. You
+can also search for items within this screen.</li>
+<li><strong>Your added items are automatically added to your
+order;</strong> you should see newly added items at the bottom of your
+list.</li>
+<li>You can add or delete items up until your shopper starts shopping
+your order.</li>
+</ol>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-share-my-listcart-with-someone-else">How can I share
+my list/cart with someone else?</h3>
+<p>On wegmans.com, click “Share My List.” This will allow you to copy a
+link and email it to someone.</p>
+<p>On the Wegmans app, tap the three dots in the top right corner, then
+select “Share My List.” This will allow you to text or email your list
+to another user.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-place-an-order-for-grocery-pickup-or-delivery">How do I
+place an order for grocery pickup or delivery?</h3>
+<p>To build a cart for grocery pickup or delivery, choose the shopping
+mode next to your store selection on the homepage.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-request-a-refund-for-an-item-that-i-ordered-online">How
+do I request a refund for an item that I ordered online?</h3>
+<p>The Service Desk can accept returns from online orders, although we
+do not encourage it. We do not offer credit for online orders.</p>
+<p><strong>For an online order placed through the Wegmans app or
+website, </strong>follow these steps:</p>
+<ol type="1">
+<li>After completing your order, view it under “My Orders and Receipts”
+and click “Get Help.”</li>
+<li>You can then select the issue that applies to the order (missing
+items, wrong items, damaged items, etc.) and designate the specific
+items for the problem.</li>
+<li>You will receive a follow-up to your issue in 1-2 days.</li>
+</ol>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-review-the-status-of-my-order">How do I review the
+status of my order?</h3>
+<p>To view the status of your order, go to “My Orders &amp; Receipts”
+and click on your online order. When the order is being shopped, it will
+say “In Progress.” When your order is ready for pickup, it will say
+“Ready.” You can also view the status of your order by selecting “My
+Orders &amp; Receipts” on the homepage of the Wegmans app.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-far-in-advance-can-i-place-my-order-for-delivery-what-is-the-deliv">How
+far in advance can I place my order for delivery? What is the delivery
+window?</h3>
+<p>Orders can be placed up to six days prior to delivery and will be
+delivered within a two-hour timeframe. Orders can be scheduled for
+delivery in as little as one hour or within the next two hours,
+depending on the availability of a shopper.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-much-does-wegmans-delivery-cost">How much does Wegmans
+delivery cost?</h3>
+<p>We keep our prices consistently low, every day, so you can save on
+the items your family uses most. When you shop online with us, you’ll
+find our prices remain about 15% above in-store prices, which includes
+our cost for shopping your order. There is also a $10 order minimum.</p>
+<p>Additional fees may apply:</p>
+<ul>
+<li>Delivery Fee (if you do not have an IC+ membership)</li>
+<li>Bag Fee</li>
+<li>Heavy Order Fee</li>
+<li>Long-Distance Delivery Fee (may vary by location)</li>
+<li>Optional Tip</li>
+</ul>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-much-does-wegmans-grocery-pickup-cost">How much does Wegmans
+grocery pickup cost?</h3>
+<p>We offer consistent low prices, every day, so you can save on the
+items your family uses most. When you shop online with us, you’ll find
+our prices are about 15% above in store, which includes the cost of
+shopping your order. There is a $10 order minimum. There is no
+additional delivery fee, service charge or tip with grocery pickup.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="i-share-an-account-with-someone-else-can-we-share-the-same-list-and-ha">I
+share an account with someone else. Can we share the same list and have
+it update as we make changes?</h3>
+<p>Yes, you can share a list, but there are a few things that you need
+to be aware of:</p>
+<ol type="1">
+<li>Cart items don’t refresh in real time if items are being added on
+different devices.</li>
+<li>If you are on the In-Store list and someone else adds an item, you
+need to exit the list and reopen it to pick up the added item.</li>
+<li>The list icon has an item count “bubble” anytime you are not in the
+list itself, and if someone else adds or removes an item, you need to
+tap into the list to see the update OR change location for the bubble to
+reflect the new item count.</li>
+<li>On desktop, refreshing the browser will also update the list and
+count bubble.</li>
+<li>Additionally, both lists must be in the same mode. One person being
+in Grocery Pickup mode while another has In Store selected will cause
+the contents of the list/cart to be different.</li>
+</ol>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="what-are-the-delivery-hours">What are the delivery hours?</h3>
+<p>The typical delivery hours are between 7am and 11pm. Available
+delivery windows can be viewed when “Delivery” is the selected shopping
+method and can be changed by clicking on the location icon, then
+clicking “View Timeslots.” (On holidays, delivery hours are subject to
+change per store holiday hours.)</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-are-the-grocery-pickup-hours">What are the grocery pickup
+hours?</h3>
+<p>The typical grocery pickup hours are between 8am and 9pm. Available
+pickup time slots can be viewed when “Pickup” is the selected shopping
+method. (Grocery pickup hours are subject to change on holidays).</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-are-the-restrictions-for-purchasing-alcohol-for-delivery-or-groce">What
+are the restrictions for purchasing alcohol for delivery or grocery
+pickup?</h3>
+<p>Alcohol delivery is only available from select Wegmans stores. You
+will be asked for proof of age (21+) when submitting your order, as well
+as at delivery. When submitting your order online, you will be prompted
+to enter your date of birth. You must also agree to the terms and
+conditions. Upon delivery, customers are required to show a federal or
+state ID showing their date of birth (21+). Coupons and rebates are not
+available for alcohol purchases.</p>
+<p>Alcohol is available in New Jersey for Grocery Pickup only and in
+Massachusetts, Virginia, and North Carolina for Grocery Pickup and
+Delivery. Beer is available in New York for Grocery Pickup and
+Delivery.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-if-i-cant-make-my-grocery-pickup-time">What if I can’t make
+my grocery pickup time?</h3>
+<p>Once you receive a notification that your order is ready for pickup,
+you can pick it up any time before 9pm on the day you scheduled it for
+pickup. Grocery pickup orders are kept in designated refrigerators and
+freezers to keep your groceries as fresh as possible. Orders not picked
+up by the end of the day will be closed out.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-the-long-distance-delivery-fee">What is the
+long-distance delivery fee?</h3>
+<p>This fee applies to both Instacart+ members and non-members who place
+a delivery order 30-60 minutes away from a Wegmans store (based on the
+delivery address). The fee* is charged by Instacart and added to your
+total to help pay shoppers for their extra effort and mileage.</p>
+<p><em>*Delivery fee may vary by location.</em></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-products-are-not-available-for-delivery-or-grocery-pickup-with-in">What
+products are not available for delivery or grocery pickup with
+Instacart?</h3>
+<p>The below items <strong>will not be available</strong> through
+Instacart at this time:</p>
+<ul>
+<li>Alcohol (exceptions apply, see below)</li>
+<li>Pharmacy prescription (only available for delivery through the
+Instacart app/website)</li>
+<li>OTC drugs/products where ID is required</li>
+<li>Catering</li>
+<li>Market Café subs, pizza, hot and cold food bars</li>
+<li>Special-order products (e.g. custom cakes)</li>
+<li>Gift cards</li>
+<li>Postage stamps</li>
+</ul>
+<p>Alcohol is available in New Jersey for Grocery Pickup only and in
+Massachusetts, Virginia, and North Carolina for Grocery Pickup and
+Delivery. Beer is available in New York for Grocery Pickup and
+Delivery.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="which-methods-of-payment-are-acceptednot-accepted">Which methods
+of payment are accepted/not accepted?</h3>
+<p><strong>Accepted:</strong> Visa, Mastercard, Discover, American
+Express, Apple Pay, and EBT SNAP cards. Wegmans gift cards are also
+accepted as payment on wegmans.com and the Wegmans app. Only one (1)
+gift card can be used per transaction.</p>
+<p><strong>Not accepted:</strong> International credit cards, prepaid
+debit cards, and HSA/FSA cards.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="who-is-doing-the-shopping-and-delivery">Who is doing the
+shopping and delivery?</h3>
+<p>Wegmans has partnered with Instacart to provide online ordering,
+shopping, and delivery of groceries to your home. For Grocery Pickup, a
+Wegmans employee will shop your order, then bring it out to you and load
+it in your car. For Delivery, your order will be shopped and delivered
+by an Instacart contractor. At select stores, your delivery order may be
+shopped by a Wegmans employee and delivered by an Instacart
+contractor.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-is-my-estimated-total-when-i-place-my-order-different-from-my-comp">Why
+is my estimated total when I place my order different from my completed
+order receipt?</h3>
+<p>When you place an order, the anticipated charge for your items,
+including estimated taxes and fees, is displayed in your order
+confirmation email. Any approved changes to your order during shopping
+can update the final total in your order receipt.</p>
+<p>These changes can include:</p>
+<p><strong>Added items</strong>: After you place an order, you can add
+items to it, either by modifying the order before it’s shopped or by
+communicating with the Personal Shopper while it’s being shopped.</p>
+<p><strong>Substituted items</strong>: You can choose to have items
+substituted if something is unavailable. If an item is replaced, your
+receipt will be updated to reflect the replacement item price. If the
+replacement is more expensive than the item you ordered, you will be
+charged more. If the replacement is less expensive, you will be charged
+less.</p>
+<p><strong>Unavailable/refunded items</strong>: If an item is
+unavailable, your shopper will mark the item as refunded, and we’ll
+remove it from your item total. This will reduce the final amount of
+your order.</p>
+<p><strong>Weight adjustments</strong>: Personal Shoppers will try to
+get the exact weight of the items you requested, but it is likely the
+weight could be more or less than what you requested. At the store, your
+shopper will input the correct item weights before checking out, which
+will update your item total. You will be charged for the weight you
+receive.</p>
+<p>Some item weights, like produce, are measured by shoppers using
+in-store scales. The weight of items from the deli, meat, and seafood
+counters are determined by the label applied in store to those
+items.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-is-the-amount-of-my-order-different-from-the-amount-pending-on-my-">Why
+is the amount of my order different from the amount pending on my form
+of payment?</h3>
+<p>When you place a grocery pickup or delivery order, we put a temporary
+hold on your payment method for slightly more than your order total.
+This helps cover any changes, like weighted items, substitutions or
+additions, while your order is being shopped. Once your order is
+complete, your card is charged for the final total shown on your
+receipt. This amount may be higher or lower than the original hold.</p>
+<p>If your order is canceled before shopping begins, your bank will
+remove the hold. You can check your confirmation email for the estimated
+total and hold amount.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="digital-coupons">Digital Coupons</h2>
+<h3
+id="can-a-digital-coupon-be-used-in-conjunction-with-other-coupons-or-a-sh">Can
+a digital coupon be used in conjunction with other coupons or a Shoppers
+Club discount?</h3>
+<p><strong>Yes.</strong> If there is a Shoppers Club discount for the
+same item, both can be redeemed. If there is a Wegmans (paper) coupon
+for the same item, both can be redeemed as long as the total discount
+does not exceed the retail price.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-a-digital-coupon-be-used-more-than-once">Can a digital
+coupon be used more than once?</h3>
+<p>Unless otherwise indicated, digital coupons can only be used
+once.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-clip-all-digital-coupons-at-once">Can I clip all digital
+coupons at once?</h3>
+<p><strong>“Clip all” is no longer available for digital
+coupons</strong> in the Wegmans app or on our website because we have
+integrated our digital coupons into the shopping list feature. This
+enhancement allows you to see which products have digital coupons
+available while you’re building your list, so you can clip them as you
+go. With the previous version of the app, we saw that a large portion of
+our customers were clipping their digital coupons and forgetting they
+had them. We decided to make the change so you could more easily
+identify when a digital coupon is offered for a product right when
+you’re building your list.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-see-the-coupons-that-i-have-redeemed">Can I see the
+coupons that I have redeemed?</h3>
+<p><strong>Yes</strong>. You can see the total value of coupons redeemed
+under “My Orders &amp; Receipts.” Select “View” on one of your past
+purchases. For in-store orders, redeemed coupons can be found within the
+list of items purchased. For online orders, coupon savings are labeled
+as “Offer Discount” at the bottom.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-share-a-digital-coupon-with-someone-else">Can I share a
+digital coupon with someone else?</h3>
+<p><strong>No.</strong> Digital coupons are only available to the
+Shoppers Club account holder who receives the coupon.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-unclip-a-coupon">Can I unclip a coupon?</h3>
+<p><strong>No.</strong> The coupon will remain available until it
+expires and then will no longer be available to view or redeem.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-digital-coupons-for-orders-placed-through-catering">Can I
+use digital coupons for orders placed through Catering?</h3>
+<p><strong>No</strong>, digital coupons cannot be used for orders placed
+through Catering.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-digital-coupons-on-grocery-delivery-and-curbside-pickup-orde">Can
+I use digital coupons on Grocery Delivery and Curbside Pickup orders
+placed through wegmans.com / the Wegmans App?</h3>
+<p><strong>Yes</strong>, as long as you are signed into your Wegmans
+Shoppers Club account. Make sure you have clipped your coupons before
+you check out.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-digital-coupons-when-placing-an-order-through-the-instacart-">Can
+I use digital coupons when placing an order through the Instacart
+Marketplace?</h3>
+<p>Instead of reducing the total of your order by the value of the
+digital coupon, your Instacart account will receive a credit for the
+value of the coupon that can be applied to your next Instacart
+Marketplace order. Be sure your Shoppers Club number is entered when you
+check out. It may take several weeks for the credit to be added to your
+account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-shoppers-club-for-business-customers-use-digital-coupons">Can
+Shoppers Club for Business customers use digital coupons?</h3>
+<p>Yes. Please reach out to your account representative to sign up for
+an online account. Once activated, you’ll receive the digital coupons
+available to you.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="do-digital-coupons-expire">Do digital coupons expire?</h3>
+<p><strong>Yes.</strong> All coupons have an expiration date.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="does-everyone-get-the-same-coupons">Does everyone get the same
+coupons?</h3>
+<p><em>No</em><strong>.</strong> Most digital coupons are targeted based
+on what you buy or might be interested in buying. Some digital coupons
+(like those tied to a direct mail piece) are not targeted based on
+purchase history, which means, occasionally, you might get a coupon for
+an item you would not typically buy. ** **</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-clip-a-digital-coupon">How do I clip a digital
+coupon?</h3>
+<p>Using the <strong>Wegmans App</strong>, <em>click on “Digital
+Coupons.”</em> Then, tap the orange <em>“clip” icon</em> on the corner
+of the coupon to clip it.</p>
+<p>Using a <strong>Desktop Computer</strong>, <em>click “Digital
+Coupons” at the top of the wegmans.com homepage</em>. Then, click the
+orange <em>“clip” icon</em> on the corner of the coupon to clip it.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-get-wegmans-digital-coupons">How do I get Wegmans’
+digital coupons?</h3>
+<p>To receive digital coupons, you must have an <strong>active Wegmans
+Shoppers Club account.</strong></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-know-that-i-used-a-digital-coupon">How do I know that I
+used a digital coupon?</h3>
+<p>The redeemed coupons are visible on your receipt.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-know-when-i-have-satisfied-the-product-requirements-to-use-a-">How
+do I know when I have satisfied the product requirements to use a
+digital coupon?</h3>
+<p>When the coupon is clipped, and you are reviewing your list/cart, you
+will see a green bar that says <strong>“Digital Coupon
+Completed”</strong> under the coupon in the <strong>“Offers Applicable
+to your Order”</strong> section. To be certain that you are adding an
+eligible product for a digital coupon, you can click on the coupon image
+on the Digital Coupon page and scroll down until you see the “Add to
+Cart” button. ** **</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-print-my-digital-coupons-to-bring-to-the-store-so-i-can-know-">How
+do I print my digital coupons to bring to the store so I can know what
+I’ve clipped?</h3>
+<p>You can print your digital coupons when you’re signed into your
+Wegmans account on a desktop or laptop computer. When you’re on the
+digital coupons page, select the option to Print from your browser’s
+settings.</p>
+<p>If the images on your list or digital coupons are not showing when
+you print them out, it may be due to your printer settings. For images
+to appear, check your printer settings to ensure that the “Background
+Graphics” box is checked under “More Options” on the print screen.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-redeem-a-digital-coupon">How do I redeem a digital
+coupon?</h3>
+<p>To redeem a digital coupon, simply <em>clip the coupon to your
+Shoppers Club account (through wegmans.com or the Wegmans App)</em> and
+scan the barcode from your Wegmans App or enter your phone number at
+checkout. If you purchased an eligible item, the discount automatically
+comes off your order.</p>
+<p>If you are placing an online order, any applicable digital coupons
+will show at the bottom of your cart under “Offers Applicable to Your
+Order.” Once the digital coupons are clipped and all applicable items
+have been added to your cart and/or the minimum purchase has been met, a
+green bar with the words “Digital Coupon Completed” will appear and the
+discount will come off your order. Please note, all requirements of a
+digital coupon must be met within the same transaction.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-see-my-coupons-that-are-going-to-expire">How do I see
+my coupons that are going to expire?</h3>
+<p>Coupons will appear in the order that they are loaded into your
+account. An <strong>expiration date</strong> will be listed under the
+coupon’s image</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-sign-up-for-shoppers-club">How do I sign up for
+Shoppers Club?</h3>
+<p><strong>At Wegmans Store Service Desk</strong> – A Service Desk team
+member will be happy to assist you in creating an account.</p>
+<p><strong>At home</strong> – Visit <a
+href="https://www.wegmans.com/service/shoppers-club"><strong>wegmans.com/shoppersclub</strong></a>
+and click “Create An Account”. You’ll be asked to create a
+<strong>Username and Password</strong> and fill in your contact
+information, including a unique phone number.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-frequently-will-new-digital-coupons-be-issued">How
+frequently will new digital coupons be issued?</h3>
+<p>After you receive your initial welcome coupons (over $25 in value),
+additional digital coupons are distributed throughout the year tied to
+direct mail pieces, holidays or new product launches. You will be
+notified of new coupons through our Fresh News emails, push
+notifications to your cell phone, and direct mail pieces.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="i-dont-have-a-smartphone-can-i-still-get-digital-coupons">I
+don’t have a smartphone – can I still get digital coupons?</h3>
+<p><strong>Yes.</strong> Digital coupons can be accessed on a desktop or
+laptop computer.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="should-i-enter-my-shoppers-club-at-checkout-even-if-i-dont-have-any-it">Should
+I enter my Shoppers Club at checkout even if I don’t have any items on
+sale with Shoppers Club?</h3>
+<p><strong>Yes</strong>. Using Shoppers Club at checkout enables you to
+view receipts and past purchases online, as well as be targeted for
+digital coupons on items we think you might be interested in trying. In
+addition, if a product you purchased has been recalled, we’ll notify you
+personally.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-are-digital-coupons">What are digital coupons?</h3>
+<p>Digital coupons are coupons that you can access online and clip
+directly to your Shoppers Club account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-does-digital-coupon-completed-mean-under-the-offers-applicable-to">What
+does “Digital Coupon Completed” mean under the Offers Applicable to your
+Order section of my list/cart?</h3>
+<p>When you are viewing your <strong>digital coupons in your
+list/cart</strong> and have added the item that matches the coupon, the
+digital coupon will have <strong>“Digital Coupon Completed”</strong>
+under the offer. This means that you have satisfied the minimum
+requirement to use the coupon. For example, if the coupon says $1 off 2
+rolls of paper towels, it will only say “Coupon Completed” when you have
+two rolls of paper towels in your cart.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-happens-when-a-coupon-expires">What happens when a coupon
+expires?</h3>
+<p>The coupon will no longer be available to view or redeem.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="where-can-i-find-my-digital-coupons">Where can I find my digital
+coupons?</h3>
+<p>To view your available digital coupons on wegmans.com, click
+on <em>“</em><strong>Digital Coupons</strong><em>”</em> at the top of
+the homepage.</p>
+<p>On the Wegmans App, digital coupons can be found by clicking on the
+“Digital Coupons” icon on the home screen. They can also be located by
+tapping the down arrow in the upper right-hand corner of your screen and
+selecting <em>“</em><strong>Digital Coupons</strong><em>”</em> from the
+menu that appears.</p>
+<p>Additionally, when searching for products on both wegmans.com and the
+Wegmans App, you’ll see an icon on products that have associated digital
+coupons. When browsing products, you can apply a filter to show only
+items with associated digital coupons.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="who-do-i-contact-with-questions-about-my-account-or-digital-coupons">Who
+do I contact with questions about my account or digital coupons?</h3>
+<p>Contact the Service Desk at your local store or contact our Customer
+Care Center. They can be reach <a
+href="https://www.wegmans.com/service/contact-us"><strong>here</strong></a>
+or by calling <strong>1-800-WEGMANS (934-6267)</strong>, Monday through
+Friday, from 8am to 6pm, and Saturday and Sunday, from 8am to 5pm.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="why-dont-i-see-any-digital-coupon-offers">Why don’t I see any
+digital coupon offers?</h3>
+<p>Digital coupons are targeted to our customers for many different
+reasons. Check “Digital Coupons” frequently for new coupons available to
+you. There may also be a few other reasons why you might not see any
+digital coupons. First, you may have clipped and redeemed all available
+digital coupons. Second, there could be an issue with you having
+multiple accounts.</p>
+<p>If you have any questions, please contact our Customer Care Center <a
+href="https://www.wegmans.com/service/contact-us"><strong>here</strong></a>,
+or call <em>1-800-WEGMANS (934-6267)</em> Monday through Friday from 8am
+to 6pm, or Saturday and Sunday from 8am-5pm</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-not-just-offer-the-savings-through-shoppers-club-discounts">Why
+not just offer the savings through Shoppers Club discounts?</h3>
+<p>Customers have asked for digital coupons. We also wanted to offer our
+customers a new way to save.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="will-digital-coupons-be-offered-for-national-brand-products-too">Will
+digital coupons be offered for national brand products, too?</h3>
+<p>Shoppers Club digital coupons are most often offered on Wegmans brand
+products, but we do offer national brand digital coupons on items that
+we do not have a Wegmans Brand alternative for.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="will-i-still-be-able-to-use-national-brand-paper-coupons-at-wegmans">Will
+I still be able to use national brand paper coupons at Wegmans?</h3>
+<p><strong>Yes.</strong> We are not changing our current coupon policy.
+Please note that paper coupons for national brand items are not
+available for redemption on online orders.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="will-shoppers-club-discounts-go-away">Will Shoppers Club
+discounts go away?</h3>
+<p><strong>No.</strong> Shoppers Club discounts will continue in
+addition to digital coupons.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="will-wegmans-still-offer-paper-coupons-in-mailers-or-by-mail">Will
+Wegmans still offer paper coupons in mailers or by mail?</h3>
+<p>We have begun to transition most of our paper coupons to digital. We
+will still offer some paper coupons in select direct-mail pieces.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="ebt-snap-as-payment-online">EBT SNAP as Payment Online</h2>
+<h3 id="can-i-designate-the-amount-to-pay-with-an-ebt-snap-card">Can I
+designate the amount to pay with an EBT SNAP card?</h3>
+<p>Yes, you can determine the amount charged to your EBT SNAP card up to
+the total amount of eligible products.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-use-my-ebt-snap-card-to-order-groceries-online">Can I use
+my EBT SNAP card to order groceries online?</h3>
+<p>Yes. Customers can now use EBT SNAP cards when placing an order
+online. Please note that only EBT-eligible items can be paid for using
+SNAP funds. A primary payment method is required for non-EBT-eligible
+items and fees.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="do-i-need-to-also-use-a-credit-card-when-paying-with-my-ebt-snap-card">Do
+I need to also use a credit card when paying with my EBT SNAP card?</h3>
+<p>Yes, you will need to enter a credit card in addition to EBT SNAP
+when ordering online to cover items and fees that are not EBT
+eligible.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-are-weighted-items-that-go-over-the-pre-authorized-amount-charged">How
+are weighted items that go over the pre-authorized amount charged?</h3>
+<p>For weighted items that go over the original estimated amount, the
+first 10% of the price difference will be charged to EBT. The remaining
+difference will be charged to your credit card.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-add-my-ebt-snap-card-online">How can I add my EBT SNAP
+card online?</h3>
+<p>You can add this card under your account profile or during
+checkout.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-know-that-my-ebt-card-has-been-entered-correctly-and-will-be-">How
+do I know that my EBT card has been entered correctly and will be
+charged?</h3>
+<p>Before clicking “Place Order,” you can check the payment breakdown in
+the paragraph below “Place Order.” If the EBT card has been entered
+correctly, it will say how much will be charged to the EBT card and how
+much your credit card will be authorized for. If you do not see both
+payments listed, double-check that everything is entered correctly under
+the payment field before placing your order.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-know-which-items-are-snap-eligible">How do I know which
+items are SNAP eligible?</h3>
+<p>There is an <a
+href="https://www.wegmans.com/shop/categories?toggle%5BebtEligible%5D=true">EBT
+filter</a> online and an EBT tag on items to quickly identify eligible
+products.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-will-my-order-be-charged-if-i-add-an-item-after-i-placed-the-order">How
+will my order be charged if I add an item after I placed the order?</h3>
+<p>If the order has not begun to be shopped, you can add items to your
+order and adjust the SNAP EBT amount for your order. Select “Charge more
+to EBT” after adding EBT-eligible items to adjust the amount of funds
+used for the order. If it is not adjusted, all charges will be covered
+by the credit card on file. If the order is being shopped, any items
+added or changed through substitutions or communication with the shopper
+will be charged to the credit card on file.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="my-credit-card-was-charged-but-not-my-ebt-card-can-you-charge-my-ebt-c">My
+credit card was charged but not my EBT card. Can you charge my EBT card
+instead?</h3>
+<p>Unfortunately, we are not able to change the card that an order has
+been charged to after the order has been placed. You will need to cancel
+your order and place a new order with the correct payment methods
+selected.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3
+id="what-do-i-do-if-i-have-a-problem-after-receiving-my-grocery-order-will">What
+do I do if I have a problem after receiving my grocery order? Will you
+refund my SNAP funds?</h3>
+<p>If EBT-eligible items require a refund, the refund will go back to
+the EBT SNAP card.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="farm-raised-seafood">Farm-Raised Seafood</h2>
+<h3 id="are-antibiotics-and-hormones-used-in-aquaculture">Are
+antibiotics and hormones used in aquaculture?</h3>
+<p>At Wegmans we do not allow the use of hormones in farm-raised
+seafood. And antibiotics are never used in any farm-raised shrimp or
+Canadian organic mussels sold at Wegmans. Non-organic farm-raised salmon
+in our stores rarely receive antibiotics. The only time they are allowed
+is if they are prescribed by a veterinarian and then those fish must
+remain in the pens until the antibiotics have left their system.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="arent-the-ponds-crowded-with-large-numbers-of-fish">Aren’t the
+ponds crowded with large numbers of fish?</h3>
+<p>While it’s true that aquafarms want to maximize the number and size
+of fish they harvest, it’s not healthy for the fish or the surrounding
+ecosystem to pack the ponds too densely. Therefore, the farms we choose
+as partners strive to find the right balance to raise healthy, thriving
+product without adding undue stress on the environment.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="do-aquaculture-operations-consume-more-wild-fish-than-they-produce">Do
+aquaculture operations consume more wild fish than they produce?</h3>
+<p>This has been a true concern of the seafood industry for a long time.
+We work with our suppliers to be sure they are continuously monitoring
+and taking steps to improve this ratio. Each species is different due to
+dietary needs and their efficiency at converting feed to weight. Our
+fresh tilapia supplier uses a feed that is 100% fishmeal and fish oil
+free. Our EU organic salmon and shrimp producers use less than 1 lb. of
+feed to raise 1 lb. of product. Our farm-raised salmon is currently at a
+1:1 ratio and working to improve. We always encourage our suppliers to
+use wild fishmeal from trimmings of fish caught for human consumption
+whenever possible.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="does-aquaculture-damage-the-environment">Does aquaculture damage
+the environment?</h3>
+<p>Wegmans seeks out farms that employ best practices to minimize impact
+on the surrounding environment. For example, aquafarmers we work with
+know that it is in their best interest to keep their pond and pen areas
+healthy and flourishing. Therefore, they take steps to minimize any
+damage to local ecosystems, such as mangroves. All Wegmans suppliers
+must abide by local and federal environmental laws and regulations to
+monitor potential impacts of their business.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="dont-farms-pollute-local-waterways">Don’t farms pollute local
+waterways?</h3>
+<p>Wegmans seeks out farms that employ best practices to minimize impact
+on the surrounding environment. For example, in open water, the
+placement of nets in productive currents is an important consideration
+at responsible farms. In addition, it is a prudent practice to be sure
+you’re not overfeeding (and consequently leaving too much feed in the
+water). And finally, when fish are harvested, the nets lie dormant (with
+no fish) for a period of months to allow the organic debris (fish waste
+and excess feed) to degrade and the ocean floor to recover. If the farm
+uses inland ponds (rather than open-water nets), the ponds are drained
+(and the water filtered), cleaned, and air-dried before water is added
+for the next season.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="is-farmed-salmon-injected-with-dye">Is farmed salmon injected
+with dye?</h3>
+<p>No. You can read more about this topic <a
+href="https://www.wegmans.com/service/current-food-topics#colorants">here</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="isnt-it-true-that-farmed-fish-can-escape-the-pens-and-mate-with-wild-f">Isn’t
+it true that farmed fish can escape the pens and mate with wild
+fish?</h3>
+<p>Improvements in the pens (design, materials, and technology) and
+management practices have significantly reduced escapes. Our suppliers
+are required to report escapes to government regulators and Wegmans.
+There was an instance of only one escaped fish, which took place as the
+fish were being harvested, reported in 2016.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="ive-heard-that-farmed-fish-are-contaminated-with-mercury-is-that-true">I’ve
+heard that farmed fish are contaminated with mercury. Is that true?</h3>
+<p>The Food and Drug Administration advises pregnant women, women of
+childbearing age who may become pregnant, nursing mothers, and young
+children to avoid consumption of shark, king mackerel, tilefish and
+swordfish. These fish have much higher levels of mercury. None of these
+species are farm raised. Farm-raised fish tend to have a shorter
+lifespan, so mercury does not have the opportunity to accumulate in
+their systems. In addition, formulated feed ingredients used in
+aquaculture are regularly monitored to avoid possible contamination of
+feed with methyl mercury. You can read more <a
+href="https://www.wegmans.com/service/current-food-topics#mercury">here</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h2 id="fresh-news-email">Fresh News Email</h2>
+<h3 id="do-you-sell-email-addresses">Do you sell email addresses?</h3>
+<p>No, we do not sell your e-mail address to anyone. We handle your
+e-mail address strictly in accordance with Wegmans’ <a
+href="https://www.wegmans.com/privacy">Privacy Policy</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-sign-up-to-receive-fresh-news-emails">How can I sign
+up to receive Fresh News emails?</h3>
+<p>To receive Fresh News emails, you must have a Wegmans online account
+and be subscribed to receive Fresh News emails. You can view &amp; edit
+your email subscriptions on the “<a
+href="https://shop.wegmans.com/account/notifications">Email
+Preferences</a>” page. If you do not have an online account <a
+href="https://myaccount.wegmans.com/wegmansonline.onmicrosoft.com/oauth2/v2.0/authorize?client_id=7c0edc2c-5aa9-4a85-9ab0-ae11c5bb251e&amp;p=B2C_1A_signup_signin&amp;state=B2C_1A_signup_signin&amp;redirect_uri=https%3A%2F%2Fshop.wegmans.com%2Fsocial-redirect%2Fwegmans_idp&amp;response_type=code&amp;scope=7c0edc2c-5aa9-4a85-9ab0-ae11c5bb251e%20offline_access">create
+an account</a> to register &amp; subscribe.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-unsubscribe-from-fresh-news">How can I unsubscribe
+from Fresh News?</h3>
+<p>You can unsubscribe by using the link located toward the bottom of a
+Fresh News email you have received or you can view &amp; edit your email
+subscriptions on the “<a
+href="https://www.wegmans.com/account/email-preferences">Email
+Preferences</a>” page.</p>
+<p>If you are having issues unsubscribing, please <a
+href="https://www.wegmans.com/service/contact-us">contact</a> our
+Customer Care Center or call 1-800-WEGMANS (934-6267).</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-fresh-news">What is Fresh News?</h3>
+<p>Fresh News is our email program we use to stay connected with you.
+Get easy meal ideas, help for entertaining, info about events at your
+store &amp; more delivered right to your inbox.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h2 id="gmos">GMOs</h2>
+<h3 id="does-wegmans-carry-gmo-salmon">Does Wegmans carry GMO
+salmon?</h3>
+<p>Wegmans does not currently offer GMO salmon (sometimes called
+genetically engineered salmon), nor do we have plans to do so. In
+addition, our specifications for farm-raised salmon would not allow GMO
+salmon to be substituted without our knowledge.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-learn-more-about-gmos">How do I learn more about
+GMOs?</h3>
+<p>The Food and Drug Administration is responsible for assuring the
+safety of our foods including those produced from genetic engineering
+(GMOs). <a
+href="https://www.fda.gov/food/food-new-plant-varieties/understanding-new-plant-varieties">Click
+here</a> to learn more about how the FDA views this technology.</p>
+<p>A group of 23 natural/organic food companies banded together to
+create the non-profit Non-GMO Project. <a
+href="http://www.nongmoproject.org/">Click here</a> to read about their
+perspective, along with a complete listing of products that carry their
+seal.</p>
+<p>Six major GMO seed companies will facilitate a response to your
+question at <a href="https://gmoanswers.com/">GMO Answers</a>. Answers
+are provided by expert members and partners.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="is-there-an-easy-way-to-avoid-gmos">Is there an easy way to
+avoid GMOs?</h3>
+<p>Yes. Look for the certified organic symbol. Certified organic foods
+cannot be grown from GMO seeds nor can they contain any other GMO
+ingredient. The same cannot be said for foods labeled as “natural.”</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-are-gmos">What are GMOs?</h3>
+<p>GMO stands for genetically modified organism. GMOs are living
+organisms that have had their genetic code modified in some way. It’s
+important to note that plant and animal genetics have been modified
+since the dawn of agriculture. Selective breeding, cross pollination,
+and hybridization are common methods farmers have used to improve their
+products. GMOs are different in that scientists have picked out a
+desired trait from one living thing, copied that trait and placed it
+into another living thing. Most genetically modified crops have had
+their genes altered to make the plant more resistant to pests and
+disease; to be able to withstand herbicides; to increase drought
+tolerance; or to improve nutritional value. You’ll also see GMO
+technology referred to as gene-splicing, bioengineering, or genetic
+engineering. <a
+href="https://www.fda.gov/food/agricultural-biotechnology/science-and-history-gmos-and-other-food-modification-processes">Click
+Here</a> for more information on the history and science of GMOs.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-are-the-most-common-gmo-crops">What are the most common GMO
+crops?</h3>
+<p>The most common GMO crops are sugar beet, corn, canola, soybean, and
+cotton.</p>
+<p>Note: Despite what you might read, wheat is not commercially
+available as a GMO. <a
+href="https://www.fda.gov/food/agricultural-biotechnology/gmo-crops-animal-food-and-beyond">Click
+Here</a> for more information on GMO crops that are grown and sold in
+the US.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-do-some-wegmans-brand-products-state-that-they-contain-bioengineer">Why
+do some Wegmans Brand products state that they contain bioengineered
+ingredients?</h3>
+<p>The National Bioengineered Food Disclosure Standard is a national
+mandatory regulation that requires disclosure on food products
+containing ingredients that are or may be bioengineered. The regulation
+became effective January 1, 2020. Food manufacturers and retailers are
+required to provide the disclosure on products starting January 1, 2022.
+The Standard defines bioengineered foods as “those that contain
+<strong>detectable genetic material</strong> that has been modified
+through certain lab techniques and cannot be created through
+conventional breeding or found in nature.” Sometimes the terms
+“bioengineering,” “GMO,” and “genetic engineering” are used
+interchangeably, but disclosures under the Standard must use the term
+“bioengineered.”</p>
+<p>Some bioengineered ingredients may be processed in such a way that
+the ingredient no longer contains <strong>detectable genetic
+material</strong>, and therefore products containing them would not need
+to include a bioengineered disclosure statement. For example, soybean
+oil, if processed in such a way that it no longer contains detectable
+genetic material, would not be required to include a bioengineered
+disclosure statement on the product’s label.</p>
+<p><a
+href="https://www.ams.usda.gov/rules-regulations/be/consumers">Click
+Here</a> for more information on the National Bioengineered Food
+Disclosure Standard.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="meals-2go-catering-cakes">Meals 2GO Catering &amp; Cakes</h2>
+<h3 id="are-all-image-and-message-requests-accepted">Are all image and
+message requests accepted?</h3>
+<p>Orders are reviewed by our store teams, and any requests containing
+profane, inappropriate or copyrighted language and/or images will not be
+fulfilled. Copyrighted images or trademarks can only be used when
+permission is obtained by the owner of the copyright or trademark in
+writing.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="are-gluten-free-options-available">Are gluten-free options
+available?</h3>
+<p>Menu items made with no gluten-containing ingredients are available;
+please <a
+href="https://meals2go.com/browse-menu/Made%20with%20No%20Gluten">click
+here</a>.</p>
+<p>We identify items that are made without gluten-containing ingredients
+by including “Made with No Gluten-Containing Ingredients” on the
+product’s label or on signage that references the item. Made with No
+Gluten-Containing Ingredients does not mean the item is gluten free. It
+means the item was not made with any ingredients derived from wheat, rye
+or barley, but may contain gluten due to shared preparation areas
+(shared preparation areas include ovens, cutting boards, utensils,
+grills, and fryers).</p>
+<p>For more information, visit our <a
+href="https://www.wegmans.com/health-nutrition/special-diets/gluten-free-faqs">Gluten-Free
+FAQs page</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="are-utensils-included-with-catering-orders">Are utensils
+included with Catering orders?</h3>
+<p>Serving utensils are available for each Catering item. Please specify
+upon pickup, in store, if you would like them included. Forks, spoons,
+and knives should be ordered separately, and can be found in the
+“Cutlery &amp; Tableware” menu.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-change-my-cake-order-on-meals-2go">Can I change my cake
+order on Meals 2GO?</h3>
+<p>No. The order cannot be changed online or in the app. Please contact
+your pickup store at the number listed in the order details in your
+confirmation email for assistance.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-customize-my-meals-2go-order">Can I customize my Meals 2GO
+order?</h3>
+<p>We want to make your meal the way you’d like it best, so we’ve
+enabled the ability to customize your order wherever we possibly
+can.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-get-my-meals-2go-order-delivered">Can I get my Meals 2GO
+order delivered?</h3>
+<p>Yes! Delivery is available at most locations for your meal or
+Catering order. Deliveries are fulfilled by trusted third-party
+partners. When checking out, you can choose “Meet at Door” or “Leave at
+Door.” Exceptions apply for holiday meals and entrees.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-order-a-cake-with-a-photo-online">Can I order a cake with
+a photo online?</h3>
+<p>Yes! You can upload a JPG or TIFF image. We recommend uploading an
+image that is 8.5 in. x 11 in. The maximum file size for each photo is
+10MB. If you are ordering more than one photo cake, the combined file
+size of all your images must be under 15MB.</p>
+<p>The final size of the image on your cake will depend on the size of
+the cake, the decoration selected, and the length of any message you
+add.</p>
+<p>By uploading a photo, you acknowledge that you are the copyright
+holder and approve this use or have the copyright holder’s approval for
+this use. We cannot fulfill orders that do not meet these standards.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-place-an-order">How do I place an order?</h3>
+<p>Please visit <a href="https://meals2go.com/">meals2GO.com</a> or
+download the Meals 2GO app. Choose your store and select carryout,
+curbside or delivery to begin your order.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-far-ahead-can-i-order-meals-2go-a-cake-or-catering-online">How
+far ahead can I order Meals 2GO, a cake or Catering online?</h3>
+<p>You can place an order up to <strong>40</strong> days prior to the
+date and time of pickup, with a minimum of 24 hours’ notice required for
+cakes and most Catering orders.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="i-am-a-501c3-organization-can-i-order-tax-exempt">I am a 501c3
+organization. Can I order tax exempt?</h3>
+<p>Yes, we accept tax exemption through Meals 2GO for any 501c3
+organization when you log in with your Wegmans for Business account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="in-stores-with-bag-legislation-what-bags-are-used-for-meals-2go-and-ca">In
+stores with bag legislation, what bags are used for Meals 2GO and
+Catering orders?</h3>
+<p>All Catering and Meals 2GO orders will use paper bags at no charge to
+customers.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="is-there-a-fee-to-order-on-meals-2go">Is there a fee to order on
+Meals 2GO?</h3>
+<p>Prices on Meals 2GO are the same as they are in stores, and there is
+no fee to order individual meal items. A small additional service charge
+may be added to Catering orders to cover the cost of preparing the
+order.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="is-tipping-required-for-delivery-orders">Is tipping required for
+delivery orders?</h3>
+<p>Tipping is an option and is a great way to support delivery drivers.
+100% of your tip goes to the driver.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="meals-2go-and-catering-delivery-pricing">Meals 2GO and Catering
+Delivery Pricing</h3>
+<p><strong>Delivery Fees</strong></p>
+<p>If you choose delivery for your Catering or Meals 2GO order, a
+delivery fee will apply based upon the subtotal of your order, as
+outlined below. For orders over $150, you’ll also have the option to add
+special delivery instructions at checkout. Delivery fees apply only to
+delivered orders; there’s no delivery fee for pickup.</p>
+<p><strong>Meals 2GO and Catering Delivery Fee Structure</strong>
+(excluding Astor Place and Brooklyn Stores)</p>
+<p>$15 – $34.99 Order | $4.99 Delivery Fee</p>
+<p>$35 – $149.99 Order | Delivery Fee is 15% of order subtotal</p>
+<p>$150 – $199.99 Order | $20 Delivery Fee</p>
+<p>$200-$499.99 Order | $30 Delivery Fee</p>
+<p>$500- $999.99 Order | $40 Delivery Fee</p>
+<p>$1,000+ Order | $50 Delivery Fee</p>
+<p><strong>Meals 2GO and Catering Delivery Fee Structure for Astor Place
+and Brooklyn Stores</strong></p>
+<p>$15 – $34.99 Order | $4.99 Delivery Fee</p>
+<p>$35 – $149.99 Order | Delivery Fee is 15% of order subtotal</p>
+<p>$150 – $199.99 Order | $25 Delivery Fee</p>
+<p>$200-$499.99 Order | $35 Delivery Fee</p>
+<p>$500- $999.99 Order | $45 Delivery Fee</p>
+<p>$1,000+ Order | $50 Delivery Fee</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-forms-of-payment-are-accepted">What forms of payment are
+accepted?</h3>
+<p>We accept valid credit cards, Wegmans for Business charge cards or
+Wegmans gift cards. Full payment is required in advance, and all
+applicable state and local taxes will be included in your purchase
+total. Sign-in is required for tax exemptions applied to qualifying
+Wegmans for Business accounts. Note: We apologize for any inconvenience,
+but we are unable to accept EBT as a method of payment online. Please
+call your store for assistance.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-happens-if-i-do-not-select-leave-at-door">What happens if I
+do not select “Leave at Door”?</h3>
+<p>If you do not select “Leave at Door,” please be ready to receive your
+order as the driver may return your food to the store. Additional
+charges may be incurred for redelivery.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-the-cancellation-policy">What is the cancellation
+policy?</h3>
+<p>You can cancel your order up to 24 hours prior to your pickup or
+delivery time through the Meals 2GO app or at <a
+href="https://meals2go.com/">meals2GO.com</a>. If you need to cancel
+your order with less than 24 hours’ notice, please contact the store as
+soon as possible. If your order has already been prepared, you may be
+charged for some or all of the order.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-the-maximum-wine-purchase-amount">What is the maximum
+wine purchase amount?</h3>
+<p>Meals 2GO wine purchases are limited to 48 bottles per day.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="what-is-true-color-frosting">What is true color frosting?</h3>
+<p>Our true color frosting is derived from fruits and vegetables and
+free of any artificial colors. Our frosting shades are thoughtfully
+curated with taste in mind for your enjoyment.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="where-do-i-find-allergen-nutrition-and-calorie-information">Where do
+I find allergen, nutrition, and calorie information?</h3>
+<p>Additional nutrition information is available upon request by
+contacting our Customer Care Center at 1-800-WEGMANS.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="why-cant-i-find-an-item-ive-ordered-before">Why can’t I find an
+item I’ve ordered before?</h3>
+<p>We change our menu seasonally to reflect the freshest offerings
+currently available. Also, sometimes items that are rarely ordered may
+be removed from the menu.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="will-any-items-require-reheating">Will any items require
+reheating?</h3>
+<p>Yes. Some Catering entrees and side dishes are cold at pickup and
+require heating before serving. Please take this into consideration when
+planning out your timetable. Catering reheating instructions can be
+found <a
+href="https://www.wegmans.com/catering"><strong>here</strong></a>.
+Serving instructions will appear on the label.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="my-orders-and-receipts">My Orders and Receipts</h2>
+<h3
+id="how-long-do-i-have-to-wait-until-i-can-view-my-receipts-online">How
+long do I have to wait until I can view my receipts online?</h3>
+<p>After an in-store purchase, your receipt will be viewable within 24
+hours of your transaction.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-do-i-need-to-do-so-that-im-able-to-view-my-receipts-online">What
+do I need to do so that I’m able to view my receipts online?</h3>
+<p>To view receipts of purchases made in store, you must use either your
+phone number or Shoppers Club card at the register during checkout. Your
+Shoppers Club card can be scanned from a physical card or keytag, or via
+your Wegmans app.</p>
+<p>NOTE: If there is a pharmacy purchase in your transaction, that will
+not be accessible online.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h2 id="pharmacy">Pharmacy</h2>
+<h3 id="at-home-covid-19-test-kits">At-Home COVID-19 Test Kits</h3>
+<ul>
+<li>COVID-19 Test Kits are available for purchase in store or can be
+ordered through the Wegmans app or Wegmans.com.</li>
+<li>Some insurance companies may cover COVID-19 Test Kits when billed
+through the pharmacy. Ask the pharmacy if your insurance plan will cover
+COVID-19 Test Kits.*</li>
+<li>Test kits may be a qualified medical expense for coverage under a
+Medical Flexible Spending Account or Health Savings Account.*</li>
+</ul>
+<p><em>*Coverage and reimbursement for COVID-19 test kits will vary
+based on insurance plan and FSA/HSA coverage. Please check with your
+insurer for specific details. All test kits are non-refundable.</em></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-ask-questions-of-a-pharmacist-via-wegmans-pharmacy-online-or-spe">Can
+I ask questions of a pharmacist via Wegmans Pharmacy Online, or speak to
+a pharmacist about prescriptions that are mailed to me?</h3>
+<p>No, you are not able to communicate directly with a pharmacist
+online, but a Wegmans pharmacist is available to go over your
+medications via telephone at 1-800-934-4797 Monday–Friday from 8:30am to
+9:00pm, Saturday from 8:30am to 6:00pm, and Sunday from 8:30am to
+5:00pm.</p>
+<p>Also, a pharmacist is available at your <a
+href="https://www.wegmans.com/stores">local Wegmans Pharmacy</a> during
+normal business hours. A pharmacist will contact you for consultation by
+phone on all new medications or changes in therapy for prescriptions
+that are shipped to your home.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-can-i-obtain-a-copy-of-my-pharmacy-records-from-wegmans">How
+can I obtain a copy of my Pharmacy records from Wegmans?</h3>
+<p>You have the right to obtain copies of your PHI contained in a
+designated record set as long as Wegmans maintains it. The designated
+record set usually will include prescription and billing records. We may
+charge you a fee for the costs of copying, mailing and supplies that are
+necessary to fulfill your request. You may also request to receive a
+copy of your PHI electronically, in a mutually agreed on and readily
+producible format. We may deny your request to inspect and copy in
+certain limited circumstances. If you are denied access to PHI about
+you, you may request that the denial be reviewed.</p>
+<p>To get a copy of your PHI, please complete the <a
+href="https://images.wegmans.com/is/content/wegmanscsprod/hipaa-phi-access-request-accesspdf">HIPAA
+PHI Access Request Form</a> and mail it to the following address:</p>
+<p>Chief Privacy Officer<br />
+Wegmans Food Markets, Inc.<br />
+PO Box 30844<br />
+Rochester. NY 14603-0844<br />
+Fax (585) 464-4636</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-can-i-obtain-a-medical-expense-report-for-myself-or-a-family-membe">How
+can I obtain a medical expense report for myself or a family
+member?</h3>
+<p>You can print an expense report from your Wegmans Pharmacy Online
+profile for yourself or anyone else for whom you have been given access
+to manage prescriptions.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-can-i-obtain-authorization-to-access-another-adults-pharmacy-recor">How
+can I obtain authorization to access another adult’s Pharmacy
+records?</h3>
+<p>In order to access another adult’s Protected Health Information
+(PHI), you must be a legal representative (Guardian, Power of Attorney
+agent, Executor or Estate Administrator) or be otherwise authorized by
+that person. Paperwork establishing this relationship must be provided,
+including a death certificate if the customer is deceased.</p>
+<p>If you do not have any of the above documentation, the <a
+href="https://images.wegmans.com/is/content/wegmanscsprod/Wegmans-Authorization-Form-Disclosure-of-Medical-Informationpdf">Authorization
+for Disclosure of Medical Information</a> must be completed by the
+person whose PHI you’d like to have access to.</p>
+<p>To obtain access to the PHI of another adult please mail completed
+paperwork to the following address:</p>
+<p>Pharmacy Office<br />
+Wegmans Food Markets, Inc.<br />
+1500 Brooks Avenue<br />
+PO Box 30844<br />
+Rochester, NY 14603-0844<br />
+Fax: (585) 239-2044</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-can-i-receive-text-messages-for-another-adults-pharmacy-orders">How
+can I receive text messages for another adult’s Pharmacy orders?</h3>
+<p>In order to receive text messages for another adult’s orders, the <a
+href="https://images.wegmans.com/is/content/wegmanscsprod/wegmans-pharmacy-text-alerts-shared-phone-number-consent-7529815pdf">Consent
+to Text Alerts Service Using a Shared Phone Number</a> must be completed
+by the person who’s orders you’d like to receive text messages for.</p>
+<p>To have text messaging enabled for another adult’s orders, please
+return the completed paperwork to your local pharmacy to have the
+request submitted for processing.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-file-a-complaint-if-i-feel-that-my-privacy-has-been-compromis">How
+do I file a complaint if I feel that my privacy has been
+compromised?</h3>
+<p>HIPAA permits you to file a privacy complaint with Wegmans regarding
+allegations of improper use or disclosure of Protected Health
+Information (PHI). Wegmans will fully investigate any complaint and
+report back to you as soon as possible, but not later than 30 days from
+the date Wegmans receives your request.</p>
+<p>Please understand that complaints will be handled with the highest
+degree of confidentiality and there will be no retaliation resulting
+from a complaint. If you believe your privacy rights have been violated,
+you can file a complaint by:</p>
+<p><strong>Writing:</strong></p>
+<p>Wegmans Food Markets<br />
+Attn: Customer Care Center<br />
+1500 Brooks Avenue<br />
+PO Box 30844<br />
+Rochester, NY 14603-0844</p>
+<p><strong>Calling:</strong> 1-800-WEGMANS (934-6267)</p>
+<p><strong>Online: </strong><a
+href="https://www.wegmans.com/service/contact-us">Contact Us</a></p>
+<p><strong>Other: </strong><a
+href="http://www.hhs.gov/hipaa/filing-a-complaint/what-to-expect/index.html">Office
+for Civil Rights, U.S. Department of Health and Human Services</a></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-does-wegmans-ensure-its-employees-properly-handle-my-health-inform">How
+does Wegmans ensure its employees properly handle my health
+information?</h3>
+<p>At Wegmans, every employee that works in the pharmacy receives HIPAA
+training as the very first step in their pharmacy training, and also is
+required to complete periodic refreshers to stay up on all important
+privacy updates.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-will-medication-shipped-to-my-home-be-packaged">How will
+medication shipped to my home be packaged?</h3>
+<p>All Home Delivery orders will be packaged discretely so that the
+contents of the package cannot be determined. Also in order to protect
+your privacy, there will be no indication on the packaging regarding its
+contents.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="if-i-create-a-wegmans-pharmacy-online-profile-will-i-still-be-able-to-">If
+I create a Wegmans Pharmacy Online profile, will I still be able to call
+in refills?</h3>
+<p>Yes, you can choose whichever method of placing an order that is most
+convenient for you at the time.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="pharmacy-online-legal-notes">Pharmacy Online Legal Notes</h3>
+<p>Wegmans Pharmacy Online complies with the requirements of the Ryan
+Haight Online Pharmacy Act.</p>
+<p>Wegmans Food Markets, INC.<br />
+2873 Broadway St, Suite 100<br />
+Cheektowaga, NY 14227<br />
+Phone: 1-800-934-4797<br />
+Website: <a href="/">wegmans.com</a></p>
+<p>Darryl Gies, Supervising Pharmacist<br />
+Degree: Bachelor of Science, Pharmacy<br />
+Licensed in: Alabama, Alaska, Arizona, Arkansas, Idaho, Iowa, Kansas,
+Kentucky, Louisiana, Maryland, Massachusetts, Michigan, Mississippi,
+Nebraska, Nevada, New York, Oklahoma, Oregon, Texas, Tennessee,
+Virginia, West Virginia<br />
+Phone: 1-800-934-4797</p>
+<p>This online pharmacy will only dispense a prescription to a person
+who has a valid prescription issued for a legitimate medical purpose
+based upon a medical relationship with a prescribing practitioner. This
+includes at least one prior in-person medical evaluation or medical
+evaluation via telemedicine in accordance with applicable requirements
+of section 309.</p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/wegmans-pharmacy-notice-of-privacy-practice.pdf">Section
+1557</a> – Rx Notice Informing Individuals About Nondiscrimination</p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/MA-taglines.pdf">MA
+Taglines</a></p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/MD-taglines.pdf">MD
+Taglines</a></p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/NJ-taglines.pdf">NJ
+Taglines</a></p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/NY-taglines.pdf">NY
+Taglines</a></p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/PA-taglines.pdf">PA
+Taglines</a></p>
+<p><a
+href="https://www.wegmans.com/wp-content/uploads/VA-taglines.pdf">VA
+Taglines</a></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-devices-and-browsers-can-i-use-to-access-wegmans-pharmacy-online">What
+devices and browsers can I use to access Wegmans Pharmacy Online?</h3>
+<p>Wegmans <a href="https://www.wegmans.com/pharmacy">Pharmacy
+Online</a> can be accessed using a PC, laptop, mobile device or tablet
+through any of the more commonly used browsers (Internet Explorer, Edge,
+Chrome, Firefox, and Safari).</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-if-i-couldnt-make-it-to-pick-up-my-prescription">What if I
+couldn’t make it to pick up my prescription?</h3>
+<p>Prescriptions are returned to our shelves if they haven’t been picked
+up in 10 days. If you still need the medication, <a
+href="https://www.wegmans.com/stores">just give us a call</a>. We’ll be
+glad to fill it again for you.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-hipaa-and-how-does-it-pertain-to-pharmacy">What is HIPAA
+and how does it pertain to pharmacy?</h3>
+<p>Wegmans is required by the Federal Health Insurance Portability and
+Accountability Act (HIPAA) to maintain the privacy of Protected Health
+Information (PHI) and to provide individuals with notice of our legal
+duties and privacy practices with respect to PHI. PHI is information
+that may identify you and that relates to your past, present or future
+physical or mental health or condition and related health care services.
+This <a
+href="https://images.wegmans.com/is/content/wegmanscsprod/wegmans-pharmacy_notice-of-privacy-practicepdf">Notice
+of Privacy Practices (Notice)</a> describes how we may use and disclose
+PHI to carry out treatment, payment or health care operations and for
+other specified purposes that are permitted or required by law. The
+Notice also describes your rights with respect to PHI about you.</p>
+<p>Wegmans is required to follow the terms of this Notice. We will not
+use or disclose PHI about you without your written authorization, except
+as described in this Notice. We reserve the right to change our
+practices and this Notice and to make the new Notice effective for all
+PHI we maintain.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-the-delivery-area-for-prescriptions">What is the
+delivery area for prescriptions?</h3>
+<p>Home Delivery service delivers your prescriptions directly to your
+mailbox, anywhere in the United States and Puerto Rico.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-security-features-exist-to-ensure-the-privacy-of-my-pharmacy-reco">What
+security features exist to ensure the privacy of my pharmacy records
+online?</h3>
+<p>Maintaining the security of our pharmacy customer’s personal
+information is very important to us which is why we have numerous
+measures in place to ensure your protection.</p>
+<p>One such measure that you will see during the profile setup process
+is the personal identity verification check administered by our trusted
+business partner Experian®. This is a one-time process that involves
+answering specific questions generated by Experian® about you to ensure
+that the person attempting to access your pharmacy information is truly
+you.</p>
+<p>From a technical standpoint, we utilize TLS encryption technology
+which secures the connection between your PC or tablet and Wegmans’
+servers. Additionally, all of your personal information is stored in our
+secure HIPAA and PCI compliant database behind a firewall where it
+cannot be accessed without proper authorization.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="when-can-i-pick-up-my-prescription">When can I pick up my
+prescription?</h3>
+<p>Your prescription could be ready in as little as 24 hours depending
+on the day and/or time of day you submit your request. Please check the
+status of your order at <a
+href="https://www.wegmans.com/pharmacy">Wegmans Pharmacy Online</a>
+before visiting the store to pick up your order.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="where-can-i-find-wegmans-notice-of-privacy-practices">Where can
+I find Wegmans Notice of Privacy Practices?</h3>
+<p>Our Notice of Privacy Practice is located <a
+href="https://images.wegmans.com/is/content/wegmanscsprod/wegmans-pharmacy_notice-of-privacy-practicepdf">here</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="where-do-i-find-information-about-healthcare-pricing">Where do I
+find information about healthcare pricing?</h3>
+<p>The following links are posted to comply with the Transparency in
+Coverage rule.</p>
+<p><strong>For Aetna members:</strong><br />
+<a
+href="https://health1.aetna.com/app/public/#/one/insurerCode=AETNACVS_I&amp;brandCode=ALICSI/machine-readable-transparency-in-coverage?reportingEntityType=Third%20Party%20Administrator_125803919&amp;lock=true%20%5Bhealth1.aetna.com%5D">health1.aetna.com</a></p>
+<p><strong>For Cigna Health Care members:</strong> This link leads to
+the machine readable files that are made available in response to the
+federal Transparency in Coverage Rule and includes negotiated service
+rates and out-of-network allowed amounts between health plans and
+healthcare providers. The machine-readable files are formatted to allow
+researchers, regulators, and application developers to more easily
+access and analyze data.<br />
+<a
+href="https://www.cigna.com/legal/compliance/machine-readable-files">cigna.com/legal/compliance/machine-readable-files</a></p>
+<p><strong>For Excellus BCBS members:</strong><br />
+<a
+href="https://member.myhealthtoolkitex.com/web/public/brands/universal/transparency-in-coverage/?branding=ex">member.myhealthtoolkitex.com</a></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3
+id="where-will-they-leave-my-prescriptions-if-my-mailbox-is-too-smalli-don">Where
+will they leave my prescriptions if my mailbox is too small/I don’t have
+a mailbox and my mail is delivered through a slot in my front door?</h3>
+<p>The USPS carrier will use their discretion when delivering large or
+bulky items; refer to your local post office for more information.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-do-i-have-to-share-my-date-of-birth-and-address-when-picking-up-a-">Why
+do I have to share my date-of-birth and address when picking up a
+prescription?</h3>
+<p>At Wegmans the health and wellness of every customer is of the utmost
+importance to us. We have many customers with similar names and use both
+of these methods as an extra safety check to ensure you are receiving
+the correct medication. However, if you are not comfortable saying this
+information aloud, you may certainly provide your license to help the
+representative identify your correct prescriptions.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="will-i-still-receive-my-text-reminders-that-my-prescription-is-readyfi">Will
+I still receive my text reminders that my prescription is
+ready/filled?</h3>
+<p>Yes. If you are enrolled in text alerts, you will receive a text when
+your order has shipped with tracking information, as well as a text when
+your order has been delivered.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="will-wegmans-contact-my-doctor-for-me-when-i-have-no-refills-left-or-m">Will
+Wegmans contact my doctor for me when I have no refills left or my
+prescription is expired?</h3>
+<p>Yes, when you request to refill a prescription that is out of refills
+or expired, we will contact your doctor for a new prescription.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="product-information">Product Information</h2>
+<h3 id="can-i-order-products-online">Can I order products online?</h3>
+<p>Wegmans offers a variety of online ordering options including Wegmans
+Delivery (powered by Instacart) and <a
+href="https://www.wegmans.com/gift-cards">gift cards</a>. Learn more at
+our <a href="https://www.wegmans.com/pickup-delivery">Pickup &amp;
+Delivery</a> page.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-refreeze-meat-if-i-decide-not-to-cook-it">Can I refreeze
+meat if I decide not to cook it?</h3>
+<p>We don’t recommend it because the quality of the meat will suffer.
+While it may still be safe to eat, it will become very dry and
+tough.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-special-order-a-product-that-wegmans-has-discontinued">Can
+I special order a product that Wegmans has discontinued?</h3>
+<p>Sorry; we don’t offer such a service. But, if the product is
+necessary for a special diet or for a medical condition, let us know by
+using our <a href="https://www.wegmans.com/service/contact-us">contact
+us page</a> and we’ll try to help out.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="does-wegmans-sell-kegs-of-beer">Does Wegmans sell kegs of
+beer?</h3>
+<p>Many of our stores sell kegs in a variety of beers. Contact your <a
+href="https://www.wegmans.com/stores">local store</a> for availability
+and pricing. Deposits may apply.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-can-i-decipher-code-dates-on-canned-and-other-packaged-food-produc">How
+can I decipher code dates on canned and other packaged food
+products?</h3>
+<p>It is sometimes only possible to “crack the code” by asking the
+manufacturer or supplier. Canned food manufacturers are now beginning to
+provide date coding that clearly conveys an expiration date for that
+particular product to the consumer. We have encouraged all of our
+Wegmans brand suppliers to switch to date codes when possible.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-does-wegmans-know-that-the-produce-they-carry-is-safe">How
+does Wegmans know that the produce they carry is safe?</h3>
+<p>We take food safety very seriously because we want people to live
+healthier, better lives and we never want to make anyone sick. Much of
+our energy centers on prevention. We are committed to discovering new
+science that can lead to best practices in limiting or eliminating bad
+pathogens in our products.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-long-can-eggs-be-stored">How long can eggs be stored?</h3>
+<p>Eggs can be stored up to three weeks past the sell-by date stamped on
+the carton. They don’t go bad after that; they just deteriorate in
+quality.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-long-can-i-keep-canned-goods-in-the-cupboard">How long can I
+keep canned goods in the cupboard?</h3>
+<p>Most canned foods will keep for up to two years. If you would like
+more information on a particular product, please contact our Customer
+Care Center by clicking <a
+href="https://www.wegmans.com/service/contact-us">here</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-long-can-i-safely-store-cooked-meats-in-the-refrigerator">How
+long can I safely store cooked meats in the refrigerator?</h3>
+<p>Cooked meats can be safely stored for 2 to 3 days in the
+refrigerator. For more information on food storage, contact our Customer
+Care Center by clicking <a
+href="https://www.wegmans.com/service/contact-us">here</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="i-want-you-to-start-carrying-this-product">I want you to start
+carrying this product.</h3>
+<p>We receive so many product requests each year it’s impossible to say
+yes to every one. But, sometimes we are able to add a new product. Send
+us an e-mail by using our <a
+href="https://www.wegmans.com/service/contact-us">contact us page</a>
+with the name of the product, size, where you’ve seen it carried, and
+the UPC number (bar code). The more information we have, the better we
+can research the possibility. Keep in mind that some products are only
+regionally available. Something seen in Florida, for example, may not be
+available in the northeast. Decisions are based on product availability,
+the number of requests we’ve received for the same product, and the
+selection of similar products in the same category.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3
+id="our-company-makes-a-product-that-wed-like-to-introduce-to-wegmans-what">Our
+company makes a product that we’d like to introduce to Wegmans. What is
+the process to follow?</h3>
+<p>The best place to start is by mailing information about your product
+and your marketing plan to the attention of the appropriate department,
+i.e. grocery, dairy, produce, health and beauty care, etc. If there is
+interest, you will be contacted to set up an appointment to present your
+product.</p>
+<p>We are sorry, but we do not give out individual e-mail address
+listings, in part because there are multiple category merchants in each
+department. It is impossible to know which merchant matches best with
+the product you have to offer. Please do not send product samples. Our
+corporate address is 1500 Brooks Avenue, Rochester, NY 14603.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-is-wegmans-position-on-the-welfare-of-the-animals-raised-for-wegm">What
+is Wegmans position on the welfare of the animals raised for Wegmans
+products?</h3>
+<p>At Wegmans, we believe raising animals in a humane way is the only
+way it should be done. We have high standards in place that were
+developed in partnership with animal welfare experts. We take a
+thorough, personal approach to selecting our supplier partners, visiting
+each potential facility to evaluate them with our own eyes. Once chosen,
+welfare audits are conducted periodically to ensure our standards are
+being met.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="where-can-i-find-information-on-your-floral-delivery-service">Where
+can I find information on your floral delivery service?</h3>
+<p>Several of our stores offer floral delivery. Learn more about our
+gifted floral options through <a
+href="https://meals2go.com/catering/You%20Might%20Need?is_retargeting=true&amp;shortlink=3138315&amp;c=101521_W2G_Floral_PC&amp;pid=PromotedCreative&amp;IID=M2GOFloralCatering:PR:LP:SB:::">Meals
+2GO</a> or call your local store for additional information.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="why-do-products-get-discontinued">Why do products get
+discontinued?</h3>
+<p>Sometimes manufacturers stop making a product; other times we choose
+to stop carrying a product. Approximately 10,000 new food products are
+introduced every year. It’s a constant juggle to figure out which new
+products to carry and which existing products to discontinue in order to
+make space. Our category merchants make decisions based on sales. They
+discontinue the slowest moving products in a category (Wegmans brand
+included) when it’s necessary to make room on the shelf for something
+new.</p>
+<p>Another factor is the growing demand for organic and natural
+products, ethnic and specialty foods, as well as prepared and other
+fresh foods, requiring more store space devoted to these products. To
+free up space, we have started to look more closely at our grocery,
+dairy, frozen, health and beauty care, and other departments in an
+effort to eliminate duplication. In some categories (cleaning and
+laundry products, for example), we have offered several nearly-identical
+products, except for the name on the label. We’re trying to scale that
+back to be sure we are offering the best quality products and those that
+offer the best value, realizing that inevitably someone will be
+disappointed with our decision to eliminate a brand. In addition to
+freeing up space for new products and those in greater demand, we also
+hope to simplify shopping for our customers.</p>
+<p>What stays and what goes is ultimately up to our customers, who
+literally ‘vote’ for or against a product every time they buy it or
+leave it on the shelf.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-is-holiday-merchandise-like-christmas-trees-and-lights-displayed-s">Why
+is holiday merchandise, like Christmas trees and lights, displayed so
+early?</h3>
+<p>We begin to display holiday merchandise in October, and we realize
+that some customers feel it is too early. Most folks haven’t bought
+their Halloween candy yet. Believe it or not, customers start buying
+holiday decorations in early fall. If we don’t have these products
+available, they will go someplace else to shop.</p>
+<p>We realize that shopping for holiday decorations early in October is
+not for everyone. But, as a retailer, we have to be ready for those who
+plan and shop early.</p>
+<p>We also have a sign that stores can put in place that explains this.
+It says “The holidays are very special times in our lives. Some
+customers like to do their holiday shopping early and others like the
+hustle-bustle of waiting until the very last minute. By displaying
+holiday items early, we are allowing you to make the decision.”</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="recipes">Recipes</h2>
+<h3 id="how-do-i-add-ingredients-to-my-listcart-on-wegmanscom">How do I
+add ingredients to my list/cart on wegmans.com?</h3>
+<p>To add items to your list/cart, click on the recipe &amp; scroll down
+and select the orange “Add to Cart/List” button to the right of the
+product you want to purchase.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-add-recipe-ingredients-to-my-listcart-on-the-wegmans-app">How
+do I add recipe ingredients to my list/cart on the Wegmans App?</h3>
+<p>To add items to your list/cart, tap on the recipe &amp; scroll down
+and click the orange “Shop Ingredients” bar. Then, individually click
+the items that you want to add to your list/cart.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-find-recipes-that-fit-my-special-diet-ex-low-sodium-in-the-we">How
+do I find recipes that fit my special diet (ex. Low Sodium) in the
+Wegmans App?</h3>
+<p>Locate recipes by tapping the “Meals” option in the bottom banner.
+Next, click on “Search All Recipes” and locate the filter options (bars)
+under Recipes.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-find-recipes-that-fit-my-special-diet-ex-low-sodium-on-wegman">How
+do I find recipes that fit my special diet (ex. Low Sodium) on
+wegmans.com?</h3>
+<p>Click on “Recipes” at the top of the page, then click on “Search All
+Recipes.” Next, check the boxes of the filters you want to apply.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-print-a-recipe">How do I print a recipe?</h3>
+<p>The easiest way to print a recipe is to scroll down to the
+“Directions” section and click the yellow “View Step by Step” button.
+Then, just right click to print the page. This will be the most printer
+friendly format.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="how-do-i-view-my-saved-recipes-on-the-wegmans-app">How do I view
+my saved recipes on the Wegmans App?</h3>
+<p>Locate recipes by tapping the “Meals” option in the bottom banner.
+Then, tap on the “Saved Recipes” option.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-view-my-saved-recipes-on-wegmanscom">How do I view my
+saved recipes on wegmans.com?</h3>
+<p>Click Recipes at the top of the page, then click on “Saved Recipes”
+at the top of the page.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-werent-all-of-the-ingredients-added-to-my-shopping-list-from-a-rec">Why
+weren’t all of the ingredients added to my shopping list from a
+recipe?</h3>
+<p>Occasionally we use other recipes to build a base for another recipe.
+Whenever we do this, we will list the other recipe we used. If you
+search for that recipe you will be able to add those items as well.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="shoppers-club">Shoppers Club</h2>
+<h3 id="how-do-i-sign-up-for-shoppers-club-2">How do I sign up for
+Shoppers Club?</h3>
+<p><strong>At Home</strong>, visit <a
+href="https://www.wegmans.com/service/shoppers-club">wegmans.com/shoppersclub</a> and
+click on “Create an Account.” You’ll be asked to create a username and
+password and fill in your contact information, including a unique phone
+number.</p>
+<p><strong>At any Wegmans Store Service Desk</strong>, a Service Desk
+Team Member will be happy to assist you in creating an account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="if-i-have-additional-questions-who-do-i-contact">If I have
+additional questions, who do I contact?</h3>
+<p>Please <a href="https://www.wegmans.com/service/contact-us">contact
+us</a> or call 1-800-WEGMANS (934-6267)</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="if-i-update-my-information-online-will-it-automatically-update-my-shop">If
+I update my information online will it automatically update my Shoppers
+Club account?</h3>
+<p>Yes, your information will be sent to us electronically and will be
+updated.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="store-policies">Store Policies</h2>
+<h3 id="do-you-accept-ebt-cards-for-purchases">Do you accept EBT cards
+for purchases?</h3>
+<p>Yes. All of our food stores accept EBT cards according to the terms
+of the state that the store is located in.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-check-cashing-policy">What is your check cashing
+policy?</h3>
+<p>You may write personal checks for your purchases.* Wegmans utilizes a
+third party for personal check authorization. Acceptance of your
+personal check and clearing of your personal check is done through this
+third-party service provider.</p>
+<p>We will not be able to honor your personal check if the third-party
+service provider does not authorize your check.</p>
+<p>Any questions regarding the acceptance of your check can be directed
+to Certegy Check Services at 1-800-237-4851.</p>
+<p><strong>Checks Not Accepted</strong></p>
+<ul>
+<li><p>Third-party checks</p></li>
+<li><p>Bluebird checks by American Express</p></li>
+<li><p>Altered, post-dated or stale-dated checks</p></li>
+<li><p>Checks drawn on any foreign bank</p></li>
+<li><p>Counter checks</p></li>
+<li><p>Starter checks (not imprinted with name)</p></li>
+<li><p>Home-printed checks</p></li>
+<li><p>Payroll/government or any other non-personal check</p></li>
+<li><p>Money orders</p></li>
+<li><p>Electronic checks (e-checks)</p></li>
+<li><p>Rebate checks</p></li>
+<li><p>Traveler’s checks</p></li>
+</ul>
+<p><em>*Please note: Our Astor Place and Brooklyn stores do not accept
+checks.</em></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="what-is-your-coupon-policy">What is your coupon policy?</h3>
+<p>We gladly accept both Manufacturer’s and Wegmans store coupons.</p>
+<p>We double manufacturers’ coupons* with a face value of $.99 or less
+with the following exceptions and limitations:</p>
+<ul>
+<li><p>Coupons with a face value of $1.00 or greater will be redeemed at
+face value.</p></li>
+<li><p>One manufacturers’ coupon per item for a SPECIFIC BRAND
+product.</p></li>
+<li><p>Only FOUR (4) manufacturers’ coupons will be accepted on FOUR (4)
+of the same brand product per day.*</p></li>
+<li><p>The double or face value of a coupon may NOT exceed the retail
+price.</p></li>
+<li><p>One manufacturers’ coupon and Shoppers Club discount or store
+coupon may be redeemed on the same item. The combination of a
+manufacturers’ coupon and a Shoppers Club discount/store coupon may not
+exceed the retail price.</p></li>
+<li><p>One manufacturers’ coupon may be redeemed for each Family Pack
+product.</p></li>
+<li><p>We cannot give you a raincheck for manufacturers’
+coupons.</p></li>
+<li><p>We do not accept manufacturers’ coupons for free products
+downloaded from the Internet (where the word FREE appears on the
+coupon).</p></li>
+<li><p>By law, we cannot accept manufacturers’ coupons for
+alcohol.</p></li>
+<li><p>We reserve the right to limit quantities.</p></li>
+<li><p>We reserve the right to refuse any coupon that may appear
+fraudulent/photocopied.</p></li>
+<li><p>We will only accept coupons that are in date, and product or
+purchase requirements have been met (must match exactly; size, variety,
+flavor, etc.).</p></li>
+<li><p>We uphold any purchase stipulations set forth by
+manufacturer.</p></li>
+<li><p>We will not accept a manufacturers’ coupon for the product that
+is received FREE as part of a Buy One, Get One offer.</p></li>
+<li><p>We do not double manufacturers’ coupons that state “do not
+double”.</p></li>
+<li><p>We do not accept Internet coupons over $4.99.</p></li>
+<li><p>We are unable to accept digital forms of coupons (other than our
+own Shoppers Club Digital Coupons). This includes Wegmans coupons that
+are uploaded to smartphone applications.</p></li>
+<li><p>We are only able to accept Wegmans Shoppers Club digital coupons.
+We are unable to accept electronic coupons from any apps other than the
+Wegmans App. All other coupons must be presented in paper form.</p></li>
+</ul>
+<p>*Exceptions</p>
+<p><strong>For the Greater Syracuse Area of New York:</strong></p>
+<ul>
+<li>Only FOUR (4) manufacturers’ coupons for free products can be
+redeemed per day (excluding Internet coupons).</li>
+</ul>
+<p><strong>For Williamsport, Allentown, Nazareth and Bethlehem in
+Pennsylvania:</strong></p>
+<ul>
+<li>Manufacturer’s Coupons with a face value at less than $1.00 we
+double to a maximum value of $1.00.</li>
+</ul>
+<p><strong>For the Midlothian, Short Pump &amp; Charlottesville
+Stores:</strong></p>
+<ul>
+<li>We do not double manufacturer coupons</li>
+</ul>
+<p><strong>Face Value Redemption For:</strong></p>
+<ul>
+<li><p>Coupons not for a specific brand name item.</p></li>
+<li><p>Free item coupons (excluding Internet coupons).</p></li>
+</ul>
+<p><strong>Additional Shoppers Club Notes:</strong></p>
+<p>Discounts on certain items (marked by MFR) are supported by the
+manufacturer; we are required by law to charge sales tax on the
+manufacturer-sponsored portion of such offers. Forgotten coupons and
+Shoppers Club discounts must be redeemed within two weeks of the
+original purchase date with original receipt.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-credit-debit-card-policy">What is your credit &amp;
+debit card policy?</h3>
+<p>Mastercard, Visa, Discover and American Express credit cards, along
+with debit cards, may be used for purchases at any register.
+Regrettably, we are unable to take credit or debit card numbers over the
+phone, except for catering orders placed through our Catering
+Department. Shoppers Club discounts will be given with credit and debit
+card transactions if a Wegmans Shoppers Club account is used.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-internet-coupon-policy">What is your internet
+coupon policy?</h3>
+<p>We take Internet coupons with only two restrictions.</p>
+<p><strong>FREE</strong> coupons are not accepted, and the fine print,
+to minimize cashier uncertainty, is that <strong>the word FREE can’t
+appear on the</strong> <strong>coupon</strong>.** <strong>This includes
+</strong>Buy One, Get One Free offers.** The other restriction is that
+the electronic <strong>coupon value (or the double value) may not exceed
+the value of the item being purchased;</strong> the same as for other
+coupons.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-pricing-guarantee">What is your pricing
+guarantee?</h3>
+<p>We pledge that we will not charge a customer a price for any item
+which exceeds the shelf price, sale price or advertised price.</p>
+<p>We have confidence in the accuracy of our scanner pricing system. If,
+in spite of our efforts, we make a mistake and you’re overcharged, you
+are entitled to the following:</p>
+<ol type="1">
+<li><p>A refund of the difference so you’re charged the lower
+amount.</p></li>
+<li><p>ONE DOLLAR ($1.00) as a “Thank You” for calling this to our
+attention.</p></li>
+<li><p><strong>Exceptions for Massachusetts:</strong></p></li>
+<li><ol type="1">
+<li><p>If you are overcharged on an item, you are entitled to that (1)
+item free (up to $10). Additional items thereafter will be charged at
+the lower, indicated price.</p></li>
+<li><p>If the item is over $10, you will be charged the indicated price
+and receive $10 off the order. Additional items thereafter will be
+charged at the lower, indicated price.</p></li>
+</ol></li>
+<li><p><strong>Exceptions for the Greater Buffalo Area
+</strong><em>(except Military Road):</em></p></li>
+<li><p>If your order is complete and you have been overcharged, you are
+entitled to a refund in accordance with Erie and Chautauqua County
+law.</p></li>
+<li><ol type="1">
+<li><p>Present your register receipt to our Service Desk and complete a
+Super Refund request form.</p></li>
+<li><p>Once the overcharge has been verified, you will receive the
+difference in price, plus an amount equal to 10 times the
+difference.</p></li>
+<li><p>The Super Refund may not be less than one dollar, nor more than
+ten dollars.</p></li>
+<li><p>If more than one identical item is purchased, you will receive a
+Super Refund on one item, plus the difference in price on the additional
+items.</p></li>
+</ol></li>
+</ol>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-purchases-and-adjustments-policy">What is your
+purchases and adjustments policy?</h3>
+<p>Home &amp; Entertaining 30-Day Price Adjustment</p>
+<p>If we put Home &amp; Entertaining items on sale within 30 days of
+your purchase, you may request a refund or credit of the difference
+between the price you paid and the sale price, as long as you present
+your original register receipt. This policy does not apply to seasonal
+merchandise or merchandise that is on clearance or discontinued.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-raincheck-policy">What is your raincheck
+policy?</h3>
+<p>If we temporarily run out of an advertised special, we will try to
+substitute it with a similar item. If we cannot do this, the Customer
+Service Desk, Front End or department manager will gladly provide you
+with a raincheck good for 30 days. A raincheck is a one-time purchase
+certificate and must be handed to the cashier upon beginning the order.
+Limits may be placed on these items. Rainchecks may not be used in
+conjunction with future Shoppers Club sales.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-your-replacement-and-refund-policy">What is your
+replacement and refund policy?</h3>
+<p><strong>All stores:</strong></p>
+<ul>
+<li><p>ALL Refunds will be processed at Service Desk only.</p></li>
+<li><p>Without a receipt, store credit may be given at the lowest sale
+price. Refund totals over $25.00 require your Shoppers Club account and
+your valid (not expired) driver’s license or equivalent.</p></li>
+<li><p>Store Management reserves the right to deny any refund or
+exchanges based on their discretion.</p></li>
+</ul>
+<p><strong>Exceptions for Buffalo NY stores minus Military Rd. Buffalo,
+NY:</strong></p>
+<ul>
+<li><p>Refunds for alcoholic beverages must be returned at the store it
+was purchased from.</p></li>
+<li><p>Refunds for alcoholic beverages will only be given when
+accompanied by a receipt.</p></li>
+<li><p>Refunds on alcoholic beverages will be given only in cases where
+the product or packaging remains unopened.</p></li>
+<li><p>Refunds for opened alcoholic beverages will only be given if
+there is a quality issue and a product complaint form is
+completed.</p></li>
+</ul>
+<p><strong>Exceptions for Massachusetts stores:</strong></p>
+<ul>
+<li><p>Refunds for alcoholic beverages must be returned at the store it
+was purchased from.</p></li>
+<li><p>Refunds on alcoholic beverages will only be given when
+accompanied by a receipt.</p></li>
+<li><p>Refunds on alcoholic beverages will only be given in cases where
+there is a quality issue with the product or packaging.</p></li>
+</ul>
+<p><strong>Exceptions for Metro NY, Rochester, Southern Tier, Syracuse
+&amp; Military Rd. Buffalo, NY:</strong></p>
+<ul>
+<li><p>Refunds for alcoholic beverages must be returned at the store it
+was purchased from.</p></li>
+<li><p>Refunds for alcoholic beverages will only be given when
+accompanied by a receipt.</p></li>
+<li><p>Refunds on alcoholic beverages will be given only in cases where
+the product or packaging remains unopened.</p></li>
+</ul>
+<p><strong>Exceptions for Pennsylvania stores:</strong></p>
+<ul>
+<li><p>Refunds for alcoholic beverages must be returned at the store it
+was purchased from.</p></li>
+<li><p>Refunds for alcoholic beverages will only be given when
+accompanied by a receipt from a PA Wegmans store.</p></li>
+<li><p>Refunds on alcoholic beverages will only be given in cases where
+there is a quality issue with the product or packaging.</p></li>
+</ul>
+<p><strong>Exceptions for Virginia, DC, North Carolina &amp; NJ stores:
+</strong></p>
+<ul>
+<li><p>Refunds for alcoholic beverages must be returned at the store it
+was purchased from.</p></li>
+<li><p>Refunds for alcoholic beverages will only be given when
+accompanied by a receipt.</p></li>
+<li><p>Refunds for alcoholic beverages will only be given if there is a
+quality issue and a product complaint form is completed</p></li>
+</ul>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="website">Website</h2>
+<h3 id="can-i-print-my-shopping-list">Can I print my shopping list?</h3>
+<p>Yes.</p>
+<p>To print an Unsaved List, hover over your list on the right-hand side
+of the page and click on the three vertically stacked dots. Then, select
+“Print.”</p>
+<p>To print a Saved List, go to the “Saved Lists” page and click on the
+“Details” button to the right of the list you would like to print. On
+the List Details page, select “Print.”</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="does-wegmans-ship-to-locations-across-the-us-or-abroad">Does
+Wegmans ship to locations across the US or abroad?</h3>
+<p>No, we do not ship groceries. The Shopping List/Cart is an online
+tool designed to help you plan your shopping trip or order groceries for
+delivery or pickup.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-create-a-shopping-list-for-in-store-shopping">How do I
+create a shopping list for in-store shopping?</h3>
+<p>Click the “Add to List” button below the product you want to add to
+your list. You need to be signed in to your account to build a list. You
+will also be able to view past purchases and/or save the shopping list
+for future reference. You can quickly find your previously purchased
+products by selecting “My Items.”</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-view-my-list-by-aisle">How do I view my list by
+aisle?</h3>
+<p>For items to be sorted by aisle, you must be in the In-Store shopping
+mode. If your items are sorted by department, it means that you are in
+Pickup or Delivery mode.</p>
+<p>If you are viewing your list in In-Store shopping mode, you can sort
+your list by clicking on the List icon in the upper right-hand corner of
+your screen. This will bring you to a page titled “My List.” Select
+“Sort By” at the top of your page and choose to sort your list by aisle
+or by department.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="is-there-a-way-to-see-if-anything-is-on-sale">Is there a way to
+see if anything is on sale?</h3>
+<p>If there is a Shoppers Club discount available on an item, the
+Shoppers Club icon will appear next to the price on your list. An icon
+will also appear on the item’s image if you have a digital coupon for
+the product. When shopping, you can filter products to only display
+products on Shoppers Club by clicking the filter icon and selecting
+“Shoppers Club.”</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-are-some-of-the-items-displayed-under-the-organic-filter-not-usda-">Why
+are some of the items displayed under the organic filter not USDA
+certified organic?</h3>
+<p>Products made with some organic ingredients (e.g., made with organic
+grains) display the green organic wellness key. Customers have told us
+they like to see the full made-with-organic assortment. The organic leaf
+is your shortcut to fully organic items.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="will-i-see-the-total-as-im-building-my-list">Will I see the
+total as I’m building my list?</h3>
+<p>An estimated total is displayed at the top right corner of the screen
+as you build your list. Your estimated total will vary depending on
+weight/number of items, tax, discounts, etc. Your actual total can only
+be determined upon purchase at checkout.</p>
+<p>When you switch your list from In Store to Pickup or Delivery, your
+estimated total will be updated to reflect the pricing differences.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="wegmans-app">Wegmans App</h2>
+<h3 id="can-i-create-multiple-shopping-lists">Can I create multiple
+shopping lists?</h3>
+<p>You can create as many shopping lists as you want, but you can only
+have one active shopping list at a time. The easiest way to create a new
+shopping list is to click on the left-hand menu bar icon and select
+“Saved Lists.” Then, click the “Create New List” button to create your
+new list.</p>
+<p>If you are viewing a product and want to make a new shopping list
+with that item, select the “Save for Later” button underneath the “Add
+to List” button. A drop-down box will appear, and you can enter the
+title of your list and click the red “+” icon. This will create your
+list and add the item to it.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-share-a-list-with-someone">Can I share a list with
+someone?</h3>
+<p>Yes. To share a list with someone, tap on the “My List” tile on the
+homepage. Then, tap on the three vertically stacked dots in the upper
+right-hand corner of the screen, and select “Share List.” This will
+allow you to share your list via text message, email, and more.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="do-i-have-to-sign-in-or-can-i-use-the-app-as-a-guest">Do I have
+to sign in or can I use the app as a guest?</h3>
+<p>The app can be used for in-store shopping without signing in.
+However, to get the most out of your experience, we recommend signing in
+with or creating a Wegmans Shoppers Club account. This allows you to
+access both in-store and online purchases, see previously purchased
+items in search results, clip digital coupons to your Shoppers Club, and
+much more.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-add-ingredients-for-a-recipe-to-my-shopping-list">How
+do I add ingredients for a recipe to my shopping list?</h3>
+<p>Tap on the “Meals” icon on the banner at the bottom of the app. When
+you locate a recipe you want to shop for, tap “Shop This Recipe,” select
+each item you’d like to add to your list, then tap “Add Selected Items
+to My List.” If you are already signed in, the ingredients will be added
+automatically. If you are not signed in, you will be prompted to do
+so.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-scan-an-item">How do I scan an item?</h3>
+<p>To scan an item, select the barcode icon located in the search bar
+and point your camera at the barcode you want to scan. To add the
+scanned item to your list, scroll down below the product’s price and
+select “Add to List” or “Save for Later.” Note: Your camera must be
+enabled within the Wegmans app.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-do-i-view-my-list-by-aisle-2">How do I view my list by
+aisle?</h3>
+<p>For items to be sorted by aisle, you must be in the In-Store shopping
+mode. If you are in Pickup or Delivery mode, items are sorted by
+department.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="is-my-mobile-device-supported">Is my mobile device
+supported?</h3>
+<p>The Wegmans app can run on Android devices with OS 14 or higher, and
+iOS devices with OS 16 or higher. If you have an older device, you can
+still use wegmans.com by opening your mobile web browser and going to <a
+href="/">www.wegmans.com.</a></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="mobile-app">MOBILE APP:</h3>
+<p><a href="https://www.wegmans.com/service/mobile-app">Click here</a>
+to learn more and download the Wegmans app.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="whats-the-difference-between-the-wegmans-app-and-the-wegmans-meals-2go">What’s
+the difference between the Wegmans app and the Wegmans Meals 2GO
+app?</h3>
+<p>Our Wegmans app and Wegmans Meals 2GO app are two separate apps. Our
+Meals 2GO app is for ordering our prepared foods (pizza, subs, sushi,
+salads, etc.) for pickup or delivery. Orders are delivered to your house
+by a third-party delivery provider. The Wegmans app is designed to help
+with your grocery shopping and gives you the ability to order groceries
+for pickup or delivery.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="why-am-i-receiving-the-message-your-account-is-already-in-use-when-try">Why
+am I receiving the message “Your account is already in use” when trying
+to create an account on the Wegmans app?</h3>
+<p>You are receiving this message because you already have an existing
+Wegmans Online account. Please sign in with the email address that was
+used to create the account or click on the “Forgot Password” link if you
+do not know your password. If you are still having problems, please
+contact our Customer Care Center <a
+href="https://www.wegmans.com/service/contact-us">here</a>, or call
+1-800-WEGMANS (934-6267), Monday through Friday from 8am to 7pm, and
+Saturday and Sunday from 8am to 5pm.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="why-do-i-need-to-verify-my-phone-number">Why do I need to verify
+my phone number?</h3>
+<p>A one-time phone verification is needed to ensure the online account
+and Shoppers Club benefits are linked properly. This will enable your
+telephone number to be entered at the register and will provide you with
+access to accurate receipt history as well as digital coupons customized
+to your purchase history.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="wegmans-for-business">Wegmans for Business</h2>
+<h3
+id="can-i-order-gift-cards-using-my-wegmans-for-business-charge-account">Can
+I order gift cards using my Wegmans for Business Charge account?</h3>
+<p>Yes, visit <a
+href="https://www.wegmans.com/gift-cards"><strong>wegmans.com/giftcards</strong></a>,
+click “Purchase Wegmans Gift Cards/Check Balance,” and go to “Gift Cards
+for Businesses.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-a-purchase-order-for-my-wegmans-for-business-purchase">Can
+I use a purchase order for my Wegmans for Business purchase?</h3>
+<p>Our Charge program allows you to use purchase orders to help control
+spending and maintain budgets. To learn more, visit <a
+href="https://www.wegmans.com/wegmans-for-business">wegmans.com/business</a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="can-i-use-a-wegmans-gift-card-to-pay-for-my-charge-bill">Can I
+use a Wegmans gift card to pay for my Charge bill?</h3>
+<p>No, not at this time.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="can-i-use-my-wegmans-charge-cards-at-other-stores">Can I use my
+Wegmans Charge cards at other stores?</h3>
+<p>Wegmans for Business Charge cards can only be used in a Wegmans-owned
+store, restaurant or wine shop.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-my-wegmans-for-business-cards-in-more-than-one-state">Can
+I use my Wegmans for Business cards in more than one state?</h3>
+<p>Yes! Your Wegmans for Business cards will work in any Wegmans store,
+regardless of your location.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="can-i-use-my-wegmans-for-business-charge-card-to-pay-my-billing-statem">Can
+I use my Wegmans for Business Charge card to pay my billing
+statement?</h3>
+<p>No, we only accept a check or ACH payment.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="do-i-need-to-have-a-membership-account-to-apply-for-a-charge-account">Do
+I need to have a Membership account to apply for a Charge account?</h3>
+<p>Yes, a Membership account is required to apply for a Charge
+account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="do-i-need-to-use-both-my-membership-and-wegmans-for-business-charge-ca">Do
+I need to use both my Membership and Wegmans for Business Charge
+cards?</h3>
+<p>For purchases made in store, a 2-card swipe is required to receive
+all your benefits, such as sales tax exemption when applicable, digital
+coupons, and Shoppers Club discounts. The Membership card has a bar code
+which will appear on a cell phone if an online account is set up.</p>
+<p>For purchases made on wegmans.com and Meals 2GO, log in to your
+online account to receive all your benefits, such as sales tax exemption
+when applicable, digital coupons, and Shoppers Club discounts.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-do-i-activate-my-charge-card-once-it-arrives-in-the-mail">How do
+I activate my Charge card once it arrives in the mail?</h3>
+<p>There will be a sticker on your Charge card with a phone number to
+call to activate the card: 1-800-543-5073. You must know the last 4
+digits of your business’s federal tax number for verification.
+Membership cards will not need to be activated.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="how-long-will-it-take-for-my-wegmans-for-business-cards-to-arrive">How
+long will it take for my Wegmans for Business cards to arrive?</h3>
+<p>Once we receive your application, both your Membership and Charge
+cards will arrive within two weeks. However, you can log in to your
+online account to purchase on <a
+href="https://www.wegmans.com/home">wegmans.com</a> and <a
+href="https://meals2go.com/">meals2GO.com</a> immediately.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="how-many-wegmans-for-business-cards-can-i-get">How many Wegmans
+for Business cards can I get?</h3>
+<p>You can have as many cards as you need for your account. You can also
+set up multiple accounts to suit your organization’s needs.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="is-there-a-fee-to-sign-up-for-a-wegmans-for-business-membership">Is
+there a fee to sign up for a Wegmans for Business Membership?</h3>
+<p>There are no fees associated with a Membership account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="no-a-pin-number-will-not-be-required">No, a PIN number will not
+be required.</h3>
+<p>Yes, once you are set up for online purchasing through your
+Membership account, you can use your Charge account for payment when
+ordering through <a href="/">wegmans.com</a>, the Wegmans App, <a
+href="https://meals2go.com/">meals2GO.com</a> or the Meals 2GO App.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-are-the-benefits-of-having-a-wegmans-for-business-charge-account">What
+are the benefits of having a Wegmans for Business Charge account?</h3>
+<p>Charge benefits include all of the Membership benefits above,
+plus:</p>
+<ul>
+<li><p>Monthly billing</p></li>
+<li><p>Purchase order capabilities</p></li>
+<li><p>Payment for online shopping</p></li>
+<li><p>Electronic statements</p></li>
+<li><p>ACH payments</p></li>
+<li><p>Security alerts</p></li>
+<li><p>View balances online</p></li>
+</ul>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-are-the-benefits-of-having-a-wegmans-for-business-membership-acco">What
+are the benefits of having a Wegmans for Business Membership
+account?</h3>
+<p>Membership benefits include:</p>
+<ul>
+<li><p>A personal Customer Service and Account Manager assigned to your
+account</p></li>
+<li><p>Digital coupons</p></li>
+<li><p>Automatic Shoppers Club discounts</p></li>
+<li><p>Multiple cards and accounts</p></li>
+<li><p>Systemized sales tax-exempt recognition when applicable</p></li>
+<li><p>Online ordering for Meals 2GO and Catering</p></li>
+<li><p>Online grocery shopping</p></li>
+<li><p>Online gift card purchasing</p></li>
+<li><p>Receipts available online</p></li>
+</ul>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-are-the-terms-and-conditions-of-the-membership-program-or-optiona">What
+are the terms and conditions of the Membership program or optional
+Charge feature?</h3>
+<p>You can find the terms and conditions <a
+href="https://images.wegmans.com/is/content/wegmanscsprod/Wegmans-for-Business-Terms-and-Conditionspdf"><strong>here</strong></a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="what-is-the-yearly-fee-for-a-wegmans-for-business-charge-account">What
+is the yearly fee for a Wegmans for Business Charge account?</h3>
+<p>For a Charge account, there is a $100 annual fee charged on the
+master account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="what-is-wegmans-for-business">What is Wegmans for Business?</h3>
+<p>This program helps make organizational purchasing at Wegmans quick
+and efficient using a <a
+href="https://www.wegmans.com/wegmans-for-business"><strong>Wegmans for
+Business account</strong></a>.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3
+id="who-do-i-contact-if-i-have-questions-andor-concerns-regarding-my-wegma">Who
+do I contact if I have questions and/or concerns regarding my Wegmans
+for Business Membership and Charge accounts?</h3>
+<p>Call our Customer Care Center:</p>
+<p>1-800-WEGMANS (934-6267)<br />
+Monday – Friday 8 AM – 7 PM ET<br />
+Saturday &amp; Sunday 8 AM – 5 PM ET<br />
+Online accounts work best with Chrome, Edge, Firefox, IE 11, and
+iOS/Safari browsers.</p>
+<p>You can also visit <a
+href="https://www.ezcardinfo.com/login.aspx?bid=8800ZC#/"><strong>wegmans.com/chargehelp</strong></a>
+to view your Wegmans for Business Charge account.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="will-there-be-a-pin-number-associated-with-my-charge-card">Will
+there be a PIN number associated with my Charge card?</h3>
+<p>No, a PIN number will not be required.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h2 id="wegmans-online-account">Wegmans Online Account</h2>
+<h3
+id="can-i-have-two-shoppers-club-accounts-registered-under-one-email-addre">Can
+I have two Shoppers Club accounts registered under one email
+address?</h3>
+<p>No, you can only have one Shoppers Club account associated with an
+email address.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<h3 id="does-wegmans-have-a-privacy-policy">Does Wegmans have a privacy
+policy?</h3>
+<p>Yes. The information gathered through this site will only be used to
+give you, our valued customer, our very best. Our <a
+href="https://www.wegmans.com/privacy"><strong>Privacy
+Policy</strong></a> is available for your convenience and answers
+questions about our website.</p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+<p>Can’t find an answer to your question? <a
+href="https://www.wegmans.com/service/contact-us">Send us an email</a>
+or call us at <a href="tel:1-800-934-6267">1-800-WEGMANS</a></p>
+<h3 id="how-do-i-create-a-wegmans-online-account">How do I create a
+Wegmans Online Account?</h3>
+<p><a
+href="https://myaccount.wegmans.com/wegmansonline.onmicrosoft.com/oauth2/v2.0/authorize?client_id=7c0edc2c-5aa9-4a85-9ab0-ae11c5bb251e&amp;p=B2C_1A_WegmansSignupSigninWithPhoneVerification&amp;state=B2C_1A_WegmansSignupSigninWithPhoneVerification&amp;redirect_uri=https%3A%2F%2Fshop.wegmans.com%2Fsocial-redirect%2Fwegmans_idp&amp;response_type=code&amp;scope=7c0edc2c-5aa9-4a85-9ab0-ae11c5bb251e%20offline_access">Create
+an account by clicking here</a></p>
+<p><a href="https://www.wegmans.com/service/faq">Back to FAQ
+Topics</a></p>
+</body>
+</html>
