@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-04" />
+  <title>The Audio Vault: how the site works</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Audio Vault: how the site works</h1>
+<p class="subtitle">The project’s own answers about registering,
+searching, downloading, requesting titles and describing them</p>
+<p class="date">2026-08-04</p>
+</header>
+<h1 id="the-audio-vault-how-the-site-works">The Audio Vault: how the
+site works</h1>
+<p>The Audio Vault is a volunteer, donation-funded project that collects
+the audio track of audio-described films and television so that blind
+and low-vision people can find described content that is otherwise
+scattered across platforms and countries. This guide gathers what the
+project publishes about <strong>using</strong> it: 25 answers and posts
+in its own words, covering registration and password resets, searching
+by language, the daily download limit, how to request a title, what an
+AudioVault Original is and how to make one, and how to volunteer as a
+describer.</p>
+<p><strong>This guide is not a catalogue and carries no download
+links.</strong> The site’s listings and its front-page featured titles
+were cut before anything was read, and any download address that
+appeared in the prose was reduced to its own words. If you want to know
+what is available, that is a question for the site’s own search, which
+needs an account.</p>
+<p>The news posts are included because they carry operational detail —
+how download limits changed, how to help supply titles, where the
+community talks. Announcements about the description of one particular
+title were set aside; there were 5 of them.</p>
+<p>Gathered on 04 August 2026. A volunteer project changes; check
+anything that matters against the site.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Frequently Asked Questions (16 articles)</li>
+<li>News about the service (8 articles)</li>
+<li>Miscellaneous (1 articles)</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="can-i-request-titles-to-be-put-on-the-site">Can I request titles
+to be put on the site?</h3>
+<p>Yes. You can either <a href="mailto:audiovault.net@gmail.com">email
+us</a> or post your request on our Discord server. If possible, include
+helpful details like the platform it’s on, the year of release, and
+whether you know if it has audio description.</p>
+<h3 id="could-i-create-avos">Could I create AVOs?</h3>
+<p>Absolutely. Anyone with enough vision to describe what’s happening on
+screen can create one. The only requirement is that it should sound
+clear and professional. You can also visit our <a
+href="https://discord.gg/sZ2PqF8">Discord server</a> for guidance or
+help from others.</p>
+<h3 id="do-you-accept-donations">Do you accept donations?</h3>
+<p>Yes, though the site is free to use for everyone, donations are
+appreciated. If you’d like to support the project, you can <a
+href="https://www.paypal.me/audiodescribed">make a donation here</a></p>
+<p>Currently PayPal is what we use to process donations, but this may
+change in the future.</p>
+<h3
+id="do-you-have-audio-description-in-languages-other-than-english">Do
+you have Audio description in languages other than English?</h3>
+<p>Yes, we do. We aim to include a variety of languages such as Spanish,
+French, German, Hindi, Turkish, and more. To find titles in a specific
+language, go to the “Movies” or “Shows” section and search by language
+name—like “Spanish”—to see all available content in that language.</p>
+<h3
+id="having-troubles-unzipping-a-tv-show-using-an-iphone-or-ipad">Having
+troubles unzipping a TV show using an iPhone or iPad?</h3>
+<ol type="1">
+<li>On your iOS Device go to settings, apps settings, Safari and then go
+down to downloads.</li>
+<li>Clicking on downloads a new section will appear. Under the section
+(Store Downloaded Files on). You want to change the setting from iCloud
+to iPhone. If you have an iPad change it to iPad. The default is usually
+set to iCloud and this is what causes the issue.</li>
+<li>Instead of the files app, try using either of the following apps <a
+href="https://apps.apple.com/us/app/izip-zip-unzip-unrar/id413971331">iZip</a>
+and or <a
+href="https://apps.apple.com/us/app/media-converter-video-to-mp3/id1294207675">Media
+Converter</a></li>
+</ol>
+<h3
+id="how-can-i-add-ad-to-titles-when-watching-with-friends-or-family-and-or-the-ad-does-not-match-with-the-video-i-have.">How
+can I add AD to titles when watching with friends or family? and or, the
+AD does not match with the video I have.</h3>
+<p>Watching with friends or family, Add audio description tracks to your
+video files with describealign, a free and open source tool with a
+screen reader accessible GUI! Amaze loved ones with your computer
+wizardry as misalignments from missing scenes or frame rates become
+distant memories of a frustrating past. Available as <a
+href="https://github.com/julbean/describealign/releases/latest">an
+application binary on Mac or Windows</a> or as a python package. Details
+available in <a
+href="https://github.com/julbean/describealign/blob/main/README.md">the
+README.</a> Version 2.0 with drag-and-drop and even more accessibility
+coming this month!</p>
+<h3
+id="i-have-an-audio-description-track-that-is-not-available-on-the-vault.-can-i-submit-this-track-to-be-added">I
+have an audio description track that is not available on the vault. Can
+I submit this track to be added?</h3>
+<p>We are always looking for tracks that are not widely available, for
+example TV broadcasts, to add to the collection. You can submit tracks
+by uploading them to a filehost of your choice. and getting in contact
+with us.</p>
+<h3 id="i-have-forgotten-my-password-what-do-i-do">I have forgotten my
+Password, What do I do?</h3>
+<p>Please <a href="mailto:audiovault.net@gmail.com">Contact Us</a> with
+the new password you would like to have and we will reset it for
+you.</p>
+<h3
+id="is-there-a-download-limit-what-settings-should-i-use-if-i-am-using-a-download-manager">Is
+there a download limit? What settings should I use if I am using a
+download manager?</h3>
+<ul>
+<li>Open <strong>Internet Download Manager</strong> (IDM).</li>
+<li>Press Alt to activate the menu bar, then press D to open the
+<strong>Downloads</strong> menu, use arrow keys to select
+<strong>Options</strong>, and press Enter.</li>
+<li>In the Options dialog, press CtrlTab to navigate to the
+<strong>Connection</strong> tab.</li>
+<li>Locate the dropdown labeled <strong>Default max. connection
+number</strong>. With arrow keys, choose <strong>1</strong> to reduce
+simultaneous connections.</li>
+<li>alternatively, there is a box below that where you can add an
+exception for audiovault.net for max 1 connection ** (Exceptions&gt;New)
+**</li>
+<li>Press Tab to reach the <strong>OK</strong> button, and press Enter
+to save.</li>
+</ul>
+<h3
+id="im-interested-in-helping-outcan-i-volunteer-to-write-or-voice-audio-description-tracks">I’m
+interested in helping out—can I volunteer to write or voice audio
+description tracks?</h3>
+<p>Absolutely, we’d be glad to have you on board! If you’d like to
+volunteer—whether it’s writing descriptions for shows or voicing scripts
+that have already been written—just get in touch. You can either <a
+href="mailto:audiovault.net@gmail.com">email us</a> or connect with us
+on our Discord server. Let us know how you’d like to contribute, and
+we’ll guide you from there.</p>
+<h3 id="what-are-audio-vault-originals">What are Audio Vault
+Originals?</h3>
+<p>AudioVault Originals (AVOs) are exclusive tracks created by
+volunteers for the audiovault. These are personal or community-driven
+projects developed out of interest and shared for the benefit of
+everyone.</p>
+<h3 id="what-does-new-description-mean-in-a-title">What does [New
+Description] mean in a title?</h3>
+<p>This tag indicates that the movie or show already had audio
+description, but a new track has been created for it—with the same
+accent but different style. For example, you might see [UK] and [UK New
+Description] to distinguish between two different versions.</p>
+<h3 id="what-does-tts-mean">What does [TTS] mean?</h3>
+<p>[TTS] stands for Text-To-Speech. It indicates that the descriptive
+narration in the audio track is generated using a synthesized voice.</p>
+<h3 id="what-is-audiovault">What is Audiovault?</h3>
+<p>This site contains the audio only portion of audio described film and
+TV shows. It is not intended to deprive copyright holders or service
+providers of income. Rather it is a small Project designed to make it
+easier for blind people to find and access audio described content that
+is spread across multiple platforms and countries.</p>
+<h3 id="why-does-a-tv-show-have-missing-seasons">Why does a TV show have
+missing seasons?</h3>
+<p>Unfortunately a lot of TV shows don’t have audio description for
+every single season. As much as we would like to provide such files, we
+are not able to due to them not being available. Content providers seem
+to skip certain seasons if not current or just don’t describe their back
+catalog, and or lack of volunteers willing to take them on. If you
+believe your favorite show definitely got the back catalog described,
+feel free to let us know on our discord server.</p>
+<h3 id="why-is-there-missing-films-in-a-specific-franchise">Why is there
+missing films in a specific franchise?</h3>
+<p>Generally this is the same as missing seasons within a show. Certain
+movie franchises like Friday the 13th won’t have all the movies
+described. As much as we would like to provide such files, we cannot do
+to them not being described by the streamer/company. We always do try to
+have a complete set of films or TV show seasons. If you have any
+information on where some of these films can be found with AD, please
+let us know on our discord server.</p>
+<h2 id="news-about-the-service">News about the service</h2>
+<h3 id="ad-for-one-piece-describealign-v2-use-of-audiovault-in-apps">AD
+for One Piece, Describealign V2, use of audiovault in apps</h3>
+<p>January 30, 2026 about One Piece Audio description, describealign
+version 2, and the use of apps that intigrate audiovault. Hello all, we
+hope you’ve had a great start to the year, and we wish you and yours a
+wonderful 2026 ahead. We’re back with yet another bit of news, and this
+one should be especially tasty if you’re the kind of person who happily
+devours anime, Where did that bag of chips go! As usual, there’s plenty
+happening behind the scenes from the awesome folks at the Audio
+Description Creators Club releasing new titles every month, to a few
+things we’re keeping under our hats for now, but will be sharing soon.
+😄 To make things even more exciting, <strong>Yonko Gene</strong> has
+started describing the <em>One Piece</em> series!</p>
+<p>Where possible, the show will be split into arcs and uploaded to the
+website once an arc is complete. For episodes that belong to an arc
+still in progress, Here is the One-Piece work-in-progress folder for
+those who can’t wait or want to stay up to date.</p>
+<p>If the folder happens to be empty, don’t panic—just check back a
+little later.</p>
+<p>For completed arcs, <a
+href="https://audiovault.net/shows?search=One+Piece+%E2%80%93+Arc">look
+in our Shows section for One Piece</a>. As always, please remember that
+this is a volunteer project—done for no gain or benefit, but purely out
+of passion and as a labor of love. If you have any constructive
+feedback, comments or words of encouragement for Gene, feel free to drop
+us a line and we will gladly pass them along. We’d also like to quickly
+clear up our stance on apps or alternative interfaces that make use of
+the Audiovault.</p>
+<p>We do not have any apps or services that are created, supported, or
+endorsed by us apart from this website. If you choose to use any app,
+service, or alternative interface, you do so at your own risk.</p>
+<p>For apps or services that do not respect our policies—or that,
+through bugs or malfunctions, cause your account to be flagged as
+abusive—you can and will be banned. As a reminder, downloading more than
+25 titles in a day, account hopping, deliberate IP hopping, attempting
+to archive the vault, and similar shenanigans are considered abusive
+behaviors. These strain our limited server resources and negatively
+affect the experience for everyone. Since our last news post,
+<strong>DescribeAlign</strong>—a tool that helps sync audio from here
+with movies or shows obtained elsewhere so you can watch with friends
+and family—has released version 2. This update adds several new features
+to an already feature-rich application.</p>
+<p><a href="https://github.com/julbean/describealign">DescribeAlign can
+be downloaded from here</a>. if you have any questions about using
+DescribeAlign, you can <a href="https://discord.gg/sZ2PqF8">join our
+Discord server</a> for help, or contact us. Thank you, as always, for
+being part of the community and for supporting the work that goes into
+making all of this possible.</p>
+<p>If you can, Please consider <a
+href="https://www.paypal.me/audiodescribed">Supporting the audiovault
+through a donation</a> Stay safe, stay curious, and enjoy the shows,</p>
+<p>The Audiovault team</p>
+<h3 id="audiovault-back-online-after-backup">Audiovault Back Online
+After Backup</h3>
+<p>March 17, 2020 Audiovault is now back, ready to support users during
+the coronavirus lockdown. Hello all,</p>
+<p>We hope all of you are doing well and are staying in to avoid the
+Coronavirus</p>
+<p>The Audiovault was offline for about 6 days or so for backup
+purposes, and we had set in a buffer time of upto 18th March for the
+backup to be finished.</p>
+<p>However the backup finished sooner than expected and as Many of you
+Wanted us to be back soon, Here we are. We understand it was perhaps
+unfortunate timing on our part, but back then when plans were being
+layed for backup and for the site to be offline in order to avoid
+putting a strain on both the hardware and the bandwidth, None of us
+could have imagined things getting as bad as they have gotten, and
+people having to stay put. Either way, We are back up now, and here’s
+hoping that the vault is able to help you even in a miner way to deal
+with some of that bordem</p>
+<p>Stay well, and Stay safe!</p>
+<h3 id="audiovault-launch-early-updates">Audiovault Launch &amp; Early
+Updates</h3>
+<p>July 23, 2019 Initial launch notes, contributors, and account system
+announcement. This has been coming for a while, but other things kept
+coming in the way. So I decided I’d finally push this out.</p>
+<p>First of all, Thanks at all our uploaders and supporters who have
+contributed to the audiovault, and an apology for the delay. In major
+news, As you may or may not have noticed, a login system has been added
+to the vault, with the cooldown system a WIP.</p>
+<p>The account system has been introduced so that we are able to provide
+better speeds and a fare use of server resources for all our users, and
+so that not all our resources are being hogged by a few. In other news,
+Our uploaders have been hard at work as always, and have added many
+awesome titles.</p>
+<p>The featured section recently added will often have movies and shows
+added to it, to highlight particularly interesting and popular titles,
+if you think of something that should be on there, get in touch.
+Alternative methods of communication are in the works, with a few almost
+good to go, and a few other fallback platforms just in case they don’t
+work out. You can Join us <a href="https://discord.gg/sZ2PqF8">On our
+Discord Server here</a> for now.</p>
+<p>Also keep an eye out on here for any more news and updates. In
+closing, if you have any questions, comments, concerns or a request,
+feel free to <a href="mailto:audiovault.net@gmail.com">Write to us
+here</a></p>
+<h3 id="download-limits">Download Limits</h3>
+<p>July 20, 2022 Important update regarding server usage and download
+limits. Hello there,</p>
+<p>Please go through this news post at least once, as it is very
+important for everyone. oweing to the rampent abuse of the server
+resources by a certain section of our users, we have had to implement IP
+blocks, which in simple words means we will be going through and
+blocking the people who abuse the service and make the experience worse
+for the rest of our users.</p>
+<p>As a result, we have limited downloads per user to 25 downloads a
+day, exceeding which will result in a ban.&gt;</p>
+<p>We are however willing to make exceptions, as long as no harm and or
+abuse was intended. Should you feel that you have are inocent of any
+wrongdoing and or if you have been banned due to an error such as not
+being aware of the 25 downloads per day limit, <a
+href="mailto:audiovault.net@gmail.com">Please Contact Us</a> With your
+details, and we will help you out. We have always been against limits
+and or restrictions of any sort fron the start, however in order to
+insure that all of our users have equal access and a better experience
+with the site, we have been forced to go down this path.</p>
+<p>We will of course take other measures should it become necessary.</p>
+<p>Our hope is that all of us by using the vault farely will make the
+user experience better for everyone, and not have the website unusable
+for the rest just because of a few.</p>
+<p>Have a great day ahead,</p>
+<p>The Audiovault Team.</p>
+<h3 id="happy-holidays-and-looking-for-uploaders">Happy Holidays and
+looking for Uploaders</h3>
+<p>December 21, 2019 Holiday greetings, uploaders, and thanks. Happy
+holidays Everyone!</p>
+<p>This month last year I along with a few friends started working on
+the Audiovault, and I never expected we would grow as much as we have,
+or do this well.</p>
+<p>Deepest Thanks to our uploaders and contributors who’ve helped us in
+getting all these audio described TV shows and movies for all our users
+to enjoy, and our donators who have help us carry on with their generous
+donations.</p>
+<p>and I am sure, with your love and support, we will continue to make
+Audio describe content available to everyone for years to come. We are
+often asked this question, so I thought I’d write this here for everyone
+to see. If you would like to help us get even more shows and movies, the
+vault is currently looking for <a
+href="http://www.audiovault.net/failed">these titles</a> If you happen
+to have any of the movies or shows listed there, do a quick search on
+both the movies and shows pages (to make sure someone else hasn’t given
+us the title first) and then upload it to any filehost and <a
+href="mailto:audiovault.net@gmail.com">Share the link with us</a> If you
+are interested in becoming a uploader, and are from the US or the UK,
+please write to us. We will be adding quite a few movies and tv shows
+this holiday season so do remember to keep an eye out, and use the first
+search field on the movies and shows pages to search the titles added by
+date, in dd-mm-yyyy format.</p>
+<p>We at AudioVault would like to wish you a very Merry Christmas and A
+Happy New Year!</p>
+<h3 id="news-gets-a-place-of-its-own">News gets a place of it’s own</h3>
+<p>September 15, 2025 Miner UI updates, News, FAQ, DescribeAlign, and
+more. Hello all!</p>
+<p>It’s been a very, very long while since we last posted on here, but
+we hope you all are doing quite well and the titles that we have been
+uploading daly are keeping your epitite for accessible entertainment
+satisfied!</p>
+<p>A lot has happened in the last 2 years, with discord acting as a hub
+for all the latest news, from AudioVault Originals to over 23000 titles,
+and an even bigger newer server! to keep up with the growing demand, new
+users and all the entertaining titles with Audio Description.</p>
+<p>Of course, not everyone uses Discord or has access to it, so we’ll do
+our best to keep you updated here as well. The major news though is that
+the news section gets it’s own page at last, rather than it cluttering
+up the home page, like all the packets of chips in my house :D.</p>
+<p>You can find it in the navigation at the top. In keeping with the UI
+changes, we have added a <a href="https://audiovault.net/faq">Frequently
+asked questions Page</a> to help answer common queries. If your question
+isn’t there—or you think something should be—please don’t hesitate to
+reach out to us. One question that we get quite often, and as a result
+of which we would like to bring a tool to your atention is
+DescribeAlign, Developed by Jules, it’s perfect for those wanting to
+watch movies or shows with friends or family.</p>
+<p>Fully accessible, <a
+href="https://github.com/julbean/describealign">Describealign</a> is a
+Free and open source software that combines audio description with
+video, available on both mac and windows.</p>
+<p>If you have questions or issues with it, feel free to either <a
+href="https://discord.gg/sZ2PqF8">Join us on our Discord server</a>, or
+write to us. There’s always more in the works, and we hope to share
+updates in our next news post soon!</p>
+<p>Before we wrap up, a small favor: with our new, bigger server and all
+the backups, running the vault has become a bit pricier. If you’re able,
+a <a href="https://www.paypal.me/audiodescribed">Donation</a> would go a
+long way in keeping things running smoothly. To everyone who’s already
+chipped in—thank you! Your support not only keeps the servers online but
+also helps our library grow. We truly couldn’t do half of what we do
+without you. Stay safe and well,</p>
+<p>The Audiovault Team</p>
+<h3 id="preparing-for-new-server-acquisition">Preparing for New Server
+Acquisition</h3>
+<p>May 31, 2022 Temporarily, new uploads may have an altered download
+process while we prepare a new server. Hello all!</p>
+<p>We are half way through 2022, and we hope and wish that all of you
+are doing well.</p>
+<p>some important information for all of our users. We are in the
+process of acquiring a new server and transfering the vault to it, as
+the current server has been running out of space.</p>
+<p>Temporarily, all the newer titles that are uploaded to the vault will
+have a slightly altered download process than usual, where a different
+page will open once you have clicked on the download link , on it you
+will need to press the download button once again to initiate the
+download</p>
+<p>meanwhile, all the older titles will be available to download
+normally, however there is a slight possibility that we might have to
+take the vault offline for about a week to transfer the data across, we
+will notify you all should that be needed. We are working and doing our
+best to obtain the new server and transfer data and minimise the
+downtime should it be necessary to the least amount possible, and we
+thank you all for understanding, contributing and of course supporting
+the vault..</p>
+<h3 id="website-migration-completed">Website Migration Completed</h3>
+<p>June 12, 2023 The migration of website data is now complete. The site
+should be faster and downloads fully functional. Hello all,</p>
+<p>Hope you all are doing well.</p>
+<p>This is to let you all know that the migration of the website data is
+now complete, and knock on wood the website should be slightly
+faster.</p>
+<p>The downloads should be functioning now as they always have, along
+with all the other areas of the website such as searching. Should you
+experience any issues however, do let us know. Please note, there is a
+slight chance anyone who created an account with us and or changed
+passwords etc, in the last 15 20 days might not be able to logon.</p>
+<p>If you had just created an account with us, reregister and things
+should work just fine after that.</p>
+<p>however if you have forgotten your password, just write to us on our
+email address with the new password you would like to have and we will
+be happy to reset your password for you. also, we would like to express
+our thanks for all the patients and understanding that all of you have
+shown during the migration process, and for all the support.</p>
+<p>Lastly, if you can, do support us with a donation, as due to a better
+bigger server, the costs have gone up yet again.</p>
+<p>And at everyone else who has already donated to the vault, many
+thanks for your generosity and consideration, We couldn’t do half of
+what we do if it weren’t for you guys.</p>
+<p>Have a great time ahead and enjoy, The audiovault team.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="what-the-audio-vault-is-in-its-own-words">What the Audio Vault
+is, in its own words</h3>
+<p>Welcome to the Audiovault. This site contains the audio only portion
+of audio described film and TV shows. It is not intended to deprive
+copyright holders or service providers of income. Rather it is a small
+Project designed to make it easier for blind people to find and access
+audio described content that is spread across multiple platforms and
+countries.</p>
+<p>No video is hosted on this site. Nobody profits from this endeavour.
+It operates on donations from the small userbase purely in order to
+maintain the site.</p>
+</body>
+</html>
