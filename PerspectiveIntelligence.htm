@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-10" />
+  <title>Perspective Intelligence: the complete help guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Perspective Intelligence: the complete help guide</h1>
+<p class="subtitle">What Techopolis publishes about its on-device AI app
+for iPhone, iPad, Apple Watch and Mac</p>
+<p class="date">2026-08-10</p>
+</header>
+<h1 id="perspective-intelligence-the-complete-help-guide">Perspective
+Intelligence: the complete help guide</h1>
+<p>This guide gathers what Perspective Intelligence publishes about
+itself: 51 articles across 8 categories, in the developer’s own words,
+gathered on 10 August 2026. It covers what the app does on device, what
+the All Access subscription adds, and – the substantial part – how to
+write the agents the app runs.</p>
+<p><strong>This is a small volume, and it is small because the published
+help is small.</strong> Most of what exists is the agent documentation;
+there is no help centre and no article-by-article knowledge base.
+Padding that out would make it less useful, not more.</p>
+<p>Perspective Intelligence is built by a blind developer and its own
+listing records full VoiceOver support. The app’s version history is
+deliberately absent: a release note says what changed, not how to do
+anything.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#anatomy-of-a-system-prompt">Anatomy of a System Prompt</a>
+<ul>
+<li><a href="#1-identity-who-is-this-agent">1. Identity — Who is this
+agent?</a></li>
+<li><a href="#2-capability-what-does-this-agent-know-or-do">2.
+Capability — What does this agent know or do?</a></li>
+<li><a href="#3-behavior-how-should-this-agent-act">3. Behavior — How
+should this agent act?</a></li>
+<li><a href="#common-mistakes">Common Mistakes</a></li>
+<li><a href="#in-brief">In brief</a></li>
+<li><a href="#prompt-length">Prompt Length</a></li>
+<li><a href="#structure-patterns">Structure Patterns</a></li>
+</ul></li>
+<li><a href="#beyond-the-prompt">Beyond the Prompt</a>
+<ul>
+<li><a href="#in-brief-2">In brief</a></li>
+<li><a href="#model-selection">Model Selection</a></li>
+<li><a href="#putting-it-all-together">Putting It All Together</a></li>
+<li><a href="#temperature">Temperature</a></li>
+<li><a href="#tool-access">Tool Access</a></li>
+</ul></li>
+<li><a href="#the-coder-agent">The Coder Agent</a>
+<ul>
+<li><a href="#adapting-this-pattern">Adapting This Pattern</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#in-brief-3">In brief</a></li>
+<li><a href="#what-makes-this-prompt-work">What Makes This Prompt
+Work</a></li>
+<li><a href="#why-only-web-search-is-enabled">Why Only Web Search Is
+Enabled</a></li>
+<li><a href="#why-temperature-0-4">Why Temperature 0.4?</a></li>
+</ul></li>
+<li><a href="#the-guide-agent">The Guide Agent</a>
+<ul>
+<li><a href="#adapting-this-pattern-2">Adapting This Pattern</a></li>
+<li><a href="#configuration-2">Configuration</a></li>
+<li><a href="#in-brief-4">In brief</a></li>
+<li><a href="#what-makes-this-prompt-work-2">What Makes This Prompt
+Work</a></li>
+<li><a href="#why-all-tools-are-enabled">Why All Tools Are
+Enabled</a></li>
+</ul></li>
+<li><a href="#how-to-write-great-agent-system-prompts">How to Write
+Great Agent System Prompts</a>
+<ul>
+<li><a href="#in-brief-5">In brief</a></li>
+<li><a href="#key-takeaway">Key Takeaway</a></li>
+<li><a href="#quick-comparison">Quick Comparison</a></li>
+<li><a href="#what-s-in-this-guide">What’s in This Guide</a></li>
+<li><a href="#why-system-prompts-matter">Why System Prompts
+Matter</a></li>
+</ul></li>
+<li><a href="#perspective-intelligence">Perspective Intelligence</a>
+<ul>
+<li><a href="#all-access-features">All Access Features</a></li>
+<li><a href="#in-brief-6">In brief</a></li>
+<li><a href="#perspective-labs">Perspective Labs</a></li>
+<li><a href="#see-it-in-action">See It in Action</a></li>
+<li><a href="#simple-pricing">Simple Pricing</a></li>
+<li><a href="#stay-in-the-loop">Stay in the Loop</a></li>
+<li><a href="#unlimited-ai-zero-compromise">Unlimited AI. Zero
+Compromise.</a></li>
+<li><a href="#why-perspective-intelligence">Why Perspective Intelligence
+?</a></li>
+</ul></li>
+<li><a href="#templates-patterns">Templates &amp; Patterns</a>
+<ul>
+<li><a href="#debate-partner">Debate Partner</a></li>
+<li><a href="#fitness-coach">Fitness Coach</a></li>
+<li><a href="#in-brief-7">In brief</a></li>
+<li><a href="#journaling-companion">Journaling Companion</a></li>
+<li><a href="#language-tutor">Language Tutor</a></li>
+<li><a href="#personal-planner">Personal Planner</a></li>
+<li><a href="#quick-reference">Quick Reference</a></li>
+<li><a href="#research-assistant">Research Assistant</a></li>
+<li><a href="#writing-your-own">Writing Your Own</a></li>
+</ul></li>
+<li><a href="#the-writer-agent">The Writer Agent</a>
+<ul>
+<li><a href="#adapting-this-pattern-3">Adapting This Pattern</a></li>
+<li><a href="#configuration-3">Configuration</a></li>
+<li><a href="#in-brief-8">In brief</a></li>
+<li><a href="#what-makes-this-prompt-work-3">What Makes This Prompt
+Work</a></li>
+<li><a href="#why-all-tools-are-disabled">Why All Tools Are
+Disabled</a></li>
+<li><a href="#why-temperature-1-0">Why Temperature 1.0?</a></li>
+</ul></li>
+</ul>
+<h2 id="anatomy-of-a-system-prompt">Anatomy of a System Prompt</h2>
+<h3 id="1-identity-who-is-this-agent">1. Identity — Who is this
+agent?</h3>
+<p>The opening sentence sets the frame. It tells the model what role to
+inhabit and what expertise to assume. <strong>Why it matters:</strong>
+Identity anchors the model’s responses. Without it, the model defaults
+to a generic assistant voice. With it, the model draws on patterns
+associated with that role — a “senior engineer” gives different advice
+than a “beginner-friendly tutor.” #### Tips - •Be specific. “Senior
+software engineer” is better than “helpful coder” - •Include the domain.
+“Creative writing assistant” narrows the space more than “writing
+helper” - •Use natural titles. The model responds to role framing the
+way an actor responds to a character description</p>
+<h3 id="2-capability-what-does-this-agent-know-or-do">2. Capability —
+What does this agent know or do?</h3>
+<p>After identity, list the specific capabilities or knowledge domains.
+This is where you ground the agent in concrete territory. <strong>Why it
+matters:</strong> Without capability grounding, the model will try to be
+helpful about <em>everything</em>. Listing specific capabilities steers
+it toward confident, accurate responses within the defined scope. ####
+Tips - •Use lists for domains with many facets (like the Guide agent’s
+feature list) - •Use flowing prose for creative or open-ended
+capabilities (like the Writer agent) - •Be exhaustive within scope, but
+don’t list things outside the agent’s purpose</p>
+<h3 id="3-behavior-how-should-this-agent-act">3. Behavior — How should
+this agent act?</h3>
+<p>The final layer defines communication style, methodology, and
+boundaries. <strong>Why it matters:</strong> Behavior directives shape
+the <em>experience</em> of interacting with the agent. Two agents with
+identical identity and capabilities but different behavior directives
+will feel completely different to use. #### Tips - •Use conditional
+behavior: “When X, do Y” patterns let you handle different interaction
+modes - •Be specific about tone: “friendly” and “precise” are more
+useful than “nice” or “good” - •Include proactive behaviors: “suggest
+features” or “offer multiple directions” make agents feel alive</p>
+<h3 id="common-mistakes">Common Mistakes</h3>
+<h4 id="being-too-vague">Being too vague</h4>
+<p>“Be a helpful assistant” gives the model nothing to work with. ####
+Being too restrictive “Only respond about X and never mention Y” creates
+brittle agents that fail on edge cases. #### Contradicting yourself “Be
+concise” and “provide thorough explanations” in the same prompt will
+cause inconsistent behavior. #### Stuffing in rules Long lists of “do
+not” directives signal distrust and make prompts fragile. Focus on what
+the agent should do. #### Ignoring temperature A creative prompt at
+temperature 0.2 will feel flat. A precision prompt at 1.0 will
+hallucinate. Prompt and temperature must align.</p>
+<h3 id="in-brief">In brief</h3>
+<p>Every effective system prompt has three layers:
+<strong>identity</strong>, <strong>capability</strong>, and
+<strong>behavior</strong>. You don’t need all three in every prompt, but
+understanding each layer helps you write prompts that produce
+consistent, useful agents.</p>
+<h3 id="prompt-length">Prompt Length</h3>
+<p>Short prompts work. The three built-in agents range from 50 to 120
+words. On-device models have limited context windows, so every word in
+your system prompt competes with conversation history. Long system
+prompts don’t just waste context — they can confuse the model by giving
+it too many competing directives.</p>
+<h3 id="structure-patterns">Structure Patterns</h3>
+<h4 id="the-list-pattern-guide-agent">The List Pattern (Guide
+Agent)</h4>
+<p>Best for: knowledge-grounded agents with enumerable domains. #### The
+Flow Pattern (Writer Agent) Best for: creative or open-ended agents
+where rigid structure would feel limiting. #### The Methodology Pattern
+(Coder Agent) Best for: technical agents where <em>how</em> they work
+matters as much as <em>what</em> they do.</p>
+<h2 id="beyond-the-prompt">Beyond the Prompt</h2>
+<h3 id="in-brief-2">In brief</h3>
+<p>A system prompt is only one part of an agent’s configuration.
+Temperature, tool access, and model selection work together with the
+prompt to define how an agent behaves. Getting the prompt right but the
+configuration wrong will produce an agent that feels broken.</p>
+<h3 id="model-selection">Model Selection</h3>
+<p>Different models have different strengths. The model tier determines
+the quality ceiling for your agent. - Tier: Model: Best For - Apple
+Intelligence: Foundation Models: Highest quality, best reasoning,
+nuanced output - Gemma 3 4B: 2.5GB on-device: Strong general purpose,
+good for most agents - Gemma 3n E4B: 2.7GB on-device: Efficient text
+generation, good balance - Gemma 3n E2B: 1.5GB on-device: Lightweight,
+fast responses, simpler tasks - Qwen 2.5 0.5B: Smallest on-device: Quick
+answers, limited reasoning depth</p>
+<h4 id="how-model-choice-affects-prompts">How Model Choice Affects
+Prompts</h4>
+<p>Smaller models have shorter context windows and less reasoning depth.
+This means: - •<strong>Shorter prompts</strong> work better on smaller
+models — a 200-word system prompt might consume too much context -
+•<strong>Simpler directives</strong> are more reliably followed —
+complex conditionals may be lost - •<strong>Explicit examples</strong>
+help more on smaller models than abstract instructions</p>
+<h3 id="putting-it-all-together">Putting It All Together</h3>
+<p>The best agents have coherent configuration — every setting
+reinforces the same intent. #### Coherent Configuration (Good) Every
+setting says “creative freedom.” #### Incoherent Configuration (Bad) The
+prompt says creativity, but every other setting fights it. ####
+Configuration Checklist</p>
+<h3 id="temperature">Temperature</h3>
+<p>Temperature controls how the model selects tokens. Lower values make
+output more deterministic; higher values introduce more variation. -
+Temperature: Behavior: Best For - 0.0 – 0.3: Highly deterministic:
+Factual lookup, classification, structured output - 0.4 – 0.6: Mostly
+deterministic with slight variation: Code generation, technical writing,
+analysis - 0.7 – 0.8: Balanced — reliable but with personality:
+Conversational agents, knowledge bases, support - 0.9 – 1.0: High
+variation, surprising word choices: Creative writing, brainstorming,
+storytelling</p>
+<h4 id="how-temperature-interacts-with-prompts">How Temperature
+Interacts with Prompts</h4>
+<p>A prompt saying “be creative and expressive” at temperature 0.2 will
+produce bland output. Low temperature overrides the prompt’s intent by
+always selecting safe, common tokens. A prompt saying “be precise and
+accurate” at temperature 1.0 will produce unreliable output. High
+temperature introduces randomness that undermines precision.
+<strong>Rule of thumb:</strong> Your temperature should match the
+freedom your prompt gives the agent. #### The Three Built-in Agents
+Warm, conversational, but grounded in real features Maximum creative
+variation Deterministic, accurate technical output</p>
+<h3 id="tool-access">Tool Access</h3>
+<p>Tools give agents the ability to take actions — check the weather,
+search the web, access calendars. But more tools isn’t always better.
+#### The Principle Every enabled tool is a classification candidate.
+When the model receives a user message, it decides whether to call a
+tool or respond with text. More enabled tools means more potential for
+misclassification. - Agent: Tools: Reasoning - <span class="citation"
+data-cites="guide">@guide</span>: All enabled: Needs to demonstrate
+every feature - <span class="citation"
+data-cites="writer">@writer</span>: All disabled: Should generate
+language, never trigger actions - <span class="citation"
+data-cites="coder">@coder</span>: Web search only: Needs current docs,
+nothing else</p>
+<h4 id="enable-a-tool-when">Enable a tool when:</h4>
+<ul>
+<li>✓The agent’s core job requires it</li>
+<li>✓Users would naturally expect the capability</li>
+<li>✓It enhances responses rather than distracting</li>
+</ul>
+<h4 id="disable-a-tool-when">Disable a tool when:</h4>
+<ul>
+<li>✗It has no relation to the agent’s purpose</li>
+<li>✗It could cause misclassification of core queries</li>
+<li>✗The agent should focus purely on language generation</li>
+</ul>
+<h4 id="common-mistakes-1">Common Mistakes</h4>
+<p>This is the most common configuration error. An agent with 11 tools
+enabled will misclassify more often than one with 2. A research agent
+without web search, or a scheduling agent without calendar access, will
+frustrate users. A writing agent with weather tools might interpret
+“Write about a stormy night” as a weather query.</p>
+<h2 id="the-coder-agent">The Coder Agent</h2>
+<h3 id="adapting-this-pattern">Adapting This Pattern</h3>
+<p>Use the Coder pattern when building agents that: - •Need technical
+accuracy above all else - •Should explain their reasoning, not just give
+answers - •Handle diverse subtopics within a broad domain - •Benefit
+from methodical, step-by-step approaches</p>
+<h4 id="template">Template</h4>
+<h4 id="examples">Examples</h4>
+<h5 id="data-science-agent">Data Science Agent</h5>
+<h5 id="devops-agent">DevOps Agent</h5>
+<h3 id="configuration">Configuration</h3>
+<ul>
+<li>Setting: Value: Why</li>
+<li>Temperature: 0.4: Low randomness — deterministic, accurate technical
+output</li>
+<li>Tools: Web search only: Can look up docs/APIs, but doesn’t trigger
+unrelated tools</li>
+<li>Model: Apple Intelligence: Best quality for nuanced code
+reasoning</li>
+</ul>
+<h3 id="in-brief-3">In brief</h3>
+<p>The Coder agent (<span class="citation"
+data-cites="coder">@coder</span>) is the most precision-oriented of the
+three built-in agents. It has the lowest temperature, a
+methodology-driven prompt, and exactly one tool enabled.</p>
+<h3 id="what-makes-this-prompt-work">What Makes This Prompt Work</h3>
+<h4 id="dual-identity">1. Dual Identity</h4>
+<p>“a senior software engineer and coding mentor” Two roles in one.
+“Senior software engineer” signals deep technical competence. “Coding
+mentor” signals that it should teach, not just produce code. This dual
+framing means the agent gives you working code <em>and</em> helps you
+understand it. Without “mentor,” you’d get code dumps. Without “senior
+engineer,” you’d get oversimplified explanations. #### 2. Scope Without
+Boundaries “across all major languages and frameworks” Unlike the Guide
+(explicit feature list) or the Writer (specific creative forms), the
+Coder uses a broad scope statement. Programming languages are too
+numerous to list, and listing specific ones would imply weakness in
+unlisted ones. #### 3. Quality Standard “Provide clear explanations with
+code examples. Follow best practices for the language in question.” The
+phrase “for the language in question” is important. It tells the model
+that Python best practices differ from Rust best practices, and it
+should switch conventions based on context. #### 4. Methodology
+Directives “When debugging, think step by step. When explaining, use
+analogies when helpful.” These are the most important lines in the
+prompt. They define <em>how</em> the agent reasons: Triggers
+chain-of-thought reasoning for debugging — break problems into pieces,
+check assumptions, trace logic Gives permission to reach beyond pure
+technical language — but only when it actually helps #### 5. Values
+Statement “Be precise with technical details and honest about
+trade-offs.” This combats a common AI failure mode: confidently
+recommending a single approach without acknowledging alternatives or
+downsides. “Honest about trade-offs” means if there’s a performance
+vs. readability trade-off, the agent says so.</p>
+<h3 id="why-only-web-search-is-enabled">Why Only Web Search Is
+Enabled</h3>
+<p>The Coder has exactly one tool: web search. This is deliberate: ####
+Why web search Code questions often require current info — API docs,
+framework versions, deprecation notices. Without it, the agent is
+limited to training data. #### Why not other tools Calendar, weather,
+contacts — none help with coding. If a user says “How do I handle dates
+in Swift?”, an agent with calendar tools might access their calendar
+instead. <strong>The principle:</strong> Enable tools that serve the
+agent’s purpose. Disable everything else.</p>
+<h3 id="why-temperature-0-4">Why Temperature 0.4?</h3>
+<p>In technical work, predictability is a feature: - •The model strongly
+prefers the most probable token — syntactically correct, idiomatic code
+- •Variable names, function signatures, and API calls are generated with
+high confidence - •Explanations follow logical structure rather than
+creative tangents</p>
+<p><strong>The tradeoff:</strong> At very low temperature, the model can
+feel repetitive or formulaic. 0.4 is a sweet spot — deterministic enough
+for accuracy, warm enough to avoid robotic output.</p>
+<h2 id="the-guide-agent">The Guide Agent</h2>
+<h3 id="adapting-this-pattern-2">Adapting This Pattern</h3>
+<p>Use the Guide pattern when building agents that: - •Need to be
+authoritative about a specific product or domain - •Should proactively
+suggest rather than just respond - •Have a bounded, enumerable knowledge
+set - •Benefit from a warm but reliable tone</p>
+<h4 id="template-1">Template</h4>
+<h4 id="examples-1">Examples</h4>
+<h5 id="customer-support-agent">Customer Support Agent</h5>
+<h5 id="onboarding-agent">Onboarding Agent</h5>
+<h3 id="configuration-2">Configuration</h3>
+<ul>
+<li>Setting: Value: Why</li>
+<li>Temperature: 0.8: Warm but grounded — friendly tone without
+hallucinating features</li>
+<li>Tools: All enabled: Needs to demonstrate features by actually using
+them</li>
+<li>Model: Apple Intelligence: Best quality for nuanced, accurate
+guidance</li>
+</ul>
+<h3 id="in-brief-4">In brief</h3>
+<p>The Guide agent (<span class="citation"
+data-cites="guide">@guide</span>) is a knowledge-grounded assistant that
+helps users discover and use app features. It’s the most structured of
+the three built-in agents.</p>
+<h3 id="what-makes-this-prompt-work-2">What Makes This Prompt Work</h3>
+<h4 id="specific-identity-with-ownership">1. Specific Identity with
+Ownership</h4>
+<p>“You are the Perspective Intelligence guide” Not “a guide” —
+<strong>the</strong> guide. This subtle framing gives the agent
+authority and ownership over its domain. It’s not one of many possible
+assistants; it’s the designated expert. #### 2. Exhaustive Feature List
+The bullet list is the backbone of this prompt. It serves as a
+<strong>knowledge boundary</strong> — the model knows exactly what it
+should be confident about. Without this list, the model would have to
+guess what features exist. With it, the model can confidently say “You
+can use Vision mode to read text from your camera” instead of hedging.
+#### 3. Proactive Behavioral Directive “Be proactive about suggesting
+features the user might not know about” This single directive transforms
+the agent from reactive (only answering what’s asked) to proactive
+(surfacing relevant features). When a user asks about reading text, the
+Guide might suggest Voice mode for hands-free use — not because they
+asked, but because the prompt encourages discovery. #### 4. Privacy as a
+Feature “Privacy: all AI processing happens on-device, no data leaves
+the device” Including privacy in the feature list means the agent can
+naturally address privacy concerns. When users ask “Is my data being
+sent anywhere?”, the Guide answers confidently from its knowledge set
+rather than generating a generic privacy statement.</p>
+<h3 id="why-all-tools-are-enabled">Why All Tools Are Enabled</h3>
+<p>The Guide is the only built-in agent with all tools enabled. This is
+deliberate — a guide that can’t demonstrate weather, calendar, or maps
+would be like a tour guide who can’t open doors. When a user asks “What
+can this app do with my calendar?”, the Guide can show them by actually
+accessing the calendar tool, not just describing it abstractly.</p>
+<h2 id="how-to-write-great-agent-system-prompts">How to Write Great
+Agent System Prompts</h2>
+<h3 id="in-brief-5">In brief</h3>
+<p>A practical guide to crafting system prompts for on-device AI agents,
+based on the three built-in agents in <a
+href="https://perspectiveintelligence.app/">Perspective
+Intelligence</a>.</p>
+<h3 id="key-takeaway">Key Takeaway</h3>
+<p>There is no universal “best” system prompt. The right prompt depends
+on what you need the agent to <em>do</em>. A creative agent needs
+freedom; a coding agent needs precision; a knowledge agent needs
+grounding. The prompt, temperature, and tool configuration work together
+as a system.</p>
+<h3 id="quick-comparison">Quick Comparison</h3>
+<ul>
+<li>Agent: Role: Temperature: Tools: Prompt Strategy</li>
+<li><span class="citation" data-cites="guide">@guide</span>: App expert:
+0.8: All enabled: Knowledge list + behavioral directive</li>
+<li><span class="citation" data-cites="writer">@writer</span>: Creative
+assistant: 1.0: All disabled: Role + capability list + style
+guidance</li>
+<li><span class="citation" data-cites="coder">@coder</span>: Software
+engineer: 0.4: Web search only: Role + methodology + values</li>
+</ul>
+<h3 id="what-s-in-this-guide">What’s in This Guide</h3>
+<h4 id="anatomy-of-a-system-prompt-1">Anatomy of a System Prompt</h4>
+<p>The core principles — identity, capability, and behavior — that make
+prompts effective. #### The Guide Agent Knowledge-grounded prompts with
+structured domain expertise for product experts. #### The Writer Agent
+Creative prompts that unlock expressive, varied output for artistic
+work. #### The Coder Agent Precision prompts for technical accuracy and
+structured reasoning. #### Beyond the Prompt How temperature, tool
+access, and model selection shape agent behavior. #### Templates &amp;
+Patterns Starter templates for common agent types — research, planning,
+coaching, and more.</p>
+<h3 id="why-system-prompts-matter">Why System Prompts Matter</h3>
+<p>A system prompt is the difference between a generic AI and a
+purpose-built agent. It defines: - Whothe agent is (identity and
+expertise) - Howthe agent communicates (tone and style) - Whatthe agent
+does and doesn’t do (scope and boundaries)</p>
+<p>The three built-in agents in Perspective Intelligence each
+demonstrate a distinct prompting strategy. This guide breaks down what
+makes each one work, extracts reusable patterns, and gives you templates
+to build your own.</p>
+<h2 id="perspective-intelligence">Perspective Intelligence</h2>
+<h3 id="all-access-features">All Access Features</h3>
+<p>Unlock premium features including voice conversations, audio
+transcription, chat memories, and smart integrations. #### Voice Mode
+Engage in hands-free, real-time voice conversations. #### Contacts
+Lookup Use Perspective Intelligence to find information from your
+contacts including contact photos. #### Points of Interest Search take
+advantage of on device AI to search for points of interest from the maps
+app. #### Reminders Integration Look up and get suggestions from
+reminders added in the Reminders app. #### Weather Look up weather
+conditions for your current location or for anywhere in the world. ####
+RSS Feed Search Add your favorite RSS feeds and get updates on news
+sources. #### Web Search Perspective Intelligence can search the web to
+find updated information than what’s included with the built in AI. All
+web searches are kept private and can be disabled in Settings. #### Deep
+Research Use a combination of web search and the model to find
+information online. The agent will even show what sources were used.
+#### Page Summary Summarize any web page by giving Perspective
+Intelligence a URL to review. #### Email Composition Perspective
+Intelligence can now open the email composer and add generated emails
+from your conversations. #### Custom User Agents Change the chat
+experience by creating your own custom personas that can have their own
+personalities. #### Speak Tool Save text to spoken audio within
+chat.</p>
+<h3 id="in-brief-6">In brief</h3>
+<p>Whether you’re exploring ideas, drafting messages, summarizing
+content, or capturing text from an image, Perspective Intelligence
+brings multiple AI components together in a simple, unified experience
+that exists completely on your device. Available on iPhone, iPad, Watch
+and Mac</p>
+<h3 id="perspective-labs">Perspective Labs</h3>
+<p>Want to try experimental features and see what’s coming next? Join
+Perspective Labs to get early access to new features before they hit the
+App Store.</p>
+<h3 id="see-it-in-action">See It in Action</h3>
+<p>A clean, intuitive interface designed for natural conversations.</p>
+<h3 id="simple-pricing">Simple Pricing</h3>
+<p>Start free with unlimited AI chat. Upgrade for premium features. ####
+Free - Full Chat Experience - Text Recognition (OCR) - AI Vision - Live
+Video - Image Generation - Live Audio Transcription - Chat Memories - AI
+on Apple Watch - Saved Prompts - Local &amp; Private</p>
+<h4 id="all-access">All Access</h4>
+<p>or $49.99/year (save 30%) - Everything in Free - Voice Mode -
+Contacts Lookup - Points of Interest Search - Reminders Integration -
+Weather - RSS Feed Search - Web Search - Deep Research - Page Summary -
+Email Composition - Custom User Agents - Speak Tool</p>
+<h3 id="stay-in-the-loop">Stay in the Loop</h3>
+<p>Get the latest Perspective Intelligence news and updates straight to
+your inbox. © 2026 Techopolis LLC. All rights reserved.</p>
+<h3 id="unlimited-ai-zero-compromise">Unlimited AI. Zero
+Compromise.</h3>
+<p>Download Perspective Intelligence and start using AI for free.
+Upgrade anytime for premium features.</p>
+<h3 id="why-perspective-intelligence">Why Perspective Intelligence
+?</h3>
+<p>Powered by Apple Intelligence. All features run on-device with no
+tokens, no cloud, and no limits. #### Full Chat Experience Enjoy
+natural, responsive conversations in a clean, accessible interface. ####
+Text Recognition (OCR) Extract text from images for documents, notes,
+and quick everyday tasks. #### AI Vision Describe your surroundings with
+on-device AI vision. Identify text, faces, objects, and colors, all
+spoken aloud for hands-free use. #### Live Video Use AI models to
+describe the world around you in real-time. #### Image Generation Create
+images your conversations based on Image Playgrounds. Everything happens
+on device #### Live Audio Transcription Convert live spoken audio into
+clear, readable text. #### Chat Memories Teach Perspective Intelligence
+to know more about you. #### AI on Apple Watch Chat with Perspective
+Intelligence from your Apple Watch for basic chats. #### Saved Prompts
+Save your favorite prompts that you use often. #### Local &amp; Private
+All features rely on on-device processing through Apple’s Foundation
+Models framework and related system technologies. Your data never leaves
+your device. Some tools may connect to outside services for weather
+lookup and web search, but this can be completely configured. All AI
+processing remains on device.</p>
+<h2 id="templates-patterns">Templates &amp; Patterns</h2>
+<h3 id="debate-partner">Debate Partner</h3>
+<p>Challenging, fair, intellectually honest. - Setting: Recommendation -
+Temperature: 0.8 - Tools: Web search - Model: Apple Intelligence</p>
+<h3 id="fitness-coach">Fitness Coach</h3>
+<p>Motivating, safety-conscious, personalized. - Setting: Recommendation
+- Temperature: 0.7 - Tools: Memories, reminders - Model: Apple
+Intelligence or Gemma 3n E4B</p>
+<h3 id="in-brief-7">In brief</h3>
+<p>Starter templates for common agent types. Each includes a system
+prompt, recommended configuration, and notes on customization.</p>
+<h3 id="journaling-companion">Journaling Companion</h3>
+<p>Reflective, gentle, non-judgmental. - Setting: Recommendation -
+Temperature: 0.8 - Tools: Memories only - Model: Apple Intelligence</p>
+<h3 id="language-tutor">Language Tutor</h3>
+<p>Patient, adaptive, pedagogically sound. - Setting: Recommendation -
+Temperature: 0.7 - Tools: None or memories only - Model: Apple
+Intelligence or Gemma 3 4B</p>
+<h3 id="personal-planner">Personal Planner</h3>
+<p>Organized, action-oriented, context-aware. - Setting: Recommendation
+- Temperature: 0.6 - Tools: Calendar, reminders, memories - Model: Apple
+Intelligence or Gemma 3n E4B</p>
+<h3 id="quick-reference">Quick Reference</h3>
+<ul>
+<li>Agent Type: Temp: Key Behavior: Tool Strategy</li>
+<li>Research: 0.5: Structure, cite, both sides: Web search + RSS</li>
+<li>Planner: 0.6: Break down, suggest, reference: Calendar +
+reminders</li>
+<li>Tutor: 0.7: Adapt, correct gently, practice: None or memories</li>
+<li>Coach: 0.7: Safety first, personalize: Memories + reminders</li>
+<li>Debate: 0.8: Challenge, counter, summarize: Web search</li>
+<li>Journal: 0.8: Reflect, mirror, don’t direct: Memories</li>
+<li>Creative: 1.0: Vary, surprise, collaborate: None</li>
+<li>Technical: 0.4: Step by step, precise, trade-offs: Web search</li>
+</ul>
+<h3 id="research-assistant">Research Assistant</h3>
+<p>Thorough, source-aware, structured output. - Setting: Recommendation
+- Temperature: 0.5 - Tools: Web search, RSS feeds - Model: Apple
+Intelligence or Gemma 3 4B</p>
+<h3 id="writing-your-own">Writing Your Own</h3>
+<p>Start with the template closest to your agent’s purpose, then:
+Replace the identity with your specific role Narrow the scope to your
+use case Add conditional behaviors for the main interaction modes Set
+the tone to match your audience Choose temperature that matches the
+prompt’s freedom level Enable only the tools that serve the agent’s core
+purpose Test and iterate — send 5–10 diverse messages and adjust based
+on what feels wrong</p>
+<h2 id="the-writer-agent">The Writer Agent</h2>
+<h3 id="adapting-this-pattern-3">Adapting This Pattern</h3>
+<p>Use the Writer pattern when building agents that: - •Prioritize
+expression over accuracy - •Need varied, non-repetitive output - •Should
+adapt to the user’s voice rather than impose their own - •Benefit from
+divergent thinking (offering options rather than answers)</p>
+<h4 id="template-2">Template</h4>
+<h4 id="examples-2">Examples</h4>
+<h5 id="music-composition-agent">Music Composition Agent</h5>
+<h5 id="game-design-agent">Game Design Agent</h5>
+<h3 id="configuration-3">Configuration</h3>
+<ul>
+<li>Setting: Value: Why</li>
+<li>Temperature: 1.0: Maximum creativity — varied word choice,
+unexpected connections</li>
+<li>Tools: All disabled: Pure language generation, no interruptions from
+tool calls</li>
+<li>Model: Apple Intelligence: Highest quality creative output</li>
+</ul>
+<h3 id="in-brief-8">In brief</h3>
+<p>The Writer agent (<span class="citation"
+data-cites="writer">@writer</span>) is a creative assistant designed for
+open-ended expression. It has the highest temperature and the most
+restrictive tool configuration — and that’s by design.</p>
+<h3 id="what-makes-this-prompt-work-3">What Makes This Prompt Work</h3>
+<h4 id="identity-with-an-adjective">1. Identity with an Adjective</h4>
+<p>“a creative writing assistant with a vivid imagination” The phrase
+“with a vivid imagination” isn’t just flavor text — it’s a behavioral
+modifier. It tells the model to prefer evocative, descriptive language
+over plain, functional prose. “You are a writing assistant” → safe,
+generic output “a creative writing assistant with a vivid imagination” →
+metaphor, imagery, surprise #### 2. Broad Capability with Flowing Prose
+Notice the capability list isn’t bullets — it’s a flowing sentence. The
+structure mirrors the content. A creative agent described in rigid
+bullet points would subtly signal the model toward rigid output. The
+closing phrase “and any form of creative expression” acts as an
+<strong>escape valve</strong> — it tells the model that the preceding
+list is illustrative, not exhaustive. #### 3. Style Directive “Use rich
+language and varied sentence structure.” This is a direct instruction
+about <em>how to write</em>, not just what to write about. It combats a
+common failure mode where AI output falls into repetitive patterns —
+same sentence length, same structure, same transitions. #### 4.
+Conditional Behaviors “When brainstorming, offer multiple directions.
+When writing, match the user’s preferred tone and style.” The user wants
+options, not a single answer The user wants the agent to adapt to their
+voice #### 5. Collaborative Tone “Be encouraging and collaborative.”
+Creative work is personal. An agent that critiques first or suggests its
+own ideas over the user’s will feel adversarial. “Encouraging and
+collaborative” ensures the agent serves the user’s vision, not its
+own.</p>
+<h3 id="why-all-tools-are-disabled">Why All Tools Are Disabled</h3>
+<p>This is the most important configuration decision for the Writer
+agent. Every enabled tool is a potential interruption. Imagine asking
+the Writer to help you craft a poem about rain. With weather tools
+enabled, the model might classify your request as a weather query and
+return a forecast instead of a verse. With all tools disabled, the model
+stays in pure language generation mode. <strong>The principle:</strong>
+Creative agents should generate language, not trigger actions.</p>
+<h3 id="why-temperature-1-0">Why Temperature 1.0?</h3>
+<p>Temperature controls randomness in token selection. At 1.0: - •Word
+choices are more varied and surprising - •More likely to use metaphors,
+unusual phrasing, and creative connections - •Output reads less like a
+template and more like genuine expression</p>
+<p><strong>The tradeoff:</strong> Higher temperature occasionally
+produces awkward phrasing or loses coherence. That’s acceptable for
+creative work where one surprising line is worth more than five
+predictable ones.</p>
+</body>
+</html>
