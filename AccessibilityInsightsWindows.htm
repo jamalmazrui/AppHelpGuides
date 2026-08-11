@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-10" />
+  <title>Accessibility Insights for Windows: the complete help guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Accessibility Insights for Windows: the complete help
+guide</h1>
+<p class="subtitle">Microsoft’s own documentation for the Windows
+desktop testing tool</p>
+<p class="date">2026-08-10</p>
+</header>
+<h1
+id="accessibility-insights-for-windows-the-complete-help-guide">Accessibility
+Insights for Windows: the complete help guide</h1>
+<p>This guide gathers Microsoft’s documentation for Accessibility
+Insights for Windows: 44 articles across 13 categories, in Microsoft’s
+own words, gathered on 10 August 2026. It covers installing and setting
+up the tool, running FastPass and its automated checks, the tab-stops
+test, Live Inspect and the UI Automation tree, the colour contrast
+analyser, event monitoring, filing bugs from a result, and the keyboard
+shortcuts.</p>
+<p><strong>This is the Windows desktop tool, not the browser
+extension.</strong> Accessibility Insights for Web has its own volume in
+this collection, and Microsoft publishes both guides on one site – so
+this gathering was fenced to the Windows documentation alone, and none
+of the web guide is here.</p>
+<p><strong>A small volume, because the documentation is small.</strong>
+Thirteen pages is everything Microsoft publishes for this tool; the
+release notes live on GitHub and are a change log, so they are
+deliberately absent.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#accessibility-insights-for-windows">Accessibility Insights
+for Windows</a>
+<ul>
+<li><a href="#additional-help">Additional Help</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#get-started">Get Started</a></li>
+<li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+<li><a href="#privacy">Privacy</a></li>
+<li><a href="#what-s-accessibility-insights-for-windows">What’s
+Accessibility Insights for Windows?</a></li>
+</ul></li>
+<li><a href="#automated-checks">Automated checks</a>
+<ul>
+<li><a href="#running-automated-checks">Running automated
+checks</a></li>
+<li><a href="#saving-automated-check-results">Saving automated check
+results</a></li>
+<li><a href="#viewing-automated-check-results">Viewing automated check
+results</a></li>
+<li><a href="#what-are-automated-checks">What are automated
+checks?</a></li>
+</ul></li>
+<li><a href="#color-contrast-analyzer">Color Contrast Analyzer</a>
+<ul>
+<li><a href="#how-to-test-contrast-ratio">How to test contrast
+ratio</a></li>
+<li><a href="#minimum-contrast-requirements">Minimum contrast
+requirements</a></li>
+<li><a href="#what-is-the-color-contrast-analyzer">What is the Color
+Contrast Analyzer?</a></li>
+<li><a href="#why-contrast-ratio-matters">Why contrast ratio
+matters</a></li>
+</ul></li>
+<li><a href="#event-monitoring">Event monitoring</a>
+<ul>
+<li><a href="#how-to-use-inspect">How to use Inspect</a></li>
+<li><a href="#what-is-event-monitoring">What is event
+monitoring?</a></li>
+</ul></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a
+href="#can-i-use-accessibility-insights-for-windows-on-a-windows-app-written-with-java">Can
+I use Accessibility Insights for Windows on a Windows app written with
+Java?</a></li>
+<li><a
+href="#does-accessibility-insights-for-windows-find-framework-specific-issues">Does
+Accessibility Insights for Windows find framework specific
+issues?</a></li>
+<li><a
+href="#does-accessibility-insights-for-windows-support-custom-ui-automation-properties">Does
+Accessibility Insights for Windows support custom UI Automation
+properties?</a></li>
+<li><a
+href="#does-accessibility-insights-for-windows-work-with-chromium-or-electron-apps">Does
+Accessibility Insights for Windows work with Chromium or Electron
+apps?</a></li>
+<li><a
+href="#sometimes-accessibility-insights-for-windows-can-t-find-my-application-is-there-a-fix">Sometimes
+Accessibility Insights for Windows can’t find my application. Is there a
+fix?</a></li>
+<li><a
+href="#what-platforms-does-accessibility-insights-for-windows-support">What
+platforms does Accessibility Insights for Windows support?</a></li>
+<li><a
+href="#what-type-of-issues-can-be-found-with-fastpass-in-accessibility-insights-for-windows">What
+type of issues can be found with FastPass in Accessibility Insights for
+Windows?</a></li>
+</ul></li>
+<li><a href="#fastpass">FastPass</a>
+<ul>
+<li><a href="#how-to-complete-a-fastpass">How to complete a
+FastPass</a></li>
+<li><a href="#what-is-fastpass">What is FastPass?</a></li>
+</ul></li>
+<li><a href="#help">Help</a>
+<ul>
+<li><a href="#contributing-2">Contributing</a></li>
+<li><a href="#for-additional-help">For additional help</a></li>
+<li><a href="#get-started-2">Get Started</a></li>
+<li><a href="#keyboard-shortcuts-2">Keyboard Shortcuts</a></li>
+<li><a href="#privacy-2">Privacy</a></li>
+</ul></li>
+<li><a href="#inspect">Inspect</a>
+<ul>
+<li><a href="#how-to-use-inspect-2">How to use Inspect</a></li>
+<li><a href="#what-is-inspect">What is Inspect?</a></li>
+</ul></li>
+<li><a href="#issue-filing">Issue filing</a>
+<ul>
+<li><a href="#how-to-file-issues">How to file issues</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul></li>
+<li><a href="#keyboard-shortcuts-3">Keyboard shortcuts</a>
+<ul>
+<li><a href="#customize-keyboard-shortcuts">Customize keyboard
+shortcuts</a></li>
+<li><a href="#default-keyboard-shortcuts">Default keyboard
+shortcuts</a></li>
+</ul></li>
+<li><a href="#setting-up-accessibility-insights-for-windows">Setting up
+Accessibility Insights for Windows</a>
+<ul>
+<li><a href="#installing-accessibility-insights-for-windows">Installing
+Accessibility Insights for Windows</a></li>
+<li><a href="#testing-your-target-application">Testing your target
+application</a></li>
+<li><a href="#troubleshooting-2">Troubleshooting</a></li>
+<li><a
+href="#uninstalling-accessibility-insights-for-windows">Uninstalling
+Accessibility Insights for Windows</a></li>
+</ul></li>
+<li><a href="#tab-stops">Tab stops</a>
+<ul>
+<li><a href="#do">Do</a></li>
+<li><a href="#don-t">Don’t</a></li>
+<li><a href="#why-it-matters">Why it matters</a></li>
+</ul></li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#disable-telemetry">Disable telemetry</a></li>
+</ul></li>
+</ul>
+<h2 id="accessibility-insights-for-windows">Accessibility Insights for
+Windows</h2>
+<h3 id="additional-help">Additional Help</h3>
+<p>For additional help such as reporting issues and asking questions: -
+<a
+href="https://accessibilityinsights.io/docs/windows/reference/help/">Help
+for Accessibility Insights for Windows</a></p>
+<h3 id="contributing">Contributing</h3>
+<p>Accessibility Insights for Windows is open source on GitHub: - <a
+href="https://github.com/microsoft/accessibility-insights-windows">Go to
+the GitHub repository for Windows</a></p>
+<h3 id="get-started">Get Started</h3>
+<p>Get started by watching a video: - <a
+href="https://www.youtube.com/watch?v=BIu9ONdMGGg">Overview</a></p>
+<p>Or read a tutorial: - <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/fastpass/">FastPass</a>
+- <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/inspect/">Inspect</a></p>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+<p>Increase your productivity with Accessibility Insights for Windows’s
+keyboard shortcuts. - <a
+href="https://accessibilityinsights.io/docs/windows/reference/keyboard/">Keyboard
+shortcuts</a></p>
+<h3 id="privacy">Privacy</h3>
+<p>With your consent, Accessibility Insights for Windows collects
+anonymized usage data and crash report information. You may opt out at
+any time by disabling it: - <a
+href="https://accessibilityinsights.io/docs/windows/reference/telemetry/">How
+do I disable telemetry?</a></p>
+<h3 id="what-s-accessibility-insights-for-windows">What’s Accessibility
+Insights for Windows?</h3>
+<p>Accessibility Insights for Windows helps developers find and fix
+accessibility issues in Windows apps. The tool supports three primary
+scenarios: - <em>Live Inspect</em> allows developers to verify that an
+element in an app has the right UI Automation properties simply by
+hovering over the element or setting keyboard focus on it.</p>
+<p>Elements are displayed in the UIA Tree. - Choose your view of the
+properties: properties relevant to the control type, all properties that
+have values, or custom.</p>
+<ul>
+<li><p>Automated checks - the tool automatically checks for compliance
+with more than 60 accessibility requirements.</p></li>
+<li><p>Tab stops test - the tool provides clear instructions and a
+visual helper that makes it easy to identify critical accessibility
+issues related to keyboard access, such as missing tab stops, keyboard
+traps, and incorrect tab order.</p></li>
+<li><p>View the patterns supported by a control and invoke the
+associated UI methods to see whether an element responds correctly to
+user input.</p></li>
+<li><p>Record application events to verify that your app is generating
+the expected events.</p></li>
+<li><p>Use the built-in contrast checker to identify contrast issues and
+select colors that provide sufficient contrast.</p></li>
+</ul>
+<h2 id="automated-checks">Automated checks</h2>
+<h3 id="running-automated-checks">Running automated checks</h3>
+<p>You can run automated checks on an entire app or on a selected
+element, and you can use a timer to run automated checks after a delay.
+However the checks are triggered, it is important to ensure that the
+application is in a “steady state” while being checked. Scan results may
+be inconclusive when checks are performed while the UI is in transition.
+#### Running automated checks on an entire app Running automated checks
+on an entire app is the quickest way to identify issues. 1. In
+Accessibility Insights for Windows, go to the <strong>Live
+Inspect</strong> view. 2. Under <strong>What to select</strong>, choose
+<strong>Entire app</strong>. 3. Select an app, and then run automated
+checks on it: - Using a mouse: 1. Hover over the app. 1. Click the test
+icon that appears in the upper right corner of the app.</p>
+<p>or - Using a keyboard: 1. Press <strong>Alt+Tab</strong> on your
+keyboard to move focus to the app. 1. Press <strong>Shift+F8</strong>.
+(You can customize this <a
+href="https://accessibilityinsights.io/docs/windows/reference/keyboard/">keyboard
+shortcut</a>.)</p>
+<p>(image: The app to be tested and Accessibility Insights for Windows
+are both open on the user’s desktop. In the upper right corner of the
+app, the mouse pointer is hovering over the test icon.) 1. Review the
+automated check results:</p>
+<p>A screenshot of the app appears, and all elements with failures are
+highlighted. 2. Detailed results are shown in Accessibility Insights for
+Windows:</p>
+<p>Failed rules are shown in a tree grid.</p>
+<p>Where applicable, failed framework rules are shown in a separate tree
+grid. 3. Each rule can be expanded to show its failure instances. 4.
+Each failure instance has a link and a <strong>File issue</strong>
+button.</p>
+<p>(image: A screenshot of the app shows all elements with failures
+highlighted. Accessibility Insights for Windows shows the accessibility
+check results. The first failed rule is expanded to show its two failure
+instances. The mouse pointer is hovering over the first failure
+instance’s link.) 1. Select a failure instance link to see details:</p>
+<p>The selected element is highlighted in the screenshot. 2. In
+Accessibility Insights for Windows,</p>
+<p>The selected element is displayed in the context of the UI Automation
+tree. 3. Rules failed by the element are listed. 4. How-to-fix
+instructions are provided for each rule.</p>
+<p>(image: The app screenshot shows a single highlighted element.
+Accessibility Insights for Windows shows the element in the UIA tree,
+lists the two rules failed by that element, and displays how-to-fix
+instructions for the first rule.) #### Running automated checks on a
+selected UI element Running automated checks on a selected UI element
+scopes the results to that element and its children. Scoped results make
+it easier to identify a specific problem, for example when filing a
+bug.</p>
+<p>You can run automated checks on an element by selecting the element
+either (1) directly in the app or (2) in the UI Automation tree in
+Accessibility Insights for Windows. ##### Selecting an element in the
+app Selecting an element directly in the app the quickest way to run
+automated checks on it. 1. In Accessibility Insights for Windows, go to
+the <strong>Live Inspect</strong> view. 2. Under <strong>What to
+select</strong>, choose <strong>Element</strong>. 3. Select an element,
+and then run automated checks on it: - Using a mouse: 1. Hover over the
+element. 1. Click the test icon that appears in the upper right corner
+of the element.</p>
+<p>or - Using a keyboard (element must be focusable): 1. Move focus to
+the element. 1. Press <strong>Shift+F8.</strong></p>
+<h5 id="selecting-an-element-in-the-ui-automation-tree">Selecting an
+element in the UI Automation tree</h5>
+<p>Selecting an element in the UI Automation tree allows you to run
+automated checks on an element that isn’t visible in the app. Also, this
+method allows you to use a keyboard to run automated checks on an
+element that isn’t focusable. 1. In Accessibility Insights for Windows,
+go to the <strong>Live Inspect</strong> view. 2. Under <strong>What to
+select</strong>, choose <strong>Entire app</strong>. 3. Select an
+element, and then run automated checks on it. - Using a mouse: 1. Hover
+over the app until the test icon appears in its upper right corner. 1.
+In the UI Automation tree, click the element. 1. Click the <strong>Test
+Element</strong> button.</p>
+<p>or - Using a keyboard: 1. Press <strong>Alt+Tab</strong> to move
+focus to the app. 1. Press <strong>Shift+F9</strong> to bring
+Accessibility Insights for Windows to the foreground. (You can customize
+this <a
+href="https://accessibilityinsights.io/docs/windows/reference/keyboard/">keyboard
+shortcut</a>.) 1. In the UI Automation tree, use the arrow keys or the
+Live Inspect keyboard shortcuts to move focus to the element. 1. Press
+<strong>Shift+F8</strong>, or <strong>Tab</strong> to the <strong>Test
+Element</strong> button and then press <strong>Enter</strong>.</p>
+<h4 id="running-automated-checks-with-a-timer">Running automated checks
+with a timer</h4>
+<p>Accessibility Insights for Windows has a built-in timer that allows
+you to run automated checks after a delay. This feature can be handy
+when testing a UI component in a transient state, such as a combo box
+with its options expanded. 1. In the command bar, select
+<strong>Timer</strong>. 2. In the popup that opens, enter the number of
+seconds you’ll need to get the UI into the desired state. (The default
+is 5.) 3. Start the timer by pressing the <strong>Enter</strong> key or
+clicking the popup. 4. In your target app, get the UI into the state you
+want to test, then wait. Automated checks will run when the timer
+reaches 0.</p>
+<p>(image: The timer popup is open, and its delay is set to five
+seconds)</p>
+<h3 id="saving-automated-check-results">Saving automated check
+results</h3>
+<p>Saving automated checks to a file allows you to share the results
+with your team. For example, you can attach the file to a bug, send it
+as an email attachment, or upload it into a file storage system. 1. Run
+automated checks using one of the methods described above. 2. Save the
+file:</p>
+<p>Using a mouse, click <strong>Save</strong>, or 3. Using a keyboard,
+press <strong>Ctrl+S</strong>. 4. In the <strong>Save As</strong>
+dialog, choose a name for your file, and then select
+<strong>Save</strong>. The automated checks will be saved to a file with
+the .a11ytest file name extension.</p>
+<p>(image: In the app screenshot, a single element is highlighted. In
+Accessibility Insights for Windows, the mouse pointer is hovering over
+the Save button.)</p>
+<h3 id="viewing-automated-check-results">Viewing automated check
+results</h3>
+<p>Anyone who has installed Accessibility Insights for Windows can view
+saved automated check results simply by opening the .a11ytest file.
+Accessibility Insights for Windows will open to the automated check
+results, and the app screenshot will open with failures highlighted.</p>
+<h3 id="what-are-automated-checks">What are automated checks?</h3>
+<p>Automated checks are a feature in Accessibility Insights for Windows
+that quickly checks an app for compliance with dozens of accessibility
+rules. It’s easy to save the results to a file so you can share them
+with your team. You can run automated checks on their own or as part of
+<a
+href="https://accessibilityinsights.io/docs/windows/getstarted/fastpass/">FastPass</a>,
+and you can <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/bugfiling/">file
+issues</a> directly from automated check failures.</p>
+<h2 id="color-contrast-analyzer">Color Contrast Analyzer</h2>
+<h3 id="how-to-test-contrast-ratio">How to test contrast ratio</h3>
+<h4 id="identify-elements-to-test">Identify elements to test</h4>
+<h5 id="text">Text</h5>
+<p>Examine the app you want to test and ​identify any instances of
+meaningful text that might have a low background-to-foreground color
+contrast. You do not need to test any text that is: - Part of an
+inactive (disabled) component - Purely decorative - Intended to be
+hidden from users - Part of a flag, logo or brand name</p>
+<h5 id="ui-elements">UI elements</h5>
+<p>Examine the app to identify any UI components (controls) that might
+have: - Low contrast against the background - Low contrast between
+different states (normal, focused, mouseover, selected)</p>
+<p>You do not need to test: - Inactive UI components - UI components
+whose appearance is determined by the browser and not modified by the
+author</p>
+<h5 id="graphical-elements">Graphical elements</h5>
+<p>Examine the app to identify any graphical objects (such as icons,
+charts, diagrams, and illustrations) that contain meaningful elements
+that might have low contrast against the background. You do not need to
+test any graphical object where: - A particular presentation is <a
+href="https://www.w3.org/TR/WCAG21/#dfn-essential">essential</a>, and
+presenting it with sufficient contrast would undermine its meaning. For
+example, logos, photos real life scenes, illustrations using realistic
+colors, and screenshots are exempt from the contrast requirement. - The
+information conveyed graphically is also conveyed through visible text.
+- The graphical object is purely decorative.</p>
+<h4 id="launch-the-color-contrast-analyzer">Launch the Color Contrast
+Analyzer</h4>
+<ol type="1">
+<li>Open Accessibility Insights for Windows.</li>
+<li>In the Navigation bar, select <strong>Contrast</strong> . (You can
+also press Ctrl+R).</li>
+</ol>
+<h4 id="auto-detect-contrast-ratio">Auto detect contrast ratio</h4>
+<p>Auto detect makes it easy to test the foreground/background contrast
+ratio of text elements. Auto detect is not recommended for use on icons
+or other graphical elements. 1. Turn on the toggle for <strong>Auto
+detect contrast ratio</strong>. 2. To auto detect a text element’s
+contrast ratio, use your mouse to hover over the text (or set keyboard
+focus on the element).</p>
+<p>A tooltip will display the detected contrast ratio and confidence
+level. 3. Accessibility Insights for Windows will display the same
+information and also indicate whether the contrast ratio passes the
+relevant WCAG 2.1 AA success criteria. (You can bring Accessibility
+Insights for Windows to the foreground by pressing Shift+F9). 4. If
+Accessibility Insights for Windows is unable to detect the colors, or if
+the confidence level is <strong>low</strong> or <strong>mid</strong>,
+you must test the contrast ratio manually.</p>
+<p>(image: Screenshot showing the target app and Accessibility Insights
+for Windows. The mouse is hovering over text that says, “Wildlife
+Manager.” A tooltip says “Ratio: 21:1, Confidence: High.” Accessibility
+Insights for Windows indicates that the ratio passes all of the WCAG
+success criteria for contrast.) #### Manually check contrast ratio
+Because auto detect uses a heuristic intended specifically for text, the
+contrast ratio of UI components and graphical elements must be tested
+manually. Also, when auto detect doesn’t work on text, the contrast
+ratio must be tested manually. 1. Turn off the toggle for <strong>Auto
+detect contrast ratio</strong>.</p>
+<h5 id="text-1">Text</h5>
+<ol type="1">
+<li>Under Color 1, select the foreground color of the text (typically a
+horizontal or vertical portion of a character). To select a color, you
+can:</li>
+</ol>
+<p>Select the first Eyedropper, and select the pixel that accurately
+represents the text’s color. You can also use the arrow keys to focus on
+the pixel and press the Enter key. 2. Select the color using the Color
+Picker box. 3. If you know the text’s hex color code, enter it in the
+<strong>Hex Code</strong> box. 4. Under Color 2, select the background
+color. If the background is not a single color, such as a gradient or
+image, select the pixel that is most similar to the foreground color. 5.
+Examine Accessibility Insights for Windows to determine whether the
+contrast ratio passes the relevant WCAG 2.1 AA success criteria.</p>
+<p>(image: Screenshot showing the target app and Accessibility Insights
+for Windows. The mouse is hovering over the background of button that
+says “Close.” Accessibility Insights for Windows indicates the color of
+the text foreground and background, and indicates that the contrast
+ratio fails the WCAG success criteria for regular or large text.) #####
+UI Components 1. Interact with each UI component in the target app to
+determine which of the following states it can adopt:</p>
+<p>Normal 2. Focused 3. Mouseover 4. Selected</p>
+<ol type="1">
+<li>The boundary of the component’s clickable area</li>
+<li>The component’s current state</li>
+</ol>
+<h5 id="graphical-objects">Graphical Objects</h5>
+<ol type="1">
+<li>For each graphic, identify the parts that are necessary for the
+graphic to be understood.</li>
+<li>Test the foreground/background contrast of each necessary state. 1.
+Under Color 1, select the foreground color. 1. Under Color 2, select the
+adjacent (background) color.</li>
+</ol>
+<p>If the foreground or background includes multiple colors or a
+gradient, select colors with the least apparent contrast. 3. Examine
+Accessibility Insights for Windows to determine whether the contrast
+ratio passes the WCAG 2.1 AA Success Criterion for graphical objects and
+UI components (at least 3:1).</p>
+<p>(image: Screenshot showing the target app and Accessibility Insights
+for Windows. The mouse is hovering over a segment of a pie chart.
+Accessibility Insights for Windows indicates that the contrast ratio
+between the color of the segment (medium blue) and its background
+(white) passes the WCAG success criterion for graphical objects and UI
+components.)</p>
+<h3 id="minimum-contrast-requirements">Minimum contrast
+requirements</h3>
+<p>According to <a
+href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast">WCAG
+2.0 AA Success Criterion 1.4.3</a>: - Any text with a contrast of 4.5 or
+greater passes. - Large text (18pt or 14pt bold) with a contrast of 3.0
+or greater passes. - Any text with a contrast below 3.0 fails.</p>
+<p>According to <a
+href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG
+2.1 AA Success Criterion 1.4.11</a>: - Any UI component or meaningful
+graphical element with a contrast ratio of 3.0 or greater passes. - Any
+active (non-disabled) UI component or meaningful graphical element with
+a contrast ratio below 3.0 fails.</p>
+<p>NOTE: Do not round up contrast ratios. 4.499 does not meet the
+threshold of 4.5 for regular text.</p>
+<h3 id="what-is-the-color-contrast-analyzer">What is the Color Contrast
+Analyzer?</h3>
+<p>The Color Contrast Analyzer is a feature in Accessibility Insights
+for Windows that helps developers investigate contrast ratios.
+<strong>Contrast ratio</strong> describes the relative brightness of
+foreground and background colors on a computer display. In general,
+higher contrast ratios make text and graphics easier to perceive and
+read. Black and white have the highest possible contrast ratio, 21:1.
+Identical colors have the lowest possible contrast ratio, 1:1. All other
+color combinations fall somewhere in between. You can also watch a short
+video to <a href="https://www.youtube.com/watch?v=eEAYRBG4TOE">learn
+more about the Color Contrast Analyzer</a>.</p>
+<h3 id="why-contrast-ratio-matters">Why contrast ratio matters</h3>
+<p>Ensuring adequate contrast makes it easier for everyone to read text
+content, interpret graphical elements, identify UI components, and
+notice when those components change state. People with low vision often
+have difficulty reading text, identifying buttons that do not contrast
+with their background, or determining the state of UI components. The
+problems can be exacerbated if the person has a color vision deficiency
+that lowers the perceived contrast even further.</p>
+<h2 id="event-monitoring">Event monitoring</h2>
+<h3 id="how-to-use-inspect">How to use Inspect</h3>
+<h4 id="get-ready-to-inspect">Get ready to inspect</h4>
+<ol type="1">
+<li>Open Accessibility Insights for Windows.</li>
+<li>If you are not already in <strong>Live Inspect</strong> mode, select
+<strong>Inspect</strong> in the main navigation bar.</li>
+<li>In the command bar, for <strong>What to select</strong>, choose
+<strong>Element</strong>.</li>
+<li>Open the application you want to test (aka the target
+application).</li>
+</ol>
+<h4 id="select-an-element">Select an element</h4>
+<ol type="1">
+<li>Select the UI element you wish to inspect:</li>
+</ol>
+<p>Use your mouse to hover over the element. 2. Use your keyboard to set
+focus on the element, then press <strong>Shift+F9</strong> to switch
+back to Accessibility Insights. 3. Pause selection (optional):</p>
+<p>When you have selected the element you wish to inspect, select
+<strong>Pause UIA Tree</strong> in the command bar. 4. When you are
+ready to inspect a different element, select <strong>Resume UIA
+Tree</strong> in the command bar.</p>
+<h4 id="verify-that-the-element-responds-correctly-to-user-input">Verify
+that the element responds correctly to user input</h4>
+<ol type="1">
+<li>In the <strong>Details</strong> tab, in the
+<strong>Patterns</strong> section, select <strong>Actions</strong> for
+the first pattern. A dialog will open, with a tab for each action
+supported by the pattern. In this example, the pattern
+(SelectionPattern) has only one action (GetSelection), so the dialog has
+only one tab. (image: SelectionPattern Actions dialog opened.)</li>
+<li>In each tab:</li>
+</ol>
+<p>Make sure that the selected element is in an appropriate state to
+perform the action. 3. Where needed, provide an appropriate value for
+the action. 4. Run the action. 5. Verify that the action succeeded.</p>
+<p>The dialog will update if the action succeeds. In this example, the
+GetSelection action returned the selected UI Element and a list of its
+properties. (image: SelectionPattern Actions dialog after running the
+GetSelection action.) Repeat steps 1 and 2 for each pattern listed in
+the <strong>Patterns</strong> section. #### Verify that the element
+generates expected events 1. Learn about the required events for the
+element’s <a
+href="https://docs.microsoft.com/en-us/windows/desktop/winauto/uiauto-supportinguiautocontroltypes">control
+type</a>. 2. Find the selected element in the <strong>UIA Tree</strong>,
+and select <strong>More options</strong> &gt; <strong>Listen to
+Events</strong>. A new <strong>Events</strong> view will open in
+Accessibility Insights for Windows. The view includes an
+<strong>Events</strong> table and two tabs, <strong>Details</strong> and
+<strong>Configuration.</strong> By default, the <strong>Events</strong>
+table is empty, and the <strong>Configuration</strong> tab is open.
+(image: Events view with the Events table empty and the Configuration
+tab open.) 3. Select the events you wish to record. By default, expected
+events based on the control type are recorded. If the type of event you
+wish to monitor is not listed, you can record any supported UI
+Automation event type by expanding “My Events” in the tree view and
+opening the “Edit My Events…” node contained within. 4. Start recording.
+The <strong>Details</strong> tab will open automatically, and new events
+will appear in the <strong>Events</strong> table. (image: Events view
+with the Details tab open.) 5. Interact with the element using your
+mouse or keyboard. 6. Verify that the element generates the required
+events. Events generated by the selected element will be added to the
+<strong>Events</strong> table. In this example, selecting an item in the
+<strong>Species</strong> list (in the target application) generated a
+series of focus change events. (image: New events recorded in the Events
+table.)</p>
+<h3 id="what-is-event-monitoring">What is event monitoring?</h3>
+<p>Event monitoring is a feature in Accessibility Insights for Windows
+that enables you to easily verify that a UI element in a Windows app: -
+Responds as expected to user input. - Generates the expected events.</p>
+<h2 id="faq">FAQ</h2>
+<h3
+id="can-i-use-accessibility-insights-for-windows-on-a-windows-app-written-with-java">Can
+I use Accessibility Insights for Windows on a Windows app written with
+Java?</h3>
+<p>If the Java framework produces controls which support Windows UI
+Automation (UIA) provider interfaces, you can use Accessibility Insights
+for Windows to scan the Java application. Frameworks known to support
+UIA are JavaFX and QT (although there may be others).</p>
+<p>However, if the application is built using a framework that requires
+the Java Access Bridge for accessibility (such as Swing), Accessibility
+Insights for Windows will not be able to scan the application.</p>
+<h3
+id="does-accessibility-insights-for-windows-find-framework-specific-issues">Does
+Accessibility Insights for Windows find framework specific issues?</h3>
+<p>Accessibility Insights for Windows can detect <em>some</em> framework
+specific issues. These checks are displayed in a tree grid below the
+Automated checks. The <strong>How to Fix</strong> information provides
+links to <a
+href="https://docs.microsoft.com/en-us/accessibility-tools-docs/">additional
+documentation and actionable guidance</a>.</p>
+<h3
+id="does-accessibility-insights-for-windows-support-custom-ui-automation-properties">Does
+Accessibility Insights for Windows support custom UI Automation
+properties?</h3>
+<p><a
+href="https://docs.microsoft.com/en-gb/windows/win32/winauto/uiauto-custompropertieseventscontrolpatterns">Custom
+UI Automation properties</a> allow third parties, such as application
+developers and assistive technology manufacturers, to exchange
+additional information beyond that permitted by the core UI Automation
+specification. Accessibility Insights for Windows supports the
+inspection of user-defined custom UI Automation properties. To enable
+custom properties, place a configuration file named CustomUIA.json,
+following the <a
+href="https://github.com/microsoft/axe-windows/blob/main/docs/CustomUIA.md">Axe.Windows
+custom UIA configuration format</a>, in the %localappdata%directory.</p>
+<h3
+id="does-accessibility-insights-for-windows-work-with-chromium-or-electron-apps">Does
+Accessibility Insights for Windows work with Chromium or Electron
+apps?</h3>
+<p>Accessibility Insights for Windows can be used to analyze Electron
+and Chromium applications in Windows 1903 update and later because
+Windows converts IAccessible2 data provided by Chromium into UI
+Automation data. However, users must consider that both Chromium and
+Electron are Web based frameworks. Thus, using Web standards and rules
+will provide more actionable results.</p>
+<h3
+id="sometimes-accessibility-insights-for-windows-can-t-find-my-application-is-there-a-fix">Sometimes
+Accessibility Insights for Windows can’t find my application. Is there a
+fix?</h3>
+<p>By default, Accessibility Insights for Windows can only scan
+applications that are not running as administrator. When this happens,
+there are 3 options: 1. If possible, run your application without
+administrative privileges. 2. Run Accessibility Insights for Windows as
+administrator (needs to be done for each session). 3. Enable UIAccess
+for Accessibility Insights for Windows (will impact all future sessions
+of Accessibility Insights for Windows). To do this, open an
+administrative command prompt and run UIAccess.cmd Enable from the
+directory where Accessibility Insights for Windows is installed.</p>
+<h3
+id="what-platforms-does-accessibility-insights-for-windows-support">What
+platforms does Accessibility Insights for Windows support?</h3>
+<p>Accessibility Insights for Windows is actively tested on and hence
+supported on Windows versions in Microsoft mainstream support. You can
+search <a
+href="https://support.microsoft.com/en-us/lifecycle/search">search
+product lifecycle</a> to determine whether a specific Windows version is
+in mainstream support or not. Accessibility Insights for Windows may
+work in older versions of Windows, but we cannot vouch for its
+performance on those platforms.</p>
+<h3
+id="what-type-of-issues-can-be-found-with-fastpass-in-accessibility-insights-for-windows">What
+type of issues can be found with FastPass in Accessibility Insights for
+Windows?</h3>
+<p>FastPass has two steps: 1. Automated checks: these checks can detect
+<strong>some</strong> common accessibility problems, such as missing or
+invalid properties. However, most accessibility problems can be
+identified only through manual testing and Automated checks only provide
+<strong>partial</strong> coverage to WCAG success criteria. 2. TabStops:
+an assisted manual test that helps you find <strong>some</strong>
+accessibility issues in keyboard navigation.</p>
+<h2 id="fastpass">FastPass</h2>
+<h3 id="how-to-complete-a-fastpass">How to complete a FastPass</h3>
+<h4 id="get-ready-to-test">Get ready to test</h4>
+<ol type="1">
+<li>Open Accessibility Insights for Windows.</li>
+<li>In the command bar, for <strong>What to select</strong>, choose
+<strong>Entire app</strong>.</li>
+<li>Open the application you want to test (aka the target
+application).</li>
+</ol>
+<p>(image: Screenshot showing the target application and Accessibility
+Insights for Windows) #### Complete the automated checks 1. Run the
+automated checks:</p>
+<p>Hover your mouse over the target application window, then click the
+test beaker icon that appears in the upper right corner. 2. Press
+Alt+Tab to switch to the target application window, then press Shift+F8.
+3. Review failure details:</p>
+<p>Click a failure icon (white exclamation on red background) in the
+application screenshot. 4. Use these keyboard commands:</p>
+<p>Press the Tab key to navigate to the <strong>Automated
+checks</strong> tree grid. 5. Press the Up and Down arrow keys to
+navigate to a rule. 6. Press the Right arrow key to expand the rule. 7.
+Press the Right arrow key to navigate to the <strong>Element
+path</strong> link. 8. Press the Space or Enter key to activate the
+link.</p>
+<p>A new view will open in Accessibility Insights for Windows. The view
+includes the <strong>UIA Tree</strong> and a set of tabs:
+<strong>Details</strong> and <strong>How to fix</strong>. The
+<strong>How to fix</strong> tab is selected by default. It’s divided
+into two regions: - <strong>Test results</strong> contains a selectable
+list of rules failed by the element selected in the <strong>UIA
+Tree</strong>. Framework specific list of rules will be displayed in a
+separate table below the test results. - <strong>Fix the
+following</strong> contains instructions for fixing the failure selected
+under <strong>Test results</strong>.</p>
+<p>(image: Screenshot showing failure details in Accessibility Insights
+for Windows) Review failure details for a different instance: - To
+select an element in the <strong>UIA Tree</strong>:</p>
+<p>Click a failing element in the <strong>UIA Tree</strong>. (You might
+need to expand a node by clicking its arrow icon.)</p>
+<p>or - Use these keyboard commands:</p>
+<p>Press the Tab key to navigate to the <strong>UIA Tree</strong>. -
+Press the Up and Down arrow keys to select a failing element. (If
+needed, press the Right arrow key to expand a node.)</p>
+<p>or - To return to the Automated Checks tree grid:</p>
+<p>Click <strong>Tests</strong> in the breadcrumb or in the main
+navigation bar.</p>
+<p>or - Press Ctrl+T.</p>
+<p>If you’re a developer, we recommend fixing the automated check
+failures before proceeding to the next part of the FastPass. ####
+Complete the manual test for tab stops 1. Be sure you are in the
+<strong>Tests</strong> view. 2. Go to the <strong>Tab stops</strong>
+test:</p>
+<p>Click <strong>Tab Stops</strong> in the navigation pane. 3. Use these
+keyboard commands:</p>
+<p>Press Tab until you reach the <strong>Automated checks</strong> tab.
+4. Use the Down arrow key to select the <strong>Tab stops</strong>
+tab.</p>
+<p>(image: Screenshot showing the Tab Stops test in Accessibility
+Insights for Windows) Make sure your target app is in the state you want
+to test. Start recording tab stops: - Click the <strong>Record tab
+stops</strong> toggle.</p>
+<p>or - Press Shift+F7.</p>
+<p>Input focus will move automatically to the target application.
+(image: Screenshot showing the Tab Stops test with tab stop recording
+enabled) Use standard keyboard commands to move input focus through all
+the interactive elements in the page. - Use Tab and Shift+Tab to
+navigate between controls. - Use the arrow keys to navigate between the
+focusable elements within a composite control, such as the items in a
+menu.</p>
+<p>In the target app, numbered circles will appear on elements that
+receive input focus. A list of those elements will also appear in a grid
+in Accessibility Insights for Windows. (image: Screenshot showing tab
+stops highlighted and numbered in the target application) As you
+navigate to each element, look for these accessibility problems: - An
+interactive element can’t be reached using the Tab or arrow keys. - An
+interactive element “traps” input focus and prevents navigating away. -
+An interactive element doesn’t give a visible indication when it has
+input focus. - The focus order is inconsistent with the logical order
+that’s communicated visually. - Input focus moves unexpectedly without
+the user initiating it.</p>
+<p>Stop recording when you have navigated to every element within your
+test scope. When you’ve completed the tab stops test, your FastPass is
+complete.</p>
+<h3 id="what-is-fastpass">What is FastPass?</h3>
+<p>FastPass is a lightweight, <em>two-step</em> process that helps
+developers identify common, high-impact accessibility issues in less
+than five minutes. 1. <strong>Automated checks</strong> - the tool
+automatically checks for compliance with dozens of accessibility rules.
+2. <strong>Manual test for tab stops</strong> - the tool provides clear
+instructions and a visual helper that makes it easy to identify critical
+accessibility issues related to keyboard access, such as missing tab
+stops, keyboard traps, and incorrect tab order.</p>
+<p>We recommend developers run a FastPass before every check-in of UI
+code. Note: Completing a FastPass requires you to use standard keyboard
+commands and to visually identify interactive interface elements.</p>
+<h2 id="help">Help</h2>
+<h3 id="contributing-2">Contributing</h3>
+<p>Accessibility Insights for Windows is open source on GitHub: - <a
+href="https://github.com/microsoft/accessibility-insights-windows">Go to
+the GitHub repository for Windows</a></p>
+<h3 id="for-additional-help">For additional help</h3>
+<ul>
+<li>Help topic: Instructions</li>
+<li>Ask a question: <a
+href="https://go.microsoft.com/fwlink/?linkid=2080279">Ask a question in
+Stack Overflow</a></li>
+<li>Search known issues: <a
+href="https://go.microsoft.com/fwlink/?linkid=2077847">Search GitHub
+issues</a></li>
+<li>Report an issue: <a
+href="https://go.microsoft.com/fwlink/?linkid=2080535">Create a bug
+report in GitHub</a></li>
+<li>Search feature requests: <a
+href="https://go.microsoft.com/fwlink/?linkid=2080623">Search GitHub
+issues</a></li>
+<li>Submit a feature request: <a
+href="https://go.microsoft.com/fwlink/?linkid=2080535">Create a feature
+request in GitHub</a></li>
+</ul>
+<h3 id="get-started-2">Get Started</h3>
+<p>Get started by reading our tutorials: - <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/fastpass/">FastPass</a>
+- <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/bugfiling/">Bug
+filing</a> - <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/inspect/">Inspect</a>
+- <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/eventmonitoring/">Event
+monitoring</a> - <a
+href="https://accessibilityinsights.io/docs/windows/getstarted/colorcontrast/">Color
+contrast</a></p>
+<h3 id="keyboard-shortcuts-2">Keyboard Shortcuts</h3>
+<p>Increase your productivity with Accessibility Insights for Windows’s
+keyboard shortcuts. - <a
+href="https://accessibilityinsights.io/docs/windows/reference/keyboard/">Keyboard
+shortcuts</a></p>
+<h3 id="privacy-2">Privacy</h3>
+<p>With your consent, Accessibility Insights for Windows collects
+anonymized usage data and crash report information. You may opt out at
+any time by disabling it: - <a
+href="https://accessibilityinsights.io/docs/windows/reference/telemetry/">How
+do I disable telemetry?</a></p>
+<h2 id="inspect">Inspect</h2>
+<h3 id="how-to-use-inspect-2">How to use Inspect</h3>
+<h4 id="get-ready-to-inspect-1">Get ready to inspect</h4>
+<ol type="1">
+<li>Open Accessibility Insights for Windows.</li>
+<li>If you are not already in <strong>Live Inspect</strong> mode, select
+<strong>Inspect</strong> in the main navigation bar.</li>
+<li>In the command bar, for <strong>What to select</strong>, choose
+<strong>Element</strong>.</li>
+<li>Open the application you want to test (aka the target
+application).</li>
+</ol>
+<h4 id="select-an-element-1">Select an element</h4>
+<ol type="1">
+<li>Select the UI element you wish to inspect:</li>
+</ol>
+<p>Use your mouse to hover over the element.</p>
+<p>or 2. Use your keyboard to move the input focus to the element. 3.
+Pause selection (optional):</p>
+<p>When you have selected the element you wish to inspect, select
+<strong>Pause UIA Tree</strong> in the command bar. 4. When you are
+ready to inspect a different element, select <strong>Resume UIA
+Tree</strong> in the command bar.</p>
+<h4
+id="verify-that-the-element-has-the-expected-ui-automation-properties">Verify
+that the element has the expected UI Automation properties</h4>
+<ol type="1">
+<li>Learn about the expected properties for the element’s <a
+href="https://docs.microsoft.com/en-us/windows/desktop/winauto/uiauto-supportinguiautocontroltypes">control
+type</a>.</li>
+<li>In the <strong>Details</strong> tab, in the
+<strong>Properties</strong> section, examine the element’s UI Automation
+properties.</li>
+</ol>
+<p>Use the default view to see basic UIA properties. 3. Choose
+<strong>UIA Tree Properties Settings</strong> &gt; <strong>Include all
+properties that have values</strong>. 4. Choose <strong>UIA Tree
+Properties Settings</strong> &gt; <strong>Configure properties to always
+show</strong>. 5. Verify that the element has the expected
+properties.</p>
+<h4
+id="verify-that-the-element-supports-the-expected-control-patterns">Verify
+that the element supports the expected control patterns</h4>
+<ol type="1">
+<li>Learn about the allowed and required control patterns for the
+element’s <a
+href="https://docs.microsoft.com/en-us/windows/desktop/winauto/uiauto-supportinguiautocontroltypes">control
+type</a>.</li>
+<li>In the <strong>Details</strong> tab, in the
+<strong>Patterns</strong> section, examine the patterns supported by the
+element.</li>
+<li>Verify that the element supports all of the required patterns.</li>
+</ol>
+<h4 id="customize-your-inspect-experience-optional">Customize your
+Inspect experience (optional)</h4>
+<ol type="1">
+<li>Choose <strong>Change settings</strong> in the main navigation bar.
+A <strong>Settings</strong> view will open to the
+<strong>Application</strong> tab. (image: Settings view with the
+Application tab open.)</li>
+<li>Under <strong>Selection type</strong>, choose which selection
+mode(s) to enable.</li>
+<li>Under <strong>Other options</strong>, choose a highlighter
+mode.</li>
+</ol>
+<h3 id="what-is-inspect">What is Inspect?</h3>
+<p>Inspect is a feature in Accessibility Insights for Windows that
+enables you to easily verify that a UI element in a Windows app: - Has
+the expected UI Automation properties. - Supports the expected control
+patterns.</p>
+<h2 id="issue-filing">Issue filing</h2>
+<h3 id="how-to-file-issues">How to file issues</h3>
+<h4 id="sign-into-your-issue-filing-account">Sign into your issue filing
+account</h4>
+<p>Open Accessibility Insights for Windows. Accessibility Insights will
+open to the <strong>Live Inspect</strong> view: (image: Screenshot
+showing the “Live Inspect” view in Accessibility Insights for Windows)
+##### To sign in to Azure Boards 1. Go to <strong>Sign In</strong>. The
+<strong>Settings</strong> &gt; <strong>Connection</strong> tab will
+open, with two options for filing issue: <strong>Azure Boards</strong>
+or <strong>GitHub</strong>. (image: Screenshot showing the “Settings”
+view with the “Connection” tab open) 2. Select <strong>Azure
+Boards</strong>. A text field and button will appear. (image: Screenshot
+showing the “Enter desired Azure boards link” text field and “Connect
+Azure Boards account” button) 3. Enter the URL for your Azure Boards
+account in the text field. The <strong>Connect Azure Boards
+account</strong> button will become enabled. (image: Screenshot showing
+the “Connect Azure Boards account” button enabled) 4. Select the
+<strong>Connect Azure Boards account</strong> button. A <strong>Pick an
+account</strong> dialog _might _open: (image: Screenshot showing the
+“Pick an account” dialog) 5. Select the account you want to use for
+filing issues. Under <strong>Select your Azure Boards team</strong>, a
+list of teams associated with the selected account will appear: (image:
+Screenshot showing the list of teams associated with the selected
+account) 6. Select your team. The <strong>Save and close</strong> button
+will become enabled: (image: Screenshot showing the team selected) 7.
+Select <strong>Save and close</strong>. You’ll return to the
+<strong>Live Inspect</strong> view: (image: Screenshot showing the “Live
+Inspect” view)</p>
+<h5 id="to-sign-in-to-github">To sign in to GitHub</h5>
+<ol type="1">
+<li>Go to <strong>Sign In</strong>. The <strong>Settings</strong> &gt;
+<strong>Connection</strong> tab will open, with two options for filing
+issues: <strong>Azure Boards</strong> or <strong>GitHub</strong>.
+(image: Screenshot showing the “Settings” view with the “Connection” tab
+open)</li>
+<li>Select <strong>GitHub</strong>. A text field will appear. (image:
+Screenshot showing the “Enter desired GitHub repo link” text field)</li>
+<li>Enter the URL for your GitHub account. The <strong>Save and
+close</strong> button will become enabled: (image: Screenshot showing
+the “Save and close” button enabled)</li>
+<li>Select <strong>Save and close</strong>. You’ll return to the
+<strong>Live Inspect</strong> view: (image: Screenshot showing the “Live
+Inspect” view)</li>
+</ol>
+<h4 id="run-automated-checks">Run automated checks</h4>
+<ol type="1">
+<li>Open the application you want to test (aka the target application).
+(image: Screenshot showing the target application and Accessibility
+Insights for Windows)</li>
+<li>In the command bar, for <strong>What to select</strong>, choose
+<strong>Entire app</strong>. (image: Screenshot showing “Entire app”
+selected)</li>
+<li>Start the automated checks:</li>
+</ol>
+<p>Use a mouse:</p>
+<p>Hover your mouse over the target application window. 4. Click the
+test beaker icon that appears in the upper right corner.</p>
+<p>or - Use these keyboard commands:</p>
+<p>Press Alt+Tab to switch to the target application window. - Press
+Shift+F8.</p>
+<p>A screenshot of the target app will open in a new window directly
+over the app, and individual failure instances will be highlighted in
+the screenshot. Failed rules and failure instances will also appear in
+Accessibility Insights for Windows in the <strong>Automated
+Checks</strong> tree grid. #### File an issue 1. In the
+<strong>Automated Checks</strong> tree grid, expand a rule:</p>
+<p>Use a mouse to click the rule. 2. Use these keyboard commands:</p>
+<p>Press the Tab key to navigate to the <strong>Automated
+checks</strong> tree grid. 3. Press the Up and Down arrow keys to
+navigate to a rule. 4. Press the Right arrow key to expand the rule.</p>
+<p>When a rule is expanded, its failure instances are revealed: (image:
+Screenshot showing the “Automated Checks” tree grid with one rule
+expanded) Select the <strong>File issue</strong> link associated with
+the failure instance you wish to file. - Use a mouse to click the
+link.</p>
+<p>or - Use these keyboard commands:</p>
+<p>Press the Up and Down arrow keys to navigate to the failure instance.
+- Press the Right arrow key to navigate to the <strong>File
+issue</strong> link. - Press Enter to activate the link.</p>
+<p>If you signed into Azure Boards, a <strong>New Issues</strong> dialog
+will open, with information about the failure automatically populated:
+(image: Screenshot showing a new issue in Azure Boards) If you signed
+into GitHub, the issue will open in a new browser window: (image:
+Screenshot showing a new issue in GitHub) Modify the information as
+desired (optional) and then save or submit the issue. When you save the
+issue, a screenshot and test file will be attached automatically.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="how-to-install-the-webview2-runtime">How to install the WebView2
+runtime</h4>
+<p>Filing issues to Azure Boards requires the WebView2 runtime. This is
+preinstalled on some Windows computers; Accessibility Insights for
+Windows will display a dialog if the WebView2 runtime is not installed.
+1. To download and install the WebView2 runtime, navigate to the <a
+href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section">Edge
+WebView2 download page</a>. 2. Download the “Evergreen Bootstrapper.”
+Review the license terms.</p>
+<p>(image: Screenshot highlighting the ‘Download’ button for the
+Evergreen Bootstrapper) 1. Run the Evergreen Bootstrapper. 2. Restart
+Accessibility Insights for Windows.</p>
+<p>When the WebView2 runtime is installed, Accessibility Insights for
+Windows will be able to file issues to Azure Boards.</p>
+<h2 id="keyboard-shortcuts-3">Keyboard shortcuts</h2>
+<h3 id="customize-keyboard-shortcuts">Customize keyboard shortcuts</h3>
+<p>A subset of the keyboard shortcuts can be customized. <strong>To
+customize keyboard shortcuts</strong> 1. Open Accessibility Insights for
+Windows. 2. In the Navigation bar, select Settings . You can also set
+focus on the Navigation bar and select the Tab key to select Settings.
+3. In the Application tab, select the keyboard shortcut you want to
+customize and enter the new shortcut.</p>
+<h3 id="default-keyboard-shortcuts">Default keyboard shortcuts</h3>
+<h4 id="navigation">Navigation</h4>
+<ul>
+<li>Key: Command</li>
+<li>F6: Go to the next pane</li>
+<li>Shift+F6: Go to the previous pane</li>
+<li>Shift+F9: Bring Accessibility Insights for Windows to the foreground
+or minimize it</li>
+<li>Ctrl+I: Go to Live Inspect</li>
+<li>Ctrl+T: Go to Test</li>
+<li>Ctrl+R: Go to Color Contrast Analyzer</li>
+</ul>
+<h4 id="help-1">Help</h4>
+<ul>
+<li>Key: Command</li>
+<li>F1: Go to Help (online)</li>
+</ul>
+<h4 id="live-inspect">Live Inspect</h4>
+<ul>
+<li>Key: Command</li>
+<li>Ctrl+O: Open snapshot (.a11ytest file)</li>
+<li>Ctrl+S: Save snapshot (.a11ytest file)</li>
+<li>Shift+F5: Pause or resume updates to the UI Automation Tree when
+focus changes via mouse or keyboard navigation.</li>
+<li>Ctrl+Shift+F5: Inspect the previous sibling element in the UI
+Automation Tree.</li>
+<li>Ctrl+Shift+F6: Inspect the Parent element in UI Automation
+Tree.</li>
+<li>Ctrl+Shift+F7: Inspect the first child element in the UI Automation
+Tree.</li>
+<li>Ctrl+Shift+F8: Inspect the Next sibling element in the UI Automation
+tree.</li>
+<li>Ctrl+Shift+F9: Inspect the last child element in the UI Automation
+Tree.</li>
+<li>Shift+F7: Start or stop event recording for the selected
+element.</li>
+<li>Shift+F8: Run automated checks on the selected element.</li>
+</ul>
+<h5 id="details-tab">Details tab</h5>
+<ul>
+<li>Key: Command</li>
+<li>Alt+S: Open and close Properties settings</li>
+<li>Alt+P: Focus into the Properties grid</li>
+<li>Alt+E: Focus into the Properties filter (enabled only when ‘Include
+all properties that have values’ settings is turned on )</li>
+<li>Alt+A: Focus into the Patterns</li>
+<li>Ctrl+C: Copy selected property’s name and value</li>
+</ul>
+<h5 id="configuration-properties-and-events">Configuration (Properties
+and Events)</h5>
+<ul>
+<li>Key: Command</li>
+<li>Alt+A: Add item</li>
+<li>Alt+R: Remove item</li>
+<li>Alt+V: Focus into available items</li>
+<li>Alt+S: Focus into currently selected items</li>
+<li>Alt+F: Focus into item filter</li>
+</ul>
+<h5 id="listen-to-events">Listen to events</h5>
+<h6 id="events">Events</h6>
+<ul>
+<li>Key: Command</li>
+<li>Alt+R: (Within Events pane) Start or stop event recording for the
+element.</li>
+<li>Alt+V: (Within Events pane) Focus into the recorded events
+table.</li>
+</ul>
+<h4 id="test">Test</h4>
+<h5 id="how-to-fix">How to fix</h5>
+<ul>
+<li>Key: Command</li>
+<li>Ctrl+NumpadAdd: Auto-resize columns in How To Fix.</li>
+</ul>
+<h2 id="setting-up-accessibility-insights-for-windows">Setting up
+Accessibility Insights for Windows</h2>
+<h3 id="installing-accessibility-insights-for-windows">Installing
+Accessibility Insights for Windows</h3>
+<h4 id="using-the-setup-wizard">Using the setup wizard</h4>
+<ol type="1">
+<li>Go to <a
+href="https://accessibilityinsights.io/downloads">Accessibility Insights
+Downloads</a>.</li>
+<li>Under <strong>For Windows</strong>, select <strong>Download for
+Windows.</strong></li>
+<li>When the installer file finishes downloading, open it.</li>
+<li>Follow the instructions in the setup wizard.</li>
+</ol>
+<h4 id="using-a-command-prompt">Using a command prompt</h4>
+<p>This method is an alternative to using the setup wizard. 1. Go to <a
+href="https://accessibilityinsights.io/downloads">Accessibility Insights
+Downloads</a>. 2. Under <strong>For Windows</strong>, select
+<strong>Download for Windows.</strong> 3. When the installer file
+finishes downloading, open a command prompt as an administrator. 4.
+Change to the directory containing the file. For example, enter the
+following command: cd %HOMEPATH%. Run the installer in quiet mode. For
+example, enter the following command: msiexec.exe /i
+AccessibilityInsights.msi /quietCopy An application icon will appear on
+the desktop when installation is complete.</p>
+<h3 id="testing-your-target-application">Testing your target
+application</h3>
+<p>By default, Accessibility Insights for Windows can’t access
+applications running with administrative privileges. In this situation,
+you have three options: - If possible, run your target application
+without administrative privileges. - Run Accessibility Insights for
+Windows as administrator. (Must be done each session.) - Enable UIAccess
+for Accessibility Insights for Windows. (Will impact all future sessions
+of Accessibility Insights for Windows.) To do this:</p>
+<p>Open a command prompt as an administrator. - Navigate to the
+directory where the AccessibilityInsights.exe file is stored. For
+example, enter the following command: cd C:Files (x86)\1.1Copy - Run
+UIAccess.cmd Enable from the directory where Accessibility Insights for
+Windows is installed. For example, enter the following command:
+UIAccess.cmd EnableCopy</p>
+<h3 id="troubleshooting-2">Troubleshooting</h3>
+<h4 id="github-authentication-error-while-using-the-setup-wizard">GitHub
+authentication error while using the setup wizard</h4>
+<p><strong>Problem</strong> Accessibility Insights for Windows was
+unable to install the application on your device due to a GitHub
+Authentication issue when downloading. <strong>Solution</strong> #####
+Using the setup wizard 1. Open a new private browser window. 2. Go to <a
+href="https://accessibilityinsights.io/downloads">Accessibility Insights
+Downloads</a>. 3. Under <strong>For Windows</strong>, select
+<strong>Download for Windows.</strong> 4. When the installer file
+finishes downloading, open it. 5. Follow the instructions in the setup
+wizard.</p>
+<h5 id="using-a-command-prompt-1">Using a command prompt</h5>
+<p>This method is an alternative to using the setup wizard. 1. Open a
+new private browser window. 2. Go to <a
+href="https://accessibilityinsights.io/downloads">Accessibility Insights
+Downloads</a>. 3. Under <strong>For Windows</strong>, select
+<strong>Download for Windows.</strong> 4. When the installer file
+finishes downloading, open a command prompt as an administrator. 5.
+Change to the directory containing the file. For example, enter the
+following command: cd %HOMEPATH%. Run the installer in quiet mode. For
+example, enter the following command: msiexec.exe /i
+AccessibilityInsights.msi /quietCopy An application icon will appear on
+the desktop when installation is complete.</p>
+<h3 id="uninstalling-accessibility-insights-for-windows">Uninstalling
+Accessibility Insights for Windows</h3>
+<ol type="1">
+<li>Go to <strong>Apps &amp; features</strong>, select Accessibility
+Insights for Windows, and then select <strong>Uninstall</strong>.</li>
+</ol>
+<h2 id="tab-stops">Tab stops</h2>
+<h3 id="do">Do</h3>
+<h4
+id="provide-a-visible-focus-indicator-on-the-interactive-element-that-has-the-input-focus.">Provide
+a visible focus indicator on the interactive element that has the input
+focus.</h4>
+<ul>
+<li>Input focus is commonly indicated by a solid or dotted border
+surrounding the element, but other visible changes are acceptable.</li>
+</ul>
+<h4 id="make-all-interactive-elements-focusable.">Make all interactive
+elements focusable.</h4>
+<ul>
+<li>Users should be able tab to every interactive element on the screen
+unless it is currently disabled.</li>
+<li>Interactive elements include links, buttons, form fields and other
+input controls.</li>
+<li>Watch out for “keyboard traps,” elements that receive input focus
+then prevent it from moving away.</li>
+</ul>
+<h4
+id="make-the-tab-order-consistent-with-the-logical-order-thats-communicated-visually.">Make
+the tab order consistent with the logical order that’s communicated
+visually.</h4>
+<ul>
+<li>In most cases, tab order should match the expected reading order
+(left-to-right and top-to-bottom).</li>
+</ul>
+<h4
+id="make-sure-elements-that-appear-in-multiple-views-have-a-consistent-tab-order.">Make
+sure elements that appear in multiple views have a consistent tab
+order.</h4>
+<ul>
+<li>For example, if multiple views in an application have a navigation
+bar, a search field, and a settings menu, these elements should have the
+same relative tab order in every view.</li>
+</ul>
+<h3 id="don-t">Don’t</h3>
+<h4 id="dont-make-non-interactive-elements-focusable.">Don’t make
+non-interactive elements focusable.</h4>
+<ul>
+<li>Don’t allow users to tab to text elements (such as labels) or other
+static content.</li>
+<li>Don’t allow users to tab to potentially interactive elements that
+are currently disabled.</li>
+</ul>
+<h4 id="dont-allow-users-to-tab-their-way-out-of-a-modal-dialog.">Don’t
+allow users to tab their way out of a modal dialog.</h4>
+<ul>
+<li>Users must actively dismiss the dialog (for example, using an OK or
+Cancel button).</li>
+</ul>
+<h4 id="dont-use-tabindex-values-to-define-an-explicit-tab-order.">Don’t
+use tabindex values to define an explicit tab order.</h4>
+<ul>
+<li>If the default tab order isn’t ideal, first try to fix the problem
+by rearranging the content.</li>
+</ul>
+<h4
+id="dont-show-input-focus-on-any-element-that-does-not-currently-have-the-input-focus.">Don’t
+show input focus on any element that does not currently have the input
+focus.</h4>
+<ul>
+<li>Be sure styling doesn’t make any element appear to have the input
+focus.</li>
+</ul>
+<h4 id="dont-move-input-focus-unexpectedly.">Don’t move input focus
+unexpectedly.</h4>
+<ul>
+<li>All focus changes that occur should be a predictable result of user
+action.</li>
+</ul>
+<h3 id="why-it-matters">Why it matters</h3>
+<p>Users must be able to interact with a software application using only
+a keyboard. - Using a mouse is impossible for people who can’t see the
+pointer. - Some people don’t have the physical capability to control a
+pointing device. - Many people without disabilities prefer to use a
+keyboard.</p>
+<p>Good tab stop design allows keyboard users to: - Access all of the
+application’s interactive elements in a predictable order. - Identify
+which element currently has the input focus.</p>
+<p>Poorly-designed tab stops create high-impact accessibility
+problems.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="disable-telemetry">Disable telemetry</h3>
+<ol type="1">
+<li>Open Accessibility Insights for Windows.</li>
+<li>In the Navigation bar, select Settings . You can also set focus on
+the Navigation bar and select the Tab key to select Settings.</li>
+<li>In the <strong>Application</strong> tab, turn off the <strong>Enable
+Telemetry</strong> toggle. You can always enable it again later by
+turning on the same toggle.</li>
+</ol>
+</body>
+</html>
