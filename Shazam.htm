@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-08-11" />
+  <title>Shazam: the complete help guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Shazam: the complete help guide</h1>
+<p class="subtitle">Apple’s own user guide for the Shazam app</p>
+<p class="date">2026-08-11</p>
+</header>
+<h1 id="shazam-the-complete-help-guide">Shazam: the complete help
+guide</h1>
+<p>This guide gathers Apple’s own user guide for Shazam: 7 topics across
+3 sections, in Apple’s words, gathered on 11 August 2026.</p>
+<p>Two things in here are easy to miss and worth knowing: <strong>Shazam
+works offline</strong>, remembering what it heard and identifying it
+once you are back online, and its settings let you <strong>choose which
+microphone it listens through</strong>.</p>
+<p>The sections come from Apple’s own table of contents.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#identify-music">Identify music</a>
+<ul>
+<li><a
+href="#identify-a-song-using-the-shazam-app-on-headphones-or-earphones-on-iphone-or-ipad">Identify
+a song using the Shazam app on headphones or earphones on iPhone or
+iPad</a></li>
+<li><a
+href="#listen-to-your-identified-songs-in-apple-music-or-apple-music-classical">Listen
+to your identified songs in Apple Music or Apple Music
+Classical</a></li>
+<li><a
+href="#use-the-shazam-app-or-shazam-music-recognition-when-you-re-offline">Use
+the Shazam app or Shazam Music Recognition when you’re offline</a></li>
+</ul></li>
+<li><a href="#set-up-and-get-started">Set up and get started</a>
+<ul>
+<li><a href="#before-you-use-the-shazam-app">Before you use the Shazam
+app</a></li>
+<li><a href="#shazam-app-at-a-glance">Shazam app at a glance</a></li>
+<li><a
+href="#sync-songs-to-the-shazam-app-using-control-center-siri-and-more">Sync
+songs to the Shazam app using Control Center, Siri, and more</a></li>
+</ul></li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a
+href="#listen-to-your-identified-songs-in-spotify-deezer-or-another-app-on-an-android-device">Listen
+to your identified songs in Spotify, Deezer, or another app on an
+Android device</a></li>
+</ul></li>
+</ul>
+<h2 id="identify-music">Identify music</h2>
+<h3
+id="identify-a-song-using-the-shazam-app-on-headphones-or-earphones-on-iphone-or-ipad">Identify
+a song using the Shazam app on headphones or earphones on iPhone or
+iPad</h3>
+<p>Use Shazam to identify music when you’re wearing headphones or
+earphones that are paired with your iPhone or iPad (or connected to it
+with a cable). Shazam can identify not only the music you’re listening
+to on your headphones or earphones, but also the music playing around
+you. To ensure the best experience, make sure the Shazam app has <a
+href="https://support.apple.com/guide/shazam/aside/dev72afd171c/1.0/web/1.0">access
+to your device’s microphone</a>. <em>Note: </em>Shazam can’t identify
+songs through headphones or earphones when you’re not connected to the
+internet. #### Identify songs while using headphones with iPhone or iPad
+1. Make sure your headphones or earphones are connected to your device.
+2. Do either of the following:Go to the Shazam app  <a
+href="https://support.apple.com/guide/shazam/aside/devfe067a444/1.0/web/1.0">home
+screen</a>, then tap the Shazam button .(image: Shazam app home screen
+showing connected headphones) 3. <a
+href="https://support.apple.com/guide/shazam/aside/dev7150a6219/1.0/web/1.0">Open
+Control Center</a>, then tap (image: the Shazam Music Recognition
+button).See <a
+href="https://support.apple.com/guide/shazam/shazam-app-iphone-ipad-android-device-dev9748744b6/1.0/web/1.0#dev12311414e">Identify
+songs using Control Center</a>.</p>
+<h3
+id="listen-to-your-identified-songs-in-apple-music-or-apple-music-classical">Listen
+to your identified songs in Apple Music or Apple Music Classical</h3>
+<p>When you subscribe to Apple Music, you can open and play your
+identified songs in the Music app . You can also automatically add
+identified songs to a “My Shazam Tracks” playlist—or a playlist of your
+choice—in Apple Music. Additionally, you can open and play songs that
+Shazam identifies as classical in the Apple Music Classical app .
+<em>Note: </em>If you’re not an Apple Music subscriber, you can hear
+previews of your identified songs in the Music app. See the Apple
+Support article <a href="https://support.apple.com/109329">Subscribe to
+Apple Music</a>. #### Open an identified song in Apple Music on iPhone
+or iPad 1. Go to the Shazam app on iPhone or iPad, then tap (image: the
+Settings button) in the top-right corner of the <a
+href="https://support.apple.com/guide/shazam/aside/devfe067a444/1.0/web/1.0">home
+screen</a>. 2. Make sure Shazam is connected to Apple Music, then tap
+(image: the Close button) to close settings. 3. Tap Library at the
+bottom of the screen, then do any of the following:Tap (image: the Apple
+Music button) on a song. 4. Tap (image: the More button) on a song, then
+tap Listen in Music. 5. Touch and hold a song, then tap Listen in Music.
+6. Tap a song, then tap Open in Apple Music in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>. 7. Tap (image: the More button) in the track screen, then
+tap Listen in Music.</p>
+<h4
+id="sync-your-identified-songs-to-a-my-shazam-tracks-playlist-in-apple-music-on-iphone-or-ipad">Sync
+your identified songs to a “My Shazam Tracks” playlist in Apple Music on
+iPhone or iPad</h4>
+<ol type="1">
+<li>Go to the Shazam app on iPhone or iPad, then tap (image: the
+Settings button) in the top-right corner of the <a
+href="https://support.apple.com/guide/shazam/aside/devfe067a444/1.0/web/1.0">home
+screen</a>.</li>
+<li>Turn on “Sync your songs to Apple Music.”A “My Shazam Tracks”
+playlist is created in Apple Music. Your existing and newly identified
+songs are automatically added to the playlist.<em>Note: </em>To sync
+songs to a “My Shazam Tracks” playlist in Apple Music when you identify
+songs with Control Center, Siri, or Shortcuts, the Shazam app must be
+installed on your device and “Sync your songs to Apple Music” must be
+turned on in Shazam app settings.To find your playlist in the Music app
+, tap Library at the bottom of the screen, tap Playlists, then scroll
+the list. Alternatively, you can tap (image: the Search button), enter
+“My Shazam Tracks,” then tap Library at the top of the screen.</li>
+</ol>
+<p><strong>Tip: </strong>If songs you’ve identified using the Shazam app
+don’t appear in the “My Shazam Tracks” playlist, turn off “Sync your
+songs to Apple Music,” then turn it on again. #### Add an identified
+song to any Apple Music playlist on iPhone or iPad 1. Go to the Shazam
+app on iPhone or iPad, then tap Library at the bottom of the screen. 2.
+Do any of the following:Tap (image: the More button) on any song, tap
+Add to a Playlist, then tap a playlist in Apple Music Playlists. 3.
+Touch and hold a song, tap Add to a Playlist, then tap a playlist. 4.
+Tap a song, tap (image: the Add to Playlist button) in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>, then tap a playlist. 5. Tap a song, tap (image: the More
+button) in the track screen, tap Add to a Playlist, then tap a playlist.
+6. Tap (image: the More button) in the top-right corner of the Library
+screen, tap (image: the Select button), select your songs, tap (image:
+the Add to Playlist button), then tap a playlist.</p>
+<p><strong>Tip: </strong>When you identify music that may help you focus
+or rest, add the songs to your own ambient playlist in Apple Music. You
+can then <a
+href="https://support.apple.com/guide/shazam/ambient-music-dev3dfeb8345/1.0/web/1.0">play
+your Apple Music playlist from one of four moods—Sleep, Chill,
+Productivity, or Wellbeing—within Ambient Music</a>. #### Open an
+identified song in Apple Music Classical on iPhone or iPad If the Shazam
+app identifies a song as classical, you can open the song in the Apple
+Music Classical app. 1. Make sure you’ve <a
+href="https://support.apple.com/guide/shazam/aside/devc741bfbb3/1.0/web/1.0">installed
+Apple Music Classical</a> on your iPhone or iPad. 2. Go to the Shazam
+app , then tap Library at the bottom of the screen. 3. Do any of the
+following:Tap a classical song, then tap Open in Classical in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>. 4. Tap (image: the More button) on a classical song, then
+tap Listen in Classical. 5. Touch and hold a classical song, then tap
+Listen in Classical. 6. Tap (image: the More button) in the track
+screen, then tap Open in Classical.</p>
+<h4
+id="open-an-identified-song-and-create-a-my-shazam-tracks-playlist-in-apple-music-on-an-android-device">Open
+an identified song and create a “My Shazam Tracks” playlist in
+Apple Music on an Android device</h4>
+<ol type="1">
+<li>Make sure the <a
+href="https://support.apple.com/guide/shazam/aside/devb7cd691f4/1.0/web/1.0">Apple
+Music app is installed</a> on your Android device.</li>
+<li>Go to the Shazam app , then tap (image: the Library button) (or
+swipe to the Library).</li>
+<li>Tap (image: the Settings button), then do either of the
+following:<em>If Apple Music is set as your default music app: </em>Tap
+Sync Shazam Library to Apple Music, sign in to your <a
+href="https://support.apple.com/guide/shazam/aside/devfe9ce10ad/1.0/web/1.0">Apple
+Account</a>, follow any onscreen instructions, then tap Back to
+Shazam.</li>
+<li><em>If Apple Music isn’t set as your default music app: </em>Tap
+“Open songs in other music apps” (or [<em>music app name</em>]), tap
+Apple Music , tap Set default, tap “Turn on syncing,” sign in to your <a
+href="https://support.apple.com/guide/shazam/aside/devfe9ce10ad/1.0/web/1.0">Apple
+Account</a>, follow any onscreen instructions, then tap Back to
+Shazam.</li>
+<li>In your library, do any of the following:Tap (image: the Apple Music
+button) on any song.</li>
+<li>Tap a song, then tap Apple Music in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>.</li>
+<li>Tap (image: the More button) on any song, then tap Open in
+Apple Music.</li>
+</ol>
+<h4
+id="open-an-identified-song-in-apple-music-classical-on-an-android-device">Open
+an identified song in Apple Music Classical on an Android device</h4>
+<p>If the Shazam app identifies a song as classical, you can open the
+song in the Apple Music Classical app. <em>Note: </em>Before you can
+listen to music in Apple Music Classical, you must <a
+href="https://support.apple.com/109329">subscribe to Apple Music</a>.
+Apple Music Classical is free with your Apple Music subscription. 1.
+Make sure you’ve <a
+href="https://support.apple.com/guide/shazam/aside/devc741bfbb3/1.0/web/1.0">installed
+Apple Music Classical</a> and <a
+href="https://support.apple.com/guide/shazam/aside/devb7cd691f4/1.0/web/1.0">Apple
+Music</a> on your Android device. 2. Go to the Shazam app , then tap
+(image: the Library button) (or swipe to the Library). 3. Do either of
+the following:Tap (image: the More button) on a classical song, then tap
+Open in Classical. 4. Tap a song, tap “Open song in” in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>, tap Classical, then tap Just Once.</p>
+<p><strong>Tip: </strong>Check out the Shazam <a
+href="https://music.apple.com/playlist/top-100-songs-in-shazam-of-all-time/pl.8ba78a4a65cc4530bcfdfc5154385c29">top
+100 of all time</a> or global weekly <a
+href="https://music.apple.com/playlist/shazam-discovery-top-50/pl.eba7614f65cd42ff8868b2d8181f49f4">top
+50</a> playlists in Apple Music.</p>
+<h3
+id="use-the-shazam-app-or-shazam-music-recognition-when-you-re-offline">Use
+the Shazam app or Shazam Music Recognition when you’re offline</h3>
+<p>On iPhone, iPad, or an Android device, you can use the Shazam app to
+identify a song when you’re offline (not connected to the internet).
+When you’re back online, the app remembers the request, identifies the
+song (if it’s available in the Shazam music catalog), then adds it to
+your Shazam app library. On iPhone or iPad, you can also use <a
+href="https://support.apple.com/guide/shazam/shazam-app-iphone-ipad-android-device-dev9748744b6/1.0/web/1.0#dev12311414e">Shazam
+Music Recognition in Control Center</a> when you’re offline. To receive
+a notification about an identified song after you’re back online, do
+either of the following: - <em>After using the Shazam app when you’re
+offline on iPhone, iPad, or an Android device:</em> Make sure <a
+href="https://support.apple.com/guide/shazam/aside/devc6e43b1e4/1.0/web/1.0">Shazam
+app notifications are turned on</a>. - <em>After using Music Recognition
+in Control Center when you’re offline on iPhone:</em> Make sure <a
+href="https://support.apple.com/guide/shazam/aside/deve40202deb/1.0/web/1.0">Music
+Recognition notifications are turned on</a>.</p>
+<p><em>Note: </em>To add songs identified using Control Center to your
+Shazam library, make sure iCloud Sync is turned on in <a
+href="https://support.apple.com/guide/shazam/modify-shazam-app-settings-on-iphone-or-ipad-devb96bc6de0/1.0/web/1.0">Shazam
+app settings</a>.</p>
+<h2 id="set-up-and-get-started">Set up and get started</h2>
+<h3 id="before-you-use-the-shazam-app">Before you use the Shazam
+app</h3>
+<p>This guide is for the Shazam app on iOS 26, iPadOS 26, macOS Tahoe,
+watchOS 26, visionOS 26, or later. This guide is also for the Shazam app
+on Android. To ensure the best possible Shazam experience, do the
+following: - <a
+href="https://support.apple.com/guide/shazam/aside/deve7d2e00dd/1.0/web/1.0">Update
+your devices to the latest operating systems</a>. - <a
+href="https://support.apple.com/guide/shazam/aside/dev2d797ba1e/1.0/web/1.0">Get
+the Shazam app for all your devices</a>, or if you’ve already downloaded
+the app, <a
+href="https://support.apple.com/guide/shazam/aside/dev631b053fc/1.0/web/1.0">make
+sure it’s updated to the latest version</a>. - <em>On Apple
+devices:</em> <a
+href="https://support.apple.com/guide/shazam/aside/devfe9ce10ad/1.0/web/1.0">Sign
+in to the same Apple Account</a> on all your devices and <a
+href="https://support.apple.com/guide/shazam/sync-your-identified-songs-to-the-shazam-app-deva59a13320/1.0/web/1.0">make
+sure your iCloud and Shazam app settings are correctly configured</a> so
+that songs you identify using Control Center, Siri, or Shortcuts are
+synced to the Shazam app. - <em>On Android devices:</em> <a
+href="https://support.apple.com/guide/shazam/aside/dev60d081573/1.0/web/1.0">Sign
+in with your email or Google Account</a> and <a
+href="https://support.apple.com/guide/shazam/aside/devb7cd691f4/1.0/web/1.0">get
+the Apple Music app for Android</a>. - If you’re not already a
+subscriber, <a href="https://support.apple.com/109329">join Apple
+Music</a> to listen to songs in full (on Apple devices) or song previews
+(on Android devices) in the Shazam app. As an Apple Music subscriber,
+you can listen to songs in full in Apple Music and Apple Music
+Classical, and add your identified songs to Apple Music playlists. - If
+you’re a classical music fan, <a
+href="https://support.apple.com/guide/shazam/aside/devc741bfbb3/1.0/web/1.0">get
+the Apple Music Classical app</a> to quickly open identified songs in
+Apple Music Classical.<em>Note: </em>The availability of the App Store,
+subscriptions, and services vary by country or region. See the Apple
+Support article <a href="https://support.apple.com/118205">Availability
+of Apple Media Services</a>.</p>
+<p>Now that you’re up to date, <a
+href="https://support.apple.com/guide/shazam/discover-music-devc8f78c3f7/1.0/web/1.0">it’s
+time to start discovering music</a>!</p>
+<h3 id="shazam-app-at-a-glance">Shazam app at a glance</h3>
+<p>There’s much more to the Shazam app than you think. As music plays
+around you, a single tap opens a whole world of music discovery (and a
+little bit of magic). You can use Shazam on iPhone, iPad, Mac,
+Apple Watch, Apple Vision Pro, HomePod, and Android devices to:
+<strong>Identify almost any song within earshot.</strong> <a
+href="https://support.apple.com/guide/shazam/discover-music-devc8f78c3f7/1.0/web/1.0">Discover
+music on your favorite device</a>. <strong>Sync your songs to an Apple
+Music playlist.</strong> Automatically add your identified songs to a
+“My Shazam Tracks” playlist in the Music app on your <a
+href="https://support.apple.com/guide/shazam/listen-to-your-songs-in-apple-music-deve9fff0ee4/1.0/web/1.0#dev3a08a33e8">iPhone,
+iPad,</a> or <a
+href="https://support.apple.com/guide/shazam/listen-to-your-songs-in-apple-music-deve9fff0ee4/1.0/web/1.0#dev8635bdc35">Android
+device</a>. <strong>Sync your songs to a Spotify playlist.</strong>
+Automatically add your identified songs to a “My Shazam Tracks” playlist
+in the Spotify app on your <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-iphone-ipad-dev83428c925/1.0/web/1.0#dev08c3f5389">iPhone,
+iPad,</a> or <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-android-deve025522b3/1.0/web/1.0#dev068da04a3">Android
+device</a>. <strong>Listen to your songs in Apple Music or Apple Music
+Classical.</strong> <a
+href="https://support.apple.com/guide/shazam/listen-to-your-songs-in-apple-music-deve9fff0ee4/1.0/web/1.0">Quickly
+open your songs in the Music app or Classical app</a>. <strong>Listen to
+your songs in other music apps.</strong> Open an identified song in
+Spotify, Deezer, or another music app on your <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-iphone-ipad-dev83428c925/1.0/web/1.0#dev0149abb86">iPhone,
+iPad,</a> or <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-android-deve025522b3/1.0/web/1.0#dev71c7690cb">Android
+device</a>. <strong>Never miss a gig.</strong> <a
+href="https://support.apple.com/guide/shazam/discover-concerts-dev08d87910a/1.0/web/1.0">Explore
+upcoming concerts, get reminders, and see ticket details</a> for your
+favorite artists. <strong>Never miss a song.</strong> No internet
+connection? No problem. <a
+href="https://support.apple.com/guide/shazam/use-shazam-when-youre-offline-devad6c028a7/1.0/web/1.0">Capture
+the music you love, even when you’re offline</a>. Shazam remembers the
+request, then identifies the song and adds it to your library after
+you’re back online. <strong>Sing along.</strong> <a
+href="https://support.apple.com/guide/shazam/listen-to-songs-view-lyrics-and-watch-videos-dev3e403546e/1.0/web/1.0#dev1bbd61d0a">Follow
+along with time-synced lyrics</a>. <strong>Watch videos.</strong> <a
+href="https://support.apple.com/guide/shazam/listen-to-songs-view-lyrics-and-watch-videos-dev3e403546e/1.0/web/1.0#dev1ccadee57">Enjoy
+official music videos</a> from Apple Music or YouTube. <strong>Spread
+the love.</strong> <a
+href="https://support.apple.com/guide/shazam/share-your-songs-deva91f77c6a/1.0/web/1.0">Share
+your identified songs</a> with friends or family, or on social media
+using Messages and other apps. <strong>Own it.</strong> <a
+href="https://support.apple.com/guide/shazam/purchase-your-identified-songs-dev27f071d76/1.0/web/1.0">Purchase
+your identified songs</a> to further support the artists you love.
+<strong>Discover new tunes.</strong> <a
+href="https://support.apple.com/guide/shazam/check-trending-songs-recommended-artists-dev66de94909/1.0/web/1.0#dev96721dd16">Check
+out recommended songs and playlists</a> or <a
+href="https://support.apple.com/guide/shazam/check-trending-songs-recommended-artists-dev66de94909/1.0/web/1.0#devb90891768">view
+trending tracks</a>. <strong>Identify music in a browser tab.</strong>
+Use an extension to <a
+href="https://support.apple.com/guide/shazam/identify-a-song-on-the-web-devfa7ba51e1/1.0/web/1.0#devb94a6024d">identify
+songs playing on a current webpage</a> (rather than from your speakers
+or microphone). <strong>Share your own songs.</strong> <a
+href="https://support.apple.com/guide/shazam/add-your-own-music-to-shazam-dev9313a6a31/1.0/web/1.0">Add
+your own music</a> to the Shazam music catalog. <strong>Customize your
+Shazam experience.</strong> Turn video previews on or off, or change
+other preferences on your <a
+href="https://support.apple.com/guide/shazam/modify-shazam-app-settings-on-iphone-or-ipad-devb96bc6de0/1.0/web/1.0">iPhone,
+iPad,</a> or <a
+href="https://support.apple.com/guide/shazam/modify-shazam-app-settings-on-android-devacc2a64ca/1.0/web/1.0">Android
+device</a>. <strong>Get a better view.</strong> Make it easier to read
+Shazam on your device’s screen <a
+href="https://support.apple.com/guide/shazam/aside/dev535693b9c/1.0/web/1.0">using
+accessibility features for vision</a>. Shazam works by quickly matching
+a digital fingerprint of the music you’re hearing to one of millions of
+songs in the Shazam catalog.</p>
+<h3
+id="sync-songs-to-the-shazam-app-using-control-center-siri-and-more">Sync
+songs to the Shazam app using Control Center, Siri, and more</h3>
+<p>When your iCloud and Shazam app settings are correctly configured,
+songs you identify using Control Center, Siri, the <a
+href="https://support.apple.com/guide/shazam/aside/dev3c17c414b/1.0/web/1.0">Smart
+Stack</a> on Apple Watch, or the Shortcuts app are automatically synced
+to the library in the Shazam app. iCloud securely stores your identified
+songs and keeps them updated across all your devices (<a
+href="https://support.apple.com/guide/shazam/aside/devfe9ce10ad/1.0/web/1.0">when
+you’re signed in to the same Apple Account</a> on all your
+devices)—without using any of your iCloud storage. To confirm that your
+identified songs are synced to the Shazam app on all your Apple devices,
+do the following: 1. Make sure you’ve <a
+href="https://support.apple.com/guide/shazam/aside/dev631b053fc/1.0/web/1.0">updated
+the Shazam app</a> to the latest version. 2. If you haven’t done so
+already, turn on two-factor authentication for your Apple Account:<em>On
+iPhone or iPad:</em> Go to Settings &gt; [<em>your name</em>] &gt;
+Sign-In &amp; Security, then tap Two-Factor Authentication. Enter a
+trusted phone number (the number you’ll use to receive verification
+codes), tap Next, then follow the verification code instructions. 3.
+<em>On Mac:</em> Choose Apple menu  &gt; System Settings &gt; [<em>your
+name</em>] &gt; Sign-In &amp; Security, click Two-Factor Authentication,
+then follow the onscreen instructions. 4. Make sure Music Recognition
+and Shazam are turned on:<em>On iPhone or iPad:</em> Go to Settings &gt;
+[<em>your name</em>] &gt; iCloud, tap See All (next to Saved to iCloud),
+then in the list of apps, confirm that Music Recognition and Shazam are
+turned on. 5. <em>On Mac:</em> Choose Apple menu  &gt; System Settings
+&gt; [<em>your name</em>] &gt; iCloud, click See All (next to Saved to
+iCloud), then in the list of apps, confirm that Music Recognition is
+turned on. 6. <em>On Apple Vision Pro:</em> Go to Settings &gt;
+[<em>your name</em>] &gt; iCloud, tap See All (next to Saved to iCloud),
+then in the list of apps, confirm that Music Recognition and Shazam are
+turned on. 7. Make sure iCloud is turned on in Shazam app
+settings:<em>On iPhone, iPad, or Apple Vision Pro:</em> Go to the Shazam
+app  <a
+href="https://support.apple.com/guide/shazam/aside/devfe067a444/1.0/web/1.0">home
+screen</a>, tap , then confirm that iCloud Sync is turned on.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3
+id="listen-to-your-identified-songs-in-spotify-deezer-or-another-app-on-an-android-device">Listen
+to your identified songs in Spotify, Deezer, or another app on an
+Android device</h3>
+<p>On an Android device, you can automatically add songs you identify to
+a “My Shazam Tracks” playlist in Spotify, or open and play your
+identified songs in another app, such as Deezer or YouTube Music. You
+can also set a default music app for listening to your identified songs,
+letting you quickly open the song in your chosen app. <em>Note: </em>To
+use Spotify or other music apps with Shazam, the apps must be installed
+on your device, and you must be a subscriber. #### Sync your identified
+songs to a “My Shazam Tracks” playlist in Spotify on an Android device
+1. Go to the Shazam app on an Android device, then tap (image: the
+Library button) (or swipe to the Library). 2. Tap (image: the Settings
+button), <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-android-deve025522b3/1.0/web/1.0#dev6346afcab">make
+sure Spotify is set as your default music app</a>, then turn on Sync
+Shazam Library to Spotify.A “My Shazam Tracks” playlist is created in
+Spotify, and your identified songs are automatically added to the
+playlist.</p>
+<p>Although you can’t add your identified songs to the “My Shazam
+Tracks” playlist in Apple Music and Spotify simultaneously, all of your
+songs are saved in your library in the Shazam app and are available on
+all of your devices (when you’re <a
+href="https://support.apple.com/guide/shazam/aside/dev60d081573/1.0/web/1.0">signed
+in</a>). #### Open an identified song in Spotify, Deezer, or another
+music app on an Android device 1. Go to the Shazam app on an Android
+device, then tap (image: the Library button) (or swipe to the
+Library).To see all songs, tap Songs. 2. Do any of the following:Tap
+(image: the More button) on a song, then tap an option in the list. 3.
+Tap a song, tap “Open song in” in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>, tap an available music app, then tap Just Once or Always.
+(Always isn’t available for Apple Music Classical or YouTube.)If you
+tapped Always, the music app you chose is set as the default and the
+“Open song in” button is replaced by that app’s button. 4. If you’ve <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-android-deve025522b3/1.0/web/1.0#dev6346afcab">set
+a default music app</a> (or <a
+href="https://support.apple.com/guide/shazam/aside/deve51b429ca/1.0/web/1.0">connected
+Shazam to Spotify in Shazam app settings</a>), tap the [<em>music app
+name</em>] button to open the song in that app.</p>
+<h4 id="set-your-default-music-app-on-an-android-device">Set your
+default music app on an Android device</h4>
+<ul>
+<li>Go to the Shazam app on an Android device, tap (image: the Library
+button) (or swipe to the Library), then do either of the following:Tap
+Songs, tap a song, tap “Open song in” in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>, tap an available music app, then tap Always.</li>
+<li>Tap (image: the Settings button), tap “Open songs in other music
+apps,” tap an available music app, then tap “Set
+default.”Apple Music Classical and YouTube can’t be set as
+defaults.</li>
+</ul>
+<p>The “Open song in” button in the track screen is replaced by a button
+for the music app you chose. You can easily <a
+href="https://support.apple.com/guide/shazam/listen-songs-spotify-apps-android-deve025522b3/1.0/web/1.0#dev1b7bb2bf8">change
+your default music app</a>. #### Change your default music app on an
+Android device - Go to the Shazam app on an Android device, tap (image:
+the Library button) (or swipe to the Library), then do either of the
+following:Tap Songs, tap a song, tap and hold the [<em>music app
+name</em>] button in the <a
+href="https://support.apple.com/guide/shazam/aside/dev40221848d/1.0/web/1.0">track
+screen</a>, tap an available music app, then tap Always. - Tap (image:
+the Settings button), tap “Default music app,” tap an available music
+app, then tap “Set default.”</p>
+</body>
+</html>
