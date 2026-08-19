@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Jira help</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -63,10 +60,6 @@
     img {
       max-width: 100%;
     }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -91,7 +84,6 @@
       color: #606060;
     }
     code {
-      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -111,8 +103,8 @@
      overflow: visible;
     }
     hr {
+      background-color: #1a1a1a;
       border: none;
-      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -155,6 +147,7 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
@@ -175,6 +168,199 @@
 <header id="title-block-header">
 <h1 class="title">Jira help</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#jira-help" id="toc-jira-help">Jira help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#change-how-your-plan-displays-your-data"
+id="toc-change-how-your-plan-displays-your-data">Change how your plan
+displays your data</a></li>
+<li><a href="#collect-information-for-your-team-with-forms"
+id="toc-collect-information-for-your-team-with-forms">Collect
+information for your team with forms</a></li>
+<li><a href="#configure-a-company-managed-board"
+id="toc-configure-a-company-managed-board">Configure a company-managed
+board</a></li>
+<li><a href="#configure-columns-and-statuses-in-your-team-managed-sapce"
+id="toc-configure-columns-and-statuses-in-your-team-managed-sapce">Configure
+columns and statuses in your team-managed sapce</a></li>
+<li><a href="#configure-jira-for-plans"
+id="toc-configure-jira-for-plans">Configure Jira for plans</a></li>
+<li><a href="#coordinate-and-monitor-work-with-sprints"
+id="toc-coordinate-and-monitor-work-with-sprints">Coordinate and monitor
+work with sprints</a></li>
+<li><a href="#create-and-configure-your-work-items"
+id="toc-create-and-configure-your-work-items">Create and configure your
+work items</a></li>
+<li><a href="#create-and-plan-work-with-scrum-and-kanban"
+id="toc-create-and-plan-work-with-scrum-and-kanban">Create and plan work
+with Scrum and Kanban</a></li>
+<li><a href="#create-different-planning-scenarios-in-your-plans"
+id="toc-create-different-planning-scenarios-in-your-plans">Create
+different planning scenarios in your plans</a></li>
+<li><a href="#enable-agile-features-in-team-managed-spaces"
+id="toc-enable-agile-features-in-team-managed-spaces">Enable agile
+features in team-managed spaces</a></li>
+<li><a href="#estimate-and-schedule-work-items-in-your-plans"
+id="toc-estimate-and-schedule-work-items-in-your-plans">Estimate and
+schedule work items in your plans</a></li>
+<li><a href="#get-started-in-jira-business-spaces"
+id="toc-get-started-in-jira-business-spaces">Get started in Jira
+business spaces</a></li>
+<li><a href="#get-started-with-plans"
+id="toc-get-started-with-plans">Get started with plans</a></li>
+<li><a href="#group-and-track-work-with-components"
+id="toc-group-and-track-work-with-components">Group and track work with
+components</a></li>
+<li><a href="#highlight-work-items-from-your-list"
+id="toc-highlight-work-items-from-your-list">Highlight work items from
+your list</a></li>
+<li><a href="#import-data-into-jira"
+id="toc-import-data-into-jira">Import data into Jira</a></li>
+<li><a href="#integrate-work-with-atlassian-home"
+id="toc-integrate-work-with-atlassian-home">Integrate work with
+Atlassian Home</a></li>
+<li><a href="#integrate-your-work-items-and-development-tools"
+id="toc-integrate-your-work-items-and-development-tools">Integrate your
+work items and development tools</a></li>
+<li><a href="#learn-how-company-managed-and-team-managed-spaces-differ"
+id="toc-learn-how-company-managed-and-team-managed-spaces-differ">Learn
+how company-managed and team-managed spaces differ</a></li>
+<li><a href="#learn-how-jira-products-work"
+id="toc-learn-how-jira-products-work">Learn how Jira products
+work</a></li>
+<li><a href="#manage-and-administer-team-managed-spaces"
+id="toc-manage-and-administer-team-managed-spaces">Manage and administer
+team-managed spaces</a></li>
+<li><a href="#manage-and-edit-work-items-in-your-plans"
+id="toc-manage-and-edit-work-items-in-your-plans">Manage and edit work
+items in your plans</a></li>
+<li><a href="#manage-and-update-work-in-a-list"
+id="toc-manage-and-update-work-in-a-list">Manage and update work in a
+list</a></li>
+<li><a href="#manage-and-visualize-your-software-space-on-the-timeline"
+id="toc-manage-and-visualize-your-software-space-on-the-timeline">Manage
+and visualize your software space on the timeline</a></li>
+<li><a href="#manage-capacity-in-your-plans"
+id="toc-manage-capacity-in-your-plans">Manage capacity in your
+plans</a></li>
+<li><a href="#manage-how-work-flows-in-your-team-managed-space"
+id="toc-manage-how-work-flows-in-your-team-managed-space">Manage how
+work flows in your team-managed space</a></li>
+<li><a href="#manage-jira-cloud-spaces"
+id="toc-manage-jira-cloud-spaces">Manage Jira Cloud spaces</a></li>
+<li><a href="#manage-releases-in-your-plans"
+id="toc-manage-releases-in-your-plans">Manage releases in your
+plans</a></li>
+<li><a href="#manage-teams-in-your-plan"
+id="toc-manage-teams-in-your-plan">Manage teams in your plan</a></li>
+<li><a href="#manage-your-user-profile"
+id="toc-manage-your-user-profile">Manage your user profile</a></li>
+<li><a href="#navigate-jira-with-your-keyboard"
+id="toc-navigate-jira-with-your-keyboard">Navigate Jira with your
+keyboard</a></li>
+<li><a href="#plan-your-next-quarter-using-a-program-board"
+id="toc-plan-your-next-quarter-using-a-program-board">Plan your next
+quarter using a Program board</a></li>
+<li><a href="#protect-your-teams-data"
+id="toc-protect-your-teams-data">Protect your team’s data</a></li>
+<li><a href="#release-your-teams-work-in-versions"
+id="toc-release-your-teams-work-in-versions">Release your team’s work in
+versions</a></li>
+<li><a href="#resolve-warnings-in-your-plans"
+id="toc-resolve-warnings-in-your-plans">Resolve warnings in your
+plans</a></li>
+<li><a href="#review-and-save-changes-made-in-your-plans"
+id="toc-review-and-save-changes-made-in-your-plans">Review and save
+changes made in your plans</a></li>
+<li><a href="#save-your-search-as-a-filter"
+id="toc-save-your-search-as-a-filter">Save your search as a
+filter</a></li>
+</ul></li>
+<li><a href="#section-4" id="toc-section-4"></a>
+<ul>
+<li><a href="#schedule-and-track-work-in-the-calendar-view"
+id="toc-schedule-and-track-work-in-the-calendar-view">Schedule and track
+work in the calendar view</a></li>
+<li><a href="#search-and-find-your-work-items"
+id="toc-search-and-find-your-work-items">Search and find your work
+items</a></li>
+<li><a href="#see-how-teams-use-jira"
+id="toc-see-how-teams-use-jira">See how teams use Jira</a></li>
+<li><a href="#set-up-approvals-in-jira"
+id="toc-set-up-approvals-in-jira">Set up approvals in Jira</a></li>
+<li><a href="#set-up-jira-cloud" id="toc-set-up-jira-cloud">Set up Jira
+Cloud</a></li>
+<li><a href="#set-up-your-plan-and-change-its-settings"
+id="toc-set-up-your-plan-and-change-its-settings">Set up your plan and
+change its settings</a></li>
+<li><a href="#share-and-export-your-plan"
+id="toc-share-and-export-your-plan">Share and export your plan</a></li>
+<li><a href="#start-a-new-software-space-for-your-team"
+id="toc-start-a-new-software-space-for-your-team">Start a new software
+space for your team</a></li>
+<li><a href="#track-and-analyze-your-teams-work-with-reports"
+id="toc-track-and-analyze-your-teams-work-with-reports">Track and
+analyze your team’s work with reports</a></li>
+<li><a href="#update-multiple-work-items-at-once"
+id="toc-update-multiple-work-items-at-once">Update multiple work items
+at once</a></li>
+<li><a href="#use-advanced-search-with-jira-query-language-jql"
+id="toc-use-advanced-search-with-jira-query-language-jql">Use advanced
+search with Jira Query Language (JQL)</a></li>
+<li><a href="#use-custom-space-templates"
+id="toc-use-custom-space-templates">Use custom space templates</a></li>
+<li><a href="#use-docs-in-jira-cloud"
+id="toc-use-docs-in-jira-cloud">Use Docs in Jira Cloud</a></li>
+<li><a href="#use-jira-cloud-with-other-apps"
+id="toc-use-jira-cloud-with-other-apps">Use Jira Cloud with other
+apps</a></li>
+<li><a href="#use-jira-cloud-with-other-atlassian-apps"
+id="toc-use-jira-cloud-with-other-atlassian-apps">Use Jira Cloud with
+other Atlassian apps</a></li>
+<li><a href="#use-jira-cloud-with-slack"
+id="toc-use-jira-cloud-with-slack">Use Jira Cloud with Slack</a></li>
+<li><a href="#view-and-manage-dependencies-in-your-plans"
+id="toc-view-and-manage-dependencies-in-your-plans">View and manage
+dependencies in your plans</a></li>
+<li><a href="#view-and-understand-insights-in-team-managed-spaces"
+id="toc-view-and-understand-insights-in-team-managed-spaces">View and
+understand insights in team-managed spaces</a></li>
+<li><a href="#view-insights-in-jira-cloud"
+id="toc-view-insights-in-jira-cloud">View insights in Jira
+Cloud</a></li>
+<li><a href="#work-in-jira-business-spaces"
+id="toc-work-in-jira-business-spaces">Work in Jira business
+spaces</a></li>
+<li><a href="#work-in-jira-cloud-spaces"
+id="toc-work-in-jira-cloud-spaces">Work in Jira Cloud spaces</a></li>
+<li><a href="#work-in-jira-cloud-team-managed-spaces"
+id="toc-work-in-jira-cloud-team-managed-spaces">Work in Jira Cloud
+team-managed spaces</a></li>
+<li><a href="#work-on-and-progress-your-work-items"
+id="toc-work-on-and-progress-your-work-items">Work on and progress your
+work items</a></li>
+</ul></li>
+<li><a href="#section-5" id="toc-section-5"></a>
+<ul>
+<li><a href="#section-6" id="toc-section-6"></a></li>
+<li><a href="#work-with-ai-agents-in-jira"
+id="toc-work-with-ai-agents-in-jira">Work with AI agents in
+Jira</a></li>
+<li><a href="#work-with-dashboards-in-jira-cloud"
+id="toc-work-with-dashboards-in-jira-cloud">Work with dashboards in Jira
+Cloud</a></li>
+<li><a href="#work-with-development-in-jira-cloud"
+id="toc-work-with-development-in-jira-cloud">Work with development in
+Jira Cloud</a></li>
+<li><a href="#work-with-search-results"
+id="toc-work-with-search-results">Work with search results</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="jira-help">Jira help</h1>
 <p>This guide holds Atlassian’s own documentation for Jira, gathered on
 18 August 2026. The categories are Atlassian’s own, taken from the trail
@@ -12163,7 +12349,7 @@ the Community</a></p>
 <li>Get started in Jira business spaces</li>
 <li>What are Jira business spaces?</li>
 <li>What is a board in business spaces? On this pageWork is represented
-by ‘work items’Work items are managed within spacesWork is tracked along
+by ’work items’Work items are managed within spacesWork is tracked along
 workflowsAdmins make things betterJira adminSpace admin</li>
 </ul>
 <p>Community<a
@@ -52611,15 +52797,9 @@ focus is on the text editor.</p>
 <p>Redo</p>
 <p>⌘ + Shift + V</p>
 <p>CTRL + Shift + V</p>
-<dl>
-<dt>Paste plain text</dt>
-<dd>
-
-</dd>
-<dd>
-
-</dd>
-</dl>
+<p>Paste plain text</p>
+<p>:</p>
+<p>:</p>
 <p>Emoji</p>
 <p>@</p>
 <p>@</p>

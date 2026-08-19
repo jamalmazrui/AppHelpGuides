@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Confluence help</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -63,10 +60,6 @@
     img {
       max-width: 100%;
     }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -91,7 +84,6 @@
       color: #606060;
     }
     code {
-      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -111,8 +103,8 @@
      overflow: visible;
     }
     hr {
+      background-color: #1a1a1a;
       border: none;
-      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -155,6 +147,7 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
@@ -175,6 +168,178 @@
 <header id="title-block-header">
 <h1 class="title">Confluence help</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#confluence-help" id="toc-confluence-help">Confluence
+help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#actions-that-require-an-organization-or-site-admin"
+id="toc-actions-that-require-an-organization-or-site-admin">Actions that
+require an organization or site admin</a></li>
+<li><a href="#advanced-tools-and-workflows-in-whiteboards"
+id="toc-advanced-tools-and-workflows-in-whiteboards">Advanced tools and
+workflows in whiteboards</a></li>
+<li><a href="#atlassian-marketplace-apps"
+id="toc-atlassian-marketplace-apps">Atlassian Marketplace apps</a></li>
+<li><a href="#collaborate-on-content"
+id="toc-collaborate-on-content">Collaborate on content</a></li>
+<li><a href="#collaborate-on-whiteboards"
+id="toc-collaborate-on-whiteboards">Collaborate on whiteboards</a></li>
+<li><a href="#configuration-settings-in-confluence-cloud"
+id="toc-configuration-settings-in-confluence-cloud">Configuration
+settings in Confluence Cloud</a></li>
+<li><a href="#confluence-automation-administration"
+id="toc-confluence-automation-administration">Confluence automation
+administration</a></li>
+<li><a href="#confluence-cloud-functionality-and-features"
+id="toc-confluence-cloud-functionality-and-features">Confluence Cloud
+functionality and features</a></li>
+<li><a href="#the-confluence-legacy-editor"
+id="toc-the-confluence-legacy-editor">The Confluence legacy
+editor</a></li>
+<li><a href="#create-and-edit-content"
+id="toc-create-and-edit-content">Create and edit content</a></li>
+<li><a href="#create-and-edit-databases"
+id="toc-create-and-edit-databases">Create and edit databases</a></li>
+<li><a href="#create-and-organize-work-in-confluence-cloud"
+id="toc-create-and-organize-work-in-confluence-cloud">Create and
+organize work in Confluence Cloud</a></li>
+<li><a href="#create-templates-blueprints-and-reports"
+id="toc-create-templates-blueprints-and-reports">Create templates,
+blueprints, and reports</a></li>
+<li><a href="#customize-your-space"
+id="toc-customize-your-space">Customize your space</a></li>
+<li><a href="#data-management-in-confluence-cloud"
+id="toc-data-management-in-confluence-cloud">Data management in
+Confluence Cloud</a></li>
+<li><a href="#export-content-from-confluence-cloud"
+id="toc-export-content-from-confluence-cloud">Export content from
+Confluence Cloud</a></li>
+<li><a href="#extend-the-functionality-of-confluence-cloud"
+id="toc-extend-the-functionality-of-confluence-cloud">Extend the
+functionality of Confluence Cloud</a></li>
+<li><a href="#find-content-in-confluence-cloud"
+id="toc-find-content-in-confluence-cloud">Find content in Confluence
+Cloud</a></li>
+<li><a href="#get-notified-about-content-and-activity"
+id="toc-get-notified-about-content-and-activity">Get notified about
+content and activity</a></li>
+<li><a href="#getting-started-with-whiteboards"
+id="toc-getting-started-with-whiteboards">Getting started with
+whiteboards</a></li>
+<li><a href="#import-data-from-other-tools-into-confluence"
+id="toc-import-data-from-other-tools-into-confluence">Import data from
+other tools into Confluence</a></li>
+<li><a href="#keep-content-organized"
+id="toc-keep-content-organized">Keep content organized</a></li>
+<li><a href="#look-and-feel-settings-in-confluence-cloud"
+id="toc-look-and-feel-settings-in-confluence-cloud">Look and feel
+settings in Confluence Cloud</a></li>
+<li><a href="#manage-confluence-content-templates"
+id="toc-manage-confluence-content-templates">Manage Confluence content
+templates</a></li>
+<li><a href="#manage-content-in-a-space"
+id="toc-manage-content-in-a-space">Manage content in a space</a></li>
+<li><a href="#manage-global-permissions-in-confluence-administration"
+id="toc-manage-global-permissions-in-confluence-administration">Manage
+global permissions in Confluence administration</a></li>
+<li><a href="#manage-permissions-at-the-content-level"
+id="toc-manage-permissions-at-the-content-level">Manage permissions at
+the content level</a></li>
+<li><a href="#manage-permissions-at-the-space-level"
+id="toc-manage-permissions-at-the-space-level">Manage permissions at the
+space level</a></li>
+<li><a href="#manage-questions-for-confluence"
+id="toc-manage-questions-for-confluence">Manage Questions for
+Confluence</a></li>
+<li><a href="#manage-space-roles" id="toc-manage-space-roles">Manage
+space roles</a></li>
+<li><a href="#manage-team-calendars"
+id="toc-manage-team-calendars">Manage team calendars</a></li>
+<li><a href="#manage-your-account" id="toc-manage-your-account">Manage
+your account</a></li>
+<li><a href="#monitor-and-manage-activity-in-confluence-cloud"
+id="toc-monitor-and-manage-activity-in-confluence-cloud">Monitor and
+manage activity in Confluence Cloud</a></li>
+<li><a href="#navigate-around-confluence"
+id="toc-navigate-around-confluence">Navigate around Confluence</a></li>
+<li><a href="#premium-admin-tools-for-confluence-cloud"
+id="toc-premium-admin-tools-for-confluence-cloud">Premium admin tools
+for Confluence Cloud</a></li>
+<li><a href="#remove-a-space" id="toc-remove-a-space">Remove a
+space</a></li>
+<li><a href="#review-macros-only-available-in-the-legacy-editor"
+id="toc-review-macros-only-available-in-the-legacy-editor">Review macros
+only available in the legacy editor</a></li>
+<li><a href="#rovo-features-in-confluence-cloud"
+id="toc-rovo-features-in-confluence-cloud">Rovo features in Confluence
+Cloud</a></li>
+<li><a href="#security-settings-in-confluence-cloud"
+id="toc-security-settings-in-confluence-cloud">Security settings in
+Confluence Cloud</a></li>
+<li><a href="#see-how-teams-use-confluence-cloud"
+id="toc-see-how-teams-use-confluence-cloud">See how teams use Confluence
+Cloud</a></li>
+<li><a href="#set-confluence-wide-functionality"
+id="toc-set-confluence-wide-functionality">Set Confluence-wide
+functionality</a></li>
+<li><a href="#set-space-specific-functionality"
+id="toc-set-space-specific-functionality">Set space-specific
+functionality</a></li>
+<li><a href="#transform-and-reuse-content-in-confluence-and-jira"
+id="toc-transform-and-reuse-content-in-confluence-and-jira">Transform
+and reuse content in Confluence and Jira</a></li>
+<li><a href="#upload-and-manage-files"
+id="toc-upload-and-manage-files">Upload and manage files</a></li>
+<li><a href="#use-company-hub-to-deliver-key-information-to-employees"
+id="toc-use-company-hub-to-deliver-key-information-to-employees">Use
+Company Hub to deliver key information to employees</a></li>
+<li><a href="#use-confluence-with-other-applications"
+id="toc-use-confluence-with-other-applications">Use Confluence with
+other applications</a></li>
+<li><a href="#use-macros-to-add-development-info-on-confluence-pages"
+id="toc-use-macros-to-add-development-info-on-confluence-pages">Use
+macros to add development info on Confluence pages</a></li>
+<li><a href="#use-macros-to-add-navigation-on-confluence-pages"
+id="toc-use-macros-to-add-navigation-on-confluence-pages">Use macros to
+add navigation on Confluence pages</a></li>
+<li><a href="#use-macros-to-add-reporting-info-to-confluence-pages"
+id="toc-use-macros-to-add-reporting-info-to-confluence-pages">Use macros
+to add reporting info to Confluence pages</a></li>
+<li><a href="#use-macros-to-add-visuals-and-images-to-confluence-pages"
+id="toc-use-macros-to-add-visuals-and-images-to-confluence-pages">Use
+macros to add visuals and images to Confluence pages</a></li>
+<li><a href="#use-macros-to-include-media-on-confluence-pages"
+id="toc-use-macros-to-include-media-on-confluence-pages">Use macros to
+include media on Confluence pages</a></li>
+<li><a
+href="#use-macros-to-show-confluence-content-on-pages-and-live-docs"
+id="toc-use-macros-to-show-confluence-content-on-pages-and-live-docs">Use
+macros to show Confluence content on pages and live docs</a></li>
+<li><a href="#use-questions-for-confluence"
+id="toc-use-questions-for-confluence">Use Questions for
+Confluence</a></li>
+<li><a href="#use-spaces-to-organize-your-work"
+id="toc-use-spaces-to-organize-your-work">Use spaces to organize your
+work</a></li>
+<li><a href="#use-team-calendars-for-confluence-premium-feature"
+id="toc-use-team-calendars-for-confluence-premium-feature">Use Team
+Calendars for Confluence (Premium feature)</a></li>
+<li><a
+href="#view-confluence-analytics-to-see-how-content-is-performing"
+id="toc-view-confluence-analytics-to-see-how-content-is-performing">View
+Confluence analytics to see how content is performing</a></li>
+<li><a href="#whiteboard-elements"
+id="toc-whiteboard-elements">Whiteboard elements</a></li>
+<li><a href="#whiteboard-settings-and-details"
+id="toc-whiteboard-settings-and-details">Whiteboard settings and
+details</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="confluence-help">Confluence help</h1>
 <p>This guide holds Atlassian’s own documentation for Confluence Cloud,
 gathered on 18 August 2026. The categories are Atlassian’s own, taken
@@ -15535,7 +15700,7 @@ character in your search.</p>
 <p>Use an asterisk <code>*</code> as a wildcard to replace multiple
 characters in your search.</p>
 <h6 id="example-8">Example</h6>
-<p>To return ‘chicken’ or ’chickpea’, search for:</p>
+<p>To return ‘chicken’ or ‘chickpea’, search for:</p>
 <p><code>chick*</code></p>
 <h6 id="multiple-wildcards">Multiple wildcards</h6>
 <p>Use multiple wildcards in your search to replace single and multiple
@@ -31860,6 +32025,7 @@ your PDF Stylesheet as shown above</li>
 <li>Edit the image URL so that it’s relative by removing the first part
 of the URL before <code>/download/...</code></li>
 </ul>
+<h6 id="table-of-contents">Table of contents</h6>
 <p>By default, a table of contents will be generated after the title
 page, or at the beginning of the PDF document if no title page is
 defined in the PDF Layout. To see the default CSS rules applied to the
