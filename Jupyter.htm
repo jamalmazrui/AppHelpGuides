@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Jupyter help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Jupyter help</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#jupyter-help" id="toc-jupyter-help">Jupyter help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#installing-jupyter" id="toc-installing-jupyter">Installing
+Jupyter</a></li>
+<li><a href="#reference" id="toc-reference">Reference</a></li>
+<li><a href="#using-jupyter" id="toc-using-jupyter">Using
+Jupyter</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="jupyter-help">Jupyter help</h1>
+<p>This guide holds the part of Jupyter’s documentation written for
+people using it, gathered on 23 August 2026: installing it, starting it,
+running a notebook server, and working with notebooks.</p>
+<p>Most of what the Jupyter project publishes is about the project
+itself — its governance, its meetings, how to contribute code — and none
+of that is here, because this collection is for people using software
+rather than building it. Pandoc reads and writes Jupyter notebooks,
+which is why the volume exists at all.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Installing Jupyter
+<ul>
+<li><a href="#install-and-use">Install and Use</a></li>
+<li><a href="#installing-kernels">Installing Kernels</a></li>
+<li><a
+href="#installing-the-classic-jupyter-notebook-interface">Installing the
+classic Jupyter Notebook interface</a></li>
+</ul></li>
+<li>Reference
+<ul>
+<li><a href="#custom-mimetypes-mime-types">Custom mimetypes (MIME
+types)</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#ipython">IPython</a></li>
+</ul></li>
+<li>Using Jupyter
+<ul>
+<li><a href="#advanced-use-cases">Advanced Use Cases</a></li>
+<li><a href="#common-directories-and-file-locations">Common Directories
+and File Locations</a></li>
+<li><a href="#index">Index</a></li>
+<li><a href="#the-jupyter-command">The jupyter Command</a></li>
+<li><a href="#jupyter-for-data-science">Jupyter for Data
+Science</a></li>
+<li><a href="#jupyter-in-the-enterprise">Jupyter in the
+Enterprise</a></li>
+<li><a href="#jupyterhub-narratives">JupyterHub Narratives</a></li>
+<li><a href="#jupyters-common-configuration-approach">Jupyter’s Common
+Configuration Approach</a></li>
+<li><a href="#migrating-from-ipython-notebook">Migrating from IPython
+Notebook</a></li>
+<li><a href="#narratives---building-blocks">Narratives - Building
+blocks</a></li>
+<li><a href="#narratives-and-use-cases">Narratives and Use
+Cases</a></li>
+<li><a href="#notebook-narratives">Notebook Narratives</a></li>
+<li><a href="#project-jupyter-documentation">Project Jupyter
+Documentation</a></li>
+<li><a href="#release-notes">Release Notes</a></li>
+<li><a href="#upgrading-jupyter-notebook">Upgrading Jupyter
+Notebook</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#what-is-jupyter">What is Jupyter?</a></li>
+</ul></li>
+<li>Miscellaneous
+<ul>
+<li><a href="#running-the-notebook">Running the Notebook</a></li>
+<li><a href="#try-jupyter">Try Jupyter</a></li>
+</ul></li>
+</ul>
+<h2 id="installing-jupyter">Installing Jupyter</h2>
+<h3 id="install-and-use">Install and Use</h3>
+<h4 id="install-and-use-1">Install and Use</h4>
+<p>This page contains information and links about installing and using
+tools across the Jupyter ecosystem. Generally speaking, the
+documentation of each tool is the place to learn about the
+best-practices for how to install and use the tool.</p>
+<h5 id="jupyter-notebook-interface">Jupyter Notebook Interface</h5>
+<p>The Jupyter Notebook interface is a Web-based application for
+authoring documents that combine live-code with narrative text,
+equations and visualizations.</p>
+<ul>
+<li><a href="https://github.com/jupyter/notebook">GitHub Repo</a></li>
+<li><a
+href="https://jupyter-notebook.readthedocs.io/en/latest/?badge=latest">Docs</a></li>
+<li><a href="install/notebook-classic.html">Installing the classic
+Jupyter Notebook interface</a></li>
+<li><a href="use/upgrade-notebook.html">Upgrading Jupyter
+Notebook</a></li>
+</ul>
+<h5 id="jupyterlab">JupyterLab</h5>
+<p>JupyterLab is a next-generation web-based user interface for Project
+Jupyter.</p>
+<ul>
+<li><a href="https://github.com/jupyterlab/jupyterlab">GitHub
+Repo</a></li>
+<li><a href="https://jupyterlab.readthedocs.io/en/stable/">Docs</a></li>
+<li><a
+href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html">Install
+instructions</a></li>
+</ul>
+<h5 id="jupyterhub">JupyterHub</h5>
+<p>JupyterHub is a multi-user hub for interactive computing sessions,
+made for teams and organizations, and with pluggable authentication and
+scalability.</p>
+<ul>
+<li><a href="https://github.com/jupyterhub/jupyterhub">GitHub
+Repo</a></li>
+<li><a href="https://jupyterhub.readthedocs.io/en/stable/">Docs</a></li>
+<li><a
+href="https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html">Install
+instructions</a></li>
+</ul>
+<h5 id="jupyter-console">Jupyter Console</h5>
+<p>The Jupyter Console is a terminal-based console for interactive
+computing.</p>
+<ul>
+<li><a href="https://github.com/jupyter/jupyter_console">GitHub
+Repo</a></li>
+<li><a href="https://jupyter-console.readthedocs.io/en/latest/">Docs and
+Install instructions</a></li>
+</ul>
+<h5 id="jupyter-qtconsole">Jupyter QtConsole</h5>
+<p>The Jupyter QtConsole is a Qt application for interactive computing
+with rich output.</p>
+<ul>
+<li><a href="https://github.com/jupyter/qtconsole">GitHub Repo</a></li>
+<li><a
+href="https://qtconsole.readthedocs.io/en/stable/index.html">Docs</a></li>
+<li><a
+href="https://qtconsole.readthedocs.io/en/stable/installation.html">Install
+instructions</a></li>
+</ul>
+<h5 id="jupyter-kernels">Jupyter Kernels</h5>
+<p>You can install Jupyter Kernels to add support for new languages and
+code behavior.</p>
+<ul>
+<li><a href="install/kernels.html">Installing Kernels</a>
+<ul>
+<li><a href="install/kernels.html#are-any-languages-pre-installed">Are
+any languages pre-installed?</a></li>
+<li><a
+href="install/kernels.html#how-do-i-install-python-2-and-python-3">How
+do I install Python 2 and Python 3?</a></li>
+<li><a
+href="install/kernels.html#how-do-i-install-other-languages-like-r-or-julia">How
+do I install other languages like R or Julia?</a></li>
+</ul></li>
+</ul>
+<h3 id="installing-kernels">Installing Kernels</h3>
+<h4 id="installing-kernels-1">Installing Kernels</h4>
+<p>This information gives a high-level view of using Jupyter Notebook
+with different programming languages (kernels).</p>
+<h5 id="are-any-languages-pre-installed">Are any languages
+pre-installed?</h5>
+<p>Yes, installing the Jupyter Notebook will also install the <a
+href="https://ipython.readthedocs.io/en/latest/">IPython</a> kernel.
+This allows working on notebooks using the Python programming
+language.</p>
+<h5 id="how-do-i-install-python-2-and-python-3">How do I install Python
+2 and Python 3?</h5>
+<p>To install an additional version of Python, i.e. to have both Python
+2 and 3 available, see the IPython docs on <a
+href="https://ipython.readthedocs.io/en/latest/install/kernel_install.html">installing
+kernels</a>.</p>
+<h5 id="how-do-i-install-other-languages-like-r-or-julia">How do I
+install other languages like R or Julia?</h5>
+<p>To run notebooks in languages other than Python, such as R or Julia,
+you will need to install additional kernels. For more information, see
+the full <a
+href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">list of
+available kernels</a>.</p>
+<p>See also</p>
+<p>Jupyter Projects</p>
+<p>Detailed installation instructions for individual Jupyter or IPython
+projects.</p>
+<p>Kernels</p>
+<p>Information about additional programming language kernels.</p>
+<p><a
+href="https://jupyter-client.readthedocs.io/en/latest/kernels.html#kernels">Kernels
+documentation for Jupyter client</a></p>
+<p>Technical information about kernels.</p>
+<h3 id="installing-the-classic-jupyter-notebook-interface">Installing
+the classic Jupyter Notebook interface</h3>
+<h4 id="installing-the-classic-jupyter-notebook-interface-1">Installing
+the classic Jupyter Notebook interface</h4>
+<p>This section includes instructions on how to get started with Jupyter
+Notebook. But there are multiple Jupyter user interfaces one can use,
+based on their needs. Please checkout the list and links below for
+additional information and instructions about how to get started with
+each of them.</p>
+<p>This information explains how to install the Jupyter Notebook and the
+IPython kernel.</p>
+<h5 id="prerequisite-python">Prerequisite: Python</h5>
+<p>While Jupyter runs code in many programming languages, Python is a
+requirement for installing the Jupyter Notebook. The Python version
+required differs between Jupyter Notebook releases (e.g. Python 3.6+ for
+Notebook v6.3, and Python 3.7+ for Notebook v7) .</p>
+<p>We recommend using the <a
+href="https://www.anaconda.com/download">Anaconda</a> distribution to
+install Python and Jupyter. We’ll go through its installation in the
+next section.</p>
+<h5 id="installing-jupyter-using-anaconda-and-conda">Installing Jupyter
+using Anaconda and conda</h5>
+<p>For new users, we highly recommend <a
+href="https://www.anaconda.com/download">installing Anaconda</a>.
+Anaconda conveniently installs Python, the Jupyter Notebook, and other
+commonly used packages for scientific computing and data science.</p>
+<p>Use the following installation steps:</p>
+<ul>
+<li><p>Download <a
+href="https://www.anaconda.com/download">Anaconda</a>. We recommend
+downloading Anaconda’s latest Python 3 version (currently Python
+3.9).</p></li>
+<li><p>Install the version of Anaconda which you downloaded, following
+the instructions on the download page.</p></li>
+<li><p>Congratulations, you have installed Jupyter Notebook. To run the
+notebook:</p>
+<p>jupyter notebook</p></li>
+<li><p>See Running the Notebook for more details.</p></li>
+</ul>
+<h5
+id="alternative-for-experienced-python-users-installing-jupyter-with-pip">Alternative
+for experienced Python users: Installing Jupyter with pip</h5>
+<p>Important</p>
+<p>Jupyter installation requires Python 3.3 or greater, or Python 2.7.
+IPython 1.x, which included the parts that later became Jupyter, was the
+last version to support Python 3.2 and 2.6.</p>
+<p>As an existing Python user, you may wish to install Jupyter using
+Python’s package manager, pip, instead of Anaconda.</p>
+<p>First, ensure that you have the latest pip; older versions may have
+trouble with some dependencies:</p>
+<pre><code>pip3 install --upgrade pip</code></pre>
+<p>Then install the Jupyter Notebook using:</p>
+<pre><code>pip3 install jupyter</code></pre>
+<p>(Use <code>pip</code> if using legacy Python 2.)</p>
+<p>Congratulations. You have installed Jupyter Notebook. See Running the
+Notebook for more details.</p>
+<h2 id="reference">Reference</h2>
+<h3 id="custom-mimetypes-mime-types">Custom mimetypes (MIME types)</h3>
+<h4 id="custom-mimetypes-mime-types-1">Custom mimetypes (MIME
+types)</h4>
+<h5 id="whats-a-mimetype">What’s a mimetype?</h5>
+<p>When an internet request and response occurs, a
+<code>Content-Type</code> header is passed. A mimetype, also referred to
+as MIME type, identifies how the content that is being returned should
+be handled or used, based on type, by the application and browser. A
+MIME type is made up of a MIME group (i.e. application, image, audio,
+etc.) and a MIME subtype. For example, a MIME type is
+<code>image/png</code> where MIME group is <code>image</code> and
+subtype is <code>png</code>.</p>
+<p>As types may contain vendor specific items, a <a
+href="https://en.wikipedia.org/wiki/Media_type#Vendor_tree">custom
+vendor specific MIME type</a>, <code>vnd</code>, can be used. A vendor
+specific MIME type will contain <code>vnd</code> such as
+<code>application/vnd.jupyter.cells</code>.</p>
+<h5 id="custom-mimetypes-used-in-jupyter-and-ipython-projects">Custom
+mimetypes used in Jupyter and IPython projects</h5>
+<ul>
+<li><code>application/vnd.jupyter</code></li>
+<li><code>application/vnd.jupyter.cells</code></li>
+<li><code>application/vnd.jupyter.dragindex</code> used by nbdime</li>
+<li><code>application/x-ipynb+json</code> for notebooks</li>
+<li><code>text/html</code>
+<ul>
+<li>metadata:
+<ul>
+<li><code>isolated: boolean</code> – HTML should be rendered inside an
+<code>&lt;iframe&gt;</code>.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="listing-of-custom-mimetypes-used-for-display">Listing of custom
+mimetypes used for display</h5>
+<ul>
+<li><code>application/vnd.geo+json</code> - <a
+href="http://geojson.org/geojson-spec.html">GeoJSON spec</a>
+<code>application/vnd.geo+json</code> is now deprecated and replaced by
+<code>application/geo+json</code></li>
+<li><code>application/geo+json</code> - preferred <a
+href="http://geojson.org/geojson-spec.html">GeoJSON spec</a></li>
+<li><code>application/vnd.plotly.v1+json</code> - <a
+href="http://help.plot.ly/json-chart-schema/">Plotly JSON
+Schema</a></li>
+<li><code>application/vdom.v1+json</code> - <a
+href="https://github.com/nteract/vdom/blob/master/docs/spec.md">Virtual
+DOM spec</a></li>
+</ul>
+<h3 id="glossary">Glossary</h3>
+<h4 id="glossary-1">Glossary</h4>
+<p><a
+href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">client-server-architecture</a>#</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Design_pattern">software
+design pattern</a> used by Jupyter applications like JupyterLab. With
+this pattern, a server program (running on a user’s computer or on a
+server that can be accessed over a business or public network) provides
+access to stored information (in JupyterLab’s case, documents in a
+folder such as notebooks and other data files), and a client program
+(the web application and editing interface for JupyterLab in this case)
+connects to the server program to view and interact with that data.</p>
+<p>console#</p>
+<p>In modern times, a <a
+href="https://en.wikipedia.org/wiki/System_console">console</a> refers
+to a simple text-based program where you type commands for your computer
+to run, also commonly called a <a
+href="https://en.wikipedia.org/wiki/Computer_terminal">terminal</a>.</p>
+<p>command line#</p>
+<p>A simple text-based program where you type commands for your computer
+to run, also called a <a
+href="https://en.wikipedia.org/wiki/Computer_terminal">terminal</a> or
+<a href="https://en.wikipedia.org/wiki/System_console">console</a>.</p>
+<p>Command Prompt#</p>
+<p>On Windows, this is the application where commands are typed into a
+window for execution. Also see <a
+href="https://en.wikipedia.org/wiki/System_console">console</a>, command
+line, or <a
+href="https://en.wikipedia.org/wiki/Computer_terminal">terminal</a>.</p>
+<p>conda#</p>
+<p>The package management tool for Anaconda, which allows for easy
+installation of Python libraries and other tools into an
+environment.</p>
+<p>config#</p>
+<p>Refers to the configuration files, and related processes that affect
+how Jupyter behaves.</p>
+<p>environment#</p>
+<p>The name for the installed software, configurations, tools, and <a
+href="https://en.wikipedia.org/wiki/Environment_variable">environment
+variables</a> that collectively define what capabilities a computer
+system has and how it behaves. Missing or incorrect software,
+configurations or environment variables can cause software to
+malfunction, or software development processes to fail. See <a
+href="https://en.wikipedia.org/wiki/Runtime_system#Relation_to_runtime_environments">this
+link</a> for more information.</p>
+<p>environment variable#</p>
+<p>See <a href="https://en.wikipedia.org/wiki/Environment_variable">this
+wiki link</a> for for information.</p>
+<p>ipynb#</p>
+<p>The file extension (.ipynb) for saved notebook files, commonly
+authored and edited with Jupyter web applications such as JupyterLab or
+Jupyter Notebook. It stands for “IPython Notebook”.</p>
+<p>IPython#</p>
+<p>The earliest ancestor of Project Jupyter. It began as an improved
+interactive Python REPL, then expanded to also contain a stored notebook
+document format (.ipynb) and related tools, a web based document
+authoring and editing tool (IPython Notebook), and more. After the
+project became large enough, IPython was split into many separate
+projects under the Project Jupyter umbrella through The Big Split.</p>
+<p>IPython Notebook#</p>
+<p>An early ancestor of the Jupyter Notebook application, this was one
+of the first web-based applications for authoring and editing
+computational notebook documents.</p>
+<p>ipywidgets#</p>
+<p>A <a href="https://github.com/jupyter-widgets/ipywidgets">python
+package for Jupyter</a> that allows Notebook applications to create and
+embed interface components like sliders or buttons in their
+notebooks.</p>
+<p>Jovyan#</p>
+<p>A term for fans of Jupyter and members of the Jupyter community. This
+term is <a
+href="https://jupyter--681.org.readthedocs.build/en/681/community/content-community.html#what-is-a-jovyan">derived
+from</a> the astronomical term “Jovian”, meaning “Like Jupiter”.</p>
+<p>Jupyter#</p>
+<p>See Project Jupyter. Also occasionally used to refer to one of the
+Jupyter frontend notebook editing applications (Jupyter Notebook or
+JupyterLab) based on the context it’s used in (this ambiguous usage can
+lead to confusion, it’s better to use the actual name of the
+application).</p>
+<p>Jupyter Notebook (Application)#</p>
+<p>A simplified web application for authoring and editing computational
+notebooks in the .ipynb format (a notebook file is also commonly
+referred to as a Jupyter Notebook).</p>
+<p>Jupyter Notebook (File Format)#</p>
+<p>A common name for a saved .ipynb Notebook file. For instance, “I just
+made a Jupyter Notebook summarizing our lab results, I can send it to
+you later today.”</p>
+<p>JupyterLab#</p>
+<p>A modern web application for authoring and editing interactive
+computational notebooks.</p>
+<p>kernel#</p>
+<p>A kernel provides programming language support in Jupyter. IPython is
+the default kernel. Additional kernels include R, Julia, and many
+more.</p>
+<p>Notebook#</p>
+<p>The generic name for a computational notebook document, such as a
+saved .ipynb file format created by JupyterLab. Also sometimes used as a
+shorthand to refer to Jupyter Notebook, the notebook editing
+application.</p>
+<p>Notebook Dashboard#</p>
+<p>The notebook user interface in the Jupyter Notebook Application (see
+above) which shows a list of the notebooks, files, and subdirectories in
+the directory where the notebook server is started.</p>
+<p>pip#</p>
+<p>Python package manager.</p>
+<p>profiles#</p>
+<p>Not available in Jupyter. In IPython 3, profiles are collections of
+configuration and runtime files.</p>
+<p>Project Jupyter#</p>
+<p>The umbrella project for many related tools for interactive computing
+with interactive notebooks</p>
+<p>REPL#</p>
+<p>Stands for “read-eval-print-loop”. An <a
+href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>
+is a program that reads user commands and inputs, evaluates them, and
+prints results for the user to view. These steps run in a perpetual
+loop, allowing the user to prototype code, interact with data, and view
+results on-the-fly, since the data and code stay open in memory after
+evaluation while the REPL is running.</p>
+<p>terminal#</p>
+<p>In modern times, a <a
+href="https://en.wikipedia.org/wiki/Computer_terminal">terminal</a>
+refers to a simple text-based program where you type commands for your
+computer to run, also commonly called a <a
+href="https://en.wikipedia.org/wiki/System_console">console</a>.</p>
+<p>The Big Split#</p>
+<p>An event and effort undertaken around 2015 by IPython developers to
+split up the then-massive IPython project into a series of smaller, more
+focused sub-projects under the Project Jupyter umbrella.</p>
+<p>widget#</p>
+<p>A user interface component from <a
+href="https://github.com/jupyter-widgets/ipywidgets">ipywidgets</a>,
+similar to a plugin, that allows customized input, such as a slider.</p>
+<h3 id="ipython">IPython</h3>
+<h4 id="ipython-1">IPython</h4>
+<h5 id="description">Description</h5>
+<p>IPython provides a rich architecture for interactive computing
+with:</p>
+<ul>
+<li>A powerful interactive shell.</li>
+<li>A kernel for Jupyter.</li>
+<li>Support for interactive data visualization and use of GUI
+toolkits.</li>
+<li>Flexible, embeddable interpreters to load into your own
+projects.</li>
+<li>Easy to use, high performance tools for parallel computing.</li>
+</ul>
+<h5 id="background">Background</h5>
+<p>IPython is a growing project, with increasingly language-agnostic
+components. IPython 3.x was the last monolithic release of IPython,
+containing the notebook server, qtconsole, etc. As of IPython 4.0, the
+language-agnostic parts of the project: the notebook format, message
+protocol, qtconsole, notebook web application, etc. have moved to new
+projects under the name Jupyter. IPython itself is focused on
+interactive Python, part of which is providing a Python kernel for
+Jupyter.</p>
+<h5 id="resources">Resources</h5>
+<ul>
+<li><a href="https://ipython.org">IPython website</a></li>
+<li><a
+href="https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks">Gallery
+of interesting notebooks</a></li>
+<li><a href="https://ipython.readthedocs.io/en/stable/">IPython
+documentation</a></li>
+</ul>
+<h2 id="using-jupyter">Using Jupyter</h2>
+<h3 id="advanced-use-cases">Advanced Use Cases</h3>
+<h4 id="advanced-use-cases-1">Advanced Use Cases</h4>
+<ul>
+<li><a href="migrating.html">Migrating from IPython Notebook</a>
+<ul>
+<li><a href="migrating.html#abstract">Abstract</a></li>
+<li><a
+href="migrating.html#understanding-the-migration-process">Understanding
+the Migration Process</a></li>
+<li><a
+href="migrating.html#finding-the-location-of-important-files">Finding
+the Location of Important Files</a></li>
+<li><a
+href="migrating.html#since-jupyter-does-not-have-profiles-how-do-i-customize-it">Since
+Jupyter does not have profiles, how do I customize it?</a></li>
+<li><a
+href="migrating.html#understanding-installation-changes">Understanding
+Installation Changes</a></li>
+<li><a
+href="migrating.html#understanding-changes-in-imports">Understanding
+Changes in imports</a></li>
+</ul></li>
+</ul>
+<h3 id="common-directories-and-file-locations">Common Directories and
+File Locations</h3>
+<h4 id="common-directories-and-file-locations-1">Common Directories and
+File Locations</h4>
+<p>Jupyter stores different files (i.e. configuration, data, runtime) in
+a number of different locations. Environment variables may be set to
+customize for the location of each file type.</p>
+<p>Jupyter separates data files (nbextensions, kernelspecs) from runtime
+files (logs, pid files, connection files) from configuration (config
+files, custom.js).</p>
+<h5 id="configuration-files">Configuration files</h5>
+<p>Config files are stored by default in the <code>~/.jupyter</code>
+directory.</p>
+<p>JUPYTER_CONFIG_DIR#</p>
+<p>Set this environment variable to use a particular directory, other
+than the default, for Jupyter config files.</p>
+<p>Besides the <code>JUPYTER_CONFIG_DIR</code>, additional directories
+to search can be specified through <code>JUPYTER_CONFIG_PATH</code>.</p>
+<p>JUPYTER_CONFIG_PATH#</p>
+<p>Set this environment variable to provide extra directories for the
+config search path. <code>JUPYTER_CONFIG_PATH</code> should contain a
+series of directories, separated by <code>os.pathsep</code>
+(<code>;</code> on Windows, <code>:</code> on Unix).</p>
+<p>An example of where the <code>JUPYTER_CONFIG_PATH</code> can be set
+is if notebook or server extensions are installed in a custom prefix.
+Since notebook and server extensions are automatically enabled through
+configuration files, automatic enabling will only work if the custom
+prefix’s <code>etc/jupyter</code> directory is added to the Jupyter
+config search path.</p>
+<p>Besides the user config directory mentioned above, Jupyter has a
+search path of additional locations from which a config file will be
+loaded. Here’s a table of the locations to be searched, in order of
+preference:</p>
+<p>Unix</p>
+<p>Windows</p>
+<p><code>JUPYTER_CONFIG_DIR</code></p>
+<p><code>JUPYTER_CONFIG_PATH</code></p>
+<p><code>{sys.prefix}/etc/jupyter/</code></p>
+<p><code>/usr/local/etc/jupyter/</code> <code>/etc/jupyter/</code></p>
+<p><code>%PROGRAMDATA%\jupyter\</code></p>
+<p>To list the config directories currently being used you can run the
+below command from the command line:</p>
+<pre><code>jupyter --paths</code></pre>
+<p>The following command shows the config directory specifically:</p>
+<pre><code>jupyter --config-dir</code></pre>
+<h5 id="data-files">Data files</h5>
+<p>Jupyter uses a search path to find installable data files, such as <a
+href="https://jupyter-client.readthedocs.io/en/latest/kernels.html#kernelspecs">kernelspecs</a>
+and notebook extensions. When searching for a resource, the code will
+search the search path starting at the first directory until it finds
+where the resource is contained.</p>
+<p>Each category of file is in a subdirectory of each directory of the
+search path. For example, kernel specs are in <code>kernels</code>
+subdirectories.</p>
+<p>JUPYTER_PATH#</p>
+<p>Set this environment variable to provide extra directories for the
+data search path. <code>JUPYTER_PATH</code> should contain a series of
+directories, separated by <code>os.pathsep</code> (<code>;</code> on
+Windows, <code>:</code> on Unix). Directories given in
+<code>JUPYTER_PATH</code> are searched before other locations. This is
+used in addition to other entries, rather than replacing any.</p>
+<p>Linux (&amp; other free desktops)</p>
+<p>Mac</p>
+<p>Windows</p>
+<p><code>JUPYTER_PATH</code></p>
+<p><code>JUPYTER_DATA_DIR</code> or (if not set)
+<code>~/.local/share/jupyter/</code> (respects
+<code>$XDG_DATA_HOME</code>)</p>
+<p><code>JUPYTER_DATA_DIR</code> or (if not set)
+<code>~/Library/Application Support/Jupyter</code></p>
+<p><code>JUPYTER_DATA_DIR</code> or (if not set)
+<code>%APPDATA%\jupyter</code></p>
+<p><code>{sys.prefix}/share/jupyter/</code></p>
+<p><code>/usr/local/share/jupyter</code>
+<code>/usr/share/jupyter</code></p>
+<p><code>%PROGRAMDATA\jupyter</code></p>
+<p>The config directory for Jupyter data files, which contain
+non-transient, non-configuration files. Examples include kernelspecs,
+nbextensions, or voila templates.</p>
+<p>JUPYTER_DATA_DIR#</p>
+<p>Set this environment variable to use a particular directory, other
+than the default, as the user data directory.</p>
+<p>As mentioned above, to list the config directories currently being
+used you can run the below command from the command line:</p>
+<pre><code>jupyter --paths</code></pre>
+<p>The following command shows the data directory specifically:</p>
+<pre><code>jupyter --data-dir</code></pre>
+<h5 id="runtime-files">Runtime files</h5>
+<p>Things like connection files, which are only useful for the lifetime
+of a particular process, have a runtime directory.</p>
+<p>These runtime files are stored in a <code>runtime/</code>
+subdirectory of the user’s data directory (second row of the table
+above).</p>
+<p>An environment variable may also be used to set the runtime
+directory.</p>
+<p>JUPYTER_RUNTIME_DIR#</p>
+<p>Set this to override where Jupyter stores runtime files.</p>
+<p>As mentioned above, to list the config directories currently being
+used you can run the below command from the command line:</p>
+<pre><code>jupyter --paths</code></pre>
+<p>The following command shows the runtime directory specifically:</p>
+<pre><code>jupyter --runtime-dir</code></pre>
+<h5 id="summary">Summary</h5>
+<p><code>JUPYTER_CONFIG_DIR</code> for config file location</p>
+<p><code>JUPYTER_CONFIG_PATH</code> for config file locations</p>
+<p><code>JUPYTER_PATH</code> for datafile directory locations</p>
+<p><code>JUPYTER_DATA_DIR</code> for data file location</p>
+<p><code>JUPYTER_RUNTIME_DIR</code> for runtime file location</p>
+<p>See also</p>
+<p><a
+href="https://jupyter-core.readthedocs.io/en/latest/api/jupyter_core.html#module-jupyter_core.paths"><code>jupyter_core.paths</code></a></p>
+<p>The Python API to locate these directories.</p>
+<p><a href="jupyter-command.html#jupyter-command">The jupyter
+Command</a></p>
+<p>Locate these directories from the command line.</p>
+<h3 id="index">Index</h3>
+<h4 id="index-1">Index</h4>
+<p>Symbols | B | C | D | E | I | J | K | N | P | R | T | W | X</p>
+<h5 id="symbols">Symbols</h5>
+<ul>
+<li>–config-dir
+<ul>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-config-dir">jupyter
+command line option</a></li>
+</ul></li>
+<li>–data-dir
+<ul>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-data-dir">jupyter
+command line option</a></li>
+</ul></li>
+<li>–help
+<ul>
+<li><a href="use/jupyter-command.html#cmdoption-jupyter-h">jupyter
+command line option</a></li>
+</ul></li>
+<li>–json
+<ul>
+<li><a href="use/jupyter-command.html#cmdoption-jupyter-json">jupyter
+command line option</a></li>
+</ul></li>
+<li>–paths
+<ul>
+<li><a href="use/jupyter-command.html#cmdoption-jupyter-paths">jupyter
+command line option</a></li>
+</ul></li>
+<li>–runtime-dir
+<ul>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-runtime-dir">jupyter
+command line option</a></li>
+</ul></li>
+<li>-h
+<ul>
+<li><a href="use/jupyter-command.html#cmdoption-jupyter-h">jupyter
+command line option</a></li>
+</ul></li>
+</ul>
+<h5 id="b">B</h5>
+<ul>
+<li><a href="projects/deployment.html#term-Binder">Binder</a></li>
+</ul>
+<h5 id="c">C</h5>
+<ul>
+<li><a
+href="glossary.html#term-client-server-architecture">client-server-architecture</a></li>
+<li><a href="glossary.html#term-command-line">command line</a></li>
+<li><a href="glossary.html#term-Command-Prompt">Command Prompt</a></li>
+<li><a href="glossary.html#term-conda">conda</a></li>
+<li><a href="glossary.html#term-config">config</a></li>
+<li><a href="glossary.html#term-console">console</a></li>
+</ul>
+<h5 id="d">D</h5>
+<ul>
+<li><a
+href="projects/deployment.html#term-docker-stacks">docker-stacks</a></li>
+<li><a
+href="projects/deployment.html#term-dockerspawner">dockerspawner</a></li>
+</ul>
+<h5 id="e">E</h5>
+<ul>
+<li><a href="glossary.html#term-environment">environment</a></li>
+<li><a href="glossary.html#term-environment-variable">environment
+variable</a>
+<ul>
+<li><a
+href="use/jupyter-directories.html#envvar-JUPYTER_CONFIG_DIR">JUPYTER_CONFIG_DIR</a>,
+[1], [2], [3]</li>
+<li><a
+href="use/jupyter-directories.html#envvar-JUPYTER_CONFIG_PATH">JUPYTER_CONFIG_PATH</a>,
+[1], [2], [3], [4], [5]</li>
+<li><a
+href="use/jupyter-directories.html#envvar-JUPYTER_DATA_DIR">JUPYTER_DATA_DIR</a>,
+[1], [2], [3], [4]</li>
+<li><a
+href="use/jupyter-directories.html#envvar-JUPYTER_PATH">JUPYTER_PATH</a>,
+[1], [2], [3], [4]</li>
+<li><a
+href="use/jupyter-directories.html#envvar-JUPYTER_RUNTIME_DIR">JUPYTER_RUNTIME_DIR</a>,
+[1]</li>
+<li><a href="use/jupyter-command.html#index-0">PATH</a></li>
+</ul></li>
+</ul>
+<h5 id="i">I</h5>
+<ul>
+<li><a href="projects/kernels.html#term-ipykernel">ipykernel</a></li>
+<li><a href="glossary.html#term-ipynb">ipynb</a></li>
+<li><a href="glossary.html#term-IPython">IPython</a>, [1]</li>
+<li><a href="glossary.html#term-IPython-Notebook">IPython
+Notebook</a></li>
+<li><a href="glossary.html#term-ipywidgets">ipywidgets</a></li>
+</ul>
+<h5 id="j">J</h5>
+<ul>
+<li><a href="glossary.html#term-Jovyan">Jovyan</a></li>
+<li><a href="glossary.html#term-Jupyter">Jupyter</a></li>
+<li>jupyter command line option
+<ul>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-config-dir">–config-dir</a></li>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-data-dir">–data-dir</a></li>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-h">–help</a></li>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-json">–json</a></li>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-paths">–paths</a></li>
+<li><a
+href="use/jupyter-command.html#cmdoption-jupyter-runtime-dir">–runtime-dir</a></li>
+<li><a href="use/jupyter-command.html#cmdoption-jupyter-h">-h</a></li>
+</ul></li>
+<li><a href="projects/user-interfaces.html#term-Jupyter-Console">Jupyter
+Console</a></li>
+<li><a href="projects/user-interfaces.html#term-Jupyter-Desktop">Jupyter
+Desktop</a></li>
+<li><a
+href="projects/user-interfaces.html#term-Jupyter-Notebook">Jupyter
+Notebook</a>
+<ul>
+<li><a
+href="glossary.html#term-Jupyter-Notebook-Application">(Application)</a></li>
+<li><a href="glossary.html#term-Jupyter-Notebook-File-Format">(File
+Format)</a></li>
+</ul></li>
+<li><a
+href="projects/user-interfaces.html#term-Jupyter-QtConsole">Jupyter
+QtConsole</a></li>
+<li><a
+href="projects/education.html#term-jupyter4edu">jupyter4edu</a></li>
+<li><a
+href="projects/core.html#term-jupyter_client">jupyter_client</a></li>
+<li><a
+href="use/jupyter-directories.html#index-0">JUPYTER_CONFIG_DIR</a>, [1],
+[2]</li>
+<li><a
+href="use/jupyter-directories.html#index-1">JUPYTER_CONFIG_PATH</a>,
+[1], [2], [3], [4]</li>
+<li><a href="projects/core.html#term-jupyter_core">jupyter_core</a></li>
+<li><a
+href="use/jupyter-directories.html#index-10">JUPYTER_DATA_DIR</a>, [1],
+[2], [3]</li>
+<li><a href="use/jupyter-directories.html#index-14">JUPYTER_PATH</a>,
+[1], [2], [3]</li>
+<li><a
+href="use/jupyter-directories.html#index-16">JUPYTER_RUNTIME_DIR</a></li>
+<li><a
+href="projects/deployment.html#term-jupyterhub">jupyterhub</a></li>
+<li><a href="glossary.html#term-JupyterLab">JupyterLab</a>, [1]</li>
+<li><a
+href="projects/user-interfaces.html#term-JupyterLite">JupyterLite</a></li>
+</ul>
+<h5 id="k">K</h5>
+<ul>
+<li><a href="glossary.html#term-kernel">kernel</a></li>
+</ul>
+<h5 id="n">N</h5>
+<ul>
+<li><a href="projects/execution.html#term-nbclient">nbclient</a></li>
+<li><a href="projects/conversion.html#term-nbconvert">nbconvert</a></li>
+<li><a href="projects/conversion.html#term-nbformat">nbformat</a></li>
+<li><a href="projects/education.html#term-nbgrader">nbgrader</a></li>
+<li><a href="projects/deployment.html#term-nbviewer">nbviewer</a></li>
+<li><a href="glossary.html#term-Notebook">Notebook</a></li>
+<li><a href="glossary.html#term-Notebook-Dashboard">Notebook
+Dashboard</a></li>
+</ul>
+<h5 id="p">P</h5>
+<ul>
+<li><a href="use/jupyter-command.html#index-0">PATH</a></li>
+<li><a href="glossary.html#term-pip">pip</a></li>
+<li><a href="glossary.html#term-profiles">profiles</a></li>
+<li><a href="glossary.html#term-Project-Jupyter">Project
+Jupyter</a></li>
+</ul>
+<h5 id="r">R</h5>
+<ul>
+<li><a href="glossary.html#term-REPL">REPL</a></li>
+</ul>
+<h5 id="t">T</h5>
+<ul>
+<li><a href="glossary.html#term-terminal">terminal</a></li>
+<li><a href="glossary.html#term-The-Big-Split">The Big Split</a></li>
+</ul>
+<h5 id="w">W</h5>
+<ul>
+<li><a href="glossary.html#term-widget">widget</a></li>
+</ul>
+<h5 id="x">X</h5>
+<ul>
+<li><a href="projects/kernels.html#term-Xeus">Xeus</a></li>
+</ul>
+<h3 id="the-jupyter-command">The jupyter Command</h3>
+<h4 id="the-jupyter-command-1">The jupyter Command</h4>
+<h5 id="synopsis">Synopsis</h5>
+<pre><code>jupyter &lt;subcommand&gt; [options]</code></pre>
+<h5 id="description-1">Description</h5>
+<p>Commands like <code>jupyter notebook</code> start Jupyter
+applications. The <code>jupyter</code> command is primarily a namespace
+for subcommands. A command like <code>jupyter-foo</code> found on your
+<code>PATH</code> will be available as a subcommand
+<code>jupyter foo</code>.</p>
+<p>The jupyter command can also be used to do actions other than
+starting a Jupyter application.</p>
+<h5 id="command-options">Command options</h5>
+<p>-h, –help#</p>
+<p>Show help information, including available subcommands.</p>
+<p>–config-dir#</p>
+<p>Show the location of the config directory.</p>
+<p>–data-dir#</p>
+<p>Show the location of the data directory.</p>
+<p>–runtime-dir#</p>
+<p>Show the location of the runtime directory.</p>
+<p>–paths#</p>
+<p>Show all Jupyter directories and search paths.</p>
+<p>–json#</p>
+<p>Print directories and search paths in machine-readable JSON
+format.</p>
+<h3 id="jupyter-for-data-science">Jupyter for Data Science</h3>
+<h4 id="jupyter-for-data-science-1">Jupyter for Data Science</h4>
+<p>The purpose of this page is to highlight kernels and other projects
+that are central to the usage of Jupyter in data science. This page is
+not meant to be comprehensive or unbiased, but rather to provide an
+opinionated view of the usage of Jupyter in data science based on our
+interactions with users.</p>
+<p>The following Jupyter kernels are widely used in data science:</p>
+<ul>
+<li>python
+<ul>
+<li>IPython (<a href="https://github.com/ipython/ipykernel">GitHub
+Repo</a>)</li>
+</ul></li>
+<li>R
+<ul>
+<li>IRkernel (<a href="https://irkernel.github.io/">Documentation</a>,
+<a href="https://github.com/IRkernel/IRkernel">GitHub Repo</a>)</li>
+<li>IRdisplay (<a href="https://github.com/IRkernel/IRdisplay">GitHub
+Repo</a>)</li>
+<li>repr (<a href="https://github.com/IRkernel/repr">GitHub
+Repo</a>)</li>
+</ul></li>
+<li>Julia
+<ul>
+<li>IJulia Kernel (<a
+href="https://github.com/JuliaLang/IJulia.jl">GitHub Repo</a>)</li>
+<li>Interactive Widgets (<a
+href="https://github.com/JuliaLang/Interact.jl">GitHub Repo</a>)</li>
+</ul></li>
+<li>Bash (<a href="https://github.com/takluyver/bash_kernel">GitHub
+Repo</a>)</li>
+</ul>
+<h3 id="jupyter-in-the-enterprise">Jupyter in the Enterprise</h3>
+<h4 id="jupyter-in-the-enterprise-1">Jupyter in the Enterprise</h4>
+<h5 id="description-2">Description</h5>
+<p>Businesses, especially those that started their ‘digital
+transformation’ journey, are producing ever-increasing volumes of data.
+Enterprise data science aims to unearth the hidden value of those
+digital assets, which are typically siloed, uncategorized, and
+inaccessible to humans.</p>
+<p>Jupyter and JupyterHub can play a major role in related initiatives,
+especially in companies with an established open-source culture. The
+intent of this page is to provide you with ideas how Jupyter technology
+can fit into your organization’s processes and system landscapes, by
+providing real-world examples and showcases.</p>
+<h5 id="example-use-cases">Example Use-Cases</h5>
+<ul>
+<li><a
+href="https://medium.com/netflix-techblog/notebook-innovation-591ee3221233">Beyond
+Interactive: Notebook Innovation at Netflix</a>
+<ul>
+<li><a
+href="https://medium.com/netflix-techblog/scheduling-notebooks-348e6c14cfd6">Part
+2: Scheduling Notebooks at Netflix</a></li>
+</ul></li>
+<li><a
+href="https://conferences.oreilly.com/jupyter/jup-ny/public/schedule/detail/68405">PayPal
+Notebooks: Data science and machine learning at scale, powered by
+Jupyter</a> (JupyterCon 2018 · <a
+href="https://youtu.be/KVGrACWVUgE">video</a>)</li>
+<li><a href="https://mingze-gao.com/posts/bloomberg-bquant/">Bloomberg
+BQuant platform</a></li>
+<li><a
+href="https://medium.com/@olivier.borderies/jupyter-python-in-the-corporate-lan-109e2ffde897">Jupyter
+&amp; Python in the corporate LAN</a></li>
+<li><a
+href="https://nbviewer.jupyter.org/github/jhermann/jupyter-by-example/blob/master/complete-scenarios/devops-intelligence.ipynb">DevOps
+Intelligence with JupyterHub</a> Note</li>
+</ul>
+<p>We’re actively working on this section of the documentation to
+improve it for you. If you’ve got a suggestion for a resource that would
+be helpful, please create an issue or a pull request!</p>
+<h3 id="jupyterhub-narratives">JupyterHub Narratives</h3>
+<h4 id="jupyterhub-narratives-1">JupyterHub Narratives</h4>
+<h5 id="description-3">Description</h5>
+<p>JupyterHub Narratives explore deployment and scaling of the Jupyter
+Notebook for a group of users. JupyterHub allows flexibility in
+configuration and deployment which makes JupyterHub valuable to
+education, industry research teams, and service providers. In these
+Narratives, we will look at differences in deployment, deployment
+advantages, and best practices.</p>
+<h5 id="narrative-examples">Narrative examples</h5>
+<ul>
+<li>A basic JupyterHub deployment</li>
+<li>A <a
+href="https://github.com/jupyterhub/jupyterhub-deploy-docker">reference
+deployment of JupyterHub using Docker</a></li>
+<li>Teaching a Course with JupyterHub and nbgrader using a <a
+href="https://github.com/jupyterhub/jupyterhub-deploy-teaching">reference
+deployment on a single server and Ansible scripts</a> to automate set
+up</li>
+<li>Teaching a Course with JupyterHub, nbgrader, and containers</li>
+<li>JupyterHub deployments using Containers including Docker Note</li>
+</ul>
+<p>We’re actively working on this section of the documentation to
+improve it for you. Thanks for your patience.</p>
+<h3 id="jupyters-common-configuration-approach">Jupyter’s Common
+Configuration Approach</h3>
+<h4 id="jupyters-common-configuration-approach-1">Jupyter’s Common
+Configuration Approach</h4>
+<h5 id="summary-1">Summary</h5>
+<p>Common Jupyter configuration system The Jupyter applications have a
+common config system, and a common <a
+href="jupyter-directories.html#config-dir">config directory</a>. By
+default, this directory is <code>~/.jupyter</code>.</p>
+<p>Kernel configuration directories If kernels use config files, these
+will normally be organized in separate directories for each kernel. For
+instance, the IPython kernel looks for files in the <a
+href="https://ipython.readthedocs.io/en/stable/config/intro.html#ipythondir">IPython
+directory</a> instead of the default Jupyter directory
+<code>~/.jupyter</code>.</p>
+<h5 id="the-python-config-file">The Python config file</h5>
+<p>To create a default config file, run:</p>
+<pre><code>jupyter {application} --generate-config</code></pre>
+<p>The generated file will be named
+<code>jupyter_application_config.py</code>.</p>
+<p>By editing the <code>jupyter_application_config.py</code> file, you
+can configure class attributes like this:</p>
+<pre><code>c.NotebookApp.port = 8754</code></pre>
+<p>Be careful with spelling. Incorrect names will simply be ignored,
+with no error message.</p>
+<p>To add to a collection which may have already been defined elsewhere,
+you can use methods like those found on lists, dicts and sets:
+<code>append</code>, <code>extend</code>, <code>prepend()</code> (like
+extend, but at the front), <code>add</code>, and <code>update</code>
+(which works both for dicts and sets):</p>
+<pre><code>c.TemplateExporter.template_path.append(&#39;./templates&#39;)</code></pre>
+<h5 id="command-line-options-for-configuration">Command line options for
+configuration</h5>
+<p>Every configurable value can also be set from the command line and
+passed as an argument, using this syntax:</p>
+<pre><code>jupyter notebook --NotebookApp.port=8754</code></pre>
+<p>Frequently used options will also have short aliases and flags, such
+as <code>--port 8754</code> or <code>--no-browser</code>.</p>
+<p>To see the abbreviated options, pass <code>--help</code> or
+<code>--help-all</code> as follows:</p>
+<pre><code>jupyter {application} --help       # Just the short options
+jupyter {application} --help-all   # Includes options without short names</code></pre>
+<p>Command line options will override options set within a configuration
+file.</p>
+<p>See also</p>
+<p><a
+href="https://traitlets.readthedocs.io/en/latest/config.html#module-traitlets.config"><code>traitlets.config</code></a></p>
+<p>The low-level architecture of this config system.</p>
+<h3 id="migrating-from-ipython-notebook">Migrating from IPython
+Notebook</h3>
+<h4 id="migrating-from-ipython-notebook-1">Migrating from IPython
+Notebook</h4>
+<h5 id="abstract">Abstract</h5>
+<p><a href="https://blog.jupyter.org/the-big-split-9d7b88a031a7">The Big
+Split</a> moved IPython’s various language-agnostic components under the
+Jupyter umbrella. Going forward, Jupyter will contain the
+language-agnostic projects that serve many languages. IPython will
+continue to focus on Python and its use with Jupyter.</p>
+<p>This document describes what has changed, and how you may need to
+modify your code or configuration when migrating from IPython version 3
+to Jupyter.</p>
+<h5 id="understanding-the-migration-process">Understanding the Migration
+Process</h5>
+<h6 id="automatic-migration-of-files">Automatic migration of files</h6>
+<p>The first time you run any <code>jupyter</code> command, it will
+perform an automatic migration of files. The automatic migration process
+copies files, instead of moving files, leaving the originals in place
+and the copies in the Jupyter file locations. You can re-run the
+migration, if needed, by calling <code>jupyter migrate</code>. Your
+custom configuration will be migrated automatically and should work with
+Jupyter without further editing. When you update or modify your
+configuration in the future, please keep in mind that the file locations
+may have changed.</p>
+<h6 id="where-have-my-configuration-files-gone">Where have my
+configuration files gone?</h6>
+<p>Also known as: “Why isn’t my configuration having any effect
+anymore?”</p>
+<p>Jupyter splitting out from IPython means that the locations of some
+files have moved, and Jupyter projects have not inherited everything
+from how IPython did it.</p>
+<p>When you start your first Jupyter application, the relevant
+configuration files are automatically copied to their new Jupyter
+locations. The original configuration files in the IPython locations
+have no effect on Jupyter’s execution. If you accidentally edit your
+original IPython config file, you may not see the desired effect with
+Jupyter now. You should check that you are editing Jupyter’s
+configuration file, and you should see the expected effect after
+restarting the Jupyter server.</p>
+<h5 id="finding-the-location-of-important-files">Finding the Location of
+Important Files</h5>
+<p>This section provides quick reference for common locations of IPython
+3 files and the migrated Jupyter files.</p>
+<h6 id="configuration-files-1">Configuration files</h6>
+<p>Configuration files customize Jupyter to the user’s preferences. The
+migrated files should all be automatically copied to their new Jupyter
+locations. Here are the location changes:</p>
+<p>IPython location</p>
+<p>Jupyter location</p>
+<p><code>~/.ipython/profile_default/static/custom</code></p>
+<p>→</p>
+<p><code>~/.jupyter/custom</code></p>
+<p><code>~/.ipython/profile_default/ipython_notebook_config.py</code></p>
+<p>→</p>
+<p><code>~/.jupyter/jupyter_notebook_config.py</code></p>
+<p><code>~/.ipython/profile_default/ipython_nbconvert_config.py</code></p>
+<p>→</p>
+<p><code>~/.jupyter/jupyter_nbconvert_config.py</code></p>
+<p><code>~/.ipython/profile_default/ipython_qtconsole_config.py</code></p>
+<p>→</p>
+<p><code>~/.jupyter/jupyter_qtconsole_config.py</code></p>
+<p><code>~/.ipython/profile_default/ipython_console_config.py</code></p>
+<p>→</p>
+<p><code>~/.jupyter/jupyter_console_config.py</code></p>
+<p>To choose a directory location other than the default
+<code>~/.jupyter</code>, set the <code>JUPYTER_CONFIG_DIR</code>
+environment variable. You may need to run <code>jupyter migrate</code>
+after setting the environment variable for files to be copied to the
+desired directory.</p>
+<h6 id="data-files-kernelspecs-and-notebook-extensions">Data files:
+kernelspecs and notebook extensions</h6>
+<p>Data files include files, other than configuration files, which are
+user installed. Examples include kernelspecs and notebook extensions.
+Like the configuration files, data files are also automatically migrated
+to their new Jupyter locations.</p>
+<p>In IPython 3, data files lived in <code>~/.ipython</code>.</p>
+<p>In Jupyter, data files use platform-appropriate locations:</p>
+<ul>
+<li>OS X: <code>~/Library/Jupyter</code></li>
+<li>Windows: the location specified in <code>%APPDATA%</code>
+environment variable</li>
+<li>Elsewhere, <code>$XDG_DATA_HOME</code> is respected, with the
+default of <code>~/.local/share/jupyter</code> In all cases, the
+<code>JUPYTER_DATA_DIR</code> environment variable can be used to set a
+location explicitly.</li>
+</ul>
+<p>Data files installed system-wide (e.g. in
+<code>/usr/local/share/jupyter</code>) have not changed. Per-user
+installation of data files has changed location from
+<code>.ipython</code> to the platform-appropriate Jupyter location.</p>
+<h5
+id="since-jupyter-does-not-have-profiles-how-do-i-customize-it">Since
+Jupyter does not have profiles, how do I customize it?</h5>
+<p>While IPython has the concept of profiles, Jupyter does not have
+profiles.</p>
+<p>In IPython, profiles are collections of configuration and runtime
+files. Inside the IPython directory (<code>~/.ipython</code>), there are
+directories with names like <code>profile_default</code> or
+<code>profile_demo</code>. In each of these are configuration files
+(<code>ipython_config.py</code>,
+<code>ipython_notebook_config.py</code>) and runtime files
+(<code>history.sqlite</code>, <code>security/kernel-*.json</code>).
+Profiles could be used to switch between configurations of IPython.</p>
+<p>Previously, people could use commands like
+<code>ipython notebook --profile demo</code> to set the profile for both
+the notebook server and the IPython kernel. This is no longer possible
+in one go with Jupyter, just like it wasn’t possible in IPython 3 for
+any other kernels.</p>
+<h6 id="changing-the-jupyter-notebook-configuration-directory">Changing
+the Jupyter notebook configuration directory</h6>
+<p>If you want to change the notebook configuration, you can set the
+<code>JUPYTER_CONFIG_DIR</code>:</p>
+<pre><code>JUPYTER_CONFIG_DIR=./jupyter_config
+jupyter notebook</code></pre>
+<h6 id="changing-the-jupyter-notebook-configuration-file">Changing the
+Jupyter notebook configuration file</h6>
+<p>If you just want to change the config file, you can do:</p>
+<pre><code>jupyter notebook --config=/path/to/myconfig.py</code></pre>
+<h6 id="changing-ipythons-profile-using-custom-kernelspecs">Changing
+IPython’s profile using custom kernelspecs</h6>
+<p>If you do want to change the IPython kernel’s profile, you can’t do
+this at the server command-line anymore. Kernel arguments must be
+changed by modifying the kernelspec. You can do this without relaunching
+the server. Kernelspec changes take effect every time you start a new
+kernel. However, there isn’t a great way to modify the kernelspecs. One
+approach uses <code>jupyter kernelspec list</code> to find the
+<code>kernel.json</code> file and then modifies it,
+e.g. <code>kernels/python3/kernel.json</code>, by hand. Alternatively,
+<a href="https://github.com/minrk/a2km">a2km</a> is an experimental
+project that tries to make these things easier.</p>
+<p>For example, add the <code>--profile</code> option to a custom
+kernelspec under <code>kernels/mycustom/kernel.json</code> (see the
+Jupyter kernelspec directions <a
+href="https://jupyter-client.readthedocs.io/en/latest/kernels.html#kernel-specs">here</a>):</p>
+<pre><code>{
+ &quot;argv&quot;: [&quot;python&quot;, &quot;-m&quot;, &quot;ipykernel&quot;,
+          &quot;--profile=my-ipython-profile&quot;,
+          &quot;-f&quot;, &quot;{connection_file}&quot;],
+ &quot;display_name&quot;: &quot;Custom Profile Python&quot;,
+ &quot;language&quot;: &quot;python&quot;
+}</code></pre>
+<p>You can then run Jupyter with the <code>--kernel=mycustom</code>
+command-line option and IPython will find the appropriate profile.</p>
+<h5 id="understanding-installation-changes">Understanding Installation
+Changes</h5>
+<p>See the Install and Use page for more information about installing
+Jupyter. Jupyter automatically migrates some things, like Notebook
+extensions and kernels.</p>
+<h6 id="notebook-extensions">Notebook extensions</h6>
+<p>Any IPython notebook extensions should be automatically migrated as
+part of the data files migration.</p>
+<p>Notebook extensions were installed with:</p>
+<pre><code>ipython install-nbextension [--user] EXTENSION</code></pre>
+<p>Now, extensions are installed with:</p>
+<pre><code>jupyter nbextension install [--user] EXTENSION</code></pre>
+<p>The notebook extensions will be installed in a system-wide location
+(e.g. <code>/usr/local/share/jupyter/nbextensions</code>). If doing a
+<code>--user</code> install, the notebook extensions will go in the
+<code>JUPYTER_DATA_DIR</code> location. Installation SHOULD NOT be done
+manually by guessing where the files should go.</p>
+<h6 id="kernels">Kernels</h6>
+<p>Kernels are installed in much the same way as notebook extensions.
+They will also be automatically migrated.</p>
+<p>Kernel specs used to be installed with:</p>
+<pre><code>ipython kernelspec install [--user] KERNEL</code></pre>
+<p>They are now installed with:</p>
+<pre><code>jupyter kernelspec install [--user] KERNEL</code></pre>
+<p>By default, kernel specs will go in a system-wide location
+(e.g. <code>/usr/local/share/jupyter/kernels</code>). If doing a
+<code>--user</code> install, the kernel specs will go in the
+<code>JUPYTER_DATA_DIR</code> location. Installation SHOULD NOT be done
+manually by guessing where the files should go.</p>
+<h5 id="understanding-changes-in-imports">Understanding Changes in
+imports</h5>
+<p>IPython 4.0 includes shims to manage dependencies; so, all imports
+that work on IPython 3 should continue to work on IPython 4. If you find
+any differences, please <a
+href="https://github.com/ipython/ipython/issues">let us know</a>.</p>
+<p>Some changes include:</p>
+<p>IPython 3</p>
+<p>Jupyter and IPython 4.0</p>
+<p><code>IPython.html</code></p>
+<p>→</p>
+<p><code>notebook</code></p>
+<p><code>IPython.html.widgets</code></p>
+<p>→</p>
+<p><code>ipywidgets</code></p>
+<p><code>IPython.kernel</code></p>
+<p>→</p>
+<p><code>jupyter_client</code>, <code>ipykernel</code></p>
+<p><code>IPython.parallel</code></p>
+<p>→</p>
+<p><code>ipyparallel</code></p>
+<p><code>IPython.qt.console</code></p>
+<p>→</p>
+<p><code>qtconsole</code></p>
+<p><code>IPython.utils.traitlets</code></p>
+<p>→</p>
+<p><code>traitlets</code></p>
+<p><code>IPython.config</code></p>
+<p>→</p>
+<p><code>traitlets.config</code></p>
+<p>Important</p>
+<p>The <code>IPython.kernel</code> Split</p>
+<p><code>IPython.kernel</code> became two packages:</p>
+<ul>
+<li><code>jupyter_client</code> for the Jupyter client-side APIs.</li>
+<li><code>ipykernel</code> for Jupyter’s IPython kernel</li>
+</ul>
+<h3 id="narratives---building-blocks">Narratives - Building blocks</h3>
+<h4 id="narratives---building-blocks-1">Narratives - Building
+blocks</h4>
+<h5 id="description-4">Description</h5>
+<p>This section presents some examples of integrating different projects
+together. These projects form the foundation of innovative services and
+provide building blocks for future applications.</p>
+<h5 id="narrative-examples-1">Narrative examples</h5>
+<ul>
+<li>A Narrative about Creating Dashboards</li>
+<li>A Narrative about Thebe</li>
+<li>A Narrative about Hydrogen Note</li>
+</ul>
+<p>We’re actively working on this section of the documentation to
+improve it for you. Thanks for your patience.</p>
+<h3 id="narratives-and-use-cases">Narratives and Use Cases</h3>
+<h4 id="narratives-and-use-cases-1">Narratives and Use Cases</h4>
+<ul>
+<li><a href="narrative-notebook.html">Notebook Narratives</a>
+<ul>
+<li><a href="narrative-notebook.html#description">Description</a></li>
+<li><a href="narrative-notebook.html#narrative-examples">Narrative
+examples</a></li>
+</ul></li>
+<li><a href="narrative-hub.html">JupyterHub Narratives</a>
+<ul>
+<li><a href="narrative-hub.html#description">Description</a></li>
+<li><a href="narrative-hub.html#narrative-examples">Narrative
+examples</a></li>
+</ul></li>
+<li><a href="narrative-other.html">Narratives - Building blocks</a>
+<ul>
+<li><a href="narrative-other.html#description">Description</a></li>
+<li><a href="narrative-other.html#narrative-examples">Narrative
+examples</a></li>
+</ul></li>
+<li><a href="data_science.html">Jupyter for Data Science</a></li>
+<li><a href="science.html">Jupyter and Scientific Computing</a></li>
+<li><a href="education.html">Jupyter in Education</a></li>
+<li><a href="enterprise.html">Jupyter in the Enterprise</a>
+<ul>
+<li><a href="enterprise.html#description">Description</a></li>
+<li><a href="enterprise.html#example-use-cases">Example
+Use-Cases</a></li>
+</ul></li>
+</ul>
+<h5 id="what-are-narratives">What are Narratives?</h5>
+<p>Narratives are collaborative, shareable, publishable, and
+reproducible. We believe that Narratives help both yourself and other
+researchers by sharing your use of Jupyter projects, technical specifics
+of your deployment, and installation and configuration tips so that
+others can learn from your experiences.</p>
+<h3 id="notebook-narratives">Notebook Narratives</h3>
+<h4 id="notebook-narratives-1">Notebook Narratives</h4>
+<h5 id="description-5">Description</h5>
+<p>The Notebook Narratives explore uses of the Jupyter Notebook in a
+variety of applications.</p>
+<h5 id="narrative-examples-2">Narrative examples</h5>
+<ul>
+<li>Using the Notebook for data exploration</li>
+<li>Using extensions and widgets</li>
+<li>Using nbconvert for code execution and workflow simplification</li>
+<li>Using nbconvert for publishing</li>
+<li>Using multiple language kernels Note</li>
+</ul>
+<p>We’re actively working on this section of the documentation to
+improve it for you. Thanks for your patience.</p>
+<h3 id="project-jupyter-documentation">Project Jupyter
+Documentation</h3>
+<h4 id="project-jupyter-documentation-1">Project Jupyter
+Documentation</h4>
+<p>Welcome to the Project Jupyter documentation site. Jupyter is a large
+umbrella project that covers many different software offerings and
+tools, including the popular <a
+href="https://jupyter-notebook.readthedocs.io/en/latest/">Jupyter
+Notebook</a> and <a
+href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>
+web-based notebook authoring and editing applications. The Jupyter
+project and its subprojects all center around providing tools (and <a
+href="https://docs.jupyter.org/en/latest/#sub-project-documentation">standards</a>)
+for interactive computing with computational notebooks.</p>
+<h5 id="what-is-a-notebook">What is a Notebook?</h5>
+<p>Pictured: A computational notebook document, shown inside
+JupyterLab</p>
+<p>📘 Note: Read <a href="what_is_jupyter.html">What is Jupyter?</a> for
+a detailed look at Jupyter and notebooks.</p>
+<p>A notebook is a shareable document that combines computer code, plain
+language descriptions, data, rich visualizations like 3D models, charts,
+graphs and figures, and interactive controls. A notebook, along with an
+editor (like JupyterLab), provides a fast interactive environment for
+prototyping and explaining code, exploring and visualizing data, and
+sharing ideas with others.</p>
+<h5 id="where-do-i-start">Where do I start?</h5>
+<p>Most people begin with Jupyter by installing an editing application
+that fits their preferences, like <a
+href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a> or <a
+href="https://jupyter-notebook.readthedocs.io/en/latest/">Jupyter
+Notebook</a>, and making their first notebook document:</p>
+<ul>
+<li>Jupyter Notebook offers a simplified, lightweight notebook authoring
+experience</li>
+<li>JupyterLab offers a feature-rich, tabbed multi-notebook editing
+environment with additional tools like a customizable interface layout
+and system console</li>
+<li>And more… read about additional notebook interfaces <a
+href="projects/user-interfaces.html">here</a>! You can also develop your
+own extensions or applications on top of existing Jupyter software.
+Check out the subproject sites below for more information.</li>
+</ul>
+<h5 id="more-information">More information</h5>
+<p>These are a few high-level topics to help you learn more about the
+Jupyter community and ecosystem.</p>
+<p><a href="start/index.html">Get started with Jupyter Notebook</a></p>
+<p>Try the notebook</p>
+<p><a href="community/content-community.html">Community</a></p>
+<p>Sustainability and growth</p>
+<p><a
+href="projects/architecture/content-architecture.html">Architecture</a></p>
+<p>What is Jupyter?</p>
+<p><a href="contributing/content-contributor.html">Contributor
+Guides</a></p>
+<p>How to contribute to the projects</p>
+<p><a href="use/use-cases/content-user.html">Narratives and Use
+Cases</a></p>
+<p>Narratives of common deployment scenarios</p>
+<p><a href="releases.html">Release Notes</a></p>
+<p>New features, upgrades, deprecation notes, and bug fixes</p>
+<p><a href="reference/ipython.html">IPython</a></p>
+<p>An interactive Python kernel and REPL</p>
+<p><a href="reference/content-reference.html">Reference</a></p>
+<p>APIs</p>
+<p><a href="projects/content-projects.html">Installation, Configuration,
+and Usage</a></p>
+<p>Documentation for users</p>
+<p><a href="use/advanced/content-advanced.html">Advanced</a></p>
+<p>Documentation for advanced use-cases</p>
+<h5 id="sub-project-documentation">Sub-project documentation</h5>
+<p>Individual sub-projects are typically organized around a key feature
+of the Jupyter ecosystem, and have their own community, documentation
+and governance. Below is a list of documentation for major parts of the
+Jupyter ecosystem.</p>
+<p>User Interfaces</p>
+<ul>
+<li><p><a
+href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a></p></li>
+<li><p><a
+href="https://jupyter-notebook.readthedocs.io/en/latest/">Jupyter
+Notebook</a></p></li>
+<li><p><a
+href="https://jupyterlite.readthedocs.io/en/latest/">JupyterLite</a></p></li>
+<li><p><a
+href="https://github.com/jupyterlab/nbclassic">nbclassic</a></p></li>
+<li><p><a
+href="https://jupyter-console.readthedocs.io/en/latest">Jupyter
+Console</a></p></li>
+<li><p><a href="https://qtconsole.readthedocs.io/en/stable">Qt
+console</a></p></li>
+<li><p><a href="https://voila.readthedocs.io/">Voilà</a>
+JupyterHub</p></li>
+<li><p><a
+href="https://jupyterhub.readthedocs.io/en/latest">JupyterHub</a></p></li>
+<li><p><a
+href="https://github.com/jupyterhub/configurable-http-proxy">Configurable
+HTTP proxy</a></p></li>
+<li><p>Authenticators: <a
+href="https://github.com/jupyterhub/ldapauthenticator">LDAP</a>, <a
+href="https://oauthenticator.readthedocs.io/en/latest/">OAuth</a>, <a
+href="https://native-authenticator.readthedocs.io/en/latest/">Native</a>,
+<a
+href="https://ltiauthenticator.readthedocs.io/en/latest/">LTI</a></p></li>
+<li><p>Spawners: <a
+href="https://github.com/jupyterhub/sudospawner">sudo</a>, <a
+href="https://jupyterhub-dockerspawner.readthedocs.io/en/latest/">Docker</a>,
+<a
+href="https://jupyterhub-kubespawner.readthedocs.io/en/latest/">Kubernetes</a></p></li>
+<li><p><a
+href="https://zero-to-jupyterhub.readthedocs.io/en/latest/">Zero to
+JupyterHub</a></p></li>
+<li><p><a href="https://github.com/jupyterhub">All JupyterHub
+Projects…</a> Working with Notebooks</p></li>
+<li><p><a href="https://nbclient.readthedocs.io/en/latest/">nbclient</a>
+- execution</p></li>
+<li><p><a
+href="https://nbconvert.readthedocs.io/en/latest/">nbconvert</a> -
+conversion</p></li>
+<li><p><a href="https://github.com/jupyter/nbviewer/">nbviewer</a> -
+viewing</p></li>
+<li><p><a href="https://nbdime.readthedocs.io/">nbdime</a> - comparing
+and merging</p></li>
+<li><p><a href="https://nbgrader.readthedocs.io/en/latest/">nbgrader</a>
+- grading</p></li>
+<li><p><a href="https://nbformat.readthedocs.io/en/latest/">nbformat</a>
+- modification and validation Kernels</p></li>
+<li><p><a
+href="https://ipython.readthedocs.io/en/stable/">IPython</a></p></li>
+<li><p><a href="https://irkernel.github.io">IRkernel</a></p></li>
+<li><p><a
+href="https://github.com/JuliaLang/IJulia.jl">IJulia</a></p></li>
+<li><p><a href="https://xeus.readthedocs.io/en/latest/">Xeus
+kernels</a></p></li>
+<li><p><a
+href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Community
+maintained kernels</a> IPython</p></li>
+<li><p><a
+href="https://ipython.readthedocs.io/en/stable/">IPython</a></p></li>
+<li><p><a
+href="https://ipython.readthedocs.io/en/stable/">ipykernel</a></p></li>
+<li><p><a
+href="https://ipyparallel.readthedocs.io/en/latest/">ipyparallel</a></p></li>
+<li><p><a
+href="https://traitlets.readthedocs.io/en/stable/">traitlets</a>
+Architecture and Specification</p></li>
+<li><p><a
+href="https://nbformat.readthedocs.io/en/latest/api.html">nbformat</a> -
+Jupyter Notebook Format</p></li>
+<li><p><a
+href="https://jupyter-client.readthedocs.io/en/latest/">jupyter-client</a>
+- Jupyter Messaging Protocol</p></li>
+<li><p><a
+href="https://jupyter-core.readthedocs.io/en/latest/">jupyter-core</a></p></li>
+<li><p><a
+href="https://jupyter-server.readthedocs.io/">jupyter-server</a></p></li>
+<li><p><a
+href="https://jupyterlab-server.readthedocs.io/en/stable/">jupyterlab-server</a>
+Deployment</p></li>
+<li><p><a
+href="https://jupyter-docker-stacks.readthedocs.io/en/latest/">Docker
+Stacks</a></p></li>
+<li><p><a
+href="https://jupyter-kernel-gateway.readthedocs.io/en/latest/">Kernel
+Gateway</a></p></li>
+<li><p><a
+href="https://jupyter-enterprise-gateway.readthedocs.io/en/latest/">Enterprise
+Gateway</a> Widgets</p></li>
+<li><p><a
+href="https://ipywidgets.readthedocs.io/">ipywidgets</a></p></li>
+<li><p><a
+href="https://github.com/jupyter-widgets/widget-cookiecutter/">widget-cookiecutter</a></p></li>
+<li><p><a href="https://github.com/jupyter-widgets">All Widget
+Projects…</a> Artificial Intelligence</p></li>
+<li><p><a
+href="https://jupyter-ai.readthedocs.io/en/latest/">jupyter-ai</a></p></li>
+<li><p><a
+href="https://github.com/jupyterlite/ai">jupyterlite/ai</a></p></li>
+<li><p><a
+href="https://github.com/jupyter-ai-contrib">jupyter-ai-contrib</a> -
+unofficial</p></li>
+</ul>
+<h5 id="table-of-contents">Table of Contents</h5>
+<p>The rest of the documentation on this site covers major use-cases of
+the Jupyter ecosystem, as well as topics that will help you navigate the
+various parts of the Jupyter community. For more in-depth documentation
+about a specific tool, we recommend checking out that tool’s
+documentation (see the list above).</p>
+<ul>
+<li><a href="start/index.html">Try Jupyter</a>
+<ul>
+<li><a
+href="start/index.html#try-in-your-browser-no-installation-needed">Try
+in Your Browser. No Installation Needed.</a></li>
+<li><a href="start/index.html#next-step-install-jupyter-locally">Next
+step: install Jupyter locally</a></li>
+</ul></li>
+<li><a href="use/using.html">Usage</a>
+<ul>
+<li><a href="use/using.html#use-and-configure">Use and
+Configure</a></li>
+<li><a href="use/using.html#how-do-i-decide-which-packages-i-need">How
+do I decide which packages I need?</a></li>
+<li><a href="use/using.html#advanced-topics">Advanced topics</a></li>
+</ul></li>
+<li><a href="projects/content-projects.html">Projects</a>
+<ul>
+<li><a
+href="projects/content-projects.html#jupyter-projects-and-communities">Jupyter
+Projects and Communities</a></li>
+<li><a href="projects/content-projects.html#more-information">More
+information</a></li>
+</ul></li>
+<li><a href="community/content-community.html">Community</a>
+<ul>
+<li><a
+href="community/content-community.html#jupyter-community-meetings">Jupyter
+Community Meetings</a></li>
+<li><a
+href="community/content-community.html#jupyter-communications">Jupyter
+communications</a></li>
+<li><a
+href="community/content-community.html#governance">Governance</a></li>
+<li><a href="community/content-community.html#code-of-conduct">Code of
+conduct</a></li>
+<li><a
+href="community/content-community.html#running-jupyter-events">Running
+Jupyter Events</a></li>
+<li><a href="community/content-community.html#what-is-a-jovyan">What is
+a Jovyan?</a></li>
+</ul></li>
+<li><a href="contributing/content-contributor.html">Contributing</a>
+<ul>
+<li><a href="contributing/start-contributing.html">Getting Started
+Contributing</a></li>
+<li><a href="contributing/dev-contributions/index.html">Developer
+Guide</a></li>
+<li><a href="contributing/docs-contributions/index.html">Documentation
+Guide</a></li>
+<li><a
+href="contributing/communication-contributions.html">Communications
+Guide</a></li>
+<li><a href="contributing/ipython-dev-guide/index.html">IPython
+Development Guide (source: old IPython wiki)</a></li>
+<li><a
+href="contributing/content-contributor.html#do-i-really-have-something-to-contribute-to-jupyter">Do
+I really have something to contribute to Jupyter?</a></li>
+<li><a
+href="contributing/content-contributor.html#what-kinds-of-contributions-can-i-make">What
+kinds of contributions can I make?</a></li>
+<li><a
+href="contributing/content-contributor.html#getting-access-to-jupyter-managed-accounts">Getting
+Access to Jupyter Managed Accounts</a></li>
+</ul></li>
+<li><a href="reference/content-reference.html">Reference</a>
+<ul>
+<li><a href="reference/mimetype.html">Custom mimetypes (MIME
+types)</a></li>
+<li><a href="reference/ipython.html">IPython</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a
+href="reference/content-reference.html#resources">Resources</a></li>
+</ul></li>
+</ul>
+<h5 id="resources-1">Resources</h5>
+<p>Site</p>
+<p>Description</p>
+<p><a href="https://jupyter.org">Jupyter website</a></p>
+<p>Keep up to date on Jupyter</p>
+<p><a href="https://ipython.org">IPython website</a></p>
+<p>Learn more about IPython</p>
+<p><a href="https://discourse.jupyter.org/">Jupyter Discourse
+forum</a></p>
+<p>Start here for help and support questions</p>
+<p><a href="https://jupyter-accessibility.readthedocs.io/">Jupyter
+Accessibility</a></p>
+<p>Accessibility sub-project documentation</p>
+<p><a href="https://groups.google.com/forum/#!forum/jupyter">Jupyter
+mailing list</a></p>
+<p>General discussion of Jupyter’s use</p>
+<p><a
+href="https://groups.google.com/forum/#!forum/jupyter-education">Jupyter
+in Education group</a></p>
+<p>Discussion of Jupyter’s use in education</p>
+<p><a href="https://www.numfocus.org">NumFocus</a></p>
+<p>Promotes world-class, innovative, open source scientific software</p>
+<p><a href="https://jupyter.org/about#donate">Donate to Project
+Jupyter</a></p>
+<p>Please contribute to open science collaboration and
+sustainability</p>
+<h5 id="indices-and-tables">Indices and tables</h5>
+<ul>
+<li><a href="genindex.html">Index</a></li>
+<li><a href="glossary.html#glossary">Glossary</a></li>
+<li><a href="search.html">Search Page</a></li>
+</ul>
+<h3 id="release-notes">Release Notes</h3>
+<h4 id="release-notes-1">Release Notes</h4>
+<p>When projects release a new version, they often include “release
+notes” with information about improvements, bug-fixes, and other
+changes. These projects are the best source of information about what
+has recently changed.</p>
+<p>Below you’ll find links to the release notes for several major
+projects in the Jupyter ecosystem.</p>
+<h5 id="jupyter-notebook">Jupyter Notebook</h5>
+<p>You can find a changelog at <a
+href="https://jupyter-notebook.readthedocs.io/en/stable/changelog.html">the
+Jupyter Notebook documentation</a>.</p>
+<h5 id="jupyterlab-1">JupyterLab</h5>
+<p>You can find a changelog at <a
+href="https://jupyterlab.readthedocs.io/en/stable/getting_started/changelog.html">the
+JupyterLab documentation</a>.</p>
+<h5 id="jupyterhub-1">JupyterHub</h5>
+<p>You can find a changelog at <a
+href="https://jupyterhub.readthedocs.io/en/stable/reference/changelog.html">the
+JupyterHub documentation</a>.</p>
+<h3 id="upgrading-jupyter-notebook">Upgrading Jupyter Notebook</h3>
+<h4 id="upgrading-jupyter-notebook-1">Upgrading Jupyter Notebook</h4>
+<h5 id="upgrading-jupyter-notebook-using-anaconda">Upgrading Jupyter
+Notebook using Anaconda</h5>
+<p>If using Anaconda, update Jupyter using <code>conda</code>:</p>
+<pre><code>conda update jupyter</code></pre>
+<p>See Run the Notebook for running the Jupyter Notebook.</p>
+<h5 id="upgrading-ipython-notebook-to-jupyter-notebook">Upgrading
+IPython Notebook to Jupyter Notebook</h5>
+<p>The Jupyter Notebook used to be called the IPython Notebook. If you
+are running an older version of the IPython Notebook (version 3 or
+earlier) you can use the following to upgrade to the latest version of
+the Jupyter Notebook.</p>
+<p>If using Anaconda, update Jupyter using <code>conda</code>:</p>
+<pre><code>conda update jupyter</code></pre>
+<p>or</p>
+<p>If using pip:</p>
+<pre><code>pip install -U jupyter</code></pre>
+<p>See Run the Notebook for running the Jupyter Notebook.</p>
+<p>See also</p>
+<p>The <a href="advanced/migrating.html">migrating document</a> has
+additional information about migrating from IPython 3 to Jupyter.</p>
+<h3 id="usage">Usage</h3>
+<h4 id="usage-1">Usage</h4>
+<p>Information relevant to using the various tools in the Jupyter
+ecosystem.</p>
+<h5 id="use-and-configure">Use and Configure</h5>
+<ul>
+<li><a href="jupyter-command.html">The jupyter Command</a></li>
+<li><a href="jupyter-directories.html">Common Directories and File
+Locations</a></li>
+<li><a href="config.html">Jupyter’s Common Configuration
+Approach</a></li>
+</ul>
+<h5 id="how-do-i-decide-which-packages-i-need">How do I decide which
+packages I need?</h5>
+<p>Jupyter can be used for many different use-cases. Below are a few
+user stories for when and how you might use tools in the Jupyter
+ecosystem, as well as a diagram that helps lay out some of your
+options.</p>
+<ul>
+<li><a href="use-cases/content-user.html">Narratives and Use Cases</a>
+<ul>
+<li><a href="use-cases/narrative-notebook.html">Notebook Narratives</a>
+<ul>
+<li><a
+href="use-cases/narrative-notebook.html#description">Description</a></li>
+<li><a
+href="use-cases/narrative-notebook.html#narrative-examples">Narrative
+examples</a></li>
+</ul></li>
+<li><a href="use-cases/narrative-hub.html">JupyterHub Narratives</a>
+<ul>
+<li><a
+href="use-cases/narrative-hub.html#description">Description</a></li>
+<li><a href="use-cases/narrative-hub.html#narrative-examples">Narrative
+examples</a></li>
+</ul></li>
+<li><a href="use-cases/narrative-other.html">Narratives - Building
+blocks</a>
+<ul>
+<li><a
+href="use-cases/narrative-other.html#description">Description</a></li>
+<li><a
+href="use-cases/narrative-other.html#narrative-examples">Narrative
+examples</a></li>
+</ul></li>
+<li><a href="use-cases/data_science.html">Jupyter for Data
+Science</a></li>
+<li><a href="use-cases/science.html">Jupyter and Scientific
+Computing</a></li>
+<li><a href="use-cases/education.html">Jupyter in Education</a></li>
+<li><a href="use-cases/enterprise.html">Jupyter in the Enterprise</a>
+<ul>
+<li><a href="use-cases/enterprise.html#description">Description</a></li>
+<li><a href="use-cases/enterprise.html#example-use-cases">Example
+Use-Cases</a></li>
+</ul></li>
+<li><a href="use-cases/content-user.html#what-are-narratives">What are
+Narratives?</a> digraph decide_project { graph [fontname = “helvetica”,
+fontsize=“18”]; node [fontname = “helvetica”, fontsize=“18”]; edge
+[fontname = “helvetica”, fontsize=“18”]; label = “Note:ringed shapes are
+links on this site and open in this windowones are links to external
+sites and open in a new tab/window.” tooltip=“How do I decide which
+packages I need?”; // Top Level what [ shape=parallelogram, label=“What
+are youto do?”, tooltip=“You have several possibilities!”, style=filled,
+color=“.3 .7 1.0”] // Second Level try [ shape=box, label=“Try the
+notebook”, tooltip=“Try the Jupyter notebook!”] install [shape=box,
+label=“Install the notebook”, tooltip=“Go To Install Jupyter!”] team [
+shape=box, label=“Install notebooksfor my team, class,or group”,
+tooltip=“Install for teams, etc!”] convert [ shape=box, label=“Convert
+mynotebook file toanother format”, tooltip=“Convert to other formats.”]
+lang [ shape=box, label=“Use anotherprogramminglanguage such asR or
+Java”, tooltip=“Use other programming languages.”] custom [ shape=box,
+label=“Customize thenotebook for myneeds”, tooltip=“Customize
+Notebooks.”] // 3rd Level online [ label=“Try Online”, tooltip=“Try
+Notebooks Online - without any installation!”, target=“_blank”,
+color=blue, // External Link href=“<a
+href="https://try.jupyter.org/">try.jupyter.org</a>”] doinstall [
+label=“Install Jupyter”, tooltip=“How to install”, target=“_top”,
+color=green, // Local Link href=“../install.html”] // 4th level hub [
+label=“JupyterHub”, tooltip=“Install JupyterHub”, target=“_blank”,
+color=blue, // External Link href=“<a
+href="https://github.com/jupyterhub/jupyterhub">github.com</a>”]
+nbconvert [ label=“nbconvert”, tooltip=“How to convert notebooks”,
+target=“_blank”, color=blue, // External Link href=“<a
+href="https://nbconvert.readthedocs.io/en/latest/">nbconvert.readthedocs.io</a>”]
+kernel [ label=“Install a”, tooltip=“How to install kernels”,
+target=“_top”, color=green, // Local Link
+href=“../projects/kernels.html”] // Path labels noinst [
+shape=plaintext, label=“No installation!”, tooltip=“Don’t wish to
+install yet?”] like [ shape=plaintext, label=“I like it,I wish to
+install it!”, tooltip=“You like it!”] my [ shape=plaintext, label=“On my
+system”, tooltip=“Local Installation”] // below kernel widgets [
+label=“Widgets”, tooltip=“Install &amp; use ipywidgets”,
+target=“_blank”, color=blue, // External Link href=“<a
+href="https://ipywidgets.readthedocs.io/en/latest/">ipywidgets.readthedocs.io</a>”]
+extend [ label=“Extensions”, tooltip=“Install &amp; use extensions”,
+target=“_blank”, color=blue, // External Link href=“<a
+href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">github.com</a>”]
+dash [ label=“Dashboards”, tooltip=“Install &amp; use dashboards”,
+target=“_blank”, color=blue, // External Link href=“<a
+href="https://github.com/voila-dashboards/voila">github.com</a>”] help [
+label=“Help”, tooltip=“Ask on jupyter help”, target=“_blank”,
+color=blue, // External Link href=“<a
+href="https://github.com/jupyter/help">github.com</a>”] // Edges what
+-&gt; {try install team convert lang custom} try -&gt; noinst -&gt;
+online online -&gt; like -&gt; doinstall install -&gt; my -&gt;
+doinstall team -&gt; hub convert -&gt; nbconvert lang -&gt; kernel
+custom -&gt; {widgets extend dash help} // Arrangement {rank=same; what}
+{rank=same; try; install; team; convert; lang; custom;} {rank=same;
+widgets; extend;} {rank=same; my; dash; help;} }</li>
+</ul></li>
+</ul>
+<h5 id="advanced-topics">Advanced topics</h5>
+<ul>
+<li><a href="advanced/content-advanced.html">Advanced Use Cases</a>
+<ul>
+<li><a href="advanced/migrating.html">Migrating from IPython
+Notebook</a>
+<ul>
+<li><a href="advanced/migrating.html#abstract">Abstract</a></li>
+<li><a
+href="advanced/migrating.html#understanding-the-migration-process">Understanding
+the Migration Process</a>
+<ul>
+<li><a
+href="advanced/migrating.html#automatic-migration-of-files">Automatic
+migration of files</a></li>
+<li><a
+href="advanced/migrating.html#where-have-my-configuration-files-gone">Where
+have my configuration files gone?</a></li>
+</ul></li>
+<li><a
+href="advanced/migrating.html#finding-the-location-of-important-files">Finding
+the Location of Important Files</a>
+<ul>
+<li><a href="advanced/migrating.html#configuration-files">Configuration
+files</a></li>
+<li><a
+href="advanced/migrating.html#data-files-kernelspecs-and-notebook-extensions">Data
+files: kernelspecs and notebook extensions</a></li>
+</ul></li>
+<li><a
+href="advanced/migrating.html#since-jupyter-does-not-have-profiles-how-do-i-customize-it">Since
+Jupyter does not have profiles, how do I customize it?</a>
+<ul>
+<li><a
+href="advanced/migrating.html#changing-the-jupyter-notebook-configuration-directory">Changing
+the Jupyter notebook configuration directory</a></li>
+<li><a
+href="advanced/migrating.html#changing-the-jupyter-notebook-configuration-file">Changing
+the Jupyter notebook configuration file</a></li>
+<li><a
+href="advanced/migrating.html#changing-ipython-s-profile-using-custom-kernelspecs">Changing
+IPython’s profile using custom kernelspecs</a></li>
+</ul></li>
+<li><a
+href="advanced/migrating.html#understanding-installation-changes">Understanding
+Installation Changes</a>
+<ul>
+<li><a href="advanced/migrating.html#notebook-extensions">Notebook
+extensions</a></li>
+<li><a href="advanced/migrating.html#kernels">Kernels</a></li>
+</ul></li>
+<li><a
+href="advanced/migrating.html#understanding-changes-in-imports">Understanding
+Changes in imports</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="what-is-jupyter">What is Jupyter?</h3>
+<h4 id="what-is-jupyter-1">What is Jupyter?</h4>
+<p>Pictured above: A notebook inside JupyterLab, showing an interactive
+view of the insulin receptor.</p>
+<p>📘 About: This document explains fundamental ideas and software
+inside the Jupyter ecosystem.</p>
+<p>“Jupyter” can mean a lot of things, so let’s start from the beginning
+and go step-by-step:</p>
+<p>Above all, “Project Jupyter” is a large umbrella project that covers
+many different software offerings and tools. That includes <a
+href="https://jupyter-notebook.readthedocs.io/en/latest/">Jupyter
+Notebook</a> and <a
+href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>,
+which are both popular notebook-editor programs. The Jupyter project,
+and its subprojects, all center around providing tools (and standards)
+for interactive computing with computational notebooks. If you’re not
+familiar with some of those things, you can take a guided tour below
+that explains each one from the start.</p>
+<p>The term “Jupyter” is often used as a shorthand to refer to one of
+those products or ideas (which might cause confusion). Let’s take a look
+at each piece, and provide some clarity, below.</p>
+<h5 id="what-is-a-computational-notebook-anyway">What is a
+“Computational Notebook” anyway?</h5>
+<p>A famous computer programmer (<a
+href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a>)
+popularized the idea to combine explanatory plain english text with
+computer code, which is commonly called <a
+href="https://en.wikipedia.org/wiki/Literate_programming">literate
+programming</a>. By adopting this practice, computer programs, as well
+as other complex information and ideas, could be better explained to a
+wide range of people.</p>
+<p>A program written in this way could be printed on paper and shared by
+hand as an actual “notebook”, but in modern times, they are shared
+digitally as “notebook files”, and can contain additional rich media
+like images, 3D models and interactive figures, along with data and
+other program outputs.</p>
+<p>By opening a notebook with an editor program like <a
+href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>, you
+can also run the code inside the notebook. Since a notebook can contain
+code that does virtually anything, you can do nearly anything regular
+software can do inside of a notebook. For example, a notebook file might
+be used to:</p>
+<ul>
+<li>Read spreadsheets (or create them) to build reports about your
+household spending</li>
+<li>Show proof of your college thesis with interactive graphs and source
+data</li>
+<li><a
+href="https://jwst-docs.stsci.edu/jwst-science-calibration-pipeline/jwst-pipeline-notebooks#gsc.tab=0">Process
+astronomical data</a> from the James Webb Space Telescope (JWST)</li>
+<li>Generate an <a
+href="https://numfocus.org/case-studies/first-photograph-black-hole">image
+of a black hole</a> by processing telescope data</li>
+<li>Calculate the presence of <a
+href="https://blog.jupyter.org/congratulations-to-the-ligo-and-virgo-collaborations-from-project-jupyter-5923247be019">gravitational
+waves</a> from observatory data Those last three are real world examples
+that demonstrate the scientific community’s usage of computational
+notebooks. Because scientists, engineers, and other technical people so
+often need to perform and communicate sophisticated calculations to
+describe their work, these “computational notebooks” became a very
+popular way to share their work and ideas.</li>
+</ul>
+<p>Notebooks are not just for NASA scientists either: Students,
+hobbyists, and business people commonly use the fast, interactive
+workflows in JupyterLab to make notebooks that help solve everyday
+problems. You can use them to explain your own ideas to others, to
+learn, to automate tasks at home or at work, visualize complex
+information, and more.</p>
+<p>When someone uses the term “notebook”, they might be referring
+to:</p>
+<ul>
+<li><p>A notebook file on their computer</p></li>
+<li><p>The idea of combining computer code, explanatory text, images and
+more into the “notebook format”</p></li>
+<li><p>The “Jupyter Notebook” application, used to author and edit
+digital notebook files</p></li>
+<li><p>Jupyter’s <code>.ipynb</code> notebook file format (used to save
+your notebook files on your computer), which is interpreted by the
+<code>nbformat</code> software library And the term “Jupyter” might
+refer to:</p></li>
+<li><p>“Project Jupyter”, the overarching umbrella project</p></li>
+<li><p>The “Jupyter Notebook” or “JupyterLab” editing programs (or other
+Jupyter products) The name Jupyter comes from the three programming
+languages the project originally supported: Julia (ju), Python (pyt) and
+R (r).</p></li>
+</ul>
+<h5 id="how-do-the-jupyter-notebook-editor-programs-work">How do the
+Jupyter notebook-editor programs work?</h5>
+<p>It is common for notebook-editor programs like JupyterLab, or Jupyter
+Notebook, to share some features and workflows, because they are
+influenced by a common set of ideas about computational notebooks, their
+advantages, and how best to work with them effectively.</p>
+<p>Let’s take a look at some of those ideas.</p>
+<h6 id="interactive-programming-the-repl">Interactive programming (the
+REPL)</h6>
+<p>In the past, writing programs, running them, and seeing results was
+commonly a slower and more deliberative process than it is today.</p>
+<p>As time passed, new techniques were discovered that sped up the
+process between writing code, running it, and seeing results. Languages
+like <a
+href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>
+were also later introduced that offered some unique advantages over
+older languages.</p>
+<p>For instance, Python is an interpreted language, so it does not need
+to be <a href="https://en.wikipedia.org/wiki/Compiler">compiled</a>
+before it can be run (saving programmers steps and time). It is also a
+dynamically-typed language that does not require the programmer to
+specify the type of their data ahead of time before using it, which can
+sometimes save time and reduce the complexity of code (particularly for
+smaller, simpler programs).</p>
+<p>Another programming technique (which is key to the Jupyter
+notebook-editing programs) is the Read-Eval-Print-Loop (<a
+href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>),
+which allows a programmer to interactively write code, run it, keep
+their data and variables intact, then rewrite, re-run, and refine their
+code on-the-fly (without losing data after the program finishes
+running).</p>
+<p>A REPL is so named because the programmer writes snippets of code
+that are first read (R), then Evaluated (E) or in other words executed,
+the results are printed (P) to some kind of display or output, and that
+process happens repeatedly in a loop (L), where the REPL waits until the
+programmer has another snippet of code to execute.</p>
+<p>New snippets of code can refer to variables defined in previous Eval
+steps, because the REPL keeps objects that were created (by previous
+runs of the loop) in-memory, until the user closes their REPL.</p>
+<h6 id="kernels-1">Kernels</h6>
+<p>Notebook editor programs like JupyterLab create a REPL (read more
+about those above) for each of your open notebook files, in a language
+of your choice. In the Jupyter ecosystem, each of these REPL’s is called
+a kernel, and it holds the data and objects you create with your
+notebook code in a long-running program on your computer (the management
+and creation of these kernels is orchestrated by the <a
+href="https://jupyter-server.readthedocs.io/en/latest/#who-s-this-for">Jupyter
+Server</a>, more on that later).</p>
+<p>This is why you don’t lose your data and variables when you execute
+multiple notebook cells in a row, they stay alive inside the REPL so
+that you can continue to use them to explore the data and problem you
+are investigating (though if you shut down the Jupyter server that holds
+the kernels, you will lose those variables).</p>
+<p>The kernels that run in the background for each of your notebooks are
+what power the fast, exploratory programming workflows that Jupyter
+notebook editor programs excel at.</p>
+<h6
+id="multiple-programs-one-experience-client-server-architecture">Multiple
+programs, one experience (client-server architecture)</h6>
+<p>Most Notebook editor programs in Project Jupyter, like JupyterLab,
+may seem like a single experience, but when you run JupyterLab on your
+laptop, there are actually several programs running independently that
+all coordinate with each other to offer you the notebook editing
+experience you may already be familiar with.</p>
+<p>This might seem like an unnecessary background detail, but some
+clarity on the inner workings can help demystify your notebook authoring
+experience, and open up new features, ideas and workflows that you can
+take advantage of.</p>
+<p>A many-pieces (modular) approach also has advantages for people using
+Jupyter software, and to the people who write it.</p>
+<p>Let’s look at some of the pieces:</p>
+<ul>
+<li>JupyterLab’s interface is a web app that you open in a browser
+program like FireFox or Google Chrome (websites themselves commonly have
+code that defines their behavior, and JupyterLab’s interface is no
+exception).</li>
+<li><a
+href="https://jupyter-server.readthedocs.io/en/latest/#who-s-this-for">Jupyter
+Server</a> runs in the background, and it orchestrates the creation,
+management of, and communication with, your notebook kernels while
+you’re running your notebooks.</li>
+<li>Jupyter kernels themselves are independent programs (operating
+system processes), and each one is its own REPL in whatever language you
+requested (commonly Python, though hundreds of other languages and
+kernels are <a
+href="https://docs.jupyter.org/en/latest/projects/kernels.html">also
+available</a>). With this design, any program (that you enable) can talk
+to your kernels using common internet communication technologies like
+HTTP. This gives you the power to edit, view, share, and manipulate your
+data across many different programs. One kernel can even connect to
+multiple editing programs simultaneously! (Similarly, in JupyterLab, you
+can connect a notebook and a console to the same kernel!)</li>
+</ul>
+<p>Project Jupyter actually defines a <a
+href="https://jupyter-protocol.readthedocs.io/en/latest/messaging.html">standard</a>
+that other programs can follow that will allow them to hook into your
+kernels in virtually any way you can imagine. You can invent new editing
+and viewing experiences for your data this way, using the interactive
+computing capabilities provided by the kernels.</p>
+<h6 id="benefits-of-a-many-piece-design">Benefits of a many-piece
+design</h6>
+<p>By breaking up a program like JupyterLab into multiple component
+pieces, you can customize the software to meet your needs. If one piece
+is missing something, you can replace it with a custom version made by
+yourself or another person to add whatever features you would like to
+see.</p>
+<p>You can also invent completely new experiences using those pieces
+that the designers may not have imagined when they started, and they can
+often inter- operate seamlessly with existing Jupyter software.</p>
+<p>Because Jupyter Server provides kernel communication and management
+features in a cohesive, self-contained package, for instance, new
+notebook editor programs can focus solely on adding new interface and
+editing experiences, leaving the task of creating and managing new
+kernels completely up to the Jupyter Server.</p>
+<p><a href="https://jupytercad.readthedocs.io/en/latest/">JupyterCAD</a>
+is a 3D modeling tool built on top of Jupyter software, for instance,
+and there are <a href="https://github.com/glue-viz/glue-jupyter">other
+examples too</a>.</p>
+<p>Pictured above: The JupyterCAD program.</p>
+<h5 id="talking-to-kernels-the-jupyter-protocol">Talking to Kernels (The
+Jupyter Protocol)</h5>
+<p>Anyone can make new software that talks to Jupyter’s kernels (read
+more about those above), by using the <a
+href="https://jupyter-client.readthedocs.io/en/latest/messaging.html">Jupyter
+Protocol</a>. The protocol provides a standardized blueprint for passing
+information back and forth between the kernels and other software.</p>
+<p>By implementing the designs described in the Jupyter Protocol, you
+could invent a completely new interactive programming experience, or add
+support for a new programming language to Jupyter.</p>
+<p>Because Project Jupyter is free and open, it encourages anyone to
+explore new ways of working with their notebooks and kernels, and likes
+to offer compatibility and interoperation with other software.</p>
+<h5 id="what-else-should-i-know-about-project-jupyter">What else should
+I know about Project Jupyter?</h5>
+<p>Jupyter software is free and open-source, developed by a global
+community of volunteers and contributors, available for the benefit of
+all.</p>
+<p>Project Jupyter welcomes people from all backgrounds and with many
+types of skills (not just software!) so we encourage you to join us! You
+can share feedback about your experiences directly with the people who
+make Jupyter software, or volunteer and contribute to help Jupyter in
+many different ways, like:</p>
+<ul>
+<li>Testing newly released versions</li>
+<li>Writing tutorials</li>
+<li>Adding software features</li>
+<li>Hosting the <a
+href="https://jupyter.org/community#live-events">weekly video
+meetings</a></li>
+<li>Helping others in the community
+<ul>
+<li>Ask for help or give help at the <a
+href="https://discourse.jupyter.org/">Jupyter Discourse Forums</a></li>
+</ul></li>
+<li>…and more! The project is split into largely independent subprojects
+which handle different aspects of Jupyter software and the community. A
+central council, the <a
+href="https://jupyter.org/governance/executive_council.html">Jupyter
+Executive Council</a>, makes decisions about project-wide goals and
+policies, while different subprojects handle the actual development of
+the various software components.</li>
+</ul>
+<p>Some subprojects take care of broader topics, such as the <a
+href="https://jupyter-accessibility.readthedocs.io/en/latest/">Accessibility</a>,
+<a href="https://jupyter.org/security">Security</a>, <a
+href="https://docs.jupyter.org/en/latest/community/content-community.html">Community</a>,
+and <a
+href="https://github.com/jupyter/docs-team-compass">Documentation</a>
+projects.</p>
+<h5 id="a-partial-tour-of-the-jupyter-universe">A (Partial) Tour of the
+Jupyter Universe</h5>
+<p>In the following sections, we are going to look at some popular
+components of the Jupyter ecosystem. This is not a comprehensive
+reference of every aspect of Jupyter, but rather a big-picture summary
+that should help illustrate some important parts that were discussed
+earlier.</p>
+<p>If you are completely new to Jupyter, the project’s <a
+href="https://docs.jupyter.org/en/latest/#sub-project-documentation">About</a>
+page is good reading that will introduce you to many of the different
+subprojects.</p>
+<p>If you want to know more about the organizational structure, check
+out the <a
+href="https://jupyter.org/governance/overview.html">Governance</a>
+pages.</p>
+<p>And if you would like to contribute to the project, have a look at
+the <a
+href="https://jupyter.org/community#join-the-jupyter-community">Get
+Involved</a> page.</p>
+<p>The graph below presents the best known software components of the
+Project.</p>
+<p>Connections and groups in this diagram are not formal relationships,
+but simple indicators to help us draw the big picture in the next
+sections.</p>
+<h6 id="notebook-editor-programs">Notebook Editor Programs</h6>
+<ul>
+<li><p>The <a
+href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab</a>
+notebook editor</p></li>
+<li><p><a
+href="https://jupyter-notebook.readthedocs.io/en/stable/">Jupyter
+Notebook</a> notebook editor Two popular notebook-editor programs made
+by Project Jupyter are Jupyter-Notebook and JupyterLab, though there are
+others. Which one you choose to use is mostly a matter of preference
+(both Notebook and Lab provide many of the same capabilities for editing
+and running notebooks):</p></li>
+<li><p>Jupyter Notebook offers a simplified, lightweight notebook
+authoring experience</p></li>
+<li><p>JupyterLab offers a more customizable, feature-rich, tabbed
+multi-notebook editing environment, and has additional tools like a
+customizable layout and system console (a common tool used by
+programmers)</p></li>
+<li><p>And more! A professor, for instance, might use JupyterLab for
+their daily work as a data analyst, and Jupyter Notebook while teaching
+to provide a simpler, more focused view of the notebook’s content to
+their students.</p></li>
+</ul>
+<h6 id="ipython-2">ipython</h6>
+<ul>
+<li><a href="https://ipython.readthedocs.io/en/stable/index.html">The
+IPython REPL</a> A long time ago, a precursor to Jupyter was created,
+called <code>ipython</code> (A soon to be released document “The History
+of Jupyter” will cover this in more detail). It provides advanced REPL
+features that are still used today in Jupyter software, as it is the
+default Python kernel bundled with JupyterLab and Jupyter Notebook.</li>
+</ul>
+<p><code>ipython</code> makes some additional commands available that
+you can type directly alongside your Python code in your notebook cells.
+Read more about some of these features below:</p>
+<ul>
+<li><a
+href="https://ipython.readthedocs.io/en/stable/interactive/tutorial.html">Interactive
+shell</a></li>
+<li><a
+href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">Magic
+commands</a> For more details on IPython features check <a
+href="https://docs.jupyter.org/en/latest/projects/ipython_projects.html"><code>docs.jupyter.org &gt; Projects &gt; IPython</code></a>.</li>
+</ul>
+<h6 id="the-notebook-format">The notebook format</h6>
+<ul>
+<li><a href="https://nbformat.readthedocs.io">The nbformat software
+library</a> Jupyter uses the <code>.ipynb</code> file format to store
+notebook files on your computer (where the data and outputs of your
+notebook reside for long term storage). The .ipynb format is interpreted
+and modified by the nbformat software library.</li>
+</ul>
+<p>The <code>.ipynb</code> format is a type of json document, which
+holds your notebook cells, program outputs, and metadata inside a
+structured text file.</p>
+<h6 id="jupyterhub-2">JupyterHub</h6>
+<ul>
+<li><a href="https://jupyterhub.readthedocs.io">JupyterHub for
+multi-user setups</a> JupyterHub provides a multi-user management system
+where many different people can log in and use their own isolated
+notebook editor program and environment.</li>
+</ul>
+<p>With JupyterHub, editing and running notebook files is still
+performed by an editor program like Lab or Notebook. The Hub is
+responsible for authenticating users and providing them their
+corresponding Lab/Notebook instance connection.</p>
+<p>JupyterHub can be set up in different system configurations:</p>
+<ul>
+<li>In a single computer</li>
+<li>In a cluster of computers</li>
+<li>In containers in the cloud JupyterHub is quite flexible for many
+different multi-user scenarios.</li>
+</ul>
+<h6
+id="interactive-buttons-sliders-and-more-with-ipywidgets">Interactive
+Buttons, Sliders and more with ipywidgets</h6>
+<ul>
+<li><a href="https://ipywidgets.readthedocs.io/en/latest/">Jupyter
+Widgets (AKA ipywidgets)</a> Jupyter Widgets (also called ipywidgets)
+provides interactive interface elements that you can add directly into
+your notebooks.</li>
+</ul>
+<p>📘 Note: The subproject was renamed to Jupyter-Widgets, but
+Jupyter-Widgets and IPyWidgets are actually the same thing. To avoid
+breaking compatibility with older code, the software library is still
+called <code>ipywidgets</code>.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="running-the-notebook">Running the Notebook</h3>
+<h4 id="running-the-notebook-1">Running the Notebook</h4>
+<h5 id="basic-steps">Basic Steps</h5>
+<ul>
+<li><p>Start the notebook server from the <a
+href="glossary.html#term-command-line">command line</a>:</p>
+<p>jupyter notebook</p></li>
+<li><p>You should see the notebook open in your browser.</p></li>
+</ul>
+<h5 id="starting-the-notebook-server">Starting the Notebook Server</h5>
+<p>After you have installed the Jupyter Notebook on your computer, you
+are ready to run the notebook server. You can start the notebook server
+from the <a href="glossary.html#term-command-line">command line</a>
+(using <a href="glossary.html#term-terminal">Terminal</a> on Mac/Linux,
+<a href="glossary.html#term-Command-Prompt">Command Prompt</a> on
+Windows) by running:</p>
+<pre><code>jupyter notebook</code></pre>
+<p>This will print some information about the notebook server in your
+terminal, including the URL of the web application (by default,
+<code>http://localhost:8888</code>):</p>
+<pre><code>$ jupyter notebook
+[I 08:58:24.417 NotebookApp] Serving notebooks from local directory: /Users/catherine
+[I 08:58:24.417 NotebookApp] 0 active kernels
+[I 08:58:24.417 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/
+[I 08:58:24.417 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</code></pre>
+<p>It will then open your default web browser to this URL.</p>
+<p>When the notebook opens in your browser, you will see the <a
+href="glossary.html#term-Notebook-Dashboard">Notebook Dashboard</a>,
+which will show a list of the notebooks, files, and subdirectories in
+the directory where the notebook server was started. Most of the time,
+you will wish to start a notebook server in the highest level directory
+containing notebooks. Often this will be your home directory.</p>
+<p>Notebook Dashboard</p>
+<h5
+id="introducing-the-notebook-servers-command-line-options">Introducing
+the Notebook Server’s Command Line Options</h5>
+<h6 id="how-do-i-open-a-specific-notebook">How do I open a specific
+Notebook?</h6>
+<p>The following code should open the given notebook in the currently
+running notebook server, starting one if necessary.</p>
+<pre><code>jupyter notebook notebook.ipynb</code></pre>
+<h6 id="how-do-i-start-the-notebook-using-a-custom-ip-or-port">How do I
+start the Notebook using a custom IP or port?</h6>
+<p>By default, the notebook server starts on port 8888. If port 8888 is
+unavailable or in use, the notebook server searches the next available
+port. You may also specify a port manually. In this example, we set the
+server’s port to 9999:</p>
+<pre><code>jupyter notebook --port 9999</code></pre>
+<h6
+id="how-do-i-start-the-notebook-server-without-opening-a-browser">How do
+I start the Notebook server without opening a browser?</h6>
+<p>Start notebook server without opening a web browser:</p>
+<pre><code>jupyter notebook --no-browser</code></pre>
+<h6 id="how-do-i-get-help-about-notebook-server-options">How do I get
+help about Notebook server options?</h6>
+<p>The notebook server provides help messages for other command line
+arguments using the <code>--help</code> flag:</p>
+<pre><code>jupyter notebook --help</code></pre>
+<p>See also</p>
+<p><a href="projects/content-projects.html#content-projects">Jupyter
+Installation, Configuration, and Usage</a></p>
+<p>Detailed information about command line arguments, configuration, and
+usage.</p>
+<h5 id="using-a-command-line-interface">Using a command-line
+interface</h5>
+<p>Notebooks can be executed from your terminal using the
+<code>execute</code> subcommand. It expects notebook paths as input
+arguments and accepts optional flags to modify the default behavior.</p>
+<p>Running a notebook is this easy.</p>
+<pre><code>jupyter execute notebook.ipynb</code></pre>
+<p>You can pass more than one notebook as well.</p>
+<pre><code>jupyter execute notebook.ipynb notebook2.ipynb</code></pre>
+<p>By default, notebook errors will be raised and printed into the
+terminal. You can suppress them by passing the
+<code>--allow-errors</code> flag.</p>
+<pre><code>jupyter execute notebook.ipynb --allow-errors</code></pre>
+<p>For more sophisticated execution options, consider the <a
+href="https://pypi.org/project/papermill/">papermill</a> library.</p>
+<h3 id="try-jupyter">Try Jupyter</h3>
+<h4 id="try-jupyter-1">Try Jupyter</h4>
+<p>These sections describe a few ways to get started with some of the
+most-commonly used tools in the Jupyter ecosystem.</p>
+<h5 id="try-in-your-browser.-no-installation-needed.">Try in Your
+Browser. No Installation Needed.</h5>
+<p>Try Jupyter (https://try.jupyter.org) is a site for trying out the
+Jupyter Notebook, equipped with kernels for several different languages
+(Julia, R, C++, Scheme, Ruby) without installing anything. Click the
+link below to go to the page.</p>
+<p><a href="https://try.jupyter.org">Click to Try Jupyter</a></p>
+<p>When running the examples on the <code>Try Jupyter</code> site, you
+will get a temporary Jupyter server running on mybinder.org which you
+can use to play around until you close your browser session.</p>
+<p>You can use this site to try a few of the major interactive computing
+interfaces created by the Jupyter community. A description of each is
+below.</p>
+<h6 id="try-the-classic-notebook-interface">Try the Classic Notebook
+interface</h6>
+<p>The Classic Notebook interface is a document-oriented interface that
+allows you to create, view, and execute code in a Jupyter Notebook.</p>
+<p>The example should look like this:</p>
+<p>Notebook Dashboard</p>
+<p>Notebook Editor</p>
+<h6 id="try-the-jupyterlab-interface">Try the JupyterLab interface</h6>
+<p>The Jupyter Lab interface is a more extensible and composable
+interactive computing interface for more complex workflows.</p>
+<p>Here’s an example of what the JupyterLab interface looks like:</p>
+<h5 id="next-step-install-jupyter-locally">Next step: install Jupyter
+locally</h5>
+<p>If you have tried Jupyter and like it, please use our Installation
+Guide to install Jupyter on your computer.</p>
+<ul>
+<li>Install and Use
+<ul>
+<li>Jupyter Notebook Interface</li>
+<li>JupyterLab</li>
+<li>JupyterHub</li>
+<li>Jupyter Console</li>
+<li>Jupyter QtConsole</li>
+<li>Jupyter Kernels</li>
+</ul></li>
+<li>Running the Notebook
+<ul>
+<li>Basic Steps</li>
+<li>Starting the Notebook Server</li>
+<li>Introducing the Notebook Server’s Command Line Options</li>
+<li>Using a command-line interface</li>
+</ul></li>
+</ul>
+</body>
+</html>
