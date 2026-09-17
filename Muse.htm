@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Muse help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Muse help</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#muse-help" id="toc-muse-help">Muse help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#using-muse" id="toc-using-muse">Using Muse</a></li>
+<li><a href="#what-meta-says-about-muse"
+id="toc-what-meta-says-about-muse">What Meta says about Muse</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="muse-help">Muse help</h1>
+<p>This guide holds Meta’s own help for Muse, its personal AI agent,
+gathered on 17 September 2026 — nine days after Muse was released, so
+expect it to age quickly.</p>
+<p>It covers what Muse does with your guidance and approval, how
+connectors work, how it handles privacy, safety and security, and how to
+manage the data it keeps. Muse can send mail and make purchases on your
+behalf, so read the approval and connector pages before you connect
+anything; nothing here is advice, and anything about money should be
+checked against Meta’s own pages on the day.</p>
+<p>Meta refuses ordinary requests for these pages, so they were gathered
+with a web browser instead. That is why this guide is short: only the
+pages a browser could reach by following links are here.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Using Muse
+<ul>
+<li><a href="#how-muse-handles-your-privacy-safety-and-security">How
+Muse handles your privacy, safety and security</a></li>
+<li><a href="#how-muse-works-with-connectors">How Muse works with
+Connectors</a></li>
+<li><a href="#how-muse-works-with-your-guidance-and-approval">How Muse
+works with your guidance and approval</a></li>
+<li><a href="#how-to-manage-your-muse-data">How to manage your Muse
+data</a></li>
+</ul></li>
+<li>What Meta says about Muse
+<ul>
+<li><a href="#start-a-chat-with-meta-ai">Start a chat with Meta
+AI</a></li>
+<li><a href="#your-personal-ai-agent-that-gets-things-done">Your
+personal AI agent that gets things done</a></li>
+</ul></li>
+</ul>
+<h2 id="using-muse">Using Muse</h2>
+<h3 id="how-muse-handles-your-privacy-safety-and-security">How Muse
+handles your privacy, safety and security</h3>
+<p>Search help articles</p>
+<p>Search help articles</p>
+<p>Search</p>
+<h4 id="how-muse-handles-your-privacy-safety-and-security-1">How Muse
+handles your privacy, safety and security</h4>
+<p>Updated:a week ago</p>
+<p>We’ve designed Muse to have multiple layers of privacy and security
+protections. No automated system is perfect, so review Muse’s activity
+and only grant the access you’re comfortable with.</p>
+<h5 id="your-data-in-muse">Your data in Muse</h5>
+<p>Muse runs on an environment in the cloud called a virtual machine
+(“VM”). This is the core environment where Muse keeps information you
+share and things you create together. Muse also maintains backups to
+help protect your agent’s history from data loss. Every Muse user’s VM
+is isolated so no one else’s agent can access it.</p>
+<p>In the future, Muse users will also have the choice to use a Muse
+Confidential VM: an environment we’re designing to keep people’s
+information private, even from Meta.</p>
+<h5 id="muse-and-meta-ads">Muse and Meta ads</h5>
+<p>Muse doesn’t share your conversations or the data in your virtual
+machine with Meta ad systems. This applies even if your Accounts Center
+includes other Meta Products.</p>
+<h5 id="how-muse-keeps-logins-safe">How Muse keeps logins safe</h5>
+<p>When you connect an app or service, credentials like usernames and
+passwords are stored in a Secure Credentials Store. Muse can use the
+Secure Credentials Store to complete an authorized action without the AI
+model seeing your password. Before Muse uses your credentials, the
+request goes through checks designed to confirm that:</p>
+<ul>
+<li>Muse is connecting to the intended service</li>
+<li>You connected or authorized the service</li>
+<li>You gave Muse permission to perform that type of action</li>
+</ul>
+<h5 id="protection-against-malicious-instructions">Protection against
+malicious instructions</h5>
+<p>Websites, emails, files and connected services can contain
+instructions intended to manipulate an AI agent. This is sometimes
+called a prompt injection attack. Muse uses multiple protections to help
+detect and resist these attempts. These include model training,
+automated detection systems, and limits on the information and services
+Muse can access during a task. Important permission and security checks
+operate separately from the AI model, meaning that they don’t depend
+only on Muse recognizing that an instruction may be malicious.</p>
+<h5 id="improving-our-ai-models">Improving our AI models</h5>
+<p>You decide whether we can use your interactions with Muse to develop
+and improve our AI models. This setting is on when you first use Muse.
+You can change it at any time using the toggle in your Settings under
+Data controls. When the setting is off, your interactions with Muse will
+not be used to develop and improve <a
+href="https://www.facebook.com/privacy/genai">AI at Meta</a>. Changes to
+this setting also apply to previous interactions.</p>
+<p>Allowing us to use your interactions in training helps us make
+smarter, more capable models. If you do allow this, we still remove
+certain categories of personally identifiable information like names,
+email addresses, phone numbers and Social Security Numbers. We also
+disassociate the interactions from your account.</p>
+<h5 id="you-control-connected-apps-and-services">You control connected
+apps and services</h5>
+<p>You can choose to connect Muse to apps and services provided by Meta
+or third-parties. We call these Connectors. When you set up a Connector,
+Muse gets new abilities, like the ability to see your calendar or write
+an email.</p>
+<p>We designed Muse to exchange with Connectors only the data that’s
+needed for them to work for you. For example, connecting your email
+allows Muse to search your email, but it won’t download your whole inbox
+(unless you tell it to). Some Connectors can also share information
+proactively with Muse. For example, calendar Connectors can update Muse
+automatically when there are changes in your schedule. We identify
+Connectors that do this before you connect them.</p>
+<p>Learn more about Connectors and how to manage them.</p>
+<h5 id="permissions-for-important-actions">Permissions for important
+actions</h5>
+<p>Muse is designed to ask you to confirm before it takes certain
+important actions like sending an email or making a purchase. When Muse
+requests permission, you can review the proposed action before allowing
+or denying it. Permission requirements may vary depending on the action,
+the Connector and the default permissions you selected.</p>
+<p>Many of these approval checks are enforced outside the AI model, so
+they don’t rely only on Muse deciding whether it should ask. You can
+also review Muse’s activity at any time. Learn more about how Muse works
+with your guidance and approval.</p>
+<h5 id="safety-standards">Safety standards</h5>
+<p>Muse is built to a set of safety standards that govern both what your
+Muse says and what it does. For example, these standards are designed to
+prevent your Muse from:</p>
+<ul>
+<li>Producing harmful or illegal content</li>
+<li>Assisting with unlawful activity, such as fraud, scams, or obtaining
+illegal goods</li>
+<li>Taking actions that could harm you or other people</li>
+<li>Sexualizing minors or facilitating harm to them</li>
+</ul>
+<h5 id="deleting-and-forgetting-muse-data">Deleting and forgetting Muse
+data</h5>
+<p>You can delete any message you send to Muse, Side Chats with Muse,
+and files in your virtual machine. If you want to start from scratch,
+you can reset Muse, which deletes all your Muse data.</p>
+<p>After you delete something from Muse, Muse may still remember
+information it learned from what you deleted. You can also use the
+forget skill: simply ask Muse to forget a topic or set of interactions.
+Forgetting works by asking Muse to look for information about a specific
+person, topic or matter in its memories and supporting files and remove
+it to the best of its ability. You can find out what Muse remembers
+about you at any time by asking directly, or by viewing files like your
+MEMORY.md.</p>
+<h5 id="report-a-problem">Report a problem</h5>
+<p>If your Muse does something unexpected or concerning, you can report
+it so our team can investigate and improve safety. To report a bug:</p>
+<ul>
+<li>From the web:
+<ul>
+<li>Click on Settings in the lower left hand corner and select Report an
+issue.</li>
+</ul></li>
+<li>From the app:
+<ul>
+<li>Shake your phone to open the reporting sheet, select Submit a report
+and complete the form, then select Submit.</li>
+<li>You can also open the Chat tab, tap the menu icon in the top left,
+tap Settings, and select Report an issue. Reporting helps us identify
+and address bugs and concerning behavior.</li>
+</ul></li>
+</ul>
+<p>Share</p>
+<h5 id="was-this-article-helpful">Was this article helpful?</h5>
+<p>Yes</p>
+<p>No</p>
+<h3 id="how-muse-works-with-connectors">How Muse works with
+Connectors</h3>
+<p>Search help articles</p>
+<p>Search help articles</p>
+<p>Search</p>
+<h4 id="how-muse-works-with-connectors-1">How Muse works with
+Connectors</h4>
+<p>Updated:a week ago</p>
+<p>You can choose to connect Muse to apps and services provided by Meta
+or third-parties. We call these Connectors. When you set up a Connector,
+Muse gets new abilities, like the ability to see your calendar or write
+an email.</p>
+<h5 id="to-connect-a-connector">To connect a Connector</h5>
+<p>You can connect a Connector by asking Muse (example: “Connect my
+Gmail”), or following these steps:</p>
+<ul>
+<li>Go to Settings, then tap Connectors.</li>
+<li>Tap Connect next to the Connector you want and read the
+information.</li>
+<li>Tap Continue to authorize the connection.</li>
+<li>Follow any additional login or authorization steps. While connected,
+your Muse will exchange information with a Connector relevant to the
+tasks you give it. Connectors have their own terms and privacy policies
+that govern how they use the information they receive.</li>
+</ul>
+<p>We designed Muse to exchange with Connectors only the data that’s
+needed for them to work for you. For example, connecting your email
+allows Muse to search your email, but it won’t download your whole inbox
+(unless you tell it to). Some Connectors can also share information
+proactively with Muse. For example, calendar Connectors can update Muse
+automatically when there are changes in your schedule. We identify
+Connectors that do this before you connect them.</p>
+<h5 id="to-disconnect-a-connector">To disconnect a Connector</h5>
+<p>You can disconnect a Connector at any time in Settings under
+Connectors. Disconnecting stops Muse from exchanging data with the
+Connector. Information that Muse previously used to perform tasks with
+that Connector might still remain in Muse’s memories and your
+conversation history.</p>
+<p>Note: You can also ask Muse to forget interactions.</p>
+<h5 id="approving-connector-actions">Approving Connector actions</h5>
+<p>By default, Muse will not take many important actions, like sending
+an email, without your approval. Many Connectors can also be set up so
+that Muse is only able to retrieve data, but not take actions (like
+sending a calendar invite). You can change when Muse asks for your
+approval in your Settings. Learn more about setting up approvals.</p>
+<h5 id="meta-connectors">Meta Connectors</h5>
+<p>Some Connectors connect to Meta products. Three of these – Facebook,
+Instagram and Threads – are connected automatically if you have your
+accounts in the same Accounts Center. You don’t need to do anything to
+set these up. You can manage your accounts at any time in <a
+href="https://accountscenter.facebook.com/">Accounts Center</a>. Learn
+more about how and when we use information across accounts in the <a
+href="https://muse.ai/privacy">Muse Privacy Policy</a>.</p>
+<h5 id="custom-connectors">Custom connectors</h5>
+<p>If you want to connect to a service not yet available in the
+Connector list, you can ask Muse to create a Custom Connector. Muse will
+guide you through the process, which can involve retrieving API
+information from the service. Muse stores these in its Secure
+Credentials Store. Meta doesn’t review custom connectors or how they use
+your information, so grant access with caution and review the provider’s
+privacy policies.</p>
+<h5 id="notes">Notes:</h5>
+<ul>
+<li>After setup, you manage Muse’s access to Connectors like Apple
+Health or Android SMS in your device settings.</li>
+<li>When connecting to Google, the use of information received from
+Workspace APIs will adhere to the <a
+href="https://developers.google.com/terms/api-services-user-data-policy">Google
+User Data Policy</a>, including the <a
+href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Limited
+Use requirements</a>. Share</li>
+</ul>
+<h5 id="was-this-article-helpful-1">Was this article helpful?</h5>
+<p>Yes</p>
+<p>No</p>
+<h3 id="how-muse-works-with-your-guidance-and-approval">How Muse works
+with your guidance and approval</h3>
+<p>Search help articles</p>
+<p>Search help articles</p>
+<p>Search</p>
+<h4 id="how-muse-works-with-your-guidance-and-approval-1">How Muse works
+with your guidance and approval</h4>
+<p>Updated:a week ago</p>
+<p>We’ve designed Muse with multiple layers of privacy and security
+protections, including checking with you before sensitive actions like
+payments or purchases. But no automated system is perfect. Because Muse
+acts on your behalf, you’re responsible for guiding it carefully and
+approving its actions. You should review its activity, and only grant
+the access you’re comfortable with.</p>
+<h5 id="muse-works-with-your-oversight">Muse works with your
+oversight</h5>
+<p>Your Muse can make mistakes or take unexpected actions. To use Muse
+safely, we recommend you:</p>
+<ul>
+<li>Control what it accesses.
+<ul>
+<li>You choose what information or Connectors your Muse has access to
+and what actions your Muse can take on your behalf. As you’re learning,
+start with low risk tasks until you become more familiar with how your
+Muse works.</li>
+</ul></li>
+<li>Oversee its actions regularly to make sure they match your
+intentions.
+<ul>
+<li>You can also ask your Muse to provide the sources it based its
+response on.</li>
+</ul></li>
+<li>Correct any mistakes promptly.
+<ul>
+<li>You’re responsible for fixing errors, including with third party
+services or recipients.</li>
+</ul></li>
+<li>Review your permissions periodically.
+<ul>
+<li>Check which Connectors Muse can access and your default permissions
+settings for those Connectors and adjust as needed.</li>
+</ul></li>
+<li>Comply with the <a href="https://agent.meta.ai/terms">Muse
+Terms</a>.
+<ul>
+<li>These contain important information about your responsibilities and
+what you must not use Muse for.</li>
+</ul></li>
+</ul>
+<h5 id="how-to-set-boundaries-on-what-muse-can-do">How to set boundaries
+on what Muse can do</h5>
+<p>You can set boundaries for your Muse and adjust them at any time to
+match what you’re comfortable with. It’s worth understanding the
+concepts of read and write actions. Read actions let Muse view your
+information (example: checking your calendar or reading an email), while
+write actions let Muse make changes and manage information on your
+behalf (example: sending a message or making a purchase). Your Muse
+learns over time which decisions need your sign off.</p>
+<h5 id="setting-permissions">Setting permissions</h5>
+<p>To manage your Muse permissions, navigate to Settings, then tap
+Permissions. Here you can manage:</p>
+<ul>
+<li>Connectors
+<ul>
+<li>If you select Ask for some actions, your Muse will ask for
+permission before every write action and important read actions.</li>
+<li>If you select Always ask, your Muse will ask for permission before
+any action.</li>
+</ul></li>
+<li>Web access defaults
+<ul>
+<li>If you select Ask for some actions, your Muse will ask for
+permission when your information may be shared or it visits a website
+that is unfamiliar.</li>
+<li>If you select Always ask, your Muse will ask for permission before
+accessing any website.</li>
+</ul></li>
+<li>Manage permissions
+<ul>
+<li>If you select Connectors, you can manage your permissions per
+Connector.</li>
+<li>If you select Artifacts and scheduled tasks, you can manage your
+approvals for each scheduled task and artifacts.</li>
+<li>If you select Allowed websites, you can view which websites you’ve
+allowed your Muse to access and revoke permission.</li>
+</ul></li>
+</ul>
+<h5 id="approving-actions">Approving actions</h5>
+<p>When Muse takes an action, it will ask you for approval in line with
+the permissions settings you’ve set up. Approval options for actions can
+include:</p>
+<ul>
+<li>Allow once: Muse proceeds this one time</li>
+<li>Allow for this task: Muse can take this type of action for the
+entire task</li>
+<li>Allow for this site: Muse can take this type of action for this
+website in the future without asking again</li>
+<li>Always allow: Muse can take this type of action for this Connector
+in the future without asking again</li>
+<li>Deny: Muse won’t proceed this one time You can tap See task details
+to see additional details about the task before deciding what permission
+to grant.</li>
+</ul>
+<h5 id="monitoring-muses-actions">Monitoring Muse’s actions</h5>
+<p>Your Muse is designed to provide transparency into what it’s
+doing:</p>
+<ul>
+<li>Your assistant avatar at the top of your screen shows live status
+updates (examples: “Is working,” “Making something”, “Is updating
+memory”).</li>
+<li>Visit your Activity log by tapping your assistant icon to see a
+chronological record of actions your Muse has taken and permissions
+you’ve given it.</li>
+<li>Check Upcoming by tapping your assistant icon to see scheduled tasks
+and reminders.</li>
+<li>Tap See task details on any permission request to see additional
+task details before deciding what permission to grant.</li>
+<li>Browse your System Files for a deeper look into your Muse’s
+activities.</li>
+</ul>
+<h5 id="controls-you-have-over-your-muses-actions">Controls you have
+over your Muse’s actions</h5>
+<p>In addition to the controls mentioned above, you can also:</p>
+<ul>
+<li>Undo or stop
+<ul>
+<li>You can ask your Muse to undo or stop some actions, like reading a
+website or comparing prices for a purchase, in chat. Some other actions,
+like sending an email, cannot be reversed, just like if you were doing
+them yourself. Keep your default permissions under review to stay in
+control.</li>
+</ul></li>
+<li>Disconnect Connectors
+<ul>
+<li>You can disconnect Connectors at any time to prevent future
+actions.</li>
+</ul></li>
+<li>Reset
+<ul>
+<li>Resetting Muse permanently deletes all information, chat history,
+files, and active tasks. This cannot be undone. Learn more about
+resetting Muse.</li>
+</ul></li>
+</ul>
+<h5 id="what-muse-is-not-built-to-do">What Muse is not built to do</h5>
+<p>See the <a href="https://www.facebook.com/legal/ai-terms">Meta AI
+Terms of Service</a> and <a href="https://agent.meta.ai/terms">Muse
+Terms of Service</a> for information about what you shouldn’t use Muse
+for.</p>
+<p>Share</p>
+<h5 id="was-this-article-helpful-2">Was this article helpful?</h5>
+<p>Yes</p>
+<p>No</p>
+<h3 id="how-to-manage-your-muse-data">How to manage your Muse data</h3>
+<p>Search help articles</p>
+<p>Search help articles</p>
+<p>Search</p>
+<h4 id="how-to-manage-your-muse-data-1">How to manage your Muse
+data</h4>
+<p>Updated:a week ago</p>
+<h5 id="your-choice-to-help-improve-metas-ai-models">Your choice to help
+improve Meta’s AI models</h5>
+<p>You decide whether we can use your interactions with Muse to train
+and improve our AI models. This setting is on when you first use Muse.
+You can change it at any time. When the setting is off, your
+interactions with Muse will not be used to develop and improve <a
+href="https://www.facebook.com/privacy/genai">AI at Meta</a>. Changes to
+this setting also apply to previous interactions.</p>
+<p>Allowing us to use your interactions in training helps us make
+smarter, more capable models. If you do allow this, we still remove
+certain categories of personally identifiable information like names,
+email addresses, phone numbers and Social Security Numbers. We also
+disassociate the interactions from your account.</p>
+<p>To update your setting:</p>
+<ul>
+<li>Go to Settings, then tap Data controls.</li>
+<li>Toggle off Help improve our AI models.</li>
+<li>Select Turn off to confirm.</li>
+</ul>
+<h5
+id="information-muse-stores-and-where-to-access-edit-and-delete-it">Information
+Muse stores and where to access, edit and delete it</h5>
+<p>Your Muse learns about you over time and stores information like your
+conversation history, artifacts and other files it uses to provide your
+experience. The simplest way to manage your information is to ask your
+Muse. You can ask it what it has saved about you, for access to a file
+or to delete information. Your Muse will help you in your chat.</p>
+<p>You can also use controls in Muse to manage your information such as
+to access, edit or delete it.</p>
+<p>Information Muse stores:</p>
+<p>Where to access the information:</p>
+<p>Where to edit and delete the information:</p>
+<p>Your interactions with Muse. Your messages and instructions, Muse’s
+responses, and information from services – including Connectors – used
+to perform tasks for you. This can include text, voice, photos, things
+you create together and information about you or others.</p>
+<p>Navigate to the Chats tab.</p>
+<p>You can interact with your Muse in the main chat thread, or create
+side chats to organize your chats. You can delete Side chat threads. In
+the Chats tab select the relevant side chat, tap the three dot menu,
+select Delete, then confirm.</p>
+<p>You can also delete your messages from the main chat and side chats.
+Tap and hold the message, select Delete, then confirm.</p>
+<p>To delete your entire main chat thread, you can reset Muse. Go to
+Settings, then Data Controls, Reset, and follow the instructions on
+screen to confirm by tapping Reset. This will reset Muse to its original
+state and permanently delete all information including chat history,
+files and active tasks.</p>
+<p>Information from Connectors. Information Muse retrieves or receives
+from connected services, such as emails and calendar events. Information
+used for a task forms part of your interactions with Muse.</p>
+<p>You can ask Muse in your chat what information it has from a
+Connector.</p>
+<p>You can use the forget skill. Ask Muse in chat to forget a topic or
+set of interactions.</p>
+<p>Goals: Personal goals that you have set, which Muse will help you
+track progress and send check-ins.</p>
+<p>Navigate to the Goals tab.</p>
+<p>In the Goals tab, tap the relevant goal, tap the three dot menu,
+select Delete, then confirm.</p>
+<p>Artifacts: Documents, images, videos, podcasts and other files that
+Muse creates .</p>
+<p>Navigate to the Library tab.</p>
+<p>In the Library tab, tap the individual file, then delete the file or
+open the file to edit.</p>
+<p>System Files: your Muse stores all files that are uploaded or created
+by you in system files.</p>
+<p>Navigate to the Library tab, then select System Files.</p>
+<p>In the Library tab, tap System Files and select the individual file
+that you want to delete.</p>
+<p>Reminders and scheduled tasks: Reminder times and content are stored
+so they can be delivered on schedule.</p>
+<p>Tap the Assistant icon, then tap Upcoming.</p>
+<p>You can ask your Muse in chat to update or delete a reminder or
+scheduled task.</p>
+<p>Memories: Information you share may be saved in Memories so Muse can
+personalize responses.</p>
+<p>Tap the Assistant icon, then Identity, then Memory.</p>
+<p>You can edit and delete information in the Memory.md file directly.
+Tap the Assistant icon, then Identity, then Memory to update or delete
+the Memory file.</p>
+<p>Soul: Who your Muse is, including core truths, boundaries, and
+personality.</p>
+<p>Tap the Assistant icon, then Identity, then Soul.</p>
+<p>You can edit and delete information in the Soul.md file directly. Tap
+the Assistant icon, then Identity, then Soul to update or clear the Soul
+file.</p>
+<p>Identity: Information about your Muse (examples: its name, creature,
+vibe, or tag line).</p>
+<p>Tap the Assistant icon, then Identity.</p>
+<p>You can edit and delete information in the Identity.md file directly.
+Tap the Assistant icon, then Identity, then Edit.</p>
+<h5
+id="important-information-about-deleting-your-muse-information">Important
+information about deleting your Muse information</h5>
+<p>You can delete any message you send to Muse, Side chats with Muse,
+and files in your virtual machine. If you want to start from scratch,
+you can reset Muse, which deletes all your Muse data. After you delete
+something from Muse, Muse may still remember information it learned from
+what you deleted.</p>
+<h5 id="forgetting">Forgetting</h5>
+<p>You can also use the forget skill: simply ask Muse to forget a topic
+or set of interactions. Forgetting works by asking Muse to look for
+information about a specific person, topic or matter in its memories and
+supporting files and remove it to the best of its ability. You can find
+out what Muse remembers about you at any time by asking directly, or by
+viewing files like your MEMORY.md.</p>
+<h5 id="how-to-reset-muse">How to reset Muse</h5>
+<p>You can reset Muse to its original state and permanently delete all
+information including chat history, files and active tasks:</p>
+<ul>
+<li>Go to Settings and select Data Controls.</li>
+<li>Tap Reset Muse and follow the instructions on screen.</li>
+<li>Tap Reset to confirm. Note: Resetting Muse cannot be undone.</li>
+</ul>
+<p>You can also delete your Meta account from Accounts Center. This will
+delete all information associated with your account, including Muse.</p>
+<h5 id="disconnect-connectors-and-services">Disconnect Connectors and
+services</h5>
+<p>Learn more about how to disconnect Connectors at How Muse works with
+Connectors.</p>
+<h5 id="how-to-export-your-information-from-muse">How to export your
+information from Muse</h5>
+<p>Download your Muse information: You can download a copy of your
+chats, files and other agent information:</p>
+<ul>
+<li><p>Go to Settings and select Data controls.</p></li>
+<li><p>Tap Download your Muse data.</p></li>
+<li><p>Select Download to confirm. Export your account information: You
+can also export a copy of your account information:</p></li>
+<li><p>Go to Settings and select Account Center.</p></li>
+<li><p>Tap Your information and permissions, then Export your
+information.</p></li>
+<li><p>Select Create export to confirm, then select what information you
+want to export. Learn more about how to export a copy of your account
+information.</p></li>
+</ul>
+<p>Share</p>
+<h5 id="was-this-article-helpful-3">Was this article helpful?</h5>
+<p>Yes</p>
+<p>No</p>
+<h2 id="what-meta-says-about-muse">What Meta says about Muse</h2>
+<h3 id="start-a-chat-with-meta-ai">Start a chat with Meta AI</h3>
+<p>Search help articles</p>
+<p>Search help articles</p>
+<p>Search</p>
+<h4 id="start-a-chat-with-meta-ai-1">Start a chat with Meta AI</h4>
+<p>Updated:19 weeks ago</p>
+<p>Meta AI app</p>
+<p>Desktop</p>
+<p>Mobile</p>
+<p>The Meta AI and Vibes apps and websites are not yet available
+everywhere. If they are available for you, some features may not yet be
+available in your area.</p>
+<p>You can start a chat with the Meta AI assistant on the Meta AI app.
+Meta AI can generate responses to any questions, give you details on a
+photo or generate images or animations for you, help edit your writing
+and more based on your prompt.</p>
+<p>When you chat with Meta AI, you can change how it responds by
+selecting a mode. Changing Meta AI’s mode will better match its
+responses to your questions.</p>
+<h5 id="to-start-a-chat-with-meta-ai">To start a chat with Meta AI:</h5>
+<ul>
+<li>Open the Meta AI app.</li>
+<li>At the bottom, tap Ask Meta AI… and type in your prompt.</li>
+<li>Choose Meta AI’s mode by tapping the current mode in the bottom
+right, then tapping the mode you’d like to use. Some modes include:
+<ul>
+<li>Instant: Generates quicker responses, best used for everyday
+questions.</li>
+<li>Thinking: Generates in-depth responses for more complex questions or
+reasoning.</li>
+<li>Shopping: A dedicated shopping concierge for you based on your
+interests and prompt.</li>
+</ul></li>
+<li>Tap . Meta AI will generate a response for you. You can also ask
+Meta AI questions about a photo by tapping , then tapping Camera to take
+a picture or Photo library to upload a photo, then typing in or speaking
+your prompt. (Example: “What breed of cat is this?” or “Where can I find
+this hat?”)</li>
+</ul>
+<p>Learn more about how to <a
+href="https://www.meta.com/help/artificial-intelligence/1382777929673771">share
+your conversations with Meta AI</a>.</p>
+<h5 id="note">Note:</h5>
+<ul>
+<li>Similar to other chats, interactions with AI are subject to our <a
+href="https://transparency.fb.com/policies/community-standards/">Community
+Standards</a> and <a href="https://www.facebook.com/legal/terms">Terms
+of Service</a>.</li>
+<li>An AI’s response may be inaccurate or inappropriate and should not
+be used to make important decisions.</li>
+<li>Meta uses your interactions with AIs to improve AI at Meta. If the
+AIs cannot answer your query, Meta shares the messages you send to AI
+and general information, like your region, with select partners so you
+can get better results. Visit our <a
+href="https://www.facebook.com/legal/ai-terms">Meta AI Terms of
+Service</a> to learn more.</li>
+<li>Meta AI uses your location information to give you more relevant
+responses. Your location information is based on things like the
+settings you’ve chosen on your device, or your activity across our
+products. Learn more about how to manage your location in the <a
+href="https://www.facebook.com/privacy/guide/location">Privacy
+Center</a>.</li>
+<li>Other information from your profile such as your age and gender, and
+interests based on your activity across our products, such as the types
+of content, including ads, you view or interact with and how you
+interact with it, will be used to help personalize your interactions
+with AI. Learn more about how Meta uses this information in the <a
+href="https://www.facebook.com/privacy/guide/generative-ai/?entry_point=privacy_center_home">Privacy
+Center.</a> You can also see <a
+href="https://www.meta.com/help/accounts-center/Information-used-across-accounts/">how
+information is used across your accounts</a> in the same Accounts Center
+and export your information. Learn how to <a
+href="https://www.meta.com/help/artificial-intelligence/1314808549771571">Export
+a copy of your information</a>.</li>
+<li>Depending on your prompt, the content generated may go against our
+Community Standards or Terms of Service of Meta’s platforms. Sharing
+AI-generated content on our platforms that go against these standards
+will be treated the same as sharing other content that go against our
+standards. If you share generated content that goes against our
+standards, your content may be removed and your account may be
+restricted or disabled. Learn more about the Community Standards and
+Terms of Service on:
+<ul>
+<li><a
+href="https://transparency.meta.com/policies/community-standards/">Facebook,
+Messenger and Instagram</a></li>
+<li><a
+href="https://www.whatsapp.com/legal/terms-of-service">WhatsApp</a></li>
+</ul></li>
+<li>Depending on your region, your interactions with AI products can be
+used to personalize content and ads. Learn more about <a
+href="https://www.facebook.com/privacy/genai">how Meta uses information
+for generative AI models</a>.</li>
+</ul>
+<p>Share</p>
+<h5 id="was-this-article-helpful-4">Was this article helpful?</h5>
+<p>Yes</p>
+<p>No</p>
+<h3 id="your-personal-ai-agent-that-gets-things-done">Your personal AI
+agent that gets things done</h3>
+<h4 id="introducing-muse">Introducing Muse</h4>
+<h4 id="your-personal-ai-agent-that-gets-things-done-1">Your personal AI
+agent that gets things done</h4>
+<h5 id="introducing-muse-1">Introducing Muse</h5>
+<h4 id="your-personal-ai-agent-that-gets-things-done-2">Your personal AI
+agent that gets things done</h4>
+<h5 id="introducing-muse-2">Introducing Muse</h5>
+<h4 id="your-personal-ai-agent-that-gets-things-done-3">Your personal AI
+agent that gets things done</h4>
+<h5 id="take-the-busywork-off-your-plate">Take the busywork off your
+plate</h5>
+<p>Muse gets to know you and your goals, working across all aspects of
+life, so you can focus on the things that matter. It comes with strong
+privacy and security built in, so you stay in control.</p>
+<p>Try Muse</p>
+<h6 id="a-secure-computer-with-its-own-browser">A secure computer with
+its own browser</h6>
+<p>Muse Secure VM runs on a persistent, dedicated virtual machine
+equipped with a state-of-the-art browser to navigate the web. It books
+appointments, fills out forms and handles customer service.</p>
+<p>Muse Secure VM runs on a persistent, dedicated virtual machine
+equipped with a state-of-the-art browser to navigate the web.</p>
+<p>It books appointments, fills out forms and handles customer
+service.</p>
+<h6 id="designed-to-feel-like-a-conversation">Designed to feel like a
+conversation</h6>
+<p>Chat with your Muse in the same way you message with other people,
+using the Muse app or directly in WhatsApp. It’s simple, just tell Muse
+what you want to get done.</p>
+<h6 id="approve-critical-actions-from-your-agent">Approve critical
+actions from your agent</h6>
+<p>Review and approve actions from Muse before they happen, like sending
+emails and making purchases. See a complete audit trail of everything
+your agent has done (and what it is planning to do).</p>
+<h6 id="your-personal-data-is-safe-and-secure">Your personal data is
+safe and secure</h6>
+<p>Your logins are kept in a secure credential store your agent can’t
+read, with 1Password integration coming soon. When shopping, a one-time
+card number is generated at checkout so your real card is never seen by
+the merchant or your agent. Eligible purchases are covered by <a
+href="https://support.link.com/questions/what-s-covered-with-protections">Link’s
+purchase protections</a>, a first for AI agents, and your conversations
+are not shared with Meta’s ad systems.</p>
+<h6 id="always-working-on-your-goals-and-suggesting-ideas">Always
+working on your goals and suggesting ideas</h6>
+<p>Give Muse a goal or a task and it builds an action plan, tracks your
+progress and proactively takes tasks off your plate along the way. It
+learns and gets sharper, coming back with ideas and suggestions built
+around what you need, ready to act on them under your direction.</p>
+<h6 id="works-with-your-apps-and-builds-its-own-tools">Works with your
+apps and builds its own tools</h6>
+<p>Connect your email, calendar, Instagram and more apps you use daily.
+If a task needs a tool that doesn’t exist, Muse builds it for you.</p>
+<h5 id="product-walkthrough">PRODUCT WALKTHROUGH</h5>
+<h6 id="get-the-most-out-of-muse">Get the most out of Muse</h6>
+<p>Watch how to hand off more to your agent, connect what matters and
+keep progress moving.</p>
+<p>Try Muse</p>
+<p>0:00 / 0:00</p>
+<h5 id="try-muse">TRY MUSE</h5>
+<h6 id="ready-to-get-more-done-with-muse">Ready to get more done with
+Muse?</h6>
+<p>Get started</p>
+<h5 id="frequently-asked-questions">FREQUENTLY ASKED QUESTIONS</h5>
+<h6 id="what-can-muse-do">What can Muse do?</h6>
+<ul>
+<li>Muse can answer questions, complete tasks, <a
+href="https://www.meta.com/help/2124746764949121/">browse the web</a>,
+make purchases, generate images, create documents, and connect with your
+favorite <a href="https://www.meta.com/help/1687253048996149/">apps and
+services</a> via <a
+href="http://meta.com/help/1687253048996149">Connectors</a>. It can also
+set reminders, track goals, and monitor things you care about, all
+working in the background on your behalf.</li>
+</ul>
+<h6 id="how-does-muse-work">How does Muse work?</h6>
+<p>Because it’s agentic AI, when you give Muse a task, it figures out
+which <a href="https://www.meta.com/help/2797651547267109/">built-in
+skills</a> it needs and gets to work. It can browse the web, pull
+information from connected apps, and take action across multiple steps.
+You stay in control by setting permissions, reviewing and approving what
+it does along the way.</p>
+<h6 id="is-muse-free">Is Muse free?</h6>
+<p>Muse is available for free with a usage limit. If you reach your free
+limit and want more, you can upgrade to a paid subscription, or wait
+until your free usage limit refreshes.</p>
+<h6 id="is-muse-safe">Is Muse safe?</h6>
+<p>Yes. Muse is built with automated protections, agentic AI security
+standards, and <a href="http://meta.com/help/1047255454427887">user
+controls</a> designed to prevent harmful content and unauthorized
+actions. It also uses a protective layer to stop your information from
+being shared without your approval. You can <a
+href="http://meta.com/help/1385290430137537">review your agent’s
+activity</a>, manage permissions, and report issues at any time.</p>
+<h6 id="does-muse-keep-working-after-i-close-the-app">Does Muse keep
+working after I close the app?</h6>
+<p>Yes. When you ask Muse to do something, it keeps working in the
+background whether you’re actively using the app or not. For example, if
+you ask it to monitor daily weather reports and alert you about rain, it
+will do that on its own without you needing to check in.</p>
+<h6 id="does-muse-ask-before-it-acts-on-my-behalf">Does Muse ask before
+it acts on my behalf?</h6>
+<p>Yes. Muse is designed to ask your permission before taking certain
+actions, like sending messages, making purchases, or sharing information
+with a connected app. You can choose to allow an action once, always
+allow it, or deny it. You can manage your <a
+href="https://www.meta.com/help/1385290430137537/">default permission
+settings</a> for every connection at any time.</p>
+<h6 id="what-is-a-personal-ai-agent">What is a personal AI agent?</h6>
+<p>A personal AI agent is an AI that can take actions and get things
+done on your behalf, not just answer questions. Muse, for example, can
+browse the web, connect to your apps, complete multi-step tasks, and
+keep working in the background with your direction and oversight.</p>
+<h6
+id="how-is-a-personal-agent-different-from-a-chatbot-or-ai-assistant">How
+is a personal agent different from a chatbot or AI assistant?</h6>
+<p>A chatbot responds to one question at a time. An AI assistant can
+handle more complex conversations and generate content. A personal AI
+agent like Muse goes further: it can take real actions across the web
+and connected apps, work through multi-step tasks on its own, and keep
+running in the background even after you close the app.</p>
+<h6 id="what-can-a-personal-ai-agent-help-with">What can a personal AI
+agent help with?</h6>
+<p>A personal AI agent can help with everyday tasks like booking
+reservations, monitoring prices, managing reminders, creating documents,
+generating images, and researching topics. It can also connect to
+third-party apps and services to take actions on your behalf, like
+sending emails or completing online purchases. See more agentic AI
+examples.</p>
+<h5 id="explore-meta-ai-products">Explore Meta AI products</h5>
+<h6 id="meta-ai-assistant">Meta AI Assistant</h6>
+<h6 id="get-more-done-with-meta-ai-your-personal-ai-assistant.">Get more
+done with Meta AI, your personal AI assistant.</h6>
+<p>Try Meta AI</p>
+<p>Learn more</p>
+<h6 id="image-generation">Image Generation</h6>
+<h6
+id="explore-fun-presets-make-precise-edits-and-visualize-your-ideas.">Explore
+fun presets, make precise edits and visualize your ideas.</h6>
+<p>Start generating</p>
+<p>Learn more</p>
+</body>
+</html>
