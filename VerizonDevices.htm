@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Verizon device guides</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -63,10 +60,6 @@
     img {
       max-width: 100%;
     }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -91,7 +84,6 @@
       color: #606060;
     }
     code {
-      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -111,8 +103,8 @@
      overflow: visible;
     }
     hr {
+      background-color: #1a1a1a;
       border: none;
-      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -155,6 +147,7 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
@@ -175,6 +168,215 @@
 <header id="title-block-header">
 <h1 class="title">Verizon device guides</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#verizon-device-guides"
+id="toc-verizon-device-guides">Verizon device guides</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#apple" id="toc-apple">Apple</a></li>
+<li><a href="#apple-arcade" id="toc-apple-arcade">Apple Arcade</a></li>
+<li><a href="#apple-ipad-9th-generation"
+id="toc-apple-ipad-9th-generation">Apple iPad (9th Generation)</a></li>
+<li><a href="#apple-ipad-a16" id="toc-apple-ipad-a16">Apple iPad
+(A16)</a></li>
+<li><a href="#apple-ipad-air-5th-gen"
+id="toc-apple-ipad-air-5th-gen">Apple iPad Air (5th Gen)</a></li>
+<li><a href="#apple-ipad-mini-2021" id="toc-apple-ipad-mini-2021">Apple
+iPad mini (2021)</a></li>
+<li><a href="#apple-ipad-pro-10.5-inch"
+id="toc-apple-ipad-pro-10.5-inch">Apple iPad Pro (10.5-inch)</a></li>
+<li><a href="#apple-ipad-pro-9.7-inch"
+id="toc-apple-ipad-pro-9.7-inch">Apple iPad Pro (9.7-inch)</a></li>
+<li><a href="#apple-iphone-13-pro" id="toc-apple-iphone-13-pro">Apple
+iPhone 13 Pro</a></li>
+<li><a href="#apple-iphone-6" id="toc-apple-iphone-6">Apple iPhone
+6</a></li>
+<li><a href="#apple-iphone-6-plus" id="toc-apple-iphone-6-plus">Apple
+iPhone 6 Plus</a></li>
+<li><a href="#apple-iphone-6s" id="toc-apple-iphone-6s">Apple iPhone
+6s</a></li>
+<li><a href="#apple-iphone-7-1" id="toc-apple-iphone-7-1">Apple iPhone
+7</a></li>
+<li><a href="#apple-iphone-7-plus" id="toc-apple-iphone-7-plus">Apple
+iPhone 7 Plus</a></li>
+<li><a href="#apple-iphone-xr" id="toc-apple-iphone-xr">Apple iPhone
+XR</a></li>
+<li><a href="#google" id="toc-google">Google</a></li>
+<li><a href="#google-pixel-10-pro" id="toc-google-pixel-10-pro">Google
+Pixel 10 Pro</a></li>
+<li><a href="#google-pixel-10a" id="toc-google-pixel-10a">Google Pixel
+10a</a></li>
+<li><a href="#google-pixel-3" id="toc-google-pixel-3">Google Pixel
+3</a></li>
+<li><a href="#google-pixel-3-xl" id="toc-google-pixel-3-xl">Google Pixel
+3 XL</a></li>
+<li><a href="#google-pixel-4-xl" id="toc-google-pixel-4-xl">Google Pixel
+4 XL</a></li>
+<li><a href="#google-pixel-5" id="toc-google-pixel-5">Google Pixel
+5</a></li>
+<li><a href="#google-pixel-6" id="toc-google-pixel-6">Google Pixel
+6</a></li>
+<li><a href="#google-pixel-6a" id="toc-google-pixel-6a">Google Pixel
+6a</a></li>
+<li><a href="#google-pixel-7" id="toc-google-pixel-7">Google Pixel
+7</a></li>
+<li><a href="#google-pixel-7a" id="toc-google-pixel-7a">Google Pixel
+7a</a></li>
+<li><a href="#google-pixel-8" id="toc-google-pixel-8">Google Pixel
+8</a></li>
+<li><a href="#google-pixel-8a" id="toc-google-pixel-8a">Google Pixel
+8a</a></li>
+<li><a href="#google-pixel-9" id="toc-google-pixel-9">Google Pixel
+9</a></li>
+<li><a href="#google-pixel-fold" id="toc-google-pixel-fold">Google Pixel
+Fold</a></li>
+<li><a href="#inseego-mifi-m2100-5g-uw"
+id="toc-inseego-mifi-m2100-5g-uw">Inseego MiFi M2100 5G UW</a></li>
+<li><a href="#kyocera" id="toc-kyocera">Kyocera</a></li>
+<li><a href="#kyocera-duraforce-pro-2"
+id="toc-kyocera-duraforce-pro-2">KYOCERA DuraForce PRO 2</a></li>
+<li><a href="#kyocera-duraforce-pro-3"
+id="toc-kyocera-duraforce-pro-3">KYOCERA DuraForce PRO 3</a></li>
+<li><a href="#kyocera-duraforce-ultra-5g-uw"
+id="toc-kyocera-duraforce-ultra-5g-uw">Kyocera DuraForce Ultra 5G
+UW</a></li>
+<li><a href="#kyocera-durasport-5g-uw"
+id="toc-kyocera-durasport-5g-uw">Kyocera DuraSport 5G UW</a></li>
+<li><a href="#mobile-hotspot-and-in-car-wi-fi"
+id="toc-mobile-hotspot-and-in-car-wi-fi">Mobile Hotspot and In-car
+Wi-Fi</a></li>
+<li><a href="#moto-g-power-2021" id="toc-moto-g-power-2021">MOTO G POWER
+(2021)</a></li>
+<li><a href="#moto-g-stylus" id="toc-moto-g-stylus">moto g
+stylus</a></li>
+<li><a href="#moto-g-stylus-5g" id="toc-moto-g-stylus-5g">moto g stylus
+5G</a></li>
+<li><a href="#motorola" id="toc-motorola">Motorola</a></li>
+<li><a href="#motorola-edge---2022"
+id="toc-motorola-edge---2022">MOTOROLA EDGE - 2022</a></li>
+<li><a href="#motorola-edge---2025"
+id="toc-motorola-edge---2025">Motorola edge - 2025</a></li>
+<li><a href="#motorola-edge-5g-uw" id="toc-motorola-edge-5g-uw">MOTOROLA
+EDGE+ 5G UW</a></li>
+<li><a href="#motorola-moto-g---2026"
+id="toc-motorola-moto-g---2026">Motorola moto g - 2026</a></li>
+<li><a href="#motorola-moto-g-play---2026"
+id="toc-motorola-moto-g-play---2026">Motorola moto g play -
+2026</a></li>
+<li><a href="#motorola-moto-g-power"
+id="toc-motorola-moto-g-power">Motorola moto g power</a></li>
+<li><a href="#motorola-moto-g7-power"
+id="toc-motorola-moto-g7-power">Motorola moto g7 power</a></li>
+<li><a href="#motorola-razr---2026"
+id="toc-motorola-razr---2026">Motorola razr - 2026</a></li>
+<li><a href="#orbic-2" id="toc-orbic-2">Orbic</a></li>
+<li><a href="#orbic-joy" id="toc-orbic-joy">ORBIC JOY</a></li>
+<li><a href="#orbic-maui" id="toc-orbic-maui">Orbic Maui</a></li>
+<li><a href="#samsung-2" id="toc-samsung-2">Samsung</a></li>
+<li><a href="#samsung-galaxy-a02s" id="toc-samsung-galaxy-a02s">Samsung
+Galaxy A02s</a></li>
+<li><a href="#samsung-galaxy-a03s" id="toc-samsung-galaxy-a03s">Samsung
+Galaxy A03s</a></li>
+<li><a href="#samsung-galaxy-a12" id="toc-samsung-galaxy-a12">Samsung
+Galaxy A12</a></li>
+<li><a href="#samsung-galaxy-a13" id="toc-samsung-galaxy-a13">Samsung
+Galaxy A13</a></li>
+<li><a href="#samsung-galaxy-a14-5g"
+id="toc-samsung-galaxy-a14-5g">Samsung Galaxy A14 5G</a></li>
+<li><a href="#samsung-galaxy-a15-5g"
+id="toc-samsung-galaxy-a15-5g">Samsung Galaxy A15 5G</a></li>
+<li><a href="#samsung-galaxy-a16-5g"
+id="toc-samsung-galaxy-a16-5g">Samsung Galaxy A16 5G</a></li>
+<li><a href="#samsung-galaxy-a17-5g"
+id="toc-samsung-galaxy-a17-5g">Samsung Galaxy A17 5G</a></li>
+<li><a href="#samsung-galaxy-a36-5g"
+id="toc-samsung-galaxy-a36-5g">Samsung Galaxy A36 5G</a></li>
+<li><a href="#samsung-galaxy-a37-5g"
+id="toc-samsung-galaxy-a37-5g">Samsung Galaxy A37 5G</a></li>
+<li><a href="#samsung-galaxy-a42-5g"
+id="toc-samsung-galaxy-a42-5g">Samsung Galaxy A42 5G</a></li>
+<li><a href="#samsung-galaxy-a53-5g-uw"
+id="toc-samsung-galaxy-a53-5g-uw">Samsung Galaxy A53 5G UW</a></li>
+<li><a href="#samsung-galaxy-a54-5g"
+id="toc-samsung-galaxy-a54-5g">Samsung Galaxy A54 5G</a></li>
+<li><a href="#samsung-galaxy-s20-5g-uw"
+id="toc-samsung-galaxy-s20-5g-uw">Samsung Galaxy S20 5G UW</a></li>
+<li><a href="#samsung-galaxy-s21-fe-5g"
+id="toc-samsung-galaxy-s21-fe-5g">Samsung Galaxy S21 FE 5G</a></li>
+<li><a href="#samsung-galaxy-s21-ultra-5g"
+id="toc-samsung-galaxy-s21-ultra-5g">Samsung Galaxy S21 Ultra
+5G</a></li>
+<li><a href="#samsung-galaxy-s22-ultra"
+id="toc-samsung-galaxy-s22-ultra">Samsung Galaxy S22 Ultra</a></li>
+<li><a href="#samsung-galaxy-s23-ultra"
+id="toc-samsung-galaxy-s23-ultra">Samsung Galaxy S23 Ultra</a></li>
+<li><a href="#samsung-galaxy-s23" id="toc-samsung-galaxy-s23">Samsung
+Galaxy S23+</a></li>
+<li><a href="#samsung-galaxy-s24-fe"
+id="toc-samsung-galaxy-s24-fe">Samsung Galaxy S24 FE</a></li>
+<li><a href="#samsung-galaxy-s24-ultra"
+id="toc-samsung-galaxy-s24-ultra">Samsung Galaxy S24 Ultra</a></li>
+<li><a href="#samsung-galaxy-s24" id="toc-samsung-galaxy-s24">Samsung
+Galaxy S24+</a></li>
+<li><a href="#samsung-galaxy-s25" id="toc-samsung-galaxy-s25">Samsung
+Galaxy S25</a></li>
+<li><a href="#samsung-galaxy-s25-fe"
+id="toc-samsung-galaxy-s25-fe">Samsung Galaxy S25 FE</a></li>
+<li><a href="#samsung-galaxy-s26" id="toc-samsung-galaxy-s26">Samsung
+Galaxy S26+</a></li>
+<li><a href="#samsung-galaxy-s8" id="toc-samsung-galaxy-s8">Samsung
+Galaxy S8+</a></li>
+<li><a href="#samsung-galaxy-z-flip3-5g"
+id="toc-samsung-galaxy-z-flip3-5g">Samsung Galaxy Z Flip3 5G</a></li>
+<li><a href="#samsung-galaxy-z-flip4"
+id="toc-samsung-galaxy-z-flip4">Samsung Galaxy Z Flip4</a></li>
+<li><a href="#samsung-galaxy-z-flip5"
+id="toc-samsung-galaxy-z-flip5">Samsung Galaxy Z Flip5</a></li>
+<li><a href="#samsung-galaxy-z-flip6"
+id="toc-samsung-galaxy-z-flip6">Samsung Galaxy Z Flip6</a></li>
+<li><a href="#samsung-galaxy-z-flip7"
+id="toc-samsung-galaxy-z-flip7">Samsung Galaxy Z Flip7</a></li>
+<li><a href="#samsung-galaxy-z-fold3-5g"
+id="toc-samsung-galaxy-z-fold3-5g">Samsung Galaxy Z Fold3 5G</a></li>
+<li><a href="#samsung-galaxy-z-fold4"
+id="toc-samsung-galaxy-z-fold4">Samsung Galaxy Z Fold4</a></li>
+<li><a href="#samsung-galaxy-z-fold5"
+id="toc-samsung-galaxy-z-fold5">Samsung Galaxy Z Fold5</a></li>
+<li><a href="#samsung-galaxy-z-fold6"
+id="toc-samsung-galaxy-z-fold6">Samsung Galaxy Z Fold6</a></li>
+<li><a href="#samsung-galaxy-z-fold7"
+id="toc-samsung-galaxy-z-fold7">Samsung Galaxy Z Fold7</a></li>
+<li><a href="#tcl-2" id="toc-tcl-2">TCL</a></li>
+<li><a href="#tcl-10-5g-uw" id="toc-tcl-10-5g-uw">TCL 10 5G UW</a></li>
+<li><a href="#tcl-30-v-5g" id="toc-tcl-30-v-5g">TCL 30 V 5G</a></li>
+<li><a href="#tcl-40-xe-5g" id="toc-tcl-40-xe-5g">TCL 40 XE 5G</a></li>
+<li><a href="#tcl-50-le" id="toc-tcl-50-le">TCL 50 LE</a></li>
+<li><a href="#tcl-50-xe-5g" id="toc-tcl-50-xe-5g">TCL 50 XE 5G</a></li>
+<li><a href="#tcl-flip-3" id="toc-tcl-flip-3">TCL FLIP 3</a></li>
+<li><a href="#tcl-flip-pro" id="toc-tcl-flip-pro">TCL FLIP Pro</a></li>
+<li><a href="#tcl-k33-5g" id="toc-tcl-k33-5g">TCL K33 5G</a></li>
+<li><a href="#tcl-linkzone-5g-uw" id="toc-tcl-linkzone-5g-uw">TCL
+LINKZONE 5G UW</a></li>
+<li><a href="#tcl-tab-10-nxtpaper-5g"
+id="toc-tcl-tab-10-nxtpaper-5g">TCL TAB 10 NXTPAPER 5G</a></li>
+<li><a href="#verizon-gizmo-watch-3"
+id="toc-verizon-gizmo-watch-3">Verizon Gizmo Watch 3</a></li>
+<li><a href="#verizon-gizmo-watch-3---adventure"
+id="toc-verizon-gizmo-watch-3---adventure">Verizon Gizmo Watch 3 -
+Adventure</a></li>
+<li><a href="#verizon-gizmo-watch-4"
+id="toc-verizon-gizmo-watch-4">Verizon Gizmo Watch 4</a></li>
+<li><a href="#verizon-gizmotablet" id="toc-verizon-gizmotablet">Verizon
+GizmoTablet</a></li>
+<li><a href="#verizon-orbic-speed-mobile-hotspot"
+id="toc-verizon-orbic-speed-mobile-hotspot">Verizon Orbic Speed Mobile
+Hotspot</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="verizon-device-guides">Verizon device guides</h1>
 <p>This guide holds the part of Verizon’s knowledge base that is written
 about individual devices: phones, tablets, watches, hotspots and home
@@ -175636,7 +175838,6 @@ continue.</p>
 <h4 id="mobile-hotspot-device-faqs-1">Mobile hotspot device FAQs</h4>
 <p>Mobile hotspot device FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Mobile hotspot device overview</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Learn about sharing your Verizon mobile network connection with
@@ -175771,7 +175972,6 @@ your mobile hotspot device:</p>
 href="https://securesit1.verizon.com/signin">Sign in</a> for
 personalized suggestions</li>
 </ul>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -175821,7 +176021,6 @@ continue.</p>
 and app FAQs</h4>
 <p>Mobile Hotspot feature and app FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Verizon Mobile Hotspot</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Share your data with other devices via Wi-Fi. Unlimited plans offer
@@ -176067,7 +176266,6 @@ Hotspot issues:</p>
 href="https://securesit1.verizon.com/signin">Sign in</a> for
 personalized suggestions</li>
 </ul>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -176125,7 +176323,6 @@ continue.</p>
 FAQs</h4>
 <p>PopData for mobile plans FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>PopData streaming</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>PopData is an all-you-can-stream 30 or 60 minute data connection
@@ -176290,7 +176487,6 @@ strength and expected capacity for the next 30 minutes at the location
 where you make the request.</p>
 <p>This doesn’t guarantee that something unexpected won’t occur (e.g.,
 moving to an area with poorer service, more network congestion).</p>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -200837,7 +201033,6 @@ continue.</p>
 <h4 id="e911-compliance-faqs-7">E911 Compliance FAQs</h4>
 <p>E911 Compliance FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>When you call 911, Enhanced 911 (E911) identifies and routes your
 location to the appropriate local Public Safety Answering Points for a
 speedier response. Learn what E911 is and how it works on our mobile
@@ -201007,7 +201202,6 @@ Verizon wireless or the app provider may have access to your location
 information. Our use of such information is governed by our Privacy
 Policy and any additional privacy notices for location-aware
 services.</p>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -202416,7 +202610,6 @@ continue.</p>
 <h4 id="lost-or-stolen-phone-faqs-1">Lost or stolen phone FAQs</h4>
 <p>Lost or stolen phone FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Learn what to do if your device has been lost or stolen. We’re here
 to help you recover or replace it, as well as prevent unauthorized
 charges to your account.</p>
@@ -202462,7 +202655,7 @@ us</a> and we’ll investigate your account activity:</p>
 <li>We give you a courtesy suspension of recurring monthly fees for up
 to 30 days, if you haven’t received one within the prior year.</li>
 <li>We may require you to provide more information about the loss or
-theft of your device. Is this bill info helpful?</li>
+theft of your device.</li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
@@ -215770,7 +215963,6 @@ continue.</p>
 <h4 id="sim-card-and-esim-faqs-40">SIM card and eSIM FAQs</h4>
 <p>SIM card and eSIM FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Learn how to manage physical SIM cards and/or eSIM. Find out what
 kind of SIM your mobile device has. Understand how to activate, unlock
 or replace a SIM card or digital eSIM profile.</p>
@@ -215985,7 +216177,7 @@ card:</p>
 instead.</li>
 <li>If you don’t have an available eSIM, <a
 href="https://www.verizon.com/sales/next/buysim.html?flow=BUYSIM#/">order
-a new or replacement SIM card</a> Is this bill info helpful?</li>
+a new or replacement SIM card</a></li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
@@ -216252,7 +216444,6 @@ continue.</p>
 do with your smartphone</h4>
 <p>Top 10 things to do with your smartphone</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Congratulations on your new smartphone! You now have a powerful tool
 to keep you constantly connected to the people, places and things that
 matter most.</p>
@@ -216415,8 +216606,8 @@ support resources and tools.</p>
 <li>Support Home Page</li>
 <li>Interactive Simulators</li>
 <li>Troubleshooting Assistant</li>
-<li>The My Verizon app for smartphones and tablets with Android or iOS
-Is this bill info helpful?</li>
+<li>The My Verizon app for smartphones and tablets with Android or
+iOS</li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
@@ -216771,7 +216962,6 @@ continue.</p>
 Emergency Alerts (WEAs) device features</h4>
 <p>Wireless Emergency Alerts (WEAs) device features</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Wireless Emergency Alerts (WEAs) are free wireless notifications that
 are delivered to your mobile device as part of a public safety system
 provided by Authorized Senders. They are designed to inform you of
@@ -217516,7 +217706,6 @@ supported. Includes WEA 1.0.</li>
 <p>WEA 1.0*</p>
 <p>Blade Vantage 2</p>
 <p>WEA 1.0*</p>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -308703,7 +308892,6 @@ continue.</p>
 tablet</h4>
 <p>How to find your phone or tablet</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>There may be a recovery method available for your phone or tablet
 that lets you see it on a map, make it ring, lock it or erase it. Select
 your device’s operating system to learn how to use these features:</p>
@@ -308763,7 +308951,6 @@ if the phone has been used since it was lost.</p>
 <p><a href="javascript:void(0);">Review full answer</a></p>
 <p>If you’re unable to find your phone using the instructions above,
 refer to our Lost or stolen phone FAQs for next steps.</p>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -308876,7 +309063,6 @@ continue.</p>
 your tablet</h4>
 <p>Top 10 things to do with your tablet</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Congratulations on the purchase of your new tablet! You now have a
 powerful tool to keep you constantly connected to the people, places and
 things that matter most.</p>
@@ -309019,8 +309205,8 @@ support resources and tools.</p>
 <li>Support Home Page</li>
 <li>Interactive Simulators</li>
 <li>Troubleshooting Assistant</li>
-<li>The My Verizon app for smartphones and tablets with Android or iOS
-Is this bill info helpful?</li>
+<li>The My Verizon app for smartphones and tablets with Android or
+iOS</li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
@@ -309948,7 +310134,6 @@ continue.</p>
 watches with the Family app FAQs</h4>
 <p>Manage Gizmo watches with the Family app FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>GizmoHub app overview</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Learn about the Family app for managing Gizmo watches. Find out how
@@ -310384,8 +310569,7 @@ watch tries to determine location using cellular (wireless) towers:
 <ul>
 <li>Accuracy depends on how far away the cell tower is.</li>
 <li>Location determined by cellular might be accurate within tens of
-yards, or within a mile if towers are far apart. Is this bill info
-helpful?</li>
+yards, or within a mile if towers are far apart.</li>
 </ul></li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
@@ -314383,7 +314567,6 @@ continue.</p>
 <h4 id="damaged-device-fee-faqs-9">Damaged Device Fee FAQs</h4>
 <p>Damaged Device Fee FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Damaged device return fees</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Learn about when damaged device fees are charged and how to avoid
@@ -314512,7 +314695,6 @@ for a damaged device?</h5>
 <p><a href="javascript:void(0);">Review full answer</a></p>
 <p>If your device is damaged, go to our Repair or replace mobile devices
 FAQs page for replacement options.</p>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>
@@ -336956,7 +337138,6 @@ continue.</p>
 <h4 id="home-internet-line-faqs-2">Home Internet Line FAQs</h4>
 <p>Home Internet Line FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>We are updating the line number associated with the home internet
 router. While this change is administrative on our end, we want to
 ensure you have the details regarding why this is happening and what to
@@ -337034,8 +337215,7 @@ after the number change?</h5>
 <li>Sign in to <a href="https://m.vzw.com/2lfMfMGs">My Verizon</a>.</li>
 <li>Visit <a
 href="https://www.verizon.com/digital/nsa/nos/ui/ngd/contactus">Contact
-Us</a> to click on Chat with us or call 1-800-922-0204. Is this bill
-info helpful?</li>
+Us</a> to click on Chat with us or call 1-800-922-0204.</li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
@@ -338381,7 +338561,6 @@ continue.</p>
 FAQs</h4>
 <p>Care Smart app and service FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Care Smart app and service overview</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Learn how the Verizon Care Smart app can help keep caregivers and
@@ -338910,7 +339089,7 @@ charges) associated with your devices, use <a
 href="https://m.vzw.com/TxcbGtP3">My Verizon</a>.</li>
 <li>If you’ve added Get Help to your plan, but haven’t set up the Care
 Smart app to use it, you’ll still be charged for the service, but you
-won’t have access to it. Is this bill info helpful?</li>
+won’t have access to it.</li>
 </ul>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
@@ -338954,7 +339133,6 @@ continue.</p>
 <h4 id="device-unlocking-faqs-61">Device Unlocking FAQs</h4>
 <p>Device Unlocking FAQs</p>
 <p>Search FAQs</p>
-<p>Is this helpful?</p>
 <p>Learn about our device locking policy for Verizon-financed devices
 and Verizon Prepaid devices. Learn how to check your device’s lock
 status and manage a locked device.</p>
@@ -339156,7 +339334,6 @@ device impacted?</h5>
 <p><a href="javascript:void(0);">Review full answer</a></p>
 <p>Verizon-bought devices activated on Verizon Prepaid before 1/27/2026
 unlocked automatically after 60 days.</p>
-<p>Is this bill info helpful?</p>
 <p>Generated by AI. Verify if needed.</p>
 <p>Speak to an agent</p>
 <p>Chat with us 24/7, or call our support team.</p>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-09-19" />
+  <title>The sweep, run and checked — twelve guides changed</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The sweep, run and checked — twelve guides
+changed</h1>
+<p class="date">2026-09-19</p>
+</header>
+<h1 id="what-changed">What changed</h1>
+<p><strong>251 guides read, 12 changed, 3,920 lines removed.</strong>
+The archive holds those twelve as .md and .htm, and nothing else: the
+other 239 were already clean and their files on your disk are still
+correct.</p>
+<ul>
+<li><strong>TuneIn 1,757 lines</strong> — its HelpDocs widget prints
+five lines per article: <em>That’s Great! / Thank you for your feedback
+/ Sorry! We couldn’t be helpful / Let us know how can we improve this
+article! / Feedback sent</em>. That is 23.6 per cent of the file, and
+the articles themselves are untouched.</li>
+<li><strong>FireTv 1,181</strong> and <strong>AmazonMusic 208</strong> —
+Amazon’s <em>Was this information helpful? Yes No</em>, plus <em>Thanks!
+While we’re unable to respond directly to your feedback…</em></li>
+<li><strong>Verizon 462</strong> and <strong>VerizonDevices 30</strong>
+— <em>Is this helpful?</em> and <em>Is this bill info helpful?</em></li>
+<li><strong>Slate 90</strong> — Freshdesk’s <em>Did you find it helpful?
+Yes No / Send feedback / Sorry we couldn’t be helpful…</em></li>
+<li><strong>Guardian 58</strong>, <strong>Downcast 55</strong>,
+<strong>Wikipedia 57</strong>, <strong>Muse 15</strong>,
+<strong>KindleDirectPublishing 5</strong>, <strong>AndroidAccessibility
+2</strong>.</li>
+</ul>
+<h1 id="what-i-found-in-your-files-that-was-not-on-my-list">What I found
+in your files that was not on my list</h1>
+<p>Reading all 251 guides turned up <strong>five widget families I had
+not seen</strong>, and each is now named in the script:
+<strong>HelpDocs</strong> (TuneIn, Downcast), <strong>Amazon</strong>,
+<strong>Verizon</strong>, <strong>Guardian</strong>, and Freshdesk’s
+apology line.</p>
+<h1 id="two-things-i-got-wrong-caught-before-they-reached-you">Two
+things I got wrong, caught before they reached you</h1>
+<p><strong>The first attempt deleted five real article
+headings.</strong> “Send feedback” is both a widget’s word and the title
+of genuine articles — YouTube’s <em>Send feedback to YouTube</em>,
+Windows’ <em>Send feedback to Microsoft with the Feedback Hub app</em>,
+Zoom’s <em>Send feedback specific to AI responses</em>. My rule matched
+the opening of a line, so it took them. <strong>The rule now matches
+only a whole line, and never a heading or a contents entry</strong>, and
+those three guides are untouched in the end.</p>
+<p><strong>The second was Wikipedia.</strong> Its guide carries archived
+reader feedback where the widget’s question is followed by the reader’s
+own words on the same line: <em>“Was this page helpful ? Please change
+the spelling of Billy’s Lakota name…”</em>. A rule that matched the
+opening would have deleted that reader. <strong>Six such lines survive,
+deliberately</strong> — the sweep removes the question only when nothing
+but yes or no follows it.</p>
+<h1 id="the-checks">The checks</h1>
+<p>For every changed guide I compared before and after:</p>
+<ul>
+<li><strong>Headings lost: only the widgets.</strong> Downcast lost 55
+<em>How did we do?</em> headings and Muse 5 <em>Was this article
+helpful?</em> headings. Every other guide kept every heading it
+had.</li>
+<li><strong>Contents lists unchanged</strong> in all twelve — the same
+number of entries before and after, so no article vanished.</li>
+<li><strong>No new heading jumps.</strong> Wikipedia has 41, and it had
+41 before; nothing else has any.</li>
+<li><strong>Every .htm rebuilt with Pandoc</strong>, contents page
+included, and checked for size and structure.</li>
+<li><strong>No widget phrase remains</strong> in eleven of the twelve,
+and the six in Wikipedia are the reader comments described above.</li>
+</ul>
+<h2 id="files">Files</h2>
+<ul>
+<li><strong>Twelve revised guides</strong>, each as .md and .htm</li>
+<li><strong>cleanFeedback.py</strong> as corrected, and the log of every
+line removed</li>
+</ul>
+</body>
+</html>
