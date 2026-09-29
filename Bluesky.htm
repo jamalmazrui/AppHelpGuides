@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bluesky help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Bluesky help</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#bluesky-help" id="toc-bluesky-help">Bluesky help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#general-questions" id="toc-general-questions">General
+questions</a></li>
+<li><a href="#the-user-guide" id="toc-the-user-guide">The user
+guide</a></li>
+<li><a href="#your-account" id="toc-your-account">Your account</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="bluesky-help">Bluesky help</h1>
+<p>This guide holds everything Bluesky publishes as help, gathered on 29
+September 2026 — and that is TEN ARTICLES of about 2,600 words in
+total.</p>
+<p>That is not an accident of gathering. Bluesky’s help centre lists its
+own articles, and the list says ten. Several date from the beta: one
+still explains how to join the waitlist, which closed in 2024. For a
+social network of this size the centre is plainly neglected, and a
+reader who finds little here has found what there is.</p>
+<p>Bluesky answers most questions by email to support@bsky.app and in
+posts from its support account, neither of which this collection can
+hold.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>General questions
+<ul>
+<li><a href="#how-to-join-the-waitlist">How to join the
+waitlist?</a></li>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+<li><a href="#what-is-bluesky">What is Bluesky?</a></li>
+</ul></li>
+<li>The user guide
+<ul>
+<li><a href="#data-privacy">Data Privacy</a></li>
+<li><a href="#moderation-and-custom-feeds">Moderation and Custom
+Feeds</a></li>
+</ul></li>
+<li>Your account
+<ul>
+<li><a href="#how-to-deletedeactivate-my-account">How to
+delete/deactivate my account?</a></li>
+<li><a href="#how-to-update-my-bluesky-accounts-email-address">How to
+update my Bluesky account’s email address?</a></li>
+<li><a href="#password-reset">Password Reset</a></li>
+<li><a
+href="#unable-to-receive-the-two-factor-authentication-2fa-code">Unable
+to receive the Two-Factor Authentication (2FA) code</a></li>
+<li><a href="#what-is-the-suggested-user-handle-format">What is the
+suggested user handle format?</a></li>
+</ul></li>
+</ul>
+<h2 id="general-questions">General questions</h2>
+<h3 id="how-to-join-the-waitlist">How to join the waitlist?</h3>
+<p>Good news! You no longer need to join a waitlist to access Bluesky
+Social. The platform is now open to everyone!</p>
+<p>Bluesky is now public! Previously, Bluesky required an invite to
+join. But now, you can create an account anytime — no waitlist or invite
+code needed.</p>
+<p>How to Get Started:</p>
+<ul>
+<li>Go to <a href="https://bsky.app">bsky.app</a></li>
+<li>Click “Create a new account”</li>
+<li>Follow the sign-up process (email, password, and handle)</li>
+<li>Once done, you can start exploring and connecting with others! For
+further questions or information, send an email to support@bsky.app</li>
+</ul>
+<h3 id="miscellaneous">Miscellaneous</h3>
+<p>How can I submit feedback?</p>
+<p>On the mobile app, open the left side menu and click “Feedback.” On
+the web app, there is a link to “Send feedback” on the right side of the
+screen.</p>
+<p>You can also email <a
+href="mailto:support@bsky.app">support@bsky.app</a> with support
+requests. Please do not use this email to request an invite. Instead,
+sign up for the waitlist <a href="https://bsky.app/">here</a>.</p>
+<p>What is a post on Bluesky called?</p>
+<p>The official term is “post.”</p>
+<p>How can I find friends or mutuals from other social networks?</p>
+<p>Third-party developers maintain tools to find friends from other
+social networks. Some of these projects are listed <a
+href="https://atproto.com/community/projects#bridges">here</a>. Please
+generate an App Password via Settings &gt; Advanced &gt; App Passwords
+to login to any third-party apps.</p>
+<p>Is there a dark mode?</p>
+<p>Yes. You can change the display settings to be light or dark mode, or
+to match your system settings, via Settings &gt; Appearance.</p>
+<p>How can I set up my domain as my handle?</p>
+<p>Please refer to our tutorial <a
+href="https://blueskyweb.xyz/blog/4-28-2023-domain-handle-tutorial">here</a>.</p>
+<h3 id="what-is-bluesky">What is Bluesky?</h3>
+<p>Bluesky is a social app that is designed to not be controlled by a
+single company. We’re creating a version of social media where it’s
+built by many people, and it still comes together as a cohesive,
+easy-to-use experience. We’ve done this by building Bluesky on the AT
+Protocol, an open source toolbox for building social apps that can all
+talk to each other.</p>
+<p>We want modern social media and public conversation online to work
+more like the early days of the web, where anyone could put up a blog or
+use RSS to subscribe to several blogs. We believe this will unlock a new
+era of experimentation and innovation in social media. Researchers and
+communities will have the ability to jump in to help solve the problems
+social networks currently face, and developers will be able to
+experiment with many new forms of interaction.</p>
+<p>Traditional social networks are often closed platforms with a central
+authority. There’s a small group of people who control those companies,
+and they have total control over how users can use the platform and what
+developers can build. On these platforms, as a user, if you try to
+leave, you have to start over from scratch without the connections you
+built there or the content you made. As a developer, if you try to build
+a new app, you have to overcome network effects to rebuild the social
+graph from scratch, and if you <a
+href="https://techcrunch.com/2022/12/15/developer-platforms-are-all-about-trust-and-twitter-lost-it/">try
+to build on the APIs</a> of these companies they can cut you off and
+kill your company in the blink of an eye. As a creator, you might spend
+years building an audience only to lose access to it when the platform
+changes the rules on you.</p>
+<p>What is the AT Protocol?</p>
+<p>The AT Protocol is a protocol for public conversation and an
+open-source framework for building social apps, meaning people have
+transparency into how it is built and what is being developed. It
+creates a standard format for user identity, follows, and data on social
+apps, allowing apps to interoperate and users to move across them
+freely. It is a federated network with account portability.</p>
+<p>An analogy to explain this: every time you create an account on a
+social platform, it’s like moving to a new city. You make friends and
+create posts, which is like filling your house with furniture you made.
+But on centralized social platforms, if you leave, it’s like leaving all
+your friends behind with no way to contact them, and leaving your house
+behind without being able to take anything with you. Leaving a
+centralized site and starting over from scratch is very hard.</p>
+<p>The AT Protocol essentially lets people move between cities. Creating
+a standard format for identity and data is like giving people a
+passport, cell phone, and property rights. If you don’t like the city
+you first moved to, you can relocate and take all your belongings (data)
+with you. Your friends will still be able to find and stay in touch with
+you at the same name and number (identity &amp; follow graph).</p>
+<p>This feature of “account portability” is one of the most important
+differences between apps built on the AT Protocol and other sites, but
+we are also working on <a
+href="https://blueskyweb.xyz/blog/3-30-2023-algorithmic-choice">algorithmic
+choice</a> and <a
+href="https://blueskyweb.xyz/blog/4-13-2023-moderation">composable
+moderation</a>, which you can read more about in the linked blog
+posts.</p>
+<p>What is the corporate structure of Bluesky?</p>
+<p>Bluesky, the company, is a Public Benefit LLC. It is owned by <a
+href="https://bsky.app/profile/jay.bsky.team">Jay Graber</a> and the
+Bluesky team. Jack Dorsey and Jeremie Miller serve on the board, along
+with Jay. Find past public statements we have made about Bluesky PBLLC’s
+governance and structure in our <a
+href="https://blueskyweb.xyz/blog/2-7-2022-overview">original
+announcement</a>, <a
+href="https://blueskyweb.xyz/blog/2-28-2022-how-it-started">other
+posts</a> on our <a href="https://blueskyweb.xyz/blog">blog</a>, and <a
+href="https://twitter.com/bluesky/status/1518707604750430208">on</a> <a
+href="https://twitter.com/bluesky/status/1518707606881067008">social</a>
+<a
+href="https://twitter.com/bluesky/status/1518707603232083968">media</a>.</p>
+<p>What is the relationship between Bluesky and Twitter?</p>
+<p>Bluesky was initially a <a
+href="https://twitter.com/jack/status/1204766078468911106">project
+kicked off by Jack Dorsey</a> when he was CEO of Twitter in 2019. Jack
+<a href="https://twitter.com/jack/status/1427315839666118662">chose Jay
+to lead Bluesky</a>, and Twitter paid Bluesky services income to build
+an open social protocol for public conversation that it could someday
+become a client on. Bluesky <a
+href="https://twitter.com/bluesky/status/1518707599843028992">has been
+an independent company</a> since its <a
+href="https://blueskyweb.xyz/blog/2-7-2022-overview">formation in
+2021.</a></p>
+<p>In late 2022, Twitter chose to sever the service agreement with
+Bluesky, and Bluesky agreed. The Bluesky PBLLC has continued to pursue
+its original founding mission to “develop and drive large-scale adoption
+of technologies for open and decentralized public conversation.”</p>
+<p>How many people are on the app?</p>
+<p>As of March 2024, Bluesky has over 5.2 million users.</p>
+<p>How do I join Bluesky?</p>
+<p>Sign up for Bluesky at <a href="https://bsky.app/">bsky.app</a>. (No
+invites required!)</p>
+<h2 id="the-user-guide">The user guide</h2>
+<h3 id="data-privacy">Data Privacy</h3>
+<p>What is public and what is private on Bluesky?</p>
+<p>Bluesky is a public social network. Think of your posts as blog posts
+– anyone on the web can see them, even those without an invite code. An
+invite code simply grants access to the service we’re running that lets
+you publish a post yourself. (Developers familiar with the API can view
+all posts regardless of whether they have an account themselves.)</p>
+<p>Specifically:</p>
+<ul>
+<li>Posts and likes are public.</li>
+<li>Blocks are public.</li>
+<li>Mutes are private, but mutelists are public lists. Your mutelist
+subscriptions are private.</li>
+<li>Invites and invite trees are private. Why are my posts, likes, and
+blocks public?</li>
+</ul>
+<p>The AT Protocol, which Bluesky is built on, is designed to support
+public conversations. To make public conversations portable across all
+sorts of platforms, your data is stored in data repositories that anyone
+can view. This means that regardless of which server you choose to join,
+you’ll still be able to see posts across the whole network, and if you
+choose to change servers, you can easily take all of your data with you.
+This is what causes the user experience of Bluesky, a federated
+protocol, to be similar to all the other social media apps you have used
+before.</p>
+<p>Can I set my profile to be private?</p>
+<p>Currently, there are no private profiles on Bluesky.</p>
+<p>What happens when I delete a post?</p>
+<p>After you delete a post, it will be immediately removed from the
+user-facing app. Any images attached to your post will be immediately
+deleted in our data storage too.</p>
+<p>However, it takes a bit longer for the text content of a post to be
+fully deleted in storage. The text content is stored in a non-readable
+form, but it is possible to query the data via the API. We will
+periodically perform back-end deletes to entirely wipe this data.</p>
+<p>Can I get a copy of all of my data?</p>
+<p>Yes — the AT Protocol keeps user data in a <a
+href="https://github.com/web3-storage/ipfs-car">content-addressed
+archive</a>. This archive can be used to migrate account data across
+servers. For developers, you can use <a
+href="https://docs.bsky.app/blog/repo-export">this method</a> to export
+a copy of your repository. For non-devs, the tooling is still being
+built to make it easy.</p>
+<p>You can read our privacy policy <a
+href="https://bsky.social/about/support/privacy-policy">here</a>.</p>
+<h3 id="moderation-and-custom-feeds">Moderation and Custom Feeds</h3>
+<h4 id="moderation">Moderation</h4>
+<p>What does muting do?</p>
+<p>Muting prevents you from seeing any notifications or top-level posts
+from an account. If they reply to a thread, you’ll see a section that
+says “Post from an account you muted” with an option to show the post.
+The account will not know that they have been muted.</p>
+<p>What does blocking do?</p>
+<p>Blocking prevents interaction. When you block an account, both you
+and the other account will no longer be able to see or interact with
+each other’s posts.</p>
+<p>How do I flag abuse?</p>
+<p>You can report posts by clicking on the three-dot menu. You can also
+report an entire account by visiting their profile and clicking the
+three-dot menu there.</p>
+<p>What is your plan for moderation?</p>
+<p>Our approach to moderation is three-fold: automated filtering, manual
+admin actions, and community labeling. It stacks new approaches to
+moderation on top of what centralized social sites already do, and
+exposes the internals of the system for anyone to observe.</p>
+<p>The open and composable labeling system for moderation we’re creating
+will allow anyone to define and apply labels to content or accounts, and
+lets anyone choose to subscribe to these label sets. Labels can be
+automatically or manually generated, and can be applied by any service
+or person in the network.</p>
+<p>For example, an organization like the ACLU could create a
+“hate-speech” label, and services or users in the network could
+subscribe to their labels to flag, filter, mute, or ban content. The
+Bluesky reference app we’re building has custom controls that lets users
+hide, warn, or show content, and will add more controls over time.
+Through this approach, we aim to prioritize user safety while giving
+people more control and transparency over how moderation is done. For
+more information, read our original <a
+href="https://blueskyweb.xyz/blog/4-13-2023-moderation">blog post on
+composable moderation</a>.</p>
+<p>Custom Feeds</p>
+<p>What are custom feeds?</p>
+<p>Custom feeds is a feature on Bluesky that allows you to pick the
+algorithm that powers your social media experience. Imagine you want
+your timeline to only be posts from your mutuals, or only posts that
+have cat photos, or only posts related to sports — you can simply pick
+your feed of choice from an open marketplace.</p>
+<p>For users, the ability to customize their feed returns control of
+their attention to themselves. For developers, an open marketplace of
+feeds provides the freedom to experiment and publish algorithms that
+anyone can use.</p>
+<p>You can read more about custom feeds and algorithmic choice in our <a
+href="https://blueskyweb.xyz/blog/3-30-2023-algorithmic-choice">blog
+post here</a>.</p>
+<p>How do I use custom feeds?</p>
+<p>On Bluesky, click “My Feeds” on the left side of the app. From there,
+you can add and discover new feeds.</p>
+<p>How can I create a custom feed?</p>
+<p>Developers can use our <a
+href="https://github.com/bluesky-social/feed-generator">feed generator
+starter kit</a> to create a custom feed. Eventually, we will provide
+better tooling such that anyone, including non-developers, can build
+custom feeds.</p>
+<h2 id="your-account">Your account</h2>
+<h3 id="how-to-deletedeactivate-my-account">How to delete/deactivate my
+account?</h3>
+<p>If you wish to delete/deactivate your account, follow the steps
+below:</p>
+<p>Go to Settings &gt;&gt; Account &gt;&gt; select either Deactivate or
+Delete Account.</p>
+<p>If you choose to deactivate your account, you will still have the
+option to reactivate it at any time should you change your mind.</p>
+<p>On the other hand, if you choose to delete your account, please note
+that this action is permanent and cannot be undone. If you have multiple
+accounts, carefully review the user handle before clicking the “Send
+Email” button to ensure you are deleting the correct account.
+Additionally, please verify that you have access to the email address
+linked to your account, as the deletion code will be sent there.</p>
+<p>Remember to check both your Inbox and Spam mailbox for the
+confirmation code.</p>
+<p>If you encounter issues, feel free to send an email to <a
+href="mailto:support@bsky.app">support@bsky.app</a></p>
+<h3 id="how-to-update-my-bluesky-accounts-email-address">How to update
+my Bluesky account’s email address?</h3>
+<p>Tip: Before proceeding with the steps below, we recommend refreshing
+your app or web browser.</p>
+<p>To update your email address, go to “Settings” &gt;&gt; “Account”
+&gt;&gt; “Update email” &gt;&gt; enter your new preferred email address
+&gt;&gt; click the “Update email” button.</p>
+<p>If the email address linked to your account has not been verified
+yet, you will not need to enter a confirmation code. Simply enter your
+new email address and click “Update email”.</p>
+<p>If you have already verified your email address and you want to
+change it, you will be prompted to enter a confirmation code. This code
+will be sent to the email address currently associated with your Bluesky
+account.</p>
+<p>Check your inbox mailbox for the email with the verification code. If
+you’re not receiving any, please try the following steps first:</p>
+<ul>
+<li>Make sure you’re using the correct email address linked to your
+account</li>
+<li>Check your Spam, Junk, and Promotions folders</li>
+<li>Wait a few minutes, then try requesting the code again If you’ve
+already tried these steps and are still not receiving the code, please
+contact us at <a href="mailto:support@bsky.app">support@bsky.app</a>
+using the email address linked to your account. Be sure to include your
+user handle so we can assist you promptly.</li>
+</ul>
+<h3 id="password-reset">Password Reset</h3>
+<p>How can I reset my password?</p>
+<p>Click “Forgot” on the sign-in screen. You will receive an email with
+a reset code.</p>
+<p>What if I didn’t get a password reset email?</p>
+<p>If you didn’t receive a password reset email, please email us at <a
+href="mailto:support@bsky.app">support@bsky.app</a>.</p>
+<h3 id="unable-to-receive-the-two-factor-authentication-2fa-code">Unable
+to receive the Two-Factor Authentication (2FA) code</h3>
+<p>Before trying the steps below, double-check that the email address
+you entered is correct and free from any typos or extra characters, as
+this is a common cause of delivery issues.</p>
+<p>If the email address is correct and you’re still not receiving the
+code, please try the following:</p>
+<ul>
+<li>Check your spam, junk, or promotions folders, as the code may have
+been filtered there.</li>
+<li>Ensure that <a
+href="mailto:noreply@bsky.social">noreply@bsky.social</a> is not blocked
+or marked as spam — we recommend adding it to your safe senders
+list.</li>
+<li>Wait a few minutes before requesting a new code. If you’ve already
+tried these steps and still haven’t received the code, please send an
+email to <a href="mailto:support@bsky.app">support@bsky.app</a> with
+your email address and user handle so we can assist you further.</li>
+</ul>
+<h3 id="what-is-the-suggested-user-handle-format">What is the suggested
+user handle format?</h3>
+<p>By default, your handle will use the .bsky.social domain. If you
+prefer not to display this, you may opt to use a custom domain handle
+instead.</p>
+<p>Please see the details below to guide you on setting up your user
+handle and to familiarize yourself with the possible error messages you
+may encounter during the process.</p>
+<p>User Handle – Error Messages</p>
+<ul>
+<li>Invalid Handle / Handle Already Taken – The handle is
+unavailable.</li>
+<li>Reserved Handle – The handle is reserved for system use.</li>
+<li>Handle Too Short – Must be at least 3 characters.</li>
+<li>Handle Too Long – Exceeds the allowed character limit.
+<ul>
+<li>.bsky.social users: up to 18 characters for the username (12 taken
+by .bsky.social, 30 total).</li>
+<li>Custom domain users: up to 30 characters total; remaining characters
+depend on domain length (e.g., .dev leaves 26 characters).</li>
+<li>Self-hosted PDS users: subdomain limit of 18 characters.</li>
+</ul></li>
+<li>Invalid Characters:
+<ul>
+<li>For .bsky.social handles: hyphens (-) are allowed, but underscores
+(_), spaces, exclamation marks (!), and periods (.) are not.</li>
+<li>For custom domain handles: first create an account with a
+.bsky.social handle, then update it to your custom domain after account
+creation. If you encounter issues, feel free to send an email to <a
+href="mailto:support@bsky.app">support@bsky.app</a> or <a
+href="https://blueskyweb.zendesk.com/hc/en-us/requests/new">Submit a
+request</a>.</li>
+</ul></li>
+</ul>
+</body>
+</html>

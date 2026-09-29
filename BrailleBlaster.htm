@@ -1,0 +1,3296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>BrailleBlaster help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">BrailleBlaster help</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#brailleblaster-help"
+id="toc-brailleblaster-help">BrailleBlaster help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-brailleblaster" id="toc-about-brailleblaster">About
+BrailleBlaster</a></li>
+<li><a href="#the-user-manual" id="toc-the-user-manual">The user
+manual</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="brailleblaster-help">BrailleBlaster help</h1>
+<p>This guide holds BrailleBlaster’s own documentation, gathered on 28
+September 2026. BrailleBlaster is the American Printing House’s free
+braille transcription program.</p>
+<p>The user manual is published as a single page of about nineteen
+thousand words; here it is split at its own headings so each part can be
+reached from the contents list. The frequently asked questions, the
+system requirements and the support page follow it.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>About BrailleBlaster
+<ul>
+<li><a href="#brailleblaster-system-requirements">BrailleBlaster System
+Requirements</a></li>
+<li><a href="#braillezephyr">BrailleZephyr</a></li>
+<li><a href="#frequently-asked-questions-faq">Frequently Asked Questions
+(FAQ)</a></li>
+<li><a href="#support">Support</a></li>
+</ul></li>
+<li>The user manual
+<ul>
+<li><a href="#appendix-a-formatting-styles">Appendix A: Formatting
+Styles</a></li>
+<li><a href="#appendix-b-shortcut-key-combinations">Appendix B: Shortcut
+Key Combinations</a></li>
+<li><a href="#appendix-c-troubleshooting-embosser-issues">Appendix C:
+Troubleshooting Embosser Issues</a></li>
+<li><a href="#automated-features-and-tools">Automated Features and
+Tools</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#other-editing-tools-and-features">Other Editing Tools and
+Features</a></li>
+</ul></li>
+</ul>
+<h2 id="about-brailleblaster">About BrailleBlaster</h2>
+<h3 id="brailleblaster-system-requirements">BrailleBlaster System
+Requirements</h3>
+<h4 id="brailleblaster-system-requirements-1">BrailleBlaster System
+Requirements</h4>
+<h5 id="software-requirements">Software Requirements</h5>
+<p>When using one of the BrailleBlaster installer packages you will need
+a computer running one of the below operating systems.</p>
+<ul>
+<li>Windows 10 or Newer</li>
+<li>Mac OS X or Newer</li>
+<li>Ubuntu Linux 20.04 or later Only if using the universal zip archive
+distribution of BrailleBlaster you will also need Java15 or higher
+installed on your computer.</li>
+</ul>
+<h5 id="hardware-requirements">Hardware Requirements</h5>
+<ul>
+<li>64-bit computer with 64-bit operating system installed.</li>
+<li>4 GB RAM, 6 GB is recommended. BrailleBlaster works best with a high
+resolution monitor, although this is not required.</li>
+</ul>
+<h4 id="legacy-brailleblaster-version-1-requirements">Legacy
+BrailleBlaster Version 1 Requirements</h4>
+<h5 id="software-requirements-1">Software Requirements</h5>
+<p>A computer with one of the following operating systems installed.</p>
+<ul>
+<li>Windows 7 or higher</li>
+<li>Mac OS X or higher</li>
+<li>Linux with Java8 installed.</li>
+</ul>
+<h5 id="hardware-requirements-1">Hardware Requirements</h5>
+<ul>
+<li>A 32-bit or 64-bit computer.</li>
+<li>4 GB RAM, 6 GB is recommended. BrailleBlaster works best with a high
+resolution monitor, although this is not required.</li>
+</ul>
+<p>Copyright © 2013-2026</p>
+<p>Notice: <a href="https://www.aph.org/accessibility/">Accessibility of
+APH Websites</a> and <a href="https://www.aph.org/privacy-policy/">APH
+Privacy Policy</a></p>
+<h3 id="braillezephyr">BrailleZephyr</h3>
+<h4 id="braillezephyr-1">BrailleZephyr</h4>
+<p>BrailleZephyr is a simple Braille Ready File (BRF) editor</p>
+<ul>
+<li>Six key entry and display using the F D S and J K L keys.</li>
+<li>ASCII Braille entry and display.</li>
+<li>Ability to set page width (cells across) and depth (lines
+down).</li>
+<li>Bell for margin warning, user settable.</li>
+<li>Bell warning for end of line.</li>
+<li>Bell warning for end of page.</li>
+<li>Can save files in Braille ready file format or in BrailleZephyr
+format.</li>
+<li>Valid for NLS Certification Tests Braille and Ascii Braille
+Views</li>
+</ul>
+<h3 id="frequently-asked-questions-faq">Frequently Asked Questions
+(FAQ)</h3>
+<h4 id="frequently-asked-questions-faq-1">Frequently Asked Questions
+(FAQ)¶</h4>
+<ul>
+<li>Frequently Asked Questions (FAQ)
+<ul>
+<li>General
+<ul>
+<li>What is BrailleBlaster™?</li>
+<li>Is BrailleBlaster open source?</li>
+<li>How much does it cost?</li>
+<li>What kind of computer do I need?</li>
+<li>I have installed BrailleBlaster but cannot find it on my desktop,
+how do I launch it?</li>
+</ul></li>
+<li>File Types
+<ul>
+<li>What file types does BrailleBlaster support?</li>
+<li>What braille codes does it support?</li>
+</ul></li>
+<li>Braille Facts
+<ul>
+<li>What kinds of braille documents can I make with BrailleBlaster?</li>
+<li>What if I need to edit BRFs?</li>
+<li>How do I create braille after I translate a file?</li>
+<li>What languages does BrailleBlaster support?</li>
+<li>My document is in UEB, can BrailleBlaster translate it into
+EBAE?</li>
+<li>Does BrailleBlaster support six-key entry?</li>
+<li>Does BrailleBlaster support math?</li>
+<li>Does BrailleBlaster support graphics?</li>
+<li>Does BrailleBlaster support my embosser?</li>
+<li>Does it do interpoint embossing?</li>
+<li>Does it do double-spaced braille?</li>
+<li>Does it give options to suppress contractions for early braille
+readers?</li>
+<li>What is BBZ?</li>
+<li>What is BBX?</li>
+<li>What is NIMAS?</li>
+<li>What is block and what is inline?</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="general">General¶</h5>
+<h6 id="what-is-brailleblaster">What is BrailleBlaster™?¶</h6>
+<p>BrailleBlaster is a braille transcription program developed by the
+American Printing House for the Blind to help transcribers provide
+students who are blind with braille textbooks on the first day of class.
+It can be used by anyone, from NLS-certified transcribers to more casual
+users.</p>
+<h6 id="is-brailleblaster-open-source">Is BrailleBlaster open
+source?¶</h6>
+<p>BrailleBlaster 3.0 and newer is open source under the GPL3. You can
+find source code at <a
+href="https://github.com/aphtech/brailleblaster">github.com</a></p>
+<h6 id="how-much-does-it-cost">How much does it cost?¶</h6>
+<p>It’s free! As a service to the field of blindness, APH is offering
+this powerful, yet easy-to-use, software free-of-charge. Download now at
+<a href="https://brailleblaster.org!">brailleblaster.org!</a></p>
+<h6 id="what-kind-of-computer-do-i-need">What kind of computer do I
+need?¶</h6>
+<p>BrailleBlaster works on a Mac® or Windows® computer. It also works
+with Linux. Installers can be found at <a
+href="https://brailleblaster.org/download.php">brailleblaster.org</a></p>
+<h6
+id="i-have-installed-brailleblaster-but-cannot-find-it-on-my-desktop-how-do-i-launch-it">I
+have installed BrailleBlaster but cannot find it on my desktop, how do I
+launch it?¶</h6>
+<p>Modern Windows packaging guidelines mean applications should not
+automatically create desktop icons. Instead you will find it in the
+start menu under applications. Windows allows you to pin apps to start
+or the task bar. However should you still want to manually create a
+desktop shortcut, set the target of your shortcut to
+“%LOCALAPPDATA%.exe”.</p>
+<h5 id="file-types">File Types¶</h5>
+<h6 id="what-file-types-does-brailleblaster-support">What file types
+does BrailleBlaster support?¶</h6>
+<p>The most readily available files types that BrailleBlaster opens and
+can edit are NIMAS XML files, DOCX, HTML, EPUB3, and TXT files. It can
+also open and edit MD, XHTML, HTM, and ODT files types. It can open, but
+not edit, BRFs.</p>
+<h6 id="what-braille-codes-does-it-support">What braille codes does it
+support?¶</h6>
+<p>Currently BrailleBlaster supports Unified English Braille (UEB); UEB
+plus Nemeth Code for Mathematics; English Braille, American Edition
+(EBAE); U.S. Spanish; and Cherokee. It also offers uncontracted versions
+of any code that normally has contractions, such as UEB and EBAE.</p>
+<h5 id="braille-facts">Braille Facts¶</h5>
+<h6
+id="what-kinds-of-braille-documents-can-i-make-with-brailleblaster">What
+kinds of braille documents can I make with BrailleBlaster?¶</h6>
+<p>You can make worksheets, reading lists, word lists, to-do lists,
+tables, study sheets, short stories, poetry, line-numbered prose, and
+just about anything else you, your child, or your student needs to
+learn!</p>
+<h6 id="what-if-i-need-to-edit-brfs">What if I need to edit BRFs?¶</h6>
+<p>To edit BRFs, download Braille Zephyr at <a
+href="https://brailleblaster.org/braillezephyr.php">brailleblaster.org/braillezephyr.php</a>.
+Braille Zephyr is a BRF editor and is approved for NLS-certification
+lessons.</p>
+<h6 id="how-do-i-create-braille-after-i-translate-a-file">How do I
+create braille after I translate a file?¶</h6>
+<p>BrailleBlaster can send documents to a braille embosser directly or
+it can also save your document as a BRF for sharing online or for use
+with a braille display.</p>
+<h6 id="what-languages-does-brailleblaster-support">What languages does
+BrailleBlaster support?¶</h6>
+<p>Since BrailleBlaster is open source, we encourage the community to
+localize BrailleBlaster into the language of their choice.</p>
+<h6
+id="my-document-is-in-ueb-can-brailleblaster-translate-it-into-ebae">My
+document is in UEB, can BrailleBlaster translate it into EBAE?¶</h6>
+<p>If your document is saved as a BrailleBlaster document (.BBZ),
+BrailleBlaster can translate it into any other available code. Note that
+it cannot retranslate .BRF files.</p>
+<h6 id="does-brailleblaster-support-six-key-entry">Does BrailleBlaster
+support six-key entry?¶</h6>
+<p>Yes, but it is not recommended because you lose some of the dynamic
+abilities that make BrailleBlaster so great. However, if your
+translation requires six-key entry, it is available.</p>
+<h6 id="does-brailleblaster-support-math">Does BrailleBlaster support
+math?¶</h6>
+<p>Yes! BrailleBlaster offers multiple methods for adding math to any
+document. You can use six-key entry, if you prefer. You can enter the
+math using the easy-to-learn APH ASCII Math Hub or the Spatial Math
+Editor. If your file has images, you can use the built-in Image
+Describer. If your file needs number lines, matrices, or tables with
+math in them, BrailleBlaster has the tools to make this process
+easier.</p>
+<h6 id="does-brailleblaster-support-graphics">Does BrailleBlaster
+support graphics?¶</h6>
+<p>We have initial graphics support for .jpg, .pdf, .png, and .svg files
+via the insert image feature and are working on adding more support for
+graphics. Join the mailing lists to be updated on this issue and more!
+[[https://www.freelists.org/list/aphbrailleblaster]]</p>
+<h6 id="does-brailleblaster-support-my-embosser">Does BrailleBlaster
+support my embosser?¶</h6>
+<p>BrailleBlaster supports embossers from Index, Enabling, and ViewPlus.
+If your embosser is not listed or you experience issues, select the
+Generic manufacturer with Text Only or Text with Margins, which works
+with all models. For continued issues, contact [email protected] and
+include your embosser model and a description of the problem.</p>
+<h6 id="does-it-do-interpoint-embossing">Does it do interpoint
+embossing?¶</h6>
+<p>For more information, please refer to the Adjust Page Properties,
+Margins, and Interpoint section of the BrailleBlaster documentation.</p>
+<h6 id="does-it-do-double-spaced-braille">Does it do double-spaced
+braille?¶</h6>
+<p>BrailleBlaster currently supports basic double-spaced braille. To
+apply it, highlight the text and select Styles &gt; Misc &gt; Double
+Line. This option applies double spacing without regard to braille rules
+or formatting. A more advanced double-spacing feature is planned for a
+future update. For more information, please refer to the Adding Double
+Lines section of the BrailleBlaster documentation.</p>
+<h6
+id="does-it-give-options-to-suppress-contractions-for-early-braille-readers">Does
+it give options to suppress contractions for early braille
+readers?¶</h6>
+<p>Yes! To make the entire document uncontracted Braille, use an
+uncontracted translation profile in translation settings. If you would
+like more control, such as only including specific contractions, use the
+contraction relaxer tool.</p>
+<h6 id="what-is-bbz">What is BBZ?¶</h6>
+<p>Often other resource files such as images, book sections, cover
+pages, etc. need to be included along with the BBX file. A BBZ file is
+an archive (ZIP) that packages all of these resources. BrailleBlaster
+works with BBZ or BBX files directly. BBZ is the default standard file
+type for BrailleBlaster.</p>
+<h6 id="what-is-bbx">What is BBX?¶</h6>
+<p>BBX is the old BrailleBlaster XML document file type. When NIMAS or
+other types of files are opened in BrailleBlaster it used to convert
+them to its own BBX format. Now files are converted to the BBZ file
+type. BBX files can still be opened but if you save files with
+BrailleBlaster, they will now be saved as BBZ.</p>
+<h6 id="what-is-nimas">What is NIMAS?¶</h6>
+<p>NIMAS (National Instructional Materials Accessibility Standard) is an
+XML-based file format used to create accessible instructional materials
+for K–12 students with qualifying print disabilities. Under IDEA 2004,
+publishers may submit NIMAS files to NIMAC, where they are used to
+produce formats such as braille, DAISY, large print, and audio. For more
+information, please refer to Operation Specific to NIMAS Files section
+of the BrailleBlaster documentation.</p>
+<h6 id="what-is-block-and-what-is-inline">What is block and what is
+inline?¶</h6>
+<p>Some features, such as Nemeth Passages and the Image Describer, allow
+content to be inserted as Block or Inline. Block inserts the content as
+a separate item (for example, its own paragraph). Inline inserts the
+content within the current item at the cursor location, such as inside
+an existing paragraph.</p>
+<h3 id="support">Support</h3>
+<h4 id="support-1">Support</h4>
+<p>Get notified of the latest releases by subscribing to our <a
+href="https://www.freelists.org/list/aphbrailleblaster-announce">BrailleBlaster
+announce mailing list</a> and follow the sign-up instructions. After
+signing-up you will be sent an email with instructions how to confirm
+your email address.</p>
+<h5 id="contact-us">Contact Us</h5>
+<p>Most questions can be answered in the <a href="docs">BrailleBlaster
+Documentation</a>.</p>
+<p>Further questions may be answered in our <a href="faq.php">Frequently
+Asked Questions page</a>.</p>
+<p>To submit bugs, use the <a href="feedback.php">Report Bug</a>
+page.</p>
+<p>If your questions cannot be answered by the <a
+href="docs">Documentation</a> or the <a href="faq.php">FAQ</a>, you can
+sign-up and ask on our <a
+href="https://www.freelists.org/list/aphbrailleblaster">BrailleBlaster
+discussion mailing list</a>, follow the sign-up instructions. After
+signing-up you will be sent an email with instructions how to confirm
+your email address.</p>
+<p>If you have specific questions or feature requests, contact us using
+the <a href="feedback.php">Submit Feedback</a> page or by emailing .
+Alternatively you may contact APH Customer Service at 1-800-223-1839</p>
+<h2 id="the-user-manual">The user manual</h2>
+<h3 id="appendix-a-formatting-styles">Appendix A: Formatting Styles</h3>
+<p>Style menu items are found both in the Styles menu and as buttons on
+the toolbar.</p>
+<p>There are many Style options BrailleBlaster supports that are
+accessed from the buttons on the toolbar or from the Styles menu. Refer
+to <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016</a> for further instruction on when to use each style.</p>
+<p>Margins are presented as a hyphenated number with the indent listed
+first and the runover second. For example, a list item (which is in 1-3)
+has an indent of 1 and a runover of 3. In other words, the first symbol
+of the element with this style appears in cell 1, and if a second line
+is needed, that line and all subsequent lines begin in cell 3.</p>
+<h4 id="basic-styles">Basic Styles¶</h4>
+<p>These styles include some of the simple styles common to
+transcription.</p>
+<h4 id="basic-styles-specification-table">Basic Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Blocked Text</p>
+<p>Left justified paragraph</p>
+<p>1-1</p>
+<p>Before</p>
+<p>Body Text</p>
+<p>Indented paragraph (default)</p>
+<p>3-1</p>
+<p>None</p>
+<p>Centered Text</p>
+<p>Text centered on the page</p>
+<p>Variable</p>
+<p>None</p>
+<p>Displayed 3-5</p>
+<p>Multiple displayed sentences following blocked text (1-1) or body
+text (3-1)</p>
+<p>3-5</p>
+<p>Before and After</p>
+<p>Displayed Blocked Text</p>
+<p>Displayed blocked paragraph following blocked text (1-1)</p>
+<p>3-3</p>
+<p>Before and After</p>
+<p>Displayed Body Text</p>
+<p>Displayed indented paragraph following body text (3-1)</p>
+<p>5-3</p>
+<p>Before and After</p>
+<h4 id="numeric-styles">Numeric Styles¶</h4>
+<p>Numeric styles apply the margins selected based the indentation of
+the first cell of text and the runover position used with no additional
+formatting. They are arranged in submenus based on the indentation,
+ranging from 1 to 11.</p>
+<h4 id="numeric-styles-specification-table">Numeric Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>1-1</p>
+<p>Text begins in cell 1 with runovers in cell 1</p>
+<p>1-1</p>
+<p>None</p>
+<p>1-3</p>
+<p>Text begins in cell 1 with runovers in cell 3</p>
+<p>1-3</p>
+<p>None</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>11-9</p>
+<p>Text begins in cell 11 with runovers in cell 9</p>
+<p>11-9</p>
+<p>None</p>
+<p>11-11</p>
+<p>Text begins in cell 11 with runovers in cell 11</p>
+<p>11-11</p>
+<p>None</p>
+<h4 id="heading-styles">Heading Styles¶</h4>
+<p>These styles follow the hierarchy of headings according to <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016</a>. For details on inserting a Running Head, see Setting
+a Running Head.</p>
+<h4 id="heading-styles-specification-table">Heading Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Heading 1</p>
+<p>Main heading (Centered Heading - First Level)</p>
+<p>Variable</p>
+<p>Before &amp; After</p>
+<p>Heading 2</p>
+<p>Subheading (Cell 5 Heading - Second Level)</p>
+<p>5-5</p>
+<p>Before</p>
+<p>Heading 3</p>
+<p>Subheading (Cell 7 Heading - Third Level)</p>
+<p>7-7</p>
+<p>Before unless immediately following a Heading 2</p>
+<h4 id="list-styles">List Styles¶</h4>
+<p>List styles are arranged in submenus based on the number of levels
+within the list, ranging from 1 to 5. Each style begins with the word
+List followed by the number for each level within the list. After the
+number there is a letter indicating the separate margins in each level.
+BrailleBlaster automatically moves entries within a list to immediately
+follow one another, and includes a blank before the first list entry and
+after the last entry.</p>
+<h4 id="list-styles-specification-table">List Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>List 1</p>
+<p>List with 1 level</p>
+<p>1-3</p>
+<p>Before &amp; After all 1 level list entries</p>
+<p>List 2a</p>
+<p>First level in a list with 2 levels</p>
+<p>1-5</p>
+<p>Before &amp; After all 2 level list entries</p>
+<p>List 2b</p>
+<p>Second level in a list with 2 levels</p>
+<p>3-5</p>
+<p>Before &amp; After all 2 level list entries</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>List 5d</p>
+<p>Fourth level in a list with 5 levels</p>
+<p>7-11</p>
+<p>Before &amp; After all 5 level list entries</p>
+<p>List 5e</p>
+<p>Fifth level in a list with 5 levels</p>
+<p>9-11</p>
+<p>Before &amp; After all 5 level list entries</p>
+<h4 id="exercise-material-styles">Exercise Material Styles¶</h4>
+<p>Exercise styles are arranged in submenus based on the number of
+levels within the exercise, ranging from 1 to 5. Each style begins with
+the word Exercise followed by the number for each level within the
+exercise. After the number there is a letter indicating the separate
+margins in each level. For example, an exercise that is only an
+open-ended question has one level, while a question with answer choices
+has two levels. See <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016 Section 10</a> for more information.</p>
+<h4 id="exercise-material-styles-specification-table">Exercise Material
+Styles Specification Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Directions</p>
+<p>First paragraph of unnumbered directions</p>
+<p>5-5</p>
+<p>None</p>
+<p>Directions 7-5</p>
+<p>Second paragraph of unnumbered directions</p>
+<p>7-5</p>
+<p>None</p>
+<p>Exercise 1</p>
+<p>Exercise with 1 level</p>
+<p>1-3</p>
+<p>None</p>
+<p>Exercise 2a</p>
+<p>First level in an exercise with 2 levels</p>
+<p>1-5</p>
+<p>None</p>
+<p>Exercise 2b</p>
+<p>Second level in an exercise with 2 levels</p>
+<p>3-5</p>
+<p>None</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>Exercise 5d</p>
+<p>Fourth level in an exercise with 5 levels</p>
+<p>7-11</p>
+<p>None</p>
+<p>Exercise 5e</p>
+<p>Fifth level in an exercise with 5 levels</p>
+<p>9-11</p>
+<p>None</p>
+<h4 id="poetry-styles">Poetry Styles¶</h4>
+<p>Poetry styles are arranged in submenus based on the number of levels
+within the poem, ranging from 1 to 5. Each style begins with the word
+Poetry followed by the number for each level within the poem. After the
+number there is a letter indicating the separate margins in each level.
+For information about line numbered poetry, see Line Numbering.</p>
+<h4 id="poetry-styles-specification-table">Poetry Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Poetry 1</p>
+<p>Poem with 1 level</p>
+<p>1-3</p>
+<p>None</p>
+<p>Poetry 2a</p>
+<p>First level in a poem with 2 levels</p>
+<p>1-5</p>
+<p>None</p>
+<p>Poetry 2b</p>
+<p>Second level in a poem with 2 levels</p>
+<p>3-5</p>
+<p>None</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>Poetry 5d</p>
+<p>Fourth level in a poem with 5 levels</p>
+<p>7-11</p>
+<p>None</p>
+<p>Poetry 5e</p>
+<p>Fifth level in a poem with 5 levels</p>
+<p>9-11</p>
+<p>None</p>
+<h4 id="caption-styles">Caption Styles¶</h4>
+<p>The style caption does not include transcriber’s notes indicators.
+These need to be added to captions, when appropriate.</p>
+<p>Transcriber’s Notes are automatically applied to all descriptions.
+For this reason, the entire item must be highlighted before applying
+style so that TN symbols are applied in the correct location.</p>
+<h4 id="caption-styles-specification-table">Caption Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Caption</p>
+<p>Print provided caption for illustrative materials</p>
+<p>7-5</p>
+<p>None</p>
+<p>Description</p>
+<p>Transcriber generated description for illustrative materials</p>
+<p>7-5</p>
+<p>None</p>
+<h4 id="glossary-styles">Glossary Styles¶</h4>
+<p>Glossary styles are arranged in submenus based on the number of
+levels within the glossary, ranging from 1 to 5. Each style begins with
+the word Glossary followed by the number for each level within the
+glossary. After the number there is a letter indicating the separate
+margins in each level. Typically, the publisher has identified the term
+and the definition within the file, allowing the term to be used as a
+Guide Word automatically. See Working with Alphabetic References for
+more information.</p>
+<h4 id="glossary-styles-specification-table">Glossary Styles
+Specification Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Glossary 1</p>
+<p>Glossary with 1 level</p>
+<p>1-3</p>
+<p>None</p>
+<p>Glossary 2a</p>
+<p>First level in a glossary with 2 levels</p>
+<p>1-5</p>
+<p>None</p>
+<p>Glossary 2b</p>
+<p>Second level in a glossary with 2 levels</p>
+<p>3-5</p>
+<p>None</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>Glossary 5d</p>
+<p>Fourth level in a glossary with 5 levels</p>
+<p>7-11</p>
+<p>None</p>
+<p>Glossary 5e</p>
+<p>Fifth level in a glossary with 5 levels</p>
+<p>9-11</p>
+<p>None</p>
+<h4 id="index-styles">Index Styles¶</h4>
+<p>Index styles are arranged in submenus based on the number of levels
+within the index, ranging from 1 to 5. Each style begins with the word
+Index followed by the number for each level within the index. After the
+number there is a letter indicating the separate margins in each level.
+See Working with Alphabetic References for more information.</p>
+<h4 id="index-styles-specification-table">Index Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Index 1</p>
+<p>Index with 1 level</p>
+<p>1-3</p>
+<p>None</p>
+<p>Index 2a</p>
+<p>First level in an index with 2 levels</p>
+<p>1-5</p>
+<p>None</p>
+<p>Index 2b</p>
+<p>Second level in an index with 2 levels</p>
+<p>3-5</p>
+<p>None</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>…</p>
+<p>Index 5d</p>
+<p>Fourth level in an index with 5 levels</p>
+<p>7-11</p>
+<p>None</p>
+<p>Index 5e</p>
+<p>Fifth level in an index with 5 levels</p>
+<p>9-11</p>
+<p>None</p>
+<h4 id="note-styles">Note Styles¶</h4>
+<p>The styles for notes include those for footnotes (BF 2016 Section
+16), but this style can also be used for endnotes and notes to a simple
+table, as they have the same margins. If a footnote has multiple
+paragraphs, the second paragraph needs to be formatted separately in
+5-3. If the note is for a table which is presented in a listed, linear,
+or stairstep format, do not use the Footnote style (1-3) as these should
+have 7-5 margins. Designating text as a footnote only adjusts the
+margins; it does not insert the note separation line or move the text to
+the bottom of the print page.</p>
+<p>To insert the Note Separation line:</p>
+<ul>
+<li>The Note Separation Line appears after the text element where your
+cursor is placed, meaning you must place your cursor at the end of the
+text previous to the footnote. If your cursor is at the beginning of the
+footnote, the Note Separation Line appears after the footnote.</li>
+<li>Go to Insert &gt; Note Separation Line.</li>
+<li>The Note Separation Line appears as the ASCII in the print view.
+Incidental notes, with and without a heading, can also be used for cross
+references as they have the same margins (BF 2016 Section 9.6).</li>
+</ul>
+<p>Incidental Note without a Heading can also be used for footnotes to a
+listed, linear, or stairstep table, and for speaker’s notes in a slide
+presentation. If the Incidental note has a heading, it needs to be
+designated separately as a cell-7 heading.</p>
+<h4 id="note-styles-specification-table">Note Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Incidental Note with Heading</p>
+<p>Incidental note or cross-reference with a heading</p>
+<p>5-5</p>
+<p>Before &amp; After</p>
+<p>Incidental Note without a Heading</p>
+<p>Incidental note or cross-reference without a heading</p>
+<p>7-5</p>
+<p>Before &amp; After</p>
+<p>Footnote</p>
+<p>Footnote that appears at the bottom of the print page, footnote to a
+table, or endnote</p>
+<p>1-3</p>
+<p>None</p>
+<h4 id="play-styles">Play Styles¶</h4>
+<p>Plays are formatted according to their type. There are two types of
+plays: Prose and Verse. A prose play is written in paragraph format,
+while Verse appears like poetry in print (BF 2016 Section 13).</p>
+<h4 id="play-styles-specification-table">Play Styles Specification
+Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Prose Play 1-3</p>
+<p>The first paragraph by a speaker in a prose play</p>
+<p>1-3</p>
+<p>None</p>
+<p>Prose Play 5-3</p>
+<p>Additional paragraphs immediately following the first by the same
+speaker in a prose play</p>
+<p>5-3</p>
+<p>None</p>
+<p>Stage Directions 7-7</p>
+<p>The first paragraph of stage directions in a prose or verse play</p>
+<p>7-7</p>
+<p>None</p>
+<p>Stage Directions 9-7</p>
+<p>Additional paragraphs immediately following the first paragraph of
+stage directions in a prose or verse play</p>
+<p>7-9</p>
+<p>None</p>
+<p>Verse Play 1-5</p>
+<p>The first line by a speaker in a verse play</p>
+<p>1-5</p>
+<p>None</p>
+<p>Verse Play 3-5</p>
+<p>Additional lines immediately following the first by the same speaker
+in a verse play</p>
+<p>3-5</p>
+<p>None</p>
+<h4 id="miscellaneous-styles">Miscellaneous Styles¶</h4>
+<p>This selection of style elements include those that do not fit into
+other categories.</p>
+<p>It includes the Transcriber’s Notes styles and Box styles. Note that
+these styles are special and require the user to select the entire set
+of text to which they will be applied first. Since the transcriber’s
+note style adds the transcriber’s note symbols and the box styles add
+box lines, the program must know where the user wants those to appear
+and it learns this through the selection made by the user.</p>
+<h4 id="miscellaneous-styles-specification-table">Miscellaneous Styles
+Specification Table¶</h4>
+<p>Style Name</p>
+<p>Description</p>
+<p>Margins</p>
+<p>Blank Line</p>
+<p>Transcriber’s Note</p>
+<p>Each paragraph of selected text is enclosed in transcriber’s note
+indicators</p>
+<p>7-5</p>
+<p>None</p>
+<h4 id="boxes-options-specification-table">Boxes Options Specification
+Table¶</h4>
+<p>Within the Miscellaneous Styles are several options for Boxes.</p>
+<p>Style Name</p>
+<p>Description</p>
+<p>Blank Line</p>
+<p>Box</p>
+<p>Selected text appears within a top and bottom box line</p>
+<p>Before the top box line &amp; After the bottom box line</p>
+<p>Color Box</p>
+<p>Selected text appears within a top and bottom box line, and the color
+you type in the pop-up appears within transcriber’s notes on the top
+line</p>
+<p>Before the top box line &amp; After the bottom box line</p>
+<p>Full Box</p>
+<p>Selected text appears within a top and bottom full box line (the
+exterior borders for a set of nested boxes)</p>
+<p>Before the top box line &amp; After the bottom box line</p>
+<p>Full Color Box</p>
+<p>Selected text appears within a top and bottom full box line (the
+exterior borders for a set of nested boxes), and the color you type in
+the pop up window appears within transcriber’s notes on the top full box
+line</p>
+<p>Before the top box line &amp; After the bottom box line</p>
+<h3 id="appendix-b-shortcut-key-combinations">Appendix B: Shortcut Key
+Combinations</h3>
+<p>Key Combination</p>
+<p>Description</p>
+<p>FILE OPERATIONS</p>
+<p>CTRL + N</p>
+<p>Create a new document</p>
+<p>CTRL + O</p>
+<p>Open a document</p>
+<p>CTRL + W</p>
+<p>Close a document</p>
+<p>ALT + F4</p>
+<p>Quit BrailleBlaster</p>
+<p>CTRL + S</p>
+<p>Save the document</p>
+<p>CTRL+SHIFT+S</p>
+<p>Save the document in a custom location</p>
+<p>CTRL + P</p>
+<p>Print a document</p>
+<p>CTRL + E</p>
+<p>Emboss a document</p>
+<p>ALT + HOME</p>
+<p>Open the Braille Preview</p>
+<p>SHIFT + F10</p>
+<p>Open the context menu (same action as when you right click)</p>
+<p>CTRL + +</p>
+<p>Increase font size 1 point</p>
+<p>CTRL + -</p>
+<p>Decrease font size 1 point</p>
+<p>EDITING</p>
+<p>CTRL + Z</p>
+<p>Undo the last action</p>
+<p>CTRL + Y</p>
+<p>Redo the last action</p>
+<p>CTRL + X</p>
+<p>Cut the selected text</p>
+<p>CTRL + C</p>
+<p>Copy the selected text</p>
+<p>CTRL + V</p>
+<p>Paste copied text</p>
+<p>CTRL + F</p>
+<p>Open the find/replace pane</p>
+<p>F3</p>
+<p>Repeat the last search</p>
+<p>SHIFT + ENTER</p>
+<p>Insert Line Break</p>
+<p>CTRL + ENTER</p>
+<p>Insert Page Break</p>
+<p>CTRL + 5</p>
+<p>Convert text to Print Page Number</p>
+<p>F7</p>
+<p>Spell check</p>
+<p>CTRL + SPACE</p>
+<p>Insert non-breaking space (represented as a white rectangle with a
+black outline in the print view)</p>
+<p>CTRL + R</p>
+<p>Repeat last style applied</p>
+<p>CTRL + T</p>
+<p>Correct Braille translation</p>
+<p>ALT + X</p>
+<p>Six-Key Mode</p>
+<p>CTRL + M</p>
+<p>Math Translation Toggle</p>
+<p>CTRL + D</p>
+<p>Direct Translation</p>
+<p>CTRL + SHIFT + T</p>
+<p>Uncontracted Translation</p>
+<p>CTRL + F2</p>
+<p>Wrap Prose</p>
+<p>CTRL + SHIFT + F2</p>
+<p>Edit Line Number</p>
+<p>NAVIGATION</p>
+<p>ALT + P</p>
+<p>Toggle Print View</p>
+<p>CTRL + G</p>
+<p>Open the page selection options</p>
+<p>CTRL + HOME</p>
+<p>Go to the first page of the current document</p>
+<p>CTRL + END</p>
+<p>Go to the last page of the current document</p>
+<p>ALT + END</p>
+<p>Open the Book Tree</p>
+<p>CTRL + Down</p>
+<p>Go to the Next Element</p>
+<p>CTRL + Up</p>
+<p>Go to the Previous Element</p>
+<p>Page Up</p>
+<p>Next Page</p>
+<p>Page Down</p>
+<p>Previous Page</p>
+<p>TYPEFORMS</p>
+<p>CTRL + B</p>
+<p>Bold</p>
+<p>CTRL + I</p>
+<p>Italic</p>
+<p>CTRL + U</p>
+<p>Underline</p>
+<p>ALT + SHIFT + S</p>
+<p>Script</p>
+<p>SHIFT + ALT + 1</p>
+<p>Transcriber-Defined Typeform 1</p>
+<p>SHIFT + ALT + 2</p>
+<p>Transcriber-Defined Typeform 2</p>
+<p>SHIFT + ALT + 3</p>
+<p>Transcriber-Defined Typeform 3</p>
+<p>SHIFT + ALT + 4</p>
+<p>Transcriber-Defined Typeform 4</p>
+<p>SHIFT + ALT + 5</p>
+<p>Transcriber-Defined Typeform 5</p>
+<p>LOADOUTS</p>
+<p>CTRL + SHIFT + M</p>
+<p>Set Miscellaneous style loadout</p>
+<p>CTRL + SHIFT + B</p>
+<p>Set Basic style loadout</p>
+<p>CTRL + SHIFT + C</p>
+<p>Set Caption style loadout</p>
+<p>CTRL + SHIFT + H</p>
+<p>Set Heading style loadout</p>
+<p>CTRL + SHIFT + L</p>
+<p>Set Lists style loadout</p>
+<p>CTRL + SHIFT + P</p>
+<p>Set Poetry style loadout</p>
+<p>CTRL + SHIFT + A</p>
+<p>Set Plays style loadout</p>
+<p>CTRL + SHIFT + G</p>
+<p>Set Glossary style loadout</p>
+<p>CTRL + SHIFT + E</p>
+<p>Set Exercise Material style loadout</p>
+<p>CTRL + SHIFT + I</p>
+<p>Set Index style loadout</p>
+<p>CTRL + SHIFT + U</p>
+<p>Set Numeric style loadout</p>
+<p>CTRL + SHIFT + N</p>
+<p>Set Notes style loadout</p>
+<p>ALT + NUMBER 1-8</p>
+<p>Apply the style level corresponding to that number for the current
+loadout</p>
+<p>MISCELLANEOUS</p>
+<p>F1</p>
+<p>Open Braille Blaster User Guide</p>
+<h3 id="appendix-c-troubleshooting-embosser-issues">Appendix C:
+Troubleshooting Embosser Issues</h3>
+<p>If you encounter issues with the embossed output when embossing a
+document, please follow the below steps.</p>
+<h4 id="confirm-correct-embosser-configuration">Confirm Correct Embosser
+Configuration¶</h4>
+<p>In your embosser configuration in BrailleBlaster check that the
+manufacturer and model settings exactly match the embosser you are
+using. Embossers with similar model names may interact with
+BrailleBlaster in very different ways, so it is important that you
+select the exact model.</p>
+<h4 id="try-using-generic-text-embosser-support">Try Using Generic Text
+Embosser Support¶</h4>
+<p>If your embosser model is not listed in BrailleBlaster, or embossing
+does not work correctly when you select your specific embosser model,
+then try the generic text embossing support. Go to Settings &gt;
+Embosser settings, select your embosser configuration and press the edit
+button. In your embosser configuration in BrailleBlaster select
+“Generic” for the manufacturer and “Text only” for model.</p>
+<p>When changing to generic text embosser support, it is important you
+correctly configure your embosser’s internal settings for the paper size
+and margins for the document you want to emboss. This will be done by
+using software provided by your embosser’s manufacturer or by using the
+buttons on the embosser itself. For details on how to alter your
+embosser’s internal settings, please refer to the user guide for your
+embosser.</p>
+<h4 id="tweak-advanced-embosser-options">Tweak Advanced Embosser
+Options¶</h4>
+<p>If generic text embosser support has not resolved your embossing
+issue, then it is possible to adjust how generic text embossing support
+works</p>
+<p>by altering the advanced embosser options. The values to be used
+depends upon the embosser being used, below is some information about
+the different options and some recommended values for some embosser
+models.</p>
+<h4 id="advanced-embosser-options">Advanced embosser options¶</h4>
+<ul>
+<li>Add margins: Whether BrailleBlaster should insert spaces and new
+lines in the embossed output to emulate the margins. If you set this to
+true, then your embosser should expect the lines to be longer than the
+Braille and the number of lines per page to be greater to account for
+the margins. It is recommended to set this to false and configure
+margins in your embosser’s internal settings.</li>
+<li>Pad page: When set to true, for pages which do not have all lines
+used by Braille, BrailleBlaster will insert new line characters for each
+empty line at the end of the page. This option is most useful for
+embossers which do not use form feed characters to identify new pages
+and instead rely on counting number of lines. For most embossers you
+should set this to false.</li>
+<li>Form feed on full page: Whether BrailleBlaster should insert the
+form feed sequence at the end of a full page. For most embossers this
+should be set to false.</li>
+<li>End of line: The byte sequence for the end of the line. For most
+embossers set this to but for some embossers may be required. See the
+below list of embossers for embosser specific recommendations.</li>
+<li>End of page: The byte sequence for the end of a page. For many
+embossers this should be set to owever some models may need a different
+value, see the below embosser specific recommendations.</li>
+<li>Header: A byte sequence which will be sent to the embosser before
+the Braille. This may be useful if your embosser needs a sequence of
+bytes to configure a mode/setting or simply state the start of an emboss
+job. In most cases it is recommended to keep this empty.</li>
+<li>Footer: A byte sequence to be sent at the end of a emboss job. For
+most embossers this should be left blank, however some embossers do
+require a value, see the below embosser specific list for details.</li>
+</ul>
+<h4 id="embosser-specific-recommended-values">Embosser specific
+recommended values¶</h4>
+<h4 id="enabling-technologies">Enabling Technologies¶</h4>
+<p>Model</p>
+<p>End of line</p>
+<p>End of page</p>
+<p>Footer</p>
+<p>Phoenix Gold</p>
+<p></p>
+<p>1a</p>
+<p>Phoenix silver</p>
+<p></p>
+<p>\r1a</p>
+<p>Cyclone</p>
+<p></p>
+<p>1a</p>
+<p>Trident</p>
+<p></p>
+<p>1a</p>
+<p>Book Maker</p>
+<p></p>
+<p>raille Express</p>
+<p></p>
+<p>homas</p>
+<p></p>
+<p>homas Pro</p>
+<p></p>
+<p>T</p>
+<p></p>
+<p>uliet Pro60</p>
+<p></p>
+<p>uliet Pro</p>
+<p></p>
+<p>uliet Classic</p>
+<p></p>
+<p>omeo 25</p>
+<p></p>
+<p>omeo Pro50</p>
+<p></p>
+<p>omeo Attache</p>
+<p>omeo Attache Pro</p>
+<p>omeo 60</p>
+<p></p>
+<p>1a</p>
+<p>Juliet 120</p>
+<p></p>
+<p>1a</p>
+<h4 id="index-braille">Index Braille¶</h4>
+<p>Model</p>
+<p>End of line</p>
+<p>End of page</p>
+<p>Footer</p>
+<p>Basic-D V5</p>
+<p></p>
+<p>1a</p>
+<p>Basic-D V4</p>
+<p></p>
+<p>1a</p>
+<p>Everest-D V5</p>
+<p></p>
+<p>1a</p>
+<p>Everest-D V4</p>
+<p></p>
+<p>1a</p>
+<p>BrailleBox V5</p>
+<p></p>
+<p>1a</p>
+<p>BrailleBox V4</p>
+<p></p>
+<p>1a</p>
+<p>Fanfold V5</p>
+<p></p>
+<p>1a</p>
+<h3 id="automated-features-and-tools">Automated Features and Tools</h3>
+<h4 id="working-with-tables">Working with Tables¶</h4>
+<p>The Table tool and Table Editor in BrailleBlaster can help you create
+and reformat braille tables more efficiently than ever before.</p>
+<p>Check out our <a
+href="https://www.youtube.com/watch?v=zWnds0ioekc">Tables in
+BrailleBlaster video</a>!</p>
+<h4 id="insertingcreating-an-unformatted-table">Inserting/Creating an
+Unformatted Table¶</h4>
+<p>To create a table manually:</p>
+<ul>
+<li>Place the cursor where you want the table to begin.</li>
+<li>Go to Insert &gt; Table, which opens the Table Editor screen.</li>
+<li>In the lower right corner of the screen there are two textboxes
+labeled Rows and Columns. The default is 3 rows and 3 columns, but you
+can add or remove rows and columns by entering the number of Rows and
+Columns you want your table to have.</li>
+<li>Begin adding the text for each entry.</li>
+<li>(Optional step) To add Emphasis or a different Translation, use the
+dropdown menus from the toolbar.</li>
+<li>Tools: You can Swap Columns and Rows for better table fit; Add
+Emphasis to All or Add Math Translation to All to change all entries at
+once; or Remove All Emphasis from the table if emphasis is not
+necessary.</li>
+<li>Emphasis: You can use any of the forms of Emphasis that are found in
+the Emphasis toolbar in BrailleBlaster’s main window and apply them to
+text in the table.</li>
+<li>Translation: You can use Direct Translation, Uncontracted
+Translation, or Math Translation to change the braille translation to
+suit your needs.
+<ul>
+<li>Direct Translation is used when you have or need ASCII,
+pre-translated braille. An example would be #id for number sign 14. This
+translation type is used to force the translation type using <a
+href="https://en.wikipedia.org/wiki/Braille_ASCII">ASCII
+braille</a>.</li>
+<li>Uncontracted Translation is used when you need the braille to appear
+without any braille contractions. It will still use your currently
+selected translation table, just without contractions.</li>
+<li>Math Translation is used when you need to create linear math. For
+this BrailleBlaster uses <a href="http://asciimath.org/">ASCII Math</a>.
+Note: The keyboard shortcuts for creating Emphasis and making
+Translation changes are the same in the Table Editor as they are in the
+Print View of BrailleBlaster.</li>
+</ul></li>
+<li>Check that the Table type in the lower left corner of the window is
+on Auto and select Save. Your table is automatically formatted into the
+style type of table BrailleBlaster thinks is the best fit for the amount
+and length of the information in your table.</li>
+</ul>
+<h4 id="creating-formatted-tables">Creating Formatted Tables¶</h4>
+<p>BrailleBlaster can automatically create many types of tables, which
+can be selected from the drop-down menu labeled Table type in the lower
+left corner. These are arranged to match the formatting of tables
+outlined in <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats 2016</a>.</p>
+<h4 id="make-a-simple-table">Make a Simple Table¶</h4>
+<p>The Simple table style sets the table to display as a standard
+braille table with columns and rows and a line separator beneath each
+column heading.</p>
+<h4 id="make-a-listed-table">Make a Listed Table¶</h4>
+<p>The Listed table style changes the table format so that the Row
+fields become Cell 5 Headings while information in the Column Heading
+fields become the first part of each listed item, followed by a colon,
+which is inserted automatically. Information in the column fields is
+added after the colon for each appropriate list item.</p>
+<h4 id="make-a-stairstep-table">Make a Stairstep Table¶</h4>
+<p>The Stairstep table creates a table format where each row is
+represented as a collection of text with indentions so that each column
+of the table is set at a different margin.</p>
+<h4 id="make-a-linear-table">Make a Linear Table¶</h4>
+<p>The Linear table format places the Column Headings in a Transcriber’s
+Note before the text and each row is put into a linear list separated by
+colons and semicolons.</p>
+<h4 id="editing-tables">Editing Tables¶</h4>
+<p>Any changes to the text within a table must occur within the Table
+Editor, whether it is simply correcting a typo or adding columns and
+rows, as the text cannot be edited in the Print View. To use the Table
+Editor, the cursor must be placed inside text designated as a table.
+Otherwise, BrailleBlaster generates the error message “Cursor is not on
+table.” Some of the features can be used for any table, while others are
+specific to each table type.</p>
+<h4 id="adding-or-removing-emphasis">Adding or Removing Emphasis¶</h4>
+<p>Within the Table Editor, any text can be changed to appear with
+Emphasis. You can add Emphasis by highlighting text in the table then
+selecting the type form from those listed in the menu.</p>
+<p>If all of the text in the table needs emphasis added, you can go to
+Tools &gt; Add Emphasis To All and choose from those same options. If
+emphasis needs to be removed from part of the text, select the text and
+apply the emphasis again. If the entire table is emphasized but should
+not be, you can remove all the emphasis at once if you go to Tools &gt;
+Remove All Emphasis.</p>
+<h4 id="changing-the-table-translation">Changing the Table
+Translation¶</h4>
+<p>You can change the translation of the table by highlighting text in
+the table then selecting the preferred Translation from the menu:
+Direct, Uncontracted or Math. If the entire table needs to appear as
+math, go to Tools &gt; Add Math Translation to All.</p>
+<h4 id="edit-a-simple-table">Edit a Simple Table¶</h4>
+<p>When the Simple table style is applied, a button appears to the right
+of the drop-down menu labeled Simple Table Options.</p>
+<ul>
+<li>Open the Simple Table Options. This opens a window with several
+tools for customizing your table:
+<ul>
+<li>Cells between columns: Choose either 2 cells between each column or
+1 cell between each column. The default is 2.</li>
+<li>Guide dots: Controls whether guide dots appear after material in
+columns. Choose either Enabled or Disabled. The default is enabled.</li>
+<li>Row headings: Controls whether information in column 2 and beyond
+appears on the same line as any runovers in column 1. When enabled,
+materials in column 2 and beyond begin on the same line as the runover
+of the heading in column 1. When disabled, material in column 2 and
+beyond begin on the same line on which the heading starts. The default
+is enabled.</li>
+<li>Columns widths: Allows control over the cell width of individual
+columns. Choose either default or custom. When custom is selected, a set
+of editable fields appear below the drop-down menu, showing each column
+in the table. (More about column widths following step 2.)</li>
+</ul></li>
+<li>Click Ok to return to the Table Editor. About Column Widths: In each
+field, the number displayed represents the number of braille cells that
+column takes up. Between each column is a number in parentheses, either
+a (1) or a (2). This number represents the number of Cells between
+columns. The fields can be edited to change the width of each column as
+desired.</li>
+</ul>
+<p>The text Total Width: “X” is shown below the fields, where “X” is the
+total number of cells the columns, and the spaces between them, occupy
+on the braille page. This number automatically changes as the column
+widths are changed. This can be useful to ensure custom column widths do
+not exceed the width of the braille page.</p>
+<h4 id="edit-a-listed-table">Edit a Listed Table¶</h4>
+<p>When the Listed table style is applied, a button appears to the right
+of the drop-down menu labeled Create Transcriber’s Note Heading.</p>
+<p>To edit a Listed table:</p>
+<ul>
+<li>Select the Create Transcriber Note Heading button. This action adds
+a text field to the top of the Table Editor allowing you to create a
+Transcriber’s Note explaining the format of your table.</li>
+<li>The 7-5 text field is set to the default text: “Print format is
+changed. Row headings are blocked in cell 5; column headings begin in
+cell 1. All headings are repeated for clarity. A colon separates
+headings from table entries.” This text can be edited to fit your
+document needs, and appears with 7-5 margins.</li>
+<li>Click Ok to return to the Table Editor.</li>
+</ul>
+<h4 id="edit-a-stairstep-table">Edit a Stairstep Table¶</h4>
+<p>When the Stairstep table style is applied, a button appears to the
+right of the drop-down menu labeled Create Transcriber Note Heading.</p>
+<p>To edit a Stairstep table:</p>
+<ul>
+<li>Select the Create Transcriber Note Heading button.</li>
+<li>Edit using the text fields in the Table Editor to explain the format
+of your table.</li>
+<li>7-5: This first field with 7-5 margins is for the Transcriber’s Note
+that precedes the table, informing the reader of the Stairstep format.
+The text defaults to “Table changes as follows:” but may be edited as
+needed.</li>
+<li>1-1, 3-3, 5-5, etc: These next fields proceed in the standard
+Stairstep format. Each of these fields can be edited as needed.</li>
+<li><ol start="3" type="1">
+<li>Click Ok to return to the Table Editor.</li>
+</ol></li>
+</ul>
+<h4 id="edit-a-linear-table">Edit a Linear Table¶</h4>
+<p>When the Linear table style is applied, a button appears to the right
+of the drop-down menu labeled Create Transcriber Note Heading.</p>
+<p>To edit a Linear table:</p>
+<ul>
+<li>Select the Create Transcriber Note Heading button.</li>
+<li>Edit using the two text fields in the Table Editor to explain the
+format of your table.</li>
+<li>7-5: This field is for the transcriber’s note with 7-5 margins
+informing the reader that the table format is changed.</li>
+<li>1-3: This field with 1-3 margins is for the explanation of the
+column heading order. By default, the text of the column headings is
+automatically placed here in order, from left to right, with a colon
+following the first column heading and a semicolon following each
+additional heading.</li>
+<li><ol start="3" type="1">
+<li>Click Ok to return to the Table Editor.</li>
+</ol></li>
+</ul>
+<h4 id="reformatting-tables">Reformatting Tables¶</h4>
+<p>It is possible to reformat your table to another style type. There
+are two ways to reformat: Reformat Table and Advanced Reformat.</p>
+<p>To reformat a table:</p>
+<ul>
+<li>Go to Actions &gt; Reformat Table.</li>
+<li>A pop-up window opens that reads “Reformatting a table will convert
+the table formatting to plain text. Are you sure you want to continue?”
+Click Yes to continue or No to cancel.</li>
+<li>When Yes is clicked, a new window opens, displaying a list of
+styles. Select a style to have all the table text reformatted into that
+style.</li>
+<li>Click Ok to confirm the style choice and reformat that table into
+normal text. Advanced Reformat functions the same way as Reformat Table,
+but it allows each field of the table to have a different Style applied
+to it when the table is reformatted. The text from each cell of the
+table appears and you designate the styles individually.</li>
+</ul>
+<p>If you decide you do not want to present information in a table, you
+can also remove the table completely. Within the Table Editor, go to
+Actions &gt; Delete Table. The text of the table is completely removed
+from the Print View.</p>
+<h4 id="line-numbering">Line Numbering¶</h4>
+<p>Line Number Tools adds a set of options to the toolbar for inserting
+line numbers into your document. This tool is primarily used for line
+numbered Prose, but it can be used for poetry as well. If you are using
+a NIMAS file and line numbers are present, BrailleBlaster may have
+automatically numbered the lines. If it did not, it is because the line
+numbers are not formatted as such in the original file.</p>
+<h4 id="inserting-line-numbers">Inserting Line Numbers¶</h4>
+<p>In order for BrailleBlaster to recognize the line numbers, the text
+in which they appear must first be wrapped in the Prose tag. This must
+be done in order for line numbers to show up in the Print and Braille
+Views. If you are adding line numbers to poetry, use the Poetic Stanza
+tag instead of the Prose tag when going through the line numbering
+process.</p>
+<p>To insert a line number to Prose:</p>
+<ul>
+<li><p>Go to Tools &gt; Line Number Tools. This action adds the Line
+Number Tools to the toolbar.</p></li>
+<li><p>In the Style View or Breadcrumbs, select the text where you want
+the line numbers displayed, or you can highlight the text in the Print
+View.</p></li>
+<li><p>To add the Prose tag, click the Wrap Prose button in the Line
+Number Tools toolbar OR use the keyboard shortcut (Ctrl + F2).</p></li>
+<li><p>Note: Wrap Prose does not affect the text other than allowing it
+to display line numbers.</p></li>
+<li><p>Choose how to number the lines using either the Line Number or
+Increment by fields:</p></li>
+<li><p>Line Number: Use this field to set the initial line number for
+your text. Line numbers cannot have more than 10 digits. The default is
+1.</p></li>
+<li><p>Increment by: This field allows you to set the increment by which
+all lines are numbered after adding the first line number. The default
+is 1. Example: With the Increment by field set to 5, each time you
+insert a line number after the first, the number increases by 5. So you
+have 5 for the second line number, 10 for the third, 15 for the fourth,
+and so on.</p></li>
+<li><p>Select Insert OR use the keyboard shortcut (F2) to place those
+line numbers in the text.</p></li>
+</ul>
+<h4 id="editing-line-numbers">Editing Line Numbers¶</h4>
+<p>If you need to edit or remove a line number, the Edit Line Number
+tool on the Line Number Tools toolbar can make those changes.</p>
+<p>To edit a line number:</p>
+<ul>
+<li><p>Click on the text that contains the line number you want to
+edit.</p></li>
+<li><p>Select Edit Line Number from the Line Number Tools toolbar OR use
+the keyboard shortcut (Ctrl + Shift +F2). This action opens a window for
+editing the line number.</p></li>
+<li><p>Type the new number in the text field, or delete it to remove the
+line number completely.</p></li>
+<li><p>Click Apply to save the change.</p></li>
+<li><p>Click Previous or Next to cycle through the other line numbers in
+the wrapped section of text and edit as needed. Clicking these buttons
+also applys any changes you have made to the line numbers. Note: If
+BrailleBlaster cannot find any more line numbers, the Edit Line Number
+window automatically closes.</p></li>
+<li><p>Click DONE, which closes the dialog.</p></li>
+</ul>
+<h4 id="making-math">Making Math¶</h4>
+<p>BrailleBlaster uses ASCII Math to create mathematical equations. If
+you are unfamiliar with ASCII Math, you can visit <a
+href="http://www.asciimath.org">asciimath.org</a> for a better
+understanding of how it works.</p>
+<p>Check out our <a
+href="https://www.youtube.com/watch?v=a0Ddg3UlXvo">Basic Math with
+BrailleBlaster video</a>!</p>
+<p>BrailleBlaster provides support for both UEB Technical Material and
+UEB in Nemeth Contexts. You can select your default math translation
+table from the Settings &gt; Translation menu.</p>
+<p>Document types that are supported by Pandoc and include LaTeX are
+also supported by BrailleBlaster. LaTeX documents opened in
+BrailleBlaster maintain formatting, math, and so on from the original
+document and does not require LaTeX software to be installed on the
+system.</p>
+<p>In some cases there may be packages or specific LaTeX notation not
+supported by BrailleBlaster. If you encounter this, we suggest that you
+convert the document to HTML using another application, and then open
+the HTML file in BrailleBlaster. TeX4HT, is an example of a
+LaTeX-to-HTML conversion tool. It integrates with the standard LaTeX
+compiler, thus offering very good LaTeX support.</p>
+<p>Note: XHTML files produced by TeX4HT have the .xht file extension.
+You must change the .xht extension to .xhtml so BrailleBlaster
+recognizes the file.</p>
+<p>To install and use TeX4HT, go to the website <a
+href="http://%5Baccess2science.com%5D(http://www.access2science.com/latex/tutorial_txht.xhtml)">Producing
+HTML and MathML from LaTeX by using tex4ht</a>.</p>
+<h4 id="editing-math">Editing Math¶</h4>
+<p>When transcribing Math material, it is helpful to first turn on the
+Math toolbar icons.</p>
+<p>Go to View &gt; Toolbar &gt; Math. When Math is checked, new icon
+buttons appear to help speed up your transcription.</p>
+<h4 id="change-to-math-translation">Change to Math Translation¶</h4>
+<p>Whenever you need to designate that text should appear as Math, you
+can get to the Toggle Math Translation tool in multiple ways and easily
+make the changes.</p>
+<p>To get to the Toggle Math Translation tool:</p>
+<ul>
+<li>Select the text you want to designate as Math.</li>
+<li>Go to Math &gt; Toggle Math Translation; or use the keyboard
+shortcut Ctrl + M; or right click and select Math from the context menu.
+Your Math text appears highlighted bright pink in the Print view.</li>
+</ul>
+<h4 id="add-nemeth-indicators">Add Nemeth Indicators¶</h4>
+<p>For Nemeth within UEB contexts, you need to insert Nemeth Indicators
+throughout your document, which you can add either blocked or inline
+depending on your needs.</p>
+<ul>
+<li>Select the text you want to appear between the Nemeth
+Indicators.</li>
+<li>Go to Math &gt; Nemeth Block or Nemeth Inline The Nemeth Indicators
+now appear on the line before and the line after your Nemeth material if
+you chose Nemeth Block, or they appear before and after the Nemeth
+material only separated by a space if you chose Nemeth Inline.</li>
+</ul>
+<h4 id="add-numeric-passages">Add Numeric Passages¶</h4>
+<p>For UEB Technical Material you may need to use a Numeric Passage in
+your document, which you can add either blocked or inline, depending on
+your needs.</p>
+<p>To add numeric passages:</p>
+<ul>
+<li>Select the text you want to appear within the Numeric Passage.</li>
+<li>Go to Math &gt; Numeric Passage Block or Numeric Passage Inline.
+<ul>
+<li>Choosing Numeric Passage Block places the Numeric Passage on the
+line before and the line after your UEB Technical material.</li>
+<li>Choosing Numeric Passage Inline places the Numeric Passage before
+and after the UEB Technical material separated only by a space.</li>
+</ul></li>
+</ul>
+<h4 id="add-numeric-spaces-to-a-series-of-numbers">Add Numeric Spaces to
+a Series of Numbers¶</h4>
+<p>You can create a numeric series by using the Numeric Series tool as
+described:</p>
+<ul>
+<li>Highlight the text you want to be a numeric series.</li>
+<li>Go to Math &gt; Numeric Series. This action places dot 5’s where the
+spaces previously were. If there are two spaces, there are two Dot
+5’s.</li>
+</ul>
+<h4 id="get-math-help">Get Math Help¶</h4>
+<p>You can also access the Math Help at any time. Go to Math &gt; Math
+Help. This action opens a quick list of definitions for the Math tools
+and the button icons.</p>
+<h4 id="making-linear-math">Making Linear Math¶</h4>
+<p>The ASCII Math Hub makes it easier to enter or edit unfamiliar math
+equations in a linear format.</p>
+<p>To make a linear equation:</p>
+<ul>
+<li>Go to Math &gt; ASCII Math Hub.</li>
+<li>From here, you can select various types of equations and mathematic
+symbols, which are organized into tabs. You can show or hide these tabs
+by using the Show Tabs option in the ASCII Math Hub toolbar and
+selecting the tabs you want to view. The tabs include:
+<ul>
+<li>Operation Symbols: A list of mathematical symbols used in an
+operation (e.g., division sign, multiply, union, etc.).</li>
+<li>Miscellaneous Symbols: A list of a variety of symbols frequently
+used in many types of mathematic notation (e.g., absolute value, angle,
+plus minus, etc.).</li>
+<li>Relation Symbols: A list of symbols that show the relationship
+between two parts of an equation (e.g., equals, greater than,
+proportional to, etc.).</li>
+<li>Greek Symbols: A list of Greek letters (e.g., alpha, beta, capital
+delta, etc.).</li>
+<li>Logical Symbols: A list of symbols commonly used in notations of
+logical expressions (e.g., true, there exists, if and only if,
+etc.).</li>
+<li>Grouping Symbols: A list of symbols used for grouping within
+mathematical equations (e.g., left and right braces, left and right
+brackets, left and right curly braces, etc.).</li>
+<li>Arrows: A list of arrows that can be use in mathematical equations
+(e.g., double left arrow, down arrow, double right left arrow,
+etc.).</li>
+<li>Accents: A list of accents that may appear in mathematical contexts
+(e.g., combining circumflex, dot x, double dot x, etc.).</li>
+<li>Functions: A list of function abbreviations used in mathematic
+equations (e.g., cosine, cotangent, cosecant, etc.).</li>
+<li>Special: Contains column vectors, complex subscripts, matrices, and
+script order templates.</li>
+<li>Examples: A list of common mathematic operations shown in ASCII Math
+and in an image for user convenience (e.g., complex fraction, exponent,
+overbar, etc.).</li>
+<li>Search: Here you can search for an ASCII Math symbol by typing it
+into the textbox and clicking OK.</li>
+</ul></li>
+<li>Select the Insert button to put your text in BrailleBlaster.</li>
+<li>(Optional step) Choose Replace Current Math to replace a previous
+entry of math that was made with your current entry. Select Previous
+Math or Next Math to navigate through the math elements in your
+document. Note: You can also make the ASCII Math Hub full screen by
+choosing Full Screen in the Settings drop-down menu.</li>
+</ul>
+<p>Note: Any math that you enter using the ASCII Math Hub is highlighted
+in bright pink in the Print View.</p>
+<p>Note: Font Size can be be increased or decreased by pressing the
+Plus(+) or Minus(-) buttons next to where it says Font Size.</p>
+<h4 id="making-spatial-math">Making Spatial Math¶</h4>
+<p>To create or edit spatial math in BrailleBlaster, open the Spatial
+Math Editor.</p>
+<p>Note: You cannot edit spatial math in the Print View. Instead, place
+your cursor in the spatial math you want to change, open the Spatial
+Math Editor, and make any changes needed.</p>
+<p>Check out our <a
+href="https://www.youtube.com/watch?v=yz9vefDsj1g">Spatial Math in
+BrailleBlaster video</a>!</p>
+<p>To create spatial math:</p>
+<ul>
+<li>Go to Math &gt; Spatial Math Editor.</li>
+<li>Select the Container Type, or type of spatial math, you want to
+create in the menu. The options are:
+<ul>
+<li>Number Line Editor</li>
+<li>Matrix</li>
+<li>Math Templates</li>
+<li>Regular Text</li>
+</ul></li>
+</ul>
+<h4 id="set-up-spatial-math">Set up Spatial Math¶</h4>
+<p>Some fields are available no matter what container type you have
+chosen. Container specific settings appear under the settings menu after
+you have selected that Container Type. There are general setting options
+and buttons to review before entering your spatial math.</p>
+<p>Settings: These change based on your container type and translation.
+It allows for Nemeth Passage Indicators, Grade 1 Passage, or Numeric
+Passage Indicators to be applied inline for the translation it is set
+on.</p>
+<p>Row: Allows you to customize the rows needed for your Spatial Math
+with three buttons:</p>
+<ul>
+<li><p>Previous: Allows you move to the previous number in the
+list</p></li>
+<li><p>Next: Allows you to add more rows or move to the next row number
+in the list.</p></li>
+<li><p>Delete: Removes a row from list. Column: Allows you to customize
+the columns needed for your Spatial Math with three buttons:</p></li>
+<li><p>Previous: Allows you move to the previous number in the
+list</p></li>
+<li><p>Next: Allows you to add more columns or move to the next column
+number in the list.</p></li>
+<li><p>Delete: Removes a column from list. Insert: Places your new
+Spatial Math into your file where your cursor is placed or updates your
+previously created Spatial Math according to your edits.</p></li>
+</ul>
+<p>Cancel: Closes the window without saving any changes.</p>
+<h4 id="editing-math-number-lines">Editing Math Number Lines¶</h4>
+<p>Before you enter your Number Line information in the Spatial Editor,
+review the settings to ensure the best translation.</p>
+<h4 id="settings-specific-to-number-lines">Settings Specific to Number
+Lines¶</h4>
+<ul>
+<li><p>Reduce Fraction: Automatically reduces the fractions on your
+number line. If you want the same denominator to appear across the
+number line, do not use Reduce Fraction. Example: If your number line is
+labeled 0 to 1 with an interval of ¼, the Reduce Fraction option would
+make your number line read: 0, ¼, ½, ¾, and 1, rather than 0, ¼, 2/4, ¾,
+and 4/4.</p></li>
+<li><p>Beveled Fraction: Sets the fraction lines in your number lines to
+a Beveled Fraction, which is a diagonal line in print. Beveled Fractions
+in UEB use the general fraction line; Nemeth uses the diagonal
+line.</p></li>
+<li><p>Add Arrows to Line: Puts arrows on the beginning and end of your
+number line.</p></li>
+<li><p>Stretch Across Page: Stretches the number line across the entire
+braille page. By default, BrailleBlaster tries to use the minimum number
+of cells to fit your number line on the page.</p></li>
+<li><p>Remove Leading Zeros: When your number line has decimals, Remove
+Leading Zeros omits the zeros that appear before the decimal. For
+example, 0.5 appears as .5 in braille.</p></li>
+<li><p>Number Line View: Sets whether your number line appears as math
+or plain text:</p>
+<ul>
+<li>Math Entry: Allows a sequential number line to be put in according
+to your needs.</li>
+<li>User Text: Allows you to enter text instead of math for the labeled
+tick marks on the number line. This adds the option Line Marker, which
+allows up to 10 markers along the number line.</li>
+</ul></li>
+<li><p>Interval/Points: Creates either Points along the number line or
+an Interval along a segment of the number line.</p>
+<ul>
+<li>Points: Creates points along the number line</li>
+<li>Interval: Creates a line segment on the number line</li>
+<li>None: Removes any Intervals or Points from the number line</li>
+</ul></li>
+<li><p>Start Interval Type: Inserts a symbol at the start of your line
+segment. Your options are:</p>
+<ul>
+<li>Empty Circle:</li>
+<li>Full Circle:</li>
+<li>None:</li>
+</ul></li>
+<li><p>End Interval Type: Creates a symbol at the end of your line
+segment. Your options are:</p>
+<ul>
+<li>Empty Circle:</li>
+<li>Full Circle:</li>
+<li>None:</li>
+</ul></li>
+</ul>
+<h4 id="create-a-number-line">Create a Number Line¶</h4>
+<p>BrailleBlaster calculates your number line automatically as long as
+the fields are filled in using numbers that make sense
+mathematically:</p>
+<ul>
+<li>Count By: The amount you want each number on the number line to
+increase by.</li>
+<li>Line Start: The first number of your number line.</li>
+<li>Line End: The last number of your number line.</li>
+<li>Interval Start: The first number of your line segment.</li>
+<li>Interval End: The last number of your line segment. Once you have
+filled out these fields, select Insert and the math is put into your
+file at the location of the cursor.</li>
+</ul>
+<h4 id="editing-matrices">Editing Matrices¶</h4>
+<p>Before you enter your Matrix information in the Spatial Editor,
+review the settings to ensure the best translation.</p>
+<h4 id="settings-specific-to-matrices">Settings Specific to
+Matrices¶</h4>
+<ul>
+<li>Translation: Allows you to choose the type of Translation for your
+Matrix:
+<ul>
+<li>Uncontracted</li>
+<li>Direct</li>
+<li>ASCII Math</li>
+<li>Literary</li>
+</ul></li>
+<li>Add Ellipsis to Blank Cells: Automatically adds ellipses to blank
+spaces in your Matrix.</li>
+<li>Grouping Device: Allows you to change which grouping indicator
+encloses your Matrix cells. The options include:
+<ul>
+<li>Bracket</li>
+<li>Parentheses</li>
+<li>Brace</li>
+<li>Vertical Bar</li>
+<li>Big Bracket</li>
+<li>Big Parentheses</li>
+<li>Big Brace</li>
+<li>Big Vertical Bar</li>
+</ul></li>
+<li>Wide Overflow Style: Automatically used when you enter large amounts
+of text in the Matrix cells or there are many Matrix cells.
+BrailleBlaster detects when a Matrix is too large to fit on one braille
+page and formats your text based on your overflow style and how you set
+up your document in Page Properties. You have two overflow options:
+<ul>
+<li>Block and Blank Line: Makes each cell of the Matrix into a block
+with the overflow of text appearing vertically in the block</li>
+<li>Indent Columns: Formats each of the Matrix columns into a block and
+indents each column by two braille cells. Note: If you have the Indent
+Columns option selected, but only one cell is too long for a braille
+page, BrailleBlaster overrides this with Block and Blank Line formatting
+in order to fit the Matrix on the page.</li>
+</ul></li>
+<li>Row &amp; Column: Customizes the number of rows and columns for each
+Matrix, up to 9 for each.</li>
+</ul>
+<h4 id="using-math-templates">Using Math Templates¶</h4>
+<p>With Math Templates you can add Identifiers, Operators, and Operands
+to your equations and customize them to fit your needs.</p>
+<h4 id="settings-specific-to-math-templates">Settings Specific to Math
+Templates¶</h4>
+<p>Before you enter your Math Template information in the Spatial
+Editor, review the settings to ensure the best translation.</p>
+<ul>
+<li>Template Type: Changing your template type changes the layout of the
+boxes where you enter your text. The three template types are:
+<ul>
+<li>Simple Template</li>
+<li>Fraction Template</li>
+<li>Division Template</li>
+</ul></li>
+<li>Operator: Allows you change the operation sign you want to use in
+your equation. You can also change your operator from the drop-down menu
+of the text area.
+<ul>
+<li>Plus</li>
+<li>Minus</li>
+<li>Multiply</li>
+</ul></li>
+<li>Operands: Customizes the number of operands in your equation, up to
+20.</li>
+<li>Solution: Allows you to enter the solution for the equation to your
+template.
+<ul>
+<li>False: No solution is shown</li>
+<li>True: You can enter the solution, which is shown</li>
+</ul></li>
+</ul>
+<h4 id="making-grids-with-regular-text">Making Grids with Regular
+Text¶</h4>
+<p>You can make a grid out of any text and can customize the position of
+that grid.</p>
+<h4 id="settings-for-regular-text">Settings for Regular Text¶</h4>
+<p>Before you enter your grid information in the Spatial Editor, review
+the settings to ensure the best translation.</p>
+<p>Vertical Alignment: Aligns your grid entries vertically with
+options:</p>
+<ul>
+<li><p>Top</p></li>
+<li><p>Center</p></li>
+<li><p>Bottom Horizontal Alignment: Aligns your grid entries
+horizontally with options:</p></li>
+<li><p>Right</p></li>
+<li><p>Center</p></li>
+<li><p>Left</p></li>
+<li><p>Trim</p></li>
+</ul>
+<h4 id="working-with-tactile-graphics">Working with Tactile
+Graphics¶</h4>
+<h4 id="creating-blank-space-for-a-tactile-graphic">Creating Blank Space
+for a Tactile Graphic¶</h4>
+<p>The Image Placeholder allows you to insert blank lines to leave the
+required amount of space for a graphic within the text.</p>
+<ul>
+<li><p>Place your cursor where you want to insert the blank lines. Note:
+The blank lines will be inserted into the document before the
+cursor.</p></li>
+<li><p>Go to Insert &gt; Image Placeholder. This action will bring up a
+window.</p></li>
+<li><p>In the window, a textbox is shown with the label: Number of lines
+(&lt;25). Type the number of lines you need for the graphic, but it must
+be a number less than 25.</p></li>
+<li><p>Once you have typed the number you need, select Submit to add in
+the lines or Cancel to go back to the document without making any
+changes. See also the sections on Creating Facing Pages and Adding Blank
+Pages, as these are important for adding tactile graphics to interpoint
+documents.</p></li>
+</ul>
+<h4 id="attaching-images-to-image-placeholders">Attaching Images to
+Image Placeholders¶</h4>
+<p>Blank lines can be associated with an image now.</p>
+<p>Go to Insert &gt; Image Placeholder and insert the number of blank
+lines in the dialog box to account for the graphic.</p>
+<p>Use the Insert Image Location button to choose a file from your
+computer to associate with that set of blank lines. When the association
+is made, the braille and graphics can be embossed together to a
+supported embosser. Currently, only ViewPlus graphics embossers are
+supported; however, more are planned for the future.</p>
+<h3 id="getting-started">Getting Started</h3>
+<h4 id="modifying-the-view">Modifying the View¶</h4>
+<p>BrailleBlaster’s customizable interface allows you to adjust the size
+and placement of tools to suit your preferences.</p>
+<h4 id="changing-font-size">Changing Font Size¶</h4>
+<p>Font Size can be increased or decreased to your preferred text size.
+Be aware that increasing or decreasing the font size may change how much
+text is shown on the screen in the Print and Braille Views.</p>
+<p>To change Font Size either go to View &gt; Increase Font Size or
+Decrease Font Size. You can also use the shortcuts (Ctrl + “+”) to
+Increase Font Size OR (Ctrl + “-”) to Decrease Font Size.</p>
+<h4 id="modifying-toolbar-icons">Modifying Toolbar Icons¶</h4>
+<p>The button icons on the toolbar can be displayed or hidden from view.
+The size of the icons can also be changed by going to View &gt; Icon
+Size. This gives you the option of having Small, Medium, or Large icons.
+How much text is shown in the Print and Braille Views of your document
+is also dependent on Icon Size.</p>
+<p>To change how the toolbar buttons are displayed:</p>
+<ul>
+<li>Go to View &gt; Toolbar. The buttons that are currently shown on the
+toolbar have checkmarks beside them.</li>
+<li>Check or uncheck which grouping of buttons you would like to have
+shown or hidden in the toolbar.</li>
+<li>Note: The default for the toolbar buttons is all groupings are shown
+in the toolbar, except for the View and Math tools.</li>
+</ul>
+<h4 id="toggle-views">Toggle Views¶</h4>
+<p>You can choose to hide or display text views on your screen allowing
+you to focus on one view or multiple views.</p>
+<ul>
+<li>Go to View &gt; Toggle Views. This shows which views you have open
+in the main window with check marks beside the following views: Print
+(Alt + P): Shows the Print text</li>
+</ul>
+<p>Note: You can only make changes to the text from within the Print
+View.</p>
+<p>Braille: Shows the Braille text</p>
+<p>Style: Shows which style is applied to the text.</p>
+<p>Breadcrumbs: Shows what styles are applied to sections of the text in
+the bottom section of the toolbar. Like a trail of breadcrumbs, it shows
+every style used leading up to that specific piece of text.</p>
+<ul>
+<li>Unchecking an item hides the view from the window.</li>
+<li>Whenever a view is hidden and then displayed it moves to the
+right-hand side of the screen. Note: At least one view must always be
+displayed.</li>
+</ul>
+<h4 id="rearrange-views">Rearrange Views¶</h4>
+<p>BrailleBlaster allows you to arrange the print, braille, and style
+views in the order that works best for you.</p>
+<p>To arrange the views:</p>
+<ul>
+<li>Go to View &gt; Toggle Views &gt; Rearrange Views</li>
+<li>From here, you can select Move Up or Move Down to switch where each
+view is displayed on the screen. Note: The views display from left to
+right starting with the first item in the list.</li>
+</ul>
+<h4 id="changing-simulated-braille-to-ascii">Changing Simulated Braille
+to ASCII¶</h4>
+<p>By checking or unchecking View Braille in the main View menu, you can
+choose whether you want the text in the Braille View and Braille Preview
+to appear as simulated braille or ASCII.</p>
+<p>View Braille Checked</p>
+<p>View Braille Unchecked</p>
+<h4 id="previewing-your-file-as-an-embossed-braille-document">Previewing
+Your File as an Embossed Braille Document¶</h4>
+<p>The Braille Preview displays how the file appears as an embossed BRF.
+The braille pages are displayed in 2 Page View mode. This side-by-side
+view is like looking at an open-bound book, with the even numbered
+braille pages on the left and the odd numbered braille pages on the
+right. This allows you to ensure the content is presented correctly in
+interpoint documents, such as when certain things need to be on facing
+pages or space needs to be allotted for graphics. When viewing
+Single-sided materials, 2 Page View can be turned off in Braille Preview
+by going to View &gt; 2 Page View and unchecking it.</p>
+<p>To preview a BRF go to File &gt; Braille Preview OR use the keyboard
+shortcut (Alt + Home). This opens the Braille Preview window.</p>
+<p>Note: When you open a BRF in BrailleBlaster it appears in this
+Braille Preview window. You cannot edit the BRF, but it can be embossed
+by going to File &gt; Emboss within the Braille Preview menu or using
+the keyboard shortcut (Ctrl + E).</p>
+<p>Within the Braille Preview, you can navigate through the document
+by:</p>
+<ul>
+<li><p>Print Page Number: The page number normally displayed in the
+top-right corner of a braille page.</p></li>
+<li><p>Braille Page Number: The page number normally displayed in the
+bottom-right corner of a braille page (including T-Pages and
+P-Pages).</p></li>
+<li><p>Ordinal Page Number: The page number out of the total number of
+pages in your document, regardless of how the print and braille page
+numbers appear. You can also navigate using the Find textbox if you need
+to find a specific section in the text. Narrow down your search further
+with these two checkboxes:</p></li>
+<li><p>Six Key: This checkbox allows a Six Key Input option for
+searching the text. If unchecked, ASCII should be entered to
+search.</p></li>
+<li><p>Uppercase: The uppercase checkbox only becomes available when a
+BRF is loaded into BrailleBlaster. When checked, it takes lowercase
+ASCII that BrailleBlaster produces in the Find textbox and uses it to
+find uppercase ASCII that is in the document. This is important because
+some BRFs use uppercase ASCII to simulate braille while others use
+lowercase ASCII. Use the Next and Previous buttons to find specific
+instances of text you are looking for. When a search reaches the end of
+the document, it restarts at the beginning.</p></li>
+</ul>
+<p>The Braille Preview window also has a status line in the lower left
+corner that provides navigation help by displaying the page number
+(based on your navigation selection), line number, and cell number the
+cursor is currently on. This information is accessible to screen
+readers.</p>
+<h4 id="basic-file-operations">Basic File Operations¶</h4>
+<p>BrailleBlaster makes creating, opening, and saving files easy through
+the use of keyboard shortcuts.</p>
+<h4 id="creating-files">Creating Files¶</h4>
+<p>When creating a new document, go to File &gt; New or use the shortcut
+(Ctrl + N) to begin working in a new blank tab/page.</p>
+<h4 id="pasting-text">Pasting Text¶</h4>
+<p>You can copy text from another document and paste it into
+BrailleBlaster, including special symbols not available on the keyboard.
+All of the text automatically formats into the Body Text style (3-1
+margins). Add additional formatting and print page numbers to your
+document using Styles the Page tool.</p>
+<h4 id="creating-an-original-document">Creating an Original
+Document¶</h4>
+<p>If you are creating a document from scratch, you can type your text
+directly into BrailleBlaster. Formatting and editing can be applied as
+you create your document.</p>
+<h4 id="opening-files">Opening Files ¶</h4>
+<p>If you want to open a file in BrailleBlaster or continue working on a
+file you have already created, go to File &gt; Open or use the keyboard
+shortcut (Ctrl + O) to open the file.</p>
+<p>BrailleBlaster opens many different types of files. When you select
+Open in the File menu, a list of the recognized file types is
+displayed.</p>
+<p>Note: LaTeX will be converted into ASCII Math when opened in
+BrailleBlaster except in NIMAS XML, TXT, BRL, and ZIP file types.</p>
+<ul>
+<li>BB XML (*.bbx)</li>
+<li>BB Archive (*.bbz)</li>
+<li>Braille Ready File (<em>.brf) </em>Note:* When BrailleBlaster opens
+a BRF, it opens in the [[#Previewing Your File as an Embossed Braille
+Document|Braille Preview]] window and no changes can be made to the
+file.</li>
+<li>Braille text (*.brl)</li>
+<li>Microsoft Word files (*.docx)</li>
+<li>EPUB e-books (*.epub)</li>
+<li>HTML files (<em>.htm or </em>.html)</li>
+<li>Markdown files (*.md)</li>
+<li>Open Document files (*.odt)</li>
+<li>LaTeX files (*.tex)</li>
+<li>Text files (*.txt)</li>
+<li>XHTML files (<em>.xhtml or </em>.xhtm or *.xht)</li>
+<li>NIMAS XML files (*.xml)</li>
+<li>NIMAS zipped files (*.zip)</li>
+</ul>
+<h4 id="using-a-nimas-xml-file">Using a NIMAS XML File¶</h4>
+<p>Within a NIMAS XML file, some of the print may be automatically
+formatted to the correct style for the braille document, such as print
+and braille page numbering, designation of headings, identification of
+tables, lists, and more. These automatic formats may need to be changed
+manually to ensure the print formatting correctly matches the braille
+formatting. For example, the headings may appear bold throughout the
+print file, but this font attribute is not needed in the braille
+transcription. For more information about working with NIMAS files go to
+the Operations Specific To NIMAS Files section.</p>
+<p>If your file contains MathML, it is converted to ASCII Math and
+translated into your chosen math braille code.</p>
+<h4 id="saving-files">Saving Files ¶</h4>
+<p>There are several unique file types that BrailleBlaster uses when
+saving a file.</p>
+<p>BrailleBlaster ZIP File (BBZ): BBZ is the default BrailleBlaster file
+type. It is a zipped NIMAS file set. When the ZIP file is saved, it
+saves as a BBZ. This allows images to remain in the file.</p>
+<p>BrailleBlaster XML File (BBX): XML stands for eXtensible Markup
+Language. BBX was the previous file standard for BrailleBlaster. Now it
+saves everything as a BBZ, see below. However, if you have a BBX
+document, it should be able to be opened in BrailleBlaster V2. Note that
+support for this feature is limited and a very complex BBX file may not
+open in V2.</p>
+<p>Braille Ready File (BRF): BrailleBlaster allows files to be saved as
+a BRF. You can also save your file in the Portable Embosser Format
+(PEF). These are the file formats that are used to Emboss the
+document.</p>
+<p>Note: You cannot edit a BRF or PEF in BrailleBlaster. Make desired
+changes before saving as BRF or PEF. You can download BrailleZephyr (a
+free and simple BRF editor) to edit BRFs.</p>
+<p>To save a BRF or PEF, go to File &gt; Save BRF/PEF. Selecting this
+option saves your entire document as a single BRF or PEF. It opens the
+Save window and allows you to name your file.</p>
+<p>For more information about BRFs within BrailleBlaster, see Previewing
+Your File as an Embossed Braille Document.</p>
+<h4 id="navigating-files">Navigating Files¶</h4>
+<p>BrailleBlaster has many tools to help you successfully navigate
+through your file. If you are using a NIMAS file, the Book Tree is the
+most useful tool for navigation, but other tools can be used to navigate
+any file.</p>
+<h4 id="navigating-to-the-beginning-of-your-file">Navigating to the
+Beginning of Your File¶</h4>
+<p>Home allows immediate navigation to the beginning of your
+document.</p>
+<p>Go to Navigate &gt; Home or use the keyboard shortcut (Ctrl + Home).
+This places the cursor at the very beginning of the document, before the
+first word on the first page.</p>
+<h4 id="navigating-to-the-end-of-your-file">Navigating to the End of
+Your File¶</h4>
+<p>End allows immediate navigation to the end of your document.</p>
+<p>Go to Navigate &gt; End or use the keyboard shortcut (Ctrl + End).
+This places the cursor at the end of the file, after the last word on
+the last page.</p>
+<h4 id="navigating-to-a-particular-page">Navigating to a Particular
+Page¶</h4>
+<p>Go to Page allows you to navigate to a specific page in your
+document. This is helpful for long documents that are difficult to
+navigate simply by scrolling. Alternatively, you can also use the Find
+and Replace feature to search your document if you are looking for a
+specific word or type of formatting in your document.</p>
+<p>To navigate to a particular page:</p>
+<ul>
+<li>Go to Navigate &gt; Go To Page or use the keyboard shortcut (Ctrl +
+G).</li>
+<li>Select the type of page you want to use to navigate: Print Page: The
+page number normally displayed in the top-right corner of a braille
+page.</li>
+</ul>
+<p>Braille Page: The page number normally displayed in the bottom-right
+corner of a braille page.</p>
+<p>Ordinal Page: The page number out of the total number of pages in
+your document, regardless of how the print and braille page numbers
+appear.</p>
+<p>Note: If your document has Volume Breaks, you can search for a
+specific braille page within a single volume rather than the entire
+file.</p>
+<ul>
+<li>Type the desired page number in the textbox and select Go To to
+complete the action. Note: If you have made changes to the page numbers
+in your file, you can also quickly navigate to those pages you have
+changed through the Page Change List in the Page Number Dialog. See
+Viewing Page Number Changes for more details.</li>
+</ul>
+<h4 id="setting-up-your-document">Setting up Your Document¶</h4>
+<p>Before getting started on your transcription, there are some basic
+settings you might need to adjust in your document, such as which
+braille code to use, how the page numbers should appear, how many
+braille lines per page, if you need a running head, and so on.</p>
+<h4 id="setting-braille-translation">Setting Braille Translation¶</h4>
+<p>Go to Settings &gt; Translation Settings</p>
+<p>The default translation setting for BrailleBlaster is UEB, but other
+translation options include: UEB Uncontracted, UEB with Nemeth
+(Contracted and Uncontracted), EBAE (Contracted and Uncontracted),
+Spanish US, and Cherokee Plus Nemeth.</p>
+<h4 id="setting-page-numbering">Setting Page Numbering¶</h4>
+<p>Go to Settings &gt; Page Numbers</p>
+<p>Depending on your agency, they may have different requirements for
+Page Numbers. You can choose the placement of both Braille and Print
+Page numbers, how you want continuation indicators for your print pages,
+and whether you want continuing pages.</p>
+<h4 id="adjusting-page-properties-margins-and-interpoint">Adjusting Page
+Properties, Margins, and Interpoint¶</h4>
+<p>Go to Settings &gt; Page Properties</p>
+<p>From here you can set your Page Size, Lines Per Page, Cells Per Line,
+and Margins of your document. You can also change whether you want your
+margins to be represented in inches or by cells or lines.</p>
+<p>The Page Size default is set to 11.5” x 11”; Margins defaults are set
+to top 0.5”, bottom 0.5”, left margin 1.25”, right margin 0.48”.</p>
+<p>The option Interpoint can be set for Yes or No. Setting it for Yes
+will emboss your file on both sides of the page. Setting it for No will
+emboss single-sided.</p>
+<p>Once you have chosen your desired settings for the Translation
+Settings, Page Numbers, and Page Properties, you can select OK or Make
+Default if you want the changes to be applied to future documents. If
+you do not wish to save your changes, select Cancel.</p>
+<h4 id="setting-a-running-head">Setting a Running Head¶</h4>
+<p>The Running Head tool allows you to add a Running Head to your
+document on all braille pages except for t1 and braille page 1. The
+default is for no running head, as it is not needed for all
+transcriptions.</p>
+<ul>
+<li>Go to Insert &gt; Running Head. This opens a small window.</li>
+<li>The option No Running Head is automatically selected. Select the
+radio button Enter Title and type the Running Head into the
+textbox.</li>
+<li>Select OK to save your changes. Note: Before entering the Running
+Head, you should confirm that the running head length fits at the top of
+the page and works for all print page numbers as required by <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016</a>.</li>
+</ul>
+<h4 id="printing-and-embossing">Printing and Embossing¶</h4>
+<p>Note that when BrailleBlaster prints, it prints the Print View. When
+it embosses, it embosses the braille view. We are working on a way to
+allow users to print the braille view for quick review.</p>
+<h4 id="setting-up-a-printer">Setting up a Printer¶</h4>
+<ul>
+<li>Go to File &gt; Print or use the keyboard shortcut (Ctrl + P) to
+open the Print window.</li>
+<li>Under Select Printer any printer connected to your computer should
+automatically be listed. However, if your printer does not show up, use
+the Find Printer button.</li>
+<li>Select the Print button to print the Print View of your
+document.</li>
+</ul>
+<h4 id="printing-a-document">Printing a Document ¶</h4>
+<ul>
+<li>Go to File &gt; Print or use the keyboard shortcut (Ctrl + P) to
+open the Print window.</li>
+<li>Select a printer.</li>
+<li>Customize your print job with Page Range and Number of copies.</li>
+<li>Click the Print button to send your file to the printer.</li>
+</ul>
+<h4 id="setting-up-an-embosser">Setting up an Embosser¶</h4>
+<ul>
+<li>Go to Settings &gt; Embosser Settings to select a default embosser,
+or to add or remove an embosser.</li>
+<li>Complete the fields in the Edit embosser window to configure your
+embosser profile.</li>
+<li>Click OK to complete your embosser profile set up or click Cancel to
+close the window without saving any changes.</li>
+</ul>
+<h4 id="edit-embosser-fields">Edit Embosser Fields¶</h4>
+<p>Name: The name can be as long as you want to identify the embosser,
+but BrailleBlaster only displays a limited number of characters.</p>
+<p>Embosser Device: Select your embosser of choice from the dropdown
+list of all available printers and embossers.</p>
+<p>Embosser Manufacturer: Select your embosser’s manufacturer from the
+following choices. Listed after each manufacturer are the available
+models.</p>
+<ul>
+<li>APH:
+<ul>
+<li>PixBlaster</li>
+<li>PageBlaster</li>
+</ul></li>
+<li>ViewPlus Technologies:
+<ul>
+<li>EmBraille</li>
+<li>Columbia</li>
+<li>Delta</li>
+<li>Premier</li>
+<li>Elite</li>
+<li>Emprint</li>
+<li>SpotDot</li>
+<li>Max</li>
+<li>Cub</li>
+<li>Cub JR</li>
+</ul></li>
+<li>Generic: Three options are available.
+<ul>
+<li>Text only: This option is used if your embosser model is not
+supported by a specific driver. BrailleBlaster assumes that the page
+size, margins, interpoint, and other settings have been set on the
+embosser itself.</li>
+<li>Text with margins: This option is similar to the Text only option,
+except that extra spaces are added in the braille to create
+margins.</li>
+<li>Graphics Embosser: This option is for embosser models that support
+graphics embossing. This feature is in beta and, therefore, not fully
+supported across all possible models. It is supported by the ViewPlus
+family of embossers.</li>
+</ul></li>
+<li>IRIE:
+<ul>
+<li>Braille Buddy</li>
+<li>Braille Sheet 120</li>
+<li>Braille Trac 120</li>
+</ul></li>
+<li>Index Braille:
+<ul>
+<li>Basic-D V5</li>
+<li>Basic-D V4</li>
+<li>Everest-D V5</li>
+<li>Everest-D V4</li>
+<li>BrailleBox V5</li>
+<li>BrailleBox V4</li>
+<li>Fanfold V5</li>
+</ul></li>
+<li>Enabling Technologies:
+<ul>
+<li>Phoenix Gold</li>
+<li>Phoenix Silver</li>
+<li>Cyclone</li>
+<li>Trident</li>
+<li>BookMaker</li>
+<li>Braille Express</li>
+<li>Thomas</li>
+<li>Thomas Pro</li>
+<li>Juliet Classic</li>
+<li>Juliet Pro</li>
+<li>Juliet Pro60</li>
+<li>ET</li>
+<li>Romeo Attache</li>
+<li>Romeo Attache Pro</li>
+<li>Romeo Pro50</li>
+<li>Romeo 25</li>
+<li>Romeo 60</li>
+<li>Juliet 120</li>
+</ul></li>
+<li>Braillo:
+<ul>
+<li>Braillo 200</li>
+<li>Braillo 400S</li>
+<li>Braillo 400SR</li>
+<li>Braillo 600</li>
+<li>Braillo 600SR</li>
+<li>Braillo 270 Note: If you do not know your embosser’s manufacturer,
+it is recommended you select Generic.</li>
+</ul></li>
+</ul>
+<p>Embosser Model: Select from the available Embosser models, listed
+above. This varies depending on which manufacturer you chose.</p>
+<h4 id="advanced-embosser-options-1">Advanced embosser options¶</h4>
+<p>The options available on the advanced tab depend upon the model of
+embosser selected. These advanced options allow working around various
+issues with specific embossers and normally should be left at their
+default values. You may be asked to alter the advanced options if you
+contact support regarding an embosser issue.</p>
+<p>Currently advanced options are only available for the generic “Text
+only” and “Text with margins” embosser models. Below is a list of the
+advanced options.</p>
+<ul>
+<li><p>Add margins (true, false)</p></li>
+<li><p>Pad page (true, false)</p></li>
+<li><p>Form feed on full page (true, false)</p></li>
+<li><p>End of line (open byte string)</p></li>
+<li><p>End of page (open byte string)</p></li>
+<li><p>Header (open byte string)</p></li>
+<li><p>Footer (open byte string) For the options which accept byte
+string values, you should enter text representing the bytes to be sent
+to the embosser for that option. For most ASCII characters you can just
+type the character itself. However for characters which may not be easy
+to type there are a few escape sequences which are given in the below
+list.</p></li>
+<li><p>\ to enter a backslash.</p></li>
+<li><p>o enter carrage return</p></li>
+<li><p>to enter new line.</p></li>
+<li><p>o enter tab.</p></li>
+<li><p>o enter form feed.</p></li>
+<li><p>followed by two hexadecimal characters to enter any byte. For
+example to enter the byte with hexadecimal value 1B (sometimes known as
+escape) you would enter 1b into the option.</p></li>
+</ul>
+<h4 id="embossing-a-document">Embossing a Document ¶</h4>
+<p>After completing the steps in Setting up an Embosser, you can begin
+the process of embossing your file.</p>
+<ul>
+<li><p>Go to File &gt; Emboss or use the keyboard shortcut (Ctrl + E) to
+open the Emboss window. Note: If you have not embossed in BrailleBlaster
+before, you are prompted to set up a profile for your embosser. See
+Setting up an Embosser.</p></li>
+<li><p>Select your embosser, the number of copies you wish to emboss, as
+well as the page range (All or a range between 1 and the final page of
+the document). Note: You can change the embosser settings at any time by
+clicking the Manage Embossers button, which opens Embosser Settings
+window.</p></li>
+<li><p>Click OK to emboss or click Cancel to close the window.</p></li>
+</ul>
+<h3 id="glossary">Glossary</h3>
+<p>ASCII: Stands for the American Standard Code for Information
+Interchange but it is simplest to think of it as the print symbols that
+can be created by a keyboard.</p>
+<p>Book Tree: The Book Tree is similar to a table of contents, showing
+the hierarchy of the book’s material. Although it does not show you the
+page numbers, selecting a section takes you to that page in the file.
+NIMAS files can be navigated using the Book Tree, which shows the
+Section tags and headings applied by the publisher.</p>
+<p>Breadcrumb: The breadcrumbs feature shows different levels of styles
+applied to a piece of text. They are visible in the bottom section of
+the toolbar and show any containers and section tags. Clicking on one of
+the levels shown within the breadcrumbs highlights the section of text
+it applies to in the print view.</p>
+<p>Note: When using a screen reader while breadcrumbs is active, any
+change to the breadcrumbs is read. You can turn breadcrumbs off by going
+to View &gt; Toggle Views &gt; Breadcrumbs.</p>
+<p>Close (Ctrl + W): Closes the current document, but BrailleBlaster
+(and any other documents) remains open. Clicking the X in the tab above
+the print view where the file name appears (or New Document if you
+haven’t saved it with a new name yet) has the same result—closing only
+that document.</p>
+<p>Container: BrailleBlaster automatically views some styles as being
+kept in a container, including List, Poetry, and Boxes. The word
+CONTAINER appears before the style name in the breadcrumbs, and when
+clicked, selects all of the elements with that particular style
+contained in the container. Once selected, you can select Unwrap Element
+from the tools menu to remove that style from the highlighted text,
+returning it to body text (3-1 margins). You can also search for
+particular containers in Find and Replace.</p>
+<p>Element: Each section of text with a style applied to it is
+considered an element in BrailleBlaster. For example, every individual
+paragraph of Body Text or every individual line of a Poem is considered
+an element. You can navigate through each element, as described in
+Navigating Through Text Elements to review the formatting.</p>
+<p>Exit (Alt + F4): Closes the BrailleBlaster application, including any
+open documents but giving an opportunity to save if changes have been
+made.</p>
+<p>Loadouts: Loadouts allow you to create shortcut keys for styles.
+There are not enough shortcut key combinations available for every style
+in BrailleBlaster. As an alternative, you can configure the loadout to a
+particular style type and designate the style levels (as appropriate) to
+quickly change the formatting of your text, using shortcut keys rather
+than clicking with the mouse. See Configuring Style Loadouts for more
+information.</p>
+<p>Set Cell Position: Sets the indentation position of the text at your
+chosen curser position. A dialog box opens in which you can type the
+cell number where the text at the cursor should start. If you type in a
+number lower than the cell the text is currently on, it moves to the
+next line and begins in that cell. It does not work if the cursor is at
+the end of a line.</p>
+<p>Spell Check (F7): Reviews the print document for spelling errors.
+There are many options within Spell Check to make changes to the errors
+found:</p>
+<ul>
+<li>Add to Dictionary: Adds the word to the dictionary so that it is no
+longer considered a spelling error in the current document and future
+documents.</li>
+<li>Ignore Word: Ignores the misspelled word and any other time it
+appears in the current document.</li>
+<li>Replace: Replaces the selected instance of the word with a suggested
+word from the list or with a word you type into the textbox.</li>
+<li>Replace All: Replaces all instances of the word within the document
+with a suggested word from the list or with a word you type into the
+textbox.</li>
+<li>Skip: Makes no change to the word and moves on to the next
+misspelled word. BrailleBlaster continues to recognize the word a
+spelling error, should you use Spell Check again. Styles: Styles impact
+the margins of the braille and the use of blank lines in your document.
+BrailleBlaster uses many different “styles” to convey to the braille
+reader how the print is formatted. The default layout of BrailleBlaster
+shows the style view on the left, so that the name of the style is in
+line with the corresponding print to the right. The complete detailed
+list of styles are found in the Appendix A: Formatting Styles.</li>
+</ul>
+<p>Note: An asterisk next to a style name in the Style view represents
+an image in that element. More details are in the Describing Images with
+the Image Describer section.</p>
+<p>TOC Builder: The tool used to build the Table of Contents (TOC).
+Complete instructions on using this feature are available in Building
+the Table of Contents.</p>
+<p>Toggle: Turns something on or off. For example, clicking View &gt;
+Toggle Views &gt; Breadcrumbs turns off the Breadcrumbs, removing them
+from the toolbar. Clicking View &gt; Toggle Views &gt; Breadcrumbs a
+second time turns them on, putting them back on the toolbar.</p>
+<h3 id="help">Help</h3>
+<p>Like any new software program, it is possible to run across some
+problems in BrailleBlaster from time to time. There are many tools in
+the program for reporting these errors as well as instructions on how to
+use the program more effectively.</p>
+<h4 id="using-the-help-menu">Using the Help Menu¶</h4>
+<p>The Help menu in BrailleBlaster covers several areas. Some things you
+can use Help for include:</p>
+<ul>
+<li>Access a local copy of the BrailleBlaster User Guide OR use the
+keyboard shortcut (F1).</li>
+<li>Check for Updates, for the most up-to-date version of the
+program.</li>
+<li>Find which version of BrailleBlaster you are using, which is helpful
+for reporting errors to APH staff.</li>
+<li>Open the BrailleBlaster website to find additional information.</li>
+<li>Report errors with View Log or Reset BB.</li>
+</ul>
+<h4 id="reporting-brailleblaster-issues">Reporting BrailleBlaster
+Issues¶</h4>
+<p>Sometimes, BrailleBlaster has exceptions that appear when specific
+strings of actions are performed that the program cannot render,
+resulting in an error. If an exception occurs, the most effective way to
+solve it is to revert to your most recent save and try making the
+changes again.</p>
+<p>One of the most important things to do if an exception happens is to
+report it with the Exception Reporting Service. Please help improve
+BrailleBlaster for other users by taking advantage of this feature. When
+an exception pop-up appears, send the exception to APH with the Tell APH
+About This Error So They Can Fix It button, or click OK to close the
+exception. We encourage you to report these exceptions rather than
+dismiss them so BrailleBlaster continues to improve.</p>
+<p>View Log and Reset BB are both tools that can be found in the Help
+menu to report other potential BrailleBlaster errors. View Log provides
+the ability to view or save a software error log in the event that
+BrailleBlaster encounters an unexpected problem. This log can be
+provided to the technical support staff at APH to assist them in
+troubleshooting.</p>
+<p>Reset BB is included with early releases because of potential
+conflicts that can occur when updating the program. If documents do not
+open after updating, but the previous version of BrailleBlaster worked
+fine, it is likely the cause of one of these conflicts.</p>
+<p>CAUTION: The Reset BB feature deletes all user data, which includes
+changes to the translation, page settings, and font size. It is not
+recommended to use this feature unless first instructed to do so by an
+APH employee.</p>
+<h3 id="other-editing-tools-and-features">Other Editing Tools and
+Features</h3>
+<h4 id="formatting-styles">Formatting Styles¶</h4>
+<p>Styles are an integral part of the transcription process. Giving text
+elements different styles distinguishes how the print is formatted,
+providing clarity for the braille reader.</p>
+<h4 id="viewing-applied-styles">Viewing Applied Styles¶</h4>
+<p>By using Breadcrumbs and the Style View you can see what kinds of
+styles are applied to the text and how the text is grouped.</p>
+<h4 id="viewing-style-containers">Viewing Style Containers¶</h4>
+<p>Breadcrumbs is a feature that shows what styles are applied to
+sections of the text. Like a trail of breadcrumbs, it shows every style
+used leading up to that specific piece of text.</p>
+<ul>
+<li>Go to View &gt; Toggle Views &gt; Breadcrumbs. This makes
+Breadcrumbs visible in the bottom section of the toolbar.</li>
+<li>Breadcrumbs shows different levels of styles that have been applied
+to a piece of text. Clicking on one of the section buttons highlights
+everything within that style level.</li>
+</ul>
+<h4 id="viewing-styles-in-the-main-window">Viewing Styles in the Main
+Window¶</h4>
+<p>Within the default Settings, the Style View for BrailleBlaster is
+located at the left-most section of the document view. This view shows
+what style has been applied to the selection of text in the Print View.
+This is helpful for viewing types of formatting in the document. You can
+change where this view is located on the screen, as well as turn it on
+and off. See Toggle Views for details.</p>
+<h4 id="applying-styles">Applying Styles¶</h4>
+<p>BrailleBlaster’s formatting is contextual, and the Styles conform to
+the rules laid out in <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats 2016</a>. How each style functions in BrailleBlaster is detailed
+in the Style Appendix.</p>
+<p>To apply a style:</p>
+<ul>
+<li>Place your cursor in an element OR highlight a section of text where
+you want to apply a style.</li>
+<li>Go to Styles and select the style you want the element to have OR
+select the desired style from the toolbar buttons.</li>
+<li>Once selected, that style is applied to the text.</li>
+</ul>
+<h4 id="repeating-the-last-used-style">Repeating the Last Used
+Style¶</h4>
+<p>The Repeat Last Style tool is used to continuously apply the last
+used style to new text elements.</p>
+<p>To repeat the last style:</p>
+<ul>
+<li>Place your cursor in an element OR highlight a section of text where
+you want to apply a style.</li>
+<li>Go to Styles &gt; Repeat Last Style or use the keyboard shortcut
+(Ctrl + R).</li>
+<li>The style last applied to the previous element is now applied to the
+current element. Note: If no style has been applied, and this feature is
+used, a pop-up opens letting you know there is no style to repeat.</li>
+</ul>
+<h4 id="removing-a-style">Removing a Style¶</h4>
+<p>In BrailleBlaster, you can replace any style with another style from
+the Style toolbar, but there is a tool that allows you to remove certain
+styles from a text element in one simple step. Unwrap Element allows you
+to remove certain styles, including List, Poetic Stanza, Box, Full Box,
+and Prose.</p>
+<p>To remove a style:</p>
+<ul>
+<li><p>Have Breadcrumbs displayed in the toolbar. See Viewing Applied
+Styles for instructions on how this done.</p></li>
+<li><p>Place your cursor on the text you want to Unwrap.</p></li>
+<li><p>Select the container button for the element in Breadcrumbs. The
+text is now highlighted.</p></li>
+<li><p>Go to Tools &gt; Unwrap Element. Note: In some cases, Unwrap
+Element may be grayed out or unavailable to select. If this occurs, you
+must apply another style instead of using this tool.</p></li>
+<li><p>After selecting Unwrap Element, the text is formatted as Body
+Text, the default style in BrailleBlaster, which presents text as
+indented paragraphs with margins of 3-1.</p></li>
+</ul>
+<h4 id="adjusting-the-number-of-style-levels">Adjusting the Number of
+Style Levels:¶</h4>
+<p>You can adjust the number of Style Levels that appear for each style
+with multiple levels. The default number of levels displayed is five,
+but you might find you need fewer or more levels. BrailleBlaster can
+show up to eight.</p>
+<p>To adjust the number of styles:</p>
+<ul>
+<li>Go to Styles &gt; Configure &gt; Style Levels.</li>
+<li>Select the number of levels that you wish to view in the dropdown
+menus in the Styles toolbar.</li>
+</ul>
+<h4 id="using-style-options">Using Style Options¶</h4>
+<p>Sometimes it is necessary for a braille document to have additional
+style rules on certain parts of the text. Style Options allows you to
+add various style rules to the text.</p>
+<h4 id="setting-your-own-margin">Setting Your Own Margin¶</h4>
+<p>There are times when you have text that doesn’t conform to
+BrailleBlaster’s existing style options. There are many oddities when
+formatting braille and they can’t all be covered by a predetermined
+style. For these situations, you can use Set Cell Position, which allows
+you to set the indentation for the line of text at the cursor’s
+position.</p>
+<p>To set your own margin:</p>
+<ul>
+<li>Place your cursor before the element you wish to indent.</li>
+<li>Go to Edit &gt; Set Cell Position, which causes a textbox to
+open.</li>
+<li>Type the cell number where you want your text to start into the
+textbox.</li>
+<li>Click OK. The text element is pushed over into the cell number you
+entered. Note: If you type in a number lower than the cell the text is
+currently on, it drops down to the next line and begins on that cell.
+This command does not work if the cursor is at the end of a line. It is
+only applied to one line at a time.</li>
+</ul>
+<h4 id="keeping-text-on-the-same-line">Keeping Text on the Same
+Line¶</h4>
+<p>Hitting Enter moves the text down to the next line, but it treats it
+is as a new element, like a new paragraph in Body Text or a new item in
+a List. When you don’t want a new element, but need text to stay
+together, you can insert a Line Break. This inserts a break at the
+location of the cursor, dropping all text following the cursor down to
+the next braille line.</p>
+<p>To keep text on the same line:</p>
+<ul>
+<li>Place your cursor where you want your line break to be.</li>
+<li>Go to Edit &gt; Line Break OR use the keyboard shortcut (Shift +
+Enter).</li>
+<li>The text moves down to the next line and starts at the appropriate
+runover. Note: The text starts in the runover cell determined by the
+current element’s style. For instance, if the style is Body Text (which
+has 3-1 margins), inserting a line break starts the new line on cell
+1.</li>
+</ul>
+<h4 id="keeping-text-on-the-same-page">Keeping Text on the Same
+Page¶</h4>
+<p>Don’t Split is the only style option that wraps elements of different
+styles. It is used to keep the selected elements together on the same
+braille page.</p>
+<p>To keep text on the same page:</p>
+<ul>
+<li>Highlight the elements that need to be kept together.</li>
+<li>Go to Styles &gt; Options &gt; Don’t Split and apply the style
+option. Note: If the selected elements do not fit on a single braille
+page, any text longer than one braille page continues on to the next
+braille page.</li>
+</ul>
+<h4 id="keep-with-next">Keep With Next¶</h4>
+<p>Selecting Keep With Next causes that element to stay with whichever
+element follows it.</p>
+<p>To keep an element with the next one:</p>
+<ul>
+<li>Select the desired element by highlighting it.</li>
+<li>Go to Styles &gt; Options &gt; Keep With Next and apply the style
+option. Note: If the second element moves to a new braille page because
+of changes to formatting, the element that has the Keep With Next style
+applied also moves to that braille page.</li>
+</ul>
+<h4 id="adding-blank-lines">Adding Blank Lines¶</h4>
+<p>The style options Lines Before and Lines After allow you to set the
+number of blank lines either before or after. Every style that begins on
+a new line automatically has a value of 1 for Lines Before and Lines
+After. If you want that element to have a blank line before or after it,
+set the value as 2. Some styles already have blank lines by default,
+such as Centered Headings, which have a value of 2 for Lines Before and
+a value of 2 for Lines After. To add an extra blank line before a
+Centered Heading, set the Lines Before value as 3.</p>
+<p>To add blank lines:</p>
+<ul>
+<li>Select the desired element(s) by highlight it.</li>
+<li>Go to Styles &gt; Options.</li>
+<li>Click on the Lines Before or Lines After style option.</li>
+<li>In the window, enter the value (number of lines) in the
+textbox.</li>
+</ul>
+<h4 id="adding-double-lines">Adding Double Lines¶</h4>
+<p>The style option Double Spaced allows you to apply double-line
+spacing to highlighted text.</p>
+<p>To apply double-line spacing:</p>
+<ul>
+<li>Highlight the desired elements to select.</li>
+<li>Go to Styles &gt; Options &gt; Double Spaced and apply the style
+option.</li>
+</ul>
+<h4 id="removing-text-from-lines-with-page-numbers">Removing Text From
+Lines with Page Numbers¶</h4>
+<p>The style option Skip Number Lines determines whether the element
+should skip lines that contain page numbers.</p>
+<p>To remove text from lines with page numbers:</p>
+<ul>
+<li>Go to Styles &gt; Options &gt; Skip Number Lines.</li>
+<li>Choose one of the following options:
+<ul>
+<li>Top: Prevents the element from appearing on the top line of the
+braille page</li>
+<li>Bottom: Prevents the element from appearing on the bottom line of
+the braille page</li>
+<li>Both: Causes the element to skip both the top and bottom lines of
+the braille page</li>
+<li>None: Removes other Skip Number Line options if they are no longer
+needed Once the style has been selected, it is immediately applied.</li>
+</ul></li>
+</ul>
+<p>Note: Keep in mind that even if None is selected, when you have a
+Running Head or Guide Words, those lines are automatically skipped
+because they are applied to those elements.</p>
+<h4 id="creating-facing-pages">Creating Facing Pages¶</h4>
+<p>Page Side is used to set which side of a page certain text needs to
+be on within interpoint documents. This is useful when you have graphics
+or material that needs to appear on facing pages, such as tables or
+question and answer choices. When formatting decisions cause an element
+to move, the selected material continues to appear on the type of page
+selected. If the page side isn’t significant, and you just need a blank
+page added, see Adding Blank Pages.</p>
+<p>To create facing pages:</p>
+<ul>
+<li>Go to Styles &gt; Options &gt; Page Side.</li>
+<li>There are two options to choose from: left or right.
+<ul>
+<li>Page Side Left: Applying this to an element causes that element to
+appear only on the left-hand side, which is an even page.</li>
+<li>Page Side Right: Applying this causes that element to appear only on
+the right-hand side, which is an odd page.</li>
+</ul></li>
+<li>If the text is on the type of page you have selected, it remains on
+that page; but if it is not, it moves to the type of page you
+selected.</li>
+</ul>
+<h4 id="adding-blank-pages">Adding Blank Pages¶</h4>
+<p>The style options New Pages Before and New Pages After are used to
+insert a blank braille page before or after the selected element. This
+ensures that formatting decisions made before this point in the document
+do not remove a blank page that the transcriber deems necessary. If the
+blank page is needed in order for material to appear on facing pages,
+see Creating Facing Pages, as that style option ensures your material
+stays facing.</p>
+<p>To add a blank page:</p>
+<ul>
+<li>Go to Styles &gt; Options.</li>
+<li>Click on the New Pages Before or New Pages After style option. If
+you chose New Pages Before, the highlighted element will move to a new
+page. You can then press Ctrl+Enter before the element to add a blank
+page.</li>
+</ul>
+<p>If you chose New Pages After, the text after the highlighted element
+will move to a new page. You can then press Ctrl+Enter after the element
+to add a blank page.</p>
+<h4 id="working-with-page-numbers">Working with Page Numbers¶</h4>
+<p>BrailleBlaster has many tools for numbering braille and print pages
+efficiently.</p>
+<h4 id="adding-page-numbers">Adding Page Numbers¶</h4>
+<h4 id="adding-print-page-numbers">Adding Print Page Numbers¶</h4>
+<p>If Print page numbers have not automatically been added to your
+document, you can add them manually by using the Page tool.</p>
+<p>To add print pages:</p>
+<ul>
+<li>Type the print page number into your document where a print page
+break should occur.</li>
+<li>Highlight that number and go to Styles &gt; Miscellaneous &gt; Page
+or use the button on the Styles toolbar. If the number is in the middle
+of a braille page, a print page change indicator appears across the page
+with the print page number at the right margin.</li>
+</ul>
+<h4 id="adding-a-page-change-indicator-with-no-print-page-number">Adding
+a Page Change Indicator with No Print Page Number¶</h4>
+<p>You may encounter material or sections with no print page numbers. If
+the print page breaks are still relevant, you can manually add a blank
+page change indicator that has no print page number.</p>
+<p>To add a page change indicator:</p>
+<ul>
+<li>Place your cursor before the location where you want the page change
+indicator to appear.</li>
+<li>Select Insert &gt; Blank Print Page Indicator.</li>
+</ul>
+<h4 id="adding-braille-page-numbers">Adding Braille Page Numbers¶</h4>
+<p>Braille page numbers are added automatically with BrailleBlaster. You
+can also add more braille pages (if needed) by using Page Break.</p>
+<p>Note: There must be text present after the cursor to use Page
+Break.</p>
+<p>To add braille page numbers:</p>
+<ul>
+<li>Place your cursor where you want the Page Break to appear.</li>
+<li>Go to Edit &gt; Page Break OR use the keyboard shortcut (Ctrl +
+Enter). The break is inserted after the cursor, forcing all text after
+the cursor to the next braille page. You can continue to use this
+feature to create more braille pages as needed.</li>
+</ul>
+<h4 id="editing-page-numbers">Editing Page Numbers¶</h4>
+<p>BrailleBlaster makes editing page numbers easy with the Edit Page
+Number tool. This tool can be used to change print and braille page
+numbers as needed.</p>
+<p>To edit a page number:</p>
+<ul>
+<li>Put your cursor anywhere on the page that you wish to change.</li>
+<li>Go to Edit &gt; Edit Page Number or right-click and select Edit Page
+Number from the context menu. This action opens the Page Number Dialog
+window. The Page Number Dialog gives you several options to change both
+your print and braille pages.</li>
+</ul>
+<h4 id="changing-print-page-indicators">Changing Print Page
+Indicators¶</h4>
+<p>Note: This option only appears if a Print Page Number is already
+present on the page selected.</p>
+<p>To change a print page indicator:</p>
+<ul>
+<li><p>In the Page Number Dialog window, go to Edit Page Number tab &gt;
+Print Page Indicator tab.</p></li>
+<li><p>Find the “Change Previous Print Page Indicator from [X]”
+section.</p></li>
+<li><p>Change the number in the textbox (which displays the current
+print page number) to the desired number. The page number can be
+presented in Direct or Uncontracted braille. You can also have a print
+page number that is a combination of two print page numbers separated by
+a hyphen. This changes the first page number and all continuation
+pages.</p></li>
+<li><p>If you have NOT inserted a hyphen into the Change Previous Print
+Page Indicator textbox, you can select Ok to save your changes or Cancel
+to leave without saving and skip steps 5 and 6.</p></li>
+<li><p>If you HAVE inserted a hyphen into the Change Previous Print Page
+Indicator textbox, the Runover Page Numbers options become
+available.</p></li>
+<li><p>Combined: This option causes the print page runovers to appear as
+hyphenated numbers.</p></li>
+<li><p>Implied: This option causes the print page runovers to be
+displayed containing only the second print page number. Note: The
+options for Runover Page Numbers are based on rules for print page
+numbers found in <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016 Section 1.11</a>.</p></li>
+<li><p>After you have selected the Runover Page Number option that is
+appropriate for your document, select Ok to save your changes or Cancel
+to leave without saving.</p></li>
+</ul>
+<h4 id="changing-print-page-numbers">Changing Print Page Numbers¶</h4>
+<p>To change a print page number:</p>
+<ul>
+<li>In the Page Number Dialog window, go to Edit Page Number tab &gt;
+Print Page Number tab.</li>
+<li>Find the “Change Print Page Number from [X]” section.</li>
+<li>Enter the appropriate changes into one or both of the textbox
+fields. <em>Note:</em> All numbers must be entered in ASCII. There are
+two textbox fields to fill in: ** Continuation Letter: You can use this
+textbox to change the Continuation Letter from what is shown (i.e., b)
+to whatever letter is needed (i.e., c). All page numbers runovers that
+follow automatically update accordingly. This is useful if your agency
+has special requirements for numbering blank pages. ** Page Number: Only
+changes that instance of the print page number, without changing the
+surrounding page numbers.</li>
+<li>Select Ok to save your changes or Cancel to leave without
+saving.</li>
+</ul>
+<h4 id="changing-braille-page-numbers">Changing Braille Page
+Numbers¶</h4>
+<p>To change braille page numbers:</p>
+<ul>
+<li>In the Page Number Dialog window, go to Edit Page Number tab &gt;
+Braille Page Number tab.</li>
+<li>Find the “Change Braille Page Number from [X]” section.</li>
+<li>Enter the appropriate braille page number for the current page.</li>
+<li>Choose Yes for that page to have a [[#Setting a Running Head|Running
+Head]], or No if not. Sometimes you may need to change the type of
+braille page number you want for your document.</li>
+</ul>
+<p>To change the type of braille page number:</p>
+<ul>
+<li><p>In the Page Number Dialog window, go to Edit Page Number tab &gt;
+Page Number Type tab.</p></li>
+<li><p>Select one of three options from the drop-down menu: ** Normal:
+The braille page number shows the ordinal number. ** T-page: The braille
+page number starts with the letter “t” for transcriber-generated pages.
+** P-page: The braille page number starts with the letter “p” for
+preliminary pages. Note: Once you change the braille page type, the
+braille page numbers continue to appear as that type until a new braille
+page number type is selected.</p></li>
+<li><p>Select Ok to save your changes or Cancel to leave without
+saving.</p></li>
+</ul>
+<h4 id="deleting-page-numbers">Deleting Page Numbers¶</h4>
+<h4 id="deleting-print-page-numbers">Deleting Print Page Numbers¶</h4>
+<p>There are two options for deleting print page numbers. You can delete
+the print page indicator or the print page.</p>
+<p>To delete a print page indicator:</p>
+<ul>
+<li><p>In the Page Number Dialog window, go to Edit Page Number tab &gt;
+Print Page Indicator tab.</p></li>
+<li><p>Select the Delete Indicator button to delete the print page
+number and all continuation indicators with that print page number. The
+pages remain in your document following the page change indicator, but
+without print page numbers. All other print page numbers remain the
+same.</p></li>
+<li><p>Select Ok to save your changes or Cancel to leave without saving.
+To delete a print page:</p></li>
+<li><p>In the Page Number Dialog window, go to Edit Page Number tab &gt;
+Print Page Number tab.</p></li>
+<li><p>Select the Delete Page button to delete the specific print page
+number and continuation letter currently in the textboxes. The print
+page number is removed from the current braille page and is applied on
+the next braille page. Example: If you delete print page c5, the current
+c5 no longer has a print page number, and the next page, d5, becomes
+print page c5.</p></li>
+<li><p>Select Ok to save your changes or Cancel to leave without saving.
+Note: You can also move or remove Print Page Numbers by going to
+Settings &gt; Page Numbers. The default location is the top right for
+both Even Print Page Number and Odd Print Page Number, but you can
+change each of these depending on what your agency requires. You can
+move them to the top left, bottom left, or bottom right of the page, or
+have none.</p></li>
+</ul>
+<h4 id="deleting-braille-page-numbers">Deleting Braille Page
+Numbers¶</h4>
+<p>To delete a Braille page number, first delete the text or blank space
+on that page. If you want to move or remove your braille page numbers,
+go to Settings &gt; Page Numbers to choose how you want your Braille
+page numbers to appear in your document. The default is the bottom right
+for both Even Braille Page Number and Odd Braille Page Number, but for
+each type you can move them to the bottom left, top right, or top left
+of the page, or have none.</p>
+<h4 id="viewing-page-number-changes">Viewing Page Number Changes¶</h4>
+<p>Within the Page Number Dialog window, there is a Page Change List tab
+that lists all the changes you have made to the print and braille page
+numbers. You can delete your changes by checking the checkbox next to
+the corresponding change and then clicking the Delete button at the
+bottom of the window. You can navigate to the changed pages by clicking
+the Go To button to the right of the list item.</p>
+<h4 id="working-with-emphasis">Working with Emphasis¶</h4>
+<p>There are many forms of Emphasis in braille that allow the text to be
+prominent. Also known as font attributes or typeforms, these range from
+common forms of print emphasis to those unique to braille. Each type of
+emphasis is explained in Section 9 of the Rules of Unified English
+Braille, and when to use or ignore font attributes is detailed in <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016, Section 5: Typeforms</a>.</p>
+<h4 id="adding-emphasis">Adding Emphasis¶</h4>
+<p>In BrailleBlaster, emphasis can only be applied to text that has
+already been created. Highlight a selection of text and add the desired
+emphasis using the appropriate keyboard shortcut or toolbar button, or
+go to the Emphasis menu.</p>
+<ul>
+<li>Bold (Ctrl + B): Adds Bold to a symbol, word, or passage.</li>
+<li>Italics (Ctrl + I): Adds Italics to a symbol, word, or passage.</li>
+<li>Underline (Ctrl + U): Adds an Underline to a symbol, word, or
+passage.</li>
+<li>Script (Alt + Shift + S): Add Script indicators to a symbol, word,
+or passage that mimics handwriting in print. The selected text appears
+light pink in the print view.</li>
+<li>Transcriber Note Symbols: Although Transcriber’s Note (TN)
+indicators are not a print typeform, they add a special emphasis for the
+braille reader. TN indicators are added at the beginning and end of the
+selected text. Adding this emphasis across three elements, for example,
+puts an opening TN indicator at the beginning of the first element and a
+closing TN indicator at the end of the last element.</li>
+<li>Transcriber-Defined Typeforms: There are some types of emphasis in
+print with no braille equivalent such as highlighting, colored font, or
+double underlining. Transcriber-Defined Typeforms allow this emphasis to
+be represented with a braille symbol that is defined on the
+Transcriber’s Notes Page of the document. These indicators and how to
+use them are described in Section 9.5 of the Rules of Unified English
+Braille.
+<ul>
+<li>Transcriber-Defined 1 (Shift + Alt + 1)</li>
+<li>Transcriber-Defined 2 (Shift + Alt + 2)</li>
+<li>Transcriber-Defined 3 (Shift + Alt + 3)</li>
+<li>Transcriber-Defined 4 (Shift + Alt + 4)</li>
+<li>Transcriber-Defined 5 (Shift + Alt + 5)</li>
+</ul></li>
+</ul>
+<h4 id="removing-emphasis">Removing Emphasis¶</h4>
+<p>Emphasis can be removed by highlighting the text that is emphasized
+and selecting the same emphasis option that is currently applied to it.
+BrailleBlaster also has tools to make the removal of emphasis easier
+from larger pieces of text with more than one applied emphasis
+style.</p>
+<h4 id="removing-emphasis-from-a-selection">Removing Emphasis from a
+Selection¶</h4>
+<p>This feature removes all emphasis from a highlighted selection. This
+works for whatever amount of text is selected: a few words, a few
+paragraphs, or several pages of text.</p>
+<ul>
+<li>Highlight any amount of text with emphasis you want removed in your
+file.</li>
+<li>Go to Emphasis &gt; Remove Emphasis from Section or use the keyboard
+shortcut (Ctrl + Shift + R) The highlighted text is no longer
+emphasized.</li>
+</ul>
+<h4 id="removing-all-emphasis-from-headings">Removing All Emphasis from
+Headings¶</h4>
+<p>Headings do not usually need to be emphasized in braille. You can
+manually remove emphasis for each heading, or a use tool to remove
+emphasis from all headings in one action.</p>
+<p>Note: It is advisable to save your work before using this
+feature.</p>
+<p>Go to Emphasis &gt; Remove All Emphasis from Headings.</p>
+<p>Note: You have to add emphasis manually to headings where it should
+be kept after using this tool.</p>
+<h4 id="removing-all-emphasis-from-list-prefixes">Removing All Emphasis
+from List Prefixes¶</h4>
+<p>In print documents, the numbers or letters at the beginning of list
+items can appear in bold. This Emphasis is usually considered
+unnecessary in braille and is typically removed. BrailleBlaster can
+search the file and remove the emphasis from numbers and letters at the
+beginning of lists.</p>
+<p>Note: It is advisable to save your work before using this
+feature.</p>
+<p>Go to Emphasis &gt; Remove All Emphasis from List Prefixes.</p>
+<p>Note: You have to add emphasis manually to any list prefixes that
+require it after using this tool.</p>
+<h4
+id="removing-all-emphasis-from-alphabetic-reference-entry-words">Removing
+All Emphasis from Alphabetic Reference Entry Words¶</h4>
+<p>Print often adds emphasis to the entries in indexes and glossaries,
+but <a
+href="http://www.brailleauthority.org/formats/formats2016.html">Braille
+Formats, 2016</a> says to ignore such font attributes unless they are
+needed for distinction, such as foreign words or book titles.
+BrailleBlaster allows you to remove the emphasis from all of the entry
+words in those sections designated as a glossary or index in one
+action.</p>
+<p>Note: It is advisable to save your work before using this
+feature.</p>
+<p>Go to Emphasis &gt; Remove Emphasis from Alphabetic Reference Entry
+Words.</p>
+<p>Note: You have to add emphasis manually to any entry words that
+require it after using this tool.</p>
+<h4 id="modifying-the-braille-translation">Modifying the Braille
+Translation¶</h4>
+<p>BrailleBlaster works with a program called LibLouis to give
+transcribers the most accurate translation possible, but sometimes the
+translation is inaccurate and needs be changed. BrailleBlaster has
+several tools for correcting braille text in your current document and
+applying it to future documents.</p>
+<h4 id="entering-braille-directly-into-a-document">Entering Braille
+Directly into a Document¶</h4>
+<p>Six Key Mode allows six key transcription within BrailleBlaster. When
+this tool is activated, you can type braille directly into the Print
+View by pressing combinations of the keyboard keys FDS and JKL to create
+the six dots of a braille cell.</p>
+<p>Letter</p>
+<p>Dot Number</p>
+<p>F</p>
+<p>1</p>
+<p>D</p>
+<p>2</p>
+<p>S</p>
+<p>3</p>
+<p>J</p>
+<p>4</p>
+<p>K</p>
+<p>5</p>
+<p>L</p>
+<p>6</p>
+<p>Note: If you find this feature doesn’t work for you, it is most
+likely your keyboard. Not all keyboards allow more than one letter to be
+pressed at a time.</p>
+<p>To use Six Key Mode:</p>
+<ul>
+<li>Go to Tools &gt; Six Key Mode or use the keyboard shortcut (Alt +
+X).</li>
+<li>Use the keyboard keys FDS and JKL as the six dots of braille to
+enter text into the Print View. The text that is created from six key
+entry is not translated by BrailleBlaster so what appears in the Print
+View will also appear in the Braille View.</li>
+<li>To exit out of Six Key Mode and return to regular keyboard entry, go
+back to Tools &gt; Six Key Mode or use the keyboard shortcut (Alt + X)
+again.</li>
+</ul>
+<h4 id="changing-the-text-translation">Changing the Text
+Translation¶</h4>
+<p>Even after you’ve designated your translation settings, you can
+change how part of the text is translated, ranging from a word to
+multiple pages. Change Translation offers two translation options for a
+selection of text: Uncontracted and Direct.</p>
+<p>To change text translation:</p>
+<ul>
+<li>Highlight the section of text to change.</li>
+<li>Go to Tools &gt; Change Translation OR use the Change Translation
+toolbar button OR right-click and Select Change Translation.</li>
+<li>Select the appropriate translation for your document:</li>
+<li>Uncontracted (Ctrl + Shift + T): Presents the selected text in grade
+1 braille, without the use of contractions. The text is highlighted in
+green in the braille view.</li>
+<li>Direct (Ctrl + D): Presents the literal ASCII translation of the
+selected text. The text is highlighted in purple in the print view.
+Note: Direct translation is sometimes necessary when you need to force
+the translation to appear a certain way, but BrailleBlaster does not
+allow it otherwise.</li>
+</ul>
+<h4 id="correcting-the-braille-translation">Correcting the Braille
+Translation¶</h4>
+<p>Correct Braille Translation allows you to submit translation
+corrections for the program LibLouis. This ensures quick and easy
+recognition of undefined print characters. The most common corrections
+are for Unicode characters (i.e., Unicode: U + 25B6 for a black
+right-pointing triangle), proper nouns, and non-English words, though
+you may find a translation mistake on occasion.</p>
+<p>When you encounter an undefined Unicode character in the translation,
+the Unicode image appears in the Print View, while the Unicode name,
+enclosed in Transcriber’s Notes, appears in the Braille View.</p>
+<h4 id="making-a-braille-translation-correction">Making a Braille
+Translation Correction¶</h4>
+<p>To make a braille translation correction:</p>
+<ul>
+<li>In the Print View, highlight the character or word that is not
+translating correctly.</li>
+<li>Go to Tools &gt; Correct Braille Translation OR use the keyboard
+shortcut (Ctrl + T). In the Correct Translation window the highlighted
+print word is shown in the Print textbox. There is also a Braille
+textbox for entering the correct translation of the character or
+word.</li>
+<li>Choose one of three options appropriate to the correction of the
+text:</li>
+<li>Define New Character: Creates a new character.</li>
+<li>Correct Character: Corrects an improperly translated character.</li>
+<li>Correct Word: Corrects a proper noun or foreign word.</li>
+<li>Select your entry method for typing the correct braille: Six Key or
+ASCII.</li>
+<li>Type the corrected braille into the Braille textbox.</li>
+<li>Select one of two options for saving your translation correction or
+Cancel to leave without making changes:</li>
+<li>Save Translation Locally: Allows you to save to a locally designated
+file on your computer. This option is for personal translation
+options.</li>
+<li>Save Translation Globally: Saves to a local file on your computer
+and submits the correction to APH. APH reviews the change for future
+BrailleBlaster releases and to share with others who use LibLouis. This
+process of continuous improvement to the translation tables helps
+braille readers around the world receive timely, accurate braille.</li>
+</ul>
+<h4 id="viewing-past-braille-translation-corrections">Viewing Past
+Braille Translation Corrections¶</h4>
+<p>To view past braille translation corrections:</p>
+<ul>
+<li>Select the View Corrections button at the bottom of the Correct
+Translation window. This action opens another window where your
+corrections to translations can be viewed.</li>
+<li>Select the Edit Translation button to make edits to translations you
+have previously entered OR select a translation from the list and click
+the Delete Entry button to delete translations that are no longer
+needed.</li>
+<li>Select Cancel to return to the Correct Braille Translation window
+without making any changes.</li>
+</ul>
+<h4 id="finding-and-replacing-text-and-styles">Finding and Replacing
+Text and Styles¶</h4>
+<p>The Find and Replace tool allows you to find and edit text and
+formatting easily.</p>
+<h4 id="finding-text">Finding Text¶</h4>
+<p>To find text in your document:</p>
+<ul>
+<li>Go to Edit &gt; Find and Replace OR use the keyboard shortcut (Ctrl
++ F).</li>
+<li>Type the text you want to search for into the Find Text
+textbox.</li>
+<li>(Optional step) Select one or both options to narrow down the
+search:</li>
+<li>Match Case: Only searches for the text as you type it in regard to
+capitalization.</li>
+<li>Example: If you search for “THE” with Match Case checked,
+BrailleBlaster only finds instances of the fully capitalized characters
+“THE” and ignores any others, like “The” or “the.”</li>
+<li>Whole word: Only searches for instances of the text that are
+preceded and followed by a space, rather than instances of the
+characters within a longer word.</li>
+<li>Example: If you search for “the” with Whole word checked,
+BrailleBlaster only finds instances of “the” where it stands alone as a
+word, and ignores results like “theater,” “them,” “bathe,” and so
+on.</li>
+<li>Select the Find button to search for an instance of the text. The
+text is highlighted in the Print View of your document for further
+instances of the text.</li>
+<li>(Optional step) Continue using the Find button to cycle through the
+document. You can also cycle through the document forwards or backwards
+by selecting one of those options.</li>
+<li>Select Close when finished.</li>
+</ul>
+<h4 id="replacing-text">Replacing Text¶</h4>
+<p>To replace text in your document:</p>
+<ul>
+<li>Go to Edit &gt; Find and Replace OR use the keyboard shortcut (Ctrl
++ F).</li>
+<li>Type the text you want to replace into the Find textbox.</li>
+<li>(Optional step) If appropriate, check the Match Case or Whole Word
+checkboxes.</li>
+<li>Match Case: Only searches for the text as you type it in regard to
+capitalization.</li>
+<li>(Optional step) Check the Match case checkbox to maintain the
+capitalization of the original text.</li>
+<li>Example: If you enter “even” in the Find Text box and “odd” in the
+Replace with box with Match case checked, “even” is replaced with “odd,”
+“Even” is replaced with “Odd,” and “EVEN” with “ODD.”</li>
+<li>Note: Match case only works with lowercase, all uppercase, and
+initial case but not with camel-capped words or oddly capped words
+(e.g., BrailleBlaster or BrAiLLeBlASTer).</li>
+<li>Whole Word: Only searches for instances of the text that are
+preceded and followed by a space, rather than instances of the
+characters within a longer word.</li>
+<li>Example: If you search for “the” with Whole Word checked,
+BrailleBlaster only finds instances of “the” where it stands alone as a
+word, and ignores results like “theater,” “them,” “bathe,” and so
+on.</li>
+<li>Type the replacement text in the Replace With textbox.</li>
+<li>Select the Find button to search for instances of the text.</li>
+<li>Select the Replace button to replace that instance of text in the
+Find box.</li>
+<li>Pressing Replace again moves you to the next instance of the word in
+the Find box and pressing it once more replaces the text. You can
+continue that way, OR you can select Replace All, changing ALL of the
+instances at once without clicking through each one.</li>
+<li>Select Close when you are finished.</li>
+</ul>
+<h4 id="finding-formatted-text">Finding Formatted Text¶</h4>
+<p>In addition to changing text through the Find and Replace function,
+the formatting on text can also be located using the Formatting button
+in the Find and Replace window.</p>
+<p>To find formatted text:</p>
+<ul>
+<li><p>Go to Edit &gt; Find and Replace OR use the keyboard shortcut
+(Ctrl + F).</p></li>
+<li><p>Click Formatting to open the types of Formatting for Find and for
+Replace. The three types of formatting that can be changed are:</p></li>
+<li><p>Styles: Focuses on Styles of text and margins.</p></li>
+<li><p>Containers: Focuses on other boxes of text such as a box or full
+color box.</p></li>
+<li><p>Text Attributes: Focuses on Emphasis and Translation of text. The
+three options have an Add button and Not radio buttons.</p></li>
+<li><p>Add: Only finds the text you typed if it has the selected
+formatting.</p></li>
+<li><p>Example: If you add “Heading 1” to the Find box, your search only
+finds the word “The” if it appears within a Heading 1 style and ignores
+all other instances.</p></li>
+<li><p>Not Radio Buttons: The behavior of the Not button is a little
+more complicated. It finds all instances of the text unless it has the
+selected formatting.</p></li>
+<li><p>Example: If you remove “Heading 1” to the Find box, it appears as
+“Not Heading 1,” and search for all instances of “The” that are not
+within Heading 1 styles.</p></li>
+<li><p>Styles, Containers, and Text Attributes each have lists of
+options. Select whatever Formatting is appropriate.</p></li>
+<li><p>Click Add to add Styles, Containers or Text Attributes to the
+Find box.</p></li>
+<li><p>This action adds the selected item to the textbox under Find. If
+you decide you do not want an item included in your Formatting, select
+Reset to clear the Find box. Note: Only one style can be added or
+removed at a time. Clicking a different style and then the Add button
+only changes the style selected in the text box.</p></li>
+<li><p>Click Close Formatting to return to the Find and Replace
+window.</p></li>
+<li><p>The Formatting you have selected now appears in a text box under
+Find Text.</p></li>
+<li><p>When finished, click Close to exit the Find and Replace
+window.</p></li>
+</ul>
+<h4 id="replacing-formatted-text">Replacing Formatted Text¶</h4>
+<p>To replace formatted text:</p>
+<ul>
+<li><p>Go to Edit &gt; Find and Replace OR use the keyboard shortcut
+(Ctrl + F).</p></li>
+<li><p>Click Formatting to open the Formatting window.</p></li>
+<li><p>The two options of formatting that can be changed are:</p></li>
+<li><p>Styles: Focuses on Styles of text and margins.</p></li>
+<li><p>Text Attributes: Focuses on Emphasis and Translation of text.
+Both options have the Add button. Only Text Attributes has the Remove
+Radio button.</p></li>
+<li><p>Add: Adds the selected format to any instances of the specified
+text in the Find and Replace window.</p></li>
+<li><p>Example: If you add “Heading 1” to the Replace box, your search
+replaces the formatting of every instance of “The” to be within the
+Heading 1 style.</p></li>
+<li><p>Remove: You cannot remove a style, but you can replace it. You
+indicate the style you are looking in Find and the style you are
+replacing with in Replace.</p></li>
+<li><p>Styles and Text Attributes have lists of options. Select whatever
+Formatting is appropriate.</p></li>
+<li><p>Click on the Add button to add the Styles or Text Attributes to
+the Replace box.</p></li>
+<li><p>This action adds the selected item to the textbox under Replace.
+If you decide you do not want an item included in your Formatting,
+select Reset to clear the Replace box.</p></li>
+<li><p>Note: Only one style can be added or removed at a time. Clicking
+a different style and then the Add button simply replaces the style
+selected in the bottom text box.</p></li>
+<li><p>Select Done to return to the Find and Replace window.</p></li>
+<li><p>The Formatting you have selected now appears in a text box under
+Replace with.</p></li>
+<li><p>When finished, click Close to exit the Find/Replace
+window.</p></li>
+</ul>
+<h4 id="resetting-find-and-replace">Resetting Find and Replace¶</h4>
+<p>Click Reset to clear all selected formatting options and checkboxes.
+The most recently searched text remains in the Find Text and Replace
+with fields.</p>
+<h4 id="repeating-the-last-search">Repeating the Last Search¶</h4>
+<p>Repeat Last Search lets you repeat what you have searched for even
+after closing Find and Replace.</p>
+<p>To repeat the last search, Go to Edit &gt; Repeat Last Search OR use
+the keyboard shortcut (F3).</p>
+<p>This action searches the document for the last searched item from
+Find and Replace and highlights it in the Print View. It does not open
+the Find and Replace window or make any changes.</p>
+<p>Note: Continuing to use Repeat Last Search cycles you through the
+document. If your last search also included Replace information, your
+text is replaced when you move to the next item.</p>
+<h4 id="operations-specific-to-nimas-files">Operations Specific To NIMAS
+Files¶</h4>
+<p>Since BrailleBlaster is intended to work hand in hand with XML and
+NIMAS files, there are some tools in BrailleBlaster that are designed to
+work with this file type only.</p>
+<h4 id="using-publishers-production-notes">Using Publisher’s Production
+Notes¶</h4>
+<p>The Production Note Manager is a tool that was designed to manage
+production notes. Production notes are added by the publisher and are
+meant to assist with the physical production of the textbook. There are
+many different kinds of production notes and some are useful in the
+braille transcription process, while others are not. The Production Note
+Manager lets you view these notes and decide which notes you would like
+to Keep, Hide, or Remove.</p>
+<p>To keep, hide, or remove production notes:</p>
+<ul>
+<li><p>Go to Tools &gt; Production Note Manager.</p></li>
+<li><p>A window opens listing the publisher’s notes. Choose one of three
+options:</p></li>
+<li><p>Keep: While production notes are not usually found in the actual
+print book, there is a chance that the text has been improperly labeled
+or is a useful picture description. Select the Keep option to keep the
+production note in the braille.</p></li>
+<li><p>Hide: Selected as the default for all production notes, Hide
+removes them from the braille translation but keeps them in the file so
+they can be referenced in future versions that might not be meant for
+braille.</p></li>
+<li><p>Remove: Removes production notes entirely by deleting them from
+the file. This is not recommended as they are not recoverable after this
+action is taken. Note: You can also choose options that affect all
+production notes, depending on what you need in your file: Keep All,
+Hide All, or Remove All.</p></li>
+<li><p>Click Apply to save your choice OR Cancel to leave the
+window.</p></li>
+</ul>
+<h4 id="navigating-a-nimas-file">Navigating A NIMAS File¶</h4>
+<p>The Book Tree allows navigation through NIMAS files via a list of
+nested headings. It shows the defined section levels listed in the NIMAS
+file.</p>
+<p>To navigate using the Book Tree:</p>
+<ul>
+<li>Go to Navigate &gt; Book Tree.</li>
+<li>To display and navigate through ALL of the levels in ALL of the
+sections, select the right-facing arrow to the left of the file
+name.</li>
+<li>Select the section you want to navigate to and choose the Navigate
+button at the bottom of the window.</li>
+<li>Select Close to cancel the navigation action.</li>
+</ul>
+</body>
+</html>
