@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>TikTok Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,36 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">TikTok Help Guide</h1>
 <p class="subtitle">TikTok’s own support centre, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#tiktok-help-guide" id="toc-tiktok-help-guide">TikTok Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-getting-started" id="toc-cat-getting-started">Getting
+started</a></li>
+<li><a href="#cat-safety-and-civility"
+id="toc-cat-safety-and-civility">Safety and civility</a></li>
+<li><a href="#cat-signing-in-and-fixing-problems"
+id="toc-cat-signing-in-and-fixing-problems">Signing in and fixing
+problems</a></li>
+<li><a href="#cat-tiktok-live" id="toc-cat-tiktok-live">TikTok
+LIVE</a></li>
+<li><a href="#cat-using-tiktok" id="toc-cat-using-tiktok">Using
+TikTok</a></li>
+<li><a href="#cat-your-account-and-privacy"
+id="toc-cat-your-account-and-privacy">Your account and privacy</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="tiktok-help-guide">TikTok Help Guide</h1>
 <p>This guide gathers TikTok’s official support centre. The text was
 taken from support.tiktok.com on 31 July 2026 and is TikTok’s own;
@@ -1307,14 +1338,14 @@ manage the audience controls setting</strong></h4>
 account. Alternatively, you can manage the audience controls setting for
 each of your videos or LIVE videos.To manage the audience controls
 setting for your account:1. In the TikTok app, tap
-<strong>Profile</strong> at the bottom. 2. Tap the<strong>Menu</strong>☰
-button at the top, then select <strong>Settings and privacy</strong>. 3.
-Tap <strong>Audience controls</strong>.4. Turn the <strong>Age 18 and
-older</strong> setting on.Keep in mind that if you’ve turned the
-audience controls setting on for your account, your content is
-automatically tagged as audience controlled and you can’t turn it off
-for individual videos or LIVE videos.To tag your TikTok video as
-audience controlled:1. <a
+<strong>Profile</strong> at the bottom. 2. Tap
+the<strong>Menu</strong>☰ button at the top, then select
+<strong>Settings and privacy</strong>. 3. Tap <strong>Audience
+controls</strong>.4. Turn the <strong>Age 18 and older</strong> setting
+on.Keep in mind that if you’ve turned the audience controls setting on
+for your account, your content is automatically tagged as audience
+controlled and you can’t turn it off for individual videos or LIVE
+videos.To tag your TikTok video as audience controlled:1. <a
 href="https://www.tiktok.com/support/faq_detail?id=7581826684085606968">Create
 your video</a>.2. On the post screen, tap <strong>More
 options</strong>.3. Turn the <strong>Audience controls</strong> setting
@@ -1863,23 +1894,24 @@ more about <a
 href="https://www.tiktok.com/support/faq_detail?id=7543897457344928262">how
 your email is used on TikTok</a>.To add an email address to your
 account:1. In the TikTok app, tap<strong>Profile</strong> atthe
-bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then select
-<strong>Settings and privacy</strong>. 3. Tap <strong>Account</strong>,
-then select <strong>Account Information</strong>. 4. Tap
-<strong>Email</strong>, enter your email address, then tap <strong>Send
-code</strong> to verify your identity. 5. Enter the verification code
-sent to your email.To change the email address associated with your
-TikTok account:1. In the TikTok app, tap<strong>Profile</strong>at the
-bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then select
-<strong>Settings and privacy</strong>. 3. Tap <strong>Account</strong>,
-then select <strong>Account Information</strong>. 4. Tap
-<strong>Email</strong>, then tap <strong>Change email</strong>. 5. Enter
-the new email address on the next screen, then tap <strong>Send
-code</strong> and enter the verification code sent to your updated
-email.Note: Since we send verification codes to your email, both the old
-and the new email address associated with the account must be active and
-verified.To remove the email address associated with your account:1. In
-the TikTok app, tap<strong>Profile</strong> at the bottom.2. Tap the
+bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then
+select <strong>Settings and privacy</strong>. 3. Tap
+<strong>Account</strong>, then select <strong>Account
+Information</strong>. 4. Tap <strong>Email</strong>, enter your email
+address, then tap <strong>Send code</strong> to verify your identity. 5.
+Enter the verification code sent to your email.To change the email
+address associated with your TikTok account:1. In the TikTok app,
+tap<strong>Profile</strong>at the bottom.2. Tap the
+<strong>Menu</strong> ☰ button at the top, then select <strong>Settings
+and privacy</strong>. 3. Tap <strong>Account</strong>, then select
+<strong>Account Information</strong>. 4. Tap <strong>Email</strong>,
+then tap <strong>Change email</strong>. 5. Enter the new email address
+on the next screen, then tap <strong>Send code</strong> and enter the
+verification code sent to your updated email.Note: Since we send
+verification codes to your email, both the old and the new email address
+associated with the account must be active and verified.To remove the
+email address associated with your account:1. In the TikTok app,
+tap<strong>Profile</strong> at the bottom.2. Tap the
 <strong>Menu</strong> ☰ button at the top, then select <strong>Settings
 and privacy</strong>. 3. Tap <strong>Account</strong>, then select
 <strong>Account Information</strong>. 4. Tap <strong>Email</strong>. 5.
@@ -1941,11 +1973,12 @@ mobile device.Note: Since we send verification codes to your device,
 both the old and the new phone number associated with the account must
 be active and verified.To remove the phone number associated with your
 account:1. In the TikTok app, tap<strong>Profile</strong> atthe
-bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then select
-<strong>Settings and privacy</strong>. 3. Tap <strong>Account</strong>,
-then select <strong>Account Information</strong>. 4 Tap <strong>Phone
-number</strong>, then select <strong>Unlink phone</strong>. 5. Tap
-<strong>Unlink</strong>.Learn more about <a
+bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then
+select <strong>Settings and privacy</strong>. 3. Tap
+<strong>Account</strong>, then select <strong>Account
+Information</strong>. 4 Tap <strong>Phone number</strong>, then select
+<strong>Unlink phone</strong>. 5. Tap <strong>Unlink</strong>.Learn more
+about <a
 href="https://www.tiktok.com/support/faq_detail?id=7543604780950624824">how
 to keep your account secure</a>.Important things to know:• Only one
 phone number can be associated with one account.• If your account is
@@ -3598,8 +3631,8 @@ off in the TikTok app while your device’s screenreader is still on, the
 feed navigation buttons won’t appear and you’ll need to go back into the
 app settings to turn it on again.To manage the feed navigation buttons
 in TikTok:1. In the TikTok app, tap <strong>Profile</strong> at the
-bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then select
-<strong>Settings and privacy</strong>.3. Tap
+bottom.2. Tap the <strong>Menu</strong> ☰ button at the top, then
+select <strong>Settings and privacy</strong>.3. Tap
 <strong>Accessibility</strong>.4. Turn <strong>Feed navigation
 buttons</strong>on or off. In order to see this setting option, TalkBack
 (Android) or VoiceOver (iOS) must be turned on in your device settings
@@ -3664,13 +3697,13 @@ href="https://support.apple.com/en-us/102453">Apple
 Support</a>.<strong>For Android</strong> If you use an Android device,
 you can adjust your text size through your TikTok settings.To adjust
 text size in TikTok: 1. In the TikTok app, tap
-<strong>Profile</strong>at the bottom.2. Tap the <strong>Menu</strong> ☰
-button at the top, then select <strong>Settings and privacy</strong>.3.
-Tap <strong>Accessibility</strong>. 4. Tap <strong>Text size</strong>,
-then use the slider at the bottom to preview text sizes. 5. Tap
-<strong>Adjust</strong> to update your text size. After you adjust the
-size, your app will restart automatically and the new text size will
-appear across TikTok.</p>
+<strong>Profile</strong>at the bottom.2. Tap the <strong>Menu</strong>
+☰ button at the top, then select <strong>Settings and
+privacy</strong>.3. Tap <strong>Accessibility</strong>. 4. Tap
+<strong>Text size</strong>, then use the slider at the bottom to preview
+text sizes. 5. Tap <strong>Adjust</strong> to update your text size.
+After you adjust the size, your app will restart automatically and the
+new text size will appear across TikTok.</p>
 <h3 id="tiktok-exploring-videos-bookings-through-tiktok">Tiktok
 exploring videos bookings through tiktok</h3>
 <p>Using TikTokSearchFootnotesBlockingDiscoverFeedFor YouRefresh your
@@ -4660,10 +4693,10 @@ personalized content recommendations. To access a non-personalized
 version of TikTok Lite, you can use the app as a guest without logging
 into an account, or you can manage your personalization settings
 directly within the app:1. In the TikTok app, tap
-<strong>Profile</strong> at the bottom.2. Tap the <strong>Menu</strong>☰
-button at the top, then select <strong>Settings and privacy</strong>.3.
-Tap <strong>Content preferences</strong>.4. Tap <strong>Personalized
-feeds</strong>, then turn the setting off.</p>
+<strong>Profile</strong> at the bottom.2. Tap the
+<strong>Menu</strong>☰ button at the top, then select <strong>Settings
+and privacy</strong>.3. Tap <strong>Content preferences</strong>.4. Tap
+<strong>Personalized feeds</strong>, then turn the setting off.</p>
 <h4 id="tiktok-lite-rewards"><strong>TikTok Lite rewards</strong></h4>
 <p>Depending on your location, you may be eligible to earn rewards on
 TikTok Lite. Earn rewards by completing tasks within the app. Once you
@@ -6099,27 +6132,29 @@ inbox notifications.</p>
 <h4 id="how-to-turn-push-notifications-on-or-off"><strong>How to turn
 push notifications on or off</strong></h4>
 <p>To turn push notifications on or off: 1. In the TikTok app, tap
-<strong>Profile</strong> at the bottom. 2. Tap the<strong>Menu</strong>☰
-button at the top, then select <strong>Settings and privacy</strong>. 3.
-Tap <strong>Notifications</strong>, then turn the notifications you’d
-like to receive on or off.Keep in mind that you can also change your
-TikTok notifications from your device settings.</p>
+<strong>Profile</strong> at the bottom. 2. Tap
+the<strong>Menu</strong>☰ button at the top, then select
+<strong>Settings and privacy</strong>. 3. Tap
+<strong>Notifications</strong>, then turn the notifications you’d like
+to receive on or off.Keep in mind that you can also change your TikTok
+notifications from your device settings.</p>
 <h4 id="how-to-mute-push-notifications"><strong>How to mute push
 notifications</strong></h4>
 <p>You can set a schedule to mute push notifications on your device for
 a specific period of time.To set a schedule to mute push notifications:
 1. In the TikTok app, tap <strong>Profile</strong> at the bottom. 2. Tap
-the<strong>Menu</strong>☰button at the top, then select <strong>Settings
-and privacy</strong>. 3. Tap <strong>Notifications</strong>. 4. Tap
-<strong>Push notification schedule</strong>. 5. Turn the setting on,
-then adjust the time. We won’t send push notifications during the time
-that you schedule. A few things to know about push notifications: • For
-teens between the ages of 13 to 15 years, the scheduled time is set from
-9 p.m. to 8 a.m. by default. This setting can’t be changed. • For teens
-between the ages of 16 to 17 years, the scheduled time is set from 10
-p.m. to 8 a.m. by default. This setting can’t be changed. • If you’re a
-parent or guardian, you can schedule additional time to mute your teen’s
-push notifications in <a
+the<strong>Menu</strong>☰button at the top, then select
+<strong>Settings and privacy</strong>. 3. Tap
+<strong>Notifications</strong>. 4. Tap <strong>Push notification
+schedule</strong>. 5. Turn the setting on, then adjust the time. We
+won’t send push notifications during the time that you schedule. A few
+things to know about push notifications: • For teens between the ages of
+13 to 15 years, the scheduled time is set from 9 p.m. to 8 a.m. by
+default. This setting can’t be changed. • For teens between the ages of
+16 to 17 years, the scheduled time is set from 10 p.m. to 8 a.m. by
+default. This setting can’t be changed. • If you’re a parent or
+guardian, you can schedule additional time to mute your teen’s push
+notifications in <a
 href="https://www.tiktok.com/support/faq_detail?id=7543604779394832952#7">Family
 Pairing</a>. Keep in mind that the default scheduled time overrides any
 custom time that overlaps with the default time. For example, if you set
@@ -6322,14 +6357,14 @@ history</strong> setting.Keep in mind that if you turn your sticker
 privacy settings off, this will also affect who can Stitch or Duet with
 your posts, and add your post to their Story.Before you make a
 post<strong>From your settings</strong>1. In the TikTok app, tap
-<strong>Profile</strong> at the bottom.2. Tap the <strong>Menu</strong>☰
-button at the top, then select <strong>Settings and privacy</strong>. 3.
-Tap <strong>Privacy</strong>, then tap <strong>Reuse of
-content</strong>. 4. Tap<strong>Allow reuse of content from</strong> and
-choose who you’d like to allow to create stickers. This setting is
-turned on by default to <strong>Everyone</strong> if you’re 18 years or
-older and your account is public.<strong>From the Post screen</strong>1.
-In the TikTok app, <a
+<strong>Profile</strong> at the bottom.2. Tap the
+<strong>Menu</strong>☰ button at the top, then select <strong>Settings
+and privacy</strong>. 3. Tap <strong>Privacy</strong>, then tap
+<strong>Reuse of content</strong>. 4. Tap<strong>Allow reuse of content
+from</strong> and choose who you’d like to allow to create stickers.
+This setting is turned on by default to <strong>Everyone</strong> if
+you’re 18 years or older and your account is public.<strong>From the
+Post screen</strong>1. In the TikTok app, <a
 href="https://support.tiktok.com/en/using-tiktok/creating-videos/making-a-post">create
 your post</a>.2. On the <strong>Post</strong> screen, tap <strong>More
 options</strong>.3. Turn the <strong>Allow reuse of content</strong>
@@ -6740,25 +6775,26 @@ mode:• This setting is turned on by default.• Depending on your location
 and when this setting is on, we may hide messages that contain sensitive
 content. You’ll have the option to view the hidden message if you
 wish.To add keywords:1. In the TikTok app, tap
-<strong>Profile</strong>at the bottom.2. Tap the <strong>Menu</strong> ☰
-button at the top, then select <strong>Settings and privacy</strong>.3.
-Tap <strong>Privacy</strong>.4. Tap <strong>Direct messages</strong>.5.
-Tap <strong>Filtered keywords</strong>.6. Turn the <strong>Filtered
-keywords</strong> setting on. Enter a word or phrase that you’d like to
-hide from your chats, then tap <strong>Add</strong>.Keep in mind that
-certain keywords can’t be filtered.<strong>Manage filtered
-requests</strong>To view filtered messages:1. In the TikTok app, tap
-<strong>Inbox</strong> at the bottom. 2. Tap <strong>Message</strong>
-<strong>requests</strong>.3. Tap the <strong>Filtered
-requests</strong>button at the top, then select a message request. From
-here, you can:༚ Tap <strong>Accept</strong>to move the chat from
-filtered requests into your inbox.༚ Tap <strong>Delete</strong> to
-decline the message request.༚ Tap <strong>Report</strong> to report the
-message.༚ Tap <strong>Tap here</strong>, then choose
-to<strong>Report</strong> the message or <strong>Block</strong> the
-sender.Keep in mind that the safe mode setting needs to be turned on to
-filter sensitive messages.<strong>Report a direct message</strong>If you
-receive a message that you think doesn’t follow our <a
+<strong>Profile</strong>at the bottom.2. Tap the <strong>Menu</strong>
+☰ button at the top, then select <strong>Settings and
+privacy</strong>.3. Tap <strong>Privacy</strong>.4. Tap <strong>Direct
+messages</strong>.5. Tap <strong>Filtered keywords</strong>.6. Turn the
+<strong>Filtered keywords</strong> setting on. Enter a word or phrase
+that you’d like to hide from your chats, then tap
+<strong>Add</strong>.Keep in mind that certain keywords can’t be
+filtered.<strong>Manage filtered requests</strong>To view filtered
+messages:1. In the TikTok app, tap <strong>Inbox</strong> at the bottom.
+2. Tap <strong>Message</strong> <strong>requests</strong>.3. Tap the
+<strong>Filtered requests</strong>button at the top, then select a
+message request. From here, you can:༚ Tap <strong>Accept</strong>to move
+the chat from filtered requests into your inbox.༚ Tap
+<strong>Delete</strong> to decline the message request.༚ Tap
+<strong>Report</strong> to report the message.༚ Tap <strong>Tap
+here</strong>, then choose to<strong>Report</strong> the message or
+<strong>Block</strong> the sender.Keep in mind that the safe mode
+setting needs to be turned on to filter sensitive
+messages.<strong>Report a direct message</strong>If you receive a
+message that you think doesn’t follow our <a
 href="https://www.tiktok.com/community-guidelines">Community
 Guidelines</a>, we encourage you to report it to us.To report a direct
 message: 1. In the TikTok app, tap <strong>Inbox</strong> at the bottom.
@@ -6941,14 +6977,14 @@ location from the data we receive directly from your Location Services.
 You can choose to delete the data that we received directly from your
 Location Services at any time.To delete data that TikTok received
 directly from your Location Services: 1. In the TikTok app, tap
-<strong>Profile</strong>at the bottom. 2. Tap the <strong>Menu</strong>☰
-button at the top, then select <strong>Settings and privacy</strong>. 3.
-Tap <strong>Privacy</strong>,then tap <strong>Location
-Services</strong>. 4. Tap <strong>Delete certain location
-data</strong>.Once deleted, keep in mind that we may continue to retain
-less specific location information previously inferred from your
-Location Services data or your IP address, such as the city in which you
-may be located.</p>
+<strong>Profile</strong>at the bottom. 2. Tap the
+<strong>Menu</strong>☰ button at the top, then select <strong>Settings
+and privacy</strong>. 3. Tap <strong>Privacy</strong>,then tap
+<strong>Location Services</strong>. 4. Tap <strong>Delete certain
+location data</strong>.Once deleted, keep in mind that we may continue
+to retain less specific location information previously inferred from
+your Location Services data or your IP address, such as the city in
+which you may be located.</p>
 <h4 id="how-to-add-a-location-to-your-post"><strong>How to add a
 location to your post</strong></h4>
 <p>Depending on your region, you can add a location to your TikTok
@@ -7547,17 +7583,17 @@ whose phone number or email address is in your phone contacts and who
 has added their phone number or email address to TikTok. To sync your
 phone contacts or Facebook friends on TikTok: 1. In the TikTok app, tap
 <strong>Profile</strong> at the bottom. 2. Tap
-the<strong>Menu</strong>☰button at the top, then select <strong>Settings
-and privacy</strong>. 3. Tap <strong>Privacy</strong>, then tap
-<strong>Sync contacts and Facebook friends</strong>. 4. Turn the
-<strong>Sync contacts</strong> or <strong>Sync Facebook friends</strong>
-setting on or off. You can also remove previously synced data.If you
-remove TikTok’s access to your phone contacts in your device settings,
-we’ll no longer sync contacts, though we’ll continue to suggest accounts
-to you from your previously synced contacts. If you wish to remove all
-your phone contacts that were synced to TikTok and stop syncing contacts
-on all devices, you can <strong>Remove previously synced
-contacts</strong> from the <strong>Sync contacts and Facebook
+the<strong>Menu</strong>☰button at the top, then select
+<strong>Settings and privacy</strong>. 3. Tap <strong>Privacy</strong>,
+then tap <strong>Sync contacts and Facebook friends</strong>. 4. Turn
+the <strong>Sync contacts</strong> or <strong>Sync Facebook
+friends</strong> setting on or off. You can also remove previously
+synced data.If you remove TikTok’s access to your phone contacts in your
+device settings, we’ll no longer sync contacts, though we’ll continue to
+suggest accounts to you from your previously synced contacts. If you
+wish to remove all your phone contacts that were synced to TikTok and
+stop syncing contacts on all devices, you can <strong>Remove previously
+synced contacts</strong> from the <strong>Sync contacts and Facebook
 friends</strong> setting. Learn more about <a
 href="https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/how-your-phone-number-is-used-on-tiktok">how
 your phone number is used on TikTok</a>.</p>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-29" />
   <title>Instagram Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,56 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Instagram Help Guide</h1>
 <p class="subtitle">Instagram’s official help, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-29</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#instagram-help-guide"
+id="toc-instagram-help-guide">Instagram Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#accessibility"
+id="toc-accessibility">Accessibility</a></li>
+<li><a href="#fixing-problems" id="toc-fixing-problems">Fixing
+problems</a></li>
+<li><a href="#following-likes-and-comments"
+id="toc-following-likes-and-comments">Following, likes and
+comments</a></li>
+<li><a href="#getting-started-and-your-profile"
+id="toc-getting-started-and-your-profile">Getting started and your
+profile</a></li>
+<li><a href="#login-recovery-and-security"
+id="toc-login-recovery-and-security">Login, recovery and
+security</a></li>
+<li><a href="#messaging-calls-and-sharing"
+id="toc-messaging-calls-and-sharing">Messaging, calls and
+sharing</a></li>
+<li><a href="#meta-ai-on-instagram" id="toc-meta-ai-on-instagram">Meta
+AI on Instagram</a></li>
+<li><a href="#other-help-articles" id="toc-other-help-articles">Other
+help articles</a></li>
+<li><a href="#policies-terms-and-the-law"
+id="toc-policies-terms-and-the-law">Policies, terms and the law</a></li>
+<li><a href="#posting-photos-reels-stories-and-editing"
+id="toc-posting-photos-reels-stories-and-editing">Posting: photos,
+reels, stories and editing</a></li>
+<li><a href="#privacy-and-reporting"
+id="toc-privacy-and-reporting">Privacy and reporting</a></li>
+<li><a href="#professional-accounts-ads-and-monetisation"
+id="toc-professional-accounts-ads-and-monetisation">Professional
+accounts, ads and monetisation</a></li>
+<li><a href="#teen-accounts-and-parental-supervision"
+id="toc-teen-accounts-and-parental-supervision">Teen accounts and
+parental supervision</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="instagram-help-guide">Instagram Help Guide</h1>
 <p>This guide gathers Instagram’s official help: setting up and using
 your account, posting photos, reels and stories, messaging, following
@@ -11398,34 +11449,26 @@ hotline as well.</p>
 <li><ul>
 <li>Veterans Crisis Line</li>
 <li>For veterans</li>
-<li><ol start="800" type="1">
-<li>273-8255</li>
-</ol></li>
+<li>(800) 273-8255</li>
 </ul></li>
 <li><ul>
 <li>National Alliance for Eating Disorders</li>
 <li>Monday-Friday 9am-7pm ET</li>
 <li>0</li>
-<li><ol start="866" type="1">
-<li>662-1235</li>
-</ol></li>
+<li>(866) 662-1235</li>
 </ul></li>
 <li><ul>
 <li>Kids Help Phone (for youth under 20)</li>
 <li>For youth</li>
 <li>0</li>
 <li>0</li>
-<li><ol start="800" type="1">
-<li>668-6868</li>
-</ol></li>
+<li>(800) 668-6868</li>
 <li>SMS: Text them at 686868</li>
 </ul></li>
 <li><ul>
 <li>The National Eating Disorder Information Centre (NEDIC)</li>
 <li>0</li>
-<li><ol start="866" type="1">
-<li>633-4220</li>
-</ol></li>
+<li>(866) 633-4220</li>
 </ul></li>
 <li><ul>
 <li>Suicide Crisis Hotline</li>
@@ -11437,12 +11480,8 @@ hotline as well.</p>
 <li>ANEB Quebec</li>
 <li>7 days a week, 8 am - 3 am ET</li>
 <li>0</li>
-<li><ol start="800" type="1">
-<li>630-0907</li>
-</ol></li>
-<li><ol start="514" type="1">
-<li>630-0907</li>
-</ol></li>
+<li>(800) 630-0907</li>
+<li>(514) 630-0907</li>
 <li>SMS: Text them at (800) 630-0907</li>
 </ul></li>
 <li><ul>

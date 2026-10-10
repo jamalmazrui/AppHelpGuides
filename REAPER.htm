@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-01" />
   <title>REAPER Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,91 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">REAPER Help Guide</h1>
 <p class="subtitle">The official REAPER documentation published by
 Cockos, gathered into one document</p>
 <p class="date">2026-08-01</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#reaper-help-guide" id="toc-reaper-help-guide">REAPER Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#1-setting-up-and-getting-started"
+id="toc-1-setting-up-and-getting-started">1 Setting Up and Getting
+Started</a></li>
+<li><a href="#2-reaper-project-basics"
+id="toc-2-reaper-project-basics">2 REAPER Project Basics</a></li>
+<li><a href="#3-recording-audio-and-midi"
+id="toc-3-recording-audio-and-midi">3 Recording Audio and MIDI</a></li>
+<li><a href="#4-managing-media-the-media-explorer"
+id="toc-4-managing-media-the-media-explorer">4 Managing Media: The Media
+Explorer</a></li>
+<li><a href="#5-project-arrangement-basics"
+id="toc-5-project-arrangement-basics">5 Project Arrangement
+Basics</a></li>
+<li><a href="#6-managing-track-and-item-fx"
+id="toc-6-managing-track-and-item-fx">6 Managing Track and Item
+FX</a></li>
+<li><a href="#7-managing-and-editing-media-items"
+id="toc-7-managing-and-editing-media-items">7 Managing and Editing Media
+Items</a></li>
+<li><a href="#8-managing-comping-and-editing-takes"
+id="toc-8-managing-comping-and-editing-takes">8 Managing, Comping and
+Editing Takes</a></li>
+<li><a href="#9-tempo-based-production-loops-markers-and-regions"
+id="toc-9-tempo-based-production-loops-markers-and-regions">9 Tempo
+Based Production, Loops, Markers and Regions</a></li>
+<li><a href="#10-pitch-and-time-manipulation"
+id="toc-10-pitch-and-time-manipulation">10 Pitch and Time
+Manipulation</a></li>
+<li><a href="#11-the-mixer-and-the-master"
+id="toc-11-the-mixer-and-the-master">11 The Mixer and The
+Master</a></li>
+<li><a href="#12-managing-the-overall-project"
+id="toc-12-managing-the-overall-project">12 Managing The Overall
+Project</a></li>
+<li><a href="#13-working-with-midi-items"
+id="toc-13-working-with-midi-items">13 Working with MIDI Items</a></li>
+<li><a href="#14-music-notation-and-reaper-s-notation-editor"
+id="toc-14-music-notation-and-reaper-s-notation-editor">14 Music
+Notation and REAPER’s Notation Editor</a></li>
+<li><a href="#15-customization-actions-mouse-modifiers-menus-and-more"
+id="toc-15-customization-actions-mouse-modifiers-menus-and-more">15
+Customization: Actions, Mouse Modifiers, Menus and More</a></li>
+<li><a href="#16-reaper-plug-ins-in-action"
+id="toc-16-reaper-plug-ins-in-action">16 REAPER Plug-ins in
+Action</a></li>
+<li><a href="#17-more-routing-examples"
+id="toc-17-more-routing-examples">17 More Routing Examples</a></li>
+<li><a href="#18-automation-envelopes-and-more"
+id="toc-18-automation-envelopes-and-more">18 Automation – Envelopes and
+More</a></li>
+<li><a href="#19-parameter-modulation"
+id="toc-19-parameter-modulation">19 Parameter Modulation</a></li>
+<li><a href="#20-using-reaper-with-video"
+id="toc-20-using-reaper-with-video">20 Using REAPER with Video</a></li>
+<li><a href="#21-exporting-files-mixing-down-and-rendering"
+id="toc-21-exporting-files-mixing-down-and-rendering">21 Exporting
+Files, Mixing Down and Rendering</a></li>
+<li><a href="#22-reaper-s-preferences-and-other-settings"
+id="toc-22-reaper-s-preferences-and-other-settings">22 REAPER’s
+Preferences and Other Settings</a></li>
+<li><a
+href="#23-u7sing-reaper-with-other-applications-and-devices-overview"
+id="toc-23-u7sing-reaper-with-other-applications-and-devices-overview">23
+U7sing REAPER with Other Applications and Devices (Overview)</a></li>
+<li><a href="#the-cockos-reaeffects" id="toc-the-cockos-reaeffects">The
+Cockos ReaEffects</a></li>
+<li><a href="#supplementary-guides"
+id="toc-supplementary-guides">Supplementary Guides</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="reaper-help-guide">REAPER Help Guide</h1>
 <p>This guide gathers the official REAPER documentation published by
 Cockos at reaper.fm, as it stood on 1 August 2026. REAPER was at version
@@ -3426,8 +3512,8 @@ $project will cause the project name to be shown, $projectlength
 displays the length of the current pproject, $localtime will display the
 current date and time, $regionname will show the name of any region that
 is currently being played. Similar useful wildcards include $regionprev,
-$regionnext, $marker, $markerprev and $markernext. Where <span
-class="math inline"><em>r</em><em>e</em><em>g</em><em>i</em><em>o</em><em>n</em><em>n</em><em>a</em><em>m</em><em>e</em>,</span>region,
+$regionnext, $marker, $markerprev and $markernext. Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>e</mi><mi>g</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">regionname,</annotation></semantics></math>region,
 $markername or $marker is shown, double-click on its color square to
 edit the region/marker. $masterpeak and $masterloudness cause real time
 peak/loudness levels to be displayed. The wildcard $trackitem displays
@@ -20852,8 +20938,8 @@ wildcards.</p></li>
 metadata or rendered file name. For example, including $project in the
 filename will cause the project name to be included. Using a backslash
 (Windows) or slash (Mac) between wildcards causes a sub directory to be
-created. For example, naming your output files <span
-class="math inline"><em>p</em><em>r</em><em>o</em><em>j</em><em>e</em><em>c</em><em>t</em> </span>track
+created. For example, naming your output files
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>e</mi><mi>c</mi><mi>t</mi><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">project\ </annotation></semantics></math>track
 would cause a separate subdirectory to be created for the output of each
 track. $author will include any text saved in the project settings notes
 Author field. Clicking the Wildcards button in the Consolidate Tracks,
@@ -21324,8 +21410,8 @@ and All regions. Output format, etc. are specified in the usual way. Use
 a backslash in the file name to create subdirectories. For example, a
 file name $project$region- $track will include project file name, region
 name and track name in the output files, with each region’s files being
-allocated its own sub-directory. The file name <span
-class="math inline"><em>p</em><em>r</em><em>o</em><em>j</em><em>e</em><em>c</em><em>t</em>$<em>t</em><em>r</em><em>a</em><em>c</em><em>k</em>−</span>region
+allocated its own sub-directory. The file name
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>$</mi><mi>t</mi><mi>r</mi><mi>a</mi><mi>c</mi><mi>k</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">project\$track-</annotation></semantics></math>region
 would include project name, track name and region name, with this time a
 separate subdirectory for each track. When ready, choose Render xx
 files…or Queued Renders… to proceed. Tip: The action list includes an

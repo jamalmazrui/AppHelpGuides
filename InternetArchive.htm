@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Internet Archive help</title>
   <style>
@@ -11,7 +11,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -36,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -54,11 +61,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -87,8 +91,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -112,7 +119,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -129,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -156,8 +163,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -168,13 +179,86 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Internet Archive help</h1>
-</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#internet-archive-help"
+id="toc-internet-archive-help">Internet Archive help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#accounts" id="toc-accounts">Accounts</a></li>
+<li><a href="#archive-it-service" id="toc-archive-it-service">Archive-it
+Service</a></li>
+<li><a href="#archive.org-general-information"
+id="toc-archive.org-general-information">Archive.org General
+Information</a></li>
+<li><a href="#audio-and-music-items-information"
+id="toc-audio-and-music-items-information">Audio and Music Items
+Information</a></li>
+<li><a href="#books-and-texts-information"
+id="toc-books-and-texts-information">Books and Texts
+Information</a></li>
+<li><a href="#borrow-a-book-from-archive.org"
+id="toc-borrow-a-book-from-archive.org">Borrow a Book from
+Archive.org</a></li>
+<li><a href="#charges-refunds" id="toc-charges-refunds">Charges &amp;
+Refunds</a></li>
+<li><a href="#collections" id="toc-collections">Collections</a></li>
+<li><a href="#disability-access" id="toc-disability-access">Disability
+Access</a></li>
+<li><a href="#donating-physical-items-to-the-archive"
+id="toc-donating-physical-items-to-the-archive">Donating Physical Items
+to the Archive</a></li>
+<li><a href="#donating-to-the-internet-archive"
+id="toc-donating-to-the-internet-archive">Donating to the Internet
+Archive</a></li>
+<li><a href="#donations" id="toc-donations">Donations</a></li>
+<li><a href="#downloading" id="toc-downloading">Downloading</a></li>
+<li><a href="#favorites" id="toc-favorites">Favorites</a></li>
+<li><a href="#files-formats-and-derivatives"
+id="toc-files-formats-and-derivatives">Files, Formats, and
+Derivatives</a></li>
+<li><a href="#forums" id="toc-forums">Forums</a></li>
+<li><a href="#general-interest" id="toc-general-interest">General
+Interest</a></li>
+<li><a href="#lists" id="toc-lists">Lists</a></li>
+<li><a href="#managing-and-editing-your-items"
+id="toc-managing-and-editing-your-items">Managing and Editing Your
+Items</a></li>
+<li><a href="#media-players" id="toc-media-players">Media
+Players</a></li>
+<li><a href="#most-frequently-asked-questions"
+id="toc-most-frequently-asked-questions">Most Frequently Asked
+Questions</a></li>
+<li><a href="#movies-and-videos" id="toc-movies-and-videos">Movies and
+Videos</a></li>
+<li><a href="#organization-information"
+id="toc-organization-information">Organization Information</a></li>
+<li><a href="#reporting-problems-or-errors"
+id="toc-reporting-problems-or-errors">Reporting problems or
+errors</a></li>
+<li><a href="#reports" id="toc-reports">Reports</a></li>
+<li><a href="#resource-guides" id="toc-resource-guides">Resource
+Guides</a></li>
+<li><a href="#search" id="toc-search">Search</a></li>
+<li><a href="#software" id="toc-software">Software</a></li>
+<li><a href="#tax-information" id="toc-tax-information">Tax
+Information</a></li>
+<li><a href="#technical-information"
+id="toc-technical-information">Technical Information</a></li>
+<li><a href="#uploading" id="toc-uploading">Uploading</a></li>
+<li><a href="#the-wayback-machine" id="toc-the-wayback-machine">The
+Wayback Machine</a></li>
+<li><a href="#wayback-machine-web-archiving"
+id="toc-wayback-machine-web-archiving">Wayback Machine &amp; Web
+Archiving</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="internet-archive-help">Internet Archive help</h1>
 <p>This guide holds the Internet Archive’s own help, gathered on 18
 August 2026: the Wayback Machine, uploading and managing items,

@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>BrailleBlaster help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">BrailleBlaster help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#brailleblaster-help"
@@ -1145,44 +1159,28 @@ recommended values¶</h4>
 <p>End of page</p>
 <p>Footer</p>
 <p>Phoenix Gold</p>
-<p></p>
 <p>1a</p>
 <p>Phoenix silver</p>
-<p></p>
 <p>\r1a</p>
 <p>Cyclone</p>
-<p></p>
 <p>1a</p>
 <p>Trident</p>
-<p></p>
 <p>1a</p>
 <p>Book Maker</p>
-<p></p>
 <p>raille Express</p>
-<p></p>
 <p>homas</p>
-<p></p>
 <p>homas Pro</p>
-<p></p>
 <p>T</p>
-<p></p>
 <p>uliet Pro60</p>
-<p></p>
 <p>uliet Pro</p>
-<p></p>
 <p>uliet Classic</p>
-<p></p>
 <p>omeo 25</p>
-<p></p>
 <p>omeo Pro50</p>
-<p></p>
 <p>omeo Attache</p>
 <p>omeo Attache Pro</p>
 <p>omeo 60</p>
-<p></p>
 <p>1a</p>
 <p>Juliet 120</p>
-<p></p>
 <p>1a</p>
 <h4 id="index-braille">Index Braille¶</h4>
 <p>Model</p>
@@ -1190,25 +1188,18 @@ recommended values¶</h4>
 <p>End of page</p>
 <p>Footer</p>
 <p>Basic-D V5</p>
-<p></p>
 <p>1a</p>
 <p>Basic-D V4</p>
-<p></p>
 <p>1a</p>
 <p>Everest-D V5</p>
-<p></p>
 <p>1a</p>
 <p>Everest-D V4</p>
-<p></p>
 <p>1a</p>
 <p>BrailleBox V5</p>
-<p></p>
 <p>1a</p>
 <p>BrailleBox V4</p>
-<p></p>
 <p>1a</p>
 <p>Fanfold V5</p>
-<p></p>
 <p>1a</p>
 <h3 id="automated-features-and-tools">Automated Features and Tools</h3>
 <h4 id="working-with-tables">Working with Tables¶</h4>
@@ -1372,9 +1363,7 @@ The text defaults to “Table changes as follows:” but may be edited as
 needed.</li>
 <li>1-1, 3-3, 5-5, etc: These next fields proceed in the standard
 Stairstep format. Each of these fields can be edited as needed.</li>
-<li><ol start="3" type="1">
-<li>Click Ok to return to the Table Editor.</li>
-</ol></li>
+<li>3. Click Ok to return to the Table Editor.</li>
 </ul>
 <h4 id="edit-a-linear-table">Edit a Linear Table¶</h4>
 <p>When the Linear table style is applied, a button appears to the right
@@ -1391,9 +1380,7 @@ column heading order. By default, the text of the column headings is
 automatically placed here in order, from left to right, with a colon
 following the first column heading and a semicolon following each
 additional heading.</li>
-<li><ol start="3" type="1">
-<li>Click Ok to return to the Table Editor.</li>
-</ol></li>
+<li>3. Click Ok to return to the Table Editor.</li>
 </ul>
 <h4 id="reformatting-tables">Reformatting Tables¶</h4>
 <p>It is possible to reformat your table to another style type. There

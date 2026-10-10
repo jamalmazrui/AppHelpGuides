@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-30" />
   <title>Notepad++ Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,7 +180,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
     html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
@@ -239,11 +249,89 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Notepad++ Help Guide</h1>
 <p class="subtitle">The official Notepad++ User Manual, gathered into
 one screen-reader-friendly document</p>
 <p class="date">2026-07-30</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#notepad-help-guide" id="toc-notepad-help-guide">Notepad++
+Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#auto-completion"
+id="toc-auto-completion">Auto-completion</a></li>
+<li><a href="#character-encoding" id="toc-character-encoding">Character
+encoding</a></li>
+<li><a href="#the-command-line" id="toc-the-command-line">The command
+line</a></li>
+<li><a href="#configuration-files"
+id="toc-configuration-files">Configuration files</a></li>
+<li><a href="#editing" id="toc-editing">Editing</a></li>
+<li><a href="#files" id="toc-files">Files</a></li>
+<li><a href="#the-function-list" id="toc-the-function-list">The function
+list</a></li>
+<li><a href="#getting-started" id="toc-getting-started">Getting
+started</a></li>
+<li><a href="#ghost-typing" id="toc-ghost-typing">Ghost typing</a></li>
+<li><a href="#history-of-this-manual"
+id="toc-history-of-this-manual">History of this manual</a></li>
+<li><a href="#licence" id="toc-licence">Licence</a></li>
+<li><a href="#macros" id="toc-macros">Macros</a></li>
+<li><a href="#other-manual-pages" id="toc-other-manual-pages">Other
+manual pages</a></li>
+<li><a href="#other-resources" id="toc-other-resources">Other
+resources</a></li>
+<li><a href="#preferences" id="toc-preferences">Preferences</a></li>
+<li><a href="#programming-languages-and-syntax-highlighting"
+id="toc-programming-languages-and-syntax-highlighting">Programming
+languages and syntax highlighting</a></li>
+<li><a href="#the-run-menu" id="toc-the-run-menu">The Run menu</a></li>
+<li><a href="#searching-and-replacing"
+id="toc-searching-and-replacing">Searching and replacing</a></li>
+<li><a href="#sessions" id="toc-sessions">Sessions</a></li>
+<li><a href="#themes" id="toc-themes">Themes</a></li>
+<li><a href="#upgrading" id="toc-upgrading">Upgrading</a></li>
+<li><a href="#user-defined-language-comments"
+id="toc-user-defined-language-comments">User Defined Language:
+comments</a></li>
+<li><a href="#user-defined-language-default-styles"
+id="toc-user-defined-language-default-styles">User Defined Language:
+default styles</a></li>
+<li><a href="#user-defined-language-delimiters"
+id="toc-user-defined-language-delimiters">User Defined Language:
+delimiters</a></li>
+<li><a href="#user-defined-language-folding-in-code"
+id="toc-user-defined-language-folding-in-code">User Defined Language:
+folding in code</a></li>
+<li><a href="#user-defined-language-folding-in-comments"
+id="toc-user-defined-language-folding-in-comments">User Defined
+Language: folding in comments</a></li>
+<li><a href="#user-defined-language-introduction"
+id="toc-user-defined-language-introduction">User Defined Language:
+introduction</a></li>
+<li><a href="#user-defined-language-keywords"
+id="toc-user-defined-language-keywords">User Defined Language:
+keywords</a></li>
+<li><a href="#user-defined-language-numbers"
+id="toc-user-defined-language-numbers">User Defined Language:
+numbers</a></li>
+<li><a href="#user-defined-language-operators"
+id="toc-user-defined-language-operators">User Defined Language:
+operators</a></li>
+<li><a href="#user-defined-language-the-system"
+id="toc-user-defined-language-the-system">User Defined Language: the
+system</a></li>
+<li><a href="#the-user-interface" id="toc-the-user-interface">The user
+interface</a></li>
+<li><a href="#views-and-tabs" id="toc-views-and-tabs">Views and
+tabs</a></li>
+<li><a href="#the-windows-shell-extension"
+id="toc-the-windows-shell-extension">The Windows shell
+extension</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="notepad-help-guide">Notepad++ Help Guide</h1>
 <p>This guide gathers the official Notepad++ User Manual. Notepad++ is
 the free Windows source-code and text editor, actively maintained, and
@@ -12236,9 +12324,10 @@ is found.</p></li>
 is found.</p></li>
 <li><p>0 ⇒ Puts an end to forced case mode initiated by 1 or 2.</p></li>
 <li><p>0, 1, 2, 3, 4 ⇒ The whole matched text.</p></li>
-<li><p>0 <span class="math inline">12</span>PREMATCH3${^PREMATCH}` ⇒ The
-text between the previous and current match, or the text before the
-match if this is the first one.</p></li>
+<li><p>0
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>12</mn><annotation encoding="application/x-tex">12</annotation></semantics></math>PREMATCH3${^PREMATCH}`
+⇒ The text between the previous and current match, or the text before
+the match if this is the first one.</p></li>
 <li><p>0, 1, 2 ⇒ Everything that follows current match.</p></li>
 <li><p>0, 1, 2 ⇒ Returns what the last matching subexpression
 matched.</p></li>

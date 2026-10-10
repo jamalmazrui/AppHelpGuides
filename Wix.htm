@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>Wix Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,44 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Wix Help Guide</h1>
 <p class="subtitle">Wix’s own help centre, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#wix-help-guide" id="toc-wix-help-guide">Wix Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-account-billing" id="toc-cat-account-billing">Account
+&amp; billing</a></li>
+<li><a href="#cat-connecting-a-domain"
+id="toc-cat-connecting-a-domain">Connecting a domain</a></li>
+<li><a href="#cat-creating-a-website"
+id="toc-cat-creating-a-website">Creating a website</a></li>
+<li><a href="#cat-getting-started-with-wix"
+id="toc-cat-getting-started-with-wix">Getting started with Wix</a></li>
+<li><a href="#cat-managing-your-business"
+id="toc-cat-managing-your-business">Managing your business</a></li>
+<li><a href="#cat-need-more-help" id="toc-cat-need-more-help">Need more
+help?</a></li>
+<li><a href="#cat-promoting-your-site"
+id="toc-cat-promoting-your-site">Promoting your site</a></li>
+<li><a href="#cat-studio-partners-enterprise"
+id="toc-cat-studio-partners-enterprise">Studio, Partners &amp;
+Enterprise</a></li>
+<li><a href="#cat-using-the-wix-mobile-apps"
+id="toc-cat-using-the-wix-mobile-apps">Using the Wix mobile
+apps</a></li>
+<li><a href="#cat-miscellaneous"
+id="toc-cat-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="wix-help-guide">Wix Help Guide</h1>
 <p>This guide gathers Wix’s official help centre. The text was taken
 from support.wix.com on 31 July 2026 and is Wix’s own; nothing has been
@@ -134840,8 +134879,8 @@ automated emails</a>.</li>
 you can customize automations</em><strong>Tip:</strong> When customizing
 the look of your email, don’t make changes to the image. It’s set to
 automatically display the image of the product that’s back in stock. In
-addition, leave the <strong><span
-class="math inline"><em>p</em><em>r</em><em>o</em><em>d</em><em>u</em><em>c</em><em>t</em>.<em>n</em><em>a</em><em>m</em><em>e</em> * *<em>a</em><em>n</em><em>d</em> * *</span>{product.price}</strong>as
+addition, leave the
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>d</mi><mi>u</mi><mi>c</mi><mi>t</mi><mi>.</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi></mrow><mo>*</mo><mi>*</mi><mi>a</mi><mi>n</mi><mi>d</mi><mo>*</mo><mi>*</mi></mrow><annotation encoding="application/x-tex">{product.name}** and **</annotation></semantics></math>{product.price}</strong>as
 they are so they display the name and price of the relevant product.</p>
 <hr />
 <h4 id="faqs-440">FAQs</h4>

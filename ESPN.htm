@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-04" />
   <title>ESPN: the complete help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,195 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">ESPN: the complete help guide</h1>
 <p class="subtitle">Every help article ESPN publishes, arranged for
 reading straight through</p>
 <p class="date">2026-08-04</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#espn-the-complete-help-guide"
+id="toc-espn-the-complete-help-guide">ESPN: the complete help guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#acc-network-acc-network-availability"
+id="toc-acc-network-acc-network-availability">ACC Network: ACC Network
+Availability</a></li>
+<li><a href="#acc-network-acc-network-general-structural"
+id="toc-acc-network-acc-network-general-structural">ACC Network: ACC
+Network General / Structural</a></li>
+<li><a href="#acc-network-acc-network-programming-content"
+id="toc-acc-network-acc-network-programming-content">ACC Network: ACC
+Network Programming &amp; Content</a></li>
+<li><a href="#espn-unlimited-select-accessing-espn-content"
+id="toc-espn-unlimited-select-accessing-espn-content">ESPN Unlimited
+&amp; Select: Accessing ESPN Content</a></li>
+<li><a href="#espn-unlimited-select-account-billing"
+id="toc-espn-unlimited-select-account-billing">ESPN Unlimited &amp;
+Select: Account &amp; Billing</a></li>
+<li><a href="#espn-unlimited-select-disney-subscriptions-bundled-plans"
+id="toc-espn-unlimited-select-disney-subscriptions-bundled-plans">ESPN
+Unlimited &amp; Select: Disney+ Subscriptions &amp; Bundled
+Plans</a></li>
+<li><a href="#espn-unlimited-select-espn-app-features"
+id="toc-espn-unlimited-select-espn-app-features">ESPN Unlimited &amp;
+Select: ESPN App Features</a></li>
+<li><a href="#espn-unlimited-select-espn-fox-one-bundle"
+id="toc-espn-unlimited-select-espn-fox-one-bundle">ESPN Unlimited &amp;
+Select: ESPN, FOX One Bundle</a></li>
+<li><a href="#espn-unlimited-select-fix-a-problem"
+id="toc-espn-unlimited-select-fix-a-problem">ESPN Unlimited &amp;
+Select: Fix A Problem</a></li>
+<li><a href="#espn-unlimited-select-getting-started"
+id="toc-espn-unlimited-select-getting-started">ESPN Unlimited &amp;
+Select: Getting Started</a></li>
+<li><a href="#espn-unlimited-select-mlb-tv"
+id="toc-espn-unlimited-select-mlb-tv">ESPN Unlimited &amp; Select:
+MLB.TV</a></li>
+<li><a href="#espn-unlimited-select-nfl-premium"
+id="toc-espn-unlimited-select-nfl-premium">ESPN Unlimited &amp; Select:
+NFL+ Premium</a></li>
+<li><a href="#espn-via-your-tv-provider-authenticate-sign-in"
+id="toc-espn-via-your-tv-provider-authenticate-sign-in">ESPN Via Your TV
+Provider: Authenticate / Sign-In</a></li>
+<li><a href="#espn-via-your-tv-provider-content"
+id="toc-espn-via-your-tv-provider-content">ESPN Via Your TV Provider:
+Content</a></li>
+<li><a href="#espn-via-your-tv-provider-how-do-i-get"
+id="toc-espn-via-your-tv-provider-how-do-i-get">ESPN Via Your TV
+Provider: How do I get?</a></li>
+<li><a href="#espn-via-your-tv-provider-technical"
+id="toc-espn-via-your-tv-provider-technical">ESPN Via Your TV Provider:
+Technical</a></li>
+<li><a href="#espn-espn-com" id="toc-espn-espn-com">ESPN:
+ESPN.com</a></li>
+<li><a href="#espn-general" id="toc-espn-general">ESPN: General</a></li>
+<li><a href="#espn-legal" id="toc-espn-legal">ESPN: Legal</a></li>
+<li><a href="#espn-member-services" id="toc-espn-member-services">ESPN:
+Member Services</a></li>
+<li><a href="#fantasy-baseball-draft"
+id="toc-fantasy-baseball-draft">Fantasy Baseball: Draft</a></li>
+<li><a href="#fantasy-baseball-managing-your-league"
+id="toc-fantasy-baseball-managing-your-league">Fantasy Baseball:
+Managing Your League</a></li>
+<li><a href="#fantasy-baseball-managing-your-team"
+id="toc-fantasy-baseball-managing-your-team">Fantasy Baseball: Managing
+Your Team</a></li>
+<li><a href="#fantasy-baseball-playoffs-and-tiebreakers"
+id="toc-fantasy-baseball-playoffs-and-tiebreakers">Fantasy Baseball:
+Playoffs and Tiebreakers</a></li>
+<li><a href="#fantasy-baseball-trades-and-waivers"
+id="toc-fantasy-baseball-trades-and-waivers">Fantasy Baseball: Trades
+and Waivers</a></li>
+<li><a href="#fantasy-baseball-username-password-help"
+id="toc-fantasy-baseball-username-password-help">Fantasy Baseball:
+Username/Password Help</a></li>
+<li><a href="#fantasy-baseball-welcome-to-fantasy-baseball"
+id="toc-fantasy-baseball-welcome-to-fantasy-baseball">Fantasy Baseball:
+Welcome to Fantasy Baseball</a></li>
+<li><a href="#fantasy-basketball-draft"
+id="toc-fantasy-basketball-draft">Fantasy Basketball: Draft</a></li>
+<li><a href="#fantasy-basketball-managing-your-league"
+id="toc-fantasy-basketball-managing-your-league">Fantasy Basketball:
+Managing Your League</a></li>
+<li><a href="#fantasy-basketball-managing-your-team"
+id="toc-fantasy-basketball-managing-your-team">Fantasy Basketball:
+Managing Your Team</a></li>
+<li><a href="#fantasy-basketball-playoffs-and-tiebreakers"
+id="toc-fantasy-basketball-playoffs-and-tiebreakers">Fantasy Basketball:
+Playoffs and Tiebreakers</a></li>
+<li><a href="#fantasy-basketball-trades-and-waivers"
+id="toc-fantasy-basketball-trades-and-waivers">Fantasy Basketball:
+Trades and Waivers</a></li>
+<li><a href="#fantasy-basketball-username-password-help"
+id="toc-fantasy-basketball-username-password-help">Fantasy Basketball:
+Username/Password Help</a></li>
+<li><a href="#fantasy-basketball-welcome-to-fantasy-basketball"
+id="toc-fantasy-basketball-welcome-to-fantasy-basketball">Fantasy
+Basketball: Welcome to Fantasy Basketball</a></li>
+<li><a href="#fantasy-football-draft"
+id="toc-fantasy-football-draft">Fantasy Football: Draft</a></li>
+<li><a href="#fantasy-football-fantasy-league-chat-lm-leagues-only"
+id="toc-fantasy-football-fantasy-league-chat-lm-leagues-only">Fantasy
+Football: Fantasy League Chat (LM Leagues Only)</a></li>
+<li><a href="#fantasy-football-managing-your-league"
+id="toc-fantasy-football-managing-your-league">Fantasy Football:
+Managing Your League</a></li>
+<li><a href="#fantasy-football-managing-your-team"
+id="toc-fantasy-football-managing-your-team">Fantasy Football: Managing
+Your Team</a></li>
+<li><a href="#fantasy-football-playoffs-and-tiebreakers"
+id="toc-fantasy-football-playoffs-and-tiebreakers">Fantasy Football:
+Playoffs and Tiebreakers</a></li>
+<li><a href="#fantasy-football-trades-and-waivers"
+id="toc-fantasy-football-trades-and-waivers">Fantasy Football: Trades
+and Waivers</a></li>
+<li><a href="#fantasy-football-username-password-help"
+id="toc-fantasy-football-username-password-help">Fantasy Football:
+Username/Password Help</a></li>
+<li><a href="#fantasy-football-welcome-to-fantasy-football"
+id="toc-fantasy-football-welcome-to-fantasy-football">Fantasy Football:
+Welcome to Fantasy Football</a></li>
+<li><a href="#fantasy-hockey-draft"
+id="toc-fantasy-hockey-draft">Fantasy Hockey: Draft</a></li>
+<li><a href="#fantasy-hockey-managing-your-league"
+id="toc-fantasy-hockey-managing-your-league">Fantasy Hockey: Managing
+Your League</a></li>
+<li><a href="#fantasy-hockey-managing-your-team"
+id="toc-fantasy-hockey-managing-your-team">Fantasy Hockey: Managing Your
+Team</a></li>
+<li><a href="#fantasy-hockey-playoffs-and-tiebreakers"
+id="toc-fantasy-hockey-playoffs-and-tiebreakers">Fantasy Hockey:
+Playoffs and Tiebreakers</a></li>
+<li><a href="#fantasy-hockey-trades-and-waivers"
+id="toc-fantasy-hockey-trades-and-waivers">Fantasy Hockey: Trades and
+Waivers</a></li>
+<li><a href="#fantasy-hockey-username-password-help"
+id="toc-fantasy-hockey-username-password-help">Fantasy Hockey:
+Username/Password Help</a></li>
+<li><a href="#fantasy-hockey-welcome-to-fantasy-hockey"
+id="toc-fantasy-hockey-welcome-to-fantasy-hockey">Fantasy Hockey:
+Welcome to Fantasy Hockey</a></li>
+<li><a href="#fantasy-women-s-basketball-draft"
+id="toc-fantasy-women-s-basketball-draft">Fantasy Women’s Basketball:
+Draft</a></li>
+<li><a href="#fantasy-women-s-basketball-managing-your-league"
+id="toc-fantasy-women-s-basketball-managing-your-league">Fantasy Women’s
+Basketball: Managing Your League</a></li>
+<li><a href="#fantasy-women-s-basketball-managing-your-team"
+id="toc-fantasy-women-s-basketball-managing-your-team">Fantasy Women’s
+Basketball: Managing Your Team</a></li>
+<li><a href="#fantasy-women-s-basketball-playoffs-and-tiebreakers"
+id="toc-fantasy-women-s-basketball-playoffs-and-tiebreakers">Fantasy
+Women’s Basketball: Playoffs and Tiebreakers</a></li>
+<li><a href="#fantasy-women-s-basketball-trades-waivers"
+id="toc-fantasy-women-s-basketball-trades-waivers">Fantasy Women’s
+Basketball: Trades &amp; Waivers</a></li>
+<li><a href="#fantasy-women-s-basketball-username-password-help"
+id="toc-fantasy-women-s-basketball-username-password-help">Fantasy
+Women’s Basketball: Username/Password Help</a></li>
+<li><a
+href="#fantasy-women-s-basketball-welcome-to-fantasy-women-s-basketball"
+id="toc-fantasy-women-s-basketball-welcome-to-fantasy-women-s-basketball">Fantasy
+Women’s Basketball: Welcome to Fantasy Women’s Basketball</a></li>
+<li><a href="#tc-tournament-challenge-bracket-faqs"
+id="toc-tc-tournament-challenge-bracket-faqs">TC - Tournament Challenge:
+Bracket FAQs</a></li>
+<li><a href="#tc-tournament-challenge-group-faqs"
+id="toc-tc-tournament-challenge-group-faqs">TC - Tournament Challenge:
+Group FAQs</a></li>
+<li><a href="#tc-tournament-challenge-username-password-help"
+id="toc-tc-tournament-challenge-username-password-help">TC - Tournament
+Challenge: Username/Password Help</a></li>
+<li><a href="#tc-tournament-challenge-welcome-to-tournament-challenge"
+id="toc-tc-tournament-challenge-welcome-to-tournament-challenge">TC -
+Tournament Challenge: Welcome to Tournament Challenge</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="espn-the-complete-help-guide">ESPN: the complete help guide</h1>
 <p>This guide gathers the help ESPN publishes: 792 articles across 60
 categories, in ESPN’s own words, gathered on 04 August 2026.</p>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-28" />
   <title>WordPress Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,73 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">WordPress Help Compendium</h1>
 <p class="subtitle">The official WordPress end-user documentation
 (wordpress.org/documentation)</p>
 <p class="date">2026-07-28</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#wordpress-help-compendium"
+id="toc-wordpress-help-compendium">WordPress Help Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-about-wordpress" id="toc-cat-about-wordpress">About
+WordPress</a></li>
+<li><a href="#cat-appearance"
+id="toc-cat-appearance">Appearance</a></li>
+<li><a href="#cat-backups" id="toc-cat-backups">Backups</a></li>
+<li><a href="#cat-block-editor" id="toc-cat-block-editor">Block
+Editor</a></li>
+<li><a href="#cat-dashboard" id="toc-cat-dashboard">Dashboard</a></li>
+<li><a href="#cat-debugging-wordpress"
+id="toc-cat-debugging-wordpress">Debugging WordPress</a></li>
+<li><a href="#cat-default-themes" id="toc-cat-default-themes">Default
+themes</a></li>
+<li><a href="#cat-design-blocks" id="toc-cat-design-blocks">Design
+blocks</a></li>
+<li><a href="#cat-embed-blocks" id="toc-cat-embed-blocks">Embed
+blocks</a></li>
+<li><a href="#cat-faqs" id="toc-cat-faqs">FAQs</a></li>
+<li><a href="#cat-installation"
+id="toc-cat-installation">Installation</a></li>
+<li><a href="#cat-maintenance"
+id="toc-cat-maintenance">Maintenance</a></li>
+<li><a href="#cat-media" id="toc-cat-media">Media</a></li>
+<li><a href="#cat-media-blocks" id="toc-cat-media-blocks">Media
+blocks</a></li>
+<li><a href="#cat-plugins" id="toc-cat-plugins">Plugins</a></li>
+<li><a href="#cat-publishing"
+id="toc-cat-publishing">Publishing</a></li>
+<li><a href="#cat-security" id="toc-cat-security">Security</a></li>
+<li><a href="#cat-server-configuration"
+id="toc-cat-server-configuration">Server configuration</a></li>
+<li><a href="#cat-site-editor" id="toc-cat-site-editor">Site
+Editor</a></li>
+<li><a href="#cat-text-blocks" id="toc-cat-text-blocks">Text
+blocks</a></li>
+<li><a href="#cat-theme-blocks" id="toc-cat-theme-blocks">Theme
+blocks</a></li>
+<li><a href="#cat-updating-wordpress-using-ftp"
+id="toc-cat-updating-wordpress-using-ftp">Updating WordPress using
+FTP</a></li>
+<li><a href="#cat-upgrading-migration"
+id="toc-cat-upgrading-migration">Upgrading / Migration</a></li>
+<li><a href="#cat-where-to-start" id="toc-cat-where-to-start">Where to
+start</a></li>
+<li><a href="#cat-widget-blocks" id="toc-cat-widget-blocks">Widget
+blocks</a></li>
+<li><a href="#cat-wordpress-configuration"
+id="toc-cat-wordpress-configuration">WordPress configuration</a></li>
+<li><a href="#cat-wordpress-multisite-network"
+id="toc-cat-wordpress-multisite-network">WordPress Multisite /
+Network</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="wordpress-help-compendium">WordPress Help Compendium</h1>
 <p>This compendium contains the main content of 338 articles from the
 official WordPress end-user documentation (HelpHub) at
@@ -16526,8 +16594,7 @@ have MySQL compute the MD5 hash for you.</p>
 </ul></li>
 </ol>
 <p>Note that even if the passwords are salted, meaning they look like
-<span
-class="math inline"><em>P</em></span>BLDJMdyBwegaCLE0GeDiGtC/mqXLzB0,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>BLDJMdyBwegaCLE0GeDiGtC/mqXLzB0,
 you can still replace the password with an MD5 hash, and WordPress will
 let you log in.</p>
 <p>This article is for those who have <a

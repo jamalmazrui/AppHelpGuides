@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Khan Academy help</title>
   <style>
@@ -11,7 +11,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -36,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -54,11 +61,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -87,8 +91,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -112,7 +119,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -129,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -156,8 +163,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -168,13 +179,216 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Khan Academy help</h1>
-</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#khan-academy-help" id="toc-khan-academy-help">Khan Academy
+help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about" id="toc-about">About</a></li>
+<li><a href="#about-us" id="toc-about-us">About Us</a></li>
+<li><a href="#accessibility-features"
+id="toc-accessibility-features">Accessibility Features</a></li>
+<li><a href="#account-issues-and-information"
+id="toc-account-issues-and-information">Account Issues and
+Information</a></li>
+<li><a href="#account-settings" id="toc-account-settings">Account
+Settings</a></li>
+<li><a href="#additional-resources"
+id="toc-additional-resources">Additional resources</a></li>
+<li><a href="#administration"
+id="toc-administration">Administration</a></li>
+<li><a href="#browser-issues-troubleshooting"
+id="toc-browser-issues-troubleshooting">Browser Issues &amp;
+Troubleshooting</a></li>
+<li><a href="#careers" id="toc-careers">Careers</a></li>
+<li><a href="#class-setup" id="toc-class-setup">Class setup</a></li>
+<li><a href="#classroom-engagement-differentiation-tools"
+id="toc-classroom-engagement-differentiation-tools">Classroom engagement
+&amp; differentiation tools</a></li>
+<li><a href="#clever-library-integration"
+id="toc-clever-library-integration">Clever Library integration</a></li>
+<li><a href="#computer-programming-faq"
+id="toc-computer-programming-faq">Computer Programming FAQ</a></li>
+<li><a href="#content-updates" id="toc-content-updates">Content
+Updates</a></li>
+<li><a href="#creating-and-managing-a-khanmigo-subscription"
+id="toc-creating-and-managing-a-khanmigo-subscription">Creating and
+managing a Khanmigo subscription</a></li>
+<li><a href="#creating-new-accounts"
+id="toc-creating-new-accounts">Creating New Accounts</a></li>
+<li><a href="#creating-subtitles" id="toc-creating-subtitles">Creating
+Subtitles</a></li>
+<li><a href="#curriculum-alignment"
+id="toc-curriculum-alignment">Curriculum alignment</a></li>
+<li><a href="#digital-sat" id="toc-digital-sat">Digital SAT</a></li>
+<li><a href="#dubbing-and-recreating-videos"
+id="toc-dubbing-and-recreating-videos">Dubbing and Recreating
+Videos</a></li>
+<li><a href="#enterprise-starter-onboarding-implementation"
+id="toc-enterprise-starter-onboarding-implementation">Enterprise
+Starter: Onboarding + Implementation</a></li>
+<li><a href="#enterprise-starter-purchase-subscription-management"
+id="toc-enterprise-starter-purchase-subscription-management">Enterprise
+Starter: Purchase + Subscription management</a></li>
+<li><a href="#exercises-articles-descriptions-platform"
+id="toc-exercises-articles-descriptions-platform">Exercises, Articles,
+Descriptions &amp; Platform</a></li>
+<li><a href="#exploring-the-content"
+id="toc-exploring-the-content">Exploring the Content</a></li>
+<li><a href="#exploring-your-account"
+id="toc-exploring-your-account">Exploring Your Account</a></li>
+<li><a href="#faq-1" id="toc-faq-1">FAQ</a></li>
+<li><a
+href="#feedback-feature-requests-other-support-community-questions"
+id="toc-feedback-feature-requests-other-support-community-questions">Feedback,
+Feature Requests, Other Support Community Questions</a></li>
+<li><a href="#for-language-advocates"
+id="toc-for-language-advocates">For Language Advocates</a></li>
+<li><a href="#frequently-asked-questions"
+id="toc-frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#gems-and-customization"
+id="toc-gems-and-customization">Gems and Customization</a></li>
+<li><a href="#general-information" id="toc-general-information">General
+Information</a></li>
+<li><a href="#getting-started" id="toc-getting-started">Getting
+Started</a></li>
+<li><a href="#getting-started-using-khan-academy-as-a-parent"
+id="toc-getting-started-using-khan-academy-as-a-parent">Getting Started
+using Khan Academy as a Parent</a></li>
+<li><a href="#guidelines-and-legal"
+id="toc-guidelines-and-legal">Guidelines and Legal</a></li>
+<li><a href="#how-to-guides" id="toc-how-to-guides">How to
+Guides</a></li>
+<li><a href="#issues-with-exercises"
+id="toc-issues-with-exercises">Issues with Exercises</a></li>
+<li><a href="#issues-with-videos" id="toc-issues-with-videos">Issues
+with Videos</a></li>
+<li><a href="#javacript-and-the-web"
+id="toc-javacript-and-the-web">Javacript and the Web</a></li>
+<li><a href="#khan-academy-on-mobile-devices"
+id="toc-khan-academy-on-mobile-devices">Khan Academy on Mobile
+Devices</a></li>
+<li><a href="#khan-academy-programming-challenge-council"
+id="toc-khan-academy-programming-challenge-council">Khan Academy
+Programming Challenge Council</a></li>
+<li><a href="#khan-academy-reimagined-for-students"
+id="toc-khan-academy-reimagined-for-students">Khan Academy Reimagined
+for Students</a></li>
+<li><a href="#khan-academy-reimagined-for-teachers"
+id="toc-khan-academy-reimagined-for-teachers">Khan Academy Reimagined
+for Teachers</a></li>
+<li><a href="#khan-academy-writing-coach-faqs-for-teachers"
+id="toc-khan-academy-writing-coach-faqs-for-teachers">Khan Academy
+Writing Coach FAQs for teachers</a></li>
+<li><a href="#khanmigo-activities" id="toc-khanmigo-activities">Khanmigo
+Activities</a></li>
+<li><a href="#khanmigo-faqs-for-learners"
+id="toc-khanmigo-faqs-for-learners">Khanmigo FAQs for Learners</a></li>
+<li><a href="#khanmigo-faqs-for-parents"
+id="toc-khanmigo-faqs-for-parents">Khanmigo FAQs for Parents</a></li>
+<li><a href="#khanmigo-faqs-for-teachers"
+id="toc-khanmigo-faqs-for-teachers">Khanmigo FAQs for Teachers</a></li>
+<li><a href="#khanmigo-for-school-and-district-administrators"
+id="toc-khanmigo-for-school-and-district-administrators">Khanmigo for
+School and District Administrators</a></li>
+<li><a href="#khanmigo-safety-and-security-information"
+id="toc-khanmigo-safety-and-security-information">Khanmigo Safety and
+Security Information</a></li>
+<li><a href="#learning-paths-teachers"
+id="toc-learning-paths-teachers">Learning Paths Teachers</a></li>
+<li><a href="#making-and-managing-assignments"
+id="toc-making-and-managing-assignments">Making and managing
+assignments</a></li>
+<li><a href="#making-and-managing-mastery-missions"
+id="toc-making-and-managing-mastery-missions">Making and managing
+Mastery Missions</a></li>
+<li><a href="#the-mastery-system" id="toc-the-mastery-system">The
+Mastery System</a></li>
+<li><a href="#materials-to-share-or-print"
+id="toc-materials-to-share-or-print">Materials to share or
+print</a></li>
+<li><a href="#meet-our-language-teams"
+id="toc-meet-our-language-teams">Meet our language teams</a></li>
+<li><a href="#navigating-the-reimagined-experience"
+id="toc-navigating-the-reimagined-experience">Navigating the reimagined
+experience</a></li>
+<li><a href="#news-and-updates" id="toc-news-and-updates">News and
+Updates</a></li>
+<li><a href="#overview-product-offerings-for-schools-and-districts"
+id="toc-overview-product-offerings-for-schools-and-districts">Overview:
+Product Offerings for Schools and Districts</a></li>
+<li><a href="#press" id="toc-press">Press</a></li>
+<li><a href="#privacy-and-permissions"
+id="toc-privacy-and-permissions">Privacy and Permissions</a></li>
+<li><a href="#readiness-check" id="toc-readiness-check">Readiness
+Check</a></li>
+<li><a href="#rostering-guidelines"
+id="toc-rostering-guidelines">Rostering Guidelines</a></li>
+<li><a href="#scoring-and-reporting"
+id="toc-scoring-and-reporting">Scoring and Reporting</a></li>
+<li><a href="#setting-up-and-managing-child-accounts"
+id="toc-setting-up-and-managing-child-accounts">Setting up and Managing
+Child Accounts</a></li>
+<li><a href="#setting-up-your-teacher-account"
+id="toc-setting-up-your-teacher-account">Setting up your teacher
+account</a></li>
+<li><a href="#settings-and-accessibility"
+id="toc-settings-and-accessibility">Settings and accessibility</a></li>
+<li><a href="#sharing-khan-with-others"
+id="toc-sharing-khan-with-others">Sharing Khan with Others</a></li>
+<li><a href="#streaks-levels" id="toc-streaks-levels">Streaks &amp;
+Levels</a></li>
+<li><a href="#student-account-management-and-troubleshooting"
+id="toc-student-account-management-and-troubleshooting">Student account
+management and troubleshooting</a></li>
+<li><a href="#student-roster-management"
+id="toc-student-roster-management">Student roster management</a></li>
+<li><a href="#students-reimagined" id="toc-students-reimagined">Students
+(Reimagined)</a></li>
+<li><a href="#submitting-a-bug-report-to-khan-academy-support"
+id="toc-submitting-a-bug-report-to-khan-academy-support">Submitting a
+Bug Report to Khan Academy Support</a></li>
+<li><a href="#technical-guidelines"
+id="toc-technical-guidelines">Technical Guidelines</a></li>
+<li><a href="#technology-considerations"
+id="toc-technology-considerations">Technology considerations</a></li>
+<li><a href="#troubleshooting-issues-with-child-accounts"
+id="toc-troubleshooting-issues-with-child-accounts">Troubleshooting
+Issues with Child Accounts</a></li>
+<li><a href="#understanding-the-khan-academy-mastery-system"
+id="toc-understanding-the-khan-academy-mastery-system">Understanding the
+Khan Academy Mastery system</a></li>
+<li><a href="#understanding-your-students-khan-academy-experience"
+id="toc-understanding-your-students-khan-academy-experience">Understanding
+your students’ Khan Academy experience</a></li>
+<li><a
+href="#using-khan-academy-districts-account-activation-and-logging-in"
+id="toc-using-khan-academy-districts-account-activation-and-logging-in">Using
+Khan Academy Districts: Account Activation and Logging in</a></li>
+<li><a
+href="#using-khan-academy-districts-administrator-reports-and-data"
+id="toc-using-khan-academy-districts-administrator-reports-and-data">Using
+Khan Academy Districts: Administrator Reports and Data</a></li>
+<li><a href="#using-khan-academy-districts-implementation-resources"
+id="toc-using-khan-academy-districts-implementation-resources">Using
+Khan Academy Districts: Implementation Resources</a></li>
+<li><a href="#using-reports-to-track-student-work-on-khan-academy"
+id="toc-using-reports-to-track-student-work-on-khan-academy">Using
+reports to track student work on Khan Academy</a></li>
+<li><a href="#video-player-issues-troubleshooting"
+id="toc-video-player-issues-troubleshooting">Video Player Issues &amp;
+Troubleshooting</a></li>
+<li><a href="#volunteer-opportunities"
+id="toc-volunteer-opportunities">Volunteer Opportunities</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="khan-academy-help">Khan Academy help</h1>
 <p>This guide holds Khan Academy’s own help, gathered on 18 August 2026
 from the publisher’s own listing, so every article arrived with its
@@ -12143,9 +12357,10 @@ finish their homework.</p>
 <p>How many tigers were left at the tea party?</p>
 <p>But when a translator encounters this string on the translation
 portal/WYSIWYG, it will be marked up with a variety of symbols:</p>
-<p><span class="math inline">10</span> tigers were having a tea party.
-<span class="math inline">4</span> of them had to go home to finish
-their</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>
+tigers were having a tea party.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math>
+of them had to go home to finish their</p>
 <p>homework.*How many tigers were left at the tea party?**</p>
 <p>What is $ for? Why are there <strong>? To begin, if a string contains
 numbers or equations, they need to be enclosed in $. What about the
@@ -12158,9 +12373,10 @@ never have to type any of these symbols! Check out this <a
 href="https://www.youtube.com/watch?v=YiGrghbG0OQ">video</a> (again) if
 you need help visualizing this).</p>
 <p>Here is a French translation:</p>
-<p><span class="math inline">10</span> tigres se retrouvent pour goûter.
-<span class="math inline">4</span> .*rentrent chez eux pour finir leurs
-devoirs.n<br />
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>
+tigres se retrouvent pour goûter.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math>
+.*rentrent chez eux pour finir leurs devoirs.n<br />
 </p>
 <p><strong>Combien reste-t-il de tigres au goûter ? </strong></p>
 <p>Don’t worry about the markup, and in most cases don’t touch it. Leave
@@ -12685,20 +12901,12 @@ email:</p></li>
 <li><ol type="i">
 <li>Requestor’s name: title and contact information</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>Name of requesting school(s) with NCES number</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>Student email domain</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>Request to exclude participation in efficacy research and feature
-testing</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>Attestation that the requester is duly authorized and has legal
-capacity to execute the request.</li>
-</ol></li>
+<li><p>(ii) Name of requesting school(s) with NCES number</p></li>
+<li><p>(iii) Student email domain</p></li>
+<li><p>(iv) Request to exclude participation in efficacy research and
+feature testing</p></li>
+<li><p>(iv) Attestation that the requester is duly authorized and has
+legal capacity to execute the request.</p></li>
 </ul>
 <h3
 id="khan-academys-automatic-account-deletion-policies-and-procedures">Khan
@@ -17334,12 +17542,8 @@ tab. To do this:</li>
 <li>Click the select all check box to the left of the student
 column</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Click “Bulk actions”</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Click “Remove from my account”</li>
-</ol></li>
+<li>2. Click “Bulk actions”</li>
+<li>3. Click “Remove from my account”</li>
 <li>NOTE: if you have lots of students + classes, click the “View
 students across all classes” link to save some time!</li>
 <li>Disable the teacher role from your <a
@@ -29304,9 +29508,7 @@ homepage:</a></li>
 <li>Your total level (all skill points from all courses)</li>
 </ul></li>
 </ul></li>
-<li><ol start="2" type="1">
-<li>On a Course/Unit/Lesson/Exercise page</li>
-</ol>
+<li>2. On a Course/Unit/Lesson/Exercise page
 <ul>
 <li>On these pages, you will see:
 <ul>
@@ -34214,10 +34416,8 @@ any classes available for the admin to enter.</li>
 back to your Admin Dashboard, just switch back to your original
 tab.</li>
 </ul></li>
-<li><ol start="4" type="1">
-<li>That’s it! Now you are a co-teacher in the class and can take
+<li>4. That’s it! Now you are a co-teacher in the class and can take
 actions like:</li>
-</ol></li>
 <li>Making Mastery Goals and content assignments (<a
 href="https://support.khanacademy.org/hc/sections/18377490064781-Making-assignments-and-mastery-goals-for-your-students">resources
 on how to do this</a>)</li>

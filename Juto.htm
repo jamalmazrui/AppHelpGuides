@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-30" />
   <title>Jutoh Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,128 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Jutoh Help Guide</h1>
 <p class="subtitle">Anthemion Software’s official manual for the Jutoh
 ebook editor, gathered into one screen-reader-friendly document</p>
 <p class="date">2026-07-30</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#jutoh-help-guide" id="toc-jutoh-help-guide">Jutoh Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#appendix-a-installing-jutoh"
+id="toc-appendix-a-installing-jutoh">Appendix A: Installing
+Jutoh</a></li>
+<li><a href="#appendix-b-configuring-jutoh"
+id="toc-appendix-b-configuring-jutoh">Appendix B: Configuring
+Jutoh</a></li>
+<li><a href="#appendix-c-the-jutoh-box-model"
+id="toc-appendix-c-the-jutoh-box-model">Appendix C: The Jutoh Box
+Model</a></li>
+<li><a href="#appendix-d-the-bibliographic-formatting-language"
+id="toc-appendix-d-the-bibliographic-formatting-language">Appendix D:
+The Bibliographic Formatting Language</a></li>
+<li><a href="#appendix-e-speech-markup-reference"
+id="toc-appendix-e-speech-markup-reference">Appendix E: Speech Markup
+Reference</a></li>
+<li><a href="#appendix-f-speech-profile-reference"
+id="toc-appendix-f-speech-profile-reference">Appendix F: Speech Profile
+Reference</a></li>
+<li><a href="#appendix-g-alphabet-description-reference"
+id="toc-appendix-g-alphabet-description-reference">Appendix G: Alphabet
+Description Reference</a></li>
+<li><a href="#chapter-1-introduction-to-ebooks-and-jutoh"
+id="toc-chapter-1-introduction-to-ebooks-and-jutoh">Chapter 1:
+Introduction to Ebooks and Jutoh</a></li>
+<li><a href="#chapter-2-getting-started"
+id="toc-chapter-2-getting-started">Chapter 2: Getting Started</a></li>
+<li><a href="#chapter-3-the-jutoh-user-interface"
+id="toc-chapter-3-the-jutoh-user-interface">Chapter 3: The Jutoh User
+Interface</a></li>
+<li><a href="#chapter-4-working-with-projects"
+id="toc-chapter-4-working-with-projects">Chapter 4: Working With
+Projects</a></li>
+<li><a href="#chapter-5-importing-files"
+id="toc-chapter-5-importing-files">Chapter 5. Importing Files</a></li>
+<li><a href="#chapter-6-editing-and-formatting-content"
+id="toc-chapter-6-editing-and-formatting-content">Chapter 6: Editing and
+Formatting Content</a></li>
+<li><a href="#chapter-7-editing-your-books-metadata"
+id="toc-chapter-7-editing-your-books-metadata">Chapter 7: Editing Your
+Book’s Metadata</a></li>
+<li><a href="#chapter-8-creating-your-cover-design"
+id="toc-chapter-8-creating-your-cover-design">Chapter 8: Creating Your
+Cover Design</a></li>
+<li><a href="#chapter-9-understanding-configurations"
+id="toc-chapter-9-understanding-configurations">Chapter 9: Understanding
+Configurations</a></li>
+<li><a href="#chapter-10-working-with-pictures"
+id="toc-chapter-10-working-with-pictures">Chapter 10: Working With
+Pictures</a></li>
+<li><a href="#chapter-11-working-with-indexes"
+id="toc-chapter-11-working-with-indexes">Chapter 11: Working With
+Indexes</a></li>
+<li><a href="#chapter-12-working-with-style-sheets"
+id="toc-chapter-12-working-with-style-sheets">Chapter 12: Working With
+Style Sheets</a></li>
+<li><a href="#chapter-13-working-with-string-tables"
+id="toc-chapter-13-working-with-string-tables">Chapter 13: Working With
+String Tables</a></li>
+<li><a href="#chapter-14-working-with-tables"
+id="toc-chapter-14-working-with-tables">Chapter 14: Working With
+Tables</a></li>
+<li><a href="#chapter-15-working-with-boxes"
+id="toc-chapter-15-working-with-boxes">Chapter 15: Working With
+Boxes</a></li>
+<li><a href="#chapter-16-working-with-tag-objects"
+id="toc-chapter-16-working-with-tag-objects">Chapter 16: Working With
+Tag Objects</a></li>
+<li><a href="#chapter-17-adding-narration-to-your-book"
+id="toc-chapter-17-adding-narration-to-your-book">Chapter 17: Adding
+Narration to Your Book</a></li>
+<li><a href="#chapter-18-creating-fixed-layout-books"
+id="toc-chapter-18-creating-fixed-layout-books">Chapter 18: Creating
+Fixed Layout Books</a></li>
+<li><a href="#chapter-19-adding-interactivity-to-your-book"
+id="toc-chapter-19-adding-interactivity-to-your-book">Chapter 19: Adding
+Interactivity To Your Book</a></li>
+<li><a href="#chapter-20-making-your-books-accessible"
+id="toc-chapter-20-making-your-books-accessible">Chapter 20: Making Your
+Books Accessible</a></li>
+<li><a href="#chapter-21-working-with-text-to-speech"
+id="toc-chapter-21-working-with-text-to-speech">Chapter 21: Working With
+Text-To-Speech</a></li>
+<li><a href="#chapter-22-formatting-for-print"
+id="toc-chapter-22-formatting-for-print">Chapter 22: Formatting For
+Print</a></li>
+<li><a href="#chapter-23-conditional-formatting"
+id="toc-chapter-23-conditional-formatting">Chapter 23: Conditional
+Formatting</a></li>
+<li><a href="#chapter-24-advanced-topics"
+id="toc-chapter-24-advanced-topics">Chapter 24: Advanced Topics</a></li>
+<li><a href="#chapter-25-troubleshooting-your-book"
+id="toc-chapter-25-troubleshooting-your-book">Chapter 25:
+Troubleshooting Your Book</a></li>
+<li><a href="#chapter-26-understanding-ebook-formats-and-platforms"
+id="toc-chapter-26-understanding-ebook-formats-and-platforms">Chapter
+26: Understanding Ebook Formats and Platforms</a></li>
+<li><a href="#chapter-27-marketing-your-book"
+id="toc-chapter-27-marketing-your-book">Chapter 27: Marketing Your
+Book</a></li>
+<li><a href="#frequently-asked-questions"
+id="toc-frequently-asked-questions">Frequently asked questions</a></li>
+<li><a href="#from-the-horses-mouth" id="toc-from-the-horses-mouth">From
+the Horse’s Mouth</a></li>
+<li><a href="#glossary" id="toc-glossary">Glossary</a></li>
+<li><a href="#preface" id="toc-preface">Preface</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="jutoh-help-guide">Jutoh Help Guide</h1>
 <p>This guide gathers Anthemion Software’s official manual for Jutoh,
 the ebook editor. You assemble a book from its parts, style it, and
@@ -996,12 +1119,11 @@ These commands are specified in the <strong>Helpers</strong> page of the
 <strong>Preferences</strong> dialog.</p>
 <p>Configuring Jutoh helper applications</p>
 <p>When configuring the Java checker application EpubCheck, you can use
-<span
-class="math inline"><em>A</em><em>P</em><em>P</em><em>D</em><em>I</em><em>R</em></span>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>P</mi><mi>P</mi><mi>D</mi><mi>I</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">APPDIR</annotation></semantics></math>
 to denote the folder in which the Jutoh application is found. You need
 to specify a full Java command, such as:</p>
-<p>java -Xss1024k -jar “<span
-class="math inline"><em>A</em><em>P</em><em>P</em><em>D</em><em>I</em><em>R</em></span>.jar”</p>
+<p>java -Xss1024k -jar
+“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>P</mi><mi>P</mi><mi>D</mi><mi>I</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">APPDIR</annotation></semantics></math>.jar”</p>
 <p>The “-Xss1024k” argument is necessary to increase the Java stack size
 because EpubCheck has become rather large.</p>
 <p>To configure Kindlegen, click on <strong>Help Me Install
@@ -10035,26 +10157,26 @@ configuration option;</p></li>
 </ol>
 <p>If you edit the <em>Drop caps CSS</em> option, you will see this
 template:</p>
-<p>font-weight: <span
-class="math inline"><em>F</em><em>O</em><em>N</em><em>T</em> − <em>W</em><em>E</em><em>I</em><em>G</em><em>H</em><em>T</em></span>;
-font-size: <span
-class="math inline"><em>F</em><em>O</em><em>N</em><em>T</em> − <em>S</em><em>I</em><em>Z</em><em>E</em></span>;
-font-variant: <span
-class="math inline"><em>F</em><em>O</em><em>N</em><em>T</em> − <em>V</em><em>A</em><em>R</em><em>I</em><em>A</em><em>N</em><em>T</em></span>;
-float: <span
-class="math inline"><em>F</em><em>L</em><em>O</em><em>A</em><em>T</em></span>;
-margin-top: <span
-class="math inline"><em>M</em><em>A</em><em>R</em><em>G</em><em>I</em><em>N</em> − <em>T</em><em>O</em><em>P</em></span>;
-margin-bottom: <span
-class="math inline"><em>M</em><em>A</em><em>R</em><em>G</em><em>I</em><em>N</em> − <em>B</em><em>O</em><em>T</em><em>T</em><em>O</em><em>M</em></span>;
-margin-left: <span
-class="math inline"><em>M</em><em>A</em><em>R</em><em>G</em><em>I</em><em>N</em><em>L</em><em>E</em><em>F</em><em>T</em></span>;
-margin-right: <span
-class="math inline"><em>M</em><em>A</em><em>R</em><em>G</em><em>I</em><em>N</em> − <em>R</em><em>I</em><em>G</em><em>H</em><em>T</em></span>;
-line-height: <span
-class="math inline"><em>L</em><em>I</em><em>N</em><em>E</em> − <em>H</em><em>E</em><em>I</em><em>G</em><em>H</em><em>T</em></span>;
-height: <span
-class="math inline"><em>H</em><em>E</em><em>I</em><em>G</em><em>H</em><em>T</em></span>;</p>
+<p>font-weight:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>O</mi><mi>N</mi><mi>T</mi><mo>−</mo><mi>W</mi><mi>E</mi><mi>I</mi><mi>G</mi><mi>H</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">FONT-WEIGHT</annotation></semantics></math>;
+font-size:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>O</mi><mi>N</mi><mi>T</mi><mo>−</mo><mi>S</mi><mi>I</mi><mi>Z</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">FONT-SIZE</annotation></semantics></math>;
+font-variant:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>O</mi><mi>N</mi><mi>T</mi><mo>−</mo><mi>V</mi><mi>A</mi><mi>R</mi><mi>I</mi><mi>A</mi><mi>N</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">FONT-VARIANT</annotation></semantics></math>;
+float:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>L</mi><mi>O</mi><mi>A</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">FLOAT</annotation></semantics></math>;
+margin-top:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>A</mi><mi>R</mi><mi>G</mi><mi>I</mi><mi>N</mi><mo>−</mo><mi>T</mi><mi>O</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">MARGIN-TOP</annotation></semantics></math>;
+margin-bottom:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>A</mi><mi>R</mi><mi>G</mi><mi>I</mi><mi>N</mi><mo>−</mo><mi>B</mi><mi>O</mi><mi>T</mi><mi>T</mi><mi>O</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">MARGIN-BOTTOM</annotation></semantics></math>;
+margin-left:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>A</mi><mi>R</mi><mi>G</mi><mi>I</mi><mi>N</mi><mi>L</mi><mi>E</mi><mi>F</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">MARGINLEFT</annotation></semantics></math>;
+margin-right:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>A</mi><mi>R</mi><mi>G</mi><mi>I</mi><mi>N</mi><mo>−</mo><mi>R</mi><mi>I</mi><mi>G</mi><mi>H</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">MARGIN-RIGHT</annotation></semantics></math>;
+line-height:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>I</mi><mi>N</mi><mi>E</mi><mo>−</mo><mi>H</mi><mi>E</mi><mi>I</mi><mi>G</mi><mi>H</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">LINE-HEIGHT</annotation></semantics></math>;
+height:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mi>E</mi><mi>I</mi><mi>G</mi><mi>H</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">HEIGHT</annotation></semantics></math>;</p>
 <p>Jutoh replaces the variables with appropriate CSS for the target
 format and drop caps height. You can replace certain variables with
 actual values, and add extra CSS properties if you wish. Any further

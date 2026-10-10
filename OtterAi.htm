@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-11" />
   <title>Otter.ai: the complete help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,110 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Otter.ai: the complete help guide</h1>
 <p class="subtitle">Every help article Otter.ai publishes, arranged for
 reading straight through</p>
 <p class="date">2026-08-11</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#otter.ai-the-complete-help-guide"
+id="toc-otter.ai-the-complete-help-guide">Otter.ai: the complete help
+guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#account-settings-billing-account-settings"
+id="toc-account-settings-billing-account-settings">Account settings
+&amp; billing: Account settings</a></li>
+<li><a href="#account-settings-billing-managing-billing-payment-plan"
+id="toc-account-settings-billing-managing-billing-payment-plan">Account
+settings &amp; billing: Managing billing, payment, &amp; plan</a></li>
+<li><a href="#account-settings-billing-security-settings"
+id="toc-account-settings-billing-security-settings">Account settings
+&amp; billing: Security settings</a></li>
+<li><a href="#announcements-known-issues"
+id="toc-announcements-known-issues">Announcements: Known issues</a></li>
+<li><a href="#getting-started-otter-101"
+id="toc-getting-started-otter-101">Getting started: Otter 101</a></li>
+<li><a href="#getting-started-plans-pricing"
+id="toc-getting-started-plans-pricing">Getting started: Plans &amp;
+Pricing</a></li>
+<li><a href="#integrations-connected-apps-services"
+id="toc-integrations-connected-apps-services">Integrations: Connected
+apps &amp; services</a></li>
+<li><a href="#integrations-crm-platforms-integrations"
+id="toc-integrations-crm-platforms-integrations">Integrations: CRM
+Platforms Integrations</a></li>
+<li><a href="#integrations-zapier-otter-integration"
+id="toc-integrations-zapier-otter-integration">Integrations: Zapier
+&lt;&gt; Otter Integration</a></li>
+<li><a href="#integrations-zoom-integration"
+id="toc-integrations-zoom-integration">Integrations: Zoom
+Integration</a></li>
+<li><a href="#meeting-settings-recordings-calendar-meeting-events"
+id="toc-meeting-settings-recordings-calendar-meeting-events">Meeting
+settings &amp; recordings: Calendar meeting events</a></li>
+<li><a href="#meeting-settings-recordings-otter-notetaker"
+id="toc-meeting-settings-recordings-otter-notetaker">Meeting settings
+&amp; recordings: Otter Notetaker</a></li>
+<li><a href="#meeting-settings-recordings-troubleshooting"
+id="toc-meeting-settings-recordings-troubleshooting">Meeting settings
+&amp; recordings: Troubleshooting</a></li>
+<li><a href="#otter-enterprise-enterprise-features"
+id="toc-otter-enterprise-enterprise-features">Otter Enterprise:
+Enterprise features</a></li>
+<li><a href="#otter-enterprise-enterprise-integrations"
+id="toc-otter-enterprise-enterprise-integrations">Otter Enterprise:
+Enterprise Integrations</a></li>
+<li><a href="#otter-enterprise-enterprise-workspace-settings"
+id="toc-otter-enterprise-enterprise-workspace-settings">Otter
+Enterprise: Enterprise workspace settings</a></li>
+<li><a href="#otter-enterprise-microsoft-entra-azure-id-sso"
+id="toc-otter-enterprise-microsoft-entra-azure-id-sso">Otter Enterprise:
+Microsoft Entra / Azure ID SSO</a></li>
+<li><a href="#otter-enterprise-single-sign-on-sso-setup"
+id="toc-otter-enterprise-single-sign-on-sso-setup">Otter Enterprise:
+Single Sign-On (SSO) setup</a></li>
+<li><a href="#otter-enterprise-getting-started-with-enterprise"
+id="toc-otter-enterprise-getting-started-with-enterprise">Otter
+Enterprise: 🚀 Getting Started with Enterprise</a></li>
+<li><a href="#otter-workspaces-getting-started"
+id="toc-otter-workspaces-getting-started">Otter Workspaces: Getting
+started</a></li>
+<li><a href="#otter-workspaces-manage-billing-payments-plans"
+id="toc-otter-workspaces-manage-billing-payments-plans">Otter
+Workspaces: Manage billing, payments &amp; plans</a></li>
+<li><a href="#otter-workspaces-manage-members"
+id="toc-otter-workspaces-manage-members">Otter Workspaces: Manage
+members</a></li>
+<li><a href="#using-otter-custom-meeting-templates-insights"
+id="toc-using-otter-custom-meeting-templates-insights">Using Otter:
+Custom Meeting Templates &amp; Insights</a></li>
+<li><a href="#using-otter-import-export-conversations"
+id="toc-using-otter-import-export-conversations">Using Otter: Import
+&amp; export conversations</a></li>
+<li><a href="#using-otter-organize-your-conversations"
+id="toc-using-otter-organize-your-conversations">Using Otter: Organize
+your conversations</a></li>
+<li><a href="#using-otter-otter-ai-chat"
+id="toc-using-otter-otter-ai-chat">Using Otter: Otter AI Chat</a></li>
+<li><a href="#using-otter-record-transcribe-conversations"
+id="toc-using-otter-record-transcribe-conversations">Using Otter: Record
+&amp; transcribe conversations</a></li>
+<li><a href="#using-otter-review-edit-conversations"
+id="toc-using-otter-review-edit-conversations">Using Otter: Review &amp;
+edit conversations</a></li>
+<li><a href="#using-otter-share-conversations"
+id="toc-using-otter-share-conversations">Using Otter: Share
+conversations</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="otter.ai-the-complete-help-guide">Otter.ai: the complete help
 guide</h1>
 <p>This guide gathers the help Otter.ai publishes: 248 articles across

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-02" />
   <title>Dropbox Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,50 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Dropbox Help Guide</h1>
 <p class="subtitle">Dropbox’s own help documentation, gathered into one
 document</p>
 <p class="date">2026-08-02</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#dropbox-help-guide" id="toc-dropbox-help-guide">Dropbox
+Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#account-access" id="toc-account-access">Account
+Access</a></li>
+<li><a href="#account-settings" id="toc-account-settings">Account
+Settings</a></li>
+<li><a href="#accounts-billing" id="toc-accounts-billing">Accounts
+Billing</a></li>
+<li><a href="#billing" id="toc-billing">Billing</a></li>
+<li><a href="#create-upload" id="toc-create-upload">Create
+Upload</a></li>
+<li><a href="#delete-restore" id="toc-delete-restore">Delete
+Restore</a></li>
+<li><a href="#files-folders" id="toc-files-folders">Files
+Folders</a></li>
+<li><a href="#installs" id="toc-installs">Installs</a></li>
+<li><a href="#installs-integrations"
+id="toc-installs-integrations">Installs Integrations</a></li>
+<li><a href="#integrations" id="toc-integrations">Integrations</a></li>
+<li><a href="#onboarding" id="toc-onboarding">Onboarding</a></li>
+<li><a href="#organize" id="toc-organize">Organize</a></li>
+<li><a href="#plans" id="toc-plans">Plans</a></li>
+<li><a href="#security" id="toc-security">Security</a></li>
+<li><a href="#share" id="toc-share">Share</a></li>
+<li><a href="#storage-space" id="toc-storage-space">Storage
+Space</a></li>
+<li><a href="#sync" id="toc-sync">Sync</a></li>
+<li><a href="#teams-admins" id="toc-teams-admins">Teams Admins</a></li>
+<li><a href="#view-edit" id="toc-view-edit">View Edit</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="dropbox-help-guide">Dropbox Help Guide</h1>
 <p>This guide gathers Dropbox’s own help documentation, as it stood on 2
 August 2026.</p>

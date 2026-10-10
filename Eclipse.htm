@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>Eclipse IDE Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,17 +180,76 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Eclipse IDE Help Guide</h1>
 <p class="subtitle">The Eclipse Workbench User Guide and Java
 Development User Guide, gathered into one screen-reader-friendly
 document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#eclipse-ide-help-guide"
+id="toc-eclipse-ide-help-guide">Eclipse IDE Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-accessibility"
+id="toc-cat-accessibility">Accessibility</a></li>
+<li><a href="#cat-ant-and-external-tools"
+id="toc-cat-ant-and-external-tools">Ant and external tools</a></li>
+<li><a href="#cat-debug-views-and-their-actions"
+id="toc-cat-debug-views-and-their-actions">Debug views and their
+actions</a></li>
+<li><a href="#cat-debugging-and-running-programs"
+id="toc-cat-debugging-and-running-programs">Debugging and running
+programs</a></li>
+<li><a href="#cat-editors-and-text-editing"
+id="toc-cat-editors-and-text-editing">Editors and text editing</a></li>
+<li><a href="#cat-getting-started-and-tutorials"
+id="toc-cat-getting-started-and-tutorials">Getting started and
+tutorials</a></li>
+<li><a href="#cat-help-system-and-the-welcome-page"
+id="toc-cat-help-system-and-the-welcome-page">Help system and the
+Welcome page</a></li>
+<li><a href="#cat-installing-updating-and-workspaces"
+id="toc-cat-installing-updating-and-workspaces">Installing, updating and
+workspaces</a></li>
+<li><a href="#cat-java-build-path-and-project-configuration"
+id="toc-cat-java-build-path-and-project-configuration">Java build path
+and project configuration</a></li>
+<li><a href="#cat-java-code-generation-and-refactoring"
+id="toc-cat-java-code-generation-and-refactoring">Java code generation
+and refactoring</a></li>
+<li><a href="#cat-java-compiler-errors-and-warnings"
+id="toc-cat-java-compiler-errors-and-warnings">Java compiler, errors and
+warnings</a></li>
+<li><a href="#cat-java-editor-and-content-assist"
+id="toc-cat-java-editor-and-content-assist">Java editor and content
+assist</a></li>
+<li><a href="#cat-java-views-and-element-browsing"
+id="toc-cat-java-views-and-element-browsing">Java views and element
+browsing</a></li>
+<li><a href="#cat-menus-toolbars-and-the-workbench-window"
+id="toc-cat-menus-toolbars-and-the-workbench-window">Menus, toolbars and
+the workbench window</a></li>
+<li><a href="#cat-preferences-reference"
+id="toc-cat-preferences-reference">Preferences reference</a></li>
+<li><a href="#cat-projects-folders-and-files"
+id="toc-cat-projects-folders-and-files">Projects, folders and
+files</a></li>
+<li><a href="#cat-search-and-navigation"
+id="toc-cat-search-and-navigation">Search and navigation</a></li>
+<li><a href="#cat-team-and-version-control"
+id="toc-cat-team-and-version-control">Team and version control</a></li>
+<li><a href="#cat-tips-and-tricks" id="toc-cat-tips-and-tricks">Tips and
+tricks</a></li>
+<li><a href="#cat-miscellaneous"
+id="toc-cat-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="eclipse-ide-help-guide">Eclipse IDE Help Guide</h1>
 <p>This guide gathers the two books the Eclipse Foundation writes for
 people who <em>use</em> the Eclipse IDE: the Workbench User Guide and

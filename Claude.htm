@@ -1,15 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-09-23" />
   <title>Claude</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -34,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -52,13 +62,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -81,10 +92,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -104,8 +119,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -122,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -148,10 +163,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -162,16 +180,93 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Claude</h1>
 <p class="subtitle">Anthropic’s Claude Help Center, gathered into one
 document</p>
 <p class="date">2026-09-23</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#claude" id="toc-claude">Claude</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-claude-code" id="toc-cat-claude-code">Claude
+Code</a></li>
+<li><a href="#cat-claude-code-launch-guides"
+id="toc-cat-claude-code-launch-guides">Claude Code: Launch
+guides</a></li>
+<li><a href="#cat-claude-cowork" id="toc-cat-claude-cowork">Claude
+Cowork</a></li>
+<li><a href="#cat-claude-desktop" id="toc-cat-claude-desktop">Claude
+Desktop</a></li>
+<li><a href="#cat-claude-desktop-desktop-extensions"
+id="toc-cat-claude-desktop-desktop-extensions">Claude Desktop: Desktop
+extensions</a></li>
+<li><a href="#cat-claude-for-education"
+id="toc-cat-claude-for-education">Claude for Education</a></li>
+<li><a href="#cat-claude-in-chrome" id="toc-cat-claude-in-chrome">Claude
+in Chrome</a></li>
+<li><a href="#cat-claude-mobile-apps"
+id="toc-cat-claude-mobile-apps">Claude Mobile apps</a></li>
+<li><a href="#cat-claude-mobile-apps-claude-for-android"
+id="toc-cat-claude-mobile-apps-claude-for-android">Claude Mobile apps:
+Claude for Android</a></li>
+<li><a href="#cat-claude-mobile-apps-claude-for-ios"
+id="toc-cat-claude-mobile-apps-claude-for-ios">Claude Mobile apps:
+Claude for iOS</a></li>
+<li><a href="#cat-claude-account-management"
+id="toc-cat-claude-account-management">Claude: Account
+management</a></li>
+<li><a href="#cat-claude-conversation-management"
+id="toc-cat-claude-conversation-management">Claude: Conversation
+management</a></li>
+<li><a href="#cat-claude-features-and-capabilities"
+id="toc-cat-claude-features-and-capabilities">Claude: Features and
+capabilities</a></li>
+<li><a href="#cat-claude-get-started-with-claude"
+id="toc-cat-claude-get-started-with-claude">Claude: Get started with
+Claude</a></li>
+<li><a href="#cat-claude-personalization-and-settings"
+id="toc-cat-claude-personalization-and-settings">Claude: Personalization
+and settings</a></li>
+<li><a href="#cat-claude-troubleshooting"
+id="toc-cat-claude-troubleshooting">Claude: Troubleshooting</a></li>
+<li><a href="#cat-claude-usage-and-limits"
+id="toc-cat-claude-usage-and-limits">Claude: Usage and limits</a></li>
+<li><a href="#cat-connectors"
+id="toc-cat-connectors">Connectors</a></li>
+<li><a href="#cat-connectors-pre-built-connectors"
+id="toc-cat-connectors-pre-built-connectors">Connectors: Pre-Built
+Connectors</a></li>
+<li><a href="#cat-privacy-and-legal"
+id="toc-cat-privacy-and-legal">Privacy and legal</a></li>
+<li><a href="#cat-pro-and-max-plans" id="toc-cat-pro-and-max-plans">Pro
+and Max plans</a></li>
+<li><a href="#cat-pro-and-max-plans-max-plan"
+id="toc-cat-pro-and-max-plans-max-plan">Pro and Max plans: Max
+plan</a></li>
+<li><a href="#cat-pro-and-max-plans-pro-plan"
+id="toc-cat-pro-and-max-plans-pro-plan">Pro and Max plans: Pro
+plan</a></li>
+<li><a href="#cat-safeguards"
+id="toc-cat-safeguards">Safeguards</a></li>
+<li><a href="#cat-team-and-enterprise-plans-capabilities"
+id="toc-cat-team-and-enterprise-plans-capabilities">Team and Enterprise
+plans: Capabilities</a></li>
+<li><a href="#cat-team-and-enterprise-plans-get-started"
+id="toc-cat-team-and-enterprise-plans-get-started">Team and Enterprise
+plans: Get started</a></li>
+<li><a href="#cat-team-and-enterprise-plans-plan-overviews"
+id="toc-cat-team-and-enterprise-plans-plan-overviews">Team and
+Enterprise plans: Plan overviews</a></li>
+<li><a href="#cat-miscellaneous"
+id="toc-cat-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="claude">Claude</h1>
 <p>This guide holds 238 articles from <a
 href="https://support.claude.com/en/">Anthropic’s own Claude Help
@@ -1801,22 +1896,22 @@ minutes on average.</p>
 <col style="width: 58%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Marker</strong></td>
 <td><strong>Severity</strong></td>
 <td><strong>Meaning</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>🔴</td>
 <td>Normal</td>
 <td>A bug that should be fixed before merging</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>🟡</td>
 <td>Nit</td>
 <td>A minor issue, worth fixing but not blocking</td>
 </tr>
-<tr class="even">
+<tr>
 <td>🟣</td>
 <td>Pre-existing</td>
 <td>A bug that exists in the codebase but wasn’t introduced by this
@@ -2469,19 +2564,19 @@ patterns that have worked across many engineering organizations.</p>
 <hr />
 <h4 id="a14555399-h-4f68288aeb">Phase 1: The champion role</h4>
 <h5 id="a14555399-h-2c18ad77b1">What a champion does</h5>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 6%" />
 <col style="width: 46%" />
 <col style="width: 46%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Behavior</strong></td>
 <td><strong>What it looks like in practice</strong></td>
 <td><strong>Why it matters</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Share what you discover</td>
 <td>Post the prompts, screenshots, and small wins from your own work in
 the places your team already reads, such as an engineering channel, a
@@ -2490,7 +2585,7 @@ standup thread, or a pull-request description.</td>
 external documentation, because colleagues can see exactly how the tool
 applies to the problems they share with you.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Be the person people ask</td>
 <td>When a colleague asks how you accomplished something, respond with
 the actual prompt you used so they can apply it directly to their own
@@ -2498,7 +2593,7 @@ task.</td>
 <td>A concrete, runnable example removes the gap between curiosity and a
 first successful use, which is where most adoption efforts stall.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Grow the circle</td>
 <td>Establish a small number of lightweight, recurring habits—such as a
 dedicated channel or a weekly thread—so that momentum continues even
@@ -2524,36 +2619,36 @@ start.</p>
 The activities below are intended to fit inside a normal working week,
 and the role should remain a multiplier on your existing work rather
 than an additional support responsibility.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 10%" />
 <col style="width: 70%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Activity</strong></td>
 <td><strong>Time per week</strong></td>
 <td><strong>Guidance</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Posting wins and prompts</td>
 <td>About 15 minutes</td>
 <td>Capture these in the moment with a screenshot and one or two
 sentences; avoid turning them into formal write-ups.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Answering questions in a shared channel</td>
 <td>About 20 minutes</td>
 <td>Answer publicly once, then link back to that answer when the
 question recurs.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Hosting a weekly show-and-tell thread</td>
 <td>About 5 minutes</td>
 <td>You post the opening prompt; the team supplies the content.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Optional pairing or walkthroughs</td>
 <td>0–30 minutes</td>
 <td>Reserve this for colleagues who are genuinely blocked, and offer the
@@ -2579,28 +2674,28 @@ compound as they spread through a team; status updates do not.</p>
 <col style="width: 24%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Worth sharing (a technique others can reuse)</strong></td>
 <td><strong>Less useful (a status update)</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“I learned that @-mentioning a directory works — pointing it at
 <code>@src/components/</code> and asking which were missing tests
 surfaced two I had overlooked.”</td>
 <td>“I migrated the payments service with Claude.”</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“Plan mode (Shift+Tab) shows exactly which files will be touched
 before any edit is made, which is why I am comfortable using it on
 shared code.”</td>
 <td>“Claude saved me a lot of time this sprint.”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>“I configured a Stop hook so I receive a desktop notification when a
 long task completes; configuration is in the thread.”</td>
 <td>“I closed eight tickets this week.”</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“Running <code>/init</code> generates a <code>CLAUDE.md</code> from
 the repository so the assistant stops re-asking about our
 conventions.”</td>
@@ -2611,36 +2706,36 @@ conventions.”</td>
 <h5 id="a14555399-h-e941ede957">Where to share it</h5>
 <p>Post wherever your team already reads. The goal is to place examples
 in the path of normal work rather than to create a new destination.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 34%" />
 <col style="width: 42%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Location</strong></td>
 <td><strong>Best suited for</strong></td>
 <td><strong>Recommended format</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>A <code>#claude-code</code> or general engineering channel</td>
 <td>Discoveries, prompts, and “today I learned” moments</td>
 <td>A screenshot accompanied by one or two sentences of context</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Pull-request descriptions</td>
 <td>Demonstrating the approach on real code that reviewers are already
 reading</td>
 <td>A single line such as “Claude and I did this refactor; happy to walk
 through the approach.”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Standups or weekly written updates</td>
 <td>Normalizing usage with leads and skip-level managers</td>
 <td>One sentence describing one concrete outcome</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Team wiki or internal documentation</td>
 <td>Durable patterns, custom skills, and <code>CLAUDE.md</code>
 examples</td>
@@ -2696,19 +2791,19 @@ they need the single thing that unblocks them.</p>
 <p>The table below covers the questions champions are asked most
 frequently, along with a suggested response and the resource to offer
 when the person is ready for more depth.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 13%" />
 <col style="width: 55%" />
 <col style="width: 30%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Question you are likely to hear</strong></td>
 <td><strong>Suggested response</strong></td>
 <td><strong>Follow-up resource</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“What should I try it on first?”</td>
 <td>Recommend a real but contained task — ideally a bug or chore the
 person has been postponing because it is tedious rather than
@@ -2717,7 +2812,7 @@ difficult.</td>
 href="https://code.claude.com/docs/en/common-workflows">Common
 workflows</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“How do I trust it with my code?”</td>
 <td>Introduce plan mode: pressing Shift+Tab cycles into it, Claude
 proposes exactly what it intends to change, and nothing is modified
@@ -2726,7 +2821,7 @@ until the user approves.</td>
 href="https://code.claude.com/docs/en/permission-modes">Permission
 modes</a></strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“Is the setup worth the effort?”</td>
 <td>Installation takes roughly two minutes, runs in the terminal, and
 requires no IDE extension. Running <code>/init</code> once is sufficient
@@ -2734,7 +2829,7 @@ to begin working.</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/quickstart">Quickstart</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“It produced an incorrect result.”</td>
 <td>Encourage them to provide the failure back to Claude — pasting the
 error message or failing test is far more effective than rephrasing the
@@ -2743,7 +2838,7 @@ original request.</td>
 href="https://code.claude.com/docs/en/common-workflows">Common
 workflows</a></strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“It does not understand our codebase conventions.”</td>
 <td>Suggest running <code>/init</code> to generate a
 <code>CLAUDE.md</code> file, then adding the team’s conventions, test
@@ -2751,7 +2846,7 @@ commands, and any directories that should be avoided.</td>
 <td><strong><a href="https://code.claude.com/docs/en/memory">CLAUDE.md
 documentation</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“Is this just autocomplete?”</td>
 <td>Offer a brief demonstration in which Claude explains an unfamiliar
 file, traces a bug across services, or drafts a migration plan — tasks
@@ -2759,7 +2854,7 @@ that require reasoning across the repository rather than completing a
 single line.</td>
 <td>A two-minute live demonstration</td>
 </tr>
-<tr class="even">
+<tr>
 <td>“What about security and data handling?”</td>
 <td>Refer this question to your administrator. Your organization’s
 deployment and data-handling policy is already configured, and champions
@@ -2779,19 +2874,19 @@ continue after you have stopped actively driving it. When questions in
 the channel are being answered by people other than you, the role has
 done its job.</p>
 <h5 id="a14555399-h-5c53d3422d">Patterns that tend to work</h5>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 73%" />
 <col style="width: 15%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Pattern</strong></td>
 <td><strong>How to run it</strong></td>
 <td><strong>Effort required</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>A dedicated channel</strong></td>
 <td>Create a <code>#claude-code</code> channel (or a recurring thread in
 an existing one), pin the <strong><a
@@ -2800,14 +2895,14 @@ link and one strong example, and answer questions publicly so each
 answer benefits everyone watching.</td>
 <td>Approximately five minutes to set up, then ambient</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>A weekly show-and-tell thread</strong></td>
 <td>Each Friday, post “What did Claude help you with this week?” No
 preparation, slides, or meeting are required; screenshots and short
 descriptions are sufficient.</td>
 <td>Approximately two minutes per week</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Share a custom skill</strong></td>
 <td>Post your most useful
 <code>.claude/skills/&lt;name&gt;/SKILL.md</code> file — for example a
@@ -2816,14 +2911,14 @@ with a one-line description. Because skills are plain Markdown,
 colleagues can adopt them immediately.</td>
 <td>Approximately five minutes per skill</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Pair on a first task</strong></td>
 <td>Offer a single fifteen-minute pairing session to anyone getting
 started. One successful outcome on their own code is more persuasive
 than any presentation.</td>
 <td>Approximately fifteen minutes per person</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Identify the next champion</strong></td>
 <td>The colleague who asks you the most questions is usually ready to
 take on this role. Forward them this kit and divide the channel
@@ -2835,19 +2930,19 @@ responsibilities between you.</td>
 <h5 id="a14555399-h-128fd01a2d">A thirty-day playbook</h5>
 <p>If a loose plan is helpful, the sequence below reflects what tends to
 work across most teams. Adjust freely to fit your context.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 57%" />
 <col style="width: 33%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Week</strong></td>
 <td><strong>Recommended activity</strong></td>
 <td><strong>Signal that it is working</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Week 1</td>
 <td>Create the channel, pin the <strong><a
 href="https://code.claude.com/docs/en/quickstart">Quickstart</a></strong>,
@@ -2856,21 +2951,21 @@ included.</td>
 <td>A few colleagues react or reply, and at least one question is asked
 in the channel.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Week 2</td>
 <td>Start the weekly show-and-tell thread, answer every question
 publicly, and share one custom skill or <code>CLAUDE.md</code>
 snippet.</td>
 <td>Someone other than you posts an example of their own.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Week 3</td>
 <td>Offer two or three short pairing sessions and consolidate the most
 common questions and answers into a pinned FAQ message.</td>
 <td>You see repeat usage — the same colleagues returning rather than
 trying once and stopping.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Week 4</td>
 <td>Identify a second champion and share a brief summary of what is
 working and what is not with your lead or administrator.</td>
@@ -2897,47 +2992,47 @@ about new tools. The most effective response is rarely to argue the
 general case. Instead, acknowledge the concern, offer a brief reframe,
 and propose one concrete demonstration on the person’s own code. Most
 concerns are resolved by a single successful experience.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 64%" />
 <col style="width: 19%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Concern</strong></td>
 <td><strong>Suggested response</strong></td>
 <td><strong>Evidence to offer</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“I am faster without it.”</td>
 <td>That is likely true for code the person writes routinely. Suggest
 trying it on the work they tend to avoid — legacy files, unfamiliar
 services, or test scaffolding — where the leverage is highest.</td>
 <td>Time one tedious task both ways and compare.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“I do not trust AI to touch production code.”</td>
 <td>Agree that no change should land unread. Plan mode combined with
 normal diff review means nothing is applied that the engineer has not
 inspected — the same standard as any pull request.</td>
 <td>Demonstrate plan mode on a real file.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>“It will make junior engineers weaker.”</td>
 <td>Used well, it is an effective explainer. Encourage junior engineers
 to ask Claude to explain a file and its call sites before asking it to
 change anything.</td>
 <td>Run “Explain @file and where it is called from” together.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“I tried it once and it hallucinated.”</td>
 <td>This is usually a context problem rather than a model problem.
 @-mentioning the relevant files, running <code>/init</code>, and
 providing the actual error output typically resolves it.</td>
 <td>Re-run their original prompt with proper @-context.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>“We do not have time to learn another tool.”</td>
 <td>Claude Code is a terminal command rather than a platform. If it does
 not return value within the first session, it is reasonable to set it
@@ -2957,45 +3052,45 @@ a channel or shared on its own.</p>
 <col style="width: 81%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Technique</strong></td>
 <td><strong>How to apply it</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Provide the right context</td>
 <td>Use <code>@file</code> or <code>@directory/</code> references, or
 paste the error or log output directly. Supplying relevant context is
 more effective than elaborate prompting.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Review the plan before the edit</td>
 <td>Press <strong>Shift+Tab</strong> to enter plan mode. Claude will
 describe the intended changes for your approval before executing
 them.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Teach it your repository</td>
 <td>Run <code>/init</code> to generate a <code>CLAUDE.md</code> file,
 then add your conventions, test commands, and any directories that
 should not be modified.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Reuse a workflow</td>
 <td>Save a <code>SKILL.md</code> file in
 <code>.claude/skills/&lt;name&gt;/</code> to create a <code>/name</code>
 skill that the entire team can use.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Stay informed during long tasks</td>
 <td>Configure a Stop hook to receive a desktop notification when a
 long-running task completes.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Recover from an incorrect result</td>
 <td>Rather than rephrasing the request, paste the failing test or stack
 trace back to Claude and ask it to address that specific failure.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Keep edits surgical</td>
 <td>Ask for a diff, or specify “only change X.” Claude respects scope
 when scope is stated.</td>
@@ -3011,36 +3106,36 @@ when scope is stated.</td>
 <col style="width: 0%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Resource</strong></td>
 <td><strong>Link</strong></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Quickstart</td>
 <td colspan="2"><strong><a
 href="https://code.claude.com/docs/en/quickstart">Claude quickstart
 page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Common workflows</td>
 <td colspan="2"><strong><a
 href="https://code.claude.com/docs/en/common-workflows">Claude common
 workflows page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Skills</td>
 <td colspan="2"><strong><a
 href="https://code.claude.com/docs/en/skills">Claude skills
 page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Anthropic Academy</td>
 <td colspan="2"><strong><a
 href="https://www.anthropic.com/learn">Anthropic learn
 page</a></strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Full Claude Code documentation</td>
 <td colspan="2"><strong><a href="https://code.claude.com/docs">Claude
 website</a></strong> |</td>
@@ -3069,91 +3164,91 @@ here before reaching for a workaround usually pays off.</p>
 <col style="width: 88%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Term</strong></td>
 <td><strong>Definition</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Session</strong></td>
 <td>One run of <code>claude</code> in a directory, from launch to exit.
 Each session has its own conversation history, while project memory
 (<code>CLAUDE.md</code>) persists across sessions.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Context window</strong></td>
 <td>The total amount of text — your prompts, Claude’s replies, and any
 files it has read — that the model can hold in mind at once. When it
 fills up, older content is compacted or dropped. It is managed with
 <code>/clear</code> and <code>/compact</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Token</strong></td>
 <td>The unit models use to measure text (roughly ¾ of a word). Usage
 limits and API billing are counted in tokens. You will mostly encounter
 this via <code>/cost</code> or the context indicator.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>CLAUDE.md</strong></td>
 <td>A markdown file (project root, home directory, or subfolder) that
 Claude reads automatically at the start of every session. It holds your
 project’s conventions, commands, and constraints so you do not have to
 repeat them.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Plan mode</strong></td>
 <td>A read-only mode in which Claude explores, explains, and proposes
 but will not edit files or run commands. Use it to review an approach
 before letting Claude execute. Toggle with <strong>Shift+Tab</strong> or
 enter directly with <code>/plan</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Accept Edits mode</strong></td>
 <td>A mode that auto-approves file edits for the rest of the session,
 while other actions such as shell commands still prompt for approval. It
 is useful once you trust the direction of the work and no longer want to
 confirm every diff. Toggle with <strong>Shift+Tab</strong>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Permissions</strong></td>
 <td>The rules governing which actions Claude can take without asking. By
 default it asks for everything that touches your machine. You can adjust
 these per project with <code>/permissions</code> or in settings.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Tool</strong></td>
 <td>A capability Claude can invoke, such as reading a file, editing,
 running bash, or searching the web. Each tool call appears in the
 transcript so you can see exactly what happened.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>MCP (Model Context Protocol)</strong></td>
 <td>An open standard for plugging external systems — such as GitHub,
 Jira, databases, or internal APIs — into Claude as tools. If your team
 has MCP servers configured, Claude can query and act on those systems
 directly.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Subagent</strong></td>
 <td>A secondary Claude instance that the main session can spawn to
 handle a focused subtask, such as running tests, searching a large
 codebase, or reviewing code, in its own context window before reporting
 back. Subagents are configured via <code>/agents</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Hook</strong></td>
 <td>A shell command that runs automatically at a defined point in
 Claude’s lifecycle, such as before a tool runs, after an edit, or on
 session start. Hooks are commonly used for auto-formatting, linting, or
 blocking unsafe commands.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Skill</strong></td>
 <td>A packaged set of instructions and helper files that teaches Claude
 a specific workflow, such as generating a PDF report, scaffolding a
 component, or following a deploy runbook. Skills are invoked with / like
 built-in commands and can also load automatically when relevant.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Command</strong></td>
 <td>Any input starting with /. Built-in commands control the session
 (see the table below); custom ones are skills your team defines in
@@ -3175,137 +3270,137 @@ tool. A few entries vary by platform and plan.</p>
 <col style="width: 75%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Command</strong></td>
 <td><strong>What it does</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/help</code></td>
 <td>List all available commands.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/init</code></td>
 <td>Explore the codebase and generate a starter
 <code>CLAUDE.md</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/clear</code></td>
 <td>Wipe conversation history and start fresh (project memory stays).
 Aliases: <code>/reset</code>, <code>/new</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/compact</code></td>
 <td>Summarize the conversation so far to free up context. Accepts
 optional focus instructions.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/btw</code></td>
 <td>Ask a quick side question without adding it to the main conversation
 or consuming context.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/rewind</code></td>
 <td>Roll the conversation and/or your code back to an earlier
 checkpoint.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/model</code></td>
 <td>View or switch the active model.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/cost</code></td>
 <td>Show token usage and spend for this session.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/usage</code></td>
 <td>Show your plan’s usage limits and current rate-limit status.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/context</code></td>
 <td>Visualize what is currently loaded into the context window and where
 it is being spent.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/memory</code></td>
 <td>View or edit the <code>CLAUDE.md</code> files in scope.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/add-dir</code></td>
 <td>Grant Claude file access to an additional directory for this
 session.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/permissions</code></td>
 <td>View or change which tools require approval.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/config</code></td>
 <td>Open configuration settings (theme, defaults, editor mode). Alias:
 <code>/settings</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/plan</code></td>
 <td>Drop straight into Plan Mode, optionally with a task
 description.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/diff</code></td>
 <td>Open an interactive viewer of uncommitted changes and per-turn
 diffs.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/copy</code></td>
 <td>Copy the last response (or a selected code block) to your
 clipboard.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/export</code></td>
 <td>Save the current conversation to a file or the clipboard.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/mcp</code></td>
 <td>Manage MCP server connections and authentication.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/agents</code></td>
 <td>List, create, or edit subagents.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/hooks</code></td>
 <td>View hook configuration for tool events.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/skills</code></td>
 <td>List the skills available in this session.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/simplify</code></td>
 <td>Bundled skill: review your recently changed files for reuse,
 quality, and efficiency issues, then apply fixes.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/status</code></td>
 <td>Show account, model, working directory, and version.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/doctor</code></td>
 <td>Diagnose install and environment issues.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/feedback</code></td>
 <td>Report an issue to Anthropic with session context attached. Alias:
 <code>/bug</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/resume</code></td>
 <td>Reopen a previous session and continue where you left off. Alias:
 <code>/continue</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/login</code> / <code>/logout</code></td>
 <td>Authenticate, switch accounts, or sign out.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/exit</code></td>
 <td>Quit the CLI. Alias: <code>/quit</code>.</td>
 </tr>
@@ -3319,50 +3414,50 @@ quality, and efficiency issues, then apply fixes.</td>
 <col style="width: 77%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Key</strong></td>
 <td><strong>Action</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Shift + Tab</strong></td>
 <td>Cycle permission mode:
 <code>auto → manual → acceptEdits → plan</code>. Also includes
 <code>bypassPermissions</code> when that mode is enabled.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Esc</strong></td>
 <td>Interrupt Claude mid-response so you can type again.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Esc, Esc</strong></td>
 <td>Open the rewind/checkpoint menu to roll back to an earlier point in
 the session.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Ctrl + C</strong></td>
 <td>Cancel the current input, or exit on an empty prompt.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Ctrl + R</strong></td>
 <td>Reverse search through your prompt history.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Ctrl + O</strong></td>
 <td>Expand to the verbose, full transcript view.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>↑ / ↓</strong></td>
 <td>Scroll through your prompt history.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong><code>@</code> + path</strong></td>
 <td>Reference a file or directory in your prompt.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><code>/</code></strong></td>
 <td>Open the command menu.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong><code>?</code></strong></td>
 <td>Show shortcuts for your current terminal or IDE.</td>
 </tr>
@@ -3402,38 +3497,38 @@ whichever fits your rollout and rewrite it from there.</p>
 <col style="width: 40%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Item</strong></td>
 <td><strong>Why it matters</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><code>#claude-code</code> channel created</strong> and
 linked in the message</td>
 <td>Gives questions one place to land</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Install command tested</strong> on at least one machine in
 your environment</td>
 <td>Catches proxy/firewall issues before 200 people hit them</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Security/data-handling link</strong> ready — <a
 href="https://code.claude.com/docs/en/data-usage">Data Usage</a> or your
 internal equivalent</td>
 <td>“Where does my code go?” will be the first reply</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>One concrete first task</strong> chosen — a real bug or file
 in <em>your</em> codebase</td>
 <td>Generic examples don’t convert; “fix the flaky test in
 <code>auth_test.go</code>” does</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>A named owner</strong> for the channel for the first 48
 hours</td>
 <td>Unanswered launch-day questions kill momentum</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>A C-suite sponsor</strong> lined up to send (or co-sign) the
 announcement</td>
 <td>Exec-sent launches consistently see higher first-week adoption than
@@ -3452,7 +3547,7 @@ ask.</p>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p><strong>Subject:</strong> Claude Code is live for [Engineering /
 your team]</p>
 <p>Team —</p>
@@ -3501,7 +3596,7 @@ plugin</a></strong> — same agent, no terminal.</p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🚀 <strong>Claude Code is live for [team]</strong></p>
 <p>AI coding agent, runs in your terminal, reads your repo, does real
 work — bugs, refactors, tests, PRs. Asks before it touches anything.</p>
@@ -3541,7 +3636,7 @@ exec’s job is to make the ask land that day; 1.2 and
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p><strong>Subject:</strong> One thing I’d like every engineer to
 try this week</p>
 <p>Team —</p>
@@ -3568,7 +3663,7 @@ claude</code></pre>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>📣 <strong>From [Exec Name]: one thing to try this
 week</strong></p>
 <p>We’ve turned on <strong>Claude Code</strong> for all of engineering.
@@ -3590,7 +3685,7 @@ group</h5>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p><strong>Subject:</strong> You’re in the Claude Code pilot</p>
 <p>[Name / team] —</p>
 <p>You’re in the first wave of Claude Code at [company]. We picked this
@@ -3616,7 +3711,7 @@ the fastest way to calibrate how much to trust it.</p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>Hey [name] — your <code>#claude-code</code> posts are doing more
 for adoption than my announcement did. A couple of people told me your
 [thread / screenshot] was why they actually tried it.</p>
@@ -3643,7 +3738,7 @@ Teams. Replace [bracketed placeholders] before sending.</p>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🎯 <strong>Tip: Match the model to the moment</strong></p>
 <p>Using Opus to fix a typo? Burning compute. Using Haiku for a 12-file
 refactor? Asking for a re-do.</p>
@@ -3669,21 +3764,21 @@ configuration</a></strong></p></td>
 <col style="width: 70%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Model</strong></td>
 <td><strong>Best for</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Opus</td>
 <td>Large-scale refactors, complex debugging, architecture decisions,
 high-stakes changes</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Sonnet <em>(recommended default)</em></td>
 <td>Everyday feature work, bug fixes, tests, documentation, code
 review</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Haiku</td>
 <td>Quick questions, formatting, mechanical edits, rapid iteration</td>
 </tr>
@@ -3695,7 +3790,7 @@ review</td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🚀 <strong>Tip: Three things to try in your first 10
 minutes</strong></p>
 <p>Installed Claude Code but not sure what to actually ask it? Start
@@ -3724,7 +3819,7 @@ href="https://code.claude.com/docs/en/quickstart">Quickstart</a></strong></p></t
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>📁 <strong>Tip: Stop re-explaining your repo every
 session</strong></p>
 <p>Telling Claude “we use pnpm, not npm” for the fifth time? There’s a
@@ -3748,7 +3843,7 @@ and project memory</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>📎 <strong>Tip: Stop pasting file contents into the
 chat</strong></p>
 <p>Copying 200 lines of a component into your prompt so Claude can “see”
@@ -3771,7 +3866,7 @@ files</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🧠 <strong>Tip: Teach Claude your team’s quirks once</strong></p>
 <p>Claude just suggested deploying from <code>main</code> — but you
 deploy from <code>release</code>. Don’t correct it again next week.</p>
@@ -3793,7 +3888,7 @@ and CLAUDE.md</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🛡️ <strong>Tip: One keystroke between “look but don’t touch” and
 “just do it”</strong> |</p>
 <p>Sometimes you want Claude to ask before every edit. Sometimes you
@@ -3817,19 +3912,19 @@ modes</a></strong></p></td>
 <p><em>Quick reference (the three you’ll use most — see <strong><a
 href="https://code.claude.com/docs/en/permissions">docs</a></strong> for
 the full list):</em></p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 20%" />
 <col style="width: 53%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>plan</strong></td>
 <td><strong>default</strong></td>
 <td><strong>acceptEdits</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude proposes, you approve before anything changes</td>
 <td>Claude asks before risky edits or commands</td>
 <td>File edits and common filesystem Bash commands go through without
@@ -3843,7 +3938,7 @@ asking; still checks before other shell commands</td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>⏪ <strong>Tip: There’s an undo button for the whole
 conversation</strong></p>
 <p>Claude went down the wrong path three turns ago and now you’re
@@ -3866,7 +3961,7 @@ href="https://code.claude.com/docs/en/checkpointing">Checkpointing</a></strong><
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🔌 <strong>Tip: Let Claude read your issue tracker so you don’t
 have to paste tickets</strong></p>
 <p>Copy-pasting Jira tickets into the terminal feels like a step
@@ -3890,7 +3985,7 @@ connectors</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>💻 <strong>Tip: You don’t have to leave your editor</strong></p>
 <p>Terminal not your thing? The same agent runs inside VS Code and
 JetBrains.</p>
@@ -3912,7 +4007,7 @@ extension</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>⚡ <strong>Tip: Turn that prompt you keep retyping into a
 command</strong></p>
 <p>Typed “summarize what I worked on today from git log, format it for
@@ -3937,7 +4032,7 @@ href="https://code.claude.com/docs/en/skills">Skills</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🔔 <strong>Tip: Get pinged when your refactor finishes — go get
 coffee</strong></p>
 <p>Sitting at your desk watching Claude work through a long task? You’ve
@@ -3961,7 +4056,7 @@ guide</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🤖 <strong>Tip: Big tasks get parallelized</strong></p>
 <p>Ever notice some tasks finish faster than the math says they should?
 That’s subagents.</p>
@@ -3984,7 +4079,7 @@ href="https://code.claude.com/docs/en/sub-agents">Subagents</a></strong></p></td
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🧩 <strong>Tip: Give Claude permission to actually think about
 the hard ones</strong></p>
 <p>Got a bug that’s defeated you twice? Don’t ask for a fast answer —
@@ -4008,7 +4103,7 @@ levels</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>📸 <strong>Tip: Stop describing the error dialog — just show
 it</strong></p>
 <p>Typing out “there’s a red box that says something about a null
@@ -4032,7 +4127,7 @@ with images</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🌿 <strong>Tip: Hand off the whole git ceremony</strong></p>
 <p>The fix took 5 minutes. The commit message, branch, and PR
 description took 15. That ratio is wrong.</p>
@@ -4056,7 +4151,7 @@ pull requests</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>⏱️ <strong>Tip: Don’t block on the test suite — keep
 talking</strong> |</p>
 <p>Full test suite takes 4 minutes? That’s 4 minutes you could spend
@@ -4080,7 +4175,7 @@ commands</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>📦 <strong>Tip: Someone probably already built that
 skill</strong></p>
 <p>About to spend an hour building a <code>/deploy</code> command? Check
@@ -4102,7 +4197,7 @@ href="https://code.claude.com/docs/en/plugins">Plugins</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>⌨️ <strong>Tip: Five shortcuts that pay rent every day</strong>
 |</p>
 <p>If you only learn five things, make it these — they each save a click
@@ -4127,7 +4222,7 @@ and shortcuts</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>🔐 <strong>Tip: The answer to “is this safe?” — for the next time
 you’re asked</strong></p>
 <p>Someone on your team is going to ask “wait, where does my code go?”
@@ -4154,7 +4249,7 @@ usage</a></strong></p></td>
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>✅ <strong>Tip: The 4 habits that separate “tried it once” from
 “use it daily”</strong></p>
 <p>Most people who bounce off Claude Code skipped one of these. Most
@@ -4186,24 +4281,24 @@ practices</a></strong></p></td>
 <col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Question</strong></td>
 <td><strong>Response</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“Does it work in VS Code?”</td>
 <td>Yes — VS Code extension and JetBrains plugin. Same features,
 embedded in your editor. <strong><a
 href="https://code.claude.com/docs/en/vs-code">Docs →</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“Do I have to configure anything first?”</td>
 <td>No — install, then <code>claude</code> in any repo. Run
 <code>/init</code> once and you’re set. <strong><a
 href="https://code.claude.com/docs/en/quickstart">Quickstart
 →</a></strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“Where does my code go?”</td>
 <td>The CLI runs in your terminal and sends context to Anthropic’s API
 for inference — no third-party servers. Under our Enterprise plan, your
@@ -4211,7 +4306,7 @@ code and prompts aren’t used to train models. <strong><a
 href="https://code.claude.com/docs/en/data-usage">Data Usage
 →</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“Can it see my whole repo?”</td>
 <td>It reads what you give it access to. File reads inside your working
 directory don’t prompt; permission prompts gate edits, shell commands,
@@ -4219,14 +4314,14 @@ and anything outside that directory. <strong><a
 href="https://code.claude.com/docs/en/permissions">Permissions
 →</a></strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>“How is this different from Copilot?”</td>
 <td>Copilot autocompletes lines. Claude Code is an agent — reads files,
 runs commands, makes multi-file edits. <strong><a
 href="https://code.claude.com/docs/en/overview">Overview
 →</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>“What should I try first?”</td>
 <td>A bug you’ve been putting off because it’s tedious. <em>“the test in
 [file] is flaky — figure out why.”</em> <strong><a
@@ -4242,45 +4337,45 @@ href="https://code.claude.com/docs/en/quickstart">Quickstart
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Task</strong></td>
 <td><strong>Prompt</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Fix a bug</td>
 <td><em>“the tests in [file] are failing — figure out why and fix
 it”</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Understand code</td>
 <td><em>“walk me through how [module] works, then tell me where the
 entry point is”</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Safe refactor</td>
 <td><em>“refactor [module] to [goal] — use plan mode so I can review
 first”</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Write tests</td>
 <td><em>“write tests for [file] that cover the edge cases around
 [scenario]”</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Review before commit</td>
 <td><em>“look at my working diff and tell me what looks risky”</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Open a PR</td>
 <td><em>“fix [issue], write a conventional commit, and open a PR with a
 summary”</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Make a skill</td>
 <td><em>“make me a /ship skill that runs tests and lint before
 commit”</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Debug a stack trace</td>
 <td><em>“here’s the stack trace — find the root cause, don’t just paper
 over it”</em></td>
@@ -4295,107 +4390,107 @@ over it”</em></td>
 <col style="width: 73%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Resource</strong></td>
 <td><strong>URL</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Code docs (home)</td>
 <td><strong><a href="https://code.claude.com/docs">Claude
 website</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Quickstart &amp; install</td>
 <td><strong><a href="https://code.claude.com/docs/en/quickstart">Claude
 quickstart page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Code in Action (free course)</td>
 <td><strong><a
 href="https://anthropic.skilljar.com/claude-code-in-action">Skilljar
 claude code in action page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>VS Code extension</td>
 <td><strong><a href="https://code.claude.com/docs/en/vs-code">Claude vs
 code page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>JetBrains plugin</td>
 <td><strong><a href="https://code.claude.com/docs/en/jetbrains">Claude
 jetbrains page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>CLAUDE.md &amp; memory</td>
 <td><strong><a href="https://code.claude.com/docs/en/memory">Claude
 memory page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Permission modes</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/permission-modes">Claude
 permission modes page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>MCP connectors</td>
 <td><strong><a href="https://code.claude.com/docs/en/mcp">Claude mcp
 page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Skills</td>
 <td><strong><a href="https://code.claude.com/docs/en/skills">Claude
 skills page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Hooks</td>
 <td><strong><a href="https://code.claude.com/docs/en/hooks-guide">Claude
 hooks guide page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Subagents</td>
 <td><strong><a href="https://code.claude.com/docs/en/sub-agents">Claude
 sub agents page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Plugins</td>
 <td><strong><a href="https://code.claude.com/docs/en/plugins">Claude
 plugins page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Checkpointing</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/checkpointing">Claude
 checkpointing page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Model configuration</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/model-config">Claude model config
 page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Common workflows</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/common-workflows">Claude common
 workflows page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Interactive mode &amp; shortcuts</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/interactive-mode">Claude
 interactive mode page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Security</td>
 <td><strong><a href="https://code.claude.com/docs/en/security">Claude
 security page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Data usage</td>
 <td><strong><a href="https://code.claude.com/docs/en/data-usage">Claude
 data usage page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Best practices</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/best-practices">Claude best
@@ -4451,63 +4546,63 @@ in your session.</p>
 <col style="width: 62%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Section</strong></td>
 <td><strong>Covers</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Working in Parallel</td>
 <td>Worktrees, subagent isolation, <code>/batch</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Planning Before Building</td>
 <td>Plan mode, model choice, effort levels</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Prompting Effectively</td>
 <td>Pushback prompts, <code>/btw</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Learning With Claude</td>
 <td>Explanatory output, diagrams, spaced repetition</td>
 </tr>
-<tr class="even">
+<tr>
 <td>CLAUDE.md and Memory</td>
 <td><code>/init</code>, @claude in PRs, auto-memory, auto-dream</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Verification</td>
 <td>Chrome extension, Desktop app, <code>/simplify</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Commands, Skills, and Subagents</td>
 <td>Custom commands, agent definitions, code-review agents</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Hooks</td>
 <td>Lifecycle events and patterns</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Permissions and Safety</td>
 <td>Pre-approvals, auto mode, sandboxing, long-running tasks</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Scheduled and Recurring Tasks</td>
 <td><code>/loop</code>, <code>/schedule</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mobile and Remote Control</td>
 <td>Mobile app, teleport, remote control, Dispatch</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Tool Integrations (MCP)</td>
 <td>Data analytics, bug fixing, plugins</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Customizing Your Environment</td>
 <td>Terminal, status line, voice, output styles</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>SDK and Multi-Repo Work</td>
 <td><code>--bare</code>, <code>--add-dir</code>, forking, setup
 scripts</td>
@@ -4746,32 +4841,32 @@ lifecycle. Ask Claude to add a hook to get started.</p>
 <col style="width: 66%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Event</strong></td>
 <td><strong>Use case</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>SessionStart</code></td>
 <td>Dynamically load context each time you start Claude</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>PreToolUse</code></td>
 <td>Log every bash command the model runs</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>PostToolUse</code></td>
 <td>Auto-format code after Write/Edit to prevent CI failures</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>PermissionRequest</code></td>
 <td>Route permission prompts to Slack, WhatsApp, or Opus for review</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Stop</code></td>
 <td>Run deterministic checks on long tasks, or nudge Claude to keep
 going</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>PostCompact</code></td>
 <td>Re-inject critical instructions after context compression</td>
 </tr>
@@ -4993,57 +5088,57 @@ is skipped on resume.</p>
 <col style="width: 63%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Area</strong></td>
 <td><strong>Key commands</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Parallel work</td>
 <td><code>claude --worktree</code>, <code>/batch</code>,
 <code>isolation: worktree</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Planning</td>
 <td>Shift+Tab, <code>/effort max</code>, <code>claude --name</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Memory</td>
 <td><code>CLAUDE.md</code>, <code>/memory</code>, <code>/dream</code>,
 <code>@claude</code> in PRs</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Verification</td>
 <td>Chrome extension, <code>/simplify</code>, Desktop app</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Automation</td>
 <td><code>.claude/skills/</code>, <code>.claude/agents/</code>,
 <code>--agent</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Hooks</td>
 <td><code>PostToolUse</code>, <code>Stop</code>,
 <code>PostCompact</code>, <code>PermissionRequest</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Permissions</td>
 <td><code>/permissions</code>, auto mode, <code>/sandbox</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Scheduling</td>
 <td><code>/loop</code>, <code>/schedule</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Remote</td>
 <td><code>--teleport</code>, <code>/remote-control</code>, mobile app,
 iMessage</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Customization</td>
 <td><code>/statusline</code>, <code>/color</code>, <code>/voice</code>,
 <code>/keybindings</code>, <code>/config</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>SDK &amp; multi-repo</td>
 <td><code>--bare</code>, <code>--add-dir</code>,
 <code>/branch</code></td>
@@ -5058,27 +5153,27 @@ iMessage</td>
 <col style="width: 72%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Resource</strong></td>
 <td><strong>Link</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Hooks reference</td>
 <td><strong><a href="https://code.claude.com/docs/en/hooks">Claude hooks
 page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Subagents and custom agents</td>
 <td><strong><a href="https://code.claude.com/docs/en/sub-agents">Claude
 sub agents page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Scheduled tasks</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/scheduled-tasks">Claude scheduled
 tasks page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Chrome extension</td>
 <td><strong><a href="https://code.claude.com/docs/en/chrome">Claude
 chrome page</a></strong> |</td>
@@ -5105,12 +5200,12 @@ specific question.</p>
 <col style="width: 78%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Question</strong></td>
-<td><strong>Answer</strong></td>
+<tr>
+<td><p><strong>Question</strong></p></td>
+<td><p><strong>Answer</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>1.1 How do I install it?</strong></td>
+<tr>
+<td><p><strong>1.1 How do I install it?</strong></p></td>
 <td><p><strong>macOS/Linux:</strong> <code>curl -fsSL</code><a
 href="https://claude.ai/install.sh"><code>https://claude.ai/install.sh</code></a><code>| bash</code><br />
 ​<strong>Windows PowerShell:</strong> <code>irm</code><a
@@ -5124,8 +5219,9 @@ Then run <code>claude</code> from any repo.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/quickstart">Quickstart</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>1.2 Installed, but “claude: command not found”</strong></td>
+<tr>
+<td><p><strong>1.2 Installed, but “claude: command not
+found”</strong></p></td>
 <td><p>The native installer puts the binary at
 <code>~/.local/bin/claude</code> (Windows:
 <code>%USERPROFILE%\.local\bin</code>). Add that directory to your PATH,
@@ -5137,9 +5233,9 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/troubleshooting">Troubleshooting:
 PATH</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>1.3 Login opens a browser on the wrong machine / I’m on
-SSH</strong></td>
+<tr>
+<td><p><strong>1.3 Login opens a browser on the wrong machine / I’m on
+SSH</strong></p></td>
 <td><p>Press <code>c</code> at the login prompt to copy the auth URL.
 Open it in a local browser, then paste the code back into the
 terminal.</p>
@@ -5148,9 +5244,9 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/troubleshooting">Troubleshooting:
 auth</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>1.4 Auth errors right after login, but I have
-access</strong></td>
+<tr>
+<td><p><strong>1.4 Auth errors right after login, but I have
+access</strong></p></td>
 <td><p><strong>400 “organization disabled”:</strong> a stray
 <code>ANTHROPIC_API_KEY</code> env var is overriding your login. Unset
 it, remove from your shell profile, restart. Run <code>/status</code> to
@@ -5162,8 +5258,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/troubleshooting">Troubleshooting:
 auth</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>1.5 Is Claude Code included in my plan?</strong></td>
+<tr>
+<td><p><strong>1.5 Is Claude Code included in my plan?</strong></p></td>
 <td><p>Yes. It’s included with Team and Enterprise seats and with
 Console (API) access. Log in with your work account; SSO is handled
 automatically. A 403 after login usually means your admin still needs to
@@ -5172,8 +5268,9 @@ enable it for the workspace.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/authentication">Authentication</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>1.6 Claude Code vs. desktop app vs. claude.ai?</strong></td>
+<tr>
+<td><p><strong>1.6 Claude Code vs. desktop app
+vs. claude.ai?</strong></p></td>
 <td><p><strong>Claude Code:</strong> terminal agent that reads your
 repo, edits files, runs commands.<br />
 ​<strong>Desktop / claude.ai:</strong> chat interfaces for conversations
@@ -5183,8 +5280,8 @@ Same model family underneath, different shape of tool.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/overview">Overview</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>1.7 Does it work in my IDE?</strong></td>
+<tr>
+<td><p><strong>1.7 Does it work in my IDE?</strong></p></td>
 <td><p>Yes. Extensions are available for VS Code and JetBrains IDEs
 (IntelliJ, PyCharm, etc.). Same features, embedded in the editor instead
 of a separate terminal.</p>
@@ -5193,9 +5290,9 @@ Reference: <strong><a href="https://code.claude.com/docs/en/vs-code">VS
 Code</a></strong> · <strong><a
 href="https://code.claude.com/docs/en/jetbrains">JetBrains</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>1.8 How is this different from Copilot/Cursor
-autocomplete?</strong></td>
+<tr>
+<td><p><strong>1.8 How is this different from Copilot/Cursor
+autocomplete?</strong></p></td>
 <td><p>Autocomplete suggests the next few lines. Claude Code is an
 agent: give it a task (“fix the failing tests”) and it reads files, runs
 commands, and makes multi-file edits until done. Less “finish my
@@ -5204,8 +5301,8 @@ sentence,” more “here’s a problem, go work it.”</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/overview">Overview</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>1.9 What should I try first?</strong></td>
+<tr>
+<td><p><strong>1.9 What should I try first?</strong></p></td>
 <td><p>Point it at a tedious-but-not-hard bug you’ve been putting off.
 Example: <em>“the test in [file] is flaky, figure out why.”</em> Let it
 read the code instead of you explaining the code.</p>
@@ -5214,8 +5311,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/common-workflows">Common use
 cases</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>1.10 How do I update it?</strong></td>
+<tr>
+<td><p><strong>1.10 How do I update it?</strong></p></td>
 <td><p>Native installs auto-update in the background. To force one now,
 run <code>claude update</code>.<br />
 Homebrew/WinGet don’t auto-update: run
@@ -5236,13 +5333,13 @@ updates</a></strong></p></td>
 <col style="width: 81%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Question</strong></td>
-<td><strong>Answer</strong></td>
+<tr>
+<td><p><strong>Question</strong></p></td>
+<td><p><strong>Answer</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>2.1 It keeps asking permission for the same
-commands</strong></td>
+<tr>
+<td><p><strong>2.1 It keeps asking permission for the same
+commands</strong></p></td>
 <td><p>Approvals last for the current session by default. To make them
 persist:<br />
 • Pick “always allow” at the prompt<br />
@@ -5253,8 +5350,8 @@ persist:<br />
 Reference: <strong><a
 href="https://code.claude.com/docs/en/permissions">Permissions</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>2.2 Permission modes and how to switch</strong></td>
+<tr>
+<td><p><strong>2.2 Permission modes and how to switch</strong></p></td>
 <td><p>Press <strong>Shift+Tab</strong> to cycle modes:</p>
 <ul>
 <li><p><strong>auto</strong> · auto-approves with a background safety
@@ -5272,8 +5369,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/permission-modes">Permission
 modes</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>2.3 What is /init and when do I run it?</strong></td>
+<tr>
+<td><p><strong>2.3 What is /init and when do I run it?</strong></p></td>
 <td><p>Run it once, early, in any repo you’ll work in more than once. It
 scans the project and writes <code>CLAUDE.md</code> with build commands,
 architecture, and conventions. Every future session loads it
@@ -5283,8 +5380,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/memory">Memory and
 CLAUDE.md</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>2.4 What goes in CLAUDE.md?</strong></td>
+<tr>
+<td><p><strong>2.4 What goes in CLAUDE.md?</strong></p></td>
 <td><p>Things tooling can’t enforce that a new teammate would get wrong
 on day one: “deploy from <code>release</code>, not <code>main</code>”,
 “all IDs are strings”, “never call the DB directly from a route
@@ -5294,8 +5391,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/memory">Memory and
 CLAUDE.md</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>2.5 Claude isn’t following my CLAUDE.md</strong></td>
+<tr>
+<td><p><strong>2.5 Claude isn’t following my CLAUDE.md</strong></p></td>
 <td><p>• Too long or too vague: trim to the rules that actually
 matter<br />
 • Buried in prose: put hard rules near the top, use imperative language
@@ -5305,9 +5402,9 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/best-practices">Best
 practices</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>2.6 Point it at a specific file without pasting
-it</strong></td>
+<tr>
+<td><p><strong>2.6 Point it at a specific file without pasting
+it</strong></p></td>
 <td><p>Type <code>@</code> then the path (tab-completes). The mentioned
 file is read before Claude responds.</p>
 <p><br />
@@ -5315,8 +5412,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/common-workflows">Common
 workflows</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>2.7 Paste a screenshot into the prompt</strong></td>
+<tr>
+<td><p><strong>2.7 Paste a screenshot into the prompt</strong></p></td>
 <td><p>Drag the image into the terminal, or press
 <strong>Ctrl+V</strong>. On Mac that’s Ctrl, not Cmd (Cmd+V pastes
 text). Works for error dialogs, UI mockups, whiteboard photos.</p>
@@ -5325,13 +5422,14 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/common-workflows#work-with-images">Working
 with images</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>2.8 Copy Claude’s response out of the terminal</strong></td>
-<td><code>/copy</code> puts the last response on your clipboard.
-<code>/export</code> writes the whole conversation to a file.</td>
+<tr>
+<td><p><strong>2.8 Copy Claude’s response out of the
+terminal</strong></p></td>
+<td><p><code>/copy</code> puts the last response on your clipboard.
+<code>/export</code> writes the whole conversation to a file.</p></td>
 </tr>
-<tr class="even">
-<td><strong>2.9 Get a previous session back</strong></td>
+<tr>
+<td><p><strong>2.9 Get a previous session back</strong></p></td>
 <td><p><code>claude --continue</code> resumes the most recent one.
 <code>claude --resume</code> opens a list to pick from. Sessions are
 stored locally per project directory.</p>
@@ -5340,8 +5438,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/common-workflows#resume-previous-conversations">Common
 workflows: resume</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>2.10 Switch models</strong></td>
+<tr>
+<td><p><strong>2.10 Switch models</strong></p></td>
 <td><p><code>/model</code> opens the picker. Set a default in
 <code>.claude/settings.json</code> if you want the same model every
 session.</p>
@@ -5350,8 +5448,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/model-config">Model
 configuration</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>2.11 Extended thinking</strong></td>
+<tr>
+<td><p><strong>2.11 Extended thinking</strong></p></td>
 <td><p>On by default. The reasoning itself is hidden in the normal view;
 press <strong>Ctrl+O</strong> to switch to the verbose transcript if you
 want to read it. Use <code>/effort</code> to dial depth up or down.
@@ -5361,10 +5459,11 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/common-workflows#use-extended-thinking-thinking-mode">Extended
 thinking</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>2.12 Stop it mid-task</strong></td>
-<td>Press <strong>Ctrl+C</strong> to cancel the current generation, then
-tell it what to do instead. No need to start the conversation over.</td>
+<tr>
+<td><p><strong>2.12 Stop it mid-task</strong></p></td>
+<td><p>Press <strong>Ctrl+C</strong> to cancel the current generation,
+then tell it what to do instead. No need to start the conversation
+over.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5376,12 +5475,12 @@ tell it what to do instead. No need to start the conversation over.</td>
 <col style="width: 86%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Question</strong></td>
-<td><strong>Answer</strong></td>
+<tr>
+<td><p><strong>Question</strong></p></td>
+<td><p><strong>Answer</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>3.1 What is MCP?</strong></td>
+<tr>
+<td><p><strong>3.1 What is MCP?</strong></p></td>
 <td><p>MCP connects Claude Code to your external tools: GitHub, Linear,
 Slack, your database, your observability stack. One
 <code>.mcp.json</code> config and Claude can read your issues, query
@@ -5391,8 +5490,8 @@ issue tracker.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/mcp">MCP</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>3.2 Wire up your first MCP server</strong></td>
+<tr>
+<td><p><strong>3.2 Wire up your first MCP server</strong></p></td>
 <td><p>• Add a <code>.mcp.json</code> at the project root, or use
 <code>claude mcp add</code><br />
 • Each entry names a server package plus any env vars (usually an auth
@@ -5403,8 +5502,8 @@ connected</p>
 Reference: <strong><a href="https://code.claude.com/docs/en/mcp">MCP
 setup</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>3.3 What are hooks for?</strong></td>
+<tr>
+<td><p><strong>3.3 What are hooks for?</strong></p></td>
 <td><p>Shell scripts that fire on events (before a tool runs, after a
 file edit, when Claude is waiting on you). Common first hook: a
 <strong>Notification</strong> hook that pings your desktop when Claude
@@ -5415,8 +5514,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/hooks-guide">Hooks
 guide</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>3.4 Make a reusable prompt / skill</strong></td>
+<tr>
+<td><p><strong>3.4 Make a reusable prompt / skill</strong></p></td>
 <td><p>Create <code>.claude/skills/ship/SKILL.md</code> and the folder
 name becomes the command: <code>/ship</code>. Plain English, no special
 syntax. Easiest path: ask Claude to write it for you. (The legacy
@@ -5425,8 +5524,8 @@ syntax. Easiest path: ask Claude to write it for you. (The legacy
 Reference: <strong><a
 href="https://code.claude.com/docs/en/skills">Skills</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>3.5 Skills vs. legacy commands</strong></td>
+<tr>
+<td><p><strong>3.5 Skills vs. legacy commands</strong></p></td>
 <td><p>Same mechanism; commands have been merged into skills.
 <code>.claude/commands/foo.md</code> and
 <code>.claude/skills/foo/SKILL.md</code> both create <code>/foo</code>.
@@ -5436,8 +5535,8 @@ The skill form is preferred and gives you a folder for supporting files
 Reference: <strong><a
 href="https://code.claude.com/docs/en/skills">Skills</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>3.6 What are subagents good for?</strong></td>
+<tr>
+<td><p><strong>3.6 What are subagents good for?</strong></p></td>
 <td><p>Parallel work: search different parts of the codebase, review a
 diff along separate dimensions, or generate competing implementations at
 the same time. The main session aggregates the results.</p>
@@ -5445,8 +5544,9 @@ the same time. The main session aggregates the results.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/sub-agents">Subagents</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>3.7 Run non-interactively (CI / scripts)</strong></td>
+<tr>
+<td><p><strong>3.7 Run non-interactively (CI /
+scripts)</strong></p></td>
 <td><p><code>claude -p "your prompt"</code> runs once and prints the
 result. Good for CI hooks, pre-commit checks, or piping into other
 tools. Auth via your logged-in session or
@@ -5456,8 +5556,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/common-workflows">Unix-style
 usage</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>3.8 Undo what it did</strong></td>
+<tr>
+<td><p><strong>3.8 Undo what it did</strong></p></td>
 <td><p><code>/rewind</code> rolls back to an earlier checkpoint.
 Checkpoints are taken automatically at every prompt you send. For
 anything already committed, use a normal <code>git revert</code>.</p>
@@ -5465,8 +5565,8 @@ anything already committed, use a normal <code>git revert</code>.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/checkpointing">Checkpointing</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>3.9 Share your setup with the team</strong></td>
+<tr>
+<td><p><strong>3.9 Share your setup with the team</strong></p></td>
 <td><p>Check <code>.claude/</code> into the repo (CLAUDE.md, commands,
 MCP config). Anyone who clones the repo gets the same setup
 automatically. Skills can also be packaged as a <strong>plugin</strong>
@@ -5485,12 +5585,13 @@ href="https://code.claude.com/docs/en/plugins">Plugins</a></strong></p></td>
 <col style="width: 81%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Question</strong></td>
-<td><strong>Answer</strong></td>
+<tr>
+<td><p><strong>Question</strong></p></td>
+<td><p><strong>Answer</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>4.1 Can’t find files / search returns nothing</strong></td>
+<tr>
+<td><p><strong>4.1 Can’t find files / search returns
+nothing</strong></p></td>
 <td><p>Claude Code ships with a bundled copy of ripgrep, so you do not
 need to install it. The bundled binary can fail on Alpine/musl systems;
 in that case install a system copy (<code>apk add ripgrep</code>) and
@@ -5500,16 +5601,16 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/troubleshooting#search-and-discovery-issues">Troubleshooting:
 search</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>4.2 Copy/paste and scroll broken over SSH or in
-tmux</strong></td>
-<td>The terminal UI captures mouse events. Hold Shift while selecting to
-bypass it, or configure tmux to pass mouse events through.
+<tr>
+<td><p><strong>4.2 Copy/paste and scroll broken over SSH or in
+tmux</strong></p></td>
+<td><p>The terminal UI captures mouse events. Hold Shift while selecting
+to bypass it, or configure tmux to pass mouse events through.
 <code>/copy</code> and <code>/export</code> sidestep the issue
-entirely.</td>
+entirely.</p></td>
 </tr>
-<tr class="even">
-<td><strong>4.3 Slow on WSL</strong></td>
+<tr>
+<td><p><strong>4.3 Slow on WSL</strong></p></td>
 <td><p>Reading Windows files through <code>/mnt/c/</code> is a known
 penalty. Move the repo into the WSL filesystem (<code>~/</code> instead
 of <code>/mnt/c/...</code>). The speed difference is dramatic.</p>
@@ -5518,13 +5619,14 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/troubleshooting">Troubleshooting:
 WSL</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>4.4 Image paste isn’t working on Mac</strong></td>
-<td>Use <strong>Ctrl+V</strong>, not Cmd+V. Cmd+V pastes text; Ctrl+V is
-the image-from-clipboard path.</td>
+<tr>
+<td><p><strong>4.4 Image paste isn’t working on Mac</strong></p></td>
+<td><p>Use <strong>Ctrl+V</strong>, not Cmd+V. Cmd+V pastes text; Ctrl+V
+is the image-from-clipboard path.</p></td>
 </tr>
-<tr class="even">
-<td><strong>4.5 Wildcard permission rule doesn’t match</strong></td>
+<tr>
+<td><p><strong>4.5 Wildcard permission rule doesn’t
+match</strong></p></td>
 <td><p>Build rules incrementally: approve commands interactively first,
 check what got written to settings, then generalize.</p>
 <p><br />
@@ -5532,9 +5634,9 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/permissions">Permissions
 patterns</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>4.6 Non-interactive -p mode behaves
-differently</strong></td>
+<tr>
+<td><p><strong>4.6 Non-interactive -p mode behaves
+differently</strong></p></td>
 <td><ul>
 <li><p>MCP servers that need OAuth can’t prompt in non-interactive
 mode</p></li>
@@ -5543,8 +5645,8 @@ mode</p></li>
 <p>For non-interactive/CI runs, prefer API-key auth and MCP servers
 configured with env-var tokens.</p></td>
 </tr>
-<tr class="even">
-<td><strong>4.7 Ran out of context mid-task</strong></td>
+<tr>
+<td><p><strong>4.7 Ran out of context mid-task</strong></p></td>
 <td><p><code>/compact</code> summarizes earlier conversation to free up
 space. <code>/clear</code> starts fresh while keeping
 <code>CLAUDE.md</code> and settings loaded. For long tasks, break into
@@ -5564,12 +5666,12 @@ context</a></strong></p></td>
 <col style="width: 77%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Question</strong></td>
-<td><strong>Answer</strong></td>
+<tr>
+<td><p><strong>Question</strong></p></td>
+<td><p><strong>Answer</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>5.1 Does Anthropic train on my code?</strong></td>
+<tr>
+<td><p><strong>5.1 Does Anthropic train on my code?</strong></p></td>
 <td><p>No. Under your organization’s Team/Enterprise terms, your code
 and conversations are not used to train models.</p>
 <p><br />
@@ -5577,8 +5679,8 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/data-usage">Data
 usage</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>5.2 Where does my code actually go?</strong></td>
+<tr>
+<td><p><strong>5.2 Where does my code actually go?</strong></p></td>
 <td><p>Claude Code runs on your machine. Source files are read locally,
 and only the portions needed for the current task are sent to the API to
 generate a response. Nothing is indexed, uploaded as a whole repo, or
@@ -5588,8 +5690,9 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/data-usage">Data
 usage</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>5.3 Can anyone else see my conversations?</strong></td>
+<tr>
+<td><p><strong>5.3 Can anyone else see my
+conversations?</strong></p></td>
 <td><p>No. Sessions are stored locally on your machine, per project
 directory, and are not shared with teammates or visible in any
 dashboard. Use <code>/export</code> if you <em>want</em> to share a
@@ -5599,9 +5702,9 @@ Reference: <strong><a
 href="https://code.claude.com/docs/en/data-usage">Data
 usage</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td><strong>5.4 How do I keep secrets and .env files out of the
-conversation?</strong></td>
+<tr>
+<td><p><strong>5.4 How do I keep secrets and .env files out of the
+conversation?</strong></p></td>
 <td><p>Claude only reads files it needs for the task; it doesn’t scan
 your whole repo. To hard-block specific files, add a Read deny rule in
 <code>.claude/settings.json</code> (e.g. <code>"Read(.env*)"</code>).
@@ -5610,9 +5713,9 @@ Denied files can’t be read even if you accidentally ask for them.</p>
 Reference: <strong><a
 href="https://code.claude.com/docs/en/permissions">Permissions</a></strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>5.5 What can “acceptEdits” mode do without asking
-me?</strong></td>
+<tr>
+<td><p><strong>5.5 What can “acceptEdits” mode do without asking
+me?</strong></p></td>
 <td><p>File edits go through without a prompt. It still asks before
 running shell commands, making network calls, or touching anything
 outside your working directory. For tighter control, stay in default
@@ -5631,24 +5734,24 @@ href="https://code.claude.com/docs/en/permissions">Permissions</a></strong></p><
 <col style="width: 55%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Resource</strong></td>
 <td><strong>What it’s for</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/help</code></td>
 <td>Built-in command listing what’s available in your session</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/feedback</code></td>
 <td>File an issue from the terminal (alias for <code>/bug</code>)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><a href="https://code.claude.com/docs">Full
 docs</a></strong></td>
 <td>Everything here, in detail</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Your team’s <code>#claude-code</code> channel</td>
 <td>Small wins and weird errors both belong there</td>
 </tr>
@@ -5662,37 +5765,37 @@ docs</a></strong></td>
 <col style="width: 72%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Page</strong></td>
 <td><strong>Link</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Quickstart</td>
 <td><strong><a href="https://code.claude.com/docs/en/quickstart">Claude
 quickstart page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Troubleshooting</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/troubleshooting">Claude
 troubleshooting page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Permissions</td>
 <td><strong><a href="https://code.claude.com/docs/en/permissions">Claude
 permissions page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Memory and CLAUDE.md</td>
 <td><strong><a href="https://code.claude.com/docs/en/memory">Claude
 memory page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>MCP</td>
 <td><strong><a href="https://code.claude.com/docs/en/mcp">Claude mcp
 page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Data usage</td>
 <td><strong><a href="https://code.claude.com/docs/en/data-usage">Claude
 data usage page</a></strong> |</td>
@@ -5715,7 +5818,7 @@ maintaining production code.</p>
 development lifecycle. The remainder of this article walks through the
 ten tasks developers most frequently use it for, with a sample prompt
 and expected result for each.</p>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 15%" />
@@ -5724,28 +5827,28 @@ and expected result for each.</p>
 <col style="width: 23%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>1. Discover</strong></td>
 <td><strong>2. Design</strong></td>
 <td><strong>3. Build</strong></td>
 <td><strong>4. Deploy</strong></td>
 <td><strong>5. Support and scale</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Explore codebase and history</td>
 <td>Plan project</td>
 <td>Implement code</td>
 <td>Automate CI/CD</td>
 <td>Debug errors</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Search documentation</td>
 <td>Develop tech specs</td>
 <td>Write and execute tests</td>
 <td>Configure environments</td>
 <td>Large-scale refactor</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Onboard and learn</td>
 <td>Define architecture</td>
 <td>Create commits and PRs</td>
@@ -5903,58 +6006,58 @@ href="https://code.claude.com/docs/en/skills">Skills</a></strong></p>
 <col style="width: 54%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>#</strong></td>
 <td><strong>Use case</strong></td>
 <td><strong>Sample prompt</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>1</td>
 <td>Fix a failing test</td>
 <td><code>the tests in [file] are failing — figure out why and fix them</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>2</td>
 <td>Understand unfamiliar code</td>
 <td><code>walk me through how [module] works</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>3</td>
 <td>Find where something happens</td>
 <td><code>where do we [action] in this codebase?</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>4</td>
 <td>Triage an error</td>
 <td>Paste the stack trace, then ask: <code>what’s going on?</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>5</td>
 <td>Refactor with a plan</td>
 <td>Shift+Tab → plan mode → describe the refactor</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>6</td>
 <td>Write tests</td>
 <td><code>add tests for @[file] — match the style in [dir]</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>7</td>
 <td>Review a PR</td>
 <td><code>/pr [URL]</code> then ask your question</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>8</td>
 <td>Onboard to a repo</td>
 <td><code>/init</code> then “give me a tour”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>9</td>
 <td>Work an issue end to end</td>
 <td><code>what’s my top-priority issue?</code> →
 <code>go ahead and fix it</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>10</td>
 <td>Create a skill</td>
 <td><code>make me a /[name] skill that [steps]</code></td>
@@ -5968,42 +6071,42 @@ href="https://code.claude.com/docs/en/skills">Skills</a></strong></p>
 <col style="width: 73%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Resource</strong></td>
 <td><strong>Link</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Quickstart</td>
 <td><strong><a href="https://code.claude.com/docs/en/quickstart">Claude
 quickstart page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Common workflows</td>
 <td><strong><a
 href="https://code.claude.com/docs/en/common-workflows">Claude common
 workflows page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Permissions</td>
 <td><strong><a href="https://code.claude.com/docs/en/permissions">Claude
 permissions page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Memory and <code>CLAUDE.md</code></td>
 <td><strong><a href="https://code.claude.com/docs/en/memory">Claude
 memory page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>MCP connectors</td>
 <td><strong><a href="https://code.claude.com/docs/en/mcp">Claude mcp
 page</a></strong> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Skills</td>
 <td><strong><a href="https://code.claude.com/docs/en/skills">Claude
 skills page</a></strong> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Built-in commands</td>
 <td><strong><a href="https://code.claude.com/docs/en/commands">Claude
 commands page</a></strong> |</td>
@@ -6036,31 +6139,31 @@ the file exists, Claude has already read it.</p>
 <h5 id="a14553240-h-227ec4816a">Where it lives</h5>
 <p>Claude looks in a few places and merges what it finds, from broad to
 specific:</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 11%" />
 <col style="width: 47%" />
 <col style="width: 40%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Location</strong></td>
 <td><strong>Scope</strong></td>
 <td><strong>Good for</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>~/.claude/CLAUDE.md</code></td>
 <td>Every project on your machine</td>
 <td>Personal preferences (for example, “I use pnpm, not npm” or “always
 suggest tests”).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>&lt;repo-root&gt;/CLAUDE.md</code></td>
 <td>This project</td>
 <td>Architecture, conventions, and commands. <strong>This is the main
 one.</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>&lt;subdir&gt;/CLAUDE.md</code></td>
 <td>That subdirectory (loaded on demand when Claude reads files in that
 directory, not at session start)</td>
@@ -6201,27 +6304,27 @@ everything else and adjust only that point.</p>
 <col style="width: 57%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Want to…</strong></td>
 <td><strong>Do this</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Generate a starting <code>CLAUDE.md</code></td>
 <td><code>/init</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>See what memory Claude is using</td>
 <td><code>/memory</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Add a rule mid-session</td>
 <td>Open <code>/memory</code>, or ask Claude to “remember” the rule</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Start fresh but keep project memory</td>
 <td><code>/clear</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Reference a specific file in a prompt</td>
 <td><code>@path/to/file</code></td>
 </tr>
@@ -6243,18 +6346,18 @@ about Claude Code behaves the same way regardless.</p>
 <col style="width: 28%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>You signed in with…</strong></td>
 <td><strong>You get</strong></td>
 <td><strong>What “running out” looks like</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Enterprise seat (via <code>/login</code>)</td>
 <td>A pool of usage included in your organization’s plan, reset on a
 rolling window.</td>
 <td>A “limit reached, resets at <em>time</em>” message.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>API key (Console, Bedrock, Vertex, or Microsoft Foundry)</td>
 <td>Pay-as-you-go, billed per token to that cloud or Console
 account.</td>
@@ -6423,27 +6526,27 @@ usage limit): run <code>/compact</code> to keep going, or
 <col style="width: 62%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Command</strong></td>
 <td><strong>What it does</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/model</code></td>
 <td>See and switch available models.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/cost</code></td>
 <td>Show this session’s token and dollar usage (API billing).</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/clear</code></td>
 <td>Start a fresh conversation (project memory stays).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>/compact</code></td>
 <td>Summarize history to free up context.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>/context</code></td>
 <td>Inspect what is currently loaded into context.</td>
 </tr>
@@ -6552,25 +6655,25 @@ terminal.</p>
 <col style="width: 67%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Your setup</strong></td>
 <td><strong>Command</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>macOS / Linux / WSL</td>
 <td>`curl -fsSL <a href="https://claude.ai/install.sh">Claude install.sh
 page</a> |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Windows (PowerShell)</td>
 <td>`irm <a href="https://claude.ai/install.ps1">Claude install.ps1
 page</a> |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Homebrew</td>
 <td><code>brew install --cask claude-code</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>npm (Node 18+)</td>
 <td><code>npm install -g @anthropic-ai/claude-code</code></td>
 </tr>
@@ -6590,27 +6693,27 @@ access. Pick one of the following:</p>
 <col style="width: 78%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>If your organization uses…</strong></td>
 <td><strong>Do this</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Enterprise seats</td>
 <td>Run <code>claude</code>, then <code>/login</code> and approve the
 request in your browser (including SSO if prompted). This is the most
 common path.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>An Anthropic Console API key</td>
 <td>Run <code>export ANTHROPIC_API_KEY=sk-ant-…</code>, then run
 <code>claude</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Amazon Bedrock</td>
 <td>Run <code>export CLAUDE_CODE_USE_BEDROCK=1</code>, configure your
 AWS credentials, then run <code>claude</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Google Vertex AI</td>
 <td>Run <code>export CLAUDE_CODE_USE_VERTEX=1</code>, configure your GCP
 credentials, then run <code>claude</code>.</td>
@@ -7500,7 +7603,7 @@ mode at any time from the mode selector in the chat box.</p>
 <p><strong>Note:</strong> If you have the new Claude experience, the
 permission setting in the message box offers <strong>Auto</strong> and
 <strong>Manual</strong> (default).</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 12%" />
 <col style="width: 29%" />
@@ -7508,30 +7611,32 @@ permission setting in the message box offers <strong>Auto</strong> and
 <col style="width: 26%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td></td>
-<td><strong>Connector tool permission: “Always allow”</strong></td>
-<td><strong>Connector tool permission: “Needs approval”</strong></td>
-<td><strong>Connector tool permission: “Blocked”</strong></td>
+<td><p><strong>Connector tool permission: “Always
+allow”</strong></p></td>
+<td><p><strong>Connector tool permission: “Needs
+approval”</strong></p></td>
+<td><p><strong>Connector tool permission: “Blocked”</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>“Manual” mode</strong></td>
-<td>Approved</td>
-<td>Asks for permission</td>
-<td>Denied</td>
+<tr>
+<td><p><strong>“Manual” mode</strong></p></td>
+<td><p>Approved</p></td>
+<td><p>Asks for permission</p></td>
+<td><p>Denied</p></td>
 </tr>
-<tr class="odd">
-<td><strong>“Auto” mode</strong></td>
+<tr>
+<td><p><strong>“Auto” mode</strong></p></td>
 <td><p>Read-only tools are approved</p>
 <p>For write/delete tools, Claude decides</p></td>
-<td>Claude decides</td>
-<td>Denied</td>
+<td><p>Claude decides</p></td>
+<td><p>Denied</p></td>
 </tr>
-<tr class="even">
-<td><strong>“Skip” mode</strong></td>
-<td>Approved</td>
-<td>Approved</td>
-<td>Denied</td>
+<tr>
+<td><p><strong>“Skip” mode</strong></p></td>
+<td><p>Approved</p></td>
+<td><p>Approved</p></td>
+<td><p>Denied</p></td>
 </tr>
 </tbody>
 </table>
@@ -8517,7 +8622,7 @@ or, if enabled, anyone with the link.</p>
 available for docs, or for artifacts that use connected apps or ask
 Claude questions). On Enterprise plans, an Owner or Primary Owner needs
 to toggle on <strong>External sharing</strong> in <strong>Organization
-settings &gt; Artifacts</strong> in order to select “Anyone with the
+settings &gt; Artifacts</strong> in order to select”Anyone with the
 link.”</p></li>
 <li><p>Pro and Max plans can select: “Only you” or “Anyone with the
 link.”</p></li>
@@ -8960,79 +9065,79 @@ yet. Here’s what you can use on each surface today:</p>
 <col style="width: 16%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Feature</strong></td>
 <td><strong>Desktop</strong></td>
 <td><strong>Web</strong></td>
 <td><strong>Mobile</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Start, steer, and review tasks</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Resume a session started on another surface</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Connectors</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Skills and plugins</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Preview files Claude creates</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Scheduled tasks</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Projects</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Live artifacts (created before August 19, 2026)</td>
 <td>✅</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Artifacts (created August 19, 2026 or later)</td>
 <td>✅</td>
 <td>✅</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Local file access</td>
 <td>✅</td>
 <td>✅*</td>
 <td>✅*</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Browser use</td>
 <td>✅</td>
 <td>✅*</td>
 <td>✅*</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Computer use</td>
 <td>✅</td>
 <td>✅*</td>
@@ -9836,7 +9941,7 @@ Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;is
 ```</code></pre>
 <hr />
 <h4 id="a12622667-h-003283c7cb">Enterprise policy options</h4>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 4%" />
@@ -9844,26 +9949,26 @@ Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;is
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Key</strong></td>
 <td><strong>Type</strong></td>
 <td><strong>Default</strong></td>
 <td><strong>Description</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>allowedWorkspaceFolders</code></td>
 <td>string[] (JSON)</td>
 <td>Unrestricted</td>
 <td>Filepath or filepaths the user can mount to Cowork</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>autoUpdaterEnforcementHours</code></td>
 <td>Integer (1-72)</td>
 <td>72</td>
 <td>Hours before forcefully restarting Claude to apply a prepared
 update</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>disableAutoUpdates</code></td>
 <td>Boolean</td>
 <td>false</td>
@@ -9873,7 +9978,7 @@ one-time provisioned install. See <strong><a
 href="#deploy-claude-desktop-for-windows">Deploy Claude Desktop for
 Windows</a></strong>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>effortLevel</code></td>
 <td>string</td>
 <td>null</td>
@@ -9885,7 +9990,7 @@ someone changed the effort level from the picker in an earlier session.
 Requires Claude Desktop version 1.25927.0 or later. Doesn’t apply to
 Cowork sessions in Claude Desktop.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>forceLoginOrgUUID</code></td>
 <td>string / array</td>
 <td>null</td>
@@ -9895,31 +10000,31 @@ an array of UUIDs where any listed organization is accepted without
 pre-selection. Login fails if the authenticated account does not belong
 to a listed organization.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>isClaudeCodeForDesktopEnabled</code></td>
 <td>Boolean</td>
 <td>true</td>
 <td>Enable Claude code access in desktop</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>isDesktopExtensionEnabled</code></td>
 <td>Boolean</td>
 <td>true</td>
 <td>Enable/disable extensions</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>isDesktopExtensionDirectoryEnabled</code></td>
 <td>Boolean</td>
 <td>true</td>
 <td>Enable extension directory access</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>isLocalDevMcpEnabled</code></td>
 <td>Boolean</td>
 <td>true</td>
 <td>Enable local MCP servers</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>secureVmFeaturesEnabled</code></td>
 <td>Boolean</td>
 <td>true</td>
@@ -9946,7 +10051,7 @@ you can do depends on your plan:</p>
 <col style="width: 20%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Feature</strong></td>
 <td><strong>Free</strong></td>
 <td><strong>Pro</strong></td>
@@ -9954,7 +10059,7 @@ you can do depends on your plan:</p>
 <td><strong>Team</strong></td>
 <td><strong>Enterprise</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Chat</td>
 <td>✅</td>
 <td>✅</td>
@@ -9962,7 +10067,7 @@ you can do depends on your plan:</p>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Code</td>
 <td></td>
 <td>✅</td>
@@ -9970,7 +10075,7 @@ you can do depends on your plan:</p>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Cowork</td>
 <td></td>
 <td>✅</td>
@@ -10158,19 +10263,19 @@ claude://claude.ai/new?q=Summarize%20this%20week%27s%20release%20notes</code></p
 <p>Opens a new chat in Claude Desktop. If you include <code>q</code>,
 the prompt field is prefilled with that text so you can review and send
 it.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 27%" />
 <col style="width: 44%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Parameter</strong></td>
 <td><strong>Required</strong></td>
 <td><strong>Description</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>q</code></td>
 <td>No</td>
 <td>Text to prefill in the prompt field.</td>
@@ -10191,32 +10296,32 @@ instead.</p>
 claude://code/new?q=Fix%20the%20failing%20test&amp;folder=%2FUsers%2Fme%2Frepo</code></pre>
 <p>Opens Claude Code in Claude Desktop with the composer prefilled. Use
 this for “Open in Claude Code” buttons in your own tools.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 11%" />
 <col style="width: 11%" />
 <col style="width: 76%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Parameter</strong></td>
 <td><strong>Required</strong></td>
 <td><strong>Description</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>q</code></td>
 <td>No</td>
 <td>Text to prefill in the composer. prompt is accepted as an
 alias.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>folder</code></td>
 <td>No</td>
 <td>Absolute path to use as the working directory. Claude Desktop asks
 you to confirm the folder before it’s used. Only the first folder value
 is applied today.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>file</code></td>
 <td>No</td>
 <td>Absolute path to a file to attach. Accepted but not currently
@@ -10242,24 +10347,24 @@ claude://cowork/new?q=Draft%20the%20Q2%20update&amp;folder=%2FUsers%2Fme%2Fdocs&
 <col style="width: 75%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Parameter</strong></td>
 <td><strong>Required</strong></td>
 <td><strong>Description</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>q</code></td>
 <td>No</td>
 <td>Text to prefill in the composer.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>folder</code></td>
 <td>No</td>
 <td>Absolute path to a folder to attach. Repeat the parameter to attach
 more than one. Claude Desktop asks you to confirm each folder before
 it’s used.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>file</code></td>
 <td>No</td>
 <td>Absolute path to a file to attach. Repeat the parameter to attach
@@ -11912,85 +12017,85 @@ install and use the extension:</p>
 <col style="width: 81%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Permission</strong></td>
 <td><strong>Why Claude needs this</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>sidePanel</td>
 <td>This lets Claude appear as a panel on the side of your browser, so
 you can chat with Claude while browsing any website.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>storage</td>
 <td>This lets Claude save your preferences so they’re still there when
 you close and reopen your browser.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>scripting</td>
 <td>This lets Claude read text on webpages so it can help you with
 tasks.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>debugger</td>
 <td>This is what allows Claude to actually control your browser –
 clicking buttons, typing text, and taking screenshots – when you ask it
 to complete tasks for you.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>tabGroups</td>
 <td>This lets Claude organize tabs it opens into a separate group with a
 different color, so you can easily tell which tabs Claude is using
 versus your personal browsing.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>tabs</td>
 <td>This lets Claude open, close, and switch between browser tabs when
 completing tasks for you.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>alarms</td>
 <td>This lets Claude run scheduled tasks at specific times you choose –
 like checking something on a website at a set time every day.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>notifications</td>
 <td>This lets Claude send you a notification on your computer when it
 finishes a task or needs you to take action.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>system.display</td>
 <td>This lets Claude know the size of your screen so it can accurately
 click in the right places when automating tasks.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>webNavigation</td>
 <td>This lets Claude intervene if it detects that you are on a high-risk
 website.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>declarativeNetRequestWithHostAccess</td>
 <td>This lets the extension identify itself to Anthropic’s servers,
 helping us understand how the browser extension is being used and
 troubleshoot any issues.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>offscreen</td>
 <td>This lets Claude play notification sounds in the background when
 your attention is needed.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>nativeMessaging</td>
 <td>This will let the extension seamlessly integrate with other
 Anthropic products on your computer like Claude Desktop or Claude Code
 once we enable that capability.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>downloads</td>
 <td>This lets Claude download files from websites and open them when you
 ask it to save or work with files as part of an automated workflow.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>unlimitedStorage</td>
 <td>This lets Claude store more data locally (like complex instructions
 for a detailed workflow) beyond the normal limits that Chrome sets for
@@ -12354,32 +12459,32 @@ are optional.</p>
 <col style="width: 73%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Parameter</strong></td>
 <td><strong>Required</strong></td>
 <td><strong>Description</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>q</code></td>
 <td>No</td>
 <td>Text to prefill in the composer. <code>prompt</code> is accepted as
 an alias.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>mode</code></td>
 <td>No</td>
 <td>Pre-selects the session mode. Accepts <code>plan</code> or
 <code>code</code>. Ignored if the mode isn’t available on your
 plan.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>repo</code></td>
 <td>No</td>
 <td>Pre-selects a GitHub repository in <code>owner/name</code> format
 (case-insensitive). Ignored if the repo isn’t in your connected GitHub
 account.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>branch</code></td>
 <td>No</td>
 <td>Pre-selects a branch. Requires <code>repo</code>.</td>
@@ -12399,20 +12504,20 @@ the link opens in the browser.</p>
 <col style="width: 32%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>URL</strong></td>
 <td><strong>Opens</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td colspan="2"><strong><a href="https://claude.ai/code">Claude code
 page</a></strong> | New-session composer |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td colspan="2"><strong><a
 href="https://claude.ai/code/%7Bsession-id%7D">Claude code {session id}
 page</a></strong> | Existing session |</td>
 </tr>
-<tr class="even">
+<tr>
 <td colspan="2"><strong><a
 href="https://claude.ai/code/new?q=Fix%20the%20failing%20test&amp;repo=anthropics%2Fclaude-code&amp;branch=main">Claude
 code new page</a></strong> | New-session composer, prefilled with the
@@ -14695,16 +14800,16 @@ your inquiry.</p>
 <col style="width: 52%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Inquiry details</strong></td>
 <td><strong>Contact</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Regarding Tax Qualified Invoices (TQI)</td>
 <td>Our <strong><a href="#how-to-get-support">Support
 team</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Consumption tax treatment</td>
 <td>Your company’s tax officer or accountant</td>
 </tr>
@@ -16310,57 +16415,57 @@ learn more.</p>
 <col style="width: 16%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Feature</strong></td>
 <td><strong>Category</strong></td>
 <td><strong>Status</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><a
 href="https://platform.claude.com/docs/en/managed-agents/overview">Claude
 Managed Agents</a></strong></td>
 <td>API and developer</td>
 <td>Research preview</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong><a href="#claude-code-usage-analytics">Claude Code usage
 tracking</a></strong></td>
 <td>Billing and usage</td>
 <td>Beta</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><a
 href="https://code.claude.com/docs/en/desktop#use-claude-code-desktop">Claude
 Code Desktop</a></strong></td>
 <td>Claude Code</td>
 <td>Beta</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong><a href="#automated-security-reviews-in-claude-code">Claude
 Code Security Center</a></strong></td>
 <td>Claude Code</td>
 <td>Research preview</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><a href="#claude-code-on-the-web">Claude Code web
 (CCR)</a></strong></td>
 <td>Claude Code</td>
 <td>Research preview</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong><a href="#set-up-code-review-for-claude-code">Code
 review</a></strong></td>
 <td>Claude Code</td>
 <td>Research preview</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong><a
 href="https://support.claude.com/en/articles/14465370-use-claude-for-word">Claude
 for Word</a></strong></td>
 <td>Integrations</td>
 <td>Beta</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong><a href="#use-the-github-integration">GitHub
 integration</a></strong></td>
 <td>Integrations</td>
@@ -18124,21 +18229,21 @@ instead of getting an invitation.</p>
 <col style="width: 75%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Access</strong></td>
 <td><strong>What they can do</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Can view</strong></td>
 <td>Open the version of the artifact you shared and read its
 comments.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Commenter</strong></td>
 <td>Everything in <strong>Can view</strong>, plus add comments and
 download any files the artifact offers. This is the default.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Can edit</strong></td>
 <td>Everything in <strong>Commenter</strong>, plus see the latest
 version, make changes, and publish new versions.</td>
@@ -19157,31 +19262,31 @@ E.g., cache poisoning via Host header.</p>
 <p>Severity is assigned per finding based on exploitability in your
 codebase, not the category itself—so the same category can land at
 different severities in different repos.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 55%" />
 <col style="width: 33%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Severity</strong></td>
 <td><strong>Criteria</strong></td>
 <td><strong>Typical example</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>High</td>
 <td>Exploitable by an unauthenticated remote attacker against a default
 deployment, with no meaningful preconditions</td>
 <td>Unauthenticated command injection in a public API endpoint</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Medium</td>
 <td>Exploitable behind authentication, or needs 1–2 realistic
 preconditions (specific role, known identifier, user interaction)</td>
 <td>SQL injection behind auth requiring knowledge of table schema</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Low</td>
 <td>Needs 3+ preconditions, local-only access, or lacks a concrete
 demonstrated attack path</td>
@@ -21936,29 +22041,29 @@ Cowork, and third-party products that use your Claude account.</p>
 <h4 id="a14246112-h-4e73dec334">Available bundles</h4>
 <p>The discount you receive depends on the bundle size you purchase.
 Bigger bundles save you more.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 32%" />
 <col style="width: 32%" />
 <col style="width: 32%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Bundle</strong></td>
 <td><strong>Discount</strong></td>
 <td><strong>You pay</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>$50</td>
 <td>10%</td>
 <td>$45</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$250</td>
 <td>20%</td>
 <td>$200</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$1000</td>
 <td>30%</td>
 <td>$700</td>
@@ -22492,35 +22597,35 @@ to Agent SDK usage and refreshes with your billing cycle.</p>
 <col style="width: 46%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Plan</strong></td>
 <td><strong>Monthly credit</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Pro</td>
 <td>$20</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Max 5x</td>
 <td>$100</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Max 20x</td>
 <td>$200</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Team (Standard seats)</td>
 <td>$20</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Team (Premium seats)</td>
 <td>$100</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Enterprise (usage-based)</td>
 <td>$20</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Enterprise (seat-based Premium seats*)</td>
 <td>$200</td>
 </tr>
@@ -23119,27 +23224,27 @@ connector before using it.</p></li>
 <col style="width: 37%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Your situation</strong></td>
 <td><strong>Recommended mode</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Fewer than 10 connectors, all used frequently</td>
 <td>Always available</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>10–30 tools with mixed usage</td>
 <td>Auto</td>
 </tr>
-<tr class="even">
+<tr>
 <td>30+ tools or multiple connectors connected</td>
 <td>On demand or Auto</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>A specific connector needs to work every time without fail</td>
 <td>Always available</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Conversations are hitting length limits</td>
 <td>On demand</td>
 </tr>
@@ -23502,37 +23607,37 @@ Code.</p>
 <col style="width: 24%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Your tool is…</strong></td>
 <td><strong>Use</strong></td>
 <td><strong>Available on</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>A cloud/SaaS product</td>
 <td>Remote connector</td>
 <td>All surfaces</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>In the Connectors Directory</td>
 <td>Remote connector</td>
 <td>All surfaces</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Running on your machine</td>
 <td>Desktop extension</td>
 <td>Desktop, Claude Code</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>A local file or folder</td>
 <td>Desktop extension</td>
 <td>Desktop, Claude Code</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Something you built with a public URL</td>
 <td>Remote connector (add as custom)</td>
 <td>All surfaces</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Something you built that runs locally</td>
 <td>Desktop extension</td>
 <td>Desktop, Claude Code</td>
@@ -24047,38 +24152,38 @@ Admin Center. For example:</p>
 <col style="width: 30%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>To restrict</strong></td>
 <td><strong>Action</strong></td>
 <td><strong>Effect</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>All access</td>
 <td>Disable connector in Claude organization settings</td>
 <td>Complete shutdown</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>SharePoint only</td>
 <td>Revoke Sites.Read.All permission in Entra</td>
 <td>Blocks SharePoint</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Email access</td>
 <td>Revoke Mail.Read permission in Entra</td>
 <td>Blocks Outlook</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Teams chat</td>
 <td>Revoke Chat.Read permission in Entra</td>
 <td>Blocks Teams</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Teams messaging (write)</td>
 <td>Revoke ChatMessage.Send, ChannelMessage.Send, and Chat.Create in
 Entra</td>
 <td>Blocks Claude from sending Teams messages</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>OneDrive files</td>
 <td>Revoke Files.Read and/or Files.Read.All</td>
 <td>Blocks reading files from OneDrive</td>
@@ -24220,49 +24325,49 @@ organization’s tenant</p></li>
 <h4 id="a12684923-h-40c4a02265">Available capabilities</h4>
 <h5 id="a12684923-h-54946f4c25">Read and search tools</h5>
 <p>The connector provides <strong>read-only</strong> access to:</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 41%" />
 <col style="width: 26%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Tool</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>Required permission</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>sharepoint_search</code></td>
 <td>Search SharePoint documents and pages</td>
 <td>Sites.Read.All</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>sharepoint_folder_search</code></td>
 <td>Find SharePoint folders by name</td>
 <td>Sites.Read.All</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_email_search</code></td>
 <td>Search email with sender/date filters</td>
 <td>Mail.Read</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_calendar_search</code></td>
 <td>Search calendar events</td>
 <td>Calendars.Read</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>find_meeting_availability</code></td>
 <td>Find available meeting times</td>
 <td>Calendars.Read</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>chat_message_search</code></td>
 <td>Search Teams chat messages</td>
 <td>Chat.Read</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>read_resource</code></td>
 <td>Read files, emails, or chat by URI</td>
 <td>Varies by resource type</td>
@@ -24277,182 +24382,182 @@ organization’s tenant</p></li>
 <col style="width: 23%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Tool</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>Required permission</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_send_mail</code></td>
 <td>Send an email as the user</td>
 <td>Mail.Send</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_forward_mail</code></td>
 <td>Forward an existing message</td>
 <td>Mail.Send</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_send_draft</code></td>
 <td>Send an existing draft</td>
 <td>Mail.Send</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_trash_thread</code></td>
 <td>Move a conversation to Deleted Items</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_untrash_thread</code></td>
 <td>Restore a conversation from Deleted Items</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_batch_delete_messages</code></td>
 <td>Move multiple messages to Deleted Items</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_create_draft</code></td>
 <td>Create a draft email</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_create_reply_draft</code></td>
 <td>Create a reply draft on a message</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_create_reply_all_draft</code></td>
 <td>Create a reply-all draft on a message</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_update_draft</code></td>
 <td>Update an existing draft</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_delete_draft</code></td>
 <td>Move a draft to Deleted Items</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_create_label</code></td>
 <td>Create a category in the master list</td>
 <td>MailboxSettings.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_update_label</code></td>
 <td>Rename or recolor a category</td>
 <td>MailboxSettings.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_delete_label</code></td>
 <td>Remove a category from the master list</td>
 <td>MailboxSettings.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_modify_labels</code></td>
 <td>Add/remove categories on one message</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_modify_thread_labels</code></td>
 <td>Add/remove categories across a thread</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_batch_modify_labels</code></td>
 <td>Add/remove categories on multiple messages</td>
 <td>Mail.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_create_event</code></td>
 <td>Create a calendar event</td>
 <td>Calendars.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_update_event</code></td>
 <td>Update an existing event</td>
 <td>Calendars.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_delete_event</code></td>
 <td>Delete a calendar event</td>
 <td>Calendars.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_respond_to_event</code></td>
 <td>Accept, decline, or tentatively accept an invitation</td>
 <td>Calendars.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_set_vacation</code></td>
 <td>Set the automatic-reply (out-of-office) message</td>
 <td>MailboxSettings.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>outlook_create_filter</code></td>
 <td>Create an inbox rule</td>
 <td>MailboxSettings.ReadWrite</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>outlook_delete_filter</code></td>
 <td>Delete an inbox rule</td>
 <td>MailboxSettings.ReadWrite</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>sharepoint_upload_file</code></td>
 <td>Create a new file in a library or folder</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>sharepoint_update_file</code></td>
 <td>Replace an existing file’s content</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>sharepoint_create_folder</code></td>
 <td>Create a new folder</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>sharepoint_rename_item</code></td>
 <td>Rename a file or folder</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>sharepoint_move_item</code></td>
 <td>Move a file or folder</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>sharepoint_copy_item</code></td>
 <td>Copy a file or folder</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>sharepoint_delete_item</code></td>
 <td>Delete a file or folder (to recycle bin)</td>
 <td>Files.ReadWrite.All</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>teams_send_chat_message</code></td>
 <td>Send a message in an existing Teams chat</td>
 <td>ChatMessage.Send</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>teams_send_channel_message</code></td>
 <td>Post or reply in a Teams channel</td>
 <td>ChannelMessage.Send</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>teams_reply_channel_message</code></td>
 <td>Reply in a Teams channel thread</td>
 <td>ChannelMessage.Send</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>teams_create_chat</code></td>
 <td>Start a new Teams chat</td>
 <td>Chat.Create</td>
@@ -25830,90 +25935,100 @@ product surface.</p>
 <col style="width: 87%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Claude Enterprise Feature</strong></td>
-<td><strong>Availability</strong></td>
+<tr>
+<td><p><strong>Claude Enterprise Feature</strong></p></td>
+<td><p><strong>Availability</strong></p></td>
 </tr>
-<tr class="even">
-<td>Chat</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Chat</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="odd">
-<td>Projects</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Projects</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="even">
-<td>Artifacts</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Artifacts</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="odd">
-<td>File creation &amp; code execution</td>
+<tr>
+<td><p>File creation &amp; code execution</p></td>
 <td><p>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></p>
 <p>⚠️ <em>excluding network access and use of external websites</em>
 |</p></td>
 </tr>
-<tr class="even">
-<td>Voice</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Voice</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="odd">
-<td>Web Search</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Web Search</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="even">
-<td>Research</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Research</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="odd">
-<td>Skills</td>
-<td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
+<tr>
+<td><p>Skills</p></td>
+<td><p>✅ <em>Covered as Eligible Services under Anthropic
+BAA*</em></p></td>
 </tr>
-<tr class="even">
-<td>MCPs / Connectors</td>
-<td>⚠️ <em>Available to use but sending data to 3rd parties via this
+<tr>
+<td><p>MCPs / Connectors</p></td>
+<td><p>⚠️ <em>Available to use but sending data to 3rd parties via this
 feature isn’t covered under Anthropic’s BAA. Administrators who enable
 these features are responsible for ensuring their workforce uses them in
-compliance with applicable legal obligations.</em> |</td>
+compliance with applicable legal obligations.</em> |</p></td>
 </tr>
-<tr class="odd">
-<td>Enterprise Search / “Ask Your Org”</td>
-<td>⚠️ <em>Available to use but sending data to 3rd parties via this
+<tr>
+<td><p>Enterprise Search / “Ask Your Org”</p></td>
+<td><p>⚠️ <em>Available to use but sending data to 3rd parties via this
 feature isn’t covered under Anthropic’s BAA. Administrators who enable
 this feature are responsible for ensuring their workforce uses it in
-compliance with applicable legal obligations.</em> |</td>
+compliance with applicable legal obligations.</em> |</p></td>
 </tr>
-<tr class="even">
-<td>Claude in Chrome</td>
-<td>⚠️ <em>Available to use but sending data to 3rd parties via this
+<tr>
+<td><p>Claude in Chrome</p></td>
+<td><p>⚠️ <em>Available to use but sending data to 3rd parties via this
 feature isn’t covered under Anthropic’s BAA. Administrators who enable
 this feature are responsible for ensuring their workforce uses it in
-compliance with applicable legal obligations.</em> |</td>
+compliance with applicable legal obligations.</em> |</p></td>
 </tr>
-<tr class="odd">
-<td>Cowork</td>
-<td>⚠️ <em>Available to use but feature is not covered under Anthropic’s
-BAA. Administrators who enable this feature are responsible for ensuring
-their workforce uses it in compliance with applicable legal
-obligations.</em> |</td>
+<tr>
+<td><p>Cowork</p></td>
+<td><p>⚠️ <em>Available to use but feature is not covered under
+Anthropic’s BAA. Administrators who enable this feature are responsible
+for ensuring their workforce uses it in compliance with applicable legal
+obligations.</em> |</p></td>
 </tr>
-<tr class="even">
-<td>Claude for Microsoft 365</td>
-<td>⚠️ <em>Available to use but some features are in beta and not
+<tr>
+<td><p>Claude for Microsoft 365</p></td>
+<td><p>⚠️ <em>Available to use but some features are in beta and not
 covered under Anthropic’s BAA. Administrators who enable this feature
 are responsible for ensuring their workforce uses it in compliance with
-applicable legal obligations.</em> |</td>
+applicable legal obligations.</em> |</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Design [beta]</td>
-<td>❌ <em>Not available yet for HIPAA-ready organizations</em></td>
+<tr>
+<td><p>Claude Design [beta]</p></td>
+<td><p>❌ <em>Not available yet for HIPAA-ready
+organizations</em></p></td>
 </tr>
-<tr class="even">
-<td>Claude Slides [beta]</td>
-<td>❌ <em>Not available yet for HIPAA-ready organizations</em></td>
+<tr>
+<td><p>Claude Slides [beta]</p></td>
+<td><p>❌ <em>Not available yet for HIPAA-ready
+organizations</em></p></td>
 </tr>
-<tr class="odd">
-<td>Claude Docs [beta]</td>
-<td>❌ <em>Not available yet for HIPAA-ready organizations</em></td>
+<tr>
+<td><p>Claude Docs [beta]</p></td>
+<td><p>❌ <em>Not available yet for HIPAA-ready
+organizations</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -25923,11 +26038,11 @@ applicable legal obligations.</em> |</td>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Claude Code Feature</strong></td>
-<td><strong>Availability</strong></td>
+<tr>
+<td><p><strong>Claude Code Feature</strong></p></td>
+<td><p><strong>Availability</strong></p></td>
 </tr>
-<tr class="even">
+<tr>
 <td><p>Claude Code CLI</p>
 <p>(via 1P API console)</p></td>
 <td><p>✅ <em>Only covered under the BAA with ZDR enabled. If your org
@@ -25935,7 +26050,7 @@ needs ZDR for 1P API, please contact a sales representative.</em></p>
 <p>⚠️<em>Without ZDR enabled, this feature is available to use but is
 not covered under Anthropic’s BAA.</em> |</p></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><p>Claude Code CLI</p>
 <p>(via Claude Enterprise OAuth)</p></td>
 <td><p>✅ <em>Only covered under the BAA with ZDR enabled.1 ZDR is
@@ -25945,8 +26060,8 @@ options.</em></p>
 <p>⚠️<em>Without ZDR enabled, this feature is available to use but is
 not covered under Anthropic’s BAA.</em> |</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code in the desktop (local mode)</td>
+<tr>
+<td><p>Claude Code in the desktop (local mode)</p></td>
 <td><p>✅ <em>Only covered under the BAA with ZDR enabled.1 ZDR is
 available for qualified accounts only. If your org needs to use PHI with
 this feature, please contact a sales representative to evaluate
@@ -25954,41 +26069,41 @@ options.</em></p>
 <p>⚠️<em>Without ZDR enabled, this feature is available to use but is
 not covered under Anthropic’s BAA.</em> |</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code in the desktop (remote mode)</td>
-<td>⚠️ <em>Available to use without ZDR, but this feature is not covered
-under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
-|</td>
+<tr>
+<td><p>Claude Code in the desktop (remote mode)</p></td>
+<td><p>⚠️ <em>Available to use without ZDR, but this feature is not
+covered under Anthropic’s BAA. This feature is incompatible with
+ZDR.</em> |</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code in the web [beta]</td>
-<td>⚠️ <em>Available to use without ZDR, but this feature is not covered
-under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
-|</td>
+<tr>
+<td><p>Claude Code in the web [beta]</p></td>
+<td><p>⚠️ <em>Available to use without ZDR, but this feature is not
+covered under Anthropic’s BAA. This feature is incompatible with
+ZDR.</em> |</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code Review [beta]</td>
-<td>⚠️ <em>Available to use without ZDR but this feature is not covered
-under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
-|</td>
+<tr>
+<td><p>Claude Code Review [beta]</p></td>
+<td><p>⚠️ <em>Available to use without ZDR but this feature is not
+covered under Anthropic’s BAA. This feature is incompatible with
+ZDR.</em> |</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code Security [beta]</td>
-<td>⚠️ <em>Available to use without ZDR but this feature is not covered
-under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
-|</td>
+<tr>
+<td><p>Claude Code Security [beta]</p></td>
+<td><p>⚠️ <em>Available to use without ZDR but this feature is not
+covered under Anthropic’s BAA. This feature is incompatible with
+ZDR.</em> |</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code Computer Use [beta]</td>
-<td>⚠️ <em>Available to use without ZDR but this feature is not covered
-under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
-|</td>
+<tr>
+<td><p>Claude Code Computer Use [beta]</p></td>
+<td><p>⚠️ <em>Available to use without ZDR but this feature is not
+covered under Anthropic’s BAA. This feature is incompatible with
+ZDR.</em> |</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code Remote Control [beta]</td>
-<td>⚠️ <em>Available to use without ZDR but this feature is not covered
-under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
-|</td>
+<tr>
+<td><p>Claude Code Remote Control [beta]</p></td>
+<td><p>⚠️ <em>Available to use without ZDR but this feature is not
+covered under Anthropic’s BAA. This feature is incompatible with
+ZDR.</em> |</p></td>
 </tr>
 </tbody>
 </table>
@@ -25999,61 +26114,61 @@ under Anthropic’s BAA. This feature is incompatible with ZDR.</em>
 <col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>API Feature (on a HIPAA Ready API Org)</strong></td>
 <td><strong>Availability</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Messages API</td>
 <td><em>See table below</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Token Counting API</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Models API</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Org Management API</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Compliance API</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Batch API</td>
 <td>❌ <em>Not covered under Anthropic BAA and not accessible for
 HIPAA-Ready API users</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Files API [beta]</td>
 <td>❌ <em>Not covered under Anthropic BAA and not accessible for
 HIPAA-Ready API users</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Skills API [beta]</td>
 <td>❌ <em>Not covered under Anthropic BAA and not accessible for
 HIPAA-Ready API users</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Code Execution</td>
 <td>❌ <em>Not covered under Anthropic BAA and not accessible for
 HIPAA-Ready API users</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Computer Use [beta]</td>
 <td>❌ <em>Not covered under Anthropic BAA and not accessible for
 HIPAA-Ready API users</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Web Fetch</td>
 <td>❌ <em>Not covered under Anthropic BAA and not accessible for
 HIPAA-Ready API users</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>External MCP</td>
 <td>⚠️ <em>Available to use but sending data to 3rd parties via this
 feature isn’t covered under Anthropic’s BAA. Administrators who enable
@@ -26075,31 +26190,31 @@ API features not listed below are not covered under your BAA.</p>
 <col style="width: 61%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Messages API Feature</strong></td>
 <td><strong>Availability</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Prompt Caching</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Structured Outputs</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Memory</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Web Search</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Bash tool</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Text Editor tool</td>
 <td>✅ <em>Covered as Eligible Services under Anthropic BAA*</em></td>
 </tr>
@@ -26113,154 +26228,158 @@ API features not listed below are not covered under your BAA.</p>
 <col style="width: 37%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><h5 id="a8114513-h-d31b1e91cd"><strong>CLAUDE
 ENTERPRISE</strong></h5>
 <p>(limited to features listed below)</p></td>
 <td></td>
 </tr>
-<tr class="even">
-<td><strong>Core chat features</strong></td>
-<td><strong>BAA coverage status</strong></td>
+<tr>
+<td><p><strong>Core chat features</strong></p></td>
+<td><p><strong>BAA coverage status</strong></p></td>
 </tr>
-<tr class="odd">
-<td>Chat</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Chat</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Projects</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Projects</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="odd">
-<td>Artifacts</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Artifacts</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="even">
-<td>File creation &amp; code execution</td>
-<td>✅ Eligible (excl. network / ext. sites)</td>
+<tr>
+<td><p>File creation &amp; code execution</p></td>
+<td><p>✅ Eligible (excl. network / ext. sites)</p></td>
 </tr>
-<tr class="odd">
-<td>Voice</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Voice</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Web search</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Web search</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="odd">
-<td>Research</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Research</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Skills</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Skills</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="odd">
-<td><strong>Integrations (3rd-party data flows)</strong></td>
-<td><strong>BAA coverage status</strong></td>
+<tr>
+<td><p><strong>Integrations (3rd-party data flows)</strong></p></td>
+<td><p><strong>BAA coverage status</strong></p></td>
 </tr>
-<tr class="even">
-<td>MCPs / Connectors</td>
-<td>⚠️ 3P data flows not covered by Anthropic BAA |</td>
+<tr>
+<td><p>MCPs / Connectors</p></td>
+<td><p>⚠️ 3P data flows not covered by Anthropic BAA |</p></td>
 </tr>
-<tr class="odd">
-<td>Enterprise Search (“Ask Your Org”)</td>
-<td>⚠️ 3P data flows not covered by Anthropic BAA |</td>
+<tr>
+<td><p>Enterprise Search (“Ask Your Org”)</p></td>
+<td><p>⚠️ 3P data flows not covered by Anthropic BAA |</p></td>
 </tr>
-<tr class="even">
-<td>Claude in Chrome</td>
-<td>⚠️ 3P data flows not covered by Anthropic BAA |</td>
+<tr>
+<td><p>Claude in Chrome</p></td>
+<td><p>⚠️ 3P data flows not covered by Anthropic BAA |</p></td>
 </tr>
-<tr class="odd">
-<td><strong>Claude Code</strong></td>
-<td><strong>BAA coverage status</strong></td>
+<tr>
+<td><p><strong>Claude Code</strong></p></td>
+<td><p><strong>BAA coverage status</strong></p></td>
 </tr>
-<tr class="even">
-<td>Claude Code CLI (via 1P API console)</td>
-<td>✅ Eligible only with ZDR enabled</td>
+<tr>
+<td><p>Claude Code CLI (via 1P API console)</p></td>
+<td><p>✅ Eligible only with ZDR enabled</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code CLI (via Claude Enterprise OAuth)</td>
-<td>✅ Eligible only with ZDR enabled (for qualified accounts)</td>
+<tr>
+<td><p>Claude Code CLI (via Claude Enterprise OAuth)</p></td>
+<td><p>✅ Eligible only with ZDR enabled (for qualified
+accounts)</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code in Desktop (local mode)</td>
-<td>✅ Eligible only with ZDR enabled (for qualified accounts)</td>
+<tr>
+<td><p>Claude Code in Desktop (local mode)</p></td>
+<td><p>✅ Eligible only with ZDR enabled (for qualified
+accounts)</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code in Desktop (remote mode)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Code in Desktop (remote mode)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code in Web (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Code in Web (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code Review (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Code Review (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code Security (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Code Security (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code Computer Use (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Code Computer Use (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code Remote Control (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Code Remote Control (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="odd">
-<td><strong>Other beta features</strong></td>
-<td><strong>BAA coverage status</strong></td>
+<tr>
+<td><p><strong>Other beta features</strong></p></td>
+<td><p><strong>BAA coverage status</strong></p></td>
 </tr>
-<tr class="even">
-<td>Claude Design (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Design (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Slides (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Slides (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Claude Docs (beta)</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Claude Docs (beta)</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><h5 id="a8114513-h-38c6d9c0c2"><strong>CLAUDE PLATFORM (1P
 API)</strong></h5></td>
 <td></td>
 </tr>
-<tr class="even">
-<td><strong>Native 1P API features</strong></td>
-<td><strong>BAA coverage status</strong></td>
+<tr>
+<td><p><strong>Native 1P API features</strong></p></td>
+<td><p><strong>BAA coverage status</strong></p></td>
 </tr>
-<tr class="odd">
-<td>Messages API (prompt caching, structured outputs, memory, web
-search, bash tool, text editor tool)</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Messages API (prompt caching, structured outputs, memory, web
+search, bash tool, text editor tool)</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="even">
-<td>Token Counting, Models, Org Management, Compliance APIs</td>
-<td>✅ Eligible under BAA</td>
+<tr>
+<td><p>Token Counting, Models, Org Management, Compliance APIs</p></td>
+<td><p>✅ Eligible under BAA</p></td>
 </tr>
-<tr class="odd">
-<td>Batch API, Files API, Skills API, Code Execution, Computer Use, Web
-Fetch</td>
-<td>❌ Not covered under BAA</td>
+<tr>
+<td><p>Batch API, Files API, Skills API, Code Execution, Computer Use,
+Web Fetch</p></td>
+<td><p>❌ Not covered under BAA</p></td>
 </tr>
-<tr class="even">
-<td>External MCP</td>
-<td>⚠️ 3P data flows not covered by Anthropic BAA |</td>
+<tr>
+<td><p>External MCP</p></td>
+<td><p>⚠️ 3P data flows not covered by Anthropic BAA |</p></td>
 </tr>
-<tr class="odd">
-<td><strong>ZDR-Eligible (covered under BAA with ZDR)</strong></td>
-<td><strong>BAA coverage status</strong></td>
+<tr>
+<td><p><strong>ZDR-Eligible (covered under BAA with
+ZDR)</strong></p></td>
+<td><p><strong>BAA coverage status</strong></p></td>
 </tr>
-<tr class="even">
-<td>Claude Code via API (CLI)</td>
-<td>✅ Eligible only with ZDR enabled (for qualified accounts)</td>
+<tr>
+<td><p>Claude Code via API (CLI)</p></td>
+<td><p>✅ Eligible only with ZDR enabled (for qualified
+accounts)</p></td>
 </tr>
 </tbody>
 </table>
@@ -26589,7 +26708,7 @@ model is designated as a Covered Model, it will be added to the list
 below and the policies on this page take effect for that model on every
 surface where it is offered.</p>
 <h4 id="a15425695-h-008eefd6e6">Current Covered Models</h4>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 11%" />
 <col style="width: 13%" />
@@ -26597,32 +26716,32 @@ surface where it is offered.</p>
 <col style="width: 60%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Model</strong></td>
 <td><strong>Designation date</strong></td>
 <td><strong>Status</strong></td>
 <td><strong>Availability</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Mythos 5.1</td>
 <td>August 31, 2026</td>
 <td>Limited availability</td>
 <td>Limited access (approved partners)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Fable 5.1</td>
 <td>August 31, 2026</td>
 <td>Generally available</td>
 <td>Claude applications, Claude Platform, Amazon Bedrock, Google Cloud
 Agent Platform, Microsoft Foundry</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Mythos 5</td>
 <td>June 9, 2026</td>
 <td>Limited availability</td>
 <td>Limited access (approved partners)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Fable 5</td>
 <td>June 9, 2026</td>
 <td>Generally available</td>
@@ -26772,84 +26891,84 @@ Enterprise plans</a></strong>.</p>
 <col style="width: 18%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Product</strong></td>
-<td><strong>How you access it</strong></td>
-<td><strong>Data retention</strong></td>
-<td><strong>Eligible Service under Anthropic’s BAA?</strong></td>
-<td><strong>Can you access Covered Models?</strong></td>
+<tr>
+<td><p><strong>Product</strong></p></td>
+<td><p><strong>How you access it</strong></p></td>
+<td><p><strong>Data retention</strong></p></td>
+<td><p><strong>Eligible Service under Anthropic’s BAA?</strong></p></td>
+<td><p><strong>Can you access Covered Models?</strong></p></td>
 </tr>
-<tr class="even">
-<td>Chat</td>
-<td>Claude Enterprise</td>
-<td>Standard retention</td>
-<td>✅ Yes</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Chat</p></td>
+<td><p>Claude Enterprise</p></td>
+<td><p>Standard retention</p></td>
+<td><p>✅ Yes</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code</td>
-<td>Claude Enterprise</td>
+<tr>
+<td><p>Claude Code</p></td>
+<td><p>Claude Enterprise</p></td>
 <td><p>Zero data retention</p>
 <p><strong>Note:</strong> ZDR is available for qualified accounts
 only.</p></td>
-<td>✅ Yes</td>
-<td>❌ No</td>
+<td><p>✅ Yes</p></td>
+<td><p>❌ No</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code</td>
-<td>Claude Enterprise</td>
-<td>Standard retention</td>
-<td>❌ No</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Claude Code</p></td>
+<td><p>Claude Enterprise</p></td>
+<td><p>Standard retention</p></td>
+<td><p>❌ No</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code</td>
-<td>1P API org</td>
-<td>Zero data retention</td>
-<td>✅ Yes</td>
-<td>❌ No</td>
+<tr>
+<td><p>Claude Code</p></td>
+<td><p>1P API org</p></td>
+<td><p>Zero data retention</p></td>
+<td><p>✅ Yes</p></td>
+<td><p>❌ No</p></td>
 </tr>
-<tr class="even">
-<td>Claude Code</td>
-<td>1P API org</td>
-<td>Standard retention</td>
-<td>❌ No</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Claude Code</p></td>
+<td><p>1P API org</p></td>
+<td><p>Standard retention</p></td>
+<td><p>❌ No</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Code</td>
-<td>3P API (Google Vertex only)*</td>
-<td>Standard retention</td>
-<td>❌ No</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Claude Code</p></td>
+<td><p>3P API (Google Vertex only)*</p></td>
+<td><p>Standard retention</p></td>
+<td><p>❌ No</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
-<tr class="even">
-<td>Cowork</td>
-<td>Claude Enterprise</td>
-<td>Standard retention</td>
-<td>❌ No</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Cowork</p></td>
+<td><p>Claude Enterprise</p></td>
+<td><p>Standard retention</p></td>
+<td><p>❌ No</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
-<tr class="odd">
-<td>Claude API (1P API)</td>
-<td>HIPAA-ready API</td>
-<td>Standard retention</td>
-<td>✅ Yes</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Claude API (1P API)</p></td>
+<td><p>HIPAA-ready API</p></td>
+<td><p>Standard retention</p></td>
+<td><p>✅ Yes</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
-<tr class="even">
-<td>Claude API (1P API)</td>
-<td>Regular API</td>
-<td>Zero data retention</td>
-<td>✅ Yes</td>
-<td>❌ No</td>
+<tr>
+<td><p>Claude API (1P API)</p></td>
+<td><p>Regular API</p></td>
+<td><p>Zero data retention</p></td>
+<td><p>✅ Yes</p></td>
+<td><p>❌ No</p></td>
 </tr>
-<tr class="odd">
-<td>Claude API (1P API)</td>
-<td>Regular API</td>
-<td>Standard retention</td>
-<td>❌ No</td>
-<td>✅ Yes</td>
+<tr>
+<td><p>Claude API (1P API)</p></td>
+<td><p>Regular API</p></td>
+<td><p>Standard retention</p></td>
+<td><p>❌ No</p></td>
+<td><p>✅ Yes</p></td>
 </tr>
 </tbody>
 </table>
@@ -26970,19 +27089,19 @@ different robots to enable website owner transparency and choice. Below
 is information on the three robots that Anthropic uses and how to set
 your site preferences to enable those you want to access your content
 and limit those you don’t.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 4%" />
 <col style="width: 36%" />
 <col style="width: 58%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Bot</strong></td>
 <td><strong>Use</strong></td>
 <td><strong>What happens when you disable it</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>ClaudeBot</td>
 <td>ClaudeBot helps enhance the utility and safety of our generative AI
 models by collecting web content that could potentially contribute to
@@ -26991,7 +27110,7 @@ their training.</td>
 future materials should be excluded from our AI model training
 datasets.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude-User</td>
 <td>Claude-User supports Claude AI users. When individuals ask questions
 to Claude, it may access websites using a Claude-User agent.</td>
@@ -27001,7 +27120,7 @@ your site prevents our system from retrieving your content in response
 to a user query, which may reduce your site’s visibility for
 user-directed web search.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude-SearchBot</td>
 <td>Claude-SearchBot navigates the web to improve search result quality
 for users. It analyzes online content specifically to enhance the
@@ -27138,7 +27257,7 @@ supported models wherever Claude is offered, worldwide.</p></li>
 <col style="width: 19%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Model</strong></td>
 <td><strong>Text watermarks in Claude output (first-party
 surfaces)</strong></td>
@@ -27146,85 +27265,85 @@ surfaces)</strong></td>
 Microsoft Foundry)</strong></td>
 <td><strong>Content Credentials (C2PA) in files</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Fable 5.1</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Fable 5</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Mythos 5.1</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Mythos 5</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Opus 5.5</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Opus 5</td>
 <td>✅</td>
 <td>✅*</td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Opus 4.8</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Opus 4.7</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Opus 4.6</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Opus 4.5</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Sonnet 5</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Sonnet 4.6</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Sonnet 4.5</td>
 <td></td>
 <td></td>
 <td>✅</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Haiku 4.5</td>
 <td></td>
 <td></td>
@@ -27497,14 +27616,14 @@ search</h5>
 <col style="width: 89%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td>Remove content from your site</td>
+<tr>
+<td><p>Remove content from your site</p></td>
 <td><p>Applicable: all content types</p>
 <p>Removing content from your site is the best way to ensure that it
 won’t appear in Claude outputs when Claude searches the web.</p></td>
 </tr>
-<tr class="even">
-<td>Password-protect your files</td>
+<tr>
+<td><p>Password-protect your files</p></td>
 <td><p>Applicable: all content types</p>
 <p>If you have confidential or private content on your site, you need to
 password protect it to ensure only authorized users can access it. This
@@ -27512,8 +27631,8 @@ will also prevent that content from appearing in Claude outputs that
 rely on web search, or if it already appears, it will eventually remove
 that content from our search results.</p></td>
 </tr>
-<tr class="odd">
-<td><code>noindex</code> tag</td>
+<tr>
+<td><p><code>noindex</code> tag</p></td>
 <td><p>Applicable: all content types</p>
 <p>The <code>noindex</code> robots meta tag is a rule that tells our
 partners not to index your content so that they don’t send it to us in
@@ -27522,21 +27641,22 @@ and visited through other web pages, or directly visited by users with a
 link, but the content will not appear in Claude outputs that use web
 search.</p></td>
 </tr>
-<tr class="even">
-<td>Disallow crawling with robots.txt</td>
+<tr>
+<td><p>Disallow crawling with robots.txt</p></td>
 <td><p>Applicable: images and video</p>
 <p>Our search partners only index images and videos that their bots are
 allowed to crawl. To prevent them from accessing your media files, use
 robots.txt rules to block the files.</p></td>
 </tr>
-<tr class="odd">
-<td>Disallow Anthropic’s Bots</td>
+<tr>
+<td><p>Disallow Anthropic’s Bots</p></td>
 <td><p>Applicable: all content types</p>
 <p>Follow the instructions <a
 href="https://privacy.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">here</a>.</p></td>
 </tr>
-<tr class="even">
-<td>Block access to a URL already appearing in Claude outputs</td>
+<tr>
+<td><p>Block access to a URL already appearing in Claude
+outputs</p></td>
 <td><p>Applicable: all content types</p>
 <p>Submit a request to <a
 href="https://support.claude.com/cdn-cgi/l/email-protection#63140601110610160f17100c13170c161723020d170b110c130a004d000c0e">[email protected]</a>,
@@ -27557,13 +27677,13 @@ Claude content</h5>
 <col style="width: 62%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td>Report content in-product</td>
+<tr>
+<td><p>Report content in-product</p></td>
 <td><p>Applicable: all content within a shared Claude conversation</p>
 <p>Use the “report” button on the shared content.</p></td>
 </tr>
-<tr class="even">
-<td>Report content through our standalone reporting form</td>
+<tr>
+<td><p>Report content through our standalone reporting form</p></td>
 <td><p>Applicable: all content within a shared Claude conversation</p>
 <p>Please report it through <a
 href="https://claude.com/form/anthropic-content-reporting">this
@@ -27579,8 +27699,8 @@ outputs or shared Claude content</h5>
 <col style="width: 86%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td>Report content</td>
+<tr>
+<td><p>Report content</p></td>
 <td><p>Applicable: all content types</p>
 <p>If you believe content violates Anthropic’s usage policies or local
 laws and should be removed or restricted, you can report it through <a
@@ -28373,43 +28493,43 @@ Claude Code or Claude Cowork.</p>
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Model</strong></td>
 <td><strong>Context window</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Fable 5.1</td>
 <td>1M tokens</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Fable 5</td>
 <td>500K tokens</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Opus 5.5</td>
 <td>1M tokens</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Opus 5</td>
 <td>1M tokens</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Opus 4.8</td>
 <td>500K tokens</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Opus 4.7</td>
 <td>500K tokens</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Opus 4.6</td>
 <td>500K tokens</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Sonnet 5</td>
 <td>1M tokens</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Claude Sonnet 4.6</td>
 <td>500K tokens</td>
 </tr>
@@ -28425,47 +28545,47 @@ when using a paid Claude plan to chat with Claude.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Model</strong></td>
-<td><strong>Context window</strong></td>
+<tr>
+<td><p><strong>Model</strong></p></td>
+<td><p><strong>Context window</strong></p></td>
 </tr>
-<tr class="even">
-<td>Claude Fable 5.1</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Fable 5.1</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Fable 5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Fable 5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Opus 5.5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 5.5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Opus 5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Opus 4.8</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 4.8</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Opus 4.7</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 4.7</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Opus 4.6</td>
+<tr>
+<td><p>Claude Opus 4.6</p></td>
 <td><p>1M tokens</p>
 <p><strong>Note:</strong> 1M context window available by selecting
 <code>claude-opus-4-6[1m]</code> with <code>/model</code>; on Pro, usage
 credits must be enabled to access</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Sonnet 5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Sonnet 5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Sonnet 4.6</td>
+<tr>
+<td><p>Claude Sonnet 4.6</p></td>
 <td><p>1M tokens</p>
 <p><strong>Note:</strong> 1M context window available by selecting
 <code>claude-sonnet-4-6[1m]</code> with <code>/model</code>; usage
@@ -28481,51 +28601,51 @@ plans)</p></td>
 <col style="width: 67%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Model</strong></td>
-<td><strong>Context window</strong></td>
+<tr>
+<td><p><strong>Model</strong></p></td>
+<td><p><strong>Context window</strong></p></td>
 </tr>
-<tr class="even">
-<td>Claude Fable 5.1</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Fable 5.1</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Fable 5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Fable 5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Opus 5.5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 5.5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Opus 5</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 5</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Opus 4.8</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 4.8</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Opus 4.7</td>
-<td>1M tokens</td>
+<tr>
+<td><p>Claude Opus 4.7</p></td>
+<td><p>1M tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Opus 4.6</td>
-<td>200K tokens</td>
+<tr>
+<td><p>Claude Opus 4.6</p></td>
+<td><p>200K tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Sonnet 5</td>
+<tr>
+<td><p>Claude Sonnet 5</p></td>
 <td><p>1M tokens</p>
 <p><strong>Note:</strong> Sonnet 5 automatically compacts the
 conversation at 500K tokens</p></td>
 </tr>
-<tr class="even">
-<td>Claude Sonnet 4.6</td>
-<td>200K tokens</td>
+<tr>
+<td><p>Claude Sonnet 4.6</p></td>
+<td><p>200K tokens</p></td>
 </tr>
-<tr class="odd">
-<td>Haiku 4.5</td>
-<td>200K tokens</td>
+<tr>
+<td><p>Haiku 4.5</p></td>
+<td><p>200K tokens</p></td>
 </tr>
 </tbody>
 </table>
@@ -30284,13 +30404,13 @@ Claude</a></strong> for more information.</p>
 <col style="width: 86%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>How you access Claude</strong></td>
-<td><strong>How to apply</strong></td>
+<tr>
+<td><p><strong>How you access Claude</strong></p></td>
+<td><p><strong>How to apply</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>Anthropic first-party</strong> (Claude.ai, Claude Code, the
-Anthropic API)</td>
+<tr>
+<td><p><strong>Anthropic first-party</strong> (Claude.ai, Claude Code,
+the Anthropic API)</p></td>
 <td><p>Navigate to the <strong><a
 href="https://portal.anthropic.com/programs/cvp">Verification
 Portal</a></strong> to apply for access to the Cyber Verification
@@ -30298,22 +30418,22 @@ Program.</p>
 <p><strong>Note:</strong> Only authorized admins will see this
 option.</p></td>
 </tr>
-<tr class="odd">
-<td><strong>Microsoft Foundry</strong></td>
-<td>Find both your Azure Tenant ID and Subscription ID in your Azure
+<tr>
+<td><p><strong>Microsoft Foundry</strong></p></td>
+<td><p>Find both your Azure Tenant ID and Subscription ID in your Azure
 Portal (see instructions <strong><a
 href="https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id">here</a></strong>).
 Choose “Azure” under the <strong>Surface</strong> field in the
 <strong><a href="https://claude.com/form/cyber-use-case">Cyber Use Case
-Form</a></strong>.</td>
+Form</a></strong>.</p></td>
 </tr>
-<tr class="even">
-<td><strong>Amazon Bedrock</strong></td>
-<td>The Cyber Verification Program is not available on Bedrock at this
-time.</td>
+<tr>
+<td><p><strong>Amazon Bedrock</strong></p></td>
+<td><p>The Cyber Verification Program is not available on Bedrock at
+this time.</p></td>
 </tr>
-<tr class="odd">
-<td><strong>Claude Platform on AWS</strong></td>
+<tr>
+<td><p><strong>Claude Platform on AWS</strong></p></td>
 <td><p>Navigate to the <strong><a
 href="https://portal.anthropic.com/link?account_source=aws&amp;program=cvp">Verification
 Portal</a></strong> to apply for access to the Cyber Verification
@@ -30323,8 +30443,8 @@ link your AWS account.<br />
 <p><strong>Note:</strong> Only authorized admins will be able to
 apply.</p></td>
 </tr>
-<tr class="even">
-<td><strong>Claude on Google Cloud</strong></td>
+<tr>
+<td><p><strong>Claude on Google Cloud</strong></p></td>
 <td><p>Navigate to the <strong><a
 href="http://portal.anthropic.com/link?account_source=aws&amp;program=cvp">Verification
 Portal</a></strong> to apply for access to the Cyber Verification
@@ -30338,18 +30458,18 @@ Cloud</a></strong> section below.</p>
 <p><strong>Note:</strong> Only authorized admins will be able to
 apply.</p></td>
 </tr>
-<tr class="odd">
-<td><strong>Third-party platform</strong> (coding tools and other apps
-powered by Claude)</td>
-<td>Reach out to your platform directly to check if Anthropic CVP is
+<tr>
+<td><p><strong>Third-party platform</strong> (coding tools and other
+apps powered by Claude)</p></td>
+<td><p>Reach out to your platform directly to check if Anthropic CVP is
 available and if so request access to the Cyber Use Case Form through
 the platform. Not all platforms participate in the CVP at this
-time.</td>
+time.</p></td>
 </tr>
-<tr class="even">
-<td><strong>Bring your own key (BYOK) Customers</strong></td>
-<td>Follow instructions under <strong>Anthropic
-first-party</strong></td>
+<tr>
+<td><p><strong>Bring your own key (BYOK) Customers</strong></p></td>
+<td><p>Follow instructions under <strong>Anthropic
+first-party</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -30380,22 +30500,22 @@ Cyber Verification Program on Claude on Google Cloud.</p>
 <col style="width: 44%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Setting</strong></td>
-<td><strong>Needed for</strong></td>
-<td><strong><code>PublisherModelConfig</code> field</strong></td>
+<tr>
+<td><p><strong>Setting</strong></p></td>
+<td><p><strong>Needed for</strong></p></td>
+<td><p><strong><code>PublisherModelConfig</code> field</strong></p></td>
 </tr>
-<tr class="even">
-<td><strong>Data sharing with Anthropic</strong></td>
-<td>Opus 5</td>
-<td><code>dataSharingEnabledProvider: "ANTHROPIC"</code></td>
+<tr>
+<td><p><strong>Data sharing with Anthropic</strong></p></td>
+<td><p>Opus 5</p></td>
+<td><p><code>dataSharingEnabledProvider: "ANTHROPIC"</code></p></td>
 </tr>
-<tr class="odd">
-<td><strong>Advanced AI</strong></td>
+<tr>
+<td><p><strong>Advanced AI</strong></p></td>
 <td><p>Sonnet 5</p>
 <p>Opus 4.7</p>
 <p>Opus 4.8</p></td>
-<td><code>claudeFeatureConfig.advancedAiEnabled: true</code></td>
+<td><p><code>claudeFeatureConfig.advancedAiEnabled: true</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -30453,14 +30573,14 @@ search</h5>
 <col style="width: 89%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td>Remove content from your site</td>
+<tr>
+<td><p>Remove content from your site</p></td>
 <td><p>Applicable: all content types</p>
 <p>Removing content from your site is the best way to ensure that it
 won’t appear in Claude outputs when Claude searches the web.</p></td>
 </tr>
-<tr class="even">
-<td>Password-protect your files</td>
+<tr>
+<td><p>Password-protect your files</p></td>
 <td><p>Applicable: all content types</p>
 <p>If you have confidential or private content on your site, you need to
 password protect it to ensure only authorized users can access it. This
@@ -30468,8 +30588,8 @@ will also prevent that content from appearing in Claude outputs that
 rely on web search, or if it already appears, it will eventually remove
 that content from our search results.</p></td>
 </tr>
-<tr class="odd">
-<td><code>noindex</code> tag</td>
+<tr>
+<td><p><code>noindex</code> tag</p></td>
 <td><p>Applicable: all content types</p>
 <p>The <code>noindex</code> robots meta tag is a rule that tells our
 partners not to index your content so that they don’t send it to us in
@@ -30478,21 +30598,22 @@ and visited through other web pages, or directly visited by users with a
 link, but the content will not appear in Claude outputs that use web
 search.</p></td>
 </tr>
-<tr class="even">
-<td>Disallow crawling with robots.txt</td>
+<tr>
+<td><p>Disallow crawling with robots.txt</p></td>
 <td><p>Applicable: images and video</p>
 <p>Our search partners only index images and videos that their bots are
 allowed to crawl. To prevent them from accessing your media files, use
 robots.txt rules to block the files.</p></td>
 </tr>
-<tr class="odd">
-<td>Disallow Anthropic’s Bots</td>
+<tr>
+<td><p>Disallow Anthropic’s Bots</p></td>
 <td><p>Applicable: all content types</p>
 <p>Follow the instructions <a
 href="https://privacy.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">here</a>.</p></td>
 </tr>
-<tr class="even">
-<td>Block access to a URL already appearing in Claude outputs</td>
+<tr>
+<td><p>Block access to a URL already appearing in Claude
+outputs</p></td>
 <td><p>Applicable: all content types</p>
 <p>Submit a request to <a
 href="https://support.claude.com/cdn-cgi/l/email-protection#c4b3a1a6b6a1b7b1a8b0b7abb4b0abb1b084a5aab0acb6abb4ada7eaa7aba9">[email protected]</a>,
@@ -30513,13 +30634,13 @@ Claude content</h5>
 <col style="width: 62%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td>Report content in-product</td>
+<tr>
+<td><p>Report content in-product</p></td>
 <td><p>Applicable: all content within a shared Claude conversation</p>
 <p>Use the “report” button on the shared content.</p></td>
 </tr>
-<tr class="even">
-<td>Report content through our standalone reporting form</td>
+<tr>
+<td><p>Report content through our standalone reporting form</p></td>
 <td><p>Applicable: all content within a shared Claude conversation</p>
 <p>Please report it through <a
 href="https://claude.com/form/anthropic-content-reporting">this
@@ -30535,8 +30656,8 @@ outputs or shared Claude content</h5>
 <col style="width: 86%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td>Report content</td>
+<tr>
+<td><p>Report content</p></td>
 <td><p>Applicable: all content types</p>
 <p>If you believe content violates Anthropic’s usage policies or local
 laws and should be removed or restricted, you can report it through <a
@@ -30769,26 +30890,26 @@ artifact.</p>
 <col style="width: 72%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Template</strong></td>
 <td><strong>What users can do with it</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Slides</td>
 <td>Start decks they can present, restyle with a design system, and
 export to PowerPoint</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Design</td>
 <td>Lay out screens, flows, and graphics as artboards they can edit by
 hand</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Design systems</td>
 <td>Capture colors, fonts, and components once so Claude applies them to
 new decks and designs</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Docs</td>
 <td>Start docs their team reads, comments on, and edits in place while
 Claude keeps them current</td>
@@ -30937,32 +31058,32 @@ role can grant access to it.</p>
 <col style="width: 77%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Capability</strong></td>
 <td><strong>What it grants</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Artifacts</td>
 <td>Creating and publishing artifacts from Claude Code and Cowork, and
 sharing chat and Cowork artifacts within the organization</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Design</td>
 <td>Starting artifacts from the Design template</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Design systems</td>
 <td>Creating and editing design systems</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Docs</td>
 <td>Starting artifacts from the Docs template</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Slides</td>
 <td>Starting artifacts from the Slides template</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Claude Design [standalone]</td>
 <td>Access to standalone Claude Design at claude.ai/design</td>
 </tr>
@@ -31682,35 +31803,35 @@ provisioned skills</h5>
 <col style="width: 20%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td></td>
 <td><strong>Owner-provisioned</strong></td>
 <td><strong>Shared peer-to-peer</strong></td>
 <td><strong>Published to the organization</strong></td>
 <td><strong>Shared with a group</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Who can share</strong></td>
 <td>Owners only</td>
 <td>Any user (if enabled)</td>
 <td>Any user (if Publishing is on)</td>
 <td>Any user (if enabled)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Where it appears</strong></td>
 <td>Everyone’s skills list</td>
 <td>Recipient’s “Shared with you” section</td>
 <td>Organization library</td>
 <td>Recipient’s “Shared with you” section</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Can recipients remove it?</strong></td>
 <td>Disable only</td>
 <td>Disable or delete</td>
 <td>Depends on how an owner offers it</td>
 <td>Disable only</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Requires owner approval?</strong></td>
 <td>Owner uploads directly</td>
 <td>No</td>
@@ -31965,32 +32086,32 @@ projects</h4>
 <col style="width: 45%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td></td>
 <td><strong>Projects</strong></td>
 <td><strong>Enterprise Search</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>System prompt</strong></td>
 <td>Customizable by users</td>
 <td>Managed by Anthropic (optimized for search)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Purpose</strong></td>
 <td>General-purpose workspace</td>
 <td>Specialized for organization knowledge search</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Connector setup</strong></td>
 <td>Manual configuration each time</td>
 <td>Guided onboarding with recommended connectors</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Availability</strong></td>
 <td>User-created</td>
 <td>Automatically provisioned for organization</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Updates</strong></td>
 <td>Static unless manually changed</td>
 <td>Automatic improvements from Anthropic</td>
@@ -32045,8 +32166,8 @@ organization’s existing security controls and policies.</p></li>
 </ul>
 <h4 id="a12489464-h-442d4c1b2c">Best practices</h4>
 <p><strong>Be specific about sources:</strong> Instead of “Find
-information about the product launch,” try “Search Slack and Google
-Drive for discussions about the Q4 product launch.”</p>
+information about the product launch,” try”Search Slack and Google Drive
+for discussions about the Q4 product launch.”</p>
 <p><strong>Use date ranges:</strong> “Summarize emails from last week
 about the budget review.”</p>
 <p><strong>Combine multiple sources:</strong> “Compile information from
@@ -32443,106 +32564,107 @@ have.</p>
 <hr />
 <h4 id="a14128775-h-6536bede08">Claude Enterprise compared to
 Console</h4>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 23%" />
 <col style="width: 68%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Capability</strong></td>
-<td><strong>Claude Console/API</strong></td>
-<td><strong>Claude Enterprise</strong></td>
+<tr>
+<td><p><strong>Capability</strong></p></td>
+<td><p><strong>Claude Console/API</strong></p></td>
+<td><p><strong>Claude Enterprise</strong></p></td>
 </tr>
-<tr class="even">
-<td>Claude Code on the web and mobile app</td>
-<td>❌</td>
-<td>✅</td>
+<tr>
+<td><p>Claude Code on the web and mobile app</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="odd">
-<td>Claude Tag</td>
-<td>❌</td>
-<td>✅</td>
+<tr>
+<td><p>Claude Tag</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="even">
-<td>Code Review</td>
-<td>❌</td>
-<td>✅</td>
+<tr>
+<td><p>Code Review</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="odd">
-<td>Enforce which tools Claude Code can use</td>
+<tr>
+<td><p>Enforce which tools Claude Code can use</p></td>
 <td><p>❌ No native UI</p>
 <p><em>*Settings can be pushed to developer machines via MDM (Jamf,
 Intune) or config management (Ansible, Puppet, etc.)</em></p></td>
-<td>✅ Native UI to set managed-settings.json allow/deny rules</td>
+<td><p>✅ Native UI to set managed-settings.json allow/deny
+rules</p></td>
 </tr>
-<tr class="even">
-<td>Block specific bash commands</td>
-<td>❌ No native UI*</td>
-<td>✅ Bash(curl:*), Bash(sudo:*), etc.</td>
+<tr>
+<td><p>Block specific bash commands</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ Bash(curl:*), Bash(sudo:*), etc.</p></td>
 </tr>
-<tr class="odd">
-<td>Prevent access to sensitive files</td>
-<td>❌ No native UI*</td>
-<td>✅ Read(.env), Read(./secrets/**)</td>
+<tr>
+<td><p>Prevent access to sensitive files</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ Read(.env), Read(./secrets/**)</p></td>
 </tr>
-<tr class="even">
-<td>Control which MCP servers are allowed</td>
-<td>❌ No native UI*</td>
-<td>✅ allowedMcpServers / deniedMcpServers</td>
+<tr>
+<td><p>Control which MCP servers are allowed</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ allowedMcpServers / deniedMcpServers</p></td>
 </tr>
-<tr class="odd">
-<td>Deploy pre-approved MCP servers org-wide</td>
-<td>❌ No native UI*</td>
-<td>✅ managed-mcp.json</td>
+<tr>
+<td><p>Deploy pre-approved MCP servers org-wide</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ managed-mcp.json</p></td>
 </tr>
-<tr class="even">
-<td>Force sandbox mode</td>
-<td>❌ No native UI*</td>
-<td>✅ sandbox.enabled</td>
+<tr>
+<td><p>Force sandbox mode</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ sandbox.enabled</p></td>
 </tr>
-<tr class="odd">
-<td>Disable –dangerously-skip-permissions</td>
-<td>❌ No native UI*</td>
-<td>✅ permissions.disableBypassPermissionsMode: disable</td>
+<tr>
+<td><p>Disable –dangerously-skip-permissions</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ permissions.disableBypassPermissionsMode: disable</p></td>
 </tr>
-<tr class="even">
-<td>Disable auto mode</td>
-<td>❌ No native UI*</td>
-<td>✅ disableAutoMode: disable</td>
+<tr>
+<td><p>Disable auto mode</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ disableAutoMode: disable</p></td>
 </tr>
-<tr class="odd">
-<td>Custom roles (RBAC)</td>
-<td>❌</td>
-<td>✅ Scope feature access by group and delegate specific admin areas
-like billing, user management, and identity without granting the Owner
-role. <strong><a
+<tr>
+<td><p>Custom roles (RBAC)</p></td>
+<td><p>❌</p></td>
+<td><p>✅ Scope feature access by group and delegate specific admin
+areas like billing, user management, and identity without granting the
+Owner role. <strong><a
 href="https://support.claude.com/en/articles/13930452-manage-custom-roles-on-enterprise-plans">Manage
-custom roles on Enterprise plans</a></strong></td>
+custom roles on Enterprise plans</a></strong></p></td>
 </tr>
-<tr class="even">
-<td>Model governance</td>
-<td>❌ No native UI*</td>
-<td>✅ Set an organization default model for chat and Cowork from the
+<tr>
+<td><p>Model governance</p></td>
+<td><p>❌ No native UI*</p></td>
+<td><p>✅ Set an organization default model for chat and Cowork from the
 admin console, and restrict Claude Code model selection with
 <code>availableModels</code> in managed settings. <strong><a
 href="https://support.claude.com/en/articles/15330088-set-a-default-model-for-your-organization">Set
-a default model for your organization</a></strong></td>
+a default model for your organization</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td>Audit logs</td>
+<tr>
+<td><p>Audit logs</p></td>
 <td><p>❌ No audit log support</p>
 <p>🟡 Claude Code does have support for <strong><a
 href="https://code.claude.com/docs/en/monitoring-usage">OpenTelemetry</a></strong></p></td>
-<td>🟡 Audit logs and the <strong><a
+<td><p>🟡 Audit logs and the <strong><a
 href="https://support.claude.com/en/articles/13015708-access-the-compliance-api">Compliance
 API</a></strong>, which includes audit log events. Transcripts of local
 CLI and Desktop sessions are available through the Compliance API for
-Enterprise plans.</td>
+Enterprise plans.</p></td>
 </tr>
-<tr class="even">
-<td>Usage analytics</td>
+<tr>
+<td><p>Usage analytics</p></td>
 <td><p>✅ Lines of code written, acceptance rate, daily active users,
 daily spend.</p>
 <p><strong><a
@@ -32553,30 +32675,30 @@ settings</strong> → <strong>Usage.</strong></p>
 <p><strong><a
 href="https://code.claude.com/docs/en/analytics#access-analytics-for-teams-and-enterprise">Docs</a></strong></p></td>
 </tr>
-<tr class="odd">
-<td>Programmatic usage and cost reporting</td>
-<td>✅ <strong><a
+<tr>
+<td><p>Programmatic usage and cost reporting</p></td>
+<td><p>✅ <strong><a
 href="https://platform.claude.com/docs/en/manage-claude/claude-code-analytics-api">Claude
-Code Analytics API</a></strong></td>
-<td>✅ The <strong><a
+Code Analytics API</a></strong></p></td>
+<td><p>✅ The <strong><a
 href="https://platform.claude.com/docs/en/manage-claude/analytics-api">Claude
 Enterprise Analytics API</a></strong> returns per-user engagement and
 Claude Code metrics (commits, pull requests, lines of code) plus usage
 and cost endpoints. The <strong><a
 href="https://platform.claude.com/docs/en/manage-claude/admin-api">Admin
-API</a></strong> covers programmatic org management.</td>
+API</a></strong> covers programmatic org management.</p></td>
 </tr>
-<tr class="even">
-<td>Contribution metrics</td>
-<td>✅ Via the Claude Code Analytics API</td>
-<td>✅ PRs created and lines of code committed with Claude Code
-assistance.</td>
+<tr>
+<td><p>Contribution metrics</p></td>
+<td><p>✅ Via the Claude Code Analytics API</p></td>
+<td><p>✅ PRs created and lines of code committed with Claude Code
+assistance.</p></td>
 </tr>
-<tr class="odd">
-<td>Granular spend controls</td>
-<td>✅ Org and workspace limits, plus per-developer limits in Claude
-Code workspaces</td>
-<td>✅ Org → Group → Individual, integrated with RBAC groups</td>
+<tr>
+<td><p>Granular spend controls</p></td>
+<td><p>✅ Org and workspace limits, plus per-developer limits in Claude
+Code workspaces</p></td>
+<td><p>✅ Org → Group → Individual, integrated with RBAC groups</p></td>
 </tr>
 </tbody>
 </table>
@@ -32640,25 +32762,25 @@ Limits cascade—a user can never exceed the org limits.</p>
 <col style="width: 41%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Level</strong></td>
 <td><strong>Scope</strong></td>
 <td><strong>Who sets it</strong></td>
 <td><strong>What it controls</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>1. Organization</td>
 <td>Entire Enterprise org</td>
 <td>Primary Owner / Owner</td>
 <td>Maximum monthly spend across all seats and usage</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>2. Group controls</td>
 <td>Groups with RBAC</td>
 <td>Primary Owner / Owner</td>
 <td>Spend limit for a group using RBAC</td>
 </tr>
-<tr class="even">
+<tr>
 <td>3. Individual</td>
 <td>Specific user</td>
 <td>Primary Owner / Owner</td>
@@ -32778,63 +32900,63 @@ and managing seats on Enterprise plans</a></strong></p>
 <h4 id="a14128775-h-6fa6296b41">Improvements in reporting</h4>
 <p>Moving from Console API to Claude Enterprise unlocks richer analytics
 for Claude Code usage:</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 16%" />
 <col style="width: 68%" />
 </colgroup>
 <tbody>
-<tr class="odd">
-<td><strong>Metric</strong></td>
-<td><strong>Console API</strong></td>
-<td><strong>Claude Enterprise</strong></td>
+<tr>
+<td><p><strong>Metric</strong></p></td>
+<td><p><strong>Console API</strong></p></td>
+<td><p><strong>Claude Enterprise</strong></p></td>
 </tr>
-<tr class="even">
-<td>Token consumption</td>
-<td>✅</td>
-<td>✅</td>
+<tr>
+<td><p>Token consumption</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="odd">
-<td>Lines of code accepted</td>
-<td>✅</td>
-<td>✅</td>
+<tr>
+<td><p>Lines of code accepted</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="even">
-<td>Suggestion acceptance rate</td>
-<td>✅</td>
-<td>✅</td>
+<tr>
+<td><p>Suggestion acceptance rate</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="odd">
-<td>PRs created with Claude Code assistance</td>
-<td>✅ Via the Claude Code Analytics API</td>
-<td>✅</td>
+<tr>
+<td><p>PRs created with Claude Code assistance</p></td>
+<td><p>✅ Via the Claude Code Analytics API</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="even">
-<td>Lines of code committed with Claude Code assistance</td>
-<td>✅ Via the Claude Code Analytics API</td>
-<td>✅</td>
+<tr>
+<td><p>Lines of code committed with Claude Code assistance</p></td>
+<td><p>✅ Via the Claude Code Analytics API</p></td>
+<td><p>✅</p></td>
 </tr>
-<tr class="odd">
-<td>Spend limit notifications</td>
-<td>✅ Notify-at-limit emails with configurable recipients</td>
+<tr>
+<td><p>Spend limit notifications</p></td>
+<td><p>✅ Notify-at-limit emails with configurable recipients</p></td>
 <td><p>✅</p>
 <p>Threshold alerts</p></td>
 </tr>
-<tr class="even">
-<td>Month-to-date spend per member</td>
-<td>❌</td>
+<tr>
+<td><p>Month-to-date spend per member</p></td>
+<td><p>❌</p></td>
 <td><p>✅</p>
 <p>Admin settings → Usage</p></td>
 </tr>
-<tr class="odd">
-<td>Compliance audit trail</td>
-<td>❌</td>
-<td>✅ The <strong><a
+<tr>
+<td><p>Compliance audit trail</p></td>
+<td><p>❌</p></td>
+<td><p>✅ The <strong><a
 href="https://support.claude.com/en/articles/13015708-access-the-compliance-api">Compliance
 API</a></strong> includes audit log events. Transcripts of local CLI and
 Desktop sessions are available through the Compliance API for Enterprise
-plans.</td>
+plans.</p></td>
 </tr>
 </tbody>
 </table>
@@ -32874,38 +32996,38 @@ by user or project settings:</p>
 <col style="width: 53%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Priority</strong></td>
 <td><strong>Source</strong></td>
 <td><strong>Scope</strong></td>
 <td><strong>Who controls it</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>1 (Highest)</td>
 <td>Managed settings (server-managed or endpoint-managed)</td>
 <td>Enterprise-wide</td>
 <td>Owner / Primary Owner (when pushed from the claude.ai admin console)
 or your IT/MDM team (when deployed as a file).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>2</td>
 <td>Command-line arguments</td>
 <td>Session</td>
 <td>Developer</td>
 </tr>
-<tr class="even">
+<tr>
 <td>3</td>
 <td>.claude/settings.local.json</td>
 <td>Project (personal)</td>
 <td>Developer</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>4</td>
 <td>.claude/settings.json</td>
 <td>Project (shared, in Git)</td>
 <td>Team</td>
 </tr>
-<tr class="even">
+<tr>
 <td>5 (Lowest)</td>
 <td>~/.claude/settings.json</td>
 <td>User (global)</td>
@@ -32945,19 +33067,19 @@ managed source is active.</p>
 <col style="width: 64%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>OS</strong></td>
 <td><strong>Path</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>macOS</td>
 <td>/Library/Application Support/ClaudeCode/managed-settings.json</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Linux</td>
 <td>/etc/claude-code/managed-settings.json</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Windows</td>
 <td>C:\Program Files\ClaudeCode\managed-settings.json</td>
 </tr>
@@ -32969,103 +33091,103 @@ migration. Claude Code supports many more: for the complete, current
 list, see <strong><a
 href="https://code.claude.com/docs/en/settings">Claude Code
 settings</a></strong>.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 70%" />
 <col style="width: 12%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Setting</strong></td>
 <td><strong>Purpose</strong></td>
 <td><strong>Example</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>permissions.deny</code></td>
 <td>Block specific tools/commands org-wide</td>
 <td>Bash(curl:*), Read(.env)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>permissions.allow</code></td>
 <td>Explicitly allow trusted commands</td>
 <td>Bash(npm run test:*)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>permissions.ask</code></td>
 <td>Require user approval each time</td>
 <td>Bash(rm:*)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>permissions.disableBypassPermissionsMode</code></td>
 <td>Prevent –dangerously-skip-permissions</td>
 <td>“disable”</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>forceLoginOrgUUID</code></td>
 <td>Restrict login to specific Enterprise org(s). Accepts one org UUID
 or an array; login to any other org is blocked. A single UUID also
 auto-selects that org at login.</td>
 <td>“298e7cb2…”</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>forceLoginMethod</code></td>
 <td>Force the login method (claudeai, console, or gateway). Recommended
 alongside <code>forceLoginOrgUUID</code> so users skip the account-type
 chooser, but not required for the org restriction to apply.</td>
 <td>“claudeai”</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>allowedMcpServers</code></td>
 <td>Allow only approved MCP servers, matched by name, command, or URL
 pattern</td>
 <td>[{“serverName”: “github”}]</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>deniedMcpServers</code></td>
 <td>Blacklist specific MCP servers</td>
 <td>[{“serverName”: “filesystem”}]</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>allowManagedPermissionRulesOnly</code></td>
 <td>Only permission rules from managed settings apply; users and
 projects can’t add their own</td>
 <td>true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>allowManagedMcpServersOnly</code></td>
 <td>Only the managed MCP allowlist applies; deny lists still merge from
 all sources</td>
 <td>true</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>allowManagedHooksOnly</code></td>
 <td>Only managed and admin-approved hooks run</td>
 <td>true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>enforceAvailableModels</code></td>
 <td>Extends the <code>availableModels</code> allowlist to the Default
 model option</td>
 <td>true</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>sandbox.enabled</code></td>
 <td>Force sandbox mode</td>
 <td>true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>sandbox.allowUnsandboxedCommands</code></td>
 <td>Block unsandboxed execution</td>
 <td>false</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>cleanupPeriodDays</code></td>
 <td>Retention period for local session data (transcripts and other
 application files). Default: 30 days</td>
 <td>7</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>companyAnnouncements</code></td>
 <td>Display messages to all Claude Code users</td>
 <td>Array of strings</td>
@@ -33366,16 +33488,16 @@ so prospective members can use it.</p>
 <col style="width: 72%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Action</strong></td>
 <td><strong>What it does</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Disable the link</td>
 <td>Immediately invalidates all existing links. No one can join via link
 until it’s re-enabled.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Regenerate the link</td>
 <td>Creates a new link and immediately invalidates the previous
 one.</td>
@@ -34256,19 +34378,19 @@ Enterprise</h4>
 <p>Both self-serve and sales-assisted Enterprise plans include the same
 features and the same seat pricing. The differences are in how you
 purchase, pay, and manage your plan:</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 42%" />
 <col style="width: 47%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td></td>
 <td><strong>Self-serve</strong></td>
 <td><strong>Sales-assisted</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>How to purchase</strong></td>
 <td><strong><a
 href="https://claude.ai/create/enterprise?utm_source=support&amp;utm_medium=article&amp;utm_content=enterprise-plan_self-serve_intro">Online</a></strong></td>
@@ -34276,27 +34398,27 @@ href="https://claude.ai/create/enterprise?utm_source=support&amp;utm_medium=arti
 href="https://claude.com/contact-sales?utm_source=support&amp;utm_medium=article&amp;utm_content=enterprise-plan_contact-sales_intro">Sales
 team</a></strong></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Minimum number of seats</strong></td>
 <td>20</td>
 <td>50</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Payment methods</strong></td>
 <td>Credit card, ACH*</td>
 <td>Credit card†, ACH, invoicing</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Accepted currency</strong></td>
 <td>USD only</td>
 <td>Multi-currency supported</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Usage billing</strong></td>
 <td>Credits purchased upfront</td>
 <td>Billed monthly in arrears</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>HIPAA-readiness / BAA</strong></td>
 <td>Available</td>
 <td>Available</td>

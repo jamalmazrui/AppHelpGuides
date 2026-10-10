@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-30" />
   <title>Quorum Studio Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,53 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Quorum Studio Help Guide</h1>
 <p class="subtitle">The official documentation for Quorum Studio and the
 Quorum language, gathered into one screen-reader-friendly document</p>
 <p class="date">2026-07-30</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#quorum-studio-help-guide"
+id="toc-quorum-studio-help-guide">Quorum Studio Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-quorum-and-quorum-studio"
+id="toc-about-quorum-and-quorum-studio">About Quorum and Quorum
+Studio</a></li>
+<li><a href="#accessibility-building-software-others-can-use"
+id="toc-accessibility-building-software-others-can-use">Accessibility:
+building software others can use</a></li>
+<li><a href="#charts-and-data-visualisation"
+id="toc-charts-and-data-visualisation">Charts and data
+visualisation</a></li>
+<li><a href="#data-science" id="toc-data-science">Data science</a></li>
+<li><a href="#databases" id="toc-databases">Databases</a></li>
+<li><a href="#digital-signal-processing-and-audio"
+id="toc-digital-signal-processing-and-audio">Digital signal processing
+and audio</a></li>
+<li><a href="#games-and-scenes" id="toc-games-and-scenes">Games and
+scenes</a></li>
+<li><a href="#mobile-devices" id="toc-mobile-devices">Mobile
+devices</a></li>
+<li><a href="#networking" id="toc-networking">Networking</a></li>
+<li><a href="#quorum-blocks-programming-in-the-browser"
+id="toc-quorum-blocks-programming-in-the-browser">Quorum Blocks:
+programming in the browser</a></li>
+<li><a href="#the-quorum-language-and-quorum-studio"
+id="toc-the-quorum-language-and-quorum-studio">The Quorum language and
+Quorum Studio</a></li>
+<li><a href="#robots" id="toc-robots">Robots</a></li>
+<li><a href="#user-interfaces" id="toc-user-interfaces">User
+interfaces</a></li>
+<li><a href="#working-online" id="toc-working-online">Working
+online</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="quorum-studio-help-guide">Quorum Studio Help Guide</h1>
 <p>This guide gathers the official documentation for Quorum Studio and
 the Quorum programming language. It was taken from the Quorum team’s own
@@ -4099,22 +4147,22 @@ class="math display">$$\text{If}\\ B\_{\text{sRGB}} \leq
 \frac{B\_{\text{sRGB}} + 0.055}{1.055} \right)^{2.4}$$</span></p>
 <p>and <em>R_(sRGB)</em>, <em>G_(sRGB)</em>, and <em>B_(sRGB)</em> are
 defined as:</p>
-<p><span class="math display">$$\begin{matrix}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>R</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mrow><mi>R</mi><mi>_</mi><mtext mathvariant="normal">8bit</mtext></mrow><mn>255</mn></mfrac></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>G</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mrow><mi>G</mi><mi>_</mi><mtext mathvariant="normal">8bit</mtext></mrow><mn>255</mn></mfrac></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>B</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mrow><mi>B</mi><mi>_</mi><mtext mathvariant="normal">8bit</mtext></mrow><mn>255</mn></mfrac></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix}
 {R\_{\text{sRGB}} = \frac{R\_{\text{8bit}}}{255}} \\
 {G\_{\text{sRGB}} = \frac{G\_{\text{8bit}}}{255}} \\
 {B\_{\text{sRGB}} = \frac{B\_{\text{8bit}}}{255}}
-\end{matrix}$$</span></p>
+\end{matrix}</annotation></semantics></math></p>
 <h5 id="example">Example</h5>
 <p>To help understand, consider a tangible example with a worked example
 going through the following calculation of the luminance of a color.
 Take <strong>royal blue</strong> which in 8 bit RGB is (65, 105, 225).
 The first step is to normalize the colors. You do this by using the
 equations for the sRGB colors:</p>
-<p><span class="math display">$$\begin{matrix}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>R</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mn>65</mn><mn>255</mn></mfrac><mo>≈</mo><mn>0.25490</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>G</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mn>105</mn><mn>255</mn></mfrac><mo>≈</mo><mn>0.41176</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>B</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mn>225</mn><mn>255</mn></mfrac><mo>≈</mo><mn>0.88235</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix}
 {R\_{\text{sRGB}} = \frac{65}{255} \approx 0.25490} \\
 {G\_{\text{sRGB}} = \frac{105}{255} \approx 0.41176} \\
 {B\_{\text{sRGB}} = \frac{225}{255} \approx 0.88235}
-\end{matrix}$$</span></p>
+\end{matrix}</annotation></semantics></math></p>
 <p>Note that results are truncated here for simplicity.</p>
 <p>Now that you have the normalized values, you find the R, G, and B
 values for the luminance equation. The relative luminance equation
@@ -4125,11 +4173,9 @@ human perception. In computer science, the technical name for this is
 <strong>linear RGB</strong>, which means the above numbers must be
 converted. All 3 values are greater than 0.03928 so you use the
 equations with the exponent as follows:</p>
-<p><span class="math display">$$R = \left( \frac{0.25490 + 0.055}{1.055}
-\right)^{2.4} \approx 0.05286$$</span> <span class="math display">$$G =
-\left( \frac{0.41176 + 0.055}{1.055} \right)^{2.4} \approx
-0.14126$$</span> <span class="math display">$$B = \left( \frac{0.88235 +
-0.055}{1.055} \right)^{2.4} \approx 0.75294$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0.25490</mn><mo>+</mo><mn>0.055</mn></mrow><mn>1.055</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>≈</mo><mn>0.05286</mn></mrow><annotation encoding="application/x-tex">R = \left( \frac{0.25490 + 0.055}{1.055} \right)^{2.4} \approx 0.05286</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0.41176</mn><mo>+</mo><mn>0.055</mn></mrow><mn>1.055</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>≈</mo><mn>0.14126</mn></mrow><annotation encoding="application/x-tex">G = \left( \frac{0.41176 + 0.055}{1.055} \right)^{2.4} \approx 0.14126</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0.88235</mn><mo>+</mo><mn>0.055</mn></mrow><mn>1.055</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>≈</mo><mn>0.75294</mn></mrow><annotation encoding="application/x-tex">B = \left( \frac{0.88235 + 0.055}{1.055} \right)^{2.4} \approx 0.75294</annotation></semantics></math></p>
 <p>Now you plug into the relative luminance equation as follows:</p>
 <p><em>L</em> = 0.2126 × 0.05286 + 0.7152 × 0.14126 + 0.0722 × 0.75294
 <em>L</em> = 0.01124 + 0.10103 + 0.05436 <em>L</em> ≈ 0.167</p>
@@ -4148,8 +4194,7 @@ and different versions of WCAG have different approaches. The two colors
 could come from a text and its background and the contrast ratio
 describes how well you can distinguish between both colors.</p>
 <p>WCAG 2.2 gives the following formula for contrast ratio:</p>
-<p><span class="math display">$${CR} = \frac{L\_{\text{1}} +
-0.05}{L\_{\text{2}} + 0.05}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>C</mi><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><mi>L</mi><mi>_</mi><mtext mathvariant="normal">1</mtext><mo>+</mo><mn>0.05</mn></mrow><mrow><mi>L</mi><mi>_</mi><mtext mathvariant="normal">2</mtext><mo>+</mo><mn>0.05</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">{CR} = \frac{L\_{\text{1}} + 0.05}{L\_{\text{2}} + 0.05}</annotation></semantics></math></p>
 <p>Where <em>L₁</em> is the relative luminance of the lighter of the
 colors and <em>L₂</em> is the darker of the colors.</p>
 <p>Since luminance can only range from 0 to 1 that means with this
@@ -4158,8 +4203,7 @@ equation the maximum ratio comes out to 21:1.</p>
 <p>Now take the luminance of <strong>royal blue</strong> that you
 calculated earlier, which was 0.167 and calculate the contrast ratio
 when compared to white which has a luminance of 1.</p>
-<p><span class="math display">$${CR} = \frac{1 + 0.05}{0.167 + 0.05} =
-\frac{1.05}{0.217} \approx 4.84$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>C</mi><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.05</mn></mrow><mrow><mn>0.167</mn><mo>+</mo><mn>0.05</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1.05</mn><mn>0.217</mn></mfrac><mo>≈</mo><mn>4.84</mn></mrow><annotation encoding="application/x-tex">{CR} = \frac{1 + 0.05}{0.167 + 0.05} = \frac{1.05}{0.217} \approx 4.84</annotation></semantics></math></p>
 <p>The contrast ratio between royal blue and white would be considered
 to be 4.84:1.</p>
 <p>The required ratio for normal text is 4.5:1 so this color combination
@@ -4221,10 +4265,7 @@ values, it still includes the higher precision weights for R, G and B.
 While this method is computationally faster and suitable for real-time
 environments, it is less precise and may not capture subtle luminance
 differences as effectively as the full version.</p>
-<p><span class="math display">$$Y\_{\text{S}} = 0.2126729 \times \left(
-\frac{R\_{\text{8bit}}}{255} \right)^{2.4} + 0.7151522 \times \left(
-\frac{G\_{\text{8bit}}}{255} \right)^{2.4} + 0.0721750 \times \left(
-\frac{B\_{\text{8bit}}}{255} \right)^{2.4}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mi>_</mi><mtext mathvariant="normal">S</mtext><mo>=</mo><mn>0.2126729</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>R</mi><mi>_</mi><mtext mathvariant="normal">8bit</mtext></mrow><mn>255</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>+</mo><mn>0.7151522</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>G</mi><mi>_</mi><mtext mathvariant="normal">8bit</mtext></mrow><mn>255</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>+</mo><mn>0.0721750</mn><mo>×</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>B</mi><mi>_</mi><mtext mathvariant="normal">8bit</mtext></mrow><mn>255</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup></mrow><annotation encoding="application/x-tex">Y\_{\text{S}} = 0.2126729 \times \left( \frac{R\_{\text{8bit}}}{255} \right)^{2.4} + 0.7151522 \times \left( \frac{G\_{\text{8bit}}}{255} \right)^{2.4} + 0.0721750 \times \left( \frac{B\_{\text{8bit}}}{255} \right)^{2.4}</annotation></semantics></math></p>
 <p>Now, this is where APCA starts to set itself apart from the Relative
 Luminance calculations in WCAG 2.0. APCA considered the fact that for
 certain colors that are near black, those dark shades of colors become
@@ -4401,30 +4442,27 @@ it into a meaningful contrast score.</p>
 <p>Before you calculate exact screen luminance, you need to normalize
 and linearize the 8-bit RGB values. This accounts for gamma correction,
 since human vision doesn’t perceive brightness linearly.</p>
-<p><span class="math display">$$\begin{matrix}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>R</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mn>65</mn><mn>255</mn></mfrac><mo>≈</mo><mn>0.25490</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>G</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mn>105</mn><mn>255</mn></mfrac><mo>≈</mo><mn>0.41176</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>B</mi><mi>_</mi><mtext mathvariant="normal">sRGB</mtext><mo>=</mo><mfrac><mn>225</mn><mn>255</mn></mfrac><mo>≈</mo><mn>0.88235</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix}
 {R\_{\text{sRGB}} = \frac{65}{255} \approx 0.25490} \\
 {G\_{\text{sRGB}} = \frac{105}{255} \approx 0.41176} \\
 {B\_{\text{sRGB}} = \frac{225}{255} \approx 0.88235}
-\end{matrix}$$</span></p>
+\end{matrix}</annotation></semantics></math></p>
 <p>You can see that each of the normalized sRGB values is greater than
 the linearization threshold of 0.04045 so R, G, and B are calculated
 as:</p>
-<p><span class="math display">$$R = \left( \frac{0.25490 + 0.055}{1.055}
-\right)^{2.4} \approx 0.05286$$</span> <span class="math display">$$G =
-\left( \frac{0.41176 + 0.055}{1.055} \right)^{2.4} \approx
-0.14126$$</span> <span class="math display">$$B = \left( \frac{0.88235 +
-0.055}{1.055} \right)^{2.4} \approx 0.75294$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0.25490</mn><mo>+</mo><mn>0.055</mn></mrow><mn>1.055</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>≈</mo><mn>0.05286</mn></mrow><annotation encoding="application/x-tex">R = \left( \frac{0.25490 + 0.055}{1.055} \right)^{2.4} \approx 0.05286</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0.41176</mn><mo>+</mo><mn>0.055</mn></mrow><mn>1.055</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>≈</mo><mn>0.14126</mn></mrow><annotation encoding="application/x-tex">G = \left( \frac{0.41176 + 0.055}{1.055} \right)^{2.4} \approx 0.14126</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0.88235</mn><mo>+</mo><mn>0.055</mn></mrow><mn>1.055</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2.4</mn></msup><mo>≈</mo><mn>0.75294</mn></mrow><annotation encoding="application/x-tex">B = \left( \frac{0.88235 + 0.055}{1.055} \right)^{2.4} \approx 0.75294</annotation></semantics></math></p>
 <p>You may have noticed that up to this point in the example, the values
 are essentially the same as in the earlier luminance example. In fact,
 for this color combination, if you chose the estimated screen luminance
 method you would get a result of about 0.167, which is the same result
 as the exact method.</p>
-<p><span class="math display">$$\begin{array}{l}
-{Y = 0.2126729 \times 0.05286 + 0.7151522 \times 0.14126 + 0.0721750
-\times 0.75294} \\
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><mi>Y</mi><mo>=</mo><mn>0.2126729</mn><mo>×</mo><mn>0.05286</mn><mo>+</mo><mn>0.7151522</mn><mo>×</mo><mn>0.14126</mn><mo>+</mo><mn>0.0721750</mn><mo>×</mo><mn>0.75294</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>Y</mi><mo>=</mo><mn>0.01124</mn><mo>+</mo><mn>0.10102</mn><mo>+</mo><mn>0.05434</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>Y</mi><mo>≈</mo><mn>0.167</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{l}
+{Y = 0.2126729 \times 0.05286 + 0.7151522 \times 0.14126 + 0.0721750 \times 0.75294} \\
 {Y = 0.01124 + 0.10102 + 0.05434} \\
 {Y \approx 0.167}
-\end{array}$$</span></p>
+\end{array}</annotation></semantics></math></p>
 <p>Now you can move on to the next steps of APCA. First, you will need
 to clamp the dark shades. The text luminance (0.167) and the background
 luminance (1.0) are both above the threshold of 0.022, which means they
@@ -4436,32 +4474,32 @@ polarity; remember if the luminance of the background is greater than
 the luminance of the text, it is considered normal polarity:</p>
 <p>Because it has normal polarity, the raw contrast signal (<em>S</em>)
 is computed as:</p>
-<p><span class="math display">$$\begin{array}{l}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><mi>S</mi><mo>=</mo><msup><mn>1.0</mn><mn>0.56</mn></msup><mo>−</mo><msup><mn>0.167</mn><mn>0.57</mn></msup></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>S</mi><mo>=</mo><mn>1.0</mn><mo>−</mo><mn>0.36054</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>S</mi><mo>≈</mo><mn>0.63946</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{l}
 {S = 1.0^{0.56} - 0.167^{0.57}} \\
 {S = 1.0 - 0.36054} \\
 {S \approx 0.63946}
-\end{array}$$</span></p>
+\end{array}</annotation></semantics></math></p>
 <p>Next, you will scale the raw signal to get a contrast score:</p>
-<p><span class="math display">$$\begin{array}{l}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><mi>C</mi><mo>=</mo><mn>0.63946</mn><mo>×</mo><mn>1.14</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>C</mi><mo>≈</mo><mn>0.72898</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{l}
 {C = 0.63946 \times 1.14} \\
 {C \approx 0.72898}
-\end{array}$$</span></p>
+\end{array}</annotation></semantics></math></p>
 <p>Now, you want to reduce the values that are not perceptible to the
 human eye by applying the offset. First you must check that your
 contrast score (<em>C</em>) is greater than the perceptual output
 threshold of 0.1, then you can apply the offset according to the
 polarity. You will notice that for this color combination, <em>C</em> is
 positive (normal polarity) so the <em>S_(apc)</em> is computed as:</p>
-<p><span class="math display">$$\begin{array}{l}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><mi>S</mi><mi>_</mi><mrow><mi>a</mi><mi>p</mi><mi>c</mi></mrow><mo>=</mo><mn>0.72898</mn><mo>−</mo><mn>0.027</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>S</mi><mi>_</mi><mrow><mi>a</mi><mi>p</mi><mi>c</mi></mrow><mo>=</mo><mn>0.70198</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{l}
 {S\_{apc} = 0.72898 - 0.027} \\
 {S\_{apc} = 0.70198}
-\end{array}$$</span></p>
+\end{array}</annotation></semantics></math></p>
 <p>Finally, multiply your Scaled Absolute Perceptual Contrast
 (<em>S_(apc)</em>) by 100 to get the final contrast score:</p>
-<p><span class="math display">$$\begin{array}{l}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="left" style="text-align: left"><mi>L</mi><mi>_</mi><mi>C</mi><mo>=</mo><mn>0.70198</mn><mo>×</mo><mn>100</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>L</mi><mi>_</mi><mi>C</mi><mo>=</mo><mn>70.198</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{l}
 {L\_{C} = 0.70198 \times 100} \\
 {L\_{C} = 70.198}
-\end{array}$$</span></p>
+\end{array}</annotation></semantics></math></p>
 <h5 id="citations-2">Citations</h5>
 <ol type="1">
 <li>IEC 61966-2-1 Multimedia systems and equipment - Colour measurement
@@ -6238,9 +6276,7 @@ space the equation looks like this:</p>
 relative luminance, the amount green in a color affects this calculation
 more than red or blue. The color contrast ratio is a measure of the
 difference between two colors. That equation looks as so:</p>
-<p><span class="math display">$$\text{Contrast Ratio} =
-\frac{\text{Lighter Color} + 0.05}{\text{Darker Color} +
-0.05}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Contrast Ratio</mtext><mo>=</mo><mfrac><mrow><mtext mathvariant="normal">Lighter Color</mtext><mo>+</mo><mn>0.05</mn></mrow><mrow><mtext mathvariant="normal">Darker Color</mtext><mo>+</mo><mn>0.05</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Contrast Ratio} = \frac{\text{Lighter Color} + 0.05}{\text{Darker Color} + 0.05}</annotation></semantics></math></p>
 <p>This thus provides a minimum contrast of 1, for example white on
 white, and a maximum of 21, white on black. A higher contrast ratio
 would then mean that your eyes have an easier time distinguishing
@@ -9734,8 +9770,7 @@ Mean</h3>
 the central value in a finite data set of numbers. We can calculate the
 mean by finding the sum of all values in a dataset and divide it by the
 number of values.</p>
-<p><span class="math display">$$\overline{x} = \frac{1}{n}\left(
-{\sum\limits\_{i = 0}^{n}x\_{i}} \right)$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo>∑</mo><mi>_</mi><msup><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msup><mi>x</mi><mi>_</mi><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\overline{x} = \frac{1}{n}\left( {\sum\limits\_{i = 0}^{n}x\_{i}} \right)</annotation></semantics></math></p>
 <p>The arithmetic mean can be calculated in Quorum by using the helper
 action, Mean() within the DataFrame’s class. To do this, we will use our
 ‘frame’ object and call the function Mean(). In this case we will be
@@ -9941,9 +9976,7 @@ the tail of the data is longer above the mean. A negative skew, or left
 skew, is the opposite. For calculating skew, we use an equation that is
 common in statistical packages, called the “Fisher-Pearson Standardized
 Moment Coefficient.”</p>
-<p><span class="math display">$$\text{Skew=}\frac{n}{(n - 1)(n -
-2)}\sum\limits\_{i = 1}^{n}\left( \frac{x\_{i} - \overline{x}}{s}
-\right)^{3}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Skew=</mtext><mfrac><mi>n</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>∑</mo><mi>_</mi><msup><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>x</mi><mi>_</mi><mi>i</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover></mrow><mi>s</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\text{Skew=}\frac{n}{(n - 1)(n - 2)}\sum\limits\_{i = 1}^{n}\left( \frac{x\_{i} - \overline{x}}{s} \right)^{3}</annotation></semantics></math></p>
 <p>The skew is calculated using the helper action Skew() which is within
 the DataFrame’s class. To do this, we will use our ‘frame’ object and
 call the function Skew(). In this case we will be calculating the skew
@@ -9995,7 +10028,7 @@ or whether the data is real. One easy way to do this is to calculate the
 number of standard deviations away from the mean. In statistics, the
 technical term for this is ‘z-scores.’ This is why the equation below
 uses z as a label.</p>
-<p><span class="math display">$$z = \frac{x - \mu}{\sigma}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{x - \mu}{\sigma}</annotation></semantics></math></p>
 <p>We can calculate z-scores, or the number of standard deviations from
 the mean, for an entire column using the StandardDeviationsFromMean
 class. In addition, this class has an action,
@@ -10078,13 +10111,9 @@ difference between each number and the mean then squaring the
 differences to divide them by the sum of squares. Here are the equations
 of standard deviation and variance:</p>
 <p><strong>Standard Deviation:</strong></p>
-<p><span class="math display">$$s\_{x} = \sqrt{\frac{1}{n -
-1}\sum\limits\_{i = 1}^{n}\left( \left( x\_{i} - \overline{x}
-\right)^{2} \right)}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>_</mi><mi>x</mi><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>∑</mo><mi>_</mi><msup><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mi>_</mi><mi>i</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">s\_{x} = \sqrt{\frac{1}{n - 1}\sum\limits\_{i = 1}^{n}\left( \left( x\_{i} - \overline{x} \right)^{2} \right)}</annotation></semantics></math></p>
 <p><strong>Variance:</strong></p>
-<p><span class="math display">$$s\_{x}^{2} = \frac{1}{n -
-1}\sum\limits\_{i = 1}^{n}\left( \left( x\_{i} - \overline{x}
-\right)^{2} \right)$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>_</mi><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>∑</mo><mi>_</mi><msup><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mi>_</mi><mi>i</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">s\_{x}^{2} = \frac{1}{n - 1}\sum\limits\_{i = 1}^{n}\left( \left( x\_{i} - \overline{x} \right)^{2} \right)</annotation></semantics></math></p>
 <p>While the mean and median are measures of central tendency, variance
 and standard deviation are measures of dispersion. Put another way,
 variance and standard deviation are different measures of how the data

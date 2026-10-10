@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-02" />
   <title>Brave Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,117 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Brave Help Guide</h1>
 <p class="subtitle">The official Brave help documentation, gathered into
 one document</p>
 <p class="date">2026-08-02</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#brave-help-guide" id="toc-brave-help-guide">Brave Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#android-browser-miscellaneous"
+id="toc-android-browser-miscellaneous">Android Browser:
+Miscellaneous</a></li>
+<li><a href="#android-browser-privacy-and-security"
+id="toc-android-browser-privacy-and-security">Android Browser: Privacy
+and Security</a></li>
+<li><a href="#android-browser-settings-management"
+id="toc-android-browser-settings-management">Android Browser: Settings
+Management</a></li>
+<li><a href="#brave-origin" id="toc-brave-origin">Brave Origin</a></li>
+<li><a href="#brave-rewards-brave-ads"
+id="toc-brave-rewards-brave-ads">Brave Rewards: Brave Ads</a></li>
+<li><a href="#brave-rewards-common-questions-about-rewards"
+id="toc-brave-rewards-common-questions-about-rewards">Brave Rewards:
+Common Questions about Rewards</a></li>
+<li><a href="#brave-rewards-connected-accounts-with-brave-rewards"
+id="toc-brave-rewards-connected-accounts-with-brave-rewards">Brave
+Rewards: Connected Accounts with Brave Rewards</a></li>
+<li><a href="#brave-rewards-creators-contributions"
+id="toc-brave-rewards-creators-contributions">Brave Rewards: Creators
+&amp; Contributions</a></li>
+<li><a href="#brave-rewards-getting-started-with-bat-rewards"
+id="toc-brave-rewards-getting-started-with-bat-rewards">Brave Rewards:
+Getting Started with BAT &amp; Rewards</a></li>
+<li><a href="#brave-sync-sync-basics"
+id="toc-brave-sync-sync-basics">Brave Sync: Sync basics</a></li>
+<li><a href="#desktop-browser-additional-information"
+id="toc-desktop-browser-additional-information">Desktop Browser:
+Additional Information</a></li>
+<li><a href="#desktop-browser-brave-features"
+id="toc-desktop-browser-brave-features">Desktop Browser: Brave
+Features</a></li>
+<li><a href="#desktop-browser-browsing-basics"
+id="toc-desktop-browser-browsing-basics">Desktop Browser: Browsing
+basics</a></li>
+<li><a href="#desktop-browser-fix-common-problems"
+id="toc-desktop-browser-fix-common-problems">Desktop Browser: Fix common
+problems</a></li>
+<li><a href="#desktop-browser-installing-brave"
+id="toc-desktop-browser-installing-brave">Desktop Browser: Installing
+Brave</a></li>
+<li><a href="#desktop-browser-new-tab-page"
+id="toc-desktop-browser-new-tab-page">Desktop Browser: New Tab
+Page</a></li>
+<li><a href="#desktop-browser-privacy-security"
+id="toc-desktop-browser-privacy-security">Desktop Browser: Privacy &amp;
+Security</a></li>
+<li><a href="#desktop-browser-settings-management"
+id="toc-desktop-browser-settings-management">Desktop Browser: Settings
+management</a></li>
+<li><a href="#ios-browser-brave-features"
+id="toc-ios-browser-brave-features">iOS Browser: Brave Features</a></li>
+<li><a href="#ios-browser-installing-brave"
+id="toc-ios-browser-installing-brave">iOS Browser: Installing
+Brave</a></li>
+<li><a href="#ios-browser-miscellaneous"
+id="toc-ios-browser-miscellaneous">iOS Browser: Miscellaneous</a></li>
+<li><a href="#ios-browser-new-tab-page"
+id="toc-ios-browser-new-tab-page">iOS Browser: New Tab Page</a></li>
+<li><a href="#ios-browser-settings-management"
+id="toc-ios-browser-settings-management">iOS Browser: Settings
+Management</a></li>
+<li><a href="#premium-account-management"
+id="toc-premium-account-management">Premium: Account Management</a></li>
+<li><a href="#premium-brave-firewall-vpn"
+id="toc-premium-brave-firewall-vpn">Premium: Brave Firewall +
+VPN</a></li>
+<li><a href="#premium-brave-firewall-vpn-mobile"
+id="toc-premium-brave-firewall-vpn-mobile">Premium: Brave Firewall + VPN
+Mobile</a></li>
+<li><a href="#premium-leo-ai" id="toc-premium-leo-ai">Premium: Leo
+AI</a></li>
+<li><a href="#premium-search" id="toc-premium-search">Premium:
+Search</a></li>
+<li><a href="#premium-talk" id="toc-premium-talk">Premium: Talk</a></li>
+<li><a href="#shields-shields-basics"
+id="toc-shields-shields-basics">Shields: Shields Basics</a></li>
+<li><a href="#wallet-crypto-wallet-basics"
+id="toc-wallet-crypto-wallet-basics">Wallet: Crypto Wallet
+Basics</a></li>
+<li><a href="#wallet-getting-started"
+id="toc-wallet-getting-started">Wallet: Getting Started</a></li>
+<li><a href="#wallet-managing-your-nfts-and-tokens"
+id="toc-wallet-managing-your-nfts-and-tokens">Wallet: Managing Your NFTs
+and Tokens</a></li>
+<li><a href="#wallet-sending-and-receiving-assets"
+id="toc-wallet-sending-and-receiving-assets">Wallet: Sending and
+Receiving Assets</a></li>
+<li><a href="#wallet-trading-assets-with-brave-swaps"
+id="toc-wallet-trading-assets-with-brave-swaps">Wallet: Trading Assets
+with Brave Swaps</a></li>
+<li><a href="#wallet-web3-wallet-settings"
+id="toc-wallet-web3-wallet-settings">Wallet: Web3 Wallet
+Settings</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="brave-help-guide">Brave Help Guide</h1>
 <p>This guide gathers the official Brave help documentation, as it stood
 on 2 August 2026.</p>
@@ -9603,9 +9715,7 @@ that is in a different location. To do this, create the file 0 in the 1
 subdirectory of Brave’s User Data Directory. Give it the following
 contents: 2. The default User Data Directory for the Release version of
 Brave is 3. So you can for example create the file with the command:</p>
-<ol start="0" type="1">
-<li></li>
-</ol></li>
+<p>0.</p></li>
 <li><p>Enable Widevine in 0. See <a
 href="#how-do-i-view-drm-protected-content">this page</a> for
 instructions.</p></li>
@@ -18461,16 +18571,14 @@ toolbar.</p></li>
 <li><p>Enter your password to unlock your secure wallet.</p></li>
 <li><p>Click on the Menu in the top-right (⋮).</p></li>
 <li><p>Navigate to the 0 option.</p>
-<ol start="6" type="1">
-<li><p>Enter your wallet password. </p></li>
-<li><p>Your Recovery Phrase is provided. Click 0. </p></li>
-<li><p>Copy and secure your phrase. <strong>Keep your recovery phrase in
+<p>6. Enter your wallet password. </p>
+<p>7. Your Recovery Phrase is provided. Click 0. </p>
+<p>8. Copy and secure your phrase. <strong>Keep your recovery phrase in
 a secure place that is not accessible to other and avoid sharing it with
-anyone. </strong></p></li>
-<li><p>Click <strong>Continue</strong>. You will be prompted to enter
-the word from a specific position of your recovery phrase to confirm
-it’s been recorded accurately.</p></li>
-</ol>
+anyone. </strong></p>
+<p>9. Click <strong>Continue</strong>. You will be prompted to enter the
+word from a specific position of your recovery phrase to confirm it’s
+been recorded accurately.</p>
 <p>You can learn more about the recovery phrase <a
 href="#what-is-a-recovery-phrase">here</a>.</p></li>
 </ol>
@@ -18486,18 +18594,16 @@ toolbar.</p></li>
 <li><p>Enter your password to unlock your secure wallet.</p></li>
 <li><p>Click on the Menu in the top-right (…).</p></li>
 <li><p>Navigate to the 0 option.</p>
-<ol start="6" type="1">
-<li><p>Enter your wallet password and toggle <strong>0</strong> <em>I
+<p>6. Enter your wallet password and toggle <strong>0</strong> <em>I
 understand that if I lose my recovery phrase, I won’t be able to access
-my crypto wallet</em>. </p></li>
-<li><p>Your Recovery Phrase is provided. Click 0. </p></li>
-<li><p>Copy and secure your phrase. <strong>Keep your recovery phrase in
+my crypto wallet</em>. </p>
+<p>7. Your Recovery Phrase is provided. Click 0. </p>
+<p>8. Copy and secure your phrase. <strong>Keep your recovery phrase in
 a secure place that is not accessible to other and avoid sharing it with
-anyone. </strong></p></li>
-<li><p>Click <strong>Continue</strong>. Enter the word from a specific
+anyone. </strong></p>
+<p>9. Click <strong>Continue</strong>. Enter the word from a specific
 position of your recovery phrase to confirm it’s been recorded
-accurately.</p></li>
-</ol>
+accurately.</p>
 <p>You can learn more about the recovery phrase <a
 href="#what-is-a-recovery-phrase">here</a>.</p></li>
 </ol>

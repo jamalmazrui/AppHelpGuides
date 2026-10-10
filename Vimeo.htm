@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>Vimeo Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,42 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Vimeo Help Guide</h1>
 <p class="subtitle">Vimeo’s own help centre, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#vimeo-help-guide" id="toc-vimeo-help-guide">Vimeo Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-account-and-billing"
+id="toc-cat-account-and-billing">Account and billing</a></li>
+<li><a href="#cat-integrations-and-third-party-apps"
+id="toc-cat-integrations-and-third-party-apps">Integrations and
+third-party apps</a></li>
+<li><a href="#cat-making-managing-and-sharing-videos"
+id="toc-cat-making-managing-and-sharing-videos">Making, managing, and
+sharing videos</a></li>
+<li><a href="#cat-monetize-content"
+id="toc-cat-monetize-content">Monetize content</a></li>
+<li><a href="#cat-policy-safety-and-copyright"
+id="toc-cat-policy-safety-and-copyright">Policy, safety, and
+copyright</a></li>
+<li><a href="#cat-virtual-events-and-livestreaming"
+id="toc-cat-virtual-events-and-livestreaming">Virtual events and
+livestreaming</a></li>
+<li><a href="#cat-watching-videos-and-events"
+id="toc-cat-watching-videos-and-events">Watching videos and
+events</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="vimeo-help-guide">Vimeo Help Guide</h1>
 <p>This guide gathers Vimeo’s official help centre. The text was taken
 from help.vimeo.com on 31 July 2026 and is Vimeo’s own; nothing has been
@@ -50977,15 +51014,9 @@ content on IP addresses associated with the institution.</p>
 <li><ol type="1">
 <li>Your name</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>The name of the institution</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Your title within the institution</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>The relevant IP addresses and subnet for the filter</li>
-</ol></li>
+<li>2) The name of the institution</li>
+<li>3) Your title within the institution</li>
+<li>4) The relevant IP addresses and subnet for the filter</li>
 </ul>
 <p>You must update us if the IP address and/or subnet of your
 institution changes.</p>
@@ -54294,15 +54325,13 @@ remote guests as a graphic, as discussed <a
 href="https://help.vimeo.com/hc/en-us/articles/31112052570513-Adding-Remote-Guests#showing-remote-guests-in-studio">here</a>.
 <strong>OR</strong></li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>In the Guests tab, select <strong>Add As Input</strong> underneath
-your guest’s camera shot, then head to any GFX tab, create a custom
-layer, and add your guest’s input in the GFX Designer manually, similar
-to a <a
+<li>2. In the Guests tab, select <strong>Add As Input</strong>
+underneath your guest’s camera shot, then head to any GFX tab, create a
+custom layer, and add your guest’s input in the GFX Designer manually,
+similar to a <a
 href="#building-a-picture-in-picture-graphic">picture-in-picture</a>.
 This is a better option if you want no other guests or video sources in
 the graphic.</li>
-</ol></li>
 </ol>
 <p>In the GFX Designer, select the guest with the green screen, then
 click the attached chroma icon to key out their background color and
@@ -64049,27 +64078,17 @@ the event and allow for a smooth stream.</p>
 <li><ol type="1">
 <li>Set up a Vimeo event</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Connect Zoom laptop to Studio</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Set up Studio to stream to Vimeo</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Start and stop your livestream</li>
-</ol></li>
+<li>2. Connect Zoom laptop to Studio</li>
+<li>3. Set up Studio to stream to Vimeo</li>
+<li>4. Start and stop your livestream</li>
 <li>Optional steps and considerations</li>
 <li>RTMP from Zoom to Vimeo</li>
 <li>What you’ll need</li>
 <li><ol type="1">
 <li>Set up a Zoom meeting</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Set up a Vimeo event</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Start and stop your livestream</li>
-</ol></li>
+<li>2. Set up a Vimeo event</li>
+<li>3. Start and stop your livestream</li>
 <li>Optional steps and considerations</li>
 </ul>
 <h4 id="connect-zoom-to-livestream-studio">Connect Zoom to Livestream
@@ -64775,20 +64794,14 @@ or Premium plan on Vimeo.</p>
 <li><ol type="1">
 <li>Open your primary browser and clear the cache and cookies.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>In Livestream Studio, click the settings (gear wheel) button in the
-upper right corner.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Navigate to the <strong>My Account</strong> tab, and log out of
+<li>2. In Livestream Studio, click the settings (gear wheel) button in
+the upper right corner.</li>
+<li>3. Navigate to the <strong>My Account</strong> tab, and log out of
 Studio.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>You will see the login prompt again. Be sure to log into the account
-that has a <a href="#how-to-access-livestream-studio">Studio license
-included</a> (Advanced, Premium, or Enterprise on Vimeo, or any paying
-account on Livestream).</li>
-</ol></li>
+<li>4. You will see the login prompt again. Be sure to log into the
+account that has a <a href="#how-to-access-livestream-studio">Studio
+license included</a> (Advanced, Premium, or Enterprise on Vimeo, or any
+paying account on Livestream).</li>
 </ol>
 <h3 id="studio-log-and-streaming-information">Studio Log and Streaming
 Information</h3>
@@ -65977,16 +65990,10 @@ for pre-show rehearsal and testing.</p>
 <li>Navigate to the <strong>Inputs</strong> tab in the main Studio
 interface.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Click <strong>Add Input</strong> in the bottom left corner.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Hover the cursor over <strong>Local Camera</strong>, which will
+<li>2. Click <strong>Add Input</strong> in the bottom left corner.</li>
+<li>3. Hover the cursor over <strong>Local Camera</strong>, which will
 expand the menu.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Click <strong>Colors / Bars</strong>.</li>
-</ol></li>
+<li>4. Click <strong>Colors / Bars</strong>.</li>
 </ol>
 <p><em>Screenshot: Studio ‘Add inputs’ menu opened, highlighting the
 local camera menu with colors / bars shown.</em></p>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>Ollama Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,7 +180,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
     html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
@@ -239,11 +249,35 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Ollama Help Guide</h1>
 <p class="subtitle">Ollama’s own documentation, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ollama-help-guide" id="toc-ollama-help-guide">Ollama Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-capabilities"
+id="toc-cat-capabilities">Capabilities</a></li>
+<li><a href="#cat-getting-started" id="toc-cat-getting-started">Getting
+started</a></li>
+<li><a href="#cat-installing-on-your-computer"
+id="toc-cat-installing-on-your-computer">Installing on your
+computer</a></li>
+<li><a href="#cat-questions-and-troubleshooting"
+id="toc-cat-questions-and-troubleshooting">Questions and
+troubleshooting</a></li>
+<li><a href="#cat-running-and-customising-models"
+id="toc-cat-running-and-customising-models">Running and customising
+models</a></li>
+<li><a href="#cat-using-ollama-with-other-programs"
+id="toc-cat-using-ollama-with-other-programs">Using Ollama with other
+programs</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="ollama-help-guide">Ollama Help Guide</h1>
 <p>This guide gathers the official documentation for Ollama, the program
 that runs large language models on your own computer. The text was taken
@@ -1827,7 +1861,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a h
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>header <span class="st">&quot;Authorization: Bearer $OLLAMA_API_KEY&quot;</span> <span class="op">\</span></span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>header <span class="st">&#39;Content-Type: application/json&#39;</span> <span class="op">\</span></span>
 <span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">--</span>data <span class="st">&#39;{</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="er">      &quot;url&quot;: &quot;ollama.com&quot;</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="er">      </span><span class="co">&quot;url&quot;</span>: <span class="st">&quot;ollama.com&quot;</span></span>
 <span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  }<span class="st">&#39;</span></span></code></pre></div>
 <p><strong>Response</strong></p>
 <div class="sourceCode" id="cb45"><pre
@@ -1852,7 +1886,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a h
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    content<span class="op">=</span><span class="st">&#39;[Cloud models](https://ollama.com/blog/cloud-models) are now available in Ollama</span><span class="ch">\n\n</span><span class="st">**Chat &amp; build</span></span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="er">with open models**\n\n</span>[Download](https:<span class="op">//</span>ollama.com<span class="op">/</span>download) [Explore</span>
 <span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>models](https:<span class="op">//</span>ollama.com<span class="op">/</span>models)\n\nAvailable <span class="cf">for</span> macOS, Windows, <span class="kw">and</span> Linux<span class="st">&#39;,</span></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="er">    links=</span>[<span class="st">&#39;https://ollama.com/&#39;</span>, <span class="st">&#39;https://ollama.com/models&#39;</span>, <span class="st">&#39;https://github.com/ollama/ollama&#39;</span>]</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>links<span class="op">=</span>[<span class="st">&#39;https://ollama.com/&#39;</span>, <span class="st">&#39;https://ollama.com/models&#39;</span>, <span class="st">&#39;https://github.com/ollama/ollama&#39;</span>]</span>
 <span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <h6 id="javascript-sdk">JavaScript SDK</h6>
 <pre class="tsx"><code>import { Ollama } from &quot;ollama&quot;;
@@ -2895,14 +2929,15 @@ with a proxy server?</h4>
 such as Nginx. To do so, configure the proxy to forward requests and
 optionally set required headers (if not exposing Ollama on the network).
 For example, with Nginx:</p>
-<pre class="nginx"><code>server {
-    listen 80;
-    server_name example.com;  # Replace with your domain or IP
-    location / {
-        proxy_pass http://localhost:11434;
-        proxy_set_header Host localhost:11434;
-    }
-}</code></pre>
+<div class="sourceCode" id="cb126"><pre
+class="sourceCode nginx"><code class="sourceCode nginx"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="dt">server</span> <span class="op">{</span></span>
+<span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">listen</span> <span class="dv">80</span><span class="op">;</span></span>
+<span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">server_name</span> example.com<span class="op">;</span>  <span class="co"># Replace with your domain or IP</span></span>
+<span id="cb126-4"><a href="#cb126-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">location</span> / <span class="op">{</span></span>
+<span id="cb126-5"><a href="#cb126-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">proxy_pass</span> http://localhost:<span class="dv">11434</span><span class="op">;</span></span>
+<span id="cb126-6"><a href="#cb126-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">proxy_set_header</span> Host localhost:<span class="dv">11434</span><span class="op">;</span></span>
+<span id="cb126-7"><a href="#cb126-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb126-8"><a href="#cb126-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h4 id="how-can-i-use-ollama-with-ngrok">How can I use Ollama with
 ngrok?</h4>
 <p>Ollama can be accessed using a range of tunneling apps. For example
@@ -4374,7 +4409,7 @@ installations), 0 is not automatically added.</p>
 <p>or add the following to a docker compose file:</p>
 <div class="sourceCode" id="cb267"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb267-1"><a href="#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="fu">extra_hosts</span><span class="kw">:</span></span>
-<span id="cb267-2"><a href="#cb267-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;host.docker.internal:host-gateway&quot;</span></span></code></pre></div>
+<span id="cb267-2"><a href="#cb267-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">- </span><span class="st">&quot;host.docker.internal:host-gateway&quot;</span></span></code></pre></div>
 <p>You should see a 0 message.</p>
 <ol start="4" type="1">
 <li><p>When creating a new workflow, select <strong>Add a first

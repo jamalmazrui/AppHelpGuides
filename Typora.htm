@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Typora help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Typora help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#typora-help" id="toc-typora-help">Typora help</a>
@@ -1910,7 +1924,7 @@ y = y(x,t) &amp;= A e^{i\theta} \\
 \end{align*}
 $$</code></pre>
 <p>will be rendered as</p>
-<p>[]</p>
+<p>[<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>y</mi><mo>=</mo><mi>y</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><msup><mi>e</mi><mrow><mi>i</mi><mi>θ</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>x</mi><mo>−</mo><mi>ω</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>x</mi><mo>−</mo><mi>ω</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>x</mi><mo>−</mo><mi>ω</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>i</mi><mi>A</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>x</mi><mo>−</mo><mi>ω</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo minsize="180%" maxsize="180%" stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>λ</mi></mfrac><mi>x</mi><mo>−</mo><mfrac><mrow><mn>2</mn><mi>π</mi><mi>v</mi></mrow><mi>λ</mi></mfrac><mi>t</mi><mo minsize="180%" maxsize="180%" stretchy="true" form="postfix">)</mo><mo>+</mo><mi>i</mi><mi>A</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo minsize="180%" maxsize="180%" stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>λ</mi></mfrac><mi>x</mi><mo>−</mo><mfrac><mrow><mn>2</mn><mi>π</mi><mi>v</mi></mrow><mi>λ</mi></mfrac><mi>t</mi><mo minsize="180%" maxsize="180%" stretchy="true" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>λ</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>v</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>i</mi><mi>A</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>λ</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>v</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*} y = y(x,t) &amp;= A e^{i\theta} \\ &amp;= A (\cos \theta + i \sin \theta) \\ &amp;= A (\cos(kx - \omega t) + i \sin(kx - \omega t)) \\ &amp;= A\cos(kx - \omega t) + i A\sin(kx - \omega t) \\ &amp;= A\cos \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) + i A\sin \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) \\ &amp;= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t) \end{align*}</annotation></semantics></math>]</p>
 <p>In Typora, you can just type <code>\$\$</code> and press the Return
 key to input a math block. In input mode, use the Up/Down arrow keys or
 Command/Ctrl + Return key to finish editing, or just click the ✓ button,
@@ -8664,19 +8678,19 @@ front matter to define meta data like title, category, tags, etc.</li>
 </ul>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: YAML Front Matter</td>
 </tr>
-<tr class="even">
+<tr>
 <td>category: how-to</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>author: typora.io</td>
 </tr>
-<tr class="even">
+<tr>
 <td>tags: [YAML, metadata, tags]</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>typora-root-url: ../../</td>
 </tr>
 </tbody>
@@ -8960,7 +8974,7 @@ line, corresponding to heading levels 1-6. For example:</p>
 ## This is an H2
 
 ###### This is an H6</code></pre>
-<p>In Typora, input ’#’s followed by title content, then pressing the
+<p>In Typora, input ‘#’s followed by title content, then pressing the
 Return key will create a heading. Or type ⌘1 to ⌘6 as a shortcut.</p>
 <h5 id="blockquotes">Blockquotes</h5>
 <p>Markdown uses email-style &gt; characters for blockquoting. They are
@@ -9025,6 +9039,7 @@ puts markdown.to_html
 the Return key. This will trigger an input field that accepts Tex/LaTex
 source. For example:</p>
 [_1 _2 =
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi mathvariant="bold-italic">𝒊</mi></mtd><mtd columnalign="center" style="text-align: center"><mi mathvariant="bold-italic">𝒋</mi></mtd><mtd columnalign="center" style="text-align: center"><mi mathvariant="bold-italic">𝒌</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mfrac><mrow><mi>∂</mi><mi>X</mi></mrow><mrow><mi>∂</mi><mi>u</mi></mrow></mfrac></mtd><mtd columnalign="center" style="text-align: center"><mfrac><mrow><mi>∂</mi><mi>Y</mi></mrow><mrow><mi>∂</mi><mi>u</mi></mrow></mfrac></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mfrac><mrow><mi>∂</mi><mi>X</mi></mrow><mrow><mi>∂</mi><mi>v</mi></mrow></mfrac></mtd><mtd columnalign="center" style="text-align: center"><mfrac><mrow><mi>∂</mi><mi>Y</mi></mrow><mrow><mi>∂</mi><mi>v</mi></mrow></mfrac></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><annotation encoding="application/x-tex">\begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ \frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \\ \frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \\ \end{vmatrix}</annotation></semantics></math>
 <p>]</p>
 <p>In the Markdown source file, the math block is a LaTeX expression
 wrapped by a pair of ‘$$’ marks:</p>

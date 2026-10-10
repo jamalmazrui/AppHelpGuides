@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Substack help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Substack help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#substack-help" id="toc-substack-help">Substack help</a>
@@ -3879,13 +3893,11 @@ visible on your profile, follow these steps.</p>
 <ul>
 <li>Tap on your profile and click “Edit”.</li>
 <li>Tap on “Subscriptions”.</li>
-<li><ol start="3" type="1">
-<li>Slide the toggle to the left next to the Substack you want to hide.
-You can also hide your subscriptions by tapping on your paid subscriber
-badge on the Substack iOS app. Once you tap on your paid subscriber
-badge, select the three dots in the upper right corner and click on
-“Edit subscription visibility”.</li>
-</ol></li>
+<li>3. Slide the toggle to the left next to the Substack you want to
+hide. You can also hide your subscriptions by tapping on your paid
+subscriber badge on the Substack iOS app. Once you tap on your paid
+subscriber badge, select the three dots in the upper right corner and
+click on “Edit subscription visibility”.</li>
 </ul>
 <p>On the web</p>
 <ul>
@@ -5521,10 +5533,8 @@ and select “Edit” next to “Customer support information”.</li>
 <li>In the “Statement descriptor” field, enter 5-22 characters in the
 text box. Stripe recommends, “To prevent chargebacks and disputes, your
 statement descriptor must be similar to your business name or URL.”</li>
-<li><ol start="4" type="1">
-<li>Click “Save”. Moving forward, any new charges will appear as the new
-text on your subscribers’ bank or credit card statements.</li>
-</ol></li>
+<li>4. Click “Save”. Moving forward, any new charges will appear as the
+new text on your subscribers’ bank or credit card statements.</li>
 </ul>
 <h3
 id="how-do-i-connect-to-stripe-on-the-substack-app-to-start-receiving-payments">How
@@ -13343,49 +13353,29 @@ include:</p>
 <li><ol type="a">
 <li>Suicide or self-harm</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>Eating disorders or disordered eating behaviours</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>Dangerous physical challenges</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>Misuse of harmful substances (ingesting, inhaling, injecting, or
+<li>b. Eating disorders or disordered eating behaviours</li>
+<li>c. Dangerous physical challenges</li>
+<li>d. Misuse of harmful substances (ingesting, inhaling, injecting, or
 otherwise self-administering)</li>
-</ol></li>
 <li>Bullying or harassment</li>
 <li>Hate content targeting people based on:</li>
 <li><ol type="a">
 <li>Race</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>Religion</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>Sex</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>Sexual orientation</li>
-</ol></li>
-<li><ol start="5" type="a">
-<li>Disability</li>
-</ol></li>
-<li><ol start="6" type="a">
-<li>Gender reassignment</li>
-</ol></li>
+<li>b. Religion</li>
+<li>c. Sex</li>
+<li>d. Sexual orientation</li>
+<li>e. Disability</li>
+<li>f. Gender reassignment</li>
 <li>Violent or graphic material that:</li>
 <li><ol type="a">
 <li>Promotes or instructs on serious violence, or</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>Depicts real or realistic acts of serious violence or injury to
+<li>b. Depicts real or realistic acts of serious violence or injury to
 people, animals, or fictional creatures.</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>Polarized recounting of mass casualty events Writers who publish
+<li>c. Polarized recounting of mass casualty events Writers who publish
 such material should ensure that their content is appropriately labelled
 as 18+.</li>
-</ol></li>
 </ul>
 <p>Reporting Illegal or Harmful Content</p>
 <p>If you are in the UK and believe content on Substack may be illegal
@@ -15611,33 +15601,27 @@ picture-in-picture support</p></li>
 your own How to get started</p></li>
 <li><p>Sign into your Substack account on the web. Click “Create” and
 select “Recording studio”.</p></li>
-<li><ol start="2" type="1">
-<li>When prompted, allow Substack to access your browser’s microphone
-and camera.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>You can invite a guest and have up to three total people in the
-recording. Enter the creator’s Substack handle to send an invitation.
-Invitations will appear as a web and app pop-up, push notification, or
-email notification. Guests can join the video session from the Substack
-app (iOS or Android) or from their computer– once they accept your
-invite, they’ll automatically join the preview room.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Click “Start recording”. The system takes approximately 20 seconds
-to connect and then a red “Recording” indicator will appear at the top
-of the screen. To stop the video recording, click “End”.</li>
-</ol></li>
-<li><ol start="5" type="1">
-<li>Once you end the recording, a post will automatically begin
+<li><p>2. When prompted, allow Substack to access your browser’s
+microphone and camera.</p></li>
+<li><p>3. You can invite a guest and have up to three total people in
+the recording. Enter the creator’s Substack handle to send an
+invitation. Invitations will appear as a web and app pop-up, push
+notification, or email notification. Guests can join the video session
+from the Substack app (iOS or Android) or from their computer– once they
+accept your invite, they’ll automatically join the preview
+room.</p></li>
+<li><p>4. Click “Start recording”. The system takes approximately 20
+seconds to connect and then a red “Recording” indicator will appear at
+the top of the screen. To stop the video recording, click
+“End”.</p></li>
+<li><p>5. Once you end the recording, a post will automatically begin
 generating and you will be redirected to your publication’s Home. You
 can save the video to your Drafts or publish it immediately. You’ll
 receive an email notification with a link once the draft video post is
 ready. Tip: If your recording is a long enough, thumbnails will auto
 generate for you. To customize your video thumbnail, select “Edit
 thumbnail” and you’ll have the options to select your own style and add
-a caption.</li>
-</ol></li>
+a caption.</p></li>
 </ul>
 <p>How do I share my screen?</p>
 <p>If you’d like to <a

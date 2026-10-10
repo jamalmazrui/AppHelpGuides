@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>YouTube Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,45 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">YouTube Help Guide</h1>
 <p class="subtitle">Google’s own help centre for YouTube, gathered into
 one screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#youtube-help-guide" id="toc-youtube-help-guide">YouTube
+Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-create-grow-your-channel"
+id="toc-cat-create-grow-your-channel">Create &amp; grow your
+channel</a></li>
+<li><a href="#cat-fix-a-problem" id="toc-cat-fix-a-problem">Fix a
+problem</a></li>
+<li><a href="#cat-manage-your-account-settings"
+id="toc-cat-manage-your-account-settings">Manage your account &amp;
+settings</a></li>
+<li><a href="#cat-monetize-your-content"
+id="toc-cat-monetize-your-content">Monetize your content</a></li>
+<li><a href="#cat-policy-safety-copyright"
+id="toc-cat-policy-safety-copyright">Policy, safety, &amp;
+copyright</a></li>
+<li><a href="#cat-supervised-experiences-on-youtube"
+id="toc-cat-supervised-experiences-on-youtube">Supervised experiences on
+YouTube</a></li>
+<li><a href="#cat-watch-videos" id="toc-cat-watch-videos">Watch
+videos</a></li>
+<li><a href="#cat-youtube-premium" id="toc-cat-youtube-premium">YouTube
+Premium</a></li>
+<li><a href="#cat-miscellaneous"
+id="toc-cat-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="youtube-help-guide">YouTube Help Guide</h1>
 <p>This guide gathers the official help Google publishes for YouTube.
 The text was taken from support.google.com/youtube on 31 July 2026 and
@@ -23675,16 +23715,13 @@ YouTube channel</li>
 </ol></li>
 </ul></li>
 <li><ul>
-<li><ol start="2" type="1">
-<li>Revert unwanted changes on the YouTube channel immediately to avoid
-policy repercussions like Community Guidelines or copyright strikes</li>
-</ol></li>
+<li>2. Revert unwanted changes on the YouTube channel immediately to
+avoid policy repercussions like Community Guidelines or copyright
+strikes</li>
 </ul></li>
 <li><ul>
-<li><ol start="3" type="1">
-<li>Reduce the risk of unauthorized access to your Google Account by
+<li>3. Reduce the risk of unauthorized access to your Google Account by
 using security best practices with all associated channel users</li>
-</ol></li>
 </ul></li>
 </ul>
 <h4 id="recover-your-google-account">Recover your Google Account</h4>
@@ -52922,10 +52959,8 @@ its non-US partners and vendors tax forms at the earlier of</p>
 <li><ol type="1">
 <li>Every 3 full calendar years after the year of submission.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>If there has been a change in circumstances that would impact the
-validity of the form.</li>
-</ol></li>
+<li>(2) If there has been a change in circumstances that would impact
+the validity of the form.</li>
 </ul>
 <p>Google is updating its payees to confirm compliance with these IRS
 rules.</p>

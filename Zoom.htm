@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-02" />
   <title>Zoom Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,15 +180,82 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Zoom Help Guide</h1>
 <p class="subtitle">Zoom’s own help documentation, second edition</p>
 <p class="date">2026-08-02</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#zoom-help-guide" id="toc-zoom-help-guide">Zoom Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#ai-companion" id="toc-ai-companion">AI Companion</a></li>
+<li><a href="#contact-center" id="toc-contact-center">Contact
+Center</a></li>
+<li><a href="#events" id="toc-events">Events</a></li>
+<li><a href="#hub" id="toc-hub">Hub</a></li>
+<li><a href="#installing-and-configuring-the-zoom-workplace-app"
+id="toc-installing-and-configuring-the-zoom-workplace-app">Installing
+and configuring the Zoom Workplace app</a></li>
+<li><a href="#phone" id="toc-phone">Phone</a></li>
+<li><a href="#revenue-accelerator" id="toc-revenue-accelerator">Revenue
+Accelerator</a></li>
+<li><a href="#rooms" id="toc-rooms">Rooms</a></li>
+<li><a href="#video-management" id="toc-video-management">Video
+Management</a></li>
+<li><a href="#virtual-agent" id="toc-virtual-agent">Virtual
+Agent</a></li>
+<li><a href="#webinar" id="toc-webinar">Webinar</a></li>
+<li><a href="#webinars" id="toc-webinars">Webinars</a></li>
+<li><a href="#webinars-plus" id="toc-webinars-plus">Webinars
+Plus</a></li>
+<li><a href="#whiteboard" id="toc-whiteboard">Whiteboard</a></li>
+<li><a href="#workflow-automation" id="toc-workflow-automation">Workflow
+Automation</a></li>
+<li><a href="#workspace-reservation"
+id="toc-workspace-reservation">Workspace Reservation</a></li>
+<li><a href="#your-account-profile-and-billing"
+id="toc-your-account-profile-and-billing">Your account, profile and
+billing</a></li>
+<li><a href="#zoom-canvas" id="toc-zoom-canvas">Zoom Canvas</a></li>
+<li><a href="#zoom-clips" id="toc-zoom-clips">Zoom Clips</a></li>
+<li><a href="#zoom-docs-and-paper" id="toc-zoom-docs-and-paper">Zoom
+Docs and Paper</a></li>
+<li><a href="#zoom-events" id="toc-zoom-events">Zoom Events</a></li>
+<li><a href="#zoom-mail" id="toc-zoom-mail">Zoom Mail</a></li>
+<li><a href="#zoom-mail-and-calendar"
+id="toc-zoom-mail-and-calendar">Zoom Mail and Calendar</a></li>
+<li><a href="#zoom-meetings" id="toc-zoom-meetings">Zoom
+Meetings</a></li>
+<li><a href="#zoom-notes" id="toc-zoom-notes">Zoom Notes</a></li>
+<li><a href="#zoom-phone" id="toc-zoom-phone">Zoom Phone</a></li>
+<li><a href="#zoom-rooms" id="toc-zoom-rooms">Zoom Rooms</a></li>
+<li><a href="#zoom-scheduler" id="toc-zoom-scheduler">Zoom
+Scheduler</a></li>
+<li><a href="#zoom-sheets" id="toc-zoom-sheets">Zoom Sheets</a></li>
+<li><a href="#zoom-slides" id="toc-zoom-slides">Zoom Slides</a></li>
+<li><a href="#zoom-tasks" id="toc-zoom-tasks">Zoom Tasks</a></li>
+<li><a href="#zoom-team-chat" id="toc-zoom-team-chat">Zoom Team
+Chat</a></li>
+<li><a href="#zoom-web-app" id="toc-zoom-web-app">Zoom Web App</a></li>
+<li><a href="#zoom-webinars" id="toc-zoom-webinars">Zoom
+Webinars</a></li>
+<li><a href="#zoom-whiteboard" id="toc-zoom-whiteboard">Zoom
+Whiteboard</a></li>
+<li><a href="#zoommate" id="toc-zoommate">ZoomMate</a></li>
+<li><a href="#zoommate-2" id="toc-zoommate-2">Zoommate</a></li>
+<li><a href="#zoommate-and-zoom-ai-companion"
+id="toc-zoommate-and-zoom-ai-companion">ZoomMate and Zoom AI
+Companion</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="zoom-help-guide">Zoom Help Guide</h1>
 <p>This guide gathers Zoom’s own help documentation. It is a second
 edition: the first was taken on 29 July 2026 and held 420 articles, and
@@ -96388,9 +96466,7 @@ Optiplex 7000 Micro</a></dt>
 <p>✔</p>
 <p>(6)</p>
 <p>✔</p>
-<ol start="3" type="1">
-<li></li>
-</ol>
+<p>(3)</p>
 <p>✔</p>
 <p>(6)</p></li>
 <li><dl>
@@ -96414,9 +96490,7 @@ support</li>
 <p>✔</p>
 <p>(6)</p>
 <p>✔</p>
-<ol start="4" type="1">
-<li></li>
-</ol>
+<p>(4)</p>
 <p>✔</p>
 <p>(6)</p></li>
 <li><p><strong><a
@@ -96434,9 +96508,7 @@ NUC 12 Pro Mini PC for Zoom Rooms</a></strong>:</p>
 <p>✔</p>
 <p>(6)</p>
 <p>✔</p>
-<ol start="3" type="1">
-<li></li>
-</ol>
+<p>(3)</p>
 <p>✔</p>
 <p>(6)</p></li>
 <li><dl>
@@ -96456,9 +96528,7 @@ NUC 11 Pro</a></dt>
 <p>✔</p>
 <p>(6)</p>
 <p>✔</p>
-<ol start="3" type="1">
-<li></li>
-</ol>
+<p>(3)</p>
 <p>✘</p></li>
 <li><dl>
 <dt><a
@@ -96479,9 +96549,7 @@ ThinkSmart Core</a></dt>
 <p>✔</p>
 <p>(6)</p>
 <p>✔</p>
-<ol start="3" type="1">
-<li></li>
-</ol>
+<p>(3)</p>
 <p>✘</p></li>
 </ul>
 <h4 id="verified-zoom-rooms-macos-platforms">Verified Zoom Rooms macOS

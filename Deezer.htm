@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-10" />
   <title>Deezer: the complete help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,72 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Deezer: the complete help guide</h1>
 <p class="subtitle">Every help article Deezer publishes, arranged for
 reading straight through</p>
 <p class="date">2026-08-10</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#deezer-the-complete-help-guide"
+id="toc-deezer-the-complete-help-guide">Deezer: the complete help
+guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#account-payment-account-basics"
+id="toc-account-payment-account-basics">Account &amp; Payment: Account
+Basics</a></li>
+<li><a href="#account-payment-deezer-family"
+id="toc-account-payment-deezer-family">Account &amp; Payment: Deezer
+Family</a></li>
+<li><a href="#account-payment-manage-your-account"
+id="toc-account-payment-manage-your-account">Account &amp; Payment:
+Manage Your Account</a></li>
+<li><a href="#account-payment-payment-help"
+id="toc-account-payment-payment-help">Account &amp; Payment: Payment
+Help</a></li>
+<li><a href="#account-payment-sharing-security"
+id="toc-account-payment-sharing-security">Account &amp; Payment: Sharing
+&amp; Security</a></li>
+<li><a href="#account-payment-subscriptions"
+id="toc-account-payment-subscriptions">Account &amp; Payment:
+Subscriptions</a></li>
+<li><a href="#deezer-partnerships-deezer-partnerships"
+id="toc-deezer-partnerships-deezer-partnerships">Deezer Partnerships:
+Deezer Partnerships</a></li>
+<li><a href="#devices-cars" id="toc-devices-cars">Devices: Cars</a></li>
+<li><a href="#devices-mobile-tablet-desktop"
+id="toc-devices-mobile-tablet-desktop">Devices: Mobile, tablet,
+desktop</a></li>
+<li><a href="#devices-other-devices"
+id="toc-devices-other-devices">Devices: Other devices</a></li>
+<li><a href="#devices-sound-systems"
+id="toc-devices-sound-systems">Devices: Sound systems</a></li>
+<li><a href="#devices-tv" id="toc-devices-tv">Devices: TV</a></li>
+<li><a href="#using-deezer-deezer-shows"
+id="toc-using-deezer-deezer-shows">Using Deezer: Deezer Shows</a></li>
+<li><a href="#using-deezer-features"
+id="toc-using-deezer-features">Using Deezer: Features</a></li>
+<li><a href="#using-deezer-playlists"
+id="toc-using-deezer-playlists">Using Deezer: Playlists</a></li>
+<li><a href="#using-deezer-profile" id="toc-using-deezer-profile">Using
+Deezer: Profile</a></li>
+<li><a href="#using-deezer-system-settings"
+id="toc-using-deezer-system-settings">Using Deezer: System &amp;
+settings</a></li>
+<li><a href="#using-deezer-the-basics"
+id="toc-using-deezer-the-basics">Using Deezer: The basics</a></li>
+<li><a href="#using-deezer-troubleshooting"
+id="toc-using-deezer-troubleshooting">Using Deezer:
+Troubleshooting</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="deezer-the-complete-help-guide">Deezer: the complete help
 guide</h1>
 <p>This guide gathers the help Deezer publishes: 154 articles across 20

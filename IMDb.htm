@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>IMDb Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,81 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">IMDb Help Guide</h1>
 <p class="subtitle">IMDb’s own help documentation, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#imdb-help-guide" id="toc-imdb-help-guide">IMDb Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#common-issues" id="toc-common-issues">Common
+Issues</a></li>
+<li><a href="#contributing-to-imdb-contribution-information"
+id="toc-contributing-to-imdb-contribution-information">Contributing to
+IMDb: Contribution Information</a></li>
+<li><a href="#contributing-to-imdb-filmography-credits"
+id="toc-contributing-to-imdb-filmography-credits">Contributing to IMDb:
+Filmography Credits</a></li>
+<li><a href="#contributing-to-imdb-images-videos"
+id="toc-contributing-to-imdb-images-videos">Contributing to IMDb: Images
+&amp; Videos</a></li>
+<li><a href="#contributing-to-imdb-industry-professional"
+id="toc-contributing-to-imdb-industry-professional">Contributing to
+IMDb: Industry Professional</a></li>
+<li><a href="#contributing-to-imdb-names-biographical-data"
+id="toc-contributing-to-imdb-names-biographical-data">Contributing to
+IMDb: Names &amp; Biographical Data</a></li>
+<li><a href="#contributing-to-imdb-other-submission-guides"
+id="toc-contributing-to-imdb-other-submission-guides">Contributing to
+IMDb: Other Submission Guides</a></li>
+<li><a href="#contributing-to-imdb-titles"
+id="toc-contributing-to-imdb-titles">Contributing to IMDb:
+Titles</a></li>
+<li><a href="#discover-watch" id="toc-discover-watch">Discover &amp;
+Watch</a></li>
+<li><a href="#featured-content" id="toc-featured-content">Featured
+Content</a></li>
+<li><a href="#general-information" id="toc-general-information">General
+Information</a></li>
+<li><a href="#imdbpro-industry-contacts"
+id="toc-imdbpro-industry-contacts">IMDbPro: Industry Contacts</a></li>
+<li><a href="#imdbpro-industry-research"
+id="toc-imdbpro-industry-research">IMDbPro: Industry Research</a></li>
+<li><a href="#imdbpro-industry-resources"
+id="toc-imdbpro-industry-resources">IMDbPro: Industry Resources</a></li>
+<li><a href="#imdbpro-manage-your-imdb-page"
+id="toc-imdbpro-manage-your-imdb-page">IMDbPro: Manage Your IMDb
+Page</a></li>
+<li><a href="#imdbpro-membership-benefits"
+id="toc-imdbpro-membership-benefits">IMDbPro: Membership
+Benefits</a></li>
+<li><a href="#imdbpro-mobile-web-apps"
+id="toc-imdbpro-mobile-web-apps">IMDbPro: Mobile Web &amp; Apps</a></li>
+<li><a href="#imdbpro-new-features-updates"
+id="toc-imdbpro-new-features-updates">IMDbPro: New Features &amp;
+Updates</a></li>
+<li><a href="#imdbpro-your-account"
+id="toc-imdbpro-your-account">IMDbPro: Your Account</a></li>
+<li><a href="#mobile-web-apps" id="toc-mobile-web-apps">Mobile Web &amp;
+Apps</a></li>
+<li><a href="#new-features-updates" id="toc-new-features-updates">New
+Features &amp; Updates</a></li>
+<li><a href="#special-events" id="toc-special-events">Special
+Events</a></li>
+<li><a href="#track-movies-tv" id="toc-track-movies-tv">Track Movies
+&amp; TV</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="imdb-help-guide">IMDb Help Guide</h1>
 <p>This guide gathers the help IMDb publishes for the people who use it,
 as it stood on 3 August 2026.</p>
@@ -3251,7 +3327,7 @@ alt="iOS edit review window" /></td>
 </p>
 <p><strong>1)</strong> To access your reviews, tap the button at the top
 of the app and click Reviews<strong>. </strong></p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 46%" />
 <col style="width: 52%" />
@@ -14949,7 +15025,7 @@ Academy Awards or episode titles for TV series at the Emmy Awards as
 well as any official reasons for Honorary Awards or Special
 Mentions.</p>
 <p>i.e.:</p>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 56%" />
@@ -14963,7 +15039,7 @@ style="text-align: left;"><code>- The decision led to an nation-wide scandal</co
 </tr>
 </tbody>
 </table>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 36%" />
 <col style="width: 61%" />
@@ -15024,7 +15100,7 @@ style="text-align: left;"><code>- Also for their performances in</code><br />
 </tr>
 </tbody>
 </table>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 42%" />
 <col style="width: 55%" />
@@ -18398,7 +18474,7 @@ href="#short">Short</a> | <a href="#sport">Sport</a> | <a
 href="#talk">Talk-Show</a> | <a href="#thriller">Thriller</a> | <a
 href="#war">War</a> | <a href="#western">Western</a></p>
 <hr />
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -18463,7 +18539,7 @@ Examples: <a href="https://www.imdb.com/title/tt0245429/">Spirited Away
 King (1994)</a> | <a href="https://www.imdb.com/title/tt0096697/">“The
 Simpsons” (1989)</a> ———————————–
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 6%" />
 <col style="width: 93%" />
@@ -18488,7 +18564,7 @@ Brockovich (2000)</a></td>
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 4%" />
 <col style="width: 95%" />
@@ -20428,7 +20504,7 @@ href="https://www.imdb.com/interest/in0000215/">Cantonese</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 6%" />
 <col style="width: 92%" />
@@ -20522,7 +20598,7 @@ href="https://www.imdb.com/interest/in0000218/">Finnish</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -20570,7 +20646,7 @@ href="https://www.imdb.com/interest/in0000220/">German</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -20593,7 +20669,7 @@ href="https://www.imdb.com/interest/in0000221/">Greek</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -20617,7 +20693,7 @@ href="https://www.imdb.com/interest/in0000222/">Hindi</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -20728,7 +20804,7 @@ href="https://www.imdb.com/interest/in0000240/">Malayalam</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -20796,7 +20872,7 @@ href="https://www.imdb.com/interest/in0000228/">Norwegian</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -20819,7 +20895,7 @@ href="https://www.imdb.com/interest/in0000229/">Persian</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 6%" />
 <col style="width: 92%" />
@@ -20866,7 +20942,7 @@ href="https://www.imdb.com/interest/in0000231/">Punjabi</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -20891,7 +20967,7 @@ href="https://www.imdb.com/interest/in0000232/">Russian</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -20960,7 +21036,7 @@ href="https://www.imdb.com/interest/in0000235/">Tamil</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -20984,7 +21060,7 @@ href="https://www.imdb.com/interest/in0000236/">Telugu</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -21248,7 +21324,7 @@ href="https://www.imdb.com/interest/in0000002/">epic-action</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -21317,7 +21393,7 @@ href="https://www.imdb.com/interest/in0000015/">epic-adventure</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -21362,7 +21438,7 @@ href="https://www.imdb.com/interest/in0000092/">animals-family</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -21386,7 +21462,7 @@ href="https://www.imdb.com/interest/in00000026/">Animation</a> |
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -21410,7 +21486,7 @@ href="https://www.imdb.com/interest/in0000027/">anime-animation</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -21433,7 +21509,7 @@ href="https://www.imdb.com/interest/in0000158/">artificial-intelligence-sci-fi</
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 6%" />
 <col style="width: 93%" />
@@ -21546,7 +21622,7 @@ href="https://www.imdb.com/interest/in0000123/">beauty-makeover-reality-tv</a><b
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -21615,7 +21691,7 @@ href="https://www.imdb.com/interest/in0000109/">body-horror</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -21662,7 +21738,7 @@ href="https://www.imdb.com/interest/in0000169/">boxing-sport</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 6%" />
 <col style="width: 93%" />
@@ -21688,7 +21764,7 @@ href="https://www.imdb.com/interest/in0000032/">buddy-comedy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -21822,7 +21898,7 @@ href="https://www.imdb.com/interest/in0000131/">classic-musical</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -21868,7 +21944,7 @@ href="https://www.imdb.com/interest/in0000034/">Comedy</a> |
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -21933,7 +22009,7 @@ href="https://www.imdb.com/interest/in0000129/">concert-music</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -21956,7 +22032,7 @@ href="https://www.imdb.com/interest/in0000176/">conspiracy-thriller</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -22067,7 +22143,7 @@ href="https://www.imdb.com/interest/in0000074/">costume-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -22091,7 +22167,7 @@ href="https://www.imdb.com/interest/in0000137/">cozy-mystery</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -22184,7 +22260,7 @@ href="https://www.imdb.com/interest/in0000177/">cyber-thriller</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -22208,7 +22284,7 @@ href="https://www.imdb.com/interest/in0000159/">cyberpunk-sci-fi</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -22410,7 +22486,7 @@ href="https://www.imdb.com/interest/in0000060/">Documentary</a> |
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -22433,7 +22509,7 @@ href="https://www.imdb.com/interest/in0000061/">docuseries-documentary</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -22456,7 +22532,7 @@ href="https://www.imdb.com/interest/in0000145/">docusoap-reality-tv</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -22480,7 +22556,7 @@ href="https://www.imdb.com/interest/in0000076/">Drama</a> |
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -22547,7 +22623,7 @@ href="https://www.imdb.com/interest/in0000077/">epic-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -22614,7 +22690,7 @@ href="https://www.imdb.com/interest/in0000097/">fairy-tale-fantasy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -22752,7 +22828,7 @@ href="https://www.imdb.com/interest/in0000151/">feel-good-romance</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -22821,7 +22897,7 @@ href="https://www.imdb.com/interest/in0000110/">folk-horror</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -22889,7 +22965,7 @@ href="https://www.imdb.com/interest/in0000111/">found-footage-horror</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -23180,7 +23256,7 @@ href="https://www.imdb.com/interest/in0000064/">history-documentary</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -23227,7 +23303,7 @@ href="https://www.imdb.com/interest/in0000193/">holiday-animation</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -23251,7 +23327,7 @@ href="https://www.imdb.com/interest/in0000194/">holiday-comedy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -23275,7 +23351,7 @@ href="https://www.imdb.com/interest/in0000195/">holiday-family</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -23431,7 +23507,7 @@ href="https://www.imdb.com/interest/in0000203/">josei-anime-animation</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -23455,7 +23531,7 @@ href="https://www.imdb.com/interest/in0000132/">jukebox-musical</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -23521,7 +23597,7 @@ href="https://www.imdb.com/interest/in0000209/">k-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -23567,7 +23643,7 @@ href="https://www.imdb.com/interest/in0000081/">legal-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -23700,7 +23776,7 @@ href="https://www.imdb.com/interest/in0000065/">military-and-war-documentary</a>
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -23747,7 +23823,7 @@ href="https://www.imdb.com/interest/in0000113/">monster-horror</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -23770,7 +23846,7 @@ href="https://www.imdb.com/interest/in0000172/">motorsports-sport</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -23794,7 +23870,7 @@ href="https://www.imdb.com/interest/in0000018/">mountain-adventure</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 19%" />
 <col style="width: 79%" />
@@ -24014,7 +24090,7 @@ href="https://www.imdb.com/interest/in0000083/">period-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -24443,7 +24519,7 @@ href="https://www.imdb.com/interest/in0000150/">epic-romance</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -24468,7 +24544,7 @@ href="https://www.imdb.com/interest/in0000199/">samurai-action</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -24736,7 +24812,7 @@ href="https://www.imdb.com/interest/in0000087/">showbiz-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -24782,7 +24858,7 @@ href="https://www.imdb.com/interest/in0000045/">sketch-comedy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -24851,7 +24927,7 @@ href="https://www.imdb.com/interest/in0000208/">slice-of-life-anime-animation</a
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -24875,7 +24951,7 @@ href="https://www.imdb.com/interest/in0000088/">soap-opera-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25032,7 +25108,7 @@ href="https://www.imdb.com/interest/in0000184/">spy-thriller</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -25123,7 +25199,7 @@ href="https://www.imdb.com/interest/in0000048/">stoner-comedy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -25190,7 +25266,7 @@ href="https://www.imdb.com/interest/in0000099/">supernatural-fantasy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25213,7 +25289,7 @@ href="https://www.imdb.com/interest/in0000117/">supernatural-horror</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -25238,7 +25314,7 @@ href="https://www.imdb.com/interest/in0000185/">survival-adventure</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25284,7 +25360,7 @@ href="https://www.imdb.com/interest/in0000140/">suspense-mystery</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -25307,7 +25383,7 @@ href="https://www.imdb.com/interest/in0000022/">swashbuckler-adventure</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -25400,7 +25476,7 @@ href="https://www.imdb.com/interest/in0000127/">Talk-Show</a> |
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25446,7 +25522,7 @@ href="https://www.imdb.com/interest/in0000049/">teen-comedy</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25625,7 +25701,7 @@ href="https://www.imdb.com/interest/in0000090/">tragedy-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25714,7 +25790,7 @@ href="https://www.imdb.com/interest/in0000058/">true-crime</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25849,7 +25925,7 @@ href="https://www.imdb.com/interest/in0000120/">werewolf-horror</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 91%" />
@@ -25919,7 +25995,7 @@ href="https://www.imdb.com/interest/in0000141/">whodunnit-mystery</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 90%" />
@@ -25964,7 +26040,7 @@ href="https://www.imdb.com/interest/in0000091/">workplace-drama</a><br />
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
@@ -30112,7 +30188,7 @@ help inform people of the events taking place in the title.<br />
 <p>A maximum of <strong>one</strong> outline is allowed per title and
 locale - rather than deleting the live one and/or adding a new one,
 please modify the existing item instead.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 73%" />
@@ -30150,7 +30226,7 @@ storyline from start to finish.</p>
 <p>IMDb reserves the right to select <strong>which plot summary to
 use</strong>. Up to five summaries per title may be kept, but only if
 they present a differing viewpoints.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 91%" />
@@ -31231,7 +31307,7 @@ request.</p>
 not accept sound mixes for DVD releases with re-mixed soundtracks.</p>
 <p>A list of the attributes currently being used can be displayed by
 clicking on the gray list icon ( ) next to the attribute field.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 76%" />
@@ -33636,7 +33712,7 @@ determination.</p>
 correct way to categorize different types of titles within our existing
 title type structure.</p>
 <p>** Film/TV/Video Title Categorization Guidelines**</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 34%" />
 <col style="width: 9%" />
@@ -35057,7 +35133,7 @@ languages</figcaption>
 account settings - steps below:*<br />
 </p>
 <ul>
-<li><table style="width:100%;">
+<li><table style="width:99%;">
 <colgroup>
 <col style="width: 39%" />
 <col style="width: 60%" />

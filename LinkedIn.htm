@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-24" />
   <title>LinkedIn Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,71 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">LinkedIn Help Compendium</h1>
 <p class="subtitle">Official LinkedIn consumer help for the website and
 mobile apps, including iOS</p>
 <p class="date">2026-07-24</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#linkedin-help-compendium"
+id="toc-linkedin-help-compendium">LinkedIn Help Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-accessibility"
+id="toc-cat-accessibility">Accessibility</a></li>
+<li><a href="#cat-advertising"
+id="toc-cat-advertising">Advertising</a></li>
+<li><a href="#cat-ai-features" id="toc-cat-ai-features">AI
+Features</a></li>
+<li><a href="#cat-analytics" id="toc-cat-analytics">Analytics</a></li>
+<li><a href="#cat-billing-and-payments"
+id="toc-cat-billing-and-payments">Billing and Payments</a></li>
+<li><a href="#cat-events" id="toc-cat-events">Events</a></li>
+<li><a href="#cat-feed-posts-and-sharing"
+id="toc-cat-feed-posts-and-sharing">Feed, Posts, and Sharing</a></li>
+<li><a href="#cat-general" id="toc-cat-general">General</a></li>
+<li><a href="#cat-groups" id="toc-cat-groups">Groups</a></li>
+<li><a href="#cat-invitations-and-connections"
+id="toc-cat-invitations-and-connections">Invitations and
+Connections</a></li>
+<li><a href="#cat-jobs-and-applications"
+id="toc-cat-jobs-and-applications">Jobs and Applications</a></li>
+<li><a href="#cat-messaging-and-inmail"
+id="toc-cat-messaging-and-inmail">Messaging and InMail</a></li>
+<li><a href="#cat-mobile-apps" id="toc-cat-mobile-apps">Mobile
+Apps</a></li>
+<li><a href="#cat-notifications-and-email"
+id="toc-cat-notifications-and-email">Notifications and Email</a></li>
+<li><a href="#cat-pages-and-companies"
+id="toc-cat-pages-and-companies">Pages and Companies</a></li>
+<li><a href="#cat-policies-and-legal"
+id="toc-cat-policies-and-legal">Policies and Legal</a></li>
+<li><a href="#cat-premium-and-subscriptions"
+id="toc-cat-premium-and-subscriptions">Premium and
+Subscriptions</a></li>
+<li><a href="#cat-privacy-and-data"
+id="toc-cat-privacy-and-data">Privacy and Data</a></li>
+<li><a href="#cat-profile" id="toc-cat-profile">Profile</a></li>
+<li><a href="#cat-search" id="toc-cat-search">Search</a></li>
+<li><a href="#cat-security-and-reporting"
+id="toc-cat-security-and-reporting">Security and Reporting</a></li>
+<li><a href="#cat-services-marketplace"
+id="toc-cat-services-marketplace">Services Marketplace</a></li>
+<li><a href="#cat-settings-and-preferences"
+id="toc-cat-settings-and-preferences">Settings and Preferences</a></li>
+<li><a href="#cat-sign-in-and-account-access"
+id="toc-cat-sign-in-and-account-access">Sign In and Account
+Access</a></li>
+<li><a href="#cat-verification-and-identity"
+id="toc-cat-verification-and-identity">Verification and
+Identity</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="linkedin-help-compendium">LinkedIn Help Compendium</h1>
 <p>This compendium contains the main content of 603 articles from
 LinkedIn’s official consumer Help Center, covering LinkedIn use on the
@@ -31171,8 +31237,8 @@ clients within the Featured content section of your profile.</li>
 <li><strong>Category</strong>: <strong>Hiring</strong>;
 <strong>Feature</strong>: <strong>Attract the right applicants</strong>
 <strong>US$100 hiring credit during free trial, followed by US$50
-monthly hiring credit (or US<span
-class="math inline">600<em>p</em><em>e</em><em>r</em><em>y</em><em>e</em><em>a</em><em>r</em><em>w</em><em>i</em><em>t</em><em>h</em><em>a</em><em>n</em><em>a</em><em>n</em><em>n</em><em>u</em><em>a</em><em>l</em><em>p</em><em>l</em><em>a</em><em>n</em>) * * * * : * * <em>F</em><em>i</em><em>n</em><em>d</em>, <em>s</em><em>c</em><em>r</em><em>e</em><em>e</em><em>n</em>, <em>a</em><em>n</em><em>d</em><em>s</em><em>h</em><em>o</em><em>r</em><em>t</em><em>l</em><em>i</em><em>s</em><em>t</em><em>t</em><em>h</em><em>e</em><em>r</em><em>i</em><em>g</em><em>h</em><em>t</em><em>c</em><em>a</em><em>n</em><em>d</em><em>i</em><em>d</em><em>a</em><em>t</em><em>e</em><em>s</em><em>w</em><em>i</em><em>t</em><em>h</em><em>L</em><em>i</em><em>n</em><em>k</em><em>e</em><em>d</em><em>I</em><em>n</em><em>H</em><em>i</em><em>r</em><em>i</em><em>n</em><em>g</em><em>P</em><em>r</em><em>o</em> : <em>y</em><em>o</em><em>u</em><em>r</em><em>b</em><em>u</em><em>i</em><em>l</em><em>t</em>‑<em>i</em><em>n</em><em>h</em><em>i</em><em>r</em><em>i</em><em>n</em><em>g</em><em>p</em><em>a</em><em>r</em><em>t</em><em>n</em><em>e</em><em>r</em>.<em>U</em><em>s</em><em>e</em><em>y</em><em>o</em><em>u</em><em>r</em><em>h</em><em>i</em><em>r</em><em>i</em><em>n</em><em>g</em><em>c</em><em>r</em><em>e</em><em>d</em><em>i</em><em>t</em><em>s</em><em>t</em><em>o</em><em>a</em><em>t</em><em>t</em><em>r</em><em>a</em><em>c</em><em>t</em><em>t</em><em>h</em><em>e</em><em>r</em><em>i</em><em>g</em><em>h</em><em>t</em><em>p</em><em>e</em><em>o</em><em>p</em><em>l</em><em>e</em><em>b</em><em>y</em><em>p</em><em>r</em><em>o</em><em>m</em><em>o</em><em>t</em><em>i</em><em>n</em><em>g</em><em>y</em><em>o</em><em>u</em><em>r</em><em>o</em><em>p</em><em>e</em><em>n</em><em>r</em><em>o</em><em>l</em><em>e</em><em>s</em><em>w</em><em>h</em><em>e</em><em>n</em><em>i</em><em>t</em>’<em>s</em><em>t</em><em>i</em><em>m</em><em>e</em><em>t</em><em>o</em><em>h</em><em>i</em><em>r</em><em>e</em>. * *<em>N</em><em>o</em><em>t</em><em>e</em> * * : <em>C</em><em>r</em><em>e</em><em>d</em><em>i</em><em>t</em><em>a</em><em>m</em><em>o</em><em>u</em><em>n</em><em>t</em><em>s</em><em>a</em><em>r</em><em>e</em><em>s</em><em>h</em><em>o</em><em>w</em><em>n</em><em>i</em><em>n</em><em>U</em><em>S</em></span>
+monthly hiring credit (or
+US<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mi>p</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>h</mi><mi>a</mi><mi>n</mi><mi>a</mi><mi>n</mi><mi>n</mi><mi>u</mi><mi>a</mi><mi>l</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>*</mi><mo>*</mo><mi>*</mi><mo>:</mo><mi>*</mi><mo>*</mo><mi>F</mi><mi>i</mi><mi>n</mi><mi>d</mi><mo>,</mo><mi>s</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>e</mi><mi>n</mi><mo>,</mo><mi>a</mi><mi>n</mi><mi>d</mi><mi>s</mi><mi>h</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>l</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi>c</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>s</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>h</mi><mi>L</mi><mi>i</mi><mi>n</mi><mi>k</mi><mi>e</mi><mi>d</mi><mi>I</mi><mi>n</mi><mi>H</mi><mi>i</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>P</mi><mi>r</mi><mi>o</mi><mo>:</mo><mi>y</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>b</mi><mi>u</mi><mi>i</mi><mi>l</mi><mi>t</mi><mi>‑</mi><mi>i</mi><mi>n</mi><mi>h</mi><mi>i</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>n</mi><mi>e</mi><mi>r</mi><mi>.</mi><mi>U</mi><mi>s</mi><mi>e</mi><mi>y</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>h</mi><mi>i</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>t</mi><mi>s</mi><mi>t</mi><mi>o</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi>p</mi><mi>e</mi><mi>o</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>b</mi><mi>y</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>m</mi><mi>o</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>y</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>r</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi>s</mi><mi>w</mi><mi>h</mi><mi>e</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>’</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>o</mi><mi>h</mi><mi>i</mi><mi>r</mi><mi>e</mi><mi>.</mi><mo>*</mo><mi>*</mi><mi>N</mi><mi>o</mi><mi>t</mi><mi>e</mi><mo>*</mo><mi>*</mi><mo>:</mo><mi>C</mi><mi>r</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>t</mi><mi>a</mi><mi>m</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mi>s</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>h</mi><mi>o</mi><mi>w</mi><mi>n</mi><mi>i</mi><mi>n</mi><mi>U</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">600 per year with an annual plan)****:** Find, screen, and shortlist the right candidates with LinkedIn Hiring Pro: your built‑in hiring partner. Use your hiring credits to attract the right people by promoting your open roles when it’s time to hire. **Note**: Credit amounts are shown in US</annotation></semantics></math>
 for the US market. LinkedIn localizes pricing and credits by country,
 check your plan selection page to see your local currency. </strong>AI
 message drafts for hiring:** Easily draft and send personalized messages

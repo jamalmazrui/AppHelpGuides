@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-10" />
   <title>SoundCloud: the complete help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,276 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">SoundCloud: the complete help guide</h1>
 <p class="subtitle">Every help article SoundCloud publishes, arranged
 for reading straight through</p>
 <p class="date">2026-08-10</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#soundcloud-the-complete-help-guide"
+id="toc-soundcloud-the-complete-help-guide">SoundCloud: the complete
+help guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a
+href="#copyright-for-soundcloud-creators-best-practices-to-avoid-copyright-issues"
+id="toc-copyright-for-soundcloud-creators-best-practices-to-avoid-copyright-issues">Copyright
+for SoundCloud Creators: Best Practices to Avoid Copyright
+Issues</a></li>
+<li><a
+href="#copyright-for-soundcloud-creators-copyright-basics-education"
+id="toc-copyright-for-soundcloud-creators-copyright-basics-education">Copyright
+for SoundCloud Creators: Copyright Basics &amp; Education</a></li>
+<li><a
+href="#copyright-for-soundcloud-creators-copyright-infringement-takedowns"
+id="toc-copyright-for-soundcloud-creators-copyright-infringement-takedowns">Copyright
+for SoundCloud Creators: Copyright Infringement &amp; Takedowns</a></li>
+<li><a href="#copyright-for-soundcloud-creators-disputes-appeals"
+id="toc-copyright-for-soundcloud-creators-disputes-appeals">Copyright
+for SoundCloud Creators: Disputes &amp; Appeals</a></li>
+<li><a
+href="#copyright-for-soundcloud-creators-reporting-copyright-infringement"
+id="toc-copyright-for-soundcloud-creators-reporting-copyright-infringement">Copyright
+for SoundCloud Creators: Reporting Copyright Infringement</a></li>
+<li><a
+href="#copyright-for-soundcloud-creators-takedowns-by-content-type"
+id="toc-copyright-for-soundcloud-creators-takedowns-by-content-type">Copyright
+for SoundCloud Creators: Takedowns by Content Type</a></li>
+<li><a href="#creators-on-soundcloud-ai-partner-integrations"
+id="toc-creators-on-soundcloud-ai-partner-integrations">Creators on
+SoundCloud: AI Partner Integrations</a></li>
+<li><a href="#creators-on-soundcloud-audience-growth-promotion"
+id="toc-creators-on-soundcloud-audience-growth-promotion">Creators on
+SoundCloud: Audience Growth &amp; Promotion</a></li>
+<li><a href="#creators-on-soundcloud-business-artist-services"
+id="toc-creators-on-soundcloud-business-artist-services">Creators on
+SoundCloud: Business &amp; Artist Services</a></li>
+<li><a href="#creators-on-soundcloud-creator-insights"
+id="toc-creators-on-soundcloud-creator-insights">Creators on SoundCloud:
+Creator Insights</a></li>
+<li><a href="#creators-on-soundcloud-creator-subscriptions"
+id="toc-creators-on-soundcloud-creator-subscriptions">Creators on
+SoundCloud: Creator Subscriptions</a></li>
+<li><a href="#creators-on-soundcloud-customize-your-rss-feed"
+id="toc-creators-on-soundcloud-customize-your-rss-feed">Creators on
+SoundCloud: Customize your RSS Feed</a></li>
+<li><a href="#creators-on-soundcloud-dj-integrations"
+id="toc-creators-on-soundcloud-dj-integrations">Creators on SoundCloud:
+DJ Integrations</a></li>
+<li><a href="#creators-on-soundcloud-fan-community-tools"
+id="toc-creators-on-soundcloud-fan-community-tools">Creators on
+SoundCloud: Fan &amp; Community Tools</a></li>
+<li><a href="#creators-on-soundcloud-get-started-with-distribution"
+id="toc-creators-on-soundcloud-get-started-with-distribution">Creators
+on SoundCloud: Get Started with Distribution</a></li>
+<li><a
+href="#creators-on-soundcloud-get-started-with-soundcloud-for-artists"
+id="toc-creators-on-soundcloud-get-started-with-soundcloud-for-artists">Creators
+on SoundCloud: Get Started with SoundCloud for Artists</a></li>
+<li><a
+href="#creators-on-soundcloud-getting-started-with-podcasts-on-soundcloud"
+id="toc-creators-on-soundcloud-getting-started-with-podcasts-on-soundcloud">Creators
+on SoundCloud: Getting Started with Podcasts on SoundCloud</a></li>
+<li><a href="#creators-on-soundcloud-getting-started-with-uploading"
+id="toc-creators-on-soundcloud-getting-started-with-uploading">Creators
+on SoundCloud: Getting started with Uploading</a></li>
+<li><a href="#creators-on-soundcloud-manage-your-podcast-episodes"
+id="toc-creators-on-soundcloud-manage-your-podcast-episodes">Creators on
+SoundCloud: Manage your Podcast Episodes</a></li>
+<li><a href="#creators-on-soundcloud-managing-updating-releases"
+id="toc-creators-on-soundcloud-managing-updating-releases">Creators on
+SoundCloud: Managing &amp; Updating Releases</a></li>
+<li><a href="#creators-on-soundcloud-marketing-promotion-fan-growth"
+id="toc-creators-on-soundcloud-marketing-promotion-fan-growth">Creators
+on SoundCloud: Marketing, Promotion &amp; Fan Growth</a></li>
+<li><a href="#creators-on-soundcloud-mastering-powered-by-dolby"
+id="toc-creators-on-soundcloud-mastering-powered-by-dolby">Creators on
+SoundCloud: Mastering, powered by Dolby</a></li>
+<li><a href="#creators-on-soundcloud-monetization-on-soundcloud"
+id="toc-creators-on-soundcloud-monetization-on-soundcloud">Creators on
+SoundCloud: Monetization on SoundCloud</a></li>
+<li><a href="#creators-on-soundcloud-music-creation-production-tools"
+id="toc-creators-on-soundcloud-music-creation-production-tools">Creators
+on SoundCloud: Music Creation &amp; Production Tools</a></li>
+<li><a href="#creators-on-soundcloud-playlist-upload-settings-metadata"
+id="toc-creators-on-soundcloud-playlist-upload-settings-metadata">Creators
+on SoundCloud: Playlist Upload Settings &amp; Metadata</a></li>
+<li><a href="#creators-on-soundcloud-podcast-analytics-insights"
+id="toc-creators-on-soundcloud-podcast-analytics-insights">Creators on
+SoundCloud: Podcast Analytics &amp; Insights</a></li>
+<li><a href="#creators-on-soundcloud-premier-legacy-program"
+id="toc-creators-on-soundcloud-premier-legacy-program">Creators on
+SoundCloud: Premier (Legacy Program)</a></li>
+<li><a href="#creators-on-soundcloud-promote-on-soundcloud"
+id="toc-creators-on-soundcloud-promote-on-soundcloud">Creators on
+SoundCloud: Promote on SoundCloud</a></li>
+<li><a href="#creators-on-soundcloud-release-setup-requirements"
+id="toc-creators-on-soundcloud-release-setup-requirements">Creators on
+SoundCloud: Release Setup &amp; Requirements</a></li>
+<li><a href="#creators-on-soundcloud-royalties-earnings"
+id="toc-creators-on-soundcloud-royalties-earnings">Creators on
+SoundCloud: Royalties &amp; Earnings</a></li>
+<li><a href="#creators-on-soundcloud-rss-feed-faqs-common-issues"
+id="toc-creators-on-soundcloud-rss-feed-faqs-common-issues">Creators on
+SoundCloud: RSS Feed FAQs &amp; Common Issues</a></li>
+<li><a href="#creators-on-soundcloud-soundcloud-dj"
+id="toc-creators-on-soundcloud-soundcloud-dj">Creators on SoundCloud:
+SoundCloud DJ</a></li>
+<li><a href="#creators-on-soundcloud-track-upload-settings-metadata"
+id="toc-creators-on-soundcloud-track-upload-settings-metadata">Creators
+on SoundCloud: Track Upload Settings &amp; Metadata</a></li>
+<li><a href="#creators-on-soundcloud-upload-errors-common-issues"
+id="toc-creators-on-soundcloud-upload-errors-common-issues">Creators on
+SoundCloud: Upload Errors &amp; Common Issues</a></li>
+<li><a
+href="#external-rightsholders-distribution-via-supply-chain-external-rightsholders-distribution-via-supply-chain"
+id="toc-external-rightsholders-distribution-via-supply-chain-external-rightsholders-distribution-via-supply-chain">External
+Rightsholders &amp; Distribution via Supply Chain: External
+Rightsholders &amp; Distribution via Supply Chain</a></li>
+<li><a href="#legal-safety-reporting-account-security"
+id="toc-legal-safety-reporting-account-security">Legal, Safety &amp;
+Reporting: Account Security</a></li>
+<li><a href="#legal-safety-reporting-community-conflict-public-safety"
+id="toc-legal-safety-reporting-community-conflict-public-safety">Legal,
+Safety &amp; Reporting: Community Conflict &amp; Public Safety</a></li>
+<li><a href="#legal-safety-reporting-content-platform-safety"
+id="toc-legal-safety-reporting-content-platform-safety">Legal, Safety
+&amp; Reporting: Content &amp; Platform Safety</a></li>
+<li><a href="#legal-safety-reporting-content-community-safety-standards"
+id="toc-legal-safety-reporting-content-community-safety-standards">Legal,
+Safety &amp; Reporting: Content, Community &amp; Safety
+Standards</a></li>
+<li><a href="#legal-safety-reporting-legal"
+id="toc-legal-safety-reporting-legal">Legal, Safety &amp; Reporting:
+Legal</a></li>
+<li><a href="#legal-safety-reporting-legal-regulatory-transparency"
+id="toc-legal-safety-reporting-legal-regulatory-transparency">Legal,
+Safety &amp; Reporting: Legal &amp; Regulatory Transparency</a></li>
+<li><a href="#legal-safety-reporting-platform-rules-use-policies"
+id="toc-legal-safety-reporting-platform-rules-use-policies">Legal,
+Safety &amp; Reporting: Platform Rules &amp; Use Policies</a></li>
+<li><a href="#legal-safety-reporting-privacy"
+id="toc-legal-safety-reporting-privacy">Legal, Safety &amp; Reporting:
+Privacy</a></li>
+<li><a
+href="#legal-safety-reporting-report-abuse-safety-harmful-content"
+id="toc-legal-safety-reporting-report-abuse-safety-harmful-content">Legal,
+Safety &amp; Reporting: Report Abuse, Safety &amp; Harmful
+Content</a></li>
+<li><a href="#legal-safety-reporting-report-account-profile-issues"
+id="toc-legal-safety-reporting-report-account-profile-issues">Legal,
+Safety &amp; Reporting: Report Account &amp; Profile Issues</a></li>
+<li><a href="#legal-safety-reporting-report-content-ownership-ip-issues"
+id="toc-legal-safety-reporting-report-content-ownership-ip-issues">Legal,
+Safety &amp; Reporting: Report Content Ownership &amp; IP
+Issues</a></li>
+<li><a
+href="#legal-safety-reporting-report-fraud-spam-platform-manipulation"
+id="toc-legal-safety-reporting-report-fraud-spam-platform-manipulation">Legal,
+Safety &amp; Reporting: Report Fraud, Spam &amp; Platform
+Manipulation</a></li>
+<li><a href="#legal-safety-reporting-reporting-violations-on-soundcloud"
+id="toc-legal-safety-reporting-reporting-violations-on-soundcloud">Legal,
+Safety &amp; Reporting: Reporting Violations on SoundCloud</a></li>
+<li><a href="#legal-safety-reporting-sign-in-security"
+id="toc-legal-safety-reporting-sign-in-security">Legal, Safety &amp;
+Reporting: Sign In Security</a></li>
+<li><a
+href="#legal-safety-reporting-technical-legal-policy-based-reports"
+id="toc-legal-safety-reporting-technical-legal-policy-based-reports">Legal,
+Safety &amp; Reporting: Technical, Legal &amp; Policy-Based
+Reports</a></li>
+<li><a href="#my-account-comments" id="toc-my-account-comments">My
+Account: Comments</a></li>
+<li><a href="#my-account-direct-messages"
+id="toc-my-account-direct-messages">My Account: Direct Messages</a></li>
+<li><a href="#my-account-email-notifications-communications"
+id="toc-my-account-email-notifications-communications">My Account:
+Email, Notifications &amp; Communications</a></li>
+<li><a href="#my-account-follower-basics"
+id="toc-my-account-follower-basics">My Account: Follower Basics</a></li>
+<li><a href="#my-account-follower-issues"
+id="toc-my-account-follower-issues">My Account: Follower Issues</a></li>
+<li><a href="#my-account-getting-started-on-soundcloud"
+id="toc-my-account-getting-started-on-soundcloud">My Account: Getting
+Started on SoundCloud</a></li>
+<li><a href="#my-account-login-issues"
+id="toc-my-account-login-issues">My Account: Login Issues</a></li>
+<li><a href="#my-account-manage-my-account"
+id="toc-my-account-manage-my-account">My Account: Manage My
+Account</a></li>
+<li><a href="#my-account-passwords-account-recovery"
+id="toc-my-account-passwords-account-recovery">My Account: Passwords
+&amp; Account Recovery</a></li>
+<li><a href="#my-account-profile-setup-customization"
+id="toc-my-account-profile-setup-customization">My Account: Profile
+Setup &amp; Customization</a></li>
+<li><a href="#share-embed-embedded-players"
+id="toc-share-embed-embedded-players">Share &amp; Embed: Embedded
+players</a></li>
+<li><a href="#share-embed-share-to-social-networks"
+id="toc-share-embed-share-to-social-networks">Share &amp; Embed: Share
+to social networks</a></li>
+<li><a href="#share-embed-share-your-tracks-and-playlists"
+id="toc-share-embed-share-your-tracks-and-playlists">Share &amp; Embed:
+Share your tracks and playlists</a></li>
+<li><a href="#soundcloud-fans-listeners-discovering-music-your-feed"
+id="toc-soundcloud-fans-listeners-discovering-music-your-feed">SoundCloud
+Fans &amp; Listeners: Discovering Music &amp; Your Feed</a></li>
+<li><a
+href="#soundcloud-fans-listeners-fan-subscriptions-soundcloud-go-go"
+id="toc-soundcloud-fans-listeners-fan-subscriptions-soundcloud-go-go">SoundCloud
+Fans &amp; Listeners: Fan Subscriptions (SoundCloud Go &amp;
+Go+)</a></li>
+<li><a href="#soundcloud-fans-listeners-filters-personalization"
+id="toc-soundcloud-fans-listeners-filters-personalization">SoundCloud
+Fans &amp; Listeners: Filters &amp; Personalization</a></li>
+<li><a href="#soundcloud-fans-listeners-library-likes-social-features"
+id="toc-soundcloud-fans-listeners-library-likes-social-features">SoundCloud
+Fans &amp; Listeners: Library, Likes &amp; Social Features</a></li>
+<li><a href="#soundcloud-fans-listeners-listen-across-devices"
+id="toc-soundcloud-fans-listeners-listen-across-devices">SoundCloud Fans
+&amp; Listeners: Listen Across Devices</a></li>
+<li><a href="#soundcloud-fans-listeners-listening-app-troubleshooting"
+id="toc-soundcloud-fans-listeners-listening-app-troubleshooting">SoundCloud
+Fans &amp; Listeners: Listening &amp; App Troubleshooting</a></li>
+<li><a href="#soundcloud-fans-listeners-offline-listening-downloads"
+id="toc-soundcloud-fans-listeners-offline-listening-downloads">SoundCloud
+Fans &amp; Listeners: Offline Listening &amp; Downloads</a></li>
+<li><a
+href="#soundcloud-fans-listeners-playback-controls-audio-experience"
+id="toc-soundcloud-fans-listeners-playback-controls-audio-experience">SoundCloud
+Fans &amp; Listeners: Playback Controls &amp; Audio Experience</a></li>
+<li><a href="#subscriptions-billing-artist-subscriptions"
+id="toc-subscriptions-billing-artist-subscriptions">Subscriptions &amp;
+Billing: Artist Subscriptions</a></li>
+<li><a href="#subscriptions-billing-fan-dj-subscriptions"
+id="toc-subscriptions-billing-fan-dj-subscriptions">Subscriptions &amp;
+Billing: Fan &amp; DJ Subscriptions</a></li>
+<li><a href="#subscriptions-billing-subscription-overview"
+id="toc-subscriptions-billing-subscription-overview">Subscriptions &amp;
+Billing: Subscription Overview</a></li>
+<li><a
+href="#vinyl-distribution-building-your-vinyl-distribution-release"
+id="toc-vinyl-distribution-building-your-vinyl-distribution-release">Vinyl
+Distribution: Building Your Vinyl Distribution Release</a></li>
+<li><a
+href="#vinyl-distribution-managing-approved-vinyl-distribution-releases"
+id="toc-vinyl-distribution-managing-approved-vinyl-distribution-releases">Vinyl
+Distribution: Managing Approved Vinyl Distribution Releases</a></li>
+<li><a
+href="#vinyl-distribution-reviewing-your-vinyl-distribution-release"
+id="toc-vinyl-distribution-reviewing-your-vinyl-distribution-release">Vinyl
+Distribution: Reviewing Your Vinyl Distribution Release</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="soundcloud-the-complete-help-guide">SoundCloud: the complete
 help guide</h1>
 <p>This guide gathers the help SoundCloud publishes: 453 articles across

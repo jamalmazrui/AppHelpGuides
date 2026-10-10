@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-02" />
   <title>Venmo Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,88 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Venmo Help Guide</h1>
 <p class="subtitle">Venmo’s own help documentation, gathered into one
 document</p>
 <p class="date">2026-08-02</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#venmo-help-guide" id="toc-venmo-help-guide">Venmo Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#account-access" id="toc-account-access">Account
+Access</a></li>
+<li><a href="#account-settings" id="toc-account-settings">Account
+Settings</a></li>
+<li><a href="#business-profile-payments"
+id="toc-business-profile-payments">Business Profile Payments</a></li>
+<li><a href="#business-profile-settings-features"
+id="toc-business-profile-settings-features">Business Profile Settings
+&amp; Features</a></li>
+<li><a href="#buying-selling-on-venmo"
+id="toc-buying-selling-on-venmo">Buying &amp; Selling on Venmo</a></li>
+<li><a href="#charity-profile-settings-features"
+id="toc-charity-profile-settings-features">Charity Profile Settings
+&amp; Features</a></li>
+<li><a href="#cryptocurrency"
+id="toc-cryptocurrency">Cryptocurrency</a></li>
+<li><a href="#disputes" id="toc-disputes">Disputes</a></li>
+<li><a href="#groups-accounts-organization-accounts"
+id="toc-groups-accounts-organization-accounts">Groups Accounts &amp;
+Organization Accounts</a></li>
+<li><a href="#notifications"
+id="toc-notifications">Notifications</a></li>
+<li><a href="#payment-disputes-errors-issues"
+id="toc-payment-disputes-errors-issues">Payment Disputes, Errors, &amp;
+Issues</a></li>
+<li><a href="#payment-issues-declines-chargebacks-cancellations"
+id="toc-payment-issues-declines-chargebacks-cancellations">Payment
+Issues: Declines, Chargebacks, &amp; Cancellations</a></li>
+<li><a href="#payment-methods-banks-cards"
+id="toc-payment-methods-banks-cards">Payment Methods: Banks &amp;
+Cards</a></li>
+<li><a href="#privacy-protecting-yourself"
+id="toc-privacy-protecting-yourself">Privacy &amp; Protecting
+Yourself</a></li>
+<li><a href="#security" id="toc-security">Security</a></li>
+<li><a href="#sending-receiving-requesting-money"
+id="toc-sending-receiving-requesting-money">Sending, Receiving, &amp;
+Requesting Money</a></li>
+<li><a href="#signing-up-signing-in"
+id="toc-signing-up-signing-in">Signing Up &amp; Signing In</a></li>
+<li><a href="#supporting-businesses-charities"
+id="toc-supporting-businesses-charities">Supporting Businesses &amp;
+Charities</a></li>
+<li><a href="#tap-to-pay-for-business-profiles"
+id="toc-tap-to-pay-for-business-profiles">Tap to Pay for Business
+Profiles</a></li>
+<li><a href="#tax-center" id="toc-tax-center">Tax Center</a></li>
+<li><a href="#teen-accounts" id="toc-teen-accounts">Teen
+Accounts</a></li>
+<li><a href="#transaction-history-venmo-balance"
+id="toc-transaction-history-venmo-balance">Transaction History &amp;
+Venmo Balance</a></li>
+<li><a href="#transfers-in-out-of-venmo"
+id="toc-transfers-in-out-of-venmo">Transfers In &amp; Out of
+Venmo</a></li>
+<li><a href="#using-venmo-in-stores"
+id="toc-using-venmo-in-stores">Using Venmo in Stores</a></li>
+<li><a href="#using-venmo-online" id="toc-using-venmo-online">Using
+Venmo Online</a></li>
+<li><a href="#venmo-basics" id="toc-venmo-basics">Venmo Basics</a></li>
+<li><a href="#venmo-credit-card" id="toc-venmo-credit-card">Venmo Credit
+Card</a></li>
+<li><a href="#venmo-debit-card" id="toc-venmo-debit-card">Venmo Debit
+Card</a></li>
+<li><a href="#visa" id="toc-visa">Visa+</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="venmo-help-guide">Venmo Help Guide</h1>
 <p>This guide gathers Venmo’s own help documentation, as it stood on 2
 August 2026.</p>

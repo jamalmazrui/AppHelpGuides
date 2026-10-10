@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-10" />
   <title>NFL: the complete help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,88 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">NFL: the complete help guide</h1>
 <p class="subtitle">Every help article NFL publishes, arranged for
 reading straight through</p>
 <p class="date">2026-08-10</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#nfl-the-complete-help-guide"
+id="toc-nfl-the-complete-help-guide">NFL: the complete help guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#nfl-account-support-i-need-help-creating-an-nfl-account"
+id="toc-nfl-account-support-i-need-help-creating-an-nfl-account">NFL
+Account Support: I need help creating an NFL account</a></li>
+<li><a
+href="#nfl-account-support-i-need-help-signing-in-to-an-existing-account"
+id="toc-nfl-account-support-i-need-help-signing-in-to-an-existing-account">NFL
+Account Support: I need help signing in to an existing account</a></li>
+<li><a
+href="#nfl-account-support-issues-updating-my-password-email-address-other-account-information"
+id="toc-nfl-account-support-issues-updating-my-password-email-address-other-account-information">NFL
+Account Support: Issues updating my password, email address &amp; other
+account information</a></li>
+<li><a href="#nfl-account-support-troubleshooting-instructions"
+id="toc-nfl-account-support-troubleshooting-instructions">NFL Account
+Support: Troubleshooting Instructions</a></li>
+<li><a href="#nfl-fantasy-commissioners"
+id="toc-nfl-fantasy-commissioners">NFL Fantasy: Commissioners</a></li>
+<li><a href="#nfl-fantasy-fantasy" id="toc-nfl-fantasy-fantasy">NFL
+Fantasy: Fantasy+</a></li>
+<li><a href="#nfl-fantasy-faqs-troubleshooting"
+id="toc-nfl-fantasy-faqs-troubleshooting">NFL Fantasy: FAQs &amp;
+Troubleshooting</a></li>
+<li><a href="#nfl-fantasy-new-to-fantasy-football"
+id="toc-nfl-fantasy-new-to-fantasy-football">NFL Fantasy: New To Fantasy
+Football</a></li>
+<li><a href="#nfl-fantasy-team-managers"
+id="toc-nfl-fantasy-team-managers">NFL Fantasy: Team Managers</a></li>
+<li><a href="#nfl-fantasy-the-draft" id="toc-nfl-fantasy-the-draft">NFL
+Fantasy: The Draft</a></li>
+<li><a href="#nfl-game-day-football-operations"
+id="toc-nfl-game-day-football-operations">NFL Game Day: Football
+Operations</a></li>
+<li><a href="#nfl-game-day-game-rules-statistics"
+id="toc-nfl-game-day-game-rules-statistics">NFL Game Day: Game Rules
+&amp; Statistics</a></li>
+<li><a href="#nfl-game-day-league-administration"
+id="toc-nfl-game-day-league-administration">NFL Game Day: League
+Administration</a></li>
+<li><a href="#nfl-game-day-merchandise"
+id="toc-nfl-game-day-merchandise">NFL Game Day: Merchandise</a></li>
+<li><a href="#nfl-game-day-nfl-events"
+id="toc-nfl-game-day-nfl-events">NFL Game Day: NFL Events</a></li>
+<li><a href="#nfl-game-day-officiating"
+id="toc-nfl-game-day-officiating">NFL Game Day: Officiating</a></li>
+<li><a href="#nfl-game-day-tickets" id="toc-nfl-game-day-tickets">NFL
+Game Day: Tickets</a></li>
+<li><a href="#nfl-access-and-content"
+id="toc-nfl-access-and-content">NFL+: Access and Content</a></li>
+<li><a href="#nfl-billing-and-account-management"
+id="toc-nfl-billing-and-account-management">NFL+: Billing and Account
+Management</a></li>
+<li><a href="#nfl-getting-started" id="toc-nfl-getting-started">NFL+:
+Getting Started</a></li>
+<li><a href="#nfl-technical" id="toc-nfl-technical">NFL+:
+Technical</a></li>
+<li><a href="#nfl-com-nfl-digital-care"
+id="toc-nfl-com-nfl-digital-care">NFL.com: NFL Digital Care</a></li>
+<li><a href="#nfl-com-nfl-com-account"
+id="toc-nfl-com-nfl-com-account">NFL.com: NFL.com Account</a></li>
+<li><a href="#nfl-com-odds-widget" id="toc-nfl-com-odds-widget">NFL.com:
+Odds Widget</a></li>
+<li><a href="#nfl-com-online-game-info"
+id="toc-nfl-com-online-game-info">NFL.com: Online Game Info</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="nfl-the-complete-help-guide">NFL: the complete help guide</h1>
 <p>This guide gathers the help NFL publishes: 237 articles across 26
 categories, in NFL’s own words, gathered on 10 August 2026.</p>

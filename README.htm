@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>App Help Guides</title>
   <style>
@@ -11,7 +11,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -36,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -54,11 +61,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -87,8 +91,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -112,7 +119,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -129,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -156,8 +163,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -168,7 +179,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
@@ -177,7 +187,30 @@
 <p class="subtitle">Official product help documentation, gathered into
 single screen-reader-efficient documents</p>
 </header>
-<h1 id="app-help-guides">App Help Guides</h1>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#table-of-contents" id="toc-table-of-contents">Table of
+Contents</a></li>
+<li><a href="#why-this-exists" id="toc-why-this-exists">Why this
+exists</a></li>
+<li><a href="#what-is-in-each-guide" id="toc-what-is-in-each-guide">What
+is in each guide</a></li>
+<li><a href="#the-volumes" id="toc-the-volumes">The volumes</a></li>
+<li><a href="#how-the-guides-are-made"
+id="toc-how-the-guides-are-made">How the guides are made</a></li>
+<li><a href="#quality-gates" id="toc-quality-gates">Quality
+gates</a></li>
+<li><a href="#scope-conventions" id="toc-scope-conventions">Scope
+conventions</a></li>
+<li><a href="#honesty-about-limits"
+id="toc-honesty-about-limits">Honesty about limits</a></li>
+<li><a href="#reading-a-guide-with-a-screen-reader"
+id="toc-reading-a-guide-with-a-screen-reader">Reading a guide with a
+screen reader</a></li>
+<li><a href="#copyright-and-attribution"
+id="toc-copyright-and-attribution">Copyright and attribution</a></li>
+</ul>
+</nav>
 <p>Every guide in this repository is the <strong>official, public help
 documentation published by the makers of the product itself</strong>,
 gathered from their own help centres and reassembled into one Markdown
@@ -507,5 +540,10 @@ endorsed by, or produced in cooperation with any of the publishers named
 here.</p>
 <p>For the current, authoritative version of any answer, consult the
 publisher’s own help centre.</p>
+<p>This collection’s own selection, arrangement and wording are licensed
+under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+Commons Attribution-ShareAlike 4.0</a> (CC BY-SA 4.0). What it gathers
+from others keeps its owners’ terms: each guide’s help text belongs to
+its publisher, as the section above says.</p>
 </body>
 </html>

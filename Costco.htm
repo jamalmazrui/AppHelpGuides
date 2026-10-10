@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>Costco Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,57 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Costco Help Guide</h1>
 <p class="subtitle">Costco’s own member help, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#costco-help-guide" id="toc-costco-help-guide">Costco Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#citi-visa" id="toc-citi-visa">Citi Visa</a></li>
+<li><a href="#costco-services" id="toc-costco-services">Costco
+Services</a></li>
+<li><a href="#costcocom-help" id="toc-costcocom-help">Costco.com
+Help</a></li>
+<li><a href="#discounts-savings-promos"
+id="toc-discounts-savings-promos">Discounts, Savings, &amp;
+Promos</a></li>
+<li><a href="#managing-your-membership"
+id="toc-managing-your-membership">Managing your Membership</a></li>
+<li><a href="#membership-info" id="toc-membership-info">Membership
+Info</a></li>
+<li><a href="#mobile-app-help" id="toc-mobile-app-help">Mobile App
+Help</a></li>
+<li><a href="#online-account" id="toc-online-account">Online
+Account</a></li>
+<li><a href="#order-changes" id="toc-order-changes">Order
+Changes</a></li>
+<li><a href="#order-statusshipping" id="toc-order-statusshipping">Order
+Status/Shipping</a></li>
+<li><a href="#ordering-online" id="toc-ordering-online">Ordering
+Online</a></li>
+<li><a href="#payment-info" id="toc-payment-info">Payment Info</a></li>
+<li><a href="#product-availability"
+id="toc-product-availability">Product Availability</a></li>
+<li><a href="#product-info" id="toc-product-info">Product Info</a></li>
+<li><a href="#returns-exchanges" id="toc-returns-exchanges">Returns
+&amp; Exchanges</a></li>
+<li><a href="#shopping-history" id="toc-shopping-history">Shopping
+History</a></li>
+<li><a href="#taxes-fees" id="toc-taxes-fees">Taxes &amp; Fees</a></li>
+<li><a href="#warehouse" id="toc-warehouse">Warehouse</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="costco-help-guide">Costco Help Guide</h1>
 <p>This guide gathers Costco’s own answers for its members, as they
 stood on 3 August 2026. The text is Costco’s; nothing has been
@@ -11588,7 +11640,7 @@ href="https://customerservice.costco.com/euf/assets/answer_pdfs/SDS%201674552%20
 download="" target="_blank">1674552 - SDS Sheet (PDF)</a></p>
 <hr />
 <p>Kirkland Signature Fabric Softener Sheets, #1725830</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 55%" />
@@ -11782,7 +11834,7 @@ href="https://customerservice.costco.com/euf/assets/answer_pdfs/SDS%201725830%20
 download="" target="_blank">1725830 - SDS Sheet (PDF)</a></p>
 <hr />
 <p>Kirkland Signature Spring Fresh Scent Beads, #1707948</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 56%" />
@@ -12076,7 +12128,7 @@ href="https://customerservice.costco.com/euf/assets/answer_pdfs/SDS%201684499%20
 download="" target="_blank">1684499 - SDS Sheet (PDF)</a></p>
 <hr />
 <p>Kirkland Signature Ultra Clean Laundry Detergent Pacs, #1785666</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 51%" />
@@ -12407,7 +12459,7 @@ href="https://customerservice.costco.com/euf/assets/answer_pdfs/SDS%201707952%20
 download="" target="_blank">1707952 - SDS Sheet (PDF)</a></p>
 <hr />
 <p>Kirkland Signature Oxi Power Laundry Detergent Pacs, #1675962</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 28%" />
 <col style="width: 53%" />

@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Hartgen Consultancy help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Hartgen Consultancy help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#hartgen-consultancy-help"
@@ -6251,29 +6265,21 @@ key word. It is the Apple iTunes podcast directory Leasey uses in order
 to retrieve search results, so you have an exceptionally wide
 choice.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Add Podcast Feed to LeaseyCast Manually. If you know the URL of the
-podcast feed, this option allows you to add it here. Simply type or
+<li>2. Add Podcast Feed to LeaseyCast Manually. If you know the URL of
+the podcast feed, this option allows you to add it here. Simply type or
 paste it into the edit field and press Enter. Leasey will then validate
 the feed to ensure it contains legitimate podcast content, and if so,
 will obtain the official name for it and add it to your Favourites
 list.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Check for Podcast Updates. This allows you to check for any updates
-to existing podcasts you have previously visited.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Podcast Download Manager. This allows you to download any episodes
-of podcasts which are part of your Favourites list.</li>
-</ol></li>
-<li><ol start="5" type="1">
-<li>Add Leasey Suggested Podcasts. If you have not added any podcast
+<li>3. Check for Podcast Updates. This allows you to check for any
+updates to existing podcasts you have previously visited.</li>
+<li>4. Podcast Download Manager. This allows you to download any
+episodes of podcasts which are part of your Favourites list.</li>
+<li>5. Add Leasey Suggested Podcasts. If you have not added any podcast
 feeds when you launch the LeaseyCast utility, some suggested podcasts
 are given in this list. However, if you have already added some podcasts
 you like to listen to, it is still possible to add our suggested feeds
 by pressing Enter on this item.</li>
-</ol></li>
 <li>List of Podcasts Added to Favourites. Below these items you will see
 any podcast titles you have added. Press Enter on any one of them in
 order to retrieve the episodes. You will have noticed that the first
@@ -13453,15 +13459,11 @@ ensure that the structure is consistent across all sports.</li>
 <li><ol type="1">
 <li>Liverpool vs. Arsenal. Saturday, May 10, 2025. 3:00 PM BST.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Brighton &amp; Hove Albion vs. Liverpool. Sunday, May 18, 2025. 3:00
-PM BST.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Liverpool vs. Crystal Palace. Sunday, May 25, 2025. 4:00 PM BST.
+<li>2. Brighton &amp; Hove Albion vs. Liverpool. Sunday, May 18, 2025.
+3:00 PM BST.</li>
+<li>3. Liverpool vs. Crystal Palace. Sunday, May 25, 2025. 4:00 PM BST.
 Note that the game times should be relative to the timezone previously
 selected.</li>
-</ol></li>
 </ul>
 <h5 id="sports-headlines.">Sports Headlines.</h5>
 <p>You can retrieve the latest sports headlines relative to one of a
@@ -18181,29 +18183,21 @@ key word. It is the Apple iTunes podcast directory Leasey uses in order
 to retrieve search results, so you have an exceptionally wide
 choice.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Add Podcast Feed to LeaseyCast Manually. If you know the URL of the
-podcast feed, this option allows you to add it here. Simply type or
+<li>2. Add Podcast Feed to LeaseyCast Manually. If you know the URL of
+the podcast feed, this option allows you to add it here. Simply type or
 paste it into the edit field and press Enter. Leasey will then validate
 the feed to ensure it contains legitimate podcast content, and if so,
 will obtain the official name for it and add it to your Favourites
 list.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Check for Podcast Updates. This allows you to check for any updates
-to existing podcasts you have previously visited.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Podcast Download Manager. This allows you to download any episodes
-of podcasts which are part of your Favourites list.</li>
-</ol></li>
-<li><ol start="5" type="1">
-<li>Add Leasey Suggested Podcasts. If you have not added any podcast
+<li>3. Check for Podcast Updates. This allows you to check for any
+updates to existing podcasts you have previously visited.</li>
+<li>4. Podcast Download Manager. This allows you to download any
+episodes of podcasts which are part of your Favourites list.</li>
+<li>5. Add Leasey Suggested Podcasts. If you have not added any podcast
 feeds when you launch the LeaseyCast utility, some suggested podcasts
 are given in this list. However, if you have already added some podcasts
 you like to listen to, it is still possible to add our suggested feeds
 by pressing Enter on this item.</li>
-</ol></li>
 <li>List of Podcasts Added to Favourites. Below these items you will see
 any podcast titles you have added. Press Enter on any one of them in
 order to retrieve the episodes. You will have noticed that the first
@@ -31178,9 +31172,7 @@ whole, and how to use it more effectively.</p>
 <li>Teams, a Team, a Channel, and a Thread</li>
 <li>Chat or Channel?</li>
 </ul></li>
-<li><ol start="2" type="1">
-<li>Getting Ready to Use Teams</li>
-</ol>
+<li>2. Getting Ready to Use Teams
 <ul>
 <li>Signing In</li>
 <li>JAWS Support and Essential Scripts</li>
@@ -31190,17 +31182,13 @@ whole, and how to use it more effectively.</p>
 <li>The Virtual Cursor</li>
 <li>Zoom and View Size</li>
 </ul></li>
-<li><ol start="3" type="1">
-<li>The Teams Window and the Main Keyboard Routes</li>
-</ol>
+<li>3. The Teams Window and the Main Keyboard Routes
 <ul>
 <li>The Most Useful Global Teams Shortcuts</li>
 <li>Using the Keyboard Shortcuts Window</li>
 <li>A Good Orientation Habit</li>
 </ul></li>
-<li><ol start="4" type="1">
-<li>Search, Commands, Status, and Your Profile</li>
-</ol>
+<li>4. Search, Commands, Status, and Your Profile
 <ul>
 <li>Going Directly to a Chat or Channel</li>
 <li>Commands</li>
@@ -31208,9 +31196,7 @@ whole, and how to use it more effectively.</p>
 <li>Setting a Status Duration</li>
 <li>Setting a Status Message</li>
 </ul></li>
-<li><ol start="5" type="1">
-<li>The Settings Dialog</li>
-</ol>
+<li>5. The Settings Dialog
 <ul>
 <li>General</li>
 <li>Appearance and Accessibility</li>
@@ -31224,9 +31210,7 @@ whole, and how to use it more effectively.</p>
 <li>Files and Links</li>
 <li>Accounts and Organisations</li>
 </ul></li>
-<li><ol start="6" type="1">
-<li>Notifications and Activity</li>
-</ol>
+<li>6. Notifications and Activity
 <ul>
 <li>Windows and JAWS Notification History</li>
 <li>Using Script Notification Rules.</li>
@@ -31235,9 +31219,7 @@ whole, and how to use it more effectively.</p>
 <li>Hashtags and Search Terms</li>
 <li>Practical Notification Setup</li>
 </ul></li>
-<li><ol start="7" type="1">
-<li>Chats and Messages</li>
-</ol>
+<li>7. Chats and Messages
 <ul>
 <li>Starting a Chat</li>
 <li>Sending the Message</li>
@@ -31247,18 +31229,14 @@ whole, and how to use it more effectively.</p>
 <li>Editing, Deleting, and Reacting</li>
 <li>Formatting Messages</li>
 </ul></li>
-<li><ol start="8" type="1">
-<li>Group Chats and New Chat Windows</li>
-</ol>
+<li>8. Group Chats and New Chat Windows
 <ul>
 <li>Creating a Group Chat</li>
 <li>When a Group Chat Is the Wrong Tool</li>
 <li>Opening a Chat in a New Window and the Role of the context menu</li>
 <li>Pinning a Window on Top</li>
 </ul></li>
-<li><ol start="9" type="1">
-<li>Teams, Channels, Posts, and Threads</li>
-</ol>
+<li>9. Teams, Channels, Posts, and Threads
 <ul>
 <li>Standard, Private, and Shared Channels</li>
 <li>Channel Layouts: Posts and Threads</li>
@@ -31269,9 +31247,7 @@ whole, and how to use it more effectively.</p>
 <li>Following Threads</li>
 <li>Participating in a Channel by email</li>
 </ul></li>
-<li><ol start="10" type="1">
-<li>Organising Chats, Channels, and Teams</li>
-</ol>
+<li>10. Organising Chats, Channels, and Teams
 <ul>
 <li>Combined and Separate Views</li>
 <li>Sections</li>
@@ -31280,9 +31256,7 @@ whole, and how to use it more effectively.</p>
 <li>context menus</li>
 <li>Script Bookmarks for Buttons, Windows, and Channels.</li>
 </ul></li>
-<li><ol start="11" type="1">
-<li>Calendar and Scheduled Meetings</li>
-</ol>
+<li>11. Calendar and Scheduled Meetings
 <ul>
 <li>Opening Calendar</li>
 <li>Navigating Calendar</li>
@@ -31291,9 +31265,7 @@ whole, and how to use it more effectively.</p>
 <li>Scheduling in Outlook</li>
 <li>Viewing Meeting Details</li>
 </ul></li>
-<li><ol start="12" type="1">
-<li>Meeting Options, Roles, and the Lobby</li>
-</ol>
+<li>12. Meeting Options, Roles, and the Lobby
 <ul>
 <li>Meeting Roles</li>
 <li>Opening Meeting Options</li>
@@ -31304,9 +31276,7 @@ whole, and how to use it more effectively.</p>
 <li>Copilot and Other AI Meeting Options.</li>
 <li>Manage What Attendees See and Green Room</li>
 </ul></li>
-<li><ol start="13" type="1">
-<li>Joining and Taking Part in Meetings</li>
-</ol>
+<li>13. Joining and Taking Part in Meetings
 <ul>
 <li>Before Joining</li>
 <li>Joining with Audio</li>
@@ -31316,9 +31286,7 @@ whole, and how to use it more effectively.</p>
 <li>The Meeting Window</li>
 <li>Leaving a Meeting</li>
 </ul></li>
-<li><ol start="14" type="1">
-<li>Meeting Chat, Participants, Reactions, and Raised Hands</li>
-</ol>
+<li>14. Meeting Chat, Participants, Reactions, and Raised Hands
 <ul>
 <li>Meeting Chat</li>
 <li>Participants</li>
@@ -31327,9 +31295,7 @@ whole, and how to use it more effectively.</p>
 <li>Reactions</li>
 <li>Admitting People from the Lobby</li>
 </ul></li>
-<li><ol start="15" type="1">
-<li>Sharing, PowerPoint Live, Recordings, and Transcripts</li>
-</ol>
+<li>15. Sharing, PowerPoint Live, Recordings, and Transcripts
 <ul>
 <li>Screen Sharing</li>
 <li>Sharing Your Own Screen</li>
@@ -31339,9 +31305,7 @@ whole, and how to use it more effectively.</p>
 <li>Meeting Recap</li>
 <li>Copilot, AI, and Meetings.</li>
 </ul></li>
-<li><ol start="16" type="1">
-<li>Files in Teams</li>
-</ol>
+<li>16. Files in Teams
 <ul>
 <li>Opening Files</li>
 <li>Searching for Files</li>
@@ -31349,9 +31313,7 @@ whole, and how to use it more effectively.</p>
 <li>Attaching a File</li>
 <li>Downloading and Saving</li>
 </ul></li>
-<li><ol start="17" type="1">
-<li>Calls and the Calls App</li>
-</ol>
+<li>17. Calls and the Calls App
 <ul>
 <li>Receiving a Call</li>
 <li>During a Call</li>
@@ -31361,9 +31323,7 @@ whole, and how to use it more effectively.</p>
 <li>Meet Now</li>
 <li>Calls App</li>
 </ul></li>
-<li><ol start="18" type="1">
-<li>A Working Method for Teams with JAWS</li>
-</ol>
+<li>18. A Working Method for Teams with JAWS
 <ul>
 <li>Learn the Main Routes First</li>
 <li>Learn the Script Layer.</li>
@@ -39518,20 +39478,12 @@ inconsistent with this Agreement.</p>
 <li><ol type="a">
 <li>providing copies to any third party;</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>making the Software available for download by others;</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>granting access over a network or other system;</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>transferring activation or licence rights to another person;
+<li>(b) making the Software available for download by others;</li>
+<li>(c) granting access over a network or other system;</li>
+<li>(d) transferring activation or licence rights to another person;
 and</li>
-</ol></li>
-<li><ol start="5" type="a">
-<li>selling, renting, leasing, lending, or otherwise supplying the
+<li>(e) selling, renting, leasing, lending, or otherwise supplying the
 Software to another person.</li>
-</ol></li>
 </ul>
 <h5 id="definitions">6. Definitions</h5>
 <p>6.1 “Demonstration Version” means any trial, demo, evaluation,

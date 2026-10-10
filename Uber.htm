@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-29" />
   <title>Uber Rider Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,91 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Uber Rider Help Guide</h1>
 <p class="subtitle">Uber’s official help for riders, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-29</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#uber-rider-help-guide" id="toc-uber-rider-help-guide">Uber
+Rider Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#accessibility"
+id="toc-accessibility">Accessibility</a></li>
+<li><a href="#account" id="toc-account">Account</a></li>
+<li><a href="#account-settings" id="toc-account-settings">Account
+settings</a></li>
+<li><a href="#cant-sign-in-or-request-a-trip"
+id="toc-cant-sign-in-or-request-a-trip">Can’t sign in or request a
+trip</a></li>
+<li><a href="#cancellations"
+id="toc-cancellations">Cancellations</a></li>
+<li><a href="#data-and-privacy" id="toc-data-and-privacy">Data and
+privacy</a></li>
+<li><a href="#duplicate-or-unknown-charges"
+id="toc-duplicate-or-unknown-charges">Duplicate or unknown
+charges</a></li>
+<li><a href="#fare-review" id="toc-fare-review">Fare review</a></li>
+<li><a href="#feedback-about-the-driver-or-vehicle"
+id="toc-feedback-about-the-driver-or-vehicle">Feedback about the driver
+or vehicle</a></li>
+<li><a href="#from-pickup-to-dropoff"
+id="toc-from-pickup-to-dropoff">From pickup to dropoff</a></li>
+<li><a href="#getting-started" id="toc-getting-started">Getting
+started</a></li>
+<li><a href="#gift-cards-and-vouchers"
+id="toc-gift-cards-and-vouchers">Gift cards and vouchers</a></li>
+<li><a href="#guides" id="toc-guides">Guides</a></li>
+<li><a href="#help-with-a-trip" id="toc-help-with-a-trip">Help with a
+trip</a></li>
+<li><a href="#lost-item" id="toc-lost-item">Lost item</a></li>
+<li><a href="#map-issue" id="toc-map-issue">Map issue</a></li>
+<li><a href="#other-payment-support"
+id="toc-other-payment-support">Other payment support</a></li>
+<li><a href="#other-rider-help-articles"
+id="toc-other-rider-help-articles">Other rider help articles</a></li>
+<li><a href="#payment-methods" id="toc-payment-methods">Payment
+methods</a></li>
+<li><a href="#policies" id="toc-policies">Policies</a></li>
+<li><a href="#pricing-and-fees" id="toc-pricing-and-fees">Pricing and
+fees</a></li>
+<li><a href="#promos-and-partnerships"
+id="toc-promos-and-partnerships">Promos and partnerships</a></li>
+<li><a href="#receipts-and-invoices"
+id="toc-receipts-and-invoices">Receipts and invoices</a></li>
+<li><a href="#rentals-by-uber" id="toc-rentals-by-uber">Rentals by
+Uber</a></li>
+<li><a href="#resources-for-riders-with-disabilities"
+id="toc-resources-for-riders-with-disabilities">Resources for riders
+with disabilities</a></li>
+<li><a href="#ride-passes" id="toc-ride-passes">Ride Passes</a></li>
+<li><a href="#safety" id="toc-safety">Safety</a></li>
+<li><a href="#signing-up" id="toc-signing-up">Signing up</a></li>
+<li><a href="#turo-on-uber" id="toc-turo-on-uber">Turo on Uber</a></li>
+<li><a href="#uber-cash" id="toc-uber-cash">Uber Cash</a></li>
+<li><a href="#uber-for-business-travel"
+id="toc-uber-for-business-travel">Uber for business travel</a></li>
+<li><a href="#uber-for-delivery" id="toc-uber-for-delivery">Uber for
+delivery</a></li>
+<li><a href="#uber-hotels" id="toc-uber-hotels">Uber Hotels</a></li>
+<li><a href="#uber-rewards" id="toc-uber-rewards">Uber Rewards</a></li>
+<li><a href="#uber-shuttle-airports" id="toc-uber-shuttle-airports">Uber
+Shuttle Airports</a></li>
+<li><a href="#uber-shuttle-events" id="toc-uber-shuttle-events">Uber
+Shuttle Events</a></li>
+<li><a href="#using-talkback-and-voiceover"
+id="toc-using-talkback-and-voiceover">Using TalkBack and
+VoiceOver</a></li>
+<li><a href="#zipcar-on-uber" id="toc-zipcar-on-uber">Zipcar on
+Uber</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="uber-rider-help-guide">Uber Rider Help Guide</h1>
 <p>This guide gathers Uber’s official help for riders: booking and
 taking trips, fares and payment, your account, safety, accessibility,

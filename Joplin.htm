@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-11" />
   <title>Joplin: the complete help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,7 +180,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
     html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
@@ -239,11 +249,29 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Joplin: the complete help guide</h1>
 <p class="subtitle">Joplin’s own documentation, including the Web
 Clipper</p>
 <p class="date">2026-08-11</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#joplin-the-complete-help-guide"
+id="toc-joplin-the-complete-help-guide">Joplin: the complete help
+guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-joplin" id="toc-about-joplin">About Joplin</a></li>
+<li><a href="#contributing-to-joplin-2"
+id="toc-contributing-to-joplin-2">Contributing to Joplin</a></li>
+<li><a href="#plugins-and-the-api" id="toc-plugins-and-the-api">Plugins
+and the API</a></li>
+<li><a href="#using-joplin-2" id="toc-using-joplin-2">Using
+Joplin</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="joplin-the-complete-help-guide">Joplin: the complete help
 guide</h1>
 <p>This guide gathers Joplin’s own documentation: 141 articles across 5
@@ -8861,8 +8889,8 @@ after each pattern is typed. On desktop, the following patterns are
 replaced: - <strong>bold</strong>: Formats bold as
 <strong>bold</strong>. - <em>italic</em>: Formats italic as
 <em>italic</em>. - ==highlighted==: Highlights highlighted. -
-<code>code</code>: Formats <code>code</code> as inline code. - <span
-class="math inline"><em>m</em><em>a</em><em>t</em><em>h</em></span>:
+<code>code</code>: Formats <code>code</code> as inline code. -
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">math</annotation></semantics></math>:
 Auto-formats to inline math (using KaTeX math syntax). After rendering,
 equations can be edited by double-clicking or with the “edit” option in
 the right click menu. - # Heading 1: Creates a level 1 heading. The #
@@ -10497,8 +10525,8 @@ class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#c
 <span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Colons can be used <span class="kw">to</span> align <span class="kw">columns</span>:</span>
 <span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>Which <span class="kw">is</span> rendered <span class="kw">as</span>:</span>
 <span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="kw">Tables</span>: Are: Cool</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> col <span class="dv">3</span> <span class="kw">is</span>: <span class="kw">right</span><span class="op">-</span>aligned: $<span class="dv">1600</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> col <span class="dv">2</span> <span class="kw">is</span>: centered: $<span class="dv">12</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> col <span class="dv">3</span> <span class="kw">is</span>: <span class="kw">right</span><span class="op">-</span>aligned: $1600</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> col <span class="dv">2</span> <span class="kw">is</span>: centered: $12</span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>#### Joplin Extras​</span>
 <span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>Besides <span class="kw">the</span> standard Markdown syntax, Joplin supports several additional features.</span>
@@ -10578,11 +10606,11 @@ href="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAsset
 - Linkify: See <a
 href="https://markdown-it.github.io/#md3=%7B%22source%22%3A%22Use%20the%20Linkify%20checkbox%20to%20switch%20link-detection%20on%20and%20off.%5Cn%5Cn%2A%2AThese%20links%20are%20auto-detected%3A%2A%2A%5Cn%5Cnhttps%3A%2F%2Fexample.com%5Cn%5Cnexample.com%5Cn%5Cntest%40example.com%5Cn%5Cn%2A%2AThese%20are%20always%20links%3A%2A%2A%5Cn%5Cn%5Blink%5D%28https%3A%2F%2Fjoplinapp.org%29%5Cn%5Cn%3Chttps%3A%2F%2Fexample.com%3E%22%2C%22defaults%22%3A%7B%22html%22%3Afalse%2C%22xhtmlOut%22%3Afalse%2C%22breaks%22%3Afalse%2C%22langPrefix%22%3A%22language-%22%2C%22linkify%22%3Atrue%2C%22typographer%22%3Atrue%2C%22_highlight%22%3Atrue%2C%22_strict%22%3Afalse%2C%22_view%22%3A%22html%22%7D%7D">linkify</a>
 markdown-it demo: Auto-detects URLs and convert them to clickable links:
-yes - <a href="https://katex.org">Katex</a>: <span
-class="math display"><em>m</em><em>a</em><em>t</em><em>h</em><em>e</em><em>x</em><em>p</em><em>r</em></span>
-or <span
-class="math inline"><em>m</em><em>a</em><em>t</em><em>h</em></span>: See
-above: yes: <a
+yes - <a href="https://katex.org">Katex</a>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">math expr</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">math</annotation></semantics></math>:
+See above: yes: <a
 href="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/md_plugins/katex_plugin.jpg">View</a>
 - <a href="https://fountain.io">Fountain</a>:
 <code>fountain Your screenplay...</code>: Adds support for the Fountain

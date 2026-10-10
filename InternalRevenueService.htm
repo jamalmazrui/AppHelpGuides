@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-28" />
   <title>IRS Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,74 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">IRS Help Compendium</h1>
 <p class="subtitle">The official IRS Help section and frequently asked
 questions (irs.gov)</p>
 <p class="date">2026-07-28</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#irs-help-compendium" id="toc-irs-help-compendium">IRS Help
+Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-faqs" id="toc-cat-faqs">FAQs</a></li>
+<li><a href="#cat-faqs-capital-gains-losses-and-sale-of-home"
+id="toc-cat-faqs-capital-gains-losses-and-sale-of-home">FAQs: Capital
+gains losses and sale of home</a></li>
+<li><a href="#cat-faqs-childcare-credit-other-credits"
+id="toc-cat-faqs-childcare-credit-other-credits">FAQs: Childcare credit
+other credits</a></li>
+<li><a href="#cat-faqs-earned-income-tax-credit"
+id="toc-cat-faqs-earned-income-tax-credit">FAQs: Earned income tax
+credit</a></li>
+<li><a href="#cat-faqs-electronic-filers"
+id="toc-cat-faqs-electronic-filers">FAQs: Electronic filers</a></li>
+<li><a href="#cat-faqs-electronic-filing-e-file"
+id="toc-cat-faqs-electronic-filing-e-file">FAQs: Electronic filing e
+file</a></li>
+<li><a href="#cat-faqs-estimated-tax"
+id="toc-cat-faqs-estimated-tax">FAQs: Estimated tax</a></li>
+<li><a href="#cat-faqs-filing-requirements-status-dependents"
+id="toc-cat-faqs-filing-requirements-status-dependents">FAQs: Filing
+requirements status dependents</a></li>
+<li><a href="#cat-faqs-individual-retirement-arrangements-iras"
+id="toc-cat-faqs-individual-retirement-arrangements-iras">FAQs:
+Individual retirement arrangements iras</a></li>
+<li><a href="#cat-faqs-interest-dividends-other-types-of-income"
+id="toc-cat-faqs-interest-dividends-other-types-of-income">FAQs:
+Interest dividends other types of income</a></li>
+<li><a href="#cat-faqs-irs-procedures"
+id="toc-cat-faqs-irs-procedures">FAQs: Irs procedures</a></li>
+<li><a href="#cat-faqs-itemized-deductions-standard-deduction"
+id="toc-cat-faqs-itemized-deductions-standard-deduction">FAQs: Itemized
+deductions standard deduction</a></li>
+<li><a href="#cat-faqs-other" id="toc-cat-faqs-other">FAQs:
+Other</a></li>
+<li><a href="#cat-faqs-retirement-plans"
+id="toc-cat-faqs-retirement-plans">FAQs: Retirement plans</a></li>
+<li><a href="#cat-faqs-sale-or-trade-of-business-depreciation-rentals"
+id="toc-cat-faqs-sale-or-trade-of-business-depreciation-rentals">FAQs:
+Sale or trade of business depreciation rentals</a></li>
+<li><a href="#cat-faqs-small-business-self-employed-other-business"
+id="toc-cat-faqs-small-business-self-employed-other-business">FAQs:
+Small business self employed other business</a></li>
+<li><a href="#cat-faqs-social-security-income"
+id="toc-cat-faqs-social-security-income">FAQs: Social security
+income</a></li>
+<li><a href="#cat-faqs-us-resident-aliens-and-citizens-living-abroad"
+id="toc-cat-faqs-us-resident-aliens-and-citizens-living-abroad">FAQs: Us
+resident aliens and citizens living abroad</a></li>
+<li><a href="#cat-help" id="toc-cat-help">Help</a></li>
+<li><a href="#cat-interactive-tax-assistant-topics"
+id="toc-cat-interactive-tax-assistant-topics">Interactive Tax Assistant
+topics</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="irs-help-compendium">IRS Help Compendium</h1>
 <p>This compendium contains the main content of 174 pages from the
 Internal Revenue Service’s designated help containers at www.irs.gov,

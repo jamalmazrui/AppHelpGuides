@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-27" />
   <title>Facebook Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,80 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Facebook Help Compendium</h1>
 <p class="subtitle">Official Facebook consumer help for the web, Windows
 browsers, and the iPhone app</p>
 <p class="date">2026-07-27</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#facebook-help-compendium"
+id="toc-facebook-help-compendium">Facebook Help Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-accessibility"
+id="toc-cat-accessibility">Accessibility</a></li>
+<li><a href="#cat-account-settings-and-management"
+id="toc-cat-account-settings-and-management">Account Settings and
+Management</a></li>
+<li><a href="#cat-ads-preferences" id="toc-cat-ads-preferences">Ads
+Preferences</a></li>
+<li><a href="#cat-apps-and-devices" id="toc-cat-apps-and-devices">Apps
+and Devices</a></li>
+<li><a href="#cat-civic-and-elections"
+id="toc-cat-civic-and-elections">Civic and Elections</a></li>
+<li><a href="#cat-creators-subscriptions-and-meta-verified"
+id="toc-cat-creators-subscriptions-and-meta-verified">Creators,
+Subscriptions, and Meta Verified</a></li>
+<li><a href="#cat-dating" id="toc-cat-dating">Dating</a></li>
+<li><a href="#cat-events" id="toc-cat-events">Events</a></li>
+<li><a href="#cat-feed-and-posts" id="toc-cat-feed-and-posts">Feed and
+Posts</a></li>
+<li><a href="#cat-friends-and-following"
+id="toc-cat-friends-and-following">Friends and Following</a></li>
+<li><a href="#cat-fundraisers-and-donations"
+id="toc-cat-fundraisers-and-donations">Fundraisers and
+Donations</a></li>
+<li><a href="#cat-gaming" id="toc-cat-gaming">Gaming</a></li>
+<li><a href="#cat-general" id="toc-cat-general">General</a></li>
+<li><a href="#cat-groups" id="toc-cat-groups">Groups</a></li>
+<li><a href="#cat-login-and-account-recovery"
+id="toc-cat-login-and-account-recovery">Login and Account
+Recovery</a></li>
+<li><a href="#cat-marketplace"
+id="toc-cat-marketplace">Marketplace</a></li>
+<li><a href="#cat-memorialization-and-deceased-accounts"
+id="toc-cat-memorialization-and-deceased-accounts">Memorialization and
+Deceased Accounts</a></li>
+<li><a href="#cat-messaging" id="toc-cat-messaging">Messaging</a></li>
+<li><a href="#cat-meta-ai-and-avatars"
+id="toc-cat-meta-ai-and-avatars">Meta AI and Avatars</a></li>
+<li><a href="#cat-meta-pay-and-payments"
+id="toc-cat-meta-pay-and-payments">Meta Pay and Payments</a></li>
+<li><a href="#cat-pages" id="toc-cat-pages">Pages</a></li>
+<li><a href="#cat-photos-and-albums"
+id="toc-cat-photos-and-albums">Photos and Albums</a></li>
+<li><a href="#cat-policies-and-legal"
+id="toc-cat-policies-and-legal">Policies and Legal</a></li>
+<li><a href="#cat-privacy" id="toc-cat-privacy">Privacy</a></li>
+<li><a href="#cat-profile" id="toc-cat-profile">Profile</a></li>
+<li><a href="#cat-reels-and-video" id="toc-cat-reels-and-video">Reels
+and Video</a></li>
+<li><a href="#cat-safety-and-reporting"
+id="toc-cat-safety-and-reporting">Safety and Reporting</a></li>
+<li><a href="#cat-search" id="toc-cat-search">Search</a></li>
+<li><a href="#cat-stories" id="toc-cat-stories">Stories</a></li>
+<li><a href="#cat-supervision-and-family-center"
+id="toc-cat-supervision-and-family-center">Supervision and Family
+Center</a></li>
+<li><a href="#cat-troubleshooting"
+id="toc-cat-troubleshooting">Troubleshooting</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="facebook-help-compendium">Facebook Help Compendium</h1>
 <p>This compendium contains the main content of 1481 articles from
 Facebook’s official consumer Help Center; articles include per-platform
@@ -58398,17 +58473,13 @@ href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.befrienders.org%2F&amp;h=A
 <li><p>SMS: Text TRUST at 741741</p></li>
 <li><p>Veterans Crisis Line</p></li>
 <li><p>For veterans</p></li>
-<li><ol start="800" type="1">
-<li>273-8255</li>
-</ol></li>
+<li><p>(800) 273-8255</p></li>
 <li><p>National Alliance for Eating Disorders</p></li>
 <li><p>Monday-Friday 9am-7pm ET</p></li>
 <li><p><a
 href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.allianceforeatingdisorders.com%2F&amp;h=AUDl5fu4FUDucRbDQZeuuTemF8tW2iHR-Pz06qCZynMR7z_e-oi5BOP84L-ldn2hfioO9CO62FX2Anenaq3Dv2OHfQ4YcuprNb9zMa40E754tum0G6tB7-1jeutMm07qeFOuHW_IEEOOkDDdwi5-iA">L
 (l.facebook.com)</a></p></li>
-<li><ol start="866" type="1">
-<li>662-1235</li>
-</ol></li>
+<li><p>(866) 662-1235</p></li>
 </ul>
 <p><strong>Canada</strong></p>
 <ul>
@@ -58420,17 +58491,13 @@ href="https://l.facebook.com/l.php?u=https%3A%2F%2Fkidshelpphone.ca%2F&amp;h=AUD
 <li><p><a
 href="https://l.facebook.com/l.php?u=http%3A%2F%2Fm.me%2FCrisisTextLinepoweredbyKidsHelpPhone&amp;h=AUDl5fu4FUDucRbDQZeuuTemF8tW2iHR-Pz06qCZynMR7z_e-oi5BOP84L-ldn2hfioO9CO62FX2Anenaq3Dv2OHfQ4YcuprNb9zMa40E754tum0G6tB7-1jeutMm07qeFOuHW_IEEOOkDDdwi5-iA">L
 (l.facebook.com)</a></p></li>
-<li><ol start="800" type="1">
-<li>668-6868</li>
-</ol></li>
+<li><p>(800) 668-6868</p></li>
 <li><p>SMS: Text them at 686868</p></li>
 <li><p>The National Eating Disorder Information Centre (NEDIC)</p></li>
 <li><p><a
 href="https://l.facebook.com/l.php?u=https%3A%2F%2Fnedic.ca%2Fhi-there%2F&amp;h=AUDl5fu4FUDucRbDQZeuuTemF8tW2iHR-Pz06qCZynMR7z_e-oi5BOP84L-ldn2hfioO9CO62FX2Anenaq3Dv2OHfQ4YcuprNb9zMa40E754tum0G6tB7-1jeutMm07qeFOuHW_IEEOOkDDdwi5-iA">L
 (l.facebook.com)</a></p></li>
-<li><ol start="866" type="1">
-<li>633-4220</li>
-</ol></li>
+<li><p>(866) 633-4220</p></li>
 <li><p>Suicide Crisis Hotline</p></li>
 <li><p><a
 href="https://l.facebook.com/l.php?u=https%3A%2F%2F988.ca%2F&amp;h=AUDl5fu4FUDucRbDQZeuuTemF8tW2iHR-Pz06qCZynMR7z_e-oi5BOP84L-ldn2hfioO9CO62FX2Anenaq3Dv2OHfQ4YcuprNb9zMa40E754tum0G6tB7-1jeutMm07qeFOuHW_IEEOOkDDdwi5-iA">L
@@ -58442,12 +58509,8 @@ href="https://l.facebook.com/l.php?u=https%3A%2F%2F988.ca%2F&amp;h=AUDl5fu4FUDuc
 <li><p><a
 href="https://l.facebook.com/l.php?u=https%3A%2F%2Fanebados.com%2F&amp;h=AUDl5fu4FUDucRbDQZeuuTemF8tW2iHR-Pz06qCZynMR7z_e-oi5BOP84L-ldn2hfioO9CO62FX2Anenaq3Dv2OHfQ4YcuprNb9zMa40E754tum0G6tB7-1jeutMm07qeFOuHW_IEEOOkDDdwi5-iA">L
 (l.facebook.com)</a></p></li>
-<li><ol start="800" type="1">
-<li>630-0907</li>
-</ol></li>
-<li><ol start="514" type="1">
-<li>630-0907</li>
-</ol></li>
+<li><p>(800) 630-0907</p></li>
+<li><p>(514) 630-0907</p></li>
 <li><p>SMS: Text them at (800) 630-0907</p></li>
 </ul>
 <p><strong>United Kingdom</strong></p>

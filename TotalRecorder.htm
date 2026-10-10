@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>Total Recorder help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,55 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Total Recorder help guide</h1>
 <p class="subtitle">Gathered into one screen-reader-friendly
 document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#total-recorder-help-guide"
+id="toc-total-recorder-help-guide">Total Recorder help guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#add-on-agc-and-speech-enhancement"
+id="toc-add-on-agc-and-speech-enhancement">Add-on: AGC and Speech
+Enhancement</a></li>
+<li><a href="#add-on-audio-restoration"
+id="toc-add-on-audio-restoration">Add-on: Audio Restoration</a></li>
+<li><a href="#add-on-spectrum-analyzer-and-graphic-equalizer"
+id="toc-add-on-spectrum-analyzer-and-graphic-equalizer">Add-on: Spectrum
+Analyzer and Graphic Equalizer</a></li>
+<li><a href="#add-on-streaming" id="toc-add-on-streaming">Add-on:
+Streaming</a></li>
+<li><a href="#appendix" id="toc-appendix">Appendix</a></li>
+<li><a href="#general-information" id="toc-general-information">General
+Information</a></li>
+<li><a href="#guidance-published-on-the-website"
+id="toc-guidance-published-on-the-website">Guidance published on the
+website</a></li>
+<li><a href="#how-to-quick-help" id="toc-how-to-quick-help">How to…
+(Quick help)</a></li>
+<li><a href="#installation-and-configuration"
+id="toc-installation-and-configuration">Installation and
+Configuration</a></li>
+<li><a href="#menus-and-keyboard-shortcuts"
+id="toc-menus-and-keyboard-shortcuts">Menus and Keyboard
+Shortcuts</a></li>
+<li><a href="#primers-on-sound-and-video"
+id="toc-primers-on-sound-and-video">Primers on sound and video</a></li>
+<li><a href="#troubleshooting"
+id="toc-troubleshooting">Troubleshooting</a></li>
+<li><a href="#using-total-recorder" id="toc-using-total-recorder">Using
+Total Recorder</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="total-recorder-help-guide">Total Recorder help guide</h1>
 <p>This guide gathers High Criteria’s official documentation for Total
 Recorder into a single document that a screen reader can navigate by

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>Squarespace Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,299 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Squarespace Help Guide</h1>
 <p class="subtitle">Squarespace’s own help centre, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#squarespace-help-guide"
+id="toc-squarespace-help-guide">Squarespace Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#account-contributors"
+id="toc-account-contributors">Account: Contributors</a></li>
+<li><a href="#account-login-and-password"
+id="toc-account-login-and-password">Account: Login and password</a></li>
+<li><a href="#account-managing-your-account"
+id="toc-account-managing-your-account">Account: Managing your
+account</a></li>
+<li><a href="#acuity-scheduling-getting-started"
+id="toc-acuity-scheduling-getting-started">Acuity Scheduling: Getting
+started</a></li>
+<li><a href="#analytics-analytics-overview"
+id="toc-analytics-analytics-overview">Analytics: Analytics
+overview</a></li>
+<li><a href="#analytics-analytics-panels"
+id="toc-analytics-analytics-panels">Analytics: Analytics panels</a></li>
+<li><a href="#billing-billing-questions-and-issues"
+id="toc-billing-billing-questions-and-issues">Billing: Billing questions
+and issues</a></li>
+<li><a href="#billing-payments-and-subscriptions"
+id="toc-billing-payments-and-subscriptions">Billing: Payments and
+subscriptions</a></li>
+<li><a href="#billing-taxes" id="toc-billing-taxes">Billing:
+Taxes</a></li>
+<li><a href="#billing-website-billing"
+id="toc-billing-website-billing">Billing: Website billing</a></li>
+<li><a href="#commerce-accepting-payments"
+id="toc-commerce-accepting-payments">Commerce: Accepting
+payments</a></li>
+<li><a href="#commerce-checkout" id="toc-commerce-checkout">Commerce:
+Checkout</a></li>
+<li><a href="#commerce-customer-accounts"
+id="toc-commerce-customer-accounts">Commerce: Customer accounts</a></li>
+<li><a href="#commerce-discounts-and-promotions"
+id="toc-commerce-discounts-and-promotions">Commerce: Discounts and
+promotions</a></li>
+<li><a href="#commerce-donations" id="toc-commerce-donations">Commerce:
+Donations</a></li>
+<li><a href="#commerce-getting-started"
+id="toc-commerce-getting-started">Commerce: Getting started</a></li>
+<li><a href="#commerce-invoicing" id="toc-commerce-invoicing">Commerce:
+Invoicing</a></li>
+<li><a href="#commerce-managing-orders"
+id="toc-commerce-managing-orders">Commerce: Managing orders</a></li>
+<li><a href="#commerce-marketing" id="toc-commerce-marketing">Commerce:
+Marketing</a></li>
+<li><a href="#commerce-products-and-inventory"
+id="toc-commerce-products-and-inventory">Commerce: Products and
+inventory</a></li>
+<li><a href="#commerce-setting-up-your-store"
+id="toc-commerce-setting-up-your-store">Commerce: Setting up your
+store</a></li>
+<li><a href="#commerce-shipping-and-delivery"
+id="toc-commerce-shipping-and-delivery">Commerce: Shipping and
+delivery</a></li>
+<li><a href="#commerce-taxes-and-accounting"
+id="toc-commerce-taxes-and-accounting">Commerce: Taxes and
+accounting</a></li>
+<li><a href="#design-animations-and-image-effects"
+id="toc-design-animations-and-image-effects">Design: Animations and
+image effects</a></li>
+<li><a href="#design-font-and-text-formatting"
+id="toc-design-font-and-text-formatting">Design: Font and text
+formatting</a></li>
+<li><a href="#design-headers-and-footers"
+id="toc-design-headers-and-footers">Design: Headers and footers</a></li>
+<li><a href="#design-style-your-site"
+id="toc-design-style-your-site">Design: Style your site</a></li>
+<li><a href="#design-version-70-styles"
+id="toc-design-version-70-styles">Design: Version 7.0 styles</a></li>
+<li><a href="#digital-products-digital-products-billing"
+id="toc-digital-products-digital-products-billing">Digital Products:
+Digital Products billing</a></li>
+<li><a href="#digital-products-getting-started"
+id="toc-digital-products-getting-started">Digital Products: Getting
+started</a></li>
+<li><a href="#digital-products-memberships"
+id="toc-digital-products-memberships">Digital Products:
+Memberships</a></li>
+<li><a href="#domains-built-in-domains-urls"
+id="toc-domains-built-in-domains-urls">Domains: Built-in domains &amp;
+URLs</a></li>
+<li><a href="#domains-connecting-third-party-domains"
+id="toc-domains-connecting-third-party-domains">Domains: Connecting
+third-party domains</a></li>
+<li><a href="#domains-dns-records-nameservers"
+id="toc-domains-dns-records-nameservers">Domains: DNS records &amp;
+nameservers</a></li>
+<li><a href="#domains-domain-billing-lifecycle"
+id="toc-domains-domain-billing-lifecycle">Domains: Domain billing &amp;
+lifecycle</a></li>
+<li><a href="#domains-privacy-security"
+id="toc-domains-privacy-security">Domains: Privacy &amp;
+security</a></li>
+<li><a href="#domains-redirecting-moving-domains"
+id="toc-domains-redirecting-moving-domains">Domains: Redirecting &amp;
+moving domains</a></li>
+<li><a href="#domains-registering-squarespace-domains"
+id="toc-domains-registering-squarespace-domains">Domains: Registering
+Squarespace domains</a></li>
+<li><a href="#domains-resold-domains"
+id="toc-domains-resold-domains">Domains: Resold domains</a></li>
+<li><a href="#domains-tlds" id="toc-domains-tlds">Domains: TLDs</a></li>
+<li><a href="#domains-transferring-domains-tofrom-squarespace"
+id="toc-domains-transferring-domains-tofrom-squarespace">Domains:
+Transferring domains to/from Squarespace</a></li>
+<li><a href="#domains-understanding-domains-hosting"
+id="toc-domains-understanding-domains-hosting">Domains: Understanding
+domains &amp; hosting</a></li>
+<li><a href="#email-campaigns-building-an-audience"
+id="toc-email-campaigns-building-an-audience">Email Campaigns: Building
+an audience</a></li>
+<li><a href="#email-campaigns-creating-campaigns"
+id="toc-email-campaigns-creating-campaigns">Email Campaigns: Creating
+campaigns</a></li>
+<li><a href="#email-campaigns-email-campaigns-billing"
+id="toc-email-campaigns-email-campaigns-billing">Email Campaigns: Email
+Campaigns billing</a></li>
+<li><a href="#email-campaigns-getting-started"
+id="toc-email-campaigns-getting-started">Email Campaigns: Getting
+started</a></li>
+<li><a href="#email-campaigns-sending-campaigns"
+id="toc-email-campaigns-sending-campaigns">Email Campaigns: Sending
+campaigns</a></li>
+<li><a href="#email-campaigns-third-party-options"
+id="toc-email-campaigns-third-party-options">Email Campaigns:
+Third-party options</a></li>
+<li><a href="#getting-started-building-your-site"
+id="toc-getting-started-building-your-site">Getting Started: Building
+your site</a></li>
+<li><a href="#getting-started-getting-around-squarespace"
+id="toc-getting-started-getting-around-squarespace">Getting Started:
+Getting around Squarespace</a></li>
+<li><a href="#getting-started-signing-up"
+id="toc-getting-started-signing-up">Getting Started: Signing up</a></li>
+<li><a href="#getting-started-site-availability"
+id="toc-getting-started-site-availability">Getting Started: Site
+availability</a></li>
+<li><a href="#getting-started-squarespace-basics"
+id="toc-getting-started-squarespace-basics">Getting Started: Squarespace
+basics</a></li>
+<li><a href="#getting-started-squarespace-circle"
+id="toc-getting-started-squarespace-circle">Getting Started: Squarespace
+Circle</a></li>
+<li><a
+href="#google-workspace-and-custom-email-addresses-custom-email-basics"
+id="toc-google-workspace-and-custom-email-addresses-custom-email-basics">Google
+Workspace and Custom Email Addresses: Custom email basics</a></li>
+<li><a
+href="#google-workspace-and-custom-email-addresses-google-workspace"
+id="toc-google-workspace-and-custom-email-addresses-google-workspace">Google
+Workspace and Custom Email Addresses: Google Workspace</a></li>
+<li><a
+href="#google-workspace-and-custom-email-addresses-google-workspace-billing"
+id="toc-google-workspace-and-custom-email-addresses-google-workspace-billing">Google
+Workspace and Custom Email Addresses: Google Workspace billing</a></li>
+<li><a
+href="#google-workspace-and-custom-email-addresses-third-party-custom-email"
+id="toc-google-workspace-and-custom-email-addresses-third-party-custom-email">Google
+Workspace and Custom Email Addresses: Third-party custom email</a></li>
+<li><a
+href="#google-workspace-and-custom-email-addresses-troubleshooting-google-workspace"
+id="toc-google-workspace-and-custom-email-addresses-troubleshooting-google-workspace">Google
+Workspace and Custom Email Addresses: Troubleshooting Google
+Workspace</a></li>
+<li><a href="#images-and-videos-advanced-image-customizations"
+id="toc-images-and-videos-advanced-image-customizations">Images and
+Videos: Advanced image customizations</a></li>
+<li><a href="#images-and-videos-banners-backgrounds-and-logos"
+id="toc-images-and-videos-banners-backgrounds-and-logos">Images and
+Videos: Banners, backgrounds, and logos</a></li>
+<li><a href="#images-and-videos-editing-and-formatting-images"
+id="toc-images-and-videos-editing-and-formatting-images">Images and
+Videos: Editing and formatting images</a></li>
+<li><a href="#images-and-videos-overview"
+id="toc-images-and-videos-overview">Images and Videos: Overview</a></li>
+<li><a href="#images-and-videos-stock-images"
+id="toc-images-and-videos-stock-images">Images and Videos: Stock
+images</a></li>
+<li><a href="#images-and-videos-videos"
+id="toc-images-and-videos-videos">Images and Videos: Videos</a></li>
+<li><a href="#integrations-and-extensions-code-based-customizations"
+id="toc-integrations-and-extensions-code-based-customizations">Integrations
+and Extensions: Code-based customizations</a></li>
+<li><a href="#integrations-and-extensions-squarespace-integrations"
+id="toc-integrations-and-extensions-squarespace-integrations">Integrations
+and Extensions: Squarespace integrations</a></li>
+<li><a href="#marketing-advertising"
+id="toc-marketing-advertising">Marketing: Advertising</a></li>
+<li><a href="#marketing-marketing-basics"
+id="toc-marketing-marketing-basics">Marketing: Marketing basics</a></li>
+<li><a href="#marketing-social-sharing"
+id="toc-marketing-social-sharing">Marketing: Social sharing</a></li>
+<li><a href="#pages-and-content-basics"
+id="toc-pages-and-content-basics">Pages and Content: Basics</a></li>
+<li><a href="#pages-and-content-blocks"
+id="toc-pages-and-content-blocks">Pages and Content: Blocks</a></li>
+<li><a href="#pages-and-content-blogging"
+id="toc-pages-and-content-blogging">Pages and Content: Blogging</a></li>
+<li><a href="#pages-and-content-content-passwords"
+id="toc-pages-and-content-content-passwords">Pages and Content: Content
+passwords</a></li>
+<li><a href="#pages-and-content-deleting-and-restoring-content"
+id="toc-pages-and-content-deleting-and-restoring-content">Pages and
+Content: Deleting and restoring content</a></li>
+<li><a href="#pages-and-content-forms"
+id="toc-pages-and-content-forms">Pages and Content: Forms</a></li>
+<li><a href="#pages-and-content-importing-and-exporting"
+id="toc-pages-and-content-importing-and-exporting">Pages and Content:
+Importing and exporting</a></li>
+<li><a href="#pages-and-content-links-and-files"
+id="toc-pages-and-content-links-and-files">Pages and Content: Links and
+files</a></li>
+<li><a href="#pages-and-content-organizing-content"
+id="toc-pages-and-content-organizing-content">Pages and Content:
+Organizing content</a></li>
+<li><a href="#pages-and-content-pages-and-sections"
+id="toc-pages-and-content-pages-and-sections">Pages and Content: Pages
+and sections</a></li>
+<li><a href="#pages-and-content-pages-in-version-70"
+id="toc-pages-and-content-pages-in-version-70">Pages and Content: Pages
+in version 7.0</a></li>
+<li><a href="#pages-and-content-podcasting"
+id="toc-pages-and-content-podcasting">Pages and Content:
+Podcasting</a></li>
+<li><a href="#pages-and-content-setting-up-your-site"
+id="toc-pages-and-content-setting-up-your-site">Pages and Content:
+Setting up your site</a></li>
+<li><a href="#pages-and-content-site-topic-guides"
+id="toc-pages-and-content-site-topic-guides">Pages and Content: Site
+topic guides</a></li>
+<li><a href="#pages-and-content-troubleshooting-content-issues"
+id="toc-pages-and-content-troubleshooting-content-issues">Pages and
+Content: Troubleshooting content issues</a></li>
+<li><a href="#privacy-and-security-account-security"
+id="toc-privacy-and-security-account-security">Privacy and Security:
+Account security</a></li>
+<li><a href="#privacy-and-security-cookies-privacy-and-policies"
+id="toc-privacy-and-security-cookies-privacy-and-policies">Privacy and
+Security: Cookies, privacy, and policies</a></li>
+<li><a href="#seo-ai-optimization-ai-optimization"
+id="toc-seo-ai-optimization-ai-optimization">SEO &amp; AI Optimization:
+AI optimization</a></li>
+<li><a href="#seo-ai-optimization-improving-your-seo"
+id="toc-seo-ai-optimization-improving-your-seo">SEO &amp; AI
+Optimization: Improving your SEO</a></li>
+<li><a href="#seo-ai-optimization-seo-basics"
+id="toc-seo-ai-optimization-seo-basics">SEO &amp; AI Optimization: SEO
+basics</a></li>
+<li><a href="#seo-ai-optimization-third-party-seo-tools"
+id="toc-seo-ai-optimization-third-party-seo-tools">SEO &amp; AI
+Optimization: Third-party SEO tools</a></li>
+<li><a href="#squarespace-payments-squarespace-capital"
+id="toc-squarespace-payments-squarespace-capital">Squarespace Payments:
+Squarespace Capital</a></li>
+<li><a href="#squarespace-payments-squarespace-payments"
+id="toc-squarespace-payments-squarespace-payments">Squarespace Payments:
+Squarespace Payments</a></li>
+<li><a href="#squarespace-payments-third-party-solutions"
+id="toc-squarespace-payments-third-party-solutions">Squarespace
+Payments: Third-party solutions</a></li>
+<li><a href="#technical-issues-and-contact-us-browser-help"
+id="toc-technical-issues-and-contact-us-browser-help">Technical Issues
+and Contact Us: Browser help</a></li>
+<li><a href="#technical-issues-and-contact-us-contact-us"
+id="toc-technical-issues-and-contact-us-contact-us">Technical Issues and
+Contact Us: Contact us</a></li>
+<li><a
+href="#technical-issues-and-contact-us-site-performance-and-speed"
+id="toc-technical-issues-and-contact-us-site-performance-and-speed">Technical
+Issues and Contact Us: Site performance and speed</a></li>
+<li><a href="#templates-version-70-templates"
+id="toc-templates-version-70-templates">Templates: Version 7.0
+templates</a></li>
+<li><a href="#templates-working-with-templates"
+id="toc-templates-working-with-templates">Templates: Working with
+templates</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="squarespace-help-guide">Squarespace Help Guide</h1>
 <p>This guide gathers Squarespace’s official help centre, as it stood on
 3 August 2026. The text is Squarespace’s own; nothing has been
@@ -8876,7 +9170,7 @@ options as Website Personal.</li>
 you’ll have the options listed in the Digital product plan column
 below.</li>
 </ul>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 24%" />
@@ -51174,9 +51468,9 @@ won’t show active styles, even if they link to a page on your site.</p>
 </blockquote>
 <h4 id="mobile-navigation">Mobile navigation</h4>
 <p>On mobile devices, main navigation links collapse behind a
-<strong>Menu</strong> link or ☰ icon (also known as a “hamburger” icon).
-A visitor can click or tap it to reveal the full menu. This helps with
-usability and keeps your site mobile-friendly.</p>
+<strong>Menu</strong> link or ☰ icon (also known as a “hamburger”
+icon). A visitor can click or tap it to reveal the full menu. This helps
+with usability and keeps your site mobile-friendly.</p>
 <p>The link or icon can also appear on computer browsers depending on
 your visitor’s browser size, the number of links in your menu, or the
 length of your navigation titles.</p>
@@ -54098,7 +54392,7 @@ video storage limit.</p>
 <li><a href="#tabs-1">Digital Products plans</a></li>
 <li><a href="#tabs-2">Basic, Core, Plus, Advanced website plans</a></li>
 </ul>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 17%" />
@@ -54130,7 +54424,7 @@ video storage limit.</p>
 </tr>
 </tbody>
 </table>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 36%" />
 <col style="width: 15%" />
@@ -58350,7 +58644,7 @@ field.</li>
 <li>Save the record.</li>
 </ol>
 <p>Here is a quick reference for adding the first CNAME record:</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 28%" />
 <col style="width: 46%" />
@@ -59685,18 +59979,16 @@ the site, <a href="#disconnecting-a-third-party-domain">disconnect the
 domain</a>.</p>
 </blockquote>
 <ol type="1">
-<li><ol start="5" type="1">
-<li>In the “Let’s Connect Your GoDaddy Domain” pop-up message, select
-<strong>No, use DNS records</strong>.</li>
-<li>Click <strong>Connect domain</strong>.</li>
-<li>Select <strong>GoDaddy</strong> from the drop-down menu, if it’s not
-already selected.</li>
-<li>In the “GoDaddy Sign In” panel, log into your GoDaddy account.</li>
-<li>Click <strong>Connect</strong>. This automatically adds the required
-DNS records to your domain.</li>
-<li>In the “Connection in progress” pop-up message on your site, click
+<li>5. In the “Let’s Connect Your GoDaddy Domain” pop-up message, select
+<strong>No, use DNS records</strong>.
+6. Click <strong>Connect domain</strong>.
+7. Select <strong>GoDaddy</strong> from the drop-down menu, if it’s not
+already selected.
+8. In the “GoDaddy Sign In” panel, log into your GoDaddy account.
+9. Click <strong>Connect</strong>. This automatically adds the required
+DNS records to your domain.
+10. In the “Connection in progress” pop-up message on your site, click
 <strong>Continue.</strong></li>
-</ol></li>
 </ol>
 <h4 id="wait-for-the-connection-to-complete">Wait for the connection to
 complete</h4>
@@ -72722,7 +73014,7 @@ destination is the URL you enter when setting up domain forwarding. It’s
 also where visitors land after typing in your domain or subdomain. These
 destinations apply to Squarespace domains and domains using nameserver
 connect.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 43%" />
@@ -76337,7 +76629,7 @@ messages and follow their instructions to ensure your domain doesn’t
 expire or get suspended.</p>
 <p>If you’re unsure if an email is legitimate, contact your registry to
 verify the request:</p>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 82%" />
@@ -82171,7 +82463,7 @@ registration.</li>
 transferring.</li>
 </ul>
 <h5 id="q-t-1">Q-T</h5>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 17%" />
@@ -83807,7 +84099,8 @@ authorization code</h4>
 <p>You’ll need an authorization code from Crazy Domains to complete the
 transfer:</p>
 <ol type="1">
-<li>Next to <strong>Domain Name</strong>, click <strong>☰.</strong></li>
+<li>Next to <strong>Domain Name</strong>, click
+<strong>☰.</strong></li>
 <li>Click <strong>Registry Key</strong>.</li>
 <li>The code that appears in the <strong>Password</strong> field is your
 authorization code. You’ll enter this code during your transfer, so copy
@@ -106500,7 +106793,7 @@ to identify yourself as a Circle partner</li>
 status</h4>
 <p>Review the table below to understand which benefits you have access
 to with your current Circle partner status.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 43%" />
 <col style="width: 16%" />
@@ -107243,7 +107536,7 @@ then add a new subscription, you’ll only receive points for being added
 with admin permissions.</p>
 </blockquote>
 <h5 id="acuity">Acuity</h5>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 22%" />
@@ -110393,7 +110686,7 @@ per-user (email address), may be <a
 href="#h_01KSDRSD2VM1B9SA4TG06WFP6J">subject to sales tax</a>, and may
 differ from Google promotional pricing. If you add a user partway
 through an annual billing cycle, we prorate the first payment.</p>
-<table style="width:98%;">
+<table style="width:97%;">
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 28%" />
@@ -169741,7 +170034,7 @@ to 24 hours for the changes to display.</p>
 <h4 id="whats-included-on-my-sitemap">What’s included on my
 sitemap?</h4>
 <p>Review what content we include on your sitemap:</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <colgroup>
 <col style="width: 82%" />
 <col style="width: 16%" />
@@ -180081,8 +180374,8 @@ view</a>.</li>
 </ul>
 <p>On smartphones:</p>
 <ul>
-<li>Navigation collapses to a ☰ in the top right. The ☰ always displays
-on mobile, even if the main navigation is empty.</li>
+<li>Navigation collapses to a ☰ in the top right. The ☰ always
+displays on mobile, even if the main navigation is empty.</li>
 <li>The menu overlay’s background color is the same as the <a
 href="#h_01JEXVZ9Q0R4N5D7JMY8BV01ZK" target="_self">header</a>.</li>
 <li>Footers that show business information display an
@@ -182997,8 +183290,8 @@ any device.</p>
 <li>Background images display on mobile. For help with formatting, visit
 our <a href="#troubleshooting-cropping-issues">troubleshooting
 tips</a>.</li>
-<li>The navigation displays as a ☰ in the top-right corner. When tapped,
-it opens as a full-screen overlay.</li>
+<li>The navigation displays as a ☰ in the top-right corner. When
+tapped, it opens as a full-screen overlay.</li>
 <li>Social icons and your site’s <a
 href="#business-information-settings">business information</a> display
 below the links in the overlay.</li>
@@ -185746,8 +186039,8 @@ distortion, don’t go higher than 72 pixels.</li>
 <li>Change the logo size with <strong>Logo width</strong>.</li>
 </ul>
 <p>Style the navigation links with the <strong>Site navigation</strong>
-tweaks. Choose if navigation appears on the page or behind a ☰ icon with
-<strong>Always use overlay nav</strong>.</p>
+tweaks. Choose if navigation appears on the page or behind a ☰ icon
+with <strong>Always use overlay nav</strong>.</p>
 <ul>
 <li>When unchecked, navigation links display either beneath the
 branding, or split on either side. This depends on the number of pages
@@ -186287,8 +186580,8 @@ icon displays instead of main navigation links</h5>
 nav</strong> in the <strong>Site navigation</strong> section of site
 styles. The navigation will display as text again.</p>
 <p>On certain narrow browsers, such as mobile devices, the navigation
-always collapses behind a ☰, even if you’ve disabled it. This is part of
-the template’s design.</p>
+always collapses behind a ☰, even if you’ve disabled it. This is part
+of the template’s design.</p>
 <h5 id="navigation-links-are-missing">Navigation links are missing</h5>
 <p>First, confirm the pages you want in your navigation are in the main
 navigation section of the <a href="#the-pages-panel"
@@ -187576,8 +187869,8 @@ horizontal line of links or a navigation menu (☰).</p>
 <p>Style the main navigation with these <strong>Site navigation</strong>
 tweaks:</p>
 <ul>
-<li><strong>Nav style: icon</strong> - The ☰ menu displays at all times.
-When clicked, the links expand horizontally.</li>
+<li><strong>Nav style: icon</strong> - The ☰ menu displays at all
+times. When clicked, the links expand horizontally.</li>
 <li><strong>Nav style: standard</strong> - Links display in a horizontal
 line. On browsers and devices that aren’t wide enough to display the
 links horizontally, they collapse to a ☰ menu.</li>
@@ -188079,8 +188372,8 @@ position</strong> tweak.</li>
 the navigation overlay.</li>
 <li>Check <strong>Always show tagline</strong> to display the tagline in
 the navigation overlay.</li>
-<li>Social icons display in the top-right, or next to the ☰ menu if it’s
-set to display on the right.</li>
+<li>Social icons display in the top-right, or next to the ☰ menu if
+it’s set to display on the right.</li>
 </ul>
 <p>How the shopping cart appears depends on how you styled the
 <strong>Cart link display</strong> tweak under <strong>Shopping
@@ -188529,7 +188822,8 @@ overlap on mobile</h4>
 <p>If the elements in your <a href="#brine-template-family"
 target="_self">mobile navigation bar</a> overlap, move one or more of
 them to the other navigation bar.</p>
-<p>For example, to move the ☰ from the top to bottom navigation bar:</p>
+<p>For example, to move the ☰ from the top to bottom navigation
+bar:</p>
 <ol type="1">
 <li>In <a href="#making-style-changes" target="_self">site styles</a>,
 scroll to the <strong>Mobile: menu icon</strong> section.</li>
@@ -191205,8 +191499,8 @@ title and description</a> display below the image</li>
 <li><strong>Feature</strong>: <a href="#index-pages-in-version-70">Index
 pages</a>; <strong>Notes</strong>: - Grid index supports blog, events,
 gallery, products, and layout pages</li>
-<li><strong>Notes</strong>: - ☰ icon in sidebar expands and displays the
-index title and links for each sub-page</li>
+<li><strong>Notes</strong>: - ☰ icon in sidebar expands and displays
+the index title and links for each sub-page</li>
 <li><strong>Notes</strong>: - Hide the ☰ with
 <strong>Index</strong></li>
 <li><strong>Notes</strong>: - Choose if page titles display below

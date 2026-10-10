@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>TTCom and Doug Lee’s scripts</title>
+  <title>TTCom and Doug Lee's scripts</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">TTCom and Doug Lee’s scripts</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#ttcom-and-doug-lees-scripts"
@@ -18624,7 +18638,7 @@ An example of such a <code>say</code> command script:</li>
 <li># Uncomment one line below that will work on your system.</li>
 <li># See the relevant documentation for descriptions of options, and to
 assist in editing commands to taste.</li>
-<li><h1 id="section"></h1></li>
+<li><h2 id="section"></h2></li>
 <li># spd-say -w -e</li>
 <li># espeak -s140 -g4 -v en-us</li>
 <li># RHVoice-test -i - -r 75 -p BDL `</li>
@@ -20215,15 +20229,15 @@ work out among themselves, without my constant input, the questions of
 when, where, and whether to run non-standard and/or constantly-connected
 TeamTalk clients.</li>
 </ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<h3
+<h3 id="miscellaneous">Miscellaneous</h3>
+<h4
 id="audio-director-manager-audir-users-guide-doug-lee-last-revised-march-2026">Audio
 Director Manager (Audir) Users Guide Doug Lee Last Revised March,
-2026</h3>
-<h4 id="audio-director-manager-audir-users-guide">Audio Director Manager
-(Audir) Users Guide</h4>
-<h4 id="doug-lee-34">Doug Lee</h4>
-<h4 id="last-revised-march-2026-1">Last Revised March, 2026</h4>
+2026</h4>
+<h5 id="audio-director-manager-audir-users-guide">Audio Director Manager
+(Audir) Users Guide</h5>
+<h5 id="doug-lee-34">Doug Lee</h5>
+<h5 id="last-revised-march-2026-1">Last Revised March, 2026</h5>
 <p>The Audio Director Manager (Audir, pronounced similarly to “lauder”
 or “odder”) is a utility program designed to simplify the tasks of
 creating, launching, and generally managing programs that direct (or
@@ -20280,7 +20294,7 @@ applications use a Zoom recorder as a microphone and an Arctis headset
 for sound output. Audir also provides a few convenient shortcuts for
 more complex SoX effects chains that may be commonly used.</li>
 </ul>
-<h5 id="licenses">Licenses</h5>
+<h6 id="licenses">Licenses</h6>
 <ul>
 <li>Audir is covered by version 3 of the GNU General Public License; see
 the file copying.txt for further information.</li>
@@ -20296,7 +20310,7 @@ copyright; see those files in the mplib folder for details.</li>
 href="http://timgolden.me.uk/python/wmi/index.html">timgolden.me.uk</a>
 for further information.</li>
 </ul>
-<h5 id="table-of-contents-37">Table of Contents</h5>
+<h6 id="table-of-contents-37">Table of Contents</h6>
 <ul>
 <li>Quick Start Guide</li>
 <li>Brief Summary of Commands</li>
@@ -20342,7 +20356,7 @@ Condition</li>
 <li>Known Issues</li>
 <li>Revision History</li>
 </ul>
-<h5 id="quick-start-guide">Quick Start Guide</h5>
+<h6 id="quick-start-guide">Quick Start Guide</h6>
 <p>Here’s how to get up and running quickly with Audir:</p>
 <ul>
 <li><a href="https://www.dlee.org/audir/audir.zip">Download the Audir
@@ -20473,7 +20487,7 @@ editing. See the Editing Repeaters section for details.</li>
 <li>close all</li>
 <li>Close all running repeaters.</li>
 </ul>
-<h5 id="brief-summary-of-commands">Brief Summary of Commands</h5>
+<h6 id="brief-summary-of-commands">Brief Summary of Commands</h6>
 <p>Audir provides the following commands, described in subsequent
 sections. Note that the term “repeater” here is used to apply to any
 sound-relaying process managed by Audir. This includes MME and KS VAC
@@ -20534,7 +20548,7 @@ application.</p>
 application launch.</p>
 <p>alias</p>
 <p>Create a command alias to simplify common operations.</p>
-<h5 id="general-command-information">General Command Information</h5>
+<h6 id="general-command-information">General Command Information</h6>
 <p>All commands include built-in documentation accessible by typing help
 followed by the command of interest. A question mark (?) can be used in
 place of help, in which case the space between it and the command of
@@ -20549,9 +20563,9 @@ items at once with a single command in some cases.</p>
 repeaters (like h1 here), however, must match exactly, including case.
 In this guide, command elements are usually cased based on their common
 appearance in Virtual Audio Cable and SoX documentation.</p>
-<h5
+<h6
 id="the-sd-command-for-managing-default-devices-and-audio-session-endpoints">The
-sd Command For Managing Default Devices and Audio Session Endpoints</h5>
+sd Command For Managing Default Devices and Audio Session Endpoints</h6>
 <h6 id="introduction">Introduction</h6>
 <p>The sd command, where “sd” stands for “sound direct,” provides means
 to change Windows default sound devices, and also the sound devices
@@ -20756,8 +20770,8 @@ and follow a change to it instantly.</li>
 <li>VLC, and presumably other media players, seem to handle changes
 well.</li>
 </ul>
-<h5 id="manipulating-running-repeaters">Manipulating Running
-Repeaters</h5>
+<h6 id="manipulating-running-repeaters">Manipulating Running
+Repeaters</h6>
 <p>Audir can manipulate any loaded VAC repeater, regardless of how it
 was started (i.e., regardless of whether Audir started it). (SoX
 processes are only managed by Audir if Audir started them.)</p>
@@ -20840,7 +20854,7 @@ way, they are acted upon in numeric order regardless of the order in
 which they are specified; so, for example, selecting “5 2 9” will act on
 repeater 2, then 5, then 9. Any repeated indices or range overlaps are
 filtered out, so no repeater will be acted upon twice.</p>
-<h5 id="creating-new-vac-repeaters">Creating New VAC Repeaters</h5>
+<h6 id="creating-new-vac-repeaters">Creating New VAC Repeaters</h6>
 <p>The launch command can be used to launch a new or saved VAC repeater
 and can also save the repeater for easier future launching.</p>
 <p>For a new VAC repeater, the first parameter after launch is the
@@ -20895,7 +20909,7 @@ following commands are all equivalent:</p>
 <p>Commonly used options can be set up as defaults for all new repeaters
 as well; see the VAC Repeater Options and Defaults section, which also
 lists the available options.</p>
-<h5 id="creating-new-sox-processes">Creating New SoX Processes</h5>
+<h6 id="creating-new-sox-processes">Creating New SoX Processes</h6>
 <p>Just as for VAC repeaters, the launch command can be used to launch a
 new or saved SoX repeater and can also save the repeater for easier
 future launching. To launch a SoX repeater, start the command with
@@ -20957,7 +20971,7 @@ playing a radio station at half volume through the default output sound
 device. The waveIn and waveOut markers are required in this case in
 order to allow the Ogg type to be included. (streamOfMyFaves.com is a
 fictitious Internet address and does not exist at this writing.)</p>
-<h5 id="using-saved-repeaters">Using Saved Repeaters</h5>
+<h6 id="using-saved-repeaters">Using Saved Repeaters</h6>
 <p>As mentioned above, adding a name when specifying input and output
 devices on a new repeater will save that repeater under the given name
 for future launching. To launch such a repeater, specify its name in
@@ -20982,8 +20996,8 @@ expression, again case ignored, to include all repeaters whose names
 match the expression. Examples of this type of argument include “r:^h”
 to include all repeaters whose names start with “h” or “H”, and “r:h$”
 for all repeaters whose names end with “h” or “H.”</p>
-<h5 id="device-and-repeater-specifications">Device and Repeater
-Specifications</h5>
+<h6 id="device-and-repeater-specifications">Device and Repeater
+Specifications</h6>
 <p>Audir allows partial matching for device and repeater names to
 minimize typing and also includes very abbreviated names for some
 standard devices.</p>
@@ -21019,8 +21033,8 @@ number.</p>
 by referring to the repeater’s status or type, again by partial or whole
 text. For example, if only one KS repeater is running, “close ks” should
 close it.</p>
-<h5 id="vac-repeater-options-and-defaults">VAC Repeater Options and
-Defaults</h5>
+<h6 id="vac-repeater-options-and-defaults">VAC Repeater Options and
+Defaults</h6>
 <p>Audir supports exactly the same repeater command-line options
 supported by the repeaters themselves, though a few should not be used
 through Audir (see below). Defaults for each repeater type can be
@@ -21083,8 +21097,8 @@ functionality by other means:</p>
 <li>Output</li>
 <li>WindowName</li>
 </ul>
-<h5 id="sox-repeater-options-and-defaults">SoX Repeater Options and
-Defaults</h5>
+<h6 id="sox-repeater-options-and-defaults">SoX Repeater Options and
+Defaults</h6>
 <p>At this writing, <a
 href="https://codeberg.org/sox_ng/sox_ng">sox_ng</a> supports more than
 65 effects that can be applied to audio as it passes between devices and
@@ -21201,8 +21215,8 @@ this approach is not required for Audir SoX processes since Audir
 includes a system for managing defaults, any options found in a
 <code>SOXOPTS</code> environment variable will be honored by SoX
 processes that Audir launches.</p>
-<h5 id="sox-effect-shortcuts-and-the-sfx-command">SoX Effect Shortcuts
-and the sfx command</h5>
+<h6 id="sox-effect-shortcuts-and-the-sfx-command">SoX Effect Shortcuts
+and the sfx command</h6>
 <p>Audir defines a number of SoX effect shortcuts. The syntax of these
 shortcuts is deliberately unlike that of native SoX effects, to make it
 easier to distinguish between the two. Each shortcut, when typed as part
@@ -21460,7 +21474,7 @@ succeeded. Typically, this is only a problem for very short DTMF
 strings. A specification like dtmf7035551212#///0 prevents this final
 delay from occurring at all.</li>
 </ul>
-<h5 id="command-aliases">Command Aliases</h5>
+<h6 id="command-aliases">Command Aliases</h6>
 <p>The alias command is useful for creating simplifications of common
 commands. For example, to load a series of repeaters that you have saved
 under various names, you could make an init alias to load them:</p>
@@ -21484,7 +21498,7 @@ alias in the DTMF effect section:</p>
 Audir user after the dtmf alias; thus, for the command line “dtmf 438#,”
 %1 will become 438# when the alias expands. This will make the user
 command result in the actual Audir command “sox -n l1 dtmf438#.”</p>
-<h5 id="editing-repeaters">Editing Repeaters</h5>
+<h6 id="editing-repeaters">Editing Repeaters</h6>
 <p>Audir includes a very powerful feature that allows a whole set of
 repeaters to be managed live from a text window. From this window,
 repeaters can be reviewed, modified, quickly closed and reopened, and
@@ -21593,7 +21607,7 @@ that support multiple tabs.</li>
 a permanent change.</li>
 <li>Wordpad, long part of Windows, is discontinued in Windows 11.</li>
 </ul>
-<h5 id="miscellaneous-hints-and-tips">Miscellaneous Hints and Tips</h5>
+<h6 id="miscellaneous-hints-and-tips">Miscellaneous Hints and Tips</h6>
 <p>The following tips and hints are derived from this author’s personal
 experience. Your mileage may vary.</p>
 <p>Starting in VAC version 4.15 (released in December, 2015), typing
@@ -21666,8 +21680,8 @@ then save the file.</p>
 launch a second Audir instance. (Just be careful not to start a second
 simultaneous edit session - it should work, but it could sure cause
 confusion).</p>
-<h5 id="advanced-tasks-and-technical-information">Advanced Tasks and
-Technical Information</h5>
+<h6 id="advanced-tasks-and-technical-information">Advanced Tasks and
+Technical Information</h6>
 <p>This section is intended mostly for advanced Audir users and audio
 professionals.</p>
 <h6 id="setting-up-24-bit-audio-paths">Setting Up 24-Bit Audio
@@ -21742,7 +21756,7 @@ from what is shown here:</p></li>
 <p>Beware: Using -b24 as a default on SoX repeaters will complicate the
 playing of 16-bit audio files from within Audir, though this author
 expects that to be a very rare use case indeed.</p>
-<h5 id="known-issues-27">Known Issues</h5>
+<h6 id="known-issues-27">Known Issues</h6>
 <p>The following issues may be addressed as time permits:</p>
 <ul>
 <li>Sometimes, a VAC repeater may freeze. In listings and wherever
@@ -21772,7 +21786,7 @@ uses import imp, sys, os</li>
 <li>This message is harmless and will likely go away as Python and
 library versions advance.</li>
 </ul>
-<h5 id="revision-history-32">Revision History</h5>
+<h6 id="revision-history-32">Revision History</h6>
 <p>This section lists changes among Audir releases, most recent
 first.</p>
 <h6 id="revision-604-march-9-2026">Revision 604, March 9, 2026</h6>
@@ -22248,11 +22262,11 @@ repeaters.</p>
 12, 2015</h6>
 <p>First public revision posted. Allows repeaters to be created, closed,
 started, stopped, shown, hidden, and listed from within Vacro.</p>
-<h3 id="bmt-bookmark-tree-doug-lee-last-revised-march-2026">bmt,
-Bookmark Tree Doug Lee Last Revised March, 2026</h3>
-<h4 id="bmt-bookmark-tree">bmt, Bookmark Tree</h4>
-<h4 id="doug-lee-35">Doug Lee</h4>
-<h4 id="last-revised-march-2026-2">Last Revised March, 2026</h4>
+<h4 id="bmt-bookmark-tree-doug-lee-last-revised-march-2026">bmt,
+Bookmark Tree Doug Lee Last Revised March, 2026</h4>
+<h5 id="bmt-bookmark-tree">bmt, Bookmark Tree</h5>
+<h5 id="doug-lee-35">Doug Lee</h5>
+<h5 id="last-revised-march-2026-2">Last Revised March, 2026</h5>
 <p>This is a Python-based utility that combines bookmarks from popular
 browsers into a single TreeView for navigation and activation. The tree
 can be filtered for easier location of bookmarks by word, phrase,
@@ -22280,7 +22294,7 @@ PUBLIC LICENSE, version 3</a>. A copy of this license is also included
 as file <code>copying.txt</code>. This program comes with ABSOLUTELY NO
 WARRANTY. This is free software, and you are welcome to redistribute it
 under certain conditions. See the full license for details.</p>
-<h5 id="table-of-contents-38">Table of Contents</h5>
+<h6 id="table-of-contents-38">Table of Contents</h6>
 <ul>
 <li>System Requirements</li>
 <li>Installation and Launch Instructions</li>
@@ -22288,7 +22302,7 @@ under certain conditions. See the full license for details.</p>
 <li>Known Issues</li>
 <li>Revision History</li>
 </ul>
-<h5 id="system-requirements-1">System Requirements</h5>
+<h6 id="system-requirements-1">System Requirements</h6>
 <p>On Windows, users can run the executable (<code>.exe</code>) version
 of this utility. Those wishing to run this utility from source on
 Windows must first download and install a version of Python 3.7 or
@@ -22301,8 +22315,8 @@ recommended and older Python versions have not been tested.
 <code>pip install wxpython</code> is also required once before first
 use. At this writing, MacOS and Linux deployments have not been tested
 thoroughly.</p>
-<h5 id="installation-and-launch-instructions">Installation and Launch
-Instructions</h5>
+<h6 id="installation-and-launch-instructions">Installation and Launch
+Instructions</h6>
 <p>To install and launch this utility:</p>
 <ul>
 <li><a href="https://www.dlee.org/bmt/bmt.zip">Download the bmt zip
@@ -22318,7 +22332,7 @@ Python command. (To avoid an extra console window besides the main bmt
 window, use a version of the Python command with a w; e.g., pythonw or
 pythonw3.)</li>
 </ul>
-<h5 id="usage-in-detail">Usage In Detail</h5>
+<h6 id="usage-in-detail">Usage In Detail</h6>
 <p>When bmt is first launched, and whenever the Refresh button is
 pressed, the app will collect bookmarks (name, URL, and containing
 folder name where applicable) from all browsers found on the current
@@ -22339,7 +22353,7 @@ phrase into the Filter box will narrow down the displayed bookmarks to
 those whose name or URL contain what is typed. Case is ignored for this
 search; so typing “phone” will match “phone” and “Phone” in a name or
 URL.</p>
-<h5 id="known-issues-28">Known Issues</h5>
+<h6 id="known-issues-28">Known Issues</h6>
 <p>Issues shown in this section may be fixed in future bmt versions.</p>
 <p>The Browser choice box only contains one choice - Default Browser.
 Since the default browser interface does not support private or
@@ -22347,7 +22361,7 @@ incognito requests, the checkbox for that is also currently
 disabled.</p>
 <p>MacOS and Linux are incompletely tested platforms for this utility at
 this time.</p>
-<h5 id="revision-history-33">Revision History</h5>
+<h6 id="revision-history-33">Revision History</h6>
 <p>Here is the revision history of bmt, most recent entry first:</p>
 <h6 id="revision-26-march-15-2026">Revision 26, March 15, 2026</h6>
 <ul>
@@ -22365,11 +22379,11 @@ browser.</li>
 <ul>
 <li>First public release.</li>
 </ul>
-<h3 id="bx-users-guide-doug-lee-last-revised-june-2026">BX User’s Guide
-Doug Lee Last Revised June, 2026</h3>
-<h4 id="bx-users-guide">BX User’s Guide</h4>
-<h4 id="doug-lee-36">Doug Lee</h4>
-<h4 id="last-revised-june-2026-1">Last Revised June, 2026</h4>
+<h4 id="bx-users-guide-doug-lee-last-revised-june-2026">BX User’s Guide
+Doug Lee Last Revised June, 2026</h4>
+<h5 id="bx-users-guide">BX User’s Guide</h5>
+<h5 id="doug-lee-36">Doug Lee</h5>
+<h5 id="last-revised-june-2026-1">Last Revised June, 2026</h5>
 <p>Welcome to BX, the JAWS toolbox! For installation instructions and a
 download link, go to the Script Installation Instructions section. For
 news on updates, go to the Revision History section.</p>
@@ -22397,7 +22411,7 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-<h5 id="table-of-contents-39">Table of Contents</h5>
+<h6 id="table-of-contents-39">Table of Contents</h6>
 <ul>
 <li>What Is BX?</li>
 <li>System Requirements</li>
@@ -22432,7 +22446,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 <li>Acknowledgements</li>
 <li>Revision History</li>
 </ul>
-<h5 id="what-is-bx">What Is BX?</h5>
+<h6 id="what-is-bx">What Is BX?</h6>
 <p>BX is a very comprehensive navigation and testing tool. It will allow
 you to test many JAWS scripting functions without writing scripts. Using
 BX, you will be able to use single keystrokes to get the results of most
@@ -22548,14 +22562,14 @@ add commands by editing a .ini-style file and using a BX-specific syntax
 that permits scripts and functions to be called directly from a text
 file without the need to compile new code.</p></li>
 </ul>
-<h5 id="system-requirements-2">System Requirements</h5>
+<h6 id="system-requirements-2">System Requirements</h6>
 <p>BX works with JAWS versions 2019 and up. BX may contain features that
 only work in newer versions of JAWS. These features will fail under
 older versions of JAWS, but this will not prevent BX from performing
 properly otherwise. In other words, BX will do its best to adapt to what
 it can find and will do as much as it can.</p>
-<h5 id="script-installation-instructions-30">Script Installation
-Instructions</h5>
+<h6 id="script-installation-instructions-30">Script Installation
+Instructions</h6>
 <p>To install BX on a new system:</p>
 <ul>
 <li>Load JAWS if this has not already been done. This will require
@@ -22568,7 +22582,7 @@ run directly, the installer for these scripts</a>; and follow the
 on-screen directions. Be sure to install the scripts in the currently
 running JAWS version if a JAWS version list is presented.</li>
 </ul>
-<h5 id="bx-usage-overview">BX Usage Overview</h5>
+<h6 id="bx-usage-overview">BX Usage Overview</h6>
 <p>BX is activated, and also deactivated, by typing Insert+Space or
 JAWSKey+Space twice in a row. BX will announce its state when turned on
 or off in this manner, e.g., by saying “BX on.”</p>
@@ -22626,7 +22640,7 @@ means of handling application accessibility problems on the fly–for
 example, setting focus to an otherwise unreachable control, monitoring
 the progress of a long operation by parking on an MSAA progress control
 and pressing V periodically to check the position of the gauge, etc.</p>
-<h5 id="a-quick-start-guide">A Quick-Start Guide</h5>
+<h6 id="a-quick-start-guide">A Quick-Start Guide</h6>
 <p>There are several help facilities in BX which will be explained
 shortly. It is not necessary to memorize a lot of commands right away;
 you can find them all interactively. However, before presenting the help
@@ -22738,8 +22752,8 @@ subsequent presses (without other intervening commands) will cycle
 through the remaining modes. The MSAA mode can have an effect on the
 output of numerous JAWS commands, notably commands like
 <code>GetObjectName</code>, <code>GetObjectValue</code>, etc.</p>
-<h5 id="navigation-failure-indication">Navigation Failure
-Indication</h5>
+<h6 id="navigation-failure-indication">Navigation Failure
+Indication</h6>
 <p>By default, except when this machine is being controlled via a JAWS
 Tandem session, BX makes a small click instead of an announcement when
 navigation among windows, MSAA or UIA objects, etc., fails. BX revisions
@@ -22759,7 +22773,7 @@ Configuration map.</li>
 the chosen navigation failure indication mode is not saved; thus sounds
 will again be used after the next JAWS restart.</li>
 </ul>
-<h5 id="the-bx-quick-key">The BX Quick Key</h5>
+<h6 id="the-bx-quick-key">The BX Quick Key</h6>
 <p>The “BX Quick Key,” sometimes also written as “QuickKey” (without the
 space), is a key that provides access to a miscellaneous set of
 functions without requiring BX itself to be activated first with
@@ -22905,8 +22919,8 @@ getWindowClass(hwnd) if num &gt; 0 ; The user typed Shift, Ctrl, or
 Ctrl+Shift with this call. val = getWindowName(hwnd) endIf return val
 enddFunction</p></li>
 </ul>
-<h5 id="event-logging-and-tracing-features">Event Logging and Tracing
-Features</h5>
+<h6 id="event-logging-and-tracing-features">Event Logging and Tracing
+Features</h6>
 <p>BX is capable of generating, to clipboard and to JAWS virtual view, a
 log of event calls. This can be very useful in determining which events
 fire at certain times or in response to certain actions. At this
@@ -22999,8 +23013,8 @@ endIf
 ; No extra lines for any other events.
 return &quot;&quot;
 endFunction</code></pre>
-<h5 id="capturing-and-examining-uia-events">Capturing and Examining UIA
-Events</h5>
+<h6 id="capturing-and-examining-uia-events">Capturing and Examining UIA
+Events</h6>
 <p>BX allows capture and examination of any or all of up to about 200
 different UIA events on a UIA element or tree. (This actually refers to
 about 35 different event types plus numerous change events for specific
@@ -23100,7 +23114,7 @@ assume that one of these keys remains held down. This issue may not
 occur if Unified Keyboard Processing (UKP) is enabled in JAWS, which
 became the default in the June 2023 JAWS update.</li>
 </ul>
-<h5 id="updating-scripts-with-bx">Updating Scripts With BX</h5>
+<h6 id="updating-scripts-with-bx">Updating Scripts With BX</h6>
 <p>BX includes features to facilitate updating BX and application
 scripts from the BX author. In BX itself, the Global Functions map
 includes three commands for updating scripts from this author’s website.
@@ -23199,8 +23213,8 @@ will cause an error message on any BX Update attempt.</p>
 <code>temp</code> value:</p>
 <p>` [BX Options]</p>
 <p>temp=j `</p>
-<h5 id="advanced-and-unusual-usage-and-tips">Advanced and Unusual Usage
-and Tips</h5>
+<h6 id="advanced-and-unusual-usage-and-tips">Advanced and Unusual Usage
+and Tips</h6>
 <p>These are uses of BX that go outside the norm, though some
 subsections of this section may be of interest to those whose lives are
 not filled with technically intense activities.</p>
@@ -23345,14 +23359,14 @@ lockout.</p>
 permits this of course), you must first move focus to a nearby control
 before trying to use BX. You can then locate the control via BX
 navigation commands and examine its properties.</p>
-<h5 id="the-bx-configuration-files">The BX Configuration Files</h5>
+<h6 id="the-bx-configuration-files">The BX Configuration Files</h6>
 <p>BX ships with a <code>bx.cnf</code> file and can also read a
 <code>bx_user.cnf</code> file for user-specific configuration options.
 Users are strongly urged to change only <code>bx_user.cnf</code> and not
 <code>bx.cnf</code> so that future BX updates do not overwrite personal
 preferences. See <code>bx.cnf</code> for information on the options
 available.</p>
-<h5 id="known-issues-29">Known Issues</h5>
+<h6 id="known-issues-29">Known Issues</h6>
 <p>The BX author is aware of the following issues but has not managed to
 address them to date:</p>
 <ul>
@@ -23375,8 +23389,8 @@ updates, or in the BX code itself, <code>bx.jsb</code>. There have been
 no requests to rectify this situation as of this writing (July, 2023),
 and doing so would likely take considerable time and effort.</li>
 </ul>
-<h5 id="bx-development-history-overview-for-the-curious">BX Development
-History Overview (For the Curious)</h5>
+<h6 id="bx-development-history-overview-for-the-curious">BX Development
+History Overview (For the Curious)</h6>
 <p>BX has its beginnings as far back as 2001 in a lot of code snippets I
 tinkered with as I found time. I kept trying to figure out a way to
 reduce the amount of time I had to spend testing things for scripting
@@ -23445,7 +23459,7 @@ also stopped including source code. See my <a
 href="https://www.dlee.org/code_policy.htm">Script Distribution
 Policy</a> document for details.</li>
 </ul>
-<h5 id="acknowledgements">Acknowledgements</h5>
+<h6 id="acknowledgements">Acknowledgements</h6>
 <p>I would like to thank Victor Tsaran for his constructive input in the
 very early days of BX’s creation, and for writing and allowing me to use
 a Nullsoft installation script for it (some of Victor’s installer code
@@ -23471,7 +23485,7 @@ that caused so much to happen to BX.</p>
 Wall, author of the Perl programming language among other major public
 offerings, I wish to thank the Author of my story for prospering the
 work of my hands.</p>
-<h5 id="revision-history-34">Revision History</h5>
+<h6 id="revision-history-34">Revision History</h6>
 <p>This is the revision history of BX, most recent revision first.</p>
 <h6 id="revision-2736-june-6-2026">Revision 2736, June 6, 2026</h6>
 <ul>
@@ -25746,28 +25760,28 @@ of it is.</p>
 <h6 id="cvs-tag-bx_rel080616-june-16-2008">CVS tag bx_rel080616, June
 16, 2008</h6>
 <p>Revision history documentation stops here for now.</p>
-<h3
+<h4
 id="changes-in-whatsapp-for-windows-doug-lee-last-revised-november-2025">Changes
-In WhatsApp For Windows Doug Lee Last Revised November, 2025</h3>
-<h4 id="changes-in-whatsapp-for-windows">Changes In WhatsApp For
-Windows</h4>
-<h4 id="doug-lee-37">Doug Lee</h4>
-<h4 id="last-revised-november-2025">Last Revised November, 2025</h4>
+In WhatsApp For Windows Doug Lee Last Revised November, 2025</h4>
+<h5 id="changes-in-whatsapp-for-windows">Changes In WhatsApp For
+Windows</h5>
+<h5 id="doug-lee-37">Doug Lee</h5>
+<h5 id="last-revised-november-2025">Last Revised November, 2025</h5>
 <p>This document is meant to help users of WhatsApp for Windows adapt to
 the changes in that application that were posted to the public around
 November 13, 2025. At that time and on closely surrounding dates, at
 least for a substantial number of users according to this author’s
 estimations, Meta replaced the long-standing UWP app with a web-based
 application version.</p>
-<h5 id="table-of-contents-40">Table of Contents</h5>
+<h6 id="table-of-contents-40">Table of Contents</h6>
 <ul>
 <li>The New Way To Find Options In a List</li>
 <li>Key Collisions With Old JAWS Scripts</li>
 <li>Things That Are Better</li>
 <li>Other Notes</li>
 </ul>
-<h5 id="the-new-way-to-find-options-in-a-list">The New Way To Find
-Options In a List</h5>
+<h6 id="the-new-way-to-find-options-in-a-list">The New Way To Find
+Options In a List</h6>
 <p>The Application or Menu button, commonly used for Context menus, does
 not work in the new app. This is likely due to limitations placed on
 browser-based apps.</p>
@@ -25788,14 +25802,14 @@ menu button and also the position slider for the voice message.</li>
 position. This is also fairly silent, probably to keep speech from
 interfering with the message being played.</li>
 </ul>
-<h5 id="key-collisions-with-old-jaws-scripts">Key Collisions With Old
-JAWS Scripts</h5>
+<h6 id="key-collisions-with-old-jaws-scripts">Key Collisions With Old
+JAWS Scripts</h6>
 <p>In the new app, Alt+S opens Settings and moves focus to the “Search
 settings” edit box. This was a script command in the old WhatsApp to
 read the status area for the current chat. <a
 href="https://www.dlee.org/whatsapp/">This author’s scripts</a> provide
 the key sequence [ S to read this area.</p>
-<h5 id="things-that-are-better">Things That Are Better</h5>
+<h6 id="things-that-are-better">Things That Are Better</h6>
 <p>This author considers the following to be improvements in the new
 WhatsApp as compared to the old:</p>
 <ul>
@@ -25810,7 +25824,7 @@ transition to the new app, this is likely to help users understand how
 to use it. (The help is similar to what Microsoft Teams pioneered years
 ago.)</li>
 </ul>
-<h5 id="other-notes">Other Notes</h5>
+<h6 id="other-notes">Other Notes</h6>
 <p>Ctrl with numbers are natively implemented to jump among recent
 chats. They focus the chat list though, not the message list or Edit box
 within the chat. Pressing Enter once you get the chat you want will move
@@ -25824,20 +25838,20 @@ find there.</p>
 <p>Alt with numbers to read recent messages would require scripting, as
 would various other keystrokes that were scripted by Freedom Scientific
 for the old WhatsApp.</p>
-<h3
+<h4
 id="contact-and-support-information-doug-lee-last-revised-december-9-2025">Contact
-and Support Information Doug Lee Last revised December 9, 2025</h3>
-<h4 id="contact-and-support-information">Contact and Support
-Information</h4>
-<h4 id="doug-lee-38">Doug Lee</h4>
-<h4 id="last-revised-december-9-2025">Last revised December 9, 2025</h4>
+and Support Information Doug Lee Last revised December 9, 2025</h4>
+<h5 id="contact-and-support-information">Contact and Support
+Information</h5>
+<h5 id="doug-lee-38">Doug Lee</h5>
+<h5 id="last-revised-december-9-2025">Last revised December 9, 2025</h5>
 <p>These are the various ways to reach me and/or obtain news of and
 assistance with <a href="https://www.dlee.org/#projects">my
 projects</a>. I place announcement information first, followed by ways
 of contacting me for project support. Expand and collapse sections with
 Space or a mouse click.</p>
-<h5 id="where-to-find-project-and-update-announcements">Where To Find
-Project and Update Announcements</h5>
+<h6 id="where-to-find-project-and-update-announcements">Where To Find
+Project and Update Announcements</h6>
 <ul>
 <li>Primary Announcement Channels (Telegram, Discord, Twitter/X, this
 website)</li>
@@ -25915,7 +25929,7 @@ accordingly.</li>
 undertaken if there is sufficient interest.</li>
 </ul></li>
 </ul>
-<h5 id="how-to-contact-me">How to contact me</h5>
+<h6 id="how-to-contact-me">How to contact me</h6>
 <p>For specific projects and inquiry areas:</p>
 <ul>
 <li><p>Business Inquiries</p></li>
@@ -25996,12 +26010,12 @@ at following everyone who follows me on this platform.</p></li>
 together. (I use this funny way to give out the address to avoid bot
 harvesting, as I did in the Business Inquiries section.)</p></li>
 </ul>
-<h3
-id="gauge-sounds---sound-files-for-reporting-on-progress-bars-and-gauges">Gauge
-Sounds - Sound Files For Reporting On Progress Bars and Gauges</h3>
 <h4
-id="gauge-sounds---sound-files-for-reporting-on-progress-bars-and-gauges-1">Gauge
+id="gauge-sounds---sound-files-for-reporting-on-progress-bars-and-gauges">Gauge
 Sounds - Sound Files For Reporting On Progress Bars and Gauges</h4>
+<h5
+id="gauge-sounds---sound-files-for-reporting-on-progress-bars-and-gauges-1">Gauge
+Sounds - Sound Files For Reporting On Progress Bars and Gauges</h5>
 <p>This is a set of sounds for reporting progress bar status. I
 originally created these sounds in 2003 for JAWS and an experimental set
 of scripts I called JGauge. I am now making the sounds available for any
@@ -26011,7 +26025,7 @@ set.</p>
 <p>For the curious, the files were generated using an old Unix-based
 command-line tool called augen. The Perl program that drives augen to
 make the files, genwavs.pl, is included in this file set as well.</p>
-<h5 id="sound-and-theory">Sound and Theory</h5>
+<h6 id="sound-and-theory">Sound and Theory</h6>
 <p>Each of the 101 position files consists of three tones: A bottom
 border tone of 220 Hz, a top border tone of 880 Hz, and a somewhat
 louder tone between the two indicating the current position. The tones
@@ -26045,15 +26059,15 @@ progressnew.wav, etc.</p>
 <p><a href="gauge_sounds.zip">Download Gauge Sounds (zip)</a></p>
 <p>Doug Lee</p>
 <p>November 15, 2009</p>
-<h3 id="listtbl-users-guide-doug-lee-last-revised-july-2024">ListTbl
-Users Guide Doug Lee Last Revised July, 2024</h3>
-<h4 id="listtbl-users-guide">ListTbl Users Guide</h4>
-<h4 id="doug-lee-39">Doug Lee</h4>
-<h4 id="last-revised-july-2024">Last Revised July, 2024</h4>
+<h4 id="listtbl-users-guide-doug-lee-last-revised-july-2024">ListTbl
+Users Guide Doug Lee Last Revised July, 2024</h4>
+<h5 id="listtbl-users-guide">ListTbl Users Guide</h5>
+<h5 id="doug-lee-39">Doug Lee</h5>
+<h5 id="last-revised-july-2024">Last Revised July, 2024</h5>
 <p>This short document explains how to use the ListTbl scripts for
 navigating supported controls with JAWS in any application. These
 scripts require JAWS version 2019 or later.</p>
-<h5 id="table-of-contents-41">Table of Contents</h5>
+<h6 id="table-of-contents-41">Table of Contents</h6>
 <ul>
 <li>What Is ListTbl?</li>
 <li>Script Installation Instructions</li>
@@ -26061,7 +26075,7 @@ scripts require JAWS version 2019 or later.</p>
 <li>Usage Examples</li>
 <li>Revision History</li>
 </ul>
-<h5 id="what-is-listtbl">What Is ListTbl?</h5>
+<h6 id="what-is-listtbl">What Is ListTbl?</h6>
 <p>These scripts make standard HTML table navigation commands (Ctrl+Alt
 with arrows, Home, End, etc.) apply to various types of controls. This
 facilitates scanning down columns other than column 1 without having to
@@ -26077,8 +26091,8 @@ applications.</li>
 the TreeView controls in the Processes and Users tabs, and App History
 and Startup Apps tabs in Windows 11.</li>
 </ul>
-<h5 id="script-installation-instructions-31">Script Installation
-Instructions</h5>
+<h6 id="script-installation-instructions-31">Script Installation
+Instructions</h6>
 <p>To install these scripts on a new system:</p>
 <ul>
 <li>Load JAWS if this has not already been done. This will require
@@ -26091,7 +26105,7 @@ run, or run directly, the installer for these scripts</a>; and follow
 the on-screen directions. Be sure to install the scripts in the
 currently running JAWS version if a JAWS version list is presented.</li>
 </ul>
-<h5 id="commands-and-features-1">Commands and Features</h5>
+<h6 id="commands-and-features-1">Commands and Features</h6>
 <p>The primary feature of these scripts is to make the standard JAWS
 table navigation commands work in supported controls. This works in all
 supported JAWS keyboard layouts and uses the same keystrokes in each as
@@ -26142,7 +26156,7 @@ clicking cells and headers usually causes new or reorganized screens to
 appear, whereas the standard JAWS Table Layer commands simply navigate
 among cells. As a side effect, it will be necessary to use commands
 outside of the Table Layer in order to double-click cells.</p>
-<h5 id="usage-examples">Usage Examples</h5>
+<h6 id="usage-examples">Usage Examples</h6>
 <p>In the following examples, the Common/Desktop layout is assumed. For
 other layouts or the Table Layer, substitute appropriate keystrokes as
 necessary.</p>
@@ -26182,7 +26196,7 @@ older)</p>
 header. In the Context menu that appears, column names appear, checked
 if displayed and not checked if not displayed. Press Enter on a checked
 column to remove it or on an unchecked column to add it.</p>
-<h5 id="revision-history-35">Revision History</h5>
+<h6 id="revision-history-35">Revision History</h6>
 <p>Here is the revision history of these scripts, most recent revision
 first. Note that revision numbers for these scripts are artificially
 high because these scripts were initially part of <a
@@ -26318,11 +26332,11 @@ number.</li>
 <ul>
 <li>This is the first release of these scripts.</li>
 </ul>
-<h3 id="me-whatever-that-means-doug-lee-last-revised-june-7-2026">Me,
-Whatever That Means Doug Lee Last revised June 7, 2026</h3>
-<h4 id="me-whatever-that-means">Me, Whatever That Means</h4>
-<h4 id="doug-lee-40">Doug Lee</h4>
-<h4 id="last-revised-june-7-2026">Last revised June 7, 2026</h4>
+<h4 id="me-whatever-that-means-doug-lee-last-revised-june-7-2026">Me,
+Whatever That Means Doug Lee Last revised June 7, 2026</h4>
+<h5 id="me-whatever-that-means">Me, Whatever That Means</h5>
+<h5 id="doug-lee-40">Doug Lee</h5>
+<h5 id="last-revised-june-7-2026">Last revised June 7, 2026</h5>
 <p>This page primarily lists the public projects I offer on this site.
 For information on how to reach me, see my Contact and Support
 Information page. For a slowly growing set of audio articles that I
@@ -26330,13 +26344,13 @@ believe define me and my beliefs and philosophy, often with a Christian
 angle, see <a href="readouts/">the Readouts</a>, <a
 href="readouts/000.mp3">readouts/000</a> being the one that explains how
 they work and why they are called readouts.</p>
-<h5 id="table-of-contents-42">Table of Contents</h5>
+<h6 id="table-of-contents-42">Table of Contents</h6>
 <ul>
 <li>Current (or at least currently useful) Projects</li>
 <li>Historical Projects</li>
 </ul>
-<h5 id="current-or-at-least-currently-useful-projects">Current (or at
-least currently useful) Projects</h5>
+<h6 id="current-or-at-least-currently-useful-projects">Current (or at
+least currently useful) Projects</h6>
 <p>For convenience, this list is alphabetical, except where it’s not in
 order to group related projects.</p>
 <ul>
@@ -26404,7 +26418,7 @@ later)</a></li>
 <li><a href="ww/">Weather Watcher Live JAWS scripts</a></li>
 <li><a href="youtube/">Youtube JAWS scripts (JAWS 17 or later)</a></li>
 </ul>
-<h5 id="historical-projects">Historical Projects</h5>
+<h6 id="historical-projects">Historical Projects</h6>
 <p>These projects are old and no longer supported but remain here for
 reference.</p>
 <ul>
@@ -26412,14 +26426,14 @@ reference.</p>
 <li><a href="mrw/">MRW, JAWS scripts to work around an MSAA registration
 issue (2017-2018)</a></li>
 </ul>
-<h3
+<h4
 id="scrfix---simplify-using-screen1-on-wsl-doug-lee-last-revised-october-2024">scrfix
 - Simplify Using Screen(1) on WSL Doug Lee Last Revised October,
-2024</h3>
-<h4 id="scrfix---simplify-using-screen1-on-wsl">scrfix - Simplify Using
-Screen(1) on WSL</h4>
-<h4 id="doug-lee-41">Doug Lee</h4>
-<h4 id="last-revised-october-2024">Last Revised October, 2024</h4>
+2024</h4>
+<h5 id="scrfix---simplify-using-screen1-on-wsl">scrfix - Simplify Using
+Screen(1) on WSL</h5>
+<h5 id="doug-lee-41">Doug Lee</h5>
+<h5 id="last-revised-october-2024">Last Revised October, 2024</h5>
 <p>This small C program, when properly installed, simplifies use of
 screen(1) on the Windows Subsystem for Linux (WSL), version 1, by
 avoiding the need to run as root or via sudo(8). The directions in this
@@ -26441,7 +26455,7 @@ has not tested Adrian’s solution and wrote this utility before noticing
 it.</p>
 <p>This utility is covered by a BSD-style license; see the top of the
 source code file for details.</p>
-<h5 id="table-of-contents-43">Table of Contents</h5>
+<h6 id="table-of-contents-43">Table of Contents</h6>
 <ul>
 <li>System Requirements</li>
 <li>Installation Instructions</li>
@@ -26449,12 +26463,12 @@ source code file for details.</p>
 <li>Theory of Operation</li>
 <li>Revision History</li>
 </ul>
-<h5 id="system-requirements-3">System Requirements</h5>
+<h6 id="system-requirements-3">System Requirements</h6>
 <p>This utility is intended for installation and use in Linux
 distributions run under the Windows Subsystem for Linux (WSL). It may
 run in other settings, with or without modification, but is by this
 author assumed to be unnecessary there.</p>
-<h5 id="installation-instructions">Installation Instructions</h5>
+<h6 id="installation-instructions">Installation Instructions</h6>
 <p>To install this utility, perform these steps:</p>
 <ul>
 <li><a href="https://www.dlee.org/scrfix/scrfix.zip">Download the Zip of
@@ -26490,7 +26504,7 @@ user priveleges and without prompting for a password. These steps must
 be repeated any time you install an update to this utility and possibly
 if you move it to a new folder.</li>
 </ul>
-<h5 id="program-usage">Program Usage</h5>
+<h6 id="program-usage">Program Usage</h6>
 <p>After installation, run scrfix once every time wsl starts an
 instance. Then screen(1) will work without a sudo. Of course, if
 launching screen works without first running this utility, your WSL
@@ -26501,7 +26515,7 @@ calling it from within a shell script that launches exactly once per WSL
 login. For Bash users, this is the <code>.profile</code> script. For
 users of tcsh, this is the <code>.login</code> script. If you already
 launch Screen automatically, just call this utility first.</p>
-<h5 id="theory-of-operation">Theory of Operation</h5>
+<h6 id="theory-of-operation">Theory of Operation</h6>
 <p>This utility simply creates and sets required permissions on a folder
 called <code>/run/screen</code>, which Screen uses to manage its
 communication sockets. In most environments, this folder can be created
@@ -26517,7 +26531,7 @@ to execute with the priveleges of its file owner. The file must be owned
 by root for this to work as intended. The net result of all this is that
 the required setup can be established without requiring
 <code>sudo</code> or a root shell.</p>
-<h5 id="revision-history-36">Revision History</h5>
+<h6 id="revision-history-36">Revision History</h6>
 <p>Here is the revision history of this utility, most recent revision
 first:</p>
 <h6 id="version-1.0-december-16-2021">Version 1.0, December 16,
@@ -26529,13 +26543,13 @@ problem, and again on October 7, 2024, to explain the likely lack of
 need for this utility under WSL 2, where systemd can run automatically
 as part of WSL startup, just as for most other Linux environments.</li>
 </ul>
-<h3
+<h4
 id="taff-the-teamtalk-audio-file-fixer-doug-lee-last-revised-may-2020">Taff,
-the TeamTalk Audio File Fixer Doug Lee Last Revised May, 2020</h3>
-<h4 id="taff-the-teamtalk-audio-file-fixer">Taff, the TeamTalk Audio
-File Fixer</h4>
-<h4 id="doug-lee-42">Doug Lee</h4>
-<h4 id="last-revised-may-2020">Last Revised May, 2020</h4>
+the TeamTalk Audio File Fixer Doug Lee Last Revised May, 2020</h4>
+<h5 id="taff-the-teamtalk-audio-file-fixer">Taff, the TeamTalk Audio
+File Fixer</h5>
+<h5 id="doug-lee-42">Doug Lee</h5>
+<h5 id="last-revised-may-2020">Last Revised May, 2020</h5>
 <p>This utility is designed to create versions of TeamTalk audio
 recordings that can be played in standard media players. See the
 Technical Details section for details on what this means and why it is
@@ -26560,7 +26574,7 @@ it under certain conditions. See the <a
 href="http://www.gnu.org/licenses/gpl-3.0.html">full GNU version 3
 license</a> for details. A copy of this license is also included as file
 copying.txt.</p>
-<h5 id="table-of-contents-44">Table of Contents</h5>
+<h6 id="table-of-contents-44">Table of Contents</h6>
 <ul>
 <li>System Requirements</li>
 <li>Installation Instructions</li>
@@ -26577,13 +26591,13 @@ copying.txt.</p>
 </ul></li>
 <li>Revision History</li>
 </ul>
-<h5 id="system-requirements-4">System Requirements</h5>
+<h6 id="system-requirements-4">System Requirements</h6>
 <p>On Windows, users can run the executable (.exe) version of this
 utility. Those wishing to run this utility from source on Windows must
 first download and install a version of Python 3.7.</p>
 <p>On MacOS, Linux, and other Python-supporting platforms, make sure to
 run this utility via Python 3.7.</p>
-<h5 id="installation-instructions-1">Installation Instructions</h5>
+<h6 id="installation-instructions-1">Installation Instructions</h6>
 <p>To install this utility:</p>
 <ul>
 <li><a href="https://www.dlee.org/taff/taff.zip">Download the Taff zip
@@ -26595,7 +26609,7 @@ the utility more conveniently.) On other operating systems, or on
 Windows with Python 3.7 installed, run taff.py via the correct Python
 command.</li>
 </ul>
-<h5 id="taff-usage">Taff Usage</h5>
+<h6 id="taff-usage">Taff Usage</h6>
 <p>This document will use the command taff to indicate launching Taff.
 If you are using the Windows executable, it might be necessary to type
 the full path to Taff, such as c:.exe instead. To run Taff from source,
@@ -26659,7 +26673,7 @@ folders until -r is found. Examples:</p></li>
 <p>Fix files in the given folder and in all of its subfolders. Also
 delete each original .ogg file as its fixed .opus version is
 completed.</p>
-<h5 id="known-issues-30">Known Issues</h5>
+<h6 id="known-issues-30">Known Issues</h6>
 <p>Issues shown in this section may be fixed in future Taff
 versions.</p>
 <p>Fixing a file that is currently being written to by TeamTalk may
@@ -26675,7 +26689,7 @@ normal unless the number of bytes is not 0. The inspect option is also
 not coded to stop for files that are not of the proper format; e.g.,
 throw a .flac file at it, and you’re likely to get reams of completely
 useless output.</p>
-<h5 id="technical-details">Technical Details</h5>
+<h6 id="technical-details">Technical Details</h6>
 <p>This section is mostly for the incurably curious (hello, that’s me!)
 and the highly technically inclined. A simpler summary of what appears
 below:</p>
@@ -26882,7 +26896,7 @@ original page2.</li>
 <li>Copy all remaining pages of audio.opus unchanged into audio.ogg.
 audio.ogg should now be exactly what Taff originally fixed.</li>
 </ul>
-<h5 id="revision-history-37">Revision History</h5>
+<h6 id="revision-history-37">Revision History</h6>
 <p>Here is the revision history of Taff, most recent entry first:</p>
 <h6 id="version-1.0.1-released-june-07-2020">Version 1.0.1, released
 June 07, 2020</h6>
@@ -26918,12 +26932,12 @@ character range l-A.”</li>
 <h6 id="version-1.0.0-released-may-6-2020">Version 1.0.0, released May
 6, 2020</h6>
 <p>First public release.</p>
-<h3
+<h4
 id="teamspeak-nvda-add-on-doug-lee-last-revised-april-2026">TeamSpeak
-NVDA Add-on Doug Lee Last revised April, 2026</h3>
-<h4 id="teamspeak-nvda-add-on">TeamSpeak NVDA Add-on</h4>
-<h4 id="doug-lee-43">Doug Lee</h4>
-<h4 id="last-revised-april-2026-2">Last revised April, 2026</h4>
+NVDA Add-on Doug Lee Last revised April, 2026</h4>
+<h5 id="teamspeak-nvda-add-on">TeamSpeak NVDA Add-on</h5>
+<h5 id="doug-lee-43">Doug Lee</h5>
+<h5 id="last-revised-april-2026-2">Last revised April, 2026</h5>
 <p>This is the home of the TeamSpeak NVDA add-on for TeamSpeak versions
 3.3.0.0 and newer. This add-on was last tested with TeamSpeak 3.6.2.0.
 This add-on does not cover TeamSpeak 5 or 6.</p>
@@ -26962,13 +26976,13 @@ prompts to install the add-on.</li>
 close the Store. You will be prompted to restart NVDA. Choose “Yes” so
 that the new or updated add-on will begin to operate.</li>
 </ul>
-<h3
+<h4
 id="teamtalk-classic-to-qt-migration-guide-doug-lee-last-revised-july-20-2024">TeamTalk
-Classic To Qt Migration Guide Doug Lee Last Revised July 20, 2024</h3>
-<h4 id="teamtalk-classic-to-qt-migration-guide">TeamTalk Classic To Qt
-Migration Guide</h4>
-<h4 id="doug-lee-44">Doug Lee</h4>
-<h4 id="last-revised-july-20-2024">Last Revised July 20, 2024</h4>
+Classic To Qt Migration Guide Doug Lee Last Revised July 20, 2024</h4>
+<h5 id="teamtalk-classic-to-qt-migration-guide">TeamTalk Classic To Qt
+Migration Guide</h5>
+<h5 id="doug-lee-44">Doug Lee</h5>
+<h5 id="last-revised-july-20-2024">Last Revised July 20, 2024</h5>
 <p>This document is intended to help users migrate from the TeamTalk
 Classic client to the <a
 href="https://en.wikipedia.org/wiki/Qt_(software)">Qt (officially
@@ -26983,14 +26997,14 @@ site, is included.</p>
 <p>TeamTalk version numbers and feature comparisons updated.</p>
 <p>July 20, 2024</p>
 <p>Documented the TeamTalk Qt 5.17 Move Users dialog.</p>
-<h5 id="table-of-contents-45">Table of Contents</h5>
+<h6 id="table-of-contents-45">Table of Contents</h6>
 <ul>
 <li>A Quick Guide For Migrating From the Classic Client</li>
 <li>Configuring TeamTalk For Accessibility</li>
 <li>Client Differences</li>
 </ul>
-<h5 id="a-quick-guide-for-migrating-from-the-classic-client">A Quick
-Guide For Migrating From the Classic Client</h5>
+<h6 id="a-quick-guide-for-migrating-from-the-classic-client">A Quick
+Guide For Migrating From the Classic Client</h6>
 <p>For those accustomed to the TeamTalk Classic client, these steps and
 tips should help with migration to the Qt client:</p>
 <ul>
@@ -27017,8 +27031,8 @@ questions.</li>
 Your recent and named server lists should now be available in this
 client. Shift+Tab if necessary to reach the list of named servers.</li>
 </ul>
-<h5 id="configuring-teamtalk-for-accessibility">Configuring TeamTalk For
-Accessibility</h5>
+<h6 id="configuring-teamtalk-for-accessibility">Configuring TeamTalk For
+Accessibility</h6>
 <p>To install the (Qt) client with automatic accessibility support, if
 you did not do this as part of the migration process described in the
 previous section:</p>
@@ -27068,7 +27082,7 @@ to “maximized.”</p></li>
 “Access denied” box with a “Continue” button, press Enter again to save
 the changes with the required administrative rights.</p></li>
 </ul>
-<h5 id="client-differences">Client Differences</h5>
+<h6 id="client-differences">Client Differences</h6>
 <p>The following information applies to TeamTalk Qt 5.14 as compared to
 TeamTalk Classic 5.8.0 and later.</p>
 <p>There is a change in how to move multiple people at once from one
@@ -27140,15 +27154,15 @@ client is not known to do this, which means it could potentially consume
 arbitrarily large amounts of memory when run for a very long time
 without a restart.</p></li>
 </ul>
-<h3 id="teamtalk-resources-doug-lee-last-revised-october-2023">TeamTalk
-Resources Doug Lee Last Revised October, 2023</h3>
-<h4 id="teamtalk-resources">TeamTalk Resources</h4>
-<h4 id="doug-lee-45">Doug Lee</h4>
-<h4 id="last-revised-october-2023-1">Last Revised October, 2023</h4>
+<h4 id="teamtalk-resources-doug-lee-last-revised-october-2023">TeamTalk
+Resources Doug Lee Last Revised October, 2023</h4>
+<h5 id="teamtalk-resources">TeamTalk Resources</h5>
+<h5 id="doug-lee-45">Doug Lee</h5>
+<h5 id="last-revised-october-2023-1">Last Revised October, 2023</h5>
 <p>This page is a jump-off point for TeamTalk-related resources provided
 on this website.</p>
-<h5 id="teamtalk-qt-client-support-and-migration-tools">TeamTalk Qt
-Client Support and Migration Tools</h5>
+<h6 id="teamtalk-qt-client-support-and-migration-tools">TeamTalk Qt
+Client Support and Migration Tools</h6>
 <p>As of August, 2021, the TeamTalk Classic client is considered legacy;
 accessibility has been rolled into the TeamTalk Qt client. The Classic
 client is no longer available or necessary.</p>
@@ -27165,7 +27179,7 @@ support for the Qt client beyond what is already included natively
 within it.</p>
 <p>This author does not know of an NVDA add-on for the TeamTalk Qt
 client but also does not know of one being necessary.</p>
-<h5 id="miscellaneous-utilities">Miscellaneous Utilities</h5>
+<h6 id="miscellaneous-utilities">Miscellaneous Utilities</h6>
 <p><a href="https://www.dlee.org/teamtalk/ttconv/">TTConv, the TeamTalk
 configuration file converter</a>, is a tool that simplifies migration
 from Classic to Qt but that can also produce an HTML file or a set of
@@ -27189,14 +27203,14 @@ Box Administration Utility</a>, simplifies many TeamTalk server
 administrative tasks, including setup and removal, configuration for
 automatic launch at system start, server updating, and server log
 analysis.</p>
-<h3
+<h4
 id="tt---teamtalk-server-box-administration-utility-doug-lee-last-revised-april-2026">TT
 - TeamTalk Server Box Administration Utility Doug Lee Last Revised
-April, 2026</h3>
-<h4 id="tt---teamtalk-server-box-administration-utility">TT - TeamTalk
-Server Box Administration Utility</h4>
-<h4 id="doug-lee-46">Doug Lee</h4>
-<h4 id="last-revised-april-2026-3">Last Revised April, 2026</h4>
+April, 2026</h4>
+<h5 id="tt---teamtalk-server-box-administration-utility">TT - TeamTalk
+Server Box Administration Utility</h5>
+<h5 id="doug-lee-46">Doug Lee</h5>
+<h5 id="last-revised-april-2026-3">Last Revised April, 2026</h5>
 <p>tt is a utility designed to help those who host several TeamTalk
 servers on a single box or virtual machine (VM). It may also be used to
 facilitate testing of TeamTalk server versions and configurations in a
@@ -27227,7 +27241,7 @@ released TTMan project by Doug Lee started in 2018. Similarly, the
 <code>logsum</code> command is a full absorption of a stand-alone
 utility written by Doug Lee in 2010 and maintained occasionally
 since.</p>
-<h5 id="table-of-contents-46">Table of Contents</h5>
+<h6 id="table-of-contents-46">Table of Contents</h6>
 <ul>
 <li>System Requirements
 <ul>
@@ -27250,7 +27264,7 @@ since.</p>
 <li>Why I Wrote This Utility</li>
 <li>Revision History</li>
 </ul>
-<h5 id="system-requirements-5">System Requirements</h5>
+<h6 id="system-requirements-5">System Requirements</h6>
 <h6 id="general-requirements">General Requirements</h6>
 <p>In order to function properly, tt requires the following system
 configuration on the box where it is to be used:</p>
@@ -27348,8 +27362,8 @@ following:</li>
 <li>MacOS does not support systemd, which currently prevents tt from
 supporting the starting and stopping of TeamTalk servers.</li>
 </ul>
-<h5 id="installation-and-setup-instructions">Installation and Setup
-Instructions</h5>
+<h6 id="installation-and-setup-instructions">Installation and Setup
+Instructions</h6>
 <p>To install and configure this utility on a new system:</p>
 <ul>
 <li><a href="https://www.dlee.org/teamtalk/tt/tt.tgz">Download and
@@ -27389,8 +27403,8 @@ want to select a specific server version. When you do one of these, tt
 will set up other required infrastructure - systemd files,
 <code>tt</code> user and group, etc., if necessary.</li>
 </ul>
-<h5 id="teamtalk-server-creation-and-maintenance">TeamTalk Server
-Creation and Maintenance</h5>
+<h6 id="teamtalk-server-creation-and-maintenance">TeamTalk Server
+Creation and Maintenance</h6>
 <p>There are two ways to create a new server:</p>
 <ul>
 <li>If you already have a server configuration xml file, place it in
@@ -27468,7 +27482,7 @@ upgrade.</li>
 <li>tt enable all</li>
 <li>tt start all `</li>
 </ul>
-<h5 id="miscellaneous-commands-1">Miscellaneous Commands</h5>
+<h6 id="miscellaneous-commands-1">Miscellaneous Commands</h6>
 <p><code>tt help</code> provides help for all commands supported by the
 utility. Typing <code>tt</code> without arguments produces the same
 information. This information also includes the revision number of tt
@@ -27566,7 +27580,7 @@ commands).</p></li>
 <li><p>This tt utility itself, along with <code>tt.conf</code> if
 present.</p></li>
 </ul>
-<h5 id="the-rlist-command">The RList Command</h5>
+<h6 id="the-rlist-command">The RList Command</h6>
 <p>The <code>rlist</code> command can perform the following tasks:</p>
 <ul>
 <li>List running TeamTalk servers along with basic information about
@@ -27706,7 +27720,7 @@ It is very wise to run a <code>rlist</code> command without
 <code>-k</code> or <code>-r</code> first to make sure the correct
 servers will be shut down or reloaded.</p></li>
 </ul>
-<h5 id="the-logsum-command">The LogSum Command</h5>
+<h6 id="the-logsum-command">The LogSum Command</h6>
 <p>This command scans through one or more TeamTalk server log files and
 produces a summary of contents. This command is based on a 2010 utility
 that this author wrote before TeamTalk 5 was released and has maintained
@@ -27839,8 +27853,8 @@ shared cipher” may also be one of these cases.</li>
 in particular. Again, Connected and Disconnected lines will appear
 immediately before these.</li>
 </ul>
-<h5 id="the-fln-command-for-saving-disk-space">The fln Command For
-Saving Disk Space</h5>
+<h6 id="the-fln-command-for-saving-disk-space">The fln Command For
+Saving Disk Space</h6>
 <p>For box administrators who allow TeamTalk users to upload files to
 TeamTalk servers, the <code>fln</code> command may save significant disk
 space depending on user upload patterns. This command will look for
@@ -27944,7 +27958,7 @@ according to operating system last-modification time is used as the
 target instance. The idea of this design choice is to preserve the age
 of the file’s contents as can best be done.</li>
 </ul>
-<h5 id="remote-usage">Remote Usage</h5>
+<h6 id="remote-usage">Remote Usage</h6>
 <p>Note: For reasons that will shortly be explained, Many commands are
 likely not to work as intended when run in this way. Commands especially
 well-suited to this usage are noted as such later in this section.</p>
@@ -28076,7 +28090,7 @@ log files and log wanted event types.</p></li>
 verifying that a remote host is capable of running the utility; e.g.,
 that its default version of <code>python3</code> is sufficient.</p></li>
 </ul>
-<h5 id="special-uses">Special Uses</h5>
+<h6 id="special-uses">Special Uses</h6>
 <p>This section documents special uses of this utility that are outside
 the normal every-day circumstances.</p>
 <h6 id="fixing-logs-after-a-file-system-overflow">Fixing Logs After a
@@ -28110,7 +28124,7 @@ If you have saved the configurations for all running servers on the box,
 the single command <code>tt reload all</code> will restart logging on
 all servers at once.</li>
 </ul>
-<h5 id="known-issues-31">Known Issues</h5>
+<h6 id="known-issues-31">Known Issues</h6>
 <p>Issues shown in this section may be fixed in future tt revisions but
 are not addressed as of this writing.</p>
 <p>The <code>rlist</code> command may show 0 connections to all servers
@@ -28120,7 +28134,7 @@ produce an error message.</p>
 <p>The requirements and operation of the <code>rlist</code> command is
 notably different from other commands, which may confuse new tt
 users.</p>
-<h5 id="why-i-wrote-this-utility">Why I Wrote This Utility</h5>
+<h6 id="why-i-wrote-this-utility">Why I Wrote This Utility</h6>
 <p>Short answer: I wrote it for myself and a few friends, then decided
 to publicize the result. The rest of this section is for anyone more
 curious and includes more information about Daniel Nash’s original shell
@@ -28160,7 +28174,7 @@ that I referenced while writing this utility.</p>
 this utility to help manage approximately 25 boxes that each run several
 TeamTalk servers; and I thought I might share the utility for anyone
 else out there doing a similar thing.</p>
-<h5 id="revision-history-38">Revision History</h5>
+<h6 id="revision-history-38">Revision History</h6>
 <p>Here is the revision history of this utility, most recent revision
 first:</p>
 <h6 id="revision-209-released-april-17-2026">Revision 209, released
@@ -28403,14 +28417,14 @@ friends. There were four releases among friends before this one, dating
 back as far as July 5, 2022; and I had handed out copies of TTMan a few
 times individually as well.</li>
 </ul>
-<h3
+<h4
 id="ttconv-the-teamtalk-configuration-file-converter-doug-lee-last-revised-july-2025">TTConv,
 the TeamTalk Configuration File Converter Doug Lee Last Revised July,
-2025</h3>
-<h4 id="ttconv-the-teamtalk-configuration-file-converter">TTConv, the
-TeamTalk Configuration File Converter</h4>
-<h4 id="doug-lee-47">Doug Lee</h4>
-<h4 id="last-revised-july-2025-2">Last Revised July, 2025</h4>
+2025</h4>
+<h5 id="ttconv-the-teamtalk-configuration-file-converter">TTConv, the
+TeamTalk Configuration File Converter</h5>
+<h5 id="doug-lee-47">Doug Lee</h5>
+<h5 id="last-revised-july-2025-2">Last Revised July, 2025</h5>
 <p>This utility is designed to help with the following tasks:</p>
 <ul>
 <li>Migrating from TeamTalk 5 Classic to the regular TeamTalk 5 QT
@@ -28435,7 +28449,7 @@ WARRANTY. This is free software, and you are welcome to redistribute it
 under certain conditions. See the full license for details. iniparse,
 included in its entirety, comes with its own license (also
 included).</p>
-<h5 id="table-of-contents-47">Table of Contents</h5>
+<h6 id="table-of-contents-47">Table of Contents</h6>
 <ul>
 <li>System Requirements</li>
 <li>Installation and Launch Instructions</li>
@@ -28449,15 +28463,15 @@ included).</p>
 <li>Known Issues</li>
 <li>Revision History</li>
 </ul>
-<h5 id="system-requirements-6">System Requirements</h5>
+<h6 id="system-requirements-6">System Requirements</h6>
 <p>On Windows, users can run the executable (<code>.exe</code>) version
 of this utility. Those wishing to run this utility from source on
 Windows must first download and install a version of Python 3.7 or
 later.</p>
 <p>On MacOS, Linux, and other Python-supporting platforms, make sure to
 run this utility via Python 3.7 or later.</p>
-<h5 id="installation-and-launch-instructions-1">Installation and Launch
-Instructions</h5>
+<h6 id="installation-and-launch-instructions-1">Installation and Launch
+Instructions</h6>
 <p>To install and launch this utility:</p>
 <ul>
 <li><a href="https://www.dlee.org/teamtalk/ttconv/ttconv.zip">Download
@@ -28471,7 +28485,7 @@ try to run the utility from inside the Zip file. On Windows, run
 Python 3.7 or later installed, run <code>ttconv.py</code> via the
 correct Python command.</li>
 </ul>
-<h5 id="ttconv-usage">TTConv Usage</h5>
+<h6 id="ttconv-usage">TTConv Usage</h6>
 <p>This document will use the command <code>ttconv</code> to indicate
 launching TTConv. If you are using the Windows executable, it might be
 necessary to type the full path to TTConv, such as
@@ -28598,7 +28612,7 @@ updated version.</p></li>
 <li><p>Any files other than <code>.tt</code> files in the folder will
 remain unchanged.</p></li>
 </ul>
-<h5 id="known-issues-32">Known Issues</h5>
+<h6 id="known-issues-32">Known Issues</h6>
 <p>Issues shown in this section may be fixed in future TTConv
 versions.</p>
 <p>Alternate TeamTalk configuration profiles are not yet supported
@@ -28611,7 +28625,7 @@ precisely synchronized with a TeamTalk configuration file. Because the
 HTML approach fills the needs previously filled by <code>.tt</code>
 files, however, this author does not predict this shortcoming to be a
 significant problem.</p>
-<h5 id="revision-history-39">Revision History</h5>
+<h6 id="revision-history-39">Revision History</h6>
 <p>Here is the revision history of TTConv, most recent entry first: Note
 that the revision numbers are artificially high because this project
 began as part of another much older one.</p>
@@ -28733,13 +28747,13 @@ but all were considered experimental and not formally released. The
 original provisional name for the utility was <code>IXConv</code>. Work
 on this incarnation began on February 5, 2013, as part of this author’s
 experimentation with non-Classic Windows and MacOS TeamTalk clients.</p>
-<h3 id="tween-resources-doug-lee-last-revised-july-2018">Tween Resources
-Doug Lee Last revised July, 2018</h3>
-<h4 id="tween-resources">Tween Resources</h4>
-<h4 id="doug-lee-48">Doug Lee</h4>
-<h4 id="last-revised-july-2018">Last revised July, 2018</h4>
-<h5 id="what-are-tween-and-opentween-and-why-this-page">What are Tween
-and OpenTween and why this page?</h5>
+<h4 id="tween-resources-doug-lee-last-revised-july-2018">Tween Resources
+Doug Lee Last revised July, 2018</h4>
+<h5 id="tween-resources">Tween Resources</h5>
+<h5 id="doug-lee-48">Doug Lee</h5>
+<h5 id="last-revised-july-2018">Last revised July, 2018</h5>
+<h6 id="what-are-tween-and-opentween-and-why-this-page">What are Tween
+and OpenTween and why this page?</h6>
 <p>Tween is a mainstream Twitter app that happens to be accessible to
 users who are blind. OpenTween is a newer and open-source version (or
 “fork”) of Tween. OpenTween can be found at <a
@@ -28751,9 +28765,9 @@ its documentation appears to have been translated to English using
 automatic translation services, which impairs readability in English.
 The purpose of this page is to provide resources for blind Tween users
 to make using the programs easier.</p>
-<h5
+<h6
 id="screen-reader-specific-scripts-and-such-for-tween-and-opentween">Screen
-Reader-Specific Scripts and Such For Tween and OpenTween</h5>
+Reader-Specific Scripts and Such For Tween and OpenTween</h6>
 <p>There are <a href="tween.php">JAWS scripts for Tween and
 OpenTween</a> on this site. As of August, 2016, these scripts focus more
 directly on OpenTween. This site also includes an <a
@@ -28766,7 +28780,7 @@ to add functionality for Tween. To use, download that Zip file and
 unpack it into the AppModules folder in NVDA’s user configuration
 directory. The zip file contains one file, tween.py. This module may be
 part of NVDA itself by now though and thus not require installation.</p>
-<h5 id="keyboard-shortcuts-for-tween">Keyboard Shortcuts For Tween</h5>
+<h6 id="keyboard-shortcuts-for-tween">Keyboard Shortcuts For Tween</h6>
 <p>This section and its subsections are written based on OpenTween
 1.3.2. Some keystrokes and functionality may not apply identically in
 other OpenTween versions or in Tween. Any entries containing three
@@ -28970,12 +28984,12 @@ tweets.</p>
 <p>Retrieve the next batch of older mentions and direct messages,
 respectively, into their respective tabs without regard to which tab is
 showing.</p>
-<h3
+<h4
 id="tweenopentween-resources-doug-lee-last-revised-september-2023">Tween/OpenTween
-Resources Doug Lee Last Revised September, 2023</h3>
-<h4 id="tweenopentween-resources">Tween/OpenTween Resources</h4>
-<h4 id="doug-lee-49">Doug Lee</h4>
-<h4 id="last-revised-september-2023">Last Revised September, 2023</h4>
+Resources Doug Lee Last Revised September, 2023</h4>
+<h5 id="tweenopentween-resources">Tween/OpenTween Resources</h5>
+<h5 id="doug-lee-49">Doug Lee</h5>
+<h5 id="last-revised-september-2023">Last Revised September, 2023</h5>
 <p>This page is a jump-off point for Tween/OpenTween-related resources
 provided on this website. These resources are moved off the main website
 page due to the dubious status of the Twitter/X platform as a whole for
@@ -28990,14 +29004,14 @@ usability with screen readers.</p>
 link)</a></li>
 <li><a href="resources.htm">Tween Resources</a></li>
 </ul>
-<h3
+<h4
 id="using-microsoft-teams-with-a-screen-reader-doug-lee-last-revised-september-2026">Using
 Microsoft Teams With a Screen Reader Doug Lee Last Revised September,
-2026</h3>
-<h4 id="using-microsoft-teams-with-a-screen-reader">Using Microsoft
-Teams With a Screen Reader</h4>
-<h4 id="doug-lee-50">Doug Lee</h4>
-<h4 id="last-revised-september-2026-2">Last Revised September, 2026</h4>
+2026</h4>
+<h5 id="using-microsoft-teams-with-a-screen-reader">Using Microsoft
+Teams With a Screen Reader</h5>
+<h5 id="doug-lee-50">Doug Lee</h5>
+<h5 id="last-revised-september-2026-2">Last Revised September, 2026</h5>
 <p>This document is meant as an introduction and reference for using
 Microsoft Teams (Teams) with a screen reader. This document may more
 directly or frequently refer to JAWS but is not meant to exclude other
@@ -29011,7 +29025,7 @@ code comes directly from a Microsoft server and may change without
 notice and without changing the Teams version number. As a result, user
 experience may vary even when version numbers match this
 documentation.</p>
-<h5 id="table-of-contents-48">Table of Contents</h5>
+<h6 id="table-of-contents-48">Table of Contents</h6>
 <ul>
 <li>A Quick Simplification of Terminology</li>
 <li>Application Structure</li>
@@ -29019,14 +29033,14 @@ documentation.</p>
 <li>Quick Ways To Get Things Done</li>
 <li>Available Microsoft Resources and Internal Application Help</li>
 </ul>
-<h5 id="a-quick-simplification-of-terminology">A Quick Simplification of
-Terminology</h5>
+<h6 id="a-quick-simplification-of-terminology">A Quick Simplification of
+Terminology</h6>
 <p>In this document, “virtual navigation” refers to navigation using
 JAWS’ virtual PC cursor, NVDA’s Browse mode, Narrator’s scan mode, or
 any similar system that involves navigating a screen-reader-crafted view
 of the document that causes many keystrokes to interact with the screen
 reader rather than with the application.</p>
-<h5 id="application-structure">Application Structure</h5>
+<h6 id="application-structure">Application Structure</h6>
 <p>Teams functionality is divided into “apps,” chosen from an app bar or
 with specific keystrokes for each app based on the app icon’s position
 on screen: Ctrl+1 opens the first app, Ctrl+2, the second, etc. When run
@@ -29061,7 +29075,7 @@ installations, based on corporate policies and app presence and order.
 Also be sure to use the Ctrl+Shift variants when running Teams inside a
 browser.</li>
 </ul>
-<h5 id="general-tips">General Tips</h5>
+<h6 id="general-tips">General Tips</h6>
 <ul>
 <li>Especially when navigating lists such as messages in a conversation,
 it is often useful to avoid virtual navigation. The JAWS Insert+Z
@@ -29070,8 +29084,8 @@ command may be useful here, for example.</li>
 Settings screens, accessed via Ctrl+Comma, or Ctrl+Shift+Comma in a
 browser Teams instance.</li>
 </ul>
-<h5 id="quick-ways-to-get-things-done">Quick Ways To Get Things
-Done</h5>
+<h6 id="quick-ways-to-get-things-done">Quick Ways To Get Things
+Done</h6>
 <p>Review available Teams keystrokes by typing Ctrl+Period and then
 turning on virtual navigation to read the shortcut information.</p>
 <p>Use Ctrl+Comma to open Settings, or Ctrl+Shift+Comma in a browser
@@ -29122,9 +29136,9 @@ and a list of the available commands provided by Microsoft, visit the
 href="https://support.office.com/en-us/article/use-commands-in-teams-88f61508-284d-417f-a53d-9e082164050b?ui=en-US">Use
 commands in Teams</a>” page.</li>
 </ul>
-<h5
+<h6
 id="available-microsoft-resources-and-internal-application-help">Available
-Microsoft Resources and Internal Application Help</h5>
+Microsoft Resources and Internal Application Help</h6>
 <p>Microsoft provides several useful resources for Teams users in
 general and screen reader users in particular: As of this writing
 (September, 2026), all of the below pages specifically address JAWS,

@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Quarto help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,10 +179,10 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -229,9 +247,6 @@
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Quarto help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#quarto-help" id="toc-quarto-help">Quarto help</a>
@@ -731,8 +746,8 @@ print(info[“format”][“identifier”][“target-format”])</p>
 <p>info_file &lt;- Sys.getenv(“QUARTO_EXECUTE_INFO”) info &lt;-
 fromJSON(info_file)</p>
 <p># Access document path info$<code>document-path</code></p>
-<p># Access format information info<span
-class="math inline"><em>f</em><em>o</em><em>r</em><em>m</em><em>a</em><em>t</em></span>identifier$<code>target-format</code></p>
+<p># Access format information
+info<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">format</annotation></semantics></math>identifier$<code>target-format</code></p>
 <p>using JSON</p>
 <p>info = JSON.parsefile(ENV[“QUARTO_EXECUTE_INFO”])</p>
 <p># Access document path println(info[“document-path”])</p>
@@ -891,12 +906,13 @@ plotly.express as px fig = px.scatter(df, x=“x”, y=“y”) fig.show() else:
 df[“y”]) plt.show()</p>
 <p>library(jsonlite)</p>
 <p>info &lt;- fromJSON(Sys.getenv(“QUARTO_EXECUTE_INFO”)) target_format
-&lt;- info<span
-class="math inline"><em>f</em><em>o</em><em>r</em><em>m</em><em>a</em><em>t</em></span>identifier$<code>target-format</code></p>
+&lt;-
+info<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">format</annotation></semantics></math>identifier$<code>target-format</code></p>
 <p>if (target_format == “html”) { # Use interactive visualization
 library(plotly) plot_ly(df, x = ~x, y = ~y, type = “scatter”) } else if
-(target_format %in% c(“pdf”, “latex”)) { # Use static plot plot(df<span
-class="math inline"><em>x</em>, <em>d</em><em>f</em></span>y) }</p></li>
+(target_format %in% c(“pdf”, “latex”)) { # Use static plot
+plot(df<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>d</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">x, df</annotation></semantics></math>y)
+}</p></li>
 </ul>
 <h6 id="format-aware-resource-paths">Format-Aware Resource Paths</h6>
 <p>Access the document path to construct relative paths to
@@ -4676,16 +4692,16 @@ you can specify the number scheme using the <code>subref-labels</code>
 option. For example:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: “My Document”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>crossref:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>labels: alpha a # (default is arabic)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>subref-labels: roman i # (default is alpha a)</td>
 </tr>
 </tbody>
@@ -5395,7 +5411,7 @@ supported by Quarto as follows:</p>
 <code>language</code> option. For example:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>language: custom.yml</td>
 </tr>
 </tbody>
@@ -6906,9 +6922,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb288-1"><a 
 <li>A list whose numbering</li>
 </ol>
 <p>continues after</p>
-<ol start="2" class="example" type="1">
-<li>an interruption</li>
-</ol></li>
+<p>(@) an interruption</p></li>
 <li><p>A list whose numbering continues after</p></li>
 <li><p>an interruption</p>
 <p>::: {}</p>
@@ -17337,10 +17351,8 @@ make sure you install the latest release version of Quarto.</p>
 <li><p>New <code>quarto.language</code> Pandoc template-variable
 namespace, exposing Quarto’s resolved localized strings to custom
 templates and template partials:</p>
-<p><span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>c</em><em>r</em><em>o</em><em>s</em><em>s</em><em>r</em><em>e</em><em>f</em> − <em>f</em><em>i</em><em>g</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em></span>
-<span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>t</em><em>o</em><em>c</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> − <em>d</em><em>o</em><em>c</em><em>u</em><em>m</em><em>e</em><em>n</em><em>t</em></span></p></li>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mi>r</mi><mi>e</mi><mi>f</mi><mo>−</mo><mi>f</mi><mi>i</mi><mi>g</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">quarto.language.crossref-fig-title</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>t</mi><mi>o</mi><mi>c</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>−</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">quarto.language.toc-title-document</annotation></semantics></math></p></li>
 </ul>
 <h6 id="release-notes">Release Notes</h6>
 <p>You can find release notes and installers for all platforms in the
@@ -17740,7 +17752,7 @@ installation of tinytex on MacOS</li>
 values</li>
 <li>Render text/latex outputs as markdown math when they consist
 entirely of $ math, or are wrapped in a LaTeX environment block (such as
-[])</li>
+[<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>.</mi><mi>.</mi><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align} ... \end{align}</annotation></semantics></math>])</li>
 <li>Use IPython 7.14 import syntax in <code>ojs_define</code></li>
 <li>Correct handling of multiple attachments in Jupyter Notebook
 classic</li>
@@ -23372,10 +23384,8 @@ table below</li>
 <li><p>New <code>quarto.language</code> Pandoc template-variable
 namespace, exposing Quarto’s resolved localized strings to custom
 templates and template partials:</p>
-<p><span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>c</em><em>r</em><em>o</em><em>s</em><em>s</em><em>r</em><em>e</em><em>f</em> − <em>f</em><em>i</em><em>g</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em></span>
-<span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>t</em><em>o</em><em>c</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> − <em>d</em><em>o</em><em>c</em><em>u</em><em>m</em><em>e</em><em>n</em><em>t</em></span></p></li>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mi>r</mi><mi>e</mi><mi>f</mi><mo>−</mo><mi>f</mi><mi>i</mi><mi>g</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">quarto.language.crossref-fig-title</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>t</mi><mi>o</mi><mi>c</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>−</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">quarto.language.toc-title-document</annotation></semantics></math></p></li>
 </ul>
 <h5 id="release-notes-19">Release Notes</h5>
 <p><a href="_">_</a> Find your operating system in the table below</p>
@@ -23469,10 +23479,8 @@ Builds.</p>
 <li><p>New <code>quarto.language</code> Pandoc template-variable
 namespace, exposing Quarto’s resolved localized strings to custom
 templates and template partials:</p>
-<p><span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>c</em><em>r</em><em>o</em><em>s</em><em>s</em><em>r</em><em>e</em><em>f</em> − <em>f</em><em>i</em><em>g</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em></span>
-<span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>t</em><em>o</em><em>c</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> − <em>d</em><em>o</em><em>c</em><em>u</em><em>m</em><em>e</em><em>n</em><em>t</em></span></p></li>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mi>r</mi><mi>e</mi><mi>f</mi><mo>−</mo><mi>f</mi><mi>i</mi><mi>g</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">quarto.language.crossref-fig-title</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>t</mi><mi>o</mi><mi>c</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>−</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">quarto.language.toc-title-document</annotation></semantics></math></p></li>
 </ul>
 <h5 id="release-notes-22">Release Notes</h5>
 <h3 id="tarball-installation-on-linux">Tarball Installation On
@@ -24121,7 +24129,7 @@ compare it to <code>"true"</code>. We’d use this shortcode as
 follows:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: “My Document”</td>
 </tr>
 </tbody>
@@ -26452,9 +26460,8 @@ diagram.</p>
 <p><a href="https://github.com/GabrielCoffee9">Gabriel Café</a></p>
 <p><a
 href="https://github.com/restlessronin/gfm-strip-disallowed">gfm-strip-disallowed</a></p>
-Remove raw HTML blocks (such as ’
-<style>
-<p>’) that are disallowed by GFM.</p>
+<p>Remove raw HTML blocks (such as ‘<style>’) that are disallowed by
+GFM.</p>
 <p><a href="https://github.com/restlessronin">restlessronin</a></p>
 <p><a href="https://github.com/mcanouil/quarto-github">github</a></p>
 <p>Use GitHub short references (commits, issues, discussions, and pull
@@ -27772,10 +27779,8 @@ Gutenberg</a> in 1452–53.</p>
 <li><p>New <code>quarto.language</code> Pandoc template-variable
 namespace, exposing Quarto’s resolved localized strings to custom
 templates and template partials:</p>
-<p><span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>c</em><em>r</em><em>o</em><em>s</em><em>s</em><em>r</em><em>e</em><em>f</em> − <em>f</em><em>i</em><em>g</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em></span>
-<span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>t</em><em>o</em><em>c</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> − <em>d</em><em>o</em><em>c</em><em>u</em><em>m</em><em>e</em><em>n</em><em>t</em></span></p></li>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mi>r</mi><mi>e</mi><mi>f</mi><mo>−</mo><mi>f</mi><mi>i</mi><mi>g</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">quarto.language.crossref-fig-title</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>t</mi><mi>o</mi><mi>c</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>−</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">quarto.language.toc-title-document</annotation></semantics></math></p></li>
 </ul>
 <h6 id="release-notes-23">Release Notes</h6>
 <h5 id="step-2">Step 2</h5>
@@ -28243,10 +28248,10 @@ the code and just show the output. To do so, specify
 <code>echo: false</code> in document header.</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: Quarto Computations</td>
 </tr>
-<tr class="even">
+<tr>
 <td>echo: false</td>
 </tr>
 </tbody>
@@ -28373,16 +28378,16 @@ document by setting <code>fig-width</code> and <code>fig-height</code>,
 expressed in inches, in the document header:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: Quarto Computations</td>
 </tr>
-<tr class="even">
+<tr>
 <td>echo: false</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>fig-height: 3.5</td>
 </tr>
-<tr class="even">
+<tr>
 <td>fig-width: 6</td>
 </tr>
 </tbody>
@@ -30923,13 +30928,13 @@ options, which instructs Quarto to run a Shiny Server behind the
 document:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: “Old Faithful”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>format: html</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>server: shiny</td>
 </tr>
 </tbody>
@@ -32221,79 +32226,79 @@ example article for users of the format:</p>
 <p>template.qmd</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: Aps Template</td>
 </tr>
-<tr class="even">
+<tr>
 <td>format:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>aps-pdf:</td>
 </tr>
-<tr class="even">
+<tr>
 <td>keep-tex: true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>aps-html: default</td>
 </tr>
-<tr class="even">
+<tr>
 <td>author:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- name: Sarah Malloc</td>
 </tr>
-<tr class="even">
+<tr>
 <td>affiliations:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- name: An Organization</td>
 </tr>
-<tr class="even">
+<tr>
 <td>department: The Department</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>address: 1 Main St</td>
 </tr>
-<tr class="even">
+<tr>
 <td>city: Boston</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>country: USA</td>
 </tr>
-<tr class="even">
+<tr>
 <td>postal-code: 02210-1022</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- A second affiliation</td>
 </tr>
-<tr class="even">
+<tr>
 <td>orcid: 0000-0000-0000-0000</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>email: sm@example.org</td>
 </tr>
-<tr class="even">
+<tr>
 <td>url: <a href="https://example.org/">example.org</a></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- name: Eliza Dealloc</td>
 </tr>
-<tr class="even">
+<tr>
 <td>affiliations:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- Another Affiliation</td>
 </tr>
-<tr class="even">
+<tr>
 <td>abstract: |</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>This document is a template demonstrating the Aps format.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>keywords: [template, demo]</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>bibliography: bibliography.bib</td>
 </tr>
 </tbody>
@@ -32398,49 +32403,49 @@ format. Here’s what the YAML document options for the template look
 like:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: Short Paper</td>
 </tr>
-<tr class="even">
+<tr>
 <td>author:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- name: Alice Anonymous</td>
 </tr>
-<tr class="even">
+<tr>
 <td>email: alice@example.com</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>affiliation: Some Institute of Technology</td>
 </tr>
-<tr class="even">
+<tr>
 <td>- name: Bob Security</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>email: bob@example.com</td>
 </tr>
-<tr class="even">
+<tr>
 <td>affiliation: Another University</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>abstract: |</td>
 </tr>
-<tr class="even">
+<tr>
 <td>This is the abstract.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>It consists of two paragraphs.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>format:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>acm-pdf:</td>
 </tr>
-<tr class="even">
+<tr>
 <td>keep-tex: true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>bibliography: bibliography.bib</td>
 </tr>
 </tbody>
@@ -33344,10 +33349,8 @@ Quarto.</p>
 <li><p>New <code>quarto.language</code> Pandoc template-variable
 namespace, exposing Quarto’s resolved localized strings to custom
 templates and template partials:</p>
-<p><span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>c</em><em>r</em><em>o</em><em>s</em><em>s</em><em>r</em><em>e</em><em>f</em> − <em>f</em><em>i</em><em>g</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em></span>
-<span
-class="math inline"><em>q</em><em>u</em><em>a</em><em>r</em><em>t</em><em>o</em>.<em>l</em><em>a</em><em>n</em><em>g</em><em>u</em><em>a</em><em>g</em><em>e</em>.<em>t</em><em>o</em><em>c</em> − <em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> − <em>d</em><em>o</em><em>c</em><em>u</em><em>m</em><em>e</em><em>n</em><em>t</em></span></p></li>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mi>r</mi><mi>e</mi><mi>f</mi><mo>−</mo><mi>f</mi><mi>i</mi><mi>g</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">quarto.language.crossref-fig-title</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>t</mi><mi>o</mi><mi>c</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>−</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">quarto.language.toc-title-document</annotation></semantics></math></p></li>
 </ul>
 <h6 id="release-notes-24">Release Notes</h6>
 <p>You can find release notes and installers for all platforms in the
@@ -36126,10 +36129,10 @@ load path, allowing <code>@use</code> or <code>@import</code> statements
 to be resolved using the same directory that contains the theme file.
 Here is an example file:</p>
 <p>/<em>– scss:functions –</em>/ <span class="citation"
-data-cites="function">@function</span> colorToRGB (<span
-class="math inline">$color) {  @return "rgb(" + red($</span>color) + “,”
-+ green(<span class="math inline">$color) + ", " + blue($</span>color)+
-“)”; }</p>
+data-cites="function">@function</span> colorToRGB ($color) { <span
+class="citation" data-cites="return">@return</span> “rgb(” + red(<span
+class="math inline">$color) + ", " + green($</span>color) + “,” +
+blue($color)+ “)”; }</p>
 <p>/<em>– scss:defaults –</em>/ $h2-font-size: 1.6rem !default;
 $headings-font-weight: 500 !default;</p>
 <p>/<em>– scss:rules –</em>/ h1, h2, h3, h4, h5, h6 { text-shadow: -1px
@@ -36581,43 +36584,43 @@ packages</p></li>
 here we use a few of these options:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: “My Document”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>format:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>pdf:</td>
 </tr>
-<tr class="even">
+<tr>
 <td>documentclass: report</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>classoption: [twocolumn, landscape]</td>
 </tr>
-<tr class="even">
+<tr>
 <td>lof: true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>lot: true</td>
 </tr>
-<tr class="even">
+<tr>
 <td>geometry:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- top=30mm</td>
 </tr>
-<tr class="even">
+<tr>
 <td>- left=20mm</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>- heightrounded</td>
 </tr>
-<tr class="even">
+<tr>
 <td>mainfont: Times New Roman</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>colorlinks: true</td>
 </tr>
 </tbody>
@@ -38789,19 +38792,19 @@ background options.</p></li>
 options, but with <code>data-</code> prepended to them. For example:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: My Slide Show</td>
 </tr>
-<tr class="even">
+<tr>
 <td>title-slide-attributes:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>data-background-image: /path/to/title_image.png</td>
 </tr>
-<tr class="even">
+<tr>
 <td>data-background-size: contain</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>data-background-opacity: “0.5”</td>
 </tr>
 </tbody>
@@ -40475,16 +40478,16 @@ distribute the presentation as a single self contained file. To do this,
 specify the <code>embed-resources</code> option:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: “Presentation”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>format:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>revealjs:</td>
 </tr>
-<tr class="even">
+<tr>
 <td>embed-resources: true</td>
 </tr>
 </tbody>
@@ -42018,19 +42021,19 @@ do the following:</p>
 example:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: My Slide Show</td>
 </tr>
-<tr class="even">
+<tr>
 <td>title-slide-attributes:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>data-background-image: /path/to/title_image.png</td>
 </tr>
-<tr class="even">
+<tr>
 <td>data-background-size: contain</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>data-background-opacity: “0.5”</td>
 </tr>
 </tbody>
@@ -68543,7 +68546,7 @@ role="doc-noteref"><sup>1</sup></a></p>
 <p>[^longnote]</p>
 <p>Converted to numeric footnote.</p>
 <p>Example lists</p>
-<ol start="3" class="example" type="1">
+<ol start="2" class="example" type="1">
 <li>First example</li>
 </ol>
 <p>Read/written as ordinary numbered lists.</p>
@@ -68916,7 +68919,7 @@ role="doc-noteref"><sup>2</sup></a></p>
 <p>[^longnote]</p>
 <p>Converted to numeric footnote.</p>
 <p>Example lists</p>
-<ol start="4" class="example" type="1">
+<ol start="3" class="example" type="1">
 <li>First example</li>
 </ol>
 <p>Read/written as ordinary numbered lists.</p>
@@ -69612,7 +69615,7 @@ role="doc-noteref"><sup>3</sup></a></p>
 <p>[^longnote]</p>
 <p>Converted to numeric footnote.</p>
 <p>Example lists</p>
-<ol start="5" class="example" type="1">
+<ol start="4" class="example" type="1">
 <li>First example</li>
 </ol>
 <p>Read/written as ordinary numbered lists.</p>
@@ -70584,25 +70587,25 @@ great sample blog”</p></li>
 <code>feed: true</code> option to the listing. For example:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>title: “myblog”</td>
 </tr>
-<tr class="even">
+<tr>
 <td>listing:</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>contents: posts</td>
 </tr>
-<tr class="even">
+<tr>
 <td>sort: “date desc”</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>type: default</td>
 </tr>
-<tr class="even">
+<tr>
 <td>categories: true</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>feed: true</td>
 </tr>
 </tbody>
@@ -70670,13 +70673,13 @@ subscription widget. MailChimp, for example, provides HTML like this for
 a minimal subscription widget.</p>
 <p><span style="font-weight: 600;">Subscribe</span></p>
 <p>Begin Mailchimp Signup Form
-<link href="[cdn-images.mailchimp.com](http://cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css)" rel="stylesheet" type="text/css"></p>
-<style type="text/css">
-      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:170px;}
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-      #mc-embedded-subscribe-form{margin-left:-5px;}
-  </style>
+<link href="[cdn-images.mailchimp.com](http://cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css)" rel="stylesheet" type="text/css">
+<style type="text/css"> #mc_embed_signup{background:#fff; clear:left;
+font:14px Helvetica,Arial,sans-serif; width:170px;} /* Add your own
+Mailchimp form style overrides in your site stylesheet or in this style
+block. We recommend moving this block and the preceding CSS link to the
+HEAD of your HTML file. */
+#mc-embedded-subscribe-form{margin-left:-5px;} </style></p>
 <div id="mc_embed_signup">
 <form action="<site_url>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 <div id="mc_embed_signup_scroll">
@@ -70692,7 +70695,8 @@ a minimal subscription widget.</p>
   &lt;/div&gt;</code></pre>
 </form>
 </div>
-<p>End mc_embed_signup</p></li>
+<p>End mc_embed_signup</p>
+</div></li>
 <li><p>Warning</p></li>
 <li><p>The above widget HTML will not work in your blog as the
 subscription HTML needs to contain value specific to your blog. See your
@@ -74009,7 +74013,7 @@ Run <code>quarto preview trace-viewer.qmd</code>, and you will be shown
 two text fields, “Trace 1” and “Trace 2”. Drag and drop the JSON file
 onto either of the fields and you will be shown the trace. If you wish
 to compare two traces, drag them onto the two fields.</p>
-<aside id="footnotes" class="footnotes footnotes-end-of-document"
+<section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
@@ -74020,6 +74024,6 @@ role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>inline<a href="#fnref3" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
-</aside>
+</section>
 </body>
 </html>

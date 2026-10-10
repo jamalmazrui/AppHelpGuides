@@ -1,15 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-30" />
   <title>The JAWS scripting language</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -34,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -52,13 +62,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -81,10 +92,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -104,8 +119,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -122,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -148,10 +163,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -162,12 +180,10 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">The JAWS scripting language</h1>
 <p class="date">2026-08-30</p>
 </header>
 <nav id="TOC" role="doc-toc">
@@ -6918,7 +6934,7 @@ UTF-8:</p>
 <p>The .jbt file must temporarily replace the file whose name is
 identical in the Program Files folder for the current version of JAWS.
 Navigate to that folder. It’s path will be something like,</p>
-<p>C:FilesScientific.0</p>
+<p>C:FilesScientific</p>
 <p>Change the name of the file called “US_Unicode.jbt” to something like
 “#US_Unicode.jbt”.</p>
 <p>Copy the file with the same name as the original file whose name you
@@ -15268,8 +15284,8 @@ code.</p>
 <p>declare namespace wiki = “https://opensearch.org/searchsuggest2”;
 declare variable $new_line := ‘t’; declare variable $doc :=
 doc(“https://en.wikipedia.org/w/api.php?action=opensearch&amp;search=|ARG_1…ARG_n|&amp;format=xml”);
-for $item in <span
-class="math inline"><em>d</em><em>o</em><em>c</em>/<em>w</em><em>i</em><em>k</em><em>i</em> : <em>S</em><em>e</em><em>a</em><em>r</em><em>c</em><em>h</em><em>S</em><em>u</em><em>g</em><em>g</em><em>e</em><em>s</em><em>t</em><em>i</em><em>o</em><em>n</em>//<em>w</em><em>i</em><em>k</em><em>i</em> : <em>I</em><em>t</em><em>e</em><em>m</em>[1]<em>r</em><em>e</em><em>t</em><em>u</em><em>r</em><em>n</em>(<em>f</em><em>n</em> : <em>n</em><em>o</em><em>r</em><em>m</em><em>a</em><em>l</em><em>i</em><em>z</em><em>e</em> − <em>s</em><em>p</em><em>a</em><em>c</em><em>e</em>(<em>d</em><em>a</em><em>t</em><em>a</em>(</span>item//wiki:Description)),
+for $item in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>o</mi><mi>c</mi><mi>/</mi><mi>w</mi><mi>i</mi><mi>k</mi><mi>i</mi><mo>:</mo><mi>S</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>h</mi><mi>S</mi><mi>u</mi><mi>g</mi><mi>g</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>/</mi><mi>/</mi><mi>w</mi><mi>i</mi><mi>k</mi><mi>i</mi><mo>:</mo><mi>I</mi><mi>t</mi><mi>e</mi><mi>m</mi><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mi>r</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mi>n</mi><mo>:</mo><mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>i</mi><mi>z</mi><mi>e</mi><mo>−</mo><mi>s</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>e</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">doc/wiki:SearchSuggestion//wiki:Item[1] return (fn:normalize-space(data(</annotation></semantics></math>item//wiki:Description)),
 $new_line)</p>
 <p>In this query, the |ARG_1…ARG_n| token will be replaced by the search
 term that is passed down from the script.</p>
@@ -16938,7 +16954,7 @@ UTF-8:</p>
 <p>The .jbt file must temporarily replace the file whose name is
 identical in the Program Files folder for the current version of JAWS.
 Navigate to that folder. It’s path will be something like,</p>
-<p>C:FilesScientific.0</p>
+<p>C:FilesScientific</p>
 <p>Change the name of the file called “US_Unicode.jbt” to something like
 “#US_Unicode.jbt”.</p>
 <p>Copy the file with the same name as the original file whose name you
@@ -17409,7 +17425,7 @@ UTF-8:</p>
 <p>The .jbt file must temporarily replace the file whose name is
 identical in the Program Files folder for the current version of JAWS.
 Navigate to that folder. It’s path will be something like,</p>
-<p>C:FilesScientific.0</p>
+<p>C:FilesScientific</p>
 <p>Change the name of the file called “US_Unicode.jbt” to something like
 “#US_Unicode.jbt”.</p>
 <p>Copy the file with the same name as the original file whose name you
@@ -24889,8 +24905,8 @@ code.</p>
 <p>declare namespace wiki = “https://opensearch.org/searchsuggest2”;
 declare variable $new_line := ‘t’; declare variable $doc :=
 doc(“https://en.wikipedia.org/w/api.php?action=opensearch&amp;search=|ARG_1…ARG_n|&amp;format=xml”);
-for $item in <span
-class="math inline"><em>d</em><em>o</em><em>c</em>/<em>w</em><em>i</em><em>k</em><em>i</em> : <em>S</em><em>e</em><em>a</em><em>r</em><em>c</em><em>h</em><em>S</em><em>u</em><em>g</em><em>g</em><em>e</em><em>s</em><em>t</em><em>i</em><em>o</em><em>n</em>//<em>w</em><em>i</em><em>k</em><em>i</em> : <em>I</em><em>t</em><em>e</em><em>m</em>[1]<em>r</em><em>e</em><em>t</em><em>u</em><em>r</em><em>n</em>(<em>f</em><em>n</em> : <em>n</em><em>o</em><em>r</em><em>m</em><em>a</em><em>l</em><em>i</em><em>z</em><em>e</em> − <em>s</em><em>p</em><em>a</em><em>c</em><em>e</em>(<em>d</em><em>a</em><em>t</em><em>a</em>(</span>item//wiki:Description)),
+for $item in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>o</mi><mi>c</mi><mi>/</mi><mi>w</mi><mi>i</mi><mi>k</mi><mi>i</mi><mo>:</mo><mi>S</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>h</mi><mi>S</mi><mi>u</mi><mi>g</mi><mi>g</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>/</mi><mi>/</mi><mi>w</mi><mi>i</mi><mi>k</mi><mi>i</mi><mo>:</mo><mi>I</mi><mi>t</mi><mi>e</mi><mi>m</mi><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mi>r</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mi>n</mi><mo>:</mo><mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>i</mi><mi>z</mi><mi>e</mi><mo>−</mo><mi>s</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>e</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">doc/wiki:SearchSuggestion//wiki:Item[1] return (fn:normalize-space(data(</annotation></semantics></math>item//wiki:Description)),
 $new_line)</p>
 <p>In this query, the |ARG_1…ARG_n| token will be replaced by the search
 term that is passed down from the script.</p>
@@ -27083,7 +27099,7 @@ UTF-8:</p>
 <p>The .jbt file must temporarily replace the file whose name is
 identical in the Program Files folder for the current version of JAWS.
 Navigate to that folder. It’s path will be something like,</p>
-<p>C:FilesScientific.0</p>
+<p>C:FilesScientific</p>
 <p>Change the name of the file called “US_Unicode.jbt” to something like
 “#US_Unicode.jbt”.</p>
 <p>Copy the file with the same name as the original file whose name you

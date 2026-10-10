@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-30" />
   <title>Scrivener Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,43 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Scrivener Help Guide</h1>
 <p class="subtitle">Scrivener’s official knowledge base, gathered into
 one screen-reader-friendly document</p>
 <p class="date">2026-07-30</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#scrivener-help-guide"
+id="toc-scrivener-help-guide">Scrivener Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cloud-syncing" id="toc-cloud-syncing">Cloud
+Syncing</a></li>
+<li><a href="#common-feature-requests"
+id="toc-common-feature-requests">Common Feature Requests</a></li>
+<li><a href="#features-and-usage" id="toc-features-and-usage">Features
+and Usage</a></li>
+<li><a href="#general" id="toc-general">General</a></li>
+<li><a href="#ios" id="toc-ios">iOS</a></li>
+<li><a href="#macos" id="toc-macos">macOS</a></li>
+<li><a href="#macos-troubleshooting"
+id="toc-macos-troubleshooting">macOS: Troubleshooting</a></li>
+<li><a href="#other-articles" id="toc-other-articles">Other
+articles</a></li>
+<li><a href="#purchasing-and-installation"
+id="toc-purchasing-and-installation">Purchasing and
+Installation</a></li>
+<li><a href="#scapple" id="toc-scapple">Scapple</a></li>
+<li><a href="#windows" id="toc-windows">Windows</a></li>
+<li><a href="#windows-troubleshooting"
+id="toc-windows-troubleshooting">Windows: Troubleshooting</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="scrivener-help-guide">Scrivener Help Guide</h1>
 <p>This guide gathers Scrivener’s official knowledge base. Scrivener is
 the writing studio for long projects: you gather research and notes into
@@ -7381,10 +7419,11 @@ different header and footer for left and right pages, and the one inch
 margin will alternate between left and right pages.</p>
 <p>Title: Cochin Document</p>
 <p>Text Format Overrides: Font Family: Cochin</p>
-<p>Folder Titles: Level 1: &lt;<span
-class="math inline"><em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> &gt; <em>L</em><em>e</em><em>v</em><em>e</em><em>l</em>2 : &lt;</span>title&gt;
-Level 3: &lt;<span
-class="math inline"><em>t</em><em>i</em><em>t</em><em>l</em><em>e</em> &gt; <em>L</em><em>e</em><em>v</em><em>e</em><em>l</em>4 : &lt;</span>title&gt;</p>
+<p>Folder Titles: Level 1:
+&lt;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>&gt;</mo><mi>L</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>l</mi><mn>2</mn><mo>:</mo><mo>&lt;</mo></mrow><annotation encoding="application/x-tex">title&gt;
+  Level 2: &lt;</annotation></semantics></math>title&gt; Level 3:
+&lt;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>&gt;</mo><mi>L</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>l</mi><mn>4</mn><mo>:</mo><mo>&lt;</mo></mrow><annotation encoding="application/x-tex">title&gt;
+  Level 4: &lt;</annotation></semantics></math>title&gt;</p>
 <p>Document Breaks:</p>
 <ul>
 <li>Page Break Before Folders</li>

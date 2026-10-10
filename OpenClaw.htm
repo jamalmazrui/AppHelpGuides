@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-31" />
   <title>OpenClaw Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,7 +180,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
     html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
@@ -239,11 +249,45 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">OpenClaw Help Guide</h1>
 <p class="subtitle">OpenClaw’s own documentation, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#openclaw-help-guide" id="toc-openclaw-help-guide">OpenClaw
+Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-automation-and-scheduling"
+id="toc-cat-automation-and-scheduling">Automation and
+scheduling</a></li>
+<li><a href="#cat-choosing-a-model-provider"
+id="toc-cat-choosing-a-model-provider">Choosing a model
+provider</a></li>
+<li><a href="#cat-clawhub-and-sharing"
+id="toc-cat-clawhub-and-sharing">ClawHub and sharing</a></li>
+<li><a href="#cat-the-command-line" id="toc-cat-the-command-line">The
+command line</a></li>
+<li><a href="#cat-connecting-whatsapp-telegram-and-the-rest"
+id="toc-cat-connecting-whatsapp-telegram-and-the-rest">Connecting
+WhatsApp, Telegram and the rest</a></li>
+<li><a href="#cat-how-openclaw-works"
+id="toc-cat-how-openclaw-works">How OpenClaw works</a></li>
+<li><a href="#cat-installing-and-updating"
+id="toc-cat-installing-and-updating">Installing and updating</a></li>
+<li><a href="#cat-nodes-and-devices"
+id="toc-cat-nodes-and-devices">Nodes and devices</a></li>
+<li><a href="#cat-running-the-gateway"
+id="toc-cat-running-the-gateway">Running the gateway</a></li>
+<li><a href="#cat-when-something-goes-wrong"
+id="toc-cat-when-something-goes-wrong">When something goes
+wrong</a></li>
+<li><a href="#cat-miscellaneous"
+id="toc-cat-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="openclaw-help-guide">OpenClaw Help Guide</h1>
 <p>This guide gathers OpenClaw’s official documentation. The text was
 taken from docs.openclaw.ai on 31 July 2026 and is the project’s own;
@@ -32695,9 +32739,7 @@ Pairing</li>
 </ul>
 <p>Groups:</p>
 <ul>
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
+<li>0.</li>
 <li>0 controls which groups or senders can trigger group replies when 1
 is set; entries can be Signal group IDs (raw, 2, or 3), sender phone
 numbers, 4 values, or 5.</li>
@@ -37357,12 +37399,8 @@ set.</li>
 state. Resolution order:</p>
 <ol type="1">
 <li>Explicit 0 in config.</li>
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
+<li>0.</li>
+<li>0.</li>
 <li>The account id for non-default accounts, or 0 for the default
 account.</li>
 </ol>
@@ -39250,12 +39288,8 @@ should abort the current run.</p>
 <p>For mode selection, OpenClaw resolves:</p>
 <ol type="1">
 <li>Inline or stored per-session 0 override.</li>
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
+<li>0.</li>
+<li>0.</li>
 <li>Default 0.</li>
 </ol>
 <p>For options, inline or stored 0 options win over config. Then

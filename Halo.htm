@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Halo help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Halo help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#halo-help" id="toc-halo-help">Halo help</a>
@@ -13283,24 +13297,16 @@ a Bug Report ticket</a> so the development team can investigate.
 <li>Right click on Halo Infinite in your Steam Library and select
 Properties.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Select the DLC tab in the Properties menu, then uncheck the
+<li>2. Select the DLC tab in the Properties menu, then uncheck the
 Multiplayer High-Res Textures.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Close the Properties window and allow the game to update.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Relaunch Halo Infinite. If the game is crashing at this step, return
-to the Properties menu and uncheck the Campaign and Campaign High-Res
-Textures DLC. After the resulting update, relaunch Halo Infinite to see
-if the game is still crashing. If the game is still crashing after
-uninstalling all DLC, fully reboot your PC.</li>
-</ol></li>
-<li><ol start="5" type="1">
-<li>If the game is now launching without issue, you can reinstall the
+<li>3. Close the Properties window and allow the game to update.</li>
+<li>4. Relaunch Halo Infinite. If the game is crashing at this step,
+return to the Properties menu and uncheck the Campaign and Campaign
+High-Res Textures DLC. After the resulting update, relaunch Halo
+Infinite to see if the game is still crashing. If the game is still
+crashing after uninstalling all DLC, fully reboot your PC.</li>
+<li>5. If the game is now launching without issue, you can reinstall the
 DLC that was removed.</li>
-</ol></li>
 </ul></li>
 </ul>
 <h4 id="purchases">Purchases</h4>
@@ -16395,12 +16401,9 @@ Services, you will follow these rules:</li>
 <li><ol type="i">
 <li>Don’t do anything illegal.</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>Don’t engage in any activity that exploits, harms, or threatens to
-harm children.</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>Don’t send spam or engage in phishing. Spam is unwanted or
+<li>ii. Don’t engage in any activity that exploits, harms, or threatens
+to harm children.</li>
+<li>iii. Don’t send spam or engage in phishing. Spam is unwanted or
 unsolicited bulk email, postings, contact requests, SMS (text messages),
 instant messages, or similar electronic communications. Phishing is
 sending emails or other electronic communications to fraudulently or
@@ -16410,43 +16413,28 @@ passport numbers, credit card information, financial information, or
 other sensitive information, or to gain access to accounts or records,
 exfiltration of documents or other sensitive information, payment and/or
 financial benefit.</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>Don’t publicly display or use the Services to share inappropriate
-content or material (involving, for example, nudity, bestiality,
-pornography, offensive language, graphic violence, or criminal
-activity).</li>
-</ol></li>
-<li><ol start="22" type="a">
-<li>Don’t engage in activity that is fraudulent, false or misleading
+<li>iv. Don’t publicly display or use the Services to share
+inappropriate content or material (involving, for example, nudity,
+bestiality, pornography, offensive language, graphic violence, or
+criminal activity).</li>
+<li>v. Don’t engage in activity that is fraudulent, false or misleading
 (e.g., asking for money under false pretenses, impersonating someone
 else, manipulating the Services to increase play count, or affect
 rankings, ratings, or comments).</li>
-</ol></li>
-<li><ol start="6" type="i">
-<li>Don’t circumvent any restrictions on access to or availability of
-the Services.</li>
-</ol></li>
-<li><ol start="7" type="i">
-<li>Don’t engage in activity that is harmful to you, the Services or
-others (e.g., transmitting viruses, stalking, posting terrorist or
+<li>vi. Don’t circumvent any restrictions on access to or availability
+of the Services.</li>
+<li>vii. Don’t engage in activity that is harmful to you, the Services
+or others (e.g., transmitting viruses, stalking, posting terrorist or
 violent extremist content, communicating hate speech, or advocating
 violence against others).</li>
-</ol></li>
-<li><ol start="8" type="i">
-<li>Don’t infringe upon the rights of others (e.g., unauthorized sharing
-of copyrighted music or other copyrighted material, resale or other
-distribution of Bing maps, or photographs).</li>
-</ol></li>
-<li><ol start="9" type="i">
-<li>Don’t engage in activity that violates the privacy of others.</li>
-</ol></li>
-<li><ol start="24" type="a">
-<li>Don’t help others break these rules.</li>
-</ol></li>
+<li>viii. Don’t infringe upon the rights of others (e.g., unauthorized
+sharing of copyrighted music or other copyrighted material, resale or
+other distribution of Bing maps, or photographs).</li>
+<li>ix. Don’t engage in activity that violates the privacy of
+others.</li>
+<li>x. Don’t help others break these rules.</li>
 </ul></li>
-<li><ol start="2" type="a">
-<li>Enforcement. If you violate these Terms, we may stop providing
+<li>b. Enforcement. If you violate these Terms, we may stop providing
 Services to you or we may close your Microsoft account. We may also
 block delivery of a communication (like email, file sharing or instant
 message) to or from the Services in an effort to enforce these Terms or
@@ -16454,9 +16442,7 @@ we may remove or refuse to publish Your Content for any reason. When
 investigating alleged violations of these Terms, Microsoft reserves the
 right to review Your Content in order to resolve the issue. However, we
 cannot monitor the entire Services and make no attempt to do so.</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>Application to Xbox Services. Click <a
+<li>c. Application to Xbox Services. Click <a
 href="https://www.xbox.com/en-US/legal/community-standards">here</a> for
 more information about how this Code of Conduct applies to all Xbox
 Services, including Xbox Game Pass, Games for Windows Live and Xbox Game
@@ -16466,16 +16452,13 @@ section 14.a.i) may result in suspensions or bans from participation in
 Xbox Services, including forfeiture of content licenses, Xbox Gold
 Membership time, and Microsoft account balances associated with the
 account.</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>Microsoft Start Community Guidelines. The <a
+<li>d. Microsoft Start Community Guidelines. The <a
 href="https://www.msn.com/en-us/community/guideline">Microsoft Start
 Community Guidelines</a> govern registered user engagement with news and
 professionally generated content on that service. Violations of the Code
 of Conduct through the Microsoft Start Community Guidelines may result
 in suspensions or bans from community commenting, or termination of
 Microsoft accounts.</li>
-</ol></li>
 </ul>
 <h4 id="game-mode-objects-1">2. Game Mode Objects</h4>
 <h5 id="requirements-1">Requirements</h5>
@@ -25294,7 +25277,7 @@ shame.</p>
 <h4 id="spartans-do-their-best-to-accomplish-the-mission">2. Spartans do
 their best to accomplish the mission</h4>
 <p>Once a Spartan’s game has begun, they work to complete the objectives
-and achieve victory. You can’t win ’em all, but for the sake of your
+and achieve victory. You can’t win ‘em all, but for the sake of your
 team you should always try. Spartans don’t injure friendlies or
 themselves on purpose to throw a match.</p>
 <h4 id="spartans-play-fair">3. Spartans play fair</h4>
@@ -43445,24 +43428,16 @@ a Bug Report ticket</a> so the development team can investigate.
 <li>Right click on Halo Infinite in your Steam Library and select
 Properties.</li>
 </ol></li>
-<li><ol start="2" type="1">
-<li>Select the DLC tab in the Properties menu, then uncheck the
+<li>2. Select the DLC tab in the Properties menu, then uncheck the
 Multiplayer High-Res Textures.</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Close the Properties window and allow the game to update.</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Relaunch Halo Infinite. If the game is crashing at this step, return
-to the Properties menu and uncheck the Campaign and Campaign High-Res
-Textures DLC. After the resulting update, relaunch Halo Infinite to see
-if the game is still crashing. If the game is still crashing after
-uninstalling all DLC, fully reboot your PC.</li>
-</ol></li>
-<li><ol start="5" type="1">
-<li>If the game is now launching without issue, you can reinstall the
+<li>3. Close the Properties window and allow the game to update.</li>
+<li>4. Relaunch Halo Infinite. If the game is crashing at this step,
+return to the Properties menu and uncheck the Campaign and Campaign
+High-Res Textures DLC. After the resulting update, relaunch Halo
+Infinite to see if the game is still crashing. If the game is still
+crashing after uninstalling all DLC, fully reboot your PC.</li>
+<li>5. If the game is now launching without issue, you can reinstall the
 DLC that was removed.</li>
-</ol></li>
 </ul></li>
 </ul>
 <h5 id="multiplayer-50">Multiplayer</h5>

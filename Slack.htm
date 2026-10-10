@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>Slack help guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,105 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Slack help guide</h1>
 <p class="subtitle">Gathered into one screen-reader-friendly
 document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#slack-help-guide" id="toc-slack-help-guide">Slack help
+guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#additional-info" id="toc-additional-info">Additional
+Info</a></li>
+<li><a href="#adjust-your-notifications"
+id="toc-adjust-your-notifications">Adjust your notifications</a></li>
+<li><a href="#ai" id="toc-ai">AI</a></li>
+<li><a href="#audio-video" id="toc-audio-video">Audio &amp;
+video</a></li>
+<li><a href="#automate-tasks-with-workflow-builder"
+id="toc-automate-tasks-with-workflow-builder">Automate tasks with
+Workflow Builder</a></li>
+<li><a href="#change-your-settings-preferences"
+id="toc-change-your-settings-preferences">Change your settings &amp;
+preferences</a></li>
+<li><a href="#channels" id="toc-channels">Channels</a></li>
+<li><a href="#configure-access-security"
+id="toc-configure-access-security">Configure access &amp;
+security</a></li>
+<li><a href="#direct-messages" id="toc-direct-messages">Direct
+messages</a></li>
+<li><a href="#discover-more" id="toc-discover-more">Discover
+more</a></li>
+<li><a href="#enterprise-settings-permissions"
+id="toc-enterprise-settings-permissions">Enterprise settings &amp;
+permissions</a></li>
+<li><a href="#explore-apps-in-the-slack-marketplace"
+id="toc-explore-apps-in-the-slack-marketplace">Explore apps in the Slack
+Marketplace</a></li>
+<li><a href="#format-style-messages"
+id="toc-format-style-messages">Format &amp; style messages</a></li>
+<li><a href="#get-troubleshooting-tips"
+id="toc-get-troubleshooting-tips">Get troubleshooting tips</a></li>
+<li><a href="#getting-started-for-new-users"
+id="toc-getting-started-for-new-users">Getting started for new
+users</a></li>
+<li><a href="#getting-started-for-slack-admins"
+id="toc-getting-started-for-slack-admins">Getting started for Slack
+admins</a></li>
+<li><a href="#intro-to-slack" id="toc-intro-to-slack">Intro to
+Slack</a></li>
+<li><a href="#keyboard-shortcuts-accessibility"
+id="toc-keyboard-shortcuts-accessibility">Keyboard shortcuts &amp;
+accessibility</a></li>
+<li><a href="#launch-your-enterprise-organization"
+id="toc-launch-your-enterprise-organization">Launch your Enterprise
+organization</a></li>
+<li><a href="#manage-apps-workflows"
+id="toc-manage-apps-workflows">Manage apps &amp; workflows</a></li>
+<li><a href="#manage-billing-payments-plans"
+id="toc-manage-billing-payments-plans">Manage billing, payments &amp;
+plans</a></li>
+<li><a href="#manage-channels" id="toc-manage-channels">Manage
+channels</a></li>
+<li><a href="#manage-members" id="toc-manage-members">Manage
+members</a></li>
+<li><a href="#manage-your-account" id="toc-manage-your-account">Manage
+your account</a></li>
+<li><a href="#message-features-tools"
+id="toc-message-features-tools">Message features &amp; tools</a></li>
+<li><a href="#policies-guidelines" id="toc-policies-guidelines">Policies
+&amp; Guidelines</a></li>
+<li><a href="#review-roles-permissions"
+id="toc-review-roles-permissions">Review roles &amp;
+permissions</a></li>
+<li><a href="#search-in-slack" id="toc-search-in-slack">Search in
+Slack</a></li>
+<li><a href="#share-files-conversations"
+id="toc-share-files-conversations">Share files &amp;
+conversations</a></li>
+<li><a href="#slack-data-analytics" id="toc-slack-data-analytics">Slack
+data &amp; analytics</a></li>
+<li><a href="#success-strategies" id="toc-success-strategies">Success
+strategies</a></li>
+<li><a href="#tutorials" id="toc-tutorials">Tutorials</a></li>
+<li><a href="#use-apps-and-the-slack-marketplace"
+id="toc-use-apps-and-the-slack-marketplace">Use apps and the Slack
+Marketplace</a></li>
+<li><a href="#videos" id="toc-videos">Videos</a></li>
+<li><a href="#workspace-customization"
+id="toc-workspace-customization">Workspace customization</a></li>
+<li><a href="#workspace-settings-permissions"
+id="toc-workspace-settings-permissions">Workspace settings &amp;
+permissions</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="slack-help-guide">Slack help guide</h1>
 <p>This guide gathers Slack’s official Help Center into a single
 document that a screen reader can navigate by heading. The words are
@@ -4645,8 +4745,8 @@ Slack</strong> to update the app.</p>
 <h5 id="direct-download-version-1">Direct Download version</h5>
 <ol type="1">
 <li>Open the Slack app.</li>
-<li>Click the ☰ <strong>three lines icon</strong> in the top-left corner
-of the Slack app, then select <strong>Help</strong>.</li>
+<li>Click the ☰ <strong>three lines icon</strong> in the top-left
+corner of the Slack app, then select <strong>Help</strong>.</li>
 <li>Click <strong>Check for Updates</strong>, then click <strong>Restart
 to Apply Update</strong>.</li>
 </ol>

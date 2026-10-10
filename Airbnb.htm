@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Airbnb help</title>
   <style>
@@ -11,7 +11,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -36,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -54,11 +61,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -87,8 +91,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -112,7 +119,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -129,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -156,8 +163,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -168,13 +179,26 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Airbnb help</h1>
-</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#airbnb-help" id="toc-airbnb-help">Airbnb help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#experience-host" id="toc-experience-host">Experience
+Host</a></li>
+<li><a href="#guest" id="toc-guest">Guest</a></li>
+<li><a href="#home-host" id="toc-home-host">Home Host</a></li>
+<li><a href="#host" id="toc-host">Host</a></li>
+<li><a href="#service-host" id="toc-service-host">Service Host</a></li>
+<li><a href="#travel-admin" id="toc-travel-admin">Travel Admin</a></li>
+<li><a href="#miscellaneous-4"
+id="toc-miscellaneous-4">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="airbnb-help">Airbnb help</h1>
 <p>This guide holds Airbnb’s own help articles, gathered on 18 August
 2026. Airbnb writes for guests and for hosts in one estate, and both are
@@ -5050,10 +5074,8 @@ distillation</li>
 <li>in relation to beer, 30 litres per household of the person per
 month</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>in relation to any other fermented liquor, 30 litres in total of all
-such liquors per household of the person per month</li>
-</ol></li>
+<li>(ii) in relation to any other fermented liquor, 30 litres in total
+of all such liquors per household of the person per month</li>
 <li>The manufacturing activities does not create a nuisance to the
 public or degrade the environment</li>
 <li>The home-brewing is carried out at the home of the individual, and
@@ -136367,10 +136389,8 @@ Responsible Guest including by:
 <li>explaining why the Responsible Guest is responsible for the HDP
 Losses; and</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>requesting that the Responsible Guest reimburse you for the HDP
+<li>(b) requesting that the Responsible Guest reimburse you for the HDP
 Losses or otherwise resolve the loss or damage; and</li>
-</ol></li>
 </ul></li>
 <li>notified us of your complaint against the Responsible Guest. 3.1.3.
 You may fulfill the obligations set out in Sections 3.1.1 and 3.1.2
@@ -136417,11 +136437,9 @@ or an admission by the Responsible Guest that they permitted smoking in
 the Eligible Accommodation in breach of the House Rules, or any other
 evidence that we deem sufficient; and</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>We may require, in our discretion, that all receipts, bills or
+<li>(b) We may require, in our discretion, that all receipts, bills or
 invoices that you provide in respect of Smoke Odor Cleaning Costs are
 from an independent third party approved by us</li>
-</ol></li>
 </ul></li>
 <li><p>The total amount of the HDP Losses that is the subject of the
 payment request.</p></li>
@@ -136637,12 +136655,10 @@ an:</p>
 <li><ol type="i">
 <li>parked or not being moved away from its usual secured dock; or</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>damaged or destroyed due to a violation of law or criminal act or
-theft or misdemeanor committed by a Responsible Guest or Invitee; 5.3.8.
-Vehicles (including, but not limited to, Eligible Motor Vehicles) unless
-such vehicle is an:</li>
-</ol></li>
+<li>(ii) damaged or destroyed due to a violation of law or criminal act
+or theft or misdemeanor committed by a Responsible Guest or Invitee;
+5.3.8. Vehicles (including, but not limited to, Eligible Motor Vehicles)
+unless such vehicle is an:</li>
 </ul></li>
 <li>Eligible Accommodation; or</li>
 <li>Eligible Motor Vehicle, that, at the time of the loss, is either:
@@ -136650,12 +136666,10 @@ such vehicle is an:</li>
 <li><ol type="i">
 <li>parked or not being moved; or</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>damaged or destroyed due to a violation of law or criminal act or
-theft or misdemeanor committed by a Responsible Guest or Invitee; 5.3.9.
-Underground mines or mine shafts or any property within such mine or
-shaft;</li>
-</ol></li>
+<li>(ii) damaged or destroyed due to a violation of law or criminal act
+or theft or misdemeanor committed by a Responsible Guest or Invitee;
+5.3.9. Underground mines or mine shafts or any property within such mine
+or shaft;</li>
 </ul></li>
 </ul>
 <p>5.3.10. Dams, dikes and levees;</p>
@@ -136866,9 +136880,7 @@ Data will not be paid;</li>
 <li>the reasonable and necessary cost to repair or restore such property
 to the physical condition that existed on the date of loss;</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>the cost to replace the property; or</li>
-</ol></li>
+<li>(ii) the cost to replace the property; or</li>
 <li>(iii)the current value of the property as assessed by a certified
 appraisal professional approved by us (the “Appraised Value”)</li>
 </ul></li>
@@ -136879,9 +136891,7 @@ appraisal professional approved by us (the “Appraised Value”)</li>
 Motor Vehicle or Eligible Watercraft to the physical condition that
 existed on the date of loss; or</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>the Actual Cash Value; and</li>
-</ol></li>
+<li>(ii) the Actual Cash Value; and</li>
 </ul></li>
 <li>Where not otherwise described in Section 7.3.1 above, the loss
 amount in respect of any Eligible Property will be the lesser of:
@@ -136889,27 +136899,19 @@ amount in respect of any Eligible Property will be the lesser of:
 <li><ol type="i">
 <li>the Actual Cash Value (as defined in Section 7.2 above);</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>the cost to repair such damaged Eligible Property;</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>the cost to rebuild or replace such Eligible Property on the same
-site with new materials of like size, kind, and quality;</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>the cost to rebuild, repair, or replace on the same or another site,
-but not to exceed the size and operating capacity that existed on the
-date of the Eligible Loss; or</li>
-</ol></li>
-<li><ol start="22" type="a">
-<li>the cost to replace unrepairable electrical or mechanical equipment,
-including computer equipment and Electronic Media, with equipment that
-is the most functionally equivalent to that damaged or destroyed, even
-if such equipment has technological advantages and/or represents an
-improvement in function and/or forms part of a program of system
-enhancement. 7.3.2. The amount of Booking Income Loss payable, if
+<li>(ii) the cost to repair such damaged Eligible Property;</li>
+<li>(iii) the cost to rebuild or replace such Eligible Property on the
+same site with new materials of like size, kind, and quality;</li>
+<li>(iv) the cost to rebuild, repair, or replace on the same or another
+site, but not to exceed the size and operating capacity that existed on
+the date of the Eligible Loss; or</li>
+<li>(v) the cost to replace unrepairable electrical or mechanical
+equipment, including computer equipment and Electronic Media, with
+equipment that is the most functionally equivalent to that damaged or
+destroyed, even if such equipment has technological advantages and/or
+represents an improvement in function and/or forms part of a program of
+system enhancement. 7.3.2. The amount of Booking Income Loss payable, if
 any:</li>
-</ol></li>
 </ul></li>
 <li>Does not include non-continuing charges and expenses or any loss of
 booking income during any period in which the Eligible Accommodation
@@ -137817,17 +137819,14 @@ aircraft, spacecraft, and satellites, unless such vessel is an:</p></li>
 <li><ol type="a">
 <li>Eligible Accommodation; or</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>Eligible Watercraft, that, at the time of the loss, is either:</li>
-</ol>
+<li>b. Eligible Watercraft, that, at the time of the loss, is either:
 <ul>
 <li><ol type="i">
 <li>parked or not being moved away from its usual secured dock; or</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>damaged or destroyed due to a violation of law or criminal act or
-theft or misdemeanor committed by a Responsible Guest or Invitee.</li>
-</ol></li>
+<li>(ii) damaged or destroyed due to a violation of law or criminal act
+or theft or misdemeanor committed by a Responsible Guest or
+Invitee.</li>
 </ul></li>
 </ul>
 <ol start="7" type="1">
@@ -137838,18 +137837,14 @@ unless such vehicle is an:</li>
 <li><ol type="a">
 <li>Eligible Accommodation; or</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>Eligible Motor Vehicle, that, at the time of the loss, is
-either:</li>
-</ol>
+<li>b. Eligible Motor Vehicle, that, at the time of the loss, is either:
 <ul>
 <li><ol type="i">
 <li>parked or not being moved; or</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>damaged or destroyed due to a violation of law or criminal act or
-theft or misdemeanor committed by a Responsible Guest or Invitee.</li>
-</ol></li>
+<li>(ii) damaged or destroyed due to a violation of law or criminal act
+or theft or misdemeanor committed by a Responsible Guest or
+Invitee.</li>
 </ul></li>
 </ul>
 <ol start="8" type="1">
@@ -137941,49 +137936,31 @@ or indirectly caused by or resulting from any of the following:</p></li>
 <li><ol type="a">
 <li>Ineligible Property;</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>acts of nature, including, but not limited to, earthquakes and
+<li>b. acts of nature, including, but not limited to, earthquakes and
 weather related events such as hurricanes and tornadoes;</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>excessive use of electricity, gas, fuel, water or other utilities
+<li>c. excessive use of electricity, gas, fuel, water or other utilities
 provided for the Eligible Accommodation;</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>indirect or remote causes;</li>
-</ol></li>
+<li>d. indirect or remote causes;</li>
 <li>e.interruption of business, loss of market and/or loss of use,
 except Booking Income Loss;</li>
-<li><ol start="6" type="a">
-<li>loss, damage, or deterioration arising from any delay;</li>
-</ol></li>
-<li><ol start="7" type="a">
-<li>mysterious disappearance, loss, or shortage disclosed on taking
+<li>f. loss, damage, or deterioration arising from any delay;</li>
+<li>g. mysterious disappearance, loss, or shortage disclosed on taking
 inventory, or any unexplained loss of inventory;</li>
-</ol></li>
-<li><ol start="8" type="a">
-<li>enforcement of any law or ordinance (i) regulating the construction,
-repair, replacement, use or removal of any property, including removal
-of debris, or (ii) requiring the demolition of any property, including
-the cost of removing its debris;</li>
-</ol></li>
+<li>h. enforcement of any law or ordinance (i) regulating the
+construction, repair, replacement, use or removal of any property,
+including removal of debris, or (ii) requiring the demolition of any
+property, including the cost of removing its debris;</li>
 <li><ol type="i">
 <li>animals, including injuries to animals, veterinary care, boarding,
 medications, and all other services associated with animals except for
 damage caused by pets as described in subsections (ii), (vi) and (vii)
 under the definition of Eligible Losses;</li>
 </ol></li>
-<li><ol start="10" type="a">
-<li>identity theft or identity fraud;</li>
-</ol></li>
-<li><ol start="11" type="a">
-<li>the authorized use of Eligible Watercraft or Eligible Motor Vehicles
-other than where they are solely used as an Eligible Accommodation;
-or</li>
-</ol></li>
-<li><ol start="12" type="a">
-<li>an Experience or Adventure offered on the Airbnb Platform.</li>
-</ol></li>
+<li>j. identity theft or identity fraud;</li>
+<li>k. the authorized use of Eligible Watercraft or Eligible Motor
+Vehicles other than where they are solely used as an Eligible
+Accommodation; or</li>
+<li>l. an Experience or Adventure offered on the Airbnb Platform.</li>
 </ul>
 <ol start="5" type="1">
 <li>any loss, damage or expense directly or indirectly caused by or
@@ -137995,31 +137972,19 @@ event contributing thereto:</li>
 <li>any hostile act or act of war, terrorism, insurrection or
 rebellion;</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>actual or threatened malicious use of poisonous biological or
+<li>b. actual or threatened malicious use of poisonous biological or
 chemical materials;</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>nuclear reaction or radiation or radioactive contamination;</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>seizure or destruction under quarantine or custom regulation, or
+<li>c. nuclear reaction or radiation or radioactive contamination;</li>
+<li>d. seizure or destruction under quarantine or custom regulation, or
 confiscation by order of any governmental or public authority;</li>
-</ol></li>
-<li><ol start="5" type="a">
-<li>contraband, or illegal transportation or trade;</li>
-</ol></li>
-<li><ol start="6" type="a">
-<li>any dishonest act, including but not limited to theft, committed by
-you or any persons or entities retained by you to do anything in
+<li>e. contraband, or illegal transportation or trade;</li>
+<li>f. any dishonest act, including but not limited to theft, committed
+by you or any persons or entities retained by you to do anything in
 connection with Eligible Property, unless such persons or entities are a
 Responsible Guest or Invitee and such act is done without your
 knowledge; or</li>
-</ol></li>
-<li><ol start="7" type="a">
-<li>lack of electricity, fuel, water, gas, steam, refrigerant, sewerage,
-telephone or internet services due to external factors.</li>
-</ol></li>
+<li>g. lack of electricity, fuel, water, gas, steam, refrigerant,
+sewerage, telephone or internet services due to external factors.</li>
 </ul>
 <ol start="6" type="1">
 <li>any loss, damage, cost or expense caused by or resulting from stains
@@ -138031,15 +137996,11 @@ Household Linens:</li>
 <li>caused by or resulting from having Unauthorized Invitees at the
 Eligible Accommodation during an Airbnb stay;</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>caused by or resulting from having a pet owned or controlled by a
+<li>b. caused by or resulting from having a pet owned or controlled by a
 Responsible Guest or Invitee at the Eligible Accommodation or any part
 of the Eligible Accommodation during an Airbnb stay and in violation of
 a Host’s House Rules; or</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>intentionally caused by a Responsible Guest or Invitee.</li>
-</ol></li>
+<li>c. intentionally caused by a Responsible Guest or Invitee.</li>
 </ul>
 <ol start="7" type="1">
 <li>any loss, damage, or expense caused by:</li>
@@ -138049,28 +138010,18 @@ a Host’s House Rules; or</li>
 <li>faulty workmanship, material, construction or design from any
 cause;</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li>deterioration, depletion, rust, corrosion or erosion, inherent vice
-or latent defect;</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>Wear and Tear;</li>
-</ol></li>
-<li><ol start="4" type="a">
-<li>settling, cracking, shrinking, bulging, or expansion of foundations,
-floors, pavements, walls, ceilings or roofs;</li>
-</ol></li>
-<li><ol start="5" type="a">
-<li>changes of temperature or relative humidity; or</li>
-</ol></li>
-<li><ol start="6" type="a">
-<li>damage caused by insects, animals or vermin except for damage caused
-by pets as described in subsections (ii), (vi) and (vii) under the
-definition of Eligible Losses provided that any physical damage
+<li>b. deterioration, depletion, rust, corrosion or erosion, inherent
+vice or latent defect;</li>
+<li>c. Wear and Tear;</li>
+<li>d. settling, cracking, shrinking, bulging, or expansion of
+foundations, floors, pavements, walls, ceilings or roofs;</li>
+<li>e. changes of temperature or relative humidity; or</li>
+<li>f. damage caused by insects, animals or vermin except for damage
+caused by pets as described in subsections (ii), (vi) and (vii) under
+the definition of Eligible Losses provided that any physical damage
 resulting from any of the causes listed under this paragraph 7 will be
 eligible for Host Damage Protection if not otherwise ineligible under
 these Host Damage Protection Terms.</li>
-</ol></li>
 </ul>
 <ol start="8" type="1">
 <li><p>any loss, damage, claim, cost, expense or other sums directly or

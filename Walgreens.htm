@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>Walgreens Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,256 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Walgreens Help Guide</h1>
 <p class="subtitle">Walgreens’s own help documentation, gathered into
 one screen-reader-friendly document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#walgreens-help-guide"
+id="toc-walgreens-help-guide">Walgreens Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#account-family-prescriptions"
+id="toc-account-family-prescriptions">Account: Family
+Prescriptions</a></li>
+<li><a href="#account-general-troubleshooting-information"
+id="toc-account-general-troubleshooting-information">Account: General
+Troubleshooting Information</a></li>
+<li><a href="#account-registration"
+id="toc-account-registration">Account: Registration</a></li>
+<li><a href="#account-sign-in" id="toc-account-sign-in">Account: Sign
+In</a></li>
+<li><a href="#account-system-requirements"
+id="toc-account-system-requirements">Account: System
+Requirements</a></li>
+<li><a href="#account-your-account"
+id="toc-account-your-account">Account: Your Account</a></li>
+<li><a href="#checkout-checkout-process"
+id="toc-checkout-checkout-process">Checkout: Checkout Process</a></li>
+<li><a href="#checkout-tax-tax-exempt"
+id="toc-checkout-tax-tax-exempt">Checkout: Tax &amp; Tax Exempt</a></li>
+<li><a href="#company-info-careers"
+id="toc-company-info-careers">Company Info: Careers</a></li>
+<li><a href="#company-info-vendor-inquiries"
+id="toc-company-info-vendor-inquiries">Company Info: Vendor
+Inquiries</a></li>
+<li><a href="#company-info-walgreens-company"
+id="toc-company-info-walgreens-company">Company Info: Walgreens
+Company</a></li>
+<li><a href="#coupons-paperless-coupons"
+id="toc-coupons-paperless-coupons">Coupons: Paperless Coupons</a></li>
+<li><a href="#coupons-printable-coupons"
+id="toc-coupons-printable-coupons">Coupons: Printable Coupons</a></li>
+<li><a href="#customer-service-email"
+id="toc-customer-service-email">Customer Service: Email</a></li>
+<li><a href="#gift-card-bulk-gift-cards"
+id="toc-gift-card-bulk-gift-cards">Gift Card: Bulk Gift Cards</a></li>
+<li><a href="#gift-card-gift-cards-and-egift-cards"
+id="toc-gift-card-gift-cards-and-egift-cards">Gift Card: Gift Cards and
+eGift Cards</a></li>
+<li><a href="#mobile-and-social-media-facebook"
+id="toc-mobile-and-social-media-facebook">Mobile and Social Media:
+Facebook</a></li>
+<li><a href="#mobile-and-social-media-mobile-applications"
+id="toc-mobile-and-social-media-mobile-applications">Mobile and Social
+Media: Mobile Applications</a></li>
+<li><a href="#mobile-and-social-media-mobile-messaging"
+id="toc-mobile-and-social-media-mobile-messaging">Mobile and Social
+Media: Mobile Messaging</a></li>
+<li><a href="#mobile-and-social-media-prescription-text-notifications"
+id="toc-mobile-and-social-media-prescription-text-notifications">Mobile
+and Social Media: Prescription Text Notifications</a></li>
+<li><a href="#mywalgreens-balance-rewards"
+id="toc-mywalgreens-balance-rewards">myWalgreens: Balance®
+Rewards</a></li>
+<li><a href="#mywalgreens-eligibility-joining"
+id="toc-mywalgreens-eligibility-joining">myWalgreens: Eligibility &amp;
+Joining</a></li>
+<li><a href="#mywalgreens-how-the-program-works"
+id="toc-mywalgreens-how-the-program-works">myWalgreens: How the Program
+Works</a></li>
+<li><a href="#mywalgreens-other-programs"
+id="toc-mywalgreens-other-programs">myWalgreens: Other Programs</a></li>
+<li><a href="#mywalgreens-overview"
+id="toc-mywalgreens-overview">myWalgreens: Overview</a></li>
+<li><a href="#mywalgreens-redemption"
+id="toc-mywalgreens-redemption">myWalgreens: Redemption</a></li>
+<li><a href="#mywalgreens-your-account"
+id="toc-mywalgreens-your-account">myWalgreens: Your Account</a></li>
+<li><a href="#payment-methods-apple-pay"
+id="toc-payment-methods-apple-pay">Payment Methods: Apple Pay</a></li>
+<li><a href="#payment-methods-carecredit"
+id="toc-payment-methods-carecredit">Payment Methods: CareCredit</a></li>
+<li><a href="#payment-methods-gift-cards"
+id="toc-payment-methods-gift-cards">Payment Methods: Gift Cards</a></li>
+<li><a href="#payment-methods-masterpass"
+id="toc-payment-methods-masterpass">Payment Methods: Masterpass</a></li>
+<li><a href="#payment-methods-mywalgreens-credit-cards"
+id="toc-payment-methods-mywalgreens-credit-cards">Payment Methods:
+myWalgreens Credit Cards</a></li>
+<li><a href="#payment-methods-otc-benefit-cards"
+id="toc-payment-methods-otc-benefit-cards">Payment Methods: OTC Benefit
+Cards</a></li>
+<li><a href="#payment-methods-payment-information"
+id="toc-payment-methods-payment-information">Payment Methods: Payment
+Information</a></li>
+<li><a href="#payment-methods-paypal"
+id="toc-payment-methods-paypal">Payment Methods: PayPal</a></li>
+<li><a href="#payment-methods-paypal-credit-formerly-bill-me-later"
+id="toc-payment-methods-paypal-credit-formerly-bill-me-later">Payment
+Methods: PayPal Credit (Formerly Bill Me Later)</a></li>
+<li><a href="#payment-methods-visa-checkout"
+id="toc-payment-methods-visa-checkout">Payment Methods: Visa
+Checkout</a></li>
+<li><a href="#pharmacy-resources-drug-health-information"
+id="toc-pharmacy-resources-drug-health-information">Pharmacy Resources:
+Drug &amp; Health Information</a></li>
+<li><a href="#pharmacy-resources-privacy-practices"
+id="toc-pharmacy-resources-privacy-practices">Pharmacy Resources:
+Privacy Practices</a></li>
+<li><a href="#pharmacy-auto-refills"
+id="toc-pharmacy-auto-refills">Pharmacy: Auto Refills</a></li>
+<li><a href="#pharmacy-expresspay"
+id="toc-pharmacy-expresspay">Pharmacy: ExpressPay</a></li>
+<li><a href="#pharmacy-flexible-spending-accounts"
+id="toc-pharmacy-flexible-spending-accounts">Pharmacy: Flexible Spending
+Accounts</a></li>
+<li><a href="#pharmacy-medicare-info"
+id="toc-pharmacy-medicare-info">Pharmacy: Medicare Info</a></li>
+<li><a href="#pharmacy-new-prescription-filling-preferences"
+id="toc-pharmacy-new-prescription-filling-preferences">Pharmacy: New
+Prescription Filling Preferences</a></li>
+<li><a href="#pharmacy-parentguardian-information"
+id="toc-pharmacy-parentguardian-information">Pharmacy: Parent/Guardian
+Information</a></li>
+<li><a href="#pharmacy-pharmacy-insurance-and-payments"
+id="toc-pharmacy-pharmacy-insurance-and-payments">Pharmacy: Pharmacy
+Insurance and Payments</a></li>
+<li><a href="#pharmacy-prescription-fulfillment-policy"
+id="toc-pharmacy-prescription-fulfillment-policy">Pharmacy: Prescription
+Fulfillment Policy</a></li>
+<li><a href="#pharmacy-prescription-history-and-records"
+id="toc-pharmacy-prescription-history-and-records">Pharmacy:
+Prescription History and Records</a></li>
+<li><a href="#pharmacy-prescription-transfers"
+id="toc-pharmacy-prescription-transfers">Pharmacy: Prescription
+Transfers</a></li>
+<li><a href="#pharmacy-registration"
+id="toc-pharmacy-registration">Pharmacy: Registration</a></li>
+<li><a href="#pharmacy-rx-savings-finder"
+id="toc-pharmacy-rx-savings-finder">Pharmacy: Rx Savings Finder</a></li>
+<li><a href="#pharmacy-walgreens-delivery"
+id="toc-pharmacy-walgreens-delivery">Pharmacy: Walgreens
+Delivery</a></li>
+<li><a href="#policies-and-legal-notices"
+id="toc-policies-and-legal-notices">Policies and legal notices</a></li>
+<li><a href="#promotions-promo-codes"
+id="toc-promotions-promo-codes">Promotions: Promo Codes</a></li>
+<li><a href="#promotions-rebates"
+id="toc-promotions-rebates">Promotions: Rebates</a></li>
+<li><a href="#promotions-specials-sales"
+id="toc-promotions-specials-sales">Promotions: Specials &amp;
+Sales</a></li>
+<li><a href="#returns-contact-lenses"
+id="toc-returns-contact-lenses">Returns: Contact Lenses</a></li>
+<li><a href="#returns-pharmacy" id="toc-returns-pharmacy">Returns:
+Pharmacy</a></li>
+<li><a href="#returns-products" id="toc-returns-products">Returns:
+Products</a></li>
+<li><a href="#returns-walgreens-photo"
+id="toc-returns-walgreens-photo">Returns: Walgreens Photo</a></li>
+<li><a href="#same-day-delivery-cancellation-and-issues"
+id="toc-same-day-delivery-cancellation-and-issues">Same Day Delivery:
+Cancellation and Issues</a></li>
+<li><a href="#same-day-delivery-delivery-process"
+id="toc-same-day-delivery-delivery-process">Same Day Delivery: Delivery
+Process</a></li>
+<li><a href="#same-day-delivery-placing-an-order"
+id="toc-same-day-delivery-placing-an-order">Same Day Delivery: Placing
+an Order</a></li>
+<li><a href="#same-day-delivery-pricing-and-promotions"
+id="toc-same-day-delivery-pricing-and-promotions">Same Day Delivery:
+Pricing and Promotions</a></li>
+<li><a href="#same-day-delivery-program-details"
+id="toc-same-day-delivery-program-details">Same Day Delivery: Program
+Details</a></li>
+<li><a href="#shipping-destinations-and-restrictions"
+id="toc-shipping-destinations-and-restrictions">Shipping: Destinations
+and Restrictions</a></li>
+<li><a href="#shipping-free-shipping"
+id="toc-shipping-free-shipping">Shipping: Free Shipping</a></li>
+<li><a href="#shipping-order-status-and-tracking"
+id="toc-shipping-order-status-and-tracking">Shipping: Order Status and
+Tracking</a></li>
+<li><a href="#shipping-processing-and-delivery-times"
+id="toc-shipping-processing-and-delivery-times">Shipping: Processing and
+Delivery Times</a></li>
+<li><a href="#shipping-shipping-options-and-rates"
+id="toc-shipping-shipping-options-and-rates">Shipping: Shipping Options
+and Rates</a></li>
+<li><a href="#shopping-online-contact-lenses"
+id="toc-shopping-online-contact-lenses">Shopping Online: Contact
+Lenses</a></li>
+<li><a href="#shopping-online-fsa-eligible-products"
+id="toc-shopping-online-fsa-eligible-products">Shopping Online: FSA
+Eligible Products</a></li>
+<li><a href="#shopping-online-pharmacy"
+id="toc-shopping-online-pharmacy">Shopping Online: Pharmacy</a></li>
+<li><a href="#shopping-online-products-pricing"
+id="toc-shopping-online-products-pricing">Shopping Online: Products
+&amp; Pricing</a></li>
+<li><a href="#shopping-online-shopping-assistance"
+id="toc-shopping-online-shopping-assistance">Shopping Online: Shopping
+Assistance</a></li>
+<li><a href="#store-pickup-cancellations-issues"
+id="toc-store-pickup-cancellations-issues">Store Pickup: Cancellations
+&amp; Issues</a></li>
+<li><a href="#store-pickup-pickup-process"
+id="toc-store-pickup-pickup-process">Store Pickup: Pickup
+Process</a></li>
+<li><a href="#store-pickup-placing-an-order"
+id="toc-store-pickup-placing-an-order">Store Pickup: Placing an
+Order</a></li>
+<li><a href="#store-pickup-pricing-promotions"
+id="toc-store-pickup-pricing-promotions">Store Pickup: Pricing &amp;
+Promotions</a></li>
+<li><a href="#store-pickup-program-details"
+id="toc-store-pickup-program-details">Store Pickup: Program
+Details</a></li>
+<li><a href="#virtual-healthcare-account-management"
+id="toc-virtual-healthcare-account-management">Virtual Healthcare:
+Account Management</a></li>
+<li><a href="#virtual-healthcare-completing-a-video-visit"
+id="toc-virtual-healthcare-completing-a-video-visit">Virtual Healthcare:
+Completing a Video Visit</a></li>
+<li><a href="#virtual-healthcare-payments"
+id="toc-virtual-healthcare-payments">Virtual Healthcare:
+Payments</a></li>
+<li><a href="#virtual-healthcare-prescriptionsrefills"
+id="toc-virtual-healthcare-prescriptionsrefills">Virtual Healthcare:
+Prescriptions/Refills</a></li>
+<li><a href="#virtual-healthcare-signing-in"
+id="toc-virtual-healthcare-signing-in">Virtual Healthcare: Signing
+In</a></li>
+<li><a href="#virtual-healthcare-starting-a-new-visit"
+id="toc-virtual-healthcare-starting-a-new-visit">Virtual Healthcare:
+Starting a New Visit</a></li>
+<li><a href="#virtual-healthcare-wait-times-and-how-to-cancel-a-visit"
+id="toc-virtual-healthcare-wait-times-and-how-to-cancel-a-visit">Virtual
+Healthcare: Wait Times and How to Cancel a Visit</a></li>
+<li><a href="#walgreens-stores-customer-service"
+id="toc-walgreens-stores-customer-service">Walgreens Stores: Customer
+Service</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="walgreens-help-guide">Walgreens Help Guide</h1>
 <p>This guide gathers Walgreens’s own help as it stood on 3 August 2026.
 The text is Walgreens’s; nothing has been summarised or rewritten.</p>

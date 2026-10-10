@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-03" />
   <title>CVS Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,129 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">CVS Help Guide</h1>
 <p class="subtitle">CVS’s own help documentation, gathered into one
 screen-reader-friendly document</p>
 <p class="date">2026-08-03</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#cvs-help-guide" id="toc-cvs-help-guide">CVS Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#consumer-health-privacy-policy"
+id="toc-consumer-health-privacy-policy">Consumer Health Privacy
+Policy</a></li>
+<li><a href="#contact-us" id="toc-contact-us">Contact Us</a></li>
+<li><a
+href="#cvs-california-notice-at-collection-of-personal-information"
+id="toc-cvs-california-notice-at-collection-of-personal-information">CVS
+California Notice at Collection of Personal Information</a></li>
+<li><a href="#cvs-privacy-policy" id="toc-cvs-privacy-policy">CVS
+Privacy Policy</a></li>
+<li><a href="#cvscom-account-account-management"
+id="toc-cvscom-account-account-management">CVS.com Account: Account
+Management</a></li>
+<li><a href="#cvscom-account-create-an-account"
+id="toc-cvscom-account-create-an-account">CVS.com Account: Create an
+Account</a></li>
+<li><a href="#cvscom-account-extracare-members"
+id="toc-cvscom-account-extracare-members">CVS.com Account: ExtraCare
+Members</a></li>
+<li><a href="#cvscom-account-prescription-management"
+id="toc-cvscom-account-prescription-management">CVS.com Account:
+Prescription Management</a></li>
+<li><a href="#cvscom-account-remember-me"
+id="toc-cvscom-account-remember-me">CVS.com Account: Remember
+Me</a></li>
+<li><a href="#cvscom-terms-of-use" id="toc-cvscom-terms-of-use">CVS.com
+| Terms of Use</a></li>
+<li><a
+href="#drug-and-health-information-drug-and-health-information-help"
+id="toc-drug-and-health-information-drug-and-health-information-help">Drug
+and Health Information: Drug and Health Information Help</a></li>
+<li><a href="#extracare-extracare-card"
+id="toc-extracare-extracare-card">ExtraCare: ExtraCare Card</a></li>
+<li><a href="#extracare-extracare-membership"
+id="toc-extracare-extracare-membership">ExtraCare: ExtraCare
+Membership</a></li>
+<li><a href="#extracare-extracare-mobile"
+id="toc-extracare-extracare-mobile">ExtraCare: ExtraCare Mobile</a></li>
+<li><a href="#extracare-extracare-online"
+id="toc-extracare-extracare-online">ExtraCare: ExtraCare Online</a></li>
+<li><a href="#extracare-extracare-savings-rewards"
+id="toc-extracare-extracare-savings-rewards">ExtraCare: ExtraCare
+Savings &amp; Rewards</a></li>
+<li><a href="#frequently-asked-questions"
+id="toc-frequently-asked-questions">Frequently Asked Questions</a></li>
+<li><a href="#medication-information-disposing-of-medication-and-sharps"
+id="toc-medication-information-disposing-of-medication-and-sharps">Medication
+Information: Disposing of Medication and Sharps</a></li>
+<li><a href="#medication-information-finding-medication-information"
+id="toc-medication-information-finding-medication-information">Medication
+Information: Finding Medication Information</a></li>
+<li><a href="#medication-information-generic-equivalents"
+id="toc-medication-information-generic-equivalents">Medication
+Information: Generic Equivalents</a></li>
+<li><a href="#mobile-access" id="toc-mobile-access">Mobile
+Access</a></li>
+<li><a href="#myweekly-ad-myweekly-ad-deals"
+id="toc-myweekly-ad-myweekly-ad-deals">myWeekly Ad: myWeekly Ad
+Deals</a></li>
+<li><a href="#myweekly-ad-myweekly-ad-shopping-list"
+id="toc-myweekly-ad-myweekly-ad-shopping-list">myWeekly Ad: myWeekly Ad
+Shopping List</a></li>
+<li><a href="#myweekly-ad-setting-up-myweekly-ad"
+id="toc-myweekly-ad-setting-up-myweekly-ad">myWeekly Ad: Setting Up
+myWeekly Ad</a></li>
+<li><a href="#ordering-your-prescriptions-order-status-and-tracking"
+id="toc-ordering-your-prescriptions-order-status-and-tracking">Ordering
+Your Prescriptions: Order Status and Tracking</a></li>
+<li><a
+href="#ordering-your-prescriptions-ordering-prescriptions-on-cvscom"
+id="toc-ordering-your-prescriptions-ordering-prescriptions-on-cvscom">Ordering
+Your Prescriptions: Ordering Prescriptions on CVS.com</a></li>
+<li><a href="#ordering-your-prescriptions-prescription-verification"
+id="toc-ordering-your-prescriptions-prescription-verification">Ordering
+Your Prescriptions: Prescription Verification</a></li>
+<li><a href="#ordering-your-prescriptions-prices-insurance-and-payments"
+id="toc-ordering-your-prescriptions-prices-insurance-and-payments">Ordering
+Your Prescriptions: Prices, Insurance and Payments</a></li>
+<li><a href="#ordering-your-prescriptions-refilling-prescriptions"
+id="toc-ordering-your-prescriptions-refilling-prescriptions">Ordering
+Your Prescriptions: Refilling Prescriptions</a></li>
+<li><a href="#ordering-your-prescriptions-transferring-prescriptions"
+id="toc-ordering-your-prescriptions-transferring-prescriptions">Ordering
+Your Prescriptions: Transferring Prescriptions</a></li>
+<li><a href="#policies-and-legal-notices"
+id="toc-policies-and-legal-notices">Policies and legal notices</a></li>
+<li><a href="#rx-delivery-right-to-your-door"
+id="toc-rx-delivery-right-to-your-door">Rx delivery right to your
+door</a></li>
+<li><a href="#security-security-alerts"
+id="toc-security-security-alerts">Security: Security Alerts</a></li>
+<li><a href="#shipping-information"
+id="toc-shipping-information">Shipping Information</a></li>
+<li><a href="#shopping-online-checkout"
+id="toc-shopping-online-checkout">Shopping Online: Checkout</a></li>
+<li><a href="#shopping-online-coupons"
+id="toc-shopping-online-coupons">Shopping Online: Coupons</a></li>
+<li><a href="#shopping-online-my-basket"
+id="toc-shopping-online-my-basket">Shopping Online: My Basket</a></li>
+<li><a href="#shopping-online-return-policy"
+id="toc-shopping-online-return-policy">Shopping Online: Return
+Policy</a></li>
+<li><a href="#shopping-online-shopping-for-nonprescription-products"
+id="toc-shopping-online-shopping-for-nonprescription-products">Shopping
+Online: Shopping for Nonprescription Products</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="cvs-help-guide">CVS Help Guide</h1>
 <p>This guide gathers CVS’s own help as it stood on 3 August 2026. The
 text is CVS’s; nothing has been summarised or rewritten.</p>

@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>The calibre manual</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">The calibre manual</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#the-calibre-manual" id="toc-the-calibre-manual">The
@@ -1308,7 +1322,7 @@ Name”. Any arguments passed are present in the args variable.</p>
 <p>Bases: <code>Plugin</code></p>
 <p>A plugin that is associated with a particular set of file types.</p>
 <p>file_types = {}¶</p>
-<p>Set of file types for which this plugin should be run. Use ’*’ for
+<p>Set of file types for which this plugin should be run. Use ‘*’ for
 all file types. For example: <code>{'lit', 'mobi', 'prc'}</code></p>
 <p>on_import = False¶</p>
 <p>If True, this plugin is run when books are added to the database</p>
@@ -3293,9 +3307,7 @@ and the source to be decoded. It must return the decoded source.</p>
 <p>extra_css = None¶</p>
 Specify any extra <a href="glossary.html#term-CSS">CSS</a> that should
 be added to downloaded <a href="glossary.html#term-HTML">HTML</a> files.
-It will be inserted into
-<style>
-tags, just before the closing
+It will be inserted into <style> tags, just before the closing
 </head>
 <p>tag thereby overriding all <a href="glossary.html#term-CSS">CSS</a>
 except that which is declared using the style attribute on individual <a
@@ -3432,7 +3444,7 @@ href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree"
 Soup</a> A common example:</p>
 <pre><code>remove_tags = [dict(name=&#39;div&#39;, class_=&#39;advert&#39;)]</code></pre>
 This will remove all
-<div class=”advert”>
+<div class="”advert”">
 <p>tags and all their children from the downloaded <a
 href="glossary.html#term-HTML">HTML</a>.</p>
 <p>remove_tags_after = None¶</p>
@@ -5383,7 +5395,7 @@ match the regular expression <code>pattern</code>.</li>
 <li><a
 href="generated/en/template_ref.html#ff-list-item">list_item</a><code>(value, index, separator)</code>
 – interpret the <code>value</code> as a list of items separated by
-<code>separator</code>, returning the ’index’th item.</li>
+<code>separator</code>, returning the ‘index’th item.</li>
 <li><a
 href="generated/en/template_ref.html#ff-list-sort">list_sort</a><code>(value, direction, separator)</code>
 – return <code>value</code> sorted using a case-insensitive lexical
@@ -9897,9 +9909,7 @@ converting to well formed XML.</li>
 <li>Malformed or unknown CSS styles. Any CSS that is not valid or that
 has properties not defined in the CSS 2.1 standard (plus a few from CSS
 3) are reported. CSS is checked in all stylesheets, inline style
-attributes and
-<style>
-tags in HTML files.</li>
+attributes and <style> tags in HTML files.</li>
 <li>Broken links. Links that point to files inside the book that are
 missing are reported.</li>
 <li>Unreferenced files. Files in the book that are not referenced by any
@@ -9951,12 +9961,11 @@ format, that looks like:</p>
 Accessed via Tools → Transform styles.</li>
 </ul>
 <h6 id="removing-unused-css-rules">Removing unused CSS rules¶</h6>
-Remove all unused CSS rules from stylesheets and
-<style>
-<p>tags. Some books created from production templates can have a large
-number of extra CSS rules that don’t match any actual content. These
-extra rules can slow down readers that need to process them all.
-Accessed via Tools → Remove unused CSS.</p>
+<p>Remove all unused CSS rules from stylesheets and <style> tags. Some
+books created from production templates can have a large number of extra
+CSS rules that don’t match any actual content. These extra rules can
+slow down readers that need to process them all. Accessed via Tools →
+Remove unused CSS.</p>
 <h6 id="fixing-html">Fixing HTML¶</h6>
 <p>This tool simply converts HTML that cannot be parsed as XML into
 well-formed XML. It is very common in e-books to have non-well-formed
@@ -12380,7 +12389,7 @@ characters match … option is checked then given the two book titles:</p>
 ignored.</p></li>
 <li><p><code>title:"g,"</code> matches both because the comma is
 ignored.</p></li>
-<li><p><code>title:"gb"</code> matches both because ’, ‘ is ignored in
+<li><p><code>title:"gb"</code> matches both because ‘, ‘ is ignored in
 book 1 and spaces are ignored in book 2.</p></li>
 <li><p><code>title:"g b"</code> matches both because comma and space are
 ignored.</p></li>
@@ -15354,5 +15363,8 @@ is <code>i</code>, it makes matching case insensitive. A good primer on
 the syntax for regular expressions can be found at <a
 href="https://docs.python.org/library/re.html">regexp syntax</a></p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
+</div>
+</div>
+</div>
 </body>
 </html>

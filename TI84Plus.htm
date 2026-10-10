@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-30" />
   <title>TI-84 Plus Guidebook</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,17 +180,79 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">TI-84 Plus Guidebook</h1>
 <p class="subtitle">Texas Instruments’ own guidebook for the TI-84 Plus
 and TI-84 Plus Silver Edition, gathered into one screen-reader-friendly
 document</p>
 <p class="date">2026-07-30</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ti-84-plus-guidebook" id="toc-ti-84-plus-guidebook">TI-84
+Plus Guidebook</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#appendix-b-reference-information"
+id="toc-appendix-b-reference-information">Appendix B: Reference
+Information</a></li>
+<li><a href="#chapter-1-operating-the-ti-84-plus-silver-edition"
+id="toc-chapter-1-operating-the-ti-84-plus-silver-edition">Chapter 1
+Operating the TI-84 Plus Silver Edition</a></li>
+<li><a href="#chapter-2-math-angle-and-test-operations"
+id="toc-chapter-2-math-angle-and-test-operations">Chapter 2 Math, Angle,
+and Test Operations</a></li>
+<li><a href="#chapter-3-function-graphing"
+id="toc-chapter-3-function-graphing">Chapter 3: Function
+Graphing</a></li>
+<li><a href="#chapter-4-parametric-graphing"
+id="toc-chapter-4-parametric-graphing">Chapter 4: Parametric
+Graphing</a></li>
+<li><a href="#chapter-5-polar-graphing"
+id="toc-chapter-5-polar-graphing">Chapter 5: Polar Graphing</a></li>
+<li><a href="#chapter-6-sequence-graphing"
+id="toc-chapter-6-sequence-graphing">Chapter 6: Sequence
+Graphing</a></li>
+<li><a href="#chapter-7-tables" id="toc-chapter-7-tables">Chapter 7:
+Tables</a></li>
+<li><a href="#chapter-8-draw-instructions"
+id="toc-chapter-8-draw-instructions">Chapter 8 Draw
+Instructions</a></li>
+<li><a href="#chapter-9-split-screen"
+id="toc-chapter-9-split-screen">Chapter 9: Split Screen</a></li>
+<li><a href="#chapter-10-matrices" id="toc-chapter-10-matrices">Chapter
+10: Matrices</a></li>
+<li><a href="#chapter-11-lists" id="toc-chapter-11-lists">Chapter 11:
+Lists</a></li>
+<li><a href="#chapter-12-statistics"
+id="toc-chapter-12-statistics">Chapter 12: Statistics</a></li>
+<li><a href="#chapter-13-inferential-statistics-and-distributions"
+id="toc-chapter-13-inferential-statistics-and-distributions">Chapter 13
+Inferential Statistics and Distributions</a></li>
+<li><a href="#chapter-14-applications"
+id="toc-chapter-14-applications">Chapter 14: Applications</a></li>
+<li><a href="#chapter-15-catalog-strings-hyperbolic-functions"
+id="toc-chapter-15-catalog-strings-hyperbolic-functions">Chapter 15
+CATALOG, Strings, Hyperbolic Functions</a></li>
+<li><a href="#chapter-16-programming"
+id="toc-chapter-16-programming">Chapter 16: Programming</a></li>
+<li><a href="#chapter-17-activities"
+id="toc-chapter-17-activities">Chapter 17: Activities</a></li>
+<li><a href="#chapter-18-memory-and-variable-management"
+id="toc-chapter-18-memory-and-variable-management">Chapter 18 Memory and
+Variable Management</a></li>
+<li><a href="#chapter-19-communication-link"
+id="toc-chapter-19-communication-link">Chapter 19: Communication
+Link</a></li>
+<li><a href="#guidebook" id="toc-guidebook">Guidebook</a></li>
+<li><a href="#service-and-warranty-information"
+id="toc-service-and-warranty-information">Service and Warranty
+Information</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="ti-84-plus-guidebook">TI-84 Plus Guidebook</h1>
 <p>This guide gathers Texas Instruments’ own guidebook for the TI-84
 Plus and TI-84 Plus Silver Edition graphing calculators. It was taken

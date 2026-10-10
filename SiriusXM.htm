@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-29" />
   <title>SiriusXM Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,36 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">SiriusXM Help Guide</h1>
 <p class="subtitle">SiriusXM’s official help for listeners, gathered
 into one screen-reader-friendly document</p>
 <p class="date">2026-07-29</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#siriusxm-help-guide" id="toc-siriusxm-help-guide">SiriusXM
+Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#channels-and-programming"
+id="toc-channels-and-programming">Channels and programming</a></li>
+<li><a href="#getting-help" id="toc-getting-help">Getting help</a></li>
+<li><a href="#listening-on-apps-and-devices"
+id="toc-listening-on-apps-and-devices">Listening on apps and
+devices</a></li>
+<li><a href="#payments-and-returns"
+id="toc-payments-and-returns">Payments and returns</a></li>
+<li><a href="#radios-and-vehicles" id="toc-radios-and-vehicles">Radios
+and vehicles</a></li>
+<li><a href="#subscriptions-and-trials"
+id="toc-subscriptions-and-trials">Subscriptions and trials</a></li>
+<li><a href="#your-account" id="toc-your-account">Your account</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="siriusxm-help-guide">SiriusXM Help Guide</h1>
 <p>This guide gathers SiriusXM’s official help for listeners:
 subscriptions and trials, your account, payments and returns, satellite
@@ -1285,34 +1316,20 @@ ID</a>.2. Go to the Manage Add-Ons page:</p>
 <li><ol type="i">
 <li>Under the I want to box, choose Manage add-ons</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>Select Account and then the phone number associated with your
+<li>ii. Select Account and then the phone number associated with your
 subscription.</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>Select Manage Add-ons and deselect the SiriusXM feature.</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>Agree to removing the feature and choose Continue.</li>
-</ol></li>
-<li><ol start="22" type="a">
-<li>On the Review your order page, select Agree &amp; Submit.</li>
-</ol></li>
+<li>iii. Select Manage Add-ons and deselect the SiriusXM feature.</li>
+<li>iv. Agree to removing the feature and choose Continue.</li>
+<li>v. On the Review your order page, select Agree &amp; Submit.</li>
 </ul></li>
 <li>T-Mobile App:
 <ul>
 <li><ol type="i">
 <li>Select Account, Manage Data and Add-ons</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>Deselect the SiriusXM feature.</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>Agree to removing the feature and choose Continue.</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>On the Review your order page, select Agree submit.</li>
-</ol></li>
+<li>ii. Deselect the SiriusXM feature.</li>
+<li>iii. Agree to removing the feature and choose Continue.</li>
+<li>iv. On the Review your order page, select Agree submit.</li>
 </ul></li>
 </ul>
 <p>If you’re having trouble, T-Mobile customers can dial 611 from your
@@ -1509,34 +1526,20 @@ ID</a>.</li>
 <li><ol type="i">
 <li>Under the I want to box, choose Manage add-ons</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>Select Account and then the phone number associated with your
+<li>ii. Select Account and then the phone number associated with your
 subscription.</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>Select Manage Add-ons and deselect the SiriusXM feature.</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>Agree to removing the feature and choose Continue.</li>
-</ol></li>
-<li><ol start="22" type="a">
-<li>On the Review your order page, select Agree &amp; Submit.</li>
-</ol></li>
+<li>iii. Select Manage Add-ons and deselect the SiriusXM feature.</li>
+<li>iv. Agree to removing the feature and choose Continue.</li>
+<li>v. On the Review your order page, select Agree &amp; Submit.</li>
 </ul></li>
 <li>T-Mobile App:
 <ul>
 <li><ol type="i">
 <li>Select Account, Manage Data and Add-ons</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li>Deselect the SiriusXM feature.</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li>Agree to removing the feature and choose Continue.</li>
-</ol></li>
-<li><ol start="4" type="i">
-<li>On the Review your order page, select Agree submit.</li>
-</ol></li>
+<li>ii. Deselect the SiriusXM feature.</li>
+<li>iii. Agree to removing the feature and choose Continue.</li>
+<li>iv. On the Review your order page, select Agree submit.</li>
 </ul></li>
 </ul>
 <p>If you’re having trouble, T-Mobile customers can dial 611 from your

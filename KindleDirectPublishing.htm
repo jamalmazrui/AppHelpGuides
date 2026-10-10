@@ -1,15 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-04" />
   <title>Kindle Direct Publishing: the complete help guide</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -34,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -52,13 +62,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -81,10 +92,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -104,8 +119,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -122,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -148,10 +163,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -162,12 +180,10 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Kindle Direct Publishing: the complete help guide</h1>
 <p class="subtitle">Every help article Amazon publishes for KDP authors,
 arranged for reading straight through</p>
 <p class="date">2026-08-04</p>
@@ -271,8 +287,6 @@ id="toc-user-guides-kdp-university">User Guides: KDP University</a></li>
 <li><a href="#user-guides-kindle-publishing-guidelines"
 id="toc-user-guides-kindle-publishing-guidelines">User Guides: Kindle
 Publishing Guidelines</a></li>
-<li><a href="#miscellaneous"
-id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -6200,7 +6214,7 @@ more. - When importing the file, Kindle Create had an error it couldn’t
 solve. Try importing the file one more time or saving a different
 version and importing it again. If that doesn’t work, contact us.: You
 might be using styles. Styles in Microsoft Word are the ones used as
-“Heading 1,” “Heading 2,” “Heading 3,” instead of “Normal.”</p>
+“Heading 1,””Heading 2,” “Heading 3,” instead of “Normal.”</p>
 <p>Here is what we recommend so you can import your file: On your file,
 go to the page where you applied the styles. From the Home tab, under
 Styles, select <strong>Normal</strong>. Then go to the Insert tab, and
@@ -16240,7 +16254,7 @@ through Kindle Unlimited (KU). If a customer reads pages in your Kindle
 eBook for the first time, you will see a separate line item indicating
 the accumulated number of pages read under the column “Kindle Edition
 Normalized Pages (KENP) Read.” The royalty earned through Kindle
-Unlimited (KU) is under the “Royalty” column. Please note monthly KENP
+Unlimited (KU) is under the”Royalty” column. Please note monthly KENP
 numbers may change and will be finalized near the 15th of the following
 month. - <strong>Free Promotion:</strong> Free downloads due to Free
 Book Promotion campaign(s) through KDP Select. - <strong>Free Price
@@ -18211,9 +18225,9 @@ zip the contents, and save it as EPUB file.:
 <body id="id1">
 <section class="class1">
 <header id="id3">
-<h1 id="id2">
+<h2 id="id2">
 What Is Art?
-</h1>
+</h2>
 </header>
 </section>
 </body>
@@ -18221,9 +18235,9 @@ What Is Art?
 <body>
 <section class="class1" id="id1">
 <header id="id3">
-<h1 id="id2">
+<h2 id="id2">
 What Is Art?
-</h1>
+</h2>
 </header>
 </section>
 </body></li>
@@ -18243,14 +18257,16 @@ file.: <strong>Toc.xhtml:</strong>
 <p id="sample" style="display:none" class="first first-in-chapter first-full-width" amzn-src-id="5308">
 There were a series of people who helped make this book possible.
 </p>
-<div class="alignment-block alignment-block-align-center" amzn-src-id="5309">
+<div class="alignment-block alignment-block-align-center"
+data-amzn-src-id="5309">
 <p>: <strong>Toc.xhtml:</strong>
 <a href="acknowledgments.xhtml#sample" amzn-src-id="5529">Acknowledgments</a></p>
 <strong>Source HTML:</strong>
 <p style="display:none" class="first first-in-chapter first-full-width" amzn-src-id="5308">
 There were a series of people who helped make this book possible.
 </p>
-<div id="sample" class="alignment-block alignment-block-align-center" amzn-src-id="5309">
+<div id="sample" class="alignment-block alignment-block-align-center"
+data-amzn-src-id="5309">
 <ul>
 <li><strong>E24011:</strong> TOC section scope is not included in the
 parent chapter: NCX file: Open the NCX file using any text editor.
@@ -18339,9 +18355,9 @@ the final file using Kindle Previewer.: Metadata content:
 Metadata content:
 <meta name="Cover" content="cover-image"/>
 <p><item href="images/ath-saikiahaines-cover.jpeg" id="cover-image" media-type="image/jpeg"/></p>
-<h5
+<h6
 id="common-errors-leading-to-kindle-conversion-internal-error">Common
-errors leading to Kindle conversion internal error</h5>
+errors leading to Kindle conversion internal error</h6>
 If you encounter a Kindle conversion internal error failure while
 submitting your manuscript to publish with Amazon, please review the
 following common error patterns that frequently cause conversion issues:
@@ -18417,7 +18433,7 @@ the Holocaust</i>
 </caption>
 <table class="table1" id="tab1_1">
 <thead>
-<h5 id="unsupported-attributes">Unsupported Attributes</h5>
+<h6 id="unsupported-attributes">Unsupported Attributes</h6>
 <p>The following attributes are not currently supported with the
 indicated values. - <strong>HTML Tag Attribute</strong>:
 <strong>Unsupported Values</strong>: <strong>Alternative Value or
@@ -18442,7 +18458,7 @@ same rendering result. - text-decoration: line-through: Remove the
 text-decoration: line-through styles from your book. - height/width:
 inherit: Use valid height/width values in px instead of inherit
 property.</p>
-<h5 id="ignored-attributes-and-tags">Ignored Attributes and Tags</h5>
+<h6 id="ignored-attributes-and-tags">Ignored Attributes and Tags</h6>
 <h6 id="ignored-attributes">Ignored Attributes</h6>
 <p>The following attributes are currently ignored when applied to any
 HTML tag. - animation - animation-delay - animation-direction -
@@ -18514,10 +18530,10 @@ overline,none</li>
 <p>The following tags are currently ignored regardless of the
 attributes, units, or values applied. - area: big: ins - kbd: map:
 max-height - max-width: mbp:nu: reference - small: time</p>
-<h3 id="boxed-and-bundles-edition-guidelines-ebook-format-only">Boxed
-and Bundles Edition Guidelines (eBook format only)</h3>
-<h4 id="boxed-and-bundles-edition-guidelines-ebook-format-only-1">Boxed
+<h4 id="boxed-and-bundles-edition-guidelines-ebook-format-only">Boxed
 and Bundles Edition Guidelines (eBook format only)</h4>
+<h5 id="boxed-and-bundles-edition-guidelines-ebook-format-only-1">Boxed
+and Bundles Edition Guidelines (eBook format only)</h5>
 <p>Boxed and bundles editions are multi-book products containing two or
 more titles sold as a single item in the eBook format. These guidelines
 are designed to help authors, publishers, and selling partners create
@@ -18542,7 +18558,7 @@ series</strong> or a <strong>collection of titles by the same author or
 within the same genre.</strong> ##### Contents - Title/Subtitle -
 Product Description - Authors - ISBN - Keywords - Table of Contents -
 Cover Image</p>
-<h5 id="titlesubtitle">Title/Subtitle</h5>
+<h6 id="titlesubtitle">Title/Subtitle</h6>
 <p>The title of your boxed or bundle edition must clearly communicate to
 customers that the product contains multiple books. Customers rely on
 the title to understand what they are purchasing, and an inaccurate or
@@ -18560,7 +18576,7 @@ books included and if part of a series, the volume or sequence range
 boxed editions within the same series, the title must include a volume
 or sequence indicator (e.g., “Boxed edition 1,” “Volume 1,” “Part
 1”)</p>
-<h5 id="product-description">Product Description</h5>
+<h6 id="product-description">Product Description</h6>
 <p>The product description helps customers understand what is included
 in the boxed or bundle edition before they purchase. A clear and
 accurate description ensures customers know exactly what they are buying
@@ -18615,7 +18631,7 @@ each included title. <strong>Best Practice Recommendations:</strong> 1.
 The name(s) of the author(s)/contributor(s) for each included title if
 the boxed or bundle contains works by multiple authors or
 contributors.</p>
-<h5 id="isbn">ISBN</h5>
+<h6 id="isbn">ISBN</h6>
 <p>A boxed or bundle edition is a distinct product, and should have its
 own unique ISBN, separate from the ISBNs of the individual titles it
 contains. You should not reuse or repurpose an ISBN from one of the
@@ -18632,7 +18648,7 @@ record of which ISBN belongs to the boxed edition versus those assigned
 to individual series titles, to avoid metadata conflicts. 2. If you plan
 to publish multiple boxed editions of the same series (e.g., Books 1–3
 and Books 4–6), assign a distinct ISBN to each volume of grouping.</p>
-<h5 id="keywords">Keywords</h5>
+<h6 id="keywords">Keywords</h6>
 <p>Keywords help customers discover your boxed or bundle edition through
 search. When selecting keywords, follow the existing keywords metadata
 guidelines and apply the following best practices specific to boxed and
@@ -18643,7 +18659,7 @@ books not included in your product as keywords. 3. Do not use keywords
 that inaccurately describe the contents of your boxed or bundle edition,
 such as including a book title that is not actually part of the
 product.</p>
-<h5 id="table-of-contents-3">Table of Contents</h5>
+<h6 id="table-of-contents-3">Table of Contents</h6>
 <p>A boxed or bundled edition must include a Table of Contents (TOC)
 that lists all individual titles included in the product. The TOC helps
 customers navigate between books and confirms that all advertised
@@ -18692,8 +18708,8 @@ displayed, and Author Namelast at bottom)</li>
 example showing Author Namelast at top, Series Title, 4-Book Collection
 label, and four individual book covers displayed in a 2x2 grid)</li>
 </ul>
-<h3 id="comparing-formats">Comparing Formats</h3>
-<h4 id="comparing-formats-1">Comparing Formats</h4>
+<h4 id="comparing-formats">Comparing Formats</h4>
+<h5 id="comparing-formats-1">Comparing Formats</h5>
 <ul>
 <li><strong>Conversion Format</strong>: <strong>Best Suited To</strong>:
 <strong>Key Features</strong>: <strong>Supported Devices</strong>:
@@ -18787,9 +18803,9 @@ compatible on e-readers: Books in Print Replica format are not
 compatible with Kindle e-reader devices and do not support key
 accessibility features, such as text resizing and screen reader
 compatibility.: Yes</p>
-<h3 id="cover-image-guidelines">Cover Image Guidelines</h3>
-<h4 id="cover-image-guidelines-1">Cover Image Guidelines</h4>
-<h5 id="marketing-cover-image">Marketing Cover Image</h5>
+<h4 id="cover-image-guidelines">Cover Image Guidelines</h4>
+<h5 id="cover-image-guidelines-1">Cover Image Guidelines</h5>
+<h6 id="marketing-cover-image">Marketing Cover Image</h6>
 <ul>
 <li><p><strong>Dimensions:</strong> 2,560 pixels in height x 1,600
 pixels in width<strong>Note:</strong> For best quality, particularly on
@@ -18812,7 +18828,7 @@ book.</p></li>
 <li><p>Make sure any text is clear, and not blurred, cut-off, or fading
 into the background.</p></li>
 </ul>
-<h5 id="internal-content-cover-image">Internal Content Cover Image</h5>
+<h6 id="internal-content-cover-image">Internal Content Cover Image</h6>
 <ul>
 <li>The internal content cover should include the Title and
 Author/Contributor information.</li>
@@ -18852,9 +18868,9 @@ cause the book to fail conversion.</li>
 <p><item href="MyCoverImage.jpg" id="my-cover-image" media-type="image/jpeg" />
 …</p>
 <p></manifest></p>
-<h3 id="creating-dictionaries">Creating Dictionaries</h3>
-<h4 id="creating-dictionaries-1">Creating Dictionaries</h4>
-<h5 id="contents-42">Contents</h5>
+<h4 id="creating-dictionaries">Creating Dictionaries</h4>
+<h5 id="creating-dictionaries-1">Creating Dictionaries</h5>
+<h6 id="contents-42">Contents</h6>
 <ul>
 <li>Introduction to Dictionaries</li>
 <li>Metadata Guidelines</li>
@@ -18864,7 +18880,7 @@ cause the book to fail conversion.</li>
 <li>Building a Dictionary with Kindle Previewer</li>
 <li>Testing Kindle Dictionaries</li>
 </ul>
-<h5 id="introduction-to-dictionaries">Introduction to Dictionaries</h5>
+<h6 id="introduction-to-dictionaries">Introduction to Dictionaries</h6>
 <p>A dictionary is a Kindle eBook with extra tags added to support
 search and lookup functionality. Dictionary eBooks: - Contain a primary
 index: a list of words or sentences that are sorted in alphabetical
@@ -18921,7 +18937,7 @@ Metadata, Regional Variant)</strong> - <x-metadata>
 <DictionaryInLanguage>en-us</DictionaryInLanguage>
 <DictionaryOutLanguage>en-us</DictionaryOutLanguage>
 <DefaultLookupIndex>headword</DefaultLookupIndex> … </x-metadata></p>
-<h5 id="text-guidelines">Text Guidelines</h5>
+<h6 id="text-guidelines">Text Guidelines</h6>
 <p>A simple, clean format works best for in-book lookup. Amazon
 recommends these dictionary content and formatting features for a
 high-quality user experience: - The headword (word being defined) should
@@ -18937,7 +18953,7 @@ href="https://kdp.amazon.com/help?topicId=GZ8BAXASXKB5JVML">table
 constraints</a>). - Font color, size, and typeface should not be forced
 (see <a href="https://kdp.amazon.com/help?topicId=GH4DRT75GWWAGBTU">text
 guidelines</a>).</p>
-<h5 id="basic-dictionary-html">Basic Dictionary HTML</h5>
+<h6 id="basic-dictionary-html">Basic Dictionary HTML</h6>
 <h6 id="format">Format</h6>
 <h6 id="frameset-element">Frameset Element</h6>
 All dictionaries must have an <mbp:frameset> element as the first child
@@ -18950,10 +18966,7 @@ href="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">h
 and it must be declared in the root
 <html>
 element of the XHTML document. <strong>Example: </strong> -
-<html xmlns:math="http://exslt.org/math" xmlns:svg="http://www.w3.org/2000/svg" xmlns:tl="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" 
- xmlns:saxon="http://saxon.sf.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xmlns:cx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:dc="http://purl.org/dc/elements/1.1/" 
- xmlns:mbp="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:mmc="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">
+<html xmlns:math="http://exslt.org/math" xmlns:svg="http://www.w3.org/2000/svg" xmlns:tl="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:saxon="http://saxon.sf.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mbp="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:mmc="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -19088,8 +19101,8 @@ match of diacritics during lookup. <strong>Example: </strong> -
 <idx:iform value="uñas" exact="yes" /> </idx:infl> </idx:orth> Setting
 the exact parameter to “yes” forces the device to match uñas to the
 headword uña (“fingernail”) and prohibits a match to una (“one”).</p>
-<h5 id="building-a-dictionary-with-kindle-previewer">Building a
-Dictionary with Kindle Previewer</h5>
+<h6 id="building-a-dictionary-with-kindle-previewer">Building a
+Dictionary with Kindle Previewer</h6>
 <p>We recommend preparing your dictionary as an EPUB file and testing it
 using Kindle Previewer. You can test it using the GUI mode or via the
 Command Line interface. If the dictionary entries are contained in a
@@ -19135,15 +19148,15 @@ walked, walking; go, goes, went, gone, going</p></li>
 <li><p>Example: contractions, elisions, verbs with clitic
 pronouns</p></li>
 </ul>
-<h3
+<h4
 id="creating-fixed-layout-books-with-image-pop-ups-or-virtual-panels">Creating
-Fixed-Layout Books with Image Pop-Ups or Virtual Panels</h3>
-<h4
+Fixed-Layout Books with Image Pop-Ups or Virtual Panels</h4>
+<h5
 id="creating-fixed-layout-books-with-image-pop-ups-or-virtual-panels-1">Creating
-Fixed-Layout Books with Image Pop-Ups or Virtual Panels</h4>
-<h4
+Fixed-Layout Books with Image Pop-Ups or Virtual Panels</h5>
+<h5
 id="creating-fixed-layout-books-with-image-pop-ups-or-virtual-panels-2">Creating
-Fixed-Layout Books with Image Pop-Ups or Virtual Panels</h4>
+Fixed-Layout Books with Image Pop-Ups or Virtual Panels</h5>
 <p>Graphic novels, manga, and comics (hereafter referred to as graphic
 novels) are the most common fixed-layout books with image pop-ups or
 Virtual Panels. Children’s eBooks can be created as fixed-layout books
@@ -19163,7 +19176,7 @@ anchor tags will be suppressed. ##### Contents - Metadata Guidelines -
 Image Guidelines - Panel View (Region Magnification) - Virtual Panels in
 Comics and Manga - Optimizing Content for the Graphic Novel Experience -
 Text Guidelines - Guided View</p>
-<h5 id="metadata-guidelines">Metadata Guidelines</h5>
+<h6 id="metadata-guidelines">Metadata Guidelines</h6>
 The OPF file specifies metadata necessary for fixed-layout books. While
 similar, the various types of fixed-layout formats have key differences.
 Unless explicitly stated, guidance for fixed layout books with image
@@ -19233,7 +19246,7 @@ books. Removes reader functionality (e.g., share) which may not be
 relevant for certain books such as children’s. Valid values are children
 or comic.</li>
 </ul>
-<h5 id="image-guidelines">Image Guidelines</h5>
+<h6 id="image-guidelines">Image Guidelines</h6>
 <p>When optimized for the 2013 Kindle Fire HD 8.9”, graphic novels
 should maintain a 1920 x 1200 aspect ratio. The image resolution will
 differ depending on the zoom factor required for Kindle Panel View.
@@ -19301,8 +19314,8 @@ Panel View activated</li>
 <img src="images/page_002.jpg" alt="Comic Book Images"/>
 </div>
 </div>
-<h5 id="virtual-panels-in-comics-and-manga">Virtual Panels in Comics and
-Manga</h5>
+<h6 id="virtual-panels-in-comics-and-manga">Virtual Panels in Comics and
+Manga</h6>
 <p>The Virtual Panels feature is activated for comics and manga books in
 the absence of publisher-provided panels. The RegionMagnification
 metadata is used to identify whether the publisher has provided panel
@@ -19369,8 +19382,8 @@ vertical-lr. <strong>Example:</strong> - <spine>
 <!-- NOTE: synthetic spread's left viewport -->
 <itemref idref="page3" properties="page-spread-right"/>
 <!--NOTE: synthetic spread's right viewport --> </spine></p>
-<h5 id="optimizing-content-for-the-graphic-novel-experience">Optimizing
-Content for the Graphic Novel Experience</h5>
+<h6 id="optimizing-content-for-the-graphic-novel-experience">Optimizing
+Content for the Graphic Novel Experience</h6>
 <h6 id="optimizing-tap-targets">Optimizing Tap Targets</h6>
 <p>Tap targets should effectively cover 100% of the screen. This ensures
 that the user gets a magnified experience whenever the user double taps
@@ -19395,7 +19408,7 @@ preserve the flow of the action, view panels should display a small
 amount of overlapped action. - First view panel of an action scene
 divided into two view panels: Second view panel of an action scene
 divided into two view panels</p>
-<h5 id="text-guidelines-1">Text Guidelines</h5>
+<h6 id="text-guidelines-1">Text Guidelines</h6>
 For fixed-layout books with image pop-ups: Images should be at least 300
 ppi, and text should be crisp and legible, with no pixilation or blur,
 and capital letters must be at least 2mm high in pop-ups, when viewed on
@@ -19418,8 +19431,10 @@ across devices. <strong>Hybrid Text HTML Example:</strong> -
 <div class="target-mag-lb">
 
 </div>
-<div id="Title_page-2-magTarget" class="target-mag" amzn-ke-id-rtbar="amzn-ke-idrtbar">
-<div class="target-mag-text" id="amzn-ke-id-rtbar-Title_page-2-magTarget">
+<div id="Title_page-2-magTarget" class="target-mag"
+data-amzn-ke-id-rtbar="amzn-ke-idrtbar">
+<div id="amzn-ke-id-rtbar-Title_page-2-magTarget"
+class="target-mag-text">
 <p><span id="amzn-ke-id-rtbar-Title_page-2-magTarget-2"></span> <span
 id="amzn-ke-id-rtbar-Title_page-2-magTarget-3">Lorem ipsum dolor sit
 amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -19432,7 +19447,7 @@ mollit anim id est laborum.</span></p>
 <p><strong>Hybrid Text CSS Example:</strong> - div.target-mag div.text{
 height: 100%; padding: 5px; background-color: #000000; font-size: 150%;
 font-family: “Arial”; }</p>
-<h5 id="guided-view">Guided View</h5>
+<h6 id="guided-view">Guided View</h6>
 <p>Guided View is a series of enhancements to the comic eBook reading
 experience that are now available for some Kindle comics. These
 enhancements allow readers to view a comic on a panel by panel basis
@@ -19448,12 +19463,12 @@ uses the existing Panel View code to properly position panels in Guided
 View. Amazon is continuously working to make Guided View compatible with
 more titles and will automatically enable Guided View enhancements for
 your Kindle comic when possible.</p>
-<h3 id="creating-fixed-layout-books-with-text-pop-ups">Creating
-Fixed-Layout Books with Text Pop-Ups</h3>
-<h4 id="creating-fixed-layout-books-with-text-pop-ups-1">Creating
+<h4 id="creating-fixed-layout-books-with-text-pop-ups">Creating
 Fixed-Layout Books with Text Pop-Ups</h4>
-<h4 id="creating-fixed-layout-books-with-text-pop-ups-2">Creating
-Fixed-Layout Books with Text Pop-Ups</h4>
+<h5 id="creating-fixed-layout-books-with-text-pop-ups-1">Creating
+Fixed-Layout Books with Text Pop-Ups</h5>
+<h5 id="creating-fixed-layout-books-with-text-pop-ups-2">Creating
+Fixed-Layout Books with Text Pop-Ups</h5>
 <p>Certain books have elements with fixed dimensions and text
 positioning that don’t allow fonts to be resized or text to be reflowed.
 For example, coffee table books and children’s picture books have
@@ -19472,7 +19487,7 @@ suppressed. ##### Contents - Metadata Guidelines - Cover Image
 Guidelines - Text Guidelines - Content Requirements - HTML and CSS
 Guidelines - Creating Fixed-Layout Books with Text Pop-Ups with
 Multipage Background Images and Text</p>
-<h5 id="metadata-guidelines-1">Metadata Guidelines</h5>
+<h6 id="metadata-guidelines-1">Metadata Guidelines</h6>
 <p>The OPF file specifies metadata necessary for fixed-layout books.
 While similar, the various types of fixed-layout formats have key
 differences. Unless explicitly stated, guidance for fixed-layout books
@@ -19529,8 +19544,8 @@ direction of right-to-left for Chinese, Japanese, and Korean books.</li>
 share) which may not be relevant for certain books such as children’s
 eBooks. Valid values are children or comic.</li>
 </ul>
-<h5 id="cover-image-guidelines-2">Cover Image Guidelines</h5>
-<h5 id="text-guidelines-2">Text Guidelines</h5>
+<h6 id="cover-image-guidelines-2">Cover Image Guidelines</h6>
+<h6 id="text-guidelines-2">Text Guidelines</h6>
 <p>Fixed-layout titles don’t allow users to choose and vary fonts. Using
 CSS <span class="citation" data-cites="font-face">@font-face</span> and
 packaging fonts with the title guarantees book design look-and-feel to
@@ -19583,21 +19598,22 @@ of the magnification areas (the order in which panels appear as part of
 the reading flow). This is required for all text that uses Region
 Magnification.</p>
 <ul>
-<li><p>One exception is when the text on the page is so large that
+<li>One exception is when the text on the page is so large that
 magnifying it to 150% would make it harder to read instead of improving
 readability. Region Magnification is not necessary for text with a
 height of at least 4mm in children’s content or a height of at least 2mm
-in nonchildren’s content on a 7” device.</p></li>
-<li><p>Another exception is when the text on the page needs to be
-increased by more than 150% to improve readability in the Region
-Magnification</p>
+in nonchildren’s content on a 7” device.</li>
+<li>Another exception is when the text on the page needs to be increased
+by more than 150% to improve readability in the Region Magnification
 <div>
-<p>. For example, if the font size of the text on the page is 45%, the
-font size of the text in the Region Magnification</p>
+. For example, if the font size of the text on the page is 45%, the font
+size of the text in the Region Magnification
 <div>
-<p>may need to be magnified to 225% to be readable.</p></li>
-<li><p>Fixed-layout sample page: Same sample page with Region
-Magnification activated</p></li>
+<p>may need to be magnified to 225% to be readable.</p>
+</div>
+</div></li>
+<li>Fixed-layout sample page: Same sample page with Region Magnification
+activated</li>
 </ul>
 <strong>Example: </strong> -
 <div id="fs3-1-org" class="txt fs3-txt1">
@@ -19611,7 +19627,7 @@ Lorem Ipsum dolor sit amet.
 <div id="fs3-txt1-magTarget" class="target-mag fs3-txt1">
 
 </div>
-<h5 id="html-and-css-guidelines">HTML and CSS Guidelines</h5>
+<h6 id="html-and-css-guidelines">HTML and CSS Guidelines</h6>
 <h6 id="applying-css-reset">Applying CSS Reset</h6>
 Apply a CSS reset to fixed-layout books. A CSS reset removes the
 inconsistent styles that browsers automatically apply, such as font
@@ -19721,10 +19737,10 @@ to position each
 <p>element. For example, top and left but never top, left, and bottom.
 CSS text-indent and line-height are useful in aligning text within HTML
 block elements.</p>
-<h3 id="creating-fixed-layout-books-without-pop-ups">Creating
-Fixed-Layout Books Without Pop-Ups</h3>
-<h4 id="creating-fixed-layout-books-without-pop-ups-1">Creating
+<h4 id="creating-fixed-layout-books-without-pop-ups">Creating
 Fixed-Layout Books Without Pop-Ups</h4>
+<h5 id="creating-fixed-layout-books-without-pop-ups-1">Creating
+Fixed-Layout Books Without Pop-Ups</h5>
 In cases where a fixed layout is needed to maintain the layout of the
 original book, but where text selection, dictionary, and highlighting
 are still required, fixed-layout without pop-ups may be used. This
@@ -19784,7 +19800,7 @@ navigation (including Kindle Text Pop-Up, Kindle Panel View, and Kindle
 Virtual Panels). Valid values are horizontal-lr, horizontal-rl,
 vertical-lr, and verticalrl. The default value is horizontal-lr.</li>
 </ul>
-<h5 id="text-guidelines-3">Text Guidelines</h5>
+<h6 id="text-guidelines-3">Text Guidelines</h6>
 In this format, each page contains a background image that is larger
 than the screen size, so that the page renders a high-quality, readable
 image. The text can then be created with either of the two following
@@ -19842,11 +19858,11 @@ font-size: 500%; line-height: 107%; text-align: center; } … #o3_1{top:
 font-size: 450%; } #o3_3{top: 44.2%; left: 24.5%; font-size: 500%; }
 #o3_4{top: 44.1%; left: 4.2%; font-size: 450%; } #o3_5{top: 46.6%; left:
 9.9%; font-size: 500%; }</p>
-<h3 id="creating-kindle-editions-with-audio-video-content">Creating
-Kindle Editions with Audio/Video Content</h3>
-<h4 id="creating-kindle-editions-with-audiovideo-content">Creating
+<h4 id="creating-kindle-editions-with-audio-video-content">Creating
 Kindle Editions with Audio/Video Content</h4>
-<h5 id="contents-43">Contents</h5>
+<h5 id="creating-kindle-editions-with-audiovideo-content">Creating
+Kindle Editions with Audio/Video Content</h5>
+<h6 id="contents-43">Contents</h6>
 <ul>
 <li>Before you start</li>
 <li>Audio Requirements</li>
@@ -19858,7 +19874,7 @@ Kindle Editions with Audio/Video Content</h4>
 <li>Audio and Video Guidelines</li>
 <li>Custom Sample File Required</li>
 </ul>
-<h5 id="before-you-start-1">Before you start</h5>
+<h6 id="before-you-start-1">Before you start</h6>
 <ul>
 <li><strong>Supported devices.</strong> Kindle Edition with Audio/Video
 content is available on Fire tablets (2nd generation and later), iPad,
@@ -19880,8 +19896,8 @@ multiple pages of text from the book in either audio or video format. -
 content, the audio and video cannot be previewed on Kindle Previewer or
 on Kindle devices and applications. To add audio and/or video content to
 your Kindle book, follow the guidelines and examples on this page.</p>
-<h5 id="audio-requirements">Audio Requirements</h5>
-<h5 id="video-requirements">Video Requirements</h5>
+<h6 id="audio-requirements">Audio Requirements</h6>
+<h6 id="video-requirements">Video Requirements</h6>
 <ul>
 <li><strong>Attribute</strong>: <strong>Setting </strong></li>
 <li>Dimensions: Widescreen: 704 x 396 (or any other widescreen ratio);
@@ -19903,11 +19919,11 @@ video/h264: RFC3984 - MPEG-2 video file: .mpg, .mpeg: video/mpeg:
 RFC2045, RFC2046 - MPEG-2 program stream: .ps: video/mp2p: RFC3555 -
 Container: File Extensions: Mime Type: RFC - MPEG-2 transport stream:
 .ts: video/mp2t: RFC3555</p>
-<h5 id="file-requirements">File Requirements</h5>
+<h6 id="file-requirements">File Requirements</h6>
 <h6 id="multimedia-directory">Multimedia Directory</h6>
 <h6 id="confirm-correct-mime-type">Confirm Correct Mime-Type</h6>
 <h6 id="file-size">File Size</h6>
-<h5 id="navigation-guidelines">Navigation Guidelines</h5>
+<h6 id="navigation-guidelines">Navigation Guidelines</h6>
 <h6 id="including-an-audio-and-video-toc">Including an Audio and Video
 TOC</h6>
 <p>This is my video (5:01) This is my audio (1:10) -
@@ -19923,16 +19939,16 @@ displayed below.” <br/><br/><br/> </audio> <strong>This is my audio
 (1:10)</strong></p>
 <h6 id="including-audio-and-video-assets-in-ncx-file">Including Audio
 and Video Assets in NCX File</h6>
-<h5 id="text-guidelines-4">Text Guidelines</h5>
+<h6 id="text-guidelines-4">Text Guidelines</h6>
 <p>KF8 features are not currently supported in Kindle Edition with
 Audio/Video content. This includes, but is not limited to: - Borders -
 Drop caps - Drop shadow - Embedded fonts - Floating elements - Nested
 tables and merged cells</p>
-<h5 id="image-guidelines-1">Image Guidelines</h5>
+<h6 id="image-guidelines-1">Image Guidelines</h6>
 <p>KF8 features are not currently supported in Kindle Edition with
 Audio/Video content. This includes, but is not limited to: - Background
 images - Floating images - Scalable Vector Graphics (SVG)</p>
-<h5 id="audio-and-video-guidelines">Audio and Video Guidelines</h5>
+<h6 id="audio-and-video-guidelines">Audio and Video Guidelines</h6>
 <h6 id="adding-audio">Adding Audio</h6>
 <p>Streaming audio is not supported at this time. Use embedded audio
 instead. To embed an audio file inside a Kindle book, add a standard
@@ -20014,7 +20030,7 @@ Controls</h6>
 <ul>
 <li><a onclick="play(this);" data-AmznAudioTag="audio1"><img src="play.jpg"/></a></li>
 </ul>
-<h5 id="custom-sample-file-required">Custom Sample File Required</h5>
+<h6 id="custom-sample-file-required">Custom Sample File Required</h6>
 <p>Amazon requires that publishers create and supply a custom sample for
 each Kindle Edition with Audio/Video. The sample file should include a
 full TOC and an audio/video list, with live links to only the content in
@@ -20022,11 +20038,11 @@ the sample file. The sample file should include at least one of each
 type of media available in the full file, including both audio and
 video, if applicable. The sample file must have a “Buy It Now” link
 added to the end, or where appropriate.</p>
-<h3 id="creating-reflowable-books">Creating Reflowable Books</h3>
-<h4 id="creating-reflowable-books-1">Creating Reflowable Books</h4>
-<h5 id="metadata-guidelines-2">Metadata Guidelines</h5>
-<h5 id="layout-guidelines">Layout Guidelines</h5>
-<h5 id="text-guidelines-5">Text Guidelines</h5>
+<h4 id="creating-reflowable-books">Creating Reflowable Books</h4>
+<h5 id="creating-reflowable-books-1">Creating Reflowable Books</h5>
+<h6 id="metadata-guidelines-2">Metadata Guidelines</h6>
+<h6 id="layout-guidelines">Layout Guidelines</h6>
+<h6 id="text-guidelines-5">Text Guidelines</h6>
 <ul>
 <li><a
 href="https://kdp.amazon.com/help?topicId=GH4DRT75GWWAGBTU#heading_alignment">Heading
@@ -20065,7 +20081,7 @@ Real Page Numbers</a></li>
 href="https://kdp.amazon.com/help?topicId=GH4DRT75GWWAGBTU#footnote_guidelines">Footnote
 Guidelines</a></li>
 </ul>
-<h5 id="image-guidelines-2">Image Guidelines</h5>
+<h6 id="image-guidelines-2">Image Guidelines</h6>
 <ul>
 <li><a
 href="https://kdp.amazon.com/help?topicId=G75V4YX5X8GRGXWV#image_guidelines">Image
@@ -20074,7 +20090,7 @@ Guidelines</a></li>
 href="https://kdp.amazon.com/help?topicId=G75V4YX5X8GRGXWV#technical_details">Technical
 Details</a></li>
 </ul>
-<h5 id="table-guidelines">Table Guidelines</h5>
+<h6 id="table-guidelines">Table Guidelines</h6>
 <ul>
 <li><a
 href="https://kdp.amazon.com/help?topicId=GZ8BAXASXKB5JVML#large_tables">Large
@@ -20092,11 +20108,11 @@ Features with Enhanced Typesetting</a></li>
 href="https://kdp.amazon.com/help?topicId=GZ8BAXASXKB5JVML#mathml_support">MathML
 Support</a></li>
 </ul>
-<h3 id="enhanced-typesetting-and-page-flip">Enhanced Typesetting and
-Page Flip</h3>
-<h4 id="enhanced-typesetting-and-page-flip-1">Enhanced Typesetting and
+<h4 id="enhanced-typesetting-and-page-flip">Enhanced Typesetting and
 Page Flip</h4>
-<h5 id="enhanced-typesetting-2">Enhanced Typesetting</h5>
+<h5 id="enhanced-typesetting-and-page-flip-1">Enhanced Typesetting and
+Page Flip</h5>
+<h6 id="enhanced-typesetting-2">Enhanced Typesetting</h6>
 <p>Enhanced Typesetting is a series of typographical and layout features
 that are automatically enabled on Kindle books. The Kindle Enhanced
 Typesetting engine displays text dynamically for beautiful pages on
@@ -20198,11 +20214,11 @@ automatically saves a reader’s place as they browse through the book:
 With Page Flip, readers can view multiple pages at once to better locate
 a chart or image</p>
 <h6 id="support-for-page-flip">Support for Page Flip</h6>
-<h3 id="guidelines-for-creating-a-source-file">Guidelines for Creating a
-Source File</h3>
-<h4 id="guidelines-for-creating-a-source-file-1">Guidelines for Creating
-a Source File</h4>
-<h5 id="contents-44">Contents</h5>
+<h4 id="guidelines-for-creating-a-source-file">Guidelines for Creating a
+Source File</h4>
+<h5 id="guidelines-for-creating-a-source-file-1">Guidelines for Creating
+a Source File</h5>
+<h6 id="contents-44">Contents</h6>
 <ul>
 <li>Source Issues</li>
 </ul>
@@ -20214,7 +20230,7 @@ IDs - File Path and File Name Requirements</p>
 <ul>
 <li>Ignored Features</li>
 </ul>
-<h5 id="source-issues">Source Issues</h5>
+<h6 id="source-issues">Source Issues</h6>
 <p>A source file can have multiple issues that degrade the reading
 experience on Kindle. You can correct these issues to improve the
 reading experience. The following sections list a few of the top source
@@ -20332,18 +20348,18 @@ text will be scrolling over and over </scrolling_text></li>
  table_id="ST0001"> Color </key_item> <key_item search_word="colour" 
  table_id="ST0002"> Colour </key_item> </key_entry></li>
 </ul>
-<h3 id="html-and-css-tags-supported-in-kindle-format-8">HTML and CSS
-Tags Supported in Kindle Format 8</h3>
-<h4 id="html-and-css-tags-supported-in-kindle-format-8-1">HTML and CSS
+<h4 id="html-and-css-tags-supported-in-kindle-format-8">HTML and CSS
 Tags Supported in Kindle Format 8</h4>
-<h4 id="html-and-css-tags-supported-in-kindle-format-8-2">HTML and CSS
-Tags Supported in Kindle Format 8</h4>
-<h5 id="contents-45">Contents</h5>
+<h5 id="html-and-css-tags-supported-in-kindle-format-8-1">HTML and CSS
+Tags Supported in Kindle Format 8</h5>
+<h5 id="html-and-css-tags-supported-in-kindle-format-8-2">HTML and CSS
+Tags Supported in Kindle Format 8</h5>
+<h6 id="contents-45">Contents</h6>
 <ul>
 <li>HTML Support Table</li>
 <li>CSS Support Table</li>
 </ul>
-<h5 id="html-support-table">HTML Support Table</h5>
+<h6 id="html-support-table">HTML Support Table</h6>
 <ul>
 <li><strong>HTML Tag </strong>: <strong>Supported on KF8-Enabled Devices
 and Applications </strong></li>
@@ -20390,7 +20406,8 @@ instead)</li>
 : Yes</li>
 <li><dfn>: Yes</li>
 <li><div>
-: Yes</li>
+: Yes
+</div></li>
 <li><dl>
 : Yes</li>
 <li><dt>
@@ -20410,7 +20427,7 @@ instead)</li>
 : No</li>
 <li><h1>
 : Yes</li>
-<li><h2>
+<li><h3>
 : Yes</li>
 <li><h3>
 : Yes</li>
@@ -20672,19 +20689,14 @@ Yes <img src='checkbox.png' alt='Check Box'/> No
 <img src='checkbox.png' alt='Check Box'/> Lorem ipsum dolor..
 </p>
 <p><strong>CSS</strong>:</p>
-<style>
- img { height: 1em;
- vertical-align: bottom;
- object-fit: contain;
- }
- </style>
-<ol start="4" type="1">
-<li><p><strong>Book cover images:</strong> Cover images should always
-have a full-page layout and be at least 1200 pixels in width or
-height.</p></li>
-<li><p><strong>Blurry and Smudged images:</strong> Amazon will flag
-eBooks containing blurry images with content quality warning on the
-eBook Amazon detail page. Example of a blurry image:</p></li>
+<p><style> img { height: 1em; vertical-align: bottom; object-fit:
+contain; } </style> 4. <strong>Book cover images:</strong> Cover images
+should always have a full-page layout and be at least 1200 pixels in
+width or height.</p>
+<ol type="1">
+<li><strong>Blurry and Smudged images:</strong> Amazon will flag eBooks
+containing blurry images with content quality warning on the eBook
+Amazon detail page. Example of a blurry image:</li>
 </ol>
 <p>(image: Example of blurry image) 2. <strong>Illegible text in
 images:</strong> Images with text containing letters, numbers, or
@@ -20928,13 +20940,10 @@ all media. <strong>Example:</strong> -
 <link href="kf8.css" media="amzn-kf8" rel="stylesheet" type="text/css">
 <link href="mobi.css" media="amzn-mobi" rel="stylesheet" type="text/css"></p>
 <h6 id="option-3-using-style-tags">Option 3: Using Style Tags</h6>
-Media queries can specify different CSS for Mobi and KF8 formats
-directly using
-<style>
-tags. <strong>Example:</strong> -
-<style type="text/css">
-<style type="text/css" media="amzn-kf8">
-<style type="text/css" media="amzn-mobi">
+<p>Media queries can specify different CSS for Mobi and KF8 formats
+directly using <style> tags. <strong>Example:</strong> -
+<style type="text/css"> <style type="text/css" media="amzn-kf8">
+<style type="text/css" media="amzn-mobi"></p>
 <h6 id="option-4-using-import">Option 4: Using <span class="citation"
 data-cites="import">@import</span></h6>
 <p>Media queries can specify different CSS for Mobi and KF8 formats
@@ -21017,12 +21026,9 @@ Subchapter 1
 Section 2
 </div>
 <p>…</p>
-Using CSS classes: -
-<style>
- 
- div.chapter { margin-left: 1em}
- div.subchapter { margin-left: 2em} 
- </style>
+<p>Using CSS classes: - <style></p>
+<p>div.chapter { margin-left: 1em} div.subchapter { margin-left: 2em}
+</style></p>
 <div>
 Section 1
 </div>
@@ -21812,10 +21818,10 @@ msgroup - mstack</p>
 <p><strong>Troubleshooting: </strong> Open the HTML page with MathJax.
 If MathML is displayed without any issues, then it will be supported in
 Enhanced Typesetting.</p>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<h3 id="create-a-hardcover-cover">Create a Hardcover Cover</h3>
-<h4 id="create-a-hardcover-cover-1">Create a Hardcover Cover</h4>
-<h5 id="contents-49">Contents</h5>
+<h2 id="miscellaneous">Miscellaneous</h3>
+<h4 id="create-a-hardcover-cover">Create a Hardcover Cover</h4>
+<h5 id="create-a-hardcover-cover-1">Create a Hardcover Cover</h5>
+<h6 id="contents-49">Contents</h6>
 <ul>
 <li>Cover elements</li>
 <li>Supported file types and sizes</li>
@@ -21825,7 +21831,7 @@ Enhanced Typesetting.</p>
 <li>Pre-publication checklist</li>
 <li>Update an existing cover</li>
 </ul>
-<h5 id="cover-elements">Cover elements</h5>
+<h6 id="cover-elements">Cover elements</h6>
 <ol type="1">
 <li><strong>Cover file.</strong> Total width and height of the cover
 file, including front, back, spine, and wrap.</li>
@@ -21850,8 +21856,8 @@ printing.</li>
 <li><strong>Barcode margin.</strong> This area ensures that the barcode
 doesn’t shift during printing and scans properly.</li>
 </ol>
-<h5 id="supported-file-types-and-sizes">Supported file types and
-sizes</h5>
+<h6 id="supported-file-types-and-sizes">Supported file types and
+sizes</h6>
 <ul>
 <li><strong>File type.</strong> Your cover must be a <strong>single
 PDF</strong> file that includes the back cover, spine, and front cover
@@ -21860,8 +21866,8 @@ as one image.</li>
 because large files can slow down printing. Cover files larger than
 650MB won’t convert.</li>
 </ul>
-<h5 id="set-your-cover-size">Set your cover size</h5>
-<h5 id="format-your-cover-background">Format your cover background</h5>
+<h6 id="set-your-cover-size">Set your cover size</h6>
+<h6 id="format-your-cover-background">Format your cover background</h6>
 <ul>
 <li><strong>Wrap.</strong> Cover file images should extend 0.51” (15 mm)
 past the edge of the front cover. This area will wrap around the case
@@ -21874,7 +21880,7 @@ the spine and safe area on the front and back covers. This flexible
 spine hinge allows your book to open. Don’t include text or the barcode
 in this area to ensure they aren’t distorted.</li>
 </ul>
-<h5 id="barcode-size-and-placement-1">Barcode size and placement</h5>
+<h6 id="barcode-size-and-placement-1">Barcode size and placement</h6>
 <ul>
 <li><strong>You include your own barcode.</strong> It has to have a
 resolution of 300 dots per inch (DPI). It also needs to be 2” (50.8 mm)
@@ -21889,7 +21895,7 @@ the lower right-hand corner of your book’s back cover. If you leave
 images or text on this part of the cover, the barcode will cover them
 during printing, so don’t leave anything important there.</li>
 </ul>
-<h5 id="pre-publication-checklist-1">Pre-publication checklist</h5>
+<h6 id="pre-publication-checklist-1">Pre-publication checklist</h6>
 <ol type="1">
 <li><strong>Save as a PDF.</strong> Your cover must be a single PDF that
 includes the back cover, spine, and front cover as one image.</li>
@@ -21913,7 +21919,7 @@ will fail review.</li>
 <li><strong>Check for missing or blank pages.</strong> Manuscripts with
 missing pages, or excessive blank pages will be rejected.</li>
 </ol>
-<h5 id="update-an-existing-cover-1">Update an existing cover</h5>
+<h6 id="update-an-existing-cover-1">Update an existing cover</h6>
 <ol type="1">
 <li>Go to your <a
 href="https://kdp.amazon.com/bookshelf">Bookshelf</a></li>
@@ -21938,8 +21944,8 @@ page.</li>
 <h6 id="section-3">**</h6>
 <p><a href="https://pulse.amazon/survey/OEMBR5T4">Yes</a> | <a
 href="https://pulse.amazon/survey/OEMBR5T4">No</a> **</p>
-<h3 id="hardcover-print-elements">Hardcover Print Elements</h3>
-<h4 id="hardcover-print-elements-1">Hardcover Print Elements</h4>
+<h4 id="hardcover-print-elements">Hardcover Print Elements</h4>
+<h5 id="hardcover-print-elements-1">Hardcover Print Elements</h5>
 <ol type="1">
 <li><strong>Cover.</strong> We print hardcover books using case
 laminate. To create the cover, we wrap your printed cover around two mm
@@ -21960,9 +21966,9 @@ manuscript is more than 120 pages.</li>
 <li><strong>Hinge.</strong> When you open the book, the cover bends
 here.</li>
 </ol>
-<h3 id="kdp-bookshelf">KDP Bookshelf</h3>
-<h4 id="kdp-bookshelf-1">KDP Bookshelf</h4>
-<h4 id="kdp-bookshelf-2">KDP Bookshelf</h4>
+<h4 id="kdp-bookshelf">KDP Bookshelf</h4>
+<h5 id="kdp-bookshelf-1">KDP Bookshelf</h5>
+<h5 id="kdp-bookshelf-2">KDP Bookshelf</h5>
 <p>Your Kindle Direct Publishing (KDP) Bookshelf is the hub of your KDP
 account. You can navigate your account, view and archive your existing
 titles, and create a new book or series. From your KDP Bookshelf, you
@@ -21972,15 +21978,15 @@ from Amazon, you can unpublish it from your Bookshelf. If your book was
 never published, you will have the option to delete it. ##### Contents -
 Bookshelf view options - Find books in your Bookshelf or on Amazon -
 View title details - Archive your titles - More helpful resources</p>
-<h5 id="bookshelf-view-options">** Bookshelf view options**</h5>
+<h6 id="bookshelf-view-options">** Bookshelf view options**</h6>
 <p>Your KDP Bookshelf includes four different views of your titles: -
 <strong>Your titles</strong> is your default view and does not include
 archived titles. - <strong>Series titles</strong> only shows titles you
 included in a series, and does not include archived titles. -
 <strong>Archived titles</strong> shows titles you archived. -
 <strong>All titles</strong> shows all of your titles.</p>
-<h5 id="find-books-in-your-bookshelf-or-on-amazon">Find books in your
-Bookshelf or on Amazon</h5>
+<h6 id="find-books-in-your-bookshelf-or-on-amazon">Find books in your
+Bookshelf or on Amazon</h6>
 <p>Starting with the KDP Bookshelf — if you don’t see your books when
 you log into KDP, check that you’re logged into the correct account.
 People often tend to log into their regular Amazon account for shopping
@@ -22013,7 +22019,7 @@ a reason we couldn’t publish your book, we’ll communicate that via
 email, but you can also see status information within your account.
 Simply go to your Bookshelf, scroll down to your book, and hover over
 the status for details.</p>
-<h5 id="view-title-details"><strong>View title details</strong></h5>
+<h6 id="view-title-details"><strong>View title details</strong></h6>
 <p>Use your KDP Bookshelf to check your book’s status and view the
 following details: - ASIN and <a
 href="https://kdp.amazon.com/help?topicId=G201834170">ISBN</a> - <a
@@ -22024,7 +22030,7 @@ your book in the Amazon store for each marketplace that it’s
 available</a> - <a
 href="https://kdp.amazon.com/help?topicId=G202132360#how_to">Order
 Author copies of your published titles</a></p>
-<h5 id="archive-your-titles">** Archive your titles **</h5>
+<h6 id="archive-your-titles">** Archive your titles **</h6>
 <p>A way to organize your Bookshelf is to archive titles. The archive
 feature allows you to hide titles from your default Bookshelf view
 without changing its status or availability on Amazon. To archive a
@@ -22058,8 +22064,8 @@ BOOK STATUS</p>
 <p>From the KDP Bookshelf, you can view the status of your book in the
 publishing cycle. <a
 href="https://kdp.amazon.com/help?topicId=G200627450">Learn more</a></p>
-<h3 id="kdp-community">KDP Community</h3>
-<h4 id="kdp-community-1">KDP Community</h4>
+<h4 id="kdp-community">KDP Community</h4>
+<h5 id="kdp-community-1">KDP Community</h5>
 <p>The KDP Community forum is a free and open resource for all KDP
 authors. It offers a friendly environment where you can discuss any
 aspect of your project, from creation to marketing and everything in
@@ -22089,8 +22095,8 @@ changes 3. Click <strong>Save</strong></p>
 href="http://www.kdpcommunity.com">www.kdpcommunity.com</a> 2. Click
 your name in the top right 3. Click “Settings” 4. Click “Notification
 preferences” and make the changes you want</p>
-<h3 id="kdp-help-center-home">KDP Help Center Home</h3>
-<h4 id="kdp-help-center-home-1">KDP Help Center Home</h4>
+<h4 id="kdp-help-center-home">KDP Help Center Home</h4>
+<h5 id="kdp-help-center-home-1">KDP Help Center Home</h5>
 <p>Find help where you need it. You can use the search bar above or
 navigate through topics, using the menu on the left. -
 <strong>NEW</strong>: .: <strong>KDP 70% eBook Royalty Option price band
@@ -22130,7 +22136,7 @@ are beginning to ask authors and publishers to verify their identity on
 KDP. For details, <a
 href="https://kdp.amazon.com/help?topicId=GH7TYHP6FR9QAUM9">visit our
 Help article</a>. - .: .</p>
-<h5 id="are-you-new">Are you new?</h5>
+<h6 id="are-you-new">Are you new?</h6>
 <p>Here are a few steps to get you started: - What is KDP? Discover if
 KDP is the right publishing service for your book. <a
 href="https://kdp.amazon.com/help?topicId=GHKDSCW2KQ3K4UU4">Learn
@@ -22141,7 +22147,7 @@ href="https://kdp.amazon.com/help?topicId=G201723130">eBook</a>: (image:
 Arrow to right): Create a Book on KDP Use our walk-through guide for
 creating your first book. <a
 href="https://kdp.amazon.com/help?topicId=G202172740">Learn More</a></p>
-<h5 id="popular-topics">Popular topics</h5>
+<h6 id="popular-topics">Popular topics</h6>
 <ul>
 <li>(image: hyperlink): <strong><a
 href="https://kdp.amazon.com/help?topicId=GMFKBUS43QQ5AJ5A">Book
@@ -22167,17 +22173,17 @@ href="https://kdp.amazon.com/help?topicId=G200652220">Link Your
 Paperback &amp; eBook</a></strong> Have your paperback and eBook
 available on the same Amazon detail page.</li>
 </ul>
-<h3 id="kindle-direct-publishing-terms-and-conditions">Kindle Direct
-Publishing Terms and Conditions</h3>
-<h4 id="kindle-direct-publishing-terms-and-conditions-1">Kindle Direct
+<h4 id="kindle-direct-publishing-terms-and-conditions">Kindle Direct
 Publishing Terms and Conditions</h4>
+<h5 id="kindle-direct-publishing-terms-and-conditions-1">Kindle Direct
+Publishing Terms and Conditions</h5>
 <ul>
 <li><a href="https://kdp.amazon.com/terms-and-conditions">Kindle Direct
 Publishing Terms and Conditions</a>: A guide to publishing on
 Amazon</li>
 </ul>
-<h3 id="proof-and-author-copies">Proof and Author Copies</h3>
-<h4 id="proof-and-author-copies-1">Proof and Author Copies</h4>
+<h4 id="proof-and-author-copies">Proof and Author Copies</h4>
+<h5 id="proof-and-author-copies-1">Proof and Author Copies</h5>
 <ul>
 <li><p>ORDER COPIESLearn more about <a
 href="https://kdp.amazon.com/help?topicId=GVEG4YA9G2T7N6DR">how to place
@@ -22211,8 +22217,8 @@ estimate.</p></li>
 href="https://youtu.be/eZUv_IQwt3U">Proof</a> and <a
 href="https://youtu.be/knF6JaqkzVs">Author</a> copies, check out our
 videos below on YouTube:</p>
-<h3 id="update-your-book">Update Your Book</h3>
-<h4 id="update-your-book-1">Update Your Book</h4>
+<h4 id="update-your-book">Update Your Book</h4>
+<h5 id="update-your-book-1">Update Your Book</h5>
 <p>The process to update your book depends on the status of the book
 you’d like to update and the type of change you want to make. The status
 of your book is available on your bookshelf to the right of the title.
@@ -22254,5 +22260,17 @@ draft books without an ISBN assigned from your Bookshelf. Published
 books can’t be deleted from your Bookshelf, but can be <a
 href="https://kdp.amazon.com/help?topicId=G4QJH4ENN4FZRFMP#unpublish">unpublished</a>
 so they’re no longer available for sale.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

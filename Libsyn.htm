@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-02" />
   <title>Libsyn Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,138 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Libsyn Help Guide</h1>
 <p class="subtitle">The official Libsyn help documentation, for both
 Libsyn 5 and Libsyn Classic</p>
 <p class="date">2026-08-02</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#libsyn-help-guide" id="toc-libsyn-help-guide">Libsyn Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#libsyn-5-connecting-your-show-to-podcast-destinations"
+id="toc-libsyn-5-connecting-your-show-to-podcast-destinations">Libsyn 5:
+Connecting Your Show to Podcast Destinations</a></li>
+<li><a href="#libsyn-5-connecting-your-show-to-social-media-sites"
+id="toc-libsyn-5-connecting-your-show-to-social-media-sites">Libsyn 5:
+Connecting Your Show to Social Media Sites</a></li>
+<li><a href="#libsyn-5-connecting-your-show-to-websites"
+id="toc-libsyn-5-connecting-your-show-to-websites">Libsyn 5: Connecting
+Your Show to Websites</a></li>
+<li><a href="#libsyn-5-including-ads-in-your-podcast"
+id="toc-libsyn-5-including-ads-in-your-podcast">Libsyn 5: Including Ads
+in Your Podcast</a></li>
+<li><a href="#libsyn-5-managing-your-account-settings"
+id="toc-libsyn-5-managing-your-account-settings">Libsyn 5: Managing Your
+Account Settings</a></li>
+<li><a href="#libsyn-5-managing-your-billing"
+id="toc-libsyn-5-managing-your-billing">Libsyn 5: Managing Your
+Billing</a></li>
+<li><a href="#libsyn-5-managing-your-content"
+id="toc-libsyn-5-managing-your-content">Libsyn 5: Managing Your
+Content</a></li>
+<li><a href="#libsyn-5-managing-your-episodes"
+id="toc-libsyn-5-managing-your-episodes">Libsyn 5: Managing Your
+Episodes</a></li>
+<li><a href="#libsyn-5-managing-your-libsyn-pro-episodes"
+id="toc-libsyn-5-managing-your-libsyn-pro-episodes">Libsyn 5: Managing
+Your Libsyn Pro Episodes</a></li>
+<li><a href="#libsyn-5-managing-your-libsynpro-network"
+id="toc-libsyn-5-managing-your-libsynpro-network">Libsyn 5: Managing
+Your LibsynPro Network</a></li>
+<li><a href="#libsyn-5-managing-your-libsynpro-settings"
+id="toc-libsyn-5-managing-your-libsynpro-settings">Libsyn 5: Managing
+Your LibsynPro Settings</a></li>
+<li><a href="#libsyn-5-managing-your-libsynpro-shows"
+id="toc-libsyn-5-managing-your-libsynpro-shows">Libsyn 5: Managing Your
+LibsynPro Shows</a></li>
+<li><a href="#libsyn-5-managing-your-libsynpro-users"
+id="toc-libsyn-5-managing-your-libsynpro-users">Libsyn 5: Managing Your
+LibsynPro Users</a></li>
+<li><a href="#libsyn-5-managing-your-podcast-users"
+id="toc-libsyn-5-managing-your-podcast-users">Libsyn 5: Managing Your
+Podcast Users</a></li>
+<li><a href="#libsyn-5-managing-your-stats-reports"
+id="toc-libsyn-5-managing-your-stats-reports">Libsyn 5: Managing Your
+Stats Reports</a></li>
+<li><a href="#libsyn-5-miscellaneous"
+id="toc-libsyn-5-miscellaneous">Libsyn 5: Miscellaneous</a></li>
+<li><a href="#libsyn-5-moving-an-existing-podcast-to-libsyn"
+id="toc-libsyn-5-moving-an-existing-podcast-to-libsyn">Libsyn 5: Moving
+an Existing Podcast to Libsyn</a></li>
+<li><a href="#libsyn-5-navigating-your-statistics"
+id="toc-libsyn-5-navigating-your-statistics">Libsyn 5: Navigating Your
+Statistics</a></li>
+<li><a href="#libsyn-5-publishing-your-episodes"
+id="toc-libsyn-5-publishing-your-episodes">Libsyn 5: Publishing Your
+Episodes</a></li>
+<li><a href="#libsyn-5-recording-a-call-with-connect"
+id="toc-libsyn-5-recording-a-call-with-connect">Libsyn 5: Recording a
+Call with Connect</a></li>
+<li><a href="#libsyn-5-set-up-a-new-podcast"
+id="toc-libsyn-5-set-up-a-new-podcast">Libsyn 5: Set Up a New
+Podcast</a></li>
+<li><a href="#libsyn-5-troubleshooting"
+id="toc-libsyn-5-troubleshooting">Libsyn 5: Troubleshooting</a></li>
+<li><a href="#libsyn-5-uploading-and-publishing-your-episodes-using-ftp"
+id="toc-libsyn-5-uploading-and-publishing-your-episodes-using-ftp">Libsyn
+5: Uploading and Publishing Your Episodes Using FTP</a></li>
+<li><a href="#libsyn-5-using-advanced-tools-for-your-show"
+id="toc-libsyn-5-using-advanced-tools-for-your-show">Libsyn 5: Using
+Advanced Tools for Your Show</a></li>
+<li><a href="#libsyn-5-viewing-your-libsynpro-stats"
+id="toc-libsyn-5-viewing-your-libsynpro-stats">Libsyn 5: Viewing Your
+LibsynPro Stats</a></li>
+<li><a href="#libsyn-5-welcome-to-publishing"
+id="toc-libsyn-5-welcome-to-publishing">Libsyn 5: Welcome to
+Publishing!</a></li>
+<li><a href="#libsyn-classic-account-configuration"
+id="toc-libsyn-classic-account-configuration">Libsyn Classic: Account
+Configuration</a></li>
+<li><a href="#libsyn-classic-billing"
+id="toc-libsyn-classic-billing">Libsyn Classic: Billing</a></li>
+<li><a href="#libsyn-classic-common-questions"
+id="toc-libsyn-classic-common-questions">Libsyn Classic: Common
+Questions</a></li>
+<li><a href="#libsyn-classic-configuring-your-show"
+id="toc-libsyn-classic-configuring-your-show">Libsyn Classic:
+Configuring Your Show</a></li>
+<li><a href="#libsyn-classic-everything-stats"
+id="toc-libsyn-classic-everything-stats">Libsyn Classic: Everything
+Stats</a></li>
+<li><a href="#libsyn-classic-ftp" id="toc-libsyn-classic-ftp">Libsyn
+Classic: FTP</a></li>
+<li><a href="#libsyn-classic-headliner"
+id="toc-libsyn-classic-headliner">Libsyn Classic: Headliner</a></li>
+<li><a href="#libsyn-classic-migrating-a-show-to-libsyn"
+id="toc-libsyn-classic-migrating-a-show-to-libsyn">Libsyn Classic:
+Migrating a Show to Libsyn</a></li>
+<li><a href="#libsyn-classic-miscellaneous"
+id="toc-libsyn-classic-miscellaneous">Libsyn Classic:
+Miscellaneous</a></li>
+<li><a href="#libsyn-classic-podcast-directories-their-rss-feeds"
+id="toc-libsyn-classic-podcast-directories-their-rss-feeds">Libsyn
+Classic: Podcast Directories &amp; Their RSS Feeds</a></li>
+<li><a href="#libsyn-classic-publishing-managing-content"
+id="toc-libsyn-classic-publishing-managing-content">Libsyn Classic:
+Publishing &amp; Managing Content</a></li>
+<li><a href="#libsyn-classic-social-promotion"
+id="toc-libsyn-classic-social-promotion">Libsyn Classic: Social
+Promotion</a></li>
+<li><a href="#libsyn-classic-starting-a-new-podcast"
+id="toc-libsyn-classic-starting-a-new-podcast">Libsyn Classic: Starting
+a New Podcast</a></li>
+<li><a href="#libsyn-classic-website-integrations"
+id="toc-libsyn-classic-website-integrations">Libsyn Classic: Website
+Integrations</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="libsyn-help-guide">Libsyn Help Guide</h1>
 <p>This guide gathers the official Libsyn help documentation, as it
 stood on 2 August 2026.</p>

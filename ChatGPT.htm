@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-17" />
   <title>ChatGPT Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,51 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">ChatGPT Help Compendium</h1>
 <p class="subtitle">Official OpenAI Help Center articles from
 help.openai.com</p>
 <p class="date">2026-07-17</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#chatgpt-help-compendium"
+id="toc-chatgpt-help-compendium">ChatGPT Help Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-account-login-and-billing"
+id="toc-cat-account-login-and-billing">Account, login and
+billing</a></li>
+<li><a href="#cat-api" id="toc-cat-api">API</a></li>
+<li><a href="#cat-chatgpt" id="toc-cat-chatgpt">ChatGPT</a></li>
+<li><a href="#cat-chatgpt-ads" id="toc-cat-chatgpt-ads">ChatGPT
+Ads</a></li>
+<li><a href="#cat-chatgpt-atlas" id="toc-cat-chatgpt-atlas">ChatGPT
+Atlas</a></li>
+<li><a href="#cat-chatgpt-business"
+id="toc-cat-chatgpt-business">ChatGPT Business</a></li>
+<li><a href="#cat-chatgpt-enterprise-and-edu"
+id="toc-cat-chatgpt-enterprise-and-edu">ChatGPT Enterprise and
+Edu</a></li>
+<li><a href="#cat-chatgpt-sites" id="toc-cat-chatgpt-sites">ChatGPT
+Sites</a></li>
+<li><a href="#cat-codex" id="toc-cat-codex">Codex</a></li>
+<li><a href="#cat-open-models-gpt-oss"
+id="toc-cat-open-models-gpt-oss">Open Models (gpt-oss)</a></li>
+<li><a href="#cat-open-source" id="toc-cat-open-source">Open
+Source</a></li>
+<li><a href="#cat-privacy-and-policies"
+id="toc-cat-privacy-and-policies">Privacy and policies</a></li>
+<li><a href="#cat-secure-sign-in" id="toc-cat-secure-sign-in">Secure
+sign in</a></li>
+<li><a href="#cat-sso-scim-and-user-management"
+id="toc-cat-sso-scim-and-user-management">SSO, SCIM, and User
+Management</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="chatgpt-help-compendium">ChatGPT Help Compendium</h1>
 <p>This compendium contains the main content of 463 English articles
 from the official OpenAI Help Center, organized by OpenAI’s own
@@ -4203,27 +4249,27 @@ article.</p>
 <hr />
 <h4 id="supported-currencies">Supported currencies</h4>
 <p>AED (د.إ) – United Arab Emirates, ALL (L) – Albania, AMD (֏) –
-Armenia, AUD (<span
-class="math inline">)–<em>A</em><em>u</em><em>s</em><em>t</em><em>r</em><em>a</em><em>l</em><em>i</em><em>a</em>, <em>A</em><em>W</em><em>G</em>(<em>ƒ</em>)–<em>A</em><em>r</em><em>u</em><em>b</em><em>a</em>, <em>A</em><em>Z</em><em>N</em>(₼)–<em>A</em><em>z</em><em>e</em><em>r</em><em>b</em><em>a</em><em>i</em><em>j</em><em>a</em><em>n</em>, <em>B</em><em>A</em><em>M</em>(<em>K</em><em>M</em>)–<em>B</em><em>o</em><em>s</em><em>n</em><em>i</em><em>a</em><em>a</em><em>n</em><em>d</em><em>H</em><em>e</em><em>r</em><em>z</em><em>e</em><em>g</em><em>o</em><em>v</em><em>i</em><em>n</em><em>a</em>, <em>B</em><em>D</em><em>T</em>(৳)–<em>B</em><em>a</em><em>n</em><em>g</em><em>l</em><em>a</em><em>d</em><em>e</em><em>s</em><em>h</em>, <em>B</em><em>G</em><em>N</em>(<em>л</em><em>в</em>)–<em>B</em><em>u</em><em>l</em><em>g</em><em>a</em><em>r</em><em>i</em><em>a</em>, <em>B</em><em>H</em><em>D</em>(<em>ب</em>.<em>د</em>)–<em>B</em><em>a</em><em>h</em><em>r</em><em>a</em><em>i</em><em>n</em>, <em>B</em><em>M</em><em>D</em>(</span>)
-– Bermuda, BRL (R<span
-class="math inline">)–<em>B</em><em>r</em><em>a</em><em>z</em><em>i</em><em>l</em>, <em>B</em><em>S</em><em>D</em>(</span>)
-– Bahamas, CAD (<span
-class="math inline">)–<em>C</em><em>a</em><em>n</em><em>a</em><em>d</em><em>a</em>, <em>C</em><em>H</em><em>F</em>(<em>C</em><em>H</em><em>F</em>)–<em>S</em><em>w</em><em>i</em><em>t</em><em>z</em><em>e</em><em>r</em><em>l</em><em>a</em><em>n</em><em>d</em>, <em>C</em><em>L</em><em>P</em>(</span>)
-– Chile, CNY (¥) – China, COP (<span
-class="math inline">)–<em>C</em><em>o</em><em>l</em><em>o</em><em>m</em><em>b</em><em>i</em><em>a</em>, <em>C</em><em>R</em><em>C</em>(₡)–<em>C</em><em>o</em><em>s</em><em>t</em><em>a</em><em>R</em><em>i</em><em>c</em><em>a</em>, <em>C</em><em>Z</em><em>K</em>(<em>K</em><em>č</em>)–<em>C</em><em>z</em><em>e</em><em>c</em><em>h</em><em>R</em><em>e</em><em>p</em><em>u</em><em>b</em><em>l</em><em>i</em><em>c</em>, <em>D</em><em>K</em><em>K</em>(<em>k</em><em>r</em>)–<em>D</em><em>e</em><em>n</em><em>m</em><em>a</em><em>r</em><em>k</em>, <em>E</em><em>G</em><em>P</em>(<em>E</em>£)–<em>E</em><em>g</em><em>y</em><em>p</em><em>t</em>, <em>E</em><em>U</em><em>R</em>(€)–<em>E</em><em>E</em><em>A</em>, <em>F</em><em>J</em><em>D</em>(</span>)
+Armenia, AUD
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>A</mi><mi>u</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>a</mi><mi>l</mi><mi>i</mi><mi>a</mi><mo>,</mo><mi>A</mi><mi>W</mi><mi>G</mi><mo stretchy="false" form="prefix">(</mo><mi>ƒ</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>A</mi><mi>r</mi><mi>u</mi><mi>b</mi><mi>a</mi><mo>,</mo><mi>A</mi><mi>Z</mi><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mi>₼</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>A</mi><mi>z</mi><mi>e</mi><mi>r</mi><mi>b</mi><mi>a</mi><mi>i</mi><mi>j</mi><mi>a</mi><mi>n</mi><mo>,</mo><mi>B</mi><mi>A</mi><mi>M</mi><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>B</mi><mi>o</mi><mi>s</mi><mi>n</mi><mi>i</mi><mi>a</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>H</mi><mi>e</mi><mi>r</mi><mi>z</mi><mi>e</mi><mi>g</mi><mi>o</mi><mi>v</mi><mi>i</mi><mi>n</mi><mi>a</mi><mo>,</mo><mi>B</mi><mi>D</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>৳</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>B</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>l</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>s</mi><mi>h</mi><mo>,</mo><mi>B</mi><mi>G</mi><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mi>л</mi><mi>в</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>B</mi><mi>u</mi><mi>l</mi><mi>g</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>a</mi><mo>,</mo><mi>B</mi><mi>H</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>ب</mi><mi>.</mi><mi>د</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>B</mi><mi>a</mi><mi>h</mi><mi>r</mi><mi>a</mi><mi>i</mi><mi>n</mi><mo>,</mo><mi>B</mi><mi>M</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">) – Australia, AWG (ƒ) – Aruba, AZN (₼) – Azerbaijan, BAM (KM) – Bosnia and Herzegovina, BDT (৳) – Bangladesh, BGN (лв) – Bulgaria, BHD (ب.د) – Bahrain, BMD (</annotation></semantics></math>)
+– Bermuda, BRL
+(R<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>B</mi><mi>r</mi><mi>a</mi><mi>z</mi><mi>i</mi><mi>l</mi><mo>,</mo><mi>B</mi><mi>S</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">) – Brazil, BSD (</annotation></semantics></math>)
+– Bahamas, CAD
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>C</mi><mi>a</mi><mi>n</mi><mi>a</mi><mi>d</mi><mi>a</mi><mo>,</mo><mi>C</mi><mi>H</mi><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mi>H</mi><mi>F</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>S</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>z</mi><mi>e</mi><mi>r</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>d</mi><mo>,</mo><mi>C</mi><mi>L</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">) – Canada, CHF (CHF) – Switzerland, CLP (</annotation></semantics></math>)
+– Chile, CNY (¥) – China, COP
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>C</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>i</mi><mi>a</mi><mo>,</mo><mi>C</mi><mi>R</mi><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>₡</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>C</mi><mi>o</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>R</mi><mi>i</mi><mi>c</mi><mi>a</mi><mo>,</mo><mi>C</mi><mi>Z</mi><mi>K</mi><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>č</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>C</mi><mi>z</mi><mi>e</mi><mi>c</mi><mi>h</mi><mi>R</mi><mi>e</mi><mi>p</mi><mi>u</mi><mi>b</mi><mi>l</mi><mi>i</mi><mi>c</mi><mo>,</mo><mi>D</mi><mi>K</mi><mi>K</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>D</mi><mi>e</mi><mi>n</mi><mi>m</mi><mi>a</mi><mi>r</mi><mi>k</mi><mo>,</mo><mi>E</mi><mi>G</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>E</mi><mi>£</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>E</mi><mi>g</mi><mi>y</mi><mi>p</mi><mi>t</mi><mo>,</mo><mi>E</mi><mi>U</mi><mi>R</mi><mo stretchy="false" form="prefix">(</mo><mi>€</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>E</mi><mi>E</mi><mi>A</mi><mo>,</mo><mi>F</mi><mi>J</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">) – Colombia, CRC (₡) – Costa Rica, CZK (Kč) – Czech Republic, DKK (kr) – Denmark, EGP (E£) – Egypt, EUR (€) – EEA, FJD (</annotation></semantics></math>)
 – Fiji, GBP (£) – United Kingdom, GEL (₾) – Georgia, HUF (Ft) – Hungary,
 IDR (Rp) – Indonesia, ILS (₪) – Israel, INR (₹) – India, IQD (ع.د) –
-Iraq, ISK (kr) – Iceland, JMD (<span
-class="math inline">)–<em>J</em><em>a</em><em>m</em><em>a</em><em>i</em><em>c</em><em>a</em>, <em>J</em><em>O</em><em>D</em>(<em>د</em>.<em>ا</em>)–<em>J</em><em>o</em><em>r</em><em>d</em><em>a</em><em>n</em>, <em>J</em><em>P</em><em>Y</em>(¥)–<em>J</em><em>a</em><em>p</em><em>a</em><em>n</em>, <em>K</em><em>R</em><em>W</em>(₩)–<em>S</em><em>o</em><em>u</em><em>t</em><em>h</em><em>K</em><em>o</em><em>r</em><em>e</em><em>a</em>, <em>K</em><em>W</em><em>D</em>(<em>د</em>.<em>ك</em>)–<em>K</em><em>u</em><em>w</em><em>a</em><em>i</em><em>t</em>, <em>K</em><em>Y</em><em>D</em>(</span>)
+Iraq, ISK (kr) – Iceland, JMD
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>J</mi><mi>a</mi><mi>m</mi><mi>a</mi><mi>i</mi><mi>c</mi><mi>a</mi><mo>,</mo><mi>J</mi><mi>O</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>د</mi><mi>.</mi><mi>ا</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>J</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>a</mi><mi>n</mi><mo>,</mo><mi>J</mi><mi>P</mi><mi>Y</mi><mo stretchy="false" form="prefix">(</mo><mi>¥</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>J</mi><mi>a</mi><mi>p</mi><mi>a</mi><mi>n</mi><mo>,</mo><mi>K</mi><mi>R</mi><mi>W</mi><mo stretchy="false" form="prefix">(</mo><mi>₩</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>S</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>h</mi><mi>K</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>,</mo><mi>K</mi><mi>W</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>د</mi><mi>.</mi><mi>ك</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>K</mi><mi>u</mi><mi>w</mi><mi>a</mi><mi>i</mi><mi>t</mi><mo>,</mo><mi>K</mi><mi>Y</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">) – Jamaica, JOD (د.ا) – Jordan, JPY (¥) – Japan, KRW (₩) – South Korea, KWD (د.ك) – Kuwait, KYD (</annotation></semantics></math>)
 – Cayman Islands, KZT (₸) – Kazakhstan, LBP (ل.ل) – Lebanon, LKR (Rs) –
 Sri Lanka, MDL (L) – Moldova, MKD (ден) – North Macedonia, MMK (Ks) –
-Myanmar, MXN (<span
-class="math inline">)–<em>M</em><em>e</em><em>x</em><em>i</em><em>c</em><em>o</em>, <em>M</em><em>Y</em><em>R</em>(<em>R</em><em>M</em>)–<em>M</em><em>a</em><em>l</em><em>a</em><em>y</em><em>s</em><em>i</em><em>a</em>, <em>N</em><em>G</em><em>N</em>(₦)–<em>N</em><em>i</em><em>g</em><em>e</em><em>r</em><em>i</em><em>a</em>, <em>N</em><em>O</em><em>K</em>(<em>k</em><em>r</em>)–<em>N</em><em>o</em><em>r</em><em>w</em><em>a</em><em>y</em>, <em>N</em><em>Z</em><em>D</em>(</span>)
+Myanmar, MXN
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>M</mi><mi>e</mi><mi>x</mi><mi>i</mi><mi>c</mi><mi>o</mi><mo>,</mo><mi>M</mi><mi>Y</mi><mi>R</mi><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>M</mi><mi>a</mi><mi>l</mi><mi>a</mi><mi>y</mi><mi>s</mi><mi>i</mi><mi>a</mi><mo>,</mo><mi>N</mi><mi>G</mi><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mi>₦</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>N</mi><mi>i</mi><mi>g</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>a</mi><mo>,</mo><mi>N</mi><mi>O</mi><mi>K</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>N</mi><mi>o</mi><mi>r</mi><mi>w</mi><mi>a</mi><mi>y</mi><mo>,</mo><mi>N</mi><mi>Z</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo></mrow><annotation encoding="application/x-tex">) – Mexico, MYR (RM) – Malaysia, NGN (₦) – Nigeria, NOK (kr) – Norway, NZD (</annotation></semantics></math>)
 – New Zealand, OMR (ر.ع.) – Oman, PEN (S/) – Peru, PHP (₱) –
 Philippines, PKR (₨) – Pakistan, PLN (zł) – Poland, QAR (ر.ق) – Qatar,
 RON (lei) – Romania, RSD (дин) – Serbia, SAR (﷼) – Saudi Arabia, SEK
-(kr) – Sweden, SGD (<span
-class="math inline">)–<em>S</em><em>i</em><em>n</em><em>g</em><em>a</em><em>p</em><em>o</em><em>r</em><em>e</em>, <em>T</em><em>H</em><em>B</em>(฿)–<em>T</em><em>h</em><em>a</em><em>i</em><em>l</em><em>a</em><em>n</em><em>d</em>, <em>T</em><em>R</em><em>Y</em>(₺)–<em>T</em><em>u</em><em>r</em><em>k</em><em>e</em><em>y</em>, <em>T</em><em>W</em><em>D</em>(<em>N</em><em>T</em></span>)
+(kr) – Sweden, SGD
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>S</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>a</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo>,</mo><mi>T</mi><mi>H</mi><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>฿</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>T</mi><mi>h</mi><mi>a</mi><mi>i</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>d</mi><mo>,</mo><mi>T</mi><mi>R</mi><mi>Y</mi><mo stretchy="false" form="prefix">(</mo><mi>₺</mi><mo stretchy="false" form="postfix">)</mo><mi>–</mi><mi>T</mi><mi>u</mi><mi>r</mi><mi>k</mi><mi>e</mi><mi>y</mi><mo>,</mo><mi>T</mi><mi>W</mi><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">) – Singapore, THB (฿) – Thailand, TRY (₺) – Turkey, TWD (NT</annotation></semantics></math>)
 – Taiwan, TZS (TSh) – Tanzania, UAH (₴) – Ukraine, USD ($) – United
 States, VND (₫) – Vietnam, ZAR (R) – South Africa</p>
 <p>For specific subscription prices, visit the <a

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-24" />
   <title>VS Code Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,7 +180,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
     html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
@@ -239,11 +249,66 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">VS Code Help Compendium</h1>
 <p class="subtitle">Official Visual Studio Code user documentation for
 Windows, command line and graphical use</p>
 <p class="date">2026-07-24</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#vs-code-help-compendium"
+id="toc-vs-code-help-compendium">VS Code Help Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-agent-customization"
+id="toc-cat-agent-customization">Agent Customization</a></li>
+<li><a href="#cat-agents" id="toc-cat-agents">Agents</a></li>
+<li><a href="#cat-azure" id="toc-cat-azure">Azure</a></li>
+<li><a href="#cat-c" id="toc-cat-c">C</a></li>
+<li><a href="#cat-c-2" id="toc-cat-c-2">C++</a></li>
+<li><a href="#cat-chat" id="toc-cat-chat">Chat</a></li>
+<li><a href="#cat-configure" id="toc-cat-configure">Configure</a></li>
+<li><a href="#cat-containers"
+id="toc-cat-containers">Containers</a></li>
+<li><a href="#cat-core-editor" id="toc-cat-core-editor">Core
+Editor</a></li>
+<li><a href="#cat-customization"
+id="toc-cat-customization">Customization</a></li>
+<li><a href="#cat-data-science" id="toc-cat-data-science">Data
+Science</a></li>
+<li><a href="#cat-debug-and-test" id="toc-cat-debug-and-test">Debug and
+Test</a></li>
+<li><a href="#cat-dev-containers" id="toc-cat-dev-containers">Dev
+Containers</a></li>
+<li><a href="#cat-editing" id="toc-cat-editing">Editing</a></li>
+<li><a href="#cat-editor" id="toc-cat-editor">Editor</a></li>
+<li><a href="#cat-enterprise"
+id="toc-cat-enterprise">Enterprise</a></li>
+<li><a href="#cat-extension-docs" id="toc-cat-extension-docs">Extension
+Docs</a></li>
+<li><a href="#cat-get-started" id="toc-cat-get-started">Get
+Started</a></li>
+<li><a href="#cat-intelligent-apps"
+id="toc-cat-intelligent-apps">Intelligent Apps</a></li>
+<li><a href="#cat-intro-videos" id="toc-cat-intro-videos">Intro
+Videos</a></li>
+<li><a href="#cat-java" id="toc-cat-java">Java</a></li>
+<li><a href="#cat-languages" id="toc-cat-languages">Languages</a></li>
+<li><a href="#cat-node-js" id="toc-cat-node-js">Node.js</a></li>
+<li><a href="#cat-other" id="toc-cat-other">Other</a></li>
+<li><a href="#cat-python" id="toc-cat-python">Python</a></li>
+<li><a href="#cat-reference" id="toc-cat-reference">Reference</a></li>
+<li><a href="#cat-remote" id="toc-cat-remote">Remote</a></li>
+<li><a href="#cat-setup" id="toc-cat-setup">Setup</a></li>
+<li><a href="#cat-source-control" id="toc-cat-source-control">Source
+Control</a></li>
+<li><a href="#cat-supporting"
+id="toc-cat-supporting">Supporting</a></li>
+<li><a href="#cat-terminal" id="toc-cat-terminal">Terminal</a></li>
+<li><a href="#cat-typescript"
+id="toc-cat-typescript">TypeScript</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="vs-code-help-compendium">VS Code Help Compendium</h1>
 <p>This compendium contains the main content of 348 articles from
 Microsoft’s official Visual Studio Code documentation, taken from the
@@ -19303,8 +19368,8 @@ evaluated when the Logpoint is hit.</p>
 <ul>
 <li>Token: $FILEPOS; Description: Current source file location; Example
 Output: C:.cs:4</li>
-<li>Token: <span
-class="math inline"><em>F</em><em>U</em><em>N</em><em>C</em><em>T</em><em>I</em><em>O</em><em>N</em>; <em>D</em><em>e</em><em>s</em><em>c</em><em>r</em><em>i</em><em>p</em><em>t</em><em>i</em><em>o</em><em>n</em> : <em>C</em><em>u</em><em>r</em><em>r</em><em>e</em><em>n</em><em>t</em><em>f</em><em>u</em><em>n</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>n</em><em>a</em><em>m</em><em>e</em>; <em>E</em><em>x</em><em>a</em><em>m</em><em>p</em><em>l</em><em>e</em><em>O</em><em>u</em><em>t</em><em>p</em><em>u</em><em>t</em> : <em>P</em><em>r</em><em>o</em><em>g</em><em>r</em><em>a</em><em>m</em>. &lt; <em>M</em><em>a</em><em>i</em><em>n</em>&gt;</span></li>
+<li>Token:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>U</mi><mi>N</mi><mi>C</mi><mi>T</mi><mi>I</mi><mi>O</mi><mi>N</mi><mo>;</mo><mi>D</mi><mi>e</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>:</mo><mi>C</mi><mi>u</mi><mi>r</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mo>;</mo><mi>E</mi><mi>x</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>O</mi><mi>u</mi><mi>t</mi><mi>p</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi>P</mi><mi>r</mi><mi>o</mi><mi>g</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>.</mi><mo>&lt;</mo><mi>M</mi><mi>a</mi><mi>i</mi><mi>n</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">FUNCTION; Description: Current function name; Example Output: Program.&lt;Main&gt;</annotation></semantics></math></li>
 <li>Token: $ADDRESS; Description: Current instruction; Example Output:
 0x00007FFF83A54001</li>
 <li>Token: $TID; Description: Thread ID; Example Output: 20668</li>
@@ -35854,8 +35919,8 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb406-1"><a href
 <span id="cb406-7"><a href="#cb406-7" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="fu">environment</span><span class="kw">:</span></span>
 <span id="cb406-8"><a href="#cb406-8" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="fu">NODE_ENV</span><span class="kw">:</span><span class="at"> development</span></span>
 <span id="cb406-9"><a href="#cb406-9" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb406-10"><a href="#cb406-10" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="kw">-</span><span class="at"> </span><span class="dv">3000</span></span>
-<span id="cb406-11"><a href="#cb406-11" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="kw">-</span><span class="at"> 9229:9229</span></span>
+<span id="cb406-10"><a href="#cb406-10" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="kw">- </span><span class="dv">3000</span></span>
+<span id="cb406-11"><a href="#cb406-11" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="kw">- </span><span class="at">9229:9229</span></span>
 <span id="cb406-12"><a href="#cb406-12" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="fu">command</span><span class="kw">:</span><span class="at"> node --inspect=0.0.0.0:9229 ./bin/www</span></span></code></pre></div></li>
 <li><p>If you have multiple apps, you need to change the port for some
 of them, so that each app has a unique port. You can point to the right
@@ -35952,8 +36017,8 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb409-1"><a href
 <span id="cb409-8"><a href="#cb409-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dockerfile</span><span class="kw">:</span><span class="at"> ./Dockerfile</span></span>
 <span id="cb409-9"><a href="#cb409-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;sh&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;-c&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;pip install debugpy -t /tmp &amp;&amp; python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:8000 --nothreading --noreload&quot;</span><span class="kw">]</span></span>
 <span id="cb409-10"><a href="#cb409-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb409-11"><a href="#cb409-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> 8000:8000</span></span>
-<span id="cb409-12"><a href="#cb409-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> 5678:5678</span></span></code></pre></div></li>
+<span id="cb409-11"><a href="#cb409-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">- </span><span class="at">8000:8000</span></span>
+<span id="cb409-12"><a href="#cb409-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">- </span><span class="at">5678:5678</span></span></code></pre></div></li>
 <li><p>Once your container is built and running, attach the debugger by
 hitting 0 with the <strong>Python Debugger: Remote Attach</strong>
 launch configuration selected.</p>
@@ -36022,7 +36087,7 @@ your app requires volume mounts, specify them by using the 0 tag in the
 1 files.</p>
 <div class="sourceCode" id="cb412"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb412-1"><a href="#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb412-2"><a href="#cb412-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> /host-folder-path:/container-folder-path</span></span></code></pre></div>
+<span id="cb412-2"><a href="#cb412-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">- </span><span class="at">/host-folder-path:/container-folder-path</span></span></code></pre></div>
 <h4 id="docker-compose-with-multiple-compose-files">Docker Compose with
 multiple Compose files</h4>
 <p>Workspaces can have multiple docker-compose files to handle different
@@ -42915,11 +42980,11 @@ list in your Docker Compose file</a>.</p>
 <p>For example:</p>
 <div class="sourceCode" id="cb510"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb510-1"><a href="#cb510-1" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb510-2"><a href="#cb510-2" aria-hidden="true" tabindex="-1"></a><span class="co">  # Mounts the project folder to &#39;/workspace&#39;. The target path inside the container</span></span>
-<span id="cb510-3"><a href="#cb510-3" aria-hidden="true" tabindex="-1"></a><span class="co">  # should match what your application expects. In this case, the compose file is</span></span>
-<span id="cb510-4"><a href="#cb510-4" aria-hidden="true" tabindex="-1"></a><span class="co">  # in a sub-folder, so you will mount &#39;..&#39;. You would then reference this path as the</span></span>
-<span id="cb510-5"><a href="#cb510-5" aria-hidden="true" tabindex="-1"></a><span class="co">  # &#39;workspaceFolder&#39; in &#39;.devcontainer/devcontainer.json&#39; so VS Code starts here.</span></span>
-<span id="cb510-6"><a href="#cb510-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ..:/workspace:cached</span></span></code></pre></div>
+<span id="cb510-2"><a href="#cb510-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="co"># Mounts the project folder to &#39;/workspace&#39;. The target path inside the container</span></span>
+<span id="cb510-3"><a href="#cb510-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="co"># should match what your application expects. In this case, the compose file is</span></span>
+<span id="cb510-4"><a href="#cb510-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="co"># in a sub-folder, so you will mount &#39;..&#39;. You would then reference this path as the</span></span>
+<span id="cb510-5"><a href="#cb510-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="co"># &#39;workspaceFolder&#39; in &#39;.devcontainer/devcontainer.json&#39; so VS Code starts here.</span></span>
+<span id="cb510-6"><a href="#cb510-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">- </span><span class="at">..:/workspace:cached</span></span></code></pre></div>
 <p>However, on Linux you may need to set up and <strong>specify a
 non-root user</strong> when using a bind mount or any files you create
 will be root. See <a
@@ -42948,9 +43013,9 @@ the following settings to your Docker Compose file:</p>
 <div class="sourceCode" id="cb513"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb513-1"><a href="#cb513-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Required for ptrace-based debuggers like C++, Go, and Rust</span></span>
 <span id="cb513-2"><a href="#cb513-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cap_add</span><span class="kw">:</span></span>
-<span id="cb513-3"><a href="#cb513-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> SYS_PTRACE</span></span>
+<span id="cb513-3"><a href="#cb513-3" aria-hidden="true" tabindex="-1"></a><span class="kw">- </span><span class="at">SYS_PTRACE</span></span>
 <span id="cb513-4"><a href="#cb513-4" aria-hidden="true" tabindex="-1"></a><span class="fu">security_opt</span><span class="kw">:</span></span>
-<span id="cb513-5"><a href="#cb513-5" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> seccomp:unconfined</span></span></code></pre></div>
+<span id="cb513-5"><a href="#cb513-5" aria-hidden="true" tabindex="-1"></a><span class="kw">- </span><span class="at">seccomp:unconfined</span></span></code></pre></div>
 <p>After you create your container for the first time, you will need to
 run the <strong>Dev Containers: Rebuild Container</strong> command for
 updates to 0, your Docker Compose files, or related Dockerfiles to take
@@ -42995,17 +43060,17 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb515-1"><a href
 <span id="cb515-2"><a href="#cb515-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
 <span id="cb515-3"><a href="#cb515-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">your-service-name-here</span><span class="kw">:</span></span>
 <span id="cb515-4"><a href="#cb515-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb515-5"><a href="#cb515-5" aria-hidden="true" tabindex="-1"></a><span class="co">      # Mounts the project folder to &#39;/workspace&#39;. While this file is in .devcontainer,</span></span>
-<span id="cb515-6"><a href="#cb515-6" aria-hidden="true" tabindex="-1"></a><span class="co">      # mounts are relative to the first file in the list, which is a level up.</span></span>
-<span id="cb515-7"><a href="#cb515-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> .:/workspace:cached</span></span>
+<span id="cb515-5"><a href="#cb515-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="co"># Mounts the project folder to &#39;/workspace&#39;. While this file is in .devcontainer,</span></span>
+<span id="cb515-6"><a href="#cb515-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="co"># mounts are relative to the first file in the list, which is a level up.</span></span>
+<span id="cb515-7"><a href="#cb515-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">- </span><span class="at">.:/workspace:cached</span></span>
 <span id="cb515-8"><a href="#cb515-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb515-9"><a href="#cb515-9" aria-hidden="true" tabindex="-1"></a><span class="co">    # [Optional] Required for ptrace-based debuggers like C++, Go, and Rust</span></span>
+<span id="cb515-9"><a href="#cb515-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="co"># [Optional] Required for ptrace-based debuggers like C++, Go, and Rust</span></span>
 <span id="cb515-10"><a href="#cb515-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cap_add</span><span class="kw">:</span></span>
-<span id="cb515-11"><a href="#cb515-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> SYS_PTRACE</span></span>
+<span id="cb515-11"><a href="#cb515-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">- </span><span class="at">SYS_PTRACE</span></span>
 <span id="cb515-12"><a href="#cb515-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">security_opt</span><span class="kw">:</span></span>
-<span id="cb515-13"><a href="#cb515-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> seccomp:unconfined</span></span>
+<span id="cb515-13"><a href="#cb515-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">- </span><span class="at">seccomp:unconfined</span></span>
 <span id="cb515-14"><a href="#cb515-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb515-15"><a href="#cb515-15" aria-hidden="true" tabindex="-1"></a><span class="co">    # Overrides default command so things don&#39;t shut down after the process ends.</span></span>
+<span id="cb515-15"><a href="#cb515-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="co"># Overrides default command so things don&#39;t shut down after the process ends.</span></span>
 <span id="cb515-16"><a href="#cb515-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> /bin/sh -c &quot;while sleep 1000; do :; done&quot;</span></span></code></pre></div>
 <p>This same file can provide additional settings, such as port
 mappings, as needed. To use it, reference your original 0 file in
@@ -43039,14 +43104,14 @@ Docker Compose file. For example, you can update 2 as follows:</p>
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb518-1"><a href="#cb518-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></span>
 <span id="cb518-2"><a href="#cb518-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
 <span id="cb518-3"><a href="#cb518-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">your-service-name-here</span><span class="kw">:</span></span>
-<span id="cb518-4"><a href="#cb518-4" aria-hidden="true" tabindex="-1"></a><span class="co">      # Note that the path of the Dockerfile and context is relative to the *primary*</span></span>
-<span id="cb518-5"><a href="#cb518-5" aria-hidden="true" tabindex="-1"></a><span class="co">      # docker-compose.yml file (the first in the devcontainer.json &quot;dockerComposeFile&quot;</span></span>
-<span id="cb518-6"><a href="#cb518-6" aria-hidden="true" tabindex="-1"></a><span class="co">      # array). The sample below assumes your primary file is in the root of your project.</span></span>
+<span id="cb518-4"><a href="#cb518-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="co"># Note that the path of the Dockerfile and context is relative to the *primary*</span></span>
+<span id="cb518-5"><a href="#cb518-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="co"># docker-compose.yml file (the first in the devcontainer.json &quot;dockerComposeFile&quot;</span></span>
+<span id="cb518-6"><a href="#cb518-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="co"># array). The sample below assumes your primary file is in the root of your project.</span></span>
 <span id="cb518-7"><a href="#cb518-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">build</span><span class="kw">:</span></span>
 <span id="cb518-8"><a href="#cb518-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">context</span><span class="kw">:</span><span class="at"> .</span></span>
 <span id="cb518-9"><a href="#cb518-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">dockerfile</span><span class="kw">:</span><span class="at"> .devcontainer/Dockerfile</span></span>
 <span id="cb518-10"><a href="#cb518-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb518-11"><a href="#cb518-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> .:/workspace:cached</span></span>
+<span id="cb518-11"><a href="#cb518-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">- </span><span class="at">.:/workspace:cached</span></span>
 <span id="cb518-12"><a href="#cb518-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">command</span><span class="kw">:</span><span class="at"> /bin/sh -c &quot;while sleep 1000; do :; done&quot;</span></span></code></pre></div>
 <p>Congratulations! You’ve now configured a dev container in Visual
 Studio Code. Continue reading to learn how to share container
@@ -43663,9 +43728,9 @@ as appropriate. For example, adding the following to 1 file to the root
 of your repository will force everything to be LF, except for Windows
 batch files that require CRLF:</p>
 <div class="sourceCode" id="cb530"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb530-1"><a href="#cb530-1" aria-hidden="true" tabindex="-1"></a><span class="at">* text=auto eol=lf</span></span>
-<span id="cb530-2"><a href="#cb530-2" aria-hidden="true" tabindex="-1"></a><span class="ot">*.{cmd,[cC][mM][dD]}</span><span class="at"> text eol=crlf</span></span>
-<span id="cb530-3"><a href="#cb530-3" aria-hidden="true" tabindex="-1"></a><span class="ot">*.{bat,[bB][aA][tT]}</span><span class="at"> text eol=crlf</span></span></code></pre></div>
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb530-1"><a href="#cb530-1" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span><span class="at"> text=auto eol=lf</span></span>
+<span id="cb530-2"><a href="#cb530-2" aria-hidden="true" tabindex="-1"></a><span class="ot">*.</span><span class="kw">{</span><span class="at">cmd</span><span class="kw">,[</span><span class="at">cC</span><span class="kw">][</span><span class="at">mM</span><span class="kw">][</span><span class="at">dD</span><span class="kw">]}</span><span class="at"> text eol=crlf</span></span>
+<span id="cb530-3"><a href="#cb530-3" aria-hidden="true" tabindex="-1"></a><span class="ot">*.</span><span class="kw">{</span><span class="at">bat</span><span class="kw">,[</span><span class="at">bB</span><span class="kw">][</span><span class="at">aA</span><span class="kw">][</span><span class="at">tT</span><span class="kw">]}</span><span class="at"> text eol=crlf</span></span></code></pre></div>
 <p>Note that this works in <strong>Git v2.10+</strong>, so if you are
 running into problems, be sure you’ve got a recent Git client installed.
 You can add other file types in your repository that require CRLF to
@@ -45126,8 +45191,8 @@ mapping</a> can easily be added your 0 file to publish additional
 ports.</p>
 <div class="sourceCode" id="cb555"><pre
 class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb555-1"><a href="#cb555-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb555-2"><a href="#cb555-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="st">&quot;3000&quot;</span></span>
-<span id="cb555-3"><a href="#cb555-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="st">&quot;8921:5000&quot;</span></span></code></pre></div></li>
+<span id="cb555-2"><a href="#cb555-2" aria-hidden="true" tabindex="-1"></a><span class="kw">- </span><span class="st">&quot;3000&quot;</span></span>
+<span id="cb555-3"><a href="#cb555-3" aria-hidden="true" tabindex="-1"></a><span class="kw">- </span><span class="st">&quot;8921:5000&quot;</span></span></code></pre></div></li>
 </ol>
 <p>In each case, you’ll need to rebuild your container for the setting
 to take effect. You can do this by running the <strong>Dev Containers:
@@ -62996,8 +63061,8 @@ whether to shorten the command line via an appropriate approach.</li>
 classes when stepping. Class names should be fully qualified. Wildcard
 is supported.</li>
 <li>0 - Skip the specified classes when stepping. You could use the
-built-in variables such as ‘<span
-class="math inline"><em>J</em><em>D</em><em>K</em><sup>′</sup><em>a</em><em>n</em><em>d</em><sup>′</sup></span>Libraries’
+built-in variables such as
+‘<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>D</mi><msup><mi>K</mi><mo>′</mo></msup><mi>a</mi><mi>n</mi><msup><mi>d</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">JDK&#39; and &#39;</annotation></semantics></math>Libraries’
 to skip a group of classes, or add a specific class name expression, for
 example 1, 2.</li>
 <li>0 - Skip synthetic methods when stepping.</li>
@@ -63030,8 +63095,8 @@ expression evaluation and conditional breakpoint may not work.</li>
 classes when stepping. Class names should be fully qualified. Wildcard
 is supported.</li>
 <li>0 - Skip the specified classes when stepping. You could use the
-built-in variables such as ‘<span
-class="math inline"><em>J</em><em>D</em><em>K</em><sup>′</sup><em>a</em><em>n</em><em>d</em><sup>′</sup></span>Libraries’
+built-in variables such as
+‘<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>D</mi><msup><mi>K</mi><mo>′</mo></msup><mi>a</mi><mi>n</mi><msup><mi>d</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">JDK&#39; and &#39;</annotation></semantics></math>Libraries’
 to skip a group of classes, or add a specific class name expression, for
 example 1, 2.</li>
 <li>0 - Skip synthetic methods when stepping.</li>
@@ -63089,13 +63154,13 @@ modify the 2 configuration in 3.
 <li>0 - External terminal that can be configured in user settings.</li>
 </ul></li>
 <li>0: Skip the specified classes when breaking on exception. You could
-use the built-in variables such as ‘<span
-class="math inline"><em>J</em><em>D</em><em>K</em><sup>′</sup><em>a</em><em>n</em><em>d</em><sup>′</sup></span>Libraries’
+use the built-in variables such as
+‘<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>D</mi><msup><mi>K</mi><mo>′</mo></msup><mi>a</mi><mi>n</mi><msup><mi>d</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">JDK&#39; and &#39;</annotation></semantics></math>Libraries’
 to skip a group of classes, or add a specific class name expression, for
 example 1, 2.</li>
 <li>0: Skip the specified classes when stepping. You could use the
-built-in variables such as ‘<span
-class="math inline"><em>J</em><em>D</em><em>K</em><sup>′</sup><em>a</em><em>n</em><em>d</em><sup>′</sup></span>Libraries’
+built-in variables such as
+‘<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mi>D</mi><msup><mi>K</mi><mo>′</mo></msup><mi>a</mi><mi>n</mi><msup><mi>d</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">JDK&#39; and &#39;</annotation></semantics></math>Libraries’
 to skip a group of classes, or add a specific class name expression, for
 example 1, 2.</li>
 <li>0: Skip synthetic methods when stepping.</li>
@@ -82076,8 +82141,8 @@ running VS Code executable</li>
 the default build task</li>
 <li>Variable: <strong>${pathSeparator}</strong>; Description: Character
 used by the operating system to separate components in file paths</li>
-<li>Variable: <strong><span
-class="math inline">/ * *; <em>D</em><em>e</em><em>s</em><em>c</em><em>r</em><em>i</em><em>p</em><em>t</em><em>i</em><em>o</em><em>n</em> : <em>S</em><em>h</em><em>o</em><em>r</em><em>t</em><em>h</em><em>a</em><em>n</em><em>d</em><em>f</em><em>o</em><em>r</em> * *</span>{pathSeparator}</strong></li>
+<li>Variable:
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>/</mi><mo>*</mo><mi>*</mi><mo>;</mo><mi>D</mi><mi>e</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>:</mo><mi>S</mi><mi>h</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>h</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>f</mi><mi>o</mi><mi>r</mi><mo>*</mo><mi>*</mi></mrow><annotation encoding="application/x-tex">{/}**; Description: Shorthand for **</annotation></semantics></math>{pathSeparator}</strong></li>
 </ul>
 <h5 id="predefined-variables-example">Predefined variables example</h5>
 <p>Suppose that you have the following conditions:</p>
@@ -82134,8 +82199,8 @@ same folder where it is used.</p>
 <p>For example, in a multi root workspace with folders 0 and 1, a 2
 refers to the path of the 3 root.</p>
 <h4 id="environment-variables-3">Environment variables</h4>
-<p>You can reference environment variables with the <strong><span
-class="math inline"><em>e</em><em>n</em><em>v</em> : <em>N</em><em>a</em><em>m</em><em>e</em> * *<em>s</em><em>y</em><em>n</em><em>t</em><em>a</em><em>x</em>.<em>F</em><em>o</em><em>r</em><em>e</em><em>x</em><em>a</em><em>m</em><em>p</em><em>l</em><em>e</em>, **</span>{env:USERNAME}</strong>
+<p>You can reference environment variables with the
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>e</mi><mi>n</mi><mi>v</mi><mo>:</mo><mi>N</mi><mi>a</mi><mi>m</mi><mi>e</mi></mrow><mo>*</mo><mi>*</mi><mi>s</mi><mi>y</mi><mi>n</mi><mi>t</mi><mi>a</mi><mi>x</mi><mi>.</mi><mi>F</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>x</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mo>,</mo><mi>*</mi><mo>*</mo></mrow><annotation encoding="application/x-tex">{env:Name}** syntax. For example, **</annotation></semantics></math>{env:USERNAME}</strong>
 references the 0 environment variable.</p>
 <div class="sourceCode" id="cb1152"><pre
 class="sourceCode json"><code class="sourceCode json"><span id="cb1152-1"><a href="#cb1152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
@@ -82148,8 +82213,7 @@ class="sourceCode json"><code class="sourceCode json"><span id="cb1152-1"><a hre
 <span id="cb1152-8"><a href="#cb1152-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <h4 id="configuration-variables">Configuration variables</h4>
 <p>To reference VS Code settings (<em>configurations</em>), use the
-<strong><span
-class="math inline"><em>c</em><em>o</em><em>n</em><em>f</em><em>i</em><em>g</em> : <em>N</em><em>a</em><em>m</em><em>e</em> * *<em>s</em><em>y</em><em>n</em><em>t</em><em>a</em><em>x</em>.<em>F</em><em>o</em><em>r</em><em>e</em><em>x</em><em>a</em><em>m</em><em>p</em><em>l</em><em>e</em>, **</span>{config:editor.fontSize}</strong>
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>c</mi><mi>o</mi><mi>n</mi><mi>f</mi><mi>i</mi><mi>g</mi><mo>:</mo><mi>N</mi><mi>a</mi><mi>m</mi><mi>e</mi></mrow><mo>*</mo><mi>*</mi><mi>s</mi><mi>y</mi><mi>n</mi><mi>t</mi><mi>a</mi><mi>x</mi><mi>.</mi><mi>F</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>x</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mo>,</mo><mi>*</mi><mo>*</mo></mrow><annotation encoding="application/x-tex">{config:Name}** syntax. For example, **</annotation></semantics></math>{config:editor.fontSize}</strong>
 references the 0 setting.</p>
 <h4 id="command-variables">Command variables</h4>
 <p>You can use any VS Code command as a variable with the
@@ -85239,9 +85303,9 @@ as appropriate. For example, adding the following to 1 file to the root
 of your repository will force everything to be LF, except for Windows
 batch files that require CRLF:</p>
 <div class="sourceCode" id="cb1221"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1221-1"><a href="#cb1221-1" aria-hidden="true" tabindex="-1"></a><span class="at">* text=auto eol=lf</span></span>
-<span id="cb1221-2"><a href="#cb1221-2" aria-hidden="true" tabindex="-1"></a><span class="ot">*.{cmd,[cC][mM][dD]}</span><span class="at"> text eol=crlf</span></span>
-<span id="cb1221-3"><a href="#cb1221-3" aria-hidden="true" tabindex="-1"></a><span class="ot">*.{bat,[bB][aA][tT]}</span><span class="at"> text eol=crlf</span></span></code></pre></div>
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1221-1"><a href="#cb1221-1" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span><span class="at"> text=auto eol=lf</span></span>
+<span id="cb1221-2"><a href="#cb1221-2" aria-hidden="true" tabindex="-1"></a><span class="ot">*.</span><span class="kw">{</span><span class="at">cmd</span><span class="kw">,[</span><span class="at">cC</span><span class="kw">][</span><span class="at">mM</span><span class="kw">][</span><span class="at">dD</span><span class="kw">]}</span><span class="at"> text eol=crlf</span></span>
+<span id="cb1221-3"><a href="#cb1221-3" aria-hidden="true" tabindex="-1"></a><span class="ot">*.</span><span class="kw">{</span><span class="at">bat</span><span class="kw">,[</span><span class="at">bB</span><span class="kw">][</span><span class="at">aA</span><span class="kw">][</span><span class="at">tT</span><span class="kw">]}</span><span class="at"> text eol=crlf</span></span></code></pre></div>
 <p>Note that this works in <strong>Git v2.10+</strong>, so if you are
 running into problems, be sure you’ve got a recent Git client installed.
 You can add other file types in your repository that require CRLF to

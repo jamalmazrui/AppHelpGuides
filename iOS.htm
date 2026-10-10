@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-18" />
   <title>iOS Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,133 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">iOS Help Compendium</h1>
 <p class="subtitle">The complete official Apple iPhone User Guide for
 the current iOS release</p>
 <p class="date">2026-07-18</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ios-help-compendium" id="toc-ios-help-compendium">iOS Help
+Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-accessibility"
+id="toc-cat-accessibility">Accessibility</a></li>
+<li><a href="#cat-accessories"
+id="toc-cat-accessories">Accessories</a></li>
+<li><a href="#cat-apple-intelligence"
+id="toc-cat-apple-intelligence">Apple Intelligence</a></li>
+<li><a href="#cat-apps-app-store" id="toc-cat-apps-app-store">Apps: App
+Store</a></li>
+<li><a href="#cat-apps-books" id="toc-cat-apps-books">Apps:
+Books</a></li>
+<li><a href="#cat-apps-calculator" id="toc-cat-apps-calculator">Apps:
+Calculator</a></li>
+<li><a href="#cat-apps-calendar" id="toc-cat-apps-calendar">Apps:
+Calendar</a></li>
+<li><a href="#cat-apps-clock" id="toc-cat-apps-clock">Apps:
+Clock</a></li>
+<li><a href="#cat-apps-compass" id="toc-cat-apps-compass">Apps:
+Compass</a></li>
+<li><a href="#cat-apps-contacts" id="toc-cat-apps-contacts">Apps:
+Contacts</a></li>
+<li><a href="#cat-apps-facetime" id="toc-cat-apps-facetime">Apps:
+FaceTime</a></li>
+<li><a href="#cat-apps-files" id="toc-cat-apps-files">Apps:
+Files</a></li>
+<li><a href="#cat-apps-find-my" id="toc-cat-apps-find-my">Apps: Find
+My</a></li>
+<li><a href="#cat-apps-fitness" id="toc-cat-apps-fitness">Apps:
+Fitness</a></li>
+<li><a href="#cat-apps-freeform" id="toc-cat-apps-freeform">Apps:
+Freeform</a></li>
+<li><a href="#cat-apps-games" id="toc-cat-apps-games">Apps:
+Games</a></li>
+<li><a href="#cat-apps-health" id="toc-cat-apps-health">Apps:
+Health</a></li>
+<li><a href="#cat-apps-home" id="toc-cat-apps-home">Apps: Home</a></li>
+<li><a href="#cat-apps-itunes-store"
+id="toc-cat-apps-itunes-store">Apps: iTunes Store</a></li>
+<li><a href="#cat-apps-journal" id="toc-cat-apps-journal">Apps:
+Journal</a></li>
+<li><a href="#cat-apps-magnifier" id="toc-cat-apps-magnifier">Apps:
+Magnifier</a></li>
+<li><a href="#cat-apps-mail" id="toc-cat-apps-mail">Apps: Mail</a></li>
+<li><a href="#cat-apps-maps" id="toc-cat-apps-maps">Apps: Maps</a></li>
+<li><a href="#cat-apps-measure" id="toc-cat-apps-measure">Apps:
+Measure</a></li>
+<li><a href="#cat-apps-messages" id="toc-cat-apps-messages">Apps:
+Messages</a></li>
+<li><a href="#cat-apps-music" id="toc-cat-apps-music">Apps:
+Music</a></li>
+<li><a href="#cat-apps-news" id="toc-cat-apps-news">Apps: News</a></li>
+<li><a href="#cat-apps-notes" id="toc-cat-apps-notes">Apps:
+Notes</a></li>
+<li><a href="#cat-apps-passwords" id="toc-cat-apps-passwords">Apps:
+Passwords</a></li>
+<li><a href="#cat-apps-phone" id="toc-cat-apps-phone">Apps:
+Phone</a></li>
+<li><a href="#cat-apps-photos" id="toc-cat-apps-photos">Apps:
+Photos</a></li>
+<li><a href="#cat-apps-podcasts" id="toc-cat-apps-podcasts">Apps:
+Podcasts</a></li>
+<li><a href="#cat-apps-preview" id="toc-cat-apps-preview">Apps:
+Preview</a></li>
+<li><a href="#cat-apps-reminders" id="toc-cat-apps-reminders">Apps:
+Reminders</a></li>
+<li><a href="#cat-apps-safari" id="toc-cat-apps-safari">Apps:
+Safari</a></li>
+<li><a href="#cat-apps-shortcuts" id="toc-cat-apps-shortcuts">Apps:
+Shortcuts</a></li>
+<li><a href="#cat-apps-stocks" id="toc-cat-apps-stocks">Apps:
+Stocks</a></li>
+<li><a href="#cat-apps-tips" id="toc-cat-apps-tips">Apps: Tips</a></li>
+<li><a href="#cat-apps-translate" id="toc-cat-apps-translate">Apps:
+Translate</a></li>
+<li><a href="#cat-apps-tv" id="toc-cat-apps-tv">Apps: TV</a></li>
+<li><a href="#cat-apps-voice-memos" id="toc-cat-apps-voice-memos">Apps:
+Voice Memos</a></li>
+<li><a href="#cat-apps-wallet" id="toc-cat-apps-wallet">Apps:
+Wallet</a></li>
+<li><a href="#cat-apps-weather" id="toc-cat-apps-weather">Apps:
+Weather</a></li>
+<li><a href="#cat-basics" id="toc-cat-basics">Basics</a></li>
+<li><a href="#cat-camera" id="toc-cat-camera">Camera</a></li>
+<li><a href="#cat-carplay" id="toc-cat-carplay">CarPlay</a></li>
+<li><a href="#cat-family-sharing" id="toc-cat-family-sharing">Family
+Sharing</a></li>
+<li><a href="#cat-introducing-iphone"
+id="toc-cat-introducing-iphone">Introducing iPhone</a></li>
+<li><a href="#cat-iphone-safety-features"
+id="toc-cat-iphone-safety-features">iPhone safety features</a></li>
+<li><a href="#cat-personalize-your-iphone"
+id="toc-cat-personalize-your-iphone">Personalize your iPhone</a></li>
+<li><a href="#cat-privacy-and-security"
+id="toc-cat-privacy-and-security">Privacy and security</a></li>
+<li><a href="#cat-restart-update-reset-and-restore"
+id="toc-cat-restart-update-reset-and-restore">Restart, update, reset,
+and restore</a></li>
+<li><a href="#cat-safety-handling-and-support"
+id="toc-cat-safety-handling-and-support">Safety, handling, and
+support</a></li>
+<li><a href="#cat-screen-time" id="toc-cat-screen-time">Screen
+Time</a></li>
+<li><a href="#cat-set-up-and-get-started"
+id="toc-cat-set-up-and-get-started">Set up and get started</a></li>
+<li><a href="#cat-siri" id="toc-cat-siri">Siri</a></li>
+<li><a href="#cat-use-iphone-with-ipad-mac-and-windows-devices"
+id="toc-cat-use-iphone-with-ipad-mac-and-windows-devices">Use iPhone
+with iPad, Mac, and Windows devices</a></li>
+<li><a href="#cat-work-with-text-and-graphics"
+id="toc-cat-work-with-text-and-graphics">Work with text and
+graphics</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="ios-help-compendium">iOS Help Compendium</h1>
 <p>This compendium contains the main content of 986 topics from Apple’s
 complete official iPhone User Guide for the current iOS release,

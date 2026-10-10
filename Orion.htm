@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-30" />
   <title>Orion Talking Calculators Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,17 +180,45 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Orion Talking Calculators Help Guide</h1>
 <p class="subtitle">The American Printing House’s official documentation
 for the Orion TI-84 Plus and TI-30XS talking calculators, gathered into
 one screen-reader-friendly document</p>
 <p class="date">2026-07-30</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#orion-talking-calculators-help-guide"
+id="toc-orion-talking-calculators-help-guide">Orion Talking Calculators
+Help Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#orion-ti-30xs-revision-history"
+id="toc-orion-ti-30xs-revision-history">Orion TI-30XS: revision
+history</a></li>
+<li><a href="#orion-ti-30xs-upgrade-instructions"
+id="toc-orion-ti-30xs-upgrade-instructions">Orion TI-30XS: upgrade
+instructions</a></li>
+<li><a href="#orion-ti-84-plus-resources"
+id="toc-orion-ti-84-plus-resources">Orion TI-84 Plus: resources</a></li>
+<li><a href="#orion-ti-84-plus-revision-history"
+id="toc-orion-ti-84-plus-revision-history">Orion TI-84 Plus: revision
+history</a></li>
+<li><a href="#orion-ti-84-plus-upgrade-instructions"
+id="toc-orion-ti-84-plus-upgrade-instructions">Orion TI-84 Plus: upgrade
+instructions</a></li>
+<li><a href="#orion-ti-84-plus-upgrading-to-version-20"
+id="toc-orion-ti-84-plus-upgrading-to-version-20">Orion TI-84 Plus:
+upgrading to version 2.0</a></li>
+<li><a href="#orion-ti-84-plus-users-guide"
+id="toc-orion-ti-84-plus-users-guide">Orion TI-84 Plus: user’s
+guide</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="orion-talking-calculators-help-guide">Orion Talking Calculators
 Help Guide</h1>
 <p>This guide gathers the American Printing House’s official

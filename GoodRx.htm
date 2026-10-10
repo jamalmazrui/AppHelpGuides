@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-08-02" />
   <title>GoodRx Help Guide</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,120 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">GoodRx Help Guide</h1>
 <p class="subtitle">GoodRx’s own help documentation, gathered into one
 document</p>
 <p class="date">2026-08-02</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#goodrx-help-guide" id="toc-goodrx-help-guide">GoodRx Help
+Guide</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-companion" id="toc-about-companion">About
+Companion</a></li>
+<li><a href="#about-pay-online" id="toc-about-pay-online">About Pay
+Online</a></li>
+<li><a href="#about-your-gold-membership"
+id="toc-about-your-gold-membership">About Your Gold Membership</a></li>
+<li><a href="#cancel-delivery-order-miscellaneous"
+id="toc-cancel-delivery-order-miscellaneous">Cancel Delivery Order:
+Miscellaneous</a></li>
+<li><a href="#care-direct-general-faqs"
+id="toc-care-direct-general-faqs">Care Direct General FAQs</a></li>
+<li><a href="#centro-de-ayuda" id="toc-centro-de-ayuda">Centro de
+Ayuda</a></li>
+<li><a href="#check-delivery-order" id="toc-check-delivery-order">Check
+Delivery Order</a></li>
+<li><a href="#data-deletion" id="toc-data-deletion">Data
+Deletion</a></li>
+<li><a href="#data-security-miscellaneous"
+id="toc-data-security-miscellaneous">Data Security:
+Miscellaneous</a></li>
+<li><a href="#delivery-order-issues"
+id="toc-delivery-order-issues">Delivery Order Issues</a></li>
+<li><a href="#earning-points" id="toc-earning-points">Earning
+Points</a></li>
+<li><a href="#earning-questions-miscellaneous"
+id="toc-earning-questions-miscellaneous">Earning Questions:
+Miscellaneous</a></li>
+<li><a href="#erectile-dysfunction"
+id="toc-erectile-dysfunction">Erectile Dysfunction</a></li>
+<li><a href="#feedback" id="toc-feedback">Feedback</a></li>
+<li><a href="#getting-started" id="toc-getting-started">Getting
+Started</a></li>
+<li><a href="#goodrx-care-issues-feedback"
+id="toc-goodrx-care-issues-feedback">GoodRx Care Issues /
+Feedback</a></li>
+<li><a href="#goodrx-discount-cards"
+id="toc-goodrx-discount-cards">GoodRx Discount Cards</a></li>
+<li><a href="#goodrx-for-pets-miscellaneous"
+id="toc-goodrx-for-pets-miscellaneous">GoodRx for Pets:
+Miscellaneous</a></li>
+<li><a href="#goodrx-rewards-issues"
+id="toc-goodrx-rewards-issues">GoodRx Rewards Issues</a></li>
+<li><a href="#goodrx-rewards-questions"
+id="toc-goodrx-rewards-questions">GoodRx Rewards Questions</a></li>
+<li><a href="#how-do-i-get-started" id="toc-how-do-i-get-started">How do
+I get started?</a></li>
+<li><a href="#how-do-i-use-goodrx-at-the-pharmacy"
+id="toc-how-do-i-use-goodrx-at-the-pharmacy">How do I use GoodRx at the
+pharmacy?</a></li>
+<li><a href="#how-our-pricing-works" id="toc-how-our-pricing-works">How
+our pricing works</a></li>
+<li><a href="#men-s-hair-loss" id="toc-men-s-hair-loss">Men’s Hair
+Loss</a></li>
+<li><a href="#paying-with-affirm" id="toc-paying-with-affirm">Paying
+with Affirm</a></li>
+<li><a href="#pharmacy-refusal-miscellaneous"
+id="toc-pharmacy-refusal-miscellaneous">Pharmacy Refusal:
+Miscellaneous</a></li>
+<li><a href="#place-delivery-order" id="toc-place-delivery-order">Place
+Delivery Order</a></li>
+<li><a href="#points-balance-miscellaneous"
+id="toc-points-balance-miscellaneous">Points Balance:
+Miscellaneous</a></li>
+<li><a href="#prescription-transfer-assistance-miscellaneous"
+id="toc-prescription-transfer-assistance-miscellaneous">Prescription
+Transfer Assistance: Miscellaneous</a></li>
+<li><a href="#pricing-discrepancy-at-the-pharmacy"
+id="toc-pricing-discrepancy-at-the-pharmacy">Pricing Discrepancy at the
+Pharmacy</a></li>
+<li><a href="#privacy" id="toc-privacy">Privacy</a></li>
+<li><a href="#promotion-questions-miscellaneous"
+id="toc-promotion-questions-miscellaneous">Promotion Questions:
+Miscellaneous</a></li>
+<li><a href="#redemption" id="toc-redemption">Redemption</a></li>
+<li><a href="#redemption-gift-card"
+id="toc-redemption-gift-card">Redemption &amp; Gift Card</a></li>
+<li><a href="#referrals-general-information"
+id="toc-referrals-general-information">Referrals General
+Information</a></li>
+<li><a href="#technical-issues" id="toc-technical-issues">Technical
+Issues</a></li>
+<li><a href="#terms-conditions" id="toc-terms-conditions">Terms &amp;
+Conditions</a></li>
+<li><a href="#types-of-accounts" id="toc-types-of-accounts">Types of
+Accounts</a></li>
+<li><a href="#unsubscribe" id="toc-unsubscribe">Unsubscribe</a></li>
+<li><a href="#updating-account-information"
+id="toc-updating-account-information">Updating Account
+Information</a></li>
+<li><a href="#updating-account-information-miscellaneous"
+id="toc-updating-account-information-miscellaneous">Updating account
+information: Miscellaneous</a></li>
+<li><a href="#website-app-navigation"
+id="toc-website-app-navigation">Website &amp; App Navigation</a></li>
+<li><a href="#weight-loss" id="toc-weight-loss">Weight Loss</a></li>
+<li><a href="#what-is-home-delivery" id="toc-what-is-home-delivery">What
+is Home Delivery?</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="goodrx-help-guide">GoodRx Help Guide</h1>
 <p>This guide gathers GoodRx’s own help documentation, as it stood on 2
 August 2026.</p>

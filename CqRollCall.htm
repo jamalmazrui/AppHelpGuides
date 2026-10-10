@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>CQ Roll Call help</title>
   <style>
@@ -11,7 +11,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -36,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -54,11 +61,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -87,8 +91,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -112,7 +119,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -129,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -156,8 +163,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -168,13 +179,56 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">CQ Roll Call help</h1>
-</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#cq-roll-call-help" id="toc-cq-roll-call-help">CQ Roll Call
+help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#additional-resources"
+id="toc-additional-resources">Additional Resources</a></li>
+<li><a href="#additional-tools" id="toc-additional-tools">Additional
+Tools</a></li>
+<li><a href="#committee-tracking" id="toc-committee-tracking">Committee
+Tracking</a></li>
+<li><a href="#cq-newsletters" id="toc-cq-newsletters">CQ
+Newsletters</a></li>
+<li><a href="#cq-verticals" id="toc-cq-verticals">CQ Verticals</a></li>
+<li><a href="#custom-tools-email-alerts-projects-more"
+id="toc-custom-tools-email-alerts-projects-more">Custom Tools: Email
+Alerts, Projects &amp; More</a></li>
+<li><a href="#faq" id="toc-faq">FAQ</a></li>
+<li><a href="#getting-started-with-cq-federal"
+id="toc-getting-started-with-cq-federal">Getting Started with CQ
+Federal</a></li>
+<li><a href="#legislative-tracking"
+id="toc-legislative-tracking">Legislative Tracking</a></li>
+<li><a href="#news-schedules" id="toc-news-schedules">News &amp;
+Schedules</a></li>
+<li><a href="#reporting" id="toc-reporting">Reporting</a></li>
+<li><a href="#researching-legislators-in-cq"
+id="toc-researching-legislators-in-cq">Researching Legislators in
+CQ</a></li>
+<li><a href="#searching-alerting" id="toc-searching-alerting">Searching
+&amp; Alerting</a></li>
+<li><a href="#searching-in-cq-federal"
+id="toc-searching-in-cq-federal">Searching in CQ Federal</a></li>
+<li><a href="#understanding-cq-reports"
+id="toc-understanding-cq-reports">Understanding CQ Reports</a></li>
+<li><a href="#understanding-transcripts-in-cq"
+id="toc-understanding-transcripts-in-cq">Understanding Transcripts in
+CQ</a></li>
+<li><a href="#understanding-your-legislative-tracking-tools"
+id="toc-understanding-your-legislative-tracking-tools">Understanding
+your Legislative Tracking Tools</a></li>
+<li><a href="#welcome-to-cq-federal-1"
+id="toc-welcome-to-cq-federal-1">Welcome to CQ Federal</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="cq-roll-call-help">CQ Roll Call help</h1>
 <p>This guide holds the help CQ Roll Call publishes for people using its
 legislative tracking and news services, gathered on 19 August 2026 from

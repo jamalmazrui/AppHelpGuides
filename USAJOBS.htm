@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2026-07-28" />
   <title>USAJOBS Help Compendium</title>
@@ -12,7 +12,10 @@
     */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -37,12 +40,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -55,11 +62,8 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
       max-width: 100%;
@@ -88,8 +92,11 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
       white-space: pre-wrap;
@@ -113,7 +120,7 @@
     }
     hr {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -130,11 +137,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -157,8 +164,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -169,16 +180,77 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">USAJOBS Help Compendium</h1>
 <p class="subtitle">The official USAJOBS Help Center for federal job
 seekers</p>
 <p class="date">2026-07-28</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#usajobs-help-compendium"
+id="toc-usajobs-help-compendium">USAJOBS Help Compendium</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#cat-about-usajobs" id="toc-cat-about-usajobs">About
+USAJOBS</a></li>
+<li><a href="#cat-faqs-account" id="toc-cat-faqs-account">FAQs:
+Account</a></li>
+<li><a href="#cat-faqs-application" id="toc-cat-faqs-application">FAQs:
+Application</a></li>
+<li><a href="#cat-faqs-emails" id="toc-cat-faqs-emails">FAQs:
+Emails</a></li>
+<li><a href="#cat-faqs-job-announcement"
+id="toc-cat-faqs-job-announcement">FAQs: Job announcement</a></li>
+<li><a href="#cat-faqs-pay" id="toc-cat-faqs-pay">FAQs: Pay</a></li>
+<li><a href="#cat-faqs-policy" id="toc-cat-faqs-policy">FAQs:
+Policy</a></li>
+<li><a href="#cat-faqs-search" id="toc-cat-faqs-search">FAQs:
+Search</a></li>
+<li><a href="#cat-faqs-suggestion" id="toc-cat-faqs-suggestion">FAQs:
+Suggestion</a></li>
+<li><a href="#cat-faqs-troubleshoot"
+id="toc-cat-faqs-troubleshoot">FAQs: Troubleshoot</a></li>
+<li><a href="#cat-how-to-account" id="toc-cat-how-to-account">How to:
+Account</a></li>
+<li><a href="#cat-how-to-application"
+id="toc-cat-how-to-application">How to: Application</a></li>
+<li><a href="#cat-how-to-job-announcement"
+id="toc-cat-how-to-job-announcement">How to: Job announcement</a></li>
+<li><a href="#cat-how-to-search" id="toc-cat-how-to-search">How to:
+Search</a></li>
+<li><a href="#cat-working-in-government-appointments"
+id="toc-cat-working-in-government-appointments">Working in government:
+Appointments</a></li>
+<li><a href="#cat-working-in-government-benefits"
+id="toc-cat-working-in-government-benefits">Working in government:
+Benefits</a></li>
+<li><a href="#cat-working-in-government-fair-and-transparent"
+id="toc-cat-working-in-government-fair-and-transparent">Working in
+government: Fair and transparent</a></li>
+<li><a href="#cat-working-in-government-leave"
+id="toc-cat-working-in-government-leave">Working in government:
+Leave</a></li>
+<li><a href="#cat-working-in-government-myths"
+id="toc-cat-working-in-government-myths">Working in government:
+Myths</a></li>
+<li><a href="#cat-working-in-government-non-citizens"
+id="toc-cat-working-in-government-non-citizens">Working in government:
+Non citizens</a></li>
+<li><a href="#cat-working-in-government-pay"
+id="toc-cat-working-in-government-pay">Working in government:
+Pay</a></li>
+<li><a href="#cat-working-in-government-service"
+id="toc-cat-working-in-government-service">Working in government:
+Service</a></li>
+<li><a href="#cat-working-in-government-unique-hiring-paths"
+id="toc-cat-working-in-government-unique-hiring-paths">Working in
+government: Unique hiring paths</a></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="usajobs-help-compendium">USAJOBS Help Compendium</h1>
 <p>This compendium contains the main content of 156 pages from the
 official USAJOBS Help Center at help.usajobs.gov, the United States

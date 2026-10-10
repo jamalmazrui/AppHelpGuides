@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>mpv help</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -33,12 +39,16 @@
     }
     @media print {
       html {
-        background-color: white;
+        color-scheme: light only;
       }
-      body {
+      html, body, pre, code {
         background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
         color: black;
-        font-size: 12pt;
+      }
+      pre, code {
+        padding: 0;
       }
       p, h2, h3 {
         orphans: 3;
@@ -51,13 +61,14 @@
     p {
       margin: 1em 0;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
+    a, a:visited {
+      color: inherit;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -80,10 +91,14 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
       color: #606060;
+      color: light-dark(#606060, #b6b6b6);
     }
     code {
+      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -103,8 +118,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -121,11 +136,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
     }
     th {
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid currentColor;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -147,10 +162,13 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -161,13 +179,9 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">mpv help</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#mpv-help" id="toc-mpv-help">mpv help</a>
@@ -986,7 +1000,8 @@ mp.command_native. (see Property Expansion).</p>
 path. As expand-text, this can only be used through the client API or
 from a script using mp.command_native.</p>
 <p>Example</p>
-<p>mp.osd_message(mp.command_native({“expand-path”, “~~home/”}))</p>
+<p>mp.osd_message(mp.command_native({“expand-path”,
+“<sub></sub>home/”}))</p>
 <p>This line of Lua would show the location of the user’s mpv
 configuration directory on the OSD.</p>
 <p>normalize-path <filename></p>
@@ -3441,7 +3456,7 @@ in mp.options functions.</p>
 <p>Default: no</p>
 <p>Whether to save the command history to a file and load it.</p>
 <p>history_path</p>
-<p>Default: ~~state/command_history.txt</p>
+<p>Default: <sub></sub>state/command_history.txt</p>
 <p>The file path for persist_history (see FILES).</p>
 <p>remember_input</p>
 <p>Default: yes</p>
@@ -4004,7 +4019,7 @@ RESUMING PLAYBACK.</p>
 <p>Mute sound.</p>
 <p>_</p>
 <p>Cycle through the available video tracks.</p>
-<h1 id="section"></h1>
+<h2 id="section"></h2>
 <p>Cycle through the available audio tracks.</p>
 <p>E</p>
 <p>Cycle through the available Editions.</p>
@@ -4172,7 +4187,7 @@ keys.)</p>
 <p>Change video zoom.</p>
 <p>If you miss some older key bindings, look at
 etc/restore-old-bindings.conf in the mpv git repository.</p>
-<h3 id="mouse-control">Mouse Control</h3>
+<h4 id="mouse-control">Mouse Control</h4>
 <p>Ctrl+left click</p>
 <p>Pan while holding the button, keeping the clicked part of the video
 under the cursor.</p>
@@ -4189,19 +4204,19 @@ under the cursor.</p>
 <p>Ctrl+Wheel up/down</p>
 <p>Change video zoom keeping the part of the video hovered by the cursor
 under it.</p>
-<h2 id="on-screen-controller">On Screen Controller</h2>
-<h3 id="configuration-on-screen-controller">Configuration (On Screen
-Controller)</h3>
+<h3 id="on-screen-controller">On Screen Controller</h3>
+<h4 id="configuration-on-screen-controller">Configuration (On Screen
+Controller)</h4>
 <p>This script can be customized through a config file
 script-opts/osc.conf placed in mpv’s user directory and through the
 –script-opts command-line option. The configuration syntax is described
 in mp.options functions.</p>
-<h4 id="command-line-syntax">Command-line Syntax</h4>
+<h5 id="command-line-syntax">Command-line Syntax</h5>
 <p>To avoid collisions with other scripts, all options need to be
 prefixed with osc-.</p>
 <p>Example:</p>
 <pre><code>--script-opts=osc-optionA=value1,osc-optionB=value2</code></pre>
-<h4 id="configurable-options-3">Configurable Options</h4>
+<h5 id="configurable-options-3">Configurable Options</h5>
 <p>layout</p>
 <p>Default: bottombar</p>
 <p>The layout for the OSC. Currently available are: box, slimbox,
@@ -4503,7 +4518,7 @@ script-message-to osc osc-hide</p>
 <p>fullscreen_mbtn_left_command=“cycle fullscreen”</p>
 <p>fullscreen_mbtn_mid_command=</p>
 <p>fullscreen_mbtn_right_command=“cycle window-maximized”</p>
-<h4 id="custom-buttons">Custom Buttons</h4>
+<h5 id="custom-buttons">Custom Buttons</h5>
 <p>Additional script-opts are available to define custom buttons in
 bottombar and topbar layouts.</p>
 <p>Example to add loop, shuffle and speed buttons</p>
@@ -4519,7 +4534,7 @@ custom_button_3_mbtn_left_command=add speed 1
 custom_button_3_mbtn_right_command=set speed 1
 custom_button_3_wheel_up_command=add speed 0.25
 custom_button_3_wheel_down_command=add speed -0.25</code></pre>
-<h4 id="script-commands">Script Commands</h4>
+<h5 id="script-commands">Script Commands</h5>
 <p>The OSC script listens to certain script commands. These commands can
 bound in input.conf, or sent by other scripts.</p>
 <p>osc-visibility</p>
@@ -4539,18 +4554,18 @@ b script-message osc-visibility auto</code></pre>
 <p>Controls the visibility of the mpv logo on idle. Valid arguments are
 yes, no, and cycle to toggle between yes and no. If a second argument is
 passed (any value), then the output on the OSD will be silenced.</p>
-<h3 id="on-screen-controller-1">On Screen Controller</h3>
+<h4 id="on-screen-controller-1">On Screen Controller</h4>
 <p>The On Screen Controller (short: OSC) is a minimal GUI integrated
 with mpv to offer basic mouse-controllability. It is intended to make
 interaction easier for new users and to enable precise and direct
 seeking.</p>
 <p>The OSC is enabled by default if mpv was compiled with Lua support.
 It can be disabled entirely using the –osc=no option.</p>
-<h3 id="using-the-osc">Using the OSC</h3>
+<h4 id="using-the-osc">Using the OSC</h4>
 <p>By default, the OSC will show up whenever the mouse is moved inside
 the player window and will hide if the mouse is not moved outside the
 OSC for 0.5 seconds or if the mouse leaves the window.</p>
-<h4 id="the-interface">The Interface</h4>
+<h5 id="the-interface">The Interface</h5>
 <pre><code>+------+---------+---------+-----------------------------------------------+
 | menu | pl prev | pl next | title                                   cache |
 +------+------+------+---------+-----------+------+-------+-----+-----+----+
@@ -4662,14 +4677,14 @@ custom title, or the target chapter name while hovering the seekbar.</p>
 with mouse actions on some interface elements, and the default behaviors
 of several elements were changed. If you miss some older behaviors, look
 at etc/restore-osc-bindings.conf in the mpv git repository.</p>
-<h4 id="key-bindings">Key Bindings</h4>
+<h5 id="key-bindings">Key Bindings</h5>
 <p>These key bindings are active by default if nothing else is already
 bound to these keys. In case of collision, the function needs to be
 bound to a different key. See the Script Commands section.</p>
 <p>del</p>
 <p>Cycles visibility between never / auto (mouse-move) / always</p>
-<h2 id="options">Options</h2>
-<h3 id="audio">Audio</h3>
+<h3 id="options">Options</h3>
+<h4 id="audio">Audio</h4>
 <p>–audio-pitch-correction=&lt;yes|no&gt;</p>
 <p>If this is enabled (default), playing with a speed different from
 normal automatically inserts the scaletempo2 audio filter. You can
@@ -5027,7 +5042,7 @@ after opening the audio device before sending actual audio data to it.
 Useful if your expensive hardware discards the first 1 or 2 seconds of
 audio data sent to it. If –audio-stream-silence=yes is not set, this
 option will likely just waste time.</p>
-<h3 id="audio-resampler">Audio Resampler</h3>
+<h4 id="audio-resampler">Audio Resampler</h4>
 <p>This controls the default options of any resampling done by mpv (but
 not within libavfilter, within the system audio API resampler, or any
 other places).</p>
@@ -5063,7 +5078,7 @@ any way.</p>
 <p>Set AVOptions on the SwrContext or AVAudioResampleContext. These
 should be documented by FFmpeg.</p>
 <p>This is a key/value list option. See List Options for details.</p>
-<h3 id="cache">Cache</h3>
+<h4 id="cache">Cache</h4>
 <p>–cache=&lt;yes|no|auto&gt;</p>
 <p>Decide whether to use network cache settings (default: auto).</p>
 <p>If enabled, use up to –cache-secs for the cache size (but still
@@ -5208,7 +5223,7 @@ audio size may be exceeded by about 1 frame.</p>
 means no limit is set. The queue size may be exceeded by about 2 frames.
 Timestamp resets may lead to random queue size usage.</p>
 <p>See –list-options for defaults and value range.</p>
-<h3 id="demuxer">Demuxer</h3>
+<h4 id="demuxer">Demuxer</h4>
 <p>–demuxer=&lt;[+]name&gt;</p>
 <p>Force demuxer type. Use a ‘+’ before the name to force it; this will
 skip some checks. Give the demuxer name as printed by –demuxer=help.</p>
@@ -5570,7 +5585,7 @@ same category as the currently loaded file. One of the *-exts is
 selected based on the input file and only files with matching extensions
 are added to the playlist. If the input file itself is not matched to
 any extension list, the playlist is not autogenerated.</p>
-<h3 id="disc-devices">Disc Devices</h3>
+<h4 id="disc-devices">Disc Devices</h4>
 <p>–cdda-device=<path></p>
 <p>Specify the CD device for CDDA playback. The default device path
 depends on the OS. See the OPTICAL DRIVES section.</p>
@@ -5630,7 +5645,7 @@ This option tells mpv which angle to use (default: 1).</p>
 <p>–bluray-angle=<ID></p>
 <p>Some Blu-ray discs contain scenes that can be viewed from multiple
 angles. This option tells mpv which angle to use (default: 1).</p>
-<h3 id="dvb">DVB</h3>
+<h4 id="dvb">DVB</h4>
 <p>–dvbin-prog=<string></p>
 <p>This defines the program to tune to. Usually, you may specify this by
 using a stream URI like “dvb://ZDF HD”, but you can tune to a different
@@ -5678,7 +5693,7 @@ the initially tuned to channel in the channel list.</p>
 <p>An example input.conf could contain: H cycle
 dvbin-channel-switch-offset up, K cycle dvbin-channel-switch-offset
 down</p>
-<h3 id="equalizer">Equalizer</h3>
+<h4 id="equalizer">Equalizer</h4>
 <p>–brightness=&lt;-100-100&gt;</p>
 <p>Adjust the brightness of the video signal (default: 0). Not supported
 by all video output drivers.</p>
@@ -5696,7 +5711,7 @@ all video output drivers.</p>
 <p>Adjust the hue of the video signal (default: 0). You can get a
 colored negative of the image with this option. Not supported by all
 video output drivers.</p>
-<h3 id="gpu-renderer-options">GPU renderer options</h3>
+<h4 id="gpu-renderer-options">GPU renderer options</h4>
 <p>The following video options are currently all specific to –vo=gpu,
 –vo=libmpv and –vo=gpu-next, which are the only VOs that implement
 them.</p>
@@ -7556,7 +7571,7 @@ unset.</p>
 the normal options system. Requires libplacebo v6.309 or higher.
 Included for debugging purposes only. For more information, see:</p>
 <p><a href="https://libplacebo.org/options/">libplacebo.org</a></p>
-<h3 id="input">Input</h3>
+<h4 id="input">Input</h4>
 <p>–native-keyrepeat=&lt;yes|no&gt;</p>
 <p>Use system settings for keyrepeat delay and rate, instead of
 –input-ar-delay and –input-ar-rate (default: no). Whether this applies
@@ -7755,7 +7770,7 @@ recommended to enable IME on demand only for the duration while text
 input is expected.</p>
 <p>The builtin console and input selector enable IME for the duration of
 accepting text input.</p>
-<h3 id="miscellaneous">Miscellaneous</h3>
+<h4 id="miscellaneous">Miscellaneous</h4>
 <p>–display-tags=tag1,tags2,…</p>
 <p>Set the list of tags that should be displayed on the terminal and
 stats. Tags that are in the list, but are not present in the played
@@ -8080,7 +8095,7 @@ unregister it using this command, register it in a new location, or
 restore mpv to its original location.</p>
 <p>If mpv was previously registered for all users, run this command as
 an administrator to remove it for all users.</p>
-<h3 id="network">Network</h3>
+<h4 id="network">Network</h4>
 <p>–user-agent=<string></p>
 <p>Use <string> as user agent for HTTP streaming.</p>
 <p>–cookies=&lt;yes|no&gt;</p>
@@ -8154,7 +8169,7 @@ audio/video streams it can find.</p>
 rate equal or below the option value is selected.</p>
 <p>The bitrate as used is sent by the server, and there’s no guarantee
 it’s actually meaningful.</p>
-<h3 id="osd">OSD</h3>
+<h4 id="osd">OSD</h4>
 <p>–osc=&lt;yes|no&gt;</p>
 <p>Whether to load the on-screen-controller (default: yes).</p>
 <p>–osd-bar=&lt;yes|no&gt;</p>
@@ -8338,7 +8353,7 @@ mechanism in the future.</p>
 <p>See –sub-font-provider for details and accepted values. Note that
 unlike subtitles, OSD never uses embedded fonts from media files.</p>
 <p>–osd-fonts-dir=<path></p>
-<p>See –sub-fonts-dir for details. Defaults to ~~/fonts.</p>
+<p>See –sub-fonts-dir for details. Defaults to <sub></sub>/fonts.</p>
 <p>–osd-glyph-limit=<value></p>
 <p>Set the maximum number of cached glyphs in libass cache for the OSD.
 0 means libass uses its default value.</p>
@@ -8353,7 +8368,7 @@ Disabled by default. See also –sub-ass-prune-delay.</p>
 <p>–osd-shaper=&lt;simple|complex&gt;</p>
 <p>Set the text layout engine used by libass for the OSD. Default:
 complex. See also –sub-shaper</p>
-<h3 id="playback-control-1">Playback Control</h3>
+<h4 id="playback-control-1">Playback Control</h4>
 <p>–start=<relative time></p>
 <p>Seek to given time position.</p>
 <p>The general format for times is [+|-][[hh:]mm:]ss[.ms]. If the time
@@ -8840,7 +8855,7 @@ backward playback, see –play-direction for details.</p>
 seeking is broken, or may make it perform multiple seeks.</p>
 <p>Setting this to a high value may lead to quadratic runtime
 behavior.</p>
-<h3 id="program-behavior">Program Behavior</h3>
+<h4 id="program-behavior">Program Behavior</h4>
 <p>–help, –h</p>
 <p>Show short summary of options.</p>
 <p>You can also pass a string to this option, which will list all
@@ -8881,8 +8896,9 @@ directory is used to load configuration files, and all other
 configuration directories are ignored. This means the global mpv
 configuration directory as well as per-user directories are ignored, and
 overrides through environment variables (MPV_HOME) are also ignored.</p>
-<p>Note that the cache and state paths (~~/cache, ~~/state) are not
-considered “configuration” and keep their auto-detection logic.</p>
+<p>Note that the cache and state paths (<sub></sub>/cache,
+<sub></sub>/state) are not considered “configuration” and keep their
+auto-detection logic.</p>
 <p>Note that the –no-config option takes precedence over this
 option.</p>
 <p>–dump-stats=<filename></p>
@@ -9111,7 +9127,7 @@ videos and images (default: yes).</p>
 some options are changed. This option should not normally be used
 directly, but only by mpv internally, or mpv-provided scripts, config
 files, or .desktop files. See PSEUDO GUI MODE for details.</p>
-<h3 id="screenshot">Screenshot</h3>
+<h4 id="screenshot">Screenshot</h4>
 <p>–screenshot-format=<type></p>
 <p>Set the image file type used for saving screenshots.</p>
 <p>Available choices:</p>
@@ -9294,7 +9310,7 @@ conversion will run in a separate thread and will probably not interrupt
 playback. The software renderer may lack some capabilities, such as HDR
 rendering. If window mode is used, the image will also be scaled in
 software which may not accurately reflect the actual visible result.</p>
-<h3 id="software-scaler">Software Scaler</h3>
+<h4 id="software-scaler">Software Scaler</h4>
 <p>–sws-scaler=<name></p>
 <p>Specify the software scaler algorithm to be used with –vf=scale. This
 also affects video output drivers which lack hardware acceleration,
@@ -9374,7 +9390,7 @@ output if threads are used.</p>
 <p>Allow optimizations that help with performance, but reduce quality
 (default: yes). Currently, this may simplify gamma conversion
 operations.</p>
-<h3 id="subtitles">Subtitles</h3>
+<h4 id="subtitles">Subtitles</h4>
 <p>Note</p>
 <p>Changing styling and position does not work with all subtitles.
 Image-based subtitles (DVD, Bluray/PGS, DVB) cannot changed for
@@ -10058,9 +10074,9 @@ Useful if you do not want to install fonts to your system. Note that
 files in this directory are loaded into memory before being used by mpv.
 If you have a lot of fonts, consider using fonts.conf (see FILES
 section) to include additional mpv user settings.</p>
-<p>If this option is not specified, ~~/fonts will be used by
+<p>If this option is not specified, <sub></sub>/fonts will be used by
 default.</p>
-<h3 id="terminal">Terminal</h3>
+<h4 id="terminal">Terminal</h4>
 <p>–quiet</p>
 <p>Make console output less verbose; in particular, prevents the status
 line (i.e. AV: 3.4 (00:00:03.37) / 5320.6 …) from being displayed.
@@ -10159,7 +10175,7 @@ sequence. The latter probably includes the regrettable win32.</p>
 seconds since the player process was started (technically, slightly
 later actually), using a monotonic time source depending on the OS. This
 is CLOCK_MONOTONIC on sane UNIX variants.</p>
-<h3 id="track-selection">Track Selection</h3>
+<h4 id="track-selection">Track Selection</h4>
 <p>–alang=&lt;languagecode[,languagecode,…]&gt;</p>
 <p>Specify a prioritized list of audio languages to use, as IETF
 language tags. Equivalent ISO 639-1 two-letter and ISO 639-2
@@ -10287,7 +10303,7 @@ the audio language and matches your list of preferred languages. The
 special value always will only select forced subtitle tracks and never
 fallback on a non-forced track. Conversely, no will never select a
 forced subtitle track.</p>
-<h3 id="video">Video</h3>
+<h4 id="video">Video</h4>
 <p>–vo=<driver></p>
 <p>Specify the video output backend to be used. See VIDEO OUTPUT DRIVERS
 for details and descriptions of available drivers.</p>
@@ -11009,7 +11025,7 @@ mandates an upper limit, the implementation can use a lower latency than
 requested internally. A setting of 1 means that the VO will wait for
 every frame to become visible before starting to render the next frame.
 (Default: 2)</p>
-<h3 id="video-sync">Video Sync</h3>
+<h4 id="video-sync">Video Sync</h4>
 <p>–mc=<seconds/frame></p>
 <p>Maximum A-V sync correction per frame (in seconds)</p>
 <p>–autosync=<factor></p>
@@ -11148,7 +11164,7 @@ additional factor. Too low values could lead to video frame dropping or
 repeating if the A/V desync cannot be compensated, too high values could
 lead to chaotic frame dropping due to the audio “overshooting” and
 skipping multiple video frames before the sync logic can react.</p>
-<h3 id="watch-history">Watch History</h3>
+<h4 id="watch-history">Watch History</h4>
 <p>–save-watch-history</p>
 <p>Whether to save which files are played. These can be then selected
 with the default g-h key binding.</p>
@@ -11157,12 +11173,12 @@ with the default g-h key binding.</p>
 disabled by default.</p>
 <p>–watch-history-path=<path></p>
 <p>The path in which to store the watch history. Default:
-~~state/watch_history.jsonl (see FILES).</p>
+<sub></sub>state/watch_history.jsonl (see FILES).</p>
 <p>This file contains one JSON object per line. Its time field is the
 UNIX timestamp when the file was opened, its path field is the
 normalized path, and its title field is the title when it was
 available.</p>
-<h3 id="watch-later">Watch Later</h3>
+<h4 id="watch-later">Watch Later</h4>
 <p>–save-position-on-quit</p>
 <p>Always save the current playback position on quit, and also when the
 loadfile command is used to replace the current playlist. When this file
@@ -11219,7 +11235,7 @@ disabled by default.</p>
 <p>–ignore-path-in-watch-later-config</p>
 <p>Ignore path (i.e. use filename only) when using watch later feature.
 (Default: disabled)</p>
-<h3 id="window">Window</h3>
+<h4 id="window">Window</h4>
 <p>–title=<string></p>
 <p>Set the window title. This is used for the video window, and if
 possible, also sets the audio stream title.</p>
@@ -11662,13 +11678,13 @@ combination of hardware/drivers/etc. happens to be.</p>
 <p>–x11-wid-title=&lt;yes|no&gt;</p>
 <p>Whether or not to set the window title when mpv is embedded on X11
 (default: no).</p>
-<h2 id="positioning">Positioning</h2>
-<h3 id="configuration-positioning">Configuration (Positioning)</h3>
+<h3 id="positioning">Positioning</h3>
+<h4 id="configuration-positioning">Configuration (Positioning)</h4>
 <p>This script can be customized through a config file
 script-opts/positioning.conf placed in mpv’s user directory and through
 the –script-opts command-line option. The configuration syntax is
 described in mp.options functions.</p>
-<h4 id="configurable-options-4">Configurable Options</h4>
+<h5 id="configurable-options-4">Configurable Options</h5>
 <p>toggle_align_to_cursor</p>
 <p>Default: no</p>
 <p>Whether align-to-cursor requires holding down a mouse button to pan.
@@ -11678,7 +11694,7 @@ the cursor, and clicking a second time disables this.</p>
 <p>Default: no</p>
 <p>Whether to not print the new value of –video-zoom when using
 cursor-centric-zoom.</p>
-<h3 id="script-bindings-positioning">Script bindings (Positioning)</h3>
+<h4 id="script-bindings-positioning">Script bindings (Positioning)</h4>
 <p>pan-x <amount></p>
 <p>Adjust –video-align-x relatively to the OSD width, rather than
 relatively to the video width like the option. This is useful to pan
@@ -11700,13 +11716,13 @@ clicking once if toggle_align_to_cursor is yes.</p>
 <p>Increase –video-zoom by amount while keeping the part of the video
 hovered by the cursor under it, or the average position of touch points
 if known.</p>
-<h2 id="select">Select</h2>
-<h3 id="configuration-select">Configuration (Select)</h3>
+<h3 id="select">Select</h3>
+<h4 id="configuration-select">Configuration (Select)</h4>
 <p>This script can be customized through a config file
 script-opts/select.conf placed in mpv’s user directory and through the
 –script-opts command-line option. The configuration syntax is described
 in mp.options functions.</p>
-<h4 id="configurable-options-5">Configurable options</h4>
+<h5 id="configurable-options-5">Configurable options</h5>
 <p>history_date_format</p>
 <p>Default: %Y-%m-%d %H:%M:%S</p>
 <p>The format of dates of history entries. This is passed to Lua’s
@@ -11715,7 +11731,7 @@ os.date, which uses the same formats as strftime(3).</p>
 <p>Default: yes</p>
 <p>Whether to show only the last of history entries with the same
 path.</p>
-<h3 id="key-bindings-1">Key bindings</h3>
+<h4 id="key-bindings-1">Key bindings</h4>
 <p>When using mp.input.select, the key bindings listed in CONSOLE are
 extended with the following:</p>
 <p>ENTER, Ctrl+j and Ctrl+m</p>
@@ -11744,7 +11760,7 @@ items.</p>
 <p>If the query starts with ’, only exact matches are filtered. You can
 also specify multiple search terms delimited by spaces, and only items
 matching all terms are filtered.</p>
-<h3 id="script-bindings-select">Script bindings (Select)</h3>
+<h4 id="script-bindings-select">Script bindings (Select)</h4>
 <p>By default select.lua’s script bindings are bound to key sequences
 starting with g listed in Keyboard Control. The names of the script
 bindings listed below can be used to bind them to different keys.</p>
@@ -11813,19 +11829,19 @@ already exist.</p>
 <p>Open mpv’s online documentation in the browser.</p>
 <p>menu</p>
 <p>Show a menu with miscellaneous entries.</p>
-<h3 id="select-1">Select</h3>
+<h4 id="select-1">Select</h4>
 <p>console can present a list of items to browse and select from with
 the mp.input.select API. select.lua is a builtin client of this API
 providing script bindings that gather and format the data to be selected
 in the console and do operations on the selected item. It can be
 disabled using the –load-select=no option.</p>
-<h2 id="stats">Stats</h2>
-<h3 id="configuration-stats">Configuration (Stats)</h3>
+<h3 id="stats">Stats</h3>
+<h4 id="configuration-stats">Configuration (Stats)</h4>
 <p>This script can be customized through a config file
 script-opts/stats.conf placed in mpv’s user directory and through the
 –script-opts command-line option. The configuration syntax is described
 in mp.options functions.</p>
-<h4 id="configurable-options-6">Configurable Options</h4>
+<h5 id="configurable-options-6">Configurable Options</h5>
 <p>key_page_1</p>
 <p>Default: 1</p>
 <p>key_page_2</p>
@@ -11946,7 +11962,7 @@ with the window or kept at a constant size, depending on the
 –osd-scale-by-window option.</p>
 <p>Note: colors are given as hexadecimal values and use ASS tag order:
 BBGGRR (blue green red).</p>
-<h4 id="different-key-bindings">Different key bindings</h4>
+<h5 id="different-key-bindings">Different key bindings</h5>
 <p>Additional keys can be configured in input.conf to display the
 stats:</p>
 <pre><code>e script-binding stats/display-stats
@@ -11954,7 +11970,7 @@ E script-binding stats/display-stats-toggle</code></pre>
 <p>And to display a certain page directly:</p>
 <pre><code>i script-binding stats/display-page-1
 h script-binding stats/display-page-4-toggle</code></pre>
-<h4 id="active-key-bindings-page">Active key bindings page</h4>
+<h5 id="active-key-bindings-page">Active key bindings page</h5>
 <p>Lists the active key bindings and the commands they’re bound to,
 excluding the interactive keys of the stats script itself. See also
 –input-test for more detailed view of each binding.</p>
@@ -11968,7 +11984,7 @@ Escape sequences can be disabled by adding - before yes,
 i.e. –script-opt=stats-bindlist=-yes.</p>
 <p>Like with –input-test, the list includes bindings from input.conf and
 from user scripts. Use –no-config to list only built-in bindings.</p>
-<h4 id="internal-stuff-page">Internal stuff page</h4>
+<h5 id="internal-stuff-page">Internal stuff page</h5>
 <p>Most entries shown on this page have rather vague meaning. Likely
 none of this is useful for you. Don’t attempt to use it. Forget its
 existence.</p>
@@ -11999,7 +12015,7 @@ starting mpv.</p>
 <p>If entries have /time and /cpu variants, the former gives the real
 time (monotonic clock), while the latter the thread CPU time (only if
 the corresponding pthread API works and is supported).</p>
-<h3 id="usage-stats">Usage (Stats)</h3>
+<h4 id="usage-stats">Usage (Stats)</h4>
 <p>The following key bindings are active by default unless something
 else is already bound to them:</p>
 <p>i</p>
@@ -12036,9 +12052,9 @@ active:</p>
 <p>On page 4, these key bindings are also active:</p>
 <p>/</p>
 <p>Search key bindings</p>
-<h2 id="usage">Usage</h2>
-<h3 id="escaping-spaces-and-other-special-characters">Escaping spaces
-and other special characters</h3>
+<h3 id="usage">Usage</h3>
+<h4 id="escaping-spaces-and-other-special-characters">Escaping spaces
+and other special characters</h4>
 <p>Keep in mind that the shell will partially parse and mangle the
 arguments you pass to mpv. For example, you might need to quote or
 escape options and filenames:</p>
@@ -12083,7 +12099,7 @@ support passing values in a more structured way instead of flat strings,
 and can avoid the suboption parsing mess. For example, –vf supports
 MPV_FORMAT_NODE, which lets you pass suboptions as a nested data
 structure of maps and arrays.</p>
-<h3 id="legacy-option-syntax">Legacy option syntax</h3>
+<h4 id="legacy-option-syntax">Legacy option syntax</h4>
 <p>The –option=value syntax is not strictly enforced, and the
 alternative legacy syntax -option value and -option=value will also
 work. This is mostly for compatibility with MPlayer. Using these should
@@ -12101,14 +12117,14 @@ would write a log to f.txt, but now this command line fails, as
 normal file to be played (as in mpv f.txt).</p>
 <p>The future plan is that -option value will not work anymore, and
 options with a single - behave the same as – options.</p>
-<h3 id="list-options">List Options</h3>
+<h4 id="list-options">List Options</h4>
 <p>Some options which store lists of option values can have action
 suffixes. For example, the –display-tags option takes a ,-separated list
 of tags, but the option also allows you to append a single tag with
 –display-tags-append, and the tag name can for example contain a literal
 , without the need for escaping.</p>
-<h4 id="string-list-and-path-list-options">String list and path list
-options</h4>
+<h5 id="string-list-and-path-list-options">String list and path list
+options</h5>
 <p>String lists are separated by ,. The strings are not parsed or
 interpreted by the option system itself. However, most path or file list
 options use : (Unix) or ; (Windows) as separator, instead of ,.</p>
@@ -12135,7 +12151,7 @@ backslash)</p>
 <p>-append is meant as a simple way to append a single item without
 having to escape the argument (you may still need to escape on the shell
 level).</p>
-<h4 id="keyvalue-list-options">Key/value list options</h4>
+<h5 id="keyvalue-list-options">Key/value list options</h5>
 <p>A key/value list is a list of key/value string pairs. In programming
 languages, this type of data structure is often called a map or a
 dictionary. The order normally does not matter, although in some cases
@@ -12163,7 +12179,7 @@ it is recommended to use the -append variant. When using libmpv, prefer
 using MPV_FORMAT_NODE_MAP; when using a scripting backend or the JSON
 IPC, use an appropriate structured data type.</p>
 <p>Prior to mpv 0.33, : was also recognized as separator by -set.</p>
-<h4 id="object-settings-list-options">Object settings list options</h4>
+<h5 id="object-settings-list-options">Object settings list options</h5>
 <p>This is a very complex option type for some options, such as –af and
 –vf. They often require complicated escaping. See VIDEO FILTERS for
 details.</p>
@@ -12186,7 +12202,7 @@ details.</p>
 <p>Append an item, or remove it if it already exists</p>
 <p>-help</p>
 <p>Pseudo operation that prints a help text to the terminal</p>
-<h4 id="general">General</h4>
+<h5 id="general">General</h5>
 <p>Without suffix, the operation used is normally -set.</p>
 <p>Some operations like -add and -pre specify multiple items, but be
 aware that you may need to escape the arguments. -append accepts a
@@ -12199,7 +12215,7 @@ alias for –sub-files-append.</p>
 command, which takes the suffix (without the -) as separate operation
 parameter.</p>
 <p>An object settings list can hold up to 100 elements.</p>
-<h3 id="paths">Paths</h3>
+<h4 id="paths">Paths</h4>
 <p>Some care must be taken when passing arbitrary paths and filenames to
 mpv. For example, paths starting with - will be interpreted as options.
 Likewise, if a path contains the sequence ://, the string before that
@@ -12235,11 +12251,11 @@ will work.</p>
 <p>The following special paths/keywords are currently recognized:</p>
 <p>Warning</p>
 <p>Beware that if –no-config is used, all of the “config
-directory”-based paths (~~/, ~~home/ and ~~global/) will be empty
-strings.</p>
-<p>This means that ~~home/ would expand to an empty string, and that
-sub-paths such as ~~home/foo/bar” would expand to a relative path
-(foo/bar), which may not be what you expected.</p>
+directory”-based paths (<sub></sub>/, <sub></sub>home/ and
+<sub></sub>global/) will be empty strings.</p>
+<p>This means that <sub></sub>home/ would expand to an empty string, and
+that sub-paths such as <sub></sub>home/foo/bar” would expand to a
+relative path (foo/bar), which may not be what you expected.</p>
 <p>Furthermore, any commands that search in config directories will fail
 to find anything, since there won’t be any directories to search in.</p>
 <p>Be sure that your scripts can handle these “no config” scenarios.</p>
@@ -12248,30 +12264,30 @@ to find anything, since there won’t be any directories to search in.</p>
 <p>~/</p>
 <p>The current user’s home directory (equivalent to ~/ and $HOME/ in
 terminal environments).</p>
-<p>~~/</p>
+<p><sub></sub>/</p>
 <p>If the sub-path exists in any of mpv’s config directories, then the
 path of the existing file/dir is returned. Otherwise this is equivalent
-to ~~home/.</p>
+to <sub></sub>home/.</p>
 <p>mpv’s config dir (for example ~/.config/mpv/).</p>
-<p>~~global/</p>
+<p><sub></sub>global/</p>
 <p>The global config path (such as /etc/mpv), if available (not on
 win32).</p>
-<p>~~osxbundle/</p>
+<p><sub></sub>osxbundle/</p>
 <p>The macOS bundle resource path (macOS only).</p>
-<p>~~desktop/</p>
+<p><sub></sub>desktop/</p>
 <p>The path to the desktop.</p>
-<p>~~exe_dir/</p>
+<p><sub></sub>exe_dir/</p>
 <p>The path to the directory containing mpv.exe (for config file
 purposes, $MPV_HOME will override this) (win32 only).</p>
-<p>~~cache/</p>
+<p><sub></sub>cache/</p>
 <p>The path to application cache data (~/.cache/mpv/). On some
-platforms, this will be the same as ~~home/.</p>
-<p>~~state/</p>
+platforms, this will be the same as <sub></sub>home/.</p>
+<p><sub></sub>state/</p>
 <p>The path to application state data (~/.local/state/mpv/). On some
-platforms, this will be the same as ~~home/.</p>
-<p>~~old_home/</p>
+platforms, this will be the same as <sub></sub>home/.</p>
+<p><sub></sub>old_home/</p>
 <p>Do not use.</p>
-<h3 id="per-file-options">Per-File Options</h3>
+<h4 id="per-file-options">Per-File Options</h4>
 <p>When playing multiple files, any option given on the command line
 usually affects all files. Example:</p>
 <pre><code>mpv --a file1.mkv --b file2.mkv --c</code></pre>
@@ -12302,7 +12318,7 @@ you must escape these on some shells.) Example:</p>
 the current file stops playing. If option –c is changed during playback
 of file2.mkv, it is reset when advancing to file3.mkv. This only affects
 file-local options. The option –a is never reset here.</p>
-<h3 id="usage-usage">Usage (Usage)</h3>
+<h4 id="usage-usage">Usage (Usage)</h4>
 <p>Command line arguments starting with - are interpreted as options,
 everything else as filenames or URLs. All options except flag options
 (or choice options which include yes) require a parameter in the form
@@ -12316,8 +12332,8 @@ they start with -. (To play a file named -, you need to use ./-.)</p>
 –no-fs.</p>
 <p>If an option is marked as (XXX only), it will only work in
 combination with the XXX option or if XXX is compiled in.</p>
-<h2 id="miscellaneous-1">Miscellaneous</h2>
-<h3 id="audio-filters">Audio Filters</h3>
+<h3 id="miscellaneous-1">Miscellaneous</h3>
+<h4 id="audio-filters">Audio Filters</h4>
 <p>Audio filters allow you to modify the audio stream and its
 properties. The syntax is:</p>
 <p>–af=…</p>
@@ -12538,7 +12554,7 @@ It always operates on full audio frames, because it was made to handle
 SPDIF (compressed audio passthrough). This is used automatically if the
 –video-sync=display-adrop option is used. Do not use this filter (or the
 given option); they are extremely low quality.</p>
-<h3 id="audio-output-drivers">Audio Output Drivers</h3>
+<h4 id="audio-output-drivers">Audio Output Drivers</h4>
 <p>Audio output drivers are interfaces to different audio output
 facilities. The syntax is:</p>
 <p>–ao=&lt;driver1,driver2,…[,]&gt;</p>
@@ -12790,7 +12806,7 @@ period.</p>
 cases, but reportedly on some devices there are glitches following
 stream resets under the default setting. In such cases, specifying a
 shorter duration might help.</p>
-<h3 id="description">Description</h3>
+<h4 id="description">Description</h4>
 <p>mpv is a media player based on MPlayer and mplayer2. It supports a
 wide variety of video file formats, audio and video codecs, and subtitle
 types. Special input URL types are available to read input from a
@@ -12798,7 +12814,7 @@ variety of sources other than disk files. Depending on platform, a
 variety of different video and audio output methods are supported.</p>
 <p>Usage examples to get you started quickly can be found at the end of
 this man page.</p>
-<h3 id="environment-variables">Environment Variables</h3>
+<h4 id="environment-variables">Environment Variables</h4>
 <p>There are a number of environment variables that can be used to
 control the behavior of mpv.</p>
 <p>HOME, XDG_CONFIG_HOME</p>
@@ -12876,7 +12892,7 @@ requires highly aligned buffers: Linux requires a 2048 bytes alignment
 <p>DVDREAD_NOKEYS</p>
 <p>Skip retrieving all keys on startup. Currently disabled.</p>
 <p>FIXME: Document this.</p>
-<h3 id="exit-codes">Exit Codes</h3>
+<h4 id="exit-codes">Exit Codes</h4>
 <p>Normally mpv returns 0 as exit code after finishing playback
 successfully. If errors happen, the following exit codes can be
 returned:</p>
@@ -12898,7 +12914,7 @@ default quit key bindings in encoding mode.</p>
 0, overriding the exit code that would be returned normally. Also, the
 quit input command can take an exit code: in this case, that exit code
 is returned.</p>
-<h3 id="files">Files</h3>
+<h4 id="files">Files</h4>
 <p>Note that this section assumes Linux/BSD. On other platforms the
 paths may be different. For Windows-specifics, see FILES ON WINDOWS
 section.</p>
@@ -12985,7 +13001,7 @@ config file.</p>
 for details.</p>
 <p>Other files in this directory are specific to the corresponding
 scripts as well, and the mpv core doesn’t touch them.</p>
-<h3 id="files-on-windows">Files On Windows</h3>
+<h4 id="files-on-windows">Files On Windows</h4>
 <p>On win32 (if compiled with MinGW, but not Cygwin), the default config
 file locations are different. They are generally located under
 %APPDATA%/mpv/. For example, the path to mpv.conf is
@@ -13018,7 +13034,7 @@ directory with the highest priority, but is now discouraged to use and
 might be removed in the future.</p>
 <p>Note that mpv likes to mix / and  path separators for simplicity.
 kernel32.dll accepts this, but cmd.exe does not.</p>
-<h3 id="installation">Installation</h3>
+<h4 id="installation">Installation</h4>
 <p>mpv</p>
 <ul>
 <li>Installation</li>
@@ -13026,10 +13042,10 @@ kernel32.dll accepts this, but cmd.exe does not.</p>
 <li>Bug Reports</li>
 <li>Community</li>
 </ul>
-<h4 id="installation-1">Installation</h4>
+<h5 id="installation-1">Installation</h5>
 <p>It is recommended to use the latest version from the git master
 branch.</p>
-<h5 id="windows">Windows</h5>
+<h6 id="windows">Windows</h6>
 <p>All binary packages are unofficial third-party builds, except as
 noted. The first-party CI builds are intended mainly for testing and may
 be missing certain features.</p>
@@ -13057,7 +13073,7 @@ href="https://packages.msys2.org/base/mingw-w64-mpv">packages.msys2.org</a></p>
 <p>Compilation instructions</p>
 <p><a
 href="https://github.com/mpv-player/mpv/blob/master/DOCS/compile-windows.md">github.com</a></p>
-<h5 id="macos">macOS</h5>
+<h6 id="macos">macOS</h6>
 <p>All binary packages are unofficial third-party builds, except as
 noted. The first-party CI builds are intended mainly for testing and may
 be missing certain features.</p>
@@ -13073,7 +13089,7 @@ href="https://ports.macports.org/port/mpv/">ports.macports.org</a></p>
 <p>Homebrew (without application bundles)</p>
 <p><a
 href="https://formulae.brew.sh/formula/mpv">formulae.brew.sh</a></p>
-<h5 id="source-code">Source code</h5>
+<h6 id="source-code">Source code</h6>
 <p>If you want bleeding edge functionality, git versions of FFmpeg or if
 a package for your platform is unavailable/outdated, you can build mpv
 from source code. The helper build scripts are recommended for most
@@ -13086,7 +13102,7 @@ and libass.</p>
 href="https://github.com/mpv-player/mpv/releases/latest">github.com</a></p>
 <p>Helper build scripts for *nix systems</p>
 <p><a href="https://github.com/mpv-player/mpv-build">github.com</a></p>
-<h5 id="linux-packages">Linux packages</h5>
+<h6 id="linux-packages">Linux packages</h6>
 <p>Distributions usually package outdated, unmaintained, and unsupported
 versions of mpv. This is especially true for popular distributions like
 Debian and Ubuntu. It is recommended to use mpv-build or third-party
@@ -13108,11 +13124,11 @@ href="https://aur.archlinux.org/packages/mpv-build-git/">aur.archlinux.org</a></
 href="https://deb-multimedia.org/dists/testing/main/binary-amd64/package/mpv">deb-multimedia.org</a></p>
 <p>Ubuntu and Debian (apt repository)</p>
 <p><a href="https://fruit.je/apt">fruit.je</a></p>
-<h5 id="mobile-platforms">Mobile platforms</h5>
+<h6 id="mobile-platforms">Mobile platforms</h6>
 <p>Android</p>
 <p><a
 href="https://play.google.com/store/apps/details?id=is.xyz.mpv">play.google.com</a></p>
-<h5 id="other-platforms">Other platforms</h5>
+<h6 id="other-platforms">Other platforms</h6>
 <p>FreeBSD (Freshports)</p>
 <p><a
 href="https://www.freshports.org/multimedia/mpv">freshports.org</a></p>
@@ -13124,10 +13140,10 @@ href="https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/multimedia/mpv/index.html
 href="https://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/multimedia/mpv/">cvsweb.openbsd.org</a></p>
 <p>Haiku</p>
 <p><a href="https://depot.haiku-os.org/mpv">depot.haiku-os.org</a></p>
-<h5 id="installed-successfully">Installed successfully?</h5>
+<h6 id="installed-successfully">Installed successfully?</h6>
 <h6 id="community">Community</h6>
 <h6 id="nope-report-a-bug">Nope (Report a bug)</h6>
-<h3 id="low-latency-playback">Low Latency Playback</h3>
+<h4 id="low-latency-playback">Low Latency Playback</h4>
 <p>mpv is optimized for normal video playback, meaning it actually tries
 to buffer as much data as it seems to make sense. This will increase
 latency. Reducing latency is possible only by specifically disabling
@@ -13160,7 +13176,7 @@ driver</li>
 <li>without audio –framedrop=no –speed=1.01 may help for live sources
 (results can be mixed)</li>
 </ul>
-<h3 id="protocols">Protocols</h3>
+<h4 id="protocols">Protocols</h4>
 <p>mpv://…</p>
 <p>mpv protocol. This is used for starting mpv from URL handler. The
 protocol is stripped and the rest is passed to the player as a normal
@@ -13297,7 +13313,7 @@ files).</p>
 <p>Use the data part as source data.</p>
 <p>hex://data</p>
 <p>Like memory://, but the string is interpreted as hexdump.</p>
-<h3 id="pseudo-gui-mode">Pseudo Gui Mode</h3>
+<h4 id="pseudo-gui-mode">Pseudo Gui Mode</h4>
 <p>mpv has no official GUI, other than the OSC (ON SCREEN CONTROLLER),
 which is not a full GUI and is not meant to be. However, to compensate
 for the lack of expected GUI behavior, mpv will in some cases start with
@@ -13333,7 +13349,7 @@ player-operation-mode=pseudo-gui</code></pre>
 the normal way. This is deprecated. In future mpv releases, the behavior
 might change, and not apply your additional settings, and/or use a
 different profile name.</p>
-<h3 id="resuming-playback">Resuming Playback</h3>
+<h4 id="resuming-playback">Resuming Playback</h4>
 <p>mpv is capable of storing the playback position of the currently
 playing file and resume from there the next time that file is played.
 This is done with the commands quit-watch-later (bound to Shift+Q by
@@ -13358,7 +13374,7 @@ a show, and later play all the episodes, mpv will automatically resume
 playback from episode 5.</p>
 <p>More options to configure this functionality are listed in Watch
 Later.</p>
-<h3 id="taking-screenshots">Taking Screenshots</h3>
+<h4 id="taking-screenshots">Taking Screenshots</h4>
 <p>Screenshots of the currently played file can be taken using the
 ‘screenshot’ input mode command, which is by default bound to the s key.
 Files named mpv-shotNNNN.jpg will be saved in the working directory,
@@ -13370,7 +13386,7 @@ end of the video filter chain and subtitles. By default, S takes
 screenshots without subtitles, while s includes subtitles.</p>
 <p>Unlike with MPlayer, the screenshot video filter is not required.
 This filter was never required in mpv, and has been removed.</p>
-<h3 id="terminal-status-line">Terminal Status Line</h3>
+<h4 id="terminal-status-line">Terminal Status Line</h4>
 <p>During playback, mpv shows the playback status on the terminal. It
 looks like something like this:</p>
 <p>AV: 00:03:12 / 00:24:25 (13%) A-V: -0.000</p>
@@ -13421,7 +13437,7 @@ demuxer in seconds, the second value shows the estimated size of the
 buffered amount in kilobytes. (demuxer-cache-duration and
 demuxer-cache-state properties.)</li>
 </ul>
-<h3 id="video-filters">Video Filters</h3>
+<h4 id="video-filters">Video Filters</h4>
 <p>Video filters allow you to modify the video stream and its
 properties. All of the information described in this section applies to
 audio filters as well (generally using the prefix –af instead of
@@ -14170,7 +14186,7 @@ any case it might go against your goals when using this filter.</p>
 <p>Do not use this with –vo=gpu. It will apply filtering twice, since
 most –vo=gpu options are unconditionally applied to the gpu filter.
 There is no mechanism in mpv to prevent this.</p>
-<h3 id="video-output-drivers">Video Output Drivers</h3>
+<h4 id="video-output-drivers">Video Output Drivers</h4>
 <p>Video output drivers are interfaces to different video output
 facilities. The syntax is:</p>
 <p>–vo=&lt;driver1,driver2,…[,]&gt;</p>
