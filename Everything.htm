@@ -188,7 +188,7 @@
 document</p>
 <p class="date">2026-08-03</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#everything-help-guide"
 id="toc-everything-help-guide">Everything help guide</a>
@@ -215,6 +215,7 @@ id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="everything-help-guide">Everything help guide</h1>
 <p>This guide gathers the official manual for “Everything”, the filename
 search program published by voidtools, into a single document that a
@@ -1372,7 +1373,7 @@ Portable Zip 64-bit</a> <a
 href="https://www.voidtools.com/Everything-1.4.1.1032.x86.Lite-Setup.exe">Download
 Lite Installer</a> <a
 href="https://www.voidtools.com/Everything-1.4.1.1032.x64.Lite-Setup.exe">Download
-Lite Installer 64-bit</a> <a href="#whats-new">What’s New</a> <a
+Lite Installer 64-bit</a> What’s New <a
 href="https://www.voidtools.com/Changes.txt">Changes</a> <a
 href="#previous-versions">Older Versions</a> <a
 href="https://www.voidtools.com/License.txt">License</a> <a
@@ -1650,7 +1651,7 @@ the same name, skip to the next file after adding the same name.</li>
 <li><strong>0x00000005</strong> – Size: BYTE – code offset</li>
 <li><strong>0x00000006</strong> – Size: code length – code</li>
 </ul>
-<h3 id="file-lists">File Lists</h3>
+<h3 id="file-lists-2">File Lists</h3>
 <p>Everything File List (EFU) are recommended for off-line files or
 files that do not change, for example a CDRom, DVDRom or read only NAS.
 An EFU file is a Comma-separated Values (CSV) file containing a list of
@@ -4763,7 +4764,7 @@ HKEY_LOCAL_MACHINE6432Node</li>
 <ul>
 <li><a href="#multiple-instances">Multiple Instances</a></li>
 </ul>
-<h2 id="searching">Searching</h2>
+<h2 id="searching-2">Searching</h2>
 <h3 id="advanced-search-functions">Advanced Search Functions</h3>
 <p>Advanced Search functions find files and folders by property
 values.</p>
@@ -6425,8 +6426,8 @@ href="#search-modifiers">Filters and bookmarks</a> <a
 href="#search-modifiers">All modifiers</a> <a
 href="#search-modifiers">See also</a></p>
 <p>Syntax</p>
-<p>Search modifiers are applied to a <a href="#search-syntax-1">single
-search term</a>:</p>
+<p>Search modifiers are applied to a single
+search term:</p>
 <p>0</p>
 <dl>
 <dt>search-modifier:</dt>
@@ -6884,20 +6885,13 @@ Escaping a filename wildcard disables filename wildcard matching.</p>
 Advanced -&gt; <a
 href="https://www.voidtools.com/forum/viewtopic.php?f=12&amp;t=9994#wildcards">wildcards</a>)
 Extended wildcards: Disabled.</p>
-<p>See also <a href="#search-syntax-1">search syntax</a> <a
+<p>See also search syntax <a
 href="#search-functions">search functions</a></p>
-<h3 id="search-syntax">Search Syntax</h3>
-<p>An Everything search consists of one or more <a
-href="#search-syntax-1">search terms</a> joined by <a
-href="#search-syntax-1">search operators</a>.</p>
+<h3 id="search-syntax-2">Search Syntax</h3>
+<p>An Everything search consists of one or more search terms joined by search operators.</p>
 <p>Requires <a
-href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> <a
-href="#search-syntax-1">Syntax</a> <a
-href="#search-syntax-1">Operators</a> <a
-href="#search-syntax-1">Wildcards</a> <a
-href="#search-syntax-1">Macros</a> <a href="#search-syntax-1">Character
-Entities</a> <a href="#search-syntax-1">Filename Parts</a> <a
-href="#search-syntax-1">See also</a></p>
+href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> Syntax Operators Wildcards Macros Character
+Entities Filename Parts See also</p>
 <p>Syntax</p>
 <p>A search term specifies what to search. The basic structure of a
 single search term is:</p>
@@ -6905,7 +6899,7 @@ single search term is:</p>
 <dl>
 <dt>[!]</dt>
 <dd>
-Optional <a href="#search-syntax-1">NOT operator</a> to exclude the
+Optional NOT operator to exclude the
 search term.
 </dd>
 <dt>[search-modifier:]</dt>
@@ -6933,13 +6927,13 @@ menu, literal text matches against the full path instead.
 paths containing abc 0 = matches files and folders modified today 0 =
 matches files with an extension containing uppercase JPG 0 = excludes
 filenames containing abc</p>
-<p>Search terms can be combined with <a href="#search-syntax-1">search
-operators</a> to create more complex search expressions.</p>
+<p>Search terms can be combined with search
+operators to create more complex search expressions.</p>
 <p>0<operator>1<search-term>2</p>
 <p>For example: 0 = matches filenames containing both 1 AND 2 0 =
 matches files with a 1 OR 2 extension</p>
 <p>Operators</p>
-<p>Operators combine <a href="#search-syntax-1">search terms</a> and
+<p>Operators combine search terms and
 control how they are evaluated.</p>
 <dl>
 <dt><em>space</em></dt>
@@ -7030,7 +7024,7 @@ Entities</a></p>
 <p><a href="#search-modifiers">Search Modifiers</a> <a
 href="#search-functions">Search Functions</a> <a
 href="#ini">operator_precedence</a></p>
-<h3 id="searching-2">Searching</h3>
+<h3 id="searching-2-2">Searching</h3>
 <p>Use the <a href="#using-everything">search edit</a> to type in a
 search.</p>
 <p>Type in a partial filename, files and folders matching your partial
@@ -7632,7 +7626,7 @@ August 2014:</p>
 </ul>
 <h2 id="serving-everything-to-other-computers">Serving Everything to
 other computers</h2>
-<h3 id="etp">ETP</h3>
+<h3 id="etp-2">ETP</h3>
 <p>The Everything ETP/FTP server allows you to search and access your
 files from an Everything client or FTP client.</p>
 <h4 id="start-an-etpftp-server">Start an ETP/FTP server</h4>
@@ -7857,8 +7851,8 @@ href="#everything-server">Advanced INI settings</a></p>
 <p>Server install</p>
 <p>To add the Everything Server plugin:</p>
 <ul>
-<li>Download and run the <a href="#plugins-1">Everything Server plugin
-installer</a>.</li>
+<li>Download and run the Everything Server plugin
+installer.</li>
 </ul>
 <p>Server setup</p>
 <p>To create an Everything Server:</p>
@@ -11131,8 +11125,7 @@ current user.
 </dd>
 <dt><em>URL protocol</em></dt>
 <dd>
-Open Everything from es: URLs. For example, when clicking on <a
-href="es:abc123">es:abc123</a> Everything will launch and populate the
+Open Everything from es: URLs. For example, when clicking on es:abc123 Everything will launch and populate the
 search with 0.
 </dd>
 <dt><em>EFU file association</em></dt>
@@ -12061,7 +12054,7 @@ Choose when the selected folder is updated.
 See <a href="#folder-indexing">Folder Indexing</a> for more information.
 </dd>
 </dl>
-<h4 id="file-lists-2">File Lists</h4>
+<h4 id="file-lists-2-2">File Lists</h4>
 <p><strong>Everything Options File Lists</strong></p>
 <p>Contains settings for configuring file lists indexes.</p>
 <dl>
@@ -12269,7 +12262,7 @@ empty to include all files. For example, exclude db files</p>
 <p>Contains settings for configuring plugins.</p>
 <p>Requires <a
 href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> To
-download a plugin, please see <a href="#plugins-1">Plugins</a>. When a
+download a plugin, please see Plugins. When a
 plugin is installed, additional option pages may appear under the
 Plugins section on the left.</p>
 <dl>
@@ -12353,24 +12346,21 @@ settings</strong>.</li>
 <ul>
 <li><a href="#ini">Everything.ini</a></li>
 </ul>
-<h3 id="plugins">Plugins</h3>
+<h3 id="plugins-2">Plugins</h3>
 <p>The ETP/FTP/HTTP servers are now plug-ins in <a
 href="https://www.voidtools.com/everything-1.5">Everything 1.5</a>.</p>
 <p>Requires <a
-href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> <a
-href="#plugins-1">Download Plug-ins</a> <a href="#plugins-1">Plug-in
-Installation</a> <a href="#plugins-1">Plug-in Setup</a> <a
-href="#plugins-1">Plug-in Directory</a> <a href="#plugins-1">Plug-in
-Settings</a> <a href="#plugins-1">Remove a Plugin</a> <a
-href="#plugins-1">Safe mode</a> <a href="#plugins-1">See also</a></p>
+href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> Download Plug-ins Plug-in
+Installation Plug-in Setup Plug-in Directory Plug-in
+Settings Remove a Plugin Safe mode See also</p>
 <p>Download Plug-ins</p>
-<p>Download and run an installer to <a href="#plugins-1">install a
-plugin</a> or download a portable zip to <a href="#plugins-1">install a
-plugin manually</a>.</p>
+<p>Download and run an installer to install a
+plugin or download a portable zip to install a
+plugin manually.</p>
 <ul>
-<li><a href="#plugins-1">HTTP Server</a></li>
-<li><a href="#plugins-1">ETP/FTP Server</a></li>
-<li><a href="#plugins-1">Everything Server</a></li>
+<li>HTTP Server</li>
+<li>ETP/FTP Server</li>
+<li>Everything Server</li>
 </ul>
 <p>HTTP Server</p>
 <p>Allow users to search and access your files from a web browser.</p>
@@ -12461,14 +12451,14 @@ later</a>.</p>
 <p>Plug-in Installation</p>
 <p>To install a plug-in:</p>
 <ul>
-<li><a href="#plugins-1">Download a plug-in installer</a>.</li>
+<li>Download a plug-in installer.</li>
 <li><strong>Run</strong> the plug-in installer.</li>
 <li>Click <strong>Add</strong>.</li>
 </ul>
 <p>-or-</p>
 <p>To manually install a plug-in:</p>
 <ul>
-<li><a href="#plugins-1">Download a plug-in zip</a> and extract the
+<li>Download a plug-in zip and extract the
 plug-in dll to your Desktop.</li>
 <li>Move the extracted plug-in dll to C:Files</li>
 <li>In <strong>Everything</strong>, from the <strong>File</strong> menu,
@@ -12523,27 +12513,14 @@ href="https://www.voidtools.com/forum/viewtopic.php?t=16535">Everything
 1.5 Plugin SDK</a> <a
 href="https://www.voidtools.com/forum/viewtopic.php?t=15853">Everything
 1.5 SDK</a></p>
-<h3 id="properties">Properties</h3>
+<h3 id="properties-2">Properties</h3>
 <p>Properties are metadata from your files, such as Length, Author,
 Tags, Size on Disk, Filename length, Dimensions, Program Version,
 Regular Expression Match 1, Frame rate, etc…</p>
 <p>Requires <a
-href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> <a
-href="#properties-1">View properties</a> <a href="#properties-1">Search
-properties</a> <a href="#properties-1">Sort by properties</a> <a
-href="#properties-1">Find duplicated properties</a> <a
-href="#properties-1">Index properties for instant searching and instant
-sorting</a> <a href="#properties-1">Update indexed properties</a> <a
-href="#properties-1">Property gathering methods</a> <a
-href="#properties-1">Setting property values</a> <a
-href="#properties-1">Windows Property System</a> <a
-href="#properties-1">Everything Properties</a> <a
-href="#properties-1">User values</a> <a
-href="#properties-1">.metadata.efu</a> <a
-href="#properties-1">property_alternate_data_stream_wchar</a> <a
-href="#properties-1">property_alternate_data_stream_ansi</a> <a
-href="#properties-1">property_alternate_data_stream_utf8</a> <a
-href="#properties-1">Summary Information</a></p>
+href="https://www.voidtools.com/everything-1.5/">Everything 1.5</a> View properties Search
+properties Sort by properties Find duplicated properties Index properties for instant searching and instant
+sorting Update indexed properties Property gathering methods Setting property values Windows Property System Everything Properties User values .metadata.efu property_alternate_data_stream_wchar property_alternate_data_stream_ansi property_alternate_data_stream_utf8 Summary Information</p>
 <p>View properties</p>
 <p>Right click the column header and click <strong>Add column…</strong>
 choose a property to display:</p>
@@ -12607,7 +12584,7 @@ menu, click <strong>Options</strong>.</li>
 </ul>
 <p>To search for properties that are not indexed, use the notindexed:
 search modifier.</p>
-<p>See also <a href="#properties-1">Update indexed properties</a></p>
+<p>See also Update indexed properties</p>
 <p>Update indexed properties</p>
 <p>Generally you will not need to update properties, all the properties
 for a file are rescanned when it is modified.</p>
@@ -12622,15 +12599,14 @@ menu, click <strong>Options</strong>.</li>
 <p>Property Gathering Methods</p>
 <p>Everything will load properties with the following methods:</p>
 <ul>
-<li><a href="#properties-1">User values</a></li>
-<li><a href="#properties-1">.metadata.efu</a></li>
-<li><a
-href="#properties-1">property_alternate_data_stream_wchar</a></li>
-<li><a href="#properties-1">property_alternate_data_stream_ansi</a></li>
-<li><a href="#properties-1">property_alternate_data_stream_utf8</a></li>
-<li><a href="#properties-1">Windows Property System</a></li>
-<li><a href="#properties-1">Summary Information</a></li>
-<li><a href="#properties-1">Everything Properties</a></li>
+<li>User values</li>
+<li>.metadata.efu</li>
+<li>property_alternate_data_stream_wchar</li>
+<li>property_alternate_data_stream_ansi</li>
+<li>property_alternate_data_stream_utf8</li>
+<li>Windows Property System</li>
+<li>Summary Information</li>
+<li>Everything Properties</li>
 </ul>
 <p>(Listed in order of priority from highest to lowest).</p>
 <p>Everything Properties will gather values from the Windows Property
@@ -12659,15 +12635,14 @@ href="https://www.voidtools.com/forum/viewtopic.php?t=9994#property_builtin_hand
 <p>Setting property values</p>
 <p>Property values can be set with the following methods:</p>
 <ul>
-<li><a href="#properties-1">User values</a></li>
-<li><a href="#properties-1">.metadata.efu</a></li>
-<li><a
-href="#properties-1">property_alternate_data_stream_wchar</a></li>
-<li><a href="#properties-1">property_alternate_data_stream_ansi</a></li>
-<li><a href="#properties-1">property_alternate_data_stream_utf8</a></li>
-<li><a href="#properties-1">Windows Property System</a></li>
-<li><a href="#properties-1">Desktop.ini</a></li>
-<li><a href="#properties-1">Summary Information</a></li>
+<li>User values</li>
+<li>.metadata.efu</li>
+<li>property_alternate_data_stream_wchar</li>
+<li>property_alternate_data_stream_ansi</li>
+<li>property_alternate_data_stream_utf8</li>
+<li>Windows Property System</li>
+<li>Desktop.ini</li>
+<li>Summary Information</li>
 </ul>
 <p>Windows Property System</p>
 <p>To select a <strong>Windows Property System</strong> property:</p>
@@ -12685,11 +12660,9 @@ System</strong> on the left.</li>
 <li>Click <strong>OK</strong>.</li>
 </ul>
 <p>Windows will modify the file to save the property value</p>
-<p>Property values for folders can be set with <a
-href="#properties-1">Desktop.ini</a>. The Windows Property System will
+<p>Property values for folders can be set with Desktop.ini. The Windows Property System will
 load these values.</p>
-<p>Property values for files and folders can be set with <a
-href="#properties-1">Summary Information</a>. The Windows Property
+<p>Property values for files and folders can be set with Summary Information. The Windows Property
 System will load these values on Windows 10 and later.</p>
 <p>Desktop.ini</p>
 <p>To set properties for a folder (advanced):</p>
@@ -13149,7 +13122,7 @@ for: 0</li>
 </ul>
 <p><a
 href="https://www.voidtools.com/forum/viewtopic.php?f=12&amp;t=9994#home_omit_results">home_omit_results</a></p>
-<h3 id="results">Results</h3>
+<h3 id="results-2">Results</h3>
 <p>The result list shows the file and folders matches for the current
 search. Right click a file or folder to perform an action, such as open,
 cut, copy, delete, rename or properties.</p>
@@ -13448,7 +13421,7 @@ background</a></strong>.</li>
 <li><a href="#indexes">Indexes</a></li>
 </ul>
 <h2 id="miscellaneous">Miscellaneous</h2>
-<h3 id="everything">Everything</h3>
+<h3 id="everything-2">Everything</h3>
 <p><strong>Everything Search Window</strong></p>
 <p>“<em>Everything</em>” is a filename search engine for Windows.</p>
 <h4 id="how-is-everything-different-from-other-search-engines">How is
@@ -13827,5 +13800,6 @@ role="doc-endnotes">
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+</main>
 </body>
 </html>

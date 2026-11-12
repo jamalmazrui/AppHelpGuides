@@ -188,7 +188,7 @@
 gathered into one screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#audacity-help-guide" id="toc-audacity-help-guide">Audacity
 Help Guide</a>
@@ -238,6 +238,7 @@ id="toc-cat-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="audacity-help-guide">Audacity Help Guide</h1>
 <p>This guide gathers the official help for Audacity, the free audio
 recorder and editor, taken from its own two documentation sites on 30
@@ -21698,7 +21699,7 @@ Manager</strong> and save your settings.</p></li>
 <li>PreviousUsing themes</li>
 <li>NextEffect Presets</li>
 </ul>
-<h3 id="keyboard-shortcuts">Keyboard shortcuts</h3>
+<h3 id="keyboard-shortcuts-2x">Keyboard shortcuts</h3>
 <p>The default <strong>Standard</strong> set of shortcuts is a reduced
 set, compared to earlier versions of Audacity, to simplify the set of
 shortcuts somewhat and to provide greater flexibility for users who wish
@@ -26403,7 +26404,7 @@ and audition the repairs, then likewise with any further clicks in our
 audio. If you have been making a lot of repairs you may want to take a
 break and come back to listen to the whole repaired track a little
 later.</p>
-<h3 id="compressor">Compressor</h3>
+<h3 id="compressor-2">Compressor</h3>
 <p>The Compressor effect reduces the <strong><em>dynamic
 range</em></strong> of audio.</p>
 <p>One of the main purposes of reducing dynamic range is to permit the
@@ -27963,7 +27964,7 @@ will usually work best on very short clicks. For broader individual pops
 in selections up to 128 <strong><em>samples</em></strong> wide (about
 three milliseconds at 44,100 <strong><em>Hz</em></strong> project sample
 rate), you could try the Repair effect.</p>
-<h5 id="compressor-2">Compressor</h5>
+<h5 id="compressor-2-2">Compressor</h5>
 <p>Compresses the <strong><em>dynamic range</em></strong> by two
 alternative methods. The default “<strong><em>RMS</em></strong>” method
 makes the louder parts softer, but leaves the quieter audio alone. The
@@ -28764,7 +28765,7 @@ waveform peaks.</p>
 <h4 id="links-16">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="limiter">Limiter</h3>
+<h3 id="limiter-2x">Limiter</h3>
 <p>Use the <strong><em>Limiter</em></strong> effect to pass signals
 below a specified input level unaffected or gently reduced, while
 preventing the peaks of stronger signals from exceeding this threshold.
@@ -28990,7 +28991,7 @@ displays the exact duration of that selection to the nearest audio
 <h4 id="links-19">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Generate Menu</p>
-<h3 id="noise-gate">Noise Gate</h3>
+<h3 id="noise-gate-2">Noise Gate</h3>
 <p>Use the <strong><em>Noise Gate</em></strong> to reduce the level of
 sound below a specified threshold level.</p>
 <p>A noise gate is a kind of “dynamics processor” that allows audio
@@ -29142,7 +29143,7 @@ selections for Noise Gate to work on.</li>
 <h4 id="links-20">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="noise-reduction">Noise Reduction</h3>
+<h3 id="noise-reduction-2">Noise Reduction</h3>
 <p>Noise Reduction can reduce constant background sounds such as hum,
 whistle, whine, buzz, and “hiss”, such as tape hiss, fan noise or
 FM/webcast carrier noise. It is not suitable for individual clicks and
@@ -29361,7 +29362,7 @@ techniques.</p>
 <h4 id="links-21">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="normalize">Normalize</h3>
+<h3 id="normalize-2x">Normalize</h3>
 <p>Use the <strong>Normalize</strong> effect to:</p>
 <ul>
 <li>set the peak <strong>amplitude</strong> of a single track (or
@@ -29638,7 +29639,7 @@ associated help file may be called “my-plugin.html” or
 “my-plugin-help.html”.</li>
 </ul></li>
 </ul>
-<h3 id="nyquist-prompt">Nyquist Prompt</h3>
+<h3 id="nyquist-prompt-2">Nyquist Prompt</h3>
 <p><strong><em>Nyquist Prompt</em></strong> lets you run and debug code
 snippets for your own plugins created using the Nyquist programming
 language. See the <strong>Manual’s Nyquist page</strong> for more
@@ -29978,7 +29979,7 @@ information:</p>
 please refer to the documentation on the Audacity Support site</li>
 </ul></li>
 </ul>
-<h3 id="other-plugins-and-tools-for-fades">Other plugins and tools for
+<h3 id="other-plugins-and-tools-for-fades-2">Other plugins and tools for
 fades</h3>
 <p>This page lists some downloadable or more advanced tools for making
 fades.</p>
@@ -30042,7 +30043,7 @@ option is NOT selected</p>
 ; wiggly fade out:
 (setf wiggle (mult 0.2 (hzosc (/ 6.0 (get-duration 1)))))
 (mult *track* (pwlv 1 1 0) (sum 1.0 wiggle))</code></pre>
-<h3 id="paulstretch">Paulstretch</h3>
+<h3 id="paulstretch-2">Paulstretch</h3>
 <p>Use <strong><em>Paulstretch</em></strong> to slow down audio by
 extreme amounts without changing the pitch.</p>
 <ul>
@@ -30082,7 +30083,7 @@ close to 1.0.</p>
 <h4 id="links-24">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="phaser">Phaser</h3>
+<h3 id="phaser-2">Phaser</h3>
 <p>The name “Phaser” comes from “Phase Shifter”, because it works by
 combining phase-shifted signals with the original signal. The movement
 of the phase-shifted signals is controlled using a Low
@@ -30291,7 +30292,7 @@ then use your normal saved settings.</p>
 <h4 id="links-26">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Analyze Menu</p>
-<h3 id="repair">Repair</h3>
+<h3 id="repair-2">Repair</h3>
 <p><strong>Repair</strong> removes a very short region of damaged or
 destroyed audio, replacing it with an estimated region of audio based on
 what is happening either side of the region. It may be used for example
@@ -30356,7 +30357,7 @@ Stereo Track” in the same menu in the upper track.</li>
 <h4 id="links-27">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="reverb">Reverb</h3>
+<h3 id="reverb-2">Reverb</h3>
 <p><strong><em>Reverb</em></strong> adds reverberation (rapid, modified
 repetitions blended with the original sound that gives an impression of
 ambience). The Reverb effect is based on the original “freeverb”
@@ -30562,7 +30563,7 @@ amount of reverb, ensuring that the result does not clip.</li>
 <h4 id="links-28">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="reverse">Reverse</h3>
+<h3 id="reverse-2">Reverse</h3>
 <p><strong><em>Reverse</em></strong> reverses the selected audio, so
 that the end of the audio will be heard first and the beginning last.
 Some people reverse small portions of audio to make inappropriate
@@ -30849,7 +30850,7 @@ lead-in and lead-out for each song would be shorter.</p>
 <h4 id="links-32">Links</h4>
 <p><strong>&gt;</strong> Silence Finder</p>
 <p><strong>&gt;</strong> Sound Finder</p>
-<h3 id="spectral-delete">Spectral Delete</h3>
+<h3 id="spectral-delete-2">Spectral Delete</h3>
 <p>The <strong>Spectral Delete</strong> is used with a Spectral
 Selection to delete that spectral selection from the audio.</p>
 <p>Note: The images on this page show spectrograms in the non-default
@@ -30900,7 +30901,7 @@ below about 100 Hz, then all frequencies below the upper bound will be
 removed (as if the selection extended down to zero Hz).</li>
 </ul></li>
 </ul>
-<h3 id="spectral-edit-multi-tool">Spectral Edit Multi Tool</h3>
+<h3 id="spectral-edit-multi-tool-2">Spectral Edit Multi Tool</h3>
 <p>The <strong>Spectral Edit Multi Tool</strong> is used with a Spectral
 Selection to apply either a <strong><em>notch filter</em></strong>,
 <strong><em>high-pass filter</em></strong> or <strong><em>low-pass
@@ -30968,7 +30969,7 @@ Multi Tool will apply a low-pass filter.</p>
 <p>In the following example the spectral selection had a lower boundary
 of 0 Hz and an upper boundary of 2,000 Hz.</p>
 <p><strong>Screenshot: SpectralEditMultiLP2000.png</strong></p>
-<h3 id="spectral-edit-parametric-eq">Spectral Edit Parametric EQ</h3>
+<h3 id="spectral-edit-parametric-eq-2">Spectral Edit Parametric EQ</h3>
 <p>The <strong>Spectral Edit Parametric EQ tool</strong> is used with a
 Spectral Selection to apply either a <strong><em>band boost
 filter</em></strong>, or <strong><em>band-cut filter</em></strong> to
@@ -31017,7 +31018,7 @@ Parametric EQ dialog, the Gain was set to -20 dB.</p>
 frequency of 2,000 Hz and a bandwidth of 2 octaves. In the Spectral Edit
 Parametric EQ dialog, the Gain was set to +10 dB.</p>
 <p><strong>Screenshot: SpectralEditParametric2000Hz+10.png</strong></p>
-<h3 id="spectral-edit-shelves">Spectral Edit Shelves</h3>
+<h3 id="spectral-edit-shelves-2">Spectral Edit Shelves</h3>
 <p>The <strong>Spectral Edit Shelves</strong> effect is used with a
 Spectral Selection to apply either a low-shelving filter or a
 high-shelving filter to the selection, depending on the type of
@@ -31585,7 +31586,7 @@ displays the exact duration of that selection to the nearest audio
 <h4 id="links-33">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Generate Menu</p>
-<h3 id="truncate-silence">Truncate Silence</h3>
+<h3 id="truncate-silence-2">Truncate Silence</h3>
 <p><strong>Truncate Silence</strong> automatically reduces the length of
 passages where the volume is below a specified threshold level.</p>
 <ul>
@@ -32082,7 +32083,7 @@ required.</p></li>
 recording and the punch track can help to create seamless
 edits.</p></li>
 </ul>
-<h3 id="vocal-reduction-and-isolation">Vocal Reduction and
+<h3 id="vocal-reduction-and-isolation-2">Vocal Reduction and
 Isolation</h3>
 <ul>
 <li><ul>
@@ -32397,7 +32398,7 @@ band stop filtering. Adjust the frequencies accordingly.</p>
 <h4 id="links-35">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="wahwah">Wahwah</h3>
+<h3 id="wahwah-2">Wahwah</h3>
 <p>Rapid tone quality variations, like that guitar sound so popular in
 the 1970’s.</p>
 <ul>
@@ -36861,7 +36862,7 @@ rate</em></strong> in Audio Settings Preferences will not produce larger
 files.</p>
 <h2 id="cat-reference-manual-menus-and-commands">Reference manual: menus
 and commands</h2>
-<h3 id="analyze-menu">Analyze Menu</h3>
+<h3 id="analyze-menu-2">Analyze Menu</h3>
 <p>The <strong><em>Analyze Menu</em></strong> contains tools for finding
 out about the characteristics of your audio, or labeling key features.
 Plugins that accept audio input but produce no audio output will be
@@ -37210,7 +37211,7 @@ track is changed without changing the speed or changing the length of
 the track by adding or removing samples.</li>
 </ul></li>
 </ul>
-<h3 id="edit-menu">Edit Menu</h3>
+<h3 id="edit-menu-2">Edit Menu</h3>
 <p>The <strong><em>Edit Menu</em></strong> provides standard edit
 commands (Undo, Redo, Cut, Copy, Paste and Delete) plus many other
 commands specific to editing audio or labels.</p>
@@ -37300,7 +37301,7 @@ exported files.</p>
 <h4 id="preferences-ctrl-p">Preferences Ctrl + P</h4>
 <p>Displays the Preferences dialog. Preferences enable you change most
 of the default behaviors and settings of Audacity.</p>
-<h3 id="effect-menu">Effect Menu</h3>
+<h3 id="effect-menu-2">Effect Menu</h3>
 <p><strong>Audacity includes many built-in effects and also lets you use
 a wide range of plugin effects.</strong></p>
 <p>You can download many free plugins for Audacity from our website.
@@ -37394,7 +37395,7 @@ transferring settings</h4>
 <p>To see how to backup your settings, last used and any user presets
 you have saved using the Manage button in each effect’s dialog, see
 <strong>this page</strong>.</p>
-<h3 id="extra-menu">Extra Menu</h3>
+<h3 id="extra-menu-2">Extra Menu</h3>
 <p>The <strong><em>Extra</em></strong> menu provides access to Toolbar
 operations, commands for track focus and movement of the editing or
 playback cursor that are not available in the default Audacity
@@ -37468,7 +37469,7 @@ Option + ⌘ + M - Mac only</h4>
 <p>On Mac only there is an extra command in this menu “<strong>Minimize
 All Projects</strong>”, shortcut Option + ⌘ + M, which minimizes all
 Audacity projects that you have open.</p>
-<h3 id="generate-menu">Generate Menu</h3>
+<h3 id="generate-menu-2">Generate Menu</h3>
 <p><strong><em>Generate Menu</em></strong> lets you create audio
 containing tones, noise or silence. Generated audio can be inserted at
 the cursor position so as to extend the track, or can replace an
@@ -37619,7 +37620,7 @@ made.</p>
 <p>Produces a realistic drum sound consisting of a sine wave
 ring-modulated by narrow band noise, an enharmonic tone and a relatively
 strong sine wave at the fundamental.</p>
-<h3 id="help-menu">Help Menu</h3>
+<h3 id="help-menu-2">Help Menu</h3>
 <p>The <strong><em>Help Menu</em></strong> lets you find out more about
 the Audacity application and how to use it.</p>
 <ul>
@@ -37779,7 +37780,7 @@ the Log and generate support data; Audacity version number, license and
 build information.</li>
 </ul></li>
 </ul>
-<h3 id="select-menu">Select Menu</h3>
+<h3 id="select-menu-2">Select Menu</h3>
 <p>The <strong><em>Select Menu</em></strong> provides a set of commands
 for defining selection regions, prior to acting on those regions with
 edits, effects and exports.</p>
@@ -37870,7 +37871,7 @@ the current position. It aims to find the crossing where the average
 amplitude of samples in the vicinity is lowest.</li>
 </ul></li>
 </ul>
-<h3 id="tools-menu">Tools Menu</h3>
+<h3 id="tools-menu-2">Tools Menu</h3>
 <p><strong><em>Tools Menu</em></strong> provides miscellaneous commands
 that:</p>
 <ul>
@@ -37989,7 +37990,7 @@ scale).</p>
 spaces, tabs or line-breaks.</li>
 <li>The file name must have a ‘.txt’ file extension.</li>
 </ul>
-<h3 id="tracks-menu">Tracks Menu</h3>
+<h3 id="tracks-menu-2">Tracks Menu</h3>
 <p><strong><em>Tracks Menu</em></strong> provides commands for:</p>
 <ul>
 <li>Creating and removing tracks</li>
@@ -38063,7 +38064,7 @@ other, even when carrying out actions like inserting, deleting or
 changing speed or tempo. You can turn this feature “on” or “off”
 <em>(default is unchecked “off”)</em> by clicking this menu item.</p>
 <p>See Sync-Locked Track Groups for more information.</p>
-<h3 id="transport-menu">Transport Menu</h3>
+<h3 id="transport-menu-2">Transport Menu</h3>
 <p><strong><em>Transport Menu</em></strong> commands let you play or
 stop, loop play, scrub play or record (including timed and sound
 activated recordings). Except for Scrub play, these playback commands
@@ -38108,7 +38109,7 @@ playback and recording dropdown menus in Audio Setup Toolbar.</p>
 <h4 id="transport-options">Transport Options</h4>
 <p>The Transport Options submenu lets you manage and set various options
 for transport (playing and recording) in Audacity.</p>
-<h3 id="view-menu">View Menu</h3>
+<h3 id="view-menu-2">View Menu</h3>
 <p><strong><em>View Menu</em></strong> has commands that determine the
 amount of detail you see in all the tracks in the project window. It
 also lets you show or hide Toolbars and some additional windows such as
@@ -38254,7 +38255,7 @@ button does the same as View &gt; Enter / Exit Full Screen.</p>
 this command will make those windows visible.</p>
 <h2 id="cat-reference-manual-other-topics">Reference manual: other
 topics</h2>
-<h3 id="accessibility">Accessibility</h3>
+<h3 id="accessibility-2x">Accessibility</h3>
 <p>This page discusses accessibility issues in Audacity for visually-
 and motion-impaired users.</p>
 <ul>
@@ -38855,7 +38856,7 @@ other purposes, Spectral Selection and editing can be used for cleaning
 up unwanted sound by removing particular frequencies, enhancing certain
 resonances, changing the quality of a voice or removing mouth sounds
 from voice work.</p>
-<h5 id="noise-reduction-2">Noise Reduction</h5>
+<h5 id="noise-reduction-2-2">Noise Reduction</h5>
 <p>Audacity can remove some kinds of noise from a recording. Noise
 Reduction is an ‘audio effect’, one of the fiddlier audio effects to
 use. This effect works best with fairly constant noise like background
@@ -39111,7 +39112,7 @@ close this Rhythm Track when you export your work (by clicking on the
 [X] top left of the track) so that you do not export the audible clicks,
 Alternatively you can simply mute the Rhythm Track prior to export by
 using the mute button in its Track Control Panel.</p>
-<h3 id="auto-duck">Auto Duck</h3>
+<h3 id="auto-duck-2">Auto Duck</h3>
 <p><strong><em>Auto Duck</em></strong> reduces (ducks) the volume of one
 or more selected tracks whenever the volume of a single unselected
 “control track” placed underneath reaches a particular threshold
@@ -39190,7 +39191,7 @@ fade lengths you will be able to see this in the graph.</p>
 <h4 id="links-44">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="bass-and-treble">Bass and Treble</h3>
+<h3 id="bass-and-treble-2">Bass and Treble</h3>
 <p><strong><em>Bass and Treble</em></strong> increases or decreases the
 lower <strong><em>frequencies</em></strong> and higher frequencies of
 your audio independently. It behaves just like the bass, treble and
@@ -39267,7 +39268,7 @@ gain is -3 dB.</p>
 <h4 id="links-45">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="beat-finder">Beat Finder</h3>
+<h3 id="beat-finder-2">Beat Finder</h3>
 <p><strong><em>Beat Finder</em></strong> attempts to place labels at
 beats which are much louder than the surrounding audio. It’s a fairly
 rough and ready tool, and will not necessarily work well on a typical
@@ -39467,7 +39468,7 @@ cartridges</h5>
 <p>The de-magnetization cartridges sold in the 1970s are ineffective.
 They used small permanent magnets and lack the necessary field
 strength.</p>
-<h3 id="change-speed-and-pitch">Change Speed and Pitch</h3>
+<h3 id="change-speed-and-pitch-2">Change Speed and Pitch</h3>
 <p>Use <strong><em>Change Speed and Pitch</em></strong> to change the
 speed of a selection, affecting its tempo,
 <strong><em>pitch</em></strong> and <strong><em>frequency</em></strong>
@@ -39547,7 +39548,7 @@ control.</p>
 <h4 id="links-47">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="classic-filters">Classic Filters</h3>
+<h3 id="classic-filters-2">Classic Filters</h3>
 <p><strong><em>Classic Filters</em></strong> offers three different
 types of <strong><em>filter</em></strong> which together emulate the
 vast majority of analog filters, providing a useful graphical tool for
@@ -41641,7 +41642,7 @@ track.</li>
 <li>Converts MP3.</li>
 </ul></li>
 </ul>
-<h4 id="extra-menu-2">Extra Menu</h4>
+<h4 id="extra-menu-2-2">Extra Menu</h4>
 <p>The Extra menu provides access to additional Commands that are not
 available in the normal default Audacity menus.</p>
 <ul>
@@ -43478,7 +43479,7 @@ and fix the source of the offset in the hardware. Updating your sound
 device drivers might help, too.</li>
 </ul></li>
 </ul>
-<h3 id="delay">Delay</h3>
+<h3 id="delay-2">Delay</h3>
 <p>Use <strong><em>Delay</em></strong> to create a multiple echo effect
 with options for variable delay times between successive echoes and the
 number, amplitude and pitch of successive repeats.</p>
@@ -43978,7 +43979,7 @@ uncompressed 24-bit file format with dither disabled.</p>
 <p>Whenever processing audio, the highest quality will be achieved by
 using 32-bit (float) throughout. Note that 32-bit audio files are twice
 the size of 16-bit audio files.</p>
-<h3 id="draw-tool">Draw Tool</h3>
+<h3 id="draw-tool-2">Draw Tool</h3>
 <p>Draw Tool enables you to redraw the waveform; it can thus be used to
 make volume changes to individual samples or effect repairs to
 clicks/noise.</p>
@@ -45657,7 +45658,7 @@ scrubbing immediately changes direction, and does not stop when the
 original key is released.</li>
 </ul></li>
 </ul>
-<h3 id="filter-curve-eq">Filter Curve EQ</h3>
+<h3 id="filter-curve-eq-2">Filter Curve EQ</h3>
 <p><strong>Filter Curve EQ</strong> is an equalization tool, it is an
 FFT (Fast Fourier Transform) filter. Equalization, is a way of
 manipulating sounds by <strong><em>Frequency</em></strong>. It allows
@@ -45801,7 +45802,7 @@ speed or pitch, use Tracks &gt; Resample.</li>
 <p><strong>&gt;</strong> Graphic EQ</p>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="find-clipping">Find Clipping</h3>
+<h3 id="find-clipping-2">Find Clipping</h3>
 <p>This displays runs of <strong><em>clipped</em></strong> samples in a
 Label Track, as a screen-reader accessible alternative to View &gt; Show
 Clipping in Waveform. A run must include at least one clipped sample,
@@ -45900,7 +45901,7 @@ ill. He probably was 60 when he died. I am anyway very sad to hear that
 he passed away and hope this post will shed some light on the man.</p>
 <p><strong><em>Peter Sampson - Audacity Team member
 25Aug17</em></strong></p>
-<h3 id="graphic-eq">Graphic EQ</h3>
+<h3 id="graphic-eq-2">Graphic EQ</h3>
 <p>Graphic EQ is a graphic equalizer.
 <strong><em>Equalization</em></strong> is a way of manipulating sounds
 by <strong><em>Frequency</em></strong>. It allows you to increase the
@@ -46980,7 +46981,7 @@ false-stmt</li>
 <h4 id="links-62">Links</h4>
 <p><strong>&gt;</strong> Programming in Nyquist</p>
 <p><strong>|&lt;</strong> Nyquist</p>
-<h3 id="invert">Invert</h3>
+<h3 id="invert-2">Invert</h3>
 <p><strong><em>Invert</em></strong> flips the audio
 <strong><em>samples</em></strong> upside-down, reversing their polarity.
 The positive samples (above the horizontal zero line in the Audacity
@@ -47211,7 +47212,7 @@ non-English languages in Audacity</h5>
 <li>ca_ES@valencia Valencian</li>
 <li>vi Vietnamese</li>
 </ul>
-<h3 id="license">License</h3>
+<h3 id="license-2">License</h3>
 <h4 id="audacity-license">Audacity License</h4>
 <p>Audacity is distributed under the terms of the GNU General Public
 License (GPL), version 2. The full text of this license is below,
@@ -47688,7 +47689,7 @@ roll-off.</li>
 <h4 id="links-64">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="macros">Macros</h3>
+<h3 id="macros-2">Macros</h3>
 <p>Macros - for batch processing and effects automation:</p>
 <p>A <strong><em>Macro</em></strong> is a sequence of pre-configured
 commands (mainly effects) in a set order that can be applied
@@ -48291,7 +48292,7 @@ is open as this will destroy the project. Windows blocks you from doing
 this but macOS and Linux do not.</li>
 </ul></li>
 </ul>
-<h3 id="measure-rms">Measure RMS</h3>
+<h3 id="measure-rms-2">Measure RMS</h3>
 <p>Use the <strong><em>Measure RMS</em></strong> analyzer to measure the
 <strong><em>RMS</em></strong> <em>(Root Mean Square)</em> levels in a
 track.</p>
@@ -48421,7 +48422,7 @@ file.</p></li>
 <p><strong>&gt;</strong> LAME MP3 Export</p>
 <p><strong>&gt;</strong> FFmpeg import/export libraries for more
 formats</p>
-<h3 id="mixer">Mixer</h3>
+<h3 id="mixer-2">Mixer</h3>
 <p><strong>Mixer</strong> is an alternative view to the audio tracks in
 the main tracks window, and is analogous to a hardware mixer board. Each
 audio track is displayed in a Track Strip. Each Track Strip has its own
@@ -48776,7 +48777,7 @@ in the “Amplification (dB)” box which will reduce the level of all the
 tracks by the specified value.</li>
 </ul></li>
 </ul>
-<h3 id="modules">Modules</h3>
+<h3 id="modules-2x">Modules</h3>
 <p>Audacity has experimental support for “modules”, which are a type of
 plugin, usually written in C++, that integrate closely with the main
 Audacity application. There are currently no modules included in the
@@ -49183,7 +49184,7 @@ Tool.</p>
 <li>Draw Tool after drawing the repair</li>
 </ul></li>
 </ul>
-<h3 id="multi-view">Multi-view</h3>
+<h3 id="multi-view-2">Multi-view</h3>
 <p>This is an <strong><em>advanced</em></strong> feature for expert
 users enabling Spectrogram and Waveform displays of the same audio shown
 simultaneously in the same track.</p>
@@ -49725,7 +49726,7 @@ Send !{c}a{Enter}{Enter} ; Send Alt, C, Enter and Enter to launch and execute Am
 <p>To run multiple effects on a project or a batch of audio files you
 can instead create and apply an Audacity Macro. Advanced users who can
 compile Audacity can use Scripting.</p>
-<h3 id="notch-filter">Notch Filter</h3>
+<h3 id="notch-filter-2x">Notch Filter</h3>
 <p><strong><em>Notch Filter</em></strong> sharply attenuates
 frequency-specific noise like mains hum or electrical whistle with
 minimal damage to the remaining audio, by cutting a “notch” out of the
@@ -50815,7 +50816,7 @@ primarily intended for use by developers.</p>
 <p><em>They show the overhead Audacity has for running the operation in
 the UI thread, the amount of time Audacity spent processing system
 events, such as mouse clicks and progress bar updates.</em></p>
-<h3 id="play">Play</h3>
+<h3 id="play-2">Play</h3>
 <h4 id="importing-audio-files">Importing audio files:</h4>
 <p>Either drag the files into the current project window, or choose File
 &gt; Import &gt; Audio.</p>
@@ -51541,7 +51542,7 @@ Options &gt; Sound Activation Level.</p>
 <p><strong>&gt;</strong> Scrubbing and Seeking</p>
 <p><strong>&gt;</strong> Timer Recording</p>
 <p><strong>&gt;</strong> Punch and Roll Recording</p>
-<h3 id="pluck">Pluck</h3>
+<h3 id="pluck-2">Pluck</h3>
 <p><strong><em>Pluck</em></strong> generates a synthesized pluck tone
 with abrupt or gradual fade-out, and selectable pitch corresponding to a
 <strong><em>MIDI</em></strong> note.</p>
@@ -51849,7 +51850,7 @@ combining two or more sounds.</li>
 <p><strong>&lt;</strong> Introduction to Nyquist and Lisp
 Programming</p>
 <p><strong>|&lt;</strong> Nyquist</p>
-<h3 id="punch-and-roll-record">Punch and Roll Record</h3>
+<h3 id="punch-and-roll-record-2">Punch and Roll Record</h3>
 <p><strong>Accessed by:</strong> Transport &gt; Recording &gt; Punch and
 Roll Record</p>
 <ul>
@@ -52006,7 +52007,7 @@ you corrected, plus one more for the original Record command.</p>
 <p><strong>&gt;</strong> Scrubbing and Seeking</p>
 <p><strong>&gt;</strong> Timer Recording</p>
 <p><strong>|&lt;</strong> Playing and Recording</p>
-<h3 id="record">Record</h3>
+<h3 id="record-2">Record</h3>
 <p><strong>To record:</strong></p>
 <ul>
 <li><p>Set the Recording Device,</p></li>
@@ -52093,7 +52094,7 @@ sources on the web include Amazon and Musiciansfriend.com.</li>
 </ul></li>
 </ul>
 <p><strong>|&lt;</strong> Back to: Getting Started</p>
-<h3 id="recording">Recording</h3>
+<h3 id="recording-2">Recording</h3>
 <p>This page provides a detailed description of various ways of
 controlling recording in Audacity, including how to control where and
 which track you record in and keyboard shortcut commands.</p>
@@ -52975,7 +52976,7 @@ is ceramic <em>(cheap USB turntables often use these)</em> it will have
 a high output. Replacing this with a magnetic cartridge will give lower
 output and better quality.</li>
 </ul>
-<h5 id="recording-2">Recording</h5>
+<h5 id="recording-2-2">Recording</h5>
 <p>Then, ignoring any instructions in the manufacturer’s guide to select
 “stereo mix”, simply press the <strong>Record</strong> button in
 Transport Toolbar to start recording from the turntable.</p>
@@ -52997,7 +52998,7 @@ decks for troubleshooting advice.</p>
 <h4 id="links-73">Links</h4>
 <p><strong>|&lt;</strong> Tutorial - Copying tapes, LPs or MiniDiscs to
 CD</p>
-<h3 id="repeat">Repeat</h3>
+<h3 id="repeat-2">Repeat</h3>
 <p><strong><em>Repeat</em></strong> repeats the selection the specified
 number of times.</p>
 <ul>
@@ -53037,7 +53038,7 @@ Audacity clipboard.</li>
 <h4 id="links-74">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Effect Menu</p>
-<h3 id="reset-configuration">Reset Configuration</h3>
+<h3 id="reset-configuration-2">Reset Configuration</h3>
 <p>This resets your Audacity configuration: <strong>toolbars</strong>,
 <strong>preferences</strong> and <strong>export settings</strong> to
 default settings.</p>
@@ -53069,7 +53070,7 @@ and will be searched for afresh next time you restart Audacity.</p>
 <h5 id="export-settings">Export settings</h5>
 <p>Any export format settings from your last use of any export command
 will be reset to default by using Reset Configuration</p>
-<h4 id="view-menu-2">View menu</h4>
+<h4 id="view-menu-2-2">View menu</h4>
 <ul>
 <li><strong>Show Clipping in Waveform</strong> will be set to the
 default “off” setting.</li>
@@ -53136,7 +53137,7 @@ cleared and remains intact.</p>
 <h5 id="plugins-1">Plugins</h5>
 <p>Any <strong>plugins</strong> that you have added will not be
 removed.</p>
-<h5 id="macros-2">Macros</h5>
+<h5 id="macros-2-2">Macros</h5>
 <p>Macros that you have created will not be removed or altered by using
 this command.</p>
 <h4 id="full-reset">Full reset</h4>
@@ -53146,7 +53147,7 @@ FAQ</strong>.</p>
 <p>Be aware that doing so will also remove all the items above in What
 is not reset as well as the items in Preferences and Export settings
 reset.</p>
-<h3 id="risset-drum">Risset Drum</h3>
+<h3 id="risset-drum-2">Risset Drum</h3>
 <p><strong><em>Risset Drum</em></strong> produces a sound based on work
 by the composer of electronic</p>
 <p>music, Jean Claude Risset. It consists of band-pass filtered noise,
@@ -53340,7 +53341,7 @@ dynamic range to analog telephone (landline), though note that telephone
 sound quality is also affected by a limited frequency range.</p>
 <p><strong>5-bit:</strong> Similar dynamic range to a 78 RPM phonograph
 disc after it has been played a few times.</p>
-<h3 id="sample-rates">Sample Rates</h3>
+<h3 id="sample-rates-2">Sample Rates</h3>
 <p>Sample Rate is the number of samples of audio carried per second. The
 default Audacity sample rate can be chosen in Audio Settings
 Preferences. This page describes the minimum sample rates appropriate
@@ -54562,7 +54563,7 @@ that Audacity is unable to recognize. Raw data in textual format cannot
 be imported.</li>
 </ul></li>
 </ul>
-<h4 id="edit-menu-2">Edit Menu</h4>
+<h4 id="edit-menu-2-2">Edit Menu</h4>
 <p>The Edit Menu provides standard edit commands (Undo, Redo, Cut, Copy,
 Paste and Delete) plus many other commands specific to editing audio or
 labels</p>
@@ -54817,7 +54818,7 @@ Boundaries &gt; Join , to join all regions or points.</li>
 audio regions.</li>
 </ul></li>
 </ul>
-<h4 id="select-menu-2">Select Menu</h4>
+<h4 id="select-menu-2-2">Select Menu</h4>
 <p>Select Menu has commands that enable you make selections of tracks or
 parts of the tracks in your project.</p>
 <ul>
@@ -55217,7 +55218,7 @@ and playback device</li>
 selection without having to be in Spectrogram view</li>
 </ul></li>
 </ul>
-<h4 id="transport-menu-2">Transport Menu</h4>
+<h4 id="transport-menu-2-2">Transport Menu</h4>
 <p>Transport Menu commands let you play or stop, loop play, scrub play
 or record (including timed and sound activated recordings).</p>
 <ul>
@@ -55426,7 +55427,7 @@ option.</li>
 <li>Toggles on and off the Enable audible input monitoring option.</li>
 </ul></li>
 </ul>
-<h4 id="tracks-menu-2">Tracks Menu</h4>
+<h4 id="tracks-menu-2-2">Tracks Menu</h4>
 <p>Tracks Menu provides commands for creating and removing tracks,
 applying operations to selected tracks such as mixing, resampling or
 converting from stereo to mono, and lets you add or edit labels.</p>
@@ -55641,7 +55642,7 @@ window, by Start Time or by Name.</p>
 <li>Sort tracks in order by name.</li>
 </ul></li>
 </ul>
-<h4 id="generate-menu-2">Generate Menu</h4>
+<h4 id="generate-menu-2-2">Generate Menu</h4>
 <p>Generate Menu lets you create audio containing tones, noise or
 silence.</p>
 <ul>
@@ -55747,7 +55748,7 @@ double cf , (default:0) double bw , (default:0) double noise ,
 <li>Produces a realistic drum sound.</li>
 </ul></li>
 </ul>
-<h4 id="effect-menu-2">Effect Menu</h4>
+<h4 id="effect-menu-2-2">Effect Menu</h4>
 <p>Audacity includes many built-in effects and also lets you use a wide
 range of plugin effects.</p>
 <ul>
@@ -56204,7 +56205,7 @@ voice with white noise will produce a robot-like voice for special
 effects.</li>
 </ul></li>
 </ul>
-<h4 id="analyze-menu-2">Analyze Menu</h4>
+<h4 id="analyze-menu-2-2">Analyze Menu</h4>
 <p>The Analyze Menu contains tools for finding out about the
 characteristics of your audio, or labeling key feature.</p>
 <ul>
@@ -56273,7 +56274,7 @@ text , (default:““)</li>
 separated by silence.</li>
 </ul></li>
 </ul>
-<h4 id="tools-menu-2">Tools Menu</h4>
+<h4 id="tools-menu-2-2">Tools Menu</h4>
 <p>The Tools Menu contains customisable tools.</p>
 <ul>
 <li><strong>ManageTools:</strong>
@@ -57348,7 +57349,7 @@ the most useful options is All_Tracks. The _Plus suffix includes the
 timeline.</li>
 </ul></li>
 </ul>
-<h4 id="help-menu-2">Help Menu</h4>
+<h4 id="help-menu-2-2">Help Menu</h4>
 <p>The Help Menu lets you find out more about the Audacity application
 and how to use it. It also includes some diagnostic tools.</p>
 <ul>
@@ -57434,7 +57435,7 @@ allows you to copy these files into the project</li>
 <li>Navigates to the next window.</li>
 </ul></li>
 </ul>
-<h3 id="scrubbing-and-seeking">Scrubbing and Seeking</h3>
+<h3 id="scrubbing-and-seeking-2x">Scrubbing and Seeking</h3>
 <p>Scrubbing or Seeking is the action of moving the mouse pointer right
 or left so as to adjust the position, speed or direction of playback,
 listening to the audio at the same time - a convenient way to quickly
@@ -58545,7 +58546,7 @@ on a Mac)</em>.</p>
 <h4 id="links-79">Links</h4>
 <p><strong>&gt;</strong> Forward to: Selecting Audio</p>
 <p><strong>|&lt;</strong> Back to: Getting Started</p>
-<h3 id="selection-tool">Selection Tool</h3>
+<h3 id="selection-tool-2">Selection Tool</h3>
 <p>The easiest way to select a region of audio is to use the
 <strong>Selection Tool</strong> - the I-beam</p>
 <p><strong>Screenshot: ToolsToolbarIBeam.png</strong></p>
@@ -58776,7 +58777,7 @@ well-advised to restrict yourself to slightly lower limits to afford
 some head-room.</li>
 </ul></li>
 </ul>
-<h3 id="sliding-stretch">Sliding Stretch</h3>
+<h3 id="sliding-stretch-2">Sliding Stretch</h3>
 <p><strong><em>Sliding Stretch</em></strong> allows you to make a
 continuous change to the tempo and/or pitch of a selection by choosing
 initial and/or final change values.</p>
@@ -58906,7 +58907,7 @@ contrasting the usage of Silence Finder and Sound Finder.</p>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Analyze Menu</p>
 <p><strong>&gt;</strong> Silence Finder</p>
-<h3 id="spectrogram-settings">Spectrogram Settings</h3>
+<h3 id="spectrogram-settings-2">Spectrogram Settings</h3>
 <p>It is possible to temporarily change the Spectrogram settings for any
 particular Spectrogram track, overriding whatever setting you have in
 Spectrograms Preferences.</p>
@@ -59051,7 +59052,7 @@ unwanted sound, enhancing certain resonances, changing the quality of a
 voice or removing mouth sounds from voice work.</p>
 <h4 id="links-83">Links</h4>
 <p><strong>|&lt;</strong> Spectrogram View</p>
-<h3 id="spectrogram-view">Spectrogram View</h3>
+<h3 id="spectrogram-view-2">Spectrogram View</h3>
 <p>The <strong><em>Spectrogram</em></strong> View of an audio track
 provides a visual indication of how the energy in different frequency
 bands changes over time. The Spectrogram can show sudden onset of a
@@ -59720,7 +59721,7 @@ onwards</em></li>
 <li>Vertical Zooming</li>
 </ul></li>
 </ul>
-<h3 id="themes">Themes</h3>
+<h3 id="themes-2">Themes</h3>
 <p>Audacity now comes supplied with four pre-configured, user-selectable
 themes. This enables you to choose the look and feel you prefer for
 Audacity’s interface.</p>
@@ -59833,7 +59834,7 @@ just the same: Simply click on the label (the bar for region labels, the
 circle for point labels) and drag them to their new place.</p>
 <p>See: <strong>Editing, resizing and moving Labels</strong> for more
 details on moving labels.</p>
-<h3 id="timeline">Timeline</h3>
+<h3 id="timeline-2">Timeline</h3>
 <p>The <strong><em>Timeline</em></strong> displays a horizontal ruler
 above the tracks measuring time from zero (the start of the track).
 Depending on zooming the ruler may span minutes of audio or give a
@@ -60009,7 +60010,7 @@ audio is played or recorded. The default setting is “off”</li>
 dragging on the gray widget in the horizontal scrollbar.</p>
 <p>For further details please see this page:
 <strong>Scrollbars</strong>.</p>
-<h3 id="timer-record">Timer Record</h3>
+<h3 id="timer-record-2x">Timer Record</h3>
 <p><strong><em>Timer Record</em></strong> operates in a manner similar
 to setting your digital video recorder or cassette recorder to make a
 scheduled recording.</p>
@@ -60203,8 +60204,8 @@ starts. If you do not Timer Record will proceed with the recording and
 then stop when your computer is about to run out of disk space, the
 remainder of the scheduled recording will not be recorded.</p>
 <p>Pressing the No will abort the Timed Recording setup.</p>
-<h3 id="tips">Tips</h3>
-<h4 id="tips-2">Tips</h4>
+<h3 id="tips-2">Tips</h3>
+<h4 id="tips-2-2">Tips</h4>
 <p>These tips pages collect many short pieces of advice on working with
 Audacity. Following these will greatly enhance your day-to-day
 experience of using Audacity.</p>
@@ -60763,7 +60764,7 @@ set “off” and not displayed by default in Audacity.</p>
 in the current version of Audacity.</p>
 <p><strong>Screenshot: Scrubbing in the Scrub Ruler.png</strong></p>
 <p><strong>&lt;</strong> Back to: Transport Menu</p>
-<h3 id="tremolo">Tremolo</h3>
+<h3 id="tremolo-2">Tremolo</h3>
 <p><strong><em>Tremolo</em></strong> modulates the volume of the
 selection at the depth and speed selected in the dialog. This is the
 same as the tremolo effect familiar to guitar and keyboard players.</p>
@@ -61479,7 +61480,7 @@ to select “<strong>stereo mix</strong>”</em>, simply press the Record
 button on Transport Toolbar.</p></li>
 </ul>
 <p><strong>|&lt;</strong> Back to: Getting Started</p>
-<h3 id="vertical-zooming">Vertical Zooming</h3>
+<h3 id="vertical-zooming-2">Vertical Zooming</h3>
 <p>If you want to carefully inspect a small portion of your audio in
 detail, you will want to use one of these Vertical Zoom methods.</p>
 <ul>
@@ -61746,7 +61747,7 @@ enable the Time Signature toolbar from View &gt; Toolbars so that you
 can vary the time signature, if required.</li>
 </ul></li>
 </ul>
-<h3 id="vocoder">Vocoder</h3>
+<h3 id="vocoder-2">Vocoder</h3>
 <p><strong><em>Vocoder</em></strong> synthesizes a <em>modulator</em>
 (usually a voice) in the left channel of a stereo track with a
 <em>carrier wave</em> in the right channel to produce a modified version
@@ -63071,7 +63072,7 @@ Right-to-Left in more circumstances, and the interface will get
 confused, with for example some buttons missing. This option is only
 available in Windows.</li>
 </ul>
-<h3 id="libraries-preferences">Libraries Preferences</h3>
+<h3 id="libraries-preferences-2">Libraries Preferences</h3>
 <p>Both the optional <strong>MP3 Export Library</strong> and the
 optional <strong>FFmpeg Import/Export Library</strong> allow Audacity to
 import and/or export many additional audio formats such as AC3, M4A and
@@ -63326,7 +63327,7 @@ turned that option “on” from the Timeline) playing with a non-fixed play
 head. This has the effect of ensuring that it is the play head that
 moves while scrubbing/seeking rather than the waveform moving.</li>
 </ul>
-<h3 id="preferences">Preferences</h3>
+<h3 id="preferences-2x">Preferences</h3>
 <p>Preferences let you change most of the default behaviors of Audacity.
 The Preferences dialog can be accessed using the Edit Menu (or by using
 the shortcut Ctrl + P). On a <strong>Mac</strong>, Preferences is under
@@ -64605,7 +64606,7 @@ mono audio at default settings.</p>
 <p><strong>Screenshot: Low disk space on startup.png</strong></p>
 <h2 id="cat-reference-manual-toolbars-and-the-project-window">Reference
 manual: toolbars and the project window</h2>
-<h3 id="audio-setup-toolbar">Audio Setup Toolbar</h3>
+<h3 id="audio-setup-toolbar-2">Audio Setup Toolbar</h3>
 <p><strong>Audio Setup Toolbar</strong> enables you to manage the setup
 of your audio input, adjust the project quality and output devices and
 adjust the latency of your computer.</p>
@@ -64997,7 +64998,7 @@ The Delete tool</strong> Delete Edit &gt; Delete or Ctrl + X</h4>
 <p>Removes the selected audio data and/or labels (ad leaves the
 clipboard as it was). By default, any audio or labels to right of the
 selection are shifted to the left.</p>
-<h3 id="device-toolbar">Device Toolbar</h3>
+<h3 id="device-toolbar-2">Device Toolbar</h3>
 <p><strong><em>Device Toolbar</em></strong> provides an easy way to
 select your required combination of audio host, recording device,
 recording channels and playback device, without having to open Audio
@@ -65156,7 +65157,7 @@ server or mixer such as pulse or dmix. It is normally best to select
 “default”. This will choose whatever is the system default playback
 device or server. The (hw:) playback devices give direct, lower latency
 access to the sound card output, bypassing any sound servers.</p>
-<h3 id="edit-toolbar">Edit Toolbar</h3>
+<h3 id="edit-toolbar-2">Edit Toolbar</h3>
 <p>These tools perform the same functions as those accessible through
 the Edit Menu, View Menu and keyboard shortcuts.</p>
 <p><strong>Screenshot: Edit Toolbar 3-6-0.png</strong></p>
@@ -65211,7 +65212,7 @@ Redo or Ctrl + Y (on Mac Shift + Ctrl + Z</h5>
 <strong>Note:</strong> If you undo an operation then perform any new one
 that appears in the Undo History, you can no longer redo that undone
 operation.</p>
-<h3 id="meter-toolbars">Meter Toolbars</h3>
+<h3 id="meter-toolbars-2">Meter Toolbars</h3>
 <p>Audacity has two meter toolbars, one for recording and the other for
 playback. They display the <strong><em>amplitude</em></strong> of audio
 being recorded or played in the project.</p>
@@ -65477,7 +65478,7 @@ level and the blue lines on the right show the Maximum Peak level.</p>
 earlier versions of Audacity or those recording to specifications
 required for audiobooks may prefer to use the Meter dropdown menu to
 open Meter Options and change to this style of meter.</p>
-<h3 id="play-at-speed-toolbar">Play-at-Speed Toolbar</h3>
+<h3 id="play-at-speed-toolbar-2">Play-at-Speed Toolbar</h3>
 <p><strong><em>Play-at-Speed Toolbar</em></strong> lets you Play or Loop
 Play audio at a slower or faster speed than normal, also affecting
 <strong><em>pitch</em></strong>. Slower than normal speeds can make it
@@ -65577,7 +65578,7 @@ enables you to scroll the tracks up and down.</p>
 <li>Clicking on the chevrons at the end of the scrollbar or the light
 gray space will scroll the tacks incrementally.</li>
 </ul>
-<h3 id="selection-toolbar">Selection Toolbar</h3>
+<h3 id="selection-toolbar-2">Selection Toolbar</h3>
 <p><strong><em>Selection Toolbar</em></strong> The primary function of
 the selection toolbar is to show you the precise timing of any current
 selection that you may have.</p>
@@ -65962,7 +65963,7 @@ and Measures format.</p>
 <p>This sets the time signature that is used when the Timeline is used
 in Beats and Measures format.</p>
 <p>The default setting is 4/4 time.</p>
-<h3 id="time-toolbar">Time Toolbar</h3>
+<h3 id="time-toolbar-2">Time Toolbar</h3>
 <p><strong><em>Time Toolbar</em></strong> is a read-only toolbar which
 displays the current audio position. When Audacity is not Playing or
 Recording, this will be either the current cursor position or the
@@ -66088,7 +66089,7 @@ recording</li>
 <li>Displays playback levels</li>
 </ul>
 <hr />
-<h5 id="device-toolbar-2">Device Toolbar</h5>
+<h5 id="device-toolbar-2-2">Device Toolbar</h5>
 <p><strong>Screenshot: Device Toolbar 3-6-0.png</strong></p>
 <ul>
 <li><p>Selects audio host, recording device, number of recording
@@ -66163,7 +66164,7 @@ digits (note carefully that this is <strong><em>not</em></strong> the
 Delete key on the numerical keypad). When in Low and High Frequencies
 view you can clear either input box individually with the Delete
 key.</p>
-<h3 id="tools-toolbar">Tools Toolbar</h3>
+<h3 id="tools-toolbar-2">Tools Toolbar</h3>
 <p><strong>Tools Toolbar</strong> sets the current tool for tasks such
 as selection, volume adjustment or horizontal zooming. Click another
 button to change tool or to go back to your previous tool.</p>
@@ -66239,7 +66240,7 @@ according to the mouse position and modifier key chosen. The shape of
 the pointer changes to show which tool is active. If you exit Audacity
 with Multi-Tool Mode selected, it will be also be enabled next time you
 launch Audacity. More details on Multi-Tool Mode here.</p>
-<h3 id="transport-toolbar">Transport Toolbar</h3>
+<h3 id="transport-toolbar-2">Transport Toolbar</h3>
 <p><strong><em>Transport Toolbar</em></strong> has buttons for
 controlling playback, recording and for moving to the project start or
 end. The buttons can also be controlled with keyboard shortcuts.</p>
@@ -66540,7 +66541,7 @@ dots). The horizontal center line denoting zero
 seen, with positive samples above the center line, and negative samples
 below.</p>
 <p><strong>Screenshot: TrackZoomedToSamples.png</strong></p>
-<h3 id="audio-clips">Audio Clips</h3>
+<h3 id="audio-clips-2">Audio Clips</h3>
 <p><strong>In Audacity, all audio is contained in clips.</strong></p>
 <ul>
 <li>Each clip can be moved around independently of other clips.</li>
@@ -66934,7 +66935,7 @@ the full source clip and not the size of the selection, regardless of
 which option you choose.</li>
 </ul></li>
 </ul>
-<h3 id="audio-tracks">Audio Tracks</h3>
+<h3 id="audio-tracks-2">Audio Tracks</h3>
 <p>Each <strong><em>audio track</em></strong> containing digital audio
 contains from left to right:</p>
 <ul>
@@ -67205,7 +67206,7 @@ synchronized</li>
 <p><strong>&gt;</strong> Track Control Panel and Vertical Scale</p>
 <p><strong>&gt;</strong> Label Tracks</p>
 <p><strong>&gt;</strong> Note Tracks (MIDI)</p>
-<h3 id="clip-fix">Clip Fix</h3>
+<h3 id="clip-fix-2">Clip Fix</h3>
 <p><strong><em>Clip Fix</em></strong> attempts to reconstruct
 <strong><em>clipped</em></strong> regions by interpolating the lost
 signal. It is only likely to be effective for repairing lightly clipped
@@ -67837,7 +67838,7 @@ label:</p>
 buttons.png</strong></p>
 <h4 id="links-91">Links</h4>
 <p><strong>|&lt;</strong> Label Tracks</p>
-<h3 id="envelope-tool">Envelope Tool</h3>
+<h3 id="envelope-tool-2">Envelope Tool</h3>
 <p>In Audacity, every track has an “amplitude envelope” which is
 controlled with the Envelope Tool on the Tools Toolbar.</p>
 <p>An amplitude envelope just means that you can control a track’s
@@ -68219,7 +68220,7 @@ within label tracks.</p>
 <li>repeat for each label track in turn</li>
 </ol>
 <p><strong>|&lt;</strong> Label Tracks</p>
-<h3 id="label-editor">Label Editor</h3>
+<h3 id="label-editor-2">Label Editor</h3>
 <p><strong><em>Label Editor</em></strong> lets you add or remove Label
 Tracks and edit their labels entirely using the keyboard, so is
 particularly useful for visually impaired users.</p>
@@ -68362,7 +68363,7 @@ select and right-click the label (or use the Menu key) then choose Edit
 to open the label in Label Editor.</li>
 </ul>
 <p><strong>|&lt;</strong> Label Tracks</p>
-<h3 id="label-sounds">Label Sounds</h3>
+<h3 id="label-sounds-2">Label Sounds</h3>
 <p><strong><em>Label Sounds</em></strong> is a tool which can useful to
 label the different songs or sections (or silences) in a long recording,
 such as the tracks from an LP or cassette.</p>
@@ -68588,7 +68589,7 @@ label</p></li>
 <h4 id="links-92">Links</h4>
 <p><strong>|&lt;</strong> Index of Effects, Generators and Analyzers</p>
 <p><strong>|&lt;</strong> Analyze Menu</p>
-<h3 id="label-tracks">Label Tracks</h3>
+<h3 id="label-tracks-2x">Label Tracks</h3>
 <p>A <strong><em>Label Track</em></strong> is an additional track that
 can be created in your project. The labels in the label track can be
 used to reference points or regions in the project’s audio tracks but
@@ -69492,7 +69493,7 @@ computer, but see below.</li>
 than one USB microphone</h4>
 <p>For information on how to record with multiple microphones please see
 FAQ:Recording - How To’s#twomics this page in the Audacity Manual.</p>
-<h3 id="regular-interval-labels">Regular Interval Labels</h3>
+<h3 id="regular-interval-labels-2">Regular Interval Labels</h3>
 <p><strong><em>Regular Interval Labels</em></strong> places labels in a
 label track so as to divide the associated audio into smaller,
 equally-sized segments. This can be useful for distributing a large file
@@ -69799,7 +69800,7 @@ down into the label track.</p>
 <p><strong>Screenshot: Removing labels together with their associated
 audio - after.png</strong></p>
 <p><strong>|&lt;</strong> Label Tracks</p>
-<h3 id="rhythm-track">Rhythm Track</h3>
+<h3 id="rhythm-track-2">Rhythm Track</h3>
 <p><strong><em>Rhythm Track</em></strong> generates a sequence of
 regular pulses at the selected tempo, beats per bar and either number of
 bars or track duration, using a selectable sound. It can thus be used
@@ -70015,7 +70016,7 @@ then Tracks &gt; Mix &gt; Mix and Render if you choose <strong>Make
 Stereo Track</strong> by mistake.</li>
 </ul></li>
 </ol>
-<h3 id="sync-locked-track-groups">Sync-Locked Track Groups</h3>
+<h3 id="sync-locked-track-groups-2x">Sync-Locked Track Groups</h3>
 <p>The <strong><em>Sync-Locked Track Groups</em></strong> feature is
 enabled by the “Sync-Lock Tracks” menu item. It ensures that length and
 position changes occurring anywhere in a defined group of tracks also
@@ -70359,7 +70360,7 @@ synced “selection” repeated three times.</p>
 <p><strong>&lt;</strong> Back to: Sync-Locked Track Groups - Time
 Shifting</p>
 <p><strong>|&lt;</strong> Sync-Locked Track Groups</p>
-<h3 id="time-tracks">Time Tracks</h3>
+<h3 id="time-tracks-2x">Time Tracks</h3>
 <p>A <strong><em>Time Track</em></strong> is used in conjunction with
 one or more audio tracks to progressively increase or decrease playback
 speed (and pitch) over the length of the audio.</p>
@@ -70525,7 +70526,7 @@ use the speed-changed audio in other applications, choose File &gt;
 Export Audio.</h2>
 <pre><code>-   Older computers may be incapable of playing audio in real-time that makes use of a Time Track. However you can always export the file as a WAV and then play the WAV file later.</code></pre></li>
 </ol>
-<h3 id="track-control-panel-and-vertical-scale">Track Control Panel and
+<h3 id="track-control-panel-and-vertical-scale-2">Track Control Panel and
 Vertical Scale</h3>
 <p>This page documents the Track Control Panel and Vertical Scale ruler
 that are present with each type of Audacity track.</p>
@@ -71406,7 +71407,7 @@ tracks.</p>
 Sync-Locked mono tracks: selection extends automatically to the second
 track</strong></p>
 <p>For more details see Sync-Locked_Track_Groups</p>
-<h4 id="auto-duck-2">Auto Duck</h4>
+<h4 id="auto-duck-2-2">Auto Duck</h4>
 <p><strong><em>Auto Duck</em></strong> reduces (ducks) the volume of one
 or more selected tracks whenever the volume of a single unselected
 “control track” placed underneath reaches a particular threshold
@@ -76889,7 +76890,7 @@ tones).</p></li>
 profile, you can press 0/1 to immediately apply the effect to your
 selection.</p></li>
 </ul>
-<h4 id="noise-gate-2">Noise Gate</h4>
+<h4 id="noise-gate-2-2">Noise Gate</h4>
 <p>The Noise Gate effect attenuates any sound quieter than a certain
 threshold while leaving sounds louder completely unaffected. To use
 it</p>
@@ -78751,5 +78752,6 @@ others. Many of them can be found in the Vamp Plugin Pack.</p>
 <li>PreviousIsolating or removing vocals from a song</li>
 <li>NextTroubleshooting overview</li>
 </ul>
+</main>
 </body>
 </html>

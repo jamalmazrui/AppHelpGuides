@@ -253,7 +253,7 @@
 one screen-reader-friendly document</p>
 <p class="date">2026-07-30</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#notepad-help-guide" id="toc-notepad-help-guide">Notepad++
 Help Guide</a>
@@ -332,6 +332,7 @@ extension</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="notepad-help-guide">Notepad++ Help Guide</h1>
 <p>This guide gathers the official Notepad++ User Manual. Notepad++ is
 the free Windows source-code and text editor, actively maintained, and
@@ -2838,17 +2839,17 @@ pixels.</p></li>
 <ul>
 <li><p>For v8.8 and newer, 0 will have:</p>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode xml"><code class="sourceCode xml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="fu">?&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        ...</span></code></pre></div>
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb8-1"></span>
+<span id="cb8-2"><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="fu">?&gt;</span></span>
+<span id="cb8-3"></span>
+<span id="cb8-4">        ...</span></code></pre></div>
 <p>You can copy the example from 0 to use as a start for 1. This example
 file has plenty of comments, to help you understand what’s
 needed.</p></li>
 <li><p>The content of the v8.4.2-v8.7.9 0 is as follows:</p>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode xml"><code class="sourceCode xml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="fu">?&gt;</span></span></code></pre></div></li>
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb9-1"></span>
+<span id="cb9-2"><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="fu">?&gt;</span></span></code></pre></div></li>
 </ul></li>
 <li><p>Note 2: This is the same folder descibed in Configuration Files
 Locations where 0 goes, and will generally be the 1 directory, unless
@@ -3651,16 +3652,16 @@ href="https://notepad-plus-plus.org/news/v86-20thyearanniversary/">v8.6
 release announce</a>:</p>
 <p>Here is a step-by-step guide that shows you how to transform from</p>
 <div class="sourceCode" id="cb10"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># var1, var2, object1, object2, object3, flag1, flag2</span></span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><span class="co"># var1, var2, object1, object2, object3, flag1, flag2</span></span></code></pre></div>
 <p>to</p>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">var1</span> <span class="op">=</span> param[<span class="st">&quot;var1&quot;</span>]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">var2</span> <span class="op">=</span> param[<span class="st">&quot;var2&quot;</span>]</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">object1</span> <span class="op">=</span> param[<span class="st">&quot;object1&quot;</span>]</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">object2</span> <span class="op">=</span> param[<span class="st">&quot;object2&quot;</span>]</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">object3</span> <span class="op">=</span> param[<span class="st">&quot;object3&quot;</span>]</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">flag1</span> <span class="op">=</span> param[<span class="st">&quot;flag1&quot;</span>]</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="at">flag2</span> <span class="op">=</span> param[<span class="st">&quot;flag2&quot;</span>]</span></code></pre></div>
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1">obj<span class="op">.</span><span class="at">var1</span> <span class="op">=</span> param[<span class="st">&quot;var1&quot;</span>]</span>
+<span id="cb11-2">obj<span class="op">.</span><span class="at">var2</span> <span class="op">=</span> param[<span class="st">&quot;var2&quot;</span>]</span>
+<span id="cb11-3">obj<span class="op">.</span><span class="at">object1</span> <span class="op">=</span> param[<span class="st">&quot;object1&quot;</span>]</span>
+<span id="cb11-4">obj<span class="op">.</span><span class="at">object2</span> <span class="op">=</span> param[<span class="st">&quot;object2&quot;</span>]</span>
+<span id="cb11-5">obj<span class="op">.</span><span class="at">object3</span> <span class="op">=</span> param[<span class="st">&quot;object3&quot;</span>]</span>
+<span id="cb11-6">obj<span class="op">.</span><span class="at">flag1</span> <span class="op">=</span> param[<span class="st">&quot;flag1&quot;</span>]</span>
+<span id="cb11-7">obj<span class="op">.</span><span class="at">flag2</span> <span class="op">=</span> param[<span class="st">&quot;flag2&quot;</span>]</span></code></pre></div>
 <p>Once you understand how it work this part, the remain demo should be
 intuitive &amp; easy to follow.</p>
 <h5 id="step-1">Step 1</h5>
@@ -7207,8 +7208,7 @@ Background</strong>.)</li>
 </ul></li>
 <li><strong>Caret Settings</strong>:
 <ul>
-<li>0: <a
-href="Set%20the%20language%20for%20the%20Notepad++%20user%20interface.">pulldown</a>
+<li>0: pulldown
 Sets the width and shape of the typing caret:
 <ul>
 <li>0, 1, 2: Width (in pixels) of the vertical-bar-style typing
@@ -8609,8 +8609,7 @@ of that tab, rather than of the active document.</li>
 </ul></li>
 <li><strong>File Status Auto-Detection</strong>
 <ul>
-<li><a
-href="Set%20the%20language%20for%20the%20Notepad++%20user%20interface.">pulldown</a>
+<li>pulldown
 <ul>
 <li>0: For the active file only, will check periodically to see if the
 file has been updated on disk, and will prompt to ask if you want to
@@ -11205,12 +11204,12 @@ Extended Search Mode</h4>
 change your search from Normal to Extended Search Mode.</p>
 <p>Assume you have the text:</p>
 <div class="sourceCode" id="cb35"><pre
-class="sourceCode txt"><code class="sourceCode default"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>456</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>abc</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>123</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>456</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>abc</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>123</span></code></pre></div>
+class="sourceCode txt"><code class="sourceCode default"><span id="cb35-1">456</span>
+<span id="cb35-2">abc</span>
+<span id="cb35-3">123</span>
+<span id="cb35-4">456</span>
+<span id="cb35-5">abc</span>
+<span id="cb35-6">123</span></code></pre></div>
 <p>If you were already in Normal Search Mode, and have the
 <strong>Settings &gt; Preferences &gt; Searching</strong> set to 0, and
 then selected two lines of text (the first 1 and 2 pair), then run the
@@ -14022,7 +14021,7 @@ you must “glue” four consecutive close braces. Otherwise you will define
 an empty keyword set.</p>
 <h2 id="user-defined-language-folding-in-code">User Defined Language:
 folding in code</h2>
-<h3 id="example-1">Example 1</h3>
+<h3 id="example-1-2x">Example 1</h3>
 <p>This is a typical C++ folding definition. Curly braces represent
 folding points in the code and preprocessor is also supported (for this
 demo not all statements were defined)</p>
@@ -14039,10 +14038,10 @@ but not when glued to word 0, as demonstrated in line 14</li>
 <p>Note: forward and backward search concept is explained in more detail
 in the UDL Parser page. You should read that part if you haven’t
 already.</p>
-<h3 id="example-2">Example 2</h3>
+<h3 id="example-2-2x">Example 2</h3>
 <p>UDL 2.1 will automatically create middle folding point if open
 folding point is followed by a close folding point on the same line.</p>
-<h3 id="example-3">Example 3</h3>
+<h3 id="example-3-2x">Example 3</h3>
 <p>Use of multi-part keywords is supported in Folder in code 2, as you
 can see in this example.</p>
 <h3 id="udl-gt-folding-in-code">UDL &gt; Folding in code</h3>
@@ -14073,7 +14072,7 @@ you want to make sure <strong>middle</strong> folding works as expected,
 make sure to use an <strong>open</strong> keyword before it.</p>
 <h2 id="user-defined-language-folding-in-comments">User Defined
 Language: folding in comments</h2>
-<h3 id="example-1-2">Example 1</h3>
+<h3 id="example-1-2-2">Example 1</h3>
 <p>Note: When selecting keywords that turn comments into folding points,
 it is important to select unique keywords. Don’t use stuff that is part
 of your source code, that will create unexpected folding points when you
@@ -14085,7 +14084,7 @@ comment” keywords embedded can become a folding point. And remember,
 these are just comments, you can put them anywhere you like. In fact,
 you can use this feature to organize your code. For one way to do it,
 see next example.</p>
-<h3 id="example-2-2">Example 2</h3>
+<h3 id="example-2-2-2">Example 2</h3>
 <p>Let’s steal some ideas from C#. Our code will be organized in
 “regions”.</p>
 <p>One keyword group will be anything that starts with “at sign” 0, so
@@ -14374,7 +14373,7 @@ use comma, please upgrade.</p>
 and covered almost anything user might need regarding numbers. If you
 think something is missing, please state so in discussion on Notepad++
 forum.</p>
-<h3 id="range-symbols">Range symbols</h3>
+<h3 id="range-symbols-2">Range symbols</h3>
 <p>Sometimes you want to express number ranges:</p>
 <pre><code>100-200
 200::300
@@ -15560,7 +15559,7 @@ scheme.</li>
 background color settings.</li>
 </ul></li>
 </ul>
-<h3 id="toolbar">Toolbar</h3>
+<h3 id="toolbar-2">Toolbar</h3>
 <p>There is a toolbar which has icons for various common tasks, which
 each run a specific menu action. If you hover your mouse over that icon,
 it will show its name. The toolbar actions include:</p>
@@ -16410,5 +16409,6 @@ have subtly different behaviors. If you are not seeing the entry, you
 might try using 0 or 1 instead of a normal 2 to see if that shows the
 old-style Windows context-menu, and you might want to explore the
 alterntatives mentioned below.</p>
+</main>
 </body>
 </html>

@@ -188,7 +188,7 @@
 gathered into one document</p>
 <p class="date">2026-08-02</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#vlc-help-guide" id="toc-vlc-help-guide">VLC Help Guide</a>
 <ul>
@@ -213,6 +213,7 @@ id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="vlc-help-guide">VLC Help Guide</h1>
 <p>This guide gathers VideoLAN’s official VLC documentation, as it stood
 on 2 August 2026.</p>
@@ -12407,8 +12408,7 @@ Give the address of the multicast group in the “Address” text input, and
 select the appropriate UDP port.</li>
 <li>To open a stream sent over http (Webradios, WebTVs, Shoutcast,
 Icecast…), ftp, or mms (Microsoft Media Server), select “HTTP/FTP/MMS”,
-and give the corresponding complete URL, (such as 0 or <a
-href="mms://live.ms.stream.net:8080/live.asf">mms://live.ms.stream.net:8080/live.asf</a>)
+and give the corresponding complete URL, (such as 0 or mms://live.ms.stream.net:8080/live.asf)
 in the corresponding text input. This also the way to open a RTSP stream
 with the MacOS X interface.</li>
 <li>To open a RTSP stream (sent by Darwin Streaming Server, VLC, etc),
@@ -17082,8 +17082,8 @@ amount of processors on the computer (or twice this number on Intel P4
 HT processors) should improve transcoding performance.</p>
 <h6 id="vfilter">vfilter</h6>
 <p>Uses video filter during transcode process. Parameters of vfilter can
-be found on the <a href="#advanced-use-of-vlc">Advanced Use of VLC
-Filters</a>.</p>
+be found on the Advanced Use of VLC
+Filters.</p>
 <p>The example</p>
 <pre><code>vlc input_file --sout=&quot;#transcode{vfilter=adjust{gamma=1.5},vcodec=theo,vb=2000,scale=0.67,acodec=vorb,ab=128,channels=2}:standard{access=file,mux=ogg,dst=&quot;output_file.ogg&quot;}&quot;</code></pre>
 <p>will adjust <em>input_file</em> gamma to 1.5, resize the video size
@@ -17671,8 +17671,7 @@ stream</h5>
 href="ftp://example/stream.xyz">ftp://example/stream.xyz</a></strong> is
 the FTP address of the stream;</p>
 <pre><code>% vlc -vvv mms://viptvr.yacast.fr/encoderfranceinfo</code></pre>
-<p>where <strong><a
-href="mms://viptvr.yacast.fr/encoderfranceinfo">mms://viptvr.yacast.fr/encoderfranceinfo</a></strong>
+<p>where <strong>mms://viptvr.yacast.fr/encoderfranceinfo</strong>
 is the MMS address of the stream.</p>
 <h5 id="receive-a-rtp-stream-available-through-rtsp">Receive a RTP
 stream available through RTSP</h5>
@@ -19055,7 +19054,7 @@ href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<h3 id="basic-troubleshooting">Basic troubleshooting</h3>
+<h3 id="basic-troubleshooting-2">Basic troubleshooting</h3>
 <p><strong>Languages:English</strong> • français</p>
 <h4 id="vlc-support-guide-solve-your-vlc-issues-right-now-2">VLC Support
 Guide: Solve your VLC issues right now!</h4>
@@ -19099,7 +19098,7 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="misc">Misc</h3>
+<h3 id="misc-2x">Misc</h3>
 <p>Miscellaneous other cool things you can do with VLC.</p>
 <h4 id="snapshot-tool-1">Snapshot Tool</h4>
 <p>Did you know you can use special codes to automatically generate
@@ -19254,7 +19253,7 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="command-line">Command line</h3>
+<h3 id="command-line-2">Command line</h3>
 <p>See also: Command-line interface</p>
 <p>This page is outdated and information might be incorrect.</p>
 <h4 id="use-the-command-line-1">Use the command line</h4>
@@ -19708,7 +19707,7 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="hotkeys">Hotkeys</h3>
+<h3 id="hotkeys-2x">Hotkeys</h3>
 <p>Most of VLC functions are accessible using hotkeys.</p>
 <p>The list of the available hotkeys and their functions can be
 retrieved and altered in the <em>Preferences</em> panel of the player.
@@ -19736,7 +19735,7 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="interface">Interface</h3>
+<h3 id="interface-2x">Interface</h3>
 <h4 id="general-interface-description-3">General Interface
 Description</h4>
 <p>VLC has several interfaces:</p>
@@ -20011,7 +20010,7 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
-<h3 id="playlist">Playlist</h3>
+<h3 id="playlist-2x">Playlist</h3>
 <p>A playlist is a customised list of media files you might want to
 watch or listen to. Using a playlist, you can specify the media files
 you want to listen each time you start the VLC media player. You can add
@@ -21946,7 +21945,7 @@ playback fails. Requires version 2.5.0 or later</p>
 <p>Starting with version 2.2 of VLC for iOS, we no longer support iOS
 5.1. VLC requires iOS 6.1 or later.</p>
 <h3 id="ubuntu-phone">Ubuntu Phone</h3>
-<h2 id="miscellaneous">Miscellaneous</h2>
+<h2 id="miscellaneous-2">Miscellaneous</h2>
 <h3 id="history">History</h3>
 <h4 id="overview-of-the-videolan-project-2">Overview of the VideoLAN
 project</h4>
@@ -21989,5 +21988,6 @@ document under the terms of the <a
 href="https://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</a> as published by the Free Software Foundation; either version
 2 of the License, or (at your option) any later version.</strong></p>
+</main>
 </body>
 </html>

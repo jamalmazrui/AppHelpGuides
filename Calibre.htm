@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="generator" content="pandoc 3.13" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>The calibre manual</title>
   <style>
@@ -182,7 +182,7 @@
   </style>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#the-calibre-manual" id="toc-the-calibre-manual">The
 calibre manual</a>
@@ -193,6 +193,7 @@ calibre manual</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="the-calibre-manual">The calibre manual</h1>
 <p>This guide holds calibre’s own manual, gathered on 23 August 2026 —
 managing an ebook library, converting between formats, the ebook viewer
@@ -275,15 +276,13 @@ fetching¶</h5>
 <p>If your news source is simple enough, calibre may well be able to
 fetch it completely automatically, all you need to do is provide the
 URL. calibre gathers all the information needed to download a news
-source into a <a href="glossary.html#term-recipe">recipe</a>. In order
-to tell calibre about a news source, you have to create a <a
-href="glossary.html#term-recipe">recipe</a> for it. Let’s see some
+source into a recipe. In order
+to tell calibre about a news source, you have to create a recipe for it. Let’s see some
 examples:</p>
 <h6 id="the-calibre-blog">The calibre blog¶</h6>
 <p>The calibre blog is a blog of posts that describe many useful calibre
 features in a simple and accessible way for new calibre users. In order
-to download this blog into an e-book, we rely on the <a
-href="glossary.html#term-RSS">RSS</a> feed of the blog:</p>
+to download this blog into an e-book, we rely on the RSS feed of the blog:</p>
 <pre><code>[blog.calibre-ebook.com](http://blog.calibre-ebook.com/feeds/posts/default)</code></pre>
 <p>I got the RSS URL by looking under “Subscribe to” at the bottom of
 the blog page and choosing Posts → Atom. To make calibre download the
@@ -300,14 +299,14 @@ each feed, and they are pretty self explanatory.</p>
 <p>To add the feeds to the recipe, enter the feed title and the feed URL
 and click the Add feed button. Once you have added the feed, simply
 click the Save button and you’re done! Close the dialog.</p>
-<p>To test your new <a href="glossary.html#term-recipe">recipe</a>,
+<p>To test your new recipe,
 click the Fetch news button and in the Custom news sources sub-menu
 click calibre Blog. After a couple of minutes, the newly downloaded
 e-book of blog posts will appear in the main library view (if you have
 your reader connected, it will be put onto the reader instead of into
 the library). Select it and hit the View button to read!</p>
 <p>The reason this worked so well, with so little effort is that the
-blog provides full-content <a href="glossary.html#term-RSS">RSS</a>
+blog provides full-content RSS
 feeds, i.e., the article content is embedded in the feed itself. For
 most news sources that provide news in this fashion, with full-content
 feeds, you don’t need any more effort to convert them to e-books. Now we
@@ -335,8 +334,7 @@ described in the next section.</li>
 process¶</h5>
 <p>When you want to perfect the download process, or download content
 from a particularly complex website, you can avail yourself of all the
-power and flexibility of the <a
-href="glossary.html#term-recipe">recipe</a> framework. In order to do
+power and flexibility of the recipe framework. In order to do
 that, in the Add custom news sources dialog, simply click the Switch to
 Advanced mode button.</p>
 <p>The easiest and often most productive customization is to use the
@@ -390,8 +388,7 @@ next section.</p>
 <h6 id="replacing-article-styles">Replacing article styles¶</h6>
 <p>In the previous section, we saw that the font size for articles from
 the print version of The BBC was too small. In most websites, The BBC
-included, this font size is set by means of <a
-href="glossary.html#term-CSS">CSS</a> stylesheets. We can disable the
+included, this font size is set by means of CSS stylesheets. We can disable the
 fetching of such stylesheets by adding the line:</p>
 <pre><code>no_stylesheets = True</code></pre>
 <p>The recipe now looks like:</p>
@@ -402,7 +399,7 @@ downloaded content.</p>
 <p>calibre contains very powerful and flexible abilities when it comes
 to manipulating downloaded content. To show off a couple of these, let’s
 look at our old friend the The BBC recipe again. Looking at the source
-code (<a href="glossary.html#term-HTML">HTML</a>) of a couple of
+code (HTML) of a couple of
 articles (print version), we see that they have a footer that contains
 no useful information, contained in</p>
 <pre><code>&lt;div class=&quot;footer&quot;&gt;
@@ -410,20 +407,18 @@ no useful information, contained in</p>
 &lt;/div&gt;</code></pre>
 <p>This can be removed by adding:</p>
 <pre><code>remove_tags    = [dict(name=&#39;div&#39;, attrs={&#39;class&#39;:&#39;footer&#39;})]</code></pre>
-<p>to the recipe. Finally, let’s replace some of the <a
-href="glossary.html#term-CSS">CSS</a> that we disabled earlier, with our
-own <a href="glossary.html#term-CSS">CSS</a> that is suitable for
+<p>to the recipe. Finally, let’s replace some of the CSS that we disabled earlier, with our
+own CSS that is suitable for
 conversion to an e-book:</p>
 <pre><code>extra_css      = &#39;.headline {font-size: x-large;} \n .fact { padding-top: 10pt  }&#39;</code></pre>
 <p>With these additions, our recipe has become “production quality”.</p>
-<p>This <a href="glossary.html#term-recipe">recipe</a> explores only the
+<p>This recipe explores only the
 tip of the iceberg when it comes to the power of calibre. To explore
 more of the abilities of calibre we’ll examine a more complex real life
 example in the next section.</p>
 <h6 id="real-life-example">Real life example¶</h6>
-<p>A reasonably complex real life example that exposes more of the <a
-href="glossary.html#term-API">API</a> of <code>BasicNewsRecipe</code> is
-the <a href="glossary.html#term-recipe">recipe</a> for The New York
+<p>A reasonably complex real life example that exposes more of the API of <code>BasicNewsRecipe</code> is
+the recipe for The New York
 Times</p>
 <pre><code>import string, re
 from calibre import strftime
@@ -505,25 +500,19 @@ class NYTimes(BasicNewsRecipe):
         content = refresh.get(&#39;content&#39;).partition(&#39;=&#39;)[2]
         raw = self.browser.open(&#39;[nytimes.com](https://www.nytimes.com)&#39;+content).read()
         return BeautifulSoup(raw.decode(&#39;cp1252&#39;, &#39;replace&#39;))</code></pre>
-<p>We see several new features in this <a
-href="glossary.html#term-recipe">recipe</a>. First, we have:</p>
+<p>We see several new features in this recipe. First, we have:</p>
 <pre><code>timefmt = &#39; [%a, %d %b, %Y]&#39;</code></pre>
 <p>This sets the displayed time on the front page of the created e-book
-to be in the format, <code>Day, Day_Number Month, Year</code>. See <a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.timefmt"><code>timefmt</code></a>.</p>
-<p>Then we see a group of directives to cleanup the downloaded <a
-href="glossary.html#term-HTML">HTML</a>:</p>
+to be in the format, <code>Day, Day_Number Month, Year</code>. See <code>timefmt</code>.</p>
+<p>Then we see a group of directives to cleanup the downloaded HTML:</p>
 <pre><code>remove_tags_before = dict(name=&#39;h1&#39;)
 remove_tags_after  = dict(id=&#39;footer&#39;)
 remove_tags = ...</code></pre>
 <p>These remove everything before the first <code>&lt;h1&gt;</code> tag
 and everything after the first tag whose id is <code>footer</code>. See
-<a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_tags"><code>remove_tags</code></a>,
-<a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_tags_before"><code>remove_tags_before</code></a>,
-<a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_tags_after"><code>remove_tags_after</code></a>.</p>
+<code>remove_tags</code>,
+<code>remove_tags_before</code>,
+<code>remove_tags_after</code>.</p>
 <p>The next interesting feature is:</p>
 <pre><code>needs_subscription = True
 ...
@@ -532,18 +521,16 @@ def get_browser(self):
 <p><code>needs_subscription = True</code> tells calibre that this recipe
 needs a username and password in order to access the content. This
 causes, calibre to ask for a username and password whenever you try to
-use this recipe. The code in <a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_browser"><code>calibre.web.feeds.news.BasicNewsRecipe.get_browser()</code></a>
+use this recipe. The code in <code>calibre.web.feeds.news.BasicNewsRecipe.get_browser()</code>
 actually does the login into the NYT website. Once logged in, calibre
 will use the same, logged in, browser instance to fetch all content. See
 <a href="https://mechanize.readthedocs.io/en/latest/">mechanize</a> to
 understand the code in <code>get_browser</code>.</p>
-<p>The next new feature is the <a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.parse_index"><code>calibre.web.feeds.news.BasicNewsRecipe.parse_index()</code></a>
+<p>The next new feature is the <code>calibre.web.feeds.news.BasicNewsRecipe.parse_index()</code>
 method. Its job is to go to <a
 href="https://www.nytimes.com/pages/todayspaper/index.html">nytimes.com</a>
 and fetch the list of articles that appear in today’s paper. While more
-complex than simply using <a href="glossary.html#term-RSS">RSS</a>, the
+complex than simply using RSS, the
 recipe creates an e-book that corresponds very closely to the day’s
 paper. <code>parse_index</code> makes heavy use of <a
 href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
@@ -560,8 +547,7 @@ root = html5lib.parse(raw, namespaceHTMLElements=False, treebuilder=&#39;lxml&#3
 # For the lxml html 4 parser
 from lxml import html
 root = html.fromstring(raw)</code></pre>
-<p>The final new feature is the <a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.preprocess_html"><code>calibre.web.feeds.news.BasicNewsRecipe.preprocess_html()</code></a>
+<p>The final new feature is the <code>calibre.web.feeds.news.BasicNewsRecipe.preprocess_html()</code>
 method. It can be used to perform arbitrary transformations on every
 downloaded HTML page. Here it is used to bypass the ads that the nytimes
 shows you before each article.</p>
@@ -576,16 +562,13 @@ command:</p>
 <p>The command ebook-convert will download all the webpages and save
 them to the EPUB file <code>myrecipe.epub</code>. The <code>-vv</code>
 option makes ebook-convert spit out a lot of information about what it
-is doing. The <a
-href="generated/en/ebook-convert.html#cmdoption-ebook-convert-recipe-input-test"><code>ebook-convert-recipe-input --test</code></a>
+is doing. The <code>ebook-convert-recipe-input --test</code>
 option makes it download only a couple of articles from at most two
 feeds. In addition, ebook-convert will put the downloaded HTML into the
 <code>debug/input</code> folder, where <code>debug</code> is the folder
-you specified in the <a
-href="generated/en/ebook-convert.html#cmdoption-ebook-convert-debug-pipeline"><code>ebook-convert --debug-pipeline</code></a>
+you specified in the <code>ebook-convert --debug-pipeline</code>
 option.</p>
-<p>Once the download is complete, you can look at the downloaded <a
-href="glossary.html#term-HTML">HTML</a> by opening the file
+<p>Once the download is complete, you can look at the downloaded HTML by opening the file
 <code>debug/input/index.html</code> in a browser. Once you’re satisfied
 that the download and preprocessing is happening correctly, you can
 generate e-books in different formats as shown below:</p>
@@ -603,13 +586,13 @@ example, if you installed calibre in <code>/Applications</code> the
 command line tools are in
 <code>/Applications/calibre.app/Contents/MacOS/</code>.</p>
 <p>See also</p>
-<p><a href="generated/en/ebook-convert.html">ebook-convert</a></p>
+<p>ebook-convert</p>
 <p>The command line interface for all e-book conversion.</p>
 <h5 id="further-reading">Further reading¶</h5>
 <p>To learn more about writing advanced recipes using some of the
 facilities, available in <code>BasicNewsRecipe</code> you should consult
 the following sources:</p>
-<p><a href="news_recipe.html#news-recipe">API documentation</a></p>
+<p>API documentation</p>
 <p>Documentation of the <code>BasicNewsRecipe</code> class and all its
 important methods and fields.</p>
 <p><a
@@ -625,179 +608,94 @@ calibre recipes forum</a></p>
 <p>Lots of knowledgeable calibre recipe writers hang out here.</p>
 <h5 id="api-documentation">API documentation¶</h5>
 <ul>
-<li><a href="news_recipe.html">API documentation for recipes</a>
+<li>API documentation for recipes
 <ul>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe"><code>BasicNewsRecipe</code></a>
+<li><code>BasicNewsRecipe</code>
 <ul>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.adeify_images"><code>BasicNewsRecipe.adeify_images()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.image_url_processor"><code>BasicNewsRecipe.image_url_processor()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.print_version"><code>BasicNewsRecipe.print_version()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.tag_to_string"><code>BasicNewsRecipe.tag_to_string()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.abort_article"><code>BasicNewsRecipe.abort_article()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.abort_recipe_processing"><code>BasicNewsRecipe.abort_recipe_processing()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.add_toc_thumbnail"><code>BasicNewsRecipe.add_toc_thumbnail()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.canonicalize_internal_url"><code>BasicNewsRecipe.canonicalize_internal_url()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.cleanup"><code>BasicNewsRecipe.cleanup()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.clone_browser"><code>BasicNewsRecipe.clone_browser()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.default_cover"><code>BasicNewsRecipe.default_cover()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.download"><code>BasicNewsRecipe.download()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.extract_readable_article"><code>BasicNewsRecipe.extract_readable_article()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_article_url"><code>BasicNewsRecipe.get_article_url()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_browser"><code>BasicNewsRecipe.get_browser()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_cover_url"><code>BasicNewsRecipe.get_cover_url()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_extra_css"><code>BasicNewsRecipe.get_extra_css()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_feeds"><code>BasicNewsRecipe.get_feeds()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_masthead_title"><code>BasicNewsRecipe.get_masthead_title()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_masthead_url"><code>BasicNewsRecipe.get_masthead_url()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_obfuscated_article"><code>BasicNewsRecipe.get_obfuscated_article()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.get_url_specific_delay"><code>BasicNewsRecipe.get_url_specific_delay()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.index_to_soup"><code>BasicNewsRecipe.index_to_soup()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.is_link_wanted"><code>BasicNewsRecipe.is_link_wanted()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.parse_feeds"><code>BasicNewsRecipe.parse_feeds()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.parse_index"><code>BasicNewsRecipe.parse_index()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.populate_article_metadata"><code>BasicNewsRecipe.populate_article_metadata()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.postprocess_book"><code>BasicNewsRecipe.postprocess_book()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.postprocess_html"><code>BasicNewsRecipe.postprocess_html()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.preprocess_html"><code>BasicNewsRecipe.preprocess_html()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.preprocess_image"><code>BasicNewsRecipe.preprocess_image()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.preprocess_raw_html"><code>BasicNewsRecipe.preprocess_raw_html()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.publication_date"><code>BasicNewsRecipe.publication_date()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.skip_ad_pages"><code>BasicNewsRecipe.skip_ad_pages()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.sort_index_by"><code>BasicNewsRecipe.sort_index_by()</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.articles_are_obfuscated"><code>BasicNewsRecipe.articles_are_obfuscated</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.auto_cleanup"><code>BasicNewsRecipe.auto_cleanup</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.auto_cleanup_keep"><code>BasicNewsRecipe.auto_cleanup_keep</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.browser_type"><code>BasicNewsRecipe.browser_type</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.center_navbar"><code>BasicNewsRecipe.center_navbar</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.compress_news_images"><code>BasicNewsRecipe.compress_news_images</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.compress_news_images_auto_size"><code>BasicNewsRecipe.compress_news_images_auto_size</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.compress_news_images_max_size"><code>BasicNewsRecipe.compress_news_images_max_size</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.conversion_options"><code>BasicNewsRecipe.conversion_options</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.cover_margins"><code>BasicNewsRecipe.cover_margins</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.delay"><code>BasicNewsRecipe.delay</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.description"><code>BasicNewsRecipe.description</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.encoding"><code>BasicNewsRecipe.encoding</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.extra_css"><code>BasicNewsRecipe.extra_css</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.feeds"><code>BasicNewsRecipe.feeds</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.filter_regexps"><code>BasicNewsRecipe.filter_regexps</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.handle_gzip"><code>BasicNewsRecipe.handle_gzip</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles"><code>BasicNewsRecipe.ignore_duplicate_articles</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.keep_only_tags"><code>BasicNewsRecipe.keep_only_tags</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.language"><code>BasicNewsRecipe.language</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.masthead_url"><code>BasicNewsRecipe.masthead_url</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.match_regexps"><code>BasicNewsRecipe.match_regexps</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.max_articles_per_feed"><code>BasicNewsRecipe.max_articles_per_feed</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.needs_subscription"><code>BasicNewsRecipe.needs_subscription</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.no_stylesheets"><code>BasicNewsRecipe.no_stylesheets</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.oldest_article"><code>BasicNewsRecipe.oldest_article</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.preprocess_regexps"><code>BasicNewsRecipe.preprocess_regexps</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.publication_type"><code>BasicNewsRecipe.publication_type</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.recipe_disabled"><code>BasicNewsRecipe.recipe_disabled</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.recipe_specific_options"><code>BasicNewsRecipe.recipe_specific_options</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.recursions"><code>BasicNewsRecipe.recursions</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_attributes"><code>BasicNewsRecipe.remove_attributes</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_empty_feeds"><code>BasicNewsRecipe.remove_empty_feeds</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_javascript"><code>BasicNewsRecipe.remove_javascript</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_tags"><code>BasicNewsRecipe.remove_tags</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_tags_after"><code>BasicNewsRecipe.remove_tags_after</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.remove_tags_before"><code>BasicNewsRecipe.remove_tags_before</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.requires_version"><code>BasicNewsRecipe.requires_version</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.resolve_internal_links"><code>BasicNewsRecipe.resolve_internal_links</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.reverse_article_order"><code>BasicNewsRecipe.reverse_article_order</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.scale_news_images"><code>BasicNewsRecipe.scale_news_images</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.scale_news_images_to_device"><code>BasicNewsRecipe.scale_news_images_to_device</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.simultaneous_downloads"><code>BasicNewsRecipe.simultaneous_downloads</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.summary_length"><code>BasicNewsRecipe.summary_length</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.template_css"><code>BasicNewsRecipe.template_css</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.timefmt"><code>BasicNewsRecipe.timefmt</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.timeout"><code>BasicNewsRecipe.timeout</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.title"><code>BasicNewsRecipe.title</code></a></li>
-<li><a
-href="news_recipe.html#calibre.web.feeds.news.BasicNewsRecipe.use_embedded_content"><code>BasicNewsRecipe.use_embedded_content</code></a>
+<li><code>BasicNewsRecipe.adeify_images()</code></li>
+<li><code>BasicNewsRecipe.image_url_processor()</code></li>
+<li><code>BasicNewsRecipe.print_version()</code></li>
+<li><code>BasicNewsRecipe.tag_to_string()</code></li>
+<li><code>BasicNewsRecipe.abort_article()</code></li>
+<li><code>BasicNewsRecipe.abort_recipe_processing()</code></li>
+<li><code>BasicNewsRecipe.add_toc_thumbnail()</code></li>
+<li><code>BasicNewsRecipe.canonicalize_internal_url()</code></li>
+<li><code>BasicNewsRecipe.cleanup()</code></li>
+<li><code>BasicNewsRecipe.clone_browser()</code></li>
+<li><code>BasicNewsRecipe.default_cover()</code></li>
+<li><code>BasicNewsRecipe.download()</code></li>
+<li><code>BasicNewsRecipe.extract_readable_article()</code></li>
+<li><code>BasicNewsRecipe.get_article_url()</code></li>
+<li><code>BasicNewsRecipe.get_browser()</code></li>
+<li><code>BasicNewsRecipe.get_cover_url()</code></li>
+<li><code>BasicNewsRecipe.get_extra_css()</code></li>
+<li><code>BasicNewsRecipe.get_feeds()</code></li>
+<li><code>BasicNewsRecipe.get_masthead_title()</code></li>
+<li><code>BasicNewsRecipe.get_masthead_url()</code></li>
+<li><code>BasicNewsRecipe.get_obfuscated_article()</code></li>
+<li><code>BasicNewsRecipe.get_url_specific_delay()</code></li>
+<li><code>BasicNewsRecipe.index_to_soup()</code></li>
+<li><code>BasicNewsRecipe.is_link_wanted()</code></li>
+<li><code>BasicNewsRecipe.parse_feeds()</code></li>
+<li><code>BasicNewsRecipe.parse_index()</code></li>
+<li><code>BasicNewsRecipe.populate_article_metadata()</code></li>
+<li><code>BasicNewsRecipe.postprocess_book()</code></li>
+<li><code>BasicNewsRecipe.postprocess_html()</code></li>
+<li><code>BasicNewsRecipe.preprocess_html()</code></li>
+<li><code>BasicNewsRecipe.preprocess_image()</code></li>
+<li><code>BasicNewsRecipe.preprocess_raw_html()</code></li>
+<li><code>BasicNewsRecipe.publication_date()</code></li>
+<li><code>BasicNewsRecipe.skip_ad_pages()</code></li>
+<li><code>BasicNewsRecipe.sort_index_by()</code></li>
+<li><code>BasicNewsRecipe.articles_are_obfuscated</code></li>
+<li><code>BasicNewsRecipe.auto_cleanup</code></li>
+<li><code>BasicNewsRecipe.auto_cleanup_keep</code></li>
+<li><code>BasicNewsRecipe.browser_type</code></li>
+<li><code>BasicNewsRecipe.center_navbar</code></li>
+<li><code>BasicNewsRecipe.compress_news_images</code></li>
+<li><code>BasicNewsRecipe.compress_news_images_auto_size</code></li>
+<li><code>BasicNewsRecipe.compress_news_images_max_size</code></li>
+<li><code>BasicNewsRecipe.conversion_options</code></li>
+<li><code>BasicNewsRecipe.cover_margins</code></li>
+<li><code>BasicNewsRecipe.delay</code></li>
+<li><code>BasicNewsRecipe.description</code></li>
+<li><code>BasicNewsRecipe.encoding</code></li>
+<li><code>BasicNewsRecipe.extra_css</code></li>
+<li><code>BasicNewsRecipe.feeds</code></li>
+<li><code>BasicNewsRecipe.filter_regexps</code></li>
+<li><code>BasicNewsRecipe.handle_gzip</code></li>
+<li><code>BasicNewsRecipe.ignore_duplicate_articles</code></li>
+<li><code>BasicNewsRecipe.keep_only_tags</code></li>
+<li><code>BasicNewsRecipe.language</code></li>
+<li><code>BasicNewsRecipe.masthead_url</code></li>
+<li><code>BasicNewsRecipe.match_regexps</code></li>
+<li><code>BasicNewsRecipe.max_articles_per_feed</code></li>
+<li><code>BasicNewsRecipe.needs_subscription</code></li>
+<li><code>BasicNewsRecipe.no_stylesheets</code></li>
+<li><code>BasicNewsRecipe.oldest_article</code></li>
+<li><code>BasicNewsRecipe.preprocess_regexps</code></li>
+<li><code>BasicNewsRecipe.publication_type</code></li>
+<li><code>BasicNewsRecipe.recipe_disabled</code></li>
+<li><code>BasicNewsRecipe.recipe_specific_options</code></li>
+<li><code>BasicNewsRecipe.recursions</code></li>
+<li><code>BasicNewsRecipe.remove_attributes</code></li>
+<li><code>BasicNewsRecipe.remove_empty_feeds</code></li>
+<li><code>BasicNewsRecipe.remove_javascript</code></li>
+<li><code>BasicNewsRecipe.remove_tags</code></li>
+<li><code>BasicNewsRecipe.remove_tags_after</code></li>
+<li><code>BasicNewsRecipe.remove_tags_before</code></li>
+<li><code>BasicNewsRecipe.requires_version</code></li>
+<li><code>BasicNewsRecipe.resolve_internal_links</code></li>
+<li><code>BasicNewsRecipe.reverse_article_order</code></li>
+<li><code>BasicNewsRecipe.scale_news_images</code></li>
+<li><code>BasicNewsRecipe.scale_news_images_to_device</code></li>
+<li><code>BasicNewsRecipe.simultaneous_downloads</code></li>
+<li><code>BasicNewsRecipe.summary_length</code></li>
+<li><code>BasicNewsRecipe.template_css</code></li>
+<li><code>BasicNewsRecipe.timefmt</code></li>
+<li><code>BasicNewsRecipe.timeout</code></li>
+<li><code>BasicNewsRecipe.title</code></li>
+<li><code>BasicNewsRecipe.use_embedded_content</code>
 © Copyright Kovid Goyal. Last updated on Aug 07, 2026.</li>
 </ul></li>
 </ul></li>
@@ -1155,30 +1053,26 @@ expression…). But should you, despite the warning, injure your foot (or
 any other body parts), try to learn from it.</p>
 <h5 id="quick-reference">Quick reference¶</h5>
 <ul>
-<li><a href="regexp_quick_reference.html">Quick reference for regexp
-syntax</a>
+<li>Quick reference for regexp
+syntax
 <ul>
-<li><a href="regexp_quick_reference.html#character-classes">Character
-classes</a></li>
-<li><a
-href="regexp_quick_reference.html#shorthand-character-classes">Shorthand
-character classes</a></li>
-<li><a href="regexp_quick_reference.html#the-quantifiers">The
-quantifiers</a></li>
-<li><a href="regexp_quick_reference.html#greed">Greed</a></li>
-<li><a
-href="regexp_quick_reference.html#alternation">Alternation</a></li>
-<li><a href="regexp_quick_reference.html#exclusion">Exclusion</a></li>
-<li><a href="regexp_quick_reference.html#anchors">Anchors</a></li>
-<li><a href="regexp_quick_reference.html#groups">Groups</a></li>
-<li><a
-href="regexp_quick_reference.html#lookarounds">Lookarounds</a></li>
-<li><a href="regexp_quick_reference.html#recursion">Recursion</a></li>
-<li><a href="regexp_quick_reference.html#special-characters">Special
-characters</a></li>
-<li><a
-href="regexp_quick_reference.html#meta-characters">Meta-characters</a></li>
-<li><a href="regexp_quick_reference.html#modes">Modes</a></li>
+<li>Character
+classes</li>
+<li>Shorthand
+character classes</li>
+<li>The
+quantifiers</li>
+<li>Greed</li>
+<li>Alternation</li>
+<li>Exclusion</li>
+<li>Anchors</li>
+<li>Groups</li>
+<li>Lookarounds</li>
+<li>Recursion</li>
+<li>Special
+characters</li>
+<li>Meta-characters</li>
+<li>Modes</li>
 </ul></li>
 </ul>
 <h5 id="credits">Credits¶</h5>
@@ -2938,8 +2832,8 @@ progress_reporter)[source]¶</p>
 <p>Base class that contains logic needed in all recipes. By overriding
 progressively more of the functionality in this class, you can make
 progressively more customized/powerful recipes. For a tutorial
-introduction to creating recipes, see <a href="news.html">Adding your
-favorite news website</a>.</p>
+introduction to creating recipes, see Adding your
+favorite news website.</p>
 <p>classmethod adeify_images(soup)[source]¶</p>
 <p>If your recipe when converted to EPUB has problems with images when
 viewed in Adobe Digital Editions, call this method from within
@@ -2951,7 +2845,7 @@ processed URL. Return None or an empty string to skip fetching the
 image.</p>
 <p>classmethod print_version(url)[source]¶</p>
 <p>Take a url pointing to the webpage with article content and return
-the <a href="glossary.html#term-URL">URL</a> pointing to the print
+the URL pointing to the print
 version of the article. By default does nothing. For example:</p>
 <pre><code>def print_version(self, url):
     return url + &#39;?&amp;pagewanted=print&#39;</code></pre>
@@ -3013,8 +2907,7 @@ to index.html</p>
 (article_html, extracted_title) tuple. Based on the original readability
 algorithm by Arc90.</p>
 <p>get_article_url(article)[source]¶</p>
-<p>Override in a subclass to customize extraction of the <a
-href="glossary.html#term-URL">URL</a> that points to the content for
+<p>Override in a subclass to customize extraction of the URL that points to the content for
 each article. Return the article URL. It is called with article, an
 object representing a parsed article from a feed. See <a
 href="https://pythonhosted.org/feedparser/">feedparser</a>. By default
@@ -3050,7 +2943,7 @@ as:</p>
         br.submit()
     return br</code></pre>
 <p>get_cover_url()[source]¶</p>
-<p>Return a <a href="glossary.html#term-URL">URL</a> to the cover image
+<p>Return a URL to the cover image
 for this issue or None. By default it returns the value of the member
 self.cover_url which is normally None. If you want your recipe to
 download a cover for the e-book override this method in your subclass,
@@ -3060,7 +2953,7 @@ called.</p>
 <p>By default returns self.extra_css. Override if you want to
 programmatically generate the extra_css.</p>
 <p>get_feeds()[source]¶</p>
-<p>Return a list of <a href="glossary.html#term-RSS">RSS</a> feeds to
+<p>Return a list of RSS feeds to
 fetch for this profile. Each element of the list must be a 2-element
 tuple of the form (title, url). If title is None or an empty string, the
 title from the feed is used. This method is useful if your recipe needs
@@ -3069,7 +2962,7 @@ so, override in your subclass.</p>
 <p>get_masthead_title()[source]¶</p>
 <p>Override in subclass to use something other than the recipe title</p>
 <p>get_masthead_url()[source]¶</p>
-<p>Return a <a href="glossary.html#term-URL">URL</a> to the masthead
+<p>Return a URL to the masthead
 image for this issue or None. By default it returns the value of the
 member self.masthead_url which is normally None. If you want your recipe
 to download a masthead for the e-book override this method in your
@@ -3160,37 +3053,32 @@ postprocess_book(oeb, opts, log)[source]¶</li>
 <li>opts – Conversion options postprocess_html(soup,
 first_fetch)[source]¶</li>
 </ul>
-<p>This method is called with the source of each downloaded <a
-href="glossary.html#term-HTML">HTML</a> file, after it is parsed for
+<p>This method is called with the source of each downloaded HTML file, after it is parsed for
 links and images. It can be used to do arbitrarily powerful
-post-processing on the <a href="glossary.html#term-HTML">HTML</a>. It
+post-processing on the HTML. It
 should return soup after processing it.</p>
 <p>Parameters:</p>
 <ul>
 <li>soup – A <a
 href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
-instance containing the downloaded <a
-href="glossary.html#term-HTML">HTML</a>.</li>
+instance containing the downloaded HTML.</li>
 <li>first_fetch – True if this is the first page of an article.
 preprocess_html(soup)[source]¶</li>
 </ul>
-<p>This method is called with the source of each downloaded <a
-href="glossary.html#term-HTML">HTML</a> file, before it is parsed for
+<p>This method is called with the source of each downloaded HTML file, before it is parsed for
 links and images. It is called after the cleanup as specified by
 remove_tags etc. It can be used to do arbitrarily powerful
-pre-processing on the <a href="glossary.html#term-HTML">HTML</a>. It
+pre-processing on the HTML. It
 should return soup after processing it.</p>
 <p>soup: A <a
 href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
-instance containing the downloaded <a
-href="glossary.html#term-HTML">HTML</a>.</p>
+instance containing the downloaded HTML.</p>
 <p>preprocess_image(img_data, image_url)[source]¶</p>
 <p>Perform some processing on downloaded image data. This is called on
 the raw data before any resizing is done. Must return the processed raw
 data. Return None to skip the image.</p>
 <p>preprocess_raw_html(raw_html, url)[source]¶</p>
-<p>This method is called with the source of each downloaded <a
-href="glossary.html#term-HTML">HTML</a> file, before it is parsed into
+<p>This method is called with the source of each downloaded HTML file, before it is parsed into
 an object tree. raw_html is a unicode string representing the raw HTML
 downloaded from the web. url is the URL from which the HTML was
 downloaded.</p>
@@ -3202,16 +3090,14 @@ object.</p>
 Defaults to the moment of download. Must return a
 <code>datetime.datetime</code> object.</p>
 <p>skip_ad_pages(soup)[source]¶</p>
-<p>This method is called with the source of each downloaded <a
-href="glossary.html#term-HTML">HTML</a> file, before any of the cleanup
+<p>This method is called with the source of each downloaded HTML file, before any of the cleanup
 attributes like remove_tags, keep_only_tags are applied. Note that
 preprocess_regexps will have already been applied. It is meant to allow
 the recipe to skip ad pages. If the soup represents an ad page, return
 the HTML of the real page. Otherwise return None.</p>
 <p>soup: A <a
 href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
-instance containing the downloaded <a
-href="glossary.html#term-HTML">HTML</a>.</p>
+instance containing the downloaded HTML.</p>
 <p>sort_index_by(index, weights)[source]¶</p>
 <p>Convenience method to sort the titles in index according to weights.
 index is sorted in place. Returns index.</p>
@@ -3305,13 +3191,12 @@ using <code>cp1252</code>. If None, try to detect the encoding. If it is
 a callable, the callable is called with two arguments: The recipe object
 and the source to be decoded. It must return the decoded source.</p>
 <p>extra_css = None¶</p>
-Specify any extra <a href="glossary.html#term-CSS">CSS</a> that should
-be added to downloaded <a href="glossary.html#term-HTML">HTML</a> files.
+Specify any extra CSS that should
+be added to downloaded HTML files.
 It will be inserted into <style> tags, just before the closing
 </head>
-<p>tag thereby overriding all <a href="glossary.html#term-CSS">CSS</a>
-except that which is declared using the style attribute on individual <a
-href="glossary.html#term-HTML">HTML</a> tags. Note that if you want to
+<p>tag thereby overriding all CSS
+except that which is declared using the style attribute on individual HTML tags. Note that if you want to
 programmatically generate the extra_css override the
 <code>get_extra_css()</code> method instead. For example:</p>
 <pre><code>extra_css = &#39;.heading { font: serif x-large }&#39;</code></pre>
@@ -3379,9 +3264,8 @@ formats. If True stylesheets are not downloaded and processed</p>
 <p>oldest_article: float | int = 7.0¶</p>
 <p>Oldest article to download from this news source. In days.</p>
 <p>preprocess_regexps = []¶</p>
-<p>List of <a href="glossary.html#term-regexp">regexp</a> substitution
-rules to run on the downloaded <a
-href="glossary.html#term-HTML">HTML</a>. Each element of the list should
+<p>List of regexp substitution
+rules to run on the downloaded HTML. Each element of the list should
 be a two element tuple. The first element of the tuple should be a
 compiled regular expression and the second a callable that takes a
 single match object and returns a string to replace the match. For
@@ -3445,8 +3329,7 @@ Soup</a> A common example:</p>
 <pre><code>remove_tags = [dict(name=&#39;div&#39;, class_=&#39;advert&#39;)]</code></pre>
 This will remove all
 <div class="”advert”">
-<p>tags and all their children from the downloaded <a
-href="glossary.html#term-HTML">HTML</a>.</p>
+<p>tags and all their children from the downloaded HTML.</p>
 <p>remove_tags_after = None¶</p>
 <p>Remove all tags that occur after the specified tag. For the format
 for specifying a tag see <code>BasicNewsRecipe.remove_tags</code>. For
@@ -3851,8 +3734,7 @@ desired</p>
 <p>{field_value:link_value, …} for non-empty links</p>
 <p>get_metadata(book_id, get_cover=False, get_user_categories=True,
 cover_as_data=False)[source]¶</p>
-<p>Return metadata for the book identified by book_id as a <a
-href="generated/en/template_ref.html#calibre.ebooks.metadata.book.base.Metadata"><code>calibre.ebooks.metadata.book.base.Metadata</code></a>
+<p>Return metadata for the book identified by book_id as a <code>calibre.ebooks.metadata.book.base.Metadata</code>
 object. Note that the list of formats is not verified. If get_cover is
 True, the cover is returned, either a path to temp file as mi.cover or
 if cover_as_data is True then as mi.cover_data.</p>
@@ -4575,8 +4457,7 @@ of Contents.</p>
 <p>The base class for individual tools in an Edit Book plugin. Useful
 members include:</p>
 <ul>
-<li><p><code>self.plugin</code>: A reference to the <a
-href="plugins.html#calibre.customize.Plugin"><code>calibre.customize.Plugin</code></a>
+<li><p><code>self.plugin</code>: A reference to the <code>calibre.customize.Plugin</code>
 object to which this tool belongs.</p></li>
 <li><p>self. <code>boss</code></p></li>
 <li><p>self. <code>gui</code> Methods that must be overridden in sub
@@ -5300,8 +5181,7 @@ means that the <code>something</code> is repeated one or more times
 regular expression matching is case-insensitive. Functions are
 documented in Template function reference. The documentation tells you
 what arguments the functions require and what the functions do. For
-example, here is the documentation of the <a
-href="generated/en/template_ref.html#ff-ifempty">ifempty</a>
+example, here is the documentation of the ifempty
 function.</p></li>
 <li><p><code>ifempty(value, text_if_empty)</code> – if the
 <code>value</code> is not empty then return that <code>value</code>,
@@ -5317,168 +5197,129 @@ tags on this book.</p>
 <p>The following functions are usable in Single Function Mode because
 their first parameter is <code>value</code>.</p>
 <ul>
-<li><a
-href="generated/en/template_ref.html#ff-capitalize">capitalize</a><code>(value)</code>
+<li>capitalize<code>(value)</code>
 – returns the <code>value</code> with the first letter in upper case and
 the rest lower case.</li>
-<li><a
-href="generated/en/template_ref.html#ff-ceiling">ceiling</a><code>(value)</code>
+<li>ceiling<code>(value)</code>
 – returns the smallest integer greater than or equal to
 <code>value</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-cmp">cmp</a><code>(value, y, lt, eq, gt)</code>
+<li>cmp<code>(value, y, lt, eq, gt)</code>
 – compares <code>value</code> and <code>y</code> after converting both
 to numbers.</li>
-<li><a
-href="generated/en/template_ref.html#ff-contains">contains</a><code>(value, pattern, text_if_match, text_if_not_match)</code>
+<li>contains<code>(value, pattern, text_if_match, text_if_not_match)</code>
 – checks if the value is matched by the regular expression
 <code>pattern</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-date-arithmetic">date_arithmetic</a><code>(value, calc_spec, fmt)</code>
+<li>date_arithmetic<code>(value, calc_spec, fmt)</code>
 – Calculate a new date from <code>value</code> using
 <code>calc_spec</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-encode-for-url">encode_for_url</a><code>(value, use_plus)</code>
+<li>encode_for_url<code>(value, use_plus)</code>
 – returns the <code>value</code> encoded for use in a URL as specified
 by <code>use_plus</code>. The value is first URL-encoded. Next, if
 <code>use_plus</code> is <code>0</code> then spaces are replaced by
 <code>'+'</code> (plus) signs. If it is <code>1</code> then spaces are
 replaced by <code>%20</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-floor">floor</a><code>(value)</code>
+<li>floor<code>(value)</code>
 – returns the largest integer less than or equal to
 <code>value</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-format-date">format_date</a><code>(value, format_string)</code>
+<li>format_date<code>(value, format_string)</code>
 – format the <code>value</code>, which must be a date string, using the
 <code>format_string</code>, returning a string.</li>
-<li><a
-href="generated/en/template_ref.html#ff-format-duration">format_duration</a><code>(value, template, [largest_unit])</code>
+<li>format_duration<code>(value, template, [largest_unit])</code>
 – format the value, a number of seconds, into a string showing weeks,
 days, hours, minutes, and seconds. If the value is a float then it is
 rounded to the nearest integer.</li>
-<li><a
-href="generated/en/template_ref.html#ff-format-number">format_number</a><code>(value, template)</code>
+<li>format_number<code>(value, template)</code>
 – interprets the <code>value</code> as a number and formats that number
 using a Python formatting template such as <code>{0:5.2f}</code> or
 <code>{0:,d}</code> or <code>\${0:5,.2f}</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-fractional-part">fractional_part</a><code>(value)</code>
+<li>fractional_part<code>(value)</code>
 – returns the part of the value after the decimal point.</li>
-<li><a
-href="generated/en/template_ref.html#ff-human-readable">human_readable</a><code>(value)</code>
+<li>human_readable<code>(value)</code>
 – expects the <code>value</code> to be a number and returns a string
 representing that number in KB, MB, GB, etc.</li>
-<li><a
-href="generated/en/template_ref.html#ff-ifempty">ifempty</a><code>(value, text_if_empty)</code>
+<li>ifempty<code>(value, text_if_empty)</code>
 – if the <code>value</code> is not empty then return that
 <code>value</code>, otherwise return <code>text_if_empty</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-language-strings">language_strings</a><code>(value, localize)</code>
+<li>language_strings<code>(value, localize)</code>
 – return the language names for the language codes (<a
 href="https://www.loc.gov/standards/iso639-2/php/code_list.php">see here
 for names and codes</a>) passed in <code>value</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-list-contains">list_contains</a><code>(value, separator, [ pattern, found_val, ]* not_found_val)</code>
+<li>list_contains<code>(value, separator, [ pattern, found_val, ]* not_found_val)</code>
 – interpret the <code>value</code> as a list of items separated by
 <code>separator</code>, checking the <code>pattern</code> against each
 item in the list.</li>
-<li><a
-href="generated/en/template_ref.html#ff-list-count">list_count</a><code>(value, separator)</code>
+<li>list_count<code>(value, separator)</code>
 – interprets the value as a list of items separated by
 <code>separator</code> and returns the number of items in the list.</li>
-<li><a
-href="generated/en/template_ref.html#ff-list-count-matching">list_count_matching</a><code>(value, pattern, separator)</code>
+<li>list_count_matching<code>(value, pattern, separator)</code>
 – interprets <code>value</code> as a list of items separated by
 <code>separator</code>, returning the number of items in the list that
 match the regular expression <code>pattern</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-list-item">list_item</a><code>(value, index, separator)</code>
+<li>list_item<code>(value, index, separator)</code>
 – interpret the <code>value</code> as a list of items separated by
 <code>separator</code>, returning the ‘index’th item.</li>
-<li><a
-href="generated/en/template_ref.html#ff-list-sort">list_sort</a><code>(value, direction, separator)</code>
+<li>list_sort<code>(value, direction, separator)</code>
 – return <code>value</code> sorted using a case-insensitive lexical
 sort.</li>
-<li><a
-href="generated/en/template_ref.html#ff-lookup">lookup</a><code>(value, [ pattern, key, ]* else_key)</code>
+<li>lookup<code>(value, [ pattern, key, ]* else_key)</code>
 – The patterns will be checked against the <code>value</code> in
 order.</li>
-<li><a
-href="generated/en/template_ref.html#ff-lowercase">lowercase</a><code>(value)</code>
+<li>lowercase<code>(value)</code>
 – returns the <code>value</code> in lower case.</li>
-<li><a
-href="generated/en/template_ref.html#ff-mod">mod</a><code>(value, y)</code>
+<li>mod<code>(value, y)</code>
 – returns the <code>floor</code> of the remainder of
 <code>value / y</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-rating-to-stars">rating_to_stars</a><code>(value, use_half_stars)</code>
+<li>rating_to_stars<code>(value, use_half_stars)</code>
 – Returns the <code>value</code> as string of star (<code>★</code>)
 characters.</li>
-<li><a
-href="generated/en/template_ref.html#ff-re">re</a><code>(value, pattern, replacement)</code>
+<li>re<code>(value, pattern, replacement)</code>
 – return the <code>value</code> after applying the regular
 expression.</li>
-<li><a
-href="generated/en/template_ref.html#ff-re-group">re_group</a><code>(value, pattern [, template_for_group]*)</code>
+<li>re_group<code>(value, pattern [, template_for_group]*)</code>
 – return a string made by applying the regular expression
 <code>pattern</code> to <code>value</code> and replacing each matched
 instance</li>
-<li><a
-href="generated/en/template_ref.html#ff-round">round</a><code>(value)</code>
+<li>round<code>(value)</code>
 – returns the nearest integer to <code>value</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-select">select</a><code>(value, key)</code>
+<li>select<code>(value, key)</code>
 – interpret the <code>value</code> as a comma-separated list of items
 with each item having the form <code>id:id_value</code> (the calibre
 <code>identifier</code> format).</li>
-<li><a
-href="generated/en/template_ref.html#ff-shorten">shorten</a><code>(value, left_chars, middle_text, right_chars)</code>
+<li>shorten<code>(value, left_chars, middle_text, right_chars)</code>
 – Return a shortened version of the <code>value</code></li>
-<li><a
-href="generated/en/template_ref.html#ff-str-in-list">str_in_list</a><code>(value, separator, [ string, found_val, ]+ not_found_val)</code>
+<li>str_in_list<code>(value, separator, [ string, found_val, ]+ not_found_val)</code>
 – interpret the <code>value</code> as a list of items separated by
 <code>separator</code> then compare <code>string</code> against each
 value in the list.</li>
-<li><a
-href="generated/en/template_ref.html#ff-subitems">subitems</a><code>(value, start_index, end_index)</code>
+<li>subitems<code>(value, start_index, end_index)</code>
 – This function breaks apart lists of tag-like hierarchical items such
 as genres.</li>
-<li><a
-href="generated/en/template_ref.html#ff-sublist">sublist</a><code>(value, start_index, end_index, separator)</code>
+<li>sublist<code>(value, start_index, end_index, separator)</code>
 – interpret the <code>value</code> as a list of items separated by
 <code>separator</code>, returning a new list made from the items from
 <code>start_index</code> to <code>end_index</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-substr">substr</a><code>(value, start, end)</code>
+<li>substr<code>(value, start, end)</code>
 – returns the <code>start</code>’th through the <code>end</code>’th
 characters of <code>value</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-swap-around-articles">swap_around_articles</a><code>(value, separator)</code>
+<li>swap_around_articles<code>(value, separator)</code>
 – returns the <code>value</code> with articles moved to the end,
 separated by a semicolon.</li>
-<li><a
-href="generated/en/template_ref.html#ff-swap-around-comma">swap_around_comma</a><code>(value)</code>
+<li>swap_around_comma<code>(value)</code>
 – given a <code>value</code> of the form <code>B, A</code>, return
 <code>A B</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-switch">switch</a><code>(value, [patternN, valueN,]+ else_value)</code>
+<li>switch<code>(value, [patternN, valueN,]+ else_value)</code>
 – for each <code>patternN, valueN</code> pair, checks if the
 <code>value</code> matches the regular expression
 <code>patternN</code></li>
-<li><a
-href="generated/en/template_ref.html#ff-test">test</a><code>(value, text_if_not_empty, text_if_empty)</code>
+<li>test<code>(value, text_if_not_empty, text_if_empty)</code>
 – return <code>text_if_not_empty</code> if the value is not empty,
 otherwise return <code>text_if_empty</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-titlecase">titlecase</a><code>(value)</code>
+<li>titlecase<code>(value)</code>
 – returns the <code>value</code> in title case.</li>
-<li><a
-href="generated/en/template_ref.html#ff-transliterate">transliterate</a><code>(value)</code>
+<li>transliterate<code>(value)</code>
 – Return a string in a latin alphabet formed by approximating the sound
 of the words in <code>value</code>.</li>
-<li><a
-href="generated/en/template_ref.html#ff-uppercase">uppercase</a><code>(value)</code>
+<li>uppercase<code>(value)</code>
 – returns the <code>value</code> in upper case. Using functions and
 formatting in the same template</li>
 </ul>
@@ -5604,10 +5445,8 @@ right-hand expressions are True. Field references</li>
 </ul>
 <p>A <code>field_reference</code> evaluates to the value of the metadata
 field named by lookup name that follows the <code>\$</code> or
-<code>\$\$</code>. Using <code>\$</code> is equivalent to using the <a
-href="generated/en/template_ref.html#ff-field">field</a> function. Using
-<code>\$\$</code> is equivalent to using the <a
-href="generated/en/template_ref.html#ff-raw-field">raw_field</a>
+<code>\$\$</code>. Using <code>\$</code> is equivalent to using the field function. Using
+<code>\$\$</code> is equivalent to using the raw_field
 function. Examples:</p>
 <pre><code>* $authors ==&gt; field(&#39;authors&#39;)
 * $#genre ==&gt; field(&#39;#genre&#39;)
@@ -5666,8 +5505,7 @@ of the <code>title</code> column:</p>
 <p>The <code>for</code> expression iterates over a list of values,
 processing them one at a time. The <code>list_expression</code> must
 evaluate either to a metadata field <code>lookup name</code> e.g.,
-<code>tags</code> or <code>#genre</code>, or to a list of values. The <a
-href="generated/en/template_ref.html#ff-range">range</a> generates a
+<code>tags</code> or <code>#genre</code>, or to a list of values. The range generates a
 list of numbers. If the result is a valid <code>lookup name</code> then
 the field’s value is fetched and the separator specified for that field
 type is used. If the result isn’t a valid lookup name then it is assumed
@@ -5988,18 +5826,15 @@ example.</li>
 template functions you can use, depending on the complexity of the
 processing.</p>
 <ul>
-<li><p><a
-href="generated/en/template_ref.html#ff-make-url">make_url</a><code>(path, [query_name, query_value]+)</code>
+<li><p>make_url<code>(path, [query_name, query_value]+)</code>
 – this function is the easiest way to construct a query URL. It uses a
 <code>path</code>, the web site and page you want to query, and
 <code>query_name</code>, <code>query_value</code> pairs from which the
 query is built. In general, the <code>query_value</code> must be
 URL-encoded. With this function it is always encoded and spaces are
 always replaced with <code>'+'</code> signs.</p></li>
-<li><p><a
-href="generated/en/template_ref.html#ff-make-url-extended">make_url_extended</a><code>(...)</code>
-– this function is similar to <a
-href="generated/en/template_ref.html#ff-make-url">make_url()</a> but
+<li><p>make_url_extended<code>(...)</code>
+– this function is similar to make_url() but
 gives you more control over the URL components. The components of a URL
 are</p></li>
 <li><p>scheme:://authority/path?query string.</p></li>
@@ -6010,16 +5845,14 @@ Locator</a> on Wikipedia for more detail.</p></li>
 query_value]+)</p></li>
 <li><p>and</p>
 <p>make_url_extended(scheme, authority, path, query_string)</p></li>
-<li><p><a
-href="generated/en/template_ref.html#ff-query-string">query_string</a><code>([query_name, query_value, how_to_encode]+)</code>–
+<li><p>query_string<code>([query_name, query_value, how_to_encode]+)</code>–
 returns a URL query string constructed from the
 <code>query_name, query_value, how_to_encode</code> triads. A query
 string is a series of items where each item looks like
 <code>query_name=query_value</code> where <code>query_value</code> is
 URL-encoded as instructed. The query items are separated by
 <code>'&amp;'</code> (ampersand) characters.</p></li>
-<li><p><a
-href="generated/en/template_ref.html#ff-encode-for-url">encode_for_url</a><code>(value, use_plus)</code>
+<li><p>encode_for_url<code>(value, use_plus)</code>
 – returns the <code>value</code> encoded for use in a URL as specified
 by <code>use_plus</code>. The value is first URL-encoded. Next, if
 <code>use_plus</code> is <code>0</code> then spaces are replaced by
@@ -6027,8 +5860,7 @@ by <code>use_plus</code>. The value is first URL-encoded. Next, if
 replaced by <code>%20</code>. For example, assume you have a custom
 column Translators (<code>#translators</code>) where the names are Last
 name, First name. You might need to convert the name to First name Last
-name when creating the URL. You can use the <a
-href="generated/en/template_ref.html#ff-make-url">make_url</a> function
+name when creating the URL. You can use the make_url function
 to do this:</p>
 <p>program: make_url(‘<a
 href="https://en.wikipedia.org/w/index.php">en.wikipedia.org</a>’,
@@ -6040,17 +5872,14 @@ the above template produces the link:</p>
 <p>Note that the person’s first name is now first, the space is now a
 plus, and that the non-English characters in the last name are
 URL-encoded.</p>
-<p>The functions <a
-href="generated/en/template_ref.html#ff-make-url-extended">make_url_extended</a>,
-<a
-href="generated/en/template_ref.html#ff-query-string">query_string</a>,
-and <a
-href="generated/en/template_ref.html#ff-encode-for-url">encode_for_url</a>
+<p>The functions make_url_extended,
+query_string,
+and encode_for_url
 might be useful depending upon any additional processing complexity.</p>
 <p>The calibre URL scheme</p>
 <p>Calibre supports several different URLs to navigate your calibre
 libraries. This section shows how to use templates to construct some of
-the URLs. See <a href="url_scheme.html">The calibre:// URL scheme</a>
+the URLs. See The calibre:// URL scheme
 for details on the URLs available.</p>
 <ul>
 <li><p>Switch to a specific library. The syntax of this URL is:</p>
@@ -6061,8 +5890,7 @@ bar of the window. It is a simple name, not the file path to the
 library. You must spell it as shown in the title bar, including letter
 case. The character <code>_</code> (underscore) stands for the current
 library. If the name contains any spaces or special characters then it
-must be hex encoded using the <a
-href="generated/en/template_ref.html#ff-to-hex">to_hex</a> function, as
+must be hex encoded using the to_hex function, as
 in the following example:</p>
 <p>program: strcat(‘calibre://switch-library/<em>hex</em>-’,
 to_hex(current_library_name()))</p></li>
@@ -6097,8 +5925,7 @@ to_hex(current_library_name()), ‘?eq=’, to_hex(‘tags:“=.AA”’))</p></
 <li><p>The resulting URL is:</p>
 <p>calibre://search/<em>hex</em>-4c6962726172792e746573745f736d616c6c?eq=746167733a223d2e414122</p></li>
 <li><p>Here is an example of the same URL built using the
-:ref:<code>ff_make_url_extended</code> function instead of <a
-href="generated/en/template_ref.html#ff-strcat">strcat</a>:</p>
+:ref:<code>ff_make_url_extended</code> function instead of strcat:</p>
 <p>program: make_url_extended(‘calibre’, ’‘, ’search/<em>hex</em>-’
 &amp; to_hex(current_library_name()), ‘eq’,
 to_hex(‘tags:“=.AA”’))</p></li>
@@ -6288,12 +6115,9 @@ searches):</p>
 <li><p>Python templates have full access to the calibre database. In
 icon rules:</p></li>
 <li><p>icon rule templates have no book data so field-based functions
-such as <a
-href="generated/en/template_ref.html#ff-format-date-field">format_date_field</a>,
-<a
-href="generated/en/template_ref.html#ff-list-count-field">list_count_field</a>,
-and <a
-href="generated/en/template_ref.html#ff-check-yes-no">check_yes_no</a>
+such as format_date_field,
+list_count_field,
+and check_yes_no
 won’t work. In the Content server:</p></li>
 <li><p>Templates have access to the new API but not the old API
 (LibraryDatabase).</p></li>
@@ -6301,16 +6125,11 @@ won’t work. In the Content server:</p></li>
 guaranteed to work in GPM templates (composite columns, icon rules, etc)
 and should be avoided if you use the content server:</p>
 <ul>
-<li><a
-href="generated/en/template_ref.html#ff-connected-device-name">connected_device_name</a></li>
-<li><a
-href="generated/en/template_ref.html#ff-connected-device-uuid">connected_device_uuid</a></li>
-<li><a
-href="generated/en/template_ref.html#ff-current-virtual-library-name">current_virtual_library_name</a></li>
-<li><a
-href="generated/en/template_ref.html#ff-is-marked">is_marked</a></li>
-<li><a
-href="generated/en/template_ref.html#ff-virtual-libraries">virtual_libraries</a></li>
+<li>connected_device_name</li>
+<li>connected_device_uuid</li>
+<li>current_virtual_library_name</li>
+<li>is_marked</li>
+<li>virtual_libraries</li>
 </ul></li>
 </ul>
 <h5 id="special-notes-for-savesend-templates">Special notes for
@@ -6364,284 +6183,198 @@ zero value works with the standard field series_index.</li>
 </ul>
 <h5 id="template-function-reference">Template function reference¶</h5>
 <ul>
-<li><a href="generated/en/template_ref.html">Reference for all built-in
-template language functions</a>
+<li>Reference for all built-in
+template language functions
 <ul>
-<li><a href="generated/en/template_ref.html#arithmetic">Arithmetic</a>
+<li>Arithmetic
 <ul>
-<li><a href="generated/en/template_ref.html#add">add</a></li>
-<li><a href="generated/en/template_ref.html#ceiling">ceiling</a></li>
-<li><a href="generated/en/template_ref.html#divide">divide</a></li>
-<li><a href="generated/en/template_ref.html#floor">floor</a></li>
-<li><a
-href="generated/en/template_ref.html#fractional-part">fractional_part</a></li>
-<li><a href="generated/en/template_ref.html#mod">mod</a></li>
-<li><a href="generated/en/template_ref.html#multiply">multiply</a></li>
-<li><a href="generated/en/template_ref.html#round">round</a></li>
-<li><a href="generated/en/template_ref.html#subtract">subtract</a></li>
+<li>add</li>
+<li>ceiling</li>
+<li>divide</li>
+<li>floor</li>
+<li>fractional_part</li>
+<li>mod</li>
+<li>multiply</li>
+<li>round</li>
+<li>subtract</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#boolean">Boolean</a>
+<li>Boolean
 <ul>
-<li><a href="generated/en/template_ref.html#and">and</a></li>
-<li><a href="generated/en/template_ref.html#not">not</a></li>
-<li><a href="generated/en/template_ref.html#or">or</a></li>
+<li>and</li>
+<li>not</li>
+<li>or</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#case-changes">Case
-changes</a>
+<li>Case
+changes
 <ul>
-<li><a
-href="generated/en/template_ref.html#capitalize">capitalize</a></li>
-<li><a
-href="generated/en/template_ref.html#lowercase">lowercase</a></li>
-<li><a
-href="generated/en/template_ref.html#titlecase">titlecase</a></li>
-<li><a
-href="generated/en/template_ref.html#uppercase">uppercase</a></li>
+<li>capitalize</li>
+<li>lowercase</li>
+<li>titlecase</li>
+<li>uppercase</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#database-functions">Database
-functions</a>
+<li>Database
+functions
 <ul>
-<li><a
-href="generated/en/template_ref.html#annotation-count">annotation_count</a></li>
-<li><a
-href="generated/en/template_ref.html#approximate-formats">approximate_formats</a></li>
-<li><a
-href="generated/en/template_ref.html#book-count">book_count</a></li>
-<li><a
-href="generated/en/template_ref.html#book-values">book_values</a></li>
-<li><a
-href="generated/en/template_ref.html#extra-file-modtime">extra_file_modtime</a></li>
-<li><a
-href="generated/en/template_ref.html#extra-file-names">extra_file_names</a></li>
-<li><a
-href="generated/en/template_ref.html#extra-file-size">extra_file_size</a></li>
-<li><a
-href="generated/en/template_ref.html#formats-modtimes">formats_modtimes</a></li>
-<li><a
-href="generated/en/template_ref.html#formats-path-segments">formats_path_segments</a></li>
-<li><a
-href="generated/en/template_ref.html#formats-paths">formats_paths</a></li>
-<li><a
-href="generated/en/template_ref.html#formats-sizes">formats_sizes</a></li>
-<li><a href="generated/en/template_ref.html#get-link">get_link</a></li>
-<li><a href="generated/en/template_ref.html#get-note">get_note</a></li>
-<li><a
-href="generated/en/template_ref.html#has-extra-files">has_extra_files</a></li>
-<li><a href="generated/en/template_ref.html#has-note">has_note</a></li>
-<li><a
-href="generated/en/template_ref.html#reading-progress">reading_progress</a></li>
+<li>annotation_count</li>
+<li>approximate_formats</li>
+<li>book_count</li>
+<li>book_values</li>
+<li>extra_file_modtime</li>
+<li>extra_file_names</li>
+<li>extra_file_size</li>
+<li>formats_modtimes</li>
+<li>formats_path_segments</li>
+<li>formats_paths</li>
+<li>formats_sizes</li>
+<li>get_link</li>
+<li>get_note</li>
+<li>has_extra_files</li>
+<li>has_note</li>
+<li>reading_progress</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#date-functions">Date
-functions</a>
+<li>Date
+functions
 <ul>
-<li><a
-href="generated/en/template_ref.html#date-arithmetic">date_arithmetic</a></li>
-<li><a
-href="generated/en/template_ref.html#days-between">days_between</a></li>
-<li><a href="generated/en/template_ref.html#today">today</a></li>
+<li>date_arithmetic</li>
+<li>days_between</li>
+<li>today</li>
 </ul></li>
-<li><a
-href="generated/en/template_ref.html#formatting-values">Formatting
-values</a>
+<li>Formatting
+values
 <ul>
-<li><a href="generated/en/template_ref.html#f-string">f_string</a></li>
-<li><a
-href="generated/en/template_ref.html#finish-formatting">finish_formatting</a></li>
-<li><a
-href="generated/en/template_ref.html#format-date">format_date</a></li>
-<li><a
-href="generated/en/template_ref.html#format-date-field">format_date_field</a></li>
-<li><a
-href="generated/en/template_ref.html#format-duration">format_duration</a></li>
-<li><a
-href="generated/en/template_ref.html#format-number">format_number</a></li>
-<li><a
-href="generated/en/template_ref.html#human-readable">human_readable</a></li>
-<li><a
-href="generated/en/template_ref.html#rating-to-stars">rating_to_stars</a></li>
+<li>f_string</li>
+<li>finish_formatting</li>
+<li>format_date</li>
+<li>format_date_field</li>
+<li>format_duration</li>
+<li>format_number</li>
+<li>human_readable</li>
+<li>rating_to_stars</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#gui-functions">GUI
-functions</a>
+<li>GUI
+functions
 <ul>
-<li><a
-href="generated/en/template_ref.html#selected-books">selected_books</a></li>
-<li><a
-href="generated/en/template_ref.html#selected-column">selected_column</a></li>
-<li><a
-href="generated/en/template_ref.html#show-dialog">show_dialog</a></li>
-<li><a
-href="generated/en/template_ref.html#sort-book-ids">sort_book_ids</a></li>
-<li><a
-href="generated/en/template_ref.html#width-from-pages">width_from_pages</a></li>
+<li>selected_books</li>
+<li>selected_column</li>
+<li>show_dialog</li>
+<li>sort_book_ids</li>
+<li>width_from_pages</li>
 </ul></li>
-<li><a
-href="generated/en/template_ref.html#get-values-from-metadata">Get
-values from metadata</a>
+<li>Get
+values from metadata
 <ul>
-<li><a
-href="generated/en/template_ref.html#author-links">author_links</a></li>
-<li><a
-href="generated/en/template_ref.html#author-sorts">author_sorts</a></li>
-<li><a href="generated/en/template_ref.html#booksize">booksize</a></li>
-<li><a
-href="generated/en/template_ref.html#connected-device-name">connected_device_name</a></li>
-<li><a
-href="generated/en/template_ref.html#connected-device-uuid">connected_device_uuid</a></li>
-<li><a
-href="generated/en/template_ref.html#current-library-name">current_library_name</a></li>
-<li><a
-href="generated/en/template_ref.html#current-library-path">current_library_path</a></li>
-<li><a
-href="generated/en/template_ref.html#current-virtual-library-name">current_virtual_library_name</a></li>
-<li><a href="generated/en/template_ref.html#field">field</a></li>
-<li><a
-href="generated/en/template_ref.html#has-cover">has_cover</a></li>
-<li><a
-href="generated/en/template_ref.html#is-marked">is_marked</a></li>
-<li><a
-href="generated/en/template_ref.html#language-codes">language_codes</a></li>
-<li><a
-href="generated/en/template_ref.html#language-strings">language_strings</a></li>
-<li><a href="generated/en/template_ref.html#ondevice">ondevice</a></li>
-<li><a
-href="generated/en/template_ref.html#raw-field">raw_field</a></li>
-<li><a href="generated/en/template_ref.html#raw-list">raw_list</a></li>
-<li><a
-href="generated/en/template_ref.html#series-sort">series_sort</a></li>
-<li><a
-href="generated/en/template_ref.html#user-categories">user_categories</a></li>
-<li><a
-href="generated/en/template_ref.html#virtual-libraries">virtual_libraries</a></li>
+<li>author_links</li>
+<li>author_sorts</li>
+<li>booksize</li>
+<li>connected_device_name</li>
+<li>connected_device_uuid</li>
+<li>current_library_name</li>
+<li>current_library_path</li>
+<li>current_virtual_library_name</li>
+<li>field</li>
+<li>has_cover</li>
+<li>is_marked</li>
+<li>language_codes</li>
+<li>language_strings</li>
+<li>ondevice</li>
+<li>raw_field</li>
+<li>raw_list</li>
+<li>series_sort</li>
+<li>user_categories</li>
+<li>virtual_libraries</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#iterate-over-values">Iterate
-over values</a>
+<li>Iterate
+over values
 <ul>
-<li><a
-href="generated/en/template_ref.html#first-non-empty">first_non_empty</a></li>
-<li><a href="generated/en/template_ref.html#lookup">lookup</a></li>
-<li><a href="generated/en/template_ref.html#switch">switch</a></li>
-<li><a
-href="generated/en/template_ref.html#switch-if">switch_if</a></li>
+<li>first_non_empty</li>
+<li>lookup</li>
+<li>switch</li>
+<li>switch_if</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#list-lookup">List lookup</a>
+<li>List lookup
 <ul>
-<li><a
-href="generated/en/template_ref.html#ff-identifier-in-list">identifier_in_list</a></li>
-<li><a
-href="generated/en/template_ref.html#list-contains">list_contains</a></li>
-<li><a
-href="generated/en/template_ref.html#list-item">list_item</a></li>
-<li><a href="generated/en/template_ref.html#select">select</a></li>
-<li><a
-href="generated/en/template_ref.html#str-in-list">str_in_list</a></li>
+<li>identifier_in_list</li>
+<li>list_contains</li>
+<li>list_item</li>
+<li>select</li>
+<li>str_in_list</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#list-manipulation">List
-manipulation</a>
+<li>List
+manipulation
 <ul>
-<li><a
-href="generated/en/template_ref.html#list-count">list_count</a></li>
-<li><a
-href="generated/en/template_ref.html#list-count-field">list_count_field</a></li>
-<li><a
-href="generated/en/template_ref.html#list-count-matching">list_count_matching</a></li>
-<li><a
-href="generated/en/template_ref.html#list-difference">list_difference</a></li>
-<li><a
-href="generated/en/template_ref.html#list-equals">list_equals</a></li>
-<li><a
-href="generated/en/template_ref.html#list-intersection">list_intersection</a></li>
-<li><a
-href="generated/en/template_ref.html#list-join">list_join</a></li>
-<li><a href="generated/en/template_ref.html#list-re">list_re</a></li>
-<li><a
-href="generated/en/template_ref.html#list-re-group">list_re_group</a></li>
-<li><a
-href="generated/en/template_ref.html#list-remove-duplicates">list_remove_duplicates</a></li>
-<li><a
-href="generated/en/template_ref.html#list-sort">list_sort</a></li>
-<li><a
-href="generated/en/template_ref.html#list-split">list_split</a></li>
-<li><a
-href="generated/en/template_ref.html#list-union">list_union</a></li>
-<li><a href="generated/en/template_ref.html#range">range</a></li>
-<li><a href="generated/en/template_ref.html#subitems">subitems</a></li>
-<li><a href="generated/en/template_ref.html#sublist">sublist</a></li>
+<li>list_count</li>
+<li>list_count_field</li>
+<li>list_count_matching</li>
+<li>list_difference</li>
+<li>list_equals</li>
+<li>list_intersection</li>
+<li>list_join</li>
+<li>list_re</li>
+<li>list_re_group</li>
+<li>list_remove_duplicates</li>
+<li>list_sort</li>
+<li>list_split</li>
+<li>list_union</li>
+<li>range</li>
+<li>subitems</li>
+<li>sublist</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#other">Other</a>
+<li>Other
 <ul>
-<li><a
-href="generated/en/template_ref.html#arguments">arguments</a></li>
-<li><a href="generated/en/template_ref.html#assign">assign</a></li>
-<li><a href="generated/en/template_ref.html#globals">globals</a></li>
-<li><a
-href="generated/en/template_ref.html#is-dark-mode">is_dark_mode</a></li>
-<li><a href="generated/en/template_ref.html#print">print</a></li>
-<li><a
-href="generated/en/template_ref.html#set-globals">set_globals</a></li>
+<li>arguments</li>
+<li>assign</li>
+<li>globals</li>
+<li>is_dark_mode</li>
+<li>print</li>
+<li>set_globals</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#recursion">Recursion</a>
+<li>Recursion
 <ul>
-<li><a href="generated/en/template_ref.html#eval">eval</a></li>
-<li><a href="generated/en/template_ref.html#template">template</a></li>
+<li>eval</li>
+<li>template</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#relational">Relational</a>
+<li>Relational
 <ul>
-<li><a href="generated/en/template_ref.html#cmp">cmp</a></li>
-<li><a
-href="generated/en/template_ref.html#first-matching-cmp">first_matching_cmp</a></li>
-<li><a href="generated/en/template_ref.html#strcmp">strcmp</a></li>
-<li><a
-href="generated/en/template_ref.html#strcmpcase">strcmpcase</a></li>
+<li>cmp</li>
+<li>first_matching_cmp</li>
+<li>strcmp</li>
+<li>strcmpcase</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#string-manipulation">String
-manipulation</a>
+<li>String
+manipulation
 <ul>
-<li><a
-href="generated/en/template_ref.html#character">character</a></li>
-<li><a
-href="generated/en/template_ref.html#check-yes-no">check_yes_no</a></li>
-<li><a href="generated/en/template_ref.html#contains">contains</a></li>
-<li><a
-href="generated/en/template_ref.html#field-exists">field_exists</a></li>
-<li><a href="generated/en/template_ref.html#ifempty">ifempty</a></li>
-<li><a href="generated/en/template_ref.html#re">re</a></li>
-<li><a href="generated/en/template_ref.html#re-group">re_group</a></li>
-<li><a href="generated/en/template_ref.html#shorten">shorten</a></li>
-<li><a href="generated/en/template_ref.html#strcat">strcat</a></li>
-<li><a
-href="generated/en/template_ref.html#strcat-max">strcat_max</a></li>
-<li><a href="generated/en/template_ref.html#strlen">strlen</a></li>
-<li><a href="generated/en/template_ref.html#substr">substr</a></li>
-<li><a
-href="generated/en/template_ref.html#swap-around-articles">swap_around_articles</a></li>
-<li><a
-href="generated/en/template_ref.html#swap-around-comma">swap_around_comma</a></li>
-<li><a href="generated/en/template_ref.html#test">test</a></li>
-<li><a
-href="generated/en/template_ref.html#transliterate">transliterate</a></li>
+<li>character</li>
+<li>check_yes_no</li>
+<li>contains</li>
+<li>field_exists</li>
+<li>ifempty</li>
+<li>re</li>
+<li>re_group</li>
+<li>shorten</li>
+<li>strcat</li>
+<li>strcat_max</li>
+<li>strlen</li>
+<li>substr</li>
+<li>swap_around_articles</li>
+<li>swap_around_comma</li>
+<li>test</li>
+<li>transliterate</li>
 </ul></li>
-<li><a href="generated/en/template_ref.html#url-functions">URL
-functions</a>
+<li>URL
+functions
 <ul>
-<li><a
-href="generated/en/template_ref.html#encode-for-url">encode_for_url</a></li>
-<li><a href="generated/en/template_ref.html#make-url">make_url</a></li>
-<li><a
-href="generated/en/template_ref.html#make-url-extended">make_url_extended</a></li>
-<li><a
-href="generated/en/template_ref.html#query-string">query_string</a></li>
-<li><a href="generated/en/template_ref.html#to-hex">to_hex</a></li>
-<li><a
-href="generated/en/template_ref.html#urls-from-identifiers">urls_from_identifiers</a></li>
+<li>encode_for_url</li>
+<li>make_url</li>
+<li>make_url_extended</li>
+<li>query_string</li>
+<li>to_hex</li>
+<li>urls_from_identifiers</li>
 </ul></li>
-<li><a
-href="generated/en/template_ref.html#api-of-the-metadata-objects">API of
-the Metadata objects</a>
+<li>API of
+the Metadata objects
 <ul>
-<li><a
-href="generated/en/template_ref.html#calibre.ebooks.metadata.book.base.Metadata"><code>Metadata</code></a></li>
-<li><a
-href="generated/en/template_ref.html#calibre.ebooks.metadata.book.base.STANDARD_METADATA_FIELDS"><code>STANDARD_METADATA_FIELDS</code></a>
+<li><code>Metadata</code></li>
+<li><code>STANDARD_METADATA_FIELDS</code>
 © Copyright Kovid Goyal. Last updated on Aug 07, 2026.</li>
 </ul></li>
 </ul></li>
@@ -6675,298 +6408,276 @@ click the “Send to device” button. Once the icon stops spinning again,
 disconnect your reader and read away! If you didn’t convert the book in
 the previous step, calibre will auto convert it to the format your
 reader device understands.</p>
-<p>To get started with more advanced usage, you should read about <a
-href="gui.html">The Graphical User Interface</a>. For even more power
-and versatility, learn the <a href="generated/en/cli-index.html">Command
-Line Interface</a>. You will find the list of <a
-href="faq.html">Frequently Asked Questions</a> useful as well.</p>
+<p>To get started with more advanced usage, you should read about The Graphical User Interface. For even more power
+and versatility, learn the Command
+Line Interface. You will find the list of Frequently Asked Questions useful as well.</p>
 <p>If you have more questions, or want to discuss calibre with other
 users or ask for help with specific things, there are <a
 href="https://calibre-ebook.com/help">forums and other help resources
 available</a>.</p>
-<p>An e-book version of this User Manual is available in <a
-href="calibre.epub">EPUB format</a>, <a href="calibre.azw3">AZW3
-(Kindle) format</a> and <a href="calibre.pdf">PDF format</a>.</p>
+<p>An e-book version of this User Manual is available in EPUB format, AZW3
+(Kindle) format and PDF format.</p>
 <p>Sections</p>
 <ul>
-<li><a href="gui.html">The Graphical User Interface</a></li>
-<li><a href="news.html">Adding your favorite news website</a></li>
-<li><a href="viewer.html">The E-book viewer</a></li>
-<li><a href="conversion.html">E-book conversion</a></li>
-<li><a href="edit.html">Editing e-books</a></li>
-<li><a href="server.html">The calibre Content server</a></li>
-<li><a href="diff.html">Comparing e-books</a></li>
-<li><a href="metadata.html">Editing e-book metadata</a></li>
-<li><a href="faq.html">Frequently Asked Questions</a></li>
-<li><a href="tutorials.html">Tutorials</a></li>
-<li><a href="url_scheme.html">The calibre:// URL scheme</a></li>
-<li><a href="customize.html">Customizing calibre</a></li>
-<li><a href="generated/en/cli-index.html">Command Line
-Interface</a></li>
-<li><a href="develop.html">Setting up a calibre development
-environment</a></li>
-<li><a href="drm.html">Digital Rights Management (DRM)</a></li>
-<li><a href="glossary.html">Glossary</a></li>
+<li>The Graphical User Interface</li>
+<li>Adding your favorite news website</li>
+<li>The E-book viewer</li>
+<li>E-book conversion</li>
+<li>Editing e-books</li>
+<li>The calibre Content server</li>
+<li>Comparing e-books</li>
+<li>Editing e-book metadata</li>
+<li>Frequently Asked Questions</li>
+<li>Tutorials</li>
+<li>The calibre:// URL scheme</li>
+<li>Customizing calibre</li>
+<li>Command Line
+Interface</li>
+<li>Setting up a calibre development
+environment</li>
+<li>Digital Rights Management (DRM)</li>
+<li>Glossary</li>
 </ul>
 <h5 id="the-main-calibre-user-interface">The main calibre user
 interface¶</h5>
 <ul>
-<li><a href="gui.html">The Graphical User Interface</a>
+<li>The Graphical User Interface
 <ul>
-<li><a href="gui.html#actions">Actions</a></li>
-<li><a href="gui.html#preferences">Preferences</a></li>
-<li><a href="gui.html#catalogs">Catalogs</a></li>
-<li><a href="gui.html#search-sort">Search &amp; sort</a></li>
-<li><a href="gui.html#the-search-interface">The search
-interface</a></li>
-<li><a href="gui.html#saving-searches">Saving searches</a></li>
-<li><a href="gui.html#searching-the-full-text-of-all-books">Searching
-the full text of all books</a></li>
-<li><a href="gui.html#virtual-libraries">Virtual libraries</a></li>
-<li><a href="gui.html#temporarily-marking-books">Temporarily marking
-books</a></li>
-<li><a href="gui.html#guessing-metadata-from-file-names">Guessing
-metadata from file names</a></li>
-<li><a href="gui.html#book-details">Book details</a></li>
-<li><a href="gui.html#tag-browser">Tag browser</a></li>
-<li><a href="gui.html#cover-grid">Cover grid</a></li>
-<li><a href="gui.html#bookshelf-view">Bookshelf view</a></li>
-<li><a href="gui.html#cover-browser">Cover browser</a></li>
-<li><a href="gui.html#adding-notes-for-authors-series-etc">Adding notes
-for authors, series, etc.</a></li>
-<li><a href="gui.html#quickview">Quickview</a></li>
-<li><a href="gui.html#jobs">Jobs</a></li>
-<li><a href="gui.html#keyboard-shortcuts">Keyboard shortcuts</a></li>
+<li>Actions</li>
+<li>Preferences</li>
+<li>Catalogs</li>
+<li>Search &amp; sort</li>
+<li>The search
+interface</li>
+<li>Saving searches</li>
+<li>Searching
+the full text of all books</li>
+<li>Virtual libraries</li>
+<li>Temporarily marking
+books</li>
+<li>Guessing
+metadata from file names</li>
+<li>Book details</li>
+<li>Tag browser</li>
+<li>Cover grid</li>
+<li>Bookshelf view</li>
+<li>Cover browser</li>
+<li>Adding notes
+for authors, series, etc.</li>
+<li>Quickview</li>
+<li>Jobs</li>
+<li>Keyboard shortcuts</li>
 </ul></li>
 </ul>
 <h5 id="adding-your-favorite-news-website-to-calibre">Adding your
 favorite news website to calibre¶</h5>
 <ul>
-<li><a href="news.html">Adding your favorite news website</a>
+<li>Adding your favorite news website
 <ul>
-<li><a href="news.html#completely-automatic-fetching">Completely
-automatic fetching</a></li>
-<li><a href="news.html#customizing-the-fetch-process">Customizing the
-fetch process</a></li>
-<li><a href="news.html#tips-for-developing-new-recipes">Tips for
-developing new recipes</a></li>
-<li><a href="news.html#further-reading">Further reading</a></li>
-<li><a href="news.html#api-documentation">API documentation</a></li>
+<li>Completely
+automatic fetching</li>
+<li>Customizing the
+fetch process</li>
+<li>Tips for
+developing new recipes</li>
+<li>Further reading</li>
+<li>API documentation</li>
 </ul></li>
 </ul>
 <h5 id="the-calibre-e-book-viewer">The calibre E-book viewer¶</h5>
 <ul>
-<li><a href="viewer.html">The E-book viewer</a>
+<li>The E-book viewer
 <ul>
-<li><a href="viewer.html#starting-the-e-book-viewer">Starting the E-book
-viewer</a></li>
-<li><a href="viewer.html#navigating-around-an-e-book">Navigating around
-an e-book</a></li>
-<li><a href="viewer.html#highlighting-text">Highlighting text</a></li>
-<li><a href="viewer.html#read-aloud">Read aloud</a></li>
-<li><a href="viewer.html#searching-the-text">Searching the text</a></li>
-<li><a
-href="viewer.html#following-links-using-only-the-keyboard">Following
-links using only the keyboard</a></li>
-<li><a
-href="viewer.html#customizing-the-look-and-feel-of-your-reading-experience">Customizing
-the look and feel of your reading experience</a></li>
-<li><a href="viewer.html#dictionary-lookup">Dictionary lookup</a></li>
-<li><a href="viewer.html#copying-text-and-images">Copying text and
-images</a></li>
-<li><a href="viewer.html#zooming-in-on-images">Zooming in on
-images</a></li>
-<li><a
-href="viewer.html#syncing-with-a-paper-edition-of-the-current-book">Syncing
-with a paper edition of the current book</a></li>
-<li><a href="viewer.html#keyboard-shortcuts">Keyboard shortcuts</a></li>
-<li><a href="viewer.html#non-re-flowable-content">Non re-flowable
-content</a></li>
-<li><a
-href="viewer.html#designing-your-book-to-work-well-with-the-calibre-e-book-viewer">Designing
-your book to work well with the calibre E-book viewer</a></li>
+<li>Starting the E-book
+viewer</li>
+<li>Navigating around
+an e-book</li>
+<li>Highlighting text</li>
+<li>Read aloud</li>
+<li>Searching the text</li>
+<li>Following
+links using only the keyboard</li>
+<li>Customizing
+the look and feel of your reading experience</li>
+<li>Dictionary lookup</li>
+<li>Copying text and
+images</li>
+<li>Zooming in on
+images</li>
+<li>Syncing
+with a paper edition of the current book</li>
+<li>Keyboard shortcuts</li>
+<li>Non re-flowable
+content</li>
+<li>Designing
+your book to work well with the calibre E-book viewer</li>
 </ul></li>
 </ul>
 <h5 id="customizing-calibres-e-book-conversion">Customizing calibre’s
 e-book conversion¶</h5>
 <ul>
-<li><a href="conversion.html">E-book conversion</a>
+<li>E-book conversion
 <ul>
-<li><a href="conversion.html#introduction">Introduction</a></li>
-<li><a href="conversion.html#look-feel">Look &amp; feel</a></li>
-<li><a href="conversion.html#page-setup">Page setup</a></li>
-<li><a href="conversion.html#heuristic-processing">Heuristic
-processing</a></li>
-<li><a href="conversion.html#search-replace">Search &amp;
-replace</a></li>
-<li><a href="conversion.html#structure-detection">Structure
-detection</a></li>
-<li><a href="conversion.html#table-of-contents">Table of
-Contents</a></li>
-<li><a
-href="conversion.html#using-images-as-chapter-titles-when-converting-html-input-documents">Using
-images as chapter titles when converting HTML input documents</a></li>
-<li><a
-href="conversion.html#using-tag-attributes-to-supply-the-text-for-entries-in-the-table-of-contents">Using
+<li>Introduction</li>
+<li>Look &amp; feel</li>
+<li>Page setup</li>
+<li>Heuristic
+processing</li>
+<li>Search &amp;
+replace</li>
+<li>Structure
+detection</li>
+<li>Table of
+Contents</li>
+<li>Using
+images as chapter titles when converting HTML input documents</li>
+<li>Using
 tag attributes to supply the text for entries in the Table of
-Contents</a></li>
-<li><a
-href="conversion.html#how-options-are-set-saved-for-conversion">How
-options are set/saved for conversion</a></li>
-<li><a href="conversion.html#format-specific-tips">Format specific
-tips</a></li>
+Contents</li>
+<li>How
+options are set/saved for conversion</li>
+<li>Format specific
+tips</li>
 </ul></li>
 </ul>
 <h5 id="editing-e-books">Editing e-books¶</h5>
 <ul>
-<li><a href="edit.html">Editing e-books</a>
+<li>Editing e-books
 <ul>
-<li><a href="edit.html#basic-workflow">Basic workflow</a></li>
-<li><a href="edit.html#the-file-browser">The File browser</a></li>
-<li><a href="edit.html#search-replace">Search &amp; replace</a></li>
-<li><a href="edit.html#automated-tools">Automated tools</a></li>
-<li><a href="edit.html#checkpoints">Checkpoints</a></li>
-<li><a href="edit.html#the-live-preview-panel">The Live preview
-panel</a></li>
-<li><a href="edit.html#the-live-css-panel">The Live CSS panel</a></li>
-<li><a href="edit.html#miscellaneous-tools">Miscellaneous tools</a></li>
-<li><a href="edit.html#special-features-in-the-code-editor">Special
-features in the code editor</a></li>
+<li>Basic workflow</li>
+<li>The File browser</li>
+<li>Search &amp; replace</li>
+<li>Automated tools</li>
+<li>Checkpoints</li>
+<li>The Live preview
+panel</li>
+<li>The Live CSS panel</li>
+<li>Miscellaneous tools</li>
+<li>Special
+features in the code editor</li>
 </ul></li>
 </ul>
 <h5 id="the-calibre-content-server-2">The calibre Content server¶</h5>
 <ul>
-<li><a href="server.html">The calibre Content server</a>
+<li>The calibre Content server
 <ul>
-<li><a
-href="server.html#accessing-the-content-server-from-other-devices">Accessing
-the Content server from other devices</a></li>
-<li><a href="server.html#the-server-interface">The server
-interface</a></li>
-<li><a href="server.html#browser-support">Browser support</a></li>
-<li><a href="server.html#enabling-offline-support">Enabling offline
-support</a></li>
-<li><a
-href="server.html#managing-user-accounts-from-the-command-line-only">Managing
-user accounts from the command-line only</a></li>
-<li><a
-href="server.html#integrating-the-calibre-content-server-into-other-servers">Integrating
-the calibre Content server into other servers</a></li>
-<li><a
-href="server.html#creating-a-service-for-the-calibre-server-on-a-modern-linux-system">Creating
-a service for the calibre server on a modern Linux system</a></li>
+<li>Accessing
+the Content server from other devices</li>
+<li>The server
+interface</li>
+<li>Browser support</li>
+<li>Enabling offline
+support</li>
+<li>Managing
+user accounts from the command-line only</li>
+<li>Integrating
+the calibre Content server into other servers</li>
+<li>Creating
+a service for the calibre server on a modern Linux system</li>
 </ul></li>
 </ul>
 <h5 id="comparing-e-books">Comparing e-books¶</h5>
 <ul>
-<li><a href="diff.html">Comparing e-books</a>
+<li>Comparing e-books
 <ul>
-<li><a href="diff.html#understanding-the-comparison-view">Understanding
-the comparison view</a></li>
-<li><a href="diff.html#launching-the-comparison-tool">Launching the
-comparison tool</a></li>
+<li>Understanding
+the comparison view</li>
+<li>Launching the
+comparison tool</li>
 </ul></li>
 </ul>
 <h5 id="editing-e-book-metadata">Editing e-book metadata¶</h5>
 <ul>
-<li><a href="metadata.html">Editing e-book metadata</a>
+<li>Editing e-book metadata
 <ul>
-<li><a
-href="metadata.html#editing-the-metadata-of-one-book-at-a-time">Editing
-the metadata of one book at a time</a></li>
-<li><a
-href="metadata.html#editing-the-metadata-of-many-books-at-a-time">Editing
-the metadata of many books at a time</a></li>
-<li><a href="metadata.html#adding-extra-data-files-to-a-book">Adding
-extra data files to a book</a></li>
+<li>Editing
+the metadata of one book at a time</li>
+<li>Editing
+the metadata of many books at a time</li>
+<li>Adding
+extra data files to a book</li>
 </ul></li>
 </ul>
 <h5 id="frequently-asked-questions">Frequently Asked Questions¶</h5>
 <ul>
-<li><a href="faq.html">Frequently Asked Questions</a>
+<li>Frequently Asked Questions
 <ul>
-<li><a href="faq.html#e-book-format-conversion">E-book format
-conversion</a></li>
-<li><a href="faq.html#device-integration">Device integration</a></li>
-<li><a href="faq.html#library-management">Library management</a></li>
-<li><a href="faq.html#miscellaneous">Miscellaneous</a></li>
+<li>E-book format
+conversion</li>
+<li>Device integration</li>
+<li>Library management</li>
+<li>Miscellaneous</li>
 </ul></li>
 </ul>
 <h5 id="tutorials">Tutorials¶</h5>
 <ul>
-<li><a href="tutorials.html">Tutorials</a>
+<li>Tutorials
 <ul>
-<li><a href="news.html">Adding your favorite news website</a></li>
-<li><a href="sub_groups.html">Managing subgroups of books, for example
-“genre”</a></li>
-<li><a href="xpath.html">XPath tutorial</a></li>
-<li><a href="template_lang.html">The calibre template language</a></li>
-<li><a href="regexp.html">All about using regular expressions in
-calibre</a></li>
-<li><a href="creating_plugins.html">Writing your own plugins to extend
-calibre’s functionality</a></li>
-<li><a href="typesetting_math.html">Typesetting mathematics in
-e-books</a></li>
-<li><a href="catalogs.html">Creating AZW3 • EPUB • MOBI
-catalogs</a></li>
-<li><a href="virtual_libraries.html">Virtual libraries</a></li>
+<li>Adding your favorite news website</li>
+<li>Managing subgroups of books, for example
+“genre”</li>
+<li>XPath tutorial</li>
+<li>The calibre template language</li>
+<li>All about using regular expressions in
+calibre</li>
+<li>Writing your own plugins to extend
+calibre’s functionality</li>
+<li>Typesetting mathematics in
+e-books</li>
+<li>Creating AZW3 • EPUB • MOBI
+catalogs</li>
+<li>Virtual libraries</li>
 </ul></li>
 </ul>
 <h5 id="customizing-calibre">Customizing calibre¶</h5>
 <ul>
-<li><a href="customize.html">Customizing calibre</a>
+<li>Customizing calibre
 <ul>
-<li><a href="customize.html#environment-variables">Environment
-variables</a></li>
-<li><a href="customize.html#tweaks">Tweaks</a></li>
-<li><a
-href="customize.html#overriding-icons-templates-et-cetera">Overriding
-icons, templates, et cetera</a></li>
-<li><a
-href="customize.html#creating-your-own-icon-theme-for-calibre">Creating
-your own icon theme for calibre</a></li>
-<li><a
-href="customize.html#customizing-calibre-with-plugins">Customizing
-calibre with plugins</a></li>
+<li>Environment
+variables</li>
+<li>Tweaks</li>
+<li>Overriding
+icons, templates, et cetera</li>
+<li>Creating
+your own icon theme for calibre</li>
+<li>Customizing
+calibre with plugins</li>
 </ul></li>
 </ul>
 <h5 id="the-command-line-interface">The Command Line Interface¶</h5>
 <ul>
-<li><a href="generated/en/cli-index.html">Command Line Interface</a>
+<li>Command Line Interface
 <ul>
-<li><a href="generated/en/cli-index.html#documented-commands">Documented
-commands</a></li>
-<li><a
-href="generated/en/cli-index.html#undocumented-commands">Undocumented
-commands</a></li>
+<li>Documented
+commands</li>
+<li>Undocumented
+commands</li>
 </ul></li>
 </ul>
 <h5 id="setting-up-a-calibre-development-environment">Setting up a
 calibre development environment¶</h5>
 <ul>
-<li><a href="develop.html">Setting up a calibre development
-environment</a>
+<li>Setting up a calibre development
+environment
 <ul>
-<li><a href="develop.html#design-philosophy">Design philosophy</a></li>
-<li><a href="develop.html#getting-the-code">Getting the code</a></li>
-<li><a href="develop.html#windows-development-environment">Windows
-development environment</a></li>
-<li><a href="develop.html#macos-development-environment">macOS
-development environment</a></li>
-<li><a href="develop.html#linux-development-environment">Linux
-development environment</a></li>
-<li><a
-href="develop.html#having-separate-normal-and-development-calibre-installs-on-the-same-computer">Having
+<li>Design philosophy</li>
+<li>Getting the code</li>
+<li>Windows
+development environment</li>
+<li>macOS
+development environment</li>
+<li>Linux
+development environment</li>
+<li>Having
 separate “normal” and “development” calibre installs on the same
-computer</a></li>
-<li><a href="develop.html#debugging-tips">Debugging tips</a></li>
-<li><a href="develop.html#running-the-calibre-test-suite">Running the
-calibre test suite</a></li>
-<li><a href="develop.html#using-calibre-in-your-projects">Using calibre
-in your projects</a></li>
-<li><a
-href="develop.html#api-documentation-for-various-parts-of-calibre">API
-documentation for various parts of calibre</a> © Copyright Kovid Goyal.
+computer</li>
+<li>Debugging tips</li>
+<li>Running the
+calibre test suite</li>
+<li>Using calibre
+in your projects</li>
+<li>API
+documentation for various parts of calibre © Copyright Kovid Goyal.
 Last updated on Aug 07, 2026.</li>
 </ul></li>
 </ul>
@@ -7034,8 +6745,8 @@ be given that you can copy/paste elsewhere.</p>
 <p>The URL syntax is:</p>
 <pre><code>calibre://search/Library_Name?q=query
 calibre://search/Library_Name?eq=hex_encoded_query</code></pre>
-<p>Here query is any valid <a href="gui.html#search-interface">search
-expression</a>. If the search expression is complicated, encode it as a
+<p>Here query is any valid search
+expression. If the search expression is complicated, encode it as a
 hex string and use <code>eq</code> instead. Leaving out the query will
 cause the current search to be cleared.</p>
 <p>By default, if a Virtual library is selected, calibre will clear it
@@ -7086,10 +6797,9 @@ so the encoded version is the string: <code>616263</code>.</p>
 <p>calibre includes an integrated e-book comparison tool that can be
 used to see what has changed inside an e-book after editing or
 converting it. It can compare books in the EPUB and AZW3 formats.</p>
-<p>To use it, either open the e-book in the tool for <a
-href="edit.html#edit">Editing e-books</a> and then click File → Compare
-to other book or use the <a href="gui.html#book-details">Book
-details</a> panel. If you do a conversion from EPUB to EPUB, the
+<p>To use it, either open the e-book in the tool for Editing e-books and then click File → Compare
+to other book or use the Book
+details panel. If you do a conversion from EPUB to EPUB, the
 original EPUB file will be saved as ORIGINAL_EPUB. Simply right click on
 the ORIGINAL_EPUB entry in the Book details panel and choose Compare to
 EPUB format.</p>
@@ -7127,8 +6837,8 @@ tool¶</h5>
 same book and you want to see what is different between them. To that
 end, there are several ways to launch the tool.</p>
 <h6 id="comparing-two-e-book-files">Comparing two e-book files¶</h6>
-<p>Open the first file in the <a href="edit.html#edit">Editing
-e-books</a> tool. Now click File → Compare to another book and choose
+<p>Open the first file in the Editing
+e-books tool. Now click File → Compare to another book and choose
 the second file (it must be in the same format as the first). The
 comparison view will open with the file being edited on the right and
 the second file on the left.</p>
@@ -7136,15 +6846,14 @@ the second file on the left.</p>
 FMT¶</h6>
 <p>When you do a conversion in calibre from a FMT to itself, the
 original file is saved as ORIGINAL_FMT. You can see what was changed by
-the conversion, by right clicking on the ORIGINAL_FMT entry in the <a
-href="gui.html#book-details">Book details</a> panel in the main calibre
+the conversion, by right clicking on the ORIGINAL_FMT entry in the Book details panel in the main calibre
 window and selecting Compare to FMT. The comparison view will open with
 ORIGINAL_FMT on the left and FMT on the right.</p>
 <h6
 id="comparing-a-checkpoint-to-the-current-state-of-the-book-while-editing">Comparing
 a checkpoint to the current state of the book while editing¶</h6>
-<p>The <a href="edit.html#edit">Editing e-books</a> tool has a very
-useful feature, called <a href="edit.html#checkpoints">Checkpoints</a>.
+<p>The Editing e-books tool has a very
+useful feature, called Checkpoints.
 This allows you to save the current state of the book as a named
 checkpoint, to which you can revert if you do not like the changes you
 have made since creating the checkpoint. Checkpoints are also created
@@ -7323,8 +7032,8 @@ override the defaults</li>
 <li>how to use plugins to add functionality to calibre.</li>
 <li>how to share icon themes and plugins with other calibre users.</li>
 <li>to see how to create recipes to add new sources of online content to
-calibre visit the Section <a href="news.html#news">Adding your favorite
-news website</a>. Note</li>
+calibre visit the Section Adding your favorite
+news website. Note</li>
 </ul>
 <p>Note that although icon themes and plugins are indexed and
 downloadable via calibre’s builtin updater, they are not part of
@@ -7349,8 +7058,8 @@ locking.</p></li>
 other than <code>1</code> disables the use of Python based templates in
 calibre.</p></li>
 <li><p><code>CALIBRE_DEVELOP_FROM</code> - used to run from a calibre
-development environment. See <a href="develop.html#develop">Setting up a
-calibre development environment</a>.</p></li>
+development environment. See Setting up a
+calibre development environment.</p></li>
 <li><p><code>CALIBRE_OVERRIDE_LANG</code> - used to force the language
 used by the interface (ISO 639 language code)</p></li>
 <li><p><code>CALIBRE_TEST_TRANSLATION</code> - used to test a
@@ -8119,8 +7828,8 @@ complete list of all the built-in plugins in calibre by going to
 Preferences → Advanced → Plugins.</p>
 <p>You can write your own plugins to customize and extend the behavior
 of calibre. The plugin architecture in calibre is very simple, see the
-tutorial <a href="creating_plugins.html#pluginstutorial">Writing your
-own plugins to extend calibre’s functionality</a>.</p>
+tutorial Writing your
+own plugins to extend calibre’s functionality.</p>
 <p>Once you have written a plugin, you can upload that to the calibre
 plugins forum at <a
 href="https://www.mobileread.com/forums/forumdisplay.php?f=237">Mobileread</a>
@@ -8237,8 +7946,7 @@ use the edited e-book as input for conversion into other formats in
 calibre.</p>
 <p>This document will refer mainly to the conversion settings as found
 in the conversion dialog, pictured below. All these settings are also
-available via command line interface to conversion, documented at <a
-href="generated/en/ebook-convert.html">ebook-convert</a>. In calibre,
+available via command line interface to conversion, documented at ebook-convert. In calibre,
 you can obtain help on any individual setting by holding your mouse over
 it, a tooltip will appear describing the setting.</p>
 <h5 id="introduction">Introduction¶</h5>
@@ -8249,8 +7957,7 @@ plugin. This HTML is then transformed. In the last step, the processed
 XHTML is converted to the specified output format by the appropriate
 Output plugin. The results of the conversion can vary greatly, based on
 the input format. Some formats convert much better than others. A list
-of the best source formats for conversion is available <a
-href="faq.html#best-source-formats">here</a>.</p>
+of the best source formats for conversion is available here.</p>
 <p>The transforms that act on the XHTML output are where all the work
 happens. There are various transforms, for example, to insert book
 metadata as a page at the start of the book, to detect chapter headings
@@ -8373,8 +8080,8 @@ corrupted. calibre tries to auto-detect the character encoding of the
 source document, but it does not always succeed. You can force it to
 assume a particular character encoding by using this setting. cp1252 is
 a common encoding for documents produced using Windows software. You
-should also read <a href="faq.html#char-encoding-faq">How do I convert
-my file containing non-English characters, or smart quotes?</a> for more
+should also read How do I convert
+my file containing non-English characters, or smart quotes? for more
 on encoding issues.</p>
 <h6 id="layout">Layout¶</h6>
 Normally, paragraphs in XHTML are rendered with a blank line between
@@ -8484,13 +8191,11 @@ are less than the length of 40% of all lines in the document. If your
 document only has a few line breaks which need correction, then this
 value should be reduced to somewhere between 0.1 and 0.2.</p>
 <p>Detect and markup unformatted chapter headings and sub headings</p>
-If your document does not have chapter headings and titles formatted
+<p>If your document does not have chapter headings and titles formatted
 differently from the rest of the text, calibre can use this option to
-attempt to detect them and surround them with heading tags.
-<h2>
-tags are used for chapter headings;
-<h3>
-<p>tags are used for any titles that are detected.</p>
+attempt to detect them and surround them with heading tags. &lt;h2&gt;
+tags are used for chapter headings; &lt;h3&gt; tags are used for any
+titles that are detected.</p>
 <p>This function will not create a TOC, but in many cases it will cause
 calibre’s default chapter detection settings to correctly detect
 chapters and build a TOC. Adjust the XPath under Structure detection if
@@ -8501,18 +8206,11 @@ the easiest way to create a TOC for the document.</p>
 Extra CSS option under the Look and Feel conversion settings. For
 example, to center heading tags, use the following:</p>
 <pre><code>h2, h3 { text-align: center }</code></pre>
-Renumber sequences of
-<h1>
-or
-<h2>
-<p>tags</p>
-Some publishers format chapter headings using multiple
-<h1>
-or
-<h2>
-<p>tags sequentially. calibre’s default conversion settings will cause
-such titles to be split into two pieces. This option will re-number the
-heading tags to prevent splitting.</p>
+<p>Renumber sequences of &lt;h1&gt; or &lt;h2&gt; tags</p>
+<p>Some publishers format chapter headings using multiple &lt;h1&gt; or
+&lt;h2&gt; tags sequentially. calibre’s default conversion settings will
+cause such titles to be split into two pieces. This option will
+re-number the heading tags to prevent splitting.</p>
 <p>Delete blank lines between paragraphs</p>
 <p>This option will cause calibre to analyze blank lines included within
 the document. If every paragraph is interleaved with a blank line, then
@@ -8586,9 +8284,8 @@ in Yellow.</p>
 text is simply removed from the document or replaced using the
 replacement pattern. The replacement pattern is optional, if left blank
 then text matching the search pattern will be deleted from the document.
-You can learn more about regular expressions and their syntax at <a
-href="regexp.html#regexptutorial">All about using regular expressions in
-calibre</a>.</p>
+You can learn more about regular expressions and their syntax at All about using regular expressions in
+calibre.</p>
 <h5 id="structure-detection">Structure detection¶</h5>
 <p>Structure detection involves calibre trying its best to detect
 structural elements in the input document, when they are not properly
@@ -8607,8 +8304,7 @@ are not chapter boundaries. Also, detected chapters can be optionally
 inserted into the auto generated Table of Contents.</p>
 <p>calibre uses XPath, a powerful language to allow the user to specify
 chapter boundaries/page breaks. XPath can seem a little daunting to use
-at first, fortunately, there is a <a
-href="xpath.html#xpath-tutorial">XPath tutorial</a> in the User Manual.
+at first, fortunately, there is a XPath tutorial in the User Manual.
 Remember that Structure detection operates on the intermediate XHTML
 produced by the conversion pipeline. Use the debug option described in
 the Introduction to figure out the appropriate settings for your book.
@@ -8617,14 +8313,11 @@ simple XPath expressions.</p>
 <p>By default, calibre uses the following expression for detecting
 chapters:</p>
 <pre><code>//*[((name()=&#39;h1&#39; or name()=&#39;h2&#39;) and re:test(., &#39;chapter|book|section|part\s+&#39;, &#39;i&#39;)) or @class = &#39;chapter&#39;]</code></pre>
-This expression is rather complex, because it tries to handle a number
-of common cases simultaneously. What it means is that calibre will
-assume chapters start at either
-<h1>
-or
-<h2>
-<p>tags that have any of the words (chapter, book, section or part) in
-them or that have the class=”chapter” attribute.</p>
+<p>This expression is rather complex, because it tries to handle a
+number of common cases simultaneously. What it means is that calibre
+will assume chapters start at either &lt;h1&gt; or &lt;h2&gt; tags that
+have any of the words (chapter, book, section or part) in them or that
+have the class=”chapter” attribute.</p>
 <p>A related option is Chapter mark, which allows you to control what
 calibre does when it detects a chapter. By default, it will insert a
 page break before the chapter. You can have it insert a ruled line
@@ -8632,11 +8325,8 @@ instead of, or in addition to the page break. You can also have it do
 nothing.</p>
 <p>The default setting for detecting page breaks is:</p>
 <pre><code>//*[name()=&#39;h1&#39; or name()=&#39;h2&#39;]</code></pre>
-which means that calibre will insert page breaks before every
-<h1>
-and
-<h2>
-<p>tag by default.</p>
+<p>which means that calibre will insert page breaks before every
+&lt;h1&gt; and &lt;h2&gt; tag by default.</p>
 <p>Note</p>
 <p>The default expressions may change depending on the input format you
 are converting.</p>
@@ -8702,8 +8392,7 @@ to remove all entries titles “Next” or “Previous” use:</p>
 <p>The Level 1,2,3 TOC options allow you to create a sophisticated
 multi-level Table of Contents. They are XPath expressions that match
 tags in the intermediate XHTML produced by the conversion pipeline. See
-the Introduction for how to get access to this XHTML. Also read the <a
-href="xpath.html#xpath-tutorial">XPath tutorial</a>, to learn how to
+the Introduction for how to get access to this XHTML. Also read the XPath tutorial, to learn how to
 construct XPath expressions. Next to each option is a button that
 launches a wizard to help with the creation of basic XPath expressions.
 The following simple example illustrates how to use these options.</p>
@@ -8922,8 +8611,8 @@ that will become included with the text. Use the Search and replace
 panel to remove headers and footers to mitigate this issue. If the
 headers and footers are not removed from the text it can throw off the
 paragraph unwrapping. To learn how to use the header and footer removal
-options, read <a href="regexp.html#regexptutorial">All about using
-regular expressions in calibre</a>.</p>
+options, read All about using
+regular expressions in calibre.</p>
 <p>Some limitations of PDF input are:</p>
 <ul>
 <li>Complex, multi-column, and image based documents are not
@@ -9262,8 +8951,8 @@ the new number to the end of the list of words. For instance,
 words occur within 120 characters of each other. Note that punctuation
 and accents are not ignored for these searches.</li>
 <li>Regex - Interprets the search text as a regular expression. To learn
-more about using regular expressions, see <a href="regexp.html">the
-tutorial</a>.</li>
+more about using regular expressions, see the
+tutorial.</li>
 </ul>
 <h5 id="following-links-using-only-the-keyboard">Following links using
 only the keyboard¶</h5>
@@ -9577,9 +9266,8 @@ other.</p>
 <p>The Edit metadata for many books dialog allows you to perform
 arbitrarily powerful search and replace operations on the selected
 books. By default it uses a simple text search and replace, but it also
-supports regular expressions. For more on regular expressions, see <a
-href="regexp.html#regexptutorial">All about using regular expressions in
-calibre</a>.</p>
+supports regular expressions. For more on regular expressions, see All about using regular expressions in
+calibre.</p>
 <p>As noted above, there are two search and replace modes: character
 match and regular expression. Character match will look in the Search
 field you choose for the characters you type in the search for box and
@@ -9619,8 +9307,8 @@ backreference is <code>\\n</code> where n is an integer that refers to
 the n’th parenthesized group in the search expression. For example,
 given the same example as above, a bad cat, a search expression a (…)
 (…), and a replace expression a \2 \1, the result will be a cat bad.
-Please see the <a href="regexp.html#regexptutorial">All about using
-regular expressions in calibre</a> for more information on
+Please see the All about using
+regular expressions in calibre for more information on
 backreferences.</p>
 <p>One useful pattern: assume you want to change the case of an entire
 field. The easiest way to do this is to use character mode, but let’s
@@ -9821,9 +9509,8 @@ selected HTML files.</p>
 allows you to search and replace text in the current file, across all
 files and even in a marked region of the current file. You can search
 using a normal search or using regular expressions. To learn how to use
-regular expressions for advanced searching, see <a
-href="regexp.html#regexptutorial">All about using regular expressions in
-calibre</a>.</p>
+regular expressions for advanced searching, see All about using regular expressions in
+calibre.</p>
 <p>Start the search and replace via the Search → Find/replace menu entry
 (you must be editing an HTML or CSS file).</p>
 <p>Type the text you want to find into the Find box and its replacement
@@ -9840,9 +9527,8 @@ selected in the dropdown box.</p>
 Search → Go to line.</p>
 <p>Note</p>
 <p>Remember, to harness the full power of search and replace, you will
-need to use regular expressions. See <a
-href="regexp.html#regexptutorial">All about using regular expressions in
-calibre</a>.</p>
+need to use regular expressions. See All about using regular expressions in
+calibre.</p>
 <h6 id="saved-searches">Saved searches¶</h6>
 <p>You can save frequently used search/replace expressions (including
 function mode expressions) and reuse them multiple times. To save a
@@ -9857,8 +9543,8 @@ replace expressions in a single operation.</p>
 <p>Function mode allows you to write arbitrarily powerful Python
 functions that are run on every Find/replace. You can do pretty much any
 text manipulation you like in function mode. For more information, see
-<a href="function_mode.html">Function mode for Search &amp; replace in
-the Editor</a>.</p>
+Function mode for Search &amp; replace in
+the Editor.</p>
 <h6 id="search-ignoring-html-tags">Search ignoring HTML tags¶</h6>
 <p>There is also a dedicated tool for searching for text, ignoring any
 HTML tags in between. For example, if the book has the HTML
@@ -10051,7 +9737,7 @@ when you wish to be able to revert a large group of related changes as a
 whole.</p>
 <p>You can see a list of available checkpoints via View → Checkpoints.
 You can compare the current state of the book to a specified checkpoint
-using the <a href="diff.html#diff">Comparing e-books</a> tool – by
+using the Comparing e-books tool – by
 selecting the checkpoint of interest and clicking the Compare button.
 The Revert to button restores the book to the selected checkpoint,
 undoing all changes since that checkpoint was created.</p>
@@ -10310,7 +9996,7 @@ text that is either re-used often or contains a lot of redundant text.
 The editor allows you to insert a snippet with only a few key strokes.
 The snippets are very powerful, with many features, such as placeholders
 you can jump between, automatic mirroring of repeated text and so on.
-For more information, see <a href="snippets.html">Snippets</a>.</p>
+For more information, see Snippets.</p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
 <h3 id="frequently-asked-questions-1">Frequently Asked Questions</h3>
 <h4 id="frequently-asked-questions-2">Frequently Asked Questions¶</h4>
@@ -10341,8 +10027,7 @@ FB2, FBZ, DOCX, HTML, PRC, ODT, RTF, PDB, TXT, PDF</p>
 <h6 id="i-converted-a-pdf-file-but-the-result-has-various-problems">I
 converted a PDF file, but the result has various problems?¶</h6>
 <p>PDF is a terrible format to convert from. For a list of the various
-issues you will encounter when converting PDF, see: <a
-href="conversion.html#pdfconversion">Convert PDF documents</a>.</p>
+issues you will encounter when converting PDF, see: Convert PDF documents.</p>
 <h6
 id="how-do-i-convert-my-file-containing-non-english-characters-or-smart-quotes">How
 do I convert my file containing non-English characters, or smart
@@ -10353,8 +10038,7 @@ quotes?¶</h6>
 character encoding your source files use, but often, this is impossible,
 so you need to tell it what encoding to use. This can be done in the GUI
 via the Input character encoding field in the Look &amp; feel → Text
-section of the conversion dialog. The command-line tools have an <a
-href="generated/en/ebook-convert.html#cmdoption-ebook-convert-txt-input-input-encoding"><code>ebook-convert-txt-input --input-encoding</code></a>
+section of the conversion dialog. The command-line tools have an <code>ebook-convert-txt-input --input-encoding</code>
 option.</li>
 <li>When adding HTML files to calibre, you may need to tell calibre what
 encoding the files are in. To do this go to Preferences → Advanced →
@@ -10556,7 +10240,7 @@ used instead.</p>
 <h6 id="how-do-i-use-calibre-with-my-ipadiphoneipod-touch">How do I use
 calibre with my iPad/iPhone/iPod touch?¶</h6>
 <p>An easy way to browse your calibre collection from your Apple device
-is by using <a href="server.html">The calibre Content server</a>, which
+is by using The calibre Content server, which
 makes your collection available over the net. First perform the
 following steps in calibre</p>
 <ul>
@@ -10579,8 +10263,8 @@ itself.</li>
 computer running the calibre server, like this:</p>
 <pre><code>http://192.168.1.2:8080/</code></pre>
 <p>Replace <code>192.168.1.2</code> with the local IP address of the
-computer running calibre. See <a href="server.html">The calibre Content
-server</a> for details on running the server and finding out the right
+computer running calibre. See The calibre Content
+server for details on running the server and finding out the right
 IP address to use.</p>
 <p>You will see a list of books in Safari, tap on any book and you will
 be given the option to either download it, or read it in the browser
@@ -10633,8 +10317,8 @@ the USB cable is plugged in, showing that the device is charging. Tap
 that and switch the device to data transfer mode, and then start
 calibre, it should then be detected.</p>
 <h6 id="over-the-air">Over the air¶</h6>
-<p>calibre has a builtin web server, the <a href="server.html">calibre
-Content server</a>. It makes your calibre collection available over the
+<p>calibre has a builtin web server, the calibre
+Content server. It makes your calibre collection available over the
 net. You can browse it on your device using a simple browser or a
 dedicated application. First perform the following steps in calibre:</p>
 <ul>
@@ -10649,8 +10333,8 @@ to</li>
 </ul>
 <p>http://192.168.1.2:8080/</p>
 <p>Replace <code>192.168.1.2</code> with the local IP address of the
-computer running calibre. See <a href="server.html">The calibre Content
-server</a> for details on running the server and finding out the right
+computer running calibre. See The calibre Content
+server for details on running the server and finding out the right
 IP address to use.</p>
 <p>You can now browse your book collection and download books from
 calibre to your device to open with whatever e-book reading software you
@@ -10665,7 +10349,7 @@ id="can-i-access-my-calibre-books-using-the-web-browser-in-my-kindle-or-other-re
 I access my calibre books using the web browser in my Kindle or other
 reading device?¶</h6>
 <p>calibre has a Content server that exports the books in calibre as a
-web page. See <a href="server.html">The calibre Content server</a> for
+web page. See The calibre Content server for
 details.</p>
 <p>Some devices, like the Kindle (1/2/DX), do not allow you to access
 port 8080 (the default port on which the content server runs). In that
@@ -11037,9 +10721,8 @@ post</a>.</p>
 the metadata from other columns. In the add column dialog use the Quick
 create links to easily create columns to show the book ISBN or formats.
 You can use the powerful calibre template language to do much more with
-columns. For more details, see <a
-href="template_lang.html#templatelangcalibre">The calibre template
-language</a>.</p>
+columns. For more details, see The calibre template
+language.</p>
 <h6 id="can-i-have-a-column-showing-the-formats-or-the-isbn">Can I have
 a column showing the formats or the ISBN?¶</h6>
 <p>Yes, you can. Follow the instructions in the answer above for adding
@@ -11179,8 +10862,8 @@ id="i-want-calibre-to-download-news-from-my-favorite-news-website.">I
 want calibre to download news from my favorite news website.¶</h6>
 <p>If you are reasonably proficient with computers, you can teach
 calibre to download news from any website of your choosing. To learn how
-to do this see <a href="news.html#news">Adding your favorite news
-website</a>.</p>
+to do this see Adding your favorite news
+website.</p>
 <p>Otherwise, you can request a particular news site by posting in the
 <a
 href="https://www.mobileread.com/forums/forumdisplay.php?f=228">calibre
@@ -11424,7 +11107,7 @@ to restore.</p>
 id="how-do-i-use-purchased-epub-books-with-calibre-or-what-do-i-do-with-.acsm-files">How
 do I use purchased EPUB books with calibre (or what do I do with .acsm
 files)?¶</h6>
-<p>Most purchased EPUB books have <a href="drm.html">DRM</a>. This
+<p>Most purchased EPUB books have DRM. This
 prevents calibre from opening them. You can still use calibre to store
 and transfer them to your e-book reader. First, you must authorize your
 reader on a Windows machine with Adobe Digital Editions. Once this is
@@ -11502,9 +11185,8 @@ extremely important/essential, calibre developers might not agree.
 Fortunately, calibre is open source, which means you always have the
 option of implementing your feature yourself, or hiring someone to do it
 for you. Furthermore, calibre has a comprehensive plugin architecture,
-so you might be able to develop your feature as a plugin, see <a
-href="creating_plugins.html#pluginstutorial">Writing your own plugins to
-extend calibre’s functionality</a>.</li>
+so you might be able to develop your feature as a plugin, see Writing your own plugins to
+extend calibre’s functionality.</li>
 </ul>
 <h6 id="why-doesnt-calibre-have-an-automatic-update">Why doesn’t calibre
 have an automatic update?¶</h6>
@@ -11526,8 +11208,7 @@ ardent calibre updater, at most five clicks a week. There are far higher
 priority things to do in calibre development.</li>
 <li>If you really, really hate downloading calibre every week but still
 want to be up to the latest, I encourage you to run from source, which
-makes updating trivial. Instructions are <a
-href="develop.html#develop">available here</a>.</li>
+makes updating trivial. Instructions are available here.</li>
 <li>There are third party automatic updaters for calibre made by calibre
 users in the <a
 href="https://www.mobileread.com/forums/forumdisplay.php?f=238">calibre
@@ -11587,8 +11268,7 @@ instead and use <code>--output-profile kindle</code>.</p>
 reader.</p>
 <p>Finally, you can add downloaded news to the calibre library with:</p>
 <pre><code>/opt/calibre/calibredb add --with-library /path/to/library outfile.epub</code></pre>
-<p>Remember to read the <a
-href="generated/en/cli-index.html#cli">Command Line Interface</a>
+<p>Remember to read the Command Line Interface
 section of the calibre User Manual to learn more about these, and other
 commands.</p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
@@ -11597,8 +11277,7 @@ for Search &amp; replace in the Editor</h3>
 <h4 id="function-mode-for-search-replace-in-the-editor-1">Function mode
 for Search &amp; replace in the Editor¶</h4>
 <p>The Search &amp; replace tool in the editor supports a function mode.
-In this mode, you can combine regular expressions (see <a
-href="regexp.html">All about using regular expressions in calibre</a>)
+In this mode, you can combine regular expressions (see All about using regular expressions in calibre)
 with arbitrarily powerful Python functions to do all sorts of advanced
 text processing.</p>
 <p>In the standard regexp mode for search and replace, you specify both
@@ -11809,8 +11488,7 @@ empty. The <code>file_name</code> is in canonical form, a path relative
 to the root of the book, using <code>/</code> as the path separator.</p>
 <h6 id="the-metadata-argument">The <code>metadata</code> argument¶</h6>
 <p>This represents the metadata of the current book, such as title,
-authors, language, etc. It is an object of class <a
-href="generated/en/template_ref.html#calibre.ebooks.metadata.book.base.Metadata"><code>calibre.ebooks.metadata.book.base.Metadata</code></a>.
+authors, language, etc. It is an object of class <code>calibre.ebooks.metadata.book.base.Metadata</code>.
 Useful attributes include, <code>title</code>, <code>authors</code> (a
 list of authors) and <code>language</code> (the language code).</p>
 <h6 id="the-dictionaries-argument">The <code>dictionaries</code>
@@ -11959,8 +11637,8 @@ it by computer programs.</p>
 <p>regexp¶</p>
 <p>Regular expressions provide a concise and flexible means for
 identifying strings of text of interest, such as particular characters,
-words, or patterns of characters. See <a href="regexp.html">the
-tutorial</a> for an introduction to regular expressions.</p>
+words, or patterns of characters. See the
+tutorial for an introduction to regular expressions.</p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
 <h3 id="the-graphical-user-interface">The Graphical User Interface</h3>
 <h4 id="the-graphical-user-interface-1">The Graphical User
@@ -12021,8 +11699,7 @@ or update the files associated with an existing book in your library
 from the current contents of the clipboard</li>
 <li>Add data files to selected book records: Allows you to add any
 number of extra files that will be stored in a <code>data</code>
-sub-directory in the book directory. See <a
-href="metadata.html#data-files">Adding extra data files to a book</a>
+sub-directory in the book directory. See Adding extra data files to a book
 for details.</li>
 <li>Add an empty file to selected book records: Allows you to add an
 empty file of the specified format to the selected book records. The Add
@@ -12061,20 +11738,18 @@ currently selected books</li>
 and formats of two or more book records. You can choose to either delete
 or keep the records that were not clicked first.</li>
 <li>Manage data files: Manage the extra data files associated with the
-selected books. For more details, see <a
-href="metadata.html#metadata">Editing e-book metadata</a>.</li>
+selected books. For more details, see Editing e-book metadata.</li>
 </ul>
 <h6 id="convert-books">Convert books¶</h6>
 <p>E-books can be converted from a number of formats into whatever
 format your e-book reader prefers. Many e-books available for purchase
-will be protected by <a href="drm.html">Digital Rights Management</a>
+will be protected by Digital Rights Management
 (DRM) technology. calibre will not convert these e-books. It is easy to
 remove the DRM from many formats, but as this may be illegal, you will
 have to find tools to liberate your books yourself and then use calibre
 to convert them.</p>
 <p>For most people, conversion should be a simple one-click affair. If
-you want to learn more about the conversion process, see <a
-href="conversion.html#conversion">E-book conversion</a>.</p>
+you want to learn more about the conversion process, see E-book conversion.</p>
 <p>The Convert books action has three variations, accessed by doing a
 right-click on the button.</p>
 <ul>
@@ -12092,8 +11767,8 @@ mouse, only those books will be added to the catalog. If you generate
 the catalog in an e-book format such as EPUB, MOBI or AZW3, the next
 time you connect your e-book reader the catalog will be automatically
 sent to the device. For more information on how catalogs work, read the
-<a href="catalogs.html#catalog-tut">Creating AZW3 • EPUB • MOBI
-catalogs</a>.</li>
+Creating AZW3 • EPUB • MOBI
+catalogs.</li>
 </ul>
 <h6 id="view">View¶</h6>
 <p>The View action displays the book in an e-book viewer program.
@@ -12126,9 +11801,8 @@ Library.</li>
 made on an e-book on your device to the comments metadata of the book in
 the calibre library. You can control the file name and folder structure
 of files sent to the device by setting up a template in Preferences →
-Import/export → Sending books to devices. Also see <a
-href="template_lang.html#templatelangcalibre">The calibre template
-language</a>.</li>
+Import/export → Sending books to devices. Also see The calibre template
+language.</li>
 </ul>
 <h6 id="fetch-news">Fetch news¶</h6>
 <p>The Fetch news action downloads news from various websites and
@@ -12138,8 +11812,8 @@ if an e-book reader is connected at the time the download finishes, the
 news is also uploaded to the reader automatically.</p>
 <p>The Fetch news action uses simple recipes (10-15 lines of code) for
 each news site. To learn how to create recipes for your own news
-sources, see <a href="news.html#news">Adding your favorite news
-website</a>.</p>
+sources, see Adding your favorite news
+website.</p>
 <p>The Fetch news action has three variations, accessed by doing a
 right-click on the button.</p>
 <ul>
@@ -12152,8 +11826,8 @@ frequency of days between downloads.</li>
 downloading news from a custom news site that you wish to access.
 Creating the recipe can be as simple as specifying an RSS news feed URL,
 or you can be more prescriptive by creating Python-based code for the
-task. For more information, see <a href="news.html#news">Adding your
-favorite news website</a>.</li>
+task. For more information, see Adding your
+favorite news website.</li>
 <li>Download all scheduled news sources: Causes calibre to immediately
 begin downloading all news sources that you have scheduled.</li>
 </ul>
@@ -12218,9 +11892,8 @@ folders. The folder structure looks like:</p>
 </ul>
 <p>You can control the file name and folder structure of files saved to
 disk by setting up a template in Preferences → Import/export → Saving
-books to disk. Also see <a
-href="template_lang.html#templatelangcalibre">The calibre template
-language</a>.</p>
+books to disk. Also see The calibre template
+language.</p>
 <ul>
 <li><p>Save to disk in a single folder: Saves the selected books to disk
 in a single folder. For 1. and 2., all available formats, as well as
@@ -12660,9 +12333,8 @@ these categories / items. You can easily run this search by pressing the
 key Ctrl+Alt+Shift+F or clicking the configure button in the Tag browser
 and choosing the Show only books that have visible categories entry.</p>
 <p>Search using templates</p>
-<p>You can search using a template in <a
-href="template_lang.html#templatelangcalibre">The calibre template
-language</a> instead of a metadata field. To do so you enter a template,
+<p>You can search using a template in The calibre template
+language instead of a metadata field. To do so you enter a template,
 a search type, and the value to search for. The syntax is:</p>
 <pre><code>template: (the template) #@#: (search type) : (the value)</code></pre>
 <p>The <code>template</code> is any valid calibre template language
@@ -12727,8 +12399,8 @@ searching.</p>
 only a few books instead of its full collection. This is an excellent
 way to partition your large collection of books into smaller, manageable
 chunks. To learn how to create and use Virtual libraries, see the
-tutorial: <a href="virtual_libraries.html#virtual-libraries">Virtual
-libraries</a>.</p>
+tutorial: Virtual
+libraries.</p>
 <h5 id="temporarily-marking-books">Temporarily marking books¶</h5>
 <p>You can temporarily mark arbitrary sets of books. Marked books will
 have a pin on them and can be found with the search
@@ -12746,8 +12418,8 @@ it can be configured to read metadata from the file name instead, via
 Preferences → Import/export → Adding books → Read metadata from file
 contents.</p>
 <p>You can also control how metadata is read from the filename using
-regular expressions (see <a href="regexp.html">All about using regular
-expressions in calibre</a>). In the Adding books section of the
+regular expressions (see All about using regular
+expressions in calibre). In the Adding books section of the
 configuration dialog, you can specify a regular expression that calibre
 will use to try and guess metadata from the names of e-book files that
 you add to the library. The default regular expression is:</p>
@@ -12852,9 +12524,8 @@ example, assume you create a custom column called “Genre” and indicate
 that it contains hierarchical items. Once done, items such as
 Mystery.Thriller and Mystery.English will display as Mystery with the
 small triangle next to it. Clicking on the triangle will show Thriller
-and English as sub-items. See <a
-href="sub_groups.html#subgroups-tutorial">Managing subgroups of books,
-for example “genre”</a> for more information.</li>
+and English as sub-items. See Managing subgroups of books,
+for example “genre” for more information.</li>
 </ul>
 <p>Hierarchical items (items with children) use the same four ‘click-on’
 searches as User categories. Items that do not have children use two of
@@ -12923,20 +12594,15 @@ value. If the value is part of a hierarchy then the average includes the
 children.</li>
 </ul></li>
 <li><p>Book metadata such as title is not available. Template database
-functions such as <a
-href="generated/en/template_ref.html#ff-book-count">book_count</a> and
-<a href="generated/en/template_ref.html#ff-book-values">book_values</a>
+functions such as book_count and
+book_values
 will work, but the performance might not be acceptable. The following
 template functions will work in the GUI but won’t work in the content
-server: <a
-href="generated/en/template_ref.html#ff-connected-device-name">connected_device_name</a>,
-<a
-href="generated/en/template_ref.html#ff-connected-device-uuid">connected_device_uuid</a>,
-<a
-href="generated/en/template_ref.html#ff-current-virtual-library-name">current_virtual_library_name</a>,
-<a href="generated/en/template_ref.html#ff-is-marked">is_marked</a>, and
-<a
-href="generated/en/template_ref.html#ff-virtual-libraries">virtual_libraries</a>.</p></li>
+server: connected_device_name,
+connected_device_uuid,
+current_virtual_library_name,
+is_marked, and
+virtual_libraries.</p></li>
 <li><p>In the GUI, Python templates have full access to the calibre
 database. In the content server, Python templates have access to new API
 (see <a href="https://manual.calibre-ebook.com/db_api.html">API
@@ -13082,8 +12748,7 @@ debug jobs that may not have completed successfully.</p>
 <p>calibre has several keyboard shortcuts to save you time and mouse
 movement. These shortcuts are active in the book list view (when you’re
 not editing the details of a particular book), and most of them affect
-the title you have selected. The calibre E-book viewer <a
-href="viewer.html#viewer-shortcuts">has its own shortcuts</a> which can
+the title you have selected. The calibre E-book viewer has its own shortcuts which can
 be customised in the viewer Preferences.</p>
 <p>Note</p>
 <p>Note: The calibre keyboard shortcuts do not require a modifier key
@@ -13372,8 +13037,8 @@ first level of the hierarchy and add it to the front along with a slash
 to indicate that it should make a folder. The template below
 accomplishes this:</p>
 <pre><code>{#genre:subitems(0,1)||/}{title} - {authors}</code></pre>
-<p>See <a href="template_lang.html#templatelangcalibre">The template
-language</a> for more information about templates and the
+<p>See The template
+language for more information about templates and the
 <code>subitems()</code> function.</p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
 <h3 id="python-module-index">Python Module Index</h3>
@@ -13381,45 +13046,28 @@ language</a> for more information about templates and the
 <p>c</p>
 <p>c</p>
 <p><code>calibre</code></p>
-<p><a
-href="plugins.html#module-calibre.customize"><code>calibre.customize</code></a></p>
+<p><code>calibre.customize</code></p>
 <p>Defines various abstract base classes that can be subclassed to
 create plugins.</p>
-<p><a
-href="plugins.html#module-calibre.customize.conversion"><code>calibre.customize.conversion</code></a></p>
-<p><a
-href="db_api.html#module-calibre.db.cache"><code>calibre.db.cache</code></a></p>
+<p><code>calibre.customize.conversion</code></p>
+<p><code>calibre.db.cache</code></p>
 <p>The API for accessing and manipulating a calibre library.</p>
-<p><a
-href="plugins.html#module-calibre.devices.interface"><code>calibre.devices.interface</code></a></p>
-<p><a
-href="generated/en/template_ref.html#module-calibre.ebooks.metadata.book.base"><code>calibre.ebooks.metadata.book.base</code></a></p>
-<p><a
-href="plugins.html#module-calibre.ebooks.metadata.sources.base"><code>calibre.ebooks.metadata.sources.base</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.container"><code>calibre.ebooks.oeb.polish.container</code></a></p>
+<p><code>calibre.devices.interface</code></p>
+<p><code>calibre.ebooks.metadata.book.base</code></p>
+<p><code>calibre.ebooks.metadata.sources.base</code></p>
+<p><code>calibre.ebooks.oeb.polish.container</code></p>
 <p>The container object used to represent a book as a collection of its
 constituent HTML files.</p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.cover"><code>calibre.ebooks.oeb.polish.cover</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.css"><code>calibre.ebooks.oeb.polish.css</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.jacket"><code>calibre.ebooks.oeb.polish.jacket</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.pretty"><code>calibre.ebooks.oeb.polish.pretty</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.replace"><code>calibre.ebooks.oeb.polish.replace</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.split"><code>calibre.ebooks.oeb.polish.split</code></a></p>
-<p><a
-href="polish.html#module-calibre.ebooks.oeb.polish.toc"><code>calibre.ebooks.oeb.polish.toc</code></a></p>
-<p><a
-href="polish.html#module-calibre.gui2.tweak_book.boss"><code>calibre.gui2.tweak_book.boss</code></a></p>
-<p><a
-href="generated/en/template_ref.html#module-calibre.utils.formatter_functions"><code>calibre.utils.formatter_functions</code></a></p>
-<p><a
-href="news_recipe.html#module-calibre.web.feeds.news"><code>calibre.web.feeds.news</code></a></p>
+<p><code>calibre.ebooks.oeb.polish.cover</code></p>
+<p><code>calibre.ebooks.oeb.polish.css</code></p>
+<p><code>calibre.ebooks.oeb.polish.jacket</code></p>
+<p><code>calibre.ebooks.oeb.polish.pretty</code></p>
+<p><code>calibre.ebooks.oeb.polish.replace</code></p>
+<p><code>calibre.ebooks.oeb.polish.split</code></p>
+<p><code>calibre.ebooks.oeb.polish.toc</code></p>
+<p><code>calibre.gui2.tweak_book.boss</code></p>
+<p><code>calibre.utils.formatter_functions</code></p>
+<p><code>calibre.web.feeds.news</code></p>
 <p>The API for writing recipes is defined by the
 :class:<code>BasicNewsRecipe</code></p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
@@ -13681,17 +13329,17 @@ is highly modular. The modules interact with each other via well defined
 interfaces. This makes adding new features and fixing bugs in calibre
 very easy, resulting in a frenetic pace of development. Because of its
 roots, calibre has a comprehensive command line interface for all its
-functions, documented in <a href="generated/en/cli-index.html">Command
-Line Interface</a>.</p>
+functions, documented in Command
+Line Interface.</p>
 <p>The modular design of calibre is expressed via <code>Plugins</code>.
-There is a <a href="customize.html#customize">tutorial</a> on writing
+There is a tutorial on writing
 calibre plugins. For example, adding support for a new device to calibre
 typically involves writing fewer than 100 lines of code in the form of a
 device driver plugin. You can browse the <a
 href="https://github.com/kovidgoyal/calibre/tree/master/src/calibre/devices">built-in
 drivers</a>. Similarly, adding support for new conversion formats
 involves writing input/output format plugins. Another example of the
-modular design is the <a href="news.html#news">recipe system</a> for
+modular design is the recipe system for
 fetching news. For more examples of plugins designed to add features to
 calibre, see the <a
 href="https://www.mobileread.com/forums/showthread.php?p=1362767#post1362767">Index
@@ -13718,7 +13366,7 @@ in <code>ebooks.oeb</code> and the format dependent code is in
 <li>Metadata reading, writing, and downloading is all in
 <code>ebooks.metadata</code></li>
 <li>Conversion happens in a pipeline, for the structure of the pipeline,
-see <a href="conversion.html#conversion-introduction">Introduction</a>.
+see Introduction.
 The pipeline consists of an input plugin, various transforms and an
 output plugin. The code that constructs and drives the pipeline is in
 <code>plumber.py</code>. The pipeline works on a representation of an
@@ -13729,11 +13377,11 @@ applied to the book during conversions live in
 <code>oeb/transforms/*.py</code>. And the input and output plugins live
 in <code>conversion/plugins/*.py</code>.</li>
 <li>E-book editing happens using a different container object. It is
-documented in <a href="polish.html#polish-api">API documentation for the
-e-book editing tools</a>.</li>
+documented in API documentation for the
+e-book editing tools.</li>
 </ul></li>
-<li>db - The database back-end. See <a href="db_api.html#db-api">API
-documentation for the database interface</a> for the interface to the
+<li>db - The database back-end. See API
+documentation for the database interface for the interface to the
 calibre library.</li>
 <li>Content server: <code>srv</code> is the calibre Content server.</li>
 <li>gui2 - The Graphical User Interface. GUI initialization happens in
@@ -14058,12 +13706,12 @@ calibre code.</p>
 <h5 id="api-documentation-for-various-parts-of-calibre">API
 documentation for various parts of calibre¶</h5>
 <ul>
-<li><a href="news_recipe.html">API documentation for recipes</a></li>
-<li><a href="plugins.html">API documentation for plugins</a></li>
-<li><a href="db_api.html">API documentation for the database
-interface</a></li>
-<li><a href="polish.html">API documentation for the e-book editing
-tools</a> © Copyright Kovid Goyal. Last updated on Aug 07, 2026.</li>
+<li>API documentation for recipes</li>
+<li>API documentation for plugins</li>
+<li>API documentation for the database
+interface</li>
+<li>API documentation for the e-book editing
+tools © Copyright Kovid Goyal. Last updated on Aug 07, 2026.</li>
 </ul>
 <h3 id="snippets-1">Snippets</h3>
 <h4 id="snippets-2">Snippets¶</h4>
@@ -14077,8 +13725,7 @@ to:</p>
 <pre><code>&lt;a href=&quot;filename&quot;&gt;&lt;/a&gt;</code></pre>
 <p>Not only that, the word <code>filename</code> will be selected, with
 the cursor placed over it, so that you can easily type in the real
-filename, using the editor’s nifty <a
-href="edit.html#editor-auto-complete">Auto-complete</a> feature. And
+filename, using the editor’s nifty Auto-complete feature. And
 once you are done typing the filename, press <code>Control+J</code>
 again and the cursor will jump to the position in between the
 <code>&lt;a&gt;</code> tags so you can easily type in the text for the
@@ -14137,8 +13784,7 @@ editor will expand this to:</p>
 <pre><code>&lt;a href=&quot;filename|&quot;&gt;&lt;/a&gt;</code></pre>
 <p>Not only that, the word <code>filename</code> will be selected, with
 the cursor placed over it, so that you can easily type in the real
-filename, using the editor’s nifty <a
-href="edit.html#editor-auto-complete">Auto-complete</a> feature. And
+filename, using the editor’s nifty Auto-complete feature. And
 once you are done typing the filename, press <code>Control+J</code>
 again and the cursor will jump to the position in between the
 <code>&lt;a&gt;</code> tags so you can easily type in the text for the
@@ -14232,20 +13878,20 @@ to expand the snippet and jump between placeholders.</p>
 <p>Here you will find tutorials to get you started using calibre’s more
 advanced features, such as XPath and templates.</p>
 <ul>
-<li><a href="news.html">Adding your favorite news website</a></li>
-<li><a href="sub_groups.html">Managing subgroups of books, for example
-“genre”</a></li>
-<li><a href="xpath.html">XPath tutorial</a></li>
-<li><a href="template_lang.html">The calibre template language</a></li>
-<li><a href="regexp.html">All about using regular expressions in
-calibre</a></li>
-<li><a href="creating_plugins.html">Writing your own plugins to extend
-calibre’s functionality</a></li>
-<li><a href="typesetting_math.html">Typesetting mathematics in
-e-books</a></li>
-<li><a href="catalogs.html">Creating AZW3 • EPUB • MOBI
-catalogs</a></li>
-<li><a href="virtual_libraries.html">Virtual libraries</a> © Copyright
+<li>Adding your favorite news website</li>
+<li>Managing subgroups of books, for example
+“genre”</li>
+<li>XPath tutorial</li>
+<li>The calibre template language</li>
+<li>All about using regular expressions in
+calibre</li>
+<li>Writing your own plugins to extend
+calibre’s functionality</li>
+<li>Typesetting mathematics in
+e-books</li>
+<li>Creating AZW3 • EPUB • MOBI
+catalogs</li>
+<li>Virtual libraries © Copyright
 Kovid Goyal. Last updated on Aug 07, 2026.</li>
 </ul>
 <h3 id="typesetting-mathematics-in-e-books">Typesetting mathematics in
@@ -14288,8 +13934,7 @@ E-book viewer.</p>
 <p>The complete HTML file, with more equations and inline mathematics is
 reproduced below. You can convert this HTML file to EPUB in calibre to
 end up with an e-book you can distribute easily to other people.</p>
-<p>Here is the generated EPUB file: <a
-href="_static/mathjax.epub">mathjax.epub</a>.</p>
+<p>Here is the generated EPUB file: mathjax.epub.</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  Copyright (c) 2012 Design Science, Inc.
@@ -14442,8 +14087,8 @@ are happy with the returned results, click the Virtual library button,
 choose Create library and enter a name for the new Virtual library. The
 Virtual library will then be created based on the search you just typed
 in. Searches are very powerful, for examples of the kinds of things you
-can do with them, see <a href="gui.html#search-interface">The search
-interface</a>.</p>
+can do with them, see The search
+interface.</p>
 <h6 id="examples-of-useful-virtual-libraries">Examples of useful Virtual
 libraries¶</h6>
 <ul>
@@ -14506,7 +14151,7 @@ example, say you have a Virtual library for books tagged as Historical
 Fiction and a saved search that shows you unread books, you can click
 the Virtual Library button and choose the Additional restriction option
 to show only unread Historical Fiction books. To learn about saved
-searches, see <a href="gui.html#saved-searches">Saving searches</a>.</p>
+searches, see Saving searches.</p>
 <p>© Copyright Kovid Goyal. Last updated on Aug 07, 2026.</p>
 <h3
 id="writing-your-own-plugins-to-extend-calibres-functionality">Writing
@@ -15034,12 +14679,10 @@ corresponds to a single button in the toolbar and entry in the Plugins
 menu in the editor. These can have sub-menus in case the tool has
 multiple related actions.</p>
 <p>The tools must all be defined in the file <code>main.py</code> in
-your plugin. Every tool is a class that inherits from the <a
-href="polish.html#calibre.gui2.tweak_book.plugin.Tool"><code>calibre.gui2.tweak_book.plugin.Tool</code></a>
+your plugin. Every tool is a class that inherits from the <code>calibre.gui2.tweak_book.plugin.Tool</code>
 class. Let’s look at <code>main.py</code> from the demo plugin, the
 source code is heavily commented and should be self-explanatory. Read
-the API documents of the <a
-href="polish.html#calibre.gui2.tweak_book.plugin.Tool"><code>calibre.gui2.tweak_book.plugin.Tool</code></a>
+the API documents of the <code>calibre.gui2.tweak_book.plugin.Tool</code>
 class for more details.</p>
 <h6 id="main.py-1">main.py¶</h6>
 <p>Here we will see the definition of a single tool that will multiply
@@ -15172,8 +14815,7 @@ number and multiply all font sizes in the book by that number.</p>
 <p>The first important thing is the tool name which you must set to some
 relatively unique string as it will be used as the key for this
 tool.</p>
-<p>The next important entry point is the <a
-href="polish.html#calibre.gui2.tweak_book.plugin.Tool.create_action"><code>calibre.gui2.tweak_book.plugin.Tool.create_action()</code></a>.
+<p>The next important entry point is the <code>calibre.gui2.tweak_book.plugin.Tool.create_action()</code>.
 This method creates the QAction objects that appear in the plugins
 toolbar and plugin menu. It also, optionally, assigns a keyboard
 shortcut that the user can customize. The triggered signal from the
@@ -15183,18 +14825,15 @@ font size multiplier, and then runs the magnification code.</p>
 things to note are that you get a reference to the editor window as
 <code>self.gui</code> and the editor Boss as <code>self.boss</code>. The
 Boss is the object that controls the editor user interface. It has many
-useful methods, that are documented in the <a
-href="polish.html#calibre.gui2.tweak_book.boss.Boss"><code>calibre.gui2.tweak_book.boss.Boss</code></a>
+useful methods, that are documented in the <code>calibre.gui2.tweak_book.boss.Boss</code>
 class.</p>
 <p>Finally, there is <code>self.current_container</code> which is a
-reference to the book being edited as a <a
-href="polish.html#calibre.ebooks.oeb.polish.container.Container"><code>calibre.ebooks.oeb.polish.container.Container</code></a>
+reference to the book being edited as a <code>calibre.ebooks.oeb.polish.container.Container</code>
 object. This represents the book as a collection of its constituent
 HTML/CSS/image files and has convenience methods for doing many useful
 things. The container object and various useful utility functions that
-can be reused in your plugin code are documented in <a
-href="polish.html#polish-api">API documentation for the e-book editing
-tools</a>.</p>
+can be reused in your plugin code are documented in API documentation for the e-book editing
+tools.</p>
 <h5 id="adding-translations-to-your-plugin">Adding translations to your
 plugin¶</h5>
 <p>You can have all the user interface strings in your plugin translated
@@ -15235,12 +14874,11 @@ function instead of <code>_()</code>. For example:</p>
 <p>As you may have noticed above, a plugin in calibre is a class. There
 are different classes for the different types of plugins in calibre.
 Details on each class, including the base class of all plugins can be
-found in <a href="plugins.html#plugins">API documentation for
-plugins</a>.</p>
+found in API documentation for
+plugins.</p>
 <p>Your plugin is almost certainly going to use code from calibre. To
 learn how to find various bits of functionality in the calibre code
-base, read the section on the calibre <a
-href="develop.html#code-layout">Code layout</a>.</p>
+base, read the section on the calibre Code layout.</p>
 <h5 id="debugging-plugins">Debugging plugins¶</h5>
 <p>The first, most important step is to run calibre in debug mode. You
 can do this from the command line with:</p>
@@ -15366,5 +15004,6 @@ href="https://docs.python.org/library/re.html">regexp syntax</a></p>
 </div>
 </div>
 </div>
+</main>
 </body>
 </html>

@@ -186,7 +186,7 @@
 <header id="title-block-header">
 <p class="date">2026-08-30</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#the-jaws-scripting-language"
 id="toc-the-jaws-scripting-language">The JAWS scripting language</a>
@@ -217,6 +217,7 @@ version</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="the-jaws-scripting-language">The JAWS scripting language</h1>
 <p>This guide holds Freedom Scientific’s developer documentation for the
 JAWS scripting language, gathered into one document on 30 August
@@ -324,15 +325,15 @@ Query</a></li>
 <li><a href="#settings-files-2">Settings Files (2)</a></li>
 <li><a href="#reserved-files-2">Reserved Files (2)</a></li>
 <li><a href="#default-settings-files">Default Settings Files</a></li>
-<li><a href="#colorsini">Colors.INI</a></li>
-<li><a href="#jfwini-formerly-symbolsini">JFW.INI (formerly
-symbols.ini)</a></li>
-<li><a href="#flexiblewebdb">FlexibleWeb.db</a></li>
-<li><a href="#settingscenterini-and-quicksettingshis">SettingsCenter.ini
-and QuickSettings.his</a></li>
+<li>Colors.INI</li>
+<li>JFW.INI (formerly
+symbols.ini)</li>
+<li>FlexibleWeb.db</li>
+<li>SettingsCenter.ini
+and QuickSettings.his</li>
 <li><a href="#useful-include-files">Useful Include Files</a></li>
-<li><a href="#hjconstjsh">HJConst.JSH</a></li>
-<li><a href="#hjglobaljsh">HJGlobal.JSH</a></li>
+<li>HJConst.JSH</li>
+<li>HJGlobal.JSH</li>
 <li><a href="#variables">Variables</a></li>
 <li><a href="#examples-of-local-and-global-variables">Examples of Local
 and Global Variables</a></li>
@@ -377,7 +378,7 @@ point)</a></li>
 less than)</a></li>
 <li><a href="#operator-greater-than-greater-than">Operator &gt;&gt;
 (greater than greater than)</a></li>
-<li><a href="#operator-dot">Operator: . (dot)</a></li>
+<li>Operator: . (dot)</li>
 <li><a href="#operator-new">Operator: New</a></li>
 <li><a href="#operator-left-bracket-right-bracket">Operator: [] (left
 bracket, right bracket)</a></li>
@@ -433,9 +434,8 @@ Webpage with the XMLDom Browser</a></li>
 <li><a
 href="#designing-a-custom-script-using-special-functions">Designing a
 Custom Script Using Special Functions</a></li>
-<li><a
-href="#using-regular-expressions-for-confignamesini-entries">Using
-Regular Expressions for ConfigNames.ini Entries</a></li>
+<li>Using
+Regular Expressions for ConfigNames.ini Entries</li>
 <li><a href="#functions-for-customized-web-app-scripts">Functions for
 Customized Web App Scripts</a></li>
 <li><a href="#example-1-moving-to-the-search-button">Example 1: Moving
@@ -456,13 +456,13 @@ Option in the Files menu of the Utilities</a></li>
 <li><a href="#script-manager">Script Manager</a></li>
 <li><a href="#keyboard-manager">Keyboard Manager</a></li>
 <li><a href="#settings-center">Settings Center</a></li>
-<li><a href="#confignamesini-and-jcf-files">ConfigNames.ini and .jcf
-Files</a></li>
+<li>ConfigNames.ini and .jcf
+Files</li>
 <li><a href="#localization-jaws-folder-restructure">Localization: JAWS
 Folder Restructure</a></li>
 <li><a href="#custom-localization">Custom Localization</a></li>
-<li><a href="#dialoglayouts-and-lcmessages-subfolders">DialogLayouts and
-LC_MESSAGES Subfolders</a></li>
+<li>DialogLayouts and
+LC_MESSAGES Subfolders</li>
 <li><a href="#finding-files-with-the-script-manager">Finding Files with
 the Script Manager</a></li>
 <li><a href="#control-flow">Control Flow</a></li>
@@ -686,7 +686,7 @@ Title to the Virtual Viewer Window</a></li>
 Functions</a></li>
 <li><a href="#structured-braille-functionality">Structured Braille
 Functionality</a></li>
-<li><a href="#the-jbs-file">The .jbs File</a></li>
+<li>The .jbs File</li>
 <li><a href="#components-of-structured-braille">Components of Structured
 Braille</a></li>
 <li><a href="#valid-components">Valid Components</a></li>
@@ -694,14 +694,14 @@ Braille</a></li>
 <li><a
 href="#general-remarks-about-structured-braille-components">General
 Remarks about Structured Braille Components</a></li>
-<li><a href="#sections-of-a-jbs-file">Sections of a .jbs File</a></li>
+<li>Sections of a .jbs File</li>
 <li><a href="#component-aliases">[Component Aliases]</a></li>
 <li><a href="#state-aliases">[State Aliases]</a></li>
 <li><a href="#control-states">[Control States]</a></li>
 <li><a href="#standard-control-types">Standard Control Types</a></li>
 <li><a href="#custom-control-types">Custom Control Types</a></li>
-<li><a href="#entries-of-a-section-in-a-jbs-file">Entries of a Section
-in a .jbs File</a></li>
+<li>Entries of a Section
+in a .jbs File</li>
 <li><a href="#code-samples---custom-controls">Code Samples - Custom
 Controls</a></li>
 <li><a href="#split-braille-overview">Split Braille Overview</a></li>
@@ -901,9 +901,8 @@ Webpage with the XMLDom Browser (2)</a></li>
 <li><a
 href="#designing-a-custom-script-using-special-functions-2">Designing a
 Custom Script Using Special Functions (2)</a></li>
-<li><a
-href="#using-regular-expressions-for-confignamesini-entries-2">Using
-Regular Expressions for ConfigNames.ini Entries (2)</a></li>
+<li>Using
+Regular Expressions for ConfigNames.ini Entries (2)</li>
 <li><a href="#functions-for-customized-web-app-scripts-2">Functions for
 Customized Web App Scripts (2)</a></li>
 <li><a href="#example-1-moving-to-the-search-button-2">Example 1: Moving
@@ -949,7 +948,7 @@ point) (2)</a></li>
 than less than) (2)</a></li>
 <li><a href="#operator-greater-than-greater-than-2">Operator &gt;&gt;
 (greater than greater than) (2)</a></li>
-<li><a href="#operator-dot-2">Operator: . (dot) (2)</a></li>
+<li>Operator: . (dot) (2)</li>
 <li><a href="#operator-new-2">Operator: New (2)</a></li>
 <li><a href="#operator-left-bracket-right-bracket-2">Operator: [] (left
 bracket, right bracket) (2)</a></li>
@@ -1137,7 +1136,7 @@ Messages (2)</a></li>
 File to Store Constants (2)</a></li>
 <li><a href="#structured-braille-functionality-2">Structured Braille
 Functionality (2)</a></li>
-<li><a href="#the-jbs-file-2">The .jbs File (2)</a></li>
+<li>The .jbs File (2)</li>
 <li><a href="#components-of-structured-braille-2">Components of
 Structured Braille (2)</a></li>
 <li><a href="#valid-components-2">Valid Components (2)</a></li>
@@ -1145,16 +1144,16 @@ Structured Braille (2)</a></li>
 <li><a
 href="#general-remarks-about-structured-braille-components-2">General
 Remarks about Structured Braille Components (2)</a></li>
-<li><a href="#sections-of-a-jbs-file-2">Sections of a .jbs File
-(2)</a></li>
+<li>Sections of a .jbs File
+(2)</li>
 <li><a href="#component-aliases-2">[Component Aliases] (2)</a></li>
 <li><a href="#state-aliases-2">[State Aliases] (2)</a></li>
 <li><a href="#control-states-2">[Control States] (2)</a></li>
 <li><a href="#standard-control-types-2">Standard Control Types
 (2)</a></li>
 <li><a href="#custom-control-types-2">Custom Control Types (2)</a></li>
-<li><a href="#entries-of-a-section-in-a-jbs-file-2">Entries of a Section
-in a .jbs File (2)</a></li>
+<li>Entries of a Section
+in a .jbs File (2)</li>
 <li><a href="#code-samples---custom-controls-2">Code Samples - Custom
 Controls (2)</a></li>
 <li><a href="#compiler-directives-2">Compiler Directives (2)</a></li>
@@ -1238,8 +1237,8 @@ Option in the Files menu of the Utilities (2)</a></li>
 <li><a href="#script-manager-2">Script Manager (2)</a></li>
 <li><a href="#keyboard-manager-2">Keyboard Manager (2)</a></li>
 <li><a href="#settings-center-2">Settings Center (2)</a></li>
-<li><a href="#confignamesini-and-jcf-files-2">ConfigNames.ini and .jcf
-Files (2)</a></li>
+<li>ConfigNames.ini and .jcf
+Files (2)</li>
 <li><a href="#constants-5">Constants (5)</a></li>
 <li><a href="#advantages-of-using-constants-3">Advantages of Using
 Constants (3)</a></li>
@@ -1878,21 +1877,20 @@ Graphics Passed to NewTextEvent (4)</a></li>
 <li><a href="#reserved-files-4">Reserved Files (4)</a></li>
 <li><a href="#default-settings-files-2">Default Settings Files
 (2)</a></li>
-<li><a href="#colorsini-2">Colors.INI (2)</a></li>
-<li><a href="#jfwini-formerly-symbolsini-2">JFW.INI (formerly
-symbols.ini) (2)</a></li>
-<li><a href="#flexiblewebdb-2">FlexibleWeb.db (2)</a></li>
-<li><a
-href="#settingscenterini-and-quicksettingshis-2">SettingsCenter.ini and
-QuickSettings.his (2)</a></li>
+<li>Colors.INI (2)</li>
+<li>JFW.INI (formerly
+symbols.ini) (2)</li>
+<li>FlexibleWeb.db (2)</li>
+<li>SettingsCenter.ini and
+QuickSettings.his (2)</li>
 <li><a href="#useful-include-files-2">Useful Include Files (2)</a></li>
-<li><a href="#hjconstjsh-2">HJConst.JSH (2)</a></li>
-<li><a href="#hjglobaljsh-2">HJGlobal.JSH (2)</a></li>
+<li>HJConst.JSH (2)</li>
+<li>HJGlobal.JSH (2)</li>
 <li><a href="#localization-jaws-folder-restructure-2">Localization: JAWS
 Folder Restructure (2)</a></li>
 <li><a href="#custom-localization-2">Custom Localization (2)</a></li>
-<li><a href="#dialoglayouts-and-lcmessages-subfolders-2">DialogLayouts
-and LC_MESSAGES Subfolders (2)</a></li>
+<li>DialogLayouts
+and LC_MESSAGES Subfolders (2)</li>
 <li><a href="#finding-files-with-the-script-manager-2">Finding Files
 with the Script Manager (2)</a></li>
 <li><a href="#conditional-statement-structures-5">Conditional Statement
@@ -1985,19 +1983,19 @@ BrailleSupportsTypeKeysMode</a></li>
 <li><a href="#script-brailletab">Script: BrailleTab</a></li>
 <li><a href="#function-contractedbrailleinputallowednow">Function:
 ContractedBrailleInputAllowedNow</a></li>
-<li><a href="#script-alvabcbraillenextlinebraillesplitpanleft">Script:
+<li><a href="#script-alvabc_braillenextline_braillesplitpanleft">Script:
 AlvaBC_BrailleNextLine_BrailleSplitPanLeft</a></li>
-<li><a href="#script-alvabcbraillepanleftbraillesplitpanleft">Script:
+<li><a href="#script-alvabc_braillepanleft_braillesplitpanleft">Script:
 AlvaBC_BraillePanLeft_BrailleSplitPanLeft</a></li>
-<li><a href="#script-alvabcbraillepanrightbraillesplitpanright">Script:
+<li><a href="#script-alvabc_braillepanright_braillesplitpanright">Script:
 AlvaBC_BraillePanRight_BrailleSplitPanRight</a></li>
-<li><a href="#script-alvabcbraillepriorlinebraillesplitpanright">Script:
+<li><a href="#script-alvabc_braillepriorline_braillesplitpanright">Script:
 AlvaBC_BraillePriorLine_BrailleSplitPanRight</a></li>
 <li><a
-href="#script-alvabcrightwhizwheeldownbraillesplitnextline">Script:
+href="#script-alvabc_rightwhizwheeldown_braillesplitnextline">Script:
 AlvaBC_RightWhizWheelDown_BrailleSplitNextLine</a></li>
 <li><a
-href="#script-alvabcrightwhizwheelupbraillesplitpriorline">Script:
+href="#script-alvabc_rightwhizwheelup_braillesplitpriorline">Script:
 AlvaBC_RightWhizWheelUp_BrailleSplitPriorLine</a></li>
 <li><a href="#script-brailleautoadvance">Script:
 BrailleAutoAdvance</a></li>
@@ -3500,7 +3498,7 @@ HomeEndMovement</a></li>
 <li><a href="#function-getcharacter">Function: GetCharacter</a></li>
 <li><a href="#function-getcharacterphonetic">Function:
 GetCharacterPhonetic</a></li>
-<li><a href="#function-getchunkcolorna">Function:
+<li><a href="#function-getchunk_colorna">Function:
 GetChunk_ColorNA</a></li>
 <li><a href="#function-getchunk">Function: GetChunk</a></li>
 <li><a href="#function-getcurrentfontdata">Function:
@@ -4072,14 +4070,14 @@ JAWSPageDownPcCursor</a></li>
 JAWSPageUpPcCursor</a></li>
 <li><a href="#function-jawstopoffile">Function: JAWSTopOfFile</a></li>
 <li><a href="#function-lowword">Function: LowWord</a></li>
-<li><a href="#function-lrldialog">Function: LRL_Dialog</a></li>
-<li><a href="#function-lrlgetfirstlookupmodule">Function:
+<li><a href="#function-lrl_dialog">Function: LRL_Dialog</a></li>
+<li><a href="#function-lrl_getfirstlookupmodule">Function:
 LRL_GetFirstLookupModule</a></li>
-<li><a href="#function-lrlgetnextlookupmodule">Function:
+<li><a href="#function-lrl_getnextlookupmodule">Function:
 LRL_GetNextLookupModule</a></li>
-<li><a href="#function-lrlgetprimarylookupmodule">Function:
+<li><a href="#function-lrl_getprimarylookupmodule">Function:
 LRL_GetPrimaryLookupModule</a></li>
-<li><a href="#function-lrlinvoke">Function: LRL_Invoke</a></li>
+<li><a href="#function-lrl_invoke">Function: LRL_Invoke</a></li>
 <li><a href="#function-jawsfind">Function: JAWSFind</a></li>
 <li><a href="#script-jawsfind">Script: JAWSFind</a></li>
 <li><a href="#function-jawsfindnext">Function: JAWSFindNext</a></li>
@@ -4106,9 +4104,9 @@ LaunchCommandsSearchViewer</a></li>
 LaunchQuickSettings</a></li>
 <li><a href="#function-levenshteindistance">Function:
 LevenshteinDistance</a></li>
-<li><a href="#function-keyboardhelplaunchwindowsshortcut">Function:
+<li><a href="#function-keyboardhelp_launchwindowsshortcut">Function:
 KeyboardHelp_LaunchWindowsShortcut</a></li>
-<li><a href="#function-keyboardhelpwindowscmd">Function:
+<li><a href="#function-keyboardhelp_windowscmd">Function:
 KeyboardHelp_WindowsCmd</a></li>
 <li><a href="#function-launchshortcut">Function: LaunchShortcut</a></li>
 <li><a href="#script-listtasktrayicons">Script:
@@ -75341,5 +75339,6 @@ called</p>
 <p>You can customize your scripts. See the details at the area topic
 called:</p>
 <p>Customized Quick Settings</p>
+</main>
 </body>
 </html>

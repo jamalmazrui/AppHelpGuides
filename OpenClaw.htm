@@ -253,7 +253,7 @@
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#openclaw-help-guide" id="toc-openclaw-help-guide">OpenClaw
 Help Guide</a>
@@ -288,6 +288,7 @@ id="toc-cat-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="openclaw-help-guide">OpenClaw Help Guide</h1>
 <p>This guide gathers OpenClaw’s official documentation. The text was
 taken from docs.openclaw.ai on 31 July 2026 and is the project’s own;
@@ -918,7 +919,7 @@ hooks</li>
 <li>Heartbeat — periodic main-session turns</li>
 <li>Configuration Reference — all config keys</li>
 </ul>
-<h3 id="automations">Automations</h3>
+<h3 id="automations-2">Automations</h3>
 <p>CapabilitiesAutomation</p>
 <p>Automations are OpenClaw’s built-in scheduler. The scheduler persists
 jobs, wakes the agent at the right time, and can deliver output to a
@@ -2122,7 +2123,7 @@ a glance</li>
 <li>Automations - scheduling background work</li>
 <li>Task Flow - flow orchestration above tasks</li>
 </ul>
-<h3 id="hooks">Hooks</h3>
+<h3 id="hooks-2">Hooks</h3>
 <p>CapabilitiesAutomation</p>
 <p>Hooks are small scripts that run inside the Gateway when agent events
 fire: commands like 0, 1, 2, session compaction, gateway lifecycle, and
@@ -2451,7 +2452,7 @@ per-channel limits, lives in Message tool.</p>
 <li>Scheduled tasks</li>
 <li>Background tasks</li>
 </ul>
-<h3 id="standing-orders">Standing orders</h3>
+<h3 id="standing-orders-2">Standing orders</h3>
 <p>CapabilitiesAutomation</p>
 <p>Standing orders grant your agent <strong>permanent operating
 authority</strong> for defined programs. Instead of prompting the agent
@@ -2582,7 +2583,7 @@ glance.</li>
 <li>Agent workspace: where standing orders live, including the full list
 of auto-injected bootstrap files (0, 1, etc.).</li>
 </ul>
-<h3 id="task-flow">Task flow</h3>
+<h3 id="task-flow-2">Task flow</h3>
 <p>CapabilitiesAutomation</p>
 <p>Task Flow is the orchestration layer above background tasks. A flow
 is a durable record of multi-step work with its own status, JSON state,
@@ -7235,7 +7236,7 @@ for an owner handle.</li>
 </ul>
 <h4 id="legacy">Legacy</h4>
 <p>Legacy 0 and 1 still available. See 2.</p>
-<h3 id="auth">Auth</h3>
+<h3 id="auth-2">Auth</h3>
 <p>ClawHubUsing ClawHub</p>
 <p>ClawHub uses GitHub for web sign-in. The CLI uses ClawHub API tokens
 created through that signed-in account.</p>
@@ -9515,7 +9516,7 @@ increment the version number, and upload the fixed version.</p>
 <li>respond clearly if users or moderators ask about release
 behavior</li>
 </ul>
-<h3 id="org-and-namespace-claims">Org and Namespace Claims</h3>
+<h3 id="org-and-namespace-claims-2">Org and Namespace Claims</h3>
 <p>Get started</p>
 <p>ClawHub uses owner handles, org handles, skill slugs, plugin package
 names, and package scopes as public namespaces. If a namespace appears
@@ -9997,7 +9998,7 @@ docs or README until the manifest contract exists.</li>
 <li>Plugin entry points</li>
 <li>Plugin compatibility</li>
 </ul>
-<h3 id="publishing">Publishing</h3>
+<h3 id="publishing-2">Publishing</h3>
 <p>ClawHubUsing ClawHub</p>
 <p>Publishing sends a skill folder or plugin package to ClawHub under
 the owner you choose. ClawHub checks that your token can publish for
@@ -10117,7 +10118,7 @@ review. See Org and Namespace Claims before filing.</p>
 <p>This protects org namespaces. A package named 0 claims the 1
 namespace, so only publishers with access to the 2 owner can publish
 it.</p>
-<h3 id="quickstart">Quickstart</h3>
+<h3 id="quickstart-2">Quickstart</h3>
 <p>ClawHubOverview</p>
 <p>ClawHub is a registry for OpenClaw skills and plugins.</p>
 <p>Use OpenClaw when you are installing things into OpenClaw. Use the 0
@@ -10587,7 +10588,7 @@ its contribution from install counters.</p>
 <p>bash</p>
 <pre><code>export CLAWHUB_DISABLE_TELEMETRY=1</code></pre>
 <p>With this set, the CLI will not send install telemetry.</p>
-<h3 id="troubleshooting">Troubleshooting</h3>
+<h3 id="troubleshooting-2x">Troubleshooting</h3>
 <p>ClawHubUsing ClawHub</p>
 <h4 id="opens-a-browser-but-never-completes">0 opens a browser but never
 completes</h4>
@@ -12944,7 +12945,7 @@ agents, credentials, sessions, and unowned local state are excluded.</p>
 <li>Cron jobs</li>
 <li>MCP configuration</li>
 </ul>
-<h3 id="cli-reference">CLI reference</h3>
+<h3 id="cli-reference-2">CLI reference</h3>
 <p>ReferenceCLI commands</p>
 <p>0 is the main CLI entry point. Each core command has a dedicated
 reference page or is documented with the command it aliases; this index
@@ -13139,7 +13140,7 @@ update; 1 can repair missing or stale completion setups.</li>
 <ul>
 <li><a href="#cli-reference">CLI reference</a></li>
 </ul>
-<h3 id="config">Config</h3>
+<h3 id="config-2">Config</h3>
 <p>ReferenceCLI commands</p>
 <p>Non-interactive helpers for 0: get/set/patch/unset a value by path,
 print the schema, validate, or print the active file path. Run 1 with no
@@ -15448,7 +15449,7 @@ individual events with <a href="#chat-channels">0</a>.</li>
 snapshot</li>
 <li>Gateway health</li>
 </ul>
-<h3 id="hooks-2">Hooks</h3>
+<h3 id="hooks-2-2">Hooks</h3>
 <p>ReferenceCLI commands</p>
 <p>Manage agent hooks (event-driven automations for commands like 0, 1,
 and gateway startup). Bare 2 is equivalent to 3.</p>
@@ -16557,7 +16558,7 @@ connected</li>
 <li><a href="#cli-reference">CLI reference</a></li>
 <li>Plugins</li>
 </ul>
-<h3 id="memory">Memory</h3>
+<h3 id="memory-2">Memory</h3>
 <p>ReferenceCLI commands</p>
 <p>Manage semantic memory indexing, search, and promotion into 0.
 Provided by the bundled 1 plugin, available when 2 selects 3 (the
@@ -17284,7 +17285,7 @@ replaying imported local data.</p>
 <li>Doctor: health check after applying a migration.</li>
 <li>Plugins: plugin install and registration.</li>
 </ul>
-<h3 id="models">Models</h3>
+<h3 id="models-2">Models</h3>
 <p>ReferenceCLI commands</p>
 <p>Model discovery, scanning, and configuration (default model,
 fallbacks, auth profiles).</p>
@@ -18573,7 +18574,7 @@ still report their own files, chunks, vector, and FTS state.</p>
 <li><a href="#cli-reference">CLI reference</a></li>
 <li>Doctor</li>
 </ul>
-<h3 id="pairing">Pairing</h3>
+<h3 id="pairing-2">Pairing</h3>
 <p>ReferenceCLI commands</p>
 <p>Approve or inspect DM pairing requests for channels that support
 pairing (chat DMs only - node/device pairing uses 0).</p>
@@ -18964,7 +18965,7 @@ it; treat a 2 edit the same as any other direct write to that file.</li>
 <ul>
 <li><a href="#cli-reference">CLI reference</a></li>
 </ul>
-<h3 id="plugins">Plugins</h3>
+<h3 id="plugins-2">Plugins</h3>
 <p>ReferenceCLI commands</p>
 <p>Manage Gateway plugins, hook packs, and compatible bundles.</p>
 <p><strong>Plugin system</strong></p>
@@ -20467,7 +20468,7 @@ fast.</p>
 <li>Devices</li>
 <li>Pairing</li>
 </ul>
-<h3 id="reset">Reset</h3>
+<h3 id="reset-2">Reset</h3>
 <p>ReferenceCLI commands</p>
 <p>Reset local config/state (keeps the CLI installed).</p>
 <p>bash</p>
@@ -20601,7 +20602,7 @@ runtime entries.</p>
 <li>Agent workspace</li>
 <li>Doctor: checks sandbox setup.</li>
 </ul>
-<h3 id="secrets">Secrets</h3>
+<h3 id="secrets-2">Secrets</h3>
 <p>ReferenceCLI commands</p>
 <p>Manage SecretRefs and keep the active runtime snapshot healthy.</p>
 <ul>
@@ -20888,7 +20889,7 @@ file when that list exists and config does not already define 3</li>
 <li><a href="#cli-reference">CLI reference</a></li>
 <li>Security audit</li>
 </ul>
-<h3 id="sessions">Sessions</h3>
+<h3 id="sessions-2">Sessions</h3>
 <p>ReferenceCLI commands</p>
 <p>List stored conversation sessions.</p>
 <p>Session lists are not channel/provider liveness checks. They show
@@ -21066,7 +21067,7 @@ summarization.</li>
 <li>Compaction</li>
 <li><a href="#cli-reference">CLI reference</a></li>
 </ul>
-<h3 id="setup">Setup</h3>
+<h3 id="setup-2x">Setup</h3>
 <p>ReferenceCLI commands</p>
 <p>0 is the system-agent entry point. On a configured system, bare 1
 opens an interactive OpenClaw chat. On a fresh system, it falls through
@@ -21201,7 +21202,7 @@ onboarding.</li>
 <li>Getting started</li>
 <li><a href="#install">Install overview</a></li>
 </ul>
-<h3 id="skills">Skills</h3>
+<h3 id="skills-2">Skills</h3>
 <p>ReferenceCLI commands</p>
 <p>Inspect local skills, search ClawHub, install skills from
 ClawHub/Git/local directories, verify ClawHub skills, and update
@@ -21588,7 +21589,7 @@ Config.</p>
 <li>TUI</li>
 <li>Goal</li>
 </ul>
-<h3 id="uninstall">Uninstall</h3>
+<h3 id="uninstall-2">Uninstall</h3>
 <p>ReferenceCLI commands</p>
 <p>Uninstall the Gateway service and/or local data. The CLI itself is
 not removed; uninstall it via npm/pnpm separately.</p>
@@ -21637,7 +21638,7 @@ selected.</li>
 <li><a href="#cli-reference">CLI reference</a></li>
 <li>Uninstall</li>
 </ul>
-<h3 id="update">Update</h3>
+<h3 id="update-2">Update</h3>
 <p>ReferenceCLI commands</p>
 <p>Update OpenClaw and switch between stable/extended-stable/beta/dev
 channels.</p>
@@ -22116,7 +22117,7 @@ for the voice webhook.</p>
 <li><a href="#cli-reference">CLI reference</a></li>
 <li>Voice call plugin</li>
 </ul>
-<h3 id="webhooks">Webhooks</h3>
+<h3 id="webhooks-2">Webhooks</h3>
 <p>ReferenceCLI commands</p>
 <p>Webhook helpers and integrations. Today this surface is scoped to
 Gmail Pub/Sub flows built on the bundled 0 watcher.</p>
@@ -24835,7 +24836,7 @@ capability detection.</li>
 <li>Channel Routing — how the gateway picks a channel for outbound
 replies.</li>
 </ul>
-<h3 id="discord">Discord</h3>
+<h3 id="discord-2">Discord</h3>
 <p>ChannelsMainstream messaging</p>
 <p>OpenClaw connects to Discord as a bot over the official Discord
 gateway. DMs and guild channels are supported.</p>
@@ -24994,7 +24995,7 @@ DMs.</p>
 <blockquote>
 <p>“Add my Discord Server ID 0 to the guild allowlist”</p>
 </blockquote>
-<h5 id="config-2">Config</h5>
+<h5 id="config-2-2">Config</h5>
 <p>json5</p>
 <pre><code>{channels: {discord: {groupPolicy: &quot;allowlist&quot;,guilds: {YOUR_SERVER_ID: { requireMention: true, users: [&quot;YOUR_USER_ID&quot;],},},},},}</code></pre>
 <h5 id="allow-responses-without-mention">Allow responses without <span
@@ -26158,7 +26159,7 @@ with 0.</li>
 <p>Map guilds and channels to agents.</p>
 <p><strong>Slash commands</strong></p>
 <p>Native command behavior.</p>
-<h3 id="discord-activities">Discord Activities</h3>
+<h3 id="discord-activities-2">Discord Activities</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Discord Activities let an agent post an interactive, self-contained
 HTML widget to the current Discord channel. The message includes an
@@ -27208,7 +27209,7 @@ channels</li>
 <li>Pairing — DM authentication and pairing flow</li>
 <li>Security — access model and hardening</li>
 </ul>
-<h3 id="groups">Groups</h3>
+<h3 id="groups-2">Groups</h3>
 <p>ChannelsConfiguration</p>
 <p>OpenClaw applies the same group rules across group-capable channels,
 including Discord, iMessage, Matrix, Microsoft Teams, QQBot, Signal,
@@ -27629,7 +27630,7 @@ mention handling details).</p>
 <li>Group messages</li>
 <li>Pairing</li>
 </ul>
-<h3 id="imessage">iMessage</h3>
+<h3 id="imessage-2">iMessage</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Status: native external CLI integration. The Gateway spawns 0 and
 speaks JSON-RPC over stdio — no separate daemon or port. Private API
@@ -28663,7 +28664,7 @@ channels</li>
 <li>Channel Routing — session routing for messages</li>
 <li>Security — access model and hardening</li>
 </ul>
-<h3 id="matrix">Matrix</h3>
+<h3 id="matrix-2">Matrix</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Matrix is a downloadable channel plugin (0) built on the official 1.
 It supports DMs, rooms, threads, media, reactions, polls, location, and
@@ -31679,7 +31680,7 @@ channels</li>
 <li>Channel Routing — session routing for messages</li>
 <li>Security — access model and hardening</li>
 </ul>
-<h3 id="pairing-2">Pairing</h3>
+<h3 id="pairing-2-2">Pairing</h3>
 <p>ChannelsConfiguration</p>
 <p>“Pairing” is OpenClaw’s explicit access approval step. It is used in
 two places:</p>
@@ -31982,7 +31983,7 @@ lane, and scenario authoring</li>
 <li>Groups</li>
 <li><a href="#chat-channels">Channels overview</a></li>
 </ul>
-<h3 id="qq-bot">QQ bot</h3>
+<h3 id="qq-bot-2">QQ bot</h3>
 <p>ChannelsRegional platforms</p>
 <p>QQ Bot connects to OpenClaw via the official QQ Bot API (WebSocket
 gateway). C2C private chat and group 0-mentions are the primary chat
@@ -32532,7 +32533,7 @@ requester used a fresh code (codes expire after 15 minutes).</li>
 </ul>
 <p>See the protocol design, security model, and self-hosting guide at <a
 href="https://reefwire.ai/docs/">docs</a>.</p>
-<h3 id="signal">Signal</h3>
+<h3 id="signal-2">Signal</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Signal is a downloadable channel plugin (0). The gateway talks to 1
 over HTTP: either the native daemon (JSON-RPC + SSE) or the <a
@@ -32974,7 +32975,7 @@ channels</li>
 <li>Channel Routing - session routing for messages</li>
 <li>Security - access model and hardening</li>
 </ul>
-<h3 id="slack">Slack</h3>
+<h3 id="slack-2">Slack</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Slack support covers DMs and channels via Slack app integrations.
 Default transport is Socket Mode; HTTP Request URLs are also supported.
@@ -34755,7 +34756,7 @@ channels</li>
 <li>Channel Routing — session routing for messages</li>
 <li>Security — access model and hardening</li>
 </ul>
-<h3 id="telegram">Telegram</h3>
+<h3 id="telegram-2">Telegram</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Production-ready for bot DMs and groups via grammY. Long polling is
 the default transport; webhook mode is optional.</p>
@@ -36039,7 +36040,7 @@ href="https://www.npmjs.com/package/@tencent-weixin/openclaw-weixin"><span
 class="citation"
 data-cites="tencent-weixin/openclaw-weixin">@tencent-weixin/openclaw-weixin</span></a></li>
 </ul>
-<h3 id="whatsapp">WhatsApp</h3>
+<h3 id="whatsapp-2">WhatsApp</h3>
 <p>ChannelsMainstream messaging</p>
 <p>Status: production-ready via WhatsApp Web (Baileys). The gateway owns
 the linked session(s); there is no separate Twilio WhatsApp channel.</p>
@@ -38444,7 +38445,7 @@ available, subject to tool policy. 0 is on by default for OpenAI models
 and gated by 1 (2, 3, 4). The 5 section of 6 does <strong>not</strong>
 control which tools exist; it is guidance for how <em>you</em> want them
 used.</p>
-<h4 id="skills-2">Skills</h4>
+<h4 id="skills-2-2">Skills</h4>
 <p>OpenClaw loads skills from these locations (highest precedence
 first):</p>
 <ul>
@@ -38783,7 +38784,7 @@ longer decide routing.</p>
 <li>Models</li>
 <li>Status</li>
 </ul>
-<h3 id="agent-workspace">Agent workspace</h3>
+<h3 id="agent-workspace-2">Agent workspace</h3>
 <p>AgentsFundamentals</p>
 <p>The workspace is the agent’s home: the working directory used for
 file tools and workspace context. Keep it private and treat it as
@@ -40223,7 +40224,7 @@ credentials.</p>
 <li>Sub-agents</li>
 <li>Multi-agent routing</li>
 </ul>
-<h3 id="dreaming">Dreaming</h3>
+<h3 id="dreaming-2">Dreaming</h3>
 <p>AgentsSessions and memory</p>
 <p>Dreaming is the background memory consolidation system in 0. It moves
 strong short-term signals into durable memory while keeping the process
@@ -42493,7 +42494,7 @@ memory.</li>
 facts.</li>
 <li>Standing intents: event-conditioned prospective memory.</li>
 </ul>
-<h3 id="memory-search">Memory search</h3>
+<h3 id="memory-search-2">Memory search</h3>
 <p>AgentsSessions and memory</p>
 <p>0 finds relevant notes from your memory files, even when the wording
 differs from the original text. It chunks memory into small pieces and
@@ -43518,7 +43519,7 @@ model</li>
 <li>0 routing</li>
 </ul>
 <p>See Models for the broader model selection and fallback overview.</p>
-<h3 id="model-providers">Model providers</h3>
+<h3 id="model-providers-2">Model providers</h3>
 <p>ModelsConcepts and configuration</p>
 <p>Reference for <strong>LLM/model providers</strong> (not chat channels
 like WhatsApp/Telegram). For model selection rules, see Models.</p>
@@ -44494,7 +44495,7 @@ command-driven paths like 1.</p>
 <li>Music generation — music model configuration</li>
 <li>Video generation — video model configuration</li>
 </ul>
-<h3 id="multi-agent-routing">Multi-agent routing</h3>
+<h3 id="multi-agent-routing-2">Multi-agent routing</h3>
 <p>AgentsMulti-agent</p>
 <p>Run multiple <em>isolated</em> agents in one Gateway process, each
 with its own workspace, state directory (0), and SQLite-backed session
@@ -44814,7 +44815,7 @@ contribution as a separate turn.</p>
 <li>Presence</li>
 <li>Gateway security</li>
 </ul>
-<h3 id="oauth">OAuth</h3>
+<h3 id="oauth-2">OAuth</h3>
 <p>AgentsFundamentals</p>
 <p>OpenClaw supports OAuth (“subscription auth”) for providers that
 offer it, notably <strong>OpenAI Codex (ChatGPT OAuth)</strong> and
@@ -48168,7 +48169,7 @@ for the boolean/ c2cStreamApi forms) by openclaw doctor –fix ; not read
 at runtime</li>
 </ul>
 <h4 id="runtime-behavior-1">Runtime behavior</h4>
-<h5 id="telegram-2">Telegram</h5>
+<h5 id="telegram-2-2">Telegram</h5>
 <ul>
 <li>Uses 0 + 1 preview updates across DMs and group/topics; final text
 edits the active preview in place. Telegram ephemeral 30-second “typing”
@@ -48199,7 +48200,7 @@ quote-reply path) so tool-progress preview lines cannot render.
 Current-message replies without selected quote text still keep preview
 streaming. See Telegram channel docs for details.</li>
 </ul>
-<h5 id="discord-2">Discord</h5>
+<h5 id="discord-2-2">Discord</h5>
 <ul>
 <li>Uses send + edit preview messages.</li>
 <li>0 mode uses draft chunking (1).</li>
@@ -48958,7 +48959,7 @@ page and macOS Instances tab.</p>
 <p><strong>Streaming and chunking</strong></p>
 <p>Outbound streaming behavior, chunk boundaries, and channel-specific
 delivery.</p>
-<h3 id="usage-tracking">Usage tracking</h3>
+<h3 id="usage-tracking-2">Usage tracking</h3>
 <p>ReferenceConcept internals</p>
 <h4 id="what-it-is-4">What it is</h4>
 <ul>
@@ -50454,7 +50455,7 @@ Discord, and more</li>
 <h4 id="related-188">Related</h4>
 <ul>
 <li><a href="#install">Install overview</a></li>
-<li><a href="/install/fly">fly</a></li>
+<li>fly</li>
 <li>Hetzner</li>
 <li>VPS hosting</li>
 </ul>
@@ -52091,7 +52092,7 @@ href="#chat-channels">Channels</a></li>
 <h4 id="related-198">Related</h4>
 <ul>
 <li><a href="#install">Install overview</a></li>
-<li><a href="/install/fly">fly</a></li>
+<li>fly</li>
 <li>Docker</li>
 <li>VPS hosting</li>
 </ul>
@@ -52182,7 +52183,7 @@ Discord, and more</li>
 <li>VPS hosting</li>
 <li>DigitalOcean</li>
 </ul>
-<h3 id="install">Install</h3>
+<h3 id="install-2x">Install</h3>
 <p>InstallInstall overview</p>
 <h4 id="system-requirements">System requirements</h4>
 <ul>
@@ -54149,7 +54150,7 @@ href="https://cua.ai/docs/lume/guide/fundamentals/unattended-setup">Unattended
 VM Setup</a> (advanced)</li>
 <li>Docker Sandboxing (alternative isolation approach)</li>
 </ul>
-<h3 id="menu-bar">Menu bar</h3>
+<h3 id="menu-bar-2">Menu bar</h3>
 <p>PlatformsmacOS companion app</p>
 <h4 id="what-is-shown">What is shown</h4>
 <ul>
@@ -54576,7 +54577,7 @@ a config file), that item is reported as a conflict while independent
 files, skills, credentials, archives, and config entries continue.
 Resolve the conflicted item and rerun the import; identical memory
 imports are idempotent.</p>
-<h4 id="secrets-2">Secrets</h4>
+<h4 id="secrets-2-2">Secrets</h4>
 <p>Interactive 0 asks whether to import detected auth credentials, with
 yes selected by default.</p>
 <ul>
@@ -55260,7 +55261,7 @@ for the most Linux-compatible Gateway runtime.</p>
 <h4 id="vps-and-hosting">VPS and hosting</h4>
 <ul>
 <li>VPS hub: VPS hosting</li>
-<li>Fly.io: <a href="/install/fly">fly</a></li>
+<li>Fly.io: fly</li>
 <li>Hetzner (Docker): Hetzner</li>
 <li>GCP (Compute Engine): GCP</li>
 <li>Azure (Linux VM): Azure</li>
@@ -56216,7 +56217,7 @@ changes that finish while an earlier request is still in flight.</li>
 <li>Skills</li>
 <li>macOS app</li>
 </ul>
-<h3 id="uninstall-2">Uninstall</h3>
+<h3 id="uninstall-2-2">Uninstall</h3>
 <p>InstallMaintenance</p>
 <p>Two paths:</p>
 <ul>
@@ -56321,7 +56322,7 @@ repo (use the easy path above or manual service removal).</li>
 <li><a href="#install">Install overview</a></li>
 <li>Migration guide</li>
 </ul>
-<h3 id="updating">Updating</h3>
+<h3 id="updating-2x">Updating</h3>
 <p>InstallMaintenance</p>
 <p>Keep OpenClaw up to date.</p>
 <p>For Docker, Podman, and Kubernetes image replacements, see Upgrading
@@ -57093,7 +57094,7 @@ sandbox.</li>
 <li>WebChat</li>
 <li>macOS app</li>
 </ul>
-<h3 id="windows">Windows</h3>
+<h3 id="windows-2">Windows</h3>
 <p>PlatformsPlatforms overview</p>
 <p>OpenClaw ships a native <strong>Windows Hub</strong> companion app
 plus Windows CLI support. Use Windows Hub for a desktop app with setup,
@@ -60214,7 +60215,7 @@ Gateway protocol.</li>
 <li>Gateway protocol</li>
 <li>OpenTelemetry</li>
 </ul>
-<h3 id="authentication">Authentication</h3>
+<h3 id="authentication-2">Authentication</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>OpenClaw supports OAuth and API keys for model providers. For an
 always-on gateway host, an API key is the most predictable option;
@@ -61321,7 +61322,7 @@ persisted container home, not only on the host; see Claude CLI backend
 in Docker.</p>
 <p>The gateway service must resolve 0 on 1. For a nonstandard path,
 register a small wrapper backend plugin.</p>
-<h4 id="sessions-2">Sessions</h4>
+<h4 id="sessions-2-2">Sessions</h4>
 <ul>
 <li>If the CLI supports sessions, set 0 with a 1 placeholder (for
 example 2).</li>
@@ -61842,7 +61843,7 @@ releases one manually. Idle leases expire on the profile’s 2.</li>
 <li>Sessions CLI — inspecting stored sessions</li>
 <li>Configuration reference</li>
 </ul>
-<h3 id="configuration">Configuration</h3>
+<h3 id="configuration-2x">Configuration</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>OpenClaw reads an optional <strong>JSON5</strong> config from 0. If
 the file is missing, OpenClaw uses safe defaults.</p>
@@ -62316,7 +62317,7 @@ Doctor</em></p>
 <li>Configuration examples</li>
 <li><a href="#gateway-runbook">Gateway runbook</a></li>
 </ul>
-<h3 id="configuration-examples">Configuration examples</h3>
+<h3 id="configuration-examples-2">Configuration examples</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>Examples below are aligned with the current config schema. For the
 exhaustive reference and per-field notes, see Configuration.</p>
@@ -63215,7 +63216,7 @@ nesting).</li>
 <li>0: age before completed subagent state is archived. Default: 1.</li>
 </ul>
 <hr />
-<h4 id="multi-agent-routing-2">Multi-agent routing</h4>
+<h4 id="multi-agent-routing-2-2">Multi-agent routing</h4>
 <p>Run multiple isolated agents inside one Gateway. See Multi-Agent.</p>
 <p>json5</p>
 <pre><code>{ agents: { list: [ { id: &quot;home&quot;, default: true, workspace: &quot;~/.openclaw/workspace-home&quot; }, { id: &quot;work&quot;, workspace: &quot;~/.openclaw/workspace-work&quot; }, ], }, bindings: [ { agentId: &quot;home&quot;, match: { channel: &quot;whatsapp&quot;, accountId: &quot;personal&quot; } }, { agentId: &quot;work&quot;, match: { channel: &quot;whatsapp&quot;, accountId: &quot;biz&quot; } }, ],}</code></pre>
@@ -63765,7 +63766,7 @@ messages, default), 2 (all messages), 3 (from 4 on all messages).</p>
 <li>0 re-enables mutable email principal matching (break-glass
 compatibility mode).</li>
 </ul>
-<h5 id="slack-2">Slack</h5>
+<h5 id="slack-2-2">Slack</h5>
 <p>json5</p>
 <pre><code>{ channels: { slack: { enabled: true, botToken: &quot;xoxb-...&quot;, appToken: &quot;xapp-...&quot;, dmPolicy: &quot;pairing&quot;, allowFrom: [&quot;U123&quot;, &quot;U456&quot;, &quot;*&quot;], dm: { enabled: true, groupEnabled: false, groupChannels: [&quot;G123&quot;] }, channels: { C123: { enabled: true, requireMention: true, allowBots: false }, C456: { enabled: true, requireMention: true, allowBots: false, users: [&quot;U123&quot;], skills: [&quot;docs&quot;], systemPrompt: &quot;Short answers only.&quot;, }, }, historyLimit: 50, allowBots: false, reactionNotifications: &quot;own&quot;, reactionAllowlist: [&quot;U123&quot;], replyToMode: &quot;off&quot;, // off | first | all | batched thread: { historyScope: &quot;thread&quot;, // thread | channel inheritParent: false, initialHistoryLimit: 20, }, actions: { reactions: true, messages: true, pins: true, memberInfo: true, emojiList: true, }, slashCommand: { enabled: true, name: &quot;openclaw&quot;, sessionPrefix: &quot;slack:slash&quot;, ephemeral: true, }, typingReaction: &quot;hourglass_flowing_sand&quot;, unfurlLinks: false, unfurlMedia: false, textChunkLimit: 4000, streaming: { mode: &quot;partial&quot;, // off | partial | block | progress chunkMode: &quot;length&quot;, // length | newline nativeTransport: true, // use Slack native streaming API when mode=partial }, mediaMaxMb: 20, execApprovals: { enabled: &quot;auto&quot;, // true | false | &quot;auto&quot; approvers: [&quot;U123&quot;], agentFilter: [&quot;default&quot;], sessionFilter: [&quot;slack:&quot;], target: &quot;dm&quot;, // dm | channel | both }, }, },}</code></pre>
 <ul>
@@ -63944,7 +63945,7 @@ persistent ACP sessions. Use a normalized handle or explicit chat target
 </ul>
 <p>iMessage SSH wrapper example bash</p>
 <pre><code>#!/usr/bin/env bashexec ssh -T gateway-host imsg &quot;$@&quot;</code></pre>
-<h5 id="matrix-2">Matrix</h5>
+<h5 id="matrix-2-2">Matrix</h5>
 <p>Matrix is plugin-backed and configured under 0.</p>
 <p>json5</p>
 <pre><code>{ channels: { matrix: { enabled: true, homeserver: &quot;https://matrix.example.org&quot;, accessToken: &quot;syt_bot_xxx&quot;, proxy: &quot;http://127.0.0.1:7890&quot;, encryption: true, initialSyncLimit: 20, defaultAccount: &quot;ops&quot;, accounts: { ops: { name: &quot;Ops&quot;, userId: &quot;@ops:example.org&quot;, accessToken: &quot;syt_ops_xxx&quot;, }, alerts: { userId: &quot;@alerts:example.org&quot;, password: &quot;secret&quot;, proxy: &quot;http://127.0.0.1:7891&quot;, }, }, }, },}</code></pre>
@@ -68365,7 +68366,7 @@ implicit direct-channel fallback).</li>
 <li>Remote access</li>
 <li>Secrets management</li>
 </ul>
-<h3 id="health-checks">Health checks</h3>
+<h3 id="health-checks-2">Health checks</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>Short guide to verify channel connectivity without guessing.</p>
 <h4 id="quick-checks">Quick checks</h4>
@@ -68508,7 +68509,7 @@ summary.</p>
 <li>Diagnostics export</li>
 <li>Gateway troubleshooting</li>
 </ul>
-<h3 id="heartbeat">Heartbeat</h3>
+<h3 id="heartbeat-2">Heartbeat</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>Heartbeat runs <strong>periodic agent turns</strong> in the main
 session so the model can surface anything that needs attention without
@@ -69344,7 +69345,7 @@ separate control-plane layer.</p>
 <li>Docker</li>
 <li>Podman</li>
 </ul>
-<h3 id="multiple-gateways">Multiple gateways</h3>
+<h3 id="multiple-gateways-2">Multiple gateways</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>Most setups need one Gateway - a single Gateway handles multiple
 messaging connections and agents. Run separate Gateways with isolated
@@ -69792,7 +69793,7 @@ the caller explicitly narrows scopes and omits operator.admin . Requires
 operator.admin for owner-level controls such as x-openclaw-model .</li>
 </ul>
 <p>See Operator scopes, Security, and Remote access.</p>
-<h4 id="authentication-2">Authentication</h4>
+<h4 id="authentication-2-2">Authentication</h4>
 <p>Uses the Gateway auth configuration (see Trusted proxy auth for that
 mode’s details):</p>
 <ul>
@@ -71572,7 +71573,7 @@ plus 1, the webhook ingress uses HTTP 429 with a 2 header, and ACP
 embeds the wait in the error message. In every case, back off for the
 indicated duration instead of retrying immediately.</li>
 </ul>
-<h3 id="remote-access">Remote access</h3>
+<h3 id="remote-access-2x">Remote access</h3>
 <p>Gateway &amp; OpsRemote access</p>
 <p>OpenClaw runs one Gateway (the master) on a host and connects every
 client to it. The Gateway owns sessions, auth profiles, channels, and
@@ -73965,7 +73966,7 @@ updates the snapshot on the next agent turn when 0 changes, and
 connecting a macOS node can make macOS-only skills eligible (based on
 bin probing). Treat skill folders as trusted code and restrict who can
 modify them.</p>
-<h4 id="plugins-2">Plugins</h4>
+<h4 id="plugins-2-2">Plugins</h4>
 <p>Plugins run in-process with the Gateway - treat them as trusted
 code.</p>
 <ul>
@@ -75377,7 +75378,7 @@ no Serve/Funnel:</p>
 <h4 id="cli-examples-2">CLI examples</h4>
 <p>bash</p>
 <pre><code>openclaw gateway --tailscale serveopenclaw gateway --tailscale funnel --auth password</code></pre>
-<h4 id="auth-2">Auth</h4>
+<h4 id="auth-2-2">Auth</h4>
 <p>0 controls the handshake:</p>
 <ul>
 <li><strong>none</strong></li>
@@ -75669,7 +75670,7 @@ execution error; sanitized message)</li>
 <li>Gateway protocol</li>
 <li>Tools and plugins</li>
 </ul>
-<h3 id="troubleshooting-2">Troubleshooting</h3>
+<h3 id="troubleshooting-2-2">Troubleshooting</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>This is the deep runbook. Start at /help/troubleshooting for the fast
 triage flow first.</p>
@@ -76949,7 +76950,7 @@ HTTP).</li>
 <li>Tailscale — simpler alternative for tailnet-only access</li>
 </ul>
 <h2 id="cat-when-something-goes-wrong">When something goes wrong</h2>
-<h3 id="debugging">Debugging</h3>
+<h3 id="debugging-2">Debugging</h3>
 <p>HelpStart here</p>
 <p>Debugging helpers for streaming output, gateway iteration, and
 startup profiling.</p>
@@ -77180,7 +77181,7 @@ alias like 2.</li>
 <li>Troubleshooting</li>
 <li>FAQ</li>
 </ul>
-<h3 id="environment-variables">Environment variables</h3>
+<h3 id="environment-variables-2x">Environment variables</h3>
 <p>HelpDiagnostics</p>
 <p>OpenClaw pulls environment variables from multiple sources. The rule
 is <strong>never override existing values</strong>. Workspace 0 files
@@ -77489,7 +77490,7 @@ prefix with 1 (for example 2 to 3); the old names take no effect.</p>
 <li>FAQ: env vars and .env loading</li>
 <li>Models overview</li>
 </ul>
-<h3 id="faq">FAQ</h3>
+<h3 id="faq-2">FAQ</h3>
 <p>HelpFAQ</p>
 <p>Quick answers plus deeper troubleshooting for real-world setups
 (local dev, VPS, multi-agent, OAuth/API keys, model failover). For
@@ -79248,13 +79249,13 @@ folder</strong> so it can read the repo and answer precisely.</p>
 <p>How do I install OpenClaw on a VPS?</p>
 <p>Any Linux VPS works. Install on the server, then reach the Gateway
 over SSH/Tailscale.</p>
-<p>Guides: exe.dev, Hetzner, <a href="/install/fly">fly</a>. Remote
+<p>Guides: exe.dev, Hetzner, fly. Remote
 access: Gateway remote.</p>
 <p>Where are the cloud/VPS install guides?</p>
 <p>Hosting hub with common providers:</p>
 <ul>
 <li>VPS hosting (all providers in one place)</li>
-<li><a href="/install/fly">fly</a></li>
+<li>fly</li>
 <li>Hetzner</li>
 <li>exe.dev</li>
 </ul>
@@ -80295,7 +80296,7 @@ missing).</li>
 <li>Testing</li>
 <li>Testing live</li>
 </ul>
-<h3 id="testing">Testing</h3>
+<h3 id="testing-2x">Testing</h3>
 <p>HelpTesting</p>
 <p>OpenClaw has three Vitest suites (unit/integration, e2e, live) plus
 Docker runners. This page covers what each suite covers, which command
@@ -95261,7 +95262,7 @@ id="toolsmulti-agent-sandbox-tools.md">tools/multi-agent-sandbox-tools.md</h4>
 <li>H2: Configuration reference (WebChat)</li>
 <li>H2: Related</li>
 </ul>
-<h3 id="getting-started">Getting started</h3>
+<h3 id="getting-started-2x">Getting started</h3>
 <p>Install OpenClaw, run onboarding, and chat with your AI assistant in
 about 5 minutes. By the end you will have a running Gateway, configured
 auth, and a working chat session.</p>
@@ -95274,9 +95275,7 @@ OpenAI, Google, etc.) — onboarding will prompt you</li>
 </ul>
 <p>Check your Node version with 0. <strong>Windows users:</strong> the
 native Windows Hub app is the easiest desktop path. The PowerShell
-installer and WSL2 Gateway paths are also supported. See <a
-href="/platforms/windows">Windows</a>. Need to install Node? See <a
-href="/install/node">Node setup</a>.</p>
+installer and WSL2 Gateway paths are also supported. See Windows. Need to install Node? See Node setup.</p>
 <h4 id="quick-setup-16">Quick setup</h4>
 <pre><code>    ```bash
     curl -fsSL https://openclaw.ai/install.sh | bash
@@ -95327,22 +95326,22 @@ for all options.</code></pre>
 <p>If you maintain a localized or customized dashboard build, point 0 to
 a directory that contains your built static assets and 0.</p>
 <div class="sourceCode" id="cb2922"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2922-1"><a href="#cb2922-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.openclaw/control-ui-custom&quot;</span></span>
-<span id="cb2922-2"><a href="#cb2922-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy your built static files into that directory.</span></span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2922-1"><span class="fu">mkdir</span> <span class="at">-p</span> <span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.openclaw/control-ui-custom&quot;</span></span>
+<span id="cb2922-2"><span class="co"># Copy your built static files into that directory.</span></span></code></pre></div>
 <p>Then set:</p>
 <div class="sourceCode" id="cb2923"><pre
-class="sourceCode json"><code class="sourceCode json"><span id="cb2923-1"><a href="#cb2923-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2923-2"><a href="#cb2923-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;gateway&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2923-3"><a href="#cb2923-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;controlUi&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2923-4"><a href="#cb2923-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enabled&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
-<span id="cb2923-5"><a href="#cb2923-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;root&quot;</span><span class="fu">:</span> <span class="st">&quot;${HOME}/.openclaw/control-ui-custom&quot;</span></span>
-<span id="cb2923-6"><a href="#cb2923-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb2923-7"><a href="#cb2923-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb2923-8"><a href="#cb2923-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+class="sourceCode json"><code class="sourceCode json"><span id="cb2923-1"><span class="fu">{</span></span>
+<span id="cb2923-2">  <span class="dt">&quot;gateway&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2923-3">    <span class="dt">&quot;controlUi&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2923-4">      <span class="dt">&quot;enabled&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2923-5">      <span class="dt">&quot;root&quot;</span><span class="fu">:</span> <span class="st">&quot;${HOME}/.openclaw/control-ui-custom&quot;</span></span>
+<span id="cb2923-6">    <span class="fu">}</span></span>
+<span id="cb2923-7">  <span class="fu">}</span></span>
+<span id="cb2923-8"><span class="fu">}</span></span></code></pre></div>
 <p>Restart the gateway and reopen the dashboard:</p>
 <div class="sourceCode" id="cb2924"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2924-1"><a href="#cb2924-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openclaw</span> gateway restart</span>
-<span id="cb2924-2"><a href="#cb2924-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openclaw</span> dashboard</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2924-1"><span class="ex">openclaw</span> gateway restart</span>
+<span id="cb2924-2"><span class="ex">openclaw</span> dashboard</span></code></pre></div>
 <h4 id="what-to-do-next">What to do next</h4>
 <pre><code>Discord, Feishu, iMessage, Matrix, Microsoft Teams, Signal, Slack, Telegram, WhatsApp, Zalo, and more.
 
@@ -95360,15 +95359,15 @@ Browser, exec, web search, skills, and plugins.</code></pre>
 <li>0 — override the state directory</li>
 <li>0 — override the config file path</li>
 </ul>
-<p>Full reference: <a href="/help/environment">Environment
-variables</a>.</p>
+<p>Full reference: Environment
+variables.</p>
 <h4 id="related-295">Related</h4>
 <ul>
 <li><a href="#install">Install overview</a></li>
 <li><a href="#chat-channels">Channels overview</a></li>
-<li><a href="/start/setup">Setup</a></li>
+<li>Setup</li>
 </ul>
-<h3 id="logging">Logging</h3>
+<h3 id="logging-2">Logging</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>OpenClaw has two main log surfaces:</p>
 <ul>
@@ -95678,7 +95677,7 @@ privacy model</li>
 subsystem prefixes, and console capture</li>
 <li>Configuration reference — full 0 field reference</li>
 </ul>
-<h3 id="network">Network</h3>
+<h3 id="network-2">Network</h3>
 <p>Gateway &amp; OpsGateway</p>
 <p>This hub links the core docs for how OpenClaw connects, pairs, and
 secures devices across localhost, LAN, and tailnet.</p>
@@ -95970,5 +95969,6 @@ For deterministic, approval-gated workflows, compare with Lobster.</p>
 <p><strong>Slash commands</strong></p>
 <p>All available chat commands including /prose.</p>
 <p>Official site: 0</p>
+</main>
 </body>
 </html>

@@ -253,7 +253,7 @@
 screen-reader-friendly document</p>
 <p class="date">2026-07-31</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#grok-help-guide" id="toc-grok-help-guide">Grok Help
 Guide</a>
@@ -272,6 +272,7 @@ id="toc-cat-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="grok-help-guide">Grok Help Guide</h1>
 <p>This guide gathers xAI’s own documentation for Grok, its assistant
 for the web, iPhone and Android. The text was taken from docs.x.ai on 31
@@ -412,9 +413,8 @@ available in conversations, just like the built-in and catalog
 connectors.</p>
 <p>Your MCP server must be reachable over the public internet. If it is
 running on your local machine, you will need a tunneling service to make
-it accessible. See <a
-href="/grok/connectors/custom-mcp-tunneling">Custom MCP Server
-Tunneling</a> for setup instructions.</p>
+it accessible. See Custom MCP Server
+Tunneling for setup instructions.</p>
 <h3 id="connectors-custom-mcp-tunneling">Connectors Custom Mcp
 Tunneling</h3>
 <h4 id="connectors">Connectors</h4>
@@ -444,20 +444,20 @@ not affiliated with xAI or Grok.</p>
 </ol>
 <p><strong>customLanguage=“bash”</strong></p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install ngrok</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install ngrok <span class="at">-s</span> msstore</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Authenticate (free account required)</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ngrok</span> config add-authtoken YOUR_AUTH_TOKEN</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><span class="co"># macOS</span></span>
+<span id="cb2-2"><span class="ex">brew</span> install ngrok</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="co"># Windows</span></span>
+<span id="cb2-5"><span class="ex">winget</span> install ngrok <span class="at">-s</span> msstore</span>
+<span id="cb2-6"></span>
+<span id="cb2-7"><span class="co"># Authenticate (free account required)</span></span>
+<span id="cb2-8"><span class="ex">ngrok</span> config add-authtoken YOUR_AUTH_TOKEN</span></code></pre></div>
 <ol start="2" type="1">
 <li>Start a tunnel pointing to your MCP server’s port:</li>
 </ol>
 <p><strong>customLanguage=“bash”</strong></p>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ngrok</span> http 3001</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><span class="ex">ngrok</span> http 3001</span></code></pre></div>
 <ol start="3" type="1">
 <li>Copy the 0 URL from the output (e.g., 1) and use it as the server
 URL in Grok’s custom connector dialog.</li>
@@ -469,14 +469,14 @@ Tunnel</a> is a free alternative that does not require account signup
 for quick tunnels.</p>
 <p><strong>customLanguage=“bash”</strong></p>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install cloudflared</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">winget</span> install <span class="at">--id</span> Cloudflare.cloudflared</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Start a quick tunnel</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">cloudflared</span> tunnel <span class="at">--url</span> http://localhost:3001</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><span class="co"># macOS</span></span>
+<span id="cb4-2"><span class="ex">brew</span> install cloudflared</span>
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co"># Windows</span></span>
+<span id="cb4-5"><span class="ex">winget</span> install <span class="at">--id</span> Cloudflare.cloudflared</span>
+<span id="cb4-6"></span>
+<span id="cb4-7"><span class="co"># Start a quick tunnel</span></span>
+<span id="cb4-8"><span class="ex">cloudflared</span> tunnel <span class="at">--url</span> http://localhost:3001</span></code></pre></div>
 <p>Copy the generated 0 URL and use it as the server URL in Grok.</p>
 <blockquote>
 <p>[!CAUTION]</p>
@@ -1321,8 +1321,8 @@ href="#about-connectors">grok.com/connectors</a>.</p>
 <li>Select <strong>Other</strong> and enter your MCP server URL.</li>
 <li>Complete any required authentication.</li>
 </ol>
-<p>See <a href="/grok/connectors/custom-mcp-tunneling">Custom MCP
-Tunneling</a> if your server runs on a local machine.</p>
+<p>See Custom MCP
+Tunneling if your server runs on a local machine.</p>
 <h4 id="managing-connectors">Managing connectors</h4>
 <p>After a connector is provisioned, admins can manage it from the
 connectors page:</p>
@@ -2189,5 +2189,6 @@ not have operational oversight of X’s service. You can contact X via
 their <a href="https://help.x.com/">Help Center</a> or message <a
 href="https://x.com/premium"><span class="citation"
 data-cites="premium">@premium</span> on X</a>.</p>
+</main>
 </body>
 </html>

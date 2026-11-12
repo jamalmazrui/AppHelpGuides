@@ -182,7 +182,7 @@
   </style>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#weasyprint-help" id="toc-weasyprint-help">WeasyPrint
 help</a>
@@ -197,6 +197,7 @@ id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="weasyprint-help">WeasyPrint help</h1>
 <p>This guide holds WeasyPrint’s own manual, gathered on 28 September
 2026. WeasyPrint turns HTML and CSS into PDF, which is one of the ways a
@@ -235,8 +236,7 @@ closely.</p>
 href="https://github.com/Kozea/WeasyPrint/edit/main/docs/api_reference.rst">Edit
 this page</a></p>
 <h4 id="api-reference-1">API Reference¶</h4>
-<p>This page is for WeasyPrint 70.0. See <a
-href="changelog.html">changelog</a> for older versions.</p>
+<p>This page is for WeasyPrint 70.0. See changelog for older versions.</p>
 <h5 id="api-stability">API Stability¶</h5>
 <p>Everything described here is considered “public”: this is what you
 can rely on. We will try to maintain backward-compatibility, and we
@@ -383,8 +383,7 @@ href="https://docs.python.org/3/glossary.html#term-file-object">file
 objects</a>.</li>
 <li>url_fetcher (<a
 href="https://docs.python.org/3/glossary.html#term-callable">callable</a>)
-– An instance of <code>urls.URLFetcher</code>. (See <a
-href="first_steps.html#url-fetchers">URL Fetchers</a>.)</li>
+– An instance of <code>urls.URLFetcher</code>. (See URL Fetchers.)</li>
 <li>media_type (<a
 href="https://docs.python.org/3/library/stdtypes.html#str">str</a>) –
 The media type to use for <code>@media</code>. Defaults to
@@ -621,8 +620,7 @@ does not belong to a specific page but to the whole document.</p>
 <p>pages¶</p>
 <p>A list of <code>Page</code> objects.</p>
 <p>url_fetcher¶</p>
-<p>A <code>weasyprint.urls.URLFetcher</code> object (see <a
-href="first_steps.html#url-fetchers">URL Fetchers</a>.)</p>
+<p>A <code>weasyprint.urls.URLFetcher</code> object (see URL Fetchers.)</p>
 <p>write_pdf(target=None, zoom=1, finisher=None, **options)¶</p>
 <p>Paint the pages in a PDF file, with metadata.</p>
 <p>Parameters:</p>
@@ -807,7 +805,7 @@ from this class, with a <code>fetch</code> method that has a compatible
 signature, can be given as the <code>url_fetcher</code> argument to
 <code>weasyprint.HTML</code> or <code>weasyprint.CSS</code>.</li>
 </ul>
-<p>See <a href="first_steps.html#url-fetchers">URL Fetchers</a> for more
+<p>See URL Fetchers for more
 information and examples.</p>
 <p>fetch(url, headers=None)¶</p>
 <p>Fetch a given URL.</p>
@@ -873,8 +871,7 @@ rules, indexed by their names.</p>
 <p>WeasyPrint can read normal files, HTTP, FTP and <a
 href="https://en.wikipedia.org/wiki/Data_URI_scheme">data URIs</a>. It
 will follow HTTP redirects but more advanced features like cookies and
-authentication are currently not supported, although a custom <a
-href="first_steps.html#url-fetchers">URL fetcher</a> can help.</p>
+authentication are currently not supported, although a custom URL fetcher can help.</p>
 <h6 id="html">HTML¶</h6>
 <h6 id="supported-html-tags">Supported HTML Tags¶</h6>
 <p>Many HTML elements are implemented in CSS through the HTML5 <a
@@ -1599,8 +1596,7 @@ fix it if you can!</p>
 href="https://github.com/Kozea/WeasyPrint">GitHub</a>. If you want to
 add or fix some code, please fork the repository and create a pull
 request, we’ll be happy to review your work.</p>
-<p>You can find more information about the code architecture in the <a
-href="going_further.html#dive-into-the-source">Dive into the Source</a>
+<p>You can find more information about the code architecture in the Dive into the Source
 section.</p>
 <h5 id="tests">Tests¶</h5>
 <p>Tests are stored in the <code>tests</code> folder at the top of the
@@ -1694,7 +1690,7 @@ really close to the specification and to fix bugs easily.</p>
 <h5 id="dive-into-the-source">Dive into the Source¶</h5>
 <p>This chapter is a high-level overview of WeasyPrint’s source code.
 For more details, see the various docstrings or even the code itself.
-When in doubt, feel free to <a href="support.html#support">ask</a>!</p>
+When in doubt, feel free to ask!</p>
 <p>Much <a
 href="https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_main_flow">like
 in web browsers</a>, the rendering of a document in WeasyPrint goes like
@@ -1715,14 +1711,12 @@ and are drawn on a PDF page.</li>
 hyperlinks, and PDF trim and bleed boxes− are added to the PDF.</li>
 </ul>
 <h6 id="parsing-html">Parsing HTML¶</h6>
-<p>Not much to see here. The <a
-href="api_reference.html#weasyprint.HTML"><code>HTML</code></a> class
+<p>Not much to see here. The <code>HTML</code> class
 handles step 1 and gives a tree of HTML elements. Although the actual
 API is different, this tree is conceptually the same as what web
 browsers call the DOM.</p>
 <h6 id="parsing-css">Parsing CSS¶</h6>
-<p>As with HTML, CSS stylesheets are parsed in the <a
-href="api_reference.html#weasyprint.CSS"><code>CSS</code></a> class with
+<p>As with HTML, CSS stylesheets are parsed in the <code>CSS</code> class with
 an external library, <a
 href="https://pypi.python.org/pypi/tinycss2">tinycss2</a>.</p>
 <p>In addition to the actual parsing, the <code>css</code> and
@@ -1748,7 +1742,7 @@ C in CSS!) applies the stylesheets to the element tree. Selectors
 associate property declarations to elements. In case of conflicting
 declarations (different values for the same property on the same
 element), the one with the highest weight wins. Weights are based on the
-stylesheet’s <a href="api_reference.html#stylesheet-origins">origin</a>,
+stylesheet’s origin,
 <code>!important</code> markers, selector specificity and source order.
 Missing values are filled in through inheritance (from the parent
 element) or the property’s initial value, so that every element has a
@@ -2302,13 +2296,11 @@ the <code>default_url_fetcher</code> function.</p>
 <ul>
 <li><p>Always use URL fetcher for HTTP redirects Python API:</p></li>
 <li><p><code>default_url_fetcher()</code> is deprecated, use the new
-<code>URLFetcher</code> class instead, see <a
-href="first_steps.html#url-fetchers">URL Fetchers</a> for more
+<code>URLFetcher</code> class instead, see URL Fetchers for more
 information about URL fetchers</p></li>
 <li><p><code>DocumentMetadata.generate_rdf_metadata</code> is now a
-method that can be overridden instead of a parameter, see <a
-href="common_use_cases.html#factur-x-zugferd-electronic-invoices">Factur-X
-/ ZUGFeRD (Electronic Invoices)</a> for examples to create e-invoices
+method that can be overridden instead of a parameter, see Factur-X
+/ ZUGFeRD (Electronic Invoices) for examples to create e-invoices
 Features:</p></li>
 <li><p><a
 href="https://github.com/Kozea/WeasyPrint/pull/2609">#2609</a>, <a
@@ -5872,7 +5864,7 @@ bugs, please report them!</p>
 <li><a href="https://github.com/Kozea/WeasyPrint/issues/706">#706</a>:
 Fix text-indent at the beginning of a page</li>
 <li><a href="https://github.com/Kozea/WeasyPrint/issues/687">#687</a>:
-Allow query strings in <a href="file://">file://</a> URIs</li>
+Allow query strings in file:// URIs</li>
 <li><a href="https://github.com/Kozea/WeasyPrint/issues/720">#720</a>:
 Optimize minimum size calculation of long inline elements</li>
 <li><a href="https://github.com/Kozea/WeasyPrint/issues/717">#717</a>:
@@ -6858,8 +6850,7 @@ PDF paths.</p>
 <p>Using WeasyPrint in web applications sometimes requires attention on
 some details.</p>
 <h6 id="security-problems">Security Problems¶</h6>
-<p>First of all, rendering untrusted HTML and CSS files can lead to <a
-href="first_steps.html#security">security problems</a>. Please be sure
+<p>First of all, rendering untrusted HTML and CSS files can lead to security problems. Please be sure
 to carefully follow the different proposed solutions if you allow your
 users to modify the source of the rendered documents in any way.</p>
 <h6 id="rights-management">Rights Management¶</h6>
@@ -6929,8 +6920,7 @@ at-rule.</p>
 <h5 id="generate-specialized-pdfs">Generate Specialized PDFs¶</h5>
 <p>WeasyPrint can generate different PDF variants, including PDF/UA and
 PDF/A. The feature is available by using the <code>--pdf-variant</code>
-CLI option, or the <code>pdf_variant</code> Python parameter of <a
-href="api_reference.html#weasyprint.HTML.write_pdf"><code>HTML.write_pdf</code></a>.</p>
+CLI option, or the <code>pdf_variant</code> Python parameter of <code>HTML.write_pdf</code>.</p>
 <pre><code>from weasyprint import HTML
 HTML(string=&quot;&lt;p&gt;document&lt;/p&gt;&quot;).write_pdf(&quot;document.pdf&quot;, pdf_variant=&quot;pdf/a-3u&quot;)
 
@@ -7209,8 +7199,7 @@ with the <code>rel</code> attribute set to <code>attachment</code>.</p>
 use the <code>--attachment</code> CLI option, multiple times if
 needed.</p>
 <pre><code>$ weasyprint document.html --attachment note.txt --attachment photo.jpg document.pdf</code></pre>
-<p>In a Python script, you can also attach files using the <a
-href="api_reference.html#weasyprint.Attachment"><code>weasyprint.Attachment</code></a>
+<p>In a Python script, you can also attach files using the <code>weasyprint.Attachment</code>
 class.</p>
 <pre><code>from weasyprint import Attachment, HTML
 attachments = [Attachment(&quot;note.txt&quot;), Attachment(&quot;photo.jpg&quot;)]
@@ -7254,9 +7243,8 @@ folder path as a string for <code>cache</code>.</p>
 <h5 id="improve-rendering-speed-and-memory-use">Improve Rendering Speed
 and Memory Use¶</h5>
 <p>WeasyPrint is often slower than other web engines. Python is the
-usual suspect, but it’s not the main culprit here. <a
-href="going_further.html#why-python">Optimization is not the main goal
-of WeasyPrint</a> and it may lead to unbearable long rendering
+usual suspect, but it’s not the main culprit here. Optimization is not the main goal
+of WeasyPrint and it may lead to unbearable long rendering
 times.</p>
 <p>First of all: WeasyPrint’s performance gets generally better with
 time. You can check <a
@@ -7440,489 +7428,441 @@ U | W | X</p>
 <ul>
 <li>–allowed-protocols
 <ul>
-<li><a href="api_reference.html#cmdoption-allowed-protocols">command
-line option</a>, [1]</li>
+<li>command
+line option, [1]</li>
 </ul></li>
 <li>–attachment
 <ul>
-<li><a href="api_reference.html#cmdoption-a">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–attachment-relationship
 <ul>
-<li><a
-href="api_reference.html#cmdoption-attachment-relationship">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–base-url
 <ul>
-<li><a href="api_reference.html#cmdoption-u">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–cache-folder
 <ul>
-<li><a href="api_reference.html#cmdoption-c">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–custom-metadata
 <ul>
-<li><a href="api_reference.html#cmdoption-custom-metadata">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–dpi
 <ul>
-<li><a href="api_reference.html#cmdoption-D">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–encoding
 <ul>
-<li><a href="api_reference.html#cmdoption-e">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–fail-on-http-errors
 <ul>
-<li><a href="api_reference.html#cmdoption-fail-on-http-errors">command
-line option</a>, [1]</li>
+<li>command
+line option, [1]</li>
 </ul></li>
 <li>–full-fonts
 <ul>
-<li><a href="api_reference.html#cmdoption-full-fonts">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–hinting
 <ul>
-<li><a href="api_reference.html#cmdoption-hinting">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–info
 <ul>
-<li><a href="api_reference.html#cmdoption-i">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–jpeg-quality
 <ul>
-<li><a href="api_reference.html#cmdoption-j">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–media-type
 <ul>
-<li><a href="api_reference.html#cmdoption-m">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–no-http-redirects
 <ul>
-<li><a href="api_reference.html#cmdoption-no-http-redirects">command
-line option</a>, [1]</li>
+<li>command
+line option, [1]</li>
 </ul></li>
 <li>–optimize-images
 <ul>
-<li><a href="api_reference.html#cmdoption-optimize-images">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–output-intent
 <ul>
-<li><a href="api_reference.html#cmdoption-output-intent">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–pdf-forms
 <ul>
-<li><a href="api_reference.html#cmdoption-pdf-forms">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–pdf-identifier
 <ul>
-<li><a href="api_reference.html#cmdoption-pdf-identifier">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–pdf-tags
 <ul>
-<li><a href="api_reference.html#cmdoption-pdf-tags">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–pdf-variant
 <ul>
-<li><a href="api_reference.html#cmdoption-pdf-variant">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–pdf-version
 <ul>
-<li><a href="api_reference.html#cmdoption-pdf-version">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–presentational-hints
 <ul>
-<li><a href="api_reference.html#cmdoption-p">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–stylesheet
 <ul>
-<li><a href="api_reference.html#cmdoption-s">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–timeout
 <ul>
-<li><a href="api_reference.html#cmdoption-t">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>–uncompressed-pdf
 <ul>
-<li><a href="api_reference.html#cmdoption-uncompressed-pdf">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–version
 <ul>
-<li><a href="api_reference.html#cmdoption-version">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>–xmp-metadata
 <ul>
-<li><a href="api_reference.html#cmdoption-xmp-metadata">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 <li>-a
 <ul>
-<li><a href="api_reference.html#cmdoption-a">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-c
 <ul>
-<li><a href="api_reference.html#cmdoption-c">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-D
 <ul>
-<li><a href="api_reference.html#cmdoption-D">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-e
 <ul>
-<li><a href="api_reference.html#cmdoption-e">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-i
 <ul>
-<li><a href="api_reference.html#cmdoption-i">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-j
 <ul>
-<li><a href="api_reference.html#cmdoption-j">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-m
 <ul>
-<li><a href="api_reference.html#cmdoption-m">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-p
 <ul>
-<li><a href="api_reference.html#cmdoption-p">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-s
 <ul>
-<li><a href="api_reference.html#cmdoption-s">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-t
 <ul>
-<li><a href="api_reference.html#cmdoption-t">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 <li>-u
 <ul>
-<li><a href="api_reference.html#cmdoption-u">command line option</a>,
+<li>command line option,
 [1]</li>
 </ul></li>
 </ul>
 <h5 id="a">A</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.Page.anchors">anchors
-(weasyprint.document.Page attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.Attachment">Attachment (class
-in weasyprint)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.attachments">attachments
-(weasyprint.document.DocumentMetadata attribute)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.authors">authors
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>anchors
+(weasyprint.document.Page attribute)</li>
+<li>Attachment (class
+in weasyprint)</li>
+<li>attachments
+(weasyprint.document.DocumentMetadata attribute)</li>
+<li>authors
+(weasyprint.document.DocumentMetadata attribute)</li>
 </ul>
 <h5 id="b">B</h5>
 <ul>
-<li><a href="api_reference.html#weasyprint.document.Page.bleed">bleed
-(weasyprint.document.Page attribute)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.Page.bookmarks">bookmarks
-(weasyprint.document.Page attribute)</a></li>
+<li>bleed
+(weasyprint.document.Page attribute)</li>
+<li>bookmarks
+(weasyprint.document.Page attribute)</li>
 </ul>
 <h5 id="c">C</h5>
 <ul>
 <li>command line option
 <ul>
-<li><a
-href="api_reference.html#cmdoption-allowed-protocols">–allowed-protocols</a>,
+<li>–allowed-protocols,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-a">–attachment</a>, [1]</li>
-<li><a
-href="api_reference.html#cmdoption-attachment-relationship">–attachment-relationship</a>,
+<li>–attachment, [1]</li>
+<li>–attachment-relationship,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-u">–base-url</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-c">–cache-folder</a>, [1]</li>
-<li><a
-href="api_reference.html#cmdoption-custom-metadata">–custom-metadata</a>,
+<li>–base-url, [1]</li>
+<li>–cache-folder, [1]</li>
+<li>–custom-metadata,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-D">–dpi</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-e">–encoding</a>, [1]</li>
-<li><a
-href="api_reference.html#cmdoption-fail-on-http-errors">–fail-on-http-errors</a>,
+<li>–dpi, [1]</li>
+<li>–encoding, [1]</li>
+<li>–fail-on-http-errors,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-full-fonts">–full-fonts</a>,
+<li>–full-fonts,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-hinting">–hinting</a>,
+<li>–hinting,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-i">–info</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-j">–jpeg-quality</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-m">–media-type</a>, [1]</li>
-<li><a
-href="api_reference.html#cmdoption-no-http-redirects">–no-http-redirects</a>,
+<li>–info, [1]</li>
+<li>–jpeg-quality, [1]</li>
+<li>–media-type, [1]</li>
+<li>–no-http-redirects,
 [1]</li>
-<li><a
-href="api_reference.html#cmdoption-optimize-images">–optimize-images</a>,
+<li>–optimize-images,
 [1]</li>
-<li><a
-href="api_reference.html#cmdoption-output-intent">–output-intent</a>,
+<li>–output-intent,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-pdf-forms">–pdf-forms</a>,
+<li>–pdf-forms,
 [1]</li>
-<li><a
-href="api_reference.html#cmdoption-pdf-identifier">–pdf-identifier</a>,
+<li>–pdf-identifier,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-pdf-tags">–pdf-tags</a>,
+<li>–pdf-tags,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-pdf-variant">–pdf-variant</a>,
+<li>–pdf-variant,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-pdf-version">–pdf-version</a>,
+<li>–pdf-version,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-p">–presentational-hints</a>,
+<li>–presentational-hints,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-s">–stylesheet</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-t">–timeout</a>, [1]</li>
-<li><a
-href="api_reference.html#cmdoption-uncompressed-pdf">–uncompressed-pdf</a>,
+<li>–stylesheet, [1]</li>
+<li>–timeout, [1]</li>
+<li>–uncompressed-pdf,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-version">–version</a>,
+<li>–version,
 [1]</li>
-<li><a
-href="api_reference.html#cmdoption-xmp-metadata">–xmp-metadata</a>,
+<li>–xmp-metadata,
 [1]</li>
-<li><a href="api_reference.html#cmdoption-a">-a</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-c">-c</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-D">-D</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-e">-e</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-i">-i</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-j">-j</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-m">-m</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-p">-p</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-s">-s</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-t">-t</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-u">-u</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-arg-input">input</a>, [1]</li>
-<li><a href="api_reference.html#cmdoption-arg-output">output</a>,
+<li>-a, [1]</li>
+<li>-c, [1]</li>
+<li>-D, [1]</li>
+<li>-e, [1]</li>
+<li>-i, [1]</li>
+<li>-j, [1]</li>
+<li>-m, [1]</li>
+<li>-p, [1]</li>
+<li>-s, [1]</li>
+<li>-t, [1]</li>
+<li>-u, [1]</li>
+<li>input, [1]</li>
+<li>output,
 [1]</li>
 </ul></li>
-<li><a
-href="api_reference.html#weasyprint.document.Document.copy">copy()
-(weasyprint.document.Document method)</a></li>
-<li><a
-href="api_reference.html#weasyprint.css.counters.CounterStyle">CounterStyle
-(class in weasyprint.css.counters)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.created">created
-(weasyprint.document.DocumentMetadata attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.CSS">CSS (class in
-weasyprint)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.custom">custom
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>copy()
+(weasyprint.document.Document method)</li>
+<li>CounterStyle
+(class in weasyprint.css.counters)</li>
+<li>created
+(weasyprint.document.DocumentMetadata attribute)</li>
+<li>CSS (class in
+weasyprint)</li>
+<li>custom
+(weasyprint.document.DocumentMetadata attribute)</li>
 </ul>
 <h5 id="d">D</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.DEFAULT_OPTIONS">DEFAULT_OPTIONS (in
-module weasyprint)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.description">description
-(weasyprint.document.DocumentMetadata attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.document.Document">Document
-(class in weasyprint.document)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata">DocumentMetadata
-(class in weasyprint.document)</a></li>
+<li>DEFAULT_OPTIONS (in
+module weasyprint)</li>
+<li>description
+(weasyprint.document.DocumentMetadata attribute)</li>
+<li>Document
+(class in weasyprint.document)</li>
+<li>DocumentMetadata
+(class in weasyprint.document)</li>
 </ul>
 <h5 id="f">F</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.urls.FatalURLFetchingError">FatalURLFetchingError
-(class in weasyprint.urls)</a></li>
-<li><a
-href="api_reference.html#weasyprint.urls.URLFetcher.fetch">fetch()
-(weasyprint.urls.URLFetcher method)</a></li>
-<li><a
-href="api_reference.html#weasyprint.text.fonts.FontConfiguration">FontConfiguration
-(class in weasyprint.text.fonts)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.Document.fonts">fonts
-(weasyprint.document.Document attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.document.Page.forms">forms
-(weasyprint.document.Page attribute)</a></li>
+<li>FatalURLFetchingError
+(class in weasyprint.urls)</li>
+<li>fetch()
+(weasyprint.urls.URLFetcher method)</li>
+<li>FontConfiguration
+(class in weasyprint.text.fonts)</li>
+<li>fonts
+(weasyprint.document.Document attribute)</li>
+<li>forms
+(weasyprint.document.Page attribute)</li>
 </ul>
 <h5 id="g">G</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.generate_rdf_metadata">generate_rdf_metadata()
-(weasyprint.document.DocumentMetadata method)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.generator">generator
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>generate_rdf_metadata()
+(weasyprint.document.DocumentMetadata method)</li>
+<li>generator
+(weasyprint.document.DocumentMetadata attribute)</li>
 </ul>
 <h5 id="h">H</h5>
 <ul>
-<li><a href="api_reference.html#weasyprint.document.Page.height">height
-(weasyprint.document.Page attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.HTML">HTML (class in
-weasyprint)</a></li>
+<li>height
+(weasyprint.document.Page attribute)</li>
+<li>HTML (class in
+weasyprint)</li>
 </ul>
 <h5 id="i">I</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.include_in_pdf">include_in_pdf()
-(weasyprint.document.DocumentMetadata method)</a></li>
+<li>include_in_pdf()
+(weasyprint.document.DocumentMetadata method)</li>
 <li>input
 <ul>
-<li><a href="api_reference.html#cmdoption-arg-input">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 </ul>
 <h5 id="k">K</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.keywords">keywords
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>keywords
+(weasyprint.document.DocumentMetadata attribute)</li>
 </ul>
 <h5 id="l">L</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.lang">lang
-(weasyprint.document.DocumentMetadata attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.document.Page.links">links
-(weasyprint.document.Page attribute)</a></li>
+<li>lang
+(weasyprint.document.DocumentMetadata attribute)</li>
+<li>links
+(weasyprint.document.Page attribute)</li>
 </ul>
 <h5 id="m">M</h5>
 <ul>
-<li><a href="api_reference.html#weasyprint.__main__.main">main() (in
-module weasyprint.__main__)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.Document.make_bookmark_tree">make_bookmark_tree()
-(weasyprint.document.Document method)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.Document.metadata">metadata
-(weasyprint.document.Document attribute)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.modified">modified
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>main() (in
+module weasyprint.__main__)</li>
+<li>make_bookmark_tree()
+(weasyprint.document.Document method)</li>
+<li>metadata
+(weasyprint.document.Document attribute)</li>
+<li>modified
+(weasyprint.document.DocumentMetadata attribute)</li>
 <li>module
 <ul>
-<li><a
-href="api_reference.html#module-weasyprint.css.counters">weasyprint.css.counters</a></li>
-<li><a
-href="api_reference.html#module-weasyprint.document">weasyprint.document</a></li>
-<li><a
-href="api_reference.html#module-weasyprint.text.fonts">weasyprint.text.fonts</a></li>
-<li><a
-href="api_reference.html#module-weasyprint.urls">weasyprint.urls</a></li>
+<li>weasyprint.css.counters</li>
+<li>weasyprint.document</li>
+<li>weasyprint.text.fonts</li>
+<li>weasyprint.urls</li>
 </ul></li>
 </ul>
 <h5 id="o">O</h5>
 <ul>
 <li>output
 <ul>
-<li><a href="api_reference.html#cmdoption-arg-output">command line
-option</a>, [1]</li>
+<li>command line
+option, [1]</li>
 </ul></li>
 </ul>
 <h5 id="p">P</h5>
 <ul>
-<li><a href="api_reference.html#weasyprint.document.Page">Page (class in
-weasyprint.document)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.Document.pages">pages
-(weasyprint.document.Document attribute)</a></li>
+<li>Page (class in
+weasyprint.document)</li>
+<li>pages
+(weasyprint.document.Document attribute)</li>
 <li>Python Enhancement Proposals
 <ul>
-<li><a href="going_further.html#index-0">PEP 20</a></li>
+<li>PEP 20</li>
 </ul></li>
 </ul>
 <h5 id="r">R</h5>
 <ul>
-<li><a href="api_reference.html#weasyprint.HTML.render">render()
-(weasyprint.HTML method)</a></li>
+<li>render()
+(weasyprint.HTML method)</li>
 </ul>
 <h5 id="t">T</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.title">title
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>title
+(weasyprint.document.DocumentMetadata attribute)</li>
 </ul>
 <h5 id="u">U</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.Document.url_fetcher">url_fetcher
-(weasyprint.document.Document attribute)</a></li>
-<li><a href="api_reference.html#weasyprint.urls.URLFetcher">URLFetcher
-(class in weasyprint.urls)</a></li>
-<li><a
-href="api_reference.html#weasyprint.urls.URLFetcherResponse">URLFetcherResponse
-(class in weasyprint.urls)</a></li>
+<li>url_fetcher
+(weasyprint.document.Document attribute)</li>
+<li>URLFetcher
+(class in weasyprint.urls)</li>
+<li>URLFetcherResponse
+(class in weasyprint.urls)</li>
 </ul>
 <h5 id="w">W</h5>
 <ul>
 <li>weasyprint.css.counters
 <ul>
-<li><a
-href="api_reference.html#module-weasyprint.css.counters">module</a></li>
+<li>module</li>
 </ul></li>
 <li>weasyprint.document
 <ul>
-<li><a
-href="api_reference.html#module-weasyprint.document">module</a></li>
+<li>module</li>
 </ul></li>
 <li>weasyprint.text.fonts
 <ul>
-<li><a
-href="api_reference.html#module-weasyprint.text.fonts">module</a></li>
+<li>module</li>
 </ul></li>
 <li>weasyprint.urls
 <ul>
-<li><a href="api_reference.html#module-weasyprint.urls">module</a></li>
+<li>module</li>
 </ul></li>
-<li><a href="api_reference.html#weasyprint.document.Page.width">width
-(weasyprint.document.Page attribute)</a></li>
-<li><a
-href="api_reference.html#weasyprint.document.Document.write_pdf">write_pdf()
-(weasyprint.document.Document method)</a>
+<li>width
+(weasyprint.document.Page attribute)</li>
+<li>write_pdf()
+(weasyprint.document.Document method)
 <ul>
-<li><a
-href="api_reference.html#weasyprint.HTML.write_pdf">(weasyprint.HTML
-method)</a></li>
+<li>(weasyprint.HTML
+method)</li>
 </ul></li>
 </ul>
 <h5 id="x">X</h5>
 <ul>
-<li><a
-href="api_reference.html#weasyprint.document.DocumentMetadata.xmp_metadata">xmp_metadata
-(weasyprint.document.DocumentMetadata attribute)</a></li>
+<li>xmp_metadata
+(weasyprint.document.DocumentMetadata attribute)</li>
 </ul>
 <h3 id="support">Support</h3>
 <p>Skip to content</p>
@@ -7997,186 +7937,184 @@ or conditions. For full authorship information, see the version control
 history.</p>
 <p>Documentation</p>
 <ul>
-<li><a href="first_steps.html">First Steps</a>
+<li>First Steps
 <ul>
-<li><a href="first_steps.html#installation">Installation</a></li>
-<li><a href="first_steps.html#command-line">Command-Line</a></li>
-<li><a href="first_steps.html#python-library">Python Library</a></li>
-<li><a href="first_steps.html#security">Security</a></li>
+<li>Installation</li>
+<li>Command-Line</li>
+<li>Python Library</li>
+<li>Security</li>
 </ul></li>
-<li><a href="common_use_cases.html">Common Use Cases</a>
+<li>Common Use Cases
 <ul>
-<li><a
-href="common_use_cases.html#regenerate-pdfs-automatically">Regenerate
-PDFs Automatically</a></li>
-<li><a href="common_use_cases.html#include-in-web-applications">Include
-in Web Applications</a></li>
-<li><a href="common_use_cases.html#adjust-document-dimensions">Adjust
-Document Dimensions</a></li>
-<li><a href="common_use_cases.html#generate-specialized-pdfs">Generate
-Specialized PDFs</a></li>
-<li><a href="common_use_cases.html#include-pdf-forms">Include PDF
-Forms</a></li>
-<li><a href="common_use_cases.html#define-pdf-metadata">Define PDF
-Metadata</a></li>
-<li><a href="common_use_cases.html#attach-files">Attach Files</a></li>
-<li><a href="common_use_cases.html#cache-and-optimize-images">Cache and
-Optimize Images</a></li>
-<li><a
-href="common_use_cases.html#improve-rendering-speed-and-memory-use">Improve
-Rendering Speed and Memory Use</a></li>
-<li><a href="common_use_cases.html#show-log-messages">Show Log
-Messages</a></li>
+<li>Regenerate
+PDFs Automatically</li>
+<li>Include
+in Web Applications</li>
+<li>Adjust
+Document Dimensions</li>
+<li>Generate
+Specialized PDFs</li>
+<li>Include PDF
+Forms</li>
+<li>Define PDF
+Metadata</li>
+<li>Attach Files</li>
+<li>Cache and
+Optimize Images</li>
+<li>Improve
+Rendering Speed and Memory Use</li>
+<li>Show Log
+Messages</li>
 </ul></li>
-<li><a href="api_reference.html">API Reference</a>
+<li>API Reference
 <ul>
-<li><a href="api_reference.html#api-stability">API Stability</a></li>
-<li><a href="api_reference.html#versioning">Versioning</a></li>
-<li><a href="api_reference.html#command-line-api">Command-line
-API</a></li>
-<li><a href="api_reference.html#python-api">Python API</a></li>
-<li><a href="api_reference.html#supported-features">Supported
-Features</a></li>
+<li>API Stability</li>
+<li>Versioning</li>
+<li>Command-line
+API</li>
+<li>Python API</li>
+<li>Supported
+Features</li>
 </ul></li>
-<li><a href="going_further.html">Going Further</a>
+<li>Going Further
 <ul>
-<li><a href="going_further.html#why-weasyprint">Why WeasyPrint?</a></li>
-<li><a href="going_further.html#why-python">Why Python?</a></li>
-<li><a href="going_further.html#dive-into-the-source">Dive into the
-Source</a> Extra Information</li>
+<li>Why WeasyPrint?</li>
+<li>Why Python?</li>
+<li>Dive into the
+Source Extra Information</li>
 </ul></li>
-<li><a href="changelog.html">Changelog</a>
+<li>Changelog
 <ul>
-<li><a href="changelog.html#version-70-0">Version 70.0</a></li>
-<li><a href="changelog.html#version-69-0">Version 69.0</a></li>
-<li><a href="changelog.html#version-68-1">Version 68.1</a></li>
-<li><a href="changelog.html#version-68-0">Version 68.0</a></li>
-<li><a href="changelog.html#version-67-0">Version 67.0</a></li>
-<li><a href="changelog.html#version-66-0">Version 66.0</a></li>
-<li><a href="changelog.html#version-65-1">Version 65.1</a></li>
-<li><a href="changelog.html#version-65-0">Version 65.0</a></li>
-<li><a href="changelog.html#version-64-1">Version 64.1</a></li>
-<li><a href="changelog.html#version-64-0">Version 64.0</a></li>
-<li><a href="changelog.html#version-63-1">Version 63.1</a></li>
-<li><a href="changelog.html#version-63-0">Version 63.0</a></li>
-<li><a href="changelog.html#version-62-3">Version 62.3</a></li>
-<li><a href="changelog.html#version-62-2">Version 62.2</a></li>
-<li><a href="changelog.html#version-62-1">Version 62.1</a></li>
-<li><a href="changelog.html#version-62-0">Version 62.0</a></li>
-<li><a href="changelog.html#version-61-2">Version 61.2</a></li>
-<li><a href="changelog.html#version-61-1">Version 61.1</a></li>
-<li><a href="changelog.html#version-61-0">Version 61.0</a></li>
-<li><a href="changelog.html#version-60-2">Version 60.2</a></li>
-<li><a href="changelog.html#version-60-1">Version 60.1</a></li>
-<li><a href="changelog.html#version-60-0">Version 60.0</a></li>
-<li><a href="changelog.html#version-59-0">Version 59.0</a></li>
-<li><a href="changelog.html#version-59-0b1">Version 59.0b1</a></li>
-<li><a href="changelog.html#version-58-1">Version 58.1</a></li>
-<li><a href="changelog.html#version-58-0">Version 58.0</a></li>
-<li><a href="changelog.html#version-58-0b1">Version 58.0b1</a></li>
-<li><a href="changelog.html#version-57-2">Version 57.2</a></li>
-<li><a href="changelog.html#version-57-1">Version 57.1</a></li>
-<li><a href="changelog.html#version-57-0">Version 57.0</a></li>
-<li><a href="changelog.html#version-57-0b1">Version 57.0b1</a></li>
-<li><a href="changelog.html#version-56-1">Version 56.1</a></li>
-<li><a href="changelog.html#version-56-0">Version 56.0</a></li>
-<li><a href="changelog.html#version-56-0b1">Version 56.0b1</a></li>
-<li><a href="changelog.html#version-55-0">Version 55.0</a></li>
-<li><a href="changelog.html#version-55-0b1">Version 55.0b1</a></li>
-<li><a href="changelog.html#version-54-3">Version 54.3</a></li>
-<li><a href="changelog.html#version-54-2">Version 54.2</a></li>
-<li><a href="changelog.html#version-54-1">Version 54.1</a></li>
-<li><a href="changelog.html#version-54-0">Version 54.0</a></li>
-<li><a href="changelog.html#version-54-0b1">Version 54.0b1</a></li>
-<li><a href="changelog.html#version-53-4">Version 53.4</a></li>
-<li><a href="changelog.html#version-53-3">Version 53.3</a></li>
-<li><a href="changelog.html#version-53-2">Version 53.2</a></li>
-<li><a href="changelog.html#version-53-1">Version 53.1</a></li>
-<li><a href="changelog.html#version-53-0">Version 53.0</a></li>
-<li><a href="changelog.html#version-53-0b2">Version 53.0b2</a></li>
-<li><a href="changelog.html#version-53-0b1">Version 53.0b1</a></li>
-<li><a href="changelog.html#version-52-5">Version 52.5</a></li>
-<li><a href="changelog.html#version-52-4">Version 52.4</a></li>
-<li><a href="changelog.html#version-52-3">Version 52.3</a></li>
-<li><a href="changelog.html#version-52-2">Version 52.2</a></li>
-<li><a href="changelog.html#version-52-1">Version 52.1</a></li>
-<li><a href="changelog.html#version-52">Version 52</a></li>
-<li><a href="changelog.html#version-51">Version 51</a></li>
-<li><a href="changelog.html#version-50">Version 50</a></li>
-<li><a href="changelog.html#version-49">Version 49</a></li>
-<li><a href="changelog.html#version-48">Version 48</a></li>
-<li><a href="changelog.html#version-47">Version 47</a></li>
-<li><a href="changelog.html#version-46">Version 46</a></li>
-<li><a href="changelog.html#version-45">Version 45</a></li>
-<li><a href="changelog.html#version-44">Version 44</a></li>
-<li><a href="changelog.html#version-43">Version 43</a></li>
-<li><a href="changelog.html#version-43rc2">Version 43rc2</a></li>
-<li><a href="changelog.html#version-43rc1">Version 43rc1</a></li>
-<li><a href="changelog.html#version-0-42-3">Version 0.42.3</a></li>
-<li><a href="changelog.html#version-0-42-2">Version 0.42.2</a></li>
-<li><a href="changelog.html#version-0-42-1">Version 0.42.1</a></li>
-<li><a href="changelog.html#version-0-42">Version 0.42</a></li>
-<li><a href="changelog.html#version-0-41">Version 0.41</a></li>
-<li><a href="changelog.html#version-0-40">Version 0.40</a></li>
-<li><a href="changelog.html#version-0-39">Version 0.39</a></li>
-<li><a href="changelog.html#version-0-38">Version 0.38</a></li>
-<li><a href="changelog.html#version-0-37">Version 0.37</a></li>
-<li><a href="changelog.html#version-0-36">Version 0.36</a></li>
-<li><a href="changelog.html#version-0-35">Version 0.35</a></li>
-<li><a href="changelog.html#version-0-34">Version 0.34</a></li>
-<li><a href="changelog.html#version-0-33">Version 0.33</a></li>
-<li><a href="changelog.html#version-0-32">Version 0.32</a></li>
-<li><a href="changelog.html#version-0-31">Version 0.31</a></li>
-<li><a href="changelog.html#version-0-30">Version 0.30</a></li>
-<li><a href="changelog.html#version-0-29">Version 0.29</a></li>
-<li><a href="changelog.html#version-0-28">Version 0.28</a></li>
-<li><a href="changelog.html#version-0-27">Version 0.27</a></li>
-<li><a href="changelog.html#version-0-26">Version 0.26</a></li>
-<li><a href="changelog.html#version-0-25">Version 0.25</a></li>
-<li><a href="changelog.html#version-0-24">Version 0.24</a></li>
-<li><a href="changelog.html#version-0-23">Version 0.23</a></li>
-<li><a href="changelog.html#version-0-22">Version 0.22</a></li>
-<li><a href="changelog.html#version-0-21">Version 0.21</a></li>
-<li><a href="changelog.html#version-0-20-2">Version 0.20.2</a></li>
-<li><a href="changelog.html#version-0-20-1">Version 0.20.1</a></li>
-<li><a href="changelog.html#version-0-20">Version 0.20</a></li>
-<li><a href="changelog.html#version-0-19-2">Version 0.19.2</a></li>
-<li><a href="changelog.html#version-0-19-1">Version 0.19.1</a></li>
-<li><a href="changelog.html#version-0-19">Version 0.19</a></li>
-<li><a href="changelog.html#version-0-18">Version 0.18</a></li>
-<li><a href="changelog.html#version-0-17-1">Version 0.17.1</a></li>
-<li><a href="changelog.html#version-0-17">Version 0.17</a></li>
-<li><a href="changelog.html#version-0-16">Version 0.16</a></li>
-<li><a href="changelog.html#version-0-15">Version 0.15</a></li>
-<li><a href="changelog.html#version-0-14">Version 0.14</a></li>
-<li><a href="changelog.html#version-0-13">Version 0.13</a></li>
-<li><a href="changelog.html#version-0-12">Version 0.12</a></li>
-<li><a href="changelog.html#version-0-11">Version 0.11</a></li>
-<li><a href="changelog.html#version-0-10">Version 0.10</a></li>
-<li><a href="changelog.html#version-0-9">Version 0.9</a></li>
-<li><a href="changelog.html#version-0-8">Version 0.8</a></li>
-<li><a href="changelog.html#version-0-7-1">Version 0.7.1</a></li>
-<li><a href="changelog.html#version-0-7">Version 0.7</a></li>
-<li><a href="changelog.html#version-0-6-1">Version 0.6.1</a></li>
-<li><a href="changelog.html#version-0-6">Version 0.6</a></li>
-<li><a href="changelog.html#version-0-5">Version 0.5</a></li>
-<li><a href="changelog.html#version-0-4">Version 0.4</a></li>
-<li><a href="changelog.html#version-0-3-1">Version 0.3.1</a></li>
-<li><a href="changelog.html#version-0-3">Version 0.3</a></li>
-<li><a href="changelog.html#version-0-2">Version 0.2</a></li>
-<li><a href="changelog.html#version-0-1">Version 0.1</a></li>
+<li>Version 70.0</li>
+<li>Version 69.0</li>
+<li>Version 68.1</li>
+<li>Version 68.0</li>
+<li>Version 67.0</li>
+<li>Version 66.0</li>
+<li>Version 65.1</li>
+<li>Version 65.0</li>
+<li>Version 64.1</li>
+<li>Version 64.0</li>
+<li>Version 63.1</li>
+<li>Version 63.0</li>
+<li>Version 62.3</li>
+<li>Version 62.2</li>
+<li>Version 62.1</li>
+<li>Version 62.0</li>
+<li>Version 61.2</li>
+<li>Version 61.1</li>
+<li>Version 61.0</li>
+<li>Version 60.2</li>
+<li>Version 60.1</li>
+<li>Version 60.0</li>
+<li>Version 59.0</li>
+<li>Version 59.0b1</li>
+<li>Version 58.1</li>
+<li>Version 58.0</li>
+<li>Version 58.0b1</li>
+<li>Version 57.2</li>
+<li>Version 57.1</li>
+<li>Version 57.0</li>
+<li>Version 57.0b1</li>
+<li>Version 56.1</li>
+<li>Version 56.0</li>
+<li>Version 56.0b1</li>
+<li>Version 55.0</li>
+<li>Version 55.0b1</li>
+<li>Version 54.3</li>
+<li>Version 54.2</li>
+<li>Version 54.1</li>
+<li>Version 54.0</li>
+<li>Version 54.0b1</li>
+<li>Version 53.4</li>
+<li>Version 53.3</li>
+<li>Version 53.2</li>
+<li>Version 53.1</li>
+<li>Version 53.0</li>
+<li>Version 53.0b2</li>
+<li>Version 53.0b1</li>
+<li>Version 52.5</li>
+<li>Version 52.4</li>
+<li>Version 52.3</li>
+<li>Version 52.2</li>
+<li>Version 52.1</li>
+<li>Version 52</li>
+<li>Version 51</li>
+<li>Version 50</li>
+<li>Version 49</li>
+<li>Version 48</li>
+<li>Version 47</li>
+<li>Version 46</li>
+<li>Version 45</li>
+<li>Version 44</li>
+<li>Version 43</li>
+<li>Version 43rc2</li>
+<li>Version 43rc1</li>
+<li>Version 0.42.3</li>
+<li>Version 0.42.2</li>
+<li>Version 0.42.1</li>
+<li>Version 0.42</li>
+<li>Version 0.41</li>
+<li>Version 0.40</li>
+<li>Version 0.39</li>
+<li>Version 0.38</li>
+<li>Version 0.37</li>
+<li>Version 0.36</li>
+<li>Version 0.35</li>
+<li>Version 0.34</li>
+<li>Version 0.33</li>
+<li>Version 0.32</li>
+<li>Version 0.31</li>
+<li>Version 0.30</li>
+<li>Version 0.29</li>
+<li>Version 0.28</li>
+<li>Version 0.27</li>
+<li>Version 0.26</li>
+<li>Version 0.25</li>
+<li>Version 0.24</li>
+<li>Version 0.23</li>
+<li>Version 0.22</li>
+<li>Version 0.21</li>
+<li>Version 0.20.2</li>
+<li>Version 0.20.1</li>
+<li>Version 0.20</li>
+<li>Version 0.19.2</li>
+<li>Version 0.19.1</li>
+<li>Version 0.19</li>
+<li>Version 0.18</li>
+<li>Version 0.17.1</li>
+<li>Version 0.17</li>
+<li>Version 0.16</li>
+<li>Version 0.15</li>
+<li>Version 0.14</li>
+<li>Version 0.13</li>
+<li>Version 0.12</li>
+<li>Version 0.11</li>
+<li>Version 0.10</li>
+<li>Version 0.9</li>
+<li>Version 0.8</li>
+<li>Version 0.7.1</li>
+<li>Version 0.7</li>
+<li>Version 0.6.1</li>
+<li>Version 0.6</li>
+<li>Version 0.5</li>
+<li>Version 0.4</li>
+<li>Version 0.3.1</li>
+<li>Version 0.3</li>
+<li>Version 0.2</li>
+<li>Version 0.1</li>
 </ul></li>
-<li><a href="contribute.html">Contribute</a>
+<li>Contribute
 <ul>
-<li><a href="contribute.html#code-issues">Code &amp; Issues</a></li>
-<li><a href="contribute.html#tests">Tests</a></li>
-<li><a href="contribute.html#documentation">Documentation</a></li>
+<li>Code &amp; Issues</li>
+<li>Tests</li>
+<li>Documentation</li>
 </ul></li>
-<li><a href="support.html">Support</a>
+<li>Support
 <ul>
-<li><a href="support.html#professional-support">Professional
-Support</a></li>
-<li><a href="support.html#sponsorship">Sponsorship</a></li>
+<li>Professional
+Support</li>
+<li>Sponsorship</li>
 </ul></li>
 </ul>
 <h2 id="miscellaneous">Miscellaneous</h2>
@@ -8390,11 +8328,9 @@ explicitly reference fonts using URLs.</p>
 this:</p>
 <pre><code>weasyprint [weasyprint.org](https://weasyprint.org) /tmp/weasyprint-website.pdf</code></pre>
 <p>You may see warnings on the standard error output about unsupported
-CSS properties. See <a
-href="api_reference.html#command-line-api">Command-line API</a> for the
+CSS properties. See Command-line API for the
 details of all available options.</p>
-<p>In particular, the <code>-s</code> option can add a filename for a <a
-href="api_reference.html#stylesheet-origins">user stylesheet</a>. For
+<p>In particular, the <code>-s</code> option can add a filename for a user stylesheet. For
 quick experimentation however, you may not want to create a file. In
 bash or zsh, you can use the shell’s redirection instead:</p>
 <pre><code>weasyprint [weasyprint.org](https://weasyprint.org) /tmp/weasyprint-website.pdf \
@@ -8418,9 +8354,7 @@ HTML(&#39;[weasyprint.org](https://weasyprint.org/)&#39;).write_pdf(&#39;/tmp/we
 Objects¶</h6>
 <p>If you have a file name, an absolute URL or a readable <a
 href="https://docs.python.org/3/glossary.html#term-file-object">file
-object</a>, you can just pass it to <a
-href="api_reference.html#weasyprint.HTML"><code>HTML</code></a> or <a
-href="api_reference.html#weasyprint.CSS"><code>CSS</code></a> to create
+object</a>, you can just pass it to <code>HTML</code> or <code>CSS</code> to create
 an instance. Alternatively, use a named argument so that no guessing is
 involved:</p>
 <pre><code>from weasyprint import HTML
@@ -8460,10 +8394,8 @@ html.write_pdf(
     &#39;/tmp/example.pdf&#39;, stylesheets=[css],
     font_config=font_config)</code></pre>
 <h6 id="rendering-to-a-single-file">Rendering to a Single File¶</h6>
-<p>Once you have a <a
-href="api_reference.html#weasyprint.HTML"><code>HTML</code></a> object,
-call its <a
-href="api_reference.html#weasyprint.HTML.write_pdf"><code>HTML.write_pdf()</code></a>
+<p>Once you have a <code>HTML</code> object,
+call its <code>HTML.write_pdf()</code>
 method to get the rendered document in a single PDF file.</p>
 <p>Without arguments, this method returns a byte string in memory. If
 you pass a file name or a writable <a
@@ -8471,18 +8403,13 @@ href="https://docs.python.org/3/glossary.html#term-file-object">file
 object</a>, they will write there directly instead. (Warning: with a
 filename, these methods will overwrite existing files silently.)</p>
 <h6 id="rendering-individual-pages">Rendering Individual Pages¶</h6>
-<p>If you want more than a single PDF, the <a
-href="api_reference.html#weasyprint.HTML.render"><code>HTML.render()</code></a>
-method gives you a <a
-href="api_reference.html#weasyprint.document.Document"><code>document.Document</code></a>
-object with access to individual <a
-href="api_reference.html#weasyprint.document.Page"><code>document.Page</code></a>
+<p>If you want more than a single PDF, the <code>HTML.render()</code>
+method gives you a <code>document.Document</code>
+object with access to individual <code>document.Page</code>
 objects. Thus you can get the number of pages, their size[1], the
-details of hyperlinks and bookmarks, etc. Documents also have a <a
-href="api_reference.html#weasyprint.document.Document.write_pdf"><code>document.Document.write_pdf()</code></a>
-method, and you can get a subset of the pages with <a
-href="api_reference.html#weasyprint.document.Document.copy"><code>document.Document.copy()</code></a>.</p>
-<p>See the <a href="api_reference.html#python-api">Python API</a> for
+details of hyperlinks and bookmarks, etc. Documents also have a <code>document.Document.write_pdf()</code>
+method, and you can get a subset of the pages with <code>document.Document.copy()</code>.</p>
+<p>See the Python API for
 details. A few random examples:</p>
 <pre><code># Write odd and even pages separately:
 #   Lists count from 0 but page numbers usually from 1
@@ -8511,11 +8438,8 @@ print_outline(document.make_bookmark_tree())</code></pre>
 such as images or CSS stylesheets. The default fetcher can natively open
 file and HTTP URLs, but the HTTP client does not support advanced
 features like cookies or authentication. This can be worked-around by
-passing a custom <a
-href="api_reference.html#weasyprint.urls.URLFetcher"><code>URLFetcher</code></a>
-to the <a
-href="api_reference.html#weasyprint.HTML"><code>HTML</code></a> or <a
-href="api_reference.html#weasyprint.CSS"><code>CSS</code></a>
+passing a custom <code>URLFetcher</code>
+to the <code>HTML</code> or <code>CSS</code>
 classes.</p>
 <p>Some features, such as the timeout delay, can be configured as
 parameters:</p>
@@ -8540,8 +8464,7 @@ source = &#39;&lt;img src=&quot;graph:42,10.3,87&quot;&gt;&#39;
 HTML(string=source, url_fetcher=MyFetcher()).write_pdf(&#39;out.pdf&#39;)</code></pre>
 <p>By default, all errors raised by the fetcher are caught by WeasyPrint
 and emit a warning. If you want some errors to be fatal and stop the
-rendering, you can raise a <a
-href="api_reference.html#weasyprint.urls.FatalURLFetchingError"><code>urls.FatalURLFetchingError</code></a>.</p>
+rendering, you can raise a <code>urls.FatalURLFetchingError</code>.</p>
 <pre><code>from weasyprint import HTML
 from weasyprint.urls import URLFetcher, FatalURLFetchingError
 
@@ -8566,8 +8489,7 @@ href="https://github.com/fdemmer/django-weasyprint">Django-Weasyprint</a>
 for <a href="https://www.djangoproject.com/">Django</a> both make use of
 a custom URL fetcher to integrate WeasyPrint and use the filesystem
 instead of a network call for static and media files.</p>
-<p>A custom fetcher should be returning a <a
-href="api_reference.html#weasyprint.urls.URLFetcherResponse"><code>urls.URLFetcherResponse</code></a>.</p>
+<p>A custom fetcher should be returning a <code>urls.URLFetcherResponse</code>.</p>
 <p>If a <code>file_obj</code> is given, the resource will be closed
 automatically by the function internally used by WeasyPrint to retrieve
 data.</p>
@@ -8662,8 +8584,7 @@ URLs or filters access depending on given paths.</li>
 <li>follow solutions listed in Long Renderings.</li>
 </ul>
 <h6 id="attachments">Attachments¶</h6>
-<p>WeasyPrint offers different ways to add <a
-href="common_use_cases.html#attach-files">attachments</a> into the PDFs
+<p>WeasyPrint offers different ways to add attachments into the PDFs
 it generates. All the files that WeasyPrint can reach, both local and
 distant, can be included and will be available to PDF readers.</p>
 <p>It means that, by default, with untrusted HTML or CSS, the PDFs
@@ -8701,5 +8622,6 @@ the ones listed here for WeasyPrint.</p>
 <p>Security advices apply for untrusted SVG files as they apply for
 untrusted HTML and CSS documents.</p>
 <p>Note that WeasyPrint’s URL fetcher is used to render SVG files.</p>
+</main>
 </body>
 </html>

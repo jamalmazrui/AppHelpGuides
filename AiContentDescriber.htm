@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AI Content Describer help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#ai-content-describer-help"
+id="toc-ai-content-describer-help">AI Content Describer help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-the-add-on" id="toc-about-the-add-on">About the
+add-on</a></li>
+<li><a href="#setting-up-a-model" id="toc-setting-up-a-model">Setting up
+a model</a></li>
+<li><a href="#using-the-add-on" id="toc-using-the-add-on">Using the
+add-on</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="ai-content-describer-help">AI Content Describer help</h1>
+<p>This guide holds the documentation for AI Content Describer, a free
+add-on for the NVDA screen reader that asks an AI model to describe
+whatever is in focus, the navigator object, the whole screen, an image
+on the clipboard or a picture from your camera, and lets you ask
+follow-up questions. It was gathered from the add-on’s GitHub repository
+on 11 November 2026.</p>
+<p>The add-on’s whole manual is one long readme, so this guide divides
+it at the readme’s own headings. Setting up a model holds one article
+for each AI service the add-on supports, from those that need a key you
+get from the company to models that run on your own computer.</p>
+<p>Left out on purpose: the parts written for people who change the
+add-on’s code rather than use it – the readme’s sections on building,
+translating and contributing, and a separate developer document on
+adding a new AI service. The readme’s translations into ten other
+languages were not gathered.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>About the add-on
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#models">Models</a></li>
+<li><a href="#use-case">Use case</a></li>
+<li><a href="#what-it-does">What it does</a></li>
+</ul></li>
+<li>Setting up a model
+<ul>
+<li><a
+href="#activating-the-vivo-bluelm-vision-model-via-nvda-cn">Activating
+the VIVO BlueLM Vision Model via NVDA-CN</a></li>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#obtaining-an-api-key-from-anthropic">Obtaining an API key
+from Anthropic</a></li>
+<li><a href="#obtaining-an-api-key-from-google">Obtaining an API key
+from Google</a></li>
+<li><a href="#obtaining-an-api-key-from-kimi-moonshot-ai">Obtaining an
+API key from Kimi (Moonshot AI)</a></li>
+<li><a href="#obtaining-an-api-key-from-mistral">Obtaining an API key
+from Mistral</a></li>
+<li><a href="#obtaining-an-api-key-from-open-ai">Obtaining an API key
+from Open-AI</a></li>
+<li><a href="#setting-up-datalab-chandra-2">Setting up Datalab Chandra
+2</a></li>
+<li><a href="#setting-up-litellm-proxy">Setting up LiteLLM
+Proxy</a></li>
+<li><a href="#setting-up-llama.cpp">Setting up llama.cpp</a></li>
+<li><a href="#setting-up-ollama">Setting up Ollama</a></li>
+<li><a href="#setting-up-seer">Setting up Seer</a></li>
+<li><a href="#which-model-should-i-use">Which model should I
+use?</a></li>
+</ul></li>
+<li>Using the add-on
+<ul>
+<li><a href="#computer-use">Computer use</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#following-up-on-a-description">Following-up on a
+description</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul></li>
+</ul>
+<h2 id="about-the-add-on">About the add-on</h2>
+<h3 id="features">Features</h3>
+<ul>
+<li>Describe the focus object, navigator object, entire screen, or snap
+a photo from the onboard camera</li>
+<li>Describe any image that has been copied to the clipboard, be it a
+picture from an email or a path in windows explorer</li>
+<li>Copy an image of the focus object, navigator object, or entire
+screen to the clipboard, to paste into other apps</li>
+<li>Indicate whether the user’s face is positioned at the center of the
+frame using computer vision algorithms (does not require paid API
+access)</li>
+<li>Use supported models to control the active application with mouse
+and keyboard actions for potentially inaccessible tasks</li>
+<li>Free to use by default, optionally add your own API key for more
+models</li>
+<li>Supports multiple providers (OpenAI’s GPT and the free Pollinations
+tier, Google’s Gemini, Mistral’s Pixtral Large, Anthropic’s Claude,
+xAI’s Grok, Moonshot AI’s Kimi, vivo BlueLM Vision via NVDA-CN, Datalab
+Chandra 2, Ollama, llama.cpp, LiteLLM Proxy, and Seer)</li>
+<li>Supports a wide variety of formats including PNG (.png), JPEG (.jpeg
+and .jpg), WEBP (.webp), and non-animated GIF (.gif)</li>
+<li>Optionally caches responses to preserve API quota</li>
+<li>For advanced use, customize the prompt and token count to tailor
+information to your needs</li>
+<li>Ask follow-up questions and attach additional images</li>
+<li>Markdown rendering to easily access structured information (just
+enable the “open results in a browsable dialog” setting and embed
+e.g. “respond in Markdown” at the end of your prompts)</li>
+</ul>
+<h3 id="models">Models</h3>
+<ul>
+<li><a href="https://pollinations.ai/">Pollinations</a>: The team behind
+Pollinations.AI generously sponsors free GPT4 access for this project,
+so users do not need to supply their own API key. Note that the service
+has been observed to be buggy, and we highly recommend using your own
+keys to realize the full benefits of this project.</li>
+<li><a href="https://platform.openai.com/docs/models">OpenAI GPT
+models</a>: Requires an OpenAI API key. Includes the GPT-5.4 family (5.4
+and 5.4 mini), the GPT-5.5 family (5.5 and 5.5 pro), the GPT-6 family (6
+Astra and 6 Luna), and the GPT-6.1 family (6.1 Sol and 6.1 Terra).
+Computer use is supported by the GPT-5.4, GPT-5.5, GPT-6, and GPT-6.1
+families.</li>
+<li><a href="https://deepmind.google/models/gemini/">Google Gemini</a>,
+including 2.5 Flash, 2.5 Flash-Lite, 2.5 Pro, 3.1 Flash-Lite, 3.1 Pro
+Preview, 3.5 Flash, 3.5 Flash-Lite, 3.6 Flash, 3.7 Flash, and 3.8 Flash
+models.</li>
+<li><a href="https://docs.anthropic.com/claude/docs/vision">Anthropic
+Claude</a>, including Claude 4.5 (Sonnet, Opus), 4.6 (Sonnet, Opus), 4.7
+Opus, 4.8 Opus, 5 (Sonnet, Opus, Fable), 5.1 Fable, and 5.5 (Haiku,
+Sonnet, Opus). All of these support computer use.</li>
+<li><a href="https://mistral.ai/en/news/pixtral-large">Pixtral
+Large</a></li>
+<li><a href="https://docs.x.ai/developers/models">xAI Grok</a>,
+including Grok 4.20 (non-reasoning), 4.3, 4.5, 4.6, and 4.7.</li>
+<li><a
+href="https://platform.kimi.ai/docs/guide/use-kimi-vision-model">Kimi</a>,
+Moonshot AI’s multimodal models, including Kimi K3 and Kimi K2.6.</li>
+<li>vivo BlueLM Vision: a multimodal model from vivo, accessed via a
+free NVDA-CN account. See the setup section below.</li>
+<li><a href="https://github.com/datalab-to/chandra">Datalab Chandra
+2</a>: State-of-the-art vision and OCR model from Datalab specializing
+in complex document layouts, tables, forms, handwriting, charts, and
+math. Supports Datalab’s managed cloud API (at <a
+href="https://www.datalab.to">datalab.to</a>) or self-hosted deployments
+via vLLM (using <code>chandra_vllm</code> or OpenAI-compatible
+<code>/v1</code> endpoints).</li>
+<li><a href="https://ollama.com/">Ollama (unstable)</a></li>
+<li><a href="https://github.com/ggerganov/llama.cpp">llama.cpp
+(extremely unstable and slow depending on your hardware, tested to work
+with llava-v1.5/1.6, BakLLaVA, Obsidian, and MobileVLM 1.7B/3B
+models)</a></li>
+<li><a href="https://docs.litellm.ai/docs/proxy/quick_start">LiteLLM
+Proxy</a>: Access multiple AI models through a unified proxy server.
+Requires a LiteLLM proxy server URL, optionally an API key depending on
+your proxy configuration. Appears as “LiteLLM Proxy” in the model
+configuration dialog. Supports dynamic model selection and follow-up
+questions. Compatible with all formats (PNG, JPEG, WEBP, GIF).</li>
+<li><a href="https://github.com/recursia-lab/Seer">Seer</a>: Runs
+PaliGemma2 locally via the Seer daemon. No API key or internet
+connection required. Note: this is a captioning-only model. Prompts and
+follow-up questions are not supported.</li>
+</ul>
+<p>Follow the instructions provided below to get each of these
+working.</p>
+<h3 id="use-case">Use case</h3>
+<p>There were a few primary motivations behind this project.</p>
+<p>NVDA is capable of performing optical character recognition (OCR) out
+of the box, which is a game changer. If you are trying to get text out
+of an image or PDF document, this is what you’re looking for.</p>
+<p>However, OCR is only able to analyze data that <em>might</em> be
+text. It falls short at considering the context, objects and
+relationships conveyed in those images. And the internet is full of
+them. Logos, portraits, memes, icons, charts, diagrams, bar/line graphs…
+You name it. They’re everywhere, and usually not in a format that screen
+reader users can interpret. Until recently, there has been an unwavering
+reliance on content authors providing alternative text descriptions.
+While this is still a must, it’s difficult to change the fact that a
+high standard of quality happens to be the exception, not the rule.</p>
+<p>Now, the possibilities are almost endless. You might:</p>
+<ul>
+<li>Visualize the desktop or a specific window to understand the
+placement of icons when training others</li>
+<li>Get detailed info about the status of games, virtual machines, etc
+when sound is insufficient or unavailable</li>
+<li>Figure out what is displayed in a graph</li>
+<li>Demystify screenshots or screen shares in Zoom or Microsoft
+Teams</li>
+<li>Ask a supported model to help operate an inaccessible app or
+complete a task in the foreground window</li>
+<li>Ensure your face is looking clearly at the camera and that your
+background is professional before recording videos or participating in
+online meetings</li>
+</ul>
+<h3 id="what-it-does">What it does</h3>
+<p>This add-on makes it possible to obtain detailed descriptions for
+images, user interface controls, and other visually inaccessible
+content.</p>
+<p>Leveraging the multimodal capabilities of advanced AI models and
+computer vision algorithms, we aim to deliver best-in-class content
+descriptions and increase independence overall. For more information
+about the underlying models, refer to the corresponding section of this
+document.</p>
+<h2 id="setting-up-a-model">Setting up a model</h2>
+<h3 id="activating-the-vivo-bluelm-vision-model-via-nvda-cn">Activating
+the VIVO BlueLM Vision Model via NVDA-CN</h3>
+<p>This service is made available free of charge through a partnership
+between VIVO (vivo.com.cn) and the NVDA Chinese Community (NVDACN). It
+provides high-quality multimodal recognition and is the recommended
+model for all users, especially those getting started.</p>
+<p>To use this model, you only need a free NVDA-CN account.</p>
+<ol type="1">
+<li>Create an Account: <a
+href="https://nvdacn.com/admin/register.php">Go to the NVDA-CN
+registration page</a>.
+<ul>
+<li><strong>Note</strong>: The page is currently in Chinese. We
+recommend using your browser’s built-in translation feature to complete
+the form.</li>
+<li>You will be asked for a username, password, and a valid email
+address. Be sure to store your password securely, as automated password
+recovery is not yet implemented.</li>
+</ul></li>
+<li>Verify Your Email: Check your inbox for a verification email and
+click the link inside to activate your account.</li>
+<li>Configure the Add-on:
+<ul>
+<li>Open the NVDA settings dialog and navigate to the “AI Content
+Describer” category.</li>
+<li>Select the “Manage models” button.</li>
+<li>From the list of providers, choose “vivo BlueLM Vision
+(NVDA-CN)”.</li>
+<li>Enter your NVDA-CN username and password into the corresponding
+fields.</li>
+<li>Click OK to save your credentials.</li>
+</ul></li>
+</ol>
+<p>You are now set up to use the VIVO model. For any account-related
+issues, you can contact the NVDA-CN team at
+<code>support@nvdacn.com</code>.</p>
+<h3 id="getting-started">Getting started</h3>
+<p>Download the latest release of the add-on from <a
+href="https://github.com/cartertemm/AI-content-describer/releases/latest/">this
+link</a>. Click on the file on a computer with NVDA installed, and
+proceed with the installation as prompted.</p>
+<p>The first time NVDA starts with the add-on, it asks to download some
+extra libraries. See the <code>Dependencies</code> section of this
+document for details.</p>
+<p>As of version 2025.06.05, usage of GPT4 is free thanks to the
+generosity of the community behind PollinationsAI.</p>
+<p>If you have the resources and interest in exploring additional
+models, you can always use your own API key and reduce requests to their
+servers. If you don’t, feel free to skip down to the <code>usage</code>
+section of this document.</p>
+<p>Follow the instructions below to obtain an API key from a supported
+provider.</p>
+<h3 id="obtaining-an-api-key-from-anthropic">Obtaining an API key from
+Anthropic</h3>
+<ol type="1">
+<li>Login to the <a href="https://console.anthropic.com/login">Anthropic
+console</a>.</li>
+<li>Click on your profile -&gt; API keys.</li>
+<li>Click Create Key.</li>
+<li>Enter a name for the key, like “AIContentDescriber”, then click on
+“Create Key” and copy the value that shows up. This is what you will
+paste into the API key field under the Ai Content Describer category of
+the NVDA settings dialog -&gt; manage models -&gt; any Claude model (for
+example “Claude 5 Sonnet”).</li>
+<li>If you haven’t already, purchase at least $5 in credits under the <a
+href="https://console.anthropic.com/settings/plans">anthropic plans
+page</a>.</li>
+</ol>
+<h3 id="obtaining-an-api-key-from-google">Obtaining an API key from
+Google</h3>
+<ol type="1">
+<li>You will first need to create a Google workspace project by going to
+<a href="https://console.cloud.google.com/projectcreate">Google cloud
+console</a>. Make sure you are logged in to your google account.</li>
+<li>Create a name between four and thirty characters, like “Gemini” or
+“NVDA add-on”</li>
+<li>Navigate to <a
+href="https://makersuite.google.com/app/apikey">Google AI studio API
+keys page</a></li>
+<li>Click “create API key”</li>
+<li>In the NVDA settings dialog, scroll down to the AI Content Describer
+category, then choose “manage models (alt+m)”, select “Google Gemini” as
+your provider, tab into the API key field, and paste the key you just
+generated here.</li>
+</ol>
+<h3 id="obtaining-an-api-key-from-kimi-moonshot-ai">Obtaining an API key
+from Kimi (Moonshot AI)</h3>
+<ol type="1">
+<li>Sign into or create an account on the <a
+href="https://platform.kimi.ai/">Kimi developer platform</a>.</li>
+<li>Once logged in, open the API keys section of the console and create
+a new key.</li>
+<li>Copy the key to your clipboard. This value is what you will paste
+into the API key field under the AI Content Describer category of the
+NVDA settings dialog -&gt; manage models -&gt; Kimi K3 (or another Kimi
+model).</li>
+<li>Fund the account, if applicable.</li>
+</ol>
+<h3 id="obtaining-an-api-key-from-mistral">Obtaining an API key from
+Mistral</h3>
+<ol type="1">
+<li>Sign into or create a MistralAI account by going to the <a
+href="https://auth.mistral.ai/ui/login">MistralAI login page</a>.</li>
+<li>If you are creating or logging into an account for the first time,
+add a workspace as prompted, supplying a name and accepting the terms
+and conditions.</li>
+<li>Once logged in, select “API keys” from the menu.</li>
+<li>Click “create a new key”, and copy it to your clipboard. This value
+is what you will paste into the API key field under the Ai Content
+Describer category of the NVDA settings dialog -&gt; manage models -&gt;
+Pixtral Large.</li>
+<li>Fund the account, if applicable.</li>
+</ol>
+<h3 id="obtaining-an-api-key-from-open-ai">Obtaining an API key from
+Open-AI</h3>
+<ol type="1">
+<li>Go to <a
+href="https://platform.openai.com/account/api-keys">open-AI’s API key
+page</a></li>
+<li>If you don’t yet have an account, create one. If you do, log
+in.</li>
+<li>On the API keys page, click to create a new secret key. Copy it to
+your clipboard.</li>
+<li>Fund the account with at least $1</li>
+<li>In the NVDA settings dialog, scroll down to the AI Content Describer
+category, then choose “manage models (alt+m)”, select any of the OpenAI
+models (for example “GPT-6.1 Sol”) as the provider, tab into the API key
+field, and paste the key you just generated here.</li>
+</ol>
+<p>At the time of this writing, Open-AI issues credits to new developer
+accounts that can be used for three months, after which they are lost.
+Following this period, you will have to purchase credits. Typical usage
+shouldn’t ever exceed $5.00 per month. For a point of reference, the
+original version of this add-on was developed for slightly under a
+dollar. It is always possible to login to your OpenAI account and click
+on “usage” to get your quota.</p>
+<h3 id="setting-up-datalab-chandra-2">Setting up Datalab Chandra 2</h3>
+<p>Datalab Chandra 2 is a state-of-the-art document intelligence and OCR
+model specializing in complex layouts, tables, forms, handwriting,
+charts, and math formulas. It can be used via Datalab’s managed cloud
+API, an on-premise container, or via a self-hosted vLLM instance.</p>
+<h4 id="option-a-using-datalabs-cloud-api-recommended">Option A: Using
+Datalab’s Cloud API (Recommended)</h4>
+<ol type="1">
+<li>Sign up for an account at <a
+href="https://www.datalab.to">datalab.to</a>. New accounts receive free
+trial credits.</li>
+<li>Visit the <a href="https://www.datalab.to/app/keys">API keys
+page</a> and generate an API key.</li>
+<li>In the NVDA settings dialog, navigate to the AI Content Describer
+category, choose “manage models (alt+m)”, and select “Datalab Chandra
+2”.</li>
+<li>Enter your API key into the “API key” field.</li>
+<li>The Base URL is configured to
+<code>https://www.datalab.to/api/v1/convert</code> by default. You can
+adjust the processing mode (<code>fast</code>, <code>balanced</code>, or
+<code>accurate</code>) depending on your requirements.</li>
+<li>Click OK. The model will now be available in the AI Content
+Describer menu.</li>
+</ol>
+<h4 id="option-b-self-hosted-with-vllm">Option B: Self-Hosted with
+vLLM</h4>
+<ol type="1">
+<li>Start your local vLLM server with Chandra 2 (e.g., using
+<code>chandra_vllm</code> or
+<code>vllm serve datalab-to/chandra-ocr-2</code>). By default, the
+server runs on <code>http://localhost:8000/v1</code>.</li>
+<li>In NVDA settings -&gt; AI Content Describer -&gt; Manage models
+-&gt; “Datalab Chandra 2”, enter your local endpoint into the “Base URL”
+field (e.g., <code>http://localhost:8000/v1</code>).</li>
+<li>Set the model name if different from the default
+(<code>datalab-to/chandra-ocr-2</code>), leave the API key blank (or
+provide a bearer token if authentication is enabled), and click OK.</li>
+</ol>
+<h3 id="setting-up-litellm-proxy">Setting up LiteLLM Proxy</h3>
+<p>LiteLLM Proxy provides a unified interface to access multiple AI
+models through a single endpoint, simplifying model management and
+allowing easy switching between providers.</p>
+<ol type="1">
+<li>Set up a LiteLLM proxy server following the <a
+href="https://docs.litellm.ai/docs/proxy/quick_start">LiteLLM proxy
+documentation</a>. You can run the proxy locally or use a remote
+server.</li>
+<li>If running locally, the quickest way to get started is:</li>
+</ol>
+<pre><code>pip install &#39;litellm[proxy]&#39;
+litellm --model gpt-4o</code></pre>
+<p>This will start a proxy server at <code>http://localhost:4000</code>
+that forwards requests to OpenAI’s GPT-4o. 3. For production use, create
+a <code>config.yaml</code> file to configure multiple models and
+authentication. See the <a
+href="https://docs.litellm.ai/docs/proxy/configs">LiteLLM configuration
+guide</a> for details. 4. In the NVDA settings dialog, scroll down to
+the AI Content Describer category, then choose “manage models (alt+m)”,
+select “LiteLLM Proxy” as your provider. 5. Enter your proxy server URL
+in the base URL field (e.g., <code>http://localhost:4000</code> for
+local or your remote server URL). 6. If your proxy requires
+authentication, enter the API key in the API key field. If not, leave it
+blank. 7. Click the “List models” button to fetch available models from
+your proxy, then select the model you want to use from the dropdown. 8.
+Adjust other settings like prompt, max tokens, and timeout as needed,
+then click OK.</p>
+<p>Note: The models available and their capabilities depend on your
+LiteLLM proxy configuration. Ensure your proxy is configured with
+vision-capable models for image description.</p>
+<h3 id="setting-up-llama.cpp">Setting up llama.cpp</h3>
+<p>This provider is currently somewhat buggy, and your mileage may vary.
+It should really only be attempted by advanced users with an interest in
+running local self-hosted models, and the hardware to do so.</p>
+<ol type="1">
+<li>Download llama.cpp. At the time of this writing, this <a
+href="https://github.com/ggerganov/llama.cpp/pull/5882">pull request</a>
+removes multimodal capabilities so you will want to use the <a
+href="https://github.com/ggerganov/llama.cpp/releases/tag/b2356">last
+version with support for this</a>. If you are running on an Nvidia
+graphics adapter with CUDA support, download these prebuilt binaries: <a
+href="https://github.com/ggerganov/llama.cpp/releases/download/b2356/llama-b2356-bin-win-cublas-cu12.2.0-x64.zip">llama-b2356-bin-win-cublas-cu12.2.0-x64.zip</a>
+and <a
+href="https://github.com/ggerganov/llama.cpp/releases/download/b2356/cudart-llama-bin-win-cu12.2.0-x64.zip">cudart-llama-bin-win-cu12.2.0-x64.zip</a>
+The steps for working with a different graphics adapter are out of
+scope, but can be found in the llama.cpp readme.</li>
+<li>Extract both of these files into the same folder.</li>
+<li>Locate the quantized formats of the models you’d like to use from
+Huggingface. For LLaVA 1.6 Vicuna 7B: <a
+href="https://huggingface.co/cjpais/llava-v1.6-vicuna-7b-gguf/blob/main/llava-v1.6-vicuna-7b.Q4_K_M.gguf">llava-v1.6-vicuna-7b.Q4_K_M.gguf</a>
+and <a
+href="https://huggingface.co/cjpais/llava-v1.6-vicuna-7b-gguf/blob/main/mmproj-model-f16.gguf">mmproj-model-f16.gguf</a></li>
+<li>Put these files in the folder with the rest of the llama.cpp
+binaries.</li>
+<li>From a command prompt, run the llava.cpp server binary, passing the
+.gguf files for the model and multimodal projector (as follows):</li>
+</ol>
+<pre><code>server.exe -m llava-v1.6-vicuna-7b.Q4_K_M.gguf --mmproj mmproj-model-f16.gguf</code></pre>
+<ol start="6" type="1">
+<li>In the NVDA settings dialog, scroll down to the AI Content Describer
+category, then choose “manage models (alt+m)”, select “llama.cpp” as
+your provider, tab into the base URL field, and enter the endpoint shown
+in the console (defaults to <code>http://localhost:8080</code>).</li>
+<li>Alternatively, you may omit some of these steps and run llama.cpp on
+a remote server with higher specs than your local machine, then enter
+that endpoint instead.</li>
+</ol>
+<h3 id="setting-up-ollama">Setting up Ollama</h3>
+<p>This is currently the preferred option for a local setup.</p>
+<p>Though the Ollama integration has been tested more extensively than
+llama.cpp, it is still less stable than calling out to an API and has
+been known to behave oddly under some configurations, up to and
+including crashes on machines that lack the required specifications. At
+bare minimum, when trying this out for the first time, save all
+documents and anything of importance before continuing in case this
+happens to you.</p>
+<p>Start by ensuring that you are able to interact with your preferred
+vision-capable model using the commandline interface. The steps for
+doing so are as follows:</p>
+<ol type="1">
+<li>Download the Ollama for Windows setup file from the <a
+href="https://ollama.com/download">Ollama downloads</a> page.</li>
+<li>Run this setup file. It will handle grabbing all the dependencies
+that your machine will need.</li>
+<li>Locate the model you would like to use. A list can be found on
+ollama.com -&gt; models -&gt; vision, or <a
+href="https://ollama.com/search?c=vision">here directly</a>.</li>
+<li>Download and launch this model by opening a command prompt and
+typing <code>ollama run [model_name]</code>, of course replacing
+“[model_name]” with the one you chose in step 3. For example,
+<code>ollama run llama3.2-vision</code>.</li>
+<li>Assuming the process completed successfully, you will be placed in
+an interactive shell wherein it is possible to type queries and get
+responses from the model, think a localized (and limited) ChatGPT. Test
+it out by asking something (anything) to see whether it works, then type
+“/bye” to exit this interface.</li>
+<li>Back in your console window, type <code>ollama list</code>. The
+first column will provide a name like “llama3.2-vision:latest”.</li>
+<li>Navigate to AI Content Describer settings -&gt; manage models -&gt;
+Ollama. In the model name field, enter this value and click OK -&gt; OK.
+You are all set! Switch to Ollama in the model submenu and it should
+work after some time.</li>
+</ol>
+<h3 id="setting-up-seer">Setting up Seer</h3>
+<p>Seer runs PaliGemma2 on your own machine with no API key or cloud
+connection required. Note that this is a captioning-only model; prompts
+and follow-up questions are not supported.</p>
+<ol type="1">
+<li>Install the <a href="https://github.com/recursia-lab/Seer">Seer
+daemon</a>. A one-command installer is provided for Windows (.bat) and
+Linux/macOS (.sh).</li>
+<li>In the NVDA settings dialog, navigate to the AI Content Describer
+category, choose “manage models (alt+m)”, and select “Seer (requires
+installation)”.</li>
+<li>The base URL defaults to <code>http://127.0.0.1:11435</code>. Leave
+it as-is unless you changed the daemon’s port.</li>
+<li>Click OK. The daemon must be running before you attempt a
+description.</li>
+</ol>
+<h3 id="which-model-should-i-use">Which model should I use?</h3>
+<p>We used to provide recommendations on the cheapest and highest
+quality options, but the landscape is changing so rapidly that it isn’t
+possible to keep this up-to-date.</p>
+<p>The short answer is that most of the state-of-the-art models have
+gotten to a point where they are accurate for most every-day use cases,
+so choose the provider that you are familiar with.</p>
+<p>Most people want to strike a balance between accuracy and cost. The
+<a href="https://lmarena.ai/leaderboard">LLM arena leaderboard</a>
+(specifically the vision category) measures correctness, while <a
+href="https://www.llm-prices.com/">LLM pricing calculator</a> outlines
+pricing.</p>
+<p>If you want to use computer control, choose one of the supported
+OpenAI or Anthropic models listed above. Free Pollinations access is
+useful for image descriptions, but it does not support computer use.</p>
+<h2 id="using-the-add-on">Using the add-on</h2>
+<h3 id="computer-use">Computer use</h3>
+<p>Computer use lets AI Content Describer control the active application
+with the mouse and keyboard after you describe a task. This can help
+with tasks that are difficult or inaccessible to complete manually.</p>
+<p>Because this gives an AI model control of your computer, use it
+carefully. The add-on asks for consent before starting, reports actions
+as they happen, and asks before potentially risky actions. You are
+responsible for what it does, so monitor the session and avoid using it
+for sensitive or hard-to-reverse work.</p>
+<p>You can pause or resume computer control at any time with
+<code>NVDA+Control+Shift+P</code>. While paused, the add-on will not
+continue with the next action until you resume it.</p>
+<p>The add-on uses tones to indicate the control state. A high beep
+means the model is taking control or resuming control. A low beep means
+control has paused, either because you paused it or because the model
+needs input. A short low error beep means the session stopped because of
+an API error.</p>
+<p>While a control session is active, the model will announce what it is
+about to do before sending input. Nothing happens until that speech has
+finished, unless you press <code>Control</code> to interrupt the
+announcement and let the action continue sooner.</p>
+<p>If the model is unsure how to complete an action, needs more
+information, or otherwise yields the turn back to you, the session
+pauses and the Computer Use dialog comes to the foreground. Type a
+follow-up message there to continue the conversation, or close the
+dialog to stop the session.</p>
+<p>This feature only works with models that provide a computer-use tool:
+GPT-5.4, GPT-5.4 mini, GPT-5.5, GPT-5.5 pro, GPT-6 Astra, GPT-6.1 Sol,
+GPT-6.1 Terra, GPT-6 Luna, Claude 4.5 Sonnet, Claude 4.5 Opus, Claude
+4.6 Sonnet, Claude 4.6 Opus, Claude 4.7 Opus, Claude 4.8 Opus, Claude 5
+Sonnet, Claude 5 Opus, Claude 5 Fable, Claude 5.1 Fable, Claude 5.5
+Haiku, Claude 5.5 Sonnet, and Claude 5.5 Opus. Other models can describe
+images, but they do not provide the structured mouse and keyboard
+actions needed for computer control.</p>
+<p>To use computer control:</p>
+<ol type="1">
+<li>Configure and select one of the supported models.</li>
+<li>Open the application or window you want the model to work with.</li>
+<li>Press <code>NVDA+shift+i</code>, then choose “Control
+computer…”.</li>
+<li>Type the task you want performed and press Send.</li>
+<li>Review the consent prompt. If you allow the session, monitor the
+actions and approve or cancel any risky action prompts.</li>
+</ol>
+<p>Note: This should be considered a beta feature, and we are actively
+taking steps to harden the implementation.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p>Some of the libraries this add-on needs are too large to include in
+the add-on package. Instead, the first time NVDA starts with the add-on
+installed, you are asked whether to download them. Select yes, wait for
+the download to finish, and NVDA restarts.</p>
+<p>The download is a zip file of about 35 to 70 MB, depending on your
+NVDA version. It comes from the <a
+href="https://github.com/cartertemm/AI-content-describer/releases/tag/libs-release">libs-release</a>
+page of this repository. If GitHub can’t be reached, the add-on offers
+to try a mirror provided by the Chinese NVDA community.</p>
+<p>The zip contains:</p>
+<ul>
+<li><a href="https://numpy.org/">NumPy</a>: math on arrays, required by
+OpenCV.</li>
+<li><a href="https://opencv.org/">OpenCV</a> (<code>cv2</code>): finds
+your face in webcam images for the face detection feature.</li>
+<li><a href="https://python-pillow.org/">Pillow</a> (<code>PIL</code>):
+captures screenshots and converts them to images the AI models can
+read.</li>
+<li><a href="https://python-markdown.github.io/">Markdown</a>: shows
+descriptions with formatting, such as headings, lists, and tables.</li>
+<li><a
+href="https://github.com/andreaschiavinato/python_grabber">pygrabber</a>:
+lists the webcams on your computer.</li>
+<li>A few modules from the Python standard library that NVDA does not
+include (<code>html</code>, <code>xml</code>, <code>pathlib</code>,
+<code>secrets</code>, and <code>_markupbase</code>). The libraries above
+need them.</li>
+</ul>
+<p>The files go in a folder named <code>aic-py-</code> followed by
+NVDA’s Python version, such as <code>aic-py-3.13</code>. This folder is
+in your NVDA user configuration folder, usually
+<code>%APPDATA%\nvda</code>. Each Python version gets its own folder,
+meaning that the add-on downloads the libraries again when a new NVDA
+release changes its Python version. Uninstalling the add-on deletes the
+folder for NVDA’s current Python version.</p>
+<p>If the download doesn’t work, you can install the libraries yourself.
+Download <code>aic-py-3.13.zip</code> (or the file for your NVDA’s
+Python version) from the libs-release page, extract it into your NVDA
+user configuration folder, and restart NVDA.</p>
+<h3 id="following-up-on-a-description">Following-up on a
+description</h3>
+<p>Sometimes, the response you get back from an AI is insufficient.
+Perhaps the image is low quality, incomplete, or includes unwanted
+details. Maybe you want to hone in on just a certain section or take a
+clearer photo without losing context. After receiving a description, you
+can press NVDA+alt+c, or select “Follow-up on previous description” from
+the AI Content Describer context menu (NVDA+shift+i). By default, the
+focus is set at the message field. To add an additional image, just keep
+the conversation window open and use the add-on as you normally would.
+When a picture is taken (be it from the camera, system control,
+screenshot, etc.) you will be asked if you want to attach it to the
+current session or start a new one.</p>
+<h3 id="usage">Usage</h3>
+<p>Six hotkeys are bound by default:</p>
+<ul>
+<li>NVDA+shift+i: Pops up a menu asking whether to describe the current
+focus, navigator object, physical camera, entire screen, or control the
+computer with AI.</li>
+<li>NVDA+shift+u: Describe the contents of the current navigator object
+using AI.</li>
+<li>NVDA+shift+y: Describe the image (or file path to an image) on the
+clipboard using AI.</li>
+<li>NVDA+shift+j: Describe the position of your face in the frame of the
+selected camera. If you have multiple cameras connected, navigate to the
+AI content describer menu (NVDA+shift+i) and choose the one you would
+like to use with the “select camera” item in the face detection
+submenu.</li>
+<li>NVDA+alt+c: Open the AI conversation dialog to ask follow-up
+questions.</li>
+<li>NVDA+control+shift+p: Pause or resume an active computer control
+session.</li>
+</ul>
+<p>Seven gestures are unbound:</p>
+<ul>
+<li>Describe the contents of the currently focused item using AI.</li>
+<li>Take a screenshot, then describe it using AI.</li>
+<li>Snap a picture using the selected camera, then describe it using
+AI.</li>
+<li>Cancel the active computer control session.</li>
+<li>Take a screenshot of the current focus object and copy it to the
+clipboard.</li>
+<li>Take a screenshot of the current navigator object and copy it to the
+clipboard.</li>
+<li>Take a screenshot of the entire screen and copy it to the
+clipboard.</li>
+</ul>
+<p>The three copy commands are also in the “Copy image to clipboard”
+submenu of the NVDA+shift+i menu. They do not send anything to an AI
+service. Use them to paste a capture into Be My AI or another app that
+this add-on does not support. The copy replaces what was on the
+clipboard before.</p>
+<p>Don’t hesitate to customize these at any time from the input gestures
+dialog.</p>
+</main>
+</body>
+</html>

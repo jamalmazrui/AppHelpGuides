@@ -182,7 +182,7 @@
   </style>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#writing-add-ons-and-plugins-for-nvda"
 id="toc-writing-add-ons-and-plugins-for-nvda">Writing add-ons and
@@ -264,6 +264,7 @@ id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="writing-add-ons-and-plugins-for-nvda">Writing add-ons and
 plugins for NVDA</h1>
 <p>This guide holds two documents from two publishers, gathered on 31
@@ -324,7 +325,7 @@ Announcing the changed name of a control</a></li>
 of overlay classes and modified roles</a></li>
 <li><a href="#a-few-other-remarks-on-scripts">A few other remarks on
 scripts</a></li>
-<li><a href="#focus-vs-navigator-object">Focus vs. navigator
+<li><a href="#focus-vs.-navigator-object">Focus vs. navigator
 object</a></li>
 <li><a
 href="#frequently-asked-questions-about-add-on-components-and-development">Frequently
@@ -389,10 +390,9 @@ NVDA</a></li>
 on NVDA backward compatibility</a></li>
 <li><a href="#special-note-on-python-version">Special note on Python
 version</a></li>
-<li><a
-href="#a-very-important-note-about-control-types-module-changes-in-nvda-20212">A
+<li>A
 very important note about control types module changes in NVDA
-2021.2</a></li>
+2021.2</li>
 <li><a
 href="#a-very-important-note-about-migrating-custom-extension-code-to-development-scratchpad">A
 very important note about migrating custom extension code to development
@@ -525,7 +525,7 @@ core</a></li>
 <li><a href="#synthdriverhandler">synthDriverHandler</a></li>
 <li><a href="#tones">tones</a></li>
 <li><a
-href="#visionvisionhandlerextensionpointseventextensionpoints">vision.visionHandlerExtensionPoints.EventExtensionPoints</a></li>
+href="#vision.visionhandlerextensionpoints.eventextensionpoints">vision.visionHandlerExtensionPoints.EventExtensionPoints</a></li>
 </ul></li>
 <li>The NVDA developer guide: Introduction
 <ul>
@@ -573,14 +573,14 @@ developer guide: Plugins)</a></li>
 href="#example-1-an-app-module-that-beeps-on-focus-change-events">Example
 1: An App Module that Beeps on Focus Change Events</a></li>
 <li><a
-href="#example-2-an-app-module-for-an-app-hosted-by-wwahostexe">Example
+href="#example-2-an-app-module-for-an-app-hosted-by-wwahost.exe">Example
 2: an app module for an app hosted by wwahost.exe</a></li>
 <li><a
 href="#example-3-a-global-plugin-providing-a-script-to-announce-the-nvda-version">Example
 3: a Global Plugin Providing a Script to Announce the NVDA
 Version</a></li>
 <li><a
-href="#example-3-an-app-module-for-an-app-employing-edge-webview2-msedgewebview2exe">Example
+href="#example-3-an-app-module-for-an-app-employing-edge-webview2-msedgewebview2.exe">Example
 3: an app module for an app employing Edge WebView2 ( msedgewebview2.exe
 )</a></li>
 <li><a
@@ -7759,5 +7759,6 @@ labels indicated in parentheses):</p>
 (<code>cancelLabel</code>)</p>
 <p><code>ReturnCode.YES</code>, <code>ReturnCode.NO</code> or
 <code>ReturnCode.CANCEL</code></p>
+</main>
 </body>
 </html>

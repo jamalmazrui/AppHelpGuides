@@ -182,7 +182,7 @@
   </style>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#typora-help" id="toc-typora-help">Typora help</a>
 <ul>
@@ -201,6 +201,7 @@ id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="typora-help">Typora help</h1>
 <p>This guide holds Typora’s own support pages, gathered on 24 August
 2026 — writing and editing in Markdown, images and diagrams, themes,
@@ -382,8 +383,8 @@ into <code>&amp;#20320;&amp;#22909;</code>.</p>
 <p>You could append other pandoc arguments as well,</p>
 <h4 id="reformat-using-custom-commands">Reformat using Custom
 Commands</h4>
-<p>You could <a href="Export/#other-formats-using-custom-commands">make
-an export item with custom commands</a>. Then use 3rd tools, like <a
+<p>You could make
+an export item with custom commands. Then use 3rd tools, like <a
 href="https://prettier.io/">prettier</a> or other tools to reformat your
 code.</p>
 <p>Take <a href="https://prettier.io/">prettier</a> for example.</p>
@@ -981,8 +982,8 @@ href="https://pandoc.org/MANUAL.html#variables-for-latex">pandoc.org</a>.</p>
 <h6 id="add-extra-content-in-latex-header">Add Extra Content in LaTeX
 Header</h6>
 <p>You can use <code>header-includes</code> or <code>latex_header</code>
-or <code>latex_header_extra</code> in <a href="yaml">YAML Front
-Matter</a>.</p>
+or <code>latex_header_extra</code> in YAML Front
+Matter.</p>
 <p>For example:</p>
 <pre><code>---
 latex_header: |
@@ -1080,7 +1081,7 @@ for HTML-based formats such as Markdown, RevealJS, etc.</p>
 <p>Also, please note that the “Export” function cannot export all styles
 even when raw type is set.</p>
 <h6 id="extra-arguments-1">Extra Arguments</h6>
-<p>See <a href="append-extra-arguments">Append-extra Arguments</a>.</p>
+<p>See Append-extra Arguments.</p>
 <h6 id="get-exported-ast-for-pandoc">Get Exported AST for Pandoc</h6>
 <p>To ensure the parse rule is the same in Typora’s Markdown and the
 output by pandoc, Typora will first convert into pandoc AST (Abstract
@@ -2222,7 +2223,7 @@ maintaining the reference between text plain and the images it used.</p>
 to upload your images into <a href="http://imgur.com/">Imgur</a>, <a
 href="https://www.flickr.com/">Flickr</a>, <a
 href="https://aws.amazon.com/s3/">Amazon S3</a>, <a
-href="www.github.com">Github</a>, or other image hosting services.</p>
+href="https://www.github.com">Github</a>, or other image hosting services.</p>
 <h5 id="warning">Warning!</h5>
 <p>Before you use this feature, please notice that Typora does not own
 those image uploader apps or cloud storage services, they are all 3rd
@@ -3846,7 +3847,7 @@ limitations under the License.</p>
 <p>Copyright (c) 2011-2014 Twitter, Inc</p>
 <p>MIT License <a
 href="http://opensource.org/licenses/MIT">opensource.org</a></p>
-<h5 id="jquery"><a href="jquery.org">JQuery</a></h5>
+<h5 id="jquery"><a href="https://jquery.org">JQuery</a></h5>
 <p>copyright 2005, 2014 jQuery Foundation and other contributors, <a
 href="https://jquery.org/">jquery.org</a> This software consists of
 voluntary contributions made by many individuals. For exact contribution
@@ -4020,7 +4021,7 @@ href="https://github.com/GitbookIO/gitbook">Gitbook</a></h5>
 <p><a
 href="https://github.com/GitbookIO/gitbook/blob/master/LICENSE">Apache
 License</a></p>
-<h5 id="pixyll"><a href="pixyll.com">Pixyll</a></h5>
+<h5 id="pixyll"><a href="https://pixyll.com">Pixyll</a></h5>
 <p>Pixyll</p>
 <p>A simple, beautiful theme for Jekyll that emphasizes content rather
 than</p>
@@ -4280,8 +4281,8 @@ normal text on Windows. By default, emojis are colorful like your iOS or
 Android devices.</p>
 <h5 id="launch-flags">Launch Flags</h5>
 <p>The <code>flags</code> property stores arguments passed when
-launching Typora, you can refer to <a href="Launch-Arguments/">Launch
-Arguments</a>.</p>
+launching Typora, you can refer to Launch
+Arguments.</p>
 <h3 id="auto-numbering-for-headings">Auto Numbering for Headings</h3>
 <p>TIP: To know where to put those CSS snippets, please see Add Custom
 CSS.</p>
@@ -5850,7 +5851,7 @@ terminal you get:</p>
 <p>Typora provides a <a href="https://snapcraft.io/typora">Snap
 installer</a>, which you can install via the command line:</p>
 <pre><code>snap install typora</code></pre>
-<p>Or simply click <a href="snap://typora">this link</a> to install it
+<p>Or simply click this link to install it
 from the Desktop Store.</p>
 <p>The Snap version supports both x64 and ARM architectures.</p>
 <p>If you do not have Snap installed, please follow the instructions at
@@ -6570,7 +6571,7 @@ or not in the Preferences Panel. Please check here for more details.</p>
 <h3 id="page-breaks">Page Breaks</h3>
 <h4 id="automatic-page-breaks">Automatic Page Breaks</h4>
 <p>Sometimes you may want to export to a PDF, and have page breaks
-before all <a href="Markdown-Reference/#headers">top-level headings</a>,
+before all top-level headings,
 perhaps always putting the header on a right-hand page.</p>
 <p>Top-level headings are created with a single-hash prefix
 <code>#</code> (and optional suffix) or an equals-sign underline
@@ -9289,5 +9290,6 @@ href="http://support.typora.io/HTML/">here</a>.</p>
 <li>Here is the text of the first footnote. ↩︎</li>
 <li>Here is the text of the second footnote. ↩︎</li>
 </ul>
+</main>
 </body>
 </html>

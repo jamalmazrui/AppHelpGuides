@@ -253,7 +253,7 @@
 Clipper</p>
 <p class="date">2026-08-11</p>
 </header>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#joplin-the-complete-help-guide"
 id="toc-joplin-the-complete-help-guide">Joplin: the complete help
@@ -6915,8 +6915,7 @@ GitHub)</a> <a href="https://www.patreon.com/joplin">(image: Become a
 patron)</a> <a href="https://joplinapp.org/donate/#donations">(image:
 Donate using IBAN)</a> Most Joplin dialogs should follow the <a
 href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">modal
-dialog pattern</a>. On desktop, this is usually done with the native <a
-href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"></a>
+dialog pattern</a>. On desktop, this is usually done with the native 
 element. On mobile, it’s a bit more complicated. #### Mobile​ #####
 Managing focus​ On mobile, the <AccessibleView> component allows moving
 focus to a component or preventing a component from being accessibility
@@ -6965,8 +6964,7 @@ Modal</a> might be rendered with: Above, the FocusControl.ModalWrapper
 communicates whether the dialog is visible to the global
 &lt;FocusControl.Provider&gt;. This allows the MainAppContent (not shown
 above) to be marked as focusable or unfocusable depending on whether the
-Modal is visible or not. The <a
-href="https://callstack.github.io/react-native-paper/docs/components/Portal/"></a>
+Modal is visible or not. The 
 is important part of the example. A <Portal> is a react-native-paper
 component that renders its children outside of the main app content
 (near the global PaperProvider). If the <Portal> is omitted, then the
@@ -9196,7 +9194,7 @@ ability to customise the banner that is displayed at the top of the
 notes. That includes changing the logo, title or colour of the banner.
 To do so, open your Profile page and go to the “Published note banner”
 section:</p>
-<h3 id="desktop-application">Desktop application</h3>
+<h3 id="desktop-application-2">Desktop application</h3>
 <p><a
 href="https://www.paypal.com/donate/?hosted_button_id=WQCERTSSLCC7U">(image:
 Donate using PayPal)</a> <a
@@ -10378,15 +10376,14 @@ href="https://github.com/laurent22/joplin/issues">GitHub issue
 tracker</a> #### Debugging the extension​ ##### In Chrome​ To provide as
 much information as possible when reporting an issue, you may provide
 the log from the various Chrome consoles. To do so, first enable
-developer mode in <a
-href="chrome://extensions/">chrome://extensions/</a> - Debugging the
+developer mode in chrome://extensions/ - Debugging the
 popup: Right-click on the Joplin extension icon, and select “Inspect
 popup”. - Debugging the background script: In chrome://extensions/,
 click on “Inspect background script”. - Debugging the content script:
 Press Ctrl+Shift+I to open the console of the current page.</p>
 <h5 id="in-firefox">In Firefox​</h5>
 <ul>
-<li>Open <a href="about:debugging">about:debugging</a> in Firefox.</li>
+<li>Open about:debugging in Firefox.</li>
 <li>Make sure the checkbox “Enable add-on debugging” is ticked.</li>
 <li>Scroll down to the Joplin Web Clipper extension.</li>
 <li>Click on “Debugging” - that should open a new console window.</li>
@@ -10462,91 +10459,91 @@ block</strong>: Here’s some JavaScript code:</p>
 }</code></pre>
 <p>Language is normally auto-detected, but it can also be specified:</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> users;</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> sessions;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>```: Here<span class="st">&#39;s some JavaScript code:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">function hello() {</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="st">    alert(&#39;</span>hello<span class="st">&#39;);</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">Language is normally auto-detected, but it can also be specified:</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT * FROM users;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">DELETE FROM sessions;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">- **Unformatted text**: Indent with a tab or 4 spaces</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">for unformatted text.</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st"> This text will not be formatted:</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="st"> Robert&#39;</span>); <span class="kw">DROP</span> <span class="kw">TABLE</span> students;<span class="co">--: Indent with a tab or 4 spaces for unformatted text.</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>This text will <span class="kw">not</span> be formatted:</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>Robert<span class="st">&#39;); DROP TABLE students;--</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="st">- **Link**: This is detected as a link:</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="st">https://joplinapp.org</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="st">And this is a link anchoring text content:</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="st">[Joplin](https://joplinapp.org)</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="st">And this is a link, with a title,</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="st">anchoring text content:</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="st">[Joplin](https://joplinapp.org &quot;Joplin project page&quot;): This is detected as a link:</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="st">[https://joplinapp.org](https://joplinapp.org)</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="st">And this is a link anchoring text content:</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="st">[Joplin](https://joplinapp.org)</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="st">And this is a link, with a title,</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="st">anchoring text content:</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="st">[Joplin](https://joplinapp.org) (*hint: hover over the link*)</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="st">- **Images**: ![Joplin icon](https://git.io/JenGk): (image: Here&#39;</span>s Joplin icon)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Horizontal <span class="kw">Rule</span><span class="op">**</span>: One <span class="kw">rule</span>:</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="op">***</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>Another <span class="kw">rule</span>:</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="co">---: One rule:</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>Another <span class="kw">rule</span>:</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="kw">Tables</span><span class="op">**</span>: See below</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>##### Tables​</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="kw">Tables</span> are created <span class="kw">using</span> pipes | <span class="kw">and</span> hyphens <span class="op">-</span>. This <span class="kw">is</span> a Markdown <span class="kw">table</span>:</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>Which <span class="kw">is</span> rendered <span class="kw">as</span>:</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="fu">First</span> <span class="kw">Header</span>: <span class="dt">Second</span> <span class="kw">Header</span></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Content Cell: Content Cell</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Content Cell: Content Cell</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>Note that there must be <span class="kw">at</span> <span class="fu">least</span> <span class="dv">3</span> dashes separating <span class="kw">each</span> <span class="kw">header</span> cell.</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Colons can be used <span class="kw">to</span> align <span class="kw">columns</span>:</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>Which <span class="kw">is</span> rendered <span class="kw">as</span>:</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="kw">Tables</span>: Are: Cool</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> col <span class="dv">3</span> <span class="kw">is</span>: <span class="kw">right</span><span class="op">-</span>aligned: $1600</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> col <span class="dv">2</span> <span class="kw">is</span>: centered: $12</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>#### Joplin Extras​</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>Besides <span class="kw">the</span> standard Markdown syntax, Joplin supports several additional features.</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>##### Links <span class="kw">to</span> other notes​</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>You can <span class="kw">create</span> a <span class="kw">link</span> <span class="kw">to</span> a note <span class="kw">by</span> specifying its <span class="kw">ID</span> <span class="kw">in</span> <span class="kw">the</span> URL. <span class="cf">For</span> example:</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>Since getting <span class="kw">the</span> <span class="kw">ID</span> <span class="kw">of</span> a note <span class="kw">is</span> <span class="kw">not</span> straightforward, <span class="kw">each</span> app provides a way <span class="kw">to</span> <span class="kw">create</span> such <span class="kw">link</span>. <span class="kw">In</span> <span class="kw">the</span> <span class="op">**</span>desktop app<span class="op">**</span>, drag <span class="kw">and</span> <span class="kw">drop</span> a note <span class="kw">into</span> another note <span class="kw">to</span> <span class="kw">create</span> a <span class="kw">link</span>. <span class="kw">Or</span> <span class="kw">right</span> click <span class="kw">on</span> a note <span class="kw">and</span> <span class="kw">select</span> <span class="ot">&quot;Copy Markdown link&quot;</span>. <span class="kw">In</span> <span class="kw">the</span> <span class="op">**</span>mobile app<span class="op">**</span>, <span class="kw">open</span> a note <span class="kw">and</span>, <span class="kw">in</span> <span class="kw">the</span> top <span class="kw">right</span> menu, <span class="kw">select</span> <span class="ot">&quot;Copy Markdown link&quot;</span>. You can <span class="cf">then</span> paste this <span class="kw">link</span> anywhere <span class="kw">in</span> another note.</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>##### Math notation​</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>Math expressions can be added <span class="kw">using</span> <span class="kw">the</span> [KaTeX notation](https:<span class="op">//</span>khan.github.io<span class="op">/</span>KaTeX<span class="op">/</span>). <span class="kw">To</span> <span class="kw">add</span> an inline equation, wrap <span class="kw">the</span> expression <span class="kw">in</span> $EXPRESSION$, eg. $\<span class="fu">sqrt</span>{<span class="dv">3</span>x<span class="op">-</span><span class="dv">1</span>}<span class="op">+</span>(<span class="dv">1</span><span class="op">+</span>x)^<span class="dv">2</span>$. <span class="kw">To</span> <span class="kw">create</span> an expression <span class="kw">block</span>, wrap it <span class="kw">as</span> follow:</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="cf">For</span> example:</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> an example <span class="kw">with</span> <span class="kw">the</span> Markdown <span class="kw">and</span> rendered result side <span class="kw">by</span> side:</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>##### Chemical equations​</span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>Joplin supports chemical equations via <span class="kw">the</span> mhchem plugin <span class="cf">for</span> KaTeX. This plugin <span class="kw">is</span> automatically enabled <span class="cf">if</span> you <span class="kw">enable</span> math notation. See <span class="kw">the</span> [mhchem documentation](https:<span class="op">//</span>mhchem.github.io<span class="op">/</span>MathJax<span class="op">-</span>mhchem<span class="op">/</span>) <span class="cf">for</span> <span class="kw">the</span> syntax.</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>##### Diagrams​</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>You can <span class="kw">create</span> diagrams <span class="kw">in</span> Joplin <span class="kw">using</span> <span class="kw">the</span> [Mermaid syntax](https:<span class="op">//</span>mermaidjs.github.io<span class="op">/</span>). <span class="kw">To</span> <span class="kw">add</span> such a graph, wrap <span class="kw">the</span> Mermaid script inside a <span class="ot">&quot;```mermaid&quot;</span> code <span class="kw">block</span> <span class="kw">like</span> this:</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>```mermaid</span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>graph TD;</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>    A<span class="co">--&gt;B;</span></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    A<span class="co">--&gt;C;</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    B<span class="co">--&gt;D;</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    C<span class="co">--&gt;D;</span></span></code></pre></div>
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> users;</span>
+<span id="cb2-2"><span class="kw">DELETE</span> <span class="kw">FROM</span> sessions;</span>
+<span id="cb2-3">```: Here<span class="st">&#39;s some JavaScript code:</span></span>
+<span id="cb2-4"></span>
+<span id="cb2-5"><span class="st">function hello() {</span></span>
+<span id="cb2-6"><span class="st">    alert(&#39;</span>hello<span class="st">&#39;);</span></span>
+<span id="cb2-7"><span class="st">}</span></span>
+<span id="cb2-8"><span class="st">Language is normally auto-detected, but it can also be specified:</span></span>
+<span id="cb2-9"></span>
+<span id="cb2-10"><span class="st">SELECT * FROM users;</span></span>
+<span id="cb2-11"><span class="st">DELETE FROM sessions;</span></span>
+<span id="cb2-12"><span class="st">- **Unformatted text**: Indent with a tab or 4 spaces</span></span>
+<span id="cb2-13"><span class="st">for unformatted text.</span></span>
+<span id="cb2-14"></span>
+<span id="cb2-15"><span class="st"> This text will not be formatted:</span></span>
+<span id="cb2-16"></span>
+<span id="cb2-17"><span class="st"> Robert&#39;</span>); <span class="kw">DROP</span> <span class="kw">TABLE</span> students;<span class="co">--: Indent with a tab or 4 spaces for unformatted text.</span></span>
+<span id="cb2-18"></span>
+<span id="cb2-19">This text will <span class="kw">not</span> be formatted:</span>
+<span id="cb2-20"></span>
+<span id="cb2-21">Robert<span class="st">&#39;); DROP TABLE students;--</span></span>
+<span id="cb2-22"><span class="st">- **Link**: This is detected as a link:</span></span>
+<span id="cb2-23"></span>
+<span id="cb2-24"><span class="st">https://joplinapp.org</span></span>
+<span id="cb2-25"></span>
+<span id="cb2-26"><span class="st">And this is a link anchoring text content:</span></span>
+<span id="cb2-27"></span>
+<span id="cb2-28"><span class="st">[Joplin](https://joplinapp.org)</span></span>
+<span id="cb2-29"></span>
+<span id="cb2-30"><span class="st">And this is a link, with a title,</span></span>
+<span id="cb2-31"><span class="st">anchoring text content:</span></span>
+<span id="cb2-32"></span>
+<span id="cb2-33"><span class="st">[Joplin](https://joplinapp.org &quot;Joplin project page&quot;): This is detected as a link:</span></span>
+<span id="cb2-34"></span>
+<span id="cb2-35"><span class="st">[https://joplinapp.org](https://joplinapp.org)</span></span>
+<span id="cb2-36"></span>
+<span id="cb2-37"><span class="st">And this is a link anchoring text content:</span></span>
+<span id="cb2-38"></span>
+<span id="cb2-39"><span class="st">[Joplin](https://joplinapp.org)</span></span>
+<span id="cb2-40"></span>
+<span id="cb2-41"><span class="st">And this is a link, with a title,</span></span>
+<span id="cb2-42"><span class="st">anchoring text content:</span></span>
+<span id="cb2-43"></span>
+<span id="cb2-44"><span class="st">[Joplin](https://joplinapp.org) (*hint: hover over the link*)</span></span>
+<span id="cb2-45"><span class="st">- **Images**: ![Joplin icon](https://git.io/JenGk): (image: Here&#39;</span>s Joplin icon)</span>
+<span id="cb2-46"><span class="op">-</span> <span class="op">**</span>Horizontal <span class="kw">Rule</span><span class="op">**</span>: One <span class="kw">rule</span>:</span>
+<span id="cb2-47"><span class="op">***</span></span>
+<span id="cb2-48">Another <span class="kw">rule</span>:</span>
+<span id="cb2-49"><span class="co">---: One rule:</span></span>
+<span id="cb2-50">Another <span class="kw">rule</span>:</span>
+<span id="cb2-51"><span class="op">-</span> <span class="op">**</span><span class="kw">Tables</span><span class="op">**</span>: See below</span>
+<span id="cb2-52"></span>
+<span id="cb2-53">##### Tables​</span>
+<span id="cb2-54"><span class="kw">Tables</span> are created <span class="kw">using</span> pipes | <span class="kw">and</span> hyphens <span class="op">-</span>. This <span class="kw">is</span> a Markdown <span class="kw">table</span>:</span>
+<span id="cb2-55">Which <span class="kw">is</span> rendered <span class="kw">as</span>:</span>
+<span id="cb2-56"><span class="op">-</span> <span class="fu">First</span> <span class="kw">Header</span>: <span class="dt">Second</span> <span class="kw">Header</span></span>
+<span id="cb2-57"><span class="op">-</span> Content Cell: Content Cell</span>
+<span id="cb2-58"><span class="op">-</span> Content Cell: Content Cell</span>
+<span id="cb2-59"></span>
+<span id="cb2-60">Note that there must be <span class="kw">at</span> <span class="fu">least</span> <span class="dv">3</span> dashes separating <span class="kw">each</span> <span class="kw">header</span> cell.</span>
+<span id="cb2-61">Colons can be used <span class="kw">to</span> align <span class="kw">columns</span>:</span>
+<span id="cb2-62">Which <span class="kw">is</span> rendered <span class="kw">as</span>:</span>
+<span id="cb2-63"><span class="op">-</span> <span class="kw">Tables</span>: Are: Cool</span>
+<span id="cb2-64"><span class="op">-</span> col <span class="dv">3</span> <span class="kw">is</span>: <span class="kw">right</span><span class="op">-</span>aligned: $1600</span>
+<span id="cb2-65"><span class="op">-</span> col <span class="dv">2</span> <span class="kw">is</span>: centered: $12</span>
+<span id="cb2-66"></span>
+<span id="cb2-67">#### Joplin Extras​</span>
+<span id="cb2-68">Besides <span class="kw">the</span> standard Markdown syntax, Joplin supports several additional features.</span>
+<span id="cb2-69">##### Links <span class="kw">to</span> other notes​</span>
+<span id="cb2-70">You can <span class="kw">create</span> a <span class="kw">link</span> <span class="kw">to</span> a note <span class="kw">by</span> specifying its <span class="kw">ID</span> <span class="kw">in</span> <span class="kw">the</span> URL. <span class="cf">For</span> example:</span>
+<span id="cb2-71">Since getting <span class="kw">the</span> <span class="kw">ID</span> <span class="kw">of</span> a note <span class="kw">is</span> <span class="kw">not</span> straightforward, <span class="kw">each</span> app provides a way <span class="kw">to</span> <span class="kw">create</span> such <span class="kw">link</span>. <span class="kw">In</span> <span class="kw">the</span> <span class="op">**</span>desktop app<span class="op">**</span>, drag <span class="kw">and</span> <span class="kw">drop</span> a note <span class="kw">into</span> another note <span class="kw">to</span> <span class="kw">create</span> a <span class="kw">link</span>. <span class="kw">Or</span> <span class="kw">right</span> click <span class="kw">on</span> a note <span class="kw">and</span> <span class="kw">select</span> <span class="ot">&quot;Copy Markdown link&quot;</span>. <span class="kw">In</span> <span class="kw">the</span> <span class="op">**</span>mobile app<span class="op">**</span>, <span class="kw">open</span> a note <span class="kw">and</span>, <span class="kw">in</span> <span class="kw">the</span> top <span class="kw">right</span> menu, <span class="kw">select</span> <span class="ot">&quot;Copy Markdown link&quot;</span>. You can <span class="cf">then</span> paste this <span class="kw">link</span> anywhere <span class="kw">in</span> another note.</span>
+<span id="cb2-72">##### Math notation​</span>
+<span id="cb2-73">Math expressions can be added <span class="kw">using</span> <span class="kw">the</span> [KaTeX notation](https:<span class="op">//</span>khan.github.io<span class="op">/</span>KaTeX<span class="op">/</span>). <span class="kw">To</span> <span class="kw">add</span> an inline equation, wrap <span class="kw">the</span> expression <span class="kw">in</span> $EXPRESSION$, eg. $\<span class="fu">sqrt</span>{<span class="dv">3</span>x<span class="op">-</span><span class="dv">1</span>}<span class="op">+</span>(<span class="dv">1</span><span class="op">+</span>x)^<span class="dv">2</span>$. <span class="kw">To</span> <span class="kw">create</span> an expression <span class="kw">block</span>, wrap it <span class="kw">as</span> follow:</span>
+<span id="cb2-74"><span class="cf">For</span> example:</span>
+<span id="cb2-75">Here <span class="kw">is</span> an example <span class="kw">with</span> <span class="kw">the</span> Markdown <span class="kw">and</span> rendered result side <span class="kw">by</span> side:</span>
+<span id="cb2-76">##### Chemical equations​</span>
+<span id="cb2-77">Joplin supports chemical equations via <span class="kw">the</span> mhchem plugin <span class="cf">for</span> KaTeX. This plugin <span class="kw">is</span> automatically enabled <span class="cf">if</span> you <span class="kw">enable</span> math notation. See <span class="kw">the</span> [mhchem documentation](https:<span class="op">//</span>mhchem.github.io<span class="op">/</span>MathJax<span class="op">-</span>mhchem<span class="op">/</span>) <span class="cf">for</span> <span class="kw">the</span> syntax.</span>
+<span id="cb2-78">##### Diagrams​</span>
+<span id="cb2-79">You can <span class="kw">create</span> diagrams <span class="kw">in</span> Joplin <span class="kw">using</span> <span class="kw">the</span> [Mermaid syntax](https:<span class="op">//</span>mermaidjs.github.io<span class="op">/</span>). <span class="kw">To</span> <span class="kw">add</span> such a graph, wrap <span class="kw">the</span> Mermaid script inside a <span class="ot">&quot;```mermaid&quot;</span> code <span class="kw">block</span> <span class="kw">like</span> this:</span>
+<span id="cb2-80">```mermaid</span>
+<span id="cb2-81">graph TD;</span>
+<span id="cb2-82">    A<span class="co">--&gt;B;</span></span>
+<span id="cb2-83">    A<span class="co">--&gt;C;</span></span>
+<span id="cb2-84">    B<span class="co">--&gt;D;</span></span>
+<span id="cb2-85">    C<span class="co">--&gt;D;</span></span></code></pre></div>
 This is how it would look with the Markdown on the left, and rendered
 graph on the right: (image: Mermaid support in Joplin) Note that Mermaid
 graphs are always rendered on a white background regardless of the
@@ -10604,7 +10601,7 @@ markdown-it demo: Does typographic replacements, (c) -&gt; © and so on:
 no: <a
 href="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/md_plugins/typographer_plugin.jpg">View</a>
 - Linkify: See <a
-href="https://markdown-it.github.io/#md3=%7B%22source%22%3A%22Use%20the%20Linkify%20checkbox%20to%20switch%20link-detection%20on%20and%20off.%5Cn%5Cn%2A%2AThese%20links%20are%20auto-detected%3A%2A%2A%5Cn%5Cnhttps%3A%2F%2Fexample.com%5Cn%5Cnexample.com%5Cn%5Cntest%40example.com%5Cn%5Cn%2A%2AThese%20are%20always%20links%3A%2A%2A%5Cn%5Cn%5Blink%5D%28https%3A%2F%2Fjoplinapp.org%29%5Cn%5Cn%3Chttps%3A%2F%2Fexample.com%3E%22%2C%22defaults%22%3A%7B%22html%22%3Afalse%2C%22xhtmlOut%22%3Afalse%2C%22breaks%22%3Afalse%2C%22langPrefix%22%3A%22language-%22%2C%22linkify%22%3Atrue%2C%22typographer%22%3Atrue%2C%22_highlight%22%3Atrue%2C%22_strict%22%3Afalse%2C%22_view%22%3A%22html%22%7D%7D">linkify</a>
+href="https://joplinapp.org">linkify</a>
 markdown-it demo: Auto-detects URLs and convert them to clickable links:
 yes - <a href="https://katex.org">Katex</a>:
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">math expr</annotation></semantics></math>
@@ -11728,7 +11725,7 @@ currently support moving the subnotebooks to different notebooks. - The
 <strong>terminal app</strong> supports displaying the tree of
 subnotebooks but it does not support collapsing/expanding them or moving
 the subnotebooks around.</p>
-<h3 id="synchronisation">Synchronisation</h3>
+<h3 id="synchronisation-2">Synchronisation</h3>
 <p><a
 href="https://www.paypal.com/donate/?hosted_button_id=WQCERTSSLCC7U">(image:
 Donate using PayPal)</a> <a

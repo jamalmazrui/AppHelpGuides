@@ -182,7 +182,7 @@
   </style>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#miktex-help" id="toc-miktex-help">MiKTeX help</a>
 <ul>
@@ -199,6 +199,7 @@ manual</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="miktex-help">MiKTeX help</h1>
 <p>This guide holds MiKTeX’s own help, gathered on 23 August 2026: its
 frequently asked questions, its how-to pages and its manual. MiKTeX is
@@ -253,8 +254,8 @@ support?</a></li>
 professional support?</a></li>
 <li><a href="#where-does-miktex-write-the-diagnostic-messages">Where
 does MiKTeX write the diagnostic messages?</a></li>
-<li><a href="#which-is-the-best-directory-to-keep-my-sty-files">Which is
-the best directory to keep my .sty files?</a></li>
+<li>Which is
+the best directory to keep my .sty files?</li>
 <li><a
 href="#which-operating-system-is-required-for-running-miktex">Which
 operating system is required for running MiKTeX?</a></li>
@@ -290,8 +291,8 @@ repository</a></li>
 <li><a href="#index">Index</a></li>
 <li><a href="#miktex-docs">MiKTeX Docs</a></li>
 <li><a href="#miktex-manual">MiKTeX Manual</a></li>
-<li><a href="#part-i-user-guide">Part I. User Guide</a></li>
-<li><a href="#part-ii-reference">Part II. Reference</a></li>
+<li>Part I. User Guide</li>
+<li>Part II. Reference</li>
 <li><a href="#privacy-policy">Privacy Policy</a></li>
 </ul></li>
 </ul>
@@ -1457,665 +1458,324 @@ More</p>
 More</p>
 <h4 id="index-1">Index</h4>
 <h5 id="symbols">Symbols</h5>
-<p>–admin, <a href="initexmf.html#id770683">Options</a>, <a
-href="miktex.html#id714360">Common options</a>, <a
-href="mpm.html#id940196">Options</a></p>
-<p>–alias=name, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="findtexmf.html#id757654">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–aux-directory=dir, <a
-href="texfeatures.html#auxdirectory">Specifying the Directory for
-Auxiliary Files</a>, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–batch, <a href="texify.html#id856154">Options</a></p>
-<p>–bistack-size=n, <a href="miktex-mf.html#id809287">Options</a></p>
-<p>–buf-size=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–c-style-errors, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–clean, <a href="texify.html#id856154">Options</a></p>
-<p>–credits, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–debug, <a href="miktex-mpost.html#id772785">Options</a></p>
-<p>–debug-format, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–default-paper-size=paper, <a
-href="initexmf.html#id770683">Options</a></p>
-<p>–disable-8bit-chars, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–disable-installer, <a
-href="texfeatures.html#autoinstalloptions">Automatic Package
-Installation</a>, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="initexmf.html#id770683">Options</a>, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex.html#id714360">Common options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–disable-write18, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–dont-parse-first-line, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–draftmode, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a></p>
-<p>–dump, <a href="miktex-formats.html#id783315">Commands</a></p>
-<p>–edit-config-file=file, <a
-href="initexmf.html#id770683">Options</a></p>
-<p>–enable-8bit-chars, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–enable-enctex, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a></p>
-<p>–enable-etex, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–enable-installer, <a
-href="texfeatures.html#autoinstalloptions">Automatic Package
-Installation</a>, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="initexmf.html#id770683">Options</a>, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex.html#id714360">Common options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–enable-mltex, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–enable-write18, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–error-line=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–even-only, <a href="mtprint.html#id941329">Options</a></p>
-<p>–expand, <a href="texify.html#id856154">Options</a></p>
-<p>–extra-mem-bot=n, <a href="miktex-pdftex.html#id822977">Options</a>,
-<a href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–extra-mem-top=n, <a href="miktex-pdftex.html#id822977">Options</a>,
-<a href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–file-line-error, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–file-line-error-style, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–file-type=filetype, <a
-href="findtexmf.html#id757654">Options</a></p>
-<p>–font-max=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–font-mem-size=n, <a href="miktex-pdftex.html#id822977">Options</a>,
-<a href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–gray-font=font, <a
-href="miktex-gftodvi.html#id769906">Options</a></p>
-<p>–half-error=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–halt-on-error, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–hash-extra=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–help, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="findtexmf.html#id757654">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="mpm.html#id940196">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="texify.html#id856154">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–hhelp, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="mpm.html#id940196">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–import-all, <a href="mpm.html#id940196">Options</a></p>
-<p>–import=package, <a href="mpm.html#id940196">Options</a></p>
-<p>–include-directory=dir, <a
-href="texfeatures.html#includedirectory">Specifying Additional Input
-Directories</a>, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–initialize, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–interaction=mode, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–job-name=name, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–job-time=file, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–label-font=font, <a
-href="miktex-gftodvi.html#id769906">Options</a></p>
-<p>–landscape, <a href="mtprint.html#id941329">Options</a></p>
-<p>–language=lang, <a href="texify.html#id856154">Options</a></p>
-<p>–lib-table-size=n, <a href="miktex-mf.html#id809287">Options</a></p>
-<p>–list-file-types, <a href="findtexmf.html#id757654">Options</a></p>
-<p>–list-modes, <a href="initexmf.html#id770683">Options</a></p>
-<p>–logo-font=font, <a
-href="miktex-gftodvi.html#id769906">Options</a></p>
-<p>–lua=file, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–luaconly, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–luaonly, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–mag=mag, <a href="miktex-dvicopy.html#id798479">Options</a></p>
-<p>–main-memory=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–max-in-open=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–max-pages=n, <a href="miktex-dvicopy.html#id798479">Options</a></p>
-<p>–max-print-line=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–max-strings=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–max-wiggle=n, <a href="miktex-mf.html#id809287">Options</a></p>
-<p>–min-crossrefs=n, <a
-href="miktex-bibtex.html#id799881">Options</a></p>
-<p>–mkidx-option=option, <a href="texify.html#id856154">Options</a></p>
-<p>–mktex=fmt, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–move-size=n, <a href="miktex-mf.html#id809287">Options</a></p>
-<p>–must-exist, <a href="findtexmf.html#id757654">Options</a></p>
-<p>–nest-size=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–no-c-style-errors, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–no-file-line-error, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–no-file-line-error-style, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–no-mktex=fmt, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–no-pdf, <a href="miktex-xetex.html#id650781">Options</a></p>
-<p>–no-registry, <a href="setupwiz.html#id849441">Options</a></p>
-<p>–no-shell-escape, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–nosocket, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–numbersystem=string, <a
-href="miktex-mpost.html#id772785">Options</a></p>
-<p>–odd-only, <a href="mtprint.html#id941329">Options</a></p>
-<p>–output-comment=string, <a
-href="miktex-luatex.html#id903021">Options</a></p>
-<p>–output-directory=dir, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–output-driver=cmd, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–output-format=format, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a></p>
-<p>–overflow-label-offset=real, <a
-href="miktex-gftodvi.html#id769906">Options</a></p>
-<p>–page-range=range, <a href="mtprint.html#id941329">Options</a></p>
-<p>–page-start=pagespec, <a
-href="miktex-dvicopy.html#id798479">Options</a></p>
-<p>–papersize=string, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–param-size=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–parse-first-line, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–path-size=n, <a href="miktex-mf.html#id809287">Options</a></p>
-<p>–pdf, <a href="texify.html#id856154">Options</a></p>
-<p>–pool-free=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–pool-size=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–print-method=method, <a href="mtprint.html#id941329">Options</a></p>
-<p>–print-nothing, <a href="mtprint.html#id941329">Options</a></p>
-<p>–print-only, <a href="initexmf.html#id770683">Options</a></p>
-<p>–printer=printer, <a href="mtprint.html#id941329">Options</a></p>
-<p>–quiet, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="initexmf.html#id770683">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex.html#id714360">Common options</a>, <a
-href="miktexsetup.html#id941545">Options</a>, <a
-href="mpm.html#id940196">Options</a>, <a
-href="mthelp.html#id940861">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="texify.html#id856154">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–record-package-usages=file, <a
-href="texfeatures.html#recpkgusg">Finding out Package Usages</a>, <a
-href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–recorder, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–register-root, <a href="initexmf.html#id770683">Options</a></p>
-<p>–report, <a href="initexmf.html#id770683">Options</a></p>
-<p>–restrict-write18, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–restricted, <a href="miktex-mpost.html#id772785">Options</a></p>
-<p>–run-viewer, <a href="texify.html#id856154">Options</a></p>
-<p>–safer, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–save-size=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–screen, <a href="miktex-mf.html#id809287">Options</a></p>
-<p>–select=sel, <a href="miktex-dvicopy.html#id798479">Options</a></p>
-<p>–set-config-value=[section]valuename=value, <a
-href="initexmf.html#id770683">Options</a></p>
-<p>–set-repository=location, <a href="mpm.html#id940196">Options</a></p>
-<p>–shell-escape, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–shell-restricted, <a href="miktex-luatex.html#id903021">Options</a>,
-<a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–show-config-value=[section]valuename, <a
-href="initexmf.html#id770683">Options</a></p>
-<p>–show-path=filetype, <a
-href="findtexmf.html#id757654">Options</a></p>
-<p>–src, <a href="texify.html#id856154">Options</a></p>
-<p>–src-specials, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–stack-size=n, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–start, <a href="findtexmf.html#id757654">Options</a></p>
-<p>–string-vacancies=n, <a href="miktex-mf.html#id809287">Options</a>,
-<a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–synctex=n, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–tcx=tcxname, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a></p>
-<p>–tex-option=option, <a href="texify.html#id856154">Options</a></p>
-<p>–tex=texprogram, <a href="miktex-mpost.html#id772785">Options</a></p>
-<p>–texinfo=cmd, <a href="texify.html#id856154">Options</a></p>
-<p>–the-name-of-the-game=engine, <a
-href="findtexmf.html#id757654">Options</a></p>
-<p>–time-statistics, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–trace=tracestreams, <a
-href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktexsetup.html#id941545">Options</a>, <a
-href="mpm.html#id940196">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–translate-file=tcxname, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a></p>
-<p>–trie-size=n, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–troff, <a href="miktex-mpost.html#id772785">Options</a></p>
-<p>–undump=name, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–unregister-root, <a href="initexmf.html#id770683">Options</a></p>
-<p>–utc, <a href="miktex-luatex.html#id903021">Options</a></p>
-<p>–verbose, <a href="initexmf.html#id770683">Options</a>, <a
-href="miktex.html#id714360">Common options</a>, <a
-href="mpm.html#id940196">Options</a>, <a
-href="texify.html#id856154">Options</a></p>
-<p>–version, <a href="miktex-bibtex.html#id799881">Options</a>, <a
-href="miktex-dvicopy.html#id798479">Options</a>, <a
-href="findtexmf.html#id757654">Options</a>, <a
-href="miktex-gftodvi.html#id769906">Options</a>, <a
-href="initexmf.html#id770683">Options</a>, <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex.html#id714360">Common options</a>, <a
-href="miktexsetup.html#id941545">Options</a>, <a
-href="mpm.html#id940196">Options</a>, <a
-href="mthelp.html#id940861">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="texify.html#id856154">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>–viewer-option=option, <a href="texify.html#id856154">Options</a></p>
-<p>-max-iterations=n, <a href="texify.html#id856154">Options</a></p>
-<p>-s internal=NUMBER, <a
-href="miktex-mpost.html#id772785">Options</a></p>
-<p>-s internal=STRING, <a
-href="miktex-mpost.html#id772785">Options</a></p>
-<p>-slant-font=font, <a
-href="miktex-gftodvi.html#id769906">Options</a></p>
-<p>-src, <a href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>-title-font=font, <a
-href="miktex-gftodvi.html#id769906">Options</a></p>
-<p>.bbl, <a href="miktex-bibtex.html#id799725">Description</a></p>
-<p>.bbl (bibliography file), <a
-href="miktex-bibtex.html#id799725">Description</a></p>
-<p>.bib (bibliographic database), <a
-href="miktex-bibtex.html#id799725">Description</a></p>
-<p>.bst (bibliography style file), <a
-href="miktex-bibtex.html#id799725">Description</a></p>
-<p>.dvi (DVI file), <a
-href="miktex-dvips.html#id799102">Description</a></p>
-<p>\write18 (run a program from within TeX), <a
-href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
+<p>–admin, Options, Common options, Options</p>
+<p>–alias=name, Options, Options, Options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–aux-directory=dir, Specifying the Directory for
+Auxiliary Files, Options,
+Options, Options, Options, Options</p>
+<p>–batch, Options</p>
+<p>–bistack-size=n, Options</p>
+<p>–buf-size=n, Options, Options, Options, Options</p>
+<p>–c-style-errors, Options,
+Options, Options, Options, Options, Options</p>
+<p>–clean, Options</p>
+<p>–credits, Options</p>
+<p>–debug, Options</p>
+<p>–debug-format, Options</p>
+<p>–default-paper-size=paper, Options</p>
+<p>–disable-8bit-chars, Options, Options, Options</p>
+<p>–disable-installer, Automatic Package
+Installation, Options, Options, Options, Options, Options, Options, Common options, Options, Options, Options</p>
+<p>–disable-write18, Options,
+Options, Options, Options</p>
+<p>–dont-parse-first-line, Options, Options, Options, Options</p>
+<p>–draftmode, Options, Options</p>
+<p>–dump, Commands</p>
+<p>–edit-config-file=file, Options</p>
+<p>–enable-8bit-chars, Options, Options, Options</p>
+<p>–enable-enctex, Options, Options</p>
+<p>–enable-etex, Options, Options</p>
+<p>–enable-installer, Automatic Package
+Installation, Options, Options, Options, Options, Options, Options, Common options, Options, Options, Options</p>
+<p>–enable-mltex, Options, Options, Options</p>
+<p>–enable-write18, Options,
+Options, Options, Options</p>
+<p>–error-line=n, Options, Options, Options, Options</p>
+<p>–even-only, Options</p>
+<p>–expand, Options</p>
+<p>–extra-mem-bot=n, Options,
+Options, Options</p>
+<p>–extra-mem-top=n, Options,
+Options, Options</p>
+<p>–file-line-error, Options,
+Options, Options, Options, Options, Options</p>
+<p>–file-line-error-style, Options, Options, Options, Options, Options, Options</p>
+<p>–file-type=filetype, Options</p>
+<p>–font-max=n, Options, Options, Options</p>
+<p>–font-mem-size=n, Options,
+Options, Options</p>
+<p>–gray-font=font, Options</p>
+<p>–half-error=n, Options, Options, Options, Options</p>
+<p>–halt-on-error, Options, Options, Options, Options, Options, Options</p>
+<p>–hash-extra=n, Options, Options, Options</p>
+<p>–help, Options, Options, Options, Options, Options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–hhelp, Options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–import-all, Options</p>
+<p>–import=package, Options</p>
+<p>–include-directory=dir, Specifying Additional Input
+Directories, Options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–initialize, Options, Options, Options, Options, Options, Options</p>
+<p>–interaction=mode, Options,
+Options, Options, Options, Options, Options</p>
+<p>–job-name=name, Options, Options, Options, Options, Options, Options</p>
+<p>–job-time=file, Options, Options, Options, Options</p>
+<p>–label-font=font, Options</p>
+<p>–landscape, Options</p>
+<p>–language=lang, Options</p>
+<p>–lib-table-size=n, Options</p>
+<p>–list-file-types, Options</p>
+<p>–list-modes, Options</p>
+<p>–logo-font=font, Options</p>
+<p>–lua=file, Options</p>
+<p>–luaconly, Options</p>
+<p>–luaonly, Options</p>
+<p>–mag=mag, Options</p>
+<p>–main-memory=n, Options, Options, Options, Options</p>
+<p>–max-in-open=n, Options, Options, Options</p>
+<p>–max-pages=n, Options</p>
+<p>–max-print-line=n, Options, Options, Options, Options</p>
+<p>–max-strings=n, Options, Options, Options, Options</p>
+<p>–max-wiggle=n, Options</p>
+<p>–min-crossrefs=n, Options</p>
+<p>–mkidx-option=option, Options</p>
+<p>–mktex=fmt, Options</p>
+<p>–move-size=n, Options</p>
+<p>–must-exist, Options</p>
+<p>–nest-size=n, Options, Options, Options</p>
+<p>–no-c-style-errors, Options, Options, Options, Options, Options, Options</p>
+<p>–no-file-line-error, Options, Options, Options, Options, Options, Options</p>
+<p>–no-file-line-error-style, Options, Options, Options, Options, Options, Options</p>
+<p>–no-mktex=fmt, Options</p>
+<p>–no-pdf, Options</p>
+<p>–no-registry, Options</p>
+<p>–no-shell-escape, Options,
+Options, Options, Options</p>
+<p>–nosocket, Options</p>
+<p>–numbersystem=string, Options</p>
+<p>–odd-only, Options</p>
+<p>–output-comment=string, Options</p>
+<p>–output-directory=dir, Options, Options, Options, Options, Options, Options</p>
+<p>–output-driver=cmd, Options</p>
+<p>–output-format=format, Options, Options</p>
+<p>–overflow-label-offset=real, Options</p>
+<p>–page-range=range, Options</p>
+<p>–page-start=pagespec, Options</p>
+<p>–papersize=string, Options</p>
+<p>–param-size=n, Options, Options, Options, Options</p>
+<p>–parse-first-line, Options, Options, Options, Options</p>
+<p>–path-size=n, Options</p>
+<p>–pdf, Options</p>
+<p>–pool-free=n, Options, Options, Options</p>
+<p>–pool-size=n, Options, Options, Options, Options</p>
+<p>–print-method=method, Options</p>
+<p>–print-nothing, Options</p>
+<p>–print-only, Options</p>
+<p>–printer=printer, Options</p>
+<p>–quiet, Options, Options, Options, Common options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–record-package-usages=file, Finding out Package Usages, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–recorder, Options, Options, Options, Options, Options, Options</p>
+<p>–register-root, Options</p>
+<p>–report, Options</p>
+<p>–restrict-write18, Options,
+Options, Options, Options</p>
+<p>–restricted, Options</p>
+<p>–run-viewer, Options</p>
+<p>–safer, Options</p>
+<p>–save-size=n, Options, Options, Options</p>
+<p>–screen, Options</p>
+<p>–select=sel, Options</p>
+<p>–set-config-value=[section]valuename=value, Options</p>
+<p>–set-repository=location, Options</p>
+<p>–shell-escape, Options, Options, Options, Options</p>
+<p>–shell-restricted, Options,
+Options, Options, Options</p>
+<p>–show-config-value=[section]valuename, Options</p>
+<p>–show-path=filetype, Options</p>
+<p>–src, Options</p>
+<p>–src-specials, Options, Options, Options</p>
+<p>–stack-size=n, Options, Options, Options, Options</p>
+<p>–start, Options</p>
+<p>–string-vacancies=n, Options,
+Options, Options, Options</p>
+<p>–synctex=n, Options, Options, Options</p>
+<p>–tcx=tcxname, Options, Options, Options</p>
+<p>–tex-option=option, Options</p>
+<p>–tex=texprogram, Options</p>
+<p>–texinfo=cmd, Options</p>
+<p>–the-name-of-the-game=engine, Options</p>
+<p>–time-statistics, Options, Options, Options, Options</p>
+<p>–trace=tracestreams, Options, Options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–translate-file=tcxname, Options, Options, Options</p>
+<p>–trie-size=n, Options, Options, Options</p>
+<p>–troff, Options</p>
+<p>–undump=name, Options, Options, Options, Options, Options, Options</p>
+<p>–unregister-root, Options</p>
+<p>–utc, Options</p>
+<p>–verbose, Options, Common options, Options, Options</p>
+<p>–version, Options, Options, Options, Options, Options, Options, Options, Options, Common options, Options, Options, Options, Options, Options, Options, Options</p>
+<p>–viewer-option=option, Options</p>
+<p>-max-iterations=n, Options</p>
+<p>-s internal=NUMBER, Options</p>
+<p>-s internal=STRING, Options</p>
+<p>-slant-font=font, Options</p>
+<p>-src, Options, Options, Options</p>
+<p>-title-font=font, Options</p>
+<p>.bbl, Description</p>
+<p>.bbl (bibliography file), Description</p>
+<p>.bib (bibliographic database), Description</p>
+<p>.bst (bibliography style file), Description</p>
+<p>.dvi (DVI file), Description</p>
+<p>\write18 (run a program from within TeX), Options, Options, Options, Options</p>
 <h5 id="a">A</h5>
-<p>automatic package installation, <a
-href="texfeatures.html#autoinstalloptions">Automatic Package
-Installation</a></p>
+<p>automatic package installation, Automatic Package
+Installation</p>
 <p>auxiliary files</p>
-<p>removing, <a href="texifying.html">texify: The MiKTeX Compiler
-Driver</a></p>
-<p>specifying the directory for, <a
-href="texfeatures.html#auxdirectory">Specifying the Directory for
-Auxiliary Files</a></p>
+<p>removing, texify: The MiKTeX Compiler
+Driver</p>
+<p>specifying the directory for, Specifying the Directory for
+Auxiliary Files</p>
 <h5 id="b">B</h5>
-<p>BIBINPUTS, <a href="miktex-bibtex.html#id798131">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
+<p>BIBINPUTS, Environment, Environment variables</p>
 <p>bibliography</p>
-<p>creation, <a href="miktex-bibtex.html#id799725">Description</a></p>
+<p>creation, Description</p>
 <p>BibTeX</p>
-<p>invoked by texify, <a href="texifying.html">texify: The MiKTeX
-Compiler Driver</a></p>
-<p>BSTINPUTS, <a href="miktex-bibtex.html#id798131">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
+<p>invoked by texify, texify: The MiKTeX
+Compiler Driver</p>
+<p>BSTINPUTS, Environment, Environment variables</p>
 <h5 id="c">C</h5>
 <p>cross-references</p>
-<p>minimum number required, <a
-href="miktex-bibtex.html#id799881">Options</a></p>
-<p>resolving, <a href="texifying.html">texify: The MiKTeX Compiler
-Driver</a></p>
+<p>minimum number required, Options</p>
+<p>resolving, texify: The MiKTeX Compiler
+Driver</p>
 <h5 id="d">D</h5>
-<p>DVI search, <a href="texifying.html">texify: The MiKTeX Compiler
-Driver</a></p>
+<p>DVI search, texify: The MiKTeX Compiler
+Driver</p>
 <h5 id="e">E</h5>
 <p>error messages</p>
-<p>C/C++ style, <a href="miktex-luatex.html#id903021">Options</a>, <a
-href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-mpost.html#id772785">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>line width, <a href="miktex-mf.html#id809287">Options</a>, <a
-href="miktex-pdftex.html#id822977">Options</a>, <a
-href="miktex-tex.html#id676546">Options</a>, <a
-href="miktex-xetex.html#id650781">Options</a></p>
-<p>extra_mem_bot, <a href="runtimeparams.html">Changing TEXMF run-time
-parameters</a></p>
+<p>C/C++ style, Options, Options, Options, Options, Options, Options</p>
+<p>line width, Options, Options, Options, Options</p>
+<p>extra_mem_bot, Changing TEXMF run-time
+parameters</p>
 <h5 id="f">F</h5>
 <p>file name database</p>
-<p>defined, <a href="configuring.html#fndbupdate">Refreshing the File
-Name Database</a></p>
-<p>refreshing, <a href="configuring.html#fndbupdate">Refreshing the File
-Name Database</a></p>
+<p>defined, Refreshing the File
+Name Database</p>
+<p>refreshing, Refreshing the File
+Name Database</p>
 <p>file name datasbase</p>
-<p>refreshing, <a href="miktex-fndb.html#id785125">Commands</a></p>
-<p>font_mem_size, <a href="runtimeparams.html">Changing TEXMF run-time
-parameters</a></p>
+<p>refreshing, Commands</p>
+<p>font_mem_size, Changing TEXMF run-time
+parameters</p>
 <p>format files</p>
-<p>build, <a href="miktex-formats.html#id783315">Commands</a></p>
+<p>build, Commands</p>
 <h5 id="g">G</h5>
-<p>gftodvi, <a href="miktex-dvips.html#id799102">Description</a></p>
-<p>give back, <a href="registering.html">Give Back</a></p>
+<p>gftodvi, Description</p>
+<p>give back, Give Back</p>
 <h5 id="k">K</h5>
 <p>Knuth</p>
-<p>Donald E., <a href="about.html">About MiKTeX</a></p>
+<p>Donald E., About MiKTeX</p>
 <h5 id="l">L</h5>
 <p>LaTeX</p>
-<p>invoked by texify, <a href="texifying.html">texify: The MiKTeX
-Compiler Driver</a></p>
+<p>invoked by texify, texify: The MiKTeX
+Compiler Driver</p>
 <p>LaTeX language definition files</p>
-<p>configuring, <a
-href="miktex-languages.html#id653542">Commands</a></p>
+<p>configuring, Commands</p>
 <p>local additions</p>
-<p>intergrating, <a href="localadditions.html">Integrating Local
-Additions</a></p>
-<p>local guide, <a href="localguide.html#gettingstarted">Getting
-Started</a></p>
+<p>intergrating, Integrating Local
+Additions</p>
+<p>local guide, Getting
+Started</p>
 <h5 id="m">M</h5>
-<p>main_memory, <a href="runtimeparams.html">Changing TEXMF run-time
-parameters</a></p>
+<p>main_memory, Changing TEXMF run-time
+parameters</p>
 <p>MakeIndex</p>
-<p>invoked by texify, <a href="texifying.html">texify: The MiKTeX
-Compiler Driver</a></p>
+<p>invoked by texify, texify: The MiKTeX
+Compiler Driver</p>
 <p>METAFONT</p>
-<p>modes, <a href="initexmf.html#id770683">Options</a></p>
-<p>MFINPUTS, <a href="miktex-mf.html#id772916">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
+<p>modes, Options</p>
+<p>MFINPUTS, Environment, Environment variables</p>
 <p>MiKTeX</p>
-<p>features, <a href="about.html">About MiKTeX</a></p>
-<p>getting, <a href="howtoget.html">How to Get MiKTeX</a></p>
-<p>how to pronounce, <a href="about.html">About MiKTeX</a></p>
-<p>registering, <a href="registering.html">Give Back</a></p>
-<p>updating, <a href="updating.html">Installing Updates</a></p>
+<p>features, About MiKTeX</p>
+<p>getting, How to Get MiKTeX</p>
+<p>how to pronounce, About MiKTeX</p>
+<p>registering, Give Back</p>
+<p>updating, Installing Updates</p>
 <p>MiKTeX Console</p>
-<p>running, <a href="updating.html">Installing Updates</a></p>
-<p>update wizard, <a href="updating.html">Installing Updates</a></p>
+<p>running, Installing Updates</p>
+<p>update wizard, Installing Updates</p>
 <p>MiKTeX project</p>
-<p>how to support the, <a href="registering.html">Give Back</a></p>
-<p>MiKTeX Project Page, <a href="projectpage.html">The MiKTeX Project
-Page</a></p>
-<p>MIKTEX_EDITOR, <a href="miktex-luatex.html#id811518">Environment</a>,
-<a href="miktex-mf.html#id772916">Environment</a>, <a
-href="miktex-pdftex.html#id863592">Environment</a>, <a
-href="miktex-tex.html#id855729">Environment</a>, <a
-href="miktex-xetex.html#id926526">Environment</a></p>
-<p>MIKTEX_REPOSITORY, <a href="mpm.html#id940622">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
-<p>MIKTEX_TRACE, <a href="miktex-bibtex.html#id798131">Environment</a>,
-<a href="miktex-dvicopy.html#id798988">Environment</a>, <a
-href="miktex-dvips.html#id757513">Environment</a>, <a
-href="miktex-gftodvi.html#id770434">Environment</a>, <a
-href="miktex-luatex.html#id811518">Environment</a>, <a
-href="miktex-mf.html#id772916">Environment</a>, <a
-href="miktex-mpost.html#id789342">Environment</a>, <a
-href="mpm.html#id940622">Environment</a>, <a
-href="mthelp.html#id941005">Environment</a>, <a
-href="mthelp.html#id941198">Environment</a>, <a
-href="miktex-pdftex.html#id863592">Environment</a>, <a
-href="miktex-tex.html#id855729">Environment</a>, <a
-href="miktex-xetex.html#id926526">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
-<p>modes.mf, <a href="miktex-mf.html#id808857">Description</a></p>
-<p>MPINPUTS, <a href="miktex-mpost.html#id789342">Environment</a></p>
-<p>mthelp, <a href="otherdoc.html">Documentation</a></p>
+<p>how to support the, Give Back</p>
+<p>MiKTeX Project Page, The MiKTeX Project
+Page</p>
+<p>MIKTEX_EDITOR, Environment,
+Environment, Environment, Environment, Environment</p>
+<p>MIKTEX_REPOSITORY, Environment, Environment variables</p>
+<p>MIKTEX_TRACE, Environment,
+Environment, Environment, Environment, Environment, Environment, Environment, Environment, Environment, Environment, Environment, Environment, Environment, Environment variables</p>
+<p>modes.mf, Description</p>
+<p>MPINPUTS, Environment</p>
+<p>mthelp, Documentation</p>
 <h5 id="o">O</h5>
 <p>Outline fonts</p>
-<p>psfonts.map, <a href="advanced.html#psfonts">Managing Font Map
-Files</a></p>
+<p>psfonts.map, Managing Font Map
+Files</p>
 <h5 id="p">P</h5>
-<p>package set, <a href="miktexsetup.html#id941545">Options</a>, <a
-href="setupwiz.html#id849441">Options</a></p>
+<p>package set, Options, Options</p>
 <p>packages</p>
-<p>automatic installation of, <a href="autoinstall.html">Automatic
-Package Installation</a></p>
-<p>finding out usages, <a href="texfeatures.html#recpkgusg">Finding out
-Package Usages</a></p>
-<p>updating, <a href="updating.html">Installing Updates</a></p>
+<p>automatic installation of, Automatic
+Package Installation</p>
+<p>finding out usages, Finding out
+Package Usages</p>
+<p>updating, Installing Updates</p>
 <p>paper format</p>
-<p>setting, <a href="papersize.html">Setting the Preferred Paper
-Format</a></p>
+<p>setting, Setting the Preferred Paper
+Format</p>
 <p>paper size</p>
-<p>changing, <a href="pdftex.cfg.html#id786445">Instructions</a></p>
-<p>setting default, <a href="initexmf.html#id770683">Options</a></p>
+<p>changing, Instructions</p>
+<p>setting default, Options</p>
 <p>PDF</p>
-<p>distilling into, <a href="miktex-dvips.html#id799174">Options</a></p>
+<p>distilling into, Options</p>
 <p>PDF/PostScript font map files</p>
-<p>configuring, <a href="miktex-fontmaps.html#id785340">Commands</a></p>
+<p>configuring, Commands</p>
 <p>pdfLaTeX</p>
-<p>invoked by texify, <a href="texifying.html">texify: The MiKTeX
-Compiler Driver</a></p>
-<p>portable, <a href="miktexsetup.html#id941545">Options</a></p>
+<p>invoked by texify, texify: The MiKTeX
+Compiler Driver</p>
+<p>portable, Options</p>
 <p>PostScript</p>
-<p>converting TeX output into, <a
-href="miktex-dvips.html#id799102">Description</a></p>
+<p>converting TeX output into, Description</p>
 <p>PostScript Type 1 fonts</p>
-<p>psfonts.map, <a href="advanced.html#psfonts">Managing Font Map
-Files</a></p>
-<p>private installation, <a
-href="setupwiz.html#id849441">Options</a></p>
-<p>project page, <a href="projectpage.html">The MiKTeX Project
-Page</a></p>
-<p>psfonts.map, <a href="miktex-dvips.html#id799174">Options</a></p>
-<p>creating, <a href="advanced.html#psfonts">Managing Font Map
-Files</a></p>
+<p>psfonts.map, Managing Font Map
+Files</p>
+<p>private installation, Options</p>
+<p>project page, The MiKTeX Project
+Page</p>
+<p>psfonts.map, Options</p>
+<p>creating, Managing Font Map
+Files</p>
 <h5 id="r">R</h5>
-<p>registration, <a href="registering.html">Give Back</a></p>
+<p>registration, Give Back</p>
 <h5 id="s">S</h5>
-<p>security, <a href="miktex-dvips.html#id799174">Options</a></p>
+<p>security, Options</p>
 <p>setup wizard</p>
-<p>setupwiz.opt, <a href="setupwiz.html#id847081">Description</a></p>
-<p>setupwiz.opt, <a href="setupwiz.html#id847081">Description</a></p>
-<p>shared installation, <a href="setupwiz.html#id849441">Options</a></p>
-<p>startup configuration file, <a
-href="setupwiz.html#id849441">Options</a></p>
+<p>setupwiz.opt, Description</p>
+<p>setupwiz.opt, Description</p>
+<p>shared installation, Options</p>
+<p>startup configuration file, Options</p>
 <h5 id="t">T</h5>
-<p>texify, <a href="texifying.html">texify: The MiKTeX Compiler
-Driver</a></p>
-<p>TEXINPUTS, <a href="miktex-pdftex.html#id863592">Environment</a>, <a
-href="miktex-tex.html#id855729">Environment</a>, <a
-href="miktex-xetex.html#id926526">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
+<p>texify, texify: The MiKTeX Compiler
+Driver</p>
+<p>TEXINPUTS, Environment, Environment, Environment, Environment variables</p>
 <p>TEXMF root</p>
-<p>registering, <a href="initexmf.html#id770683">Options</a></p>
-<p>unregistering, <a href="initexmf.html#id770683">Options</a></p>
-<p>TFMFONTS, <a href="miktex-pdftex.html#id863592">Environment</a>, <a
-href="miktex-tex.html#id855729">Environment</a>, <a
-href="miktex-xetex.html#id926526">Environment</a>, <a
-href="envvars.html">Environment variables</a></p>
+<p>registering, Options</p>
+<p>unregistering, Options</p>
+<p>TFMFONTS, Environment, Environment, Environment, Environment variables</p>
 <h5 id="u">U</h5>
-<p>unattended setup, <a
-href="miktexsetup.html#id941429">Description</a>, <a
-href="setupwiz.html#id849441">Options</a></p>
+<p>unattended setup, Description, Options</p>
 <p>updates</p>
-<p>installing, <a href="updating.html">Installing Updates</a></p>
+<p>installing, Installing Updates</p>
 <h5 id="v">V</h5>
 <p>virtual fonts</p>
-<p>resolving, <a href="miktex-dvicopy.html#id798412">Description</a></p>
+<p>resolving, Description</p>
 <h3 id="miktex-docs">MiKTeX Docs</h3>
 <p>This website uses cookies to personalize content and ads. Learn
 More</p>
@@ -2145,228 +1805,228 @@ permission notice identical to this one.</p>
 manual into another language, under the above conditions for modified
 versions, except that this permission notice may be stated in a
 translation approved by the Free Software Foundation.</p>
-<p><a href="preface.html">About this Document</a></p>
-<p><a href="userguide.html">I. User Guide</a></p>
-<p><a href="intro.html">1. Introduction</a></p>
-<p><a href="intro.html#aboutmanual">About this Manual</a></p>
-<p><a href="about.html">About MiKTeX</a></p>
-<p><a href="howtoget.html">How to Get MiKTeX</a></p>
-<p><a href="registering.html">Give Back</a></p>
-<p><a href="projectpage.html">The MiKTeX Project Page</a></p>
-<p><a href="otherdoc.html">Documentation</a></p>
-<p><a href="installing.html">2. Installing MiKTeX</a></p>
-<p><a href="installing.html#installwin">Windows</a></p>
-<p><a href="installmac.html">macOS</a></p>
-<p><a href="installunx.html">Linux</a></p>
-<p><a href="localguide.html">3. Using MiKTeX</a></p>
-<p><a href="localguide.html#gettingstarted">Getting Started</a></p>
-<p><a href="texfeatures.html">Unique TeX features</a></p>
-<p><a href="texfeatures.html#autoinstalloptions">Automatic Package
-Installation</a></p>
-<p><a href="texfeatures.html#recpkgusg">Finding out Package
-Usages</a></p>
-<p><a href="texfeatures.html#includedirectory">Specifying Additional
-Input Directories</a></p>
-<p><a href="texfeatures.html#auxdirectory">Specifying the Directory for
-Auxiliary Files</a></p>
-<p><a href="texifying.html">texify: The MiKTeX Compiler Driver</a></p>
-<p><a href="printing.html">Printing</a></p>
-<p><a href="printing.html#id787661">Using a Viewer to Print DVI/PDF
-Files</a></p>
-<p><a href="printing.html#id787711">Using mtprint to Print DVI
-Files</a></p>
-<p><a href="configuring.html">4. Maintenance</a></p>
-<p><a href="configuring.html#fndbupdate">Refreshing the File Name
-Database</a></p>
-<p><a href="papersize.html">Setting the Preferred Paper Format</a></p>
-<p><a href="updating.html">Installing Updates</a></p>
-<p><a href="autoinstall.html">Automatic Package Installation</a></p>
-<p><a href="localadditions.html">Integrating Local Additions</a></p>
-<p><a href="advanced.html">5. Advanced Topics</a></p>
-<p><a href="advanced.html#psfonts">Managing Font Map Files</a></p>
-<p><a href="runtimeparams.html">Changing TEXMF run-time
-parameters</a></p>
-<p><a href="reference.html">II. Reference</a></p>
-<p><a href="programs.html">6. Programs</a></p>
-<p><a href="miktex-bibtex.html">miktex-bibtex</a> — make a bibliography
+<p>About this Document</p>
+<p>I. User Guide</p>
+<p>1. Introduction</p>
+<p>About this Manual</p>
+<p>About MiKTeX</p>
+<p>How to Get MiKTeX</p>
+<p>Give Back</p>
+<p>The MiKTeX Project Page</p>
+<p>Documentation</p>
+<p>2. Installing MiKTeX</p>
+<p>Windows</p>
+<p>macOS</p>
+<p>Linux</p>
+<p>3. Using MiKTeX</p>
+<p>Getting Started</p>
+<p>Unique TeX features</p>
+<p>Automatic Package
+Installation</p>
+<p>Finding out Package
+Usages</p>
+<p>Specifying Additional
+Input Directories</p>
+<p>Specifying the Directory for
+Auxiliary Files</p>
+<p>texify: The MiKTeX Compiler Driver</p>
+<p>Printing</p>
+<p>Using a Viewer to Print DVI/PDF
+Files</p>
+<p>Using mtprint to Print DVI
+Files</p>
+<p>4. Maintenance</p>
+<p>Refreshing the File Name
+Database</p>
+<p>Setting the Preferred Paper Format</p>
+<p>Installing Updates</p>
+<p>Automatic Package Installation</p>
+<p>Integrating Local Additions</p>
+<p>5. Advanced Topics</p>
+<p>Managing Font Map Files</p>
+<p>Changing TEXMF run-time
+parameters</p>
+<p>II. Reference</p>
+<p>6. Programs</p>
+<p>miktex-bibtex — make a bibliography
 for LaTeX</p>
-<p><a href="miktex-dvicopy.html">miktex-dvicopy</a> — produce modified
+<p>miktex-dvicopy — produce modified
 copy of DVI file</p>
-<p><a href="miktex-dvips.html">miktex-dvips</a> — convert a DVI file to
+<p>miktex-dvips — convert a DVI file to
 PostScript</p>
-<p><a href="findtexmf.html">findtexmf</a> — search files in MiKTeX
+<p>findtexmf — search files in MiKTeX
 directories</p>
-<p><a href="miktex-gftodvi.html">miktex-gftodvi</a> — make proof sheets
+<p>miktex-gftodvi — make proof sheets
 from generic font files</p>
-<p><a href="initexmf.html">initexmf</a> — MiKTeX configuration
+<p>initexmf — MiKTeX configuration
 utility</p>
-<p><a href="miktex-filesystem.html">miktex-filesystem</a> — watch the
+<p>miktex-filesystem — watch the
 file system</p>
-<p><a href="miktex-filetypes.html">miktex-filetypes</a> — manage Windows
+<p>miktex-filetypes — manage Windows
 filetypes</p>
-<p><a href="miktex-fndb.html">miktex-fndb</a> — manage the MiKTeX file
+<p>miktex-fndb — manage the MiKTeX file
 name database</p>
-<p><a href="miktex-fontmaps.html">miktex-fontmaps</a> — manage
+<p>miktex-fontmaps — manage
 PDF/PostScript font maps</p>
-<p><a href="miktex-formats.html">miktex-formats</a> — manage TeX
+<p>miktex-formats — manage TeX
 formats</p>
-<p><a href="miktex-links.html">miktex-links</a> — manage links from
+<p>miktex-links — manage links from
 scripts and formats to executables</p>
-<p><a href="miktex-languages.html">miktex-languages</a> — manage LaTeX
+<p>miktex-languages — manage LaTeX
 language definitions</p>
-<p><a href="miktex-luatex.html">miktex-luatex</a> — an extended version
+<p>miktex-luatex — an extended version
 of pdfTeX using Lua as an embedded scripting language</p>
-<p><a href="miktex-mf.html">miktex-mf</a> — METAFONT, a language for
+<p>miktex-mf — METAFONT, a language for
 font and logo design</p>
-<p><a href="miktex-mpost.html">miktex-mpost</a> — MetaPost, a system for
+<p>miktex-mpost — MetaPost, a system for
 creating graphics</p>
-<p><a href="miktex-packages.html">miktex-packages</a> — manage MiKTeX
+<p>miktex-packages — manage MiKTeX
 packages</p>
-<p><a href="miktex-repositories.html">miktex-repositories</a> — manage
+<p>miktex-repositories — manage
 MiKTeX package repositories</p>
-<p><a href="miktex.html">miktex</a> — One MiKTeX Utility</p>
-<p><a href="miktexsetup.html">miktexsetup</a> — MiKTeX setup utility</p>
-<p><a href="mpm.html">mpm</a> — MiKTeX package manager</p>
-<p><a href="mthelp.html">mthelp</a> — MiKTeX help utility</p>
-<p><a href="mtprint.html">mtprint</a> — MiKTeX print utility</p>
-<p><a href="miktex-pdftex.html">miktex-pdftex</a> — DVI/PDF output from
+<p>miktex — One MiKTeX Utility</p>
+<p>miktexsetup — MiKTeX setup utility</p>
+<p>mpm — MiKTeX package manager</p>
+<p>mthelp — MiKTeX help utility</p>
+<p>mtprint — MiKTeX print utility</p>
+<p>miktex-pdftex — DVI/PDF output from
 TeX</p>
-<p><a href="setupwiz.html">setupwiz</a> — MiKTeX setup wizard</p>
-<p><a href="miktex-tex.html">miktex-tex</a> — text formatting and
+<p>setupwiz — MiKTeX setup wizard</p>
+<p>miktex-tex — text formatting and
 typesetting</p>
-<p><a href="texify.html">texify</a> — MiKTeX compiler driver</p>
-<p><a href="miktex-xetex.html">miktex-xetex</a> — Unicode-based TeX
+<p>texify — MiKTeX compiler driver</p>
+<p>miktex-xetex — Unicode-based TeX
 engine</p>
-<p><a href="files.html">7. Files</a></p>
-<p><a href="miktex.ini.html">miktex.ini</a> — MiKTeX configuration data
+<p>7. Files</p>
+<p>miktex.ini — MiKTeX configuration data
 store</p>
-<p><a href="pdftex.cfg.html">pdftex.cfg</a> — configuration settings for
+<p>pdftex.cfg — configuration settings for
 MiKTeX-pdfTeX</p>
-<p><a href="envvars.html">8. Environment variables</a></p>
-<p><a href="tracestreams.html">9. Trace Streams</a></p>
-<p><a href="defaults.html">10. Run-Time Defaults</a></p>
-<p><a href="defaults.html#miktexconfig">All MiKTeX Programs</a></p>
-<p><a href="bibtexdefaults.html">BibTeX</a></p>
-<p><a href="texmfdefaults.html">All TeXMF Programs</a></p>
-<p><a href="texdefaults.html">All TeX Programs</a></p>
-<p><a href="pdftexdefaults.html">pdfTeX</a></p>
-<p><a href="mpmfdefaults.html">METAFONT &amp; MetaPost</a></p>
-<p><a href="mfdefaults.html">METAFONT</a></p>
-<p><a href="mpostdefaults.html">MetaPost</a></p>
-<p><a href="idx.html">Index</a></p>
+<p>8. Environment variables</p>
+<p>9. Trace Streams</p>
+<p>10. Run-Time Defaults</p>
+<p>All MiKTeX Programs</p>
+<p>BibTeX</p>
+<p>All TeXMF Programs</p>
+<p>All TeX Programs</p>
+<p>pdfTeX</p>
+<p>METAFONT &amp; MetaPost</p>
+<p>METAFONT</p>
+<p>MetaPost</p>
+<p>Index</p>
 <h3 id="part-i.-user-guide">Part I. User Guide</h3>
 <p>This website uses cookies to personalize content and ads. Learn
 More</p>
 <h4 id="part-i.-user-guide-1">Part I. User Guide</h4>
-<p><a href="intro.html">1. Introduction</a></p>
-<p><a href="intro.html#aboutmanual">About this Manual</a></p>
-<p><a href="about.html">About MiKTeX</a></p>
-<p><a href="howtoget.html">How to Get MiKTeX</a></p>
-<p><a href="registering.html">Give Back</a></p>
-<p><a href="projectpage.html">The MiKTeX Project Page</a></p>
-<p><a href="otherdoc.html">Documentation</a></p>
-<p><a href="installing.html">2. Installing MiKTeX</a></p>
-<p><a href="installing.html#installwin">Windows</a></p>
-<p><a href="installmac.html">macOS</a></p>
-<p><a href="installunx.html">Linux</a></p>
-<p><a href="localguide.html">3. Using MiKTeX</a></p>
-<p><a href="localguide.html#gettingstarted">Getting Started</a></p>
-<p><a href="texfeatures.html">Unique TeX features</a></p>
-<p><a href="texfeatures.html#autoinstalloptions">Automatic Package
-Installation</a></p>
-<p><a href="texfeatures.html#recpkgusg">Finding out Package
-Usages</a></p>
-<p><a href="texfeatures.html#includedirectory">Specifying Additional
-Input Directories</a></p>
-<p><a href="texfeatures.html#auxdirectory">Specifying the Directory for
-Auxiliary Files</a></p>
-<p><a href="texifying.html">texify: The MiKTeX Compiler Driver</a></p>
-<p><a href="printing.html">Printing</a></p>
-<p><a href="printing.html#id787661">Using a Viewer to Print DVI/PDF
-Files</a></p>
-<p><a href="printing.html#id787711">Using mtprint to Print DVI
-Files</a></p>
-<p><a href="configuring.html">4. Maintenance</a></p>
-<p><a href="configuring.html#fndbupdate">Refreshing the File Name
-Database</a></p>
-<p><a href="papersize.html">Setting the Preferred Paper Format</a></p>
-<p><a href="updating.html">Installing Updates</a></p>
-<p><a href="autoinstall.html">Automatic Package Installation</a></p>
-<p><a href="localadditions.html">Integrating Local Additions</a></p>
-<p><a href="advanced.html">5. Advanced Topics</a></p>
-<p><a href="advanced.html#psfonts">Managing Font Map Files</a></p>
-<p><a href="runtimeparams.html">Changing TEXMF run-time
-parameters</a></p>
+<p>1. Introduction</p>
+<p>About this Manual</p>
+<p>About MiKTeX</p>
+<p>How to Get MiKTeX</p>
+<p>Give Back</p>
+<p>The MiKTeX Project Page</p>
+<p>Documentation</p>
+<p>2. Installing MiKTeX</p>
+<p>Windows</p>
+<p>macOS</p>
+<p>Linux</p>
+<p>3. Using MiKTeX</p>
+<p>Getting Started</p>
+<p>Unique TeX features</p>
+<p>Automatic Package
+Installation</p>
+<p>Finding out Package
+Usages</p>
+<p>Specifying Additional
+Input Directories</p>
+<p>Specifying the Directory for
+Auxiliary Files</p>
+<p>texify: The MiKTeX Compiler Driver</p>
+<p>Printing</p>
+<p>Using a Viewer to Print DVI/PDF
+Files</p>
+<p>Using mtprint to Print DVI
+Files</p>
+<p>4. Maintenance</p>
+<p>Refreshing the File Name
+Database</p>
+<p>Setting the Preferred Paper Format</p>
+<p>Installing Updates</p>
+<p>Automatic Package Installation</p>
+<p>Integrating Local Additions</p>
+<p>5. Advanced Topics</p>
+<p>Managing Font Map Files</p>
+<p>Changing TEXMF run-time
+parameters</p>
 <h3 id="part-ii.-reference">Part II. Reference</h3>
 <p>This website uses cookies to personalize content and ads. Learn
 More</p>
 <h4 id="part-ii.-reference-1">Part II. Reference</h4>
-<p><a href="programs.html">6. Programs</a></p>
-<p><a href="miktex-bibtex.html">miktex-bibtex</a> — make a bibliography
+<p>6. Programs</p>
+<p>miktex-bibtex — make a bibliography
 for LaTeX</p>
-<p><a href="miktex-dvicopy.html">miktex-dvicopy</a> — produce modified
+<p>miktex-dvicopy — produce modified
 copy of DVI file</p>
-<p><a href="miktex-dvips.html">miktex-dvips</a> — convert a DVI file to
+<p>miktex-dvips — convert a DVI file to
 PostScript</p>
-<p><a href="findtexmf.html">findtexmf</a> — search files in MiKTeX
+<p>findtexmf — search files in MiKTeX
 directories</p>
-<p><a href="miktex-gftodvi.html">miktex-gftodvi</a> — make proof sheets
+<p>miktex-gftodvi — make proof sheets
 from generic font files</p>
-<p><a href="initexmf.html">initexmf</a> — MiKTeX configuration
+<p>initexmf — MiKTeX configuration
 utility</p>
-<p><a href="miktex-filesystem.html">miktex-filesystem</a> — watch the
+<p>miktex-filesystem — watch the
 file system</p>
-<p><a href="miktex-filetypes.html">miktex-filetypes</a> — manage Windows
+<p>miktex-filetypes — manage Windows
 filetypes</p>
-<p><a href="miktex-fndb.html">miktex-fndb</a> — manage the MiKTeX file
+<p>miktex-fndb — manage the MiKTeX file
 name database</p>
-<p><a href="miktex-fontmaps.html">miktex-fontmaps</a> — manage
+<p>miktex-fontmaps — manage
 PDF/PostScript font maps</p>
-<p><a href="miktex-formats.html">miktex-formats</a> — manage TeX
+<p>miktex-formats — manage TeX
 formats</p>
-<p><a href="miktex-links.html">miktex-links</a> — manage links from
+<p>miktex-links — manage links from
 scripts and formats to executables</p>
-<p><a href="miktex-languages.html">miktex-languages</a> — manage LaTeX
+<p>miktex-languages — manage LaTeX
 language definitions</p>
-<p><a href="miktex-luatex.html">miktex-luatex</a> — an extended version
+<p>miktex-luatex — an extended version
 of pdfTeX using Lua as an embedded scripting language</p>
-<p><a href="miktex-mf.html">miktex-mf</a> — METAFONT, a language for
+<p>miktex-mf — METAFONT, a language for
 font and logo design</p>
-<p><a href="miktex-mpost.html">miktex-mpost</a> — MetaPost, a system for
+<p>miktex-mpost — MetaPost, a system for
 creating graphics</p>
-<p><a href="miktex-packages.html">miktex-packages</a> — manage MiKTeX
+<p>miktex-packages — manage MiKTeX
 packages</p>
-<p><a href="miktex-repositories.html">miktex-repositories</a> — manage
+<p>miktex-repositories — manage
 MiKTeX package repositories</p>
-<p><a href="miktex.html">miktex</a> — One MiKTeX Utility</p>
-<p><a href="miktexsetup.html">miktexsetup</a> — MiKTeX setup utility</p>
-<p><a href="mpm.html">mpm</a> — MiKTeX package manager</p>
-<p><a href="mthelp.html">mthelp</a> — MiKTeX help utility</p>
-<p><a href="mtprint.html">mtprint</a> — MiKTeX print utility</p>
-<p><a href="miktex-pdftex.html">miktex-pdftex</a> — DVI/PDF output from
+<p>miktex — One MiKTeX Utility</p>
+<p>miktexsetup — MiKTeX setup utility</p>
+<p>mpm — MiKTeX package manager</p>
+<p>mthelp — MiKTeX help utility</p>
+<p>mtprint — MiKTeX print utility</p>
+<p>miktex-pdftex — DVI/PDF output from
 TeX</p>
-<p><a href="setupwiz.html">setupwiz</a> — MiKTeX setup wizard</p>
-<p><a href="miktex-tex.html">miktex-tex</a> — text formatting and
+<p>setupwiz — MiKTeX setup wizard</p>
+<p>miktex-tex — text formatting and
 typesetting</p>
-<p><a href="texify.html">texify</a> — MiKTeX compiler driver</p>
-<p><a href="miktex-xetex.html">miktex-xetex</a> — Unicode-based TeX
+<p>texify — MiKTeX compiler driver</p>
+<p>miktex-xetex — Unicode-based TeX
 engine</p>
-<p><a href="files.html">7. Files</a></p>
-<p><a href="miktex.ini.html">miktex.ini</a> — MiKTeX configuration data
+<p>7. Files</p>
+<p>miktex.ini — MiKTeX configuration data
 store</p>
-<p><a href="pdftex.cfg.html">pdftex.cfg</a> — configuration settings for
+<p>pdftex.cfg — configuration settings for
 MiKTeX-pdfTeX</p>
-<p><a href="envvars.html">8. Environment variables</a></p>
-<p><a href="tracestreams.html">9. Trace Streams</a></p>
-<p><a href="defaults.html">10. Run-Time Defaults</a></p>
-<p><a href="defaults.html#miktexconfig">All MiKTeX Programs</a></p>
-<p><a href="bibtexdefaults.html">BibTeX</a></p>
-<p><a href="texmfdefaults.html">All TeXMF Programs</a></p>
-<p><a href="texdefaults.html">All TeX Programs</a></p>
-<p><a href="pdftexdefaults.html">pdfTeX</a></p>
-<p><a href="mpmfdefaults.html">METAFONT &amp; MetaPost</a></p>
-<p><a href="mfdefaults.html">METAFONT</a></p>
-<p><a href="mpostdefaults.html">MetaPost</a></p>
+<p>8. Environment variables</p>
+<p>9. Trace Streams</p>
+<p>10. Run-Time Defaults</p>
+<p>All MiKTeX Programs</p>
+<p>BibTeX</p>
+<p>All TeXMF Programs</p>
+<p>All TeX Programs</p>
+<p>pdfTeX</p>
+<p>METAFONT &amp; MetaPost</p>
+<p>METAFONT</p>
+<p>MetaPost</p>
 <h3 id="privacy-policy">Privacy Policy</h3>
 <p>This website uses cookies to personalize content and ads. Learn
 More</p>
@@ -3012,5 +2672,6 @@ href="https://dg-datenschutz.de/services/external-data-protection-officer/?lang=
 Data Protection Officers</a> that was developed in cooperation with the
 <a href="https://www.wbs-law.de/eng/practice-areas/media-law/">Media Law
 Lawyers</a> from WBS-LAW.</p>
+</main>
 </body>
 </html>

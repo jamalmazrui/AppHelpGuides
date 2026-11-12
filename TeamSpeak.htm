@@ -1,0 +1,3105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>TeamSpeak help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#teamspeak-help" id="toc-teamspeak-help">TeamSpeak help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#client" id="toc-client">Client</a></li>
+<li><a href="#communities" id="toc-communities">Communities</a></li>
+<li><a href="#general" id="toc-general">General</a></li>
+<li><a href="#ios" id="toc-ios">iOS</a></li>
+<li><a href="#myteamspeak-myts" id="toc-myteamspeak-myts">myTeamSpeak
+(myTS)</a></li>
+<li><a href="#servers" id="toc-servers">Servers</a></li>
+<li><a href="#technical-support---client"
+id="toc-technical-support---client">Technical Support - Client</a></li>
+<li><a href="#technical-support---server"
+id="toc-technical-support---server">Technical Support - Server</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="teamspeak-help">TeamSpeak help</h1>
+<p>This guide holds TeamSpeak’s own help centre, gathered on 2 November
+2026 from the publisher’s own listing. The categories are TeamSpeak’s
+own sections, covering TeamSpeak 6 and the older TeamSpeak 3, whose
+articles TeamSpeak keeps for people still using it. Doug Lee publishes
+JAWS scripts and an NVDA add-on for TeamSpeak; his documentation is in
+Ttcom.htm.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Client
+<ul>
+<li><a href="#are-there-any-limits-on-the-avatar-size">Are there any
+limits on the avatar size?</a></li>
+<li><a
+href="#group-chats---how-do-i-join-a-group-chat-how-do-i-create-a-group-chat">Group
+Chats - How do I join a group chat &amp; how do I create a group
+chat?</a></li>
+<li><a
+href="#how-do-i-add-a-contact-and-start-a-chat-on-teamspeak-6">How do I
+add a contact and start a chat on TeamSpeak 6?</a></li>
+<li><a href="#how-do-i-set-up-badges-on-teamspeak-6">How do I set up
+badges on TeamSpeak 6?</a></li>
+<li><a
+href="#how-to-import-bookmarks-and-identities-from-ts3-to-teamspeak-6">How
+to import bookmarks and identities from TS3 to TeamSpeak 6?</a></li>
+<li><a href="#how-to-voice-chat">How to voice chat</a></li>
+<li><a
+href="#i-need-some-help-with-a-3rd-party-plugin.-can-teamspeak-assist">I
+need some help with a 3rd party plugin. Can TeamSpeak assist?</a></li>
+<li><a href="#is-there-a-size-limit-to-the-files-i-can-sendtransfer">Is
+there a size limit to the files I can send/transfer?</a></li>
+<li><a href="#what-are-bookmarks">What are bookmarks?</a></li>
+<li><a href="#what-do-the-different-roles-in-group-chats-mean">What do
+the different Roles in Group Chats mean?</a></li>
+<li><a href="#what-is-end-to-end-encryption">What is end-to-end
+encryption?</a></li>
+<li><a
+href="#what-is-the-account-recovery-key-and-what-can-i-do-if-i-lose-this">What
+is the account recovery key and what can I do if I lose this?</a></li>
+<li><a
+href="#what-is-the-difference-between-push-to-talk-and-voice-activity-detection">What
+is the difference between Push-To-Talk and Voice Activity
+Detection?</a></li>
+<li><a href="#what-is-the-security-level-and-what-does-it-mean">What is
+the security level and what does it mean?</a></li>
+<li><a href="#where-are-the-permissions">Where are the
+permissions?</a></li>
+</ul></li>
+<li>Communities
+<ul>
+<li><a href="#current-community-options">Current Community
+Options</a></li>
+<li><a href="#how-can-i-make-changes-to-my-subscription">How can I make
+changes to my subscription?</a></li>
+<li><a href="#how-do-i-make-my-community-discoverable">How do I make my
+community discoverable?</a></li>
+<li><a href="#my-community-is-not-working.-who-can-i-reach-out-to">My
+Community is not working. Who can I reach out to?</a></li>
+<li><a href="#payment-options">Payment Options</a></li>
+<li><a href="#what-regions-are-currently-available">What regions are
+currently available?</a></li>
+</ul></li>
+<li>General
+<ul>
+<li><a
+href="#am-i-allowed-to-share-my-teamspeak-6-experiences-with-the-public">Am
+I allowed to share my TeamSpeak 6 experiences with the public?</a></li>
+<li><a
+href="#can-i-add-my-own-scriptsbotsaddonsremote-apps-to-teamspeak-6">Can
+I add my own scripts/bots/addons/remote apps to TeamSpeak 6?</a></li>
+<li><a href="#can-ts3-andor-the-app-connect-to-teamspeak-6">Can TS3
+and/or the app connect to TeamSpeak 6?</a></li>
+<li><a href="#cant-find-what-youre-looking-for">Can’t find what you’re
+looking for?</a></li>
+<li><a href="#does-teamspeak-3-encrypt-my-voice-packets">Does TeamSpeak
+3 encrypt my voice packets?</a></li>
+<li><a href="#does-teamspeak-3-support-dns-srv-records">Does TeamSpeak 3
+support DNS SRV records?</a></li>
+<li><a href="#future-features-for-teamspeak-6">Future features for
+TeamSpeak 6?</a></li>
+<li><a href="#getting-started-with-a-teamspeak-3-server">Getting started
+with a TeamSpeak 3 server</a></li>
+<li><a
+href="#how-can-i-integrate-large-existing-user-bases-e.g.-from-a-forumwebsitemmo-into-the-teamspeak-3-authentication-system">How
+can I integrate large existing user bases (e.g. from a
+forum/website/MMO) into the TeamSpeak 3 authentication system?</a></li>
+<li><a href="#how-do-i-findredeem-badges">How do I find/redeem
+badges?</a></li>
+<li><a href="#how-do-i-rent-my-own-teamspeak-3-server">How do I rent my
+own TeamSpeak 3 server?</a></li>
+<li><a href="#how-does-the-teamspeak-3-user-authentication-work">How
+does the TeamSpeak 3 user Authentication work?</a></li>
+<li><a href="#how-much-bandwidth-does-teamspeak-require">How much
+bandwidth does TeamSpeak require?</a></li>
+<li><a href="#what-are-codecs-and-how-do-they-differ">What are codecs,
+and how do they differ?</a></li>
+<li><a
+href="#what-is-the-difference-between-the-teamspeak-3-sdk-and-the-teamspeak-3-plugin-sdk">What
+is the difference between the “TeamSpeak 3 SDK” and the “TeamSpeak 3
+Plugin SDK”?</a></li>
+<li><a href="#what-licenses-are-available">What licenses are
+available?</a></li>
+<li><a
+href="#where-can-i-find-teamspeaks-privacy-policy-and-terms">Where can I
+find TeamSpeak’s Privacy Policy and Terms?</a></li>
+<li><a href="#where-can-i-obtain-technical-support">Where can I obtain
+technical support?</a></li>
+</ul></li>
+<li>iOS
+<ul>
+<li><a
+href="#can-i-use-my-bluetooth-headset-with-the-teamspeak-3-app">Can I
+use my Bluetooth headset with the TeamSpeak 3 app?</a></li>
+<li><a
+href="#does-the-app-make-use-of-mobile-data-while-the-device-is-connected-to-a-wifi-network">Does
+the app make use of mobile data while the device is connected to a WiFi
+network?</a></li>
+<li><a
+href="#how-can-i-configure-the-app-so-that-it-allows-me-to-switch-channels-by-tapping-them">How
+can I configure the app so that it allows me to switch channels by
+tapping them?</a></li>
+<li><a href="#how-do-i-configure-my-voice-activation-settings">How do I
+configure my voice activation settings?</a></li>
+<li><a href="#how-do-i-connect-to-a-server">How do I connect to a
+server?</a></li>
+<li><a
+href="#how-do-i-connect-to-more-than-one-teamspeak-3-server-and-how-do-i-switch-between-them">How
+do I connect to more than one TeamSpeak 3 server and how do i switch
+between them?</a></li>
+<li><a href="#how-do-i-enter-my-priviledge-key-in-the-ios-app">How do i
+enter my priviledge key in the iOS app?</a></li>
+<li><a
+href="#how-do-i-make-use-of-the-admin-functions-within-the-app">How do i
+make use of the admin functions within the app?</a></li>
+<li><a href="#how-do-i-switch-a-channel">How do i switch a
+channel</a></li>
+<li><a
+href="#how-do-i-switch-from-voice-activation-to-push-to-talk-and-vice-versa">How
+do i switch from voice activation to Push-To-Talk and vice
+versa?</a></li>
+<li><a href="#how-do-i-use-bookmarks">How do i use bookmarks?</a></li>
+<li><a
+href="#i-am-getting-a-connection-error-message-with-a-0x705-error-code-aka-705-error.-how-do-i-fix-this">I
+am getting a ‘Connection Error’ message with a [0x705] error code (AKA
+705 error). How do I fix this?</a></li>
+<li><a
+href="#im-trying-to-connect-to-my-teamspeak-3-server-but-it-says-could-not-validate-client-identity">Im
+trying to connect to my TeamSpeak 3 server but it says “Could not
+validate client identity”</a></li>
+<li><a href="#what-does-the-option-auto-gain-control-acg-do">What does
+the option “Auto Gain Control” (ACG) do?</a></li>
+<li><a
+href="#why-is-there-a-license-fee-for-the-ios-client-when-all-other-client-platforms-are-free">Why
+is there a license fee for the iOS client, when all other client
+platforms are free?</a></li>
+</ul></li>
+<li>myTeamSpeak (myTS)
+<ul>
+<li><a href="#how-do-i-delete-myteamspeak-account-download-my-data">How
+do I delete myTeamSpeak account / Download my data?</a></li>
+<li><a
+href="#i-want-to-change-my-username-however-i-keep-receiving-an-error-message.-is-this-working">I
+want to change my username, however I keep receiving an error message.
+Is this working?</a></li>
+<li><a href="#what-is-a-myteamspeak-myts-account">What is a myTeamSpeak
+(myTS) account?</a></li>
+</ul></li>
+<li>Servers
+<ul>
+<li><a href="#how-do-i-connect-to-a-server-on-teamspeak">How do I
+connect to a server on TeamSpeak?</a></li>
+<li><a href="#how-do-you-share-your-teamspeak-server-to-other-users">How
+do you share your TeamSpeak server to other users?</a></li>
+<li><a href="#how-to-self-host-the-teamspeak-6-beta-server">How To
+Self-Host The TeamSpeak 6 Beta Server</a></li>
+</ul></li>
+<li>Technical Support - Client
+<ul>
+<li><a
+href="#client-installationstart-fails-api-ms-win-crt-runtime-is-missing">Client
+installation/start fails (api-ms-win-crt-runtime is missing)</a></li>
+<li><a
+href="#does-teamspeak-3-offer-text-to-speech-tts-if-so-how-do-i-use-it">Does
+TeamSpeak 3 offer text-to-speech (TTS)? If so, how do I use it?</a></li>
+<li><a href="#how-can-i-view-my-printf-plugin-debug-output">How can I
+view my printf plugin debug output?</a></li>
+<li><a href="#how-do-i-enable-the-advanced-permissions-system">How do I
+enable the advanced permissions system?</a></li>
+<li><a
+href="#how-do-i-make-myself-and-then-someone-else-a-server-admin">How do
+I make myself (and then someone else) a server admin?</a></li>
+<li><a
+href="#how-do-i-move-my-unique-identity-to-another-computer-or-create-a-backup">How
+do I move my unique identity to another computer or create a
+backup?</a></li>
+<li><a href="#how-do-i-transfer-my-unique-identity-id-to-another-pc">How
+do I transfer my Unique Identity (ID) to another PC?</a></li>
+<li><a href="#how-do-i-write-my-own-plugins">How do I write my own
+plugins?</a></li>
+<li><a href="#how-does-teamspeak-3-user-authentication-work">How does
+TeamSpeak 3 user authentication work?</a></li>
+<li><a href="#how-does-the-ban-system-work">How does the ban system
+work?</a></li>
+<li><a
+href="#i-installed-the-client-but-the-plugins-are-not-activated.-how-do-i-activate-them">I
+installed the client but the plugins are not activated. How do I
+activate them?</a></li>
+<li><a
+href="#myteamspeak-sync---i-lost-my-items-bookmarks-identities-etc.">myTeamSpeak
+Sync - I lost my Items (Bookmarks, Identities etc.)</a></li>
+<li><a
+href="#on-mac-os-x-my-hotkeys-do-not-work-when-teamspeak-does-not-have-the-focus">On
+Mac OS X my Hotkeys do not work when TeamSpeak does not have the
+focus</a></li>
+<li><a
+href="#there-is-a-password-field-in-the-connection-and-bookmark-dialogs.-but-i-read-teamspeak-3-does-not-use-passwords">There
+is a password field in the connection and bookmark dialogs. But I read
+TeamSpeak 3 does not use passwords?</a></li>
+<li><a
+href="#when-i-connect-to-a-very-busy-server-the-client-provides-too-many-spoken-notifications-about-users-joining-or-leaving.-how-can-i-deactivate-them">When
+I connect to a very busy server, the client provides too many spoken
+notifications about users joining or leaving. How can I deactivate
+them?</a></li>
+<li><a href="#when-i-talk-i-am-producing-echoes.-how-can-i-fix-this">When
+I talk I am producing echoes. How can I fix this?</a></li>
+<li><a
+href="#when-i-try-to-connect-to-a-teamspeak-server-i-keep-getting-the-message-no-reply-from-server.-what-does-this-error-mean">When
+I try to connect to a TeamSpeak server I keep getting the message “No
+reply from server”. What does this error mean?</a></li>
+<li><a href="#where-is-text-to-speech-tts-on-linux">Where is
+text-to-speech (TTS) on Linux?</a></li>
+</ul></li>
+<li>Technical Support - Server
+<ul>
+<li><a
+href="#how-can-i-convert-a-mysql-database-to-an-sqlite-database-or-the-other-way-around">How
+can I convert a MySQL database to an SQLite database (or the other way
+around)</a></li>
+<li><a href="#how-can-i-link-to-my-teamspeak-3-server-on-my-webpage">How
+can I link to my TeamSpeak 3 server on my webpage?</a></li>
+<li><a href="#how-can-i-restrict-access-to-my-teamspeak-3-servers">How
+can I restrict access to my TeamSpeak 3 Servers?</a></li>
+<li><a href="#how-do-i-allow-normal-users-to-upload-avatars">How do I
+allow normal users to upload avatars?</a></li>
+<li><a href="#how-do-i-change-my-serverquery-admin-password">How do I
+change my ServerQuery Admin password?</a></li>
+<li><a
+href="#how-do-i-change-or-reset-the-password-of-the-serveradmin-server-query-account">How
+do I change or reset the password of the serveradmin Server Query
+account?</a></li>
+<li><a href="#how-do-i-create-a-new-virtual-server">How do I create a
+new virtual server?</a></li>
+<li><a href="#how-do-i-delete-an-existing-virtual-server">How do I
+delete an existing virtual server?</a></li>
+<li><a
+href="#how-do-i-modify-a-virtual-servers-max-clients-max-concurrent-user-connections">How
+do I modify a virtual server’s max clients (max concurrent user
+connections)?</a></li>
+<li><a href="#how-do-i-set-up-my-own-non-commercial-ts3-server">How do I
+set up my own non-commercial TS3 server?</a></li>
+<li>How
+to accept the server license agreement (Server &gt;= 3.1.0)</li>
+<li><a
+href="#how-to-configure-the-ts3-server-to-use-an-https-proxy-for-backend-communication">How
+to configure the TS3 server to use an HTTPS Proxy for backend
+communication</a></li>
+<li><a
+href="#i-am-a-server-admin-but-still-cannot-access-everything-because-of-insufficient-permissions.-how-do-i-fix-this">I
+am a Server Admin but still cannot access everything because of
+insufficient permissions. How do I fix this?</a></li>
+<li><a
+href="#i-am-on-a-mac-and-i-have-downloaded-the-licensekey.dat-file-but-my-server-is-not-accepting-it.-how-can-i-fix-this">I
+am on a Mac and I have downloaded the licensekey.dat file but my server
+is not accepting it. How can I fix this?</a></li>
+<li><a
+href="#i-want-to-move-my-server-to-another-machine-which-files-should-i-copy">I
+want to move my server to another machine, which files should I
+copy?</a></li>
+<li><a
+href="#im-about-to-upgrade-my-teamspeak-3-server.-what-can-i-do-to-make-sure-my-permission-system-is-upgraded-automatically">I’m
+about to upgrade my TeamSpeak 3 Server. What can I do to make sure my
+permission system is upgraded automatically?</a></li>
+<li><a
+href="#on-unix-the-server-terminates-on-startup-and-the-message-reads-server-error-while-starting-servermanager-error-instance-check-error.-how-do-i-fix-this">On
+Unix the server terminates on startup and the message reads “Server()
+error while starting servermanager, error: instance check error”. How do
+I fix this?</a></li>
+<li><a
+href="#server-address-resolution-and-tsdns-changes-with-client-3.1.x">Server
+address resolution and TSDNS changes with Client 3.1.x</a></li>
+<li><a
+href="#server-is-crashing-with-error-epoll-function-not-implemented.-how-to-fix">Server
+is crashing with error “epoll: Function not implemented”. How to
+fix?</a></li>
+<li><a href="#virtual-server-is-running-elsewhere-shutting-down">virtual
+server is running elsewhere, shutting down!</a></li>
+<li><a
+href="#virtualserver-started-too-many-times-in-a-certain-time-period">virtualserver
+started too many times in a certain time period</a></li>
+<li><a
+href="#what-is-a-virtual-server-snapshot-how-is-it-used-and-are-there-any-guidelines-i-should-be-aware-of">What
+is a virtual server snapshot, how is it used, and are there any
+guidelines I should be aware of?</a></li>
+<li><a
+href="#what-is-the-default-permission-set-in-a-new-teamspeak-3-server-installation">What
+is the default permission set in a new TeamSpeak 3 server
+installation?</a></li>
+<li><a href="#what-is-the-minimum-requirements-for-a-ts3-server">What is
+the minimum requirements for a TS3 server?</a></li>
+<li><a href="#which-ports-does-the-teamspeak-3-server-use">Which ports
+does the TeamSpeak 3 server use?</a></li>
+</ul></li>
+<li>Miscellaneous
+<ul>
+<li><a
+href="#can-i-use-an-existing-ts3-license-on-a-teamspeak-6-server">Can I
+use an existing TS3 license on a TeamSpeak 6 server?</a></li>
+</ul></li>
+</ul>
+<h2 id="client">Client</h2>
+<h3 id="are-there-any-limits-on-the-avatar-size">Are there any limits on
+the avatar size?</h3>
+<p>At the moment the max resolution is 320 x 320. You can use a static
+image or a GIF file for your avatar.</p>
+<p>Tip: You can also add different avatars for your different statuses.
+On the client, click on the icon and select “Account”. Then next to your
+username you should see your current (or any empty) avatar. If you click
+on the circle where the pencil (edit) icon is.</p>
+<p>You should now be presented with something like this:</p>
+<p>You can see from this example, that depending on if I’m available,
+away, do not disturb or offline, my avatar will change to that
+image.</p>
+<p>All you would need to do to achieve this is each time that you want
+to add a new avatar to reflect a different status, hover over the status
+you would like to edit. Then click the upload icon (with an up arrow)
+Then once you upload your new image and set it to where you like it the
+best, click “save”. (Repeat this for the other statuses until you’re
+happy).</p>
+<h3
+id="group-chats---how-do-i-join-a-group-chat-how-do-i-create-a-group-chat">Group
+Chats - How do I join a group chat &amp; how do I create a group
+chat?</h3>
+<p>What are Group Chats?</p>
+<p>Group Chats are an area where you are able to hold conversations with
+many other people. These can be created as public group chats, which can
+be discovered using the “Discover Communities” function, or private
+group chats, which would be invite-only.</p>
+<p>How do I join a Group Chat?</p>
+<p>On the client itself, you should see a “Group Chats” tab. If you
+click on the “magnifying glass” icon, you will be taken to the “Discover
+Communities” section.</p>
+<p>This will take you to this particular screen:</p>
+<p>In the example above, the green outline indicates which group chats
+you are a member of. Once you find a group chat that you’re interested
+in, all you have to do is click on the group chat you would like to
+join, and you can start chatting with the community.</p>
+<p>How do I create a Group Chat?</p>
+<p>You can find this in the same area where you tried to find a group
+chat.</p>
+<p>Click on the “plus sign” icon, and then you should be presented with
+this:</p>
+<p>This is mostly straightforward. The first decision you need to make
+is whether this should be a public group chat or a private group.</p>
+<ul>
+<li><p>If you choose this to be a public group chat, then anyone can
+join the community if they find your group chat and join it.</p></li>
+<li><p>If this is a private group chat, then it can’t be discovered. To
+invite more people, you or users with the correct permissions would need
+to invite specific users to join.</p></li>
+</ul>
+<p>Under settings, this is where you will give your group chat a name
+and a topic, and this will automatically generate a public address for
+you (which can be changed if you prefer).</p>
+<p>For private group chats only, you can also choose if this should have
+“end-to-end Encryption” or not.</p>
+<p>Before creating the group chat, you can also invite existing contacts
+to your group chat as well. You can checkmark all of the users you want
+to invite, or if you have a large contact list, you can also use the
+filter contacts option to speed up your search.</p>
+<p>Once you’re happy with everything, click on “Create”.</p>
+<p>Now you should have your very own group chat, which will now show
+under your group chats tab.</p>
+<h3 id="how-do-i-add-a-contact-and-start-a-chat-on-teamspeak-6">How do I
+add a contact and start a chat on TeamSpeak 6?</h3>
+<p>To add a contact, you have two ways in which to do this.</p>
+<p>Underneath the “Contacts” tab, you should see an option that says
+“Add Contact”.</p>
+<p>If you click on this, it should then give you an area to enter the
+username of the person that you want to connect with. You can either do
+this using their myTS username, or they might provide you with a “<span
+class="citation" data-cites="myteamspeak.com">@myteamspeak.com</span>”
+address, which is essentially the same thing as it’s usually their <a
+href="mailto:username@myteamspeak.com,">username@myteamspeak.com,</a>
+just wanted to highlight this in case you come across this.</p>
+<p>You can also use the search bar method, which can be found at the top
+left of the client. Simply enter the details of the person that you want
+to connect with and then select the correct user.</p>
+<p>Tip: Ctrl + F will bring you to the search bar as well, to save you
+some time.</p>
+<p>In both scenarios, you should now see that you have successfully
+requested to connect with the user, and it will look something like this
+whilst you wait for the recipient to accept your invite.</p>
+<p>Once the user accepts the invite, you can have a chat and see if they
+are online or not. To chat with a user, return to the “Contacts” tab and
+simply left-click on the user. This should now open up a chat
+environment for you and your connection.</p>
+<h3 id="how-do-i-set-up-badges-on-teamspeak-6">How do I set up badges on
+TeamSpeak 6?</h3>
+<p>You have redeemed some badges, but now you want to show them off.</p>
+<p>To reach this area, you will need to click on the settings icon in
+the bottom left area and then make sure you’re in the “Account” area.
+This should bring you to your “Badges” section, which will look
+something like this when you don’t have any badges on display at this
+time:</p>
+<p>As explained in this section, all you have to do is click and drag
+the badges that you want to become visible on servers into the blurred
+row at the top. Here’s an example:</p>
+<p>Now, when you’re in a server, you should now see your badges
+alongside your username:</p>
+<p>💡Tip: If you don’t see your badges displaying next to your username,
+you might need to enable “Use myTS Features” on the server you are
+visiting. If you have already bookmarked the server, all you have to do
+is right-click on the server name and click “edit,” or if you are
+currently in the server, right-click on the server name at the top of
+the screen and select “Edit Bookmark”.</p>
+<p>Both of these options should lead you here, where you can toggle this
+option:</p>
+<h3
+id="how-to-import-bookmarks-and-identities-from-ts3-to-teamspeak-6">How
+to import bookmarks and identities from TS3 to TeamSpeak 6?</h3>
+<p>For help with bookmarks:</p>
+<ul>
+<li><p>Firstly, open the TS3 client</p></li>
+<li><p>Then select Tools -&gt; Options</p></li>
+<li><p>Click on the myTeamspeak tab and if you haven’t already done
+this, log into your myTeamSpeak account in the normal manner.</p></li>
+<li><p>Great! You’re logged in. Next, just below where you signed in,
+you should see “myTeamSpeak Account Features”. Make sure
+“synchronization” is active.</p></li>
+<li><p>Press the OK button</p></li>
+<li><p>Next, visit Bookmarks -&gt; Manage Bookmarks</p></li>
+<li><p>In there you should see “Local Bookmarks” and “Synchronized
+Bookmarks” on the left hand side. (Just In case you only see one section
+on the left hand side when you enter this area of the client, there
+should be 3 dots either on the top or the bottom of this section. Click
+and drag this to the middle of the area and let go for more than one
+section to appear properly so you can make the needed changes).</p></li>
+<li><p>For the Bookmark(s) or Folder(s) you want to share with TeamSpeak
+6, you can either right click and select “Move to synchronized” or you
+can click and drag these to the “Synchronized Bookmarks” area.</p></li>
+<li><p>Now they should appear at the top in the “Synchronized Bookmarks”
+section and now this should import correctly to TeamSpeak 6. For help
+with your identities (repeat steps 1-5 from above firstly and
+then):</p></li>
+<li><p>Select Tools -&gt; Identities</p></li>
+<li><p>In there you should see “Local Identities” and “Synchronized
+Identities” on the left hand side. (Just In case you only see one
+section on the left hand side when you enter this area of the client,
+there should be 3 dots either on the top or the bottom of this section.
+Click and drag this this to the middle of the area and let go for more
+than one section to appear properly so you can make the needed
+changes).</p></li>
+<li><p>For the Identities that you want to share with TeamSpeak 6, you
+can either right click and select “Move to synchronized” or you can
+click and drag these to the “Synchronized Identities” area.</p></li>
+<li><p>Now they should appear at the top in the “Synchronized
+Identities” section and now this should import correctly to TeamSpeak 6.
+💡Tip: An additional thing you can do is repeat this again with Hotkeys
+and Whisper lists as well if you wanted to do these as well.</p></li>
+</ul>
+<p>Also, the above instructions might not show for you properly if you
+are using a custom theme as some creators delete or remove certain
+aspects of the client to suit the skin. In order to follow the above
+guide, you can either temporarily disable your preferred skin so you
+have the default client available to you, or if you enable/click
+“expert”, this also enables the local bookmarks which avoids needing to
+temporarily disable your preferred theme.</p>
+<h3 id="how-to-voice-chat">How to voice chat</h3>
+<p>In order to speak to other users, you need to join a server. Servers
+host channels that you and other users can join to talk to each other.
+All voice data is transmitted directly through the server.</p>
+<p>How do you connect to a server?</p>
+<p>There are a few different ways to connect to a server which we will
+look at individually:</p>
+<ul>
+<li>Join a featured server</li>
+<li>This is a good way to start if you’ve never used TeamSpeak before.
+All you need to do is click on one of our featured servers on the
+dashboard and this will take you straight to the server.</li>
+<li>Discover a community</li>
+<li>If you click on Bookmarks → Community Discovery (look for the 🔍
+icon), You can use the search bar to explore available servers, then
+simply click on one to join.</li>
+<li>Join a private server</li>
+<li>If you have been provided the details for a private server, you can
+use the search bar in the top left corner to search for the
+IP/domain/Server Nickname, or you can use the search bar on I’m on the
+server, so where can I voice chat?</li>
+</ul>
+<p>Usually the default channel is moderated and doesn’t allow
+communication (like a welcome area which is generally the starting point
+on a server). All you need to do is double-click on another channel to
+join them. There, you can talk to other people.</p>
+<p>On most servers, you also have the option to create a custom channel
+for you and your friends. Just tell them where you are and they can join
+too!</p>
+<h3
+id="i-need-some-help-with-a-3rd-party-plugin.-can-teamspeak-assist">I
+need some help with a 3rd party plugin. Can TeamSpeak assist?</h3>
+<p>With plugins there is a couple of things to consider here.</p>
+<p>The majority of these can be found on the <a
+href="http://myteamspeak.com">myteamspeak.com</a> website. To install
+plugins in the client, you just need to download them first so then you
+can install them client side. Some plugins however aren’t hosted by us
+and instead you might need to reach out to the author’s directly so you
+can receive support. This all depends on some of the servers you join
+that might require certain plugins to enhance the overall experience. If
+this is a requirement, they’ll be sure to let you know in their
+setup.</p>
+<p>If you require technical support regarding plugins, you will need to
+contact the author directly so they can troubleshoot this with you.
+Authors can usually be found quite easily if you do a browser search for
+them, however if you do get stuck we can try to help you find some
+contact details as long as we know the name of the plugin you’re
+enquiring about.</p>
+<p>If TeamSpeak itself is the author of the plugin, technical support
+can be located on our <a
+href="https://community.teamspeak.com/">forums</a>.</p>
+<p>Firstly, do a quick search as your concern might already have a
+relevant topic posted, however if you can’t find anything, feel free to
+create a post and the team &amp; community veterans will do their best
+to help you. (You do require a myTS account to post on the forums).</p>
+<p>If you’ve never used the forums before and want to post, the login
+details is exactly the same as your myTS login that you use in the
+client. If you don’t already have a myTS account and want to post in the
+forums, you can create an account right <a
+href="https://www.myteamspeak.com/register">here</a>.</p>
+<h3 id="is-there-a-size-limit-to-the-files-i-can-sendtransfer">Is there
+a size limit to the files I can send/transfer?</h3>
+<p>At this moment in time, the limit to files that you send/transfer is
+10mb per file. If this changes we will update this article.</p>
+<h3 id="what-are-bookmarks">What are bookmarks?</h3>
+<p>When you journey through all of the different servers that are
+available to you, there will be specific servers that you really enjoy
+and would like to return to in the future.</p>
+<p>Bookmarks gives you the facility to store and remember your favorite
+servers on your client, which means you can revisit them again in the
+future without having to locate them again, should you forget their
+details.</p>
+<p>For this example we’ll use: voice.teamspeak.com</p>
+<p>So there is three ways to bookmark a server:</p>
+<ol type="1">
+<li>In the Bookmarks section on the left hand side, you can search for
+specific servers. If you already know the details of the server that you
+want to join, click on the “+” symbol and a text box should appear.
+Enter the server details and hit enter.</li>
+</ol>
+<p>Now your server has been bookmarked and should be in your list of
+Bookmarks.</p>
+<ol start="2" type="1">
+<li>If you know the server information, you can enter this in the search
+bar at the top left of the client and this will allow you to either
+store the bookmark for future usage, or you can quick connect to the
+server.</li>
+</ol>
+<p>This server should now appear on your activity center for future
+usage, similar to below:</p>
+<p>Great! So you have bookmarked the server. What else can you do?</p>
+<p>For each individual server that you bookmark, you can then save
+additional details for each server. Some servers might require a
+password, or you may use an alternative identity for different servers
+and so on.</p>
+<p>You can either do this whilst you’re in a server or via your activity
+panel:</p>
+<p>Within the server (right click on the server name at the top):</p>
+<p>Or via the activity panel (right click the server name):</p>
+<p>This should lead you to the below screenshot which is self
+explanatory in the choices that you have at your disposal:</p>
+<h3 id="what-do-the-different-roles-in-group-chats-mean">What do the
+different Roles in Group Chats mean?</h3>
+<p>There are three different roles that a user can have in a group
+chat:</p>
+<ol type="1">
+<li><p>Administrator - Usually the owner/s of the group chat or someone
+who is completely trusted within the community.</p></li>
+<li><p>Moderator - Someone who has extra permissions and you have trust
+in to maintain things in the administrator/s absence.</p></li>
+<li><p>Standard - Everyone else who has joined the group chat.</p></li>
+</ol>
+<p>Essentially, the settings that you have in a group chat should always
+be set in a way where the Administrator -&gt; Moderator -&gt; Standard
+users, so that each responsibility has different powers.</p>
+<p>You can grant a user in your group chat a role by clicking the info
+icon at the top right of the group chat. You should now be presented
+with a list of everyone who is in the group chat. If you right-click on
+any of the contacts, you should now see “Assign Role”. Click on this,
+and now you should have the above options available to pick from for the
+user in question. Once ticked, you should now see that the user has
+moved into that section, which means they have now been assigned a new
+role.</p>
+<p>You can alter the “Roles and Permissions” by clicking the settings
+icon in the top right corner.</p>
+<p>This is quite self-explanatory in itself, but you can modify these
+settings depending on how you would like your room to function. (For
+example: You might want to give standard users the ability to “remove
+messages”).</p>
+<h3 id="what-is-end-to-end-encryption">What is end-to-end
+encryption?</h3>
+<p>End-to-end encryption is a system of communication where only the
+communicating users can read the messages. In principle, it prevents
+potential eavesdroppers (which includes telecom providers, internet
+providers and even the provider of the communication service) from being
+able to access the cryptographic keys needed to decrypt the
+conversation.</p>
+<p>Essentially it’s a safer way to communicate.</p>
+<h3
+id="what-is-the-account-recovery-key-and-what-can-i-do-if-i-lose-this">What
+is the account recovery key and what can I do if I lose this?</h3>
+<p>The recovery key ensures that you can recover all of your data should
+you forget your password, so it is vitally important that you keep a
+copy of what this is when you are running TeamSpeak 6 for the first
+time. Data includes your identities, or bookmarks to name a couple of
+examples.</p>
+<p>The below screenshot shows when this will appear during the initial
+setup process:</p>
+<p>So please remember to keep a copy of this safe somewhere, just in
+case you forget your password, or perhaps you’ve had to reformat your
+device, or have switched to a new device altogether. Without it, you
+will not be able to access your identities, bookmarks and other data
+will lose your permissions as well.</p>
+<p>I still have access to my account, however I have forgotten what my
+recovery key is. Is there a way to generate a new one?</p>
+<p>You can request a new one via: -&gt; “Account” -&gt; Above your badge
+collection, you should see “New Recovery Key”. Click on this, it will
+ask for your password for confirmation and then you should receive a new
+recovery key to keep safe.</p>
+<h3
+id="what-is-the-difference-between-push-to-talk-and-voice-activity-detection">What
+is the difference between Push-To-Talk and Voice Activity
+Detection?</h3>
+<p>Push-To-Talk means that your microphone will only be activated when
+you hold down a key of your choice (which can be located in “Key
+Bindings”). This is often used when you only want one person to speak
+when playing particular games that requires a leader to call out actions
+so the team is more effective as an example.</p>
+<p>Voice Activity Detection uses intelligent algorithms to determine
+that your input signal contains speech and allows you to speak whenever
+you like essentially. This is more suited to a casual community just
+wanting to have a chat while they’re hanging out or playing games as an
+example.</p>
+<p>Both of these settings can be found in the “Audio” section under
+settings.</p>
+<h3 id="what-is-the-security-level-and-what-does-it-mean">What is the
+security level and what does it mean?</h3>
+<p>The security level is essentially a measure of your TeamSpeak
+account’s power. This is determined by the age of your account and the
+longer you use TeamSpeak for. The higher your security level is, the
+less restrictions you’ll face when joining new servers as you’ll have a
+proven track record based on your TeamSpeak experience.</p>
+<h3 id="where-are-the-permissions">Where are the permissions?</h3>
+<p>On TeamSpeak 6, you will first need to make sure that you are
+connected to the server where you are looking to modify the permissions
+for the server.</p>
+<p>There is three ways to enter the permissions area:</p>
+<ul>
+<li><p>When you join the server, this should appear within your personal
+activity area which is normally just underneath the search bar. If you
+right click on the server name which has populated, you should now be
+able to select “show permissions”.</p></li>
+<li><p>You can also right click on the server name at the top of the
+server on the main screen which should also populate “show
+permissions”.</p></li>
+<li><p>You can left click on the server name at the top of the server on
+the main screen and then click on this This should now take you to the
+“Permission Groups” area where you can see two things:</p></li>
+<li><p>Server Groups (Permissions surrounding this would take function
+anywhere on the server)</p></li>
+<li><p>Channel Groups (Permissions surrounding this would only function
+in set scenarios where users are in a channel and the group is assigned
+or active as an example). Ideally you would setup multiple server and
+channel groups depending on how you would like the server to run. Who
+can do X, who shouldn’t do X, does Y override X and so on. Every server
+is different so it will take some time to decide how best this should
+run for your server in particular, however it should also be noted that
+you don’t have to use every single permission that is at your disposal.
+We’d always recommend using the permissions that best suits your needs,
+perhaps start off basic and then work your way up once you gain more of
+a grasp on what each of the permissions do and how these would benefit
+your setup.</p></li>
+</ul>
+<p>Once you have your groups, if you then click on any of the groups you
+have, now you should have visibility of the permissions on offer to your
+server.</p>
+<p>The area’s this cover are:</p>
+<ul>
+<li><p>Virtual Server - This covers topics like the virtual server
+information, administration or settings.</p></li>
+<li><p>Channel - This focuses on channel information, creation,
+modifications, access and also the ability to delete channels.</p></li>
+<li><p>Group - This is essentially the same as the above, but with
+groups in mind.</p></li>
+<li><p>Client - This focuses more on individual user access. What can
+your users do in your server.</p></li>
+<li><p>File Transfer - Who can use this functionality within the server.
+There is also 3 types of permission that you will need to
+consider:</p></li>
+<li><p>Boolean - These permissions can only have two values, so
+basically yes or no.</p></li>
+<li><p>Integer - These permissions accept numbers as values. Usually
+used to define limits such as the maximum number of connected clones
+(clients with the same identity) or the maximum size of upload files to
+name a couple of examples.</p></li>
+<li><p>Power - These permissions are a special type of integer
+permission. They always come in pairs of “Power” and “Needed Power” and
+these permissions control whether or not a user is allowed to perform a
+specific action by comparing their own “power” with the targets “needed
+power”. At first this may seem overwhelming with all the options that
+you have at your disposal, but once you start with the basics and then
+work your way up, you’ll soon discover how useful permissions can
+be.</p></li>
+</ul>
+<p>If you have any specific questions about permissions, how they work,
+or if you’re just looking for inspiration from other server owners and
+their own setups, feel free to post on our <a
+href="https://community.teamspeak.com/">forums</a> and the staff and
+community veterans can help you out wherever possible.</p>
+<h2 id="communities">Communities</h2>
+<h3 id="current-community-options">Current Community Options</h3>
+<p>We offer Official TeamSpeak Community Servers with direct support,
+ensuring you always have assistance when needed. Your server stays up to
+date and is ready for use 24/7. This includes all the latest TS6
+features like Screen Share functionality as well.</p>
+<p>Below are the pricing details for our standard Community Plans, which
+can be set up directly from your <a
+href="https://www.myteamspeak.com/">myTeamSpeak</a> dashboard:</p>
+<p>Plans</p>
+<p>Slots*</p>
+<p>Monthly Cost**</p>
+<p>Yearly Cost**</p>
+<p>Crew</p>
+<p>10 + 1</p>
+<p>$4.99</p>
+<p>$53.99</p>
+<p>Team</p>
+<p>25 + 2</p>
+<p>$8.99</p>
+<p>$96.99</p>
+<p>Faction</p>
+<p>60 + 4</p>
+<p>$17.99</p>
+<p>$194.99</p>
+<p>*The “+” slots are additional bonus slots you receive with the
+subscription</p>
+<p>**All the prices shown are in $ USD</p>
+<p>Alternatively, you can rent a TeamSpeak 3 server from one of our
+authorized TeamSpeak Host Providers. Check out our <a
+href="https://teamspeak.com/en/more/find-a-host/">Hoster Map</a> for
+available options.</p>
+<p>⚠️Note: If you want to host your own server on your own dedicated
+device, see this <a
+href="https://support.teamspeak.com/hc/en-us/articles/26033788383261">FAQ</a>
+article instead.</p>
+<h3 id="how-can-i-make-changes-to-my-subscription">How can I make
+changes to my subscription?</h3>
+<p>You can manage your Community subscription through your <a
+href="http://myteamspeak.com">myTeamSpeak</a> account. All you need to
+do is “Login” → Click on “Account” → and under “Subscriptions” -&gt;
+“Manage”.</p>
+<p>From there, you can view and manage your active subscription.</p>
+<p>I’m currently on a free trial. Can I upgrade early?</p>
+<p>You’ll just need to wait until your free trial ends before making any
+changes to your subscription.</p>
+<p>Once your trial finishes, your first monthly charge will be applied.
+From there, you’re free to switch to whichever subscription suits you
+best. Any remaining credit (which is unused time) will automatically be
+carried over and applied to your new subscription.</p>
+<p>What are the current subscription choices?</p>
+<p>Please see this <a
+href="https://support.teamspeak.com/hc/en-us/articles/26033099878045">FAQ</a>
+article.</p>
+<h3 id="how-do-i-make-my-community-discoverable">How do I make my
+community discoverable?</h3>
+<p>Right click on your community server -&gt; click “Edit Server
+Settings” -&gt; then click on the “Show Advanced” dropdown.</p>
+<p>There are two things you need to do now:</p>
+<ul>
+<li>“Add Server to Public Discovery”. Tick the checkbox.</li>
+<li>“Server Address for the Public Directory”. Add your IP, Domain, or
+Server Nickname. We recommend adding the domain address of your
+community which you can locate by logging into your <a
+href="https://www.myteamspeak.com/communities">myTeamSpeak</a> account
+-&gt; and it should be in your community tab. It looks like:
+yourcommunity.ny1.teamspeak.com. Once you have added these details,
+click “Save Options”. This will be updated within 15 minutes and once
+complete, users will now be able to discover and join your community
+server.</li>
+</ul>
+<h3 id="my-community-is-not-working.-who-can-i-reach-out-to">My
+Community is not working. Who can I reach out to?</h3>
+<p>If your TeamSpeak community isn’t working as expected, our <a
+href="mailto:support@teamspeak.com">support team</a> is here to help. We
+can assist you to get your server back up and running as quickly as
+possible.</p>
+<p>For example, we can help with:</p>
+<ul>
+<li>Reactivating suspended servers (for example, if a subscription
+payment was missed)</li>
+<li>Troubleshooting servers that may not have started correctly</li>
+<li>Resolving any subscription or billing issues you may have If you’re
+unsure what’s causing the issue, don’t worry, just reach out with as
+much detail as possible, including any error messages or what you’re
+experiencing, and we’ll guide you from there.</li>
+</ul>
+<h3 id="payment-options">Payment Options</h3>
+<p>Our current payment options for Communities are Google/Apple Pay and
+Credit Card.</p>
+<h3 id="what-regions-are-currently-available">What regions are currently
+available?</h3>
+<p>At this time, our server locations are:</p>
+<ul>
+<li>Amsterdam (Netherlands)</li>
+<li>Frankfurt (Germany)</li>
+<li>New York (USA) &amp;</li>
+<li>Toronto (Canada) We’re actively working on expanding into more
+regions, and we’ll share updates on our social media channels and the <a
+href="https://community.teamspeak.com">forum</a> as new locations go
+live.</li>
+</ul>
+<p>If you’d like to see a location added in a specific region, feel free
+to contact our <a href="mailto:support@teamspeak.com">support team</a>.
+Your feedback helps us decide where to expand next.</p>
+<h2 id="general">General</h2>
+<h3
+id="am-i-allowed-to-share-my-teamspeak-6-experiences-with-the-public">Am
+I allowed to share my TeamSpeak 6 experiences with the public?</h3>
+<p>Yes you can! We have left the alpha testing stage and beta users are
+not held to a NDA (Non-disclosure agreement).</p>
+<p>In your travels, if you spot any bugs or have feature requests for
+the new TeamSpeak, please leave this information on our <a
+href="https://community.teamspeak.com/">forum</a> because then we can
+collect everyone’s feedback in a single place.</p>
+<h3
+id="can-i-add-my-own-scriptsbotsaddonsremote-apps-to-teamspeak-6">Can I
+add my own scripts/bots/addons/remote apps to TeamSpeak 6?</h3>
+<p>At this time, there isn’t a way to do this. However, as soon as this
+opens up as an option so people can begin to do this, we’ll let you know
+on all of our social platforms and we’ll update this article.</p>
+<p>One thing that you can test currently is we have recently opened up
+the option to create “Skins” for the new client. The existing skins and
+instructions on how to install these can be found <a
+href="https://community.teamspeak.com/c/ts-client/extensions">here</a>.</p>
+<p>These are created by 3rd party authors, not TeamSpeak, so if you do
+bump into a concern or issue whilst using these skin packs, please reach
+out to the author of the extension so it can be resolved.</p>
+<h3 id="can-ts3-andor-the-app-connect-to-teamspeak-6">Can TS3 and/or the
+app connect to TeamSpeak 6?</h3>
+<p>All servers are cross compatible which means that TeamSpeak 6, TS3
+and app users can all connect to the same server (providing the server
+owner has set this up). However, each type of user would be restricted
+to the client they are using at that time, so some users may have
+varying features at their disposal.</p>
+<h3 id="cant-find-what-youre-looking-for">Can’t find what you’re looking
+for?</h3>
+<p>If you can’t find what you’re looking for, have you tried using the
+search bar at the top right of the page to see if the article is
+there?</p>
+<p>If you need Technical Support this can be located on our forum <a
+href="https://community.teamspeak.com/">here</a>.</p>
+<p>If you’ve never used the forums before and want to post, the login
+details is exactly the same as your myTS login that you use in the
+client. If you don’t already have a myTS account and want to post in the
+forum, you can create an account right <a
+href="https://www.myteamspeak.com/register">here</a>.</p>
+<p>When it comes to updates or news relating to TeamSpeak, we’re on <a
+href="https://www.facebook.com/teamspeak">Facebook</a>, <a
+href="https://www.instagram.com/teamspeak">Instagram</a>, <a
+href="https://x.com/teamspeak">X</a>, <a
+href="https://www.twitch.tv/teamspeak_tv">Twitch</a> and <a
+href="https://www.youtube.com/teamspeak">YouTube</a>.</p>
+<p>If none of the above helps or you have a more general question, feel
+free to click the “help” button at the bottom right of this page which
+links up to the support team and we will do our best to assist you.</p>
+<h3 id="does-teamspeak-3-encrypt-my-voice-packets">Does TeamSpeak 3
+encrypt my voice packets?</h3>
+<p>TeamSpeak 3 offers encryption of all voice packets with an <a
+href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES
+based encryption</a>. This is an optional server feature as the
+calculations require additional server CPU usage, and voice encryption
+might be in conflict with local law.</p>
+<p>To check if your conversation is encrypted, please right click on the
+TeamSpeak 3 Server’s name you are connected to (above the top channel),
+click on Edit Virtual Server and select the Security tab.</p>
+<p>If “Channel voice data encryption” is set to “Globally off”, then the
+encryption mechanism is disabled. If it is set to “Globally on”,
+encryption is enabled for all channels and if it is set to “Configure
+per Channel”, please close the “Edit Virtual Server” window and click at
+your channel. On the right hand side, you will find the status of “Voice
+Data Encryption”, which is either “Enabled” or “Disabled”.</p>
+<h3 id="does-teamspeak-3-support-dns-srv-records">Does TeamSpeak 3
+support DNS SRV records?</h3>
+<p>Yes it does. TeamSpeak 3 provides full support for DNS SRV records in
+combination with our proven TSDNS system. This means you are able to
+define the location (e.g. the hostname and port number) of specific
+voice servers and/or TSDNS services.</p>
+<p>Currently, we support two different types SRV records:</p>
+<p>_ts3._udp.teamspeak.com. 86400 IN SRV 0 5 9987
+voice.teamspeak.com.</p>
+<p>_tsdns._tcp. teamspeak.com. 86400 IN SRV 0 5 41144
+voice.teamspeak.com.</p>
+<p>These two entries point to a voice server named voice.teamspeak.com
+listening on UDP port 9987 and a TSDNS service listening on TCP port
+41144. The syntax of the SRV records consists of the service (ts3/tsdns)
+and the protocol (tcp/udp). Both of these are prefixed with an
+underscore.</p>
+<p>A detailed description of the above fields is available at the
+Wikipedia article on SRV Records. SRV Records provide a priority field
+similar to the priority field in MX records, and a weight field for DNS
+based load balancing.</p>
+<p>Like TSDNS, SRV records allow people to connect to any virtual voice
+server without knowing the port number. For example, the following SRV
+record would instruct the TeamSpeak 3 Client to connect to a TeamSpeak 3
+Server running on UDP port 1337 while using yourdomain.tld as server
+address:</p>
+<p>_ts3._udp.yourdomain.tld. 86400 IN SRV 0 5 1337 yourdomain.tld.</p>
+<p>SRV records can not only direct you to a voice server, but also to
+direct you to a TSDNS service, creating a double redirect situation.
+This allows you to run the TSDNS service on arbitrary machines and
+hosts, while still servicing the domain you wish.</p>
+<p>_tsdns._tcp.yourdomain.tld. 86400 IN SRV 0 5 41144
+tsdns.yourdomain.tld.</p>
+<p>Before connecting to any server, the TeamSpeak 3 Client will try to
+resolve the IP address of the server in the following order:</p>
+<ul>
+<li>_ts3 SRV record</li>
+<li>_tsdns SRV record</li>
+<li>TSDNS</li>
+<li>DNS</li>
+</ul>
+<h3 id="future-features-for-teamspeak-6">Future features for TeamSpeak
+6?</h3>
+<p>We’ll always try our best to make sure that you and the community are
+updated on any developments relating to TeamSpeak 6 and beyond.</p>
+<p>Generally speaking, our best suggestion on how to keep up with what
+we’re up to is by following our official channels and our forum.</p>
+<p>We’re on <a href="https://www.facebook.com/teamspeak">Facebook</a>,
+<a href="https://www.instagram.com/teamspeak">Instagram</a>, <a
+href="https://x.com/teamspeak">X</a>, <a
+href="https://www.twitch.tv/teamspeak_tv">Twitch</a> and <a
+href="https://www.youtube.com/teamspeak">YouTube</a>. Forum wise, feel
+free to join in the community discussions which covers a wide range of
+topics right <a href="https://community.teamspeak.com/">here.</a></p>
+<h3 id="getting-started-with-a-teamspeak-3-server">Getting started with
+a TeamSpeak 3 server</h3>
+<p>If you would like to setup your own TeamSpeak 3 server you have two
+options:</p>
+<ul>
+<li>Setting up your own TeamSpeak 3 server</li>
+<li>Renting your own TeamSpeak 3 server There are certain advantages to
+each which you should consider before deciding on what option suits your
+situation better.</li>
+</ul>
+<p>Advantages of setting up your own TS3 server:</p>
+<ul>
+<li>Native license comes with 1 virtual TS3 server and 32 slots.</li>
+<li>Total control of hardware and bandwidth where the TS3 server will
+reside.</li>
+<li>Can turn on/off TS3 server at will.</li>
+<li>We offer tutorials on our website to assist individuals to setup
+their own TS3 server. If you decide this is the right solution for you,
+there is step-by-step instructions on how to set up your own TS3 server
+right <a
+href="https://support.teamspeak.com/hc/en-us/articles/360002712958--How-do-I-set-up-my-own-non-commercial-TS3-server-">here</a>.</li>
+</ul>
+<p>Advantages of renting your own TS3 server:</p>
+<ul>
+<li>Convenient, caters to non-tech savvy users who don’t know or don’t
+want to manually set up, configure, and maintain their own TS3
+server.</li>
+<li>Don’t need to have your computer running the TS3 server at all times
+for others to be able to connect. When you rent a server, other users
+have connectivity to the TS3 server 24/7, whether you are connected or
+not.</li>
+<li>Great alternative to growing clans/guilds, when the home internet
+connection is no longer capable of handling the bandwidth usage,
+especially the upload, which is fairly low for most internet
+connections.</li>
+<li>There are many Authorized TeamSpeak Host Providers worldwide. You
+have several to choose from, so you can find the one with the right
+package and pricing for your needs.</li>
+<li>Can have a TS3 server up and running within a business day and a lot
+of the times within an hour, depending on the ATHP.</li>
+<li>Low cost, with a very affordable average price of about 20 – 30
+cents per user, per month (prices vary among the different ATHPs). If
+you decide this is the right solution for you, there is step-by-step
+instructions on how to rent your own TS3 server right <a
+href="https://support.teamspeak.com/hc/en-us/articles/360002711478-How-do-I-rent-my-own-TeamSpeak-3-server-">here</a>.</li>
+</ul>
+<h3
+id="how-can-i-integrate-large-existing-user-bases-e.g.-from-a-forumwebsitemmo-into-the-teamspeak-3-authentication-system">How
+can I integrate large existing user bases (e.g. from a
+forum/website/MMO) into the TeamSpeak 3 authentication system?</h3>
+<p>This FAQ is for you if you have large community that are already
+authenticated (e.g. by username/password) on your game, forum or website
+and you would like allow these members access to a TeamSpeak 3 Server.
+In this FAQ we talk a lot about forum members, which might as well in
+your scenario be community members of something entirely different than
+a forum, just substitute “forum” with whatever platform your community
+is built on.</p>
+<p>Use Cases</p>
+<p>Only members: You want to create a TeamSpeak 3 server but want only
+forum members to be able to join (and a server password won’t work for
+you because your community is too large to keep secrets or because you
+want to be able to revoke join privileges without hassle).</p>
+<p>Special privileges: You wish to assign custom server or channel
+groups to your members depending on their forum rank or post count
+etc.</p>
+<p>Harnessing the powers of TeamSpeak 3 allows you to create a very user
+friendly and simple interface to get your users onto TeamSpeak 3, but
+there will be some coding work to be done on the forum (developer side)
+to make this possible. Let’s look at the two perspectives, user and
+developer:</p>
+<p>Forum Users View</p>
+<p>After logging in you will see a link “Join our TeamSpeak 3 server”
+which will take you to a separate page telling you to download and
+install the TeamSpeak 3 client (if not already present) and then to
+“Click this link to connect”. When you click the link your TeamSpeak 3
+client will start (if not already started) and then connect to the
+community TeamSpeak 3 server. Optionally a dialogue will ask if you wish
+to bookmark this server within the TS3 Client so you don’t have to go
+through the forums “Click this link to connect” link in the future, but
+can just use TS3 directly to connect. If you are banned/deleted from the
+Forums your TeamSpeak 3 privileges will also be revoked.</p>
+<p>Forum Developers View</p>
+<p>For each forum user (either on demand or up front, depending on what
+works best in your scenario) you will create a so called privilege key
+(previously called “token”, and still called token in the serverquery
+interface) which is a string that authenticates a user. Use the tokenadd
+serverquery command to create them, the commands might look like
+this:</p>
+<p><code>tokenaddtokentype=0tokenid1=7tokenid2=0tokendescription=automaticallyscreatedstokensfors\$USERtokencustomset=ident=forum_usersvalue=\$USERpident=forum_idsvalue=\$USER_ID</code></p>
+<p>Please refer to the tokenadd documentation for details, but take note
+that we are using the “tokencustomset” parameter to specify any amount
+of parameters that you might need to find this user in your forum user
+database (so to do the TS3 user &lt;-&gt; forum user mapping).</p>
+<p>Once you have the token you then need to build the ts3server:// link
+that lies behind the “Click here to connect”. It should look something
+like this:</p>
+<p><code>&amp;lt;a href="ts3server://voice.teamspeak.com?nickname=$USER&amp;addbookmark=TS-Forum-Server&amp;token=eKnFZQ9EK7G7MhtuQB6+N2B1PNZZ6OZL3ycDp2OW/"&gt;Click here to connect&amp;lt;/a&gt;</code></p>
+<p>The “addbookmark=xyz” is optional but recommended.</p>
+<p>Now all you need to do is make sure privileges on TS3 are
+revoked/adjusted when they are changed on the forum. Say all you need is
+to delete TS3 accounts when you delete forum accounts. Find the code
+that is run when deleting a forum user, and add code that uses the
+serverquery interface to interface with the TS3 server, the commands
+could be something like this (lines beginning with “&gt;” are sent by
+you, everything else is response by the server):</p>
+<p><code>&gt; customsearch ident=forum_account pattern=\$USERcldbid=123 ident=forum_account value=\$USERerror id=0 msg=ok</code></p>
+<p><code>&gt; clientdbdelete cldbid=123error id=0 msg=ok</code></p>
+<p>Of course there are many more possibilities (e.g add a custom TS3
+group for users with more than X posts on your forum etc.), your
+imagination is the limit :). If you wanted to make your server Members
+only as described above you will need to set up your permission system
+to facilitate this.</p>
+<h3 id="how-do-i-findredeem-badges">How do I find/redeem badges?</h3>
+<p>Our badges can be earned in various ways, but these will mostly be
+announced on our social media platforms.</p>
+<p>Usually to redeem a badge, this will either be a single code that
+everyone can redeem, or generated codes which are one time use codes.
+The badges themselves is mainly for seasonal holidays, event based
+moments, or for special occasions.</p>
+<p>We do have forum article which lists every badge (currently
+redeemable or expired) which can be found right <a
+href="https://community.teamspeak.com/t/updated-teamspeak-badge-list">here</a>.</p>
+<p>Once you receive or locate a code you can then redeem this to add on
+to your badge collection. There is currently three ways to do this.</p>
+<ul>
+<li>Via TeamSpeak 6, you will need to click the “Cog” icon -&gt;
+“Account” and now you should see the badges screen. Click on “Redeem
+badge” enter your code -&gt; click “Redeem” again in the popup and now
+you should have the new badge in your collection. (If this doesn’t
+display immediately, it will on client restart).</li>
+<li>If you use TS3, follow this pathway. “Tools” -&gt; “Options” -&gt;
+“myTeamSpeak” -&gt; Then underneath “Badges” you should see an option
+“Redeem Code”. Click on this and enter your code into the popup, click
+“Redeem” and now you should have the new badge in your collection.</li>
+<li>Via <a href="https://www.myteamspeak.com/login">myteamspeak.com</a>.
+Login to your myTS account and on the dashboard you should see “Redeem
+badges”. Click on this, enter your code and click on “Check code”. Now
+you should have the badge in your collection.</li>
+</ul>
+<h3 id="how-do-i-rent-my-own-teamspeak-3-server">How do I rent my own
+TeamSpeak 3 server?</h3>
+<p>You can rent your own low cost and affordable TeamSpeak 3 server by
+following these steps:</p>
+<ul>
+<li>To begin, visit our <a
+href="https://teamspeak.com/more/find-a-host/">find a host</a>
+page.</li>
+<li>To determine the right location where you should rent your TS3
+server, you need to take into account where all your users are located,
+and choose the most central location to all of your users to maximize
+the quality of your server for all of your community members.</li>
+<li>On the map, click on a TeamSpeak logo that would best fit your needs
+for the community.</li>
+<li>Below the map, you should now see a list of all the ATHPs in that
+state (or country) that has three columns: ‘Company Name’,
+‘Headquarters’, and ‘Hoster Since’. We recommend that you visit a few
+ATHPs and compare their pricing and get a feel for their sites.</li>
+<li>Once you decide which ATHP is right for you, simply complete their
+registration process and order your TS3 server online through their
+webpage. After you complete the order process and pay, your TS3 server
+will be up and running within a business day and a lot of the times
+within an hour, depending on the ATHP. When your TS3 server is created
+and configured, you will be provided with the info needed to connect to
+your TS3 server.</li>
+<li>Provide your server details to any friend, clan/guild member that
+you want to connect to your TS3 server and point them to our <a
+href="https://teamspeak.com/en/downloads/">download page</a> to install
+the latest client, if they don’t already have it.</li>
+</ul>
+<h3 id="how-does-the-teamspeak-3-user-authentication-work">How does the
+TeamSpeak 3 user Authentication work?</h3>
+<p>Rather than using usernames and a passwords, TeamSpeak 3 uses <a
+href="https://en.wikipedia.org/wiki/Public-key_cryptography">asymetric
+cryptography</a> for user authentication. This greatly adds to the
+security of TeamSpeak 3 servers, reducing the potential risk Server
+Admins with weak passwords could cause.</p>
+<p>Upon installing the TeamSpeak 3 client, an identity file is generated
+locally. This file consists of two cryptographical keys: A public key
+and a private key. When a client connects to a server, it will present
+its public key which will be used by the server to send an encrypted
+reply to the client. To authenticate, the client needs to decrypt the
+reply, which requires the private key.</p>
+<p>TeamSpeak 3 servers recognize clients by the public component of
+their identities. All server groups, permissions, offline messages etc.
+are stored on the server and will be assigned to clients upon
+authenticating.</p>
+<p>We advise you to back-up of your identity to an external device for
+safe keeping. This can be done by opening up the Identities Options by
+clicking at Settings, Identities, Export. Similarly, previously exported
+identities can be imported. Anyone who has this file can impersonate you
+and will gain all of your permissions so make sure only YOU have access
+to your identity file.</p>
+<p>You can also generate additional or delete existing identities in the
+Identities settings in the TeamSpeak client.</p>
+<h3 id="how-much-bandwidth-does-teamspeak-require">How much bandwidth
+does TeamSpeak require?</h3>
+<p>This heavily depends on how many people are connected to your server,
+how many people join the same channel (chat room) and which voice codec
+is used. This makes it very difficult to predict how much bandwidth or
+traffic your TeamSpeak 3 server will require.</p>
+<p>Basics:</p>
+<ul>
+<li><p>Each person speaking sends one voice stream to the
+server</p></li>
+<li><p>The server decides based on who’s in the same channel to whom the
+stream has to be sent.</p></li>
+<li><p>If 12 persons in the same channel speak at the same time, the
+server receives 12 voice streams and sends 12 voice streams to every one
+in the same channel.</p></li>
+<li><p>The server does not mix the voice streams.</p></li>
+<li><p>The server sends a heartbeat packet (66 Bytes) to each client
+each second which answers with a packet (62 Bytes). The bandwidth and
+traffic requirement is depending on:</p></li>
+<li><p>The amount of channels and users</p></li>
+<li><p>Selected codec in the channels</p></li>
+<li><p>People speaking at the same time in same/different
+channel</p></li>
+<li><p>The server’s uptime This FAQ can only show you how you can
+calculate the bandwidth/traffic requirement for your server as only you
+know your specific setup and how often and how long people will talk on
+your server.</p></li>
+</ul>
+<p>Bandwidth calculation for the server</p>
+<p>We’ll divide this into several examples which hopeful explain the
+calculation somewhat better. The first is a simple example we’ll explain
+a little bit more in detail. For each example we use the following
+syntax:</p>
+<p><code>DOWN: people_speaking_atm * selected_codec</code></p>
+<p><code>UP: people_speaking_atm * (people_in_channel - 1) * selected_codec</code></p>
+<p>The following would be a server with one channel set to Speex 25.9,
+10 people in the only channel and one person is speaking:</p>
+<p><code>DOWN: 1 * 25.9 Kbit/s = 25.9 Kbit/s</code></p>
+<p><code>UP: 1 * (10 - 1) * 25.9 Kbit/s = 233.1 Kbit/s</code></p>
+<p>As you see in this example, the DOWN bandwidth is usually not a
+problem but the UP bandwidth can be one - especially with home Internet
+access as they usually have asymmetric bandwidth where the DOWN
+bandwidth is much higher then the UP bandwidth.</p>
+<p>Here’s another example with one channel set to Speex 12.3, 10 people
+in the only channel and two persons are speaking:</p>
+<p><code>DOWN: 1 * 12.3 Kbit/s = 12.3 Kbit/s</code></p>
+<p><code>UP: 2 * (10 - 1) * 12.3 Kbit/s = 221.4 Kbit/s</code></p>
+<p>The last example shows how the bandwidth requirement explodes when
+more then one people are speaking at the same time. In TeamSpeak 2 there
+is no setting to stop simultaneous speaking.</p>
+<p>Client bandwidth calculation</p>
+<p>Lets look at the bandwidth requirement for the client. We’ll explain
+this by looking at the two examples above. UP and DOWN bandwidth are now
+contrary when looking at the client. We always assume that the client we
+are looking at is the one or one of the speaking person. If he is
+listening, there is only DOWN bandwidth required.</p>
+<p><code>DOWN: 0 * 12.3 Kbit/s = 0 Kbit/s</code></p>
+<p><code>UP: 1 * 12.3 Kbit/s = 12.3 Kbit/s</code></p>
+<p><code>DOWN: 2 * 12.3 Kbit/s = 24.6 Kbit/s</code></p>
+<p><code>UP: 1 * 12.3 Kbit/s = 12.3 Kbit/s</code></p>
+<p>Bandwidth requirement for the client are usually not a big issue,
+unless you’re in a Speex 25.9 channel with an analog Internet access.
+But when hosting a server at home, you have to be aware, that especially
+the UP bandwidth is the limiting factor.</p>
+<p>Keep in mind, that a game or other application you run in parallel to
+TeamSpeak requires as well bandwidth and with several open connections
+you can not use 100% of your bandwidth. The connection quality will
+decrease which will be easily heard in a time sensitive application such
+as a voice-communication tool.</p>
+<h3 id="what-are-codecs-and-how-do-they-differ">What are codecs, and how
+do they differ?</h3>
+<p>A codec is a property that every channel (room) on a server has, it’s
+a technical word that describes what technique is used to compress the
+voice data before transporting it over the internet. To change the codec
+of a channel, you right click on it and select ‘Edit Channel’, there you
+can set the codec that will be used for all further communication in the
+selected room. Note: You will probably need administrative privileges
+[server admin (SA) or channel admin (CA)] in order to change the codec
+of a channel.</p>
+<p>Codecs are usually a trade-off between bandwidth usage and quality,
+the bandwidth usage (in KBits/sec) is part of the name of each codec
+that TeamSpeak offers; following we have ordered codecs by quality. Note
+that quality can not be measured, so the following is just the opinion
+of the writer of this text.</p>
+<p>Quality: (best quality comes first)</p>
+<p>Speex25.9 &gt; Speex19.5 &gt; Speex16.3 &gt; Speex12.3 &gt; GSM16.4 =
+GSM14.8 &gt; Speex9.3 &gt; Speex7.2 &gt; WinCELP5.2 &gt; Speex5.2 &gt;
+CELP6.3 = CELP5.1 &gt; Speex3.4</p>
+<p>What codec for which internet connection?</p>
+<p>DSL/Cable or better</p>
+<p>For talking Speex 16.3 is easily good enough, if you want to transmit
+music, go Speex 25.9.</p>
+<p>ISDN</p>
+<p>Speex 12.3 sounds alright, limit your download to 14 KBit/s if you
+want to game. Speex 16.3 with download limit on 17 might also be OK.</p>
+<p>Modem</p>
+<p>Speex 9.3 is still quite good quality. Limit your download to 10
+KBit. Note that if you want to game its way to high a setting, go as low
+as you can bare (Speex 5.2, or even Speex 3.4, limit your download to 6
+respectivly 4).</p>
+<h3
+id="what-is-the-difference-between-the-teamspeak-3-sdk-and-the-teamspeak-3-plugin-sdk">What
+is the difference between the “TeamSpeak 3 SDK” and the “TeamSpeak 3
+Plugin SDK”?</h3>
+<p>The TeamSpeak 3 SDK is designed to integrate TeamSpeak 3 voice
+communication technology into an existing client/server application of
+any kind (including a Java based web application). It is noteworthy to
+understand that projects utilizing the TeamSpeak 3 SDK cannot make use
+of the TeamSpeak 3 Client and Server.</p>
+<p>In contrast, the TeamSpeak 3 Plugin SDK lets you create extensions
+for the TeamSpeak 3 Client should you want to do this.</p>
+<h3 id="what-licenses-are-available">What licenses are available?</h3>
+<p>Activation/Gamer License</p>
+<p>The Activation/Gamer License is available for individuals and
+non-commercial groups operating their own self-hosted TeamSpeak 3
+server.</p>
+<p>This license is intended for personal and non-commercial use. It is
+not intended for companies or organizations using TeamSpeak as part of
+commercial or revenue-generating activities.</p>
+<p>The license does not permit reselling or sublicensing TeamSpeak
+capacity, providing TeamSpeak servers to third parties, or integrating
+TeamSpeak technology into another product.</p>
+<p>Pricing is as follows:</p>
+<p>Server Slots</p>
+<p>Virtual Servers</p>
+<p>6 Monthly License*</p>
+<p>Yearly License*</p>
+<p>64</p>
+<p>1</p>
+<p>Not Available</p>
+<p>$55</p>
+<p>128</p>
+<p>2</p>
+<p>$50</p>
+<p>$100</p>
+<p>256</p>
+<p>2</p>
+<p>$87.50</p>
+<p>$175</p>
+<p>512</p>
+<p>2</p>
+<p>$150</p>
+<p>$300</p>
+<p>1024</p>
+<p>2</p>
+<p>$250</p>
+<p>$500</p>
+<p>*All the prices shown are in USD</p>
+<p>Yearly licenses can be purchased through the <a
+href="https://sales.teamspeak.com/">TeamSpeak Customer Center</a>.</p>
+<p>The 6-month option is processed manually and cannot be ordered
+through the Customer Center. <a
+href="mailto:support@teamspeak.com">Contact TeamSpeak Support</a> if you
+would like to purchase a 6-month license.</p>
+<p>Note: If you want to rent a hosted server instead of operating your
+own, see <a
+href="https://support.teamspeak.com/hc/en-us/articles/26033099878045">Current
+Community Options</a>.</p>
+<p>Commercial License</p>
+<p>The Commercial License is intended for companies and professionally
+operated organizations using a self-hosted TeamSpeak server as part of
+their organizational or commercial activities.</p>
+<p>Commercial licensing is tailored to the organization’s deployment,
+capacity, and operational requirements. Pricing is provided
+individually.</p>
+<p>A Commercial License does not permit reselling TeamSpeak services,
+hosting servers for third parties, or sublicensing capacity.</p>
+<p>For additional information or a quote, contact the <a
+href="mailto:bizdev@teamspeak.com">TeamSpeak Business Team</a>.</p>
+<p>SDK Licensing</p>
+<p>SDK Licensing is intended for organizations that want to integrate
+TeamSpeak voice technology into their own software, application, game,
+or product.</p>
+<p>SDK terms and pricing are tailored to the organization’s technical
+requirements, intended use, deployment, and business model.</p>
+<p>For additional information or a quote, contact the <a
+href="mailto:bizdev@teamspeak.com">TeamSpeak Business Team</a>.</p>
+<h3 id="where-can-i-find-teamspeaks-privacy-policy-and-terms">Where can
+I find TeamSpeak’s Privacy Policy and Terms?</h3>
+<p>You can view TeamSpeak’s Privacy Policy and Terms of Service on our
+official page <a
+href="https://teamspeak.com/privacy-and-terms/">here</a>.</p>
+<p>This page provides the most up-to-date information on how we handle
+data, user responsibilities, and our service terms. If you have specific
+questions, we recommend reviewing this page first before contacting <a
+href="mailto:privacy@teamspeak.com">support</a>.</p>
+<h3 id="where-can-i-obtain-technical-support">Where can I obtain
+technical support?</h3>
+<p>Technical support can be located on our forum <a
+href="https://community.teamspeak.com/">here</a>.</p>
+<p>If you’ve never used the forums before and want to post, the login
+details is exactly the same as your myTS login that you use in the
+client. If you don’t already have a myTS account and want to post in the
+forum, you can create an account right <a
+href="https://www.myteamspeak.com/register">here</a>.</p>
+<h2 id="ios">iOS</h2>
+<h3 id="can-i-use-my-bluetooth-headset-with-the-teamspeak-3-app">Can I
+use my Bluetooth headset with the TeamSpeak 3 app?</h3>
+<p>Yes you can. Simply connect your Bluetooth headset to your
+device.</p>
+<h3
+id="does-the-app-make-use-of-mobile-data-while-the-device-is-connected-to-a-wifi-network">Does
+the app make use of mobile data while the device is connected to a WiFi
+network?</h3>
+<p>No it doesn’t. TeamSpeak does not make use of your mobile data while
+connected to a WiFi network.</p>
+<h3
+id="how-can-i-configure-the-app-so-that-it-allows-me-to-switch-channels-by-tapping-them">How
+can I configure the app so that it allows me to switch channels by
+tapping them?</h3>
+<p>Open up your TeamSpeak 3 app and tap ‘Settings’. In the upcoming
+dialog enable ‘Quick switch’ to allow one-click joining of channels.</p>
+<h3 id="how-do-i-configure-my-voice-activation-settings">How do I
+configure my voice activation settings?</h3>
+<p>Once you set your voice mode to “Voice Activation”, tap on the little
+microphone at the bottom while you are on a server. A window with gain
+control will show up.</p>
+<p>Speak a few sentences into your device and hit the “Auto Settings”
+button. The voice activation feature should now be set so that it only
+activates once you start talking.</p>
+<h3 id="how-do-i-connect-to-a-server">How do I connect to a server?</h3>
+<p>Open up the TeamSpeak 3 app -&gt; click on “Bookmarks”. Add a server
+if you haven’t done this already and click on “Connect to server”.</p>
+<h3
+id="how-do-i-connect-to-more-than-one-teamspeak-3-server-and-how-do-i-switch-between-them">How
+do I connect to more than one TeamSpeak 3 server and how do i switch
+between them?</h3>
+<ul>
+<li>Open up the TeamSpeak 3 app -&gt; choose “Bookmarks” and add two
+different servers you want to connect to -&gt; Connect to the server of
+your choice.</li>
+<li>Once you are connected to the first server hit the back button in
+the upper left of your screen -&gt; tap the “Bookmarks” button.</li>
+<li>Now choose the second server and hit “Connect to server”. You are
+now connected to 2 different TeamSpeak 3 servers at once.</li>
+<li>In order to switch between these two servers just tap the servername
+(back button) in the upper left corner of your screen -&gt; tap
+“Home”.</li>
+<li>You will be presented with a list that shows the servers you are
+connected to. Just select one of those servers by tapping on its name
+and it will become active.</li>
+</ul>
+<h3 id="how-do-i-enter-my-priviledge-key-in-the-ios-app">How do i enter
+my priviledge key in the iOS app?</h3>
+<p>When connected to a server, from the actions menu at the bottom-left,
+choose “Use Privilege Key”.</p>
+<h3 id="how-do-i-make-use-of-the-admin-functions-within-the-app">How do
+i make use of the admin functions within the app?</h3>
+<p>To make use of the admin functions you have to make sure that you are
+in the serveradmin group. (any group will suffice as long as you have
+the right permissions to edit server- and usersettings).</p>
+<p>To edit a user, simply click their username to open a dialog where
+you can mute, move, kick, poke, and perform other actions for that
+user.</p>
+<p>To edit a channel simply click on the little blue arrow behind the
+channel -&gt; A dialog will come up that allows you to create
+sub-channels, edit the codec, modify the password/description and much
+more. Give it a try!</p>
+<h3 id="how-do-i-switch-a-channel">How do i switch a channel</h3>
+<p>Click on the channel you want to join -&gt; hit “Switch to
+channel”.</p>
+<p>You can change this behavior in the configuration dialog. The option
+“Quick Switch” allows you to switch channels without hitting “Switch to
+channel” each time so if this is your preference, just enable it.</p>
+<h3
+id="how-do-i-switch-from-voice-activation-to-push-to-talk-and-vice-versa">How
+do i switch from voice activation to Push-To-Talk and vice versa?</h3>
+<p>In the TeamSpeak 3 app click on “options”. You will be presented with
+the configuration dialog where you can set your preferred voice
+mode.</p>
+<p>Click on ‘Voice mode’ and choose one of the three options:</p>
+<ul>
+<li>Voice Activated</li>
+<li>Push To Talk</li>
+<li>Continuous If you choose to use Voice Activation, make sure to
+enable “Echo Cancel” in the configuration dialog as well.</li>
+</ul>
+<h3 id="how-do-i-use-bookmarks">How do i use bookmarks?</h3>
+<p>Open the TeamSpeak 3 app and click on ‘Bookmarks’. In the lower left
+of the screen, tap the “+” button and you will see an empty mask:</p>
+<p>Address:</p>
+<p>Label:</p>
+<p>Server Port:</p>
+<p>Nickname:</p>
+<p>Server Password:</p>
+<p>Identity:</p>
+<p>Fill out the mask with your server data to connect to your server. It
+should look like the below example:</p>
+<p>Address: voice.teamspeak.com</p>
+<p>Label: TeamSpeak Public</p>
+<p>Server Port: 9987</p>
+<p>Nickname: Tonitester</p>
+<p>Server Password:</p>
+<p>Identity: Default</p>
+<p>Click the “Done” button in the upper right corner once you are happy.
+Now choose your added server from the bookmarks menu and hit “Connect to
+server”.</p>
+<h3
+id="i-am-getting-a-connection-error-message-with-a-0x705-error-code-aka-705-error.-how-do-i-fix-this">I
+am getting a ‘Connection Error’ message with a [0x705] error code (AKA
+705 error). How do I fix this?</h3>
+<p>This can be caused for several reasons:</p>
+<ul>
+<li><p>You might have made a mistake in a portion of your server
+address. For example:</p></li>
+<li><ol type="a">
+<li>you entered the wrong ip to the server you are trying to connect
+to.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>you entered the wrong port to the server you are trying to connect
+to.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>you have a typo somewhere in your server address.</li>
+</ol></li>
+<li><p>Your Internet provider or firewall is filtering TeamSpeak network
+traffic.</p></li>
+<li><p>You were given a DNS based server address and your DNS services
+are not working.</p></li>
+<li><p>Your Internet connection is down or so slow that a connection
+cannot be established.</p></li>
+<li><p>The server you are trying to connect to could be offline. Typical
+solutions to the above referenced items:</p></li>
+<li><p>Check for typos in the IP address, port #, or spelling of your
+server address.</p></li>
+<li><p>Contact your Internet provider to determine if TeamSpeak network
+traffic is being filtered or if you know how to do so, try reconfiguring
+or disabling your firewall to allow for TeamSpeak network
+traffic.</p></li>
+<li><p>Contact your server administrator and request the server address
+in IP:PORT format instead of its DNS counterpart.</p></li>
+<li><p>Make sure you have Internet access (try using your web browser).
+If your Internet connection is down (or too slow), contact your provider
+for assistance.</p></li>
+<li><p>Contact the server administrator for assistance.</p></li>
+</ul>
+<h3
+id="im-trying-to-connect-to-my-teamspeak-3-server-but-it-says-could-not-validate-client-identity">Im
+trying to connect to my TeamSpeak 3 server but it says “Could not
+validate client identity”</h3>
+<p>This message is displayed if you are trying to connect to a server
+that has a higher security level set than the default setting of 8. You
+have 2 options to connect to such a server:</p>
+<ul>
+<li>Import your already existing identity from your desktop computer
+(which might already have a raised security level).</li>
+<li>Create a new identity on your desktop computer and raise the
+security level. Then you can export this identity to your iOS
+device.</li>
+</ul>
+<h3 id="what-does-the-option-auto-gain-control-acg-do">What does the
+option “Auto Gain Control” (ACG) do?</h3>
+<p>Auto Gain Control effectively reduces the volume if the signal is
+strong and raises it when it is weaker.</p>
+<p>For example, without AGC the sound would vary to an extreme extent
+from a weak signal to a strong signal. With ACG this is normalized.</p>
+<h3
+id="why-is-there-a-license-fee-for-the-ios-client-when-all-other-client-platforms-are-free">Why
+is there a license fee for the iOS client, when all other client
+platforms are free?</h3>
+<p>We carefully examined the notion of bringing the complex iOS client
+development in-house, however due to our limited resources and expertise
+in this area, most of the iOS development had to be outsourced.</p>
+<p>As a relatively small company, we could not bear the development
+costs without impacting our current resources and objectives.</p>
+<p>For this reason we had to place a small fee (which is currently $0.99
+USD) on the iOS client in order to help offset these costs.</p>
+<p>Please keep in mind that after paying the one-time fee, all
+subsequent upgrades of the TeamSpeak 3.x iOS client will be available to
+you through the Apple Store free of charge.</p>
+<h2 id="myteamspeak-myts">myTeamSpeak (myTS)</h2>
+<h3 id="how-do-i-delete-myteamspeak-account-download-my-data">How do I
+delete myTeamSpeak account / Download my data?</h3>
+<p>You can manage your account anytime by visiting <a
+href="https://myteamspeak.com">myteamspeak.com</a>.</p>
+<p>After logging in, click the Account tab -&gt; you’ll then find the
+two options:</p>
+<p>From here, you can download your data or request to delete your
+account.</p>
+<p>If you choose to delete your account, it will enter a 30-day grace
+period during which you can change your mind. To cancel the deletion,
+simply return to this same page and click the option to cancel the
+deletion request.</p>
+<p>Please note: once the account is permanently deleted, this action
+cannot be reversed so be sure before you proceed.</p>
+<p>💡 Tip: If you have an active community subscription, you’ll need to
+cancel it before deleting your account.</p>
+<h3
+id="i-want-to-change-my-username-however-i-keep-receiving-an-error-message.-is-this-working">I
+want to change my username, however I keep receiving an error message.
+Is this working?</h3>
+<p>Currently changing your username isn’t possible because the team are
+working on a specific area of the new client which is account sensitive.
+For this reason, this has temporarily been disabled.</p>
+<p>Once it’s available as a function again, we’ll let everyone know on
+the <a
+href="https://support.teamspeak.com/hc/en-us/articles/community.teamspeak.com">forums</a>
+and on our social media platforms to keep everyone informed.</p>
+<h3 id="what-is-a-myteamspeak-myts-account">What is a myTeamSpeak (myTS)
+account?</h3>
+<p>Your myTS account is your all-in-one TeamSpeak login; a single
+account that connects everything you do across the TeamSpeak ecosystem.
+As well as creating your own unique username, you can also use it to
+sign in and access your forum profile, or join TeamSpeak Communities;
+all from one secure account.</p>
+<p>Whether you’re gaming on multiple devices or switching between
+setups, myTS keeps your servers, settings, and preferences perfectly in
+sync. No matter where you log in, your TeamSpeak experience follows
+you.</p>
+<p>Creating your account</p>
+<p>You can do this via our <a
+href="https://www.myteamspeak.com/register">myTeamSpeak</a> site. You
+will need to enter:</p>
+<ul>
+<li>Your username</li>
+<li>Your email for the account</li>
+<li>Your password (twice to ensure it matches up)</li>
+<li>You need to review the terms and conditions. If you are happy with
+everything, check the checkbox</li>
+<li>Then once you are ready, click “Register”. You’ll be asked to check
+your email for the activation code. Please follow the link contained
+within the email you receive to activate your account.</li>
+</ul>
+<p>💡Tip: If it’s completed, you’ll see the following message. “Your
+account has been successfully activated. You may log in now”. That means
+you’re all set.</p>
+<h2 id="servers">Servers</h2>
+<h3 id="how-do-i-connect-to-a-server-on-teamspeak">How do I connect to a
+server on TeamSpeak?</h3>
+<p>Every server at TeamSpeak has varying details in which to connect to
+them. These are:</p>
+<ul>
+<li>The Domain address</li>
+<li>The IP address</li>
+<li>Server nickname/s Let’s use “ts-community” as an example. Within the
+TeamSpeak client, if you take a look at the top left of the client, you
+should see a “search” area where you can enter details in.</li>
+</ul>
+<p>Once you’ve entered the desired location in. You should see three
+options appear:</p>
+<ul>
+<li>Quick connect - This will literally connect you to the server.</li>
+<li>Bookmarks - Bookmarking a server means you can save this server for
+future usage which means that you don’t need to remember the exact
+details to re-join the server again if you become a regular of the
+server. (Once you have added bookmarks, you can also edit these as well
+which we’ll cover in another article).</li>
+<li>Add contact - For the purposes of servers, you don’t need to use
+this function. However, this is used for when you’re adding contacts to
+your friends list (which we’ll cover in another article). (Quick
+shortcut tip: Ctrl + F will take you to the search bar as well. In your
+journeys, you might end up with a lot of contacts, favorite servers etc
+so you can use this to quickly locate a specific server or contact to
+save you some time).</li>
+</ul>
+<p>Select “Quick connect” or simply hit “Enter” and now you should be
+connected to the server.</p>
+<p>Every server has different set ups, games they play, unique interests
+and hobbies and plenty of new people to meet.</p>
+<p>Having trouble joining a server?</p>
+<p>There can be several reasons why you’re unable to connect to a
+TeamSpeak server, such as incorrect server details, network or firewall
+restrictions, or server-side issues. In some cases, the issue may be
+outside your control (for example, if the server is offline or access is
+restricted).</p>
+<p>We recommend checking the exact error message you receive and
+searching for it on our <a
+href="https://community.teamspeak.com">forum</a> for more specific
+guidance and solutions.</p>
+<h3 id="how-do-you-share-your-teamspeak-server-to-other-users">How do
+you share your TeamSpeak server to other users?</h3>
+<p>Once you have created a TeamSpeak server, you’ll want people to join
+naturally.</p>
+<p>Most communities will have some kind of website, forum, social media,
+streaming channels or other sources to help them gain exposure so other
+people can join them, so mostly clickable site links or “word of mouth”
+are the most common ways for servers to gain exposure and therefore gain
+more users to join in whatever the community in question gets up to.</p>
+<p>You can also “Create an invite URL” which allows you to invite your
+own contacts to discover your server. You can do this by right clicking
+either on your server in the activity panel, or from within the server
+itself and it should give you these options:</p>
+<p>Select “Create Invite URL” and it should lead you to this:</p>
+<p>Your unique “Share Invite URL” should be displayed. You can also
+choose if you want to add your specific channel into the invite as well
+(This could be handy if you are in a large server with lots of channels
+contained within). You can also add a custom message to your invites so
+people know what they’re joining before they click on the link.</p>
+<p>Finally, at the bottom of the invite, you should see all of your
+contacts that you currently have. Then you can “tick” all of the people
+that you would like to invite to the server so you can send the invite
+to more than one person at the same time. If you have a lot of contacts,
+but know who you want to send the invite to, you can also “search” for
+users as shown in the image above which could be quicker than scrolling
+through your contacts list.</p>
+<h3 id="how-to-self-host-the-teamspeak-6-beta-server">How To Self-Host
+The TeamSpeak 6 Beta Server</h3>
+<p>DISCLAIMER:</p>
+<p>As this is a Beta version, some features are still in development,
+and you may come across bugs. Your feedback is important and will help
+us shape a more stable and complete final release.</p>
+<p>It is not yet possible to obtain or upgrade to a larger license for
+TeamSpeak 6.</p>
+<p><a
+href="https://support.teamspeak.com/hc/en-us/articles/360002744798-Can-I-use-an-existing-TS3-license-on-a-TeamSpeak-6-server">Can
+I use an existing TS3 license on a TeamSpeak 6 server?</a></p>
+<p>Link to the Official <a
+href="https://github.com/teamspeak/teamspeak6-server">GitHub
+Repository</a></p>
+<p>Link to the Official <a
+href="https://hub.docker.com/r/teamspeaksystems/teamspeak6-server">Docker
+Image</a></p>
+<p>Link to <a
+href="https://community.teamspeak.com/c/teamspeak-6-server/45">Provide
+Feedback</a></p>
+<p>You can configure your server in three main ways:</p>
+<ul>
+<li>Command-Line Arguments Pass: options directly when starting the
+server (e.g., ./tsserver –default-voice-port 9987). This is useful for
+temporary changes or for scripting.</li>
+<li>Environment Variables: Set environment variables before starting the
+server. This is useful for Docker or when you want to avoid command-line
+clutter.</li>
+<li>YAML Configuration File: For a persistent configuration, it is
+highly recommended to use a tsserver.yaml file. You can generate a
+default config file using the –write-config-file flag. Key settings you
+can control include network ports (voice, file transfer), database
+connections (supports SQLite and MariaDB), IP bindings, and logging
+options.</li>
+</ul>
+<p>For a complete list of available options, run the server with the
+–help flag or refer to the <a
+href="https://github.com/teamspeak/teamspeak6-server/blob/main/CONFIG.md">CONFIG.md</a>.</p>
+<p>Running the Server with Binaries</p>
+<p>If you are not using Docker, you can run the server directly on your
+operating system.</p>
+<p>On Linux:</p>
+<p>Make the server binary executable:</p>
+<pre><code>chmod +x tsserver</code></pre>
+<p>Run the server from your terminal, making sure to accept the
+license:</p>
+<pre><code>./tsserver --accept-license</code></pre>
+<p>On Windows:</p>
+<p>Open Command Prompt or PowerShell and navigate to the directory where
+you extracted the server files.</p>
+<p>Run the server executable, making sure to accept the license:</p>
+<pre><code>tsserver.exe</code></pre>
+<p>Running the Server with Docker (Recommended):</p>
+<p>Docker is the easiest way to run the TeamSpeak 6 server in an
+isolated and manageable environment.</p>
+<ol type="1">
+<li>Simple docker run command:</li>
+</ol>
+<p>For a quick start, you can use the docker run command.</p>
+<pre><code>docker run -it --rm \
+ -p 9987:9987/udp \
+ -p 30033:30033 \
+ -e TSSERVER_LICENSE_ACCEPTED=accept \
+ teamspeaksystems/teamspeak6-server:latest</code></pre>
+<ol start="2" type="1">
+<li>Using docker-compose.yaml (for persistent setups):</li>
+</ol>
+<p>This is the best practice for a server you intend to keep running.
+Create a docker-compose.yaml file:</p>
+<pre><code>services:
+ teamspeak:
+   image: teamspeaksystems/teamspeak6-server:latest
+   container_name: teamspeak-server
+   restart: unless-stopped
+   ports:
+     - &quot;9987:9987/udp&quot;   # Voice Port
+     - &quot;30033:30033/tcp&quot; # File Transfer
+     # - &quot;10080:10080/tcp&quot; # Web Query
+   environment:
+     - TSSERVER_LICENSE_ACCEPTED=accept
+   volumes:
+     - teamspeak-data:/var/tsserver/
+volumes:
+ teamspeak-data:</code></pre>
+<h2 id="technical-support---client">Technical Support - Client</h2>
+<h3
+id="client-installationstart-fails-api-ms-win-crt-runtime-is-missing">Client
+installation/start fails (api-ms-win-crt-runtime is missing)</h3>
+<p>This error is caused by a missing Windows update <a
+href="https://support.microsoft.com/en-us/kb/2999226">KB2999226</a></p>
+<p>Please note that on Windows 7 Service Pack 1 is required to be
+installed to use the TeamSpeak Client.</p>
+<p>Install all available Windows Updates, restart and check for updates
+again. Install any updates found and repeat until no more updates are
+found.</p>
+<ul>
+<li>Download VC++ Redistributable <a
+href="https://www.microsoft.com/en-us/download/details.aspx?id=53840">From
+Microsoft Website</a> or <a
+href="http://dl.4players.de/ts/client/redist/">From TeamSpeak</a>. Make
+sure to choose the correct one for the TeamSpeak Client you’re trying to
+install/launch. If you’re trying to run a 32-bit client or still have a
+32 bit operating system use the x86 file. Otherwise use the x64
+file.</li>
+<li>Run the downloaded file and select “Uninstall” if that is offered
+-&gt; “Reboot”.</li>
+<li>Run the downloaded file and “Install”.</li>
+</ul>
+<h3
+id="does-teamspeak-3-offer-text-to-speech-tts-if-so-how-do-i-use-it">Does
+TeamSpeak 3 offer text-to-speech (TTS)? If so, how do I use it?</h3>
+<p>We offer three default soundpacks:</p>
+<ol type="1">
+<li><p>Spoken text from wave files (default)</p></li>
+<li><p>Spoken text via TTS (for channel-, nick- and
+servernames)</p></li>
+<li><p>Silence</p></li>
+</ol>
+<p>For TTS you need to switch to the “Default Speech” soundpack via
+Settings &gt; Options &gt; Notifications.</p>
+<h3 id="how-can-i-view-my-printf-plugin-debug-output">How can I view my
+printf plugin debug output?</h3>
+<p>Start the TeamSpeak 3 client with the “-console” commandline
+parameter.</p>
+<h3 id="how-do-i-enable-the-advanced-permissions-system">How do I enable
+the advanced permissions system?</h3>
+<p>To enable the advanced permissions system, select “Settings” -&gt;
+“Options” -&gt; “Application” on the left -&gt; Check the box next to
+Advanced permissions system in the “Misc” section.</p>
+<h3 id="how-do-i-make-myself-and-then-someone-else-a-server-admin">How
+do I make myself (and then someone else) a server admin?</h3>
+<p>After installing the TS3 server, you will be shown a Server Admin
+Token ID either on screen (Windows) or you can also find it from your
+logs in the log directory. Once you have this, copy it and launch the
+TS3 client and connect to your server as a normal user. Now, go to
+“Permissions” -&gt; “Use Token” and paste the Token ID into the box. If
+successful, this will make you a Server Admin and you should see a “SA”
+icon next to your name.</p>
+<p>Note the token can only be used once. After you’re logged in as a
+Server Admin you can create a new token for someone else to use by going
+to “Permissions” -&gt; “Token Manager” -&gt; “Add Token” and choosing
+Server Group for type and Server Admin for group then clicking “Create”.
+You can then provide the token to another user allowing which would
+allow them to do the same thing.</p>
+<h3
+id="how-do-i-move-my-unique-identity-to-another-computer-or-create-a-backup">How
+do I move my unique identity to another computer or create a
+backup?</h3>
+<p>You can export an identity in the identity manager dialog in the
+TeamSpeak 3 client. This file can then be moved to another computer and
+then imported in the identity manager there, or serve as a backup file
+in case your TeamSpeak 3 client configuration directory is ever lost or
+destroyed.</p>
+<h3 id="how-do-i-transfer-my-unique-identity-id-to-another-pc">How do I
+transfer my Unique Identity (ID) to another PC?</h3>
+<p>Click on “Settings” -&gt; “Identities”, then choose the identity you
+want to export (usually Default) -&gt; click “Export” on the upper
+right, then choose a filename.</p>
+<p>Now on the target PC, go to “Settings” -&gt; “Identities”, and choose
+“Import” then point to the INI file to complete the import process.</p>
+<p>This will allow you to receive the same permissions settings assigned
+to you by the server regardless of which PC you’re using.</p>
+<h3 id="how-do-i-write-my-own-plugins">How do I write my own
+plugins?</h3>
+<p><a href="https://teamspeak.com/en/downloads/#sdk">Download</a> the
+TeamSpeak 3 Plugin SDK and build upon our demonstration plugin. Please
+be sure to carefully read the documentation provided with the Plugin
+SDK.</p>
+<h3 id="how-does-teamspeak-3-user-authentication-work">How does
+TeamSpeak 3 user authentication work?</h3>
+<p>TeamSpeak 3 uses a public/private key mechanism where each user is
+assigned a unique identifier. This is your “key” to the server and all
+permissions are bound to this unique identifier. The private key is
+stored on your computer and are not shown anywhere in the client. This
+private key must be kept secret.</p>
+<p>The public key, shown in many places in the client can be given to
+other users to identify yourself. If you lose your private key, your
+user account is lost and cannot be recovered. If anyone is asking you
+for your private key, don’t share this.</p>
+<p>TeamSpeak staff will never ask for your private key.</p>
+<h3 id="how-does-the-ban-system-work">How does the ban system work?</h3>
+<p>Clients can be banned by any combination of IP, username (including
+regular expressions) and unique identifier.</p>
+<h3
+id="i-installed-the-client-but-the-plugins-are-not-activated.-how-do-i-activate-them">I
+installed the client but the plugins are not activated. How do I
+activate them?</h3>
+<p>You need to activate plugins manually since by default all plugins
+are deactivated. To activate plugins go to “Tools” -&gt; “Options” -&gt;
+“Addons” and enable the plugin/s you want to use.</p>
+<h3
+id="myteamspeak-sync---i-lost-my-items-bookmarks-identities-etc.">myTeamSpeak
+Sync - I lost my Items (Bookmarks, Identities etc.)</h3>
+<p>If you create a myTeamSpeak account and log in for the first time
+with the sync feature enabled, all of your identities, bookmarks,
+whisper lists, hotkeys and other items that can be synchronized will be
+moved to the cloud. As such you will need to be logged in to access
+these items.</p>
+<p>If you disable the “Stay logged in on this computer” option, the next
+time you start the client you will not be logged in, and thus unable to
+access your cloud stored items. To get the items back you will need to
+log back into your account. This can be done in Tools -&gt; Options
+-&gt; myTeamSpeak.</p>
+<p>If you disable the “Synchronization” option then you will lose access
+to your cloud items upon applying the changes, because the client will
+no longer access the cloud storage. To gain access to these items again
+you will have to enable to “Synchronization” option again.</p>
+<p>If you have ever been logged in to your account in the client and had
+synchronization enabled (which is the default option) and can no longer
+see your items, then make sure that you are logged in to your account
+and that synchronization is enabled in Tools -&gt; Options -&gt;
+myTeamSpeak.</p>
+<p>If you want to remove your items from the cloud and only keep them
+locally again, you will need to do so manually by going to the
+respective management dialog of the item and dragging them from the
+cloud to the local area.</p>
+<p>For Bookmarks, go to Bookmarks -&gt; Manage Bookmarks -&gt; Go to
+Advanced and drag the bookmarks you do not want to be stored in the
+cloud to the lower (Local) area.</p>
+<p>Please note that any such item will only be available on the device
+you’re doing this on. Any other device connected to your account will no
+longer have the items you removed from the cloud on any other
+device.</p>
+<h3
+id="on-mac-os-x-my-hotkeys-do-not-work-when-teamspeak-does-not-have-the-focus">On
+Mac OS X my Hotkeys do not work when TeamSpeak does not have the
+focus</h3>
+<p>For global hotkeys, you need to enable a setting in the Mac system
+preferences.</p>
+<p>Mac OS X 10.5.8</p>
+<ul>
+<li><p>Open System Preferences</p></li>
+<li><p>Universal Access</p></li>
+<li><p>“Enable access for assistive devices” (on bottom) Mac OS
+10.9.x</p></li>
+<li><p>Open System preferences</p></li>
+<li><p>Security &amp; Privacy</p></li>
+<li><p>Privacy tab</p></li>
+<li><p>Accessibility</p></li>
+<li><p>Enable TeamSpeak 3 or 5 Client Mac OS 10.15.x</p></li>
+<li><p>Open System preferences</p></li>
+<li><p>Security &amp; Privacy</p></li>
+<li><p>Privacy tab</p></li>
+<li><p>Input Monitoring</p></li>
+<li><p>Enable TeamSpeak 3 or 5 Client (when list does not offer the “+”
+button then try to start the app from application folder.)</p></li>
+</ul>
+<p>The reason for this is, on Mac by default you cannot catch keypresses
+from one application if another application has the focus for security
+reasons as a protection mechanism against malware trying to log keyboard
+input. In order to catch TeamSpeak 3 hotkeys when another application is
+running, this option must be explicitly enabled, otherwise OS X would
+not pass the keypresses to TS3.</p>
+<h3
+id="there-is-a-password-field-in-the-connection-and-bookmark-dialogs.-but-i-read-teamspeak-3-does-not-use-passwords">There
+is a password field in the connection and bookmark dialogs. But I read
+TeamSpeak 3 does not use passwords?</h3>
+<p>The password field specifies the optional server password. This is
+the same password for every user on this server and has nothing to do
+with user authentication.</p>
+<h3
+id="when-i-connect-to-a-very-busy-server-the-client-provides-too-many-spoken-notifications-about-users-joining-or-leaving.-how-can-i-deactivate-them">When
+I connect to a very busy server, the client provides too many spoken
+notifications about users joining or leaving. How can I deactivate
+them?</h3>
+<p>Go into Tools -&gt; Options -&gt; Notifications. Find the specific
+notifications you want to disable, double click on the entry and more
+options within that category will appear. Anything you don’t want to
+receive a notification for ,check/uncheck the boxes. Press Ok or Apply
+if you want this to be permanent. Alternatively, you can select the
+“Sounds deactivated” soundpack for complete silence. We tried to make
+this as customizable as possible, so you can decide for yourself to
+listen to all sounds, none or only selected ones.</p>
+<h3 id="when-i-talk-i-am-producing-echoes.-how-can-i-fix-this">When I
+talk I am producing echoes. How can I fix this?</h3>
+<p>There are two ways echoes can occur:</p>
+<ul>
+<li>The sound from your speakers/headphones is being recorded by your
+microphone.</li>
+<li>Your sound driver is recording all the sound that you hear for you.
+You can find out which issue this is quite easily. Just turn your
+speakers/headsets off (volume = 0%), and ask your friends if you are
+still echoing. If you are not, it’s the first issue,; if you are still
+echoing you have the second issue.</li>
+</ul>
+<p>Fixing issue 1:</p>
+<p>This type of echo is nearly impossible to fix completely, but you can
+minimize it greatly if you follow a few general points:</p>
+<ul>
+<li>Switch your speakers off when TeamSpeak is on and use a headset to
+hear.</li>
+<li>Use headphones that shield well, meaning they prevent as much sound
+as possible from being audible to the outside.</li>
+<li>Try and keep your microphone as far away as possible from the
+headset (or generally speaking, the sound-source).</li>
+<li>Lower the volume of the sound-source. Fixing issue 2:</li>
+</ul>
+<p>These echoes are produced by your sound-drivers. They should be
+configurable by your driver too (its not a bug, its a feature). From
+windows users we have often heard you can select from which devices to
+record in the mixer (a mixer is the place where you can slide all these
+volume controls). Make sure the microphone is the only entry that is
+being recorded from. This can be located on various locations depending
+on your driver/OS combination, you will have to look for this.</p>
+<h3
+id="when-i-try-to-connect-to-a-teamspeak-server-i-keep-getting-the-message-no-reply-from-server.-what-does-this-error-mean">When
+I try to connect to a TeamSpeak server I keep getting the message “No
+reply from server”. What does this error mean?</h3>
+<p>The client could not make a connection to the destination server
+you’re trying to connect to. Either something is blocking the connection
+request or there is no server at the end.</p>
+<p>Possible reasons:</p>
+<ul>
+<li>You entered an IP or port which is not correct or where no server is
+running on. Check with the serveradmin if you have the correct IP and
+port and if the server is running. If the server doesn’t run on the
+default port 9987, enter the destination address of the server like the
+following: IP:PORT or in numbers 192.168.1.1:8760 (this is just an
+example).</li>
+<li>You have a firewall which is preventing a connection to the server.
+Check your firewall manual to see how to allow TS a connection to any TS
+server. The ports required by TS are mentioned in the FAQ. If this
+doesn’t help you, check a firewall forum for specific help for your kind
+of firewall.</li>
+<li>You can connect to some servers but not to the one specific. Test
+several servers to make sure the problem lies not within your network
+configuration but on the server side. The server hoster may miss a port
+forwarding or has a bad firewall config (this is often the case when new
+/ network unexperienced user setup servers). Advice the hoster to
+configure the port forwarding.</li>
+<li>You get a timeout. Some firewalls can cause timeout problems as
+well, so deactivate the firewall for testing. Wireless networks may as
+well be the cause of timeout problems. Try to connect without the WLAN
+and use an ethernet cable instead.</li>
+</ul>
+<h3 id="where-is-text-to-speech-tts-on-linux">Where is text-to-speech
+(TTS) on Linux?</h3>
+<p>At this time TTS is only supported for Windows and Mac OS X. On Linux
+you can use the spoken texts from wave files.</p>
+<h2 id="technical-support---server">Technical Support - Server</h2>
+<h3
+id="how-can-i-convert-a-mysql-database-to-an-sqlite-database-or-the-other-way-around">How
+can I convert a MySQL database to an SQLite database (or the other way
+around)</h3>
+<p>You cannot convert the database from one type to another without
+issues. While there are tools available that offer to convert MySQL to
+SQLite and vice versa, in our experience the conversion never goes
+without issues and you will most certainly end up messing up the
+database causing errors in the long run which will ultimately corrupt
+your database forcing you to start from scratch.</p>
+<p>What you could do however is use snapshots to move the servers
+between instances and thus indirectly “converting” your database. You
+will need to schedule a maintenance window during which all of your
+virtual servers on the instance that you want to “convert” will be
+unavailable.</p>
+<p>Then you will need to set up a new instance with the default SQLite
+database backend. Keep in mind to use the defaults.sql recommended for
+ATHPs (which is available <a
+href="https://github.com/teamspeak/dotfiles/blob/main/defaults.sql">here</a>)
+before you start the new instance for the first time.</p>
+<p>In addition to that, if you want all the icons, files and avatars to
+be preserved, you should copy the files folder from the SQLite instance
+over to the MySQL instance folder before you start the new instance with
+the MySQL backend. If you skip this step the icons, files and avatars
+will have to be set/uploaded again afterwards.</p>
+<p>Then login to the query interface of the new instance and delete the
+virtual server that has been created by default.</p>
+<p>Now you connect to the query interface of your running TeamSpeak
+instance that is using MySQL.</p>
+<p>Now that you are connected to the query interface of both the new
+instance (running SQLite) and the old instance (running MySQL) you need
+to do the following for each and every virtual server that is running on
+the server instance using MySQL:</p>
+<p>On the MySQL server query:</p>
+<p>serverstop sid=VIRTUALSERVER_ID</p>
+<p>use sid=VIRTUALSERVER_ID</p>
+<p>serversnapshotcreate</p>
+<p>Now copy the resulting string (excluding the newline at the end and
+the error id=0 msg=ok) and do the following on the SQLite server query
+connection:</p>
+<p>serversnapshotdeploy LONG_STRING_YOU_JUST_COPIED</p>
+<p>serverstart sid=VIRTUALSERVER_ID</p>
+<p>Back to the query interface of the MySQL server instance do the
+following:</p>
+<p>serveredit virtualserver_autostart=0</p>
+<p>Repeat the above for every virtual server on the MySQL instance.</p>
+<p>As the output of “serversnapshotcreate” is very large, it is
+advisable to use a telnet client that can log output from the connection
+to a file or increase the amount of text that is being kept in the
+window so you can be sure to get the entire output to copy. You have to
+be absolutely certain to copy the exact output as given by the query
+interface for serversnapshotcreate. Any new line characters or control
+characters that are copied which were not part of the original output
+will cause the snapshot to be invalid and thus fail to import on the
+SQLite instance.</p>
+<p>After all of the virtual servers on the MySQL instance have been
+deployed in the SQLite Instance without errors, you should restart the
+SQLite instance. It is important that you should not shut the MySQL
+instance down just yet.</p>
+<p>All virtual servers that were running before should now be running
+again. All users should be able to connect without issues (provided you
+run both instances on the same machine, otherwise the IP would’ve
+changed) and should still have all their channels, permissions etc. The
+only thing that will be missing are any uploaded files which includes
+icons and avatars. Those will have to be uploaded again.</p>
+<p>After you have confirmed that all virtual servers are running without
+problems and everything is fine, you can now shutdown the TeamSpeak
+instance that was running on MySQL.</p>
+<h3 id="how-can-i-link-to-my-teamspeak-3-server-on-my-webpage">How can I
+link to my TeamSpeak 3 server on my webpage?</h3>
+<p>Complete format:</p>
+<p>`ts3server://ts3.hoster.com?port=9987&amp;nickname=UserNickname&amp;password=serverPassword&amp;channel=MyDefaultChannel</p>
+<p>&amp;cid=channelID&amp;channelpassword=defaultChannelPassword&amp;token=TokenKey&amp;addbookmark=MyBookMarkLabel
+`</p>
+<p>Please keep in mind that if you use “cid=channelID”, the parameter
+“channel=MyDefaultChannel” will be ignored.</p>
+<p>Parameters are optional. In most cases specifying the host and port
+should be sufficient.</p>
+<p>Nicknames usually should not be specified. Leave this to be
+configured by the users in the client.</p>
+<p>So a common URL would look like this:
+ts3server://ts3.hoster.com?port=9987</p>
+<p>Or simplified if only the port is given:
+ts3server://ts3.hoster.com:9987</p>
+<p>Or even shorter, using default port 9987:
+ts3server://ts3.hoster.com</p>
+<p>Example for a complete HTML link:</p>
+<p><code>&amp;lt;a href="ts3server://ts3.hoster.com?port=9987"&gt;Click to connect to my server&amp;lt;/a&gt;</code></p>
+<p>You can also use this feature to invite users to your server without
+having them to manually type the server-address.</p>
+<h3 id="how-can-i-restrict-access-to-my-teamspeak-3-servers">How can I
+restrict access to my TeamSpeak 3 Servers?</h3>
+<p>There are two types of TeamSpeak servers: public servers and private
+servers. If you are running a private server chances are you wish to
+somehow restrict people from joining your server. There are multiple
+ways to do it depending on how much you want to control who joins your
+server:</p>
+<p>Unpublished Server</p>
+<p>Just by not publishing your servers IP/Port publicly (and by making
+sure it is not listed on the official TS3 server web list) you can
+eliminate a lot of unwanted visitors. Just give out the IP+Port to
+anyone you wish to join. Depending on how public the IP is, technically
+savvy users can scan for open ports and find your server so this method
+of restriction is not the strongest option, but will reduce unwanted
+visitors.</p>
+<p>Servers with Password</p>
+<p>By editing a virtual server (just connect with the client, right
+click on the server name and select “Edit Virtual Server”) you can set a
+global server password which is required by all clients to connect. The
+only exception are users that have the permission
+b_virtualserver_join_ignore_password, which by default are only server
+admins. Tell this password only to users you wish to join your server.
+This is the most common way to restrict server access, but still it
+doesn’t give you full control. Any of the people you invite to your
+server can invite anybody else (as he knows the password now). Also
+there is no way to revoke the privilege to join the server (once he
+knows the password, he knows the password).</p>
+<p>Invite only Servers</p>
+<p>For those scenarios where you want total control over who joins your
+server and also the ability to revoke this privilege, the invite only
+server comes into play. Here is the recipe:</p>
+<ul>
+<li>Set some cryptic, long server password that you do not
+remember/write down. The result is nobody except users with the
+privilege b_virtualserver_join_ignore_password can connect.</li>
+<li>Create a server group called something like “AllowedUsers” that has
+b_virtualserver_join_ignore_password set to true (use the Normal or a
+copy of the Guest group as base to avoid having to put users in multiple
+server groups). Add all users that should be able to join your server to
+this group, so they can join without knowing the password that you made
+sure nobody knows.</li>
+<li>If you wish to invite a new user to your server you need to make
+sure he is added to the “AllowedUsers” during connect. To do this you
+need to create a “Privilege key” (old name: token) which grants access
+to the “AllowedUsers” group. Tell the user his privilege key needs to be
+added as a “One-Time Privilege Key” in Connections -&gt; Connect -&gt;
+and then more specifics for the user to be able to join. Alternatively
+you can give the invited user a direct link that already contains the
+privilege key so all the user has to do is click the link to connect in
+the right way. The link would look something like this:</li>
+<li><code>ts3server://voice.teamspeak.com?nickname=John&amp;token=eKnFZQ9EK7G7MhtuQB6+N2B1PNZZ6OZL3ycDp2OW/</code></li>
+<li>To revoke any users privilege to join your server just remove them
+from the “AllowedUsers” group. Note: Instead of using a virtual server
+password and the b_virtualserver_join_ignore_password permission you
+could also use a ban that bans all users (name=.*) and the permission
+b_client_ignore_bans. The advantage of this method is you can write some
+explanation as ban reason, e.g. “Server is invite only, ask George for
+details” so users are better informed. The disadvantage of this method
+is that you can’t use the ban system in “regular” ways any more when
+everybody on your server has the permission to ignore bans. But on an
+invite only server, this might not really matter.</li>
+</ul>
+<h3 id="how-do-i-allow-normal-users-to-upload-avatars">How do I allow
+normal users to upload avatars?</h3>
+<p>The permission used to control a users avatar upload privileges is
+called “i_client_max_avatar_filesize”.</p>
+<p>Set the value of this permission to a custom number of bytes to allow
+the users to upload avatars.</p>
+<h3 id="how-do-i-change-my-serverquery-admin-password">How do I change
+my ServerQuery Admin password?</h3>
+<p>Execute the following steps to change your ServerQuery Admin
+password.</p>
+<p>WINDOWS:</p>
+<ol type="1">
+<li><p>Navigate to your TeamSpeak 3 server folder</p></li>
+<li><p>Create a shortcut file that corresponds to your operating
+system</p></li>
+</ol>
+<ul>
+<li>Windows 32-Bit: ts3server_win32.exe</li>
+<li>Windows 64-Bit: ts3server_win64.exe</li>
+</ul>
+<ol start="3" type="1">
+<li><p>Right-click this shortcut and choose ‘Properties’</p></li>
+<li><p>The next dialog should contain one of the following two
+parameters in its ‘Target’ input field</p></li>
+</ol>
+<ul>
+<li>Windows 32-Bit: C:Files-server_win323server_win32.exe</li>
+<li>Windows 64-Bit: C:Files-server_win323server_win64.exe</li>
+</ul>
+<ol start="5" type="1">
+<li>Append the following parameter to the corresponding .EXE
+“serveradmin_password=YourNewPassword”</li>
+</ol>
+<p>It should look like this (replace ‘YourNewPassword’ with your own
+password):</p>
+<ul>
+<li>Windows 32-Bit: C:Files-server_win323server_win32.exe
+serveradmin_password=IhrNeuesPasswort</li>
+<li>Windows 64-Bit: C:Files-server_win323server_win64.exe
+serveradmin_password=IhrNeuesPasswort</li>
+</ul>
+<ol start="6" type="1">
+<li>Shut down the TeamSpeak 3 instance and restart it by using the new
+created shortcut.</li>
+</ol>
+<p>Your ServerQuery Admin password has been changed.</p>
+<p>*Please note that you only have to start the server once with this
+shortcut in order to change the password permanently.</p>
+<p>*After a successful change, you can start the server as usual.</p>
+<p>LINUX:</p>
+<ol type="1">
+<li><p>Open up a Terminal/CLI/Bash</p></li>
+<li><p>Navigate to your TeamSpeak 3 folder and open the file
+‘ts3server_startscript.sh’ with a texteditor</p></li>
+</ol>
+<p>Replace the following code:</p>
+<ul>
+<li><p>COMMANDLINE_PARAMETERS=“” with this:</p></li>
+<li><p>COMMANDLINE_PARAMETERS=$2</p></li>
+</ul>
+<ol start="4" type="1">
+<li><p>Save the file</p></li>
+<li><p>Change back to your command line interface and start the server
+with the following parameter:</p></li>
+</ol>
+<p>(replace ‘YourNewPassword’ with your own password)</p>
+<ul>
+<li>./ts3server_startscript.sh start
+serveradmin_password=YourNewPassword Your ServerQuery Admin password has
+been changed.</li>
+</ul>
+<p>*You don’t have to append this parameter everytime, a one-time
+serverstart with the parameter set will permanently change it</p>
+<h3
+id="how-do-i-change-or-reset-the-password-of-the-serveradmin-server-query-account">How
+do I change or reset the password of the serveradmin Server Query
+account?</h3>
+<p>This article is for people who are hosting their own servers. First
+of all we will set a new password and then generate a new one using
+Server Query. If you still have your serveradmin password, then you can
+skip the first step.</p>
+<ol type="1">
+<li>Reset a forgotten serveradmin password</li>
+</ol>
+<p>To reset the query admin password a server restart is required.
+Please stop your TeamSpeak 3 server and then launch it with the
+additional parameter
+<code>serveradmin_password=MY_NEW_PASSWORD_HERE.</code></p>
+<p>On Windows, this can be done by creating a shortcut to the servers
+.exe file and editing the “Target” section.</p>
+<p>Linux example:
+<code>./ts3server_minimal_runscript.sh inifile=ts3server.ini serveradmin_password=test1234</code></p>
+<p>Windows example of target (shortcut properties):
+<code>C:\Program Files\teamspeak3-server_win64\ts3server_win64.exe inifile=ts3server.ini serveradmin_password=test1234</code></p>
+<p>You should skip the inifile parameter if you’re not using an ini file
+when starting the server.</p>
+<p>Upon starting up the server, the serveradmin password will be
+changed. Now please stop the server again and start it regularly
+(i.e. Linux users use the regular startscript, Windows users delete the
+shortcut created above and run exe file or your usual shortcut).</p>
+<p>You should now be able to log into the Server Query again. There are
+some potential security issues as your current password might show up in
+system log files or shell history. You should therefore also follow the
+second step to generate a secure password.</p>
+<ol start="2" type="1">
+<li>Using Server Query to generate a new and safe password</li>
+</ol>
+<p>You need to have the password of the serveradmin account ready. If
+you don’t have it, please see step 1. Please establish a Telnet
+connection to your TeamSpeak 3 Servers Server Query interface using any
+Telnet client (such as Putty). The default Query port is 10011, please
+replace anything written in capital letters:</p>
+<p>`login serveradmin YOUR_CURRENT_PASSWORD</p>
+<p>clientsetserverquerylogin client_login_name=serveradmin`</p>
+<p>The output with your new password should look like this:</p>
+<p>`client_login_password=1ZKIodA6</p>
+<p>error id=0 msg=ok`</p>
+<p>You’re now logged out again and would have to login with the password
+that was displayed to you. Please keep the displayed password safe as
+you’ll have to use this password from now on.</p>
+<h3 id="how-do-i-create-a-new-virtual-server">How do I create a new
+virtual server?</h3>
+<p>Login to the ServerQuery using any telnet client (for example <a
+href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">putty</a>)
+and use the “servercreate” command to create a new virtual server.</p>
+<p>You will have to enter the commands highlighted in green, the other
+lines are server responses.</p>
+<p>`TS3</p>
+<p>login serveradmin password</p>
+<p>error id=0 msg=ok</p>
+<p>servercreate virtualserver_name=Myvirtualserver_port=1337
+virtualserver_maxclients=128</p>
+<p>sid=2 virtualserver_port=1337
+token=ddqCmka21sXaE+0zjnFHFQsqMJ832Boc6SSdECXe</p>
+<p>error id=0 msg=ok`</p>
+<p>As you can see above, the server created a new virtual server with ID
+2 and displays the initial administrator token. If virtualserver_port is
+not specified, the server will detect the next unused port
+automatically.</p>
+<p>Per default, subsequently started virtual servers will be running on
+increasing port numbers. The second on 9998, the third on 9999 etc.</p>
+<p>Please check the ServerQuery documentation
+(ts3_serverquery_manual.pdf) for additional information on how to use
+these sorts of commands.</p>
+<h3 id="how-do-i-delete-an-existing-virtual-server">How do I delete an
+existing virtual server?</h3>
+<p>Login to the ServerQuery from within your client (Tools =&gt;
+ServerQuery) and use the “serverdelete” command to delete an existing
+virtual server. Please note that the virtual server needs to be stopped
+before it can be deleted.</p>
+<p>`TS3</p>
+<p>login serveradmin password</p>
+<p>error id=0 msg=ok</p>
+<p>serverstop sid=2</p>
+<p>error id=0 msg=ok</p>
+<p>serverdelete sid=2</p>
+<p>error id=0 msg=ok`</p>
+<p>Please check the ServerQuery documentation
+(ts3_serverquery_manual.pdf) for additional information on how to use
+these sorts of commands.</p>
+<h3
+id="how-do-i-modify-a-virtual-servers-max-clients-max-concurrent-user-connections">How
+do I modify a virtual server’s max clients (max concurrent user
+connections)?</h3>
+<p>Login to the ServerQuery from within your client (Tools =&gt;
+ServerQuery) and use the “serveredit” command to modify the properties
+of a virtual server.</p>
+<p>`TS3</p>
+<p>login serveradmin password</p>
+<p>error id=0 msg=ok</p>
+<p>use 1</p>
+<p>error id=0 msg=ok</p>
+<p>serveredit virtualserver_maxclients=64</p>
+<p>error id=0 msg=ok`</p>
+<p>Please check the ServerQuery documentation
+(ts3_serverquery_manual.pdf) for additional information on how to use
+these sorts of commands.</p>
+<h3 id="how-do-i-set-up-my-own-non-commercial-ts3-server">How do I set
+up my own non-commercial TS3 server?</h3>
+<p>You can set up and configure your own TeamSpeak 3 server with
+absolutely no licensing costs (limited to 1 virtual server and 32 slots)
+by following these steps:</p>
+<ul>
+<li>Go to our <a
+href="https://teamspeak.com/en/downloads/#server">download page</a> and
+download the TS3 server software for your respective operating
+system.</li>
+<li>Extract the downloaded file and place the server folder on target
+location on your hard drive.</li>
+<li>Ensure that port 9987 UDP (our default port for Voice) is forwarded
+in your router.</li>
+<li>Execute the the ts3server binary. This needs you to read &amp; agree
+the license agreement (see more details via your console on Linux and
+MacOS). Once you have installed and configured your TS3 server, provide
+your TS3 server info to any friend or clan/guild member that you want to
+connect to your server. Point them to our <a
+href="https://teamspeak.com/downloads">download page</a> to download and
+install the TS3 client if they don’t already have it.</li>
+</ul>
+<h3 id="how-to-accept-the-server-license-agreement-server-3.1.0">How to
+accept the server license agreement (Server &gt;= 3.1.0)</h3>
+<p>With the release of TeamSpeak 3 server version 3.1.0 it is required
+that you agree to our license. This license can be found in the file
+“license.txt” or “LICENSE” (depending on your platform) which is
+located</p>
+<p>in the same location as the ts3server binary (the main folder). Note
+that on Unix platforms you can also view the license by starting the
+TeamSpeak 3 server with the environment variable TS3SERVER_LICENSE set
+to “view”.</p>
+<p>You can accept the license in one of three ways:</p>
+<ul>
+<li>Create an empty file called “.ts3server_license_accepted” in the
+current working directory. For example on Unix like systems do:
+<code>touch .ts3server_license_accepted</code></li>
+<li>Start the ts3server with the commandline parameter
+“license_accepted” set to 1. For example:
+<code>ts3server license_accepted=1</code></li>
+<li>Set the OS environment variable TS3SERVER_LICENSE to “accept” prior
+to starting the server. For example on Windows:
+<code>set TS3SERVER_LICENSE=accept</code></li>
+</ul>
+<h3
+id="how-to-configure-the-ts3-server-to-use-an-https-proxy-for-backend-communication">How
+to configure the TS3 server to use an HTTPS Proxy for backend
+communication</h3>
+<p>TeamSpeak 3 servers beginning with version 3.1.0 use HTTPS
+connections for communication with the accounting backend. The TeamSpeak
+3 server can be configured to use a proxy server for the accounting
+system in cases where direct internet access is not available on the
+system running the TeamSpeak 3 server.</p>
+<p>The proxy server is specified by the http_proxy command line
+parameter which accepts domain names, IPv4 and IPv6 addresses and must
+include the port. It can be specified in either an ini file (itself
+specified with the inifile parameter) or be provided on the command
+line.</p>
+<p>The following are examples of valid http_proxy parameters:</p>
+<p>`http_proxy=my.proxy.example:1234</p>
+<p>http_proxy=192.0.2.1:1234</p>
+<p>http_proxy=[2001:DB8::4321:5678:9ABC]:1234`</p>
+<p>Proxy requirements:</p>
+<p>The proxy provided must not require authentication, as that is not
+supported by the TeamSpeak 3 server.</p>
+<h3
+id="i-am-a-server-admin-but-still-cannot-access-everything-because-of-insufficient-permissions.-how-do-i-fix-this">I
+am a Server Admin but still cannot access everything because of
+insufficient permissions. How do I fix this?</h3>
+<p>In the default permission configuration some settings are not
+available to Server Admins. You can add these permissions yourself using
+the ServerQuery interface.</p>
+<p>These permissions are meant to be limited to the server owner. The
+permissions system is very flexible.</p>
+<p>If you dislike the default settings you can adjust the defaults at
+any point by modifying the server template groups to your own
+preference.</p>
+<p>The deployed default settings are what we consider useful. If you
+don’t like these you can change them. Please see the permissions
+documentation for details.</p>
+<h3
+id="i-am-on-a-mac-and-i-have-downloaded-the-licensekey.dat-file-but-my-server-is-not-accepting-it.-how-can-i-fix-this">I
+am on a Mac and I have downloaded the licensekey.dat file but my server
+is not accepting it. How can I fix this?</h3>
+<p>Apple Mail detects “.dat” files as “embedded text” or metadata for
+attachments. When you open the file the first 3 lines should look
+something like this:</p>
+<p>company name : First Last</p>
+<p>address : 123 Main Street</p>
+<p>zipcode : 12345</p>
+<p>Populated with the information you provided during registration. If
+the first 3 lines of your license does not look similar, you will need
+to download the file using WebMail or something other than Apple Mail
+(eg - Thunderbird).</p>
+<h3
+id="i-want-to-move-my-server-to-another-machine-which-files-should-i-copy">I
+want to move my server to another machine, which files should I
+copy?</h3>
+<p>The following files and folders need to copied if you want to retain
+the respective information:</p>
+<p>licensekey.dat</p>
+<p>This file contains your license. You may not have this file, in which
+case you don’t have to copy it</p>
+<p>query_ip_whitelist.txt</p>
+<p>Whitelisted IPs for the query interface</p>
+<p>query_ip_blacklist.txt</p>
+<p>Blacklisted IPs for the query interface</p>
+<p>files/*</p>
+<p>Any Icons, Avatars and files that were uploaded to the server. Be
+sure to copy the entire folder including any subfolders and files
+inside.</p>
+<p>ts3server.sqlitedb</p>
+<p>The database. This file is the most important one and contains all
+the information about virtual servers, users, permissions, channels and
+groups etc. All Settings of the server instance and its virtual servers
+are contained in this file.</p>
+<p>*.ini</p>
+<p>Possibly existing file(s) containing startup parameters and database
+configuration. These do not exist by default</p>
+<p>tsdns/tsdns_settings.ini</p>
+<p>The configuration for the TSDNS service. This is only needed if you
+actually use TSDNS.</p>
+<h3
+id="im-about-to-upgrade-my-teamspeak-3-server.-what-can-i-do-to-make-sure-my-permission-system-is-upgraded-automatically">I’m
+about to upgrade my TeamSpeak 3 Server. What can I do to make sure my
+permission system is upgraded automatically?</h3>
+<p>With beta22, the TeamSpeak 3 Server introduced a new permission
+called i_group_auto_update_type. Whenever the permission system gets
+updated, the server will automatically try to assign the new permissions
+to your existing groups.</p>
+<p>To enable auto-updating, simply add a value for
+i_group_auto_update_type of the target group. The following values are
+available:</p>
+<ul>
+<li>20: The group will be handled like ‘Query Guest’</li>
+<li>50: The group will be handled like ‘Query Admin’</li>
+<li>45: The group will be handled like ‘Server Admin’</li>
+<li>30: The group will be handled like ‘Server Normal’</li>
+<li>15: The group will be handled like ‘Server Guest’</li>
+<li>40: The group will be handled like ‘Channel Admin’</li>
+<li>35: The group will be handled like ‘Channel Operator’</li>
+<li>25: The group will be handled like ‘Channel Voice’</li>
+<li>10: The group will be handled like ‘Channel Guest’ As you can see,
+each of these values represents a group from the default permission set
+of the TeamSpeak 3 Server. For example, if the permission system is
+updated with a new permission for Server Admins, all groups having their
+i_group_auto_update_type set to 45 will be updated automatically.</li>
+</ul>
+<p>Fresh installations of the TeamSpeak 3 Server already have the
+correct values for this permission assigned. If your database is based
+on an older release, you might need to follow these steps:</p>
+<ul>
+<li>First, you need to connect to TeamSpeak 3’s ServerQuery interface
+and login as “serveradmin”.</li>
+<li>`TS3</li>
+<li>login serveradmin password</li>
+<li>error id=0 msg=ok`</li>
+<li>After that, select a virtual server running in your server instance
+and grab a list of server groups available:</li>
+<li>`use port=9987</li>
+<li>error id=0 msg=ok</li>
+<li>servergrouplist</li>
+<li>sgid=1 name=ServerQuery Guests type=2 iconid=0 savedb=0|sgid=2
+name=ServerQuery Admins type=2 iconid=300 savedb=1|sgid=3 name=Server
+Admins type=0 iconid=300 savedb=1|sgid=4 name=Normal type=0 iconid=0
+savedb=1|sgid=5 name=Guests type=0 iconid=0 savedb=0|sgid=6 name=Server
+Admins type=1 iconid=300 savedb=1|sgid=7 name= Normal type=1 iconid=0
+savedb=1|sgid=8 name= Guests type=1 iconid=0 savedb=0`</li>
+<li>Please note that the example output above contains three different
+types of server groups:</li>
+<li>type=0 - Template groups</li>
+<li>type=1 - Regular groups</li>
+<li>type=2 - ServerQuery groups</li>
+<li>Template groups represent the default settings for new virtual
+servers meaning that changes on these groups will automatically apply on
+every virtual server you create in the future. Regular groups are the
+groups existing on the virtual server you’ve selected. In our example,
+this is the default virtual server running on port 9987.</li>
+<li>Now, you need to assign the permission to both template and regular
+server groups. As you can see in our example output above, the template
+group for “Server Admins” has ID 3 and the regular group has ID 6.</li>
+<li>`servergroupaddperm sgid=3 permsid=i_group_auto_update_type
+permvalue=45 permskip=0 permnegated=0</li>
+<li>error id=0 msg=ok</li>
+<li>servergroupaddperm sgid=6 permsid=i_group_auto_update_type
+permvalue=45 permskip=0 permnegated=0</li>
+<li>error id=0 msg=ok` Depending on your permission system settings, the
+server might report an ‘insufficient permission modify power’ error
+while trying to set the new permissions. In this case you need to
+execute the following SQL commands on your database first:</li>
+</ul>
+<p>`INSERT INTO perm_server_group (server_id, id1, id2, perm_id,
+perm_value, perm_negated, perm_skip) VALUES(0, 2, 0,
+“b_permission_modify_power_ignore”, 1, 0, 0);</p>
+<p>INSERT INTO perm_server_group (server_id, id1, id2, perm_id,
+perm_value, perm_negated, perm_skip) VALUES(0, 2, 0,
+“i_needed_modify_power_permission_modify_power_ignore”, 100, 0, 0);`</p>
+<p>These commands will assign the permission called
+b_permission_modify_power_ignore to your ServerQuery admin group (ID 2)
+which allows you to modify each permission available even when you don’t
+have the required permission to modify powers.</p>
+<h3
+id="on-unix-the-server-terminates-on-startup-and-the-message-reads-server-error-while-starting-servermanager-error-instance-check-error.-how-do-i-fix-this">On
+Unix the server terminates on startup and the message reads “Server()
+error while starting servermanager, error: instance check error”. How do
+I fix this?</h3>
+<p>As long as you don’t have a license key embededded we make sure you
+only run exactly one instance of the TS3 server (free 32 slot
+unregistered version). We use shared memory to facilitate the
+communication to detect other running instances, which requires tmpfs to
+be mounted at /dev/shm. If you (for whatever reason) do not have this
+mounted, the above error will occur.</p>
+<p>To fix this problem, the following commands or file edits need to be
+done as root user (or using something like sudo). This is a temporary
+fix until your next reboot.</p>
+<p><code>mount -t tmpfs tmpfs /dev/shm</code></p>
+<p>Now to make sure this mount is done automatically upon reboot, edit
+the file /etc/fstab and add the line:</p>
+<p><code>tmpfs /dev/shm tmpfs defaults 0 0</code></p>
+<p>If you get an error about “Too many levels of symbolic links” make
+sure that /dev/shm is not already a symbolic link to somewhere else
+which in turn is a symbolic link back to /dev/shm. If that is the case
+remove /dev/shm then create it again before mounting.</p>
+<h3
+id="server-address-resolution-and-tsdns-changes-with-client-3.1.x">Server
+address resolution and TSDNS changes with Client 3.1.x</h3>
+<p>With Client 3.1.0 we’ve changed the way the client performs server
+address resolution when connecting.</p>
+<p>Previous clients attempted to connect to possible TSDNS servers on
+their own in the process of resolving the given address.</p>
+<p>This is going to change and in the future the client will no longer
+attempt to connect to TSDNS servers unless an SRV record
+_tsdns._tcp.example.com (where example.com is the first subdomain of the
+server that a connection is attempted to which is not listed in <a
+href="https://publicsuffix.org/list/public_suffix_list.dat">publicsuffix.org</a>
+- so example.co.uk or example.com for a.b.c.d.example.co.uk and
+a.b.c.d.example.com respectively) is present and pointing to a TSDNS
+server.</p>
+<p>That means, that if you’re not using SRV records already and are
+currently relying on TSDNS to resolve names to IP addresses and ports,
+clients will no longer be able to connect to these servers in the
+future.</p>
+<p>To fix this issue and allow clients to connect to your servers again
+you’ll have to create an SRV record as follows:</p>
+<pre><code>_tsdns._tcp.example.com 86400 IN SRV 5 0 41144 example.com
+example.com 86400 IN A 1.2.3.4</code></pre>
+<p>Where 86400 is the TTL and example.com is the domain on which the
+TSDNS server is running. Please note that this has to be a DNS name
+which has at least one A or AAAA record.</p>
+<p>Alternatively you can remove TSDNS altogether and use _ts3._udp SRV
+records for every virtual server instead.</p>
+<p>It has also come to our attention that a few TSDNS servers out there
+are returning domain names instead of IP addresses - This was never
+supported, and will no longer work starting with client 3.1.0. TSDNS
+results were always intended to be a final step in name resolution and
+hence need to be IP addresses.</p>
+<h4 id="details-and-example">Details and Example</h4>
+<h5 id="until-client-3.1.0">Until Client 3.1.0</h5>
+<p>In previous versions of the TeamSpeak 3 Client (up to 3.0.19.4
+inclusive) when attempting a connection to a server at
+four.three.two.one.example.com the client did the following:</p>
+<p>Since Client 3.0.8:</p>
+<pre><code>Resolve _ts3._udp.four.three.two.one.example.com IN SRV
+Resolve _tsdns._tcp.two.one.example.com IN SRV
+Resolve _tsdns._tcp.one.example.com IN SRV
+Resolve _tsdns._tcp.example.com IN SRV</code></pre>
+<p>always</p>
+<pre><code>Resolve four.three.two.one.example.com IN A
+Attempt to connect to two.one.example.com:41144
+Attempt to connect to one.example.com:41144
+Attempt to connect to example.com:41144</code></pre>
+<p>The connection attempts to 41144 are TSDNS resolution attempts. The
+first connection attempt that is accepted and responds is used as a
+result</p>
+<h5 id="since-client-3.1.0">Since Client 3.1.0</h5>
+<p>Starting with the 3.1.0 release of the client, we deprecated the
+connection attempts to port 41144, but instead rely on SRV records to
+tell the client on where to find a TSDNS server. If none is specified,
+future client versions will not attempt to connect to TSDNS servers and
+won’t ask them for an IP address for the address we’re attempting to
+connect to.</p>
+<p>So the client will do the following in above scenario:</p>
+<pre><code>Resolve _ts3._udp.four.three.two.one.example.com IN SRV
+Resolve _tsdns.tcp.example.com IN SRV
+Resolve four.three.two.one.example.com IN AAAA
+Resolve four.three.two.one.example.com IN A</code></pre>
+<p>In order to enable a graceful transition for our hosters and users,
+the 3.1.0 release of the client will still perform the following
+connection attempts if the _tsdns._tcp SRV resolve failed or returned no
+data:</p>
+<pre><code>Attempt to connect to one.example.com:41144
+Attempt to connect to example.com:41144</code></pre>
+<p>However a warning will be raised and printed to the log, informing
+users that the server they’re connecting to is using a deprecated setup
+and will no longer work with the next client release.</p>
+<h5 id="with-a-future-client-release">With a future Client release</h5>
+<p>It behaves like 3.1.0 does with the exception that unless the
+_tsdns._tcp SRV resolve returns a result, no TSDNS server is contacted
+and the _ts3._udp SRV, AAAA or A record resolves are used to
+connect.</p>
+<h3
+id="server-is-crashing-with-error-epoll-function-not-implemented.-how-to-fix">Server
+is crashing with error “epoll: Function not implemented”. How to
+fix?</h3>
+<p>If you are either running a 2.4.x (or older) kernel and/or glibc
+older than 2.3.2. your linux system is lacking the implementation of
+“epoll” which is described <a
+href="http://www.kernel.org/doc/man-pages/online/pages/man4/epoll.4.html">here.</a></p>
+<p>Note the paragraph about versions: “The epoll API was introduced in
+Linux kernel 2.5.44. Support was added to glibc in version 2.3.2.”</p>
+<h3 id="virtual-server-is-running-elsewhere-shutting-down">virtual
+server is running elsewhere, shutting down!</h3>
+<p>This error appears when the specified server is already running in
+another instance.</p>
+<h4 id="possible-causes">Possible causes</h4>
+<ul>
+<li>You were moving a virtual server from one instance to another while
+both instances were running.
+<ul>
+<li>Moving virtual servers between two running instances is currently
+not reliably possible. You need to restart the instance you moved the
+virtual server to, which will cause the virtual server you moved to
+shutdown in the old instance if it hasn’t been already.</li>
+<li>If you do not restart the target instance after the move, the
+virtual server will shutdown within an hour. It cannot be predicted
+whether it will shutdown in the old or the new instance.</li>
+</ul></li>
+<li>You attempted to start a virtual server in an instance that
+previously crashed or was forcefully terminated.
+<ul>
+<li>If the old instance was not cleanly shutdown or was otherwise unable
+to inform our servers of being shutdown, our systems will continue to
+assume the servers are running for a period of 3 hours.</li>
+<li>There are safeguards in place to prevent this error from happening,
+however they only work if the virtual server is automatically launched
+with the instance (virtualserver_autostart=1). If your virtual servers
+are set to not launch automatically when the instance is started
+(virtualserver_autostart property is 0) the instance will report that it
+is running empty. Now when you attempt to start your virtual servers,
+the next time the instance reports to us it will have servers running,
+but according to our data these servers are still being run in the old
+instance that crashed or was forcefully terminated.</li>
+</ul></li>
+<li>You got two instances running that use the same database with the
+same settings.</li>
+</ul>
+<h4 id="how-to-fix">How to fix?</h4>
+<p>We strongly recommend against setting the virtualserver_autostart
+property of virtual servers to 0 if you intend them to be running.</p>
+<p>You can of course set it to 0 if the server shouldn’t be running
+(e.g. customer didn’t pay), however if the server is supposed to be
+running it should always be set to 1.</p>
+<p>When moving virtual servers between instances you currently have to
+restart the target instance to make sure our servers know it is supposed
+to be running in this instance. Keep in mind that you should’ve set the
+virtualserver_autostart property of that virtual server to 1.</p>
+<h3
+id="virtualserver-started-too-many-times-in-a-certain-time-period">virtualserver
+started too many times in a certain time period</h3>
+<p>This error is there to protect our backend services from getting
+spammed with frequent server updates.</p>
+<h4 id="what-causes-this-error">What causes this error?</h4>
+<p>The trigger conditions for this error are very specific and are as
+follows:</p>
+<ul>
+<li>You start a server instance and then this same instance stops within
+5 seconds of it being started.</li>
+<li>The above happens more than 3 times in a 41 minute window. After you
+triggered this error, you will be prevented from starting any server
+instance using the affected license for a period of 12 minutes.</li>
+</ul>
+<h4 id="how-do-i-fix-this">How do I fix this?</h4>
+<p>You should first investigate how you managed to trigger this error
+and change your scripts to avoid triggering the conditions above.</p>
+<p>Then you must not start any server instance for the 12 minute grace
+period mentioned above. After this you should be able to start your
+instance normally.</p>
+<h3
+id="what-is-a-virtual-server-snapshot-how-is-it-used-and-are-there-any-guidelines-i-should-be-aware-of">What
+is a virtual server snapshot, how is it used, and are there any
+guidelines I should be aware of?</h3>
+<p>A snapshot provides a TeamSpeak server administrator with the ability
+to create an exact copy of a single virtual server. Server snapshots are
+a great way to easily backup the state of a single virtual server and
+also serve a great purpose for moving a virtual server between server
+instances.</p>
+<p>A snapshot can be taken from any server and deployed to the same or
+any other instance of TeamSpeak 3 server, which can run on the same or
+any other server in the world, regardless of the operating system.</p>
+<p>Included are:</p>
+<ul>
+<li><p>All server and channel groups including their
+permissions</p></li>
+<li><p>All the channels on the server including any permissions assigned
+to them.</p></li>
+<li><p>Channel descriptions, topic, password etc.</p></li>
+<li><p>All clients that are present in the database for this virtual
+server including possibly assigned permissions.</p></li>
+<li><p>Server settings (server name, slots, banner etc.) Things that are
+not included:</p></li>
+<li><p>Any Icons</p></li>
+<li><p>Any Avatars</p></li>
+<li><p>Any files that have been uploaded</p></li>
+</ul>
+<h4 id="general-guidelines-regarding-snapshots">General guidelines
+regarding snapshots</h4>
+<ul>
+<li>No permission checks are performed when deploying a snapshot. This
+means that even though you might not be allowed to assign a certain
+permission, or change a certain setting, if these permissions or
+settings are assigned in the snapshot they will be on the resulting
+virtual server as well.</li>
+<li>The only permission required to deploy a snapshot is
+b_virtualserver_snapshot_deploy</li>
+<li>Snapshots are protected by a hash, any changes in the generated
+snapshot can invalidate the snapshot. Some editors automatically change
+the line endings for example, invalidating the snapshot in the
+process.</li>
+<li>Snapshots created with older versions of the TeamSpeak 3 server
+might not be able to be deployed in newer versions. This is usually the
+case when fundamental changes have taken place or variables have been
+renamed.</li>
+<li>If a snapshot is deployed and the original server is still running,
+one of the virtual servers will be shut down since each virtual server
+can only run once throughout all instances.</li>
+</ul>
+<h4 id="creating-a-snapshot">Creating a snapshot</h4>
+<p>To create a snapshot of a particular server you can use the following
+commands in the server query interface:</p>
+<pre><code>login serveradmin password
+error id=0 msg=ok
+use port=9987
+error id=0 msg=ok
+serversnapshotcreate
+hash=bnTd2E1kNITHjJYRCFjgbKKO5P8=|virtualserver_name=TeamSpeak\sServer .......
+error id=0 msg=ok</code></pre>
+<p>The chunk of text outputted by the serversnapshotcreate command is
+already quite large on a default server which was just created and will
+increase in size the more groups, channels and users that server
+has.</p>
+<p>For that reason we also offer Linux shell scripts to create snapshots
+more easily and save them to a text file directly.</p>
+<h4 id="restoring-a-snapshot">Restoring a snapshot</h4>
+<p>A snapshot can be restored to any instance of a TeamSpeak 3 server
+regardless on which operating system the server that originally created
+the snapshot was running.</p>
+<p>You can either replace an existing virtual server with the one
+represented by the snapshot, or create a new virtual server from the
+snapshot.</p>
+<p>To restore a virtual server from a snapshot simply follow these
+steps:</p>
+<pre><code>login serveradmin password
+error id=0 msg=ok
+use port=9988 OR use 0
+error id=0 msg=ok
+serversnapshotdeploy {Text from the snapshot}
+sid=X port=Y
+error id=0 msg=ok</code></pre>
+<p>If you want to deploy to a new virtual server use “use 0” on line 3,
+otherwise specify the voice port of the virtual server you would like to
+replace.</p>
+<p>In case of deploying to a new virtual server, the command will have
+the sid=X port=Y output, which indicates the port and server id of the
+newly created virtual server.</p>
+<p>Please note that deployed snapshots will be automatically started
+which might fail if your license limits would be exceeded.</p>
+<h3
+id="what-is-the-default-permission-set-in-a-new-teamspeak-3-server-installation">What
+is the default permission set in a new TeamSpeak 3 server
+installation?</h3>
+<p>Upon launching a new installation of the TeamSpeak 3 server, a master
+global ServerQuery superuser called “serveradmin” is created using a
+random password.</p>
+<p>This user has access to ALL FUNCTIONS, features, commands and
+permissions of the master server instance, including ALL virtual servers
+running under the instance. This user acts as the equivalent to the
+“superadmin” user known in TeamSpeak 2.</p>
+<p>The password can be changed using the ServerQuery command
+clientsetserverquerylogin.</p>
+<p>Whenever a new virtual server is created, the TeamSpeak 3 server will
+generate a token which can be used to gain access to the administrator
+group on a virtual server.</p>
+<p>By default, members of this server group are able to modify the
+configuration of their own virtual server, INCLUDING the maximum number
+of slots, file transfer quotas and host settings (e.g. Host Message,
+Host Banner and Host Button).</p>
+<p>In addition, they can create an infinite number of channels using any
+codec with a maximum quality of 10. Also by default, the file transfer
+feature is enabled for virtual servers and users can specify their own
+upload/download quotas.</p>
+<h3 id="what-is-the-minimum-requirements-for-a-ts3-server">What is the
+minimum requirements for a TS3 server?</h3>
+<p>For Windows:</p>
+<p>Windows 8.1 and newer, 32 and 64-bit</p>
+<p>For Mac OS X:</p>
+<p>Mac OS 10.14 Mojave and above, 32 and 64-bit Intel CPU</p>
+<p>For Linux:</p>
+<p>Any recent Linux distribution, 32 and 64-bit</p>
+<p>For FreeBSD:</p>
+<p>10.2 and above, 32 and 64-bit</p>
+<p>For the CPU:</p>
+<p>SSE2 capable CPU</p>
+<p>SSE4.x capable CPU with POPCNT enabled (Only for the 64-bit version
+on Windows)</p>
+<p>For Memory:</p>
+<p>This depends on the operating system being used, however a minimum of
+1 GB RAM is recommended.</p>
+<p>Total memory usage depends on the number and size of hosted virtual
+servers.</p>
+<p>For the Hard disk:</p>
+<p>The bare minimum installation is 15 MB.</p>
+<p>Total disk usage is highly dependent on actual usage, size and the
+amount of hosted virtual servers.</p>
+<p>Additional space is required for file transfer and for icon/avatar
+storage.</p>
+<h3 id="which-ports-does-the-teamspeak-3-server-use">Which ports does
+the TeamSpeak 3 server use?</h3>
+<p>These are the default ports that need to be forwarded and opened in
+your firewall:</p>
+<p>Service</p>
+<p>Protocol</p>
+<p>Local Port (Server)</p>
+<p>Required?</p>
+<p>Voice</p>
+<p>UDP</p>
+<p>9987</p>
+<p>Yes</p>
+<p>Filetransfer</p>
+<p>TCP</p>
+<p>30033</p>
+<p>Yes</p>
+<p>ServerQuery (raw)</p>
+<p>TCP</p>
+<p>10011</p>
+<p>Optional</p>
+<p>ServerQuery (SSH)</p>
+<p>TCP</p>
+<p>10022</p>
+<p>Optional</p>
+<p>WebQuery (http)</p>
+<p>TCP</p>
+<p>10080</p>
+<p>Optional</p>
+<p>WebQuery (https)</p>
+<p>TCP</p>
+<p>10443</p>
+<p>Optional</p>
+<p>TSDNS</p>
+<p>TCP</p>
+<p>41144</p>
+<p>Optional</p>
+<p>TeamSpeak 3 servers will communicate with the following
+addresses:</p>
+<p>Note that the Server side ports are configurable for all services but
+TSDNS and the client will use the appropriate ports.</p>
+<p>Domain</p>
+<p>Protocol</p>
+<p>Local Port (Server)</p>
+<p>Remote Port</p>
+<p>Notes</p>
+<p>accounting.teamspeak.com</p>
+<p>TCP</p>
+<p>1024-65535 (random by OS)</p>
+<p>2008</p>
+<p>TeamSpeak 3 Server versions 3.0.x</p>
+<p>accounting2.teamspeak.com</p>
+<p>TCP</p>
+<p>1024-65535 (random by OS)</p>
+<p>443</p>
+<p>TeamSpeak 3 Server versions 3.1.x</p>
+<p>ts3services.teamspeak.com</p>
+<p>TCP</p>
+<p>1024-65535 (random by OS)</p>
+<p>443</p>
+<p>TeamSpeak 3 Server versions 3.1.x</p>
+<p>weblist.teamspeak.com</p>
+<p>UDP</p>
+<p>2011-2110 (first available)</p>
+<p>2010</p>
+<p>all server versions</p>
+<p><a
+href="https://support.teamspeak.com/hc/en-us/articles/360002711717">For
+HTTPS communication, a proxy can be configured as described
+here.</a></p>
+<p>Please note that we do not guarantee that these DNS names will
+resolve to the same IP address at any point in time. These services have
+changed IP addresses in the past and will continue to do so in the
+future.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="can-i-use-an-existing-ts3-license-on-a-teamspeak-6-server">Can I
+use an existing TS3 license on a TeamSpeak 6 server?</h3>
+<p>The short answer is no.</p>
+<p>You can connect to a TS3 server via the TS6 client, however this
+would be limited to TS3 features.</p>
+<p>You can’t however use a TS3 license on a TS6 server. This would need
+to be a TS6 license.</p>
+<p>⚠️ Note: TS6 licenses are not available as of yet. As soon as they
+are this article will be updated.</p>
+</main>
+</body>
+</html>

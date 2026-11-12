@@ -247,7 +247,7 @@
   </style>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
 <li><a href="#quarto-help" id="toc-quarto-help">Quarto help</a>
 <ul>
@@ -299,6 +299,7 @@ id="toc-miscellaneous-3">Miscellaneous</a></li>
 </ul></li>
 </ul>
 </nav>
+<main>
 <h1 id="quarto-help">Quarto help</h1>
 <p>This guide holds Quarto’s own documentation, gathered on 25 September
 2026: authoring documents, computations in several languages, the output
@@ -356,10 +357,10 @@ Documents</a></li>
 <li><a href="#front-matter">Front Matter</a></li>
 <li><a href="#includes">Includes</a></li>
 <li><a href="#markdown-basics">Markdown Basics</a></li>
-<li><a href="#multiformat-branding-with-_brandyml">Multiformat branding
-with _brand.yml</a></li>
-<li><a href="#palmer-penguins-ipynb">Palmer Penguins (.ipynb)</a></li>
-<li><a href="#palmer-penguins-qmd">Palmer Penguins (.qmd)</a></li>
+<li>Multiformat branding
+with _brand.yml</li>
+<li>Palmer Penguins (.ipynb)</li>
+<li>Palmer Penguins (.qmd)</li>
 <li><a href="#shortcodes">Shortcodes</a></li>
 <li><a href="#tables">Tables</a></li>
 <li><a href="#title-blocks">Title Blocks</a></li>
@@ -431,15 +432,15 @@ R</a></li>
 </ul></li>
 <li>Downloading Quarto
 <ul>
-<li><a href="#11-release-notes">1.1 Release Notes</a></li>
-<li><a href="#12-release-notes">1.2 Release Notes</a></li>
-<li><a href="#13-release-notes">1.3 Release Notes</a></li>
-<li><a href="#14-release-notes">1.4 Release Notes</a></li>
-<li><a href="#15-release-notes">1.5 Release Notes</a></li>
-<li><a href="#16-release-notes">1.6 Release Notes</a></li>
-<li><a href="#17-release-notes">1.7 Release Notes</a></li>
-<li><a href="#18-release-notes">1.8 Release Notes</a></li>
-<li><a href="#19-release-notes">1.9 Release Notes</a></li>
+<li>1.1 Release Notes</li>
+<li>1.2 Release Notes</li>
+<li>1.3 Release Notes</li>
+<li>1.4 Release Notes</li>
+<li>1.5 Release Notes</li>
+<li>1.6 Release Notes</li>
+<li>1.7 Release Notes</li>
+<li>1.8 Release Notes</li>
+<li>1.9 Release Notes</li>
 <li><a href="#download-quarto">Download Quarto</a></li>
 <li><a href="#pre-release-builds">Pre-release Builds</a></li>
 <li><a href="#release-builds">Release Builds</a></li>
@@ -546,8 +547,8 @@ Themes</a></li>
 </ul></li>
 <li>Prerelease features
 <ul>
-<li><a href="#ast-processing-changes-in-v14">AST processing changes in
-v1.4</a></li>
+<li>AST processing changes in
+v1.4</li>
 <li><a href="#behind-the-scenes-changes-to-cross-references">Behind the
 Scenes Changes to Cross-References</a></li>
 <li><a href="#connect-email-generation">Connect Email
@@ -556,9 +557,9 @@ Generation</a></li>
 <li><a href="#html-table-processing">HTML Table Processing</a></li>
 <li><a href="#lua-filter-changes">Lua filter changes</a></li>
 <li><a href="#pdf-format-improvements">PDF Format Improvements</a></li>
-<li><a href="#quarto-13-pre-release">Quarto 1.3 Pre-Release</a></li>
-<li><a href="#quarto-14-pre-release">Quarto 1.4 Pre-Release</a></li>
-<li><a href="#quarto-19-pre-release">Quarto 1.9 Pre-Release</a></li>
+<li>Quarto 1.3 Pre-Release</li>
+<li>Quarto 1.4 Pre-Release</li>
+<li>Quarto 1.9 Pre-Release</li>
 <li><a href="#quarto-callouts-custom-node-api">Quarto Callouts Custom
 Node API</a></li>
 <li><a href="#quarto-conditional-blocks-custom-node-api">Quarto
@@ -3096,13 +3097,13 @@ GitHub Markdown, annotations are instead labeled with the line of code
 <ul>
 <li><p>PDF</p></li>
 <li><p>GitHub Flavored Markdown</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm,</span>
-<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm</span>
-<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><span class="fu">library</span>(tidyverse)</span>
+<span id="cb80-2"><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb80-3">penguins <span class="sc">|&gt;</span></span>
+<span id="cb80-4">  <span class="fu">mutate</span>(</span>
+<span id="cb80-5">    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm,</span>
+<span id="cb80-6">    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm</span>
+<span id="cb80-7">  )</span></code></pre></div>
 <p>Line 3 Take <code>penguins</code>, and then,</p>
 <p>Lines 4-7 add new columns for the bill ratio and bill area.</p></li>
 </ul>
@@ -3128,13 +3129,13 @@ which includes the contents of each annotation. Each numbered item in
 the ordered list will correspond to the line(s) of code with the same
 annotation number. For example, the annotations in the overview were
 produced with the following:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span>                                      <span class="co"># &lt;1&gt;</span></span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(                                        <span class="co"># &lt;2&gt;</span></span>
-<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm, <span class="co"># &lt;2&gt;</span></span>
-<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm  <span class="co"># &lt;2&gt;</span></span>
-<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>  )                                              <span class="co"># &lt;2&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><span class="fu">library</span>(tidyverse)</span>
+<span id="cb81-2"><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb81-3">penguins <span class="sc">|&gt;</span>                                      <span class="co"># &lt;1&gt;</span></span>
+<span id="cb81-4">  <span class="fu">mutate</span>(                                        <span class="co"># &lt;2&gt;</span></span>
+<span id="cb81-5">    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm, <span class="co"># &lt;2&gt;</span></span>
+<span id="cb81-6">    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm  <span class="co"># &lt;2&gt;</span></span>
+<span id="cb81-7">  )                                              <span class="co"># &lt;2&gt;</span></span></code></pre></div>
 <ol type="1">
 <li>Take <code>penguins</code>, and then,</li>
 <li>add new columns for the bill ratio and bill area.</li>
@@ -5482,8 +5483,8 @@ cell:</p>
 <p>This will embed the plot as follows:</p>
 <p>Figure 1: A scatterplot of bill dimensions for penguins, made with
 Altair.</p>
-<p><a href="penguins-preview.html#cell-fig-bill-scatter">Source: Palmer
-Penguins (.ipynb)</a></p>
+<p>Source: Palmer
+Penguins (.ipynb)</p>
 <p>A link to the source notebook is automatically provided beneath the
 plot. Following the link takes users to a rendered version of the
 notebook, allowing them to explore the notebook without having to
@@ -5529,9 +5530,8 @@ ggplot(penguins, aes(body_mass_g, flipper_length_mm)) +
 <pre><code>{{&lt; embed penguins.qmd#fig-size-scatter &gt;}}</code></pre>
 <p>Which results in the following output:</p>
 <p>Figure 2</p>
-<p><a
-href="penguins-qmd.embed-preview.html#cell-fig-size-scatter">Source:
-Palmer Penguins (.qmd)</a></p>
+<p>Source:
+Palmer Penguins (.qmd)</p>
 <h6 id="jupyter-notebooks">Jupyter Notebooks</h6>
 <p>When the source is a Jupyter Notebook, the identifier used to locate
 the proper cell follows these heuristics:</p>
@@ -5665,10 +5665,9 @@ view the notebook contents without needing to download and run the
 notebook locally. This notebook view displays the contents of the
 notebook and includes a button to download the notebook. For
 example:</p>
-<p>As an example, you can view the live previews for the <a
-href="penguins-preview.html"><code>penguins.ipynb</code> notebook</a>
-and <a href="penguins-qmd.embed-preview.html"><code>penguins.qmd</code>
-notebook</a> used in this document.</p>
+<p>As an example, you can view the live previews for the <code>penguins.ipynb</code> notebook
+and <code>penguins.qmd</code>
+notebook used in this document.</p>
 <h6 id="view-options">View Options</h6>
 <p>You can control the behavior of notebook views using
 <code>notebook-view</code>. For each source notebook, you can provide a
@@ -6902,7 +6901,7 @@ Violets are blue.</code></pre>
 <li><p>ordered list</p></li>
 <li><p>item 2</p>
 <div class="sourceCode" id="cb288"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb288-1"><a href="#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, World!&quot;</span>)</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb288-1"><span class="bu">print</span>(<span class="st">&quot;Hello, World!&quot;</span>)</span></code></pre></div>
 <ol type="A">
 <li>sub-sub-item 1</li>
 </ol></li>
@@ -13740,8 +13739,7 @@ Plot.rectY(filtered,
 )</code></pre>
 <p>Let’s take a look at the source code for this example. First we
 create an <code>{ojs}</code> cell that reads in some data from a CSV
-file (e.g., <a
-href="palmer-penguins.csv"><code>palmer-penguins.csv</code></a>) using a
+file (e.g., <code>palmer-penguins.csv</code>) using a
 <a
 href="https://observablehq.com/@observablehq/file-attachments">FileAttachment</a>:</p>
 <pre><code>```{ojs}
@@ -17344,7 +17342,7 @@ automatically split into two side by side cards.</p>
 <h6 id="step-1-install-quarto">Step 1: Install Quarto</h6>
 <p>Dashboards are a feature in the Quarto v1.4. Before you get started,
 make sure you install the latest release version of Quarto.</p>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <h6 id="highlights">Highlights</h6>
 <p>Quarto 1.10 includes the following new features:</p>
 <ul>
@@ -23375,7 +23373,7 @@ Avoid O(n^2) performance in handling large code blocks.</li>
 <ul>
 <li>Current Release — v</li>
 <li>Pre-release — v</li>
-<li>Older Releases <a href="_">_</a> Find your operating system in the
+<li>Older Releases _ Find your operating system in the
 table below</li>
 </ul>
 <h5 id="highlights-1">Highlights</h5>
@@ -23388,7 +23386,7 @@ templates and template partials:</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>o</mi><mi>.</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>u</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>.</mi><mi>t</mi><mi>o</mi><mi>c</mi><mo>−</mo><mi>t</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>e</mi><mo>−</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">quarto.language.toc-title-document</annotation></semantics></math></p></li>
 </ul>
 <h5 id="release-notes-19">Release Notes</h5>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <h5 id="highlights-2">Highlights</h5>
 <p>Quarto v1.11 was just released, nothing to see here – yet!</p>
 <h5 id="release-notes-20">Release Notes</h5>
@@ -23400,55 +23398,55 @@ versions of Quarto are linked below.</p>
 <p>URL</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.9.38">1.9.38</a></p>
-<p><a href="changelog/1.9/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>May 25, 2026</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.9.38">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.8.27">1.8.27</a></p>
-<p><a href="changelog/1.8/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Jan 16, 2026</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.8.27">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.7.34">1.7.34</a></p>
-<p><a href="changelog/1.7/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Aug 29, 2025</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.7.34">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.6.43">1.6.43</a></p>
-<p><a href="changelog/1.6/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Apr 4, 2025</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.6.43">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.5.57">1.5.57</a></p>
-<p><a href="changelog/1.5/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Aug 29, 2024</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.5.57">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.4.557">1.4.557</a></p>
-<p><a href="changelog/1.4/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Jun 27, 2024</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.4.557">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.3.450">1.3.450</a></p>
-<p><a href="changelog/1.3/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Aug 23, 2023</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.3.450">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.2.475">1.2.475</a></p>
-<p><a href="changelog/1.2/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Mar 22, 2023</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.2.475">github.com</a></p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.1.189">1.1.189</a></p>
-<p><a href="changelog/1.1/">Release Notes</a></p>
+<p>Release Notes</p>
 <p>Sep 4, 2022</p>
 <p><a
 href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.1.189">github.com</a></p>
@@ -23465,14 +23463,14 @@ href="https://github.com/quarto-dev/quarto-cli/releases/tag/v1.0.38">github.com<
 <p>Pre-release builds are intended for testing purposes, and are not
 recommended for general use. For stable builds, please visit Release
 Builds.</p>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <h5 id="highlights-3">Highlights</h5>
 <p>Quarto v1.11 was just released, nothing to see here – yet!</p>
 <h5 id="release-notes-21">Release Notes</h5>
 <h3 id="release-builds">Release Builds</h3>
 <h4 id="release-builds-1">Release Builds</h4>
 <p>Install a release build of Quarto.</p>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <h5 id="highlights-4">Highlights</h5>
 <p>Quarto 1.10 includes the following new features:</p>
 <ul>
@@ -23487,7 +23485,7 @@ templates and template partials:</p>
 Linux</h3>
 <h4 id="tarball-installation-on-linux-1">Tarball Installation On
 Linux</h4>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <p>You can install Quarto for a single user on Linux by using the Quarto
 tarball and following the below set of steps.</p>
 <ol type="1">
@@ -25478,7 +25476,7 @@ organization (these are extensions maintained by the Quarto core team).
 Once you are able to read and understand that code you are ready to
 start developing your own extensions! Some additional learning resources
 you might find useful include:</p></li>
-<li><p><a href="luarefv51.pdf">Lua Quick Reference</a>, a PDF with a
+<li><p>Lua Quick Reference, a PDF with a
 compact summary of the language and base library.</p></li>
 <li><p><a
 href="https://www.amazon.com/exec/obidos/ASIN/8590379868/lua-pilindex-20">Programming
@@ -27772,7 +27770,7 @@ Gutenberg</a> in 1452–53.</p>
 <p>Install Quarto, then check out the tutorials to learn the basics.</p>
 <h5 id="step-1">Step 1</h5>
 <h6 id="install-quarto">Install Quarto</h6>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <h6 id="highlights-5">Highlights</h6>
 <p>Quarto 1.10 includes the following new features:</p>
 <ul>
@@ -27786,12 +27784,12 @@ templates and template partials:</p>
 <h5 id="step-2">Step 2</h5>
 <h6 id="choose-your-tool">Choose your tool</h6>
 <h6 id="and-get-started">and get started</h6>
-<p><a href="hello/positron.html">Positron</a></p>
-<p><a href="hello/vscode.html">VS Code</a></p>
-<p><a href="hello/jupyter.html">Jupyter</a></p>
-<p><a href="hello/rstudio.html">RStudio</a></p>
-<p><a href="hello/neovim.html">Neovim</a></p>
-<p><a href="hello/text-editor.html">Text Editor</a></p>
+<p>Positron</p>
+<p>VS Code</p>
+<p>Jupyter</p>
+<p>RStudio</p>
+<p>Neovim</p>
+<p>Text Editor</p>
 <h3 id="tutorial-authoring">Tutorial: Authoring</h3>
 <h4 id="tutorial-authoring-1">Tutorial: Authoring</h4>
 <h5 id="choose-your-tool-1">Choose your tool</h5>
@@ -27844,7 +27842,7 @@ let’s close this empty document and start with one that has a little bit
 of content in it. If you would like to follow along step-by-step in your
 own environment, download the Quarto document (<code>.qmd</code>) below
 and open it in RStudio.</p>
-<p><a href="_authoring.qmd">Download authoring.qmd</a></p>
+<p>Download authoring.qmd</p>
 <p>CautionLaTeX Required for <code>format: pdf</code></p>
 <p>In order to create PDFs you will need to install a recent
 distribution of <a href="https://www.latex-project.org/">LaTeX</a>. We
@@ -28142,8 +28140,8 @@ options.</p>
 have a Quarto document that implements everything we covered. Otherwise,
 you can download a completed version of <code>computations.qmd</code>
 below.</p>
-<p><a href="_authoring-complete.qmd">Download
-authoring-complete.qmd</a></p>
+<p>Download
+authoring-complete.qmd</p>
 <h5 id="learning-more-9">Learning More</h5>
 <p>You’ve now learned the basics of using Quarto! Once you feel
 comfortable creating and customizing documents here are a few more
@@ -28465,9 +28463,9 @@ computational engine, use a code block:</p>
 <li><p>R</p></li>
 <li><p>Python</p>
 <div class="sourceCode" id="cb995"><pre
-class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="#cb995-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code goes here</span></span></code></pre></div>
+class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><span class="co"># Code goes here</span></span></code></pre></div>
 <div class="sourceCode" id="cb996"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb996-1"><a href="#cb996-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Code goes here</span></span></code></pre></div></li>
+class="sourceCode python"><code class="sourceCode python"><span id="cb996-1"><span class="co"># Code goes here</span></span></code></pre></div></li>
 </ul>
 <p>You can read more and see some syntax alternatives at Markdown
 Basics: Source Code.</p>
@@ -28508,11 +28506,11 @@ you can download a completed version of <code>computations.qmd</code>
 below.</p>
 <ul>
 <li>R</li>
-<li>Python <a href="_positron/r/computations-complete.qmd">Download
-<code>computations-complete.qmd</code></a></li>
+<li>Python Download
+<code>computations-complete.qmd</code></li>
 </ul>
-<p><a href="_positron/python/%60computations-complete.qmd%60">Download
-computations-complete.qmd</a></p>
+<p>Download
+computations-complete.qmd</p>
 <h5 id="next-up">Next Up</h5>
 <p>You’ve now covered the basics of customizing the behavior and output
 of executable code in Quarto documents.</p>
@@ -28845,8 +28843,7 @@ and navigation.</p>
 interactivity spanning from visualizations embedded within a longer-form
 article all the way up to a more application/dashboard style layout.
 We’ll cover both of these layout scenarios below.</p>
-<p>We’ll use examples from both <a href="ojs/">Observable JS</a> and <a
-href="shiny/">Shiny</a> interactive documents—if you aren’t familiar
+<p>We’ll use examples from both Observable JS and Shiny interactive documents—if you aren’t familiar
 with the code/syntax used for a given example just focus on the
 enclosing layout markup rather than the application code.</p>
 <h5 id="input-panel">Input Panel</h5>
@@ -29562,9 +29559,8 @@ gallery</a>.</p>
 explore the concepts and data you are presenting more deeply. There are
 three ways to add interactive components to Quarto documents:</p>
 <ul>
-<li>Create custom JavaScript visualizations using <a
-href="ojs/">Observable JS</a>.</li>
-<li>Use the <a href="shiny/">Shiny</a> R package to add interactivity to
+<li>Create custom JavaScript visualizations using Observable JS.</li>
+<li>Use the Shiny R package to add interactivity to
 Knitr engine documents.</li>
 <li>Incorporate Jupyter Widgets or htmlwidgets (for the Jupyter and
 Knitr engines, respectively) into your document. Each of these
@@ -29684,8 +29680,8 @@ re-executed.</p>
 <p>One benefit of using JavaScript for interactive documents is that all
 the logic and computation is performed on the client (so no server is
 required for deployment).</p>
-<p>To learn more see the articles on <a href="ojs/">Observable
-JS</a>.</p>
+<p>To learn more see the articles on Observable
+JS.</p>
 <h5 id="shiny-2">Shiny</h5>
 <p>The Shiny package provides a flexible, easy to use framework for
 creating interactive web applications with R. Quarto in turn includes
@@ -29718,8 +29714,8 @@ reactive with a call to the appropriate render function:</p>
 <p>Shiny makes it very straightforward to create interactive documents
 using only R. Unlike using JavaScript though, you will need to deploy
 documents that use Shiny to a server.</p>
-<p>To learn more see the articles on <a href="shiny/">Using Shiny with
-Quarto</a>.</p>
+<p>To learn more see the articles on Using Shiny with
+Quarto.</p>
 <h5 id="widgets">Widgets</h5>
 <p><a href="https://jupyter.org/widgets">Jupyter Widgets</a> and <a
 href="https://www.htmlwidgets.org/">htmlwidgets</a> are great ways to
@@ -33206,8 +33202,8 @@ Manuscripts</h3>
 Manuscripts</h4>
 <h5 id="overview-76">Overview</h5>
 <p>ImportantComplete the Authoring Tutorial First</p>
-<p>This page is a continuation of the <a href="authoring/">Authoring
-Manuscripts</a> tutorial. We’ll assume you’ve cloned the template
+<p>This page is a continuation of the Authoring
+Manuscripts tutorial. We’ll assume you’ve cloned the template
 repository, have made some changes, and are happy with the preview
 generated by Quarto.</p>
 <p>Publishing a Quarto manuscript is the process of taking the preview
@@ -33342,7 +33338,7 @@ to the manuscript’s GitHub Repo.</p>
 <p>Manuscripts are a feature in the 1.4 release of Quarto. Before you
 get started, make sure you install the latest release version of
 Quarto.</p>
-<p><a href="_">_</a> Find your operating system in the table below</p>
+<p>_ Find your operating system in the table below</p>
 <h6 id="highlights-6">Highlights</h6>
 <p>Quarto 1.10 includes the following new features:</p>
 <ul>
@@ -33360,9 +33356,9 @@ download page.</p>
 tutorials below walk you through authoring Quarto manuscripts with a few
 common tools.</p>
 <p>Choose your tool to start learning:</p>
-<p><a href="authoring/jupyterlab.html">Jupyter</a></p>
-<p><a href="authoring/vscode.html">VS Code</a></p>
-<p><a href="authoring/rstudio.html">RStudio</a></p>
+<p>Jupyter</p>
+<p>VS Code</p>
+<p>RStudio</p>
 <h3 id="using-manuscripts">Using Manuscripts</h3>
 <h4 id="using-manuscripts-1">Using Manuscripts</h4>
 <h5 id="overview-78">Overview</h5>
@@ -35859,8 +35855,8 @@ format: html: default typst: default format-links: - html - format:
 typst text: PDF icon: file-pdf</p></li>
 </ul>
 <p>You can also provide <code>format-links</code> items using the same
-options as <a href="html-basics.html#code-links-and-other-links">Code
-Links and Other Links</a>. For example, rather than another format, you
+options as Code
+Links and Other Links. For example, rather than another format, you
 could to add a link to an external URL:</p>
 <pre><code>format-links:
   - text: Other Link
@@ -41416,10 +41412,9 @@ detail, including interactions with other SCSS files and
 <h5 id="overview-102">Overview</h5>
 <p>You can create <a href="https://revealjs.com/">Revealjs</a>
 presentations using the <code>revealjs</code> format. The best way to
-get a sense for the capabilities of Revealjs is this <a
-href="demo/">demo</a> presentation:</p>
+get a sense for the capabilities of Revealjs is this demo presentation:</p>
 <p>If you prefer to view the demo in a standalone browser you can do
-that <a href="demo/">here</a>. Check out the <a
+that here. Check out the <a
 href="https://github.com/quarto-dev/quarto-web/blob/main/docs/presentations/revealjs/demo/index.qmd">source
 code</a> for the demo to see how the slides were created.</p>
 <p>See the Revealjs format reference for a comprehensive overview of all
@@ -43622,8 +43617,7 @@ publishing destination to protect against any sensitive or confidential
 content from being made publicly available.</p>
 <h5 id="confluence-publishing-basics">Confluence Publishing Basics</h5>
 <p>To demonstrate the process of publishing to Confluence, we’ll take a
-single document, <a
-href="_confluence_examples/confluence-demo.qmd"><code>confluence-demo.qmd</code></a>,
+single document, <code>confluence-demo.qmd</code>,
 and publish it as a page to a Confluence space. Here’s the contents of
 <code>confluence-demo.qmd</code>:</p>
 <pre><code>---
@@ -74013,7 +74007,7 @@ Run <code>quarto preview trace-viewer.qmd</code>, and you will be shown
 two text fields, “Trace 1” and “Trace 2”. Drag and drop the JSON file
 onto either of the fields and you will be shown the trace. If you wish
 to compare two traces, drag them onto the two fields.</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
+<section id="footnotes-2x" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
@@ -74025,5 +74019,6 @@ role="doc-backlink">↩︎</a></p></li>
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+</main>
 </body>
 </html>
