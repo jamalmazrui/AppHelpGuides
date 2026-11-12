@@ -1,0 +1,3795 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>NVDA Coach help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#nvda-coach-help" id="toc-nvda-coach-help">NVDA Coach
+help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-nvda-coach" id="toc-about-nvda-coach">About NVDA
+Coach</a></li>
+<li><a href="#chapter-1-getting-started-with-nvda"
+id="toc-chapter-1-getting-started-with-nvda">Chapter 1: Getting Started
+with NVDA</a></li>
+<li><a href="#chapter-2-your-keyboard"
+id="toc-chapter-2-your-keyboard">Chapter 2: Your Keyboard</a></li>
+<li><a href="#chapter-3-reading-and-moving-through-text"
+id="toc-chapter-3-reading-and-moving-through-text">Chapter 3: Reading
+and Moving Through Text</a></li>
+<li><a href="#chapter-4-browse-mode-and-web-navigation"
+id="toc-chapter-4-browse-mode-and-web-navigation">Chapter 4: Browse Mode
+and Web Navigation</a></li>
+<li><a href="#chapter-5-object-navigation"
+id="toc-chapter-5-object-navigation">Chapter 5: Object
+Navigation</a></li>
+<li><a href="#chapter-6-customizing-nvda"
+id="toc-chapter-6-customizing-nvda">Chapter 6: Customizing NVDA</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="nvda-coach-help">NVDA Coach help</h1>
+<p>This guide holds the whole course of NVDA Coach, Tony Gebhard’s free
+add-on that teaches the NVDA screen reader from inside NVDA, in 45
+guided lessons across six chapters, with the add-on’s own user guide and
+resources page. It is read from the add-on itself, so every step, key,
+hint and message is the author’s own wording; the add-on and its lessons
+are licensed under the GNU General Public License, version 2. Get the
+add-on from NVDA’s Add-on Store, or from the releases of its GitHub
+repository.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>About NVDA Coach
+<ul>
+<li><a href="#about-this-guide">About this guide</a></li>
+<li><a href="#during-a-lesson">During a Lesson</a></li>
+<li><a href="#for-instructors">For Instructors</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#navigating-between-lessons">Navigating Between
+Lessons</a></li>
+<li><a href="#nvda-coach-resources">NVDA Coach Resources</a></li>
+<li><a href="#official-nvda-resources">Official NVDA Resources</a></li>
+<li><a href="#practice-environments">Practice Environments</a></li>
+<li><a href="#progress-tracking">Progress Tracking</a></li>
+<li><a href="#support-and-contact">Support and Contact</a></li>
+<li><a href="#system-requirements">System Requirements</a></li>
+<li><a href="#web-accessibility-and-screen-reader-resources">Web
+Accessibility and Screen Reader Resources</a></li>
+<li><a href="#what-is-nvda-coach">What is NVDA Coach?</a></li>
+</ul></li>
+<li>Chapter 1: Getting Started with NVDA
+<ul>
+<li><a href="#lesson-1.01-understanding-command-categories">Lesson 1.01:
+Understanding Command Categories</a></li>
+<li><a href="#lesson-1.02-meet-your-nvda-key">Lesson 1.02: Meet Your
+NVDA Key</a></li>
+<li><a href="#lesson-1.03-read-the-title-bar">Lesson 1.03: Read the
+Title Bar</a></li>
+<li><a href="#lesson-1.04-read-the-time">Lesson 1.04: Read the
+Time</a></li>
+<li><a href="#lesson-1.05-check-your-battery-status">Lesson 1.05: Check
+Your Battery Status</a></li>
+<li><a href="#lesson-1.06-stop-nvda-from-talking">Lesson 1.06: Stop NVDA
+from Talking</a></li>
+<li><a href="#lesson-1.07-find-out-where-you-are">Lesson 1.07: Find Out
+Where You Are</a></li>
+<li><a href="#lesson-1.08-move-between-controls-with-tab">Lesson 1.08:
+Move Between Controls with Tab</a></li>
+<li><a href="#lesson-1.09-activate-buttons-and-controls">Lesson 1.09:
+Activate Buttons and Controls</a></li>
+<li><a href="#lesson-1.10-read-the-current-line">Lesson 1.10: Read the
+Current Line</a></li>
+<li><a href="#lesson-1.11-explore-keys-with-input-help">Lesson 1.11:
+Explore Keys with Input Help</a></li>
+<li><a href="#lesson-1.12-open-the-user-guide">Lesson 1.12: Open the
+User Guide</a></li>
+<li><a href="#lesson-1.13-understanding-your-keyboard">Lesson 1.13:
+Understanding Your Keyboard</a></li>
+<li><a href="#lesson-1.14-switching-windows-with-alttab">Lesson 1.14:
+Switching Windows with Alt+Tab</a></li>
+</ul></li>
+<li>Chapter 2: Your Keyboard
+<ul>
+<li><a href="#lesson-2.01-modifier-keys-and-their-locations">Lesson
+2.01: Modifier Keys and Their Locations</a></li>
+<li><a href="#lesson-2.02-function-keys-and-the-fn-key">Lesson 2.02:
+Function Keys and the Fn Key</a></li>
+<li><a href="#lesson-2.03-desktop-vs-laptop-keyboard-layout">Lesson
+2.03: Desktop vs Laptop Keyboard Layout</a></li>
+</ul></li>
+<li>Chapter 3: Reading and Moving Through Text
+<ul>
+<li><a href="#lesson-3.01-move-by-character">Lesson 3.01: Move by
+Character</a></li>
+<li><a href="#lesson-3.02-jump-word-by-word">Lesson 3.02: Jump Word by
+Word</a></li>
+<li><a href="#lesson-3.03-move-line-by-line">Lesson 3.03: Move Line by
+Line</a></li>
+<li><a href="#lesson-3.04-jump-to-start-and-end">Lesson 3.04: Jump to
+Start and End</a></li>
+<li><a href="#lesson-3.05-read-everything-from-here">Lesson 3.05: Read
+Everything from Here</a></li>
+<li><a href="#lesson-3.06-select-and-highlight-text">Lesson 3.06: Select
+and Highlight Text</a></li>
+<li><a href="#lesson-3.07-navigate-by-paragraph-and-page">Lesson 3.07:
+Navigate by Paragraph and Page</a></li>
+<li><a href="#lesson-3.08-check-font-and-formatting">Lesson 3.08: Check
+Font and Formatting</a></li>
+</ul></li>
+<li>Chapter 4: Browse Mode and Web Navigation
+<ul>
+<li><a href="#lesson-4.01-about-browse-mode">Lesson 4.01: About Browse
+Mode</a></li>
+<li><a href="#lesson-4.02-navigate-by-heading">Lesson 4.02: Navigate by
+Heading</a></li>
+<li><a href="#lesson-4.03-jump-to-heading-levels">Lesson 4.03: Jump to
+Heading Levels</a></li>
+<li><a href="#lesson-4.04-navigate-by-link">Lesson 4.04: Navigate by
+Link</a></li>
+<li><a href="#lesson-4.05-interact-with-forms">Lesson 4.05: Interact
+with Forms</a></li>
+<li><a href="#lesson-4.06-focus-mode-vs-browse-mode">Lesson 4.06: Focus
+Mode vs Browse Mode</a></li>
+<li><a href="#lesson-4.07-landmarks-and-lists">Lesson 4.07: Landmarks
+and Lists</a></li>
+<li><a href="#lesson-4.08-the-elements-list">Lesson 4.08: The Elements
+List</a></li>
+<li><a href="#lesson-4.09-find-text-on-a-page">Lesson 4.09: Find Text on
+a Page</a></li>
+<li><a href="#lesson-4.10-navigate-tables">Lesson 4.10: Navigate
+Tables</a></li>
+</ul></li>
+<li>Chapter 5: Object Navigation
+<ul>
+<li><a href="#lesson-5.01-what-is-object-navigation">Lesson 5.01: What
+Is Object Navigation?</a></li>
+<li><a href="#lesson-5.02-move-to-the-next-and-previous-object">Lesson
+5.02: Move to the Next and Previous Object</a></li>
+<li><a href="#lesson-5.03-move-up-and-down-levels">Lesson 5.03: Move Up
+and Down Levels</a></li>
+<li><a href="#lesson-5.04-read-the-current-navigator-object">Lesson
+5.04: Read the Current Navigator Object</a></li>
+<li><a
+href="#lesson-5.05-move-keyboard-focus-to-a-navigator-object">Lesson
+5.05: Move Keyboard Focus to a Navigator Object</a></li>
+<li><a href="#lesson-5.06-when-object-navigation-helps">Lesson 5.06:
+When Object Navigation Helps</a></li>
+</ul></li>
+<li>Chapter 6: Customizing NVDA
+<ul>
+<li><a href="#lesson-6.01-changing-your-keyboard-layout">Lesson 6.01:
+Changing Your Keyboard Layout</a></li>
+<li><a href="#lesson-6.02-the-synth-settings-ring">Lesson 6.02: The
+Synth Settings Ring</a></li>
+<li><a href="#lesson-6.03-change-the-audio-output-device">Lesson 6.03:
+Change the Audio Output Device</a></li>
+<li><a href="#lesson-6.04-control-audio-ducking">Lesson 6.04: Control
+Audio Ducking</a></li>
+</ul></li>
+</ul>
+<h2 id="about-nvda-coach">About NVDA Coach</h2>
+<h3 id="about-this-guide">About this guide</h3>
+<p>Built from NVDA Coach 1.6.0, the add-on file
+nvdaCoach-1.6.0.nvda-addon. It needs NVDA 2024.1 or later, and was
+tested through NVDA 2026.1.1.</p>
+<p>Each lesson below is laid out as the Coach presents it: one step at a
+time, with the keys the step expects, what the Coach says when it works,
+and the hints F2 gives. In the Coach itself, F1 repeats a step and F3
+skips it.</p>
+<h3 id="during-a-lesson">During a Lesson</h3>
+<p>Each lesson guides you through a short series of steps. For steps
+that ask you to try an NVDA command, switch to another window and
+perform the action, then press NVDA+Shift+C to return to the Coach
+window and press Enter to confirm and continue. For steps with inline
+practice text, simply arrow down into the text area inside the Coach
+window and practice there directly. The following keys are always
+available during any lesson:</p>
+<ul>
+<li>Enter: Advance to the next step.</li>
+<li>F1: Repeat the current instruction.</li>
+<li>F2: Get a hint for the current step. Press again to cycle through up
+to three hints per step.</li>
+<li>F3: Skip the current step.</li>
+<li>Escape: Stop the current lesson.</li>
+<li>NVDA+Shift+C: Return to the Coach window from any other window.</li>
+</ul>
+<h3 id="for-instructors">For Instructors</h3>
+<p>Lessons are stored as plain JSON files in the add-on’s
+<code>lessons</code> folder. Each JSON file defines one lesson category
+with an ordered list of lessons, and each lesson is a list of steps.
+Steps can be informational (the student reads and presses Enter),
+gesture-based (the student performs the action themselves and confirms
+with Enter), or include inline practice text for in-window navigation
+drills. You can create new lesson categories by adding a new JSON file —
+see the included files as templates.</p>
+<p>For custom lesson development, training consultations, or questions
+about using NVDA Coach with your students, contact Tony directly:</p>
+<ul>
+<li>Email: <a
+href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
+<li>Web: <a
+href="https://tonygebhard.me/nvdacoach/">tonygebhard.me/nvdacoach</a></li>
+</ul>
+<h3 id="getting-started">Getting Started</h3>
+<p>Press NVDA+Shift+C to open NVDA Coach. A persistent Coach window will
+appear on screen. The first time you open it, you will see an
+introduction and a lesson picker. Use the arrow keys to select a lesson
+and press Enter to begin.</p>
+<p>The Coach window stays open throughout your session so you always
+have your instructions in front of you. Press NVDA+Shift+C at any time
+during a lesson to return to the Coach window if you have switched away
+to practice in another window.</p>
+<h3 id="navigating-between-lessons">Navigating Between Lessons</h3>
+<p>After completing a lesson, you can move to the next one without
+reopening the picker:</p>
+<ul>
+<li>Ctrl+N: Move to the next lesson in the current chapter.</li>
+<li>Ctrl+B: Go back to the previous lesson.</li>
+<li>Ctrl+R: Restart the current lesson from the beginning.</li>
+<li>NVDA+Shift+C: Open the lesson picker to jump to any lesson or
+chapter.</li>
+</ul>
+<h3 id="nvda-coach-resources">NVDA Coach Resources</h3>
+<ul>
+<li><a href="https://tonygebhard.me/nvdacoach/readme.html">NVDA Coach
+User Guide</a> — Full documentation for the NVDA Coach add-on, including
+all keyboard shortcuts, lesson descriptions, and customization
+options.</li>
+<li><a href="https://tonygebhard.me/nvdacoach/practice.html">NVDA Coach
+Practice Page</a> — The web page used for browse mode lessons. Open this
+any time to practice heading navigation, links, forms, tables, and
+lists.</li>
+<li><a href="https://github.com/tonygeb23/nvdaCoach-">NVDA Coach on
+GitHub</a> — Source code, issue tracker, release downloads, and version
+history.</li>
+</ul>
+<h3 id="official-nvda-resources">Official NVDA Resources</h3>
+<ul>
+<li><a href="https://www.nvaccess.org">NV Access</a> — The organization
+that creates and maintains NVDA. Download the latest version, get
+support, and donate to keep NVDA free.</li>
+<li><a href="https://www.nvaccess.org/get-help/">NVDA Help and
+Support</a> — Official documentation, community forums, and support
+options.</li>
+<li><a
+href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html">NVDA
+User Guide (online)</a> — The complete NVDA reference covering every
+feature and command.</li>
+</ul>
+<h3 id="practice-environments">Practice Environments</h3>
+<p>Several lessons include built-in practice environments so you can try
+real commands without leaving the lesson:</p>
+<ul>
+<li>Live practice forms — Lessons on Tab navigation, activating
+controls, and identifying your focus open a separate accessible form
+window with real buttons, checkboxes, and text fields to practice
+on.</li>
+<li>Inline practice text — Reading and text navigation lessons embed a
+practice text area directly inside the Coach window. Arrow down from the
+instruction into the text to practice character, word, line, and
+selection navigation without switching windows.</li>
+<li>Practice web page — Browse mode lessons open a fully accessible
+practice HTML page in your browser with headings, links, forms,
+landmarks, and lists.</li>
+</ul>
+<h3 id="progress-tracking">Progress Tracking</h3>
+<p>NVDA Coach remembers which lessons you have completed. Completed
+lessons are marked in the lesson picker so you can see your progress at
+a glance. Your progress is saved in your NVDA user configuration folder
+and persists across NVDA restarts.</p>
+<h3 id="support-and-contact">Support and Contact</h3>
+<p>If you have questions, run into a problem, or want to suggest new
+lessons, reach out directly:</p>
+<ul>
+<li>Tony Gebhard, Assistive Technology Instructor</li>
+<li>Email: <a
+href="mailto:info@tonygebhard.me">info@tonygebhard.me</a></li>
+<li>Web: <a
+href="https://tonygebhard.me/nvdacoach/">tonygebhard.me/nvdacoach</a></li>
+</ul>
+<h3 id="system-requirements">System Requirements</h3>
+<ul>
+<li>NVDA 2024.1 or later (tested through NVDA 2026.1)</li>
+<li>Windows 10 or Windows 11</li>
+<li>No additional software required</li>
+</ul>
+<h3 id="web-accessibility-and-screen-reader-resources">Web Accessibility
+and Screen Reader Resources</h3>
+<ul>
+<li><a href="https://webaim.org">WebAIM</a> — Practical guides and
+articles on web accessibility, including screen reader techniques and
+keyboard navigation.</li>
+<li><a href="https://webaim.org/articles/nvda/">WebAIM: Using NVDA to
+Evaluate Web Accessibility</a> — A practical guide to using NVDA for web
+navigation and accessibility testing.</li>
+<li><a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative
+(WAI)</a> — International standards and guidelines for accessible web
+design.</li>
+</ul>
+<h3 id="what-is-nvda-coach">What is NVDA Coach?</h3>
+<p>NVDA Coach is an interactive training add-on that teaches you NVDA
+commands through short, hands-on drills. Instead of reading about
+commands in a manual, you practice them in real time with spoken
+feedback. The Coach guides you step by step and keeps you moving at your
+own pace from inside NVDA itself.</p>
+<p>NVDA Coach is designed specifically for absolute beginners and people
+who are just starting out with screen readers. It was built by an
+assistive technology instructor who works with these students every
+day.</p>
+<h2 id="chapter-1-getting-started-with-nvda">Chapter 1: Getting Started
+with NVDA</h2>
+<h3 id="lesson-1.01-understanding-command-categories">Lesson 1.01:
+Understanding Command Categories</h3>
+<p><em>Learn the essential NVDA commands every beginner needs. Each
+lesson is a short drill that takes about one to three minutes.</em></p>
+<h4 id="step-1">Step 1</h4>
+<p>Welcome to NVDA Coach. Before you practice any commands, it helps to
+understand something that most documentation glosses over: when you
+press a key on your keyboard, who is actually doing the work? There are
+three different layers that control keyboard commands on Windows, and
+knowing which layer a command belongs to will help you learn faster and
+make fewer mistakes. This lesson covers all three. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The three layers are: Windows itself, the application you are using,
+and your screen reader. Each handles different commands.</li>
+<li>Windows commands work the same in every program. Application
+commands work only in the program they belong to. NVDA commands only
+announce information — they never change anything.</li>
+<li>As you practice through this course, try guessing which category
+each new command belongs to before being told. This habit builds faster
+intuition.</li>
+</ul>
+<h4 id="step-2">Step 2</h4>
+<p>The first layer is Windows itself. Some commands belong entirely to
+the operating system. Cut, Copy, and Paste — Control+X, Control+C, and
+Control+V — are Windows commands. When any application lets you paste
+text, it is not the application doing the pasting; it is making a
+request to Windows to do it. Opening the Start Menu, switching between
+windows with Alt+Tab, and closing a window with Alt+F4 are also Windows
+commands. They work the same way in every program because Windows itself
+is in charge. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Control plus C copies, Control plus V pastes — these work in every
+Windows program because the operating system handles them, not the
+application.</li>
+<li>Alt plus Tab switches between open windows. Alt plus F4 closes the
+current window. Both are Windows commands that work everywhere.</li>
+<li>Windows commands are the most transferable skills you will learn —
+master them once and they work in every program you will ever use.</li>
+</ul>
+<h4 id="step-3">Step 3</h4>
+<p>The second layer is the application you are using. When you press
+Down Arrow in a word processor, you are telling the word processor to
+move your cursor to the next line. The application moves the cursor —
+that is a program command. Control+N in Microsoft Word opens a new
+document — that is Word’s command, not Windows. Your screen reader has
+nothing to do with moving that cursor. It simply reads aloud what the
+application already did. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Down Arrow in a word processor moves the cursor — the application
+does the work, and NVDA only reads aloud what happened.</li>
+<li>The same key can mean different things in different applications.
+Control plus N opens a new document in Word but a new tab in a browser —
+because each application defines its own commands.</li>
+<li>When something does not work as expected, remember: NVDA is only
+reading what the application shows. If the application is misbehaving,
+that is an application issue, not an NVDA issue.</li>
+</ul>
+<h4 id="step-4">Step 4</h4>
+<p>The third layer is your screen reader. NVDA commands are unique: they
+take no action in the application. They only inform. When you press
+NVDA+T, nothing changes in your document. The title bar does not move,
+no dialog opens, nothing is activated. NVDA simply announces what is
+already there — because sighted users can glance at the title bar any
+time, and you need a way to hear it. This distinction — take no action,
+only inform — is the heart of what makes screen reader commands
+different from all others. As you work through NVDA Coach, you will
+begin to recognize which layer each command belongs to without being
+told. Press Enter to begin your first lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA commands always start with the NVDA modifier key — usually
+Insert or Caps Lock — and they never change anything on screen. They
+only speak information.</li>
+<li>If you press NVDA plus T and nothing on screen changes, that is
+correct behavior. NVDA read the title bar aloud without modifying
+anything.</li>
+<li>Think of NVDA commands as questions. NVDA plus T asks ‘what is the
+title of this window?’ NVDA answers in speech, and nothing changes.</li>
+</ul>
+<h3 id="lesson-1.02-meet-your-nvda-key">Lesson 1.02: Meet Your NVDA
+Key</h3>
+<h4 id="step-1-1">Step 1</h4>
+<p>Welcome to NVDA Coach! If you have an assistive technology instructor
+with you right now, this is a great moment to let them know you are
+starting. They can sit with you, help you find keys, and answer
+questions as you go. If you are working on your own, that is absolutely
+fine. NVDA Coach is designed to guide you independently, and you can do
+this. If you ever feel stuck, press F2 for a hint, F1 to hear the
+instruction again, or F3 to skip a step and come back to it later. In
+this first lesson, you will learn about the NVDA modifier key. This is
+the special key you hold while pressing other keys to send commands to
+NVDA. On most keyboards it is the Insert key. On many laptops it is Caps
+Lock. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>On most desktop keyboards, the NVDA key is the Insert key. It is in
+the cluster of keys above the arrow keys, near Home, Delete, and Page
+Up.</li>
+<li>On many laptops, Caps Lock serves as the NVDA key. It is on the far
+left of the keyboard, just above the left Shift key.</li>
+<li>You can use both Insert and Caps Lock as NVDA keys at the same time.
+NVDA accepts either one, so you never have to choose between them.</li>
+</ul>
+<h4 id="step-2-1">Step 2</h4>
+<p>NVDA+N opens the NVDA menu — your hub for all of NVDA’s settings and
+features. Sighted users can click a menu with a mouse; NVDA+N is your
+equivalent. Try it now. Hold your NVDA key and press the letter N. You
+should hear NVDA open a menu and begin announcing items such as
+Preferences, Tools, and Help. Once you hear the menu open, press Escape
+to close it and come back here, then press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold the Insert or Caps Lock key down first, keep it held, then
+press the letter N. Both keys must be pressed together — not one at a
+time.</li>
+<li>If the menu does not open, try again. Make sure you are holding the
+NVDA key before pressing N. A common mistake is releasing the NVDA key
+too early.</li>
+<li>After the menu opens, press Escape to close it and return to where
+you were. Escape cancels menus and dialogs throughout all of
+Windows.</li>
+</ul>
+<h4 id="step-3-1">Step 3</h4>
+<p>Well done! You now know how to open and close the NVDA menu. NVDA+N
+opens the menu — it is your main hub for preferences, tools, and help.
+The Escape key closes menus and cancels actions, and you will use it
+constantly. These two shortcuts together give you full access to
+everything NVDA can do. Press Enter to finish this lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus N is your master key for everything NVDA can do —
+settings, tools, help, and more. It is worth making it your first
+habit.</li>
+<li>The Escape key closes menus and cancels dialogs without taking any
+action. It will never cause harm — when in doubt, press Escape.</li>
+<li>Practice opening and closing the NVDA menu a few more times on your
+own. The muscle memory will build quickly.</li>
+</ul>
+<h3 id="lesson-1.03-read-the-title-bar">Lesson 1.03: Read the Title
+Bar</h3>
+<h4 id="step-1-2">Step 1</h4>
+<p>Every window has a title bar at the top that tells you which program
+you are in. Sighted users can glance at the title bar at any time.
+NVDA+T speaks the title bar aloud — your equivalent of that glance.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The title bar is the strip at the very top of every window. It
+usually shows the program name and sometimes the current document or
+page title.</li>
+<li>NVDA plus T is a quick orientation command. Use it any time you are
+not sure which program is currently active.</li>
+<li>Pressing NVDA plus T twice quickly spells out the title bar
+character by character — useful when the title contains an abbreviation
+you do not recognize.</li>
+</ul>
+<h4 id="step-2-2">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press the letter T. You should
+hear NVDA read the title bar of the current window — something like the
+name of the program you are in right now. Whenever you are not sure
+which program you are looking at, NVDA+T will tell you immediately. It
+is one of the most useful commands you will ever learn. Press Enter here
+to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold your NVDA key — Insert or Caps Lock — and press the letter T.
+The T key is in the middle row of letters, between R and Y.</li>
+<li>If NVDA reads something like ‘NVDA Coach — lesson window’, that is
+correct. It is reading the title of the currently active window.</li>
+<li>Press NVDA plus T twice quickly to have NVDA spell out the title
+character by character. This is useful when the title is an unfamiliar
+word or abbreviation.</li>
+</ul>
+<h4 id="step-3-2">Step 3</h4>
+<p>Let’s do that one more time to build the habit. Hold your NVDA key
+and press T again. Listen as NVDA reads the title bar aloud. Repetition
+is how keyboard commands become automatic — the more you practice, the
+faster each command becomes second nature. Press Enter here when you are
+ready to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>This time, try switching to a different open window first with Alt
+plus Tab, then press NVDA plus T to hear that window’s title.</li>
+<li>NVDA plus T is especially useful after switching windows with Alt
+plus Tab, since you cannot always tell by ear which program you just
+landed in.</li>
+<li>Hold NVDA, press T, then release both. You should hear the title
+spoken immediately.</li>
+</ul>
+<h3 id="lesson-1.04-read-the-time">Lesson 1.04: Read the Time</h3>
+<h4 id="step-1-3">Step 1</h4>
+<p>Sighted users can glance at the clock in the corner of the screen.
+NVDA+F12 speaks the current time without you having to navigate
+anywhere. NVDA can tell you the current time and date without leaving
+what you are doing. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>F12 is the last function key on the top row of your keyboard, on the
+far right end of the row labeled F1 through F12.</li>
+<li>Pressing NVDA plus F12 twice quickly reads the current date instead
+of the time — a handy way to check both without opening any
+program.</li>
+<li>Function keys run across the very top of the keyboard. F12 is at the
+far right end of that row, often next to a Print Screen or Scroll Lock
+key.</li>
+</ul>
+<h4 id="step-2-3">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press F12 — the last function key
+on the top row of your keyboard, usually on the far right. You should
+hear NVDA announce the current time. Quick tip: if you press NVDA+F12
+twice in rapid succession, NVDA reads the date instead of the time. Give
+both a try if you like, then press Enter here to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>F12 is the last key in the row of function keys across the top of
+the keyboard. Hold your NVDA key and press F12.</li>
+<li>If you are not sure you pressed the right key, use Input Help: press
+NVDA plus 1 to turn it on, press the key you want to test, listen to the
+description, then press NVDA plus 1 again to turn it off.</li>
+<li>Press NVDA plus F12 twice in quick succession to hear the full date.
+The first press gives the time; the second rapid press gives the
+date.</li>
+</ul>
+<h3 id="lesson-1.05-check-your-battery-status">Lesson 1.05: Check Your
+Battery Status</h3>
+<h4 id="step-1-4">Step 1</h4>
+<p>If you are using a laptop, NVDA can tell you your battery level and
+whether the charger is connected — without touching the mouse or
+navigating to the taskbar. Press NVDA+Shift+B to have NVDA announce the
+current battery status. NVDA will say something like “Battery: 74
+percent, not charging” or “Battery: 91 percent, charging”. This command
+only works on laptops and tablets that have a battery. On a desktop
+computer, NVDA may say nothing or report no battery found. Press Enter
+to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus Shift plus B is an NVDA command that reads the battery
+level instantly — no navigation required.</li>
+<li>The report includes the percentage remaining and whether the power
+adapter is connected. “Not charging” means the charger is unplugged or
+the battery is full.</li>
+<li>If you do not hear anything, your computer may be a desktop with no
+battery, or the battery driver may not be reporting status. This is
+normal on most desktop PCs.</li>
+</ul>
+<h4 id="step-2-4">Step 2</h4>
+<p>Try it now. Hold your NVDA key and Shift, then press B. Listen for
+NVDA to announce the battery level. If you are on a laptop, you will
+hear the percentage and charging state. If you are on a desktop, NVDA
+may report no battery. Press Enter when you are ready to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold NVDA and Shift together, then press B. NVDA will announce the
+battery status immediately.</li>
+<li>On a laptop: listen for the percentage and whether the charger is
+plugged in. On a desktop: NVDA may say nothing or report no battery
+found.</li>
+<li>This is a quick status check — it does not open any window or
+dialog. You can use it any time without interrupting what you are
+doing.</li>
+</ul>
+<h3 id="lesson-1.06-stop-nvda-from-talking">Lesson 1.06: Stop NVDA from
+Talking</h3>
+<h4 id="step-1-5">Step 1</h4>
+<p>Sometimes NVDA talks too much or you want it to stop mid sentence.
+The Control key by itself immediately silences speech. This is called
+stopping speech, and it works in Narrator, JAWS, and VoiceOver as well —
+it is a universal screen reader convention. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The Control key is in the bottom left corner of your keyboard. Most
+keyboards also have a second Control key in the bottom right corner.
+Either one silences NVDA.</li>
+<li>A single tap of Control stops NVDA speech instantly. You do not need
+to hold it or combine it with any other key.</li>
+<li>Control stops speech completely and cannot resume. Shift, which you
+will learn next, pauses and can be pressed again to resume from where
+NVDA left off.</li>
+</ul>
+<h4 id="step-2-5">Step 2</h4>
+<p>There is also a second option: the Shift key. Pressing Shift pauses
+NVDA’s speech mid-sentence. Press Shift again and NVDA resumes reading
+right where it left off. This pause-and-resume behavior is specific to
+NVDA. It is useful when you need a brief moment to focus — for example,
+reading a phone number from a document while you dial it. Press Shift
+once to pause, then press Shift again to continue. Control stops
+completely. Shift pauses and resumes. Both are worth knowing. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The Shift key is the wide key just above the Control key on either
+side of the keyboard. A single press pauses NVDA; pressing it again
+resumes from exactly where it left off.</li>
+<li>Use Shift to pause when you need a moment to act — for example, NVDA
+is reading a phone number and you need to dial it. Pause with Shift,
+dial, then Shift again to continue.</li>
+<li>Control stops completely with no resuming. Shift pauses and resumes.
+Both are single key presses with no modifiers needed.</li>
+</ul>
+<h4 id="step-3-3">Step 3</h4>
+<p>A note on practicing these keys: pressing Control or Shift during an
+active lesson would interfere with the lesson itself, so reliable
+in-lesson practice is not possible here. Instead, build the habit
+naturally. The next time NVDA reads something too long or too fast,
+reach for Control to stop it. When you need a moment mid-reading, try
+Shift to pause and resume. You will discover both reflexes quickly in
+real use. Press Enter to finish this lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>Try this in any application after this lesson: open a long email or
+web page, let NVDA begin reading something, then press Control to stop
+it cold. The reflex builds quickly with daily use.</li>
+<li>These keys are completely safe to press at any time. They only
+affect NVDA’s speech output and have no effect on the application you
+are using.</li>
+<li>You will develop these reflexes naturally through daily use. The
+next time NVDA reads something too long, reach for Control — and it will
+become automatic.</li>
+</ul>
+<h3 id="lesson-1.07-find-out-where-you-are">Lesson 1.07: Find Out Where
+You Are</h3>
+<h4 id="step-1-6">Step 1</h4>
+<p>Sighted users can see which control is highlighted on screen.
+NVDA+Tab speaks the name, type, and state of whatever control you are
+currently focused on — your equivalent of that visual glance. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus Tab reads the currently focused control — its name, type
+(button, checkbox, edit field), and state (checked, pressed, etc.).</li>
+<li>Note the difference: Tab alone moves you to the next control. NVDA
+plus Tab reads the current control without moving anywhere.</li>
+<li>This command is most useful when you land somewhere unexpected and
+need to figure out where you are before doing anything else.</li>
+</ul>
+<h4 id="step-2-6">Step 2</h4>
+<p>A practice login form is about to open in a separate window. When it
+appears, press Alt+Tab to switch to it. Tab to different controls and
+press NVDA+Tab on each one to hear NVDA describe it. When you are done,
+press Alt+Tab to return here, then press NVDA+Shift+C to bring the Coach
+window forward, and press Enter to continue. Ready? Press Enter now to
+open the practice form.</p>
+<p>Hints:</p>
+<ul>
+<li>Press Alt plus Tab to switch to the practice window after it opens.
+Hold Alt and press Tab once to move to the next open window.</li>
+<li>If you switch to the wrong window, keep holding Alt and press Tab
+again to cycle through all open windows until you hear the practice
+form.</li>
+<li>The practice form has a username field, a password field, a
+checkbox, and buttons. Tab to each one and press NVDA plus Tab to hear
+how NVDA describes each type of control.</li>
+</ul>
+<h4 id="step-3-4">Step 3</h4>
+<p>Now in the practice window, Tab to any control in the login form,
+then press NVDA+Tab. NVDA will announce the name, type, and state of
+whatever control you are focused on. For example it might say ‘Username
+edit’ or ‘Sign in button.’ Try it on several different controls — text
+fields, the checkbox, and each button — to hear how NVDA describes each
+type. When you are done exploring, press NVDA+Shift+C to return here,
+then press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold your NVDA key and press Tab. This is different from Tab alone —
+Tab alone moves focus, but NVDA plus Tab only reads the current control
+without moving.</li>
+<li>Try NVDA plus Tab on several different control types. A text field
+sounds different from a button, which sounds different from a
+checkbox.</li>
+<li>When you are done, press NVDA plus Shift plus C to bring the Coach
+window forward, then press Enter to continue.</li>
+</ul>
+<h3 id="lesson-1.08-move-between-controls-with-tab">Lesson 1.08: Move
+Between Controls with Tab</h3>
+<h4 id="step-1-7">Step 1</h4>
+<p>In dialog boxes, settings windows, and forms, you press the Tab key
+to move forward between controls like buttons, checkboxes, and text
+fields. Shift+Tab moves you backwards. This is the same in every Windows
+program — learning it here means you can use it everywhere. You will use
+Tab and Shift+Tab throughout this course, including inside the NVDA
+Settings dialog in the Customizing NVDA chapter. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The Tab key is on the far left side of the keyboard, just above Caps
+Lock. It often has a symbol with two arrows pointing in opposite
+directions.</li>
+<li>Shift plus Tab moves backwards through controls — opposite direction
+from Tab alone. Together they let you move freely through any form or
+dialog.</li>
+<li>Tab and Shift plus Tab work identically in every Windows dialog,
+form, and settings window. Master them here and you can use them in any
+program.</li>
+</ul>
+<h4 id="step-2-7">Step 2</h4>
+<p>A practice form is about to open in a separate window. When it
+appears, press Alt+Tab to switch to it. Press Tab to move forward
+through the controls. When you are done, press Alt+Tab to return here,
+press NVDA+Shift+C to bring the Coach window forward, and press Enter to
+continue. Ready? Press Enter now to open the practice form.</p>
+<p>Hints:</p>
+<ul>
+<li>Press Alt plus Tab to switch to the practice form after it opens.
+Hold Alt and tap Tab once.</li>
+<li>Press NVDA plus Shift plus C at any time to bring the Coach window
+back to the front.</li>
+<li>The practice form has several controls — text fields, checkboxes,
+and buttons. Tab all the way through the form before returning.</li>
+</ul>
+<h4 id="step-3-5">Step 3</h4>
+<p>Switch to the practice form by pressing Alt+Tab. Once you are there,
+press Tab to move to the next control. NVDA will announce the name and
+type of each control as you land on it. Keep pressing Tab to move
+through the whole form. When you are ready, press NVDA+Shift+C to come
+back here, then press Enter to continue.</p>
+<p>Keys: Tab.</p>
+<p>When it works: You moved to the next control. NVDA announced what you
+landed on.</p>
+<p>Hints:</p>
+<ul>
+<li>The Tab key is on the far left of the keyboard, just above Caps
+Lock. Press it by itself — no modifier key needed.</li>
+<li>Each press of Tab moves to the next control and NVDA announces its
+name and type. Listen for words like ‘button’, ‘edit’, or
+‘checkbox’.</li>
+<li>If you Tab past the last control in the form, focus wraps back to
+the first control. This is normal — you can keep pressing Tab to cycle
+through indefinitely.</li>
+</ul>
+<h4 id="step-4-1">Step 4</h4>
+<p>Now in the practice form, press Shift+Tab to move back to the
+previous control. Hold Shift and press Tab. NVDA will announce the
+control you return to. Tab goes forward, Shift+Tab goes back. Press
+NVDA+Shift+C to return here when ready, then press Enter to
+continue.</p>
+<p>Keys: Shift+Tab.</p>
+<p>When it works: You moved backwards. Tab goes forward, Shift+Tab goes
+back. These two keys will carry you through most dialog boxes and
+forms.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Shift first, then press Tab while keeping Shift held. Shift is
+the wide key above the left Control key.</li>
+<li>Shift plus Tab always moves backwards — the exact opposite of Tab
+alone. Use it whenever you overshoot a control and need to back up.</li>
+<li>You never have to start over from the beginning of a form. If you go
+too far, Shift plus Tab brings you right back.</li>
+</ul>
+<h3 id="lesson-1.09-activate-buttons-and-controls">Lesson 1.09: Activate
+Buttons and Controls</h3>
+<h4 id="step-1-8">Step 1</h4>
+<p>Once you have Tabbed to a button or control, you need to activate it.
+Enter activates buttons and default actions. Space toggles checkboxes on
+and off. These keys work the same way in every Windows program. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Enter activates buttons. Space toggles checkboxes on and off. These
+two keys handle nearly all activation tasks in Windows dialogs.</li>
+<li>After pressing Space on a checkbox, NVDA announces ‘checked’ or
+‘unchecked’ to confirm the new state.</li>
+<li>For radio buttons, use the Up and Down Arrow keys to move between
+options rather than Space or Enter.</li>
+</ul>
+<h4 id="step-2-8">Step 2</h4>
+<p>A practice window with checkboxes and buttons is about to open. When
+it appears, press Alt+Tab to switch to it. When you are done, press
+Alt+Tab to return here, press NVDA+Shift+C to bring the Coach window
+forward, and press Enter to continue. Ready? Press Enter now to open the
+practice window.</p>
+<p>Hints:</p>
+<ul>
+<li>Press Alt plus Tab to switch to the practice window after it
+opens.</li>
+<li>The practice window has checkboxes and buttons. Tab to each one and
+listen to how NVDA announces the control type so you know which key to
+use.</li>
+<li>NVDA announces button names and checkbox labels as you Tab to them.
+Buttons get Enter; checkboxes get Space.</li>
+</ul>
+<h4 id="step-3-6">Step 3</h4>
+<p>Switch to the practice window with Alt+Tab. Tab to one of the
+checkboxes labeled ‘Enable screen reader tips’ or ‘Show practice hints
+during lessons’, then press the Space bar to check or uncheck it. NVDA
+will announce whether the box is now checked or unchecked. When you are
+done, press NVDA+Shift+C to return here, then press Enter to
+continue.</p>
+<p>Keys: Space.</p>
+<p>When it works: Space bar pressed. Space is used to check or uncheck
+checkboxes and to activate some buttons.</p>
+<p>Hints:</p>
+<ul>
+<li>The Space bar is the long flat key at the very bottom center of the
+keyboard. Make sure you have Tabbed to a checkbox before pressing
+it.</li>
+<li>After pressing Space, NVDA says ‘checked’ if the checkbox is now on,
+or ‘unchecked’ if you turned it off. This confirms the action
+worked.</li>
+<li>Space also activates some types of buttons, but Enter is the more
+reliable choice for buttons. Use Space specifically for checkboxes and
+toggle controls.</li>
+</ul>
+<h4 id="step-4-2">Step 4</h4>
+<p>Now in the practice window, Tab to one of the buttons — ‘Play a beep
+sound’, ‘Say hello’, or ‘Show keyboard tip’ — and press Enter to
+activate it. NVDA will announce what happened. When done, press
+NVDA+Shift+C to return here, then press Enter to continue.</p>
+<p>Keys: Enter or Numpad Enter.</p>
+<p>When it works: Enter key pressed. Enter activates buttons and follows
+links. Between Tab, Space, and Enter, you can navigate almost any dialog
+box.</p>
+<p>Hints:</p>
+<ul>
+<li>Enter is the large key on the right side of the main keyboard area.
+Some keyboards also have a second Enter key on the numpad — either
+works.</li>
+<li>Tab to a button first, then press Enter to activate it. If nothing
+seems to happen, make sure NVDA announced ‘button’ when you tabbed to
+it.</li>
+<li>Between Tab, Space, and Enter, you can navigate and activate almost
+every control in any Windows application or dialog.</li>
+</ul>
+<h3 id="lesson-1.10-read-the-current-line">Lesson 1.10: Read the Current
+Line</h3>
+<h4 id="step-1-9">Step 1</h4>
+<p>When you are in a document or text area, you can have NVDA read the
+line where your cursor is sitting. NVDA+Up Arrow reads the current line
+— useful whenever you want to confirm exactly where you are in a
+document. A practice text area is included right in the next step. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus Up Arrow reads the current line without moving your
+cursor. Your position in the document stays exactly where it is.</li>
+<li>The Up Arrow key is in the arrow key cluster in the lower right area
+of the keyboard. Hold your NVDA key and press the upward-pointing
+arrow.</li>
+<li>Use NVDA plus Up Arrow whenever you lose track of where you are in a
+document — it re-reads the line your cursor is on without changing
+anything.</li>
+</ul>
+<h4 id="step-2-9">Step 2</h4>
+<p>Arrow down into the practice text area below to move your cursor
+through the lines. Then press NVDA+Up Arrow to have NVDA read the
+current line aloud. Move to a different line with Up or Down Arrow and
+press NVDA+Up Arrow again to hear each one. This works in any document,
+email, or text area. Press Enter to continue when done.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold your NVDA key — Insert or Caps Lock — and press the Up Arrow
+key. The Up Arrow is the upward-pointing key in the arrow cluster at the
+lower right of the keyboard.</li>
+<li>Move your cursor to different lines first with the Down Arrow key,
+then press NVDA plus Up Arrow to confirm which line you are on.</li>
+<li>If NVDA reads a line but you did not catch it all, just press NVDA
+plus Up Arrow again. You can press it as many times as needed to re-read
+the same line.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h3 id="lesson-1.11-explore-keys-with-input-help">Lesson 1.11: Explore
+Keys with Input Help</h3>
+<h4 id="step-1-10">Step 1</h4>
+<p>NVDA+1 toggles Input Help mode. When it is on, pressing any key tells
+you what that key does in NVDA — without actually doing anything. It is
+a completely safe way to explore your keyboard, and it is unique to
+NVDA. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus 1 uses the number 1 from the top row of the keyboard — the
+row of numbers above the letter keys. Do not use the numpad 1.</li>
+<li>In Input Help mode, pressing any key is completely safe. Nothing
+actually happens in the application — NVDA only describes what the key
+would do.</li>
+<li>Input Help is one of the most useful learning tools NVDA has. Use it
+any time you encounter an unfamiliar key combination and want to know
+what it does.</li>
+</ul>
+<h4 id="step-2-10">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press the number 1 from the top
+row of your keyboard — not the numpad, but the number row just above the
+letter keys. You should hear NVDA say ‘Input help on.’ While Input Help
+is active, you can press any key and NVDA will describe what that key
+does without actually performing the action. Press Enter here to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold your NVDA key and press the number 1 from the top row of the
+keyboard. The number 1 is at the far left of the number row, just above
+the Q key.</li>
+<li>When Input Help turns on, try pressing any key — for example, press
+F12 and NVDA will tell you it reads the time, without actually reading
+the time.</li>
+<li>NVDA says ‘Input help on’ to confirm it is active. While it is on,
+every key press is described but nothing is executed.</li>
+</ul>
+<h4 id="step-3-7">Step 3</h4>
+<p>Now press NVDA+1 again to turn Input Help back off. Hold your NVDA
+key and press the number 1. You should hear NVDA say ‘Input help off.’
+Whenever you forget what a key does in the future, turn on Input Help,
+press the key to hear its description, and then turn Input Help back
+off. It is like having a built-in cheat sheet that is always available
+to you. Press Enter here to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press NVDA plus 1 again — the same combination that turned Input
+Help on will turn it off. NVDA says ‘Input help off’ to confirm.</li>
+<li>After turning it off, all keys resume their normal behavior
+immediately.</li>
+<li>Remember this shortcut for life: whenever you encounter an
+unfamiliar key combination, turn on Input Help, press it to hear the
+description, then turn it back off.</li>
+</ul>
+<h3 id="lesson-1.12-open-the-user-guide">Lesson 1.12: Open the User
+Guide</h3>
+<h4 id="step-1-11">Step 1</h4>
+<p>NVDA comes with a complete user guide that you can open at any time.
+The user guide is found in the NVDA menu under Help. It is a great
+reference when you want to learn more on your own. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The user guide opens in your default web browser as a local HTML
+file. It is installed with NVDA so you can read it without an internet
+connection.</li>
+<li>To open the user guide: press NVDA plus N to open the NVDA menu,
+press H for Help, then press U for User Guide. Your browser will open
+automatically.</li>
+<li>The user guide covers every NVDA command and feature in detail. You
+can use browse mode — covered later in this course — to navigate it
+quickly with headings.</li>
+</ul>
+<h4 id="step-2-11">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press N to open the NVDA menu. You
+should hear NVDA announce the menu and its items. From here, in real
+use, you would press the Down Arrow to move through items, navigate to
+Help, and then select User Guide to read the full documentation at any
+time. For now, just listen to the menu open, then press Escape to close
+it and come back here. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold NVDA and press N to open the menu. Once open, press H to open
+the Help submenu, then press U for User Guide.</li>
+<li>If you land somewhere unexpected in the menu, press Escape to close
+it and try again. The menu opens at the top each time.</li>
+<li>The NVDA menu is organized into Preferences, Tools, Help, and a few
+other items. Arrow keys move through it; Enter opens a submenu or
+activates an item.</li>
+</ul>
+<h4 id="step-3-8">Step 3</h4>
+<p>Well done. You have now learned the essential NVDA commands that
+carry you through daily use. Two more lessons remain in the Getting
+Started chapter: Understanding Your Keyboard — which covers the physical
+keys you will use constantly — and Switching Windows with Alt+Tab. When
+you are ready, press Enter to continue to the next lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>Two more lessons remain in this chapter: Understanding Your Keyboard
+and Switching Windows with Alt+Tab. Continue through them before moving
+to the Reading Text chapter.</li>
+<li>All the commands from this lesson work together: NVDA plus T tells
+you where you are, NVDA plus Tab tells you what control you are on, and
+Tab plus Enter let you navigate and act.</li>
+<li>NVDA Coach saves your progress automatically. When you return, your
+completed lessons will be marked so you can pick up right where you left
+off.</li>
+</ul>
+<h3 id="lesson-1.13-understanding-your-keyboard">Lesson 1.13:
+Understanding Your Keyboard</h3>
+<h4 id="step-1-12">Step 1</h4>
+<p>Before going further, let’s look at some keys that often cause
+confusion — especially on laptop keyboards. The first is the Control
+key. On most keyboards, the Control key sits in the bottom-left corner.
+But on some laptops, the Fn key occupies the bottom-left corner instead,
+with the Control key immediately to its right. If you are pressing what
+you think is Control and nothing happens, check whether your bottom-left
+corner key says Fn or Ctrl — it matters. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press NVDA+1 to turn on Input Help, then press the key in the very
+bottom-left corner. NVDA will name it. If it says Fn, Control is the
+next key to the right. If it says Control, you are already on it. Press
+NVDA+1 again to turn Input Help off.</li>
+<li>Both Fn and Control are typically in the same row, but which one is
+in the very corner varies by laptop model and manufacturer.</li>
+<li>If you are not sure which key is which, press NVDA plus 1 to turn on
+Input Help, then press the bottom-left key. NVDA will tell you what it
+is. Press NVDA plus 1 again to turn off Input Help.</li>
+</ul>
+<h4 id="step-2-12">Step 2</h4>
+<p>Many laptops do not have dedicated Home, End, Page Up, and Page Down
+keys. Instead, the Fn key combines with the Arrow keys to produce them.
+On most keyboards with this design: Fn plus Left Arrow equals Home; Fn
+plus Right Arrow equals End; Fn plus Up Arrow equals Page Up; Fn plus
+Down Arrow equals Page Down. Your keyboard may vary — check the small
+labels printed on the Arrow keys for symbols like a home icon or
+up-arrow-page symbol. If your keyboard has dedicated Home, End, Page Up,
+and Page Down keys above the arrow keys, you do not need Fn at all for
+those functions. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>You do not need to read the key caps to find out. Hold Fn and press
+the Up Arrow in a document: if the cursor jumps a whole screen, Fn plus
+Up Arrow is Page Up on your keyboard. If nothing changes, your laptop
+does not map them that way.</li>
+<li>Fn plus Left Arrow is typically Home. Fn plus Right Arrow is End. Fn
+plus Up Arrow is Page Up. Fn plus Down Arrow is Page Down. But always
+check your specific keyboard.</li>
+<li>If your keyboard has a full key cluster above the arrow keys —
+including dedicated Page Up, Page Down, Home, and End keys — you do not
+need Fn for those functions at all.</li>
+</ul>
+<h4 id="step-3-9">Step 3</h4>
+<p>The top row of many laptops has function keys labeled F1 through F12.
+On some laptop models, these keys default to multimedia controls —
+adjusting volume, brightness, and media playback — rather than F1
+through F12. To use F1 through F12 on those keyboards, you hold the Fn
+key and press the corresponding function key. Other laptops are the
+opposite: the F keys are primary and multimedia controls require Fn.
+Many keyboards have an Fn Lock key — often Fn plus Escape or Fn plus
+Caps Lock — that permanently swaps the behavior so you do not have to
+hold Fn each time. Check your laptop’s manual or the key labels to find
+out how your keyboard is set up. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>If pressing F2 for a Coach hint changes your screen brightness
+instead, your laptop defaults to multimedia mode. Hold Fn and press F2
+to get the actual F2 function.</li>
+<li>Look for an Fn Lock key — often labeled FnLk or shown as a padlock
+icon combined with Fn. Pressing it toggles between multimedia-primary
+and F-key-primary modes.</li>
+<li>The indicator for this is usually a small light, which is no use to
+you. Test it instead: press F2 while a lesson is open. If you hear a
+hint, the F keys are acting as F keys. If the volume changes instead,
+they are in multimedia mode and you need to hold Fn to get F2.</li>
+</ul>
+<h4 id="step-4-3">Step 4</h4>
+<p>A quick review of the modifier key locations most important for NVDA:
+Ctrl is bottom-left (or one key right of Fn on some laptops). Shift is
+the wide key above Ctrl on both sides of the keyboard. Alt is next to
+the Space bar on both sides. The Windows key — a key with the Windows
+logo — is between Ctrl and Alt on the left side. And of course your NVDA
+key: Insert is in the cluster above the arrow keys, and Caps Lock is on
+the far left above Shift. Knowing where these keys live without looking
+is one of the most valuable keyboard skills you can build. Press Enter
+to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>From left to right along the bottom row of most keyboards: Ctrl (or
+Fn), Windows key, Alt, Space bar, Alt, menu key (sometimes), Ctrl.</li>
+<li>Shift is the wide key above Ctrl on both sides. It is one of the
+widest keys on the keyboard — easy to find by feel.</li>
+<li>Caps Lock is on the far left, just above Shift. On many NVDA users’
+keyboards, Caps Lock serves as the NVDA key — one of the most important
+keys you will ever press.</li>
+</ul>
+<h3 id="lesson-1.14-switching-windows-with-alttab">Lesson 1.14:
+Switching Windows with Alt+Tab</h3>
+<h4 id="step-1-13">Step 1</h4>
+<p>Alt+Tab is a Windows command that switches between open programs and
+windows. Sighted users can see all open windows on the taskbar at a
+glance. Alt+Tab is the keyboard equivalent — it lets you cycle through
+open windows without needing a mouse. This is one of the most important
+Windows commands you will ever learn, and it works in every version of
+Windows. You have already used it briefly to switch between the Coach
+window and practice forms. This lesson teaches both ways to use it.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Alt plus Tab is a Windows command — it is built into Windows itself
+and works whether NVDA is running or not.</li>
+<li>The Alt key is on either side of the Space bar. The Tab key is on
+the far left of the keyboard above Caps Lock.</li>
+<li>This command works in every version of Windows and in virtually
+every scenario. It is one of the most universal keyboard shortcuts you
+will ever use.</li>
+</ul>
+<h4 id="step-2-13">Step 2</h4>
+<p>The first way: a single Alt+Tab press. Hold Alt and tap Tab once,
+then release both keys immediately. This switches you to the most
+recently used window — the one you were in before the current one. If
+you are in your browser and you press Alt+Tab, you jump to the program
+you were in before the browser. Press Alt+Tab again and you go back to
+the browser. This is the fastest way to toggle between two programs you
+are using together. NVDA announces the name of the window you switch to.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Alt, tap Tab once, then release both. You land in the most
+recently used window. NVDA announces what you landed in.</li>
+<li>Press Alt+Tab a second time to go back to where you started. Two
+presses toggle you between two windows quickly.</li>
+<li>This is the version most people use the most — a quick Alt+Tab to
+check another window, then Alt+Tab again to return.</li>
+</ul>
+<h4 id="step-3-10">Step 3</h4>
+<p>The second way: hold Alt and keep tapping Tab. If you have three or
+more windows open, you can cycle through them all. Hold Alt down and tap
+Tab once — NVDA announces the first window. Keep holding Alt and tap Tab
+again — NVDA announces the second window. Each tap moves to the next
+open window in the list. When you hear the window you want, release the
+Alt key and you land there. If you go too far, you can hold Alt and
+press Shift+Tab to cycle backward. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold the Alt key down the entire time. Each Tab press cycles to the
+next window. Do not release Alt until you hear the window you want.</li>
+<li>NVDA announces each window name as you cycle through. Listen for the
+program name or the document title.</li>
+<li>Holding Alt and pressing Shift plus Tab cycles backward through the
+window list — useful if you overshoot the window you want.</li>
+</ul>
+<h4 id="step-4-4">Step 4</h4>
+<p>Try single Alt+Tab now. Hold Alt and press Tab once, then release
+both keys. NVDA will announce which window you switched to. Then press
+Alt+Tab again to come back here. When you are back in the Coach window,
+press Enter to continue.</p>
+<p>Keys: Alt+Tab.</p>
+<p>When it works: You switched windows with Alt+Tab. Alt+Tab is how you
+move between open programs without a mouse.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Alt — the key to the left of the Space bar — and tap Tab once.
+Release both keys immediately after tapping Tab.</li>
+<li>NVDA announces the name of the window you land in. You may land in
+the previous application or another Coach practice window.</li>
+<li>To come back, press Alt plus Tab once more. This toggles you back to
+the Coach window.</li>
+</ul>
+<h4 id="step-5">Step 5</h4>
+<p>Excellent work — you have completed the Getting Started chapter! You
+now know how to identify the three categories of commands; use essential
+NVDA commands; understand your keyboard layout; and switch between
+programs with Alt+Tab. These skills work together every time you use
+NVDA. Practice a little every day and they will become automatic. When
+you are ready, press NVDA+Shift+C to open the lesson picker and continue
+to the next chapter: Your Keyboard. Press Enter to finish.</p>
+<p>Hints:</p>
+<ul>
+<li>The next chapter is Your Keyboard. It covers the regions of the
+keyboard, where the most important keys live, and NVDA’s desktop and
+laptop layouts.</li>
+<li>Alt+Tab summary: single press toggles to the last window. Hold Alt
+and keep pressing Tab to cycle through all open windows. Release Alt to
+land.</li>
+<li>NVDA Coach saves your progress automatically. When you return, your
+completed lessons will be marked so you can pick up right where you left
+off.</li>
+</ul>
+<h2 id="chapter-2-your-keyboard">Chapter 2: Your Keyboard</h2>
+<h3 id="lesson-2.01-modifier-keys-and-their-locations">Lesson 2.01:
+Modifier Keys and Their Locations</h3>
+<p><em>Understand the physical keyboard — modifier key locations,
+function keys, Fn key behavior, and how to match your keyboard to your
+NVDA layout setting.</em></p>
+<h4 id="step-1-14">Step 1</h4>
+<p>Modifier keys are keys you hold while pressing another key to change
+its meaning. The four main modifier keys in Windows are: Control (Ctrl),
+Shift, Alt, and the Windows key. None of these do anything by themselves
+— they modify other keys. Understanding where they are on your keyboard
+is as important as knowing which commands to use. This lesson covers
+where to find each one. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Modifier keys are always held down while you press another key.
+Releasing them first — or pressing them in the wrong order — can prevent
+a command from working.</li>
+<li>Most keyboards have duplicate modifier keys on both sides: Ctrl on
+the left and right, Shift on the left and right, Alt on the left and
+right. Either side works for most commands.</li>
+<li>The Menu key, also called the Applications key, sits on the right of
+the bottom row next to the right Control key. Many laptops leave it out
+altogether.</li>
+</ul>
+<h4 id="step-2-14">Step 2</h4>
+<p>The Control key (Ctrl) is in the bottom-left corner of the keyboard
+and in the bottom-right corner. On most laptops the Fn key sits just to
+the right of the left Ctrl key — between Ctrl and the Windows key — so
+the bottom-left row reads Ctrl, Fn, Windows, Alt, then the space bar. On
+standard desktop keyboards there is no Fn key in that row; the order is
+simply Ctrl, Windows, Alt, space bar. Both Ctrl keys — left and right —
+work identically for almost all commands. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>On laptops: Ctrl is bottom-left, then Fn is the next key to the
+right, then the Windows key, then Alt, then the space bar.</li>
+<li>The right Ctrl key works the same as the left for all commands in
+this course. Use whichever is more comfortable for your hand
+position.</li>
+<li>Not sure which is Ctrl? Press NVDA plus 1 to turn on Input Help,
+press the key you think is Ctrl, and NVDA will confirm whether it
+recognized it as Control. Press NVDA plus 1 again to turn off Input
+Help.</li>
+</ul>
+<h4 id="step-3-11">Step 3</h4>
+<p>The Shift key is the wide key directly above Control on both sides of
+the keyboard. It is one of the widest keys on most keyboards, making it
+easy to find by feel. The left Shift is above the left Control; the
+right Shift is above the right Control. Either Shift key works for most
+commands. Shift is used constantly with NVDA: Shift+Tab moves backward
+through controls (Windows command), Shift+H moves backward through
+headings in browse mode, and NVDA+Shift+C opens the lesson picker. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Left Shift is above the left Ctrl key on the left side of the
+keyboard. Right Shift is above the right Ctrl key on the right
+side.</li>
+<li>Shift is wider than most keys — you can usually find it by feel
+without looking. It is the wide key just above Ctrl on both sides.</li>
+<li>Either Shift key works for any command. Use whichever side is closer
+to the other keys you need to press at the same time.</li>
+</ul>
+<h4 id="step-4-5">Step 4</h4>
+<p>The Alt key is immediately to the left and right of the Space bar.
+The Space bar is the long flat key at the bottom center of the keyboard
+— the longest key on the board. Alt is the key directly adjacent to it
+on each side. The left Alt is used most often. Alt+Tab (Windows command)
+uses the left Alt. Alt+F4 (Windows command) closes a window. Some
+programs use the right Alt (also called AltGr on some keyboards) for
+special characters, but for NVDA and Windows navigation you will almost
+always use the left Alt. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Alt is directly to the left and right of the Space bar. The Space
+bar is easy to find — it is the longest key on the keyboard.</li>
+<li>Use the left Alt for Alt+Tab and other Windows navigation commands.
+The right Alt (AltGr) is typically used for special characters in some
+languages.</li>
+<li>Alt plus Tab is a Windows command. Alt plus F4 closes the current
+window. Both use the left Alt key.</li>
+</ul>
+<h4 id="step-5-1">Step 5</h4>
+<p>The Windows key lives in the bottom row. Most keyboards emboss the
+Windows logo on it, so you can often feel a raised shape where the other
+keys are smooth. On standard desktop keyboards it sits between the left
+Ctrl and the left Alt keys. On most laptops the Fn key takes the
+position immediately next to Ctrl, so the Windows key sits between Fn
+and Alt instead. Either way, it is always somewhere in the bottom row.
+The Windows key opens the Start menu when pressed alone. Windows+Up
+Arrow (Windows command) maximizes a window. Windows+D (Windows command)
+shows the desktop. Windows+L (Windows command) locks the screen. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop keyboards: Windows key sits between left Ctrl and left Alt.
+Laptops: Fn is between Ctrl and Windows, so the order is Ctrl, Fn,
+Windows, Alt. On most keyboards the Windows logo is embossed rather than
+flat, so the key often feels different under your fingertip.</li>
+<li>Windows plus Up Arrow maximizes the current window to full screen.
+This is useful before using object navigation — a maximized window shows
+all objects.</li>
+<li>Windows key alone opens the Start menu. Press Escape to close it
+without selecting anything.</li>
+</ul>
+<h4 id="step-6">Step 6</h4>
+<p>Your NVDA key can be Insert or Caps Lock. NVDA actually offers three
+choices in its Keyboard settings - Caps Lock, the Insert key in the
+cluster above the arrows, and the Insert on the numeric keypad - and any
+combination of them can be switched on. Insert is in the cluster of keys
+above the arrow keys on most keyboards, near Home, Delete, Page Up, and
+Page Down. Caps Lock is on the far left side of the keyboard, just above
+the left Shift key. Both can serve as your NVDA key at the same time —
+NVDA accepts either. Many laptop users prefer Caps Lock because Insert
+may be harder to reach. You can choose your preferred NVDA key in NVDA
+Settings under Keyboard. Press Enter to finish this lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>Insert is in the cluster above the arrow keys — near Home, Delete,
+End, Page Up, and Page Down. It is not a modifier by itself; it only
+becomes the NVDA key because NVDA assigns it that role.</li>
+<li>Caps Lock is on the far left, just above Shift. Using Caps Lock as
+your NVDA key means Caps Lock no longer toggles uppercase — press NVDA
+plus F2 and then Caps Lock to actually toggle it when needed.</li>
+<li>Both Insert and Caps Lock work as the NVDA key simultaneously. You
+do not have to choose — you can use either one depending on which is
+more convenient for each command.</li>
+</ul>
+<h3 id="lesson-2.02-function-keys-and-the-fn-key">Lesson 2.02: Function
+Keys and the Fn Key</h3>
+<h4 id="step-1-15">Step 1</h4>
+<p>The top row of your keyboard has keys labeled F1 through F12 — these
+are function keys. Each one can be assigned a specific action by
+Windows, NVDA, or the application you are using. In NVDA Coach, F1
+repeats the current step instruction, F2 gives a hint, and F3 skips a
+step. F1 also opens Help in most Windows applications (application
+command). F5 refreshes web pages in most browsers (application command).
+NVDA uses F12 to read the time (NVDA+F12). These are just a few examples
+— function keys serve many purposes. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Function keys are in the top row, labeled F1 through F12 from left
+to right. F1 is on the far left; F12 is on the far right.</li>
+<li>In NVDA Coach: F1 repeats the instruction, F2 gives a hint, F3 skips
+the step. These are NVDA Coach-specific commands.</li>
+<li>In most Windows applications, F1 opens Help (application command).
+In most browsers, F5 refreshes the page (application command). NVDA+F12
+reads the time (NVDA command).</li>
+</ul>
+<h4 id="step-2-15">Step 2</h4>
+<p>On many laptops, the function key row has two modes. In one mode, the
+keys act as F1 through F12 for software commands. In the other mode, the
+same keys control hardware functions — adjusting screen brightness,
+speaker volume, keyboard backlight, and media playback. These hardware
+functions are often shown as icons printed on the keys. Which mode is
+active by default depends on your laptop model. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Rather than reading the key caps, test one. Press F3 on its own. If
+you hear a hint or nothing at all, the F keys are acting as F keys. If
+the volume or brightness changes, your laptop is in multimedia mode and
+the F keys need Fn held down.</li>
+<li>On some laptops, the hardware icons (multimedia) are primary and you
+press Fn plus the key to get F1 through F12. On others, F1 through F12
+are primary and you press Fn for hardware functions.</li>
+<li>The Fn key is not a standard Windows modifier — it is processed by
+the keyboard firmware before Windows sees it. This means NVDA and
+Windows do not know about Fn presses.</li>
+</ul>
+<h4 id="step-3-12">Step 3</h4>
+<p>The Fn key is typically in the bottom-left corner of a laptop
+keyboard, or to the right of the left Ctrl key. When you hold Fn and
+press an arrow key, many laptops produce Home, End, Page Up, or Page
+Down — because compact keyboards often do not have those as dedicated
+keys. Fn plus Left Arrow is typically Home. Fn plus Right Arrow is End.
+Fn plus Up Arrow is Page Up. Fn plus Down Arrow is Page Down. Check the
+labels on your arrow keys for these secondary symbols. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Test rather than read. In any document, hold Fn and press the Left
+Arrow. If NVDA reads from the start of the line, Fn plus Left Arrow is
+Home on your keyboard. Fn plus Up Arrow is usually Page Up.</li>
+<li>Fn plus Left Arrow is Home on most compact laptops. Fn plus Right
+Arrow is End. Fn plus Up Arrow is Page Up. Fn plus Down Arrow is Page
+Down.</li>
+<li>These Fn combinations are keyboard firmware functions — they are
+invisible to Windows and NVDA. They produce the same result as dedicated
+Home, End, Page Up, and Page Down keys.</li>
+</ul>
+<h4 id="step-4-6">Step 4</h4>
+<p>Many laptop keyboards have an Fn Lock feature. When Fn Lock is
+active, you do not need to hold Fn — the secondary functions are active
+all the time. This is useful if you need F1 through F12 constantly and
+do not want to hold Fn each time. Fn Lock is often toggled by pressing
+Fn plus Escape, Fn plus Caps Lock, or a dedicated key with a padlock
+icon. Check your laptop’s documentation to find the Fn Lock key and how
+to toggle it. Different manufacturers place it differently and may use
+different key combinations. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Look for a key with a padlock icon combined with Fn, or check your
+laptop’s manual for the Fn Lock combination. Common options are Fn plus
+Escape or Fn plus Caps Lock.</li>
+<li>Some laptops signal Fn Lock with a light or an on-screen display,
+neither of which helps you. A few make a sound. The reliable way to know
+is to press F3 on its own and listen: a hint means the F keys are
+primary, a volume change means they are not.</li>
+<li>If pressing F2 in NVDA Coach gives you a hint — rather than changing
+screen brightness — then either Fn Lock is active or your laptop
+defaults to F-key mode.</li>
+</ul>
+<h4 id="step-5-2">Step 5</h4>
+<p>A practical tip for using NVDA Coach: if pressing F2 changes your
+screen brightness or volume instead of giving you a hint, your keyboard
+is in multimedia mode. Either hold Fn and press F2, or toggle Fn Lock to
+make F1 through F12 primary. Once function keys work as F1 through F12,
+F1 repeats the lesson instruction, F2 gives you a hint, and F3 skips the
+step. These are NVDA Coach-specific commands. Press Enter to finish this
+lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>Test: press F2 while in a lesson. If you hear a hint, function keys
+are in software mode. If your screen brightness changes, you are in
+multimedia mode — hold Fn and press F2 instead.</li>
+<li>Once you know your Fn Lock state, you can use Coach shortcut keys
+without frustration. F1 repeats instruction, F2 gives a hint, F3 skips —
+all Coach-specific commands.</li>
+<li>Fn Lock state usually persists across restarts on most laptops. Once
+you set it the way you want, you should not need to change it
+again.</li>
+</ul>
+<h3 id="lesson-2.03-desktop-vs-laptop-keyboard-layout">Lesson 2.03:
+Desktop vs Laptop Keyboard Layout</h3>
+<h4 id="step-1-16">Step 1</h4>
+<p>NVDA has two keyboard layout settings: desktop and laptop. This is
+not about your physical keyboard hardware — it is a setting inside NVDA
+that determines which key combinations NVDA listens for. Desktop layout
+uses the numeric keypad for many NVDA commands. Laptop layout uses NVDA
+plus letter or symbol keys instead, so that users without a numpad can
+reach all NVDA commands. You choose your layout in NVDA Settings. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout and laptop layout are NVDA software settings — they
+do not change how Windows or your applications behave, only how NVDA
+responds to key presses.</li>
+<li>If your keyboard has a numeric keypad on the right side, desktop
+layout may be natural. If you are on a laptop without a numpad, laptop
+layout is designed for you.</li>
+<li>You can switch between layouts at any time without restarting NVDA.
+The change takes effect immediately.</li>
+</ul>
+<h4 id="step-2-16">Step 2</h4>
+<p>To check or change your layout: press NVDA+N (NVDA command) to open
+the NVDA menu, then P for Preferences, then S for Settings. The Settings
+dialog opens. In the category list on the left, press K to jump to the
+Keyboard category using first-letter navigation. Tab to the Keyboard
+layout combo box, use the Up and Down Arrow keys to choose Desktop or
+Laptop, then Tab to OK and press Enter to save. The Customizing NVDA
+chapter covers this process in detail. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus N opens the NVDA menu. P for Preferences, S for Settings.
+Then K in the category list jumps to Keyboard using first-letter
+navigation.</li>
+<li>The Keyboard layout combo box has two options: Desktop and Laptop.
+Use Arrow keys to choose, Tab to OK, and Enter to save.</li>
+<li>If you are unsure which layout is currently active, press NVDA plus
+1 to turn on Input Help, press a numpad key, and listen to what NVDA
+says. Press NVDA plus 1 again to turn off Input Help.</li>
+</ul>
+<h4 id="step-3-13">Step 3</h4>
+<p>When commands differ between layouts, NVDA Coach always shows both.
+For example: ‘Press NVDA+NumPad5 (desktop) or NVDA+Shift+O (laptop).’
+Use whichever matches your current layout setting. If a command is not
+working as expected, the most common cause is a mismatch between your
+NVDA layout setting and the keys you are pressing. Check your layout
+setting first before trying other troubleshooting steps. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout command listed first, laptop layout in parentheses or
+after ‘or’. Use the version that matches your NVDA layout setting.</li>
+<li>A mismatch between layout setting and keys pressed is the most
+common reason a command does not work. Open NVDA Settings and verify
+your Keyboard layout if commands seem wrong.</li>
+<li>Remember: layout is an NVDA setting, not a keyboard hardware
+feature. You can use laptop layout on a desktop keyboard or desktop
+layout on a laptop if you prefer.</li>
+</ul>
+<h4 id="step-4-7">Step 4</h4>
+<p>You have completed the Your Keyboard chapter! You now know where
+modifier keys are located on standard and laptop keyboards, how function
+keys and Fn key behavior work, and how to choose and change your NVDA
+keyboard layout setting. With this foundation, all the key combinations
+throughout NVDA Coach will make more sense — you will know exactly where
+your fingers need to go. When you are ready, press NVDA+Shift+C to open
+the lesson picker and continue to the next chapter: Reading and Moving
+Through Text. Press Enter to finish.</p>
+<p>Hints:</p>
+<ul>
+<li>This chapter is a reference you can return to at any time. If a
+command is not working and you are not sure where a key is, come back
+here.</li>
+<li>Modifier key locations summary: Ctrl is bottom-left. On laptops, Fn
+sits between Ctrl and the Windows key, making the bottom row Ctrl, Fn,
+Windows, Alt, space bar. On desktop keyboards there is no Fn in that
+row, so it is just Ctrl, Windows, Alt, space bar. Shift is above Ctrl.
+Alt is next to space. NVDA key is Insert or Caps Lock.</li>
+<li>NVDA Coach saves your progress automatically. All completed lessons
+are marked when you return.</li>
+</ul>
+<h2 id="chapter-3-reading-and-moving-through-text">Chapter 3: Reading
+and Moving Through Text</h2>
+<h3 id="lesson-3.01-move-by-character">Lesson 3.01: Move by
+Character</h3>
+<p><em>Learn how to move through documents and have NVDA read text back
+to you. Each practice step includes a text area right inside the Coach
+window — no extra window needed.</em></p>
+<h4 id="step-1-17">Step 1</h4>
+<p>When your cursor is in text, the Right Arrow key moves forward one
+character at a time and the Left Arrow key moves backward. NVDA speaks
+each character as you land on it. Sighted users can see each character;
+NVDA announces it for you as you move. A practice text area is included
+right in each practice step below. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The Right and Left Arrow keys are in the arrow key cluster in the
+lower right area of the keyboard. Right moves forward one character;
+Left moves back one.</li>
+<li>NVDA announces each character as your cursor lands on it. For
+punctuation, NVDA speaks the punctuation name — for example, it says
+‘period’ instead of just making a sound.</li>
+<li>Moving by character is useful for checking spelling, reading
+character by character through a word you do not recognize, or
+confirming what you just typed.</li>
+</ul>
+<h4 id="step-2-17">Step 2</h4>
+<p>Arrow down into the practice text area below, then press Right Arrow
+to move forward one character. NVDA will announce the character you land
+on. Try it a few times.</p>
+<p>Keys: Right Arrow.</p>
+<p>When it works: You moved forward one character. NVDA announced
+whatever character your cursor landed on.</p>
+<p>Hints:</p>
+<ul>
+<li>The Right Arrow key is in the arrow key cluster in the lower right
+of the keyboard. Press it once to move one character forward.</li>
+<li>NVDA announces the character your cursor lands on. For letters it
+speaks the letter; for spaces it says ‘space’; for punctuation it speaks
+the name.</li>
+<li>Press Tab to move focus into the practice text area first, then
+start pressing Right Arrow.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-3-14">Step 3</h4>
+<p>Now press Left Arrow to move back one character. NVDA will announce
+it.</p>
+<p>Keys: Left Arrow.</p>
+<p>When it works: You moved back one character. Right and Left Arrow let
+you read any text one character at a time.</p>
+<p>Hints:</p>
+<ul>
+<li>The Left Arrow key is to the left of the Down Arrow key in the arrow
+key cluster. Press it once to move one character backward.</li>
+<li>NVDA speaks the character your cursor backs onto. This is the same
+character that was to the left of where you were.</li>
+<li>Right and Left Arrow give you complete control over reading any word
+or line one character at a time — useful for proofreading or confirming
+spelling.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h3 id="lesson-3.02-jump-word-by-word">Lesson 3.02: Jump Word by
+Word</h3>
+<h4 id="step-1-18">Step 1</h4>
+<p>Character by character is slow when you need to scan text. Control
+plus Right Arrow jumps to the start of the next word. Control plus Left
+Arrow jumps back to the previous word. NVDA speaks the word you land on.
+This shortcut works the same way in Word, Notepad, email, and most other
+programs — with or without a screen reader. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Control plus Right Arrow jumps forward one word at a time. Hold the
+Control key in the bottom left corner of the keyboard and press Right
+Arrow.</li>
+<li>Control plus Left Arrow jumps backward one word. NVDA speaks each
+word as your cursor lands on it.</li>
+<li>Word-by-word navigation is much faster than character-by-character
+for scanning a sentence or finding a specific word in a paragraph.</li>
+</ul>
+<h4 id="step-2-18">Step 2</h4>
+<p>Arrow into the practice text below, then press Control+Right Arrow to
+jump to the next word. NVDA will announce the word you land on.</p>
+<p>Keys: Control+Right Arrow.</p>
+<p>When it works: You jumped forward one word. NVDA announced the word
+your cursor landed on.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold the Control key in the bottom left corner of the keyboard and
+press the Right Arrow. Both keys must be held at the same time.</li>
+<li>NVDA announces the word your cursor jumps to. Each press moves one
+full word forward.</li>
+<li>If you hold Control plus Right Arrow down, your cursor will keep
+jumping word by word rapidly. Release to stop.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-3-15">Step 3</h4>
+<p>Now press Control+Left Arrow to jump back to the previous word. NVDA
+will announce it.</p>
+<p>Keys: Control+Left Arrow.</p>
+<p>When it works: You jumped back one word. Control plus arrows give you
+fast word-by-word navigation through any document.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Control and press the Left Arrow. This jumps your cursor back
+to the start of the previous word.</li>
+<li>NVDA announces the word you land on each time. Use this to review
+words you just passed over.</li>
+<li>Control plus Left and Right Arrow together give you fast scanning
+through any document — much quicker than moving one character at a
+time.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h3 id="lesson-3.03-move-line-by-line">Lesson 3.03: Move Line by
+Line</h3>
+<h4 id="step-1-19">Step 1</h4>
+<p>Down Arrow moves to the next line in a document. Up Arrow moves to
+the previous line. NVDA reads the entire line each time you move to it.
+Sighted users can scan lines visually; you move to each one and NVDA
+reads it aloud. This is one of the most important navigation methods for
+documents and web pages. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Down Arrow moves to the next line and NVDA reads the entire line
+aloud. Up Arrow moves to the previous line.</li>
+<li>The Down and Up Arrow keys are in the arrow key cluster in the lower
+right area of the keyboard.</li>
+<li>Line-by-line navigation is the most common way to read through a
+document, email, or web page — you will use it constantly.</li>
+</ul>
+<h4 id="step-2-19">Step 2</h4>
+<p>Arrow into the practice text below, then press Down Arrow to move to
+the next line. NVDA will read the entire line for you.</p>
+<p>Keys: Down Arrow.</p>
+<p>When it works: You moved down one line. NVDA read the entire line for
+you.</p>
+<p>Hints:</p>
+<ul>
+<li>The Down Arrow key is in the arrow key cluster at the lower right of
+the keyboard. Press it once to move down one line.</li>
+<li>NVDA reads the entire line as you land on it. If you want to hear
+just part of it again, use NVDA plus Up Arrow to re-read the current
+line.</li>
+<li>Move down a few lines, then try moving back up with the Up Arrow.
+NVDA reads each line as you move to it in either direction.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-3-16">Step 3</h4>
+<p>Now press Up Arrow to move back to the previous line. NVDA will read
+it.</p>
+<p>Keys: Up Arrow.</p>
+<p>When it works: You moved up one line. Up and Down Arrow are your main
+tools for reading through any document line by line.</p>
+<p>Hints:</p>
+<ul>
+<li>The Up Arrow key is directly above the Down Arrow key in the arrow
+cluster. Press it once to move up one line.</li>
+<li>NVDA reads the entire line as you move up to it, just as it did when
+you moved down.</li>
+<li>Up and Down Arrow together are your main reading tools for any
+document. Most screen reader users spend the majority of their time
+using just these two keys.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h3 id="lesson-3.04-jump-to-start-and-end">Lesson 3.04: Jump to Start
+and End</h3>
+<h4 id="step-1-20">Step 1</h4>
+<p>Control+Home jumps immediately to the very beginning of a document,
+list, or web page. Control+End jumps to the very end. These are great
+for getting your bearings when you land in a new document. Sighted users
+can scroll quickly to get the full picture; these keys do the equivalent
+instantly for keyboard users. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Control plus Home jumps to the very beginning of a document. Control
+plus End jumps to the very end.</li>
+<li>The Home key is usually near the Insert, Delete, and Page Up keys —
+above the arrow keys on most keyboards.</li>
+<li>These two shortcuts are useful whenever you open a new document and
+want to start reading from the beginning, or jump to the end to see how
+long it is.</li>
+</ul>
+<h4 id="step-2-20">Step 2</h4>
+<p>Arrow into the practice text below, then press Control+Home to jump
+to the very beginning. NVDA will read the first line.</p>
+<p>Keys: Control+Home.</p>
+<p>When it works: You jumped to the start. NVDA read the first line.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Control and press the Home key. Home is in the cluster above
+the arrow keys on most keyboards, near Insert and Delete.</li>
+<li>NVDA reads the first line of the document after you jump there. You
+are now at the very beginning.</li>
+<li>Control plus Home works in documents, web pages, lists, and most
+other text areas. It always takes you to the very top.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-3-17">Step 3</h4>
+<p>Now press Control+End to jump to the very last line. NVDA will read
+it.</p>
+<p>Keys: Control+End.</p>
+<p>When it works: You jumped to the end. Control plus Home or End
+instantly moves you to either end of any document.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Control and press the End key. End is near the Home key, in the
+cluster above the arrow keys.</li>
+<li>NVDA reads the last line of the document after you jump there with
+Control plus End.</li>
+<li>Control plus Home and Control plus End together let you quickly get
+the full scope of any document — jump to the start to begin, jump to the
+end to see where it finishes.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h3 id="lesson-3.05-read-everything-from-here">Lesson 3.05: Read
+Everything from Here</h3>
+<h4 id="step-1-21">Step 1</h4>
+<p>Say All tells NVDA to start reading from the current position to the
+end of the document without stopping. The keystroke depends on your
+keyboard layout. If you are on the desktop layout, press NVDA plus Down
+Arrow. If you are on the laptop layout, press NVDA plus A. NVDA keeps
+reading until it reaches the end or you stop it. Sighted users can skim
+an entire page at a glance; Say All is your equivalent — let NVDA read
+the whole thing while you listen. You can press Control at any time to
+stop. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold your NVDA key and press Down Arrow. Laptop
+layout: hold your NVDA key and press the letter A. Not sure which layout
+you are using? Check in the Customizing NVDA chapter.</li>
+<li>Press Control at any time to stop Say All immediately. Press Shift
+to pause it; press Shift again to resume from where it stopped.</li>
+<li>Say All is most useful for reading long documents, emails, or web
+articles without having to press Down Arrow repeatedly.</li>
+</ul>
+<h4 id="step-2-21">Step 2</h4>
+<p>Arrow down into the practice text area below and position your cursor
+somewhere in the middle. Then start Say All: desktop layout users press
+NVDA plus Down Arrow; laptop layout users press NVDA plus A. NVDA will
+begin reading everything from your cursor to the end without stopping.
+Press Control to stop it at any time. When done, press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA — Insert or Caps Lock — and press the Down
+Arrow key. Laptop layout: hold NVDA and press the letter A.</li>
+<li>Once Say All starts, you do not need to do anything — just listen.
+Press Control to stop at any point.</li>
+<li>Try starting Say All from different positions in the practice text.
+It always reads from the cursor position to the end.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h3 id="lesson-3.06-select-and-highlight-text">Lesson 3.06: Select and
+Highlight Text</h3>
+<h4 id="step-1-22">Step 1</h4>
+<p>You can select text by holding the Shift key while pressing arrow
+keys. These are Windows commands — they work the same way with or
+without NVDA, in any application. As you select, NVDA reads the
+characters, words, or lines being added to the selection. Sighted users
+can see highlighted text on screen; NVDA announces each piece you select
+so you always know exactly what is included. Selected text can be copied
+with Control+C and pasted with Control+V anywhere you can type — both
+are also Windows commands. This chapter covers a mix of Windows commands
+and NVDA commands, so pay attention to which is which as we go. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Shift and press any arrow key to extend a selection. Shift plus
+Right Arrow selects one character; Shift plus Down Arrow selects one
+line; Control plus Shift plus Right Arrow selects one word. These are
+all Windows commands.</li>
+<li>NVDA announces each character, word, or line as you add it to the
+selection. Press any arrow key without Shift to deselect.</li>
+<li>Once text is selected, Control plus C copies it and Control plus V
+pastes it. These are Windows commands — they work in every application
+whether NVDA is running or not.</li>
+</ul>
+<h4 id="step-2-22">Step 2</h4>
+<p>Arrow into the practice text below. Hold Shift and press Right Arrow
+to select one character forward. NVDA will announce it. Keep pressing
+Shift+Right Arrow to extend the selection character by character.</p>
+<p>Keys: Shift+Right Arrow.</p>
+<p>When it works: You selected a character. NVDA announced it as
+selected.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold the Shift key first, then press Right Arrow while keeping Shift
+held. The Shift key is the wide key above the left Control key.</li>
+<li>NVDA announces each character as you add it to the selection. You
+should hear the character name followed by ‘selected’.</li>
+<li>Keep Shift held and keep pressing Right Arrow to select more
+characters one at a time. Release Shift when you are done
+selecting.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-3-18">Step 3</h4>
+<p>Now try selecting a whole word. Press Control+Shift+Right Arrow to
+select the next word at once. NVDA will read the selected word.</p>
+<p>Keys: Control+Shift+Right Arrow.</p>
+<p>When it works: You selected a full word. Holding Shift with any
+navigation key extends the selection by that amount.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Control and Shift at the same time, then press Right Arrow.
+Control plus Shift plus Right Arrow selects one full word at once.</li>
+<li>NVDA announces the selected word. You can keep pressing Control plus
+Shift plus Right Arrow to select additional words one at a time.</li>
+<li>This combination — Control plus Shift plus Right Arrow — is one of
+the fastest ways to select text. You can build up a multi-word selection
+quickly.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-4-8">Step 4</h4>
+<p>Now hold Shift and press Down Arrow to select the entire current line
+and one more below it. NVDA will read the selected block.</p>
+<p>Keys: Shift+Down Arrow.</p>
+<p>When it works: You selected a line. Shift plus Down Arrow is great
+for selecting whole lines quickly.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Shift and press the Down Arrow once. This extends the selection
+downward by one full line.</li>
+<li>NVDA reads the content of the newly selected line as you add it to
+the selection.</li>
+<li>Shift plus Down Arrow is the fastest way to select complete lines.
+Each additional press adds another line to the selection.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Screen readers open the digital world to everyone.</p>
+<p>NVDA is free and open source software.</p>
+<p>Practice builds the habit of screen reader navigation.</p>
+<p>Arrow keys move through text one step at a time.</p>
+<p>Control plus arrows jump by whole words at once.</p>
+<p>Home and End move to a line boundary.</p>
+<p>Control plus Home or End jumps to document extremes.</p>
+<p>This is the last line of the practice area.</p>
+</blockquote>
+<h4 id="step-5-3">Step 5</h4>
+<p>To deselect, press any arrow key without Shift. To copy the
+selection, press Control+C (Windows command). To paste it somewhere,
+press Control+V (Windows command). Control+A selects all text in the
+current document at once — also a Windows command. Selection with Shift
+plus arrows works identically in Word, Notepad, email, web forms, and
+most other text areas. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press any arrow key without Shift to deselect. Control plus C copies
+the selection; Control plus V pastes it anywhere you can type. Both are
+Windows commands.</li>
+<li>Control plus A selects all the text in the current document or text
+area at once — a quick way to select everything. This is a Windows
+command.</li>
+<li>Selection with Shift plus arrows works identically in Word, Notepad,
+email, web forms, and most other text areas — with or without NVDA
+running.</li>
+</ul>
+<h4 id="step-6-1">Step 6</h4>
+<p>After selecting text, you can ask NVDA to read back exactly what you
+have selected. This is an NVDA command — it only works when NVDA is
+running. On desktop layout, press NVDA+Shift+Up Arrow. On laptop layout,
+press NVDA+Shift+S. NVDA will read the entire selected text aloud. This
+is a good habit to build: select text, then verify the selection before
+copying or doing anything else with it. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA and Shift, then press the Up Arrow key to
+hear your current selection read back.</li>
+<li>Laptop layout: hold NVDA and Shift, then press the letter S to hear
+your current selection read back.</li>
+<li>Use this NVDA command before pressing Control plus C to copy. It
+confirms exactly what is selected so you do not accidentally copy the
+wrong text.</li>
+</ul>
+<h4 id="step-7">Step 7</h4>
+<p>Well done. You have finished the Select and Highlight Text lesson.
+Next up is Navigate by Paragraph and Page, lesson 7 of 8 in this chapter
+— where you will learn to jump through long documents in bigger jumps
+using Ctrl+Up/Down Arrow for paragraphs and Page Up/Page Down for larger
+sections. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The next lesson is Navigate by Paragraph and Page. Paragraph and
+page navigation are Windows commands — they work in most text editors
+and word processors.</li>
+<li>Selection commands summary: Shift+Arrow selects by amount moved;
+Ctrl+C copies; Ctrl+V pastes. All Windows commands. NVDA+Shift+Up or
+NVDA+Shift+S reports your selection — NVDA command.</li>
+<li>Press Enter to move to the Navigate by Paragraph and Page
+lesson.</li>
+</ul>
+<h3 id="lesson-3.07-navigate-by-paragraph-and-page">Lesson 3.07:
+Navigate by Paragraph and Page</h3>
+<h4 id="step-1-23">Step 1</h4>
+<p>When a document has many paragraphs, moving line by line is slow.
+Control+Down Arrow jumps forward to the start of the next paragraph.
+Control+Up Arrow jumps back to the previous paragraph. These are Windows
+commands — they work in Word, Notepad, email clients, and most
+text-editing applications whether NVDA is running or not. NVDA reads the
+paragraph text as you land on it. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold the Control key in the bottom left corner of the keyboard and
+press Down Arrow to jump to the next paragraph. Control plus Up Arrow
+jumps to the previous paragraph.</li>
+<li>These are Windows commands — they work in Word, Outlook, Notepad,
+and most other text applications even without a screen reader.</li>
+<li>Paragraph navigation is faster than line-by-line when you are
+scanning a long document and want to get to the right section
+quickly.</li>
+</ul>
+<h4 id="step-2-23">Step 2</h4>
+<p>Arrow into the practice text below, then press Control+Down Arrow to
+jump to the next paragraph. NVDA will read the first line of the
+paragraph you land on.</p>
+<p>Keys: Control+Down Arrow.</p>
+<p>When it works: You jumped to the next paragraph. NVDA read the text
+where your cursor landed.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Control — bottom left of the keyboard — and press Down Arrow at
+the same time. Your cursor jumps to the start of the next
+paragraph.</li>
+<li>NVDA reads the text at the beginning of the paragraph you jump to.
+Keep pressing Control plus Down Arrow to move through subsequent
+paragraphs.</li>
+<li>In some applications, Ctrl+Down Arrow may jump to the end of the
+current paragraph before moving to the next. The behavior varies
+slightly by program.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>First paragraph: The quick brown fox jumps over the lazy dog. This
+sentence is commonly used to test keyboards and fonts because it
+contains every letter of the alphabet.</p>
+<p>Second paragraph: Screen readers open the digital world to everyone.
+NVDA is free, open source, and available to anyone who needs it.
+Learning to use a screen reader takes practice and patience.</p>
+<p>Third paragraph: Control plus Down Arrow moves to the next paragraph.
+Control plus Up Arrow moves back. These are Windows commands that work
+in most text applications whether or not a screen reader is running.</p>
+<p>Fourth paragraph: Page Up and Page Down move in larger jumps through
+a document. Use them when paragraphs are not the right unit of
+navigation — for example in a long web article or a multi-page
+document.</p>
+<p>Fifth paragraph: This is the last paragraph in the practice area. You
+have reached the end of the text.</p>
+</blockquote>
+<h4 id="step-3-19">Step 3</h4>
+<p>Now press Control+Up Arrow to jump back to the previous paragraph.
+NVDA will read it.</p>
+<p>Keys: Control+Up Arrow.</p>
+<p>When it works: You jumped back to the previous paragraph. Control
+plus Up and Down Arrow are great for scanning long documents
+quickly.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Control and press Up Arrow to jump back to the start of the
+previous paragraph.</li>
+<li>NVDA reads the paragraph text you land on. Use this to re-read a
+paragraph you passed over.</li>
+<li>Control plus Up and Control plus Down together give you fast,
+paragraph-level scanning through any long document.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>First paragraph: The quick brown fox jumps over the lazy dog. This
+sentence is commonly used to test keyboards and fonts because it
+contains every letter of the alphabet.</p>
+<p>Second paragraph: Screen readers open the digital world to everyone.
+NVDA is free, open source, and available to anyone who needs it.
+Learning to use a screen reader takes practice and patience.</p>
+<p>Third paragraph: Control plus Down Arrow moves to the next paragraph.
+Control plus Up Arrow moves back. These are Windows commands that work
+in most text applications whether or not a screen reader is running.</p>
+<p>Fourth paragraph: Page Up and Page Down move in larger jumps through
+a document. Use them when paragraphs are not the right unit of
+navigation — for example in a long web article or a multi-page
+document.</p>
+<p>Fifth paragraph: This is the last paragraph in the practice area. You
+have reached the end of the text.</p>
+</blockquote>
+<h4 id="step-4-9">Step 4</h4>
+<p>Page Up and Page Down move in larger jumps — typically one screen’s
+worth of content at a time. These are Windows commands that work in most
+applications. In a word processor, Page Down moves forward about one
+full page. In a web browser in browse mode, it scrolls down one screen.
+In some programs, Page Up and Page Down also move the cursor. NVDA reads
+the line your cursor lands on after each jump. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Page Up and Page Down keys are usually in the cluster above the
+arrow keys, near the Home and End keys.</li>
+<li>These are Windows commands — they work in Word, browsers, PDF
+viewers, and most other applications whether NVDA is running or
+not.</li>
+<li>Page Up and Page Down are best used in long documents or web pages
+when you want to move quickly without jumping all the way to the start
+or end.</li>
+</ul>
+<h4 id="step-5-4">Step 5</h4>
+<p>Press Page Down to move forward about one screen’s worth of content.
+NVDA will read the text where your cursor lands.</p>
+<p>Keys: Page Down.</p>
+<p>When it works: You pressed Page Down. In longer documents this moves
+you forward by about one screen at a time.</p>
+<p>Hints:</p>
+<ul>
+<li>The Page Down key is in the cluster above the arrow keys on most
+keyboards, near Home, End, and Page Up.</li>
+<li>NVDA reads the line your cursor lands on after Page Down. In a
+practice text area, this may jump to the end if the text is shorter than
+one screen.</li>
+<li>In a long web article or multi-page document, Page Down is much
+faster than pressing Down Arrow repeatedly.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>First paragraph: The quick brown fox jumps over the lazy dog. This
+sentence is commonly used to test keyboards and fonts because it
+contains every letter of the alphabet.</p>
+<p>Second paragraph: Screen readers open the digital world to everyone.
+NVDA is free, open source, and available to anyone who needs it.
+Learning to use a screen reader takes practice and patience.</p>
+<p>Third paragraph: Control plus Down Arrow moves to the next paragraph.
+Control plus Up Arrow moves back. These are Windows commands that work
+in most text applications whether or not a screen reader is running.</p>
+<p>Fourth paragraph: Page Up and Page Down move in larger jumps through
+a document. Use them when paragraphs are not the right unit of
+navigation — for example in a long web article or a multi-page
+document.</p>
+<p>Fifth paragraph: This is the last paragraph in the practice area. You
+have reached the end of the text.</p>
+</blockquote>
+<h4 id="step-6-2">Step 6</h4>
+<p>Now press Page Up to move back about one screen’s worth. NVDA will
+read the line you land on.</p>
+<p>Keys: Page Up.</p>
+<p>When it works: You pressed Page Up. Page Up and Page Down together
+let you move through long documents in large jumps.</p>
+<p>Hints:</p>
+<ul>
+<li>The Page Up key is next to Page Down in the cluster above the arrow
+keys.</li>
+<li>NVDA reads the line your cursor lands on after Page Up.</li>
+<li>Page Up and Page Down together give you fast, large-scale movement
+through documents — use them after Control plus Home/End to navigate at
+different speeds.</li>
+</ul>
+<p>Practice text:</p>
+<blockquote>
+<p>First paragraph: The quick brown fox jumps over the lazy dog. This
+sentence is commonly used to test keyboards and fonts because it
+contains every letter of the alphabet.</p>
+<p>Second paragraph: Screen readers open the digital world to everyone.
+NVDA is free, open source, and available to anyone who needs it.
+Learning to use a screen reader takes practice and patience.</p>
+<p>Third paragraph: Control plus Down Arrow moves to the next paragraph.
+Control plus Up Arrow moves back. These are Windows commands that work
+in most text applications whether or not a screen reader is running.</p>
+<p>Fourth paragraph: Page Up and Page Down move in larger jumps through
+a document. Use them when paragraphs are not the right unit of
+navigation — for example in a long web article or a multi-page
+document.</p>
+<p>Fifth paragraph: This is the last paragraph in the practice area. You
+have reached the end of the text.</p>
+</blockquote>
+<h4 id="step-7-1">Step 7</h4>
+<p>Great work — you have covered character, word, line, paragraph, and
+page navigation, plus jumping to document extremes, Say All, selecting
+text, and copy/paste. One more lesson remains in this chapter: Check
+Font and Formatting, which teaches NVDA+F for inspecting how text is
+styled. Press Enter to continue to the final lesson of this chapter.</p>
+<p>Hints:</p>
+<ul>
+<li>The final lesson of this chapter covers NVDA+F — a single command
+that reports font name, size, and attributes like bold, italic, and
+underline at the cursor.</li>
+<li>If NVDA’s reading speed feels too fast or slow, you can adjust it in
+the Customizing NVDA chapter using the synth settings ring.</li>
+<li>NVDA Coach saves your progress. When you return, your completed
+lessons are marked so you can pick up right where you left off.</li>
+</ul>
+<h3 id="lesson-3.08-check-font-and-formatting">Lesson 3.08: Check Font
+and Formatting</h3>
+<h4 id="step-1-24">Step 1</h4>
+<p>When reading or proofreading a document, it helps to know not just
+what the text says, but how it is formatted. NVDA+F reports the font
+name, size, and attributes — such as bold, italic, and underline — at
+the current cursor position. This works in word processors, text
+editors, and other applications where NVDA can read the text cursor.
+Place your cursor anywhere in formatted text and press NVDA+F to hear
+the formatting details. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus F is an NVDA command. It reads formatting at the text
+cursor — the blinking insertion point inside a document or text
+field.</li>
+<li>The report includes font name (for example, Calibri or Times New
+Roman), size in points, and attributes like bold, italic, underline, or
+color if they apply.</li>
+<li>This command works best in applications that expose formatting to
+NVDA — such as Microsoft Word, LibreOffice Writer, and most rich text
+editors. In plain text editors, formatting information may be
+limited.</li>
+</ul>
+<h4 id="step-2-24">Step 2</h4>
+<p>Pressing NVDA+F once quickly reports the basic font name and size.
+Pressing NVDA+F twice in rapid succession opens a Font Formatting dialog
+that lists all formatting details in a browseable window — useful when
+there are many attributes to review. Try both: first a single press to
+hear the spoken report, then a quick double press to open the dialog.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Single press: NVDA speaks the font name and size immediately. Double
+press: a dialog opens showing all formatting attributes, which you can
+read and close with Escape.</li>
+<li>The dialog from a double press is especially useful when text has
+many simultaneous attributes — for example, bold, italic, and colored
+text all at once.</li>
+<li>If the double press is opening a dialog you did not intend, Escape
+closes it immediately without changing anything.</li>
+</ul>
+<h4 id="step-3-20">Step 3</h4>
+<p>Open any document that has mixed formatting — for example a Word file
+or a rich text email. Place your cursor inside some bold or italic text.
+Press NVDA+F and listen to the formatting report. Then move to a
+different word with different formatting and press NVDA+F again to
+compare. Press Enter here when you have tried it.</p>
+<p>Hints:</p>
+<ul>
+<li>If you do not have a formatted document handy, open Notepad and type
+a few words, then open WordPad (Start &gt; WordPad) and paste them —
+WordPad supports bold and italic formatting.</li>
+<li>Move the cursor with the arrow keys. NVDA+F always reports
+formatting at the cursor position, not wherever the mouse pointer
+happens to be.</li>
+<li>Try navigating word by word with Ctrl+Right Arrow, pressing NVDA+F
+after each word to hear how formatting changes across a sentence.</li>
+</ul>
+<h4 id="step-4-10">Step 4</h4>
+<p>Excellent work — you have completed the Reading and Moving Through
+Text chapter! You now know how to navigate by character, word, line,
+paragraph, and page; jump to document extremes; use Say All; select text
+with Shift plus arrows; verify selections with NVDA+Shift+Up Arrow or
+NVDA+Shift+S; copy and paste with Windows commands; and check font and
+formatting details with NVDA+F. These skills work everywhere NVDA is
+active. Quick tip: if NVDA is reading too fast or too slowly as you
+practice, you can adjust speech speed using the synth settings ring —
+that is covered in the Customizing NVDA chapter. When you are ready,
+press NVDA+Shift+C to open the lesson picker and continue to the next
+chapter: Browse Mode and Web Navigation. Press Enter to finish.</p>
+<p>Hints:</p>
+<ul>
+<li>The next chapter is Browse Mode and Web Navigation. It covers how to
+read and interact with web pages using NVDA’s navigation shortcuts.</li>
+<li>If NVDA’s reading speed feels too fast or slow, you can adjust it in
+the Customizing NVDA chapter using the synth settings ring.</li>
+<li>NVDA Coach saves your progress. When you return, your completed
+lessons are marked so you can pick up right where you left off.</li>
+</ul>
+<h2 id="chapter-4-browse-mode-and-web-navigation">Chapter 4: Browse Mode
+and Web Navigation</h2>
+<h3 id="lesson-4.01-about-browse-mode">Lesson 4.01: About Browse
+Mode</h3>
+<p><em>Learn how to navigate web pages and HTML documents using NVDA’s
+browse mode. A practice web page will open automatically when you start
+a lesson.</em></p>
+<h4 id="step-1-25">Step 1</h4>
+<p>Browse mode is how NVDA helps you read web pages. Sighted users can
+see a web page laid out visually. NVDA creates a virtual text copy of
+the page that you can navigate with arrow keys and single-letter
+shortcuts, as if it were a document. When you press Enter, a practice
+web page will open in your browser in a separate window. Stay here and
+finish reading these instructions first. NVDA Coach will remain focused
+so you can read the next step. When you are ready, press Alt+Tab to
+switch to your browser. Press Enter to open the practice page and
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Browse mode creates a virtual copy of the web page as a text
+document. Arrow keys move through it just like a regular document.</li>
+<li>Single-letter shortcuts like H for heading and K for link only work
+in browse mode — not in forms or text fields where you need to
+type.</li>
+<li>NVDA switches to browse mode automatically when you open a web page.
+You will hear ‘browse mode’ announced when it activates.</li>
+</ul>
+<h4 id="step-2-25">Step 2</h4>
+<p>The practice page is now open in your browser. Press Alt+Tab to
+switch to it. Once you are there, press Down Arrow to begin reading the
+page. Press NVDA+Shift+C at any time to return here and continue your
+lesson. Press Enter when you are ready.</p>
+<p>Hints:</p>
+<ul>
+<li>Press Alt plus Tab to switch to your browser. Hold Alt and tap Tab
+once to move to the next open window.</li>
+<li>Once in the browser, just press Down Arrow to start reading the page
+line by line — the same way you read a document.</li>
+<li>Press NVDA plus Shift plus C at any time to return to the Coach
+window and continue your lesson.</li>
+</ul>
+<h4 id="step-3-21">Step 3</h4>
+<p>Press Alt+Tab to switch to your browser.</p>
+<p>Keys: Alt+Tab.</p>
+<p>When it works: You switched windows. You should now be in your
+browser on the practice page.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold the Alt key — to the left of the Space bar — and press Tab
+once. Release both keys when you hear your browser announced.</li>
+<li>If you cycle past the browser, keep holding Alt and press Tab again
+to continue cycling through open windows.</li>
+<li>Once in the browser, NVDA should announce the page title and ‘browse
+mode’ to let you know you are in a web page.</li>
+</ul>
+<h4 id="step-4-11">Step 4</h4>
+<p>You are in the browser. Press Down Arrow to start reading the page
+line by line.</p>
+<p>Keys: Down Arrow.</p>
+<p>When it works: You are navigating the practice page in browse mode.
+Arrow keys work just like reading a text document. Well done.</p>
+<p>Hints:</p>
+<ul>
+<li>Press the Down Arrow key — the downward-pointing key in the arrow
+cluster. In browse mode it moves through the page one line at a
+time.</li>
+<li>NVDA reads each line as you move down, just like reading a document.
+The page content flows top to bottom.</li>
+<li>If NVDA is silent, make sure you are focused on the browser window.
+Try pressing NVDA plus T to confirm which window is active.</li>
+</ul>
+<h3 id="lesson-4.02-navigate-by-heading">Lesson 4.02: Navigate by
+Heading</h3>
+<h4 id="step-1-26">Step 1</h4>
+<p>Web pages are structured with headings, like chapters in a book.
+Sighted users see headings visually — they are larger or bold. NVDA
+announces the heading text and its level. In browse mode, press H to
+jump to the next heading. Shift plus H goes back to the previous
+heading. Make sure you are in your browser on the practice page. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press H by itself — just the letter H with no modifier key. In
+browse mode, single letters are shortcuts, not typed text.</li>
+<li>NVDA announces the heading text and its level, for example ‘level 2
+heading: Getting Started’. The level tells you where it sits in the page
+structure.</li>
+<li>Shift plus H goes backward to the previous heading. The pattern of
+pressing a key to go forward and Shift plus that key to go backward
+applies to most browse mode shortcuts.</li>
+</ul>
+<h4 id="step-2-26">Step 2</h4>
+<p>Press H to jump to the next heading on the page.</p>
+<p>Keys: H.</p>
+<p>When it works: You jumped to the next heading. NVDA announced the
+heading text and its level.</p>
+<p>Hints:</p>
+<ul>
+<li>Press H by itself — just the letter key, no modifier. In browse
+mode, letter keys jump to page elements, not type characters.</li>
+<li>NVDA announces the heading text and its level number. Level 1 is the
+main title; level 2 is a section; level 3 is a sub-section.</li>
+<li>If nothing happens, make sure you are in browse mode in the browser.
+Press NVDA plus Shift plus C to return to Coach if needed.</li>
+</ul>
+<h4 id="step-3-22">Step 3</h4>
+<p>Press H again to move to the next heading.</p>
+<p>Keys: H.</p>
+<p>When it works: Good. You can press H repeatedly to scan all the
+headings on a page very quickly.</p>
+<p>Hints:</p>
+<ul>
+<li>Keep pressing H to move forward through all the headings on the
+page. Each press jumps to the next one.</li>
+<li>Scanning headings with H is the fastest way to get an overview of a
+web page’s structure — like reading a table of contents.</li>
+<li>If NVDA says ‘no next heading’, you have reached the last heading on
+the page.</li>
+</ul>
+<h4 id="step-4-12">Step 4</h4>
+<p>Now press Shift+H to go back to the previous heading.</p>
+<p>Keys: Shift+H.</p>
+<p>When it works: You jumped back one heading. Shift plus a navigation
+key always moves backward. H and Shift+H let you scan any page’s
+structure in seconds.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Shift and press H. This is the backward version of the H
+shortcut — the same pattern applies to most browse mode navigation
+keys.</li>
+<li>NVDA announces the heading you jump back to, including its level and
+text.</li>
+<li>Shift plus a navigation letter always moves backward in browse mode.
+H and Shift plus H let you scan any page’s headings in either
+direction.</li>
+</ul>
+<h3 id="lesson-4.03-jump-to-heading-levels">Lesson 4.03: Jump to Heading
+Levels</h3>
+<h4 id="step-1-27">Step 1</h4>
+<p>Web pages use different heading levels for structure — level 1 is the
+main title, level 2 is a major section, level 3 is a sub-section.
+Sighted users can see this hierarchy by the size of the text. In browse
+mode, you can press a number from 1 to 9 to jump directly to a heading
+of that level. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press 1 to jump to level 1 headings, 2 for level 2, and so on up to
+9. Use the number row at the top of the keyboard, not the numpad.</li>
+<li>Shift plus a number jumps backward to the previous heading of that
+level — the same forward and backward pattern as other browse mode
+keys.</li>
+<li>Most well-structured pages have one level 1 heading (the main title)
+and several level 2 headings (main sections). Level 3 headings are
+sub-sections within those.</li>
+</ul>
+<h4 id="step-2-27">Step 2</h4>
+<p>Press 1 to jump to the next level 1 heading on the page.</p>
+<p>Keys: 1.</p>
+<p>When it works: You jumped to a level 1 heading. This is usually the
+main title of the page.</p>
+<p>Hints:</p>
+<ul>
+<li>Press the number 1 from the top row of the keyboard — the row above
+the letter keys. Do not use the numpad.</li>
+<li>NVDA announces the level 1 heading text. Level 1 is usually the main
+title of the page.</li>
+<li>If NVDA says ‘no next heading at level 1’, the page only has one
+level 1 heading or none at all.</li>
+</ul>
+<h4 id="step-3-23">Step 3</h4>
+<p>Press 2 to jump to the next level 2 heading.</p>
+<p>Keys: 2.</p>
+<p>When it works: You jumped to a level 2 heading. These are the main
+section headings.</p>
+<p>Hints:</p>
+<ul>
+<li>Press the number 2 from the top row of the keyboard. Level 2
+headings are the main sections of a page.</li>
+<li>NVDA announces the level 2 heading text. Keep pressing 2 to move
+through all level 2 headings in order.</li>
+<li>Level 2 headings on a news site might be article titles. On a help
+page they might be topic names.</li>
+</ul>
+<h4 id="step-4-13">Step 4</h4>
+<p>Press 3 to jump to the next level 3 heading.</p>
+<p>Keys: 3.</p>
+<p>When it works: You jumped to a level 3 heading. Heading-level
+navigation is one of the most powerful tools for quickly scanning a web
+page.</p>
+<p>Hints:</p>
+<ul>
+<li>Press the number 3 from the top row. Level 3 headings are
+sub-sections within a level 2 section.</li>
+<li>NVDA announces the level 3 heading text. Level 3 headings provide
+more detailed structure within major sections.</li>
+<li>Heading-level navigation is one of the most powerful tools for
+quickly scanning a web page. Combine H for all headings with numbers for
+specific levels.</li>
+</ul>
+<h3 id="lesson-4.04-navigate-by-link">Lesson 4.04: Navigate by Link</h3>
+<h4 id="step-1-28">Step 1</h4>
+<p>Links are what you activate to move between web pages. Sighted users
+can see links as underlined or colored text. In browse mode, press K to
+jump to the next link — NVDA announces the link text so you know where
+it goes. Shift plus K goes to the previous link. Tab also moves you
+forward between links and other interactive elements. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press K by itself to jump to the next link. NVDA announces the link
+text — this tells you where the link goes before you follow it.</li>
+<li>Shift plus K goes to the previous link. The forward and backward
+pattern applies here just like with headings.</li>
+<li>Tab also moves between links and interactive elements, but it skips
+plain text. K moves through links only, while Tab includes buttons and
+form fields too.</li>
+</ul>
+<h4 id="step-2-28">Step 2</h4>
+<p>Press K to jump to the next link on the page.</p>
+<p>Keys: K.</p>
+<p>When it works: You jumped to a link. NVDA announced the link text. To
+follow a link in browse mode, press Enter.</p>
+<p>Hints:</p>
+<ul>
+<li>Press K by itself — just the letter key with no modifier. NVDA
+announces the link text so you know where it leads.</li>
+<li>The link text is the descriptive name of the link. Good link text
+tells you the destination; vague text like ‘click here’ does not.</li>
+<li>To follow a link, press Enter. To continue scanning without
+following it, just press K again to move to the next link.</li>
+</ul>
+<h4 id="step-3-24">Step 3</h4>
+<p>Press K again to jump to the next link.</p>
+<p>Keys: K.</p>
+<p>When it works: Good. You can scan all links on a page very quickly
+with K.</p>
+<p>Hints:</p>
+<ul>
+<li>Press K again to jump to the next link. Keep pressing K to scan all
+links on the page in order.</li>
+<li>NVDA announces each link’s text as you land on it. This lets you
+quickly scan all the navigation options on a page.</li>
+<li>If NVDA says ‘no next link’, you have reached the last link on the
+page.</li>
+</ul>
+<h4 id="step-4-14">Step 4</h4>
+<p>Now press Shift+K to go back to the previous link.</p>
+<p>Keys: Shift+K.</p>
+<p>When it works: You moved back one link. K and Shift+K let you quickly
+review all the links on a page.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Shift and press K to move backward. This follows the same
+pattern as Shift plus H for headings.</li>
+<li>NVDA announces the previous link’s text as you jump back to it.</li>
+<li>K and Shift plus K together let you freely scan all links on a page
+in either direction.</li>
+</ul>
+<h4 id="step-5-5">Step 5</h4>
+<p>Press Tab to move to the next interactive element on the page.</p>
+<p>Keys: Tab.</p>
+<p>When it works: Tab moved you to the next interactive element. Tab is
+great for moving between controls in forms and navigating menus.</p>
+<p>Hints:</p>
+<ul>
+<li>Tab moves between all interactive elements — links, buttons, and
+form fields — skipping over plain text content.</li>
+<li>Tab is useful when you want to move through only the actionable
+parts of a page without reading the surrounding content.</li>
+<li>The Tab key is on the far left of the keyboard above Caps Lock.
+Press it by itself — no modifier needed.</li>
+</ul>
+<h3 id="lesson-4.05-interact-with-forms">Lesson 4.05: Interact with
+Forms</h3>
+<h4 id="step-1-29">Step 1</h4>
+<p>Web pages often have forms with text boxes, buttons, and checkboxes.
+Sighted users can see these visually; NVDA announces what type of field
+you land on. In browse mode, press F to jump to the next form field.
+Press E to jump to the next edit field, which is a text box you can type
+in. Press B to jump to the next button. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>F jumps to the next form field of any type. E jumps specifically to
+text input fields. B jumps to buttons. All use the same forward and
+backward pattern — Shift plus the letter goes backward.</li>
+<li>NVDA announces the field type and label when you land on it — for
+example ‘Search edit’ or ‘Submit button’.</li>
+<li>To type in an edit field, you first need to switch to focus mode.
+NVDA often does this automatically, or you can press Enter or NVDA plus
+Space to switch manually.</li>
+</ul>
+<h4 id="step-2-29">Step 2</h4>
+<p>Press F to jump to the next form field on the page.</p>
+<p>Keys: F.</p>
+<p>When it works: You jumped to a form field. NVDA announced what type
+of field it is.</p>
+<p>Hints:</p>
+<ul>
+<li>Press F by itself — just the letter key. This jumps to the next form
+field of any type on the page.</li>
+<li>NVDA announces the field type — ‘edit’, ‘checkbox’, ‘radio button’,
+‘combo box’ — so you know what kind of control it is.</li>
+<li>Shift plus F goes to the previous form field. The same forward and
+backward pattern applies here.</li>
+</ul>
+<h4 id="step-3-25">Step 3</h4>
+<p>Press E to jump to the next text input field.</p>
+<p>Keys: E.</p>
+<p>When it works: You landed on an edit field. To type in it, you would
+first press Enter or NVDA+Space to switch to focus mode.</p>
+<p>Hints:</p>
+<ul>
+<li>Press E by itself to jump to the next edit field — a text box where
+you can type.</li>
+<li>NVDA announces the field label and the word ‘edit’ to identify it as
+a text input.</li>
+<li>To type in an edit field, press Enter to switch to focus mode, type
+your text, then press Escape to return to browse mode.</li>
+</ul>
+<h4 id="step-4-15">Step 4</h4>
+<p>Press B to jump to the next button.</p>
+<p>Keys: B.</p>
+<p>When it works: You found a button. Buttons are activated by pressing
+Enter or Space. B is the quickest way to find buttons on any page.</p>
+<p>Hints:</p>
+<ul>
+<li>Press B by itself to jump to the next button on the page.</li>
+<li>NVDA announces the button’s label. Activate any button by pressing
+Enter or Space while focused on it.</li>
+<li>B is the quickest way to find action buttons — like Submit, Search,
+or Log In — on any web page.</li>
+</ul>
+<h3 id="lesson-4.06-focus-mode-vs-browse-mode">Lesson 4.06: Focus Mode
+vs Browse Mode</h3>
+<h4 id="step-1-30">Step 1</h4>
+<p>Browse mode lets you read and navigate pages. But when you need to
+type into a text box, you need to switch to focus mode. When focus mode
+activates, your cursor is placed inside the edit box and you can type
+directly — this is intentional. Focus mode puts the cursor in the edit
+box so you can interact with form fields. Your keypresses go directly to
+the application instead of being used as navigation shortcuts. NVDA
+often switches to focus mode automatically when you Tab into a text
+field. You can also toggle manually with NVDA+Space (NVDA command).
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Browse mode: letter keys are navigation shortcuts. Focus mode:
+letter keys type characters into a field — your cursor is in the edit
+box. NVDA plus Space toggles between them.</li>
+<li>NVDA usually switches to focus mode automatically when you enter a
+text field. You will hear ‘focus mode’ announced, and your cursor lands
+in the edit box ready to type.</li>
+<li>If you are trying to type and letters are jumping around the page
+instead of appearing in a field, you are in browse mode. Press NVDA plus
+Space to switch to focus mode and place the cursor in the edit box.</li>
+</ul>
+<h4 id="step-2-30">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press the Space bar. NVDA will
+announce either ‘focus mode’ or ‘browse mode’ to tell you which one you
+are switching to. In focus mode, letter keys type characters into a
+field instead of navigating the page. In browse mode, letter keys are
+navigation shortcuts. NVDA often switches automatically when you Tab
+into a text field, but knowing how to toggle manually with NVDA+Space
+gives you full control at any time. Press Enter here to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold your NVDA key — Insert or Caps Lock — and press the Space bar.
+The Space bar is the long flat key at the bottom center of the
+keyboard.</li>
+<li>NVDA announces ‘focus mode’ or ‘browse mode’ to confirm which mode
+you switched to. Toggle back and forth a few times to get the feel of
+it.</li>
+<li>If letters are being typed when you expect navigation, press NVDA
+plus Space to switch to browse mode. If navigation is happening when you
+expect typing, press NVDA plus Space to switch to focus mode.</li>
+</ul>
+<h4 id="step-3-26">Step 3</h4>
+<p>Press NVDA+Space one more time to switch back to the other mode. Hold
+your NVDA key and press Space, and listen for NVDA to announce the mode
+name. Remembering this one shortcut means you will always have control
+over how your keyboard behaves on any web page. Press Enter here to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold NVDA and press the Space bar again to toggle back. NVDA
+announces the mode name each time you switch.</li>
+<li>The Space bar is the long flat key at the very bottom of the
+keyboard. Hold your NVDA key, then tap Space.</li>
+<li>NVDA plus Space is one of the most important web browsing shortcuts.
+Once it becomes a reflex, you will never feel stuck in the wrong
+mode.</li>
+</ul>
+<h3 id="lesson-4.07-landmarks-and-lists">Lesson 4.07: Landmarks and
+Lists</h3>
+<h4 id="step-1-31">Step 1</h4>
+<p>Well-designed web pages use landmarks — named regions such as
+navigation, main content, and footer. Sighted users can see these
+sections at a glance. In browse mode, press D to jump to the next
+landmark and skip directly to the part of the page you need. Shift plus
+D goes backward. Pages also have lists of items. Press L to jump to the
+next list. These shortcuts help you skip to the right part of a page
+without reading everything. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>D jumps to the next landmark region. Common landmarks include:
+banner (page header), navigation, main (main content), and contentinfo
+(footer).</li>
+<li>L jumps to the next list on the page. Once inside a list, press I to
+move between individual list items.</li>
+<li>Using D to jump to the main landmark skips past repeated navigation
+links at the top of a page — a major time saver on every site you
+visit.</li>
+</ul>
+<h4 id="step-2-31">Step 2</h4>
+<p>Press D to jump to the next landmark on the page.</p>
+<p>Keys: D.</p>
+<p>When it works: You jumped to a landmark. Landmarks are a quick way to
+get to the main content area and skip past repeated navigation
+links.</p>
+<p>Hints:</p>
+<ul>
+<li>Press D by itself. NVDA announces the landmark type — for example
+‘navigation landmark’ or ‘main landmark’.</li>
+<li>The main landmark contains the primary content of the page. Jumping
+to it with D skips past repeated headers and navigation menus.</li>
+<li>Shift plus D goes backward to the previous landmark.</li>
+</ul>
+<h4 id="step-3-27">Step 3</h4>
+<p>Press D again to move to the next landmark.</p>
+<p>Keys: D.</p>
+<p>When it works: Good. You can press D repeatedly to move between all
+the major sections of a page.</p>
+<p>Hints:</p>
+<ul>
+<li>Press D again to jump to the next landmark. Keep pressing to cycle
+through all landmark regions on the page.</li>
+<li>NVDA announces each landmark type as you land on it.</li>
+<li>If NVDA says ‘no next landmark’, the page either has no more
+landmarks or is not well structured with ARIA roles.</li>
+</ul>
+<h4 id="step-4-16">Step 4</h4>
+<p>Now press L to jump to the next list on the page.</p>
+<p>Keys: L.</p>
+<p>When it works: You found a list. Once inside a list, press I to move
+between list items. L and D together cover most of the structural
+navigation you need on any page.</p>
+<p>Hints:</p>
+<ul>
+<li>Press L by itself to jump to the next list. Lists contain grouped
+items — navigation menus, bullet points, product listings, and
+more.</li>
+<li>Once inside a list, press I to move between individual list items
+one at a time.</li>
+<li>NVDA announces ‘list with X items’ when you land on a list, so you
+know how many items it contains before you start reading through
+it.</li>
+</ul>
+<h3 id="lesson-4.08-the-elements-list">Lesson 4.08: The Elements
+List</h3>
+<h4 id="step-1-32">Step 1</h4>
+<p>NVDA has a powerful dialog called the Elements List that shows you
+all the headings, links, form fields, or landmarks on the current page
+in one place. You can filter the list and jump directly to any item.
+Sighted users can visually scan a page and spot what they need; the
+Elements List gives you the same overview in one accessible dialog. It
+is like a table of contents for the whole page. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The Elements List opens with NVDA plus F7. It shows headings, links,
+form fields, or landmarks depending on which tab you are on.</li>
+<li>Inside the Elements List, Tab moves between the category buttons at
+the top. Arrow keys move through the list of items. Enter jumps to the
+selected item on the page.</li>
+<li>The Elements List is one of the fastest ways to find a specific link
+or heading on a long page without reading everything.</li>
+</ul>
+<h4 id="step-2-32">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press F7 at the top of your
+keyboard. The Elements List dialog will open and NVDA will announce it.
+Inside the dialog, press Tab to switch between viewing headings, links,
+form fields, and landmarks on the current page. Use the arrow keys to
+move through the list, and press Enter on any item to jump directly to
+it on the page. It is like an instant table of contents for the whole
+page — one of the most powerful tools NVDA gives you for web navigation.
+When you are done exploring, press Escape to close the dialog, then
+press Enter here to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold your NVDA key and press F7 — the seventh function key in the
+top row. The Elements List dialog opens immediately.</li>
+<li>Inside the dialog, Tab moves between the category buttons: headings,
+links, form fields, buttons, and landmarks. Arrow keys then move through
+the items in the selected category.</li>
+<li>Type a few letters in the filter box to narrow the list to items
+containing that text. This is very useful on pages with many links.</li>
+</ul>
+<h4 id="step-3-28">Step 3</h4>
+<p>Well done. The Elements List is one of the fastest ways to get an
+overview of any page. Press Enter to continue to the next lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>Use the Elements List any time you land on an unfamiliar page and
+want to quickly understand its structure before reading.</li>
+<li>The filter box in the Elements List lets you type a word to narrow
+the list — for example, type ‘contact’ to find a contact link on any
+page.</li>
+<li>Remember: NVDA plus F7 opens the Elements List from any web page. It
+works in most browsers including Chrome, Firefox, and Edge.</li>
+</ul>
+<h3 id="lesson-4.09-find-text-on-a-page">Lesson 4.09: Find Text on a
+Page</h3>
+<h4 id="step-1-33">Step 1</h4>
+<p>NVDA+Ctrl+F opens the NVDA Find dialog, which lets you search for any
+text on the current web page. Sighted users can press Ctrl+F in their
+browser to find text on screen. NVDA’s Find dialog works the same way
+but announces the result through speech. It works in browse mode and in
+many documents. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus Control plus F opens NVDA’s own Find dialog. Hold NVDA,
+hold Control, then press F.</li>
+<li>Type the text you want to find, then press Enter. NVDA jumps to the
+first match and reads the surrounding text.</li>
+<li>NVDA plus F3 finds the next match after the first. NVDA plus Shift
+plus F3 finds the previous match.</li>
+</ul>
+<h4 id="step-2-33">Step 2</h4>
+<p>Try it now. Hold your NVDA key, then hold Control, then press F. The
+Find dialog will open. Type a word that appears on the practice page —
+such as ‘heading’ or ‘link’ — then press Enter to jump to the first
+match. NVDA will announce the text around the result. Press Escape to
+close the dialog without searching. When you are done, press
+NVDA+Shift+C to return here, then press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold NVDA, hold Control, and press F — all three at the same time.
+The Control key is in the bottom left corner; F is in the middle row of
+letters.</li>
+<li>Type a word you know is on the page, then press Enter. NVDA jumps to
+the first occurrence and reads the surrounding text.</li>
+<li>If no match is found, NVDA says ‘not found’. Try a different search
+term or check your spelling.</li>
+</ul>
+<h4 id="step-3-29">Step 3</h4>
+<p>You can also find the next or previous occurrence without reopening
+the dialog. Press NVDA+F3 to find the next match, and NVDA+Shift+F3 to
+find the previous match. These work the same way as Find Next in other
+applications. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus F3 finds the next match. NVDA plus Shift plus F3 finds the
+previous match. F3 is the third function key in the top row.</li>
+<li>After opening Find and jumping to the first result, close the dialog
+with Escape and use NVDA plus F3 to keep moving through subsequent
+matches.</li>
+<li>This shortcut works in browse mode on web pages and in many document
+viewers — useful any time you are searching for a specific word or
+phrase.</li>
+</ul>
+<h3 id="lesson-4.10-navigate-tables">Lesson 4.10: Navigate Tables</h3>
+<h4 id="step-1-34">Step 1</h4>
+<p>Web pages often use tables to display structured information — rows
+and columns of data such as schedules, pricing, or comparison charts.
+Sighted users can see the grid layout visually. When your cursor lands
+on a table in browse mode, NVDA announces ‘table with X rows and Y
+columns’ so you know the size of the table. Understanding what kind of
+command you are using is important here: table cell navigation commands
+are NVDA commands — they require your NVDA key or a combination that
+NVDA interprets. They are not Windows commands or browser commands.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA announces ‘table with X rows and Y columns’ when you land on a
+table. This tells you how large it is before you start navigating inside
+it.</li>
+<li>Table navigation commands in this lesson are NVDA commands — they
+only work when NVDA is running and you are in browse mode on a web
+page.</li>
+<li>Not all tables on web pages are data tables. Some pages use tables
+for visual layout. NVDA will still announce them, but they may not have
+meaningful row and column structure.</li>
+</ul>
+<h4 id="step-2-34">Step 2</h4>
+<p>To move between cells in a table, use Ctrl+Alt+Arrow keys — these are
+NVDA commands for table navigation. Ctrl+Alt+Right Arrow moves to the
+next cell in the same row. Ctrl+Alt+Left Arrow moves to the previous
+cell. Ctrl+Alt+Down Arrow moves to the cell directly below in the same
+column. Ctrl+Alt+Up Arrow moves to the cell directly above. As you move,
+NVDA announces the cell content and its row and column position. This
+works the same way whether you are on desktop or laptop keyboard layout.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Ctrl and Alt together, then press an Arrow key to move through
+table cells. Right and Left move across a row. Down and Up move through
+a column.</li>
+<li>NVDA announces the cell content, plus its row and column position —
+for example, ‘row 2, column 3, Price: 49 dollars’. This tells you
+exactly where you are in the table.</li>
+<li>These are NVDA commands — Ctrl+Alt+Arrow keys are intercepted by
+NVDA in browse mode. They do not work the same way outside of a web page
+table.</li>
+</ul>
+<h4 id="step-3-30">Step 3</h4>
+<p>Try it now on the practice page. Navigate to a table using H or Down
+Arrow to find the section labeled Tables. Once you are inside the table,
+try pressing Ctrl+Alt+Right Arrow to move to the next cell, then
+Ctrl+Alt+Down Arrow to move down a row. NVDA will announce the cell
+content and position as you move. When you are ready to continue, press
+NVDA+Shift+C to return here and press Enter.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold Ctrl and Alt at the same time — both with your left hand — then
+press Right Arrow to move to the next cell in the row.</li>
+<li>Hold Ctrl and Alt, then press Down Arrow to move to the cell
+directly below in the same column. NVDA announces the row and column
+number.</li>
+<li>If the table has headers, NVDA announces the column or row header
+label as you move — for example ‘Monday, column 1’ or ‘Price, row
+3’.</li>
+</ul>
+<h4 id="step-4-17">Step 4</h4>
+<p>A reminder about command categories: Ctrl+Alt+Arrow for table
+navigation is an NVDA command. The regular Tab key and Arrow keys are
+Windows commands that work anywhere. H, K, D, and other single-letter
+shortcuts are NVDA browse mode commands that only work in browse mode on
+web pages. Keeping track of which commands belong to which category
+helps you understand why some keys work in some places but not others.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA commands require NVDA to be running and active. Tab and Arrow
+keys are Windows commands — they work in any application.</li>
+<li>Browse mode single-letter shortcuts like H and K only work when you
+are in browse mode. If they are not working, you may be in focus mode —
+press NVDA plus Space to check.</li>
+<li>Ctrl+Alt+Arrow for tables is an NVDA command that only activates
+inside a table in browse mode. Outside a table, Ctrl+Alt+Arrow may do
+something different or nothing at all.</li>
+</ul>
+<h4 id="step-5-6">Step 5</h4>
+<p>Excellent work — you have completed the Browse Mode and Web
+Navigation chapter! You now know how to navigate web pages using
+headings, links, form fields, landmarks, lists, the Elements List, NVDA
+Find, focus mode, and table navigation. These skills let you navigate
+any web page quickly and independently. When you are ready, press
+NVDA+Shift+C to open the lesson picker and continue to the next chapter:
+Object Navigation — where you will learn to reach any control on screen,
+even ones that Tab cannot get to. Press Enter to finish.</p>
+<p>Hints:</p>
+<ul>
+<li>The next chapter is Object Navigation. It teaches you to reach any
+element on screen — even controls that Tab and browse mode cannot
+access.</li>
+<li>Browse mode quick reference: H for headings, K for links, F for form
+fields, D for landmarks, L for lists, Ctrl+Alt+Arrow for table cells.
+Shift plus any of these goes backward.</li>
+<li>NVDA Coach saves your progress automatically. All completed lessons
+are marked when you return.</li>
+</ul>
+<h2 id="chapter-5-object-navigation">Chapter 5: Object Navigation</h2>
+<h3 id="lesson-5.01-what-is-object-navigation">Lesson 5.01: What Is
+Object Navigation?</h3>
+<p><em>Learn how to explore and interact with controls that cannot be
+reached with the Tab key, using NVDA’s object navigation
+commands.</em></p>
+<h4 id="step-1-35">Step 1</h4>
+<p>Welcome to the Object Navigation chapter. Most of what you have
+learned so far uses the Tab key and arrow keys to move through a screen.
+But some programs — especially older desktop applications — have
+controls that Tab cannot reach. NVDA has a separate system for exploring
+these called object navigation. It lets you move through every element
+on the screen, whether or not it accepts keyboard focus. Before you
+begin: maximize your current application window if it is not already
+full screen. Press Windows+Up Arrow (Windows command) to maximize. This
+ensures all objects are visible and accessible to the navigator. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Object navigation is separate from Tab navigation. Tab only reaches
+controls designed to accept keyboard focus. Object navigation reaches
+everything on screen.</li>
+<li>Older desktop applications — like some media players, custom
+toolbars, and accessibility tools — often have controls that do not
+respond to Tab. Object navigation is how you reach them.</li>
+<li>To maximize your window before exploring, press Windows+Up Arrow. A
+maximized window ensures no objects are hidden off-screen or
+clipped.</li>
+</ul>
+<h4 id="step-2-35">Step 2</h4>
+<p>NVDA thinks of the screen as a tree of objects — picture a pyramid.
+At the top is the application window. The level below it contains
+panels, toolbars, and menus. The level below that contains the
+individual controls: buttons, text fields, and checkboxes. Each object
+may contain more objects at the level below it. Object navigation lets
+you move through this pyramid in any direction: across to the next
+object at the same level, up one level to the container, or down one
+level to the first object inside. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Think of the pyramid like a building. The whole building is the
+application. Each floor is a level. Each room on a floor is a panel or
+toolbar. Each item in a room is an individual control.</li>
+<li>Every element on screen — a toolbar button, a status bar, a progress
+indicator — lives somewhere in this pyramid, even if Tab cannot reach
+it.</li>
+<li>Object navigation is most useful in programs that have non-standard
+controls — custom toolbars, status bars, notification areas, and
+embedded controls.</li>
+</ul>
+<h4 id="step-3-31">Step 3</h4>
+<p>There are two keyboard layouts in NVDA: desktop and laptop. Desktop
+layout uses the numeric keypad on the right side of a full-size
+keyboard. Laptop layout uses combinations of NVDA plus letter or symbol
+keys so you do not need a numpad. All object navigation commands in this
+chapter will show both layouts. If you are not sure which layout you are
+using, open the NVDA menu with NVDA+N (NVDA command), go to Preferences,
+then Settings, then Keyboard, and listen for the layout setting. Press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout uses numpad keys for object navigation. Laptop layout
+adds Shift to many arrow key combinations. All commands in this chapter
+list both.</li>
+<li>If you are not sure which layout you are using, press NVDA+1 (NVDA
+command) to turn on Input Help, then press one of the object navigation
+keys to hear which layout NVDA expects. Then press NVDA+1 again to turn
+Input Help off.</li>
+<li>You can change your keyboard layout at any time in NVDA Settings
+under the Keyboard category. The Customizing NVDA chapter covers this in
+detail.</li>
+</ul>
+<h3 id="lesson-5.02-move-to-the-next-and-previous-object">Lesson 5.02:
+Move to the Next and Previous Object</h3>
+<h4 id="step-1-36">Step 1</h4>
+<p>To move to the next object at the same level in the pyramid, press
+NVDA+NumPad6 (desktop layout) or NVDA+Shift+Right Arrow (laptop layout).
+These are NVDA commands. To move to the previous object at the same
+level, press NVDA+NumPad4 (desktop) or NVDA+Shift+Left Arrow (laptop).
+NVDA announces each object as you land on it — its name, type, and
+sometimes its value. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA and press NumPad6 — the right arrow key on
+the numpad — to move to the next object. NumPad4 — the left arrow on the
+numpad — moves to the previous object.</li>
+<li>Laptop layout: hold NVDA and Shift together, then press Right Arrow
+for the next object, or Left Arrow for the previous object.</li>
+<li>NVDA announces the name, type, and sometimes the value of each
+object as you land on it — similar to what NVDA+Tab tells you about
+focused controls.</li>
+</ul>
+<h4 id="step-2-36">Step 2</h4>
+<p>Try it now. Hold your NVDA key and press NumPad6 (desktop) or
+Shift+Right Arrow (laptop) to move to the next object. NVDA will
+announce what it is. Then hold NVDA and press NumPad4 (desktop) or
+Shift+Left Arrow (laptop) to move to the previous object. Try moving
+through a few objects in any open application to get the feel of it.
+Press Enter here when you are ready to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: NumPad6 is the right arrow key on the numeric
+keypad. Hold NVDA and press it to move to the next object at the same
+level.</li>
+<li>Laptop layout: Hold NVDA and Shift at the same time, then press
+Right Arrow. Make sure you are pressing Shift — without it, the arrow
+keys control the review cursor instead.</li>
+<li>Open any familiar application like File Explorer or Notepad and
+explore its object pyramid. Move through a few objects to get a sense of
+how they are organized.</li>
+</ul>
+<h4 id="step-3-32">Step 3</h4>
+<p>Notice that NVDA announces the name, type, and sometimes the value of
+each object — whether or not it has keyboard focus. This is an important
+distinction. NVDA+Tab (NVDA command) reads the control that currently
+has keyboard focus. Object navigation reads whatever object the
+navigator is pointed at — they are two separate things. You can use
+NVDA+Tab any time to check where keyboard focus is, and use object
+navigation to explore beyond it. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA+Tab tells you about the focused control — the one your keyboard
+is currently on. Object navigation moves independently of keyboard
+focus.</li>
+<li>Even if an object cannot receive keyboard focus, object navigation
+can still reach it and read it aloud.</li>
+<li>You might use NVDA+Tab to check where you are, then use object
+navigation to explore nearby controls that are not reachable by
+Tab.</li>
+</ul>
+<h3 id="lesson-5.03-move-up-and-down-levels">Lesson 5.03: Move Up and
+Down Levels</h3>
+<h4 id="step-1-37">Step 1</h4>
+<p>To move up one level — to the container that holds the current object
+— press NVDA+NumPad8 (desktop layout) or NVDA+Shift+Up Arrow (laptop
+layout). These are NVDA commands. To move down one level — into the
+first object inside the current one — press NVDA+NumPad2 (desktop) or
+NVDA+Shift+Down Arrow (laptop). This is how you explore the pyramid in
+depth: climbing up to see the bigger picture, or descending to find
+controls nested inside a panel or toolbar. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: NumPad8 — the up arrow on the numpad — moves you up
+one level to the container. NumPad2 — the down arrow on the numpad —
+moves you down one level to the first object inside.</li>
+<li>Laptop layout: NVDA plus Shift plus Up Arrow moves up one level.
+NVDA plus Shift plus Down Arrow moves down one level.</li>
+<li>Moving up takes you to the container — the panel or toolbar that
+holds the current object. Moving down takes you into the first object
+inside the current container.</li>
+</ul>
+<h4 id="step-2-37">Step 2</h4>
+<p>Try it now. Hold NVDA and press NumPad8 (desktop) or Shift+Up Arrow
+(laptop) to move up one level. NVDA will announce the container. Then
+press NVDA+NumPad2 (desktop) or NVDA+Shift+Down Arrow (laptop) to move
+back down one level to the first object inside. Climbing up and down the
+levels helps you find controls that are grouped together inside panels
+or toolbars. Press Enter when you are ready to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: NumPad8 is the up arrow on the numpad. Hold NVDA and
+press it to move up one level.</li>
+<li>Laptop layout: Hold NVDA and Shift together, then press Up Arrow to
+move up one level. Hold NVDA and Shift, then press Down Arrow to move
+down one level.</li>
+<li>If you move up one level and want to go back in, press the move-down
+command to enter the level below. The first object down is the first
+item inside the current container.</li>
+</ul>
+<h3 id="lesson-5.04-read-the-current-navigator-object">Lesson 5.04: Read
+the Current Navigator Object</h3>
+<h4 id="step-1-38">Step 1</h4>
+<p>When you have navigated to an object, you can have NVDA read it.
+Press NVDA+NumPad5 (desktop layout) or NVDA+Shift+O (laptop layout) to
+hear the full description of the current navigator object. These are
+NVDA commands. The O key is in the top row of letters, between I and P.
+Press the command twice quickly to spell out the object name character
+by character. This is useful when the name is unfamiliar or abbreviated.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA and press NumPad5 — the center key on the
+numpad — to read the current navigator object.</li>
+<li>Laptop layout: hold NVDA and Shift, then press the letter O. It is
+in the top row of letters, between I and P.</li>
+<li>Press the command twice quickly to spell the object name one
+character at a time. Useful when the name is unfamiliar or
+abbreviated.</li>
+</ul>
+<h4 id="step-2-38">Step 2</h4>
+<p>Try it now. Navigate to any object using NVDA+NumPad6 (desktop) or
+NVDA+Shift+Right Arrow (laptop). Then press NVDA+NumPad5 (desktop) or
+NVDA+Shift+O (laptop) to hear the full description of that object. Press
+the command twice quickly to spell the name. When you are ready, press
+Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>First navigate to an object using the next-object command, then read
+it with NVDA+NumPad5 (desktop) or NVDA+Shift+O (laptop).</li>
+<li>Pressing the read command twice quickly spells the object name one
+character at a time — very useful for unfamiliar names or
+abbreviations.</li>
+<li>The O key for laptop layout is in the top row of letters, between I
+and P.</li>
+</ul>
+<h3 id="lesson-5.05-move-keyboard-focus-to-a-navigator-object">Lesson
+5.05: Move Keyboard Focus to a Navigator Object</h3>
+<h4 id="step-1-39">Step 1</h4>
+<p>Once you have used object navigation to find a control, you can move
+keyboard focus to it so you can interact with it normally. Press
+NVDA+Shift+NumPadMinus (desktop) or NVDA+Shift+BackSpace (laptop) to
+route focus to the current navigator object. These are NVDA commands. If
+the object can accept focus, your keyboard focus will move to it and you
+can then press Enter, Space, or type as normal. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA and Shift, then press the numpad minus key
+— top right of the numpad — to route keyboard focus to the current
+navigator object.</li>
+<li>Laptop layout: hold NVDA and Shift, then press Backspace — the large
+key above Enter on the right side of the keyboard.</li>
+<li>Not all objects can accept keyboard focus. If routing focus does not
+work, the object may be display-only — you can read it but not interact
+with it.</li>
+</ul>
+<h4 id="step-2-39">Step 2</h4>
+<p>There is also a reverse command: press NVDA+NumPadMinus (desktop) or
+NVDA+BackSpace (laptop) — without Shift — to move the navigator object
+to wherever your keyboard focus currently is. This is useful when you
+want to start exploring from where you already are in the program,
+rather than starting from the top of the pyramid. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: NVDA plus NumPadMinus (without Shift) moves the
+navigator to the currently focused control — a good starting point for
+object exploration.</li>
+<li>Laptop layout: NVDA plus Backspace (without Shift) does the same
+thing. Use this to sync the navigator with your current keyboard
+focus.</li>
+<li>Use this command at the start of an object navigation session to
+begin exploring from where you are rather than searching from the top of
+the pyramid.</li>
+</ul>
+<h4 id="step-3-33">Step 3</h4>
+<p>Object navigation takes practice. The best way to get comfortable is
+to maximize a familiar program — like Notepad or File Explorer — and
+spend a few minutes exploring its pyramid. Move across objects at the
+same level, go up to containers, come back down, and read each object as
+you go. Over time, you will build a mental picture of how programs are
+structured at every level. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Start with File Explorer — it has a well-structured pyramid with
+clearly named folders, toolbars, and panels. Good for practice.</li>
+<li>Notepad is another good practice environment. Its object pyramid is
+simple and predictable.</li>
+<li>Maximize the application window first (Windows+Up Arrow) so all
+objects are visible. Then explore — do not worry about memorizing all
+commands at once.</li>
+</ul>
+<h3 id="lesson-5.06-when-object-navigation-helps">Lesson 5.06: When
+Object Navigation Helps</h3>
+<h4 id="step-1-40">Step 1</h4>
+<p>Object navigation is most useful in three situations. First, when a
+program has controls that Tab cannot reach — some toolbars, custom
+panels, and application-specific controls only appear in the object
+pyramid. Second, when you need to read something on screen that is not
+focused — like a status bar showing progress or a notification area.
+Third, when you want to explore the structure of a new program before
+deciding how to interact with it. A key tip: always maximize the
+application window first. A maximized window gives the object navigator
+the fullest view of all available objects. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Status bars and progress indicators are common objects that Tab
+cannot reach. Object navigation lets you read them without any keyboard
+focus.</li>
+<li>Custom toolbars in older applications — media players, photo
+editors, and some office tools — often only respond to object
+navigation.</li>
+<li>Maximize first (Windows+Up Arrow), then navigate. You will find more
+objects and have fewer surprises.</li>
+</ul>
+<h4 id="step-2-40">Step 2</h4>
+<p>Most everyday tasks — email, web browsing, word processing — do not
+require object navigation. Tab, arrow keys, and browse mode cover almost
+everything. Object navigation is an advanced tool you reach for when the
+standard methods fall short. Knowing it is there means no control on any
+screen is truly out of reach. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>If Tab and browse mode get you through your daily work, that is
+completely normal. Object navigation is a specialist tool, not a daily
+necessity for most users.</li>
+<li>When a sighted helper says there is a button on screen but Tab
+cannot reach it, object navigation is your answer.</li>
+<li>As you gain experience, you will develop an instinct for when to
+switch to object navigation. Most new screen reader users rarely need it
+at first.</li>
+</ul>
+<h4 id="step-3-34">Step 3</h4>
+<p>You have completed the Object Navigation chapter! You now know how to
+move across objects at the same level, climb up to containers, descend
+into the level below, read any object, and route keyboard focus to it.
+When you are ready, press NVDA+Shift+C to open the lesson picker and
+continue to the next chapter: Customizing NVDA — where you will learn to
+adjust your keyboard layout and tune speech speed, pitch, voice, and
+volume. Press Enter to finish.</p>
+<p>Hints:</p>
+<ul>
+<li>The next chapter is Customizing NVDA. It covers how to adjust speech
+speed, pitch, voice, and keyboard layout — all without opening settings
+menus if you prefer.</li>
+<li>Object navigation quick reference — desktop: NumPad4/6 across same
+level, NumPad8/2 up and down levels, NumPad5 to read. Laptop:
+NVDA+Shift+Arrow, NVDA+Shift+O to read.</li>
+<li>NVDA Coach saves your progress automatically. All completed lessons
+are marked when you return.</li>
+</ul>
+<h2 id="chapter-6-customizing-nvda">Chapter 6: Customizing NVDA</h2>
+<h3 id="lesson-6.01-changing-your-keyboard-layout">Lesson 6.01: Changing
+Your Keyboard Layout</h3>
+<p><em>Learn how to adjust NVDA’s keyboard layout, speech rate, and
+voice to suit your preferences.</em></p>
+<h4 id="step-1-41">Step 1</h4>
+<p>NVDA supports two keyboard layouts: desktop and laptop. Desktop
+layout uses the numeric keypad on the right side of a full-size keyboard
+for many NVDA commands. Laptop layout uses NVDA plus letter keys
+instead, so you do not need a numpad. Most desktop computers use desktop
+layout by default. Most laptops use laptop layout. You can change this
+at any time in NVDA settings. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout relies on the numeric keypad — the block of number
+keys on the right side of a full-size keyboard. If your keyboard does
+not have a numpad, use laptop layout.</li>
+<li>Laptop layout replaces numpad commands with NVDA plus letter key
+combinations. Most laptop users find this more natural since they do not
+have a numpad.</li>
+<li>You can switch between layouts at any time without restarting NVDA.
+The change takes effect immediately after you save in Settings.</li>
+</ul>
+<h4 id="step-2-41">Step 2</h4>
+<p>To open NVDA settings, press NVDA+N (NVDA command) to open the NVDA
+menu. Then press P for Preferences, then S for Settings. You will hear
+NVDA announce the Settings dialog opening. The first category you land
+on may vary. Press Tab (Windows command) to move between settings
+categories or use the Arrow keys in the category list. Navigate to the
+Keyboard category to find the layout setting. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus N is an NVDA command — it opens the NVDA menu. P for
+Preferences, then S for Settings opens the main NVDA Settings
+dialog.</li>
+<li>Once the Settings dialog is open, you will be in a category list on
+the left. Use the Up and Down Arrow keys to move through categories, or
+press the first letter of a category name to jump to it.</li>
+<li>You can also use first-letter navigation — press K to jump straight
+to the Keyboard category, or S to jump to Speech.</li>
+</ul>
+<h4 id="step-3-35">Step 3</h4>
+<p>Inside the Keyboard settings, you will find a combo box labeled
+‘Keyboard layout’ with two options: Desktop and Laptop. Use the Up and
+Down Arrow keys (Windows commands) to choose the layout that matches
+your keyboard. Use Tab (Windows command) to move to the OK button and
+press Enter to save — the same Tab navigation you practiced in the Move
+Between Controls with Tab lesson in the Getting Started chapter. Your
+new layout takes effect immediately without restarting NVDA. Press Enter
+to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Once in the Keyboard category, press Tab to move to the Keyboard
+layout combo box. Use Up and Down Arrow to choose Desktop or
+Laptop.</li>
+<li>After choosing your layout, press Tab to reach the OK button and
+press Enter to save. This is the same Tab navigation from the Getting
+Started chapter.</li>
+<li>If you press Escape instead of OK, your changes will be discarded
+and the layout will remain unchanged.</li>
+</ul>
+<h4 id="step-4-18">Step 4</h4>
+<p>A note on NVDA Coach lessons: the lesson instructions in this course
+mention both desktop and laptop key alternatives when they differ. If
+you have changed your layout to laptop, use the laptop key combinations
+shown. If you are unsure which layout is active, open NVDA Settings and
+check the Keyboard category. Press Enter to finish this lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>Throughout NVDA Coach, desktop layout commands appear first,
+followed by laptop layout commands in parentheses. Use whichever matches
+your keyboard.</li>
+<li>If a command does not seem to work, check your keyboard layout
+setting. Pressing desktop layout keys when NVDA is set to laptop layout
+— or vice versa — will not produce the expected result.</li>
+<li>Not sure which layout you are using? Press NVDA plus 1 to turn on
+Input Help, press a numpad key, and listen to what NVDA says. Then press
+NVDA plus 1 again to turn Input Help off.</li>
+</ul>
+<h3 id="lesson-6.02-the-synth-settings-ring">Lesson 6.02: The Synth
+Settings Ring</h3>
+<h4 id="step-1-42">Step 1</h4>
+<p>NVDA includes a powerful on-the-fly speech control system called the
+synth settings ring. It lets you adjust speech properties — such as
+rate, pitch, volume, voice, and variant — without ever opening a
+settings dialog. Think of it as a dial you can spin through different
+settings and then turn up or down. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>The synth settings ring lets you adjust speech on the fly — while
+you are in the middle of anything — without opening any dialog.</li>
+<li>Available settings in the ring include: rate (speed), pitch, volume,
+voice, and variant. You navigate between them and then adjust each
+one.</li>
+<li>Think of it as a two-step process: first pick the setting you want
+(like rate), then turn it up or down.</li>
+</ul>
+<h4 id="step-2-42">Step 2</h4>
+<p>The synth settings ring has two types of movement. First, you move
+between settings to choose which property you want to adjust — for
+example, moving from rate to pitch to volume. Second, once you are on
+the setting you want, you increase or decrease its value. These are two
+separate sets of keys. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Step one: navigate between settings using the left and right
+commands. Step two: adjust the value using the up and down commands. Two
+separate sets of keys.</li>
+<li>NVDA announces the setting name when you navigate to it — for
+example ‘Rate’ or ‘Pitch’. Then it announces the value as you adjust —
+for example ‘Rate 60’.</li>
+<li>You must be on the right setting before you can adjust it. If you
+press the up or down command but hear the wrong setting change, navigate
+left or right first to get to the setting you want.</li>
+</ul>
+<h4 id="step-3-36">Step 3</h4>
+<p>All synth settings ring commands are NVDA commands — they require
+your NVDA key and only work while NVDA is running. To move to the next
+setting in the ring, press NVDA+Control+Right Arrow on desktop layout,
+or NVDA+Shift+Control+Right Arrow on laptop layout. To move to the
+previous setting, press NVDA+Control+Left Arrow on desktop, or
+NVDA+Shift+Control+Left Arrow on laptop. NVDA will announce the name of
+the setting you land on, such as ‘Rate’ or ‘Pitch’. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA and Control together, then press Right
+Arrow to move to the next setting. Left Arrow moves to the previous
+setting.</li>
+<li>Laptop layout: hold NVDA, Shift, and Control together, then press
+Right Arrow for the next setting or Left Arrow for the previous
+setting.</li>
+<li>NVDA announces the setting name as you land on it — for example
+‘Rate’, ‘Pitch’, ‘Volume’, ‘Voice’, or ‘Variant’. Stop when you hear the
+one you want to adjust.</li>
+</ul>
+<h4 id="step-4-19">Step 4</h4>
+<p>Once you are on the setting you want to change, press NVDA+Control+Up
+Arrow (desktop) or NVDA+Shift+Control+Up Arrow (laptop) to increase the
+value. Press NVDA+Control+Down Arrow (desktop) or
+NVDA+Shift+Control+Down Arrow (laptop) to decrease it. NVDA announces
+the new value as you adjust. For example, if you are on Rate and press
+the increase key, you will hear something like ‘Rate 60’. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: hold NVDA and Control, then press Up Arrow to
+increase the current setting’s value. Down Arrow decreases it.</li>
+<li>Laptop layout: hold NVDA, Shift, and Control, then press Up Arrow to
+increase or Down Arrow to decrease.</li>
+<li>NVDA announces the new value after each adjustment — for example
+‘Rate 75’. Keep pressing to continue adjusting in the same
+direction.</li>
+</ul>
+<h4 id="step-5-7">Step 5</h4>
+<p>If you want to make larger adjustments more quickly, use
+NVDA+Control+PageUp (desktop) or NVDA+Shift+Control+PageUp (laptop) to
+increase in bigger steps, and NVDA+Control+PageDown (desktop) or
+NVDA+Shift+Control+PageDown (laptop) to decrease in bigger steps. This
+is useful when you want to make a dramatic change without pressing the
+adjustment key many times in a row. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Desktop layout: NVDA plus Control plus Page Up increases in larger
+steps. NVDA plus Control plus Page Down decreases in larger steps.</li>
+<li>Laptop layout: NVDA plus Shift plus Control plus Page Up for larger
+increase. NVDA plus Shift plus Control plus Page Down for larger
+decrease.</li>
+<li>Page Up and Page Down are usually in the cluster of keys above the
+arrow keys, near Home and End.</li>
+</ul>
+<h4 id="step-6-3">Step 6</h4>
+<p>Try it now. Press NVDA+Control+Right Arrow (desktop) or
+NVDA+Shift+Control+Right Arrow (laptop) a few times to cycle through the
+available settings — you will hear Rate, Pitch, Volume, Voice, and
+Variant announced as you move. Then stop on Rate, and press the increase
+or decrease keys to change it. Notice how NVDA speaks in real time at
+the new speed. Press Enter when you are ready to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Press the navigate-right command a few times to cycle through all
+available settings. You will hear Rate, Pitch, Volume, Voice, and
+Variant in order.</li>
+<li>Stop when you hear ‘Rate’. Then press the increase command a few
+times and notice NVDA speaking faster in real time with each press.</li>
+<li>Decrease the rate back toward a comfortable speed when you are done.
+NVDA announces each new value so you can dial it in precisely.</li>
+</ul>
+<h4 id="step-7-2">Step 7</h4>
+<p>For more precise control, you can adjust speech settings inside the
+NVDA Settings dialog. Press NVDA+N to open the NVDA menu, then P for
+Preferences, then S for Settings. The Settings dialog opens with a
+category list on the left. You can move through categories with the Up
+and Down Arrow keys, or use first-letter navigation — just press the
+first letter of the category name to jump to it. For example, press S to
+jump straight to Speech. Once you are in the Speech category, press Tab
+to move forward through sliders and combo boxes for rate, pitch, volume,
+inflection, voice, and synthesizer. Press Shift+Tab to move backward. If
+you need a refresher on Tab navigation, that was covered in the Move
+Between Controls with Tab lesson in the Getting Started chapter. Changes
+made here are saved when you press OK or Apply. Press Enter to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Open Settings with NVDA plus N, P for Preferences, S for Settings.
+Then press S in the category list to jump straight to the Speech
+category using first-letter navigation.</li>
+<li>Inside the Speech category, Tab moves forward through controls: rate
+slider, pitch slider, volume slider, voice combo box, and more. Shift
+plus Tab moves backward.</li>
+<li>Sliders in the Speech settings respond to Left and Right Arrow keys
+to adjust their values. NVDA announces the value as you move the
+slider.</li>
+</ul>
+<h4 id="step-8">Step 8</h4>
+<p>NVDA includes the eSpeak NG synthesizer by default, which supports
+many languages and voices. If you have installed additional synthesizers
+— such as Windows OneCore voices or third-party options — you can switch
+between them in the Speech settings under the Synthesizer combo box.
+Each synthesizer may offer different voice options and quality levels.
+Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>eSpeak NG is installed with NVDA and works offline. Windows OneCore
+voices use Microsoft’s built-in voices and offer more natural-sounding
+speech.</li>
+<li>To switch synthesizers, open NVDA Settings, go to the Speech
+category, and find the Synthesizer combo box. Use arrow keys to choose a
+different synthesizer.</li>
+<li>After switching synthesizers, the Voice combo box will update to
+show the voices available for the new synthesizer. Try a few to find the
+one you prefer.</li>
+</ul>
+<h4 id="step-9">Step 9</h4>
+<p>Once you have found speech settings you are happy with, NVDA saves
+them automatically when you close the settings dialog with OK. Your
+preferred rate, voice, and pitch will be active every time NVDA starts.
+If you ever want to experiment and return to a known state, note your
+settings before changing them, or press NVDA+Ctrl+R once to revert to
+your last saved configuration. Press Enter to finish this lesson.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA saves all speech settings when you press OK in the Settings
+dialog. Your preferences are restored every time NVDA starts.</li>
+<li>The Speech category has no reset button. To put every NVDA setting
+back to how it shipped, press NVDA+Ctrl+R three times: once reverts to
+your last saved configuration, and three times restores factory
+defaults.</li>
+<li>You can combine the synth settings ring for quick on-the-fly
+adjustments with the Settings dialog for precise fine-tuning. Both
+methods save your preferences.</li>
+</ul>
+<h3 id="lesson-6.03-change-the-audio-output-device">Lesson 6.03: Change
+the Audio Output Device</h3>
+<h4 id="step-1-43">Step 1</h4>
+<p>When you connect headphones, external speakers, or an HDMI monitor,
+Windows may not automatically route NVDA speech to the device you want.
+NVDA+Ctrl+U opens the Audio category of the NVDA Settings dialog, where
+the output device is one of the settings you can change. This is
+especially useful when switching between headphones and speakers while
+in the middle of a task. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus Control plus U is an NVDA command that opens the Audio
+category of the NVDA Settings dialog, where Output device is one of the
+settings.</li>
+<li>Tab to the Output device combo box, then use the Up and Down Arrow
+keys to hear each device. Tab to OK and press Enter to apply, or press
+Escape to leave it unchanged.</li>
+<li>The change takes effect immediately — you will hear NVDA begin
+speaking through the selected device right away. No restart is
+needed.</li>
+</ul>
+<h4 id="step-2-43">Step 2</h4>
+<p>Try it now. Press NVDA+Ctrl+U. The Audio category of NVDA Settings
+opens, with focus on the Output device combo box. Before you change
+anything, listen to the device NVDA reads out and remember it, because
+that is the one that currently works. Arrow through the list to hear the
+others. Then press Escape to leave everything as it was. Only pick a
+different device when you are actually plugging in headphones or
+speakers: if you choose one that makes no sound, NVDA goes silent and
+you will not be able to hear your way back. If that happens, press
+Ctrl+Alt+N to restart NVDA. Press Enter here when you are ready to
+continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold NVDA and Control together, then press U. The Audio category of
+NVDA Settings opens immediately.</li>
+<li>Arrow keys move through the Output device list. NVDA announces each
+device name as you land on it. Escape leaves the dialog without changing
+anything, which is the safe way out.</li>
+<li>If you only have one audio device, the list shows one entry. Press
+Escape to close NVDA Settings if there is nothing you want to
+change.</li>
+</ul>
+<h3 id="lesson-6.04-control-audio-ducking">Lesson 6.04: Control Audio
+Ducking</h3>
+<h4 id="step-1-44">Step 1</h4>
+<p>Audio ducking controls what happens to other sounds on your computer
+when NVDA speaks. When ducking is active, NVDA automatically lowers the
+volume of music, videos, or other audio while it is talking, then
+restores the volume when it finishes. This prevents NVDA speech from
+competing with other sounds. Press NVDA+Shift+D to cycle through the
+three ducking modes: No ducking, Duck when outputting speech and sounds,
+and Always duck. This command only works when NVDA has been installed on
+the computer: on a portable copy it does nothing, and that is expected
+rather than a fault with your sound card. Press Enter to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>NVDA plus Shift plus D is an NVDA command. Each press cycles to the
+next ducking mode and NVDA announces the new mode by name.</li>
+<li>The three modes are: No ducking (other audio plays at full volume),
+Duck when outputting speech and sounds (audio lowers only while NVDA is
+talking), and Always duck (audio stays lowered even when NVDA is
+silent).</li>
+<li>Audio ducking is only available when NVDA has been installed. If you
+are running NVDA from a USB drive, NVDA+Shift+D does nothing at all. On
+an installed copy, if you hear no difference between modes, your audio
+driver may not support ducking.</li>
+</ul>
+<h4 id="step-2-44">Step 2</h4>
+<p>Try it now. Open a music player or video and let it play. Then press
+NVDA+Shift+D once and listen: if ducking is now active, you will notice
+the music drop in volume when NVDA speaks. Press NVDA+Shift+D again to
+hear NVDA announce the next mode. Cycle through all three to find the
+setting that works best for your workflow. Press Enter here when you are
+ready to continue.</p>
+<p>Hints:</p>
+<ul>
+<li>Hold NVDA and Shift together, then press D. NVDA announces the new
+ducking mode immediately.</li>
+<li>Start with music or a video playing so you can clearly hear whether
+ducking is working. The volume drop should be noticeable when NVDA
+begins to speak.</li>
+<li>If no mode changes anything, check first whether this is a portable
+copy of NVDA, because ducking needs an installed copy. On an installed
+copy it is usually the audio driver, which is common with some USB
+headsets and virtual audio devices.</li>
+</ul>
+<h4 id="step-3-37">Step 3</h4>
+<p>Your preferred ducking mode is saved automatically and will be active
+every time NVDA starts. Most users prefer Duck when outputting speech
+and sounds — it keeps audio at full volume when NVDA is quiet and only
+lowers it when speech begins, so you can follow both the audio content
+and NVDA announcements without one drowning out the other. Press Enter
+to finish this lesson and complete the Customizing NVDA chapter.</p>
+<p>Hints:</p>
+<ul>
+<li>Duck when outputting speech and sounds is the most popular mode —
+audio plays normally when NVDA is quiet and drops only when NVDA
+speaks.</li>
+<li>Always Duck is useful if you find audio distracting even between
+NVDA announcements, such as when using NVDA in a noisy or media-heavy
+environment.</li>
+<li>No Ducking is the default. If you prefer all audio at full volume at
+all times and want to hear NVDA and other sounds simultaneously at full
+level, this mode leaves everything unchanged.</li>
+</ul>
+</main>
+</body>
+</html>
