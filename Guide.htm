@@ -1,0 +1,1587 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.13" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Guide help</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#guide-help" id="toc-guide-help">Guide help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#about-guide" id="toc-about-guide">About Guide</a></li>
+<li><a href="#questions-people-ask"
+id="toc-questions-people-ask">Questions people ask</a></li>
+<li><a href="#releases-and-news" id="toc-releases-and-news">Releases and
+news</a></li>
+<li><a href="#using-guide" id="toc-using-guide">Using Guide</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="guide-help">Guide help</h1>
+<p>This guide holds what the makers of Guide publish about it, gathered
+from guideinteraction.com on 14 November 2026. Guide is a Windows
+program for people who are blind or have low vision: you tell it, by
+voice or keyboard, what you want done on the screen, and it describes
+what is there and clicks, types or plays for you. It is meant to work
+beside a screen reader such as JAWS or NVDA, not to replace one. It is a
+paid subscription with a free trial.</p>
+<p>The site is small, so this guide is too. The support pages are the
+help itself: settings, voices, keyboard shortcuts, the two assist modes
+and what to do when Guide cannot act in a program. The questions on
+Guide’s front page are articles of their own. The release posts are kept
+in their own category, because they are where Guide says what each
+version added.</p>
+<p>This is a different product from the recruiting service also called
+Guide.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>About Guide
+<ul>
+<li><a href="#about-the-company">About the company</a></li>
+<li><a href="#guide-for-organizations">Guide for organizations</a></li>
+<li><a href="#what-guide-is">What Guide is</a></li>
+</ul></li>
+<li>Questions people ask
+<ul>
+<li><a href="#can-i-download-guide-right-now">Can I download Guide right
+now?</a></li>
+<li><a href="#can-i-still-use-my-existing-screen-reader-with-guide">Can
+I still use my existing screen reader with Guide?</a></li>
+<li><a href="#do-i-need-special-hardware-or-additional-software">Do I
+need special hardware or additional software?</a></li>
+<li><a
+href="#do-i-need-to-enter-my-credit-card-to-start-the-free-trial">Do I
+need to enter my credit card to start the free trial?</a></li>
+<li><a href="#how-do-i-cancel-my-subscription">How do I cancel my
+subscription?</a></li>
+<li><a href="#how-do-i-report-issues-or-request-new-features">How do I
+report issues or request new features?</a></li>
+<li><a
+href="#how-is-guide-different-from-a-traditional-screen-reader">How is
+Guide different from a traditional screen reader?</a></li>
+<li><a href="#how-much-does-guide-cost">How much does Guide
+cost?</a></li>
+<li><a href="#is-guide-safe-to-use-what-does-it-have-access-to">Is Guide
+safe to use? What does it have access to?</a></li>
+<li><a href="#what-countries-is-guide-available-in">What countries is
+Guide available in?</a></li>
+<li><a href="#what-is-a-guide-assist">What is a Guide assist?</a></li>
+<li><a href="#what-is-guide">What is Guide?</a></li>
+<li><a href="#what-is-guides-mission">What is Guide’s mission?</a></li>
+<li><a href="#what-kinds-of-use-cases-is-guide-best-suited-for">What
+kinds of use cases is Guide best suited for?</a></li>
+<li><a href="#what-languages-does-guide-support">What languages does
+Guide support?</a></li>
+<li><a href="#what-should-i-not-use-guide-for">What should I
+<em>not</em> use Guide for?</a></li>
+</ul></li>
+<li>Releases and news
+<ul>
+<li><a href="#guide-just-got-smarter">Guide Just Got Smarter</a></li>
+<li><a href="#guide-just-got-smarter-again">Guide Just Got Smarter
+Again</a></li>
+<li><a href="#guide-now-speaks-32-languages">Guide Now Speaks 32
+Languages</a></li>
+<li><a href="#guide-now-supports-windows-speech">Guide Now Supports
+Windows Speech</a></li>
+<li><a href="#guide-on-the-at-banter-podcast">Guide on the AT Banter
+Podcast</a></li>
+<li><a href="#guide-on-the-carrie-on-accessibility-podcast">Guide on the
+Carrie on Accessibility Podcast</a></li>
+<li><a href="#introducing-guide-lite">Introducing Guide Lite</a></li>
+<li><a href="#introducing-smart-and-expert-modes">Introducing Smart and
+Expert Modes</a></li>
+<li><a
+href="#next-step-for-guide-sustainable-plans-for-a-more-accessible-future">Next
+Step for Guide: Sustainable Plans for a More Accessible Future</a></li>
+<li><a href="#your-recent-prompts-are-now-one-click-away">Your Recent
+Prompts Are Now One Click Away</a></li>
+</ul></li>
+<li>Using Guide
+<ul>
+<li><a href="#assist-modes-in-guide-smart-and-expert">Assist Modes in
+Guide: Smart and Expert</a></li>
+<li><a href="#chat-options-in-guide">Chat Options in Guide</a></li>
+<li><a href="#getting-started-with-guide">Getting Started with
+Guide</a></li>
+<li><a
+href="#guide-not-working-in-a-specific-app-try-running-as-administrator">Guide
+not working in a specific app? Try running as administrator</a></li>
+<li><a href="#the-guide-update-log">The Guide Update Log</a></li>
+<li><a href="#keyboard-shortcuts-come-to-guide">Keyboard shortcuts come
+to Guide</a></li>
+<li><a href="#support">Support</a></li>
+<li><a href="#voice-options-in-guide">Voice Options in Guide</a></li>
+<li><a href="#what-are-some-use-cases-that-guide-can-help-with">What are
+some use-cases that Guide can help with?</a></li>
+</ul></li>
+</ul>
+<h2 id="about-guide">About Guide</h2>
+<h3 id="about-the-company">About the company</h3>
+<p>Our mission is to make the digital world easy to navigate for every
+single person on the planet.</p>
+<p>Guide is a Windows assistant built by a Better Future DRIVENxDesign
+award winning team that contributed to the Xbox Adaptive Controller at
+Microsoft, as well as accessible onboarding experiences at Dropbox.
+Guide was started when the founders heard that 97% of the top million
+websites and countless desktop apps still do not meet WCAG Compliance
+and they wanted to help do something about it. The Guide team is
+passionate about making the digital world easier to navigate for every
+single person on the planet.</p>
+<p>Andrew Gillies</p>
+<p>CEO</p>
+<p>Nick Morris</p>
+<p>CTO</p>
+<h3 id="guide-for-organizations">Guide for organizations</h3>
+<h4 id="guide-for-organizations-guide-for-organizations">Guide for
+Organizations</h4>
+<p>Guide helps people who are blind or have low vision navigate
+inaccessible websites and Windows applications. Users type what they
+want to do, and Guide handles the navigation—narrating each step along
+the way.</p>
+<p><a
+href="mailto:organizations@guideinteraction.com?subject=Guide%20for%20Organizations%20Inquiry">Contact
+Us</a></p>
+<h4 id="the-accessibility-gap-is-real">The accessibility gap is
+real</h4>
+<p>97% of the top million websites fail to meet WCAG compliance</p>
+<p>Your organization likely uses dozens of applications—learning
+platforms, HR systems, internal tools—that create barriers for users who
+rely on screen readers. Guide bridges that gap, giving users
+independence without waiting for vendors to fix their software.</p>
+<h4 id="built-for-your-environment">Built for your environment</h4>
+<h5 id="higher-education">Higher Education</h5>
+<p>Support students with disabilities in navigating any application they
+need to get their work done—whether campus systems, third-party tools,
+or inaccessible websites.</p>
+<p>Common deployments:</p>
+<ul>
+<li>Disability Services offices</li>
+<li>IT Accessibility teams</li>
+<li>Student success programs</li>
+</ul>
+<h5 id="enterprise">Enterprise</h5>
+<p>Help employees who are blind or have low vision get their job done
+independently—without waiting for IT tickets or sighted assistance.</p>
+<p>Common deployments:</p>
+<ul>
+<li>Workplace accommodations</li>
+<li>HR accessibility initiatives</li>
+<li>DEI programs</li>
+</ul>
+<h5 id="non-profits">Non-Profits</h5>
+<p>Equip the people you serve with tools to navigate digital barriers.
+Guide helps organizations focused on blindness and low vision extend
+their impact.</p>
+<p>Common deployments:</p>
+<ul>
+<li>Blindness organizations</li>
+<li>Vocational rehabilitation</li>
+<li>Assistive technology training centers</li>
+</ul>
+<h4 id="enterprise-ready">Enterprise-ready</h4>
+<p>Everything you need to deploy</p>
+<p>Privacy Focused</p>
+<p>Guide does not store screenshots or user data. Images are sent to our
+AI provider for processing only and are not retained.</p>
+<p>Dedicated Support</p>
+<p>Priority support and onboarding assistance.</p>
+<p>Training Sessions</p>
+<p>Training sessions to help your team get started quickly.</p>
+<p>Flexible Deployment</p>
+<p>Start with a small pilot and expand as needed. No upfront long-term
+commitments required.</p>
+<h5 id="independence-matters">Independence matters</h5>
+<p>When someone can complete a task on their own, it changes
+everything—their confidence, their productivity, and how they’re
+perceived at work or school.</p>
+<p>Guide gives people the autonomy to navigate digital barriers without
+asking for help every time they encounter an inaccessible button or
+form.</p>
+<h4 id="simple-deployment">Simple deployment</h4>
+<p>Get started in three steps</p>
+<p>1</p>
+<p>Pilot</p>
+<p>Start with a small group to evaluate Guide in your environment. No
+commitment required.</p>
+<p>2</p>
+<p>Deploy</p>
+<p>Roll out to your organization with volume licensing and dedicated
+onboarding support.</p>
+<p>3</p>
+<p>Support</p>
+<p>Training resources and priority technical support.</p>
+<h4 id="ready-to-get-started">Ready to get started?</h4>
+<p>Whether you’re exploring options or ready to launch a pilot, we’d
+love to learn about your organization’s needs and show you how Guide can
+help.</p>
+<p><a
+href="mailto:organizations@guideinteraction.com?subject=Guide%20for%20Organizations%20Inquiry">Contact
+Us</a></p>
+<p>organizations@guideinteraction.com</p>
+<h3 id="what-guide-is">What Guide is</h3>
+<h4 id="inaccessible-doesnt-have-to-mean-undoable">Inaccessible doesn’t
+have to mean undoable</h4>
+<p>Welcome to Guide—an AI-assisted Windows desktop companion that helps
+people with blindness or low vision navigate inaccessible content with
+ease.</p>
+<p><a
+href="https://guideupdates.blob.core.windows.net/appupdates/Guide-Setup-2.4.0.exe">Download
+Windows app</a></p>
+<p>Free 7-day trial, then plans start at $8/month after your trial
+ends.</p>
+<h4 id="live-independently.-navigate-confidently.">Live independently.
+Navigate confidently.</h4>
+<p>Take on any website — your way</p>
+<p>Don’t let bad design block you. Guide helps you browse, click, and
+move through inaccessible pages with confidence — no workarounds, no
+stress.</p>
+<p>Feel in control of your digital day</p>
+<p>Whether it’s shopping, reading PDFs, watching videos, or
+double-checking colors — Guide helps you confirm, act, and move forward
+independently.</p>
+<p>No more waiting — Guide is ready when you are</p>
+<p>Unlike services that require scheduling or wait times, Guide is
+instant. Get help the moment you need it, no calls, no delays.</p>
+<h4 id="what-our-community-says">What Our Community Says</h4>
+<p>Showing testimonials 1 to 3 of 10</p>
+<p>“Guide is amazing! I’ve been using an audio broadcast app for years
+which was not accessible with JAWS. Now, with guide I can start and end
+a stream with no sided assistance!”</p>
+<p>George, Guide User</p>
+<p>“I’ve used Guide today to help with inaccessible comboboxes on
+Indeed, LinkedIn and something called Jobvite. These should of course be
+accessible, but I was happy to have a work-around. I used it so much I
+finally subscribed.”</p>
+<p>Darrell, Guide User</p>
+<p>“Random task. Opened up Steam after work to play mk11, and my client
+language was in Chinese. I opened Guide and asked it to change the
+language back to English. Did it in about 30 seconds…. Pretty sweet!!!
+Bravo.”</p>
+<p>Tony, Guide User</p>
+<h4 id="watch-a-demo">Watch a demo</h4>
+<p>Let’s navigate an inaccessible site with Guide</p>
+<p><a href="https://youtu.be/P3aqVbKWz4A">Open video on YouTube</a></p>
+<h2 id="questions-people-ask">Questions people ask</h2>
+<h3 id="can-i-download-guide-right-now">Can I download Guide right
+now?</h3>
+<p>Yes, you can download Guide from this page. Additionally, we release
+regular updates to improve performance and refine Guide’s responses.</p>
+<h3 id="can-i-still-use-my-existing-screen-reader-with-guide">Can I
+still use my existing screen reader with Guide?</h3>
+<p>Absolutely. Guide is designed to complement, not replace, existing
+assistive tools. You can use it alongside JAWS, NVDA, or other screen
+readers.</p>
+<h3 id="do-i-need-special-hardware-or-additional-software">Do I need
+special hardware or additional software?</h3>
+<p>Guide runs on Windows 10 or later. You do not need any special
+hardware beyond a standard computer.</p>
+<h3 id="do-i-need-to-enter-my-credit-card-to-start-the-free-trial">Do I
+need to enter my credit card to start the free trial?</h3>
+<p>Yes — you’ll be asked to enter your credit card when starting the
+free trial. But you won’t be charged until the 7-day trial ends. You can
+cancel anytime before then and won’t be billed.</p>
+<h3 id="how-do-i-cancel-my-subscription">How do I cancel my
+subscription?</h3>
+<p>You can cancel your subscription at any time through the Guide app.
+Navigate to the Account tab in the tab control, and from there click
+Manage Subscription. This will open a secure Stripe web page where you
+can then click Cancel Subscription. Your access will continue until the
+end of the current billing or free trial cycle. If you hit the assist
+limit in the free trial, your plan has been canceled and you will not be
+charged. If all else fails, email support@guideinteraction.com from the
+email address you used to sign up, and we’ll help you out.</p>
+<h3 id="how-do-i-report-issues-or-request-new-features">How do I report
+issues or request new features?</h3>
+<p>We love feedback! You can submit bug reports or feature suggestions
+by contacting our support team. We regularly incorporate user requests
+into our roadmap to ensure Guide evolves with the community’s needs.</p>
+<h3 id="how-is-guide-different-from-a-traditional-screen-reader">How is
+Guide different from a traditional screen reader?</h3>
+<p>Guide is not a screen reader in the traditional sense. Guide uses AI
+to identify and describe elements contextually. It can take actions such
+as clicking buttons or playing a video with simple commands, making
+navigation of inaccessible content easier.</p>
+<h3 id="how-much-does-guide-cost">How much does Guide cost?</h3>
+<p>Guide is free to try for 7 days, with 30 assists in that timeframe.
+After your trial, you can choose from three plans: Guide Lite at
+$8/month for 15 assists (great for occasional use), Guide Standard at
+$15/month for 30 assists, or Guide Plus at $25/month for 100 assists.
+Standard and Plus also include Expert mode, a more powerful AI model for
+complex, multi-step tasks.</p>
+<h3 id="is-guide-safe-to-use-what-does-it-have-access-to">Is Guide safe
+to use? What does it have access to?</h3>
+<p>Yes, security and transparency are top priorities for Guide. Because
+Guide helps navigate inaccessible content, it uses AI and automation to
+take screenshots and simulate mouse and keyboard actions on your Windows
+computer.</p>
+<p>Screenshots are securely sent to Anthropic’s Claude, an advanced AI
+model, to interpret what’s on your screen and suggest or perform
+actions. These screenshots are not stored or used for training, and
+Guide does not access your files, record audio, or monitor activity
+outside of what’s visually on screen.</p>
+<h3 id="what-countries-is-guide-available-in">What countries is Guide
+available in?</h3>
+<p>Guide works worldwide, but our services are based in the United
+States so users outside North America may experience higher latency or
+voice choppiness. Many people find it runs just fine for their
+needs.</p>
+<h3 id="what-is-a-guide-assist">What is a Guide assist?</h3>
+<p>An assist is what we call Guide performing a command or answering a
+question for you. For example, if you ask Guide to “Open Chrome and go
+to cnn.com,” that counts as one assist. If you then say, “Read the
+headlines,” that’s another assist. Each time Guide helps you with a task
+or provides information, it uses an assist from your monthly
+allowance.</p>
+<h3 id="what-is-guide">What is Guide?</h3>
+<p>Guide is a desktop application designed for individuals with
+blindness or low vision. It leverages AI to describe on-screen content
+and execute commands through voice or keyboard shortcuts. Our goal is to
+simplify computer use and unlock access to digital tools for
+everyone.</p>
+<h3 id="what-is-guides-mission">What is Guide’s mission?</h3>
+<p>Guide exists to make computers more accessible and empower people
+with blindness or low vision to be more independent. We believe everyone
+deserves the same opportunities to work, learn, and connect in a digital
+world.</p>
+<h3 id="what-kinds-of-use-cases-is-guide-best-suited-for">What kinds of
+use cases is Guide best suited for?</h3>
+<p>Guide can help with a variety of tasks. It is generally well suited
+to targetted actions in inaccessible content or software, rather than
+complete workflows. Some real world examples from our community
+include:</p>
+<ul>
+<li>Switching language from Chinese to English in Steam when it somehow
+got changed</li>
+<li>Reading a restaurant menu from an inaccessible PDF</li>
+<li>Entering answers in inaccessible text fields on an online learning
+platform</li>
+<li>Clicking on a non-labeled Play or Unmute button in a video
+player</li>
+<li>Bypassing keyboard traps in inaccessible websites</li>
+</ul>
+<h3 id="what-languages-does-guide-support">What languages does Guide
+support?</h3>
+<p>The Guide app interface is in English, but Guide can respond to you
+in 32 languages. Language support varies by tier:</p>
+<p>Best experience: English, Spanish, French, German, Portuguese,
+Italian, Arabic, Chinese (Mandarin), Japanese, Korean, Hindi, and
+Indonesian.</p>
+<p>Supported, but may vary: Dutch, Swedish, Norwegian, Danish, Finnish,
+Polish, Czech, Slovak, Romanian, Hungarian, Bulgarian, Croatian, Greek,
+Turkish, Russian, Ukrainian, Malay, Vietnamese, and Filipino.</p>
+<p>Experimental: Tamil.</p>
+<p>Guide can speak all listed languages. Understanding and computer
+control work best in the “Best experience” group.</p>
+<h3 id="what-should-i-not-use-guide-for">What should I <em>not</em> use
+Guide for?</h3>
+<p>Guide is designed to help with accessibility challenges, not replace
+human judgment or handle sensitive tasks.</p>
+<p>Avoid using Guide for:</p>
+<ul>
+<li>Entering passwords or sensitive personal information</li>
+<li>Submitting financial transactions or signing legal agreements</li>
+<li>Browsing secure medical, banking, or government portals</li>
+<li>Running unattended or automating workflows</li>
+<li>While using any software or website you do not trust Treat Guide as
+a helpful assistant, not a fully autonomous system.</li>
+</ul>
+<h2 id="releases-and-news">Releases and news</h2>
+<h3 id="guide-just-got-smarter">Guide Just Got Smarter</h3>
+<p>October 26, 2025</p>
+<h4 id="guide-just-got-smarter-guide-just-got-smarter">Guide Just Got
+Smarter</h4>
+<p>Guide 2.2.1 features an upgraded AI assistant powered by Anthropic’s
+Claude 4.5, improving Windows computer accessibility and automation with
+45% better performance on industry benchmarks.</p>
+<p>We’ve upgraded Guide, our AI-powered Windows computer control
+assistant, to leverage Claude 4.5—a new AI model from Anthropic that
+shows over 45% higher performance on industry benchmarks. That means
+more successful keyboard and mouse commands, smarter reasoning, and
+better correction when something doesn’t work.</p>
+<h5 id="whats-new-in-version-2.2.1">What’s New in Version 2.2.1</h5>
+<p>Guide now runs on Anthropic’s Claude 4.5 AI model, significantly
+improving how it understands and executes your commands. This upgrade
+brings meaningful improvements to computer accessibility and
+automation:</p>
+<ul>
+<li>More successful keyboard and mouse commands - Better accuracy in
+understanding what you want to do, whether you’re navigating complex
+applications or automating repetitive tasks</li>
+<li>Smarter reasoning - Improved ability to figure out the right steps
+to accomplish your tasks, making Guide a more capable AI assistant</li>
+<li>Better error correction - When something doesn’t work as expected,
+Guide can now better understand what went wrong and try alternative
+approaches to complete your request</li>
+</ul>
+<h5 id="why-this-matters-for-accessibility">Why This Matters for
+Accessibility</h5>
+<p>This AI model upgrade makes Guide more reliable as an assistive
+technology tool for Windows users. The improved performance means fewer
+failed commands and less frustration when controlling your Windows
+computer with natural language. Whether you’re using Guide for
+accessibility needs or productivity automation, you’ll notice the
+difference in how it handles complex workflows.</p>
+<h5 id="how-to-update">How to Update</h5>
+<p>Update to the latest version 2.2.1 by using Guide - it will download
+automatically while the app is open, and ask you to restart once the
+update is finished.</p>
+<p>No manual downloads or complicated installation steps required. Just
+keep Guide running, and you’ll be prompted when the update is ready to
+install.</p>
+<p>Thank you for being part of our community and helping us make
+computers easier for everyone to use. As always, please send any
+feedback you have.</p>
+<p>Andrew Co-Founder, Guide</p>
+<h3 id="guide-just-got-smarter-again">Guide Just Got Smarter Again</h3>
+<p>February 22, 2026</p>
+<h4 id="guide-just-got-smarter-again-guide-just-got-smarter-again">Guide
+Just Got Smarter Again</h4>
+<p>Guide 2.4.0 upgrades to Anthropic’s latest AI model, bringing sharper
+reasoning and an 18% improvement on real-world computer task
+benchmarks.</p>
+<p>We’ve upgraded Guide’s AI to Anthropic’s newest model, and the
+improvement is significant. On OS-World, a standardized benchmark for
+real-world computer tasks, the new model scores 72.5% vs 61.4% on the
+previous version. That’s an 18% improvement on benchmarks measuring the
+AI’s ability to complete tasks on a Windows PC.</p>
+<h5 id="what-this-means-for-you">What This Means for You</h5>
+<p>Guide’s AI now handles your requests with:</p>
+<ul>
+<li>Sharper reasoning. Better at figuring out the right sequence of
+steps to get something done, especially for multi-step tasks.</li>
+<li>Fewer failed attempts. Higher benchmark scores translate directly to
+more commands that work on the first try.</li>
+<li>More reliable context. If you’ve built up a long conversation or
+given Guide detailed instructions, it holds onto that context more
+consistently throughout your session.</li>
+</ul>
+<h5 id="why-os-world-matters">Why OS-World Matters</h5>
+<p>OS-World is an independently developed benchmark that tests AI models
+on real computer tasks: navigating applications, filling out forms,
+moving files. It’s one of the closest measures we have to how good an AI
+is at actually using a computer. An 18% improvement on that benchmark is
+one of the largest single-model jumps we’ve seen.</p>
+<h5 id="why-this-matters-for-accessibility-1">Why This Matters for
+Accessibility</h5>
+<p>For users who rely on Guide as an assistive technology, a smarter
+model means fewer frustrating moments where Guide misunderstands or
+fails. Every improvement to accuracy is a direct improvement to
+independence. Less time correcting mistakes, more time getting things
+done.</p>
+<h5 id="how-to-update-1">How to Update</h5>
+<p>Guide updates automatically in the background while you use it. When
+the update is ready, you’ll be prompted to restart. No manual download
+needed.</p>
+<p>If you’d like to install fresh, you can always grab the latest
+version from our website.</p>
+<p>Thank you for using Guide. Every piece of feedback you’ve shared has
+helped us know where to push. More updates coming soon.</p>
+<p>Andrew Co-Founder, Guide</p>
+<h3 id="guide-now-speaks-32-languages">Guide Now Speaks 32
+Languages</h3>
+<p>December 27, 2025</p>
+<h4
+id="guide-now-speaks-32-languages-guide-now-speaks-32-languages">Guide
+Now Speaks 32 Languages</h4>
+<p>Guide 2.3.4 adds support for 32 languages — Guide will now respond in
+the language you speak.</p>
+<p>We’re excited to announce that Guide now supports 32 languages.
+Starting with version 2.3.4, Guide will respond in the language you
+speak.</p>
+<p>Guide uses AI for both speech and understanding. Some languages work
+well today, while others may be less consistent depending on the
+task.</p>
+<h5 id="best-experience">Best Experience</h5>
+<p>These languages are fully supported and work reliably for speech,
+understanding, and computer control.</p>
+<p>English, Spanish, French, German, Portuguese, Italian, Arabic,
+Chinese (Mandarin), Japanese, Korean, Hindi, and Indonesian.</p>
+<h5 id="supported-but-may-vary">Supported, but May Vary</h5>
+<p>These languages generally work for speech and basic understanding,
+but may be less accurate for complex tasks or computer control.</p>
+<p>Dutch, Swedish, Norwegian, Danish, Finnish, Polish, Czech, Slovak,
+Romanian, Hungarian, Bulgarian, Croatian, Greek, Turkish, Russian,
+Ukrainian, Malay, Vietnamese, and Filipino.</p>
+<h5 id="experimental">Experimental</h5>
+<p>These languages can be spoken, but AI understanding or computer
+control may be limited.</p>
+<p>Tamil.</p>
+<p>Guide can speak all listed languages. Understanding and computer
+control work best in the “Best Experience” group. Simply speak to Guide
+in your language, and it will respond in kind.</p>
+<h5 id="also-in-2.3.4">Also in 2.3.4</h5>
+<ul>
+<li>Upgraded voices — all voices are lower latency and more natural
+sounding</li>
+<li>Trial fixes — resolved issues some users experienced with the free
+trial</li>
+<li>Stability improvements — fixed unexpected keyboard behavior</li>
+<li>Smaller download — reduced app size for faster installs and updates
+As always, thank you to our community for your continued feedback. If
+you have questions or run into any issues, reach out to us at
+support@guideinteraction.com.</li>
+</ul>
+<p>Andrew Co-Founder, Guide</p>
+<h3 id="guide-now-supports-windows-speech">Guide Now Supports Windows
+Speech</h3>
+<p>February 22, 2026</p>
+<h4
+id="guide-now-supports-windows-speech-guide-now-supports-windows-speech">Guide
+Now Supports Windows Speech</h4>
+<p>Guide 2.4.0 introduces support for Windows Speech (SAPI), letting you
+use your own Windows voice settings with Guide. We’re also improving our
+NVDA integration.</p>
+<p>One of the most common requests we’ve heard from our accessibility
+community: “Can Guide use my Windows voice instead of its own?” Starting
+with version 2.4.0, the answer is yes.</p>
+<h5 id="windows-speech-sapi-support">Windows Speech (SAPI) Support</h5>
+<p>Guide now lets you choose Windows Speech as your TTS engine, using
+whatever voice and speed you’ve already configured in Windows Settings.
+This means:</p>
+<ul>
+<li>Your voice, your settings. If you’ve spent time tuning a Windows
+voice to your preference, Guide now respects that without needing to
+reconfigure anything in Guide itself.</li>
+<li>More voice variety. Access any voice installed on your Windows
+system, including voices you’ve downloaded from Microsoft.</li>
+<li>Consistent experience. For users who rely on a specific Windows
+voice across all their apps, Guide can now be part of that consistent
+setup. To switch, open Guide’s Settings tab and choose Windows Speech
+(SAPI) from the new voice selector. You’ll see a dropdown of all voices
+available on your system.</li>
+</ul>
+<h5 id="redesigned-voice-settings">Redesigned Voice Settings</h5>
+<p>We’ve cleaned up the voice settings panel with a new radio button
+layout that makes it easier to switch between Guide’s three voice
+modes:</p>
+<ul>
+<li>Guide built-in voices (Amelia, Rachel, Brian, Michelle)</li>
+<li>Windows Speech (SAPI) using your own Windows-configured voice</li>
+<li>NVDA for screen reader users who prefer NVDA to handle all speech No
+more separate checkboxes to juggle. Just pick the mode that works best
+for you.</li>
+</ul>
+<h5 id="nvda-improvements-coming">NVDA Improvements Coming</h5>
+<p>We heard your feedback. NVDA speech in Guide was too fast and didn’t
+respect your custom NVDA voice setup. We’ve made improvements to address
+both of those issues in 2.4.0, and we’re continuing to invest in the
+NVDA experience.</p>
+<p>That said, there are real limitations to what’s possible with NVDA
+today. Because Guide can’t reliably detect when NVDA has finished
+speaking, the completion sound and window re-maximize aren’t available
+in NVDA mode. Guide also can’t guarantee it will always get priority in
+NVDA’s speech queue, so other things NVDA is reading may cut Guide off
+mid-response. We know these things matter for some workflows and we’re
+actively working on them. More improvements are in the pipeline.</p>
+<h5 id="how-to-update-2">How to Update</h5>
+<p>Guide updates automatically in the background. You’ll be prompted to
+restart when version 2.4.0 is ready. Or download fresh from our
+website.</p>
+<p>If you have feedback on the new voice settings, especially if you use
+NVDA or SAPI day to day, we’d love to hear from you at
+support@guideinteraction.com.</p>
+<p>Andrew Co-Founder, Guide</p>
+<h3 id="guide-on-the-at-banter-podcast">Guide on the AT Banter
+Podcast</h3>
+<p>March 18, 2026</p>
+<h4
+id="guide-on-the-at-banter-podcast-guide-on-the-at-banter-podcast">Guide
+on the AT Banter Podcast</h4>
+<p>We joined Rob, Ryan, and Lis on AT Banter Episode 455 to talk about
+making inaccessible software accessible with Guide.</p>
+<p>We joined Rob, Ryan, and Lis on <a
+href="https://atbanter.com/2026/03/18/at-banter-episode-455-making-the-inaccessible-accessible-with-guide/">AT
+Banter Episode 455</a> to talk about how Guide helps people get through
+software that wasn’t designed with them in mind.</p>
+<p><a
+href="https://atbanter.com/2026/03/18/at-banter-episode-455-making-the-inaccessible-accessible-with-guide/">▶️
+Listen on AT Banter</a></p>
+<p>We covered what Guide is, how it works alongside existing assistive
+technology, and where we’re headed. If you’re curious what Guide sounds
+like in practice, or want to share it with someone who’s never heard of
+it, this is a good place to start.</p>
+<p>Have questions after listening? Reach us at
+support@guideinteraction.com or drop a message in our Slack
+community.</p>
+<h3 id="guide-on-the-carrie-on-accessibility-podcast">Guide on the
+Carrie on Accessibility Podcast</h3>
+<p>June 21, 2025</p>
+<h4
+id="guide-on-the-carrie-on-accessibility-podcast-guide-on-the-carrie-on-accessibility-podcast">Guide
+on the Carrie on Accessibility Podcast</h4>
+<p>Watch our full interview with Carrie to hear how Guide tackles
+everyday accessibility roadblocks.</p>
+<p>We recently joined Carrie on Accessibility to break down what Guide
+is, how it works, and where we’re headed next.</p>
+<p><a href="https://www.youtube.com/watch?v=ix4SVk4Z5Rc">▶️ Watch on
+YouTube</a></p>
+<h5 id="quick-outline">Quick outline</h5>
+<ul>
+<li>0:00 — Intro</li>
+<li>1:44 — Meet Andrew (Guide co-founder)</li>
+<li>2:08 — What is Guide?</li>
+<li>4:49 — How to interact with Guide</li>
+<li>5:51 — How the tech &amp; AI work</li>
+<li>9:32 — Does it help with PDFs?</li>
+<li>10:26 — Guide for docs &amp; websites</li>
+<li>14:04 — Guide for gaming?</li>
+<li>15:57 — Creating presets</li>
+<li>17:25 — Privacy</li>
+<li>20:30 — Example use-cases</li>
+<li>23:29 — Why develop Guide?</li>
+<li>27:31 — Availability &amp; price</li>
+<li>30:06 — Why is AT so expensive?</li>
+<li>31:24 — Future developments</li>
+<li>33:59 — Final words from Andrew</li>
+<li>35:05 — Carrie’s closing thoughts Have questions or feedback after
+watching?</li>
+</ul>
+<p>Post in our Slack #feedback channel, every comment shapes what we
+build next.</p>
+<h3 id="introducing-guide-lite">Introducing Guide Lite</h3>
+<p>December 9, 2025</p>
+<h4 id="introducing-guide-lite-introducing-guide-lite">Introducing Guide
+Lite</h4>
+<p>Guide 2.3.3 introduces Guide Lite, a new $8/month plan with 15
+assists for those who want a more affordable way to access Guide.</p>
+<p>We’ve heard from our community: $15/month isn’t accessible for
+everyone. Some of you use Guide occasionally, others just want to try it
+out for a month before committing. Today, we’re excited to introduce
+Guide Lite—a new plan designed with you in mind.</p>
+<h5 id="what-is-guide-lite">What is Guide Lite?</h5>
+<p>Guide Lite is our new entry-level plan at $8/month with 15 assists.
+It’s the full Guide experience at a more approachable price point.</p>
+<p>Guide Lite is perfect if you:</p>
+<ul>
+<li>Use Guide occasionally for specific tasks</li>
+<li>Want to try Guide beyond the free trial without a bigger
+commitment</li>
+<li>Need an affordable option that fits your budget</li>
+</ul>
+<h5 id="our-full-pricing-lineup">Our Full Pricing Lineup</h5>
+<p>With Guide 2.3.3, you now have three plans to choose from:</p>
+<ul>
+<li>Guide Lite — $8/month for 15 assists</li>
+<li>Guide Standard — $15/month for 30 assists</li>
+<li>Guide Plus — $25/month for 100 assists Everyone still starts with a
+free 7-day trial with 30 assists. After that, pick the plan that works
+best for you.</li>
+</ul>
+<h5 id="why-we-made-this-change">Why We Made This Change</h5>
+<p>When we launched our current pricing, we heard feedback that
+$15/month was too much for people who only need Guide a few times a
+month. We believe everyone should have access to tools that help them
+navigate inaccessible content, regardless of budget.</p>
+<p>Guide Lite is our response to that feedback. It’s the same powerful
+AI assistance, just sized for lighter usage.</p>
+<h5 id="how-to-get-guide-lite">How to Get Guide Lite</h5>
+<p>If you’re a new user, simply download Guide and select Guide Lite
+when you sign up. If you’re an existing subscriber on Guide Standard,
+you can switch to Guide Lite through the Account tab in the app.</p>
+<p>Thank you to everyone in our community who shared feedback about
+pricing. Your input directly shaped this update. As always, we’re
+listening—keep the feedback coming.</p>
+<p>Andrew Co-Founder, Guide</p>
+<h3 id="introducing-smart-and-expert-modes">Introducing Smart and Expert
+Modes</h3>
+<p>September 7, 2026</p>
+<h4
+id="introducing-smart-and-expert-modes-introducing-smart-and-expert-modes">Introducing
+Smart and Expert Modes</h4>
+<p>Guide 2.5.0 upgrades everyone to a newer, state-of-the-art AI model
+and adds Expert mode for your hardest tasks, included with Guide
+Standard and Plus.</p>
+<p>Guide 2.5.0 is here, and it brings the biggest upgrade to Guide’s
+intelligence since launch. Everyone gets a newer, more capable AI model
+automatically. And for the tasks that used to trip Guide up, there’s now
+a second gear: Expert mode.</p>
+<h5 id="smarter-for-everyone">Smarter for everyone</h5>
+<p>Guide’s default mode, Smart, now runs on a newer generation of AI
+model. On the industry benchmark for real computer tasks, navigating
+apps, filling in forms, moving files, it completes 3.4% more tasks
+successfully than the model Guide used before. The tasks it wins are the
+awkward ones: the ones that used to need a second try.</p>
+<p>In everyday use, that means Guide plans multi-step jobs more
+carefully, finds its way around unfamiliar apps and websites more
+reliably, and gets clicks and text fields right more often.</p>
+<p>You don’t need to do anything. If Guide has updated, you’re already
+on it.</p>
+<h5 id="expert-mode-for-the-hard-stuff">Expert mode, for the hard
+stuff</h5>
+<p>Some tasks are simply harder: a booking with dates and options, a
+long form spread over several pages, comparing prices across tabs. For
+those, Expert mode puts a bigger, more capable model behind Guide, one
+built for long, multi-step work where there’s more to keep track of.</p>
+<p>Expert is included with Guide Standard and Guide Plus. Switch it on
+under Settings → Assistant Behavior → Assist mode. Guide remembers your
+choice, and you can switch back any time. On the free trial and Guide
+Lite, Expert appears in the list but isn’t selectable; upgrading to
+Standard or Plus unlocks it.</p>
+<p>Full details in our new support article: <a
+href="https://www.guideinteraction.com/support/guide-assist-modes">Assist
+modes in Guide</a>.</p>
+<h5 id="more-room-for-big-tasks">More room for big tasks</h5>
+<p>Long jobs take more steps. A single assist can now run up to 40
+actions, up from 30, so multi-page tasks are far less likely to stop
+short of the finish line. Your plan’s monthly assists are unchanged.</p>
+<h5 id="how-to-update-3">How to update</h5>
+<p>Guide updates itself in the background while you use it. When 2.5.0
+is ready, it will ask you to restart. That’s it.</p>
+<p>If you’d rather install fresh, the latest version is always on our
+website.</p>
+<p>Try Expert on something Guide used to struggle with and tell us how
+it went. Your feedback decides what we improve next.</p>
+<p>Andrew Co-Founder, Guide</p>
+<h3
+id="next-step-for-guide-sustainable-plans-for-a-more-accessible-future">Next
+Step for Guide: Sustainable Plans for a More Accessible Future</h3>
+<p>October 19, 2025</p>
+<h4
+id="next-step-for-guide-sustainable-plans-for-a-more-accessible-future-next-step-for-guide-sustainable-plans-for-a-more-accessible-future">Next
+Step for Guide: Sustainable Plans for a More Accessible Future</h4>
+<p>Introducing Guide Standard and Guide Plus pricing tiers to keep
+accessibility innovation sustainable.</p>
+<p>When Guide launched in early 2025, it started with a simple belief,
+that blind and low-vision people deserve the same effortless access to
+computers as anyone else.</p>
+<p>For the first few months, our $8/month early adopter plan helped us
+grow and learn. People joined, shared feedback, and shaped what Guide
+has become today.</p>
+<p>Now, to keep improving the experience, from voice speed and accuracy
+to reliability, we’re introducing new pricing plans that reflect the
+real costs of running powerful AI and accessibility technology.</p>
+<h5 id="new-plans">New Plans</h5>
+<ul>
+<li>Guide Standard - $15/month: 30 assists</li>
+<li>Guide Plus - $25/month: 100 assists Every new subscriber starts on
+Guide Standard and gets the full Guide experience. If you hit the
+Standard assist limit, you have the option to upgrade to Guide Plus for
+extra assists—everything else stays the same.</li>
+</ul>
+<p>Existing subscribers who signed up before October 19, 2025 will
+remain on a $8/month Legacy plan, with a 100-assist monthly limit.</p>
+<h5 id="why-this-matters">Why This Matters</h5>
+<p>Guide isn’t a generic AI app. It’s built for accessibility - tested
+with screen readers, designed to give options for focus, built around
+keyboard input, and crafted for people who want to resolve accessibility
+roadblocks every day. These updates help ensure we can keep building a
+sustainable, trustworthy product that supports that mission.</p>
+<p>Our long-term vision remains the same: to make computers feel
+effortless for people who are blind and low-vision, and eventually, to
+make the entire digital world accessible to everyone.</p>
+<p>Thank you for being part of that mission.</p>
+<p>Andrew, Co-founder</p>
+<p>Guide Interaction LLC</p>
+<h3 id="your-recent-prompts-are-now-one-click-away">Your Recent Prompts
+Are Now One Click Away</h3>
+<p>April 22, 2026</p>
+<h4
+id="your-recent-prompts-are-now-one-click-away-your-recent-prompts-are-now-one-click-away">Your
+Recent Prompts Are Now One Click Away</h4>
+<p>Guide now remembers your recent prompts so you can re-run a command
+without retyping it.</p>
+<p>If you find yourself typing the same commands over and over, “What’s
+on this screen?”, “Unmute the video”, “Scroll down”, Guide now remembers
+them for you.</p>
+<h5 id="recent-prompts">Recent Prompts</h5>
+<p>The new More button (labelled ··· visually) in the chat panel opens a
+small menu with your most recently used prompts. Tap one to send it
+again instantly, no retyping needed. It’s there when you need it, out of
+the way when you don’t.</p>
+<p>You’ll also find Clear recent prompts and Clear chat in the same
+menu, keeping things tidy without cluttering the main interface.</p>
+<h5 id="also-in-this-release">Also in This Release</h5>
+<ul>
+<li>Stabler sign-in, fewer unexpected sign-out prompts</li>
+<li>Brief mode is now actually brief, one short sentence when a task is
+done, nothing more</li>
+<li>Getting Started page restored to a clean, readable list</li>
+<li>The Watch Demo button now opens correctly in your browser</li>
+</ul>
+<h5 id="how-to-update-4">How to Update</h5>
+<p>Guide updates automatically. You’ll be prompted to restart when the
+new version is ready, or download fresh from <a
+href="https://www.guideinteraction.com">guideinteraction.com</a>.</p>
+<p>Questions or feedback? Reach us at support@guideinteraction.com.</p>
+<p>Andrew</p>
+<p>Co-Founder, Guide</p>
+<h2 id="using-guide">Using Guide</h2>
+<h3 id="assist-modes-in-guide-smart-and-expert">Assist Modes in Guide:
+Smart and Expert</h3>
+<p>September 7, 2026</p>
+<h4
+id="assist-modes-in-guide-smart-and-expert-assist-modes-in-guide-smart-and-expert">Assist
+Modes in Guide: Smart and Expert</h4>
+<p>Guide 2.5.0 lets you choose between Smart mode, the default for
+everyday tasks, and Expert mode, a more powerful model for complex work
+on Standard and Plus plans. Here’s how to switch and what to expect.</p>
+<p>Since version 2.5.0, Guide has an Assist mode setting that decides
+which AI model handles your requests. There are two options.</p>
+<h5 id="smart-default">Smart (default)</h5>
+<p>Smart is Guide’s everyday mode and the right choice for almost
+everything: reading what’s on screen, opening apps, filling in forms,
+sending messages, playing music. It runs on a newer, more capable AI
+model than earlier versions of Guide, and it’s what Guide uses unless
+you change it.</p>
+<h5 id="expert">Expert</h5>
+<p>Expert puts a bigger, more capable model behind Guide, one built for
+long, multi-step work. Use it for tasks with many steps or unfamiliar
+layouts: a booking with dates and options, a long form across several
+pages, comparing things across tabs.</p>
+<p>Availability: Expert is included with Guide Standard and Guide Plus.
+On the free trial and Guide Lite, Expert appears in the Assist mode list
+but can’t be selected; upgrading to Standard or Plus unlocks it straight
+away.</p>
+<h5 id="how-to-switch">How to switch</h5>
+<ul>
+<li>Bring Guide into focus (<code>Ctrl + Alt + G</code>).</li>
+<li>Go to the Settings tab.</li>
+<li>Under Assistant Behavior, find Assist mode and choose Smart or
+Expert. The setting is saved immediately and applies to your next
+request. There is no need to restart Guide.</li>
+</ul>
+<p>With a screen reader, the Assist mode control is a standard combo
+box: arrow through the two options and the description of each is read
+out.</p>
+<h5 id="assists-and-actions">Assists and actions</h5>
+<p>An assist is one request from you. Guide may take many actions
+(clicks, keystrokes, screenshots) to complete it. Since 2.5.0, Guide can
+take up to 40 actions per assist (up from 30), so longer tasks are less
+likely to stop before they finish. Your plan’s monthly assist count is
+unchanged.</p>
+<h5 id="which-mode-should-i-use">Which mode should I use?</h5>
+<ul>
+<li>Start with Smart. It is fast, capable, and included with every
+plan.</li>
+<li>Switch to Expert if Guide keeps getting stuck on a particular task,
+or the task has a lot of steps. Switch back afterwards if you like; the
+choice is yours to keep either way.</li>
+</ul>
+<h6 id="need-help">Need help?</h6>
+<p>Email support@guideinteraction.com and we’ll get back to you.</p>
+<h3 id="chat-options-in-guide">Chat Options in Guide</h3>
+<p>April 22, 2026</p>
+<h4 id="chat-options-in-guide-chat-options-in-guide">Chat Options in
+Guide</h4>
+<p>Guide’s More button gives you quick access to recent prompts,
+screenshot, and chat management. Here’s how each option works.</p>
+<p>The More button (labelled ··· visually) sits next to the Send button
+in the chat panel. It gives you quick access to a few useful options
+without cluttering the main interface.</p>
+<h5 id="recent-prompts-1">Recent prompts</h5>
+<p>Guide keeps a short list of your most recently used commands. Open
+the More menu to see them. Tap any prompt to send it again instantly,
+with no retyping needed.</p>
+<p>To clear the list, select Clear recent prompts from the same
+menu.</p>
+<h5 id="screenshot">Screenshot</h5>
+<p>Select Screenshot to capture the current screen and send it to Guide
+straight away. Guide will describe what’s on screen without you needing
+to type anything.</p>
+<p>You can also trigger this from the keyboard using the Ctrl + Alt + A
+shortcut, which works even when Guide is not in focus.</p>
+<h5 id="clear-chat">Clear chat</h5>
+<p>Select Clear chat to wipe the current conversation and start fresh.
+This clears the visible chat history and resets the conversation context
+Guide is working from.</p>
+<h6 id="need-help-1">Need help?</h6>
+<p>Email support@guideinteraction.com and we’ll get back to you.</p>
+<h3 id="getting-started-with-guide">Getting Started with Guide</h3>
+<p>June 20, 2025</p>
+<h4 id="getting-started-with-guide-getting-started-with-guide">Getting
+Started with Guide</h4>
+<p>A quick tour of keyboard controls and settings in Guide.</p>
+<p>Guide has three main panes for configurations and
+settings—Instructions, Settings, and Account—plus a few global
+shortcuts.</p>
+<h5 id="keyboard-shortcuts">Keyboard shortcuts</h5>
+<ul>
+<li>Bring Guide into focus: <code>Ctrl + Alt + G</code> or
+<code>Alt + Shift + 1</code></li>
+<li>Stop Guide (cancel speech and actions):
+<code>Ctrl + Alt + S</code></li>
+<li>Jump to first chat message: <code>Alt + 1</code></li>
+<li>Jump to newest chat message: <code>Alt + 9</code> The shortcuts for
+bringing Guide into focus and stopping it work no matter which
+application is in the foreground. The chat message ones require Guide to
+be in focus.</li>
+</ul>
+<h5 id="voice-settings">Voice settings</h5>
+<p>Guide supports three voice modes, selectable via radio buttons in the
+Settings tab:</p>
+<ul>
+<li>Guide built-in voices — choose from Amelia, Rachel, Brian, or
+Michelle. A sample plays when you select a voice.</li>
+<li>Windows Speech (SAPI) — uses your Windows-configured voice. Only
+available if your system supports it.</li>
+<li>NVDA — hands off speech to NVDA. Only enabled if NVDA is already
+running when Guide starts. For more detail, see <a
+href="https://www.guideinteraction.com/support/guide-voice-options">Voice
+Options in Guide</a>.</li>
+</ul>
+<h5 id="assistant-behaviour">Assistant behaviour</h5>
+<ul>
+<li>Assist mode: choose Smart (default, included with every plan) or
+Expert (an even more capable model for complex, multi-step tasks; Guide
+Standard and Guide Plus). See <a
+href="https://www.guideinteraction.com/support/guide-assist-modes">Assist
+modes in Guide</a>.</li>
+<li>Verbosity: how much Guide says while it works — Brief, Balanced, or
+Detailed.</li>
+<li>Re-maximise Guide window after command finishes: enabled by default.
+<ul>
+<li>When checked, the chat window pops back to full size once Guide
+completes an action.</li>
+<li>Uncheck it if you prefer Guide to stay minimised and so you can go
+about your business.</li>
+</ul></li>
+</ul>
+<h5 id="version-updates">Version &amp; updates</h5>
+<ul>
+<li>The current build appears at the bottom of the Settings pane
+(e.g. Guide version 2.3.1).</li>
+<li>New updates automatically download while Guide is in use. Once an
+update is ready, Guide will let you know, as it needs to restart to
+finish the update.</li>
+<li>If you don’t want to wait and are curious if there is an update, you
+can select Check for updates.</li>
+</ul>
+<h5 id="account-subscription">Account &amp; subscription</h5>
+<ul>
+<li>Logged in as: shows the email currently signed in.</li>
+<li>Log out: switch to a different account.</li>
+<li>Manage subscription: opens the customer portal in your browser.</li>
+<li>Refresh status: refreshes subcription state, try this if you see any
+errors or you changed your subscription status and want to check.”*</li>
+</ul>
+<h6 id="need-help-or-have-feature-ideas">Need help or have feature
+ideas?</h6>
+<p>Email feedback@guideinteraction.com or drop a note in our Slack
+#feedback channel. The communtiy comments shape what we build next.</p>
+<p>Happy Guiding!</p>
+<h3
+id="guide-not-working-in-a-specific-app-try-running-as-administrator">Guide
+not working in a specific app? Try running as administrator</h3>
+<p>April 26, 2026</p>
+<h4
+id="guide-not-working-in-a-specific-app-try-running-as-administrator-guide-not-working-in-a-specific-app-try-running-as-administrator">Guide
+not working in a specific app? Try running as administrator</h4>
+<p>If Guide can’t click or type in a particular program, running Guide
+as administrator usually fixes it.</p>
+<p>If Guide works fine in most programs but struggles with a specific
+app, such as clicks not landing or keyboard input being ignored, it is
+most likely a Windows permissions issue.</p>
+<h5 id="why-this-happens">Why this happens</h5>
+<p>Windows protects apps that run with elevated privileges from being
+controlled by other software. If the program you are trying to use is
+running as administrator and Guide is not, Windows will block Guide’s
+clicks and keystrokes from reaching it.</p>
+<p>Running Guide as administrator puts it at the same privilege level,
+which removes that block.</p>
+<h5 id="how-to-run-guide-as-administrator">How to run Guide as
+administrator</h5>
+<ul>
+<li>Close Guide if it is already open</li>
+<li>Find the Guide shortcut on your desktop or in the Start menu</li>
+<li>Right-click the shortcut and select Run as administrator</li>
+<li>Accept the User Account Control prompt if one appears</li>
+<li>Try your task again</li>
+</ul>
+<h5 id="making-it-permanent">Making it permanent</h5>
+<p>If you regularly use apps that require this, you can set Guide to
+always launch as administrator.</p>
+<ul>
+<li>Open File Explorer and navigate to the folder where Guide is
+installed, typically <code>C:\Program Files\Guide</code></li>
+<li>Right-click Guide.exe and select Properties</li>
+<li>Open the Compatibility tab</li>
+<li>Check Run this program as an administrator</li>
+<li>Click Apply Guide will now always start with administrator
+privileges.</li>
+</ul>
+<h6 id="still-not-working">Still not working?</h6>
+<p>Email support@guideinteraction.com and we’ll take a look.</p>
+<h3 id="the-guide-update-log">The Guide Update Log</h3>
+<p>June 10, 2025</p>
+<h4 id="the-guide-update-log-the-guide-update-log">The Guide Update
+Log</h4>
+<p>Major improvements and new features added to Guide</p>
+<p>Below is a version-by-version log of recent updates, newest first,
+oldest last.</p>
+<p>Last updated September 2026.</p>
+<h5 id="series-smart-expert-modes">2.5 Series – Smart &amp; Expert
+Modes</h5>
+<h6 id="section">2.5.0</h6>
+<ul>
+<li>Smarter for everyone — Smart mode (the default) now runs on a newer,
+more capable AI model that completes 3.4% more tasks successfully on the
+industry benchmark for real computer tasks: better at multi-step jobs,
+unfamiliar apps and websites, and getting clicks and text fields right
+first time</li>
+<li>Expert mode — a second gear for your hardest tasks, powered by a
+bigger, more capable model; included with Guide Standard and Guide Plus.
+Find it under Settings → Assistant Behavior → Assist mode</li>
+<li>More room for big tasks — a single assist can now run up to 40
+actions (was 30), so long, multi-page jobs are less likely to stop
+short</li>
+<li>Reliability improvements behind the scenes</li>
+</ul>
+<h5 id="series-smarter-ai-more-voice-options">2.4 Series – Smarter AI
+&amp; More Voice Options</h5>
+<h6 id="section-1">2.4.3</h6>
+<ul>
+<li>Suggested prompts — the empty chat state now shows 4 suggested
+prompts to help you get started; returning users see their most recent
+commands instead</li>
+<li>Arrow key navigation between prompts, fully accessible with NVDA and
+other screen readers</li>
+</ul>
+<h6 id="section-2">2.4.2</h6>
+<ul>
+<li>Recent prompts — the new ··· menu in the chat panel shows your most
+recently used commands; tap any to re-send instantly</li>
+<li>Clear recent prompts &amp; Clear chat — both available in the ···
+menu</li>
+<li>Getting Started page restored to a clean, readable list</li>
+<li>Watch Demo button now opens in your system browser</li>
+<li>Sign-in stability improvements</li>
+</ul>
+<h6 id="section-3">2.4.0</h6>
+<ul>
+<li>Upgraded AI model — Anthropic’s latest model, with improved
+reasoning and 18% better on real-world computer task benchmarks</li>
+<li>Windows Speech (SAPI) — choose Windows’ built-in voices directly in
+Guide’s voice settings, using whatever voice and speed you’ve configured
+in Windows</li>
+<li>Redesigned voice settings — clean radio button selector to switch
+between Guide built-in voices, Windows Speech, and NVDA</li>
+<li>NVDA improvements — more reliable speech with improved priority
+handling</li>
+<li>Billing reliability improvements</li>
+</ul>
+<h5 id="series-performance-reliability">2.3 Series – Performance &amp;
+Reliability</h5>
+<h6 id="section-4">2.3.4</h6>
+<ul>
+<li>32 languages — Guide now responds in the language you speak: Arabic,
+Bulgarian, Mandarin Chinese, Croatian, Czech, Danish, Dutch, English,
+Filipino, Finnish, French, German, Greek, Hungarian, Hindi, Indonesian,
+Italian, Japanese, Korean, Malay, Norwegian, Polish, Portuguese,
+Romanian, Russian, Slovak, Spanish, Swedish, Tamil, Turkish, Ukrainian,
+Vietnamese</li>
+<li>Upgraded voices — all voices are lower latency, more natural
+sounding</li>
+<li>Trial fixes</li>
+<li>Stability — fixed unexpected keyboard behavior</li>
+<li>Smaller download — slightly reduced app size for faster
+installs/updates</li>
+</ul>
+<h6 id="section-5">2.3.3</h6>
+<ul>
+<li>Guide Lite — new $8/month plan with 15 assists for occasional
+use</li>
+<li>Three pricing tiers: Guide Lite ($8), Guide Standard ($15), Guide
+Plus ($25)</li>
+</ul>
+<h6 id="section-6">2.3.1</h6>
+<ul>
+<li>Performance improvements for faster response times</li>
+<li>Infrastructure enhancements for improved reliability</li>
+</ul>
+<h5 id="series-intelligence-sustainability">2.2 Series – Intelligence
+&amp; Sustainability</h5>
+<h6 id="section-7">2.2.1</h6>
+<ul>
+<li>Upgraded to Claude 4.5 AI model for 45% better performance on
+Windows</li>
+<li>More successful keyboard and mouse commands</li>
+<li>Smarter reasoning and better error correction</li>
+<li>Reliability improvements for Windows users</li>
+</ul>
+<h6 id="section-8">2.2.0</h6>
+<ul>
+<li>New sustainable pricing plans (Guide Standard &amp; Guide Plus)</li>
+<li>Assist limit tracking and usage indicator</li>
+<li>Security and stability enhancements</li>
+</ul>
+<h5 id="series-speed-safety-ux">2.1 Series – Speed, Safety, UX</h5>
+<h6 id="section-9">2.1.5</h6>
+<ul>
+<li>Keyboard shortcuts tab now supports background commands with the
+<code>Ctrl + Alt + [letter]</code> pattern</li>
+<li>Add your own prompt per shortcut and choose whether Guide refocuses
+when it finishes</li>
+<li>New built-in background shortcut <code>Ctrl + Alt + A</code> that
+captures a screenshot and describes it without leaving your active
+app</li>
+</ul>
+<h6 id="section-10">2.1.1</h6>
+<ul>
+<li>Snappier, more concise screenshot descriptions</li>
+<li>Extra guard-rails against destructive actions</li>
+<li>Reliability improvements</li>
+</ul>
+<h6 id="section-11">2.1.0</h6>
+<ul>
+<li>“Clear Chat” button</li>
+<li>Smaller binary (-20 % size)</li>
+<li>Faster updater</li>
+<li>Quieter status chatter</li>
+<li>Smoother signup flow</li>
+</ul>
+<h5 id="earlier-2.0-releases">Earlier 2.0 Releases</h5>
+<h6 id="section-12">2.0.3</h6>
+<ul>
+<li>ALT + 1 / ALT + 9 jump to first/last chat message</li>
+<li>Session-timeout logic corrected</li>
+</ul>
+<h6 id="section-13">2.0.0</h6>
+<ul>
+<li>Additional contrast fixes</li>
+<li>Streamlined login flow</li>
+<li>New safety banner reminding users to avoid sensitive tasks</li>
+</ul>
+<h5 id="series-polish-contrast">1.1 Series – Polish &amp; Contrast</h5>
+<h6 id="section-14">1.1.4</h6>
+<ul>
+<li>Toggle for “re-maximize after command”</li>
+<li>Low-contrast UI elements fixed</li>
+<li>Fewer login hiccups</li>
+</ul>
+<h6 id="section-15">1.1.1</h6>
+<ul>
+<li>Continued reliability and security hardening</li>
+</ul>
+<h5 id="series-public-launch-security">1.0 Series – Public Launch &amp;
+Security</h5>
+<h6 id="section-16">1.0.7</h6>
+<ul>
+<li>Persistent sessions—no more logging in every launch</li>
+<li>Additional reliability patches</li>
+</ul>
+<h6 id="section-17">1.0.5</h6>
+<ul>
+<li>Mandatory email-code login added for better security</li>
+</ul>
+<h6 id="section-18">1.0.1</h6>
+<ul>
+<li>First release</li>
+</ul>
+<h5 id="series-smarter-actions">0.2 Series – Smarter Actions</h5>
+<h6 id="section-19">0.2.5</h6>
+<ul>
+<li>Click engine rewritten—far fewer “trying a different method”
+fall-backs before successfully clicking</li>
+</ul>
+<h5 id="series-foundation">0.1 Series – Foundation</h5>
+<h6 id="section-20">0.1.7</h6>
+<ul>
+<li>Less-verbose replies</li>
+<li>Optional NVDA voice passthrough</li>
+<li>General stability fixes</li>
+</ul>
+<h6 id="section-21">0.1.6</h6>
+<ul>
+<li>Chat pane in normal tab order</li>
+<li>Arrow-key and CTRL + TAB tab navigation</li>
+<li>Placeholder message while screenshots process</li>
+</ul>
+<h6 id="section-22">0.1.5</h6>
+<ul>
+<li>New low-latency voice “Michelle” and faster dropdown</li>
+<li>Chat history made focusable in browse mode</li>
+</ul>
+<h6 id="section-23">0.1.4</h6>
+<ul>
+<li>Auto-update engine (last manual installer)</li>
+<li>Voice picker with instant samples</li>
+<li>Startup speed optimizations</li>
+</ul>
+<h6 id="section-24">0.1.2</h6>
+<ul>
+<li>Guide key now refocuses reliably</li>
+<li>Added CTRL + ALT + S panic stop</li>
+<li>First pass at smooth scrolling on web/PDF</li>
+</ul>
+<h6 id="whats-next">What’s Next</h6>
+<p>Auto-updates now roll out quietly in the background, so you’re always
+one restart away from the latest improvements. Keep the feedback coming,
+and check Settings → “Check for updates” any time you’re curious.</p>
+<h3 id="keyboard-shortcuts-come-to-guide">Keyboard shortcuts come to
+Guide</h3>
+<p>October 5, 2025</p>
+<h4
+id="keyboard-shortcuts-come-to-guide-keyboard-shortcuts-come-to-guide">Keyboard
+shortcuts come to Guide</h4>
+<p>Customize background commands and try the new screenshot description
+shortcut.</p>
+<p>Guide 2.1.5 is here, and it introduces a new Shortcuts tab that lets
+you fire off actions without leaving the app you are currently using.
+The update downloads automatically in the background, so you simply
+restart Guide when it prompts you.</p>
+<h5 id="build-shortcuts-that-match-your-workflow">Build shortcuts that
+match your workflow</h5>
+<ul>
+<li>Define background shortcuts using the
+<code>Ctrl + Alt + [letter]</code> pattern and pair each one with a
+custom prompt.</li>
+<li>Decide whether Guide should pop back into focus after it finishes
+running the action. These shortcuts run even while another application
+is in front, so you can stay immersed in your task.</li>
+</ul>
+<h5 id="try-the-new-built-in-screenshot-helper">Try the new built-in
+screenshot helper</h5>
+<p>Version 2.1.5 ships with a ready-made background shortcut: Ctrl + Alt
++ A. Press the combo to grab a quick screenshot and have Guide describe
+what is on screen, all without interrupting the app you are in or
+bringing Guide to focus.</p>
+<p>We would love to hear how you are putting shortcuts to use. Share
+your favorite combos with the team so we can keep refining the
+experience.</p>
+<h3 id="support">Support</h3>
+<h4 id="support-support">Support</h4>
+<p>Guides, tutorials, and reference documentation to help you get the
+most out of Guide.</p>
+<h5 id="assist-modes-in-guide-smart-and-expert-1"><a
+href="https://www.guideinteraction.com/support/guide-assist-modes">Assist
+Modes in Guide: Smart and Expert</a></h5>
+<p>Guide 2.5.0 lets you choose between Smart mode, the default for
+everyday tasks, and Expert mode, a more powerful model for complex work
+on Standard and Plus plans. Here’s how to switch and what to expect.</p>
+<p>September 7, 2026</p>
+<h5
+id="guide-not-working-in-a-specific-app-try-running-as-administrator-1"><a
+href="https://www.guideinteraction.com/support/guide-run-as-administrator">Guide
+not working in a specific app? Try running as administrator</a></h5>
+<p>If Guide can’t click or type in a particular program, running Guide
+as administrator usually fixes it.</p>
+<p>April 26, 2026</p>
+<h5 id="chat-options-in-guide-1"><a
+href="https://www.guideinteraction.com/support/guide-chat-options">Chat
+Options in Guide</a></h5>
+<p>Guide’s More button gives you quick access to recent prompts,
+screenshot, and chat management. Here’s how each option works.</p>
+<p>April 22, 2026</p>
+<h5 id="voice-options-in-guide"><a
+href="https://www.guideinteraction.com/support/guide-voice-options">Voice
+Options in Guide</a></h5>
+<p>Guide supports three TTS engines: built-in voices, Windows Speech
+(SAPI), and NVDA. Learn what’s available and how to switch.</p>
+<p>February 22, 2026</p>
+<h5 id="keyboard-shortcuts-come-to-guide-1"><a
+href="https://www.guideinteraction.com/support/guide-shortcuts-2-1-5">Keyboard
+shortcuts come to Guide</a></h5>
+<p>Customize background commands and try the new screenshot description
+shortcut.</p>
+<p>October 5, 2025</p>
+<h5 id="getting-started-with-guide-1"><a
+href="https://www.guideinteraction.com/support/guide-settings-accessibility">Getting
+Started with Guide</a></h5>
+<p>A quick tour of keyboard controls and settings in Guide.</p>
+<p>June 20, 2025</p>
+<h5 id="what-are-some-use-cases-that-guide-can-help-with"><a
+href="https://www.guideinteraction.com/support/use-cases-for-guide">What
+are some use-cases that Guide can help with?</a></h5>
+<p>Sharing a few real-world wins from our community.</p>
+<p>June 17, 2025</p>
+<h5 id="the-guide-update-log-1"><a
+href="https://www.guideinteraction.com/support/guide-updates-accessibility">The
+Guide Update Log</a></h5>
+<p>Major improvements and new features added to Guide</p>
+<p>June 10, 2025</p>
+<h3 id="voice-options-in-guide-1">Voice Options in Guide</h3>
+<p>February 22, 2026</p>
+<h4 id="voice-options-in-guide-voice-options-in-guide">Voice Options in
+Guide</h4>
+<p>Guide supports three TTS engines: built-in voices, Windows Speech
+(SAPI), and NVDA. Learn what’s available and how to switch.</p>
+<p>Guide gives you three ways to hear responses. You can switch between
+them any time in the Settings tab.</p>
+<h5 id="built-in-voices">Built-in voices</h5>
+<p>Guide’s default option. These are low-latency cloud voices that work
+out of the box with no extra setup.</p>
+<p>Available voices:</p>
+<ul>
+<li>Amelia</li>
+<li>Rachel</li>
+<li>Brian</li>
+<li>Michelle (default) To sample a voice before committing to it, select
+it from the dropdown and a short audio preview will play
+automatically.</li>
+</ul>
+<h5 id="windows-speech-sapi">Windows Speech (SAPI)</h5>
+<p>Guide can use your Windows built-in voices instead of its own. This
+is useful if you’ve already configured a preferred voice in Windows
+Settings, or if you want access to voices you’ve downloaded from
+Microsoft.</p>
+<p>Availability: Windows Speech is enabled automatically if your system
+supports it. If the option is greyed out, SAPI voices aren’t available
+on your device.</p>
+<p>How to enable:</p>
+<ul>
+<li>Open Guide and go to the Settings tab</li>
+<li>Under Voice, select Windows Speech (SAPI)</li>
+<li>A dropdown will appear listing all voices installed on your system.
+Pick the one you want. Guide will use whatever voice you select at the
+speed and pitch configured in your Windows Settings.</li>
+</ul>
+<h5 id="nvda">NVDA</h5>
+<p>If you use NVDA as your primary screen reader, Guide can hand off all
+speech to NVDA instead of speaking on its own. This keeps your audio
+experience consistent across everything you use.</p>
+<p>Availability: The NVDA option is only enabled if NVDA is already
+running when Guide starts. If NVDA isn’t detected at launch, the option
+will be greyed out. Start NVDA first, then open Guide to enable it.</p>
+<p>Things to know in NVDA mode:</p>
+<ul>
+<li>Guide uses your NVDA voice, rate, and pitch settings</li>
+<li>The completion sound and window re-maximize are not available in
+NVDA mode, since Guide can’t reliably detect when NVDA has finished
+speaking</li>
+<li>Guide can’t guarantee speech priority in NVDA’s queue, so other
+things NVDA is reading may cut Guide off mid-response</li>
+<li>To re-enable the completion sound and re-maximize, switch back to a
+built-in voice or Windows Speech</li>
+</ul>
+<h5 id="switching-between-voice-modes">Switching between voice
+modes</h5>
+<p>All three options are available as radio buttons in Settings &gt;
+Voice. Select a mode and Guide will switch immediately with no restart
+needed.</p>
+<h6 id="need-help-2">Need help?</h6>
+<p>Email support@guideinteraction.com and we’ll get back to you.</p>
+<h3 id="what-are-some-use-cases-that-guide-can-help-with-1">What are
+some use-cases that Guide can help with?</h3>
+<p>June 17, 2025</p>
+<h4
+id="what-are-some-use-cases-that-guide-can-help-with-what-are-some-use-cases-that-guide-can-help-with">What
+are some use-cases that Guide can help with?</h4>
+<p>Sharing a few real-world wins from our community.</p>
+<p>This article lists three real use cases Guide users have shared with
+us, so you can get inspired or try them yourself.</p>
+<h5 id="play-an-inaccessible-web-audio-player">1. Play an inaccessible
+web-audio player</h5>
+<p>“…it worked super well to click the inaccessible web player.” — Guide
+user</p>
+<h6 id="prompt">Prompt</h6>
+<pre><code>Guide, play the audio player on the screen, make sure it is unmuted.</code></pre>
+<h6 id="why-it-matters">Why it matters</h6>
+<p>Some embedded players expose no alternative text on their media
+player icons; Guide targets the visual icon.</p>
+<h5 id="dictate-answers-into-an-online-exam">2. Dictate answers into an
+online exam</h5>
+<p>“…practising for my exam, dictated my answers and it typed them in
+the boxes. This is so cool.” — Guide user</p>
+<h6 id="prompt-1">Prompt</h6>
+<pre><code>Guide, focus the first answer box. Then, type: “The doctrine of estoppel applies…”</code></pre>
+<h6 id="why-it-matters-1">Why it matters</h6>
+<p>Guide can find input fields that aren’t in the tab order, as well as
+focus traps.</p>
+<h5 id="control-an-android-phone-remotely">3. Control an Android Phone
+remotely</h5>
+<p>“…I have had it successfully control the screen on my Android phone.”
+— Guide user</p>
+<h6 id="setup">Setup</h6>
+<ul>
+<li>Mirror the phone to Windows (via Phone Link).</li>
+<li>Bring the mirror window to the foreground.</li>
+<li>Ask Guide to take whatever action you need on it.</li>
+</ul>
+<h6 id="prompt-2">Prompt</h6>
+<pre><code>Guide, on the phone screen share, scroll down until you see “Settings” and double-tap it.</code></pre>
+<h6 id="why-it-matters-2">Why it matters</h6>
+<p>Some apps can be finicky with TalkBack. Even moreso, this is a
+creative example of how some users have found use cases for Guide we
+hadn’t imagined.</p>
+<h4 id="contribute-yours">Contribute yours</h4>
+<p>We love to hear wins the communtiy finds with Guide. Post your prompt
+and result in our #feedback channel on Slack.</p>
+</main>
+</body>
+</html>

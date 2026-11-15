@@ -1,0 +1,833 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.13" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Learning Ally help</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#learning-ally-help" id="toc-learning-ally-help">Learning
+Ally help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#general" id="toc-general">General</a></li>
+<li><a href="#get-started" id="toc-get-started">Get Started</a></li>
+<li><a href="#schools-and-integrations"
+id="toc-schools-and-integrations">Schools and integrations</a></li>
+<li><a href="#tech-support" id="toc-tech-support">Tech Support</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="learning-ally-help">Learning Ally help</h1>
+<p>This guide holds Learning Ally’s own help, gathered from its public
+help pages on 14 November 2026. Learning Ally is a nonprofit library of
+human-read audiobooks for students with dyslexia, blindness and other
+reading barriers, used at home and in schools. Each question on its help
+page is an article here, under Learning Ally’s own headings, and the
+pages for schools that sign in through Clever, ClassLink or Google have
+a category of their own.</p>
+<p>The app guides Learning Ally offers as PDF files were not gathered.
+Bookshare, another accessible library, has its own guide in this
+collection.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>General
+<ul>
+<li><a
+href="#are-learning-ally-audiobooks-compatible-with-kindle-e-readers-or-fire-tablets">Are
+Learning Ally audiobooks compatible with Kindle E-readers or Fire
+tablets?</a></li>
+<li><a href="#how-can-i-reset-my-childs-username-or-password">How can I
+reset my child’s username or password?</a></li>
+<li><a href="#how-can-i-reset-my-username-or-password">How can I reset
+my username or password?</a></li>
+<li><a
+href="#how-current-does-the-proof-of-eligibility-need-to-be-for-me-or-my-child-to-qualify">How
+current does the proof of eligibility need to be for me or my child to
+qualify?</a></li>
+<li><a
+href="#how-do-i-determine-eligibility-for-a-student-to-use-the-learning-ally-audiobook-solution-and-why-is-this-required">How
+do I determine eligibility for a student to use the Learning Ally
+Audiobook Solution, and why is this required?</a></li>
+<li><a
+href="#how-do-i-download-my-audiobooks-to-other-daisy-devices">How do I
+download my audiobooks to other DAISY devices?</a></li>
+<li><a
+href="#how-do-i-renew-an-individual-membership-for-a-child-or-an-adult">How
+do I renew an individual membership for a child or an adult?</a></li>
+<li><a
+href="#how-do-i-update-my-account-information-like-contact-or-credit-card-information">How
+do I update my account information, like contact or credit card
+information?</a></li>
+<li><a
+href="#i-added-3-books-to-the-bookshelf-and-now-i-cant-add-anymore.-what-am-i-doing-wrong">I
+added 3 books to the bookshelf and now I can’t add anymore. What am I
+doing wrong?</a></li>
+<li><a
+href="#is-membership-to-learning-ally-available-to-those-outside-of-the-united-states">Is
+membership to Learning Ally available to those outside of the United
+States?</a></li>
+<li><a href="#what-are-the-national-achievement-awards-naa">What are the
+National Achievement Awards (NAA)?</a></li>
+<li><a
+href="#what-devices-can-we-use-to-listen-to-audiobooks-at-home">What
+devices can we use to listen to audiobooks at home?</a></li>
+<li><a
+href="#where-can-i-find-a-guide-for-using-the-learning-ally-audiobook-app">Where
+can I find a guide for using the Learning Ally Audiobook App?</a></li>
+<li><a
+href="#why-cant-i-login-to-my-account-im-getting-a-message-to-call-customer-care-on-hold-due-to-payment-issue">Why
+can’t I login to my account, I’m getting a message to call Customer
+Care? (On Hold due to Payment Issue)</a></li>
+<li><a href="#why-is-my-account-on-hold">Why is my account on
+hold?</a></li>
+</ul></li>
+<li>Get Started
+<ul>
+<li><a href="#how-do-i-get-a-membership-for-my-school-or-district">How
+do I get a membership for my school or district?</a></li>
+<li><a
+href="#how-do-i-start-a-learning-ally-membership-for-my-child">How do I
+start a Learning Ally membership for my child?</a></li>
+<li><a
+href="#how-do-i-start-an-individual-adult-membership-for-myself">How do
+I start an individual adult membership for myself?</a></li>
+</ul></li>
+<li>Schools and integrations
+<ul>
+<li><a href="#classlink-integration-support">Classlink Integration
+Support</a></li>
+<li><a href="#clever-integration-support">Clever Integration
+Support</a></li>
+<li><a href="#get-started-with-integrations">Get started with
+integrations</a></li>
+</ul></li>
+<li>Tech Support
+<ul>
+<li><a href="#how-can-my-students-login-over-the-summer">How can my
+students login over the summer?</a></li>
+<li><a href="#how-do-i-add-students-manually">How do I add students
+manually?</a></li>
+<li><a
+href="#how-long-does-it-take-for-students-to-sync-from-cleverclasslink">How
+long does it take for students to sync from Clever/ClassLink?</a></li>
+<li><a
+href="#why-am-i-getting-a-login-error-even-though-my-credentials-are-correct">Why
+am I getting a login error even though my credentials are
+correct?</a></li>
+<li><a
+href="#why-arent-my-students-showing-up-in-learning-ally-or-are-unable-to-log-in-through-clever-or-classlink">Why
+aren’t my students showing up in Learning Ally, or are unable to log in
+through Clever or ClassLink?</a></li>
+<li><a href="#why-is-google-sso-not-working-for-our-school">Why is
+Google SSO not working for our school?</a></li>
+</ul></li>
+</ul>
+<h2 id="general">General</h2>
+<h3
+id="are-learning-ally-audiobooks-compatible-with-kindle-e-readers-or-fire-tablets">Are
+Learning Ally audiobooks compatible with Kindle E-readers or Fire
+tablets?</h3>
+<p>No, Learning Ally audiobooks are not currently compatible with Kindle
+E-readers or Fire tablets. Please view our system requirements for more
+information on device compatibility.</p>
+<h3 id="how-can-i-reset-my-childs-username-or-password">How can I reset
+my child’s username or password?</h3>
+<p>Log into <a href="http://www.LearningAlly.org">LearningAlly.org</a>
+with your parent log in information</p>
+<p>Navigate to where it says “Manage Child” and click “Edit Child”.</p>
+<p>Type the new username</p>
+<p>Type the new password</p>
+<p>Click Save</p>
+<h3 id="how-can-i-reset-my-username-or-password">How can I reset my
+username or password?</h3>
+<p>Navigate to <a
+href="https://portal.learningally.org/login">portal.learningally.org</a>
+and click the “forgot username?” or “forgot password” options to reset
+this information.</p>
+<h3
+id="how-current-does-the-proof-of-eligibility-need-to-be-for-me-or-my-child-to-qualify">How
+current does the proof of eligibility need to be for me or my child to
+qualify?</h3>
+<p>The Learning Ally Audiobook Solution is a proven accommodation
+reserved for people with reading-based learning differences like
+dyslexia. Eligibility for the Learning Ally Audiobook Solution can be
+determined by a professional who has experience identifying whether an
+individual exhibits a specific skill deficit, disability or condition.
+Qualified Educators can determine eligibility through assessments,
+observations and review of student work. Individuals do not need an IEP
+or 504 in order to qualify. There is no expiration date on qualification
+once provided by a professional.</p>
+<p>Learning Ally is able to offer our human-read audio textbooks and
+literature titles under a special provision of the U.S. Copyright law
+(17 U.S.C. § 121, et seq., Marrakesh exemption). To be eligible to
+receive our solution under this special provision, a person’s reading or
+perceptual deficit or disability needs to be determined by a Qualified
+Educator or Qualified Evaluator with experience making such
+determinations.</p>
+<h3
+id="how-do-i-determine-eligibility-for-a-student-to-use-the-learning-ally-audiobook-solution-and-why-is-this-required">How
+do I determine eligibility for a student to use the Learning Ally
+Audiobook Solution, and why is this required?</h3>
+<p>The Learning Ally Audiobook Solution is a proven multi-sensory
+reading accommodation for individuals who meet one of the following
+eligibility categories:</p>
+<ol type="1">
+<li>Reading Deficit</li>
+</ol>
+<p>A reading deficit is determined by a student’s need for a reading
+accommodation due to challenges with decoding, fluency, and/or
+comprehension that prevent them from accessing content at the same level
+as their peers. An IEP or 504 Plan is not required for eligibility.</p>
+<ol start="2" type="1">
+<li>Blind or Visually Impaired</li>
+</ol>
+<p>Individuals who are blind or have a visual impairment that prevents
+or significantly limits their ability to read standard printed materials
+may qualify. This includes individuals whose visual acuity is 20/200 or
+less in the better eye with correction, or whose visual field is
+substantially restricted.</p>
+<ol start="3" type="1">
+<li>Physical Disability</li>
+</ol>
+<p>Students who have a physical impairment that prevents them from
+reading standard print—such as an inability to hold a book or turn
+pages—may qualify. Examples include conditions such as Cerebral Palsy,
+Multiple Sclerosis, or Muscular Dystrophy.</p>
+<p>Eligibility may be determined by an educator or other qualified
+professional with experience identifying reading deficits, visual
+impairments, blindness, or physical disabilities. Determinations may be
+based on classroom observations, student work samples, and informal or
+formal assessments.</p>
+<p>Conditions such as ADD/ADHD, autism, intellectual disabilities,
+emotional disturbance, or other health impairments do not independently
+qualify a student for Learning Ally services. However, students with
+these conditions may be eligible if they also have a qualifying reading
+deficit, visual impairment, blindness, or physical disability.</p>
+<p>Individuals with temporary conditions that prevent access to standard
+print may also be eligible for services for the duration of the
+condition, as determined by a qualified educator or professional.</p>
+<p>Learning Ally requires eligibility determinations to ensure that
+access to its accessible audiobook collection is provided in accordance
+with applicable accessibility guidelines, eligibility requirements, and
+Terms of Service.</p>
+<h3 id="how-do-i-download-my-audiobooks-to-other-daisy-devices">How do I
+download my audiobooks to other DAISY devices?</h3>
+<p>Please follow the steps below to download our audiobooks to your
+authorized DAISY</p>
+<p>Make sure your device is authorized to play Learning Ally audiobooks.
+If it is not authorized, visit Authorize a DAISY Player.</p>
+<p>Make sure to add books to your bookshelf at <a
+href="http://www.LearningAlly.org">LearningAlly.org</a></p>
+<p>Go to My Bookshelf</p>
+<p>Click Continue under I’m ready to listen to my audiobooks</p>
+<p>Click Choose a Device under How to listen</p>
+<p>Select Advanced Users Download .Zip</p>
+<p>Click Continue</p>
+<p>Click Done</p>
+<p>Now, next to each title there will be a Download .zip link</p>
+<p>Click on that link to download the zip file of the book, which you
+can then copy these files into a folder on the device (SD card, flash
+drive, etc.) of your choice.</p>
+<h3
+id="how-do-i-renew-an-individual-membership-for-a-child-or-an-adult">How
+do I renew an individual membership for a child or an adult?</h3>
+<p>As a member, you have the option to set your account to auto or
+manual renewal. At time of purchase you are defaulted to auto
+renewal.</p>
+<ul>
+<li>Log in to <a href="http://www.learningally.org">learningally.org</a>
+using your username and password.</li>
+<li>Note: If you are a parent renewing for a child, please log in using
+your Parent Account credentials.</li>
+<li>Once logged in, click your name in the top right corner.</li>
+<li>Click My Account.</li>
+<li>On the Account Summary page, click Renewal and Billing.</li>
+<li>Under Membership Type &amp; Renewal → Billing Preference, select
+either Auto or Manual, then click Save. If needed, under Available
+Payment Methods, click Add New Payment Method.</li>
+<li>Click Renew Membership to proceed through the registration renewal
+process and submit your payment. Browser Tip: For the best experience
+when processing your payment, we recommend using Google Chrome or
+Mozilla Firefox.</li>
+</ul>
+<h3
+id="how-do-i-update-my-account-information-like-contact-or-credit-card-information">How
+do I update my account information, like contact or credit card
+information?</h3>
+<p>In order to update your account please use the instructions
+below:</p>
+<p>Log in to <a href="http://www.learningally.org">learningally.org</a>
+with your username &amp; password. If you have a Parent Household
+account, you must login using your Parent Account username and
+password.</p>
+<p>Once logged in, click your name in the top right corner</p>
+<p>Click My Account</p>
+<p>On the Account Summary page you will see 6 options:</p>
+<p>Account Summary: This section shows you the status of your
+membership</p>
+<p>Contact Information: This section lists your current contact
+information and allows you to make changes to crucial information such
+as: e-mail address, mailing address and phone number</p>
+<p>Renewal and Billing: This section lists your current saved Credit
+Card information as well as your membership renewal preference; you can
+be set up for auto-renewal or manual. This section may also be used to
+process a renewal payment online if your account is not set up for
+automatic renewal or to set up a new payment method.</p>
+<p>Order History: This section shows you the payments that have been
+processed from your account since your membership has been active.</p>
+<p>Change Password: This section is in case you need to update the
+password for your parent/adult membership. Note: you will need to know
+your current password to make the changes.</p>
+<p>Cancel Account: This section lists our phone number to call to cancel
+and provide your cancellation reason.</p>
+<p>Select the option for what you need to update, edit the information,
+enter the correct information and save</p>
+<p>When using our website, it is recommended to use Google Chrome or
+Mozilla Firefox as your browser as they work better with our
+website.</p>
+<h3
+id="i-added-3-books-to-the-bookshelf-and-now-i-cant-add-anymore.-what-am-i-doing-wrong">I
+added 3 books to the bookshelf and now I can’t add anymore. What am I
+doing wrong?</h3>
+<p>When you sign up for a membership with Learning Ally you have
+immediate access to 3 audiobooks of your choice until proof of
+eligibility is confirmed. As soon as we confirm proof of eligibility you
+will have unlimited access to our full library.</p>
+<p>In order to update your account for unlimited audiobook access we
+must confirm proof of eligibility within 30 days of registration. If
+proof of eligibility is not received within 30 days your account will be
+placed on hold until you can provide it.</p>
+<p>The reason we provide you with the initial 3 audiobooks is because we
+have a 30 day refund policy, as outlined in our terms of service. So, if
+you are not satisfied you can call to cancel and receive a full refund
+prior to submitting your documentation.</p>
+<p>If you have already submitted proof of eligibility and are still
+receiving a “Limit Reached” error message, please contact Customer Care
+by phone at 800.221.4792 for additional assistance.</p>
+<h3
+id="is-membership-to-learning-ally-available-to-those-outside-of-the-united-states">Is
+membership to Learning Ally available to those outside of the United
+States?</h3>
+<p>Learning Ally understands how many people with reading deficits,
+visual impairments or other physical disabilities outside the United
+States might be interested in membership. However, Learning Ally is not
+offering membership outside the United States for non-U.S. citizens at
+this time. With the adoption of the Marrakesh Treaty to Facilitate
+Access to Published Works for Persons Who Are Blind, Visually Impaired
+or Otherwise Print Disabled Learning Ally is working on making our
+services available outside the U.S. Please check back periodically to
+see when we expand to your region.</p>
+<p>We are sorry for any inconvenience this may cause you. Please contact
+our Customer Care department with any questions, or for additional
+information. We can be reached at <a
+href="mailto:customercare@LearningAlly.org">customercare@LearningAlly.org</a>
+or by calling 800.221.4792.</p>
+<h3 id="what-are-the-national-achievement-awards-naa">What are the
+National Achievement Awards (NAA)?</h3>
+<p>Each year, Learning Ally offers two endowed scholarship awards for
+outstanding students with print and learning disabilities. The
+recipients of these awards are role models of success and inspiration to
+students throughout the country. Read more about our scholarship winners
+here!</p>
+<h3 id="what-devices-can-we-use-to-listen-to-audiobooks-at-home">What
+devices can we use to listen to audiobooks at home?</h3>
+<p>Students can use home computers, laptops, and most mobile devices
+including smartphones and tablets.</p>
+<h3
+id="where-can-i-find-a-guide-for-using-the-learning-ally-audiobook-app">Where
+can I find a guide for using the Learning Ally Audiobook App?</h3>
+<p>You can download the Learning Ally Audiobook App guide in both
+English and Spanish using the links below:</p>
+<p><a
+href="https://learningally.org/wp-content/uploads/2026/09/LearningAlly_AudiobookApp_Guide_English.pdf">Click
+here for the English guide</a></p>
+<p><a
+href="https://learningally.org/wp-content/uploads/2026/07/LearningAlly_AudiobookApp_Guide_Spanish.pdf">Click
+here for the Spanish guide</a></p>
+<h3
+id="why-cant-i-login-to-my-account-im-getting-a-message-to-call-customer-care-on-hold-due-to-payment-issue">Why
+can’t I login to my account, I’m getting a message to call Customer
+Care? (On Hold due to Payment Issue)</h3>
+<p>If your account is on hold, it’s most often because a renewal payment
+is overdue. Other possible reasons include a failed payment method or
+required account verification. Check your email for any notices about
+the hold (including your spam or junk mail folder,) then review the
+Billing or Account alerts for specific instructions. If you don’t see
+clear instructions or can’t resolve the issue online, contact Customer
+Care at 800-221-4792 or <a
+href="mailto:customercare@learningally.org">customercare@learningally.org</a>.</p>
+<h3 id="why-is-my-account-on-hold">Why is my account on hold?</h3>
+<p>If your account is on hold, it’s most often because a renewal payment
+is overdue. Other possible reasons include a failed payment method or
+required account verification. Check your email for any notices about
+the hold (including your spam or junk mail folder,) then review the
+Billing or Account alerts for specific instructions. If you don’t see
+clear instructions or can’t resolve the issue online, contact Customer
+Care at 800-221-4792 or <a
+href="mailto:customercare@learningally.org">customercare@learningally.org</a>.</p>
+<h2 id="get-started">Get Started</h2>
+<h3 id="how-do-i-get-a-membership-for-my-school-or-district">How do I
+get a membership for my school or district?</h3>
+<p>Check with your school to see if Learning Ally is already available
+to students. If not, have them call: 1-800-221-1098 or <a
+href="https://learningally.org/schedule-demo/">schedule a demo.</a></p>
+<h3 id="how-do-i-start-a-learning-ally-membership-for-my-child">How do I
+start a Learning Ally membership for my child?</h3>
+<p>How do I start a membership for my child to access audiobooks?</p>
+<p>Answer:</p>
+<p>Put your child on a path to success for only $135 per year.</p>
+<p>Gain the knowledge, tools, and resources to help your child learn and
+thrive.</p>
+<p>Benefits of a Learning Ally membership include:</p>
+<ul>
+<li>Household membership — includes up to 4 child profiles</li>
+<li>Unlimited access to a library of educational audiobooks</li>
+<li>FREE reading app for PC, Mac, and Chromebook computers</li>
+<li>FREE reading app for Apple and Android devices Try a Learning Ally
+membership and discover how our services can unlock your child’s
+potential! <a href="https://learningally.org/families/">👉 Sign up
+today</a></li>
+</ul>
+<p>Eligibility Requirement:</p>
+<p>To qualify for our audiobook services, you must submit proof of
+eligibility within 30 days of creating your child’s profile.</p>
+<p>Financial Assistance:</p>
+<p>If you are experiencing financial hardship, please complete the
+necessary forms linked below:</p>
+<ul>
+<li><a
+href="https://learningally.org/wp-content/uploads/2026/08/3PA-Application.pdf">Individual
+Application</a></li>
+<li><a
+href="https://learningally.org/wp-content/uploads/2026/08/AssistanceProgram_Application.pdf">Financial
+Assistance Form</a> Submit completed forms via fax to 609.281.5900 or
+email them to <a
+href="mailto:CustomerCare@LearningAlly.org">CustomerCare@LearningAlly.org</a>.</li>
+</ul>
+<h3 id="how-do-i-start-an-individual-adult-membership-for-myself">How do
+I start an individual adult membership for myself?</h3>
+<p>Answer</p>
+<p>Gain the knowledge, tools, and resources that can help you learn and
+thrive.</p>
+<p>Benefits of a Learning Ally membership include:</p>
+<ul>
+<li>Annual membership with unlimited downloads — $135.00</li>
+<li>Access to a library of educational audiobooks</li>
+<li>FREE reading app for PC, Mac, and Chromebook computers</li>
+<li>FREE reading app for Apple and Android devices Eligibility
+Requirement:</li>
+</ul>
+<p>To qualify for our services, we must receive your proof of
+eligibility within 30 days of registration.</p>
+<p>Financial Assistance:</p>
+<p>If you are unable to afford the membership fee due to financial
+hardship, please complete the following forms linked below:</p>
+<p>Individual Application</p>
+<p>Financial Assistance Form</p>
+<p>Submit completed forms via fax to 609.281.5900 or email them to</p>
+<p><a
+href="mailto:CustomerCare@LearningAlly.org">CustomerCare@LearningAlly.org</a>.</p>
+<h2 id="schools-and-integrations">Schools and integrations</h2>
+<h3 id="classlink-integration-support">Classlink Integration
+Support</h3>
+<h4
+id="classlink-integration-support-classlink-integration-support">Classlink
+Integration Support</h4>
+<h5 id="get-started-today">Get started today:</h5>
+<ul>
+<li><a
+href="https://learningally.org/help/classlink/classlink-integration">Set
+Up ClassLink Integration</a></li>
+<li><a
+href="https://learningally.org/help/classlink/classlink-educator-login">Educators:
+Access the Learning Ally Audiobook Solution Through ClassLink</a></li>
+<li><a
+href="https://learningally.org/help/classlink/classlink-student-login">Students:
+Access the Learning Ally Audiobook Solution Through ClassLink</a></li>
+<li><a
+href="https://learningally.org/help/classlink/classlink-family-support">Families:
+Access the Learning Ally Audiobook Solution Through ClassLink</a></li>
+</ul>
+<h3 id="clever-integration-support">Clever Integration Support</h3>
+<h4 id="clever-integration-support-clever-integration-support">Clever
+Integration Support</h4>
+<h5 id="clever">Clever</h5>
+<ul>
+<li><a
+href="https://learningally.org/help/clever/clever-integration">Clever
+Integration</a></li>
+<li><a
+href="https://learningally.org/help/clever/clever-educator-login">For
+Educators: Access the Learning Ally Audiobook Solution Through
+Clever</a></li>
+<li><a
+href="https://learningally.org/help/clever/clever-student-login">For
+Students: Access the Learning Ally Audiobook Solution Through
+Clever</a></li>
+<li><a
+href="https://learningally.org/help/clever/clever-family-support">Families:
+Access the Learning Ally Audiobook Solution Through Clever</a></li>
+</ul>
+<h5 id="were-here-to-help">We’re here to help!</h5>
+<p>Representatives are available at 800-221-4792 Monday through Friday,
+from 8:30am-6:00pm EST.</p>
+<p>Email: customercare@LearningAlly.org Fax: 609-281-5900</p>
+<p>Mailing Address:</p>
+<p>Learning Ally 20 Roszel Rd. Princeton, NJ 08540</p>
+<h6 id="donation-inquiries">Donation Inquiries</h6>
+<p>Phone: 800-221-4792, option 4</p>
+<h6 id="volunteer-inquiries">Volunteer Inquiries</h6>
+<p>Phone: <a href="tel:800-221-4792">800-221-4792</a>, option 3 Email:
+<a
+href="mailto:Volunteer@LearningAlly.org">Volunteer@LearningAlly.org</a></p>
+<h6 id="specialist-inquiries">Specialist Inquiries</h6>
+<p>Phone: <a href="tel:800-221-4792">800-221-4792</a>, option 2 Email:
+<a
+href="mailto:Specialist@learningally.org">Specialist@learningally.org</a></p>
+<h3 id="get-started-with-integrations">Get started with
+integrations</h3>
+<h4 id="get-started-with-integrations-get-started-with-integrations">Get
+started with integrations</h4>
+<p>Did you know? Learning Ally now offers LMS integration options so
+students can access their audiobooks without extra logins or separate
+systems.</p>
+<p>With LTI integration:</p>
+<ul>
+<li>No rostering required</li>
+<li>No SSO set-up needed</li>
+<li>No separate passwords to manage</li>
+<li>No problem getting started Plus, educators assign audiobooks to
+students within the LMS along with other classroom resources and access
+more robust reporting of student and classroom reading progress.</li>
+</ul>
+<p>Select your LMS below to get started:</p>
+<ul>
+<li><p><a
+href="https://wp-media.learningally.org/wp-content/uploads/Canvas-Integration-One-Pager-For-New-Users-w_-Reading-Activity-and-Reporting.pdf">Canvas</a></p></li>
+<li><p><a
+href="https://wp-media.learningally.org/wp-content/uploads/Schoology-Integration-One-Pager-For-New-w_-Reading-Activity-and-Reporting-Users.pdf">Schoology</a>
+Select your SSO/Rostering Software below to get started:</p></li>
+<li><p><a
+href="https://learningally.org/help/classlink/classlink-integration">ClassLink</a></p></li>
+<li><p><a
+href="https://learningally.org/help/clever/clever-integration">Clever</a></p></li>
+<li><p><a
+href="https://learningally.org/help/google-single-sign-on/set-up-google-single-sign-on-integration/">Google
+SSO</a> Questions?</p></li>
+</ul>
+<p>For questions or integration assistance, please complete the form
+below or contact our Integrations Specialist. Email <a
+href="mailto:adario@learningally.org">adario@learningally.org</a> or
+call 609-215-7413.</p>
+<p><a
+href="https://docs.google.com/forms/d/e/1FAIpQLSfiDRG_YxAAQTsjjJl2ovLD1uRf5JqB183OzjXoZNEx6I_VNQ/viewform">Submit
+your inquiry →</a></p>
+<h5 id="learning-ally-manual-rostering">Learning Ally Manual
+Rostering</h5>
+<ul>
+<li>Bulk Account Creation – Educator and student accounts are easily
+created when data is imported into the educator portal through a CSV or
+Excel file to our system.</li>
+<li>Bulk Account Updates – Any changes or updates that occur within
+accounts or school associations are updated when data is imported in the
+educator portal through a CSV or Excel file to our system.</li>
+<li><a
+href="https://drive.google.com/file/d/1PFmSqa_i3ptRSnm1O9TG1vnC6HGoFljR/view">Individual
+Account Creation</a> – Educator and student accounts are created when
+individual data is added to the educator portal.</li>
+<li><a
+href="https://drive.google.com/file/d/1PFmSqa_i3ptRSnm1O9TG1vnC6HGoFljR/view">Individual
+and Bulk Account Updates</a> – Any changes or updates that occur within
+accounts or school associations are updated when individual data is
+edited in the educator portal.</li>
+<li>For assistance, please contact our Manual Rostering Specialist,
+Nishat Azfar, at <a
+href="mailto:nazfar@learninglly.org">nazfar@learninglly.org</a> or
+609-243-5870.</li>
+</ul>
+<h5 id="choose-your-integration-method">Choose your integration
+method</h5>
+<ul>
+<li>Choosing an integration method is a critical step to the successful
+implementation of the Learning Ally Audiobook Solution. If
+automatic/semi-automatic rostering, account provisioning and single
+sign-on are important features for you, our Clever and ClassLink
+integrations would be the best options.</li>
+<li>If you are already using Canvas, Schoology or Google Classroom,
+these integrations are the best way to incorporate Learning Ally into
+your existing workflows.</li>
+<li>If you would prefer to import and add your own data through the
+Learning Ally educator portal and would prefer your educators and
+students to log in using specific Learning Ally credentials or Google
+SSO, then Learning Ally Roster Import and/or Learning Ally Manual
+Creation would be the best option.</li>
+<li>If you are an existing Learning Ally customer, and you’re thinking
+of changing your integration method, we recommend contacting our
+Integrations Specialist, Alison Dario, at adario@learningally.org or
+609-215-7413.</li>
+</ul>
+<h2 id="tech-support">Tech Support</h2>
+<h3 id="how-can-my-students-login-over-the-summer">How can my students
+login over the summer?</h3>
+<p>Your method of logging in over the summer depends on how your
+student’s account is set up—students can access the Learning Ally
+Audiobook Solution via the same method your district provided during the
+school year to sign in over the summer; through our website with their
+username and password, using Google SSO, using Clever or using
+ClassLink. Please find your method linked below:</p>
+<p>Students: Access the Learning Ally Audiobook Solution <a
+href="https://portal.learningally.org/login">Through our website</a></p>
+<p>Students: Access the Learning Ally Audiobook Solution <a
+href="https://login.classlink.com">Through ClassLink</a></p>
+<p>Students: Access the Learning Ally Audiobook Solution <a
+href="https://learningally.org/help/classlink">Through Clever</a></p>
+<p>Students: Access the Learning Ally Audiobook Solution <a
+href="https://learningally.org/help/google-single-sign-on">Through
+Google Single Sign-On</a></p>
+<p>If you still have questions or concerns, contact Customer Care at <a
+href="mailto:customercare@learningally.org">customercare@learningally.org</a>
+or call 1-800-221-4792.</p>
+<h3 id="how-do-i-add-students-manually">How do I add students
+manually?</h3>
+<p>Once logged in, Educators and Admins can go to their Manage Students
+tab and click “Add Individual Student” to add students one at a time. If
+an Educator or Admin has the Data Manager role, they can also click
+Add/Update Student From File” to add students in bulk via CSV file.
+These options will not be available if integrated with Clever or
+ClassLink</p>
+<h3
+id="how-long-does-it-take-for-students-to-sync-from-cleverclasslink">How
+long does it take for students to sync from Clever/ClassLink?</h3>
+<p>Our data sync normally runs every 24 hours, but this can take longer
+during high volume times like back to school. If you have any questions
+about the status of your data sync please reach out to Customer Care at
+800-221-4792 or <a
+href="mailto:customercare@LearningAlly.org">customercare@LearningAlly.org</a>.</p>
+<h3
+id="why-am-i-getting-a-login-error-even-though-my-credentials-are-correct">Why
+am I getting a login error even though my credentials are correct?</h3>
+<p>Please make sure you are logging in the correct way. If your school
+is integrated with Clever, ClassLink or Google SSO you may need to
+access via the “Login Through Your School” option on our website.</p>
+<p>If you have a manual login, please try resetting your login info and
+if that still does not work please reach out to Customer Care at
+800-221-4792 or <a
+href="mailto:customercare@learningally.org">customercare@learningally.org</a>.</p>
+<h3
+id="why-arent-my-students-showing-up-in-learning-ally-or-are-unable-to-log-in-through-clever-or-classlink">Why
+aren’t my students showing up in Learning Ally, or are unable to log in
+through Clever or ClassLink?</h3>
+<p>Please see below for a list of things to check if your student cannot
+login:</p>
+<p>Confirm their login method. If users are integrated with ClassLink or
+Clever, they will not be able to manually login with a username and
+password on our website. Instead, they will need to use the “Log in
+through your school” option on our site, or access via their Clever or
+ClassLink portals.</p>
+<p>Confirm whether they are being shared from their rostering provider.
+If you search their name in Clever or ClassLink does their record
+populate?</p>
+<p>Confirm they are shared with the required data. Values like email,
+student number and grade are all required for user creation. If a user
+is shared without these values, their record will not be created.</p>
+<p>Confirm the user is shared to an enrolled org. It is very common for
+users to be shared to a non-enrolled district org or school which will
+prevent their account creation.</p>
+<h3 id="why-is-google-sso-not-working-for-our-school">Why is Google SSO
+not working for our school?</h3>
+<p>Please confirm with your account contact that your Google SSO
+integration has been set up. If so please confirm that users are trying
+to login with the correct email domain that was used to set up the
+integration.</p>
+<p>If that still does not work, you may need to make sure access to
+third party app is configured from Google. More information on this can
+be found <a
+href="https://knowledge.workspace.google.com/admin/apps/setting-up-sso">here.</a></p>
+</main>
+</body>
+</html>
