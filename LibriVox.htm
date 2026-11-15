@@ -2,19 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc 3.13" />
+  <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>LibriVox help</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     html {
       color: #1a1a1a;
-      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
-      background-color: light-dark(#fdfdfd, #1a1a1a);
-      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -39,16 +33,12 @@
     }
     @media print {
       html {
-        color-scheme: light only;
+        background-color: white;
       }
-      html, body, pre, code {
+      body {
         background-color: transparent;
-      }
-      body, a, a:visited, blockquote {
         color: black;
-      }
-      pre, code {
-        padding: 0;
+        font-size: 12pt;
       }
       p, h2, h3 {
         orphans: 3;
@@ -61,14 +51,13 @@
     p {
       margin: 1em 0;
     }
-    a, a:visited {
-      color: inherit;
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
     }
     img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -91,14 +80,10 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid;
-      border-color: #e6e6e6;
-      border-color: light-dark(#e6e6e6, #4c4c4c);
+      border-left: 2px solid #e6e6e6;
       color: #606060;
-      color: light-dark(#606060, #b6b6b6);
     }
     code {
-      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -118,8 +103,8 @@
      overflow: visible;
     }
     hr {
+      background-color: #1a1a1a;
       border: none;
-      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -136,11 +121,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid currentColor;
-      border-bottom: 1px solid currentColor;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
     }
     th {
-      border-top: 1px solid currentColor;
+      border-top: 1px solid #1a1a1a;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -162,13 +147,10 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -179,6 +161,7 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
@@ -3356,13 +3339,17 @@ OK.</p>
 <p>Now your recording should be set to the optimum of 89 dB.</p>
 <pre><code>* Optional: If you choose Normalize from the drop-down menu, Audacity will amplify it for you, providing it doesn&#39;t cause clipping.</code></pre>
 <ul>
-<li>2. <a href="http://mp3gain.sourceforge.net/">MP3Gain</a> for Windows
-or <a href="http://projects.sappharad.com/mp3gain/">MP3Gain Express</a>
-for Mac: these are simple free programs which will tell you the decibel
+<li><ol start="2" type="1">
+<li><a href="http://mp3gain.sourceforge.net/">MP3Gain</a> for Windows or
+<a href="http://projects.sappharad.com/mp3gain/">MP3Gain Express</a> for
+Mac: these are simple free programs which will tell you the decibel
 level of your MP3.</li>
-<li>3. Our own Checker program: this requires Java to be installed on
-your computer. It has been reported that it does not work on the latest
+</ol></li>
+<li><ol start="3" type="1">
+<li>Our own Checker program: this requires Java to be installed on your
+computer. It has been reported that it does not work on the latest
 version of MacOS.</li>
+</ol></li>
 </ul>
 <h4 id="recording-is-off-centre">Recording is Off-centre</h4>
 <p>Q: My whole recording is not centred on the middle line. Does it
@@ -9110,10 +9097,12 @@ throughout.</p></li>
 <li>You may find gaps between those short segments and you’ll have to
 readjust everything, closing up the gaps.</li>
 </ol></li>
-<li><p>2. If you’ve made changes, those changes will no longer line up
-with any individual volume settings you’ve made. You’ll have to do all
-of them over again. <a
-href="http://librivox.drakesdoor.org/images/gb156mins.png">librivox.drakesdoor.org</a></p></li>
+<li><ol start="2" type="1">
+<li>If you’ve made changes, those changes will no longer line up with
+any individual volume settings you’ve made. You’ll have to do all of
+them over again. <a
+href="http://librivox.drakesdoor.org/images/gb156mins.png">librivox.drakesdoor.org</a></li>
+</ol></li>
 </ul>
 <p>MORE TO COME on in a future edit. (Most recent edit: 30 Aug 06)</p>
 <h4 id="hints-on-dealing-with-gbs-missing-insert-command">Hints on
@@ -11109,9 +11098,11 @@ MP3 version of each recording in a book/project.</li>
 <li>If you have a high-speed internet connection (broadband, ADSL), you
 can listen directly via streaming audio.</li>
 </ol></li>
-<li>2. Most people like to download the files for an audio book before
-they listen. We have a guide which explains How To Get LibriVox Audio
-Files. Come back here after you finish it.</li>
+<li><ol start="2" type="1">
+<li>Most people like to download the files for an audio book before they
+listen. We have a guide which explains How To Get LibriVox Audio Files.
+Come back here after you finish it.</li>
+</ol></li>
 </ul>
 <h4 id="how-to-listen-to-librivox-audio-files">How to listen to LibriVox
 audio files</h4>

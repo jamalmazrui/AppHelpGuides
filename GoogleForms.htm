@@ -1,20 +1,14 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Google Forms help</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     html {
       color: #1a1a1a;
-      color: light-dark(#1a1a1a, #fdfdfd);
       background-color: #fdfdfd;
-      background-color: light-dark(#fdfdfd, #1a1a1a);
-      color-scheme: light dark;
     }
     body {
       margin: 0 auto;
@@ -39,16 +33,12 @@
     }
     @media print {
       html {
-        color-scheme: light only;
+        background-color: white;
       }
-      html, body, pre, code {
+      body {
         background-color: transparent;
-      }
-      body, a, a:visited, blockquote {
         color: black;
-      }
-      pre, code {
-        padding: 0;
+        font-size: 12pt;
       }
       p, h2, h3 {
         orphans: 3;
@@ -61,14 +51,13 @@
     p {
       margin: 1em 0;
     }
-    a, a:visited {
-      color: inherit;
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
     }
     img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -91,14 +80,10 @@
     blockquote {
       margin: 1em 0 1em 1.7em;
       padding-left: 1em;
-      border-left: 2px solid;
-      border-color: #e6e6e6;
-      border-color: light-dark(#e6e6e6, #4c4c4c);
+      border-left: 2px solid #e6e6e6;
       color: #606060;
-      color: light-dark(#606060, #b6b6b6);
     }
     code {
-      white-space: pre-wrap;
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
@@ -118,8 +103,8 @@
      overflow: visible;
     }
     hr {
+      background-color: #1a1a1a;
       border: none;
-      border-top: 1px solid currentColor;
       height: 1px;
       margin: 1em 0;
     }
@@ -136,11 +121,11 @@
     }
     tbody {
       margin-top: 0.5em;
-      border-top: 1px solid currentColor;
-      border-bottom: 1px solid currentColor;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
     }
     th {
-      border-top: 1px solid currentColor;
+      border-top: 1px solid #1a1a1a;
       padding: 0.25em 0.5em 0.25em 0.5em;
     }
     td {
@@ -162,13 +147,10 @@
     #TOC a:not(:hover) {
       text-decoration: none;
     }
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     /* The extra [class] is a hack that increases specificity enough to
        override a similar rule in reveal.js */
@@ -179,6 +161,7 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
@@ -193,10 +176,16 @@ id="toc-advanced-tools-and-troubleshooting">Advanced tools and
 troubleshooting</a></li>
 <li><a href="#create-edit-and-format"
 id="toc-create-edit-and-format">Create, edit, and format</a></li>
-<li><a href="#google-forms" id="toc-google-forms">Google Forms</a></li>
+<li><a href="#gemini-in-docs-editors"
+id="toc-gemini-in-docs-editors">Gemini in Docs Editors</a></li>
+<li><a href="#share-form-collect-responses"
+id="toc-share-form-collect-responses">Share form &amp; collect
+responses</a></li>
 <li><a href="#share-your-form-and-collect-responses"
 id="toc-share-your-form-and-collect-responses">Share your form and
 collect responses</a></li>
+<li><a href="#tools-troubleshooting"
+id="toc-tools-troubleshooting">Tools &amp; troubleshooting</a></li>
 <li><a href="#miscellaneous"
 id="toc-miscellaneous">Miscellaneous</a></li>
 </ul></li>
@@ -204,10 +193,22 @@ id="toc-miscellaneous">Miscellaneous</a></li>
 </nav>
 <main>
 <h1 id="google-forms-help">Google Forms help</h1>
-<p>This guide holds Google’s own help for Forms, gathered on 17
-September 2026. Google documents Forms inside its editors help centre,
-beside Docs, Sheets and Slides, so only the articles about forms,
-quizzes, surveys and responses are here.</p>
+<p>This guide holds Google’s own help for Google Forms, gathered from
+support.google.com on 14 November 2026, and replaces September’s: it is
+fuller and current. It covers making and editing a form, question types,
+quizzes, sharing a form, and collecting and viewing responses.</p>
+<p>Google keeps the help for Docs, Sheets, Slides, Forms and Vids in one
+help centre, and this guide holds the part of it about Forms. Google
+writes the same article once for each device it runs on, so where an
+article differs by platform the heading says which one it is for:
+Computer, or iPhone and iPad. Google’s Android editions are left out, as
+this collection covers Windows, the web, iPhone and iPad, and Alexa. The
+categories are Google’s own topics.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
 <h2 id="contents">Contents</h2>
 <ul>
 <li>Advanced tools and troubleshooting
@@ -231,23 +232,27 @@ question for your form</a></li>
 quizzes with Google Forms</a></li>
 <li><a href="#edit-your-form">Edit your form</a></li>
 <li><a href="#how-to-use-google-forms">How to use Google Forms</a></li>
-<li><a href="#how-to-use-google-forms-android">How to use Google Forms
-(Android)</a></li>
 <li><a href="#how-to-use-google-forms-computer">How to use Google Forms
 (Computer)</a></li>
 <li><a href="#how-to-use-google-forms-iphone-and-ipad">How to use Google
 Forms (iPhone and iPad)</a></li>
 <li><a href="#share-your-form-with-collaborators">Share your form with
 collaborators</a></li>
+<li><a href="#show-questions-based-on-answers">Show questions based on
+answers</a></li>
 </ul></li>
-<li>Google Forms
+<li>Gemini in Docs Editors
 <ul>
-<li><a href="#autosave-your-response-progress-on-a-google-form">Autosave
-your response progress on a Google Form</a></li>
-<li><a href="#fix-common-errors-while-you-respond-to-a-google-form">Fix
-common errors while you respond to a Google Form</a></li>
-<li><a href="#format-text-in-your-form">Format text in your
-form</a></li>
+<li><a
+href="#create-a-form-with-gemini-in-google-forms-gemini-in-docs-editors">Create
+a form with Gemini in Google Forms (Gemini in Docs Editors)</a></li>
+<li><a
+href="#summarize-analyze-responses-with-gemini-in-google-forms-gemini-in-docs-editors">Summarize
+&amp; analyze responses with Gemini in Google Forms (Gemini in Docs
+Editors)</a></li>
+</ul></li>
+<li>Share form &amp; collect responses
+<ul>
 <li><a href="#learn-about-updates-in-google-forms">Learn about updates
 in Google Forms</a></li>
 <li><a
@@ -263,34 +268,34 @@ share your form with responders</a></li>
 <li><a href="#view-manage-form-responses">View &amp; manage form
 responses</a></li>
 </ul></li>
+<li>Tools &amp; troubleshooting
+<ul>
+<li><a href="#autosave-your-response-progress-on-a-google-form">Autosave
+your response progress on a Google Form</a></li>
+<li><a href="#fix-common-errors-while-you-respond-to-a-google-form">Fix
+common errors while you respond to a Google Form</a></li>
+</ul></li>
 <li>Miscellaneous
 <ul>
 <li><a
-href="#create-a-form-with-gemini-in-google-forms-workspace-experiments">Create
-a form with Gemini in Google Forms (Workspace Experiments)</a></li>
-<li><a href="#gemini-in-docs-sheets-slides-vids-forms">Gemini in Docs,
-Sheets, Slides, Vids, &amp; Forms</a></li>
+href="#create-a-form-with-gemini-in-google-forms-miscellaneous">Create a
+form with Gemini in Google Forms (Miscellaneous)</a></li>
+<li><a href="#format-text-in-your-form">Format text in your
+form</a></li>
 <li><a href="#generate-questions-with-gemini-in-google-forms">Generate
 questions with Gemini in Google Forms</a></li>
 <li><a
-href="#generate-questions-with-gemini-in-google-forms-workspace-experiments">Generate
-questions with Gemini in Google Forms (Workspace Experiments)</a></li>
-<li><a
-href="#learn-about-prompts-for-gemini-in-docs-sheets-slides-vids-forms">Learn
-about prompts for Gemini in Docs, Sheets, Slides, Vids &amp;
-Forms</a></li>
-<li><a
-href="#summarize-analyze-responses-with-gemini-in-google-forms-workspace-experiments">Summarize
-&amp; analyze responses with Gemini in Google Forms (Workspace
-Experiments)</a></li>
+href="#summarize-analyze-responses-with-gemini-in-google-forms-miscellaneous">Summarize
+&amp; analyze responses with Gemini in Google Forms
+(Miscellaneous)</a></li>
+<li><a href="#use-google-forms-with-a-screen-reader">Use Google Forms
+with a screen reader</a></li>
 </ul></li>
 </ul>
 <h2 id="advanced-tools-and-troubleshooting">Advanced tools and
 troubleshooting</h2>
 <h3 id="get-permission-to-open-a-google-form">Get permission to open a
 Google Form</h3>
-<h4 id="get-permission-to-open-a-google-form-1">Get permission to open a
-Google Form</h4>
 <p>If you try to open a Google Form and you get a “You need access”
 message, it could be because:</p>
 <ul>
@@ -299,8 +304,8 @@ open a Google Form.</li>
 <li>You’re signed in to a Google Account that doesn’t have access. To
 resolve this issue, sign in to a different Google Account.</li>
 </ul>
-<h5 id="get-permission-to-open-a-form">Get permission to open a
-form</h5>
+<h4 id="get-permission-to-open-a-form">Get permission to open a
+form</h4>
 <p>Your access to open a form depends on the sharing settings selected
 by the form creator. If the form’s creator uses Google apps for work or
 school, they might need to share with your specific group so that you
@@ -318,7 +323,7 @@ organization.”</p></li>
 <li><p>If you’re the form creator: Learn how to share your form with
 responders.</p></li>
 </ul>
-<h5 id="sign-in-to-open-a-form">Sign in to open a form</h5>
+<h4 id="sign-in-to-open-a-form">Sign in to open a form</h4>
 <p>Make sure you sign in to the correct account. Unless the creator
 changes the settings, forms created through work or school accounts are
 only accessible to people within the organization.</p>
@@ -339,7 +344,7 @@ Add another account.</li>
 <li>To check if you have access to the form, after you sign in, try its
 link again.</li>
 </ul>
-<h5 id="related-resources">Related resources</h5>
+<h4 id="related-resources">Related resources</h4>
 <ul>
 <li>Fix common errors while you respond to a Google Form</li>
 <li>How to use Google Forms</li>
@@ -347,12 +352,10 @@ link again.</li>
 </ul>
 <h3 id="how-to-set-rules-for-your-form">How to set rules for your
 form</h3>
-<h4 id="how-to-set-rules-for-your-form-1">How to set rules for your
-form</h4>
 <p>You can create rules that people have to follow when they fill out
 your form. For example, if you ask for email addresses, you can make
 sure that people can only submit properly formatted email addresses.</p>
-<h5 id="set-up-rules-for-a-question">Set up rules for a question</h5>
+<h4 id="set-up-rules-for-a-question">Set up rules for a question</h4>
 <ul>
 <li><a href="https://forms.google.com">Open a form in Google
 Forms</a>.</li>
@@ -368,7 +371,7 @@ error text” field, enter an error message. Responders will get this
 message when their answer doesn’t follow the rules.</li>
 <li>Example: You reached the limit of 200 words.</li>
 </ul>
-<h5 id="types-of-rules">Types of rules</h5>
+<h4 id="types-of-rules">Types of rules</h4>
 <p>Each question type has different settings options.</p>
 <p>Rules for short answer questions</p>
 <ul>
@@ -458,8 +461,8 @@ message and can’t continue. See how to set up an error message.</p></li>
 <li>Check the box next to “Shuffle row order.”</li>
 </ul></li>
 </ul>
-<h6 id="example-of-limit-to-one-response-per-column">Example of “Limit
-to one response per column”</h6>
+<h5 id="example-of-limit-to-one-response-per-column">Example of “Limit
+to one response per column”</h5>
 <p>Input:</p>
 <ul>
 <li>Rows: A, B, C</li>
@@ -493,8 +496,8 @@ message and can’t continue. See how to set up an error message.</p></li>
 <li>Check the box next to “Shuffle row order.”</li>
 </ul></li>
 </ul>
-<h6 id="example-of-limit-to-one-response-per-column-1">Example of “Limit
-to one response per column”</h6>
+<h5 id="example-of-limit-to-one-response-per-column-1">Example of “Limit
+to one response per column”</h5>
 <p>Input:</p>
 <ul>
 <li>Rows: A, B, C</li>
@@ -502,7 +505,7 @@ to one response per column”</h6>
 C) for each column (1, 2, 3). If they check multiple rows in a column,
 they get an error message.</li>
 </ul>
-<h5 id="regular-expressions">Regular expressions</h5>
+<h4 id="regular-expressions">Regular expressions</h4>
 <p>You can require answers to match a particular set of criteria called
 regular expressions. Regular expressions search for patterns in the
 answers.</p>
@@ -597,35 +600,33 @@ that isn’t within the given set.</p>
 <p>dg, dog, doug</p>
 <p>Below are a couple of examples of how regular expressions could be
 used to search a spreadsheet:</p>
-<h6 id="search-for-cells-that-contain-dollar-amounts">Search for cells
-that contain dollar amounts</h6>
+<h5 id="search-for-cells-that-contain-dollar-amounts">Search for cells
+that contain dollar amounts</h5>
 <pre><code>- Enter the following in the Find bar: `^\$([0-9,]+)?[.][0-9]+`</code></pre>
 <p>This means a dollar amount where the first number is any number 0–9
 or comma occurring zero or more times, followed by [.], followed by any
 number 0–9 repeated one or more times. This search would return any of
 the following: $4.666, $17.86, $7.76, $.54, $900,001.00,
 $523,877,231.56</p>
-<h6 id="search-for-cells-that-contain-us-zip-codes">Search for cells
-that contain US zip codes</h6>
+<h5 id="search-for-cells-that-contain-us-zip-codes">Search for cells
+that contain US zip codes</h5>
 <pre><code>- In the “Find” bar, enter: `[0-9]{5}(-[0-9]{4})?`</code></pre>
 <p>This means a U.S. zip code consisting of five numbers with an
 optional hyphen and four-digit add-on.</p>
-<h6
+<h5
 id="search-for-cells-containing-names-beginning-with-a-lowercase-letter">Search
-for cells containing names beginning with a lowercase letter</h6>
+for cells containing names beginning with a lowercase letter</h5>
 <pre><code>- Enter the following into the Find bar: `^[a-z].*`</code></pre>
 <p>This means a cell input that contains a lowercase letter followed by
 another character 0 or more times. This search would return any of the
 following: bob, jim, gEORGE, marTin</p>
-<h5 id="related-resources-1">Related resources</h5>
+<h4 id="related-resources-1">Related resources</h4>
 <ul>
 <li>Choose a type of question for your form</li>
 <li>Create &amp; grade quizzes with Google Forms</li>
 </ul>
 <h3 id="keyboard-shortcuts-for-google-forms">Keyboard shortcuts for
 Google Forms</h3>
-<h4 id="keyboard-shortcuts-for-google-forms-1">Keyboard shortcuts for
-Google Forms</h4>
 <p>To open a list of keyboard shortcuts in Google Forms, press Ctrl + /
 (Windows, Chrome OS) or ⌘ + / (Mac).</p>
 <p>You might also be interested in keyboard shortcuts for Google
@@ -826,11 +827,10 @@ Sheets.</p>
 <p>Focus grade above</p>
 <p>Ctrl + Shift + Up arrow</p>
 <h3 id="use-locked-mode-for-quizzes">Use locked mode for quizzes</h3>
-<h4 id="use-locked-mode-for-quizzes-1">Use locked mode for quizzes</h4>
 <p>You can help keep students focused while they take quizzes and tests
 on their Chromebooks. When students take a quiz in locked mode, they
 won’t be able to browse other websites or open any other apps.</p>
-<h5 id="about-locked-mode">About locked mode</h5>
+<h4 id="about-locked-mode">About locked mode</h4>
 <p>Locked mode collects email addresses and limits quizzes to your
 domain. In locked mode:</p>
 <ul>
@@ -851,15 +851,15 @@ Important: To use locked mode, you need:</p></li>
 managed Chromebooks.</p></li>
 <li><p>Chrome OS 75 and up</p></li>
 </ul>
-<h5 id="turn-on-locked-mode">Turn on locked mode</h5>
+<h4 id="turn-on-locked-mode">Turn on locked mode</h4>
 <ul>
 <li>Open a quiz in <a href="https://forms.google.com">Google
 Forms</a>.</li>
 <li>At the top of the quiz, click Settings Make this a quiz.</li>
 <li>Under “Chromebook settings,” turn on Locked mode.</li>
 </ul>
-<h5 id="accessibility-features-extensions-in-locked-mode">Accessibility
-features &amp; extensions in locked mode</h5>
+<h4 id="accessibility-features-extensions-in-locked-mode">Accessibility
+features &amp; extensions in locked mode</h4>
 <p>Recommended Chromebook accessibility features</p>
 <ul>
 <li>ChromeVox (text-to-speech)</li>
@@ -896,7 +896,7 @@ for Google Chrome</a>: Converts text to speech and speech to text, with
 picture dictionaries, text prediction, and more. Tip: If you can’t find
 an accessibility feature, use accessibility shortcuts instead.</li>
 </ul>
-<h5 id="if-you-cant-use-locked-mode">If you can’t use locked mode</h5>
+<h4 id="if-you-cant-use-locked-mode">If you can’t use locked mode</h4>
 <p>For teachers giving quizzes</p>
 <ul>
 <li><p>Make sure you’re signed in to your Google Account through
@@ -917,11 +917,9 @@ teacher.</p></li>
 <h2 id="create-edit-and-format">Create, edit, and format</h2>
 <h3 id="change-the-theme-or-font-of-your-form">Change the theme or font
 of your form</h3>
-<h4 id="change-the-theme-or-font-of-your-form-1">Change the theme or
-font of your form</h4>
 <p>To tailor your form to your audience, you can add a theme or change
 the font.</p>
-<h5 id="change-the-color-or-theme">Change the color or theme</h5>
+<h4 id="change-the-color-or-theme">Change the color or theme</h4>
 <ul>
 <li>In <a href="http://forms.google.com/">Google Forms</a>, open a
 form.</li>
@@ -936,7 +934,7 @@ image.</li>
 <li>Click Close . You can view your new theme and continue to edit your
 form.</li>
 </ul>
-<h5 id="customize-a-section-header">Customize a section header</h5>
+<h4 id="customize-a-section-header">Customize a section header</h4>
 <p>Add a header image</p>
 <ul>
 <li><p>On your computer, open a form in <a
@@ -969,7 +967,7 @@ href="https://forms.google.com/">Google Forms</a>.</li>
 <li>To crop the image, drag the corners of the box.</li>
 <li>Click Save.</li>
 </ul>
-<h5 id="choose-a-different-font">Choose a different font</h5>
+<h4 id="choose-a-different-font">Choose a different font</h4>
 <ul>
 <li>In <a href="http://forms.google.com/">Google Forms</a>, open a
 form.</li>
@@ -981,8 +979,6 @@ and size.</li>
 </ul>
 <h3 id="choose-a-type-of-question-for-your-form">Choose a type of
 question for your form</h3>
-<h4 id="choose-a-type-of-question-for-your-form-1">Choose a type of
-question for your form</h4>
 <p>You can select types of questions from a menu:</p>
 <ul>
 <li>Open a form in <a href="https://forms.google.com/">Google
@@ -996,7 +992,7 @@ turn Required on or off.</li>
 Description.</li>
 <li>(Optional) To find more options for each question, click More .</li>
 </ul>
-<h5 id="types-of-questions">Types of questions</h5>
+<h4 id="types-of-questions">Types of questions</h4>
 <p>Short answer</p>
 <ul>
 <li><p>You can provide an open question. Responders can find one line to
@@ -1088,10 +1084,8 @@ at the bottom right of the question, click More .</li>
 </ul>
 <h3 id="create-grade-quizzes-with-google-forms">Create &amp; grade
 quizzes with Google Forms</h3>
-<h4 id="create-grade-quizzes-with-google-forms-1">Create &amp; grade
-quizzes with Google Forms</h4>
-<h5 id="make-a-new-quiz-answer-key">Make a new quiz &amp; answer
-key</h5>
+<h4 id="make-a-new-quiz-answer-key">Make a new quiz &amp; answer
+key</h4>
 <p>Tip: The quickest way to create a quiz is to go to <a
 href="http://g.co/createaquiz&amp;sa=D&amp;usg=AFQjCNFlSIVjFYxUIq-jkHh2QIoNYt8NHw">g.co/createaquiz</a>
 .</p>
@@ -1115,7 +1109,7 @@ assign points &amp; add automatic feedback</li>
 <li>Multiple choice grid</li>
 <li>Checkbox grid</li>
 </ul>
-<h6 id="create-an-answer-key">Create an answer key</h6>
+<h5 id="create-an-answer-key">Create an answer key</h5>
 <ul>
 <li>To add a question, click Add question .</li>
 <li>Fill out your question and answers.</li>
@@ -1144,7 +1138,7 @@ quiz to people outside of your work or school</p></li>
 and its trusted organizations. Learn how to send your quiz to
 others.</p></li>
 </ul>
-<h5 id="grade-quizzes">Grade quizzes</h5>
+<h4 id="grade-quizzes">Grade quizzes</h4>
 <p>You can see automatic summaries for all quiz responses,
 including:</p>
 <ul>
@@ -1152,7 +1146,7 @@ including:</p>
 <li>Graphs marked with correct answers</li>
 <li>Average, median, and range of scores</li>
 </ul>
-<h6 id="grade-individual-responses">Grade individual responses</h6>
+<h5 id="grade-individual-responses">Grade individual responses</h5>
 <p>If you collect email addresses, you can assign points and leave
 feedback on individual responses. After you grade each response, save
 your changes.</p>
@@ -1190,7 +1184,7 @@ Add feedback.</p></li>
 .</p></li>
 <li><p>When you’re done grading, at the bottom, click Save.</p></li>
 </ul>
-<h5 id="share-results">Share results</h5>
+<h4 id="share-results">Share results</h4>
 <p>If you collect email addresses in your form, you can send results
 immediately or wait until you’re ready to share them.</p>
 <p>By default:</p>
@@ -1198,8 +1192,8 @@ immediately or wait until you’re ready to share them.</p>
 <li>Grades will release immediately</li>
 <li>Email addresses won’t be collected.</li>
 </ul>
-<h6 id="change-how-you-release-grades">Change how you release
-grades</h6>
+<h5 id="change-how-you-release-grades">Change how you release
+grades</h5>
 <ul>
 <li>In Google Forms, open a quiz.</li>
 <li>Click Settings.</li>
@@ -1209,7 +1203,7 @@ grades</h6>
 <li>Later, after manual review</li>
 </ul></li>
 </ul>
-<h6 id="email-results-after-review">Email results after review</h6>
+<h5 id="email-results-after-review">Email results after review</h5>
 <ul>
 <li>In <a href="https://forms.google.com/">Google Forms</a>, open a
 quiz.</li>
@@ -1220,12 +1214,11 @@ Release score.</li>
 <li>Click Send emails and release.</li>
 </ul>
 <h3 id="edit-your-form">Edit your form</h3>
-<h4 id="edit-your-form-1">Edit your form</h4>
 <p>After you’ve created a form, you can add and edit up to 300 pieces of
 content, like questions, descriptions, images, and videos. To organize
 your form by topic, you can add up to 75 sections.</p>
-<h5 id="add-questions-headers-sections">Add questions, headers &amp;
-sections</h5>
+<h4 id="add-questions-headers-sections">Add questions, headers &amp;
+sections</h4>
 <p>Add a question</p>
 <ul>
 <li>Open a form in <a href="https://forms.google.com">Google
@@ -1236,8 +1229,8 @@ want.</li>
 <li>Type the possible responses to your question. To prevent people from
 not answering, turn on Required. Add image or video</li>
 </ul>
-<h6 id="add-an-image-or-video-to-a-question-or-answer">Add an image or
-video to a question or answer</h6>
+<h5 id="add-an-image-or-video-to-a-question-or-answer">Add an image or
+video to a question or answer</h5>
 <p>You can add an image to a question or an answer for multiple choice
 or checkbox questions.</p>
 <ul>
@@ -1248,8 +1241,8 @@ form.</li>
 <li>Upload or choose an image.</li>
 <li>Click Select.</li>
 </ul>
-<h6 id="add-an-image-or-video-on-its-own">Add an image or video on its
-own</h6>
+<h5 id="add-an-image-or-video-on-its-own">Add an image or video on its
+own</h5>
 <p>You can add an image or YouTube video to your form. You can’t add
 videos to questions, but you can place them before or after a
 question.</p>
@@ -1267,12 +1260,12 @@ form.</li>
 <li>Click Add Section .</li>
 <li>Name the new section. Duplicate a question, image, or section</li>
 </ul>
-<h6 id="questions-or-images">Questions or images</h6>
+<h5 id="questions-or-images">Questions or images</h5>
 <ul>
 <li>Click a question or image.</li>
 <li>Click Duplicate .</li>
 </ul>
-<h6 id="sections">Sections</h6>
+<h5 id="sections">Sections</h5>
 <ul>
 <li><p>Click a section header.</p></li>
 <li><p>Click More .</p></li>
@@ -1287,16 +1280,16 @@ Select.</p></li>
 add.</p></li>
 <li><p>Click Import questions.</p></li>
 </ul>
-<h5 id="delete-or-edit-items">Delete or edit items</h5>
+<h4 id="delete-or-edit-items">Delete or edit items</h4>
 <p>To edit a question, header, or description, click the text you want
 to change.</p>
 <p>Delete a question, image, or section</p>
-<h6 id="questions-or-images-1">Questions or images</h6>
+<h5 id="questions-or-images-1">Questions or images</h5>
 <ul>
 <li>Click a question or image.</li>
 <li>Click Delete .</li>
 </ul>
-<h6 id="section">Section</h6>
+<h5 id="section">Section</h5>
 <ul>
 <li><p>Click a section header.</p></li>
 <li><p>Click More .</p></li>
@@ -1309,8 +1302,8 @@ order.</p></li>
 <li><p>If you want to undo a recent change:</p></li>
 <li><p>At the top right of your form, click Undo .</p></li>
 </ul>
-<h5 id="randomly-order-questions-and-answers">Randomly order questions
-and answers</h5>
+<h4 id="randomly-order-questions-and-answers">Randomly order questions
+and answers</h4>
 <p>You can have questions and answers appear in a different order for
 everyone who fills out your form.</p>
 <p>Note: Questions and answers will only be shuffled once per email
@@ -1332,8 +1325,8 @@ questions.</p>
 <li>In the bottom right, click More .</li>
 <li>Click Shuffle option order.</li>
 </ul>
-<h5 id="turn-off-autosave-for-responders">Turn off autosave for
-responders</h5>
+<h4 id="turn-off-autosave-for-responders">Turn off autosave for
+responders</h4>
 <p>By default, draft responses to forms are autosaved for 30 days after
 a responder’s last edit or until the form is complete, whichever comes
 first.</p>
@@ -1347,7 +1340,7 @@ autosave on or off:</p></li>
 <li><p>Next to “Presentation,” click the Down arrow .</p></li>
 <li><p>Turn Disable autosave for all respondents on or off.</p></li>
 </ul>
-<h5 id="change-your-default-settings">Change your default settings</h5>
+<h4 id="change-your-default-settings">Change your default settings</h4>
 <p>To make every new form use the same settings:</p>
 <ul>
 <li>In <a href="https://forms.google.com">Google Forms</a>, open a
@@ -1357,7 +1350,6 @@ form.</li>
 new form.</li>
 </ul>
 <h3 id="how-to-use-google-forms">How to use Google Forms</h3>
-<h4 id="how-to-use-google-forms-1">How to use Google Forms</h4>
 <p>Want advanced Google Workspace features for your business?</p>
 <p><a
 href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=6281888">Try
@@ -1367,8 +1359,8 @@ forms, send them to others to fill out and then analyze their responses
 in real time.</p>
 <p>To edit forms and analyze responses with others, you can share your
 form with collaborators.</p>
-<h5 id="step-1-create-a-new-form-or-quiz">Step 1: Create a new form or
-quiz</h5>
+<h4 id="step-1-create-a-new-form-or-quiz">Step 1: Create a new form or
+quiz</h4>
 <ul>
 <li>Go to <a href="https://forms.google.com">forms.google.com</a>.</li>
 <li>Click Blank form .</li>
@@ -1390,8 +1382,8 @@ a form directly from Google Drive:</p>
 href="https://drive.google.com">drive.google.com</a>.</li>
 <li>In the top left, click New Google Forms.</li>
 </ul>
-<h5 id="step-2-edit-and-format-a-form-or-quiz">Step 2: Edit and format a
-form or quiz</h5>
+<h4 id="step-2-edit-and-format-a-form-or-quiz">Step 2: Edit and format a
+form or quiz</h4>
 <p>You can:</p>
 <ul>
 <li>Add, edit, or format text, images or videos in a form.</li>
@@ -1399,12 +1391,12 @@ form or quiz</h5>
 <li>Select to store form responses in a Google Sheet. To create or edit
 your form with others, you can share your form with collaborators.</li>
 </ul>
-<h5 id="step-3-send-your-form-for-people-to-fill-in">Step 3: Send your
-form for people to fill in</h5>
+<h4 id="step-3-send-your-form-for-people-to-fill-in">Step 3: Send your
+form for people to fill in</h4>
 <p>When you are ready, you can publish and send your form to others to
 collect their responses.</p>
-<h5 id="step-4-review-analyze-responses">Step 4: Review &amp; analyze
-responses</h5>
+<h4 id="step-4-review-analyze-responses">Step 4: Review &amp; analyze
+responses</h4>
 <p>You can get charts with response data or open the data with Google
 Sheets and other add-ons for deeper analysis of the responses.</p>
 <ul>
@@ -1412,70 +1404,16 @@ Sheets and other add-ons for deeper analysis of the responses.</p>
 <li>View and manage form responses.</li>
 <li>Use add-ons, Apps Script, AppSheet, and Data Studio.</li>
 </ul>
-<h5 id="related-resources-2">Related resources</h5>
+<h4 id="related-resources-2">Related resources</h4>
 <p>If you need help with a form or quiz that someone has sent you, check
 out resources for responders:</p>
 <ul>
 <li>Autosave your response progress on a Google Form</li>
 <li>Get permission to open a Google Form</li>
-<li>Fix common errors while you respond to a Google Form <a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DDesktop">Computer</a>
-<a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DAndroid">Android</a><a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DiOS">iPhone
-&amp; iPad</a></li>
-</ul>
-<h3 id="how-to-use-google-forms-android">How to use Google Forms
-(Android)</h3>
-<h4 id="how-to-use-google-forms-2">How to use Google Forms</h4>
-<p>Want advanced Google Workspace features for your business?</p>
-<p><a
-href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=6281888">Try
-Google Workspace today!</a></p>
-<p>You can use Google Forms to create online surveys, quizzes, and
-forms, send them to others to fill out and then analyze their responses
-in real time.</p>
-<p>To edit forms and analyze responses with others, you can share your
-form with collaborators.</p>
-<h5 id="step-1-create-a-new-form-or-quiz-1">Step 1: Create a new form or
-quiz</h5>
-<ul>
-<li>On your Android phone or tablet, open a mobile web browser, like
-Chrome.</li>
-<li>Go to <a href="https://forms.google.com">forms.google.com</a>.</li>
-<li>Tap Blank form .</li>
-<li>Name your untitled form.</li>
-</ul>
-<h5 id="step-2-edit-and-format-a-form-or-quiz-1">Step 2: Edit and format
-a form or quiz</h5>
-<p>You can:</p>
-<ul>
-<li>Add, edit, or format text, images or videos in a form.</li>
-<li>Create and grade quizzes in a form.</li>
-<li>Select to store form responses in a Google Sheet.</li>
-</ul>
-<h5 id="step-3-send-your-form-for-people-to-fill-in-1">Step 3: Send your
-form for people to fill in</h5>
-<p>When you are ready, you can publish and send your form to others to
-collect their responses.</p>
-<p>Tip: To find existing forms, go to the Google Drive app and find
-forms that were created earlier or shared with you.</p>
-<h5 id="related-resources-3">Related resources</h5>
-<p>If you need help with a form or quiz that someone has sent you, check
-out resources for responders:</p>
-<ul>
-<li>Autosave your response progress on a Google Form</li>
-<li>Get permission to open a Google Form</li>
-<li>Fix common errors while you respond to a Google Form <a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DAndroid">Android</a>
-<a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DDesktop">Computer</a><a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DiOS">iPhone
-&amp; iPad</a></li>
+<li>Fix common errors while you respond to a Google Form</li>
 </ul>
 <h3 id="how-to-use-google-forms-computer">How to use Google Forms
 (Computer)</h3>
-<h4 id="how-to-use-google-forms-3">How to use Google Forms</h4>
 <p>Want advanced Google Workspace features for your business?</p>
 <p><a
 href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=6281888">Try
@@ -1485,8 +1423,8 @@ forms, send them to others to fill out and then analyze their responses
 in real time.</p>
 <p>To edit forms and analyze responses with others, you can share your
 form with collaborators.</p>
-<h5 id="step-1-create-a-new-form-or-quiz-2">Step 1: Create a new form or
-quiz</h5>
+<h4 id="step-1-create-a-new-form-or-quiz-1">Step 1: Create a new form or
+quiz</h4>
 <ul>
 <li>Go to <a href="https://forms.google.com">forms.google.com</a>.</li>
 <li>Click Blank form .</li>
@@ -1508,8 +1446,8 @@ a form directly from Google Drive:</p>
 href="https://drive.google.com">drive.google.com</a>.</li>
 <li>In the top left, click New Google Forms.</li>
 </ul>
-<h5 id="step-2-edit-and-format-a-form-or-quiz-2">Step 2: Edit and format
-a form or quiz</h5>
+<h4 id="step-2-edit-and-format-a-form-or-quiz-1">Step 2: Edit and format
+a form or quiz</h4>
 <p>You can:</p>
 <ul>
 <li>Add, edit, or format text, images or videos in a form.</li>
@@ -1517,12 +1455,12 @@ a form or quiz</h5>
 <li>Select to store form responses in a Google Sheet. To create or edit
 your form with others, you can share your form with collaborators.</li>
 </ul>
-<h5 id="step-3-send-your-form-for-people-to-fill-in-2">Step 3: Send your
-form for people to fill in</h5>
+<h4 id="step-3-send-your-form-for-people-to-fill-in-1">Step 3: Send your
+form for people to fill in</h4>
 <p>When you are ready, you can publish and send your form to others to
 collect their responses.</p>
-<h5 id="step-4-review-analyze-responses-1">Step 4: Review &amp; analyze
-responses</h5>
+<h4 id="step-4-review-analyze-responses-1">Step 4: Review &amp; analyze
+responses</h4>
 <p>You can get charts with response data or open the data with Google
 Sheets and other add-ons for deeper analysis of the responses.</p>
 <ul>
@@ -1530,22 +1468,16 @@ Sheets and other add-ons for deeper analysis of the responses.</p>
 <li>View and manage form responses.</li>
 <li>Use add-ons, Apps Script, AppSheet, and Data Studio.</li>
 </ul>
-<h5 id="related-resources-4">Related resources</h5>
+<h4 id="related-resources-3">Related resources</h4>
 <p>If you need help with a form or quiz that someone has sent you, check
 out resources for responders:</p>
 <ul>
 <li>Autosave your response progress on a Google Form</li>
 <li>Get permission to open a Google Form</li>
-<li>Fix common errors while you respond to a Google Form <a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DDesktop">Computer</a>
-<a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DAndroid">Android</a><a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DiOS">iPhone
-&amp; iPad</a></li>
+<li>Fix common errors while you respond to a Google Form</li>
 </ul>
 <h3 id="how-to-use-google-forms-iphone-and-ipad">How to use Google Forms
 (iPhone and iPad)</h3>
-<h4 id="how-to-use-google-forms-4">How to use Google Forms</h4>
 <p>Want advanced Google Workspace features for your business?</p>
 <p><a
 href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=6281888">Try
@@ -1555,16 +1487,16 @@ forms, send them to others to fill out and then analyze their responses
 in real time.</p>
 <p>To edit forms and analyze responses with others, you can share your
 form with collaborators.</p>
-<h5 id="step-1-create-a-new-form-or-quiz-3">Step 1: Create a new form or
-quiz</h5>
+<h4 id="step-1-create-a-new-form-or-quiz-2">Step 1: Create a new form or
+quiz</h4>
 <ul>
 <li>On your iPhone or iPad, open a mobile web browser, like Safari.</li>
 <li>Go to <a href="https://forms.google.com">forms.google.com</a>.</li>
 <li>Tap Blank form .</li>
 <li>Name your untitled form.</li>
 </ul>
-<h5 id="step-2-edit-and-format-a-form-or-quiz-3">Step 2: Edit and format
-a form or quiz</h5>
+<h4 id="step-2-edit-and-format-a-form-or-quiz-2">Step 2: Edit and format
+a form or quiz</h4>
 <p>Important: Date and time picker is not currently supported for iPhone
 and iPad.</p>
 <p>You can:</p>
@@ -1573,33 +1505,27 @@ and iPad.</p>
 <li>Create and grade quizzes in a form.</li>
 <li>Select to store form responses in a Google Sheet.</li>
 </ul>
-<h5 id="step-3-send-your-form-for-people-to-fill-in-3">Step 3: Send your
-form for people to fill in</h5>
+<h4 id="step-3-send-your-form-for-people-to-fill-in-2">Step 3: Send your
+form for people to fill in</h4>
 <p>When you are ready, you can publish and send your form to others to
 collect their responses.</p>
 <p>Tip: To find existing forms, go to the Google Drive app and find
 forms that were created earlier or shared with you.</p>
-<h5 id="related-resources-5">Related resources</h5>
+<h4 id="related-resources-4">Related resources</h4>
 <p>If you need help with a form or quiz that someone has sent you, check
 out resources for responders:</p>
 <ul>
 <li>Autosave your response progress on a Google Form</li>
 <li>Get permission to open a Google Form</li>
-<li>Fix common errors while you respond to a Google Form <a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DiOS">iPhone
-&amp; iPad</a> <a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DAndroid">Android</a><a
-href="https://support.google.com/docs/answer/6281888?co=GENIE.Platform%3DDesktop">Computer</a></li>
+<li>Fix common errors while you respond to a Google Form</li>
 </ul>
 <h3 id="share-your-form-with-collaborators">Share your form with
 collaborators</h3>
-<h4 id="share-your-form-with-collaborators-1">Share your form with
-collaborators</h4>
 <p>You can work with others on a form by sharing it with collaborators.
 If you only want people to fill out your form instead, learn how to send
 a form to responders.</p>
-<h5 id="share-editor-access-to-a-form">Share editor access to a
-form</h5>
+<h4 id="share-editor-access-to-a-form">Share editor access to a
+form</h4>
 <ul>
 <li><p>Open a form in <a href="https://forms.google.com/">Google
 Forms</a>.</p></li>
@@ -1637,8 +1563,8 @@ automatically.</li>
 the linked sheet separately.</li>
 </ul></li>
 </ul>
-<h5 id="transfer-ownership-of-your-form">Transfer ownership of your
-form</h5>
+<h4 id="transfer-ownership-of-your-form">Transfer ownership of your
+form</h4>
 <p>Before you transfer ownership of your form to someone, you need to
 give them editor access.</p>
 <p>To transfer ownership to an existing editor:</p>
@@ -1648,232 +1574,342 @@ give them editor access.</p>
 arrow .</li>
 <li>Select Transfer ownership Yes.</li>
 </ul>
-<h2 id="google-forms">Google Forms</h2>
-<h3 id="autosave-your-response-progress-on-a-google-form">Autosave your
-response progress on a Google Form</h3>
-<h4 id="autosave-your-response-progress-on-a-google-form-1">Autosave
-your response progress on a Google Form</h4>
-<p>When you fill out a Google Form in your Google account, your progress
-is automatically saved as a draft for 30 days. This means if you can’t
-complete a form or need to switch devices, you don’t have to start over
-the next time you open the form.</p>
-<p>Important: If you’re offline, autosave doesn’t work.</p>
-<p>When you save a draft, Draft saved appears at the top of the
+<h3 id="show-questions-based-on-answers">Show questions based on
+answers</h3>
+<p>You can set up a survey so that people only see certain sections
+based on their answers.</p>
+<ul>
+<li>Open a form in <a href="https://forms.google.com/">Google
+Forms</a>.</li>
+<li>At the bottom right, click More Go to section based on answer. If
+you want the survey to end based on an answer, you can also choose
+Submit form.</li>
+<li>Choose specific sections to send people to. Tip: “Go to section
+based on answer” is only available for Multiple choice and Dropdown
+question types.</li>
+</ul>
+<h4 id="skip-sections-in-your-form">Skip sections in your form</h4>
+<ul>
+<li>Open a form in <a href="https://forms.google.com/">Google
+Forms</a>.</li>
+<li>To add a section break, click Add section .</li>
+<li>At the bottom of each section, you can choose which section people
+go to next.</li>
+</ul>
+<h2 id="gemini-in-docs-editors">Gemini in Docs Editors</h2>
+<h3
+id="create-a-form-with-gemini-in-google-forms-gemini-in-docs-editors">Create
+a form with Gemini in Google Forms (Gemini in Docs Editors)</h3>
+<p>Feature availability:</p>
+<ul>
+<li>This feature requires an eligible Google Workspace or Google AI
+plan. Learn how to get started with Google Workspace with Gemini.</li>
+<li>This feature is also available through our trusted tester program,
+Google Workspace Experiments.</li>
+<li>Learn about supported languages for Google Workspace with Gemini. In
+Google Forms, you can use “Help me create a form” to create new forms
+based on your prompts using Gemini.</li>
+</ul>
+<p>For eligible Workspace Experiments users, Gemini can also use context
+from your Google Drive, Google Chat, web content, and / or Gmail. You
+can select which source(s) are used to provide this additional context,
+which helps create more relevant forms. You can also create forms from
+your specific files like Google Docs, Sheets, Slides, and PDFs.</p>
+<p>This feature is currently available on desktop. For Workspace
+Experiments users, including those in Gemini Beta, it is also available
+on Android and iOS.</p>
+<h4 id="use-gemini-to-create-a-form">Use Gemini to create a form</h4>
+<ul>
+<li><p>On your computer, open a new form in <a
+href="https://docs.google.com/forms/u/0/">Google Forms</a>.</p></li>
+<li><p>In the window that opens, enter a prompt that describes your
 form.</p>
-<p>If you sign in to a Google Account and Saving disabled is at the top
-of the form, the creator may have disabled draft response autosaving on
-their form. If you want to turn on autosaving, contact the form
-owner.</p>
-<p>Factors that may impact saved responses:</p>
 <ul>
-<li>If you lose access to a form, you also lose access to your
-draft.</li>
-<li>If the form owner:
-<ul>
-<li>Deletes a question, your answer to that question is deleted.</li>
-<li>Makes a change to a question option you’ve selected, it’s no longer
-selected in your draft.</li>
-<li>Makes changes to branching logic in a form, you may lose access to
-certain pages of a form. Tips:</li>
+<li>Or, in the toolbar, click Help me create a form .</li>
+<li>To get ideas for new prompts, explore the suggested prompt tiles or
+click Shuffle .</li>
 </ul></li>
-<li>If the form owner changes the question stem or other answer options,
-your answer won’t be affected.</li>
-</ul>
-<h5 id="find-a-draft">Find a draft</h5>
-<p>To find a draft response for a form, reopen the form URL in the same
-Google Account you used to create the draft.</p>
-<h5 id="delete-a-draft">Delete a draft</h5>
-<p>To clear all the answers on your form:</p>
+<li><p>Enter a prompt. For example: “Create a simple RSVP form for a
+neighborhood potluck, collecting name, allergy info, and what dish
+they’ll bring.”</p></li>
+<li><p>Tip: To get better results, include more details in your
+prompt.</p></li>
+<li><p>(Optional - Experiment and Gemini Beta users only) Click Add
+sources select or deselect the sources you want to include as contextual
+data for your form.</p>
 <ul>
-<li>Scroll to the bottom of the form.</li>
-<li>At the bottom right, to confirm, click Clear form.</li>
-</ul>
-<h3 id="fix-common-errors-while-you-respond-to-a-google-form">Fix common
-errors while you respond to a Google Form</h3>
-<h4 id="fix-common-errors-while-you-respond-to-a-google-form-1">Fix
-common errors while you respond to a Google Form</h4>
-<p>If you encounter issues when you respond to a form, this article can
-help you identify and resolve the most common problems.</p>
-<h5 id="if-you-cant-submit-a-form">If you can’t submit a form</h5>
-<p>If you’ve completed all the questions on a form but you can’t submit
-it, there may be several underlying issues.</p>
-<p>To troubleshoot, ensure you’ve answered all required questions. Check
-for any fields highlighted in red with the message “This is a required
-question,” which indicate that they’re mandatory.</p>
-<p>Learn more about common error messages in Forms.</p>
-<h5 id="if-you-cant-click-next-on-a-form">If you can’t click “Next” on a
-form</h5>
-<p>If you can’t click the “Next” button to move to the next question or
-section, it means some required fields are incomplete or some answer
-validation error is not resolved. To proceed, make sure that every
-question marked as required is filled out.</p>
-<p>Learn more about common error messages in Forms.</p>
-<h5 id="if-you-click-next-and-it-loops-back-to-previous-sections">If you
-click “Next” and it loops back to previous sections</h5>
-<p>In some cases, a form returns to the same question or takes you back
-to a previous one when you click “Next.” This behavior is often
-intentional, as form owners can set up forms to loop back to earlier
-sections based on your answers.</p>
-<p>If the behavior seems unusual, contact the form owner or the person
-who shared the form with you. Learn how to show questions based on
-answers.</p>
-<h5 id="if-you-cant-upload-a-file-or-files">If you can’t upload a file
-or files</h5>
-<p>In some forms, owners may require you to upload files. To complete
-the upload in response to a question, you need to sign in to your Google
-Account.</p>
-<p>For the file upload question, the form owner can set restrictions on
-the number, type, or size of files.</p>
-<p>Tips:</p>
-<ul>
-<li>Check the instructions for any file requirements or limitations in
-the form. Contact the form owner if you’re unable to submit a form due
-to file requirements or limitations.</li>
-<li>You can’t upload a file from a shared drive.</li>
-</ul>
-<h5 id="if-you-get-unable-to-save-your-draft">If you get “Unable to save
-your draft”</h5>
-<p>You can still submit your response if you get this error, and all
-your responses will be recorded. However, if you get this error and
-close the form before you submit it, you might lose the progress you
-made.</p>
-<p>Learn more about common error messages in Forms</p>
-<p>Type of error</p>
-<p>Description</p>
-<p>Suggested action</p>
-<p>Any error on a question requires an answer in text.</p>
-<p>Form owners can set rules that don’t let you submit a form. Learn
-more about response validation rules.</p>
-<p>Tip: If the validation rule is incorrect or doesn’t let you submit
-the required info, reach out to the form owner or the person who shared
-it with you.</p>
-<p>“Invalid date.”</p>
-<p>You can get different required date formats for date questions based
-on your Google Account or browser language. For example, MM/DD/YYYY or
-DD/MM/YYYY.</p>
-<p>Check that your response matches the required date format in the
-form.</p>
-<p>“This question requires one response per row.”</p>
-<p>This means each row must have at least one multiple choice or
-checkbox selected.</p>
-<p>Select the required options for each row and check for any missed
-responses.</p>
-<p>To avoid this error, check the rules for Multiple choice grid
-questions.</p>
-<p>“Please don’t select more than one response per column.”</p>
-<p>This means you can only select one response per column.</p>
-<p>To avoid this error, check the rules for Multiple choice grid
-questions.</p>
-<p>“Form is no longer accepting responses.”</p>
-<p>This means that the form is currently closed for submissions.</p>
-<p>Contact the form owner.</p>
-<h5 id="report-a-violation">Report a violation</h5>
-<ul>
-<li>At the bottom of the form, click Report Abuse.</li>
-<li>Select the type of abuse found in the form.</li>
-<li>Click Submit Abuse Report. Learn how to report violations in Google
-Forms.</li>
-</ul>
-<h5 id="contact-the-form-owner">Contact the form owner</h5>
-<p>If you have questions about a form or want to send feedback about it,
-you can contact the form owner or the person who shared it with you
-directly.</p>
-<p>Important: When you send a message, your name and email address are
-also shared.</p>
-<ul>
-<li>At the bottom of the form, click Help and feedback Contact form
-owner.</li>
-<li>In the pop-up, add the subject and your message.</li>
-<li>Click OK.
-<ul>
-<li>You get an “Email sent” pop-up message as confirmation. Tips:</li>
+<li>Selecting additional data sources helps Gemini generate more
+relevant forms.</li>
 </ul></li>
-<li>After you send the message, the form owner can block you from
-sending more emails or messages. Learn how to block messages from
-responders.</li>
-<li>If you can’t find the “Contact form owner” option, the form might be
-stored in a shared drive. You can contact the form owner outside of
-Google Forms instead.</li>
-</ul>
-<h5 id="help-us-improve-find-help-in-the-community">Help us improve
-&amp; find help in the community</h5>
+<li><p>Click Create.</p></li>
+<li><p>(Optional) After you generate a form, you can:</p>
 <ul>
-<li>If you still have any questions, you can visit the Google Docs
-Editors Help Community.</li>
-<li>To report an issue, at the bottom left of the form, click Report a
-problem to Google. The owner of the form won’t receive this
-feedback.</li>
-</ul>
-<h5 id="related-resources-6">Related resources</h5>
+<li>Edit your prompt:
 <ul>
-<li>How to set rules for your form</li>
-<li>Get permission to open a Google Form</li>
-</ul>
-<h3 id="format-text-in-your-form">Format text in your form</h3>
-<h4 id="format-text-in-your-form-1">Format text in your form</h4>
-<p>You can add links, numbered lists, and bulleted lists to the text in
-your form. You can also bold, italicize, and underline your text.</p>
-<p>Important: You can only format the text in titles, questions, and
-descriptions. You can’t format answer options.</p>
-<p>Bold, italicize, or underline text</p>
+<li>At the top of the generated draft, click the prompt.</li>
+<li>Edit your prompt.</li>
+<li>Click Recreate .</li>
+</ul></li>
+<li>Create a new version of the form: If you want more options for a
+given prompt or use case, click Recreate .
 <ul>
+<li>Important: After you create a new version, you cannot go back to the
+previous version.</li>
+</ul></li>
+</ul></li>
+<li><p>When you’re satisfied with the generated draft of the form, click
+Create form. Tip: Some functions are not currently supported,
+including:</p></li>
+<li><p>Using “Help me create a form” to update quiz settings or create
+forms with multiple sections .</p></li>
+<li><p>Using “Help me create a form” to edit an existing form is not
+currently supported. It will replace the existing form with the
+generated form.</p></li>
+</ul>
+<h4 id="write-prompts-to-create-new-forms-with-gemini">Write prompts to
+create new forms with Gemini</h4>
+<p>Include details in your prompt to create more complex forms, here are
+some examples:</p>
+<ul>
+<li>“Design a form to collect data on exercise habits and fitness goals
+of adults.”</li>
+<li>“Design a post-event survey to collect attendee feedback on a
+business networking event.”</li>
+<li>“Develop a 10-question quiz to assess basic knowledge of biology for
+high school students.”</li>
+<li>“Create an event planning form for a weekend yoga retreat. Include
+options for accommodation preferences (shared or private room), dietary
+restrictions, and interest in optional add-on activities. Make sure you
+have one question which asks which weekend in April 2025 works best for
+potential attendees.”</li>
+</ul>
+<h4 id="create-a-quiz-with-gemini-in-forms">Create a quiz with Gemini in
+Forms</h4>
+<p>To generate new quizzes in Google Forms instantly, use “Help me
+create:“</p>
+<ul>
+<li><p>Based on your prompt, “Help me create” will generate a form or a
+quiz.</p></li>
+<li><p>When a quiz is generated using “Help me create,” it will also
+mark correct answers and assign points.</p></li>
+<li><p>A quiz can have a mix of multiple-choice, checkbox, grid, short,
+and long-answer questions. Tip: “Help me create” can also use your
+documents or curriculum to generate a quiz.</p></li>
+<li><p>On your computer, open a new form in <a
+href="https://docs.google.com/forms/u/0/">Google Forms</a>.</p></li>
+<li><p>In the window that opens, enter a prompt that describes your
+quiz.</p>
+<ul>
+<li>Use toolbar: In the toolbar, click Help me create a form .</li>
+<li>Sample prompt: “Create a 10-question quiz on biology for high-school
+students based on my course curriculum.“</li>
+</ul></li>
+<li><p>Click Create.</p></li>
+<li><p>Review the generated quiz.</p></li>
+<li><p>To review correct answers and point values, check the box next to
+“Show answer key.”</p></li>
+<li><p>Optional: After you generate a quiz, you can:</p>
+<ul>
+<li>Edit your prompt:
+<ul>
+<li>At the top of the generated draft, click the prompt.</li>
+<li>Edit your prompt.</li>
+<li>Click Submit .</li>
+</ul></li>
+<li>Create a new version of the quiz: If you want to get more options
+for a given prompt or use case, click Recreate .</li>
+<li>Tip: After you create a new version, you can’t go back to the
+previous version.</li>
+</ul></li>
+<li><p>Click Create quiz.</p></li>
+<li><p>Optional: After you generate a quiz, you can:</p>
+<ul>
+<li>Edit the questions or change answer key. Learn more about create and
+mark quizzes with Google Forms.</li>
+<li>To get more questions based on your existing quiz, in the
+“Questions” tab, click Suggest questions.</li>
+</ul></li>
+<li><p>To publish your quiz, click Publish.</p></li>
+<li><p>To change the responders, in the pop-up, click Manage.</p></li>
+<li><p>Once done, click Publish.</p></li>
+</ul>
+<h4 id="give-feedback-on-a-generated-form-or-quiz">Give feedback on a
+generated form or quiz</h4>
+<ul>
+<li>To provide feedback on the generated input of this feature, click ,
+and follow the prompts.</li>
+<li>To provide general feedback on this feature, at the top, go to Help
+Help Forms improve.</li>
+<li>To report a legal issue, learn how to report content for legal
+reasons.</li>
+</ul>
+<h4 id="learn-about-gemini-feature-suggestions">Learn about Gemini
+feature suggestions</h4>
+<ul>
+<li>Gemini feature suggestions don’t represent Google’s views, and
+should not be attributed to Google.</li>
+<li>Don’t rely on Gemini features as medical, legal, financial or other
+professional advice.</li>
+<li>Gemini features may suggest inaccurate or inappropriate information.
+Your feedback makes Gemini more helpful and safe.</li>
+<li>Enterprise end users can submit feedback about their experience
+using this feature. End users are informed before they submit feedback
+that the feedback data shouldn’t contain personal, sensitive, or
+confidential information.</li>
+</ul>
+<h4 id="related-resources-5">Related resources</h4>
+<ul>
+<li>Get started with Google Workspace with Gemini</li>
+<li>Gemini in Docs, Sheets, Slides, Vids, &amp; Forms</li>
+<li>Edit your form</li>
+</ul>
+<h3
+id="summarize-analyze-responses-with-gemini-in-google-forms-gemini-in-docs-editors">Summarize
+&amp; analyze responses with Gemini in Google Forms (Gemini in Docs
+Editors)</h3>
+<p>Feature availability:</p>
+<ul>
+<li>This feature requires an eligible Google Workspace or Google AI
+plan. Learn how to get started with Google Workspace with Gemini.</li>
+<li>This feature is also available through our trusted tester program,
+Google Workspace Experiments.</li>
+<li>Learn about supported languages for Google Workspace with Gemini.
+You can use Gemini to summarize responses to open text questions in your
+Google Forms.</li>
+</ul>
+<h4 id="use-gemini-to-summarize-responses">Use Gemini to summarize
+responses</h4>
+<p>Important:</p>
+<ul>
+<li><p>You can find generated summaries once there are 3 to 200
+responses.</p></li>
+<li><p>You can’t generate summaries of quiz responses. To find the
+summary to a question’s responses:</p></li>
+<li><p>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</p></li>
+<li><p>At the top, click Responses.</p>
+<ul>
+<li>In the summary block, summaries for each text question are generated
+automatically.</li>
+</ul></li>
+<li><p>Optional:</p>
+<ul>
+<li>To generate a new response summary, click Retry.</li>
+<li>To copy the summary, click Copy. Tips:</li>
+</ul></li>
+<li><p>If you get new responses while the summary is open, to refresh
+the summary, click Refresh with latest responses.</p></li>
+<li><p>The generated summaries aren’t saved. You can copy or generate
+them again.</p></li>
+<li><p>Summaries won’t be generated for direct questions, like names and
+addresses.</p></li>
+</ul>
+<h4 id="generate-refine-themes-from-responses">Generate &amp; refine
+themes from responses</h4>
+<p>With Gemini, you can identify, group, and analyze common themes from
+Google Forms text responses in Google Sheets.</p>
+<p>Important:</p>
+<ul>
+<li>This feature works best with 8–200 responses.</li>
+<li>If your form has more than 200 responses, the theme generation
+option becomes unavailable. The button appears grayed out and the system
+displays an error message.</li>
+<li>Themes are generated with AI functions in Google Sheets, learn about
+AI function limits here.</li>
 <li>On your computer, open a form in <a
 href="https://docs.google.com/forms/">Google Forms</a>.</li>
-<li>Click the item you want to edit.</li>
-<li>Select the text you want to change.</li>
-<li>Format the text.
+<li>At the top, click Responses.</li>
+<li>To generate themes for a text question, scroll to the text
+question.</li>
+<li>Below the question’s summary, click See theme percentages .</li>
+<li>To modify themes, click Modify themes.
 <ul>
-<li>To bold: Click Bold .</li>
-<li>To italicize: Click Italic .</li>
-<li>To underline: Click Underline . Add a numbered or bulleted list</li>
+<li>To add a theme, click Add .</li>
+<li>To delete a theme, next to the name, click Delete category .</li>
 </ul></li>
-<li>On your computer, open a form in <a
-href="https://docs.google.com/forms/">Google Forms</a>.</li>
-<li>Click the description where you want to add a list.</li>
-<li>Choose a list:
+<li>To get a more detailed analysis, click See theme percentages .
 <ul>
-<li>To add a numbered list: Click Numbered list .</li>
-<li>To add a bulleted list: Click Bulleted list .</li>
+<li>The system opens a new Google Sheet that includes:
+<ul>
+<li>A pie chart that visually represents the distribution of
+themes.</li>
+<li>A summary response theme count that shows how many responses are
+associated with each theme.</li>
 </ul></li>
-<li>If you can’t find the option, click More Description. Add, edit, or
-remove links</li>
-</ul>
-<h5 id="add-a-link">Add a link</h5>
-<ul>
-<li>On your computer, open a form in <a
-href="https://docs.google.com/forms/">Google Forms</a>.</li>
-<li>Click the item you want to edit.</li>
-<li>Click where you want the link or select the text you want to
-link.</li>
-<li>Click Insert link .</li>
-<li>Under “Link to,” enter a URL or email address or search for a
-website.</li>
-<li>Click OK.</li>
-</ul>
-<h5 id="change-or-remove-links">Change or remove links</h5>
-<ul>
-<li>On your computer, open a form in <a
-href="https://docs.google.com/forms/">Google Forms</a>.</li>
-<li>Click the link you want to update.
-<ul>
-<li>To change: Click Edit link .</li>
-<li>To remove: Click Remove link . Remove formatting on text</li>
+<li>If you encounter an error, in the Sheets side panel, click Refresh
+&amp; Generate. Tip: If the number of responses is fewer than or equal
+to 8, or over 500, the summary shows but the button is grayed out.</li>
 </ul></li>
+</ul>
+<h4 id="get-actionable-insights-from-responses">Get actionable insights
+from responses</h4>
+<p>You can use Actionable Insights to help you understand key takeaways
+and insights and recommend next steps based on responses to all question
+types.</p>
+<p>Important:</p>
+<ul>
+<li>The feature isn’t available for forms when you turn on “Quiz
+settings.”</li>
+<li>Your form must have a minimum of 12 responses and 3 questions.</li>
+<li>This feature isn’t available if the form has a linked sheet which
+you do not have access to.</li>
 <li>On your computer, open a form in <a
 href="https://docs.google.com/forms/">Google Forms</a>.</li>
-<li>Click the item you want to edit.</li>
-<li>Select the text you want to change.</li>
-<li>Click Remove formatting .</li>
+<li>At the top, click Responses.</li>
+<li>In the Responses tab, locate the Actionable Insights section.</li>
+<li>Click Generate insights.</li>
+<li>To review the generated insights, click Analysis steps . The
+generated insights consists of several takeaways and recommendations,
+like:
+<ul>
+<li>Executive Synthesis</li>
+<li>Advanced Analysis &amp; Correlations</li>
+<li>Recommended Next Steps Optional: Below the generated insight:</li>
+</ul></li>
+<li>To provide feedback, select Good suggestion or Bad suggestion . A
+pop-up screen appears with information you can share with your feedback
+about “Prompt” and “Output.”</li>
+<li>To generate new insights, click Retry .</li>
 </ul>
+<h4 id="give-feedback-on-this-feature">Give feedback on this
+feature</h4>
+<ul>
+<li>To provide feedback on the generated input of this feature, click ,
+and follow the prompts.</li>
+<li>To provide general feedback on this feature, at the top, go to Help
+Help Docs improve.</li>
+<li>To report a legal issue, learn how to report content for legal
+reasons.</li>
+</ul>
+<h4 id="learn-about-gemini-feature-suggestions-1">Learn about Gemini
+feature suggestions</h4>
+<ul>
+<li>Gemini feature suggestions don’t represent Google’s views, and
+should not be attributed to Google.</li>
+<li>Don’t rely on Gemini features as medical, legal, financial or other
+professional advice.</li>
+<li>Gemini features may suggest inaccurate or inappropriate information.
+Your feedback makes Gemini more helpful and safe.</li>
+<li>Enterprise end users can submit feedback about their experience
+using this feature. End users are informed before they submit feedback
+that the feedback data shouldn’t contain personal, sensitive, or
+confidential information.</li>
+</ul>
+<h4 id="related-resources-6">Related resources</h4>
+<ul>
+<li>Get started with Google Workspace with Gemini</li>
+<li>How to use Google Forms</li>
+<li>Edit your form</li>
+</ul>
+<h2 id="share-form-collect-responses">Share form &amp; collect
+responses</h2>
 <h3 id="learn-about-updates-in-google-forms">Learn about updates in
 Google Forms</h3>
-<h4 id="learn-about-updates-in-google-forms-1">Learn about updates in
-Google Forms</h4>
 <p>In the fall of 2024, Google updated Forms to give you more detailed
 control over who can access and respond to your forms. You can now share
 forms with individuals or specific Google Groups. Learn how to publish
 and share your form with responders.</p>
-<h5 id="learn-about-the-updates">Learn about the updates</h5>
+<h4 id="learn-about-the-updates">Learn about the updates</h4>
 <p>Important:</p>
 <ul>
 <li><p>As of December 2025, Google automatically upgrades older forms to
@@ -1904,7 +1940,7 @@ upgrade completes.</p></li>
 <li><p>To review your sharing settings, at the top right, click Share
 .</p></li>
 </ul>
-<h5 id="related-resources-7">Related resources</h5>
+<h4 id="related-resources-7">Related resources</h4>
 <ul>
 <li>Publish &amp; share your form with responders</li>
 <li>How to use Google Forms</li>
@@ -1913,11 +1949,8 @@ upgrade completes.</p></li>
 <h3
 id="share-responder-access-for-users-in-trusted-domains-in-upgraded-forms">Share
 responder access for users in trusted domains in upgraded forms</h3>
-<h4
-id="share-responder-access-for-users-in-trusted-domains-in-upgraded-forms-1">Share
-responder access for users in trusted domains in upgraded forms</h4>
-<h5 id="transfer-responders-in-trusted-domains">Transfer responders in
-trusted domains</h5>
+<h4 id="transfer-responders-in-trusted-domains">Transfer responders in
+trusted domains</h4>
 <p>Important: On September 8, 2025, Google removed trusted domain access
 to restricted forms. Responders from trusted domains can no longer:</p>
 <ul>
@@ -1955,7 +1988,7 @@ from your trusted domains. Learn more about target audiences.</li>
 <li>Share form with individual responders.</li>
 </ul></li>
 </ul>
-<h5 id="related-resource">Related resource</h5>
+<h4 id="related-resource">Related resource</h4>
 <ul>
 <li>Upgrade your Google Form to have better access control</li>
 </ul>
@@ -1963,8 +1996,6 @@ from your trusted domains. Learn more about target audiences.</li>
 collect responses</h2>
 <h3 id="choose-where-to-save-form-responses">Choose where to save form
 responses</h3>
-<h4 id="choose-where-to-save-form-responses-1">Choose where to save form
-responses</h4>
 <p>This article is for form creators and it explains where you can save
 your form responses.</p>
 <p>When responders fill out your form, you can find a summary of the
@@ -1979,8 +2010,8 @@ Forms</a>.</li>
 to your form. Tip: The “Summary” tab displays on a form only when
 there’s one or more responses.</li>
 </ul>
-<h5 id="choose-where-to-store-responses">Choose where to store
-responses</h5>
+<h4 id="choose-where-to-store-responses">Choose where to store
+responses</h4>
 <p>If you store your responses in a spreadsheet, Google Sheets
 automatically puts your data in a table. It gives your data format and
 structure. Learn how to use tables in Google Sheets.</p>
@@ -2026,7 +2057,7 @@ Forms</a>.</li>
 <li>At the top right, click More Unlink form .</li>
 <li>Click Unlink.</li>
 </ul>
-<h5 id="delete-a-form-or-responses">Delete a form or responses</h5>
+<h4 id="delete-a-form-or-responses">Delete a form or responses</h4>
 <p>If you store responses in a spreadsheet, you have a separate file in
 Google Drive. You can delete the spreadsheet and not delete the form, or
 you can delete the form and not delete the spreadsheet.</p>
@@ -2052,21 +2083,19 @@ Forms</a>.</li>
 .</li>
 <li>Click Delete YES.</li>
 </ul>
-<h5 id="related-resources-8">Related resources</h5>
+<h4 id="related-resources-8">Related resources</h4>
 <ul>
 <li>View &amp; manage form responses</li>
 <li>Auto-save your response progress on a Google form</li>
 </ul>
 <h3 id="publish-share-your-form-with-responders">Publish &amp; share
 your form with responders</h3>
-<h4 id="publish-share-your-form-with-responders-1">Publish &amp; share
-your form with responders</h4>
 <p>To create online surveys and quizzes, use Google Forms. You can share
 your forms with collaborators or responders. Before responders can
 access your form, you need to publish it. When your form is ready to
 share, you can share it through email, social media, or embed on a
 website or blog.</p>
-<h5 id="step-1-check-form-settings">Step 1: Check form settings</h5>
+<h4 id="step-1-check-form-settings">Step 1: Check form settings</h4>
 <p>Default settings apply unless you customize them. Learn how to edit
 your form.</p>
 <ul>
@@ -2116,7 +2145,7 @@ Forms</a>.</li>
 <li>Enter your message.</li>
 <li>Click Save.</li>
 </ul>
-<h5 id="step-2-publish-the-form">Step 2: Publish the form</h5>
+<h4 id="step-2-publish-the-form">Step 2: Publish the form</h4>
 <p>When you publish a form, responders can access it. If the form is
 unpublished, responders with the link can’t access it.</p>
 <ul>
@@ -2142,8 +2171,8 @@ publish a form, they can restrict the access to a domain, trusted
 audience, or group of users.</li>
 </ul></li>
 </ul>
-<h5 id="share-your-form-with-responders">Share your form with
-responders</h5>
+<h4 id="share-your-form-with-responders">Share your form with
+responders</h4>
 <ul>
 <li>Open a form in <a href="https://forms.google.com">Google
 Forms</a>.</li>
@@ -2217,11 +2246,12 @@ Forms</a>.</li>
 </ul>
 <h3 id="view-manage-form-responses">View &amp; manage form
 responses</h3>
-<h4 id="view-manage-form-responses-1">View &amp; manage form
-responses</h4>
 <p>You can view and restrict replies to a form with <a
 href="https://docs.google.com/forms/">Google Forms</a>.</p>
-<h5 id="view-responses">View responses</h5>
+<p>Important: Starting in September 2026, Forms will have new limits of
+1 GB total storage and 500k responses per form. Learn more about changes
+to data and response limits on Forms.</p>
+<h4 id="view-responses">View responses</h4>
 <p>Find responses to your form</p>
 <ul>
 <li>Open a form in <a href="https://forms.google.com/">Google
@@ -2266,9 +2296,9 @@ Forms</a>.</li>
 <li>At the top of the form, click Responses.</li>
 <li>Click More Download responses (.csv).</li>
 </ul>
-<h5 id="manage-responses">Manage responses</h5>
-<h6 id="turn-response-notifications-on-or-off">Turn response
-notifications on or off</h6>
+<h4 id="manage-responses">Manage responses</h4>
+<h5 id="turn-response-notifications-on-or-off">Turn response
+notifications on or off</h5>
 <ul>
 <li>Open a form in <a href="https://forms.google.com">Google
 Forms</a>.</li>
@@ -2280,13 +2310,13 @@ respondents, <a
 href="https://gsuite.google.com/marketplace/app/form_notifications/573009629797">download
 the Form notifications add-on.</a></li>
 </ul>
-<h6 id="block-messages-from-responders">Block messages from
-responders</h6>
+<h5 id="block-messages-from-responders">Block messages from
+responders</h5>
 <p>Responders can contact you with questions or feedback. Learn how
 responders can contact a form owner.</p>
 <p>To block a responder so that they don’t send more messages, at the
 bottom of the email with their feedback, click Block the sender.</p>
-<h6 id="more-options">More options</h6>
+<h5 id="more-options">More options</h5>
 <p>Stop collecting responses</p>
 <p>Responders can access the published forms, but you can also manage to
 stop accepting responses and responders get a message “The form is no
@@ -2364,9 +2394,9 @@ Forms</a>.</li>
 <li>Click Responses.</li>
 <li>At the top right of a chart, click Copy .</li>
 <li>Paste the chart wherever you would like. Tip: If you copy and paste
-a chart into Google Docs, Slides, or Drawings, you can update the chart directly from the doc,
-presentation, or drawing as long as you have edit access to the doc,
-presentation, or drawing, and the form.</li>
+a chart into Google Docs, Slides, or Drawings, you can update the chart
+directly from the doc, presentation, or drawing as long as you have edit
+access to the doc, presentation, or drawing, and the form.</li>
 </ul>
 <p>Send response receipts</p>
 <p>If you collect responder emails, you can choose whether respondents
@@ -2386,12 +2416,46 @@ requested or Always. Tip: In certain circumstances, responders may not
 receive expected response receipts due to spam filters or other
 counter-abuse measures.</li>
 </ul>
-<p>Learn more about response limits on Forms</p>
+<p>Learn more about data and response limits on Forms</p>
 <p>If certain features in your form don’t work as expected, it might be
 because it has a large number of responses. These limits ensure Forms
 work reliably for all users. Your form continues to receive responses,
 which you can download in a CSV file.</p>
 <ul>
+<li>Starting in September 2026, Forms will have new data and response
+limits. If your form approaches or exceeds the new limits, you’ll see an
+in-product alert.
+<ul>
+<li>Data limits: Each form can have up to 1 GB of total storage. This
+limit includes form file size and response data but not user-uploaded
+files.</li>
+<li>Response limits: Each form can now receive up to 500k responses. To
+continue accepting responses after reaching the limit, form owners can
+download and delete existing responses. Learn more about downloading
+responses.
+<ul>
+<li>Tip: It’s recommended that form owners close the form for new
+responses before downloading and deleting existing responses. Closing
+the form helps ensure no responses are deleted after downloading
+responses. Learn more about deleting responses.</li>
+</ul></li>
+<li>Important:
+<ul>
+<li>Deleting responses from Forms does not delete attached files.</li>
+<li>Downloaded responses are not sorted by timestamp; you can sort them
+in Google Sheets after a CSV import.</li>
+<li>For existing enterprise forms:
+<ul>
+<li>Forms above the limit: Existing forms can receive new responses
+until March 2027. After that date, a <a
+href="https://takeout.google.com/">Google Takeout</a> archive with
+responses will be generated for admins or owners. Responses are then
+deleted to allow more submissions.</li>
+<li>Forms not at the limit: New responses will stop after reaching the
+new response and / or data limits.</li>
+</ul></li>
+</ul></li>
+</ul></li>
 <li>If you don’t find the response summary, it can be because your form
 has more than 50,000 responses.</li>
 <li>If your form’s responses aren’t synced with Sheets, it can be
@@ -2402,27 +2466,185 @@ your form has more than 10,000 responses.</li>
 <li>If you don’t find the question or individual view for responses in
 Forms, it can be because your form has more than 10,000 responses.</li>
 </ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<h3
-id="create-a-form-with-gemini-in-google-forms-workspace-experiments">Create
-a form with Gemini in Google Forms (Workspace Experiments)</h3>
-<h4
-id="create-a-form-with-gemini-in-google-forms-workspace-experiments-1">Create
-a form with Gemini in Google Forms (Workspace Experiments)</h4>
-<p>Important: This article is referring to Google Workspace Experiments,
-which is a trusted tester program for users to try new AI features. The
-Workspace Experiments program may not be available in your country. To
-check if you have access to Workspace Experiments features, open a form
-in Google Forms, then find Help me create a form .</p>
-<p>On Google Forms, you can use “Help me create a form” to create new
-forms using Gemini.</p>
-<p>You can also create forms from your Drive files, like Google Docs,
-Sheets, Slides, and PDFs when you use Gemini.</p>
-<p>This feature is:</p>
+<h2 id="tools-troubleshooting">Tools &amp; troubleshooting</h2>
+<h3 id="autosave-your-response-progress-on-a-google-form">Autosave your
+response progress on a Google Form</h3>
+<p>When you fill out a Google Form in your Google account, your progress
+is automatically saved as a draft for 30 days. This means if you can’t
+complete a form or need to switch devices, you don’t have to start over
+the next time you open the form.</p>
+<p>Important: If you’re offline, autosave doesn’t work.</p>
+<p>When you save a draft, Draft saved appears at the top of the
+form.</p>
+<p>If you sign in to a Google Account and Saving disabled is at the top
+of the form, the creator may have disabled draft response autosaving on
+their form. If you want to turn on autosaving, contact the form
+owner.</p>
+<p>Factors that may impact saved responses:</p>
 <ul>
-<li>Currently available on desktop.</li>
+<li>If you lose access to a form, you also lose access to your
+draft.</li>
+<li>If the form owner:
+<ul>
+<li>Deletes a question, your answer to that question is deleted.</li>
+<li>Makes a change to a question option you’ve selected, it’s no longer
+selected in your draft.</li>
+<li>Makes changes to branching logic in a form, you may lose access to
+certain pages of a form. Tips:</li>
+</ul></li>
+<li>If the form owner changes the question stem or other answer options,
+your answer won’t be affected.</li>
 </ul>
-<h5 id="use-gemini-to-create-a-form">Use Gemini to create a form</h5>
+<h4 id="find-a-draft">Find a draft</h4>
+<p>To find a draft response for a form, reopen the form URL in the same
+Google Account you used to create the draft.</p>
+<h4 id="delete-a-draft">Delete a draft</h4>
+<p>To clear all the answers on your form:</p>
+<ul>
+<li>Scroll to the bottom of the form.</li>
+<li>At the bottom right, to confirm, click Clear form.</li>
+</ul>
+<h3 id="fix-common-errors-while-you-respond-to-a-google-form">Fix common
+errors while you respond to a Google Form</h3>
+<p>If you encounter issues when you respond to a form, this article can
+help you identify and resolve the most common problems.</p>
+<h4 id="if-you-cant-submit-a-form">If you can’t submit a form</h4>
+<p>If you’ve completed all the questions on a form but you can’t submit
+it, there may be several underlying issues.</p>
+<p>To troubleshoot, ensure you’ve answered all required questions. Check
+for any fields highlighted in red with the message “This is a required
+question,” which indicate that they’re mandatory.</p>
+<p>Learn more about common error messages in Forms.</p>
+<h4 id="if-you-cant-click-next-on-a-form">If you can’t click “Next” on a
+form</h4>
+<p>If you can’t click the “Next” button to move to the next question or
+section, it means some required fields are incomplete or some answer
+validation error is not resolved. To proceed, make sure that every
+question marked as required is filled out.</p>
+<p>Learn more about common error messages in Forms.</p>
+<h4 id="if-you-click-next-and-it-loops-back-to-previous-sections">If you
+click “Next” and it loops back to previous sections</h4>
+<p>In some cases, a form returns to the same question or takes you back
+to a previous one when you click “Next.” This behavior is often
+intentional, as form owners can set up forms to loop back to earlier
+sections based on your answers.</p>
+<p>If the behavior seems unusual, contact the form owner or the person
+who shared the form with you. Learn how to show questions based on
+answers.</p>
+<h4 id="if-you-cant-upload-a-file-or-files">If you can’t upload a file
+or files</h4>
+<p>In some forms, owners may require you to upload files. To complete
+the upload in response to a question, you need to sign in to your Google
+Account.</p>
+<p>For the file upload question, the form owner can set restrictions on
+the number, type, or size of files.</p>
+<p>Tips:</p>
+<ul>
+<li>Check the instructions for any file requirements or limitations in
+the form. Contact the form owner if you’re unable to submit a form due
+to file requirements or limitations.</li>
+<li>You can’t upload a file from a shared drive.</li>
+</ul>
+<h4 id="if-you-get-unable-to-save-your-draft">If you get “Unable to save
+your draft”</h4>
+<p>You can still submit your response if you get this error, and all
+your responses will be recorded. However, if you get this error and
+close the form before you submit it, you might lose the progress you
+made.</p>
+<p>Learn more about common error messages in Forms</p>
+<p>Type of error</p>
+<p>Description</p>
+<p>Suggested action</p>
+<p>Any error on a question requires an answer in text.</p>
+<p>Form owners can set rules that don’t let you submit a form. Learn
+more about response validation rules.</p>
+<p>Tip: If the validation rule is incorrect or doesn’t let you submit
+the required info, reach out to the form owner or the person who shared
+it with you.</p>
+<p>“Invalid date.”</p>
+<p>You can get different required date formats for date questions based
+on your Google Account or browser language. For example, MM/DD/YYYY or
+DD/MM/YYYY.</p>
+<p>Check that your response matches the required date format in the
+form.</p>
+<p>“This question requires one response per row.”</p>
+<p>This means each row must have at least one multiple choice or
+checkbox selected.</p>
+<p>Select the required options for each row and check for any missed
+responses.</p>
+<p>To avoid this error, check the rules for Multiple choice grid
+questions.</p>
+<p>“Please don’t select more than one response per column.”</p>
+<p>This means you can only select one response per column.</p>
+<p>To avoid this error, check the rules for Multiple choice grid
+questions.</p>
+<p>“Form is no longer accepting responses.”</p>
+<p>This means that the form is currently closed for submissions.</p>
+<p>Contact the form owner.</p>
+<h4 id="report-a-violation">Report a violation</h4>
+<ul>
+<li>At the bottom of the form, click Report Abuse.</li>
+<li>Select the type of abuse found in the form.</li>
+<li>Click Submit Abuse Report. Learn how to report violations in Google
+Forms.</li>
+</ul>
+<h4 id="contact-the-form-owner">Contact the form owner</h4>
+<p>If you have questions about a form or want to send feedback about it,
+you can contact the form owner or the person who shared it with you
+directly.</p>
+<p>Important: When you send a message, your name and email address are
+also shared.</p>
+<ul>
+<li>At the bottom of the form, click Help and feedback Contact form
+owner.</li>
+<li>In the pop-up, add the subject and your message.</li>
+<li>Click OK.
+<ul>
+<li>You get an “Email sent” pop-up message as confirmation. Tips:</li>
+</ul></li>
+<li>After you send the message, the form owner can block you from
+sending more emails or messages. Learn how to block messages from
+responders.</li>
+<li>If you can’t find the “Contact form owner” option, the form might be
+stored in a shared drive. You can contact the form owner outside of
+Google Forms instead.</li>
+</ul>
+<h4 id="help-us-improve-find-help-in-the-community">Help us improve
+&amp; find help in the community</h4>
+<ul>
+<li>If you still have any questions, you can visit the Google Docs
+Editors Help Community.</li>
+<li>To report an issue, at the bottom left of the form, click Report a
+problem to Google. The owner of the form won’t receive this
+feedback.</li>
+</ul>
+<h4 id="related-resources-9">Related resources</h4>
+<ul>
+<li>How to set rules for your form</li>
+<li>Get permission to open a Google Form</li>
+</ul>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="create-a-form-with-gemini-in-google-forms-miscellaneous">Create
+a form with Gemini in Google Forms (Miscellaneous)</h3>
+<p>Feature availability:</p>
+<ul>
+<li>This feature requires an eligible Google Workspace or Google AI
+plan. Learn how to get started with Google Workspace with Gemini.</li>
+<li>This feature is also available through our trusted tester program,
+Google Workspace Experiments.</li>
+<li>Learn about supported languages for Google Workspace with Gemini. In
+Google Forms, you can use “Help me create a form” to create new forms
+based on your prompts using Gemini.</li>
+</ul>
+<p>For eligible Workspace Experiments users, Gemini can also use context
+from your Google Drive, Google Chat, web content, and / or Gmail. You
+can select which source(s) are used to provide this additional context,
+which helps create more relevant forms. You can also create forms from
+your specific files like Google Docs, Sheets, Slides, and PDFs.</p>
+<p>This feature is currently available on desktop. For Workspace
+Experiments users, including those in Gemini Beta, it is also available
+on Android and iOS.</p>
+<h4 id="use-gemini-to-create-a-form-1">Use Gemini to create a form</h4>
 <ul>
 <li><p>On your computer, open a new form in <a
 href="https://docs.google.com/forms/u/0/">Google Forms</a>.</p></li>
@@ -2430,16 +2652,21 @@ href="https://docs.google.com/forms/u/0/">Google Forms</a>.</p></li>
 form.</p>
 <ul>
 <li>Or, in the toolbar, click Help me create a form .</li>
+<li>To get ideas for new prompts, explore the suggested prompt tiles or
+click Shuffle .</li>
 </ul></li>
-<li><p>Tip: To get ideas for new prompts, explore the suggested prompt
-tiles or click Shuffle .</p></li>
-<li><p>Enter a prompt. For example:</p>
+<li><p>Enter a prompt. For example: “Create a simple RSVP form for a
+neighborhood potluck, collecting name, allergy info, and what dish
+they’ll bring.”</p></li>
+<li><p>Tip: To get better results, include more details in your
+prompt.</p></li>
+<li><p>(Optional - Experiment and Gemini Beta users only) Click Add
+sources select or deselect the sources you want to include as contextual
+data for your form.</p>
 <ul>
-<li>“Create a simple RSVP form for a neighborhood potluck, collecting
-name, allergy info, and what dish they’ll bring.”</li>
+<li>Selecting additional data sources helps Gemini generate more
+relevant forms.</li>
 </ul></li>
-<li><p>Tip: You might get better results if you include more details in
-your prompt.</p></li>
 <li><p>Click Create.</p></li>
 <li><p>(Optional) After you generate a form, you can:</p>
 <ul>
@@ -2449,23 +2676,24 @@ your prompt.</p></li>
 <li>Edit your prompt.</li>
 <li>Click Recreate .</li>
 </ul></li>
-<li>Create a new version of the form: If you want to get more options
-for a given prompt or use case, click Recreate .
+<li>Create a new version of the form: If you want more options for a
+given prompt or use case, click Recreate .
 <ul>
-<li>Important: After you create a new version, you can’t go back to the
+<li>Important: After you create a new version, you cannot go back to the
 previous version.</li>
 </ul></li>
 </ul></li>
 <li><p>When you’re satisfied with the generated draft of the form, click
-Create form. Tips:</p></li>
-<li><p>We do not yet support using “Help me create a form” to update
-quiz settings or create forms with multiple sections.</p></li>
-<li><p>We do not yet support using “Help me create a form” to edit an
-existing form. It will replace the existing form with the generated
-form.</p></li>
+Create form. Tip: Some functions are not currently supported,
+including:</p></li>
+<li><p>Using “Help me create a form” to update quiz settings or create
+forms with multiple sections .</p></li>
+<li><p>Using “Help me create a form” to edit an existing form is not
+currently supported. It will replace the existing form with the
+generated form.</p></li>
 </ul>
-<h5 id="write-prompts-to-create-new-forms-with-gemini">Write prompts to
-create new forms with Gemini</h5>
+<h4 id="write-prompts-to-create-new-forms-with-gemini-1">Write prompts
+to create new forms with Gemini</h4>
 <p>Include details in your prompt to create more complex forms, here are
 some examples:</p>
 <ul>
@@ -2481,8 +2709,8 @@ restrictions, and interest in optional add-on activities. Make sure you
 have one question which asks which weekend in April 2025 works best for
 potential attendees.”</li>
 </ul>
-<h5 id="create-a-quiz-with-gemini-in-forms">Create a quiz with Gemini in
-Forms</h5>
+<h4 id="create-a-quiz-with-gemini-in-forms-1">Create a quiz with Gemini
+in Forms</h4>
 <p>To generate new quizzes in Google Forms instantly, use “Help me
 create:“</p>
 <ul>
@@ -2531,156 +2759,93 @@ mark quizzes with Google Forms.</li>
 <li><p>To change the responders, in the pop-up, click Manage.</p></li>
 <li><p>Once done, click Publish.</p></li>
 </ul>
-<h5 id="give-feedback-on-a-generated-form-or-quiz">Give feedback on a
-generated form or quiz</h5>
-<p>Google Workspace with Gemini constantly learns and may not be able to
-support your request.</p>
-<p>If you get a suggestion that’s inaccurate or that you feel unsafe,
-you can submit feedback to let us know. Your feedback can be used to
-enhance AI-assisted Workspace features and expand Google efforts in
-AI.</p>
+<h4 id="give-feedback-on-a-generated-form-or-quiz-1">Give feedback on a
+generated form or quiz</h4>
 <ul>
-<li>Below the generated form, select Good suggestion or Bad suggestion
-.</li>
-<li>In the pop-up window, you can select if you want to share outputs
-along with your feedback. If you don’t want to share it, you can uncheck
-it.
-<ul>
-<li>If you select Bad suggestion , select Next to select the issue you
-found and enter additional feedback.</li>
-</ul></li>
-<li>Click Submit. To provide general feedback on this feature, at the
-bottom, click Help &amp; feedback .</li>
+<li>To provide feedback on the generated input of this feature, click ,
+and follow the prompts.</li>
+<li>To provide general feedback on this feature, at the top, go to Help
+Help Forms improve.</li>
+<li>To report a legal issue, learn how to report content for legal
+reasons.</li>
 </ul>
-<p>To report a legal issue, create a request.</p>
-<h5 id="turn-off-the-help-me-create-a-form-button">Turn off the “Help me
-create a form” button</h5>
-<p>To turn off any of the features on Google Workspace Experiments, you
-must exit Workspace Experiments. If you exit:</p>
+<h4 id="learn-about-gemini-feature-suggestions-2">Learn about Gemini
+feature suggestions</h4>
 <ul>
-<li>You’ll permanently lose access to all Workspace Experiments
-features.</li>
-<li>You won’t be able to rejoin Workspace Experiments. Learn more about
-how to exit Workspace Experiments.</li>
+<li>Gemini feature suggestions don’t represent Google’s views, and
+should not be attributed to Google.</li>
+<li>Don’t rely on Gemini features as medical, legal, financial or other
+professional advice.</li>
+<li>Gemini features may suggest inaccurate or inappropriate information.
+Your feedback makes Gemini more helpful and safe.</li>
+<li>Enterprise end users can submit feedback about their experience
+using this feature. End users are informed before they submit feedback
+that the feedback data shouldn’t contain personal, sensitive, or
+confidential information.</li>
 </ul>
-<h5 id="learn-about-workspace-experiments-feature-suggestions">Learn
-about Workspace Experiments feature suggestions</h5>
-<ul>
-<li>Workspace Experiments feature suggestions don’t represent Google’s
-views, and should not be attributed to Google.</li>
-<li>Don’t rely on Workspace Experiments features as medical, legal,
-financial or other professional advice.</li>
-<li>Workspace Experiments features may suggest inaccurate or
-inappropriate information. Your feedback makes Workspace Experiments
-more helpful and safe.</li>
-<li>Don’t include personal, confidential, or sensitive information in
-your prompts.</li>
-<li>Google uses Workspace Experiments data and metrics to provide,
-improve, and develop products, services, and machine learning
-technologies across Google.</li>
-<li>Your Workspace Experiments Data may also be read, rated, annotated,
-and reviewed by human reviewers. Importantly, where Google uses
-Google-selected input (as described in the Privacy Notice) to generate
-output, Google will aggregate and/or pseudonymize that content and
-resulting output before it is viewed by human reviewers, unless it is
-specifically provided as part of your feedback to Google. You can review
-the Google Workspace Experiments Privacy Notice and Terms for Personal
-Accounts.</li>
-</ul>
-<h6 id="how-workspace-experiments-data-in-forms-is-collected">How
-Workspace Experiments data in Forms is collected</h6>
-<p>When you use the “Help me create a form” prompt in Google Forms,
-Google uses and stores the following data:</p>
-<ul>
-<li>The prompts you enter</li>
-<li>The generated form</li>
-<li>Your feedback on the generated form To understand how this data will
-be used, review the Google Workspace Experiments Privacy Notice and
-Terms of Service.</li>
-</ul>
-<h5 id="related-resources-9">Related resources</h5>
-<ul>
-<li>Get started with Google Workspace Experiments</li>
-<li>Google Workspace Experiments Privacy Notice and Terms for Personal
-Accounts</li>
-<li>How to use Google Forms</li>
-</ul>
-<h3 id="gemini-in-docs-sheets-slides-vids-forms">Gemini in Docs, Sheets,
-Slides, Vids, &amp; Forms</h3>
-<h4 id="gemini-in-docs-sheets-slides-vids-forms-1">Gemini in Docs,
-Sheets, Slides, Vids, &amp; Forms</h4>
-<p>Gemini is the AI-powered assistant from Google, built into Docs,
-Sheets, Slides, Vids, Forms, and more. You can use Gemini in Docs to
-draft new content quickly, improve your writing, summarize content, and
-more.</p>
-<p>Feature availability</p>
-<ul>
-<li>These features require an eligible Google Workspace or Google AI
-plan. <a href="https://support.google.com/docs/answer/13952129">Learn
-about Gemini features and plans</a>.</li>
-<li><a href="https://support.google.com/docs/answer/14925782">Learn
-about supported languages for Gemini for Google Workspace</a>.</li>
-</ul>
-<h5
-id="learn-how-to-write-prompts-for-gemini-in-docs-sheets-slides-vids-forms">Learn
-how to write prompts for Gemini in Docs, Sheets, Slides, Vids &amp;
-Forms</h5>
-<ul>
-<li>Learn how to write prompts to increase your productivity using
-Gemini</li>
-<li>Try sample prompts for Google Docs, Sheets, Slides, Vids, and
-Forms</li>
-</ul>
-<h5 id="generative-ai-training-help">Generative AI Training &amp;
-Help</h5>
-<ul>
-<li>Learn more about Generative AI</li>
-<li>Get tips for using Gemini in your role at work</li>
-<li>Get more training &amp; help</li>
-</ul>
-<h5 id="how-to-use-gemini-in-docs-sheets-slides-vids">How to use Gemini
-in Docs, Sheets, Slides &amp; Vids</h5>
-<p>Gemini in Google Docs</p>
-<p>Gemini in Slides</p>
-<p>Gemini in Sheets</p>
-<p>Create images with AI in Google Slides</p>
-<p>Gemini in Vids</p>
-<h5 id="learn-more-about-gemini-in-docs-sheets-slides-vids-forms">Learn
-more about Gemini in Docs, Sheets, Slides, Vids &amp; Forms</h5>
-<p>Gemini in Docs</p>
-<ul>
-<li><p>Write with Gemini in Google Docs</p></li>
-<li><p>Proofread with Gemini in Docs</p></li>
-<li><p>Collaborate with Gemini in Google Docs</p></li>
-<li><p>Create documents with Gemini in Google Docs Gemini in
-Vids</p></li>
-<li><p>Get started with Google Vids</p></li>
-<li><p>Create a video with AI in Google Vids</p></li>
-<li><p>Add stock media &amp; generated images in Google Vids</p></li>
-<li><p>Create scripts &amp; voiceovers in Google Vids Gemini in
-Slides</p></li>
-<li><p>Remove image backgrounds in Google Drawings, Slides &amp;
-Vids</p></li>
-<li><p>Create images with Gemini in Google Slides</p></li>
-<li><p>Collaborate with Gemini in Google Slides Gemini in
-Sheets</p></li>
-<li><p>Organize with Gemini in Google Sheets</p></li>
-<li><p>Use enhanced Smart Fill with Gemini in Google Sheets</p></li>
-<li><p>Collaborate with Gemini in Google Sheets Gemini in Forms</p></li>
-<li><p>Create a form with Gemini in Google Forms (Workspace
-Experiments)</p></li>
-</ul>
-<h5 id="related-resources-10">Related resources</h5>
+<h4 id="related-resources-10">Related resources</h4>
 <ul>
 <li>Get started with Google Workspace with Gemini</li>
-<li>Learn how Gemini in Gmail, Docs, Drive, Sheets, Slides, Meet &amp;
-Vids protects your data</li>
-<li>Generative AI training &amp; help</li>
+<li>Gemini in Docs, Sheets, Slides, Vids, &amp; Forms</li>
+<li>Edit your form</li>
+</ul>
+<h3 id="format-text-in-your-form">Format text in your form</h3>
+<p>You can add links, numbered lists, and bulleted lists to the text in
+your form. You can also bold, italicize, and underline your text.</p>
+<p>Important: You can only format the text in titles, questions, and
+descriptions. You can’t format answer options.</p>
+<p>Bold, italicize, or underline text</p>
+<ul>
+<li>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</li>
+<li>Click the item you want to edit.</li>
+<li>Select the text you want to change.</li>
+<li>Format the text.
+<ul>
+<li>To bold: Click Bold .</li>
+<li>To italicize: Click Italic .</li>
+<li>To underline: Click Underline . Add a numbered or bulleted list</li>
+</ul></li>
+<li>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</li>
+<li>Click the description where you want to add a list.</li>
+<li>Choose a list:
+<ul>
+<li>To add a numbered list: Click Numbered list .</li>
+<li>To add a bulleted list: Click Bulleted list .</li>
+</ul></li>
+<li>If you can’t find the option, click More Description. Add, edit, or
+remove links</li>
+</ul>
+<h4 id="add-a-link">Add a link</h4>
+<ul>
+<li>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</li>
+<li>Click the item you want to edit.</li>
+<li>Click where you want the link or select the text you want to
+link.</li>
+<li>Click Insert link .</li>
+<li>Under “Link to,” enter a URL or email address or search for a
+website.</li>
+<li>Click OK.</li>
+</ul>
+<h4 id="change-or-remove-links">Change or remove links</h4>
+<ul>
+<li>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</li>
+<li>Click the link you want to update.
+<ul>
+<li>To change: Click Edit link .</li>
+<li>To remove: Click Remove link . Remove formatting on text</li>
+</ul></li>
+<li>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</li>
+<li>Click the item you want to edit.</li>
+<li>Select the text you want to change.</li>
+<li>Click Remove formatting .</li>
 </ul>
 <h3 id="generate-questions-with-gemini-in-google-forms">Generate
 questions with Gemini in Google Forms</h3>
-<h4 id="generate-questions-with-gemini-in-google-forms-1">Generate
-questions with Gemini in Google Forms</h4>
 <p>Feature availability:</p>
 <ul>
 <li>This feature requires an eligible Google Workspace or Google AI
@@ -2698,7 +2863,7 @@ and at least 2 questions.</li>
 <li>If you ask Gemini to generate questions as part of the quiz, set the
 answer key. To set the answer key, click Add answer feedback.</li>
 </ul>
-<h5 id="add-questions-to-your-form">Add questions to your form</h5>
+<h4 id="add-questions-to-your-form">Add questions to your form</h4>
 <p>Important: You can use forms and quizzes in English only with a
 single section.</p>
 <ul>
@@ -2716,8 +2881,8 @@ click Suggest questions.</li>
 <li>Optional: To regenerate questions, click Retry.</li>
 <li>When the suggested questions look good to you, click Insert.</li>
 </ul>
-<h5 id="give-feedback-on-your-generated-questions">Give feedback on your
-generated questions</h5>
+<h4 id="give-feedback-on-your-generated-questions">Give feedback on your
+generated questions</h4>
 <ul>
 <li>To provide feedback on the generated input of this feature, click ,
 and follow the prompts.</li>
@@ -2727,264 +2892,20 @@ Help Docs improve.</li>
 reasons.</li>
 </ul>
 <h3
-id="generate-questions-with-gemini-in-google-forms-workspace-experiments">Generate
-questions with Gemini in Google Forms (Workspace Experiments)</h3>
-<h4
-id="generate-questions-with-gemini-in-google-forms-workspace-experiments-1">Generate
-questions with Gemini in Google Forms (Workspace Experiments)</h4>
-<p>Important: This article is referring to Google Workspace Experiments,
-which is an invite only program for users to try new AI features. The
-Workspace Experiments program may not be available in your country. To
-check if you have access to Workspace Experiments program features, open
-a new form on Google Forms and look for “Help me create a form” at the
-top.</p>
-<p>This feature is currently available on desktop and in English. Learn
-how to change your language on the web.</p>
-<p>You can use Gemini to quickly add relevant new questions to your form
-based on your current content.</p>
-<p>Tips:</p>
+id="summarize-analyze-responses-with-gemini-in-google-forms-miscellaneous">Summarize
+&amp; analyze responses with Gemini in Google Forms (Miscellaneous)</h3>
+<p>Feature availability:</p>
 <ul>
-<li>To get suggested questions from Gemini, your form must have a title
-and at least 2 questions.</li>
-<li>If you ask Gemini to generate questions as part of the quiz, set the
-answer key. To set the answer key, click Add answer feedback.</li>
+<li>This feature requires an eligible Google Workspace or Google AI
+plan. Learn how to get started with Google Workspace with Gemini.</li>
+<li>This feature is also available through our trusted tester program,
+Google Workspace Experiments.</li>
+<li>Learn about supported languages for Google Workspace with Gemini.
+You can use Gemini to summarize responses to open text questions in your
+Google Forms.</li>
 </ul>
-<h5 id="add-questions-to-your-form-1">Add questions to your form</h5>
-<p>Important: You can use forms and quizzes in English only with a
-single section.</p>
-<ul>
-<li>On your computer, create or open a form on <a
-href="https://google.com/forms">Google Forms</a>.</li>
-<li>Use Gemini to generate questions for your form. You can generate
-questions in 2 ways:
-<ul>
-<li>To give Gemini instructions on what to write: At the top right of
-the form, click Help me write a question .</li>
-<li>To ask Gemini to come up with ideas: At the bottom of the form,
-click Suggest questions.
-<ul>
-<li>Gemini generates questions based on your form.</li>
-</ul></li>
-</ul></li>
-<li>Select any questions you want to keep with a checkbox.</li>
-<li>Optional: To regenerate questions, click Retry.</li>
-<li>When the suggested questions look good to you, click Insert.</li>
-</ul>
-<h5 id="give-feedback-on-suggested-questions">Give feedback on suggested
-questions</h5>
-<p>Google Workspace with Gemini is constantly learning and may not be
-able to support your request.</p>
-<p>If you get a suggestion that’s inaccurate or that you feel is unsafe,
-you can let us know by submitting feedback. Your feedback can help
-improve AI-assisted Workspace features and broader Google efforts in
-AI.</p>
-<p>Because feedback may be human readable, do not submit data that
-contains personal, confidential, or sensitive information.</p>
-<ul>
-<li>Below the generated text, click Good suggestion or Bad suggestion
-.</li>
-<li>If you click Bad suggestion , you can select the issue you found and
-provide additional feedback.</li>
-<li>Click Submit. To provide general feedback on this feature, at the
-bottom, click Help &amp; feedback Help forms improve .</li>
-</ul>
-<p>To report a legal issue, create a request.</p>
-<h5 id="learn-about-workspace-experiments-feature-suggestions-1">Learn
-about Workspace Experiments feature suggestions</h5>
-<ul>
-<li>Workspace Experiments feature suggestions don’t represent Google’s
-views, and should not be attributed to Google.</li>
-<li>Don’t rely on Workspace Experiments features as medical, legal,
-financial or other professional advice.</li>
-<li>Workspace Experiments features may suggest inaccurate or
-inappropriate information. Your feedback makes Workspace Experiments
-more helpful and safe.</li>
-<li>Don’t include personal, confidential, or sensitive information in
-your prompts.</li>
-<li>Google uses Workspace Experiments data and metrics to provide,
-improve, and develop products, services, and machine learning
-technologies across Google.</li>
-<li>Your Workspace Experiments Data may also be read, rated, annotated,
-and reviewed by human reviewers. Importantly, where Google uses
-Google-selected input (as described in the Privacy Notice) to generate
-output, Google will aggregate and/or pseudonymize that content and
-resulting output before it is viewed by human reviewers, unless it is
-specifically provided as part of your feedback to Google.</li>
-</ul>
-<h6 id="how-workspace-experiments-data-in-forms-is-collected-1">How
-Workspace Experiments data in Forms is collected</h6>
-<p>When you generate a question in Forms, Google uses and stores the
-following data:</p>
-<ul>
-<li>The generated question</li>
-<li>Form content that is referenced to generate questions</li>
-<li>Your feedback on the generated question To understand how this data
-is used, review the Google Workspace Experiments Privacy Notice and
-Terms for Personal Accounts.</li>
-</ul>
-<h5 id="related-resources-11">Related resources</h5>
-<ul>
-<li>Create a form with Gemini in Google Forms (Workspace
-Experiments)</li>
-<li>Summarize responses with Gemini in Google Forms (Workspace
-Experiments)</li>
-<li>Google Workspace Experiments Privacy Notice and Terms for Personal
-Accounts</li>
-</ul>
-<h3
-id="learn-about-prompts-for-gemini-in-docs-sheets-slides-vids-forms">Learn
-about prompts for Gemini in Docs, Sheets, Slides, Vids &amp; Forms</h3>
-<h4
-id="learn-about-prompts-for-gemini-in-docs-sheets-slides-vids-forms-1">Learn
-about prompts for Gemini in Docs, Sheets, Slides, Vids &amp; Forms</h4>
-<p>To be more productive and efficient in your day-to-day tasks when you
-use Gemini in Docs, Sheets, Slides, and Vids, learn how to write
-prompts.</p>
-<p>In this page, you can find:</p>
-<ul>
-<li><p>Tips for writing prompts for Gemini in Docs, Sheets, Slides, Vids
-&amp; Forms</p></li>
-<li><p>Sample prompts for Gemini in Docs, Sheets, Slides, Vids &amp;
-Forms Feature availability</p></li>
-<li><p>These features require an eligible Google Workspace or Google AI
-plan. Learn about Gemini features and plans.</p></li>
-<li><p>Learn about supported languages for Google Workspace with
-Gemini.</p></li>
-</ul>
-<h5
-id="tips-for-writing-prompts-for-gemini-in-docs-sheets-slides-vids-forms">Tips
-for Writing Prompts for Gemini in Docs, Sheets, Slides, Vids &amp;
-Forms</h5>
-<p>There are 4 main areas to consider when writing an effective prompt.
-You don’t need to use all 4, but using a few will help:</p>
-<p>Persona</p>
-<p>Tell Gemini what role to play, which gives it some context for how to
-behave and respond.</p>
-<p>Task</p>
-<p>Tell Gemini what you need it to do (summarize, write, change the
-tone, create, etc.), and use a verb.</p>
-<p>Context</p>
-<p>Provide as much relevant background as possible.</p>
-<p>Format</p>
-<p>Be specific when specifying desired structure.</p>
-<p>I am a customer service representative.</p>
-<p>Help me craft an empathetic email response.</p>
-<p>The customer ordered a pair of headphones that arrived damaged.</p>
-<p>Include a paragraph that acknowledges their frustration and 3 bullet
-points with potential resolutions.</p>
-<p>I am a customer service representative. Help me craft an empathetic
-email response. The customer ordered a pair of headphones that arrived
-damaged. Include a paragraph that acknowledges their frustration and 3
-bullet points with potential resolutions.</p>
-<p>For the best results when writing prompts for Gemini in Docs, Sheets,
-Slides, and Vids, write like you talk, provide as much relevant context
-as possible, and build on your prompts for improved results:</p>
-<p>Use natural language</p>
-<ul>
-<li><p>Write like you talk.</p></li>
-<li><p>Express thoughts in full sentences. Be specific and
-iterate</p></li>
-<li><p>Provide as much relevant context as possible.</p></li>
-<li><p>Attach relevant documents by typing “@” to select from
-suggestions or type a file name.</p></li>
-<li><p>Use descriptive prompts to specify details like audience,
-purpose, and goals. Make it a conversation</p></li>
-<li><p>If the results don’t meet your expectations or you believe
-there’s room for improvement, fine tune your prompts.</p></li>
-<li><p>To yield better results, use follow-up prompts and an iterative
-process of review and refinement.</p></li>
-</ul>
-<h5
-id="sample-prompts-for-gemini-in-docs-sheets-slides-vids-forms">Sample
-Prompts for Gemini in Docs, Sheets, Slides, Vids, &amp; Forms</h5>
-<p>Use the prompts below for inspiration. Copy and paste into Gemini in
-Docs, Sheets, Slides, and Vids as is, or copy, paste, and refine to
-customize for your needs. The example prompts below are meant for
-illustrative purposes:</p>
-<p>Docs Sample Prompts</p>
-<p>“Draft templates for 3 different types of customer communication.
-Create a template for apology emails, order confirmation messages, and
-thank you notes for loyal customers. Keep each template to one paragraph
-and use a friendly tone.”</p>
-<p>“Craft a list of customer communication best practices that can be
-used to train new team members. Outline 3 sections that include how to
-handle happy customer inquiries, neutral customer inquiries, and
-dissatisfied customer inquiries.”</p>
-<p>“Summarize this content to write a clear and concise product return
-policy.”</p>
-<p>“Draft an email template to a customer that highlights self-service
-resources [blog link] for [support issues]. Thank the customer for their
-business and assure them of our commitment to meet their needs.”</p>
-<p>“Write 3 engaging social media posts about [product or service or
-topic] that would appeal to [target audience]. Keep each social media
-post to 2 sentences and include a call to action to visit [our
-website].”</p>
-<p>Sheets Sample Prompts</p>
-<p>“Create a table to track the progress and impact of different
-customer experience improvement tactics with relevant metrics that
-include support ticket volume and priority level (high, medium,
-low).”</p>
-<p>“Create a table that tracks weekly staffing. Create columns for date,
-name, shift (AM or PM), and notes.”</p>
-<p>”Create a table that outlines a new employee’s first-week schedule,
-with key meetings, training sessions, and introductions. Provide a
-column for key contacts and priority level (low, medium, high) for each
-activity.”</p>
-<p>Slides Sample Prompts</p>
-<p>“Create an image of a plane that flies above the clouds over
-mountains and rivers during sunrise that I can use in the marketing
-campaign to promote my travel company.”</p>
-<p>“Create a slide that outlines the next steps from @[File name] and
-@[File name].”</p>
-<p>“Create a slide about how to optimally train for a marathon.”</p>
-<p>”Summarize this presentation in 3 sentences.”</p>
-<p>Vids Sample Prompts</p>
-<p>“Explain our Q4 product roadmap for executives with @[File name].
-This video informs company leadership of upcoming plans and strategy to
-achieve end of year goals.”</p>
-<p>“Remind employees to complete their annual self-assessments as
-explained in @[File name]. This process is important so this video will
-be shared with everyone in the company.”</p>
-<p>“Pitch video shared with internal customer service teams to use our
-latest product update with @[File name]. This video should convince
-potential customers of our product to try new features.”</p>
-<p>Forms Sample Prompts</p>
-<p>“Design a form to collect data on exercise habits and fitness goals
-of adults.”</p>
-<p>“Design a post-event survey to collect attendee feedback on a
-business networking event.”</p>
-<p>“Develop a 10-question quiz to assess basic knowledge of biology for
-high school students.”</p>
-<p>“Create an event planning form for a weekend yoga retreat. Include
-options for accommodation preferences (shared or private room), dietary
-restrictions, and interest in optional add-on activities. Make sure you
-have one question which asks which weekend in August 2024 works best for
-potential attendees.”</p>
-<p>Learn more about how to bring your best ideas to life with Google
-Workspace with Gemini. Visit the Workspace for GenAI Productivity
-Guide.</p>
-<h3
-id="summarize-analyze-responses-with-gemini-in-google-forms-workspace-experiments">Summarize
-&amp; analyze responses with Gemini in Google Forms (Workspace
-Experiments)</h3>
-<h4
-id="summarize-analyze-responses-with-gemini-in-google-forms-workspace-experiments-1">Summarize
-&amp; analyze responses with Gemini in Google Forms (Workspace
-Experiments)</h4>
-<p>Important: This article is referring to Google Workspace Experiments,
-which is an invite only program for users to try new AI features. The
-Workspace Experiments program may not be available in your country. To
-check if you have access to Workspace Experiments program features, open
-a new form on Google Forms and look for “Help me create a form” at the
-top.</p>
-<p>You can use Gemini to summarize responses to open text questions in
-your Google Forms.</p>
-<p>This feature is currently available on desktop and in English. Learn
-how to change your language on the web.</p>
-<p>If you can’t find this feature and your account is part of an
-organization, you can ask your admin to turn on the feature for you.</p>
-<h5 id="use-gemini-to-summarize-responses">Use Gemini to summarize
-responses</h5>
+<h4 id="use-gemini-to-summarize-responses-1">Use Gemini to summarize
+responses</h4>
 <p>Important:</p>
 <ul>
 <li><p>You can find generated summaries once there are 3 to 200
@@ -3010,8 +2931,8 @@ them again.</p></li>
 <li><p>Summaries won’t be generated for direct questions, like names and
 addresses.</p></li>
 </ul>
-<h5 id="generate-refine-themes-from-responses">Generate &amp; refine
-themes from responses</h5>
+<h4 id="generate-refine-themes-from-responses-1">Generate &amp; refine
+themes from responses</h4>
 <p>With Gemini, you can identify, group, and analyze common themes from
 Google Forms text responses in Google Sheets.</p>
 <p>Important:</p>
@@ -3047,77 +2968,500 @@ associated with each theme.</li>
 to 8, or over 500, the summary shows but the button is grayed out.</li>
 </ul></li>
 </ul>
-<h5 id="give-feedback-on-generated-summary">Give feedback on generated
-summary</h5>
-<p>Google Workspace with Gemini constantly learns and may not be able to
-support your request.</p>
-<p>If you get a suggestion that’s inaccurate or that you feel unsafe,
-you can submit feedback to let us know. Your feedback can be used to
-enhance AI-assisted Workspace features and expand Google efforts in
-AI.</p>
+<h4 id="get-actionable-insights-from-responses-1">Get actionable
+insights from responses</h4>
+<p>You can use Actionable Insights to help you understand key takeaways
+and insights and recommend next steps based on responses to all question
+types.</p>
+<p>Important:</p>
 <ul>
-<li>Below the generated summary, select Good suggestion or Bad
-suggestion .</li>
-<li>In the pop-up window, you can select the data you want to share
-along with your feedback, including prompts and outputs. If you don’t
-want to share certain data, you can uncheck it.
+<li>The feature isn’t available for forms when you turn on “Quiz
+settings.”</li>
+<li>Your form must have a minimum of 12 responses and 3 questions.</li>
+<li>This feature isn’t available if the form has a linked sheet which
+you do not have access to.</li>
+<li>On your computer, open a form in <a
+href="https://docs.google.com/forms/">Google Forms</a>.</li>
+<li>At the top, click Responses.</li>
+<li>In the Responses tab, locate the Actionable Insights section.</li>
+<li>Click Generate insights.</li>
+<li>To review the generated insights, click Analysis steps . The
+generated insights consists of several takeaways and recommendations,
+like:
 <ul>
-<li>If you select Bad suggestion , select Next to select the issue you
-found and enter additional feedback.</li>
+<li>Executive Synthesis</li>
+<li>Advanced Analysis &amp; Correlations</li>
+<li>Recommended Next Steps Optional: Below the generated insight:</li>
 </ul></li>
-<li>Click Submit. To provide general feedback on this feature, at the
-bottom, click Help &amp; feedback .</li>
+<li>To provide feedback, select Good suggestion or Bad suggestion . A
+pop-up screen appears with information you can share with your feedback
+about “Prompt” and “Output.”</li>
+<li>To generate new insights, click Retry .</li>
 </ul>
-<p>To report a legal issue, create a request.</p>
-<h5 id="turn-off-response-summary">Turn off response summary</h5>
-<p>To turn off any of the features on Google Workspace Experiments, you
-must exit Workspace Experiments. If you exit, you:</p>
+<h4 id="give-feedback-on-this-feature-1">Give feedback on this
+feature</h4>
 <ul>
-<li>Permanently lose access to all Workspace Experiments features.</li>
-<li>Won’t be able to rejoin Workspace Experiments. Learn how to turn off
-Workspace Experiments features.</li>
+<li>To provide feedback on the generated input of this feature, click ,
+and follow the prompts.</li>
+<li>To provide general feedback on this feature, at the top, go to Help
+Help Docs improve.</li>
+<li>To report a legal issue, learn how to report content for legal
+reasons.</li>
 </ul>
-<h5 id="learn-about-workspace-experiments-feature-suggestions-2">Learn
-about Workspace Experiments feature suggestions</h5>
+<h4 id="learn-about-gemini-feature-suggestions-3">Learn about Gemini
+feature suggestions</h4>
 <ul>
-<li>Workspace Experiments feature suggestions don’t represent Google’s
-views, and shouldn’t be attributed to Google.</li>
-<li>Don’t rely on Workspace Experiments features as medical, legal,
-financial, or other professional advice.</li>
-<li>Workspace Experiments features may suggest inaccurate or
-inappropriate information. Your feedback makes Workspace Experiments
-more helpful and safe.</li>
-<li>Enterprise administrators who participate in Workspace Experiments
-agree to allow Google to use the organization’s Customer Data, feedback,
-and metrics on usage to provide, develop, and improve Workspace
-services.</li>
-<li>Google will access Customer Data for Workspace improvements and
-process Customer Data in an aggregated and/or pseudonymized form to
-improve Workspace services. Pseudonymization and aggregation are
-standard data processing techniques to make identification of an
-individual, enterprise, entity, or device unlikely.</li>
+<li>Gemini feature suggestions don’t represent Google’s views, and
+should not be attributed to Google.</li>
+<li>Don’t rely on Gemini features as medical, legal, financial or other
+professional advice.</li>
+<li>Gemini features may suggest inaccurate or inappropriate information.
+Your feedback makes Gemini more helpful and safe.</li>
 <li>Enterprise end users can submit feedback about their experience
 using this feature. End users are informed before they submit feedback
 that the feedback data shouldn’t contain personal, sensitive, or
-confidential information. You can review the <a
-href="https://workspace.google.com/terms/labs-terms.html">Google
-Workspace Experiments for Business Terms of Service</a>.</li>
+confidential information.</li>
 </ul>
-<h5 id="related-resources-12">Related resources</h5>
+<h4 id="related-resources-11">Related resources</h4>
 <ul>
-<li>Get started with Google Workspace Experiments</li>
-<li>Google Workspace Experiments Privacy Notice &amp; Terms for Personal
-Accounts</li>
+<li>Get started with Google Workspace with Gemini</li>
 <li>How to use Google Forms</li>
+<li>Edit your form</li>
 </ul>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
+<h3 id="use-google-forms-with-a-screen-reader">Use Google Forms with a
+screen reader</h3>
+<p>When you use Google Forms, you can:</p>
+<ul>
+<li>Create forms and surveys to gather data and gain insights from
+anywhere.</li>
+<li>Select from multiple question types, reorder them, and customize
+each to fit your needs.</li>
+<li>Share your form through:
+<ul>
+<li>Email</li>
+<li>Social media</li>
+<li>Embedding it on a website</li>
+</ul></li>
+<li>Design and personalize forms to match your brand’s identity and make
+sure it looks great on any device.</li>
+<li>Have peace of mind with cloud-native infrastructure designed to keep
+your data safe and protected.</li>
+</ul>
+<h4 id="introduction">Introduction</h4>
+<p>This article is divided into sections with headings. To go to a
+specific section of the article, you can use the links below.</p>
+<h4 id="topics">Topics</h4>
+<ul>
+<li>Quick start</li>
+<li>Getting started
+<ul>
+<li>Learn the recommended browser &amp; screen readers</li>
+<li>Use Forms as a web application</li>
+<li>Set up your screen reader</li>
+<li>Open a form</li>
+</ul></li>
+<li>About the UI</li>
+<li>Navigate the UI
+<ul>
+<li>Use screen reader commands</li>
+<li>Use keyboard shortcuts</li>
+</ul></li>
+<li>Complete common tasks
+<ul>
+<li>Add or edit items</li>
+<li>Use the More menu</li>
+<li>Adjust settings</li>
+<li>Format, preview &amp; publish form</li>
+</ul></li>
+<li>Review &amp; analyze results
+<ul>
+<li>Check questions or responses</li>
+</ul></li>
+<li>Create a quiz</li>
+<li>Related resources</li>
+</ul>
+<h4 id="quick-start">Quick start</h4>
+<ul>
+<li><p>On your computer, go to <a
+href="http://forms.google.com">forms.google.com</a>.</p></li>
+<li><p>Open a form or create a quiz.</p></li>
+<li><p>Add or edit items.</p></li>
+<li><p>Format, preview, and publish your form.</p></li>
+<li><p>When responses are ready, you can review and analyze your
+results. When you edit the form, use the screen reader commands to
+navigate by edit field to each heading in your published form. Or, to
+move the focus:</p></li>
+<li><p>Navigate the buttons at the top of the UI:</p>
+<ul>
+<li>Press Alt + s (Command + Option + s on Mac) to move focus to the
+More button.</li>
+<li>Press Shift + Tab to move focus to the other controls before the
+form.</li>
+</ul></li>
+<li><p>Navigate the “Settings” tab:</p>
+<ul>
+<li>Press Ctrl + e (Command + e on Mac).</li>
+<li>Optional: To open the “Questions” and “Responses” tabs, press the
+Right or Left arrow key. To open the “Keyboard shortcuts” panel, and
+search or browse keyboard shortcuts, press Ctrl + Slash (Command + Slash
+on Mac).</li>
+</ul></li>
+</ul>
+<h4 id="get-started">Get started</h4>
+<h5 id="recommended-browser-and-screen-readers">Recommended browser and
+screen readers</h5>
+<p>Google Forms recommends Chrome and:</p>
+<ul>
+<li>NVDA or JAWS on Windows</li>
+<li>ChromeVox on ChromeOS</li>
+<li>VoiceOver on MacOS</li>
+</ul>
+<h5 id="use-forms-as-a-web-application">Use Forms as a web
+application</h5>
+<p>To use Forms as a web application:</p>
+<ul>
+<li>Turn off the screen reader web browsing shortcuts. For details, go
+to Set up your screen reader.</li>
+<li>Use “Tab navigation” and some key Forms keyboard shortcuts to
+navigate and read instead of your screen reader’s commands. For details,
+go to Use keyboard shortcuts. Tip: Sometimes, you should use Forms as a
+web page and use screen reader browser commands. We point out these
+times as they occur.</li>
+</ul>
+<h5 id="set-up-your-screen-reader">Set up your screen reader</h5>
+<p>To use Forms as a web application (reverse the toggle to use as a web
+page):</p>
+<ul>
+<li>JAWS: To turn off the “virtual cursor,” press JAWS + z until you
+hear “Off.”</li>
+<li>NVDA: To turn off “browse mode,” press NVDA + Spacebar until you
+hear a click sound like typing on a keyboard</li>
+<li>ChromeVox: To turn off “sticky mode,” quickly press Search twice
+until you hear “Sticky mode disabled.”</li>
+<li>VoiceOver: To turn off “quick nav,” press Left + Right arrow keys
+until you hear “Quicknav off.”</li>
+</ul>
+<h5 id="open-a-form">Open a form</h5>
+<ul>
+<li>On your computer, go to <a
+href="http://forms.google.com">forms.google.com</a>.</li>
+<li>Open a form.
+<ul>
+<li>The keyboard focus is on your “Recent forms.”</li>
+</ul></li>
+<li>To navigate to previous Forms, press the Right arrow key.
+<ul>
+<li>Or, you can press Shift + Tab to:
+<ul>
+<li>Open file picker.</li>
+<li>Choose the sort options for your Forms.</li>
+<li>Switch between grid and list view.
+<ul>
+<li>List is default and recommended.</li>
+</ul></li>
+<li>Choose forms by owner.</li>
+<li>Open the template gallery.</li>
+<li>Start a new blank form. Tip: To open a new blank form, in your
+browser’s URL bar, enter: <code>forms.new</code>.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="about-the-ui">About the UI</h4>
+<p>A new blank form has 2 items:</p>
+<ul>
+<li><p>Title and description</p></li>
+<li><p>Question Above the form is a set of controls that are on the page
+of every form. These are the controls in order:</p></li>
+<li><p>Forms Home link</p></li>
+<li><p>The title edit field</p></li>
+<li><p>Move to folder button</p></li>
+<li><p>Star check box</p></li>
+<li><p>Help me create a form button</p></li>
+<li><p>Customize Theme button</p></li>
+<li><p>Preview button</p></li>
+<li><p>Undo button</p></li>
+<li><p>Redo button</p></li>
+<li><p>Copy responder link menu button</p></li>
+<li><p>Share button</p></li>
+<li><p>Publish button</p></li>
+<li><p>More menu button</p></li>
+<li><p>Google Account button</p></li>
+<li><p>3 tabs with:</p>
+<ul>
+<li>Questions</li>
+<li>Responses</li>
+<li>Settings</li>
+</ul></li>
+<li><p>A floating set of buttons to add items at the beginning of the
+form:</p>
+<ul>
+<li>Add question button</li>
+<li>Import questions button</li>
+<li>Add title and description button</li>
+<li>Add image button</li>
+<li>Add video button</li>
+<li>Add section button Each item in the form starts with an edit field
+with the text of the title, question, or section.</li>
+</ul></li>
+</ul>
+<h4 id="navigate-the-ui">Navigate the UI</h4>
+<h5 id="use-screen-reader-commands">Use screen reader commands</h5>
+<p>When a Form is published, to make navigation easy, each title,
+question, and section displays as a heading. However, when you edit each
+of these, these become edit fields instead of headings. So, use your
+screen reader commands to navigate by edit fields.</p>
+<p>To show all other elements in the focused item like the “Formatting
+toolbar,” move the keyboard focus to the edit field.</p>
+<p>Tip: Edit fields that are not titles, sections or questions will have
+published names like “Option value.”</p>
+<h5 id="use-keyboard-shortcuts">Use keyboard shortcuts</h5>
+<ul>
+<li>Preview the form: Press Ctrl + Shift + p (Command + Shift + p on
+Mac).</li>
+<li>Publish the form: Press Ctrl + Enter (Command + Enter on Mac).</li>
+<li>Navigate between elements at the top before the Form items: Press
+Tab.</li>
+<li>Navigate to the “More menu button” near the end of the elements at
+the top:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Alt + s (Command + Option + s on Mac).</li>
+</ul></li>
+<li>Navigate to the “Settings” tab:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + e (Command + e on Mac).</li>
+<li>Press the Right arrow key for “Questions” tab (Start of your form)
+or, Left arrow key for “Answers” tab (Start of responses after you
+publish).</li>
+</ul></li>
+<li>Reorder questions:
+<ul>
+<li>Tab to a non-edit field in a question.</li>
+<li>Then:
+<ul>
+<li>To move the question up, press Ctrl + Shift + k (Command + Shift + k
+on Mac).</li>
+<li>To move the question down, press Ctrl + Shift + j (Command + Shift +
+j on Mac). When the question is already at the top or the bottom of the
+form, these shortcuts have no effect.</li>
+</ul></li>
+</ul></li>
+<li>Insert the elements after a focused item without the use of the
+floating set of buttons:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Then:
+<ul>
+<li>Question: Press Ctrl + Shift + Enter (Command + Shift + Enter on
+Mac).</li>
+<li>Title and description: Press Ctrl + i, then h (Command + i, then h
+on Mac).</li>
+<li>Image: Press Ctrl + i, then p (Command + i, then p on Mac).</li>
+<li>Video: Press Ctrl + i, then v (Command + i, then v on Mac).</li>
+<li>Section: Press Ctrl + i, then b (Command + i, then b on Mac).</li>
+<li>Duplicate the focused item: Press Ctrl + Shift + d (Command + Shift
++ d on Mac).</li>
+</ul></li>
+</ul></li>
+<li>Open a list of shortcuts: Move focus to a non-edit field, then press
+Ctrl + Slash (Command + Slash on Mac).
+<ul>
+<li>Optional: Enter a search term in the focused “Search keyboard
+shortcuts” combo box to reduce the results. From there:
+<ul>
+<li>Toggle your screen reader to Virtual/Browse/Sticky/QuickNav mode.
+<ul>
+<li>If focus isn’t on the table, navigate to the next table.</li>
+</ul></li>
+<li>To hear the function names that match your search, navigate down the
+left column.</li>
+<li>To hear the shortcut, navigate to the right column.</li>
+<li>Optional: If needed, navigate back to the first column and continue.
+<ul>
+<li>Or, to explore matches in another category of functions, navigate to
+the next table.</li>
+</ul></li>
+<li>When you find your desired shortcut, toggle the screen reader
+mode.</li>
+<li>To return to the content, press Escape. Tips:</li>
+</ul></li>
+</ul></li>
+<li>To browse all presented shortcuts without the need to perform a
+search, you can also use the steps above.</li>
+<li>To review all shortcuts in a web page, go to Keyboard shortcuts for
+Google Forms.</li>
+</ul>
+<h4 id="complete-common-tasks">Complete common tasks</h4>
+<h5 id="add-or-edit-items">Add or edit items</h5>
+<p>In your form, you can:</p>
+<ul>
+<li>Add an item:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + Shift + Enter (Command + Shift + Enter on Mac).</li>
+</ul></li>
+<li>Edit items: Tab to these fields or buttons:
+<ul>
+<li>Title: Enter the item’s title like a question for your form.</li>
+<li>Question types: To choose a type of question for your form like
+multiple choice or short answer, in the “Question” drop-down menu:
+<ul>
+<li>Press Up and Down arrow keys.</li>
+<li>To select, press Enter.</li>
+</ul></li>
+<li>Question details: The question details change based on the question
+type.</li>
+<li>Action buttons: These buttons let you:
+<ul>
+<li>Duplicate the question</li>
+<li>Delete the question</li>
+<li>Make the question required</li>
+</ul></li>
+<li>Answer key (Only for Quizzes): To choose correct answers, assign
+points, or add explanations, use the Answer key.</li>
+<li>More options: The “Menu” button at the end of each question allows
+you to select other options like going to a different section of the
+form based on the answer.</li>
+</ul></li>
+</ul>
+<h5 id="use-the-more-menu">Use the More menu</h5>
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Alt + s (Command + Option + s on Mac).</li>
+<li>Press Down arrow key for options like:
+<ul>
+<li>Make a copy</li>
+<li>Move to trash</li>
+<li>Pre-fill form</li>
+<li>Embed HTML</li>
+<li>Unpublish form</li>
+</ul></li>
+</ul>
+<h5 id="adjust-settings">Adjust settings</h5>
+<p>To open the “Settings” tab between the top buttons and the Form
+items,</p>
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + e (Command + e on Mac).</li>
+<li>Then, you can:
+<ul>
+<li>Manage response:
+<ul>
+<li>Collect email address</li>
+<li>Allow response editing</li>
+<li>Limit to a single response</li>
+</ul></li>
+<li>Manage presentation:
+<ul>
+<li>Show progress bar</li>
+<li>Shuffle questions</li>
+<li>Provide a confirmation message</li>
+<li>Provide a summary</li>
+</ul></li>
+<li>Manage default settings: Form and question defaults</li>
+</ul></li>
+</ul>
+<h5 id="format-preview-publish-form">Format, preview &amp; publish
+form</h5>
+<p>Use the buttons at the top to:</p>
+<ul>
+<li>Customize theme: To open the Theme panel:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Alt + t (Ctrl + Option + t on Mac).</li>
+<li>Press Tab to choose:
+<ul>
+<li>Fonts for:
+<ul>
+<li>Headers</li>
+<li>Questions</li>
+<li>Text</li>
+</ul></li>
+<li>Header image</li>
+<li>Theme color and background</li>
+</ul></li>
+</ul></li>
+<li>Preview: To open the form in a new tab:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + Shift + p (Command + Shift + p on Mac).</li>
+<li>When done, close the browser tab.</li>
+</ul></li>
+<li>Share: To share your form with collaborators:
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Alt + s (Command + Option + s on Mac) to focus the “More” menu
+button.</li>
+<li>Press Shift + Tab twice to the Share button.</li>
+</ul></li>
+<li>Publish: To open a pop up to create the online form and verify or
+change who can respond,</li>
+<li>When published, press the same keyboard shortcuts to get a responder
+link.
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + Enter (Command + Enter on Mac).</li>
+</ul></li>
+</ul>
+<h4 id="review-analyze-results">Review &amp; analyze results</h4>
+<p>For deeper analysis of the responses, you can get charts with
+response data or open the data with Google Sheets and other add-ons.</p>
+<ul>
+<li>Choose where to save form responses.</li>
+<li>View and manage form responses.</li>
+<li>Use add-ons, Apps Script, AppSheet, and Data Studio.</li>
+</ul>
+<h5 id="check-questions-or-responses">Check questions or responses</h5>
+<p>To open the “Settings” tab,</p>
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + e (Command + e on Mac).</li>
+<li>Press the Right or Left arrow keys to choose between “Questions” and
+“Responses” tabs.
+<ul>
+<li>Questions tab: You can add and edit questions.</li>
+<li>Responses tab: You can:
+<ul>
+<li>Set the form to accept or not accept responses.</li>
+<li>Choose the destination for form responses.</li>
+<li>Read responses individually or as a summary.</li>
+<li>If you select “Individual,” to read the responses, you might need to
+change your screen reader to “Forms mode” or “Focus mode.” On the
+“Individual” tab, you can grade responses for quizzes.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="create-a-quiz">Create a quiz</h4>
+<ul>
+<li>On your computer, go to <a
+href="http://forms.google.com">forms.google.com</a>.</li>
+<li>Open a form.</li>
+<li>To open the “Settings” tab,
+<ul>
+<li>Tab to a non-edit field.</li>
+<li>Press Ctrl + e (Command + e on Mac).</li>
+</ul></li>
+<li>Press Tab in the Settings tab.</li>
+<li>Check the “Make this a quiz” checkbox. Tip: To quickly create a new
+quiz, go to <a href="http://g.co/createaquiz">g.co/createaquiz</a>.</li>
+</ul>
+<p>To learn more about answer keys, grading, and sharing results, refer
+to Create &amp; grade quizzes with Google Forms.</p>
+<h4 id="related-resources-12">Related resources</h4>
+<ul>
+<li>Publish &amp; share your form with responders</li>
+<li>Use Google Sheets with a screen reader</li>
+<li>Use Google Drive with a screen reader</li>
+</ul>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
 <li id="fn1"><p>dh<a href="#fnref1" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section>
+</aside>
 </main>
 </body>
 </html>

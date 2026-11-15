@@ -1,0 +1,4568 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Google Tasks help</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#google-tasks-help" id="toc-google-tasks-help">Google Tasks
+help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#get-started-with-google-tasks"
+id="toc-get-started-with-google-tasks">Get started with Google
+Tasks</a></li>
+<li><a href="#organize-manage-your-tasks"
+id="toc-organize-manage-your-tasks">Organize &amp; manage your
+tasks</a></li>
+<li><a href="#use-google-tasks-with-other-products"
+id="toc-use-google-tasks-with-other-products">Use Google Tasks with
+other products</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="google-tasks-help">Google Tasks help</h1>
+<p>This guide holds Google’s own help for Google Tasks, gathered from
+support.google.com on 14 November 2026. It covers tasks and lists in the
+Tasks app and beside Gmail, Calendar, Chat and the Docs editors. Some of
+it repeats what the Google Calendar guide says about tasks there.</p>
+<p>Google writes the same article once for each device it runs on, so
+where an article differs by platform the heading says which one it is
+for: Computer, or iPhone and iPad. Google’s Android editions are left
+out, as this collection covers Windows, the web, iPhone and iPad, and
+Alexa. The categories are Google’s own topics: Google no longer puts a
+trail above each article, so each article is filed under the topic its
+help centre lists it in.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Get started with Google Tasks
+<ul>
+<li><a href="#add-google-tasks-to-your-home-screen">Add Google Tasks to
+your home screen</a></li>
+<li><a href="#add-google-tasks-to-your-home-screen-iphone-and-ipad">Add
+Google Tasks to your home screen (iPhone and iPad)</a></li>
+<li><a href="#add-or-edit-a-task">Add or edit a task</a></li>
+<li><a href="#add-or-edit-a-task-computer">Add or edit a task
+(Computer)</a></li>
+<li><a href="#add-or-edit-a-task-iphone-and-ipad">Add or edit a task
+(iPhone and iPad)</a></li>
+<li><a href="#learn-about-google-tasks">Learn about Google
+Tasks</a></li>
+<li><a href="#manage-google-tasks-notification-settings">Manage Google
+Tasks notification settings</a></li>
+<li><a href="#manage-google-tasks-notification-settings-computer">Manage
+Google Tasks notification settings (Computer)</a></li>
+<li><a
+href="#manage-google-tasks-notification-settings-iphone-and-ipad">Manage
+Google Tasks notification settings (iPhone and iPad)</a></li>
+<li><a href="#print-your-tasks">Print your tasks</a></li>
+<li><a href="#use-dark-theme-in-google-tasks">Use Dark theme in Google
+Tasks</a></li>
+<li><a href="#use-dark-theme-in-google-tasks-computer">Use Dark theme in
+Google Tasks (Computer)</a></li>
+<li><a href="#use-dark-theme-in-google-tasks-iphone-and-ipad">Use Dark
+theme in Google Tasks (iPhone and iPad)</a></li>
+<li><a href="#use-keyboard-shortcuts-for-google-tasks">Use keyboard
+shortcuts for Google Tasks</a></li>
+<li><a href="#use-keyboard-shortcuts-for-google-tasks-computer">Use
+keyboard shortcuts for Google Tasks (Computer)</a></li>
+<li><a
+href="#use-keyboard-shortcuts-for-google-tasks-iphone-and-ipad">Use
+keyboard shortcuts for Google Tasks (iPhone and iPad)</a></li>
+</ul></li>
+<li>Organize &amp; manage your tasks
+<ul>
+<li><a href="#add-a-list">Add a list</a></li>
+<li><a href="#add-a-list-computer">Add a list (Computer)</a></li>
+<li><a href="#add-a-list-iphone-and-ipad">Add a list (iPhone and
+iPad)</a></li>
+<li><a href="#delete-a-task-or-list">Delete a task or list</a></li>
+<li><a href="#delete-a-task-or-list-computer">Delete a task or list
+(Computer)</a></li>
+<li><a href="#delete-a-task-or-list-iphone-and-ipad">Delete a task or
+list (iPhone and iPad)</a></li>
+<li><a
+href="#manage-repeating-tasks-in-google-tasks-google-calendar">Manage
+repeating tasks in Google Tasks &amp; Google Calendar</a></li>
+<li><a
+href="#manage-repeating-tasks-in-google-tasks-google-calendar-computer">Manage
+repeating tasks in Google Tasks &amp; Google Calendar
+(Computer)</a></li>
+<li><a
+href="#manage-repeating-tasks-in-google-tasks-google-calendar-iphone-and-ipad">Manage
+repeating tasks in Google Tasks &amp; Google Calendar (iPhone and
+iPad)</a></li>
+<li><a href="#organize-your-tasks">Organize your tasks</a></li>
+<li><a href="#organize-your-tasks-computer">Organize your tasks
+(Computer)</a></li>
+<li><a href="#organize-your-tasks-iphone-and-ipad">Organize your tasks
+(iPhone and iPad)</a></li>
+<li><a href="#prioritize-tasks-with-stars">Prioritize tasks with
+stars</a></li>
+<li><a href="#prioritize-tasks-with-stars-computer">Prioritize tasks
+with stars (Computer)</a></li>
+<li><a href="#prioritize-tasks-with-stars-iphone-and-ipad">Prioritize
+tasks with stars (iPhone and iPad)</a></li>
+</ul></li>
+<li>Use Google Tasks with other products
+<ul>
+<li><a href="#assign-tasks-from-google-docs">Assign tasks from Google
+Docs</a></li>
+<li><a href="#assign-tasks-from-google-docs-computer">Assign tasks from
+Google Docs (Computer)</a></li>
+<li><a href="#assign-tasks-from-google-docs-iphone-and-ipad">Assign
+tasks from Google Docs (iPhone and iPad)</a></li>
+<li><a href="#create-assign-tasks-in-google-chat">Create &amp; assign
+tasks in Google Chat</a></li>
+<li><a href="#create-assign-tasks-in-google-chat-computer">Create &amp;
+assign tasks in Google Chat (Computer)</a></li>
+<li><a href="#create-assign-tasks-in-google-chat-iphone-and-ipad">Create
+&amp; assign tasks in Google Chat (iPhone and iPad)</a></li>
+<li><a href="#create-manage-tasks-in-google-calendar">Create &amp;
+manage tasks in Google Calendar</a></li>
+<li><a href="#create-manage-tasks-in-google-calendar-computer">Create
+&amp; manage tasks in Google Calendar (Computer)</a></li>
+<li><a
+href="#create-manage-tasks-in-google-calendar-iphone-and-ipad">Create
+&amp; manage tasks in Google Calendar (iPhone and iPad)</a></li>
+<li><a href="#get-started-with-shared-tasks">Get started with shared
+tasks</a></li>
+<li><a href="#learn-about-google-keep-reminders-in-google-tasks">Learn
+about Google Keep reminders in Google Tasks</a></li>
+<li><a href="#report-assigned-tasks-as-spam">Report assigned tasks as
+spam</a></li>
+<li><a href="#report-assigned-tasks-as-spam-computer">Report assigned
+tasks as spam (Computer)</a></li>
+<li><a href="#report-assigned-tasks-as-spam-iphone-and-ipad">Report
+assigned tasks as spam (iPhone and iPad)</a></li>
+<li><a href="#use-google-products-side-by-side">Use Google products side
+by side</a></li>
+<li><a href="#use-google-products-side-by-side-computer">Use Google
+products side by side (Computer)</a></li>
+<li><a href="#use-google-products-side-by-side-iphone-and-ipad">Use
+Google products side by side (iPhone and iPad)</a></li>
+</ul></li>
+<li>Miscellaneous
+<ul>
+<li><a href="#attach-google-drive-files-to-a-task">Attach Google Drive
+files to a task</a></li>
+<li><a href="#attach-google-drive-files-to-a-task-computer">Attach
+Google Drive files to a task (Computer)</a></li>
+<li><a href="#export-your-data-from-google-tasks">Export your data from
+Google Tasks</a></li>
+</ul></li>
+</ul>
+<h2 id="get-started-with-google-tasks">Get started with Google
+Tasks</h2>
+<h3 id="add-google-tasks-to-your-home-screen">Add Google Tasks to your
+home screen</h3>
+<p>To manage your tasks from the home screen without opening the Tasks
+app, you can add a widget.</p>
+<h4 id="add-the-tasks-widget-to-your-home-screen">Add the Tasks widget
+to your home screen</h4>
+<p>Important: Depending on your Android phone or tablet, some of these
+steps may be different.</p>
+<ul>
+<li>On your Android phone or tablet, touch and hold the home
+screen.</li>
+<li>Tap Widgets.</li>
+<li>Tap Tasks.</li>
+<li>Touch and hold a Tasks widget:
+<ul>
+<li>List: Find, create, and manage tasks in the widget</li>
+<li>New Task: Adds a shortcut to create a new task in the app.</li>
+</ul></li>
+<li>Drag the widget to an empty space on the home screen, then release
+it.</li>
+</ul>
+<h4 id="resize-the-tasks-widget">Resize the Tasks widget</h4>
+<p>Important: You can only resize the “List” widget.</p>
+<ul>
+<li>Touch and hold the widget on your home screen, then release it.
+<ul>
+<li>An outline with dots appears on the sides of the widget.</li>
+</ul></li>
+<li>To resize the widget, drag the dots.</li>
+<li>When you’re done, tap outside the widget.</li>
+</ul>
+<h4 id="move-the-tasks-widget">Move the Tasks widget</h4>
+<ul>
+<li>Touch and hold the widget.</li>
+<li>Drag the widget to an empty space on the home screen, then release
+it.</li>
+</ul>
+<h4 id="remove-the-tasks-widget">Remove the Tasks widget</h4>
+<ul>
+<li>Touch and hold the widget.</li>
+<li>Drag the widget up to Remove, then release it.</li>
+</ul>
+<h3 id="add-google-tasks-to-your-home-screen-iphone-and-ipad">Add Google
+Tasks to your home screen (iPhone and iPad)</h3>
+<p>To manage your tasks from the home screen without opening the Tasks
+app, you can add a widget.</p>
+<h4 id="add-the-tasks-widget-to-your-home-screen-1">Add the Tasks widget
+to your home screen</h4>
+<p>Important:</p>
+<ul>
+<li>You can add widgets on an iPhone or iPad running iOS 14 and up.</li>
+<li>To add the widget, <a
+href="https://apps.apple.com/ky/app/google-tasks-get-things-done/id1353634006">download
+the Google Tasks app</a>.</li>
+<li>If you recently installed the Tasks app, you may need to open the
+app before the widget appears in the list of widgets.</li>
+<li>On your iPhone or iPad, touch and hold the home screen.</li>
+<li>At the top left, tap Add .</li>
+<li>In the list of widgets, tap Tasks.</li>
+<li>To select the widget size, swipe right or left.</li>
+<li>Tap Add Widget.</li>
+<li>At the top right, tap Done.</li>
+</ul>
+<h4 id="animation-how-to-add-the-tasks-widget">Animation: How to add the
+Tasks widget</h4>
+<h4 id="add-the-tasks-widget-to-today-view">Add the Tasks widget to
+Today View</h4>
+<ul>
+<li>On your iPhone or iPad, swipe right on the home screen until you
+find a list of widgets.</li>
+<li>Scroll to the bottom and tap Edit.</li>
+<li>At the top left, tap Add .</li>
+<li>In the list of widgets, tap Tasks.</li>
+<li>To select the widget size, swipe right or left.</li>
+<li>Tap Add Widget.</li>
+<li>At the top right, tap Done. Tip: To hide your tasks when the screen
+is locked, open Settings Face ID &amp; Passcode or Touch ID &amp;
+Passcode, then turn off Today View and Search.</li>
+</ul>
+<h4 id="move-the-tasks-widget-1">Move the Tasks widget</h4>
+<ul>
+<li>Touch and hold the widget.</li>
+<li>Tap Edit Home Screen.</li>
+<li>Drag the widget to another location on the home screen, then release
+it.</li>
+<li>At the top right, tap Done.</li>
+</ul>
+<h4 id="remove-the-tasks-widget-1">Remove the Tasks widget</h4>
+<ul>
+<li>Touch and hold the widget.</li>
+<li>Tap Remove Widget Remove.</li>
+</ul>
+<h3 id="add-or-edit-a-task">Add or edit a task</h3>
+<p>When you create a task, you can:</p>
+<ul>
+<li><p>Add details.</p></li>
+<li><p>Set a date and time.</p></li>
+<li><p>Add a deadline.</p></li>
+<li><p>Make it repeat on certain days.</p></li>
+<li><p>Add subtasks. Important:</p></li>
+<li><p>Across all your lists, you can create up to 100,000
+tasks.</p></li>
+<li><p>For any list, you can create up to 20,000 uncompleted
+tasks.</p></li>
+</ul>
+<h4 id="create-a-task">Create a task</h4>
+<p>Create a task from Google Calendar</p>
+<h5 id="create-a-task-in-calendar">Create a task in Calendar</h5>
+<p>Important: Only work or school accounts can use the “Do not disturb”
+and “Automatically decline meetings” options.</p>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On your calendar, click an empty slot.
+<ul>
+<li>Or, at the top left, you can click Create.</li>
+</ul></li>
+<li>Click Task.</li>
+<li>Update your task settings.</li>
+<li>Click Save. Tip: To find a list of all tasks from the last 365 days,
+at the top of your calendar, click Pending tasks.</li>
+</ul>
+<h5 id="learn-about-task-settings">Learn about task settings</h5>
+<p>Task setting</p>
+<p>Description</p>
+<p>Start date and time</p>
+<p>Enter the start date and how much time you plan to spend on the
+task.</p>
+<p>Deadline</p>
+<p>Enter the date you expect to complete the task. The deadline appears
+on the “All day” section of Calendar.</p>
+<p>Description</p>
+<p>Enter the date when the task must be completed.</p>
+<p>Task list</p>
+<p>Select a list for your task.</p>
+<p>Advanced settings</p>
+<p>Customize your task with additional options. You can:</p>
+<ul>
+<li>Change the color of your tasks.</li>
+<li>Set your availability to Free or Busy.</li>
+<li>Turn on Do not disturb to mute chat notifications.</li>
+<li>Turn on Automatically decline meetings if your availability is
+“Busy.”</li>
+<li>Select your task’s visibility to others.</li>
+</ul>
+<h6 id="create-a-task-from-tasks-in-calendar">Create a task from Tasks
+in Calendar</h6>
+<ul>
+<li><p>On your computer, select an option:</p>
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>At the top right, click Tasks .</li>
+</ul></li>
+<li><p>Click Create.</p></li>
+<li><p>Enter your task details.</p></li>
+<li><p>Click Save. Tips:</p></li>
+<li><p>To add a task to an existing list, at the top, click Add a
+task.</p></li>
+<li><p>Tasks with a date also appear on your calendar. Create a task
+from the side panel</p></li>
+</ul>
+<p>In most Google Workspace products, on the right, you can access Tasks
+in a side panel. You can also access Tasks in:</p>
+<ul>
+<li><p><a href="https://mail.google.com/">Gmail</a></p></li>
+<li><p><a href="https://calendar.google.com/">Calendar</a></p></li>
+<li><p><a href="https://chat.google.com/">Chat</a></p></li>
+<li><p><a href="https://drive.google.com/">Drive</a></p></li>
+<li><p>A file in <a href="https://drive.google.com/">Google Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a></p></li>
+<li><p>In the side panel, on the right, click Tasks .</p></li>
+<li><p>At the top, click Add a task.</p></li>
+<li><p>Enter a task. Tips:</p></li>
+<li><p>If you don’t see the side panel, click Show side panel in the
+bottom right of the screen. Learn more about the side panel.</p></li>
+<li><p>To add a task to an existing list, at the top of the list, click
+Add a task.</p></li>
+<li><p>Tasks with a date and time also appear in Calendar. Create a task
+from Gmail</p></li>
+<li><p>On your computer, open <a
+href="https://mail.google.com/">Gmail</a>.</p></li>
+<li><p>Open an email.</p></li>
+<li><p>At the top, click Add to Tasks .</p>
+<ul>
+<li>If you can’t find Add to Tasks , click More Add to Tasks. Tip: You
+can also drag and drop an email into the Gmail side panel:</li>
+</ul></li>
+<li><p>In Gmail, on the right, click Tasks .</p>
+<ul>
+<li>If you can’t find Tasks in Gmail, at the bottom right, click Show
+side panel .</li>
+</ul></li>
+<li><p>Drag and drop the email to the side panel. Create a task from
+Google Chat</p></li>
+</ul>
+<h6 id="create-a-task-based-on-a-message">Create a task based on a
+message</h6>
+<ul>
+<li><p>On your computer, open <a
+href="https://mail.google.com/chat/u/0/#chat/welcome">Google
+Chat</a>.</p>
+<ul>
+<li>You can also open Chat from <a
+href="https://mail.google.com/mail/u/0/#inbox">your Gmail
+account.</a></li>
+</ul></li>
+<li><p>Open a direct message.</p></li>
+<li><p>Hover over a message.</p></li>
+<li><p>Click More Add to Tasks. Your task appears in the last list you
+view. Tips:</p></li>
+<li><p>When you add a date to your task, the task also appears in
+Calendar.</p></li>
+<li><p>If you edit the task in Tasks, the Chat message stays the
+same.</p></li>
+<li><p>To navigate back to your Chat message from Tasks, below the task,
+click the chat’s name.</p></li>
+</ul>
+<h6 id="create-a-group-task">Create a group task</h6>
+<ul>
+<li>In Chat, open a space.</li>
+<li>At the top, click Tasks Add space task.</li>
+<li>Enter your task details and include:
+<ul>
+<li>A title.</li>
+<li>The date and time.</li>
+<li>A description.</li>
+</ul></li>
+<li>Optional: To assign the task to a space member, click Assign enter
+the member’s name.
+<ul>
+<li>When assigned, the assignee receives an email, and the task appears
+in their personal task list.</li>
+</ul></li>
+<li>Click Add. Learn how to create group tasks in Chat.</li>
+</ul>
+<p>Create a task from Google Docs</p>
+<p>Important: You can only add tasks from Google Docs if you have an
+eligible Google Workspace plan. Learn more about tasks in Google
+Docs.</p>
+<ul>
+<li>On your computer, open <a href="http://docs.google.com">Google
+Docs</a>.</li>
+<li>Open a document.</li>
+<li>Enter <code>@task</code>.</li>
+<li>Press Enter.</li>
+<li>Enter your task details.</li>
+<li>Assign the task to yourself or others.
+<ul>
+<li>When assigned, the assignee receives an email, and the task appears
+in their personal task list.</li>
+</ul></li>
+<li>Click Assign as a task. Tip: To quickly assign tasks from a
+checklist, to the left of a checklist item, click Add to Tasks Enter the
+assignee and date.</li>
+</ul>
+<h4 id="change-a-task">Change a task</h4>
+<ul>
+<li><p>From your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</p></li>
+<li><p>Click the task you want to change.</p></li>
+<li><p>Change the task info. Tips:</p></li>
+<li><p>You can also manage your tasks from the side panel.</p></li>
+<li><p>To change the date and time of the next repeating task in a
+series, click the date.</p></li>
+<li><p>To add a subtask, next to the task, click Task options Add a
+subtask.</p></li>
+<li><p>To move a task to a different list, click Task options choose a
+list. Learn more about lists.</p></li>
+</ul>
+<h4 id="mark-a-task-as-complete">Mark a task as complete</h4>
+<ul>
+<li>From your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>To the left of a task, click Complete .</li>
+</ul>
+<h4 id="delete-a-task">Delete a task</h4>
+<ul>
+<li>From your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>Point to the task you want to delete.</li>
+<li>Next to the task name, click Task options Delete.
+<ul>
+<li>For repeating tasks, click Delete all. Tip: To remove all complete
+tasks from a list, at the top of the list, click List options Delete all
+completed tasks.</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-task-notifications">Learn about task
+notifications</h4>
+<ul>
+<li>If you add a date and time to your task, you get notifications at
+the scheduled date and time.</li>
+<li>Tasks with a date also appear in the Calendar app.</li>
+<li>For tasks without a time, notifications appear at 9 AM.</li>
+<li>For tasks with a deadline, you get a notification to complete the
+task on the day of the deadline at 9 AM in your local time.</li>
+</ul>
+<h4 id="learn-about-repeating-tasks">Learn about repeating tasks</h4>
+<ul>
+<li>To repeat a task, select the date and time Repeat .</li>
+<li>Tasks with subtasks can’t repeat.</li>
+<li>In Calendar, a certain number of upcoming instances of a repeating
+task will appear on the calendar grid, and as time passes, new ones will
+be added automatically.</li>
+</ul>
+<h4 id="related-resources">Related resources</h4>
+<ul>
+<li>Add a list</li>
+<li>Learn about Google Tasks</li>
+<li>Use notifications for tasks</li>
+</ul>
+<h3 id="add-or-edit-a-task-computer">Add or edit a task (Computer)</h3>
+<p>When you create a task, you can:</p>
+<ul>
+<li><p>Add details.</p></li>
+<li><p>Set a date and time.</p></li>
+<li><p>Add a deadline.</p></li>
+<li><p>Make it repeat on certain days.</p></li>
+<li><p>Add subtasks. Important:</p></li>
+<li><p>Across all your lists, you can create up to 100,000
+tasks.</p></li>
+<li><p>For any list, you can create up to 20,000 uncompleted
+tasks.</p></li>
+</ul>
+<h4 id="create-a-task-1">Create a task</h4>
+<p>Create a task from Google Calendar</p>
+<h5 id="create-a-task-in-calendar-1">Create a task in Calendar</h5>
+<p>Important: Only work or school accounts can use the “Do not disturb”
+and “Automatically decline meetings” options.</p>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On your calendar, click an empty slot.
+<ul>
+<li>Or, at the top left, you can click Create.</li>
+</ul></li>
+<li>Click Task.</li>
+<li>Update your task settings.</li>
+<li>Click Save. Tip: To find a list of all tasks from the last 365 days,
+at the top of your calendar, click Pending tasks.</li>
+</ul>
+<h5 id="learn-about-task-settings-1">Learn about task settings</h5>
+<p>Task setting</p>
+<p>Description</p>
+<p>Start date and time</p>
+<p>Enter the start date and how much time you plan to spend on the
+task.</p>
+<p>Deadline</p>
+<p>Enter the date you expect to complete the task. The deadline appears
+on the “All day” section of Calendar.</p>
+<p>Description</p>
+<p>Enter the date when the task must be completed.</p>
+<p>Task list</p>
+<p>Select a list for your task.</p>
+<p>Advanced settings</p>
+<p>Customize your task with additional options. You can:</p>
+<ul>
+<li>Change the color of your tasks.</li>
+<li>Set your availability to Free or Busy.</li>
+<li>Turn on Do not disturb to mute chat notifications.</li>
+<li>Turn on Automatically decline meetings if your availability is
+“Busy.”</li>
+<li>Select your task’s visibility to others.</li>
+</ul>
+<h6 id="create-a-task-from-tasks-in-calendar-1">Create a task from Tasks
+in Calendar</h6>
+<ul>
+<li><p>On your computer, select an option:</p>
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>At the top right, click Tasks .</li>
+</ul></li>
+<li><p>Click Create.</p></li>
+<li><p>Enter your task details.</p></li>
+<li><p>Click Save. Tips:</p></li>
+<li><p>To add a task to an existing list, at the top, click Add a
+task.</p></li>
+<li><p>Tasks with a date also appear on your calendar. Create a task
+from the side panel</p></li>
+</ul>
+<p>In most Google Workspace products, on the right, you can access Tasks
+in a side panel. You can also access Tasks in:</p>
+<ul>
+<li><p><a href="https://mail.google.com/">Gmail</a></p></li>
+<li><p><a href="https://calendar.google.com/">Calendar</a></p></li>
+<li><p><a href="https://chat.google.com/">Chat</a></p></li>
+<li><p><a href="https://drive.google.com/">Drive</a></p></li>
+<li><p>A file in <a href="https://drive.google.com/">Google Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a></p></li>
+<li><p>In the side panel, on the right, click Tasks .</p></li>
+<li><p>At the top, click Add a task.</p></li>
+<li><p>Enter a task. Tips:</p></li>
+<li><p>If you don’t see the side panel, click Show side panel in the
+bottom right of the screen. Learn more about the side panel.</p></li>
+<li><p>To add a task to an existing list, at the top of the list, click
+Add a task.</p></li>
+<li><p>Tasks with a date and time also appear in Calendar. Create a task
+from Gmail</p></li>
+<li><p>On your computer, open <a
+href="https://mail.google.com/">Gmail</a>.</p></li>
+<li><p>Open an email.</p></li>
+<li><p>At the top, click Add to Tasks .</p>
+<ul>
+<li>If you can’t find Add to Tasks , click More Add to Tasks. Tip: You
+can also drag and drop an email into the Gmail side panel:</li>
+</ul></li>
+<li><p>In Gmail, on the right, click Tasks .</p>
+<ul>
+<li>If you can’t find Tasks in Gmail, at the bottom right, click Show
+side panel .</li>
+</ul></li>
+<li><p>Drag and drop the email to the side panel. Create a task from
+Google Chat</p></li>
+</ul>
+<h6 id="create-a-task-based-on-a-message-1">Create a task based on a
+message</h6>
+<ul>
+<li><p>On your computer, open <a
+href="https://mail.google.com/chat/u/0/#chat/welcome">Google
+Chat</a>.</p>
+<ul>
+<li>You can also open Chat from <a
+href="https://mail.google.com/mail/u/0/#inbox">your Gmail
+account.</a></li>
+</ul></li>
+<li><p>Open a direct message.</p></li>
+<li><p>Hover over a message.</p></li>
+<li><p>Click More Add to Tasks. Your task appears in the last list you
+view. Tips:</p></li>
+<li><p>When you add a date to your task, the task also appears in
+Calendar.</p></li>
+<li><p>If you edit the task in Tasks, the Chat message stays the
+same.</p></li>
+<li><p>To navigate back to your Chat message from Tasks, below the task,
+click the chat’s name.</p></li>
+</ul>
+<h6 id="create-a-group-task-1">Create a group task</h6>
+<ul>
+<li>In Chat, open a space.</li>
+<li>At the top, click Tasks Add space task.</li>
+<li>Enter your task details and include:
+<ul>
+<li>A title.</li>
+<li>The date and time.</li>
+<li>A description.</li>
+</ul></li>
+<li>Optional: To assign the task to a space member, click Assign enter
+the member’s name.
+<ul>
+<li>When assigned, the assignee receives an email, and the task appears
+in their personal task list.</li>
+</ul></li>
+<li>Click Add. Learn how to create group tasks in Chat.</li>
+</ul>
+<p>Create a task from Google Docs</p>
+<p>Important: You can only add tasks from Google Docs if you have an
+eligible Google Workspace plan. Learn more about tasks in Google
+Docs.</p>
+<ul>
+<li>On your computer, open <a href="http://docs.google.com">Google
+Docs</a>.</li>
+<li>Open a document.</li>
+<li>Enter <code>@task</code>.</li>
+<li>Press Enter.</li>
+<li>Enter your task details.</li>
+<li>Assign the task to yourself or others.
+<ul>
+<li>When assigned, the assignee receives an email, and the task appears
+in their personal task list.</li>
+</ul></li>
+<li>Click Assign as a task. Tip: To quickly assign tasks from a
+checklist, to the left of a checklist item, click Add to Tasks Enter the
+assignee and date.</li>
+</ul>
+<h4 id="change-a-task-1">Change a task</h4>
+<ul>
+<li><p>From your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</p></li>
+<li><p>Click the task you want to change.</p></li>
+<li><p>Change the task info. Tips:</p></li>
+<li><p>You can also manage your tasks from the side panel.</p></li>
+<li><p>To change the date and time of the next repeating task in a
+series, click the date.</p></li>
+<li><p>To add a subtask, next to the task, click Task options Add a
+subtask.</p></li>
+<li><p>To move a task to a different list, click Task options choose a
+list. Learn more about lists.</p></li>
+</ul>
+<h4 id="mark-a-task-as-complete-1">Mark a task as complete</h4>
+<ul>
+<li>From your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>To the left of a task, click Complete .</li>
+</ul>
+<h4 id="delete-a-task-1">Delete a task</h4>
+<ul>
+<li>From your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>Point to the task you want to delete.</li>
+<li>Next to the task name, click Task options Delete.
+<ul>
+<li>For repeating tasks, click Delete all. Tip: To remove all complete
+tasks from a list, at the top of the list, click List options Delete all
+completed tasks.</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-task-notifications-1">Learn about task
+notifications</h4>
+<ul>
+<li>If you add a date and time to your task, you get notifications at
+the scheduled date and time.</li>
+<li>Tasks with a date also appear in the Calendar app.</li>
+<li>For tasks without a time, notifications appear at 9 AM.</li>
+<li>For tasks with a deadline, you get a notification to complete the
+task on the day of the deadline at 9 AM in your local time.</li>
+</ul>
+<h4 id="learn-about-repeating-tasks-1">Learn about repeating tasks</h4>
+<ul>
+<li>To repeat a task, select the date and time Repeat .</li>
+<li>Tasks with subtasks can’t repeat.</li>
+<li>In Calendar, a certain number of upcoming instances of a repeating
+task will appear on the calendar grid, and as time passes, new ones will
+be added automatically.</li>
+</ul>
+<h4 id="related-resources-1">Related resources</h4>
+<ul>
+<li>Add a list</li>
+<li>Learn about Google Tasks</li>
+<li>Use notifications for tasks</li>
+</ul>
+<h3 id="add-or-edit-a-task-iphone-and-ipad">Add or edit a task (iPhone
+and iPad)</h3>
+<p>When you create a task, you can:</p>
+<ul>
+<li><p>Add details.</p></li>
+<li><p>Set a date and time.</p></li>
+<li><p>Add a deadline.</p></li>
+<li><p>Make it repeat on certain days.</p></li>
+<li><p>Add subtasks. Important:</p></li>
+<li><p>Across all your lists, you can create up to 100,000
+tasks.</p></li>
+<li><p>For any list, you can create up to 20,000 uncompleted
+tasks.</p></li>
+</ul>
+<h4 id="create-a-task-2">Create a task</h4>
+<p>Add a task with the Google Tasks app</p>
+<ul>
+<li><p>Open the Google Tasks app .</p></li>
+<li><p>Tap Add a new task .</p></li>
+<li><p>Enter a task.</p></li>
+<li><p>Optional: To add a date and time or repeat a task, tap Add
+date/time Done.</p></li>
+<li><p>Tap Save. Add a task from an email</p></li>
+<li><p>On your iPhone or iPad, open the Gmail app .</p></li>
+<li><p>Open the email you want to save as a task.</p></li>
+<li><p>At the top right, tap More options Add to Tasks. Add a task from
+Google Calendar</p></li>
+<li><p>On your iPhone or iPad, open the Google Calendar app .</p></li>
+<li><p>On your calendar, tap an empty slot Task.</p>
+<ul>
+<li>Or, you can tap Add Task .</li>
+</ul></li>
+<li><p>Update your task settings.</p></li>
+<li><p>Tap Save. Tips:</p></li>
+<li><p>Any tasks with dates you create in the Tasks app appear on Google
+Calendar.</p></li>
+<li><p>A list of all uncompleted tasks from the last 365 days is
+available in your current day on Google Calendar.</p></li>
+<li><p>When you switch categories from “Task” to “Event” in the middle
+of the creation process, the Calendar app retains as much of the data as
+possible.</p></li>
+</ul>
+<h5 id="learn-about-task-settings-2">Learn about task settings</h5>
+<p>Task setting</p>
+<p>Description</p>
+<p>Start date and time</p>
+<p>Enter the task start date and the total task time.</p>
+<p>Deadline</p>
+<p>Enter the date you expect to complete the task. This date shows in
+the “All day” section of your calendar.</p>
+<p>Description</p>
+<p>Enter the task end date.</p>
+<p>Task list</p>
+<p>Select a list for your task.</p>
+<p>Add a task from Google Chat</p>
+<p>You can create a personal task from Google Chat.</p>
+<ul>
+<li><p>Open the Google Chat app .</p></li>
+<li><p>Touch and hold the chat message you want to add as a
+task.</p></li>
+<li><p>Tap Add to Tasks.</p></li>
+<li><p>Finish your draft task in the Tasks app. Tips:</p></li>
+<li><p>If you add a date to your task in Google Tasks, the task also
+appears on Google Calendar.</p></li>
+<li><p>If you edit the task in Google Tasks, the Chat message remains
+unchanged.</p></li>
+<li><p>To navigate back to your Chat message from Google Tasks, below
+the task, click the chat’s name.</p></li>
+</ul>
+<h4 id="change-a-task-2">Change a task</h4>
+<p>You can:</p>
+<ul>
+<li><p>Change the task name</p></li>
+<li><p>Add details</p></li>
+<li><p>Set a due date</p></li>
+<li><p>Add subtasks</p></li>
+<li><p>Open the Google Tasks app .</p></li>
+<li><p>Tap the task you want to edit.</p></li>
+<li><p>Change the task info.</p></li>
+<li><p>Tap Back . Tips:</p></li>
+<li><p>If you want to change the date and time of the next repeating
+task in a series, tap the date.</p></li>
+<li><p>To edit the date and time for all tasks, at the bottom, tap the
+repetition info.</p></li>
+</ul>
+<h4 id="mark-a-task-as-complete-2">Mark a task as complete</h4>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>To the left of a task, tap Complete .</li>
+</ul>
+<h4 id="delete-a-task-2">Delete a task</h4>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>Tap the task you want to delete Delete .</li>
+</ul>
+<h4 id="delete-a-task-in-a-repeating-series">Delete a task in a
+repeating series</h4>
+<ul>
+<li>Open the Google Calendar app .</li>
+<li>Tap the task you want to delete.</li>
+<li>Tap Delete This task.</li>
+</ul>
+<h4 id="learn-about-task-notifications-2">Learn about task
+notifications</h4>
+<ul>
+<li>If you add a date and time to your task, you get notifications at
+the scheduled date and time.</li>
+<li>Tasks with a date also appear in the Calendar app.</li>
+<li>For tasks without a time, notifications appear at 9 AM.</li>
+<li>For tasks with a deadline, you get a notification to complete the
+task on the day of the deadline at 9 AM in your local time.</li>
+</ul>
+<h4 id="learn-about-repeating-tasks-2">Learn about repeating tasks</h4>
+<ul>
+<li>To repeat a task, select the date and time Repeat .</li>
+<li>Tasks with subtasks can’t repeat.</li>
+<li>In Calendar, a certain number of upcoming instances of a repeating
+task will appear on the calendar grid, and as time passes, new ones will
+be added automatically.</li>
+</ul>
+<h4 id="related-resources-2">Related resources</h4>
+<ul>
+<li>Add a list</li>
+<li>Learn about Google Tasks</li>
+<li>Use notifications for tasks</li>
+</ul>
+<h3 id="learn-about-google-tasks">Learn about Google Tasks</h3>
+<p>Use Google Tasks to keep track of important to-dos that sync across
+all your devices. With Tasks, you can:</p>
+<ul>
+<li>Quickly capture tasks anywhere, from any device.</li>
+<li>Add details to your tasks and create subtasks.</li>
+<li>Create tasks from Google Workspace products like Gmail and
+Calendar.</li>
+<li>Stay on track with due dates and notifications.</li>
+</ul>
+<h4 id="open-tasks-on-the-web">Open Tasks on the web</h4>
+<p>From your computer, you can access Tasks in Calendar in your
+browser.</p>
+<p><a href="https://calendar.google.com/calendar/u/0/r/tasks">Open Tasks
+in Calendar</a></p>
+<h4 id="download-install-the-tasks-app">Download &amp; install the Tasks
+app</h4>
+<p>To add and manage tasks from your mobile device, download the Tasks
+app .</p>
+<h4 id="use-tasks-in-other-google-products">Use Tasks in other Google
+products</h4>
+<p>You can create and manage tasks in:</p>
+<ul>
+<li>Google Calendar</li>
+<li>Chrome OS</li>
+<li><a href="https://keep.google.com/u/0">Keep</a></li>
+<li>Tasks from the side panel in:
+<ul>
+<li><a href="https://mail.google.com/">Gmail</a></li>
+<li><a href="https://calendar.google.com/">Calendar</a></li>
+<li><a href="https://chat.google.com/">Chat</a></li>
+<li><a href="https://drive.google.com/">Drive</a></li>
+<li>A file in <a href="https://drive.google.com/">Google Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>
+Important:</li>
+</ul></li>
+<li>If you don’t see the side panel, click Show side panel in the bottom
+right of the screen.</li>
+<li>For work or school accounts, your administrator controls access to
+Tasks. If you don’t see Tasks, reach out to your administrator.</li>
+</ul>
+<h4 id="learn-more-ways-to-use-tasks">Learn more ways to use Tasks</h4>
+<ul>
+<li>In Gmail, create a task from an email.</li>
+<li>In Chat, create a task based on a direct message or create and
+assign group tasks in a space.</li>
+<li>In Google Docs, if you’re signed in to an eligible Google Workspace
+account, assign tasks to yourself or others in a doc.</li>
+</ul>
+<h4 id="related-resources-3">Related resources</h4>
+<ul>
+<li>Get started with Google Tasks</li>
+<li>Add or edit a task</li>
+<li>Add a list</li>
+<li>Organize your tasks</li>
+</ul>
+<h3 id="manage-google-tasks-notification-settings">Manage Google Tasks
+notification settings</h3>
+<p>You can receive task notifications for apps on different devices.</p>
+<p>Tip: To get notifications, add a date and time to your task. Learn
+how to add or edit a task.</p>
+<h4 id="turn-on-task-notifications">Turn on task notifications</h4>
+<ul>
+<li>On your computer, open <a
+href="https://www.google.com/calendar">Google Calendar</a>.</li>
+<li>Turn on notifications in Calendar. Learn how to modify Google
+Calendar notifications.</li>
+<li>On the left, under “My calendars,” select Tasks.</li>
+</ul>
+<h4 id="related-resources-4">Related resources</h4>
+<ul>
+<li>Modify Google Calendar notifications</li>
+<li>Change your Google notifications</li>
+</ul>
+<h3 id="manage-google-tasks-notification-settings-computer">Manage
+Google Tasks notification settings (Computer)</h3>
+<p>You can receive task notifications for apps on different devices.</p>
+<p>Tip: To get notifications, add a date and time to your task. Learn
+how to add or edit a task.</p>
+<h4 id="turn-on-task-notifications-1">Turn on task notifications</h4>
+<ul>
+<li>On your computer, open <a
+href="https://www.google.com/calendar">Google Calendar</a>.</li>
+<li>Turn on notifications in Calendar. Learn how to modify Google
+Calendar notifications.</li>
+<li>On the left, under “My calendars,” select Tasks.</li>
+</ul>
+<h4 id="related-resources-5">Related resources</h4>
+<ul>
+<li>Modify Google Calendar notifications</li>
+<li>Change your Google notifications</li>
+</ul>
+<h3
+id="manage-google-tasks-notification-settings-iphone-and-ipad">Manage
+Google Tasks notification settings (iPhone and iPad)</h3>
+<p>You can receive task notifications for apps on different devices.</p>
+<p>Tip: To get notifications, add a date and time to your task. Learn
+how to add or edit a task.</p>
+<h4 id="turn-on-task-notifications-2">Turn on task notifications</h4>
+<p>Important: You can receive task notifications in the Google Tasks and
+Google Calendar apps. If both of the apps are installed, only one app
+notifies you. For example, if you have the Calendar app and the Tasks
+app installed, only the Tasks app notifies you.</p>
+<ul>
+<li>On your iPhone or iPad, open the settings app.</li>
+<li>Tap Notifications.</li>
+<li>In the app list, tap Tasks.</li>
+<li>Turn on Allow notifications. Tip: If you don’t have the Tasks app,
+you can change task notifications for Calendar. Learn how to update your
+notifications for Calendar.</li>
+</ul>
+<h4 id="fix-delayed-or-missing-task-notifications">Fix delayed or
+missing task notifications</h4>
+<p>If you set up a Focus on your iPhone or iPad, you may not get
+notifications. To keep notifications for the Tasks app on, turn on Time
+Sensitive Notifications:</p>
+<ul>
+<li>On your iPhone or iPad, open the settings app.</li>
+<li>Tap Focus.</li>
+<li>At the top, tap the desired Focus.</li>
+<li>Under “Allow Notifications,” tap Apps Add apps Tasks Done.</li>
+<li>Turn on Time Sensitive Notifications.</li>
+</ul>
+<h4 id="related-resources-6">Related resources</h4>
+<ul>
+<li>Modify Google Calendar notifications</li>
+<li>Change your Google notifications</li>
+</ul>
+<h3 id="print-your-tasks">Print your tasks</h3>
+<p>From your computer, you can print a copy of your tasks.</p>
+<h4 id="print-a-task-list">Print a task list</h4>
+<ul>
+<li><p>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</p></li>
+<li><p>On the right, in the side panel, click Tasks .</p>
+<ul>
+<li>If you don’t see the side panel, click Show side panel in the bottom
+right of the screen.</li>
+</ul></li>
+<li><p>At the top, click the Down arrow .</p></li>
+<li><p>Select the list you want to print.</p>
+<ul>
+<li>Tip: To print your complete tasks, at the bottom of the list, click
+Completed.</li>
+</ul></li>
+<li><p>Next to “Add a task,” click List options .</p></li>
+<li><p>Click Print list. Tip: You can also use a keyboard shortcut to
+print tasks.</p></li>
+<li><p>For Chrome OS and Windows: Ctrl + p</p></li>
+<li><p>For Mac: ⌘ + p</p></li>
+</ul>
+<h4 id="related-resources-7">Related resources</h4>
+<ul>
+<li>Export your data from Google Tasks</li>
+<li>Organize your tasks</li>
+</ul>
+<h3 id="use-dark-theme-in-google-tasks">Use Dark theme in Google
+Tasks</h3>
+<p>To check tasks more easily in Google Tasks, you can change the
+background theme.</p>
+<h4 id="turn-on-dark-theme-for-tasks-in-calendar">Turn on Dark theme for
+Tasks in Calendar</h4>
+<p>Important: When you turn on Dark theme in Calendar, it also applies
+to Tasks in Calendar and in the side panel.</p>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.
+<ul>
+<li>Check if you’re in <a href="https://tasks.google.com">Tasks in
+Calendar</a>. If so, at the top, click Switch to Calendar .</li>
+</ul></li>
+<li>At the top right, click Settings menu Appearance.</li>
+<li>In the “Appearance” window, select Dark.</li>
+<li>To apply the changes, click Done.</li>
+</ul>
+<h4 id="turn-on-dark-theme-for-tasks-in-gmail">Turn on Dark theme for
+Tasks in Gmail</h4>
+<ul>
+<li><p>On your computer, open <a
+href="https://mail.google.com/mail/u/0/">Gmail</a>.</p></li>
+<li><p>At the top right, click Settings .</p></li>
+<li><p>In the “Quick settings” menu, next to “Theme,” click View
+all.</p></li>
+<li><p>In the theme window, select Dark.</p></li>
+<li><p>At the bottom right, click Save.</p></li>
+<li><p>Refresh your browser. Tip: Certain themes allow you to
+personalize the background of specific Gmail elements, such as the Tasks
+side panel, separately from the overall Gmail background. This allows
+for combinations like a dark background for Tasks and a light background
+for your inbox. To change the text background:</p></li>
+<li><p>In the theme window, select a theme.</p></li>
+<li><p>In the bottom right of the theme window, click Text background
+.</p>
+<ul>
+<li>If you don’t get this option, you can’t change the text
+background.</li>
+</ul></li>
+<li><p>Select Dark.</p></li>
+<li><p>Refresh your browser.</p></li>
+<li><p>On the right, click Tasks .</p>
+<ul>
+<li>Your tasks in Gmail should now match the chosen background.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-8">Related resources</h4>
+<ul>
+<li>Learn about Google Tasks</li>
+<li>Add Google Tasks to your home screen</li>
+<li>Use Dark theme in Calendar</li>
+<li>Change your Gmail background</li>
+</ul>
+<h3 id="use-dark-theme-in-google-tasks-computer">Use Dark theme in
+Google Tasks (Computer)</h3>
+<p>To check tasks more easily in Google Tasks, you can change the
+background theme.</p>
+<h4 id="turn-on-dark-theme-for-tasks-in-calendar-1">Turn on Dark theme
+for Tasks in Calendar</h4>
+<p>Important: When you turn on Dark theme in Calendar, it also applies
+to Tasks in Calendar and in the side panel.</p>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.
+<ul>
+<li>Check if you’re in <a href="https://tasks.google.com">Tasks in
+Calendar</a>. If so, at the top, click Switch to Calendar .</li>
+</ul></li>
+<li>At the top right, click Settings menu Appearance.</li>
+<li>In the “Appearance” window, select Dark.</li>
+<li>To apply the changes, click Done.</li>
+</ul>
+<h4 id="turn-on-dark-theme-for-tasks-in-gmail-1">Turn on Dark theme for
+Tasks in Gmail</h4>
+<ul>
+<li><p>On your computer, open <a
+href="https://mail.google.com/mail/u/0/">Gmail</a>.</p></li>
+<li><p>At the top right, click Settings .</p></li>
+<li><p>In the “Quick settings” menu, next to “Theme,” click View
+all.</p></li>
+<li><p>In the theme window, select Dark.</p></li>
+<li><p>At the bottom right, click Save.</p></li>
+<li><p>Refresh your browser. Tip: Certain themes allow you to
+personalize the background of specific Gmail elements, such as the Tasks
+side panel, separately from the overall Gmail background. This allows
+for combinations like a dark background for Tasks and a light background
+for your inbox. To change the text background:</p></li>
+<li><p>In the theme window, select a theme.</p></li>
+<li><p>In the bottom right of the theme window, click Text background
+.</p>
+<ul>
+<li>If you don’t get this option, you can’t change the text
+background.</li>
+</ul></li>
+<li><p>Select Dark.</p></li>
+<li><p>Refresh your browser.</p></li>
+<li><p>On the right, click Tasks .</p>
+<ul>
+<li>Your tasks in Gmail should now match the chosen background.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-9">Related resources</h4>
+<ul>
+<li>Learn about Google Tasks</li>
+<li>Add Google Tasks to your home screen</li>
+<li>Use Dark theme in Calendar</li>
+<li>Change your Gmail background</li>
+</ul>
+<h3 id="use-dark-theme-in-google-tasks-iphone-and-ipad">Use Dark theme
+in Google Tasks (iPhone and iPad)</h3>
+<p>To check tasks more easily in Google Tasks, you can change the
+background theme.</p>
+<h4 id="turn-on-dark-mode">Turn on Dark Mode</h4>
+<p>Important:</p>
+<ul>
+<li>Dark Mode is available on iOS 13 and up.</li>
+<li>When you update your device settings, all apps on your iPhone or
+iPad change to match the background theme.</li>
+<li>On your iPhone or iPad, <a
+href="https://support.apple.com/en-us/HT210332">turn on Dark
+Mode</a>.</li>
+<li>Tap Tasks .</li>
+</ul>
+<h4 id="related-resources-10">Related resources</h4>
+<ul>
+<li>Learn about Google Tasks</li>
+<li>Add Google Tasks to your home screen</li>
+<li>Use Dark theme in Calendar</li>
+<li>Change your Gmail background</li>
+</ul>
+<h3 id="use-keyboard-shortcuts-for-google-tasks">Use keyboard shortcuts
+for Google Tasks</h3>
+<p>You can use keyboard shortcuts to save time on tasks.</p>
+<p>Action</p>
+<p>Shortcut</p>
+<p>Create a task</p>
+<p>Enter</p>
+<p>Mark a task as complete</p>
+<p>Space</p>
+<p>Indent task</p>
+<p>⌘ + ] (Mac)</p>
+<p>Ctrl + ] (Windows)</p>
+<p>Remove indent</p>
+<p>⌘ + [ (Mac)</p>
+<p>Ctrl + [ (Windows)</p>
+<p>Add below</p>
+<p>Return (except in notes field)</p>
+<p>Add sub-item</p>
+<p>⌘ + Opt +Return (Mac)</p>
+<p>Ctrl + Alt + Return (Windows)</p>
+<p>Finish editing</p>
+<p>Esc or Enter</p>
+<p>More actions</p>
+<p>. (period) or v</p>
+<p>Move down</p>
+<p>⌘ + Down (Mac)</p>
+<p>Ctrl + Down (Windows)</p>
+<p>Move to bottom</p>
+<p>⌘ + Shift + Down (Mac)</p>
+<p>Ctrl + Shift + Down (Windows)</p>
+<p>Add to starred</p>
+<p>s, +, =</p>
+<p>Remove from starred</p>
+<p>s, -</p>
+<p>Move to list</p>
+<p>. (period) or v</p>
+<p>Move to top</p>
+<p>⌘ + Shift + Up (Mac)</p>
+<p>Ctrl + Shift + Up (Windows)</p>
+<p>Move up</p>
+<p>⌘ + Up (Mac)</p>
+<p>Ctrl + Up (Windows)</p>
+<p>Print a task list</p>
+<p>⌘ + p (Mac)</p>
+<p>Ctrl + p (Windows)</p>
+<p>Report spam</p>
+<p>!</p>
+<p>Select first</p>
+<p>Opt + Up (Mac)</p>
+<p>Home (Windows)</p>
+<p>Select last</p>
+<p>Opt + Down (Mac)</p>
+<p>End (Windows)</p>
+<p>Show the list of shortcuts</p>
+<p>⌘ + / (Mac)</p>
+<p>Ctrl + / (Windows)</p>
+<p>Undo</p>
+<p>⌘ + z (Mac)</p>
+<p>Ctrl + z (Windows)</p>
+<h3 id="use-keyboard-shortcuts-for-google-tasks-computer">Use keyboard
+shortcuts for Google Tasks (Computer)</h3>
+<p>You can use keyboard shortcuts to save time on tasks.</p>
+<p>Action</p>
+<p>Shortcut</p>
+<p>Create a task</p>
+<p>Enter</p>
+<p>Mark a task as complete</p>
+<p>Space</p>
+<p>Indent task</p>
+<p>⌘ + ] (Mac)</p>
+<p>Ctrl + ] (Windows)</p>
+<p>Remove indent</p>
+<p>⌘ + [ (Mac)</p>
+<p>Ctrl + [ (Windows)</p>
+<p>Add below</p>
+<p>Return (except in notes field)</p>
+<p>Add sub-item</p>
+<p>⌘ + Opt +Return (Mac)</p>
+<p>Ctrl + Alt + Return (Windows)</p>
+<p>Finish editing</p>
+<p>Esc or Enter</p>
+<p>More actions</p>
+<p>. (period) or v</p>
+<p>Move down</p>
+<p>⌘ + Down (Mac)</p>
+<p>Ctrl + Down (Windows)</p>
+<p>Move to bottom</p>
+<p>⌘ + Shift + Down (Mac)</p>
+<p>Ctrl + Shift + Down (Windows)</p>
+<p>Add to starred</p>
+<p>s, +, =</p>
+<p>Remove from starred</p>
+<p>s, -</p>
+<p>Move to list</p>
+<p>. (period) or v</p>
+<p>Move to top</p>
+<p>⌘ + Shift + Up (Mac)</p>
+<p>Ctrl + Shift + Up (Windows)</p>
+<p>Move up</p>
+<p>⌘ + Up (Mac)</p>
+<p>Ctrl + Up (Windows)</p>
+<p>Print a task list</p>
+<p>⌘ + p (Mac)</p>
+<p>Ctrl + p (Windows)</p>
+<p>Report spam</p>
+<p>!</p>
+<p>Select first</p>
+<p>Opt + Up (Mac)</p>
+<p>Home (Windows)</p>
+<p>Select last</p>
+<p>Opt + Down (Mac)</p>
+<p>End (Windows)</p>
+<p>Show the list of shortcuts</p>
+<p>⌘ + / (Mac)</p>
+<p>Ctrl + / (Windows)</p>
+<p>Undo</p>
+<p>⌘ + z (Mac)</p>
+<p>Ctrl + z (Windows)</p>
+<h3 id="use-keyboard-shortcuts-for-google-tasks-iphone-and-ipad">Use
+keyboard shortcuts for Google Tasks (iPhone and iPad)</h3>
+<p>You can use keyboard shortcuts to save time on tasks.</p>
+<p>To use shortcuts, open Google Tasks on your computer.</p>
+<h2 id="organize-manage-your-tasks">Organize &amp; manage your
+tasks</h2>
+<h3 id="add-a-list">Add a list</h3>
+<p>You can create more than one list to keep track of your different
+tasks.</p>
+<h4 id="create-a-list">Create a list</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>At the top, click the Down arrow .</li>
+<li>Click Create a new list.</li>
+<li>Enter a name.</li>
+<li>Click Done.</li>
+</ul>
+<h4 id="switch-between-lists">Switch between lists</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>At the top, click the Down arrow .</li>
+<li>Click the list you want.</li>
+</ul>
+<h4 id="rename-a-list">Rename a list</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Click More .</li>
+<li>Click Rename list.</li>
+<li>Enter a name.</li>
+<li>Click Done.</li>
+</ul>
+<h4 id="reorder-lists">Reorder lists</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>At the top, click the Down arrow .</li>
+<li>To reorder lists, select an option:
+<ul>
+<li>Click and drag the list you want to move.</li>
+<li>Highlight a list with the arrow keys and press Alt + the Up or Down
+arrow key to move a list up or down.</li>
+</ul></li>
+</ul>
+<h3 id="add-a-list-computer">Add a list (Computer)</h3>
+<p>You can create more than one list to keep track of your different
+tasks.</p>
+<h4 id="create-a-list-1">Create a list</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>At the top, click the Down arrow .</li>
+<li>Click Create a new list.</li>
+<li>Enter a name.</li>
+<li>Click Done.</li>
+</ul>
+<h4 id="switch-between-lists-1">Switch between lists</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>At the top, click the Down arrow .</li>
+<li>Click the list you want.</li>
+</ul>
+<h4 id="rename-a-list-1">Rename a list</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Click More .</li>
+<li>Click Rename list.</li>
+<li>Enter a name.</li>
+<li>Click Done.</li>
+</ul>
+<h4 id="reorder-lists-1">Reorder lists</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>At the top, click the Down arrow .</li>
+<li>To reorder lists, select an option:
+<ul>
+<li>Click and drag the list you want to move.</li>
+<li>Highlight a list with the arrow keys and press Alt + the Up or Down
+arrow key to move a list up or down.</li>
+</ul></li>
+</ul>
+<h3 id="add-a-list-iphone-and-ipad">Add a list (iPhone and iPad)</h3>
+<p>You can create more than one list to keep track of your different
+tasks.</p>
+<h4 id="create-a-list-2">Create a list</h4>
+<ul>
+<li>On your iPhone, open the <a
+href="https://itunes.apple.com/us/app/google-tasks/id1353634006">Google
+Tasks app</a> .</li>
+<li>Tap Menu .</li>
+<li>Tap Create new list .</li>
+<li>Enter a name.</li>
+<li>Tap Done.</li>
+</ul>
+<h4 id="switch-between-lists-2">Switch between lists</h4>
+<ul>
+<li>On your iPhone, open the <a
+href="https://itunes.apple.com/us/app/google-tasks/id1353634006">Google
+Tasks app</a> .</li>
+<li>Tap Menu .</li>
+<li>Tap the list you want. Tip: You can also swipe between lists.</li>
+</ul>
+<h4 id="rename-a-list-2">Rename a list</h4>
+<ul>
+<li>On your iPhone, open the <a
+href="https://itunes.apple.com/us/app/google-tasks/id1353634006">Google
+Tasks app</a> .</li>
+<li>Tap More .</li>
+<li>Tap Rename list.</li>
+<li>Enter a name.</li>
+<li>Tap Done.</li>
+</ul>
+<h3 id="delete-a-task-or-list">Delete a task or list</h3>
+<p>When you complete a task or list, you can delete it so it no longer
+appears.</p>
+<h4 id="delete-a-task-3">Delete a task</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>Click the task you want to delete.</li>
+<li>Next to the task name, click Task options Delete.
+<ul>
+<li>For repeating tasks, click Delete Delete all.</li>
+</ul></li>
+<li>To cancel, click Undo. Tip: To delete all completed tasks, on the
+right of the list, click List options Delete all completed tasks.</li>
+</ul>
+<h4 id="delete-a-list">Delete a list</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>On the right of the list, click More Delete list.</li>
+</ul>
+<h3 id="delete-a-task-or-list-computer">Delete a task or list
+(Computer)</h3>
+<p>When you complete a task or list, you can delete it so it no longer
+appears.</p>
+<h4 id="delete-a-task-4">Delete a task</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>Click the task you want to delete.</li>
+<li>Next to the task name, click Task options Delete.
+<ul>
+<li>For repeating tasks, click Delete Delete all.</li>
+</ul></li>
+<li>To cancel, click Undo. Tip: To delete all completed tasks, on the
+right of the list, click List options Delete all completed tasks.</li>
+</ul>
+<h4 id="delete-a-list-1">Delete a list</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>On the right of the list, click More Delete list.</li>
+</ul>
+<h3 id="delete-a-task-or-list-iphone-and-ipad">Delete a task or list
+(iPhone and iPad)</h3>
+<p>When you complete a task or list, you can delete it so it no longer
+appears.</p>
+<h4 id="delete-a-task-5">Delete a task</h4>
+<ul>
+<li>On your iPhone, open the <a
+href="https://itunes.apple.com/us/app/google-tasks/id1353634006">Google
+Tasks app</a> .</li>
+<li>Tap the task you want to delete.</li>
+<li>Tap Delete .</li>
+<li>To cancel, tap Undo.</li>
+</ul>
+<h4 id="delete-a-list-2">Delete a list</h4>
+<ul>
+<li>On your iPhone, open the <a
+href="https://itunes.apple.com/us/app/google-tasks/id1353634006">Google
+Tasks app</a> .</li>
+<li>Tap Menu .</li>
+<li>Choose the list you want to delete.</li>
+<li>Tap More .</li>
+<li>Tap Delete list.</li>
+</ul>
+<h3 id="manage-repeating-tasks-in-google-tasks-google-calendar">Manage
+repeating tasks in Google Tasks &amp; Google Calendar</h3>
+<p>You can create, edit, and delete repeating tasks in Google Tasks and
+Google Calendar.</p>
+<p>Important:</p>
+<ul>
+<li>A limited number of upcoming recurring tasks appear at one time on
+your Calendar grid. As time passes, new tasks appear automatically.</li>
+<li>Shared tasks and subtasks can’t be set to repeat.</li>
+<li>Recurring tasks can’t be moved to other task lists.</li>
+<li>If you stop a series of tasks from repeating, you can’t set it to
+repeat again. You must create a new series of repeating tasks.</li>
+</ul>
+<h4 id="set-tasks-to-repeat">Set tasks to repeat</h4>
+<h5 id="to-set-tasks-to-repeat-from-google-tasks">To set tasks to repeat
+from Google Tasks:</h5>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Click an existing task or create a new task.</li>
+<li>To add a date and time, click Date/time.</li>
+<li>Next to “Date/time,” click Repeat .</li>
+<li>Under “Repeats every,” select day, week, month, or year.</li>
+<li>Under “Ends,” select an option to create a recurring task:
+<ul>
+<li>With no end date, select Never.</li>
+<li>With a specific end date, select On, then choose a date.</li>
+<li>That ends after a certain number of occurrences, select After, then
+select a number of occurrences.</li>
+</ul></li>
+<li>Click OK.</li>
+</ul>
+<h5 id="to-set-tasks-to-repeat-from-google-calendar">To set tasks to
+repeat from Google Calendar:</h5>
+<ul>
+<li>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On the calendar grid, click any empty space.</li>
+<li>Below the title, select Task.</li>
+<li>Below the date, click Does not repeat.</li>
+<li>Select an option:
+<ul>
+<li>Select a pre-set frequency, such as Daily, Weekly, Monthly, or
+Annually. Click Save.</li>
+<li>Select Custom, then set your preferred recurrence frequency or an
+end date. Click Done Save.</li>
+</ul></li>
+</ul>
+<h4 id="edit-or-complete-a-recurring-task">Edit or complete a recurring
+task</h4>
+<h5 id="to-edit-or-complete-a-recurring-task-from-google-tasks">To edit
+or complete a recurring task from Google Tasks:</h5>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Click the task you want to change.
+<ul>
+<li>To edit the date and time for all tasks in a series, at the bottom
+of the task, click the repetition info.</li>
+<li>To change the date and time of the next repeating task in a series,
+click the date.</li>
+<li>To stop a task from repeating, next to the repetition info, click
+Stop repeating Stop repeating.</li>
+<li>To mark the task complete, on the left of a task, click Complete .
+At the bottom of the panel, under “Completed,” you can view your
+completed tasks. The next instance of your repeating task appears in
+your task list on the date specified.</li>
+</ul></li>
+</ul>
+<h5 id="to-edit-or-complete-a-recurring-task-from-google-calendar">To
+edit or complete a recurring task from Google Calendar:</h5>
+<ul>
+<li>Open <a href="https://calendar.google.com/calendar">Google
+Calendar</a>.</li>
+<li>Click a task you want to change.</li>
+<li>To edit, click Edit .</li>
+<li>Select an option:
+<ul>
+<li>To edit the date or time, click Date/Time .</li>
+<li>To edit how often a task occurs or stop a task from repeating, click
+Repeat .</li>
+</ul></li>
+<li>Click Save.</li>
+<li>Choose between applying changes to “This task” or “All tasks.”</li>
+<li>Click OK.</li>
+<li>To mark the task complete, click Mark completed.</li>
+</ul>
+<h4 id="delete-tasks-in-a-series">Delete tasks in a series</h4>
+<h5 id="to-delete-all-tasks-in-a-series-from-google-tasks">To delete all
+tasks in a series from Google Tasks:</h5>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Next to the task you want to delete, click Open menu .</li>
+<li>Click Delete Delete all.</li>
+</ul>
+<h5 id="to-delete-tasks-in-a-series-from-google-calendar">To delete
+tasks in a series from Google Calendar:</h5>
+<ul>
+<li>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>Click the task you want to delete.</li>
+<li>Click Delete .</li>
+<li>Select an option:
+<ul>
+<li>This task</li>
+<li>This and following tasks</li>
+<li>All tasks</li>
+</ul></li>
+<li>Click OK. Important: To delete a single task from a repeating
+series, you must use Google Calendar.</li>
+</ul>
+<h4 id="related-resources-11">Related resources</h4>
+<ul>
+<li>Add or edit a task</li>
+<li>Organize your tasks</li>
+<li>Use keyboard shortcuts for Google Tasks</li>
+</ul>
+<h3
+id="manage-repeating-tasks-in-google-tasks-google-calendar-computer">Manage
+repeating tasks in Google Tasks &amp; Google Calendar (Computer)</h3>
+<p>You can create, edit, and delete repeating tasks in Google Tasks and
+Google Calendar.</p>
+<p>Important:</p>
+<ul>
+<li>A limited number of upcoming recurring tasks appear at one time on
+your Calendar grid. As time passes, new tasks appear automatically.</li>
+<li>Shared tasks and subtasks can’t be set to repeat.</li>
+<li>Recurring tasks can’t be moved to other task lists.</li>
+<li>If you stop a series of tasks from repeating, you can’t set it to
+repeat again. You must create a new series of repeating tasks.</li>
+</ul>
+<h4 id="set-tasks-to-repeat-1">Set tasks to repeat</h4>
+<h5 id="to-set-tasks-to-repeat-from-google-tasks-1">To set tasks to
+repeat from Google Tasks:</h5>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Click an existing task or create a new task.</li>
+<li>To add a date and time, click Date/time.</li>
+<li>Next to “Date/time,” click Repeat .</li>
+<li>Under “Repeats every,” select day, week, month, or year.</li>
+<li>Under “Ends,” select an option to create a recurring task:
+<ul>
+<li>With no end date, select Never.</li>
+<li>With a specific end date, select On, then choose a date.</li>
+<li>That ends after a certain number of occurrences, select After, then
+select a number of occurrences.</li>
+</ul></li>
+<li>Click OK.</li>
+</ul>
+<h5 id="to-set-tasks-to-repeat-from-google-calendar-1">To set tasks to
+repeat from Google Calendar:</h5>
+<ul>
+<li>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On the calendar grid, click any empty space.</li>
+<li>Below the title, select Task.</li>
+<li>Below the date, click Does not repeat.</li>
+<li>Select an option:
+<ul>
+<li>Select a pre-set frequency, such as Daily, Weekly, Monthly, or
+Annually. Click Save.</li>
+<li>Select Custom, then set your preferred recurrence frequency or an
+end date. Click Done Save.</li>
+</ul></li>
+</ul>
+<h4 id="edit-or-complete-a-recurring-task-1">Edit or complete a
+recurring task</h4>
+<h5 id="to-edit-or-complete-a-recurring-task-from-google-tasks-1">To
+edit or complete a recurring task from Google Tasks:</h5>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Click the task you want to change.
+<ul>
+<li>To edit the date and time for all tasks in a series, at the bottom
+of the task, click the repetition info.</li>
+<li>To change the date and time of the next repeating task in a series,
+click the date.</li>
+<li>To stop a task from repeating, next to the repetition info, click
+Stop repeating Stop repeating.</li>
+<li>To mark the task complete, on the left of a task, click Complete .
+At the bottom of the panel, under “Completed,” you can view your
+completed tasks. The next instance of your repeating task appears in
+your task list on the date specified.</li>
+</ul></li>
+</ul>
+<h5 id="to-edit-or-complete-a-recurring-task-from-google-calendar-1">To
+edit or complete a recurring task from Google Calendar:</h5>
+<ul>
+<li>Open <a href="https://calendar.google.com/calendar">Google
+Calendar</a>.</li>
+<li>Click a task you want to change.</li>
+<li>To edit, click Edit .</li>
+<li>Select an option:
+<ul>
+<li>To edit the date or time, click Date/Time .</li>
+<li>To edit how often a task occurs or stop a task from repeating, click
+Repeat .</li>
+</ul></li>
+<li>Click Save.</li>
+<li>Choose between applying changes to “This task” or “All tasks.”</li>
+<li>Click OK.</li>
+<li>To mark the task complete, click Mark completed.</li>
+</ul>
+<h4 id="delete-tasks-in-a-series-1">Delete tasks in a series</h4>
+<h5 id="to-delete-all-tasks-in-a-series-from-google-tasks-1">To delete
+all tasks in a series from Google Tasks:</h5>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>On the right, click Tasks .</li>
+<li>Next to the task you want to delete, click Open menu .</li>
+<li>Click Delete Delete all.</li>
+</ul>
+<h5 id="to-delete-tasks-in-a-series-from-google-calendar-1">To delete
+tasks in a series from Google Calendar:</h5>
+<ul>
+<li>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>Click the task you want to delete.</li>
+<li>Click Delete .</li>
+<li>Select an option:
+<ul>
+<li>This task</li>
+<li>This and following tasks</li>
+<li>All tasks</li>
+</ul></li>
+<li>Click OK. Important: To delete a single task from a repeating
+series, you must use Google Calendar.</li>
+</ul>
+<h4 id="related-resources-12">Related resources</h4>
+<ul>
+<li>Add or edit a task</li>
+<li>Organize your tasks</li>
+<li>Use keyboard shortcuts for Google Tasks</li>
+</ul>
+<h3
+id="manage-repeating-tasks-in-google-tasks-google-calendar-iphone-and-ipad">Manage
+repeating tasks in Google Tasks &amp; Google Calendar (iPhone and
+iPad)</h3>
+<p>You can create, edit, and delete repeating tasks in Google Tasks and
+Google Calendar.</p>
+<p>Important:</p>
+<ul>
+<li>A limited number of upcoming recurring tasks appear at one time on
+your Calendar grid. As time passes, new tasks appear automatically.</li>
+<li>Shared tasks and subtasks can’t be set to repeat.</li>
+<li>Recurring tasks can’t be moved to other task lists.</li>
+<li>If you stop a series of tasks from repeating, you can’t set it to
+repeat again. You must create a new series of repeating tasks.</li>
+</ul>
+<h4 id="set-tasks-to-repeat-2">Set tasks to repeat</h4>
+<h5 id="to-set-tasks-to-repeat-from-google-tasks-2">To set tasks to
+repeat from Google Tasks:</h5>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>Tap an existing task or create a new task.</li>
+<li>Tap Date &amp; Time .</li>
+<li>Under “Date &amp; Time,” tap Does not repeat.</li>
+<li>Select an option to create a recurring task:
+<ul>
+<li>Select a pre-set frequency, such as Every day, week, month, or
+year.</li>
+<li>Select Custom. Set your preferred recurrence frequency. Tap Does not
+end, then choose your end date.</li>
+</ul></li>
+<li>Tap Done.</li>
+</ul>
+<h5 id="to-set-tasks-to-repeat-from-google-calendar-2">To set tasks to
+repeat from Google Calendar:</h5>
+<ul>
+<li>Open the Google Calendar app .</li>
+<li>Tap an existing task or create a new task.</li>
+<li>Tap Does not repeat .</li>
+<li>Select an option:
+<ul>
+<li>Select a pre-set frequency, such as Every day, week, month, or year.
+Tap Save.</li>
+<li>Select Custom. Set your preferred recurrence frequency, then choose
+your end date. Tap Done Save.</li>
+</ul></li>
+</ul>
+<h4 id="edit-or-complete-a-recurring-task-2">Edit or complete a
+recurring task</h4>
+<h5 id="to-edit-or-complete-a-recurring-task-from-google-tasks-2">To
+edit or complete a recurring task from Google Tasks:</h5>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>Tap the task you want to change.
+<ul>
+<li>To edit the date and time or stop a task from repeating, at the
+bottom of the task, tap the repetition info.</li>
+<li>To mark the task complete, at the bottom, tap Mark completed. At the
+bottom of the panel, under “Completed,” you can view your completed
+tasks. The next instance of your repeating tasks appears in your task
+list on the date specified. Tip: If you want to change the date and time
+of the next repeating task in a series, tap the date.</li>
+</ul></li>
+</ul>
+<h5 id="to-edit-or-complete-a-recurring-task-from-google-calendar-2">To
+edit or complete a recurring task from Google Calendar:</h5>
+<ul>
+<li>Open the Google Calendar app .</li>
+<li>Tap a task Edit .</li>
+<li>Select an option:
+<ul>
+<li>To edit the date or time of the task, tap Date/Time Save.</li>
+<li>To edit how often a task occurs or stop a task from repeating, tap
+Repeat Save.</li>
+</ul></li>
+<li>Choose between applying changes to “This task” or “All Tasks.”</li>
+</ul>
+<h4 id="delete-tasks-in-a-series-2">Delete tasks in a series</h4>
+<h5 id="to-delete-recurring-tasks-from-google-tasks">To delete recurring
+tasks from Google Tasks:</h5>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>Tap the task you want to delete.</li>
+<li>At the top right, tap Delete Delete all.</li>
+</ul>
+<h5 id="to-delete-recurring-tasks-from-google-calendar">To delete
+recurring tasks from Google Calendar:</h5>
+<ul>
+<li>Open the Google Calendar app .</li>
+<li>Tap the task you want to delete.</li>
+<li>Tap More Delete.</li>
+<li>Select an option:
+<ul>
+<li>This task</li>
+<li>This and following tasks</li>
+<li>All tasks Important: You can only delete a single task in a
+repeating series from Google Calendar.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-13">Related resources</h4>
+<ul>
+<li>Add or edit a task</li>
+<li>Organize your tasks</li>
+<li>Use keyboard shortcuts for Google Tasks</li>
+</ul>
+<h3 id="organize-your-tasks">Organize your tasks</h3>
+<p>You can change the order of your tasks, or move them to a different
+list.</p>
+<h4 id="sort-a-task-list">Sort a task list</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right, in the side panel, click Tasks .</li>
+</ul></li>
+<li>At the top of a list, click List options .</li>
+<li>Under “Sort by,” you can choose:
+<ul>
+<li>My order</li>
+<li>Date</li>
+<li>Deadline</li>
+<li>Starred recently</li>
+<li>Title Tips:</li>
+</ul></li>
+<li>Under “Past,” tasks you haven’t completed by a specific date appear
+at the top.</li>
+<li>All uncompleted tasks from the last 365 days are available on your
+current day.</li>
+</ul>
+<h4 id="reorder-your-tasks">Reorder your tasks</h4>
+<p>Important: To reorder your tasks, change your sort options to “My
+order.” At the top of a list, click List options My order.</p>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>Click and hold a task.</li>
+<li>Move the task where you want. Tip: To reorder a task you’re editing,
+on the left, click and hold Drag .</li>
+</ul>
+<h4 id="move-a-task-to-a-different-list">Move a task to a different
+list</h4>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</p></li>
+<li><p>Click and hold a task.</p></li>
+<li><p>Drag and drop the task to a different list. Tips:</p></li>
+<li><p>You can’t move tasks set to repeat to a different list.</p></li>
+<li><p>Next to a task, to select a list name, click Task options
+.</p></li>
+</ul>
+<h4 id="reorder-your-task-lists">Reorder your task lists</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>In the side panel, click Tasks Down arrow .</li>
+</ul></li>
+<li>Click and hold the list that you want to move.</li>
+<li>Drag and drop the list to another location.</li>
+</ul>
+<h4 id="find-or-hide-completed-tasks">Find or hide completed tasks</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>Select an option:
+<ul>
+<li>To find completed tasks, next to “Completed,” click the Right arrow
+.</li>
+<li>To hide completed tasks, click the Down arrow . Tip: You can hide
+completed tasks that show in your calendar.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-14">Related resources</h4>
+<ul>
+<li>Create &amp; manage tasks in Google Calendar</li>
+<li>Add or edit a task</li>
+</ul>
+<h3 id="organize-your-tasks-computer">Organize your tasks
+(Computer)</h3>
+<p>You can change the order of your tasks, or move them to a different
+list.</p>
+<h4 id="sort-a-task-list-1">Sort a task list</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right, in the side panel, click Tasks .</li>
+</ul></li>
+<li>At the top of a list, click List options .</li>
+<li>Under “Sort by,” you can choose:
+<ul>
+<li>My order</li>
+<li>Date</li>
+<li>Deadline</li>
+<li>Starred recently</li>
+<li>Title Tips:</li>
+</ul></li>
+<li>Under “Past,” tasks you haven’t completed by a specific date appear
+at the top.</li>
+<li>All uncompleted tasks from the last 365 days are available on your
+current day.</li>
+</ul>
+<h4 id="reorder-your-tasks-1">Reorder your tasks</h4>
+<p>Important: To reorder your tasks, change your sort options to “My
+order.” At the top of a list, click List options My order.</p>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>Click and hold a task.</li>
+<li>Move the task where you want. Tip: To reorder a task you’re editing,
+on the left, click and hold Drag .</li>
+</ul>
+<h4 id="move-a-task-to-a-different-list-1">Move a task to a different
+list</h4>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</p></li>
+<li><p>Click and hold a task.</p></li>
+<li><p>Drag and drop the task to a different list. Tips:</p></li>
+<li><p>You can’t move tasks set to repeat to a different list.</p></li>
+<li><p>Next to a task, to select a list name, click Task options
+.</p></li>
+</ul>
+<h4 id="reorder-your-task-lists-1">Reorder your task lists</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>In the side panel, click Tasks Down arrow .</li>
+</ul></li>
+<li>Click and hold the list that you want to move.</li>
+<li>Drag and drop the list to another location.</li>
+</ul>
+<h4 id="find-or-hide-completed-tasks-1">Find or hide completed
+tasks</h4>
+<ul>
+<li>On your computer, select an option:
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>On the right of the side panel, click Tasks .</li>
+</ul></li>
+<li>Select an option:
+<ul>
+<li>To find completed tasks, next to “Completed,” click the Right arrow
+.</li>
+<li>To hide completed tasks, click the Down arrow . Tip: You can hide
+completed tasks that show in your calendar.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-15">Related resources</h4>
+<ul>
+<li>Create &amp; manage tasks in Google Calendar</li>
+<li>Add or edit a task</li>
+</ul>
+<h3 id="organize-your-tasks-iphone-and-ipad">Organize your tasks (iPhone
+and iPad)</h3>
+<p>You can change the order of your tasks, or move them to a different
+list.</p>
+<p>On your iPhone, <a
+href="https://itunes.apple.com/us/app/google-tasks/id1353634006">download
+the Google Tasks app</a>.</p>
+<h4 id="reorder-your-tasks-2">Reorder your tasks</h4>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>Touch and hold a task.</li>
+<li>Move the task where you want.</li>
+</ul>
+<h4 id="sort-tasks-by-due-date">Sort tasks by due date</h4>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>At the bottom, tap More Date.</li>
+</ul>
+<h4 id="move-a-task-to-a-different-list-2">Move a task to a different
+list</h4>
+<ul>
+<li><p>Open the Google Tasks app .</p></li>
+<li><p>Tap the task you want to move.</p></li>
+<li><p>At the top, tap the list name.</p></li>
+<li><p>Choose a list you want to move the task to.</p></li>
+<li><p>To close the task, tap Back . Tips:</p></li>
+<li><p>You can’t move tasks set to repeat to a different list.</p></li>
+<li><p>Next to a task, to select a list name, click Task options
+.</p></li>
+</ul>
+<h4 id="reorder-your-task-lists-2">Reorder your task lists</h4>
+<p>Important: To reorder task lists, you must use a computer.</p>
+<h4 id="check-pending-tasks-on-a-list">Check pending tasks on a
+list</h4>
+<ul>
+<li><p>Open the Google Tasks app .</p></li>
+<li><p>Tap the list you want to check for pending tasks.</p></li>
+<li><p>Sort the list by due date. Uncompleted tasks appear at the top,
+under “Past.” Tips:</p></li>
+<li><p>Tasks with dates also appear in Google Calendar.</p></li>
+<li><p>A list of all uncompleted tasks from the last 365 days is
+available in your current day on Google Calendar.</p></li>
+</ul>
+<h4 id="find-or-hide-completed-tasks-2">Find or hide completed
+tasks</h4>
+<ul>
+<li>Open the Google Tasks app .</li>
+<li>Select an option:
+<ul>
+<li>To find completed tasks, next to “Completed,” tap the Down arrow
+.</li>
+<li>To hide completed tasks, tap the Up arrow .</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-16">Related resources</h4>
+<ul>
+<li>Create &amp; manage tasks in Google Calendar</li>
+<li>Add or edit a task</li>
+</ul>
+<h3 id="prioritize-tasks-with-stars">Prioritize tasks with stars</h3>
+<p>You can add a star to important tasks.</p>
+<h4 id="mark-tasks-with-a-star">Mark tasks with a star</h4>
+<ul>
+<li><p>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>On the right of a task, click Add to starred . Tips:</p></li>
+<li><p>From the Starred list, you can create a starred task and select
+its primary list.</p></li>
+<li><p>To remove a task from your Starred list, click Remove from
+starred .</p></li>
+</ul>
+<h4 id="manage-starred-tasks">Manage starred tasks</h4>
+<p>To find your starred tasks:</p>
+<ul>
+<li><p>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>Click the Down arrow Starred tasks . To reorder your starred
+tasks, click More .</p></li>
+<li><p>To sort by due date, click Date.</p></li>
+<li><p>To sort by time starred, click Recently starred. To change the
+primary list of a starred task:</p></li>
+<li><p>Click the task List .</p></li>
+<li><p>In the drop down, select the desired list. Tips:</p></li>
+<li><p>You can’t manually reorder starred tasks in the Starred
+list.</p></li>
+<li><p>You can find your completed starred tasks in their primary
+lists.</p></li>
+</ul>
+<h3 id="prioritize-tasks-with-stars-computer">Prioritize tasks with
+stars (Computer)</h3>
+<p>You can add a star to important tasks.</p>
+<h4 id="mark-tasks-with-a-star-1">Mark tasks with a star</h4>
+<ul>
+<li><p>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>On the right of a task, click Add to starred . Tips:</p></li>
+<li><p>From the Starred list, you can create a starred task and select
+its primary list.</p></li>
+<li><p>To remove a task from your Starred list, click Remove from
+starred .</p></li>
+</ul>
+<h4 id="manage-starred-tasks-1">Manage starred tasks</h4>
+<p>To find your starred tasks:</p>
+<ul>
+<li><p>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>Click the Down arrow Starred tasks . To reorder your starred
+tasks, click More .</p></li>
+<li><p>To sort by due date, click Date.</p></li>
+<li><p>To sort by time starred, click Recently starred. To change the
+primary list of a starred task:</p></li>
+<li><p>Click the task List .</p></li>
+<li><p>In the drop down, select the desired list. Tips:</p></li>
+<li><p>You can’t manually reorder starred tasks in the Starred
+list.</p></li>
+<li><p>You can find your completed starred tasks in their primary
+lists.</p></li>
+</ul>
+<h3 id="prioritize-tasks-with-stars-iphone-and-ipad">Prioritize tasks
+with stars (iPhone and iPad)</h3>
+<p>You can add a star to important tasks.</p>
+<h4 id="mark-tasks-with-a-star-2">Mark tasks with a star</h4>
+<ul>
+<li><p>Open the Google Tasks app .</p></li>
+<li><p>On the right of a task, tap Add to starred . Tips:</p></li>
+<li><p>From the Starred list, you can create a starred task and select
+its primary list.</p></li>
+<li><p>To remove a task from your Starred list, tap Remove from starred
+.</p></li>
+</ul>
+<h4 id="manage-starred-tasks-2">Manage starred tasks</h4>
+<p>To find your starred tasks:</p>
+<ul>
+<li><p>Open the Google Tasks app .</p></li>
+<li><p>At the top, tap Starred tasks . To reorder your starred tasks,
+tap More Sort by.</p></li>
+<li><p>To sort by due date, tap Date.</p></li>
+<li><p>To sort by time starred, tap Recently starred. To change the
+primary list of a starred task:</p></li>
+<li><p>Tap the task.</p></li>
+<li><p>At the top, tap the name of the list.</p></li>
+<li><p>In the drop down, tap the desired list. Tips:</p></li>
+<li><p>You can’t manually reorder starred tasks in the Starred
+list.</p></li>
+<li><p>You can find your completed starred tasks in their primary
+lists.</p></li>
+</ul>
+<h2 id="use-google-tasks-with-other-products">Use Google Tasks with
+other products</h2>
+<h3 id="assign-tasks-from-google-docs">Assign tasks from Google
+Docs</h3>
+<p>If you use Google Docs on a work or school account, you can assign
+tasks to yourself or other people in your organization. Tasks sync with
+your default list in Google Tasks, but you can move them into different
+lists.</p>
+<h4 id="assign-a-task-in-google-docs">Assign a task in Google Docs</h4>
+<ul>
+<li><p>On your computer, in Google Docs, open a doc.</p></li>
+<li><p>In the document, enter <code>@task</code> and press
+Enter.</p></li>
+<li><p>In the popup window, enter the task.</p>
+<ul>
+<li>You can also create a task from a checklist.
+<ul>
+<li>Choose an option:
+<ul>
+<li>Select Format Bullets &amp; numbering Checklist.</li>
+<li>In the document, enter <code>@checklist</code> and press Enter.</li>
+</ul></li>
+<li>Enter a task in the checklist.</li>
+<li>To the left of the checklist item, click Add to Tasks . A pop-up
+window will appear.</li>
+</ul></li>
+</ul></li>
+<li><p>In the “Assignee” field, enter the name of the user you want to
+assign the task to.</p>
+<ul>
+<li>You can assign a task to yourself or other users in your
+domain.</li>
+</ul></li>
+<li><p>Optional: To set a date for the task, click Date and pick a date
+from the calendar.</p></li>
+<li><p>To assign the task, click Add. Important:</p></li>
+<li><p>When you assign a task to someone, they receive an email
+notification that includes your email address. They can view the task in
+their personal Tasks list and on their Google Calendar if the task has a
+set date. Learn more about shared tasks.</p></li>
+<li><p>Anonymous users can’t assign or edit Tasks in a Google
+Doc.</p></li>
+</ul>
+<h4 id="view-or-edit-a-task-in-docs">View or edit a task in Docs</h4>
+<ul>
+<li>In Google Docs, open a doc with assigned tasks.
+<ul>
+<li>To view all the tasks assigned from a document, go to Tools Tasks.
+Tasks are displayed on the right of your screen. To scroll to a task in
+your document, click it.</li>
+</ul></li>
+<li>On the left of an assigned checklist item, hover over the icon.
+<ul>
+<li>If a task is completed, its title will be crossed out.</li>
+</ul></li>
+<li>To edit the task:
+<ul>
+<li>Title: Type in the checklist item text and press Tab to update.</li>
+<li>Assignee or task date: At the bottom left of the task card, click
+Edit.
+<ul>
+<li>If you edit the user the task is assigned to, both the previous
+assignee and the new assignee will receive an email notification.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="mark-a-task-complete-in-docs">Mark a task complete in Docs</h5>
+<ul>
+<li>In Google Docs, open a doc with assigned tasks.</li>
+<li>Find an assigned checklist item.</li>
+<li>Click the checkbox in the doc.
+<ul>
+<li>If a task is marked as completed in the doc, it’ll show as completed
+in the assignee’s personal Tasks list and they’ll get an email
+notification.</li>
+</ul></li>
+</ul>
+<h5 id="delete-a-task-in-docs">Delete a task in Docs</h5>
+<ul>
+<li><p>In Google Docs, open a doc with assigned tasks.</p></li>
+<li><p>On the left of an assigned checklist item, point to the
+icon.</p></li>
+<li><p>Click Delete Confirm. Tips:</p></li>
+<li><p>If a task is deleted in the doc, it won’t appear in the
+assignee’s personal Tasks list. If the task wasn’t already completed,
+the assignee will receive an email notification.</p></li>
+<li><p>If a checklist item is deleted in the doc, but the task isn’t
+deleted first, it’ll still appear in the assignee’s personal Tasks list.
+To view and delete the task, click Tools Tasks.</p></li>
+</ul>
+<h4 id="manage-updates-to-tasks-in-docs">Manage updates to tasks in
+Docs</h4>
+<p>On the icon to the left of the checklist item, a blue dot may appear.
+This can happen when:</p>
+<ul>
+<li><p>Someone updates the checklist item in the doc but doesn’t update
+the task.</p></li>
+<li><p>The assignee of a task updates the task title in Tasks, but
+doesn’t update the checklist text in the doc.</p></li>
+<li><p>Someone reverts the document to an earlier version. To fix the
+issue and remove the blue dot:</p></li>
+<li><p>Point to the task with a blue dot.</p></li>
+<li><p>At the bottom right of the pop up window, click Update. Tip: A
+blue dot may also appear on a task icon if the assignee updates or
+deletes the task in their personal Tasks list, but doesn’t have edit
+access to the doc.</p></li>
+<li><p>To fix this, point to the blue dot and click Yes.</p></li>
+<li><p>To prevent this, make sure the assignee has edit access to the
+doc.</p></li>
+</ul>
+<h4 id="change-task-notifications">Change task notifications</h4>
+<p>You can change the notifications you receive for tasks in a
+document.</p>
+<ul>
+<li>On your computer, open a Google Doc, Sheet, or Slide.</li>
+<li>At the top right corner, click Open comment history .</li>
+<li>Click Notification settings .</li>
+<li>Choose when you want to receive notifications.
+<ul>
+<li>All comments and tasks: When any tasks are created or changed.</li>
+<li>Comments and tasks for you: When others reply to tasks or comments
+you’re added to.</li>
+<li>None: Never receive emails about comments or tasks for that
+file.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-17">Related resources</h4>
+<ul>
+<li>Get started with shared tasks</li>
+<li>Learn about Google Tasks</li>
+</ul>
+<h3 id="assign-tasks-from-google-docs-computer">Assign tasks from Google
+Docs (Computer)</h3>
+<p>If you use Google Docs on a work or school account, you can assign
+tasks to yourself or other people in your organization. Tasks sync with
+your default list in Google Tasks, but you can move them into different
+lists.</p>
+<h4 id="assign-a-task-in-google-docs-1">Assign a task in Google
+Docs</h4>
+<ul>
+<li><p>On your computer, in Google Docs, open a doc.</p></li>
+<li><p>In the document, enter <code>@task</code> and press
+Enter.</p></li>
+<li><p>In the popup window, enter the task.</p>
+<ul>
+<li>You can also create a task from a checklist.
+<ul>
+<li>Choose an option:
+<ul>
+<li>Select Format Bullets &amp; numbering Checklist.</li>
+<li>In the document, enter <code>@checklist</code> and press Enter.</li>
+</ul></li>
+<li>Enter a task in the checklist.</li>
+<li>To the left of the checklist item, click Add to Tasks . A pop-up
+window will appear.</li>
+</ul></li>
+</ul></li>
+<li><p>In the “Assignee” field, enter the name of the user you want to
+assign the task to.</p>
+<ul>
+<li>You can assign a task to yourself or other users in your
+domain.</li>
+</ul></li>
+<li><p>Optional: To set a date for the task, click Date and pick a date
+from the calendar.</p></li>
+<li><p>To assign the task, click Add. Important:</p></li>
+<li><p>When you assign a task to someone, they receive an email
+notification that includes your email address. They can view the task in
+their personal Tasks list and on their Google Calendar if the task has a
+set date. Learn more about shared tasks.</p></li>
+<li><p>Anonymous users can’t assign or edit Tasks in a Google
+Doc.</p></li>
+</ul>
+<h4 id="view-or-edit-a-task-in-docs-1">View or edit a task in Docs</h4>
+<ul>
+<li>In Google Docs, open a doc with assigned tasks.
+<ul>
+<li>To view all the tasks assigned from a document, go to Tools Tasks.
+Tasks are displayed on the right of your screen. To scroll to a task in
+your document, click it.</li>
+</ul></li>
+<li>On the left of an assigned checklist item, hover over the icon.
+<ul>
+<li>If a task is completed, its title will be crossed out.</li>
+</ul></li>
+<li>To edit the task:
+<ul>
+<li>Title: Type in the checklist item text and press Tab to update.</li>
+<li>Assignee or task date: At the bottom left of the task card, click
+Edit.
+<ul>
+<li>If you edit the user the task is assigned to, both the previous
+assignee and the new assignee will receive an email notification.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="mark-a-task-complete-in-docs-1">Mark a task complete in
+Docs</h5>
+<ul>
+<li>In Google Docs, open a doc with assigned tasks.</li>
+<li>Find an assigned checklist item.</li>
+<li>Click the checkbox in the doc.
+<ul>
+<li>If a task is marked as completed in the doc, it’ll show as completed
+in the assignee’s personal Tasks list and they’ll get an email
+notification.</li>
+</ul></li>
+</ul>
+<h5 id="delete-a-task-in-docs-1">Delete a task in Docs</h5>
+<ul>
+<li><p>In Google Docs, open a doc with assigned tasks.</p></li>
+<li><p>On the left of an assigned checklist item, point to the
+icon.</p></li>
+<li><p>Click Delete Confirm. Tips:</p></li>
+<li><p>If a task is deleted in the doc, it won’t appear in the
+assignee’s personal Tasks list. If the task wasn’t already completed,
+the assignee will receive an email notification.</p></li>
+<li><p>If a checklist item is deleted in the doc, but the task isn’t
+deleted first, it’ll still appear in the assignee’s personal Tasks list.
+To view and delete the task, click Tools Tasks.</p></li>
+</ul>
+<h4 id="manage-updates-to-tasks-in-docs-1">Manage updates to tasks in
+Docs</h4>
+<p>On the icon to the left of the checklist item, a blue dot may appear.
+This can happen when:</p>
+<ul>
+<li><p>Someone updates the checklist item in the doc but doesn’t update
+the task.</p></li>
+<li><p>The assignee of a task updates the task title in Tasks, but
+doesn’t update the checklist text in the doc.</p></li>
+<li><p>Someone reverts the document to an earlier version. To fix the
+issue and remove the blue dot:</p></li>
+<li><p>Point to the task with a blue dot.</p></li>
+<li><p>At the bottom right of the pop up window, click Update. Tip: A
+blue dot may also appear on a task icon if the assignee updates or
+deletes the task in their personal Tasks list, but doesn’t have edit
+access to the doc.</p></li>
+<li><p>To fix this, point to the blue dot and click Yes.</p></li>
+<li><p>To prevent this, make sure the assignee has edit access to the
+doc.</p></li>
+</ul>
+<h4 id="change-task-notifications-1">Change task notifications</h4>
+<p>You can change the notifications you receive for tasks in a
+document.</p>
+<ul>
+<li>On your computer, open a Google Doc, Sheet, or Slide.</li>
+<li>At the top right corner, click Open comment history .</li>
+<li>Click Notification settings .</li>
+<li>Choose when you want to receive notifications.
+<ul>
+<li>All comments and tasks: When any tasks are created or changed.</li>
+<li>Comments and tasks for you: When others reply to tasks or comments
+you’re added to.</li>
+<li>None: Never receive emails about comments or tasks for that
+file.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-18">Related resources</h4>
+<ul>
+<li>Get started with shared tasks</li>
+<li>Learn about Google Tasks</li>
+</ul>
+<h3 id="assign-tasks-from-google-docs-iphone-and-ipad">Assign tasks from
+Google Docs (iPhone and iPad)</h3>
+<p>If you use Google Docs on a work or school account, you can assign
+tasks to yourself or other people in your organization. Tasks sync with
+your default list in Google Tasks, but you can move them into different
+lists.</p>
+<h4 id="assign-a-task-in-google-docs-2">Assign a task in Google
+Docs</h4>
+<ul>
+<li><p>Open a document in the <a
+href="https://itunes.apple.com/app/apple-store/id842842640?pt=9008&amp;ct=docs_hc&amp;mt=8">Google
+Docs app</a>.</p></li>
+<li><p>Tap Edit .</p></li>
+<li><p>Tap the part of the screen where you want to add the
+list.</p></li>
+<li><p>At the bottom right, tap Lists .</p></li>
+<li><p>Tap Checklist .</p></li>
+<li><p>Enter a task in the checklist.</p></li>
+<li><p>To the left of the checklist item, tap Add to Tasks .</p></li>
+<li><p>In the “Assignee” field, enter the name of the user you want to
+assign the task to.</p>
+<ul>
+<li>You can assign a task to yourself or other users in your
+domain.</li>
+</ul></li>
+<li><p>Optional: To set a date for the task, tap Add Date and pick a
+date from the calendar.</p></li>
+<li><p>At the top right, tap Add . Important:</p></li>
+<li><p>When you assign a task to someone, they receive an email
+notification that includes your email address. They can view the task in
+their personal Tasks list and on their Google Calendar if the task has a
+set date. Learn more about shared tasks.</p></li>
+<li><p>Anonymous users can’t assign or edit Tasks in a Google
+Doc.</p></li>
+</ul>
+<h4 id="view-or-edit-a-task-in-docs-2">View or edit a task in Docs</h4>
+<ul>
+<li>Open a document with assigned tasks in the <a
+href="https://itunes.apple.com/app/apple-store/id842842640?pt=9008&amp;ct=docs_hc&amp;mt=8">Google
+Docs app</a>.</li>
+<li>Tap Edit .</li>
+<li>On the left of an assigned checklist item, tap the assignee’s
+avatar.
+<ul>
+<li>Tip: If a task is completed, its title will be crossed out.</li>
+</ul></li>
+<li>At the bottom, tap Edit .
+<ul>
+<li>If you edit the user the task is assigned to, both the previous
+assignee and the new assignee will receive an email notification.</li>
+</ul></li>
+<li>Optional: You can also tap Open in Tasks to edit the task in the
+Tasks app.</li>
+</ul>
+<h5 id="mark-a-task-complete-in-docs-2">Mark a task complete in
+Docs</h5>
+<ul>
+<li>Open a document with assigned tasks in the <a
+href="https://itunes.apple.com/app/apple-store/id842842640?pt=9008&amp;ct=docs_hc&amp;mt=8">Google
+Docs app</a>.</li>
+<li>Tap Edit .</li>
+<li>Find an assigned checklist item.</li>
+<li>Tap the checkbox in the doc.
+<ul>
+<li>If a task is marked as completed in the doc, it’ll show as completed
+in the assignee’s personal Tasks list and they’ll get an email
+notification.</li>
+</ul></li>
+</ul>
+<h5 id="delete-a-task-in-docs-2">Delete a task in Docs</h5>
+<ul>
+<li><p>Open a document with assigned tasks in the <a
+href="https://itunes.apple.com/app/apple-store/id842842640?pt=9008&amp;ct=docs_hc&amp;mt=8">Google
+Docs app</a>.</p></li>
+<li><p>Tap Edit .</p></li>
+<li><p>On the left of an assigned checklist item, tap the assignee’s
+avatar.</p></li>
+<li><p>At the bottom, tap Delete Confirm. Tips:</p></li>
+<li><p>If a task is deleted in the doc, it won’t appear in the
+assignee’s personal Tasks list. If the task wasn’t already completed,
+the assignee will receive an email notification.</p></li>
+<li><p>If a checklist item is deleted in the doc, but the task isn’t
+deleted first, it’ll still appear in the assignee’s personal Tasks
+list.</p></li>
+</ul>
+<h4 id="manage-updates-to-tasks-in-docs-2">Manage updates to tasks in
+Docs</h4>
+<p>On the icon to the left of the checklist item, a blue dot may appear.
+This can happen when:</p>
+<ul>
+<li><p>Someone updates the checklist item in the doc but doesn’t update
+the task.</p></li>
+<li><p>The assignee of a task updates the task title in Tasks, but
+doesn’t update the checklist text in the doc.</p></li>
+<li><p>Someone reverts the document to an earlier version. To fix the
+issue and remove the blue dot:</p></li>
+<li><p>Tap on the task with a blue dot.</p></li>
+<li><p>At the bottom right of the pop up window, tap Update. Tip: A blue
+dot may also appear on a task icon if the assignee updates or deletes
+the task in their personal Tasks list, but doesn’t have edit access to
+the doc.</p></li>
+<li><p>To fix this, tap on the blue dot and tap Yes.</p></li>
+<li><p>To prevent this, make sure the assignee has edit access to the
+doc.</p></li>
+</ul>
+<h4 id="related-resources-19">Related resources</h4>
+<ul>
+<li>Get started with shared tasks</li>
+<li>Learn about Google Tasks</li>
+</ul>
+<h3 id="create-assign-tasks-in-google-chat">Create &amp; assign tasks in
+Google Chat</h3>
+<p>As a member of a space in Google Chat, you can create and manage
+group tasks and assign tasks to other space members. You can view tasks
+in the space where they’re created. If a task is assigned to you, it
+appears in your personal task list in Google Tasks. When someone creates
+or updates a task, a notification appears in the space.</p>
+<p>Tips:</p>
+<ul>
+<li>If you use a work or school account and don’t have the “Tasks” tab
+in a space, contact your Google Workspace administrator to turn on this
+feature.</li>
+<li>When a space becomes too large, you can no longer:
+<ul>
+<li>Assign tasks</li>
+<li>Mention anyone through “@”</li>
+</ul></li>
+</ul>
+<h4 id="create-assign-a-task-in-a-space">Create &amp; assign a task in a
+space</h4>
+<p>Important: When you delete a task, it’s deleted for all members of
+the space and from the assignee’s personal task list.</p>
+<ul>
+<li><p>On your computer, open <a href="https://chat.google.com">Google
+Chat</a> or <a href="https://mail.google.com">Gmail</a>.</p>
+<ul>
+<li>In Gmail, on the left, click Chat.</li>
+</ul></li>
+<li><p>Select the space where you want to create a task.</p></li>
+<li><p>At the top right, click Tasks .</p></li>
+<li><p>At the bottom of the panel, click Add.</p></li>
+<li><p>Enter details about the task, such as:</p>
+<ul>
+<li>Title</li>
+<li>Details</li>
+<li>Date</li>
+<li>Assignee</li>
+</ul></li>
+<li><p>Click Add. Tips:</p></li>
+<li><p>If you add a date to your task, you get notifications in Chat for
+the scheduled dates.</p></li>
+<li><p>If the assignee leaves the space, the task remains in the space
+and in their personal task list in Google Tasks.</p></li>
+<li><p>Users may have restrictions when they assign tasks to a subset of
+members. Learn more about group restrictions.</p></li>
+</ul>
+<h4 id="edit-a-task">Edit a task</h4>
+<ul>
+<li><p>In Chat, select the space.</p></li>
+<li><p>At the top right, click Tasks .</p></li>
+<li><p>Click the title, details, date, or assignee and make the changes.
+Tips: If you have a task in your personal task list:</p></li>
+<li><p>You can edit the task title, details, and date from your personal
+task list.</p></li>
+<li><p>Changes update the task for everyone in the space and a
+notification displays.</p></li>
+</ul>
+<h4 id="mark-a-task-complete">Mark a task complete</h4>
+<ul>
+<li><p>In Chat, select the space.</p></li>
+<li><p>At the top right, click Tasks .</p></li>
+<li><p>Next to the task, point to Incomplete and click Complete . Tips:
+If you have a task in your personal task list:</p></li>
+<li><p>You can edit the task title, details, and date from your personal
+task list.</p></li>
+<li><p>Changes update the task for everyone in the space and a
+notification displays.</p></li>
+</ul>
+<h4 id="mark-a-task-incomplete">Mark a task incomplete</h4>
+<ul>
+<li>In Chat, select the space.</li>
+<li>At the top right, click Tasks .</li>
+<li>Next to “Completed,” to view the tasks, click Expand .</li>
+<li>Next to the task, click Complete to change the status to Incomplete
+.</li>
+</ul>
+<h4 id="delete-a-task-6">Delete a task</h4>
+<p>Important: When you delete a task, it’s deleted for all members of
+the space and from the assignee’s personal task list.</p>
+<ul>
+<li>In Chat, select the space.</li>
+<li>Select the space.</li>
+<li>At the top right, click Tasks .</li>
+<li>At the top right, click Delete Delete.</li>
+</ul>
+<h3 id="create-assign-tasks-in-google-chat-computer">Create &amp; assign
+tasks in Google Chat (Computer)</h3>
+<p>As a member of a space in Google Chat, you can create and manage
+group tasks and assign tasks to other space members. You can view tasks
+in the space where they’re created. If a task is assigned to you, it
+appears in your personal task list in Google Tasks. When someone creates
+or updates a task, a notification appears in the space.</p>
+<p>Tips:</p>
+<ul>
+<li>If you use a work or school account and don’t have the “Tasks” tab
+in a space, contact your Google Workspace administrator to turn on this
+feature.</li>
+<li>When a space becomes too large, you can no longer:
+<ul>
+<li>Assign tasks</li>
+<li>Mention anyone through “@”</li>
+</ul></li>
+</ul>
+<h4 id="create-assign-a-task-in-a-space-1">Create &amp; assign a task in
+a space</h4>
+<p>Important: When you delete a task, it’s deleted for all members of
+the space and from the assignee’s personal task list.</p>
+<ul>
+<li><p>On your computer, open <a href="https://chat.google.com">Google
+Chat</a> or <a href="https://mail.google.com">Gmail</a>.</p>
+<ul>
+<li>In Gmail, on the left, click Chat.</li>
+</ul></li>
+<li><p>Select the space where you want to create a task.</p></li>
+<li><p>At the top right, click Tasks .</p></li>
+<li><p>At the bottom of the panel, click Add.</p></li>
+<li><p>Enter details about the task, such as:</p>
+<ul>
+<li>Title</li>
+<li>Details</li>
+<li>Date</li>
+<li>Assignee</li>
+</ul></li>
+<li><p>Click Add. Tips:</p></li>
+<li><p>If you add a date to your task, you get notifications in Chat for
+the scheduled dates.</p></li>
+<li><p>If the assignee leaves the space, the task remains in the space
+and in their personal task list in Google Tasks.</p></li>
+<li><p>Users may have restrictions when they assign tasks to a subset of
+members. Learn more about group restrictions.</p></li>
+</ul>
+<h4 id="edit-a-task-1">Edit a task</h4>
+<ul>
+<li><p>In Chat, select the space.</p></li>
+<li><p>At the top right, click Tasks .</p></li>
+<li><p>Click the title, details, date, or assignee and make the changes.
+Tips: If you have a task in your personal task list:</p></li>
+<li><p>You can edit the task title, details, and date from your personal
+task list.</p></li>
+<li><p>Changes update the task for everyone in the space and a
+notification displays.</p></li>
+</ul>
+<h4 id="mark-a-task-complete-1">Mark a task complete</h4>
+<ul>
+<li><p>In Chat, select the space.</p></li>
+<li><p>At the top right, click Tasks .</p></li>
+<li><p>Next to the task, point to Incomplete and click Complete . Tips:
+If you have a task in your personal task list:</p></li>
+<li><p>You can edit the task title, details, and date from your personal
+task list.</p></li>
+<li><p>Changes update the task for everyone in the space and a
+notification displays.</p></li>
+</ul>
+<h4 id="mark-a-task-incomplete-1">Mark a task incomplete</h4>
+<ul>
+<li>In Chat, select the space.</li>
+<li>At the top right, click Tasks .</li>
+<li>Next to “Completed,” to view the tasks, click Expand .</li>
+<li>Next to the task, click Complete to change the status to Incomplete
+.</li>
+</ul>
+<h4 id="delete-a-task-7">Delete a task</h4>
+<p>Important: When you delete a task, it’s deleted for all members of
+the space and from the assignee’s personal task list.</p>
+<ul>
+<li>In Chat, select the space.</li>
+<li>Select the space.</li>
+<li>At the top right, click Tasks .</li>
+<li>At the top right, click Delete Delete.</li>
+</ul>
+<h3 id="create-assign-tasks-in-google-chat-iphone-and-ipad">Create &amp;
+assign tasks in Google Chat (iPhone and iPad)</h3>
+<p>As a member of a space in Google Chat, you can create and manage
+group tasks and assign tasks to other space members. You can view tasks
+in the space where they’re created. If a task is assigned to you, it
+appears in your personal task list in Google Tasks. When someone creates
+or updates a task, a notification appears in the space.</p>
+<p>Tips:</p>
+<ul>
+<li>If you use a work or school account and don’t have the “Tasks” tab
+in a space, contact your Google Workspace administrator to turn on this
+feature.</li>
+<li>When a space becomes too large, you can no longer:
+<ul>
+<li>Assign tasks</li>
+<li>Mention anyone through “@”</li>
+</ul></li>
+</ul>
+<h4 id="create-assign-a-task-in-a-space-2">Create &amp; assign a task in
+a space</h4>
+<ul>
+<li>On your iPhone or iPad, open the Chat app or Gmail app .
+<ul>
+<li>In Gmail: At the bottom, tap Chat .</li>
+</ul></li>
+<li>In the bottom navigation menu, tap Spaces select the space.</li>
+<li>On the top, tap the Tasks tab.</li>
+<li>At the bottom right, tap New task .</li>
+<li>Enter a title for the task.</li>
+<li>Optional: To add a description or more details, tap Details and
+enter the information.</li>
+<li>Optional: To add a date, tap Google Calendar select a date tap
+Done.</li>
+<li>Tip: If you add a date to your task, you get notifications at the
+scheduled dates.</li>
+<li>Optional: To assign the task to a member of the space, tap Person
+tap the name of the person. To assign the task to someone who isn’t a
+member of the space, invite them to the space first.</li>
+<li>Tap Save. Important: When you delete a task, it’s deleted for all
+members of the space and from the assignee’s personal task list.</li>
+</ul>
+<h4 id="edit-a-task-2">Edit a task</h4>
+<ul>
+<li><p>In Chat, select the space.</p></li>
+<li><p>On the bottom, tap Spaces select the space.</p></li>
+<li><p>On the top, tap the Tasks tab select the task.</p></li>
+<li><p>Tap the title, details, date, or assignee and make the
+changes.</p></li>
+<li><p>Tap Back . Tips: If you have a task in your personal task
+list:</p></li>
+<li><p>You can edit the task title, details, and date from your personal
+task list.</p></li>
+<li><p>Changes update the task for everyone in the space and a
+notification displays.</p></li>
+</ul>
+<h4 id="mark-a-task-complete-2">Mark a task complete</h4>
+<ul>
+<li><p>In Chat, select the space.</p></li>
+<li><p>At the top, tap the Tasks tab select the task.</p></li>
+<li><p>At the top right, tap Mark as complete . Tips: If you have a task
+in your personal task list:</p></li>
+<li><p>You can edit the task title, details, and date from your personal
+task list.</p></li>
+<li><p>Changes update the task for everyone in the space and a
+notification displays.</p></li>
+</ul>
+<h4 id="mark-a-task-incomplete-2">Mark a task incomplete</h4>
+<ul>
+<li>In Chat, select the space.</li>
+<li>On the bottom, tap Spaces select the space.</li>
+<li>On the top, tap the Tasks tab.</li>
+<li>Next to Completed, tap Expand to view the tasks.</li>
+<li>Next to the task, tap Complete to change the status to Incomplete
+.</li>
+</ul>
+<h4 id="delete-a-task-8">Delete a task</h4>
+<p>Important: When you delete a task, it’s deleted for all members of
+the space and from the assignee’s personal task list.</p>
+<ul>
+<li>In Chat, select the space.</li>
+<li>On the bottom, tap Spaces select the space.</li>
+<li>On the top, tap the Tasks tab select the task.</li>
+<li>At the top right, tap Delete .</li>
+</ul>
+<h3 id="create-manage-tasks-in-google-calendar">Create &amp; manage
+tasks in Google Calendar</h3>
+<p>In Google Calendar, you can create, view, and change tasks.</p>
+<h4 id="create-a-task-in-calendar-2">Create a task in Calendar</h4>
+<p>Important: Only work or school accounts can use the “Do not disturb”
+and “Automatically decline meetings” options.</p>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On your calendar, click an empty slot.
+<ul>
+<li>Or, at the top left, you can click Create.</li>
+</ul></li>
+<li>Click Task.</li>
+<li>Update your task settings.</li>
+<li>Click Save. Tip: To find a list of all tasks from the last 365 days,
+at the top of your calendar, click Pending tasks.</li>
+</ul>
+<h5 id="learn-about-task-settings-3">Learn about task settings</h5>
+<p>Task setting</p>
+<p>Description</p>
+<p>Start date and time</p>
+<p>Enter the start date and how much time you plan to spend on the
+task.</p>
+<p>Deadline</p>
+<p>Enter the date you expect to complete the task. The deadline appears
+on the “All day” section of Calendar.</p>
+<p>Description</p>
+<p>Enter the date when the task must be completed.</p>
+<p>Task list</p>
+<p>Select a list for your task.</p>
+<p>Advanced settings</p>
+<p>Customize your task with additional options. You can:</p>
+<ul>
+<li>Change the color of your tasks.</li>
+<li>Set your availability to Free or Busy.</li>
+<li>Turn on Do not disturb to mute chat notifications.</li>
+<li>Turn on Automatically decline meetings if your availability is
+“Busy.”</li>
+<li>Select your task’s visibility to others.</li>
+</ul>
+<h4 id="create-a-task-from-tasks-in-calendar-2">Create a task from Tasks
+in Calendar</h4>
+<ul>
+<li><p>On your computer, select an option:</p>
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>At the top right, click Tasks .</li>
+</ul></li>
+<li><p>Click Create.</p></li>
+<li><p>Enter your task details.</p></li>
+<li><p>Click Save. Tips:</p></li>
+<li><p>To add a task to an existing list, at the top, click Add a
+task.</p></li>
+<li><p>Tasks with a date also appear on your calendar.</p></li>
+</ul>
+<h4 id="mark-a-task-as-complete-3">Mark a task as complete</h4>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On the left of the task name, click Complete .</li>
+<li>At the bottom right, click Mark completed.</li>
+</ul>
+<h4 id="view-edit-or-delete-tasks">View, edit, or delete tasks</h4>
+<p>To appear on your calendar, tasks must have a date.</p>
+<p>View your tasks</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/calendar">Google
+Calendar</a>.</p></li>
+<li><p>On the left panel, go to “My calendars.”</p>
+<ul>
+<li>To find “My calendars,” you may have to click Menu .</li>
+</ul></li>
+<li><p>Make sure the “Tasks” box is checked. Edit a task</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>Click the task you want to edit Edit task .</p></li>
+<li><p>Update any task details.</p></li>
+<li><p>Click Save. Tips:</p></li>
+<li><p>You can also edit tasks from the side panel or from <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</p></li>
+<li><p>If you want to change the date and time of the next repeating
+task in a series, click the date.</p></li>
+<li><p>To edit the date and time for all tasks, click the repetition
+info. Edit a deadline</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>Click the task you want to edit Edit task .</p></li>
+<li><p>Next to “Deadline ,” enter a new due date for the task.</p></li>
+<li><p>At the bottom right, click Save. Edit the task start &amp; end
+time</p></li>
+</ul>
+<p>Important: If you share your calendar with someone, you can change
+the visibility of tasks with a start and end time. Learn how to change
+event and task visibility.</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>Click the task you want to edit Edit task .</p></li>
+<li><p>Next to “Start date ,” choose your start and end time.</p></li>
+<li><p>At the bottom right, click Save. Tips:</p></li>
+<li><p>You can’t add an end time for recurring tasks.</p></li>
+<li><p>To convert an existing task into a task with a start and end
+time:</p>
+<ul>
+<li>Open the task.</li>
+<li>Click Add time. Delete a task</li>
+</ul></li>
+<li><p>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</p></li>
+<li><p>Click the task to update Delete . Add an attachment</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>At the bottom right, click Show side panel .</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>To the right of the task, click Task options Add
+attachment.</p></li>
+<li><p>From your Google Drive, select a file.</p></li>
+<li><p>Click Insert. Learn more about attachments in Tasks.</p></li>
+</ul>
+<h4 id="hide-tasks-on-your-calendar">Hide tasks on your calendar</h4>
+<p>Hide completed tasks</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>At the top right, next to “Settings menu ,” click the View
+switcher menu .</p></li>
+<li><p>In the dropdown, deselect Show completed tasks. Hide all
+tasks</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>On the left panel, under “My calendars,” uncheck the box next to
+“Tasks.”</p>
+<ul>
+<li>To find “My calendars,” click Menu .</li>
+</ul></li>
+</ul>
+<h4 id="find-edit-pending-tasks">Find &amp; edit pending tasks</h4>
+<p>To check all uncompleted tasks from the last 365 days:</p>
+<ul>
+<li>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>While viewing a day’s schedule, click Pending tasks.</li>
+<li>In the pop-up list, choose how to update pending tasks:
+<ul>
+<li>To edit a task, hover to the right of the task. Click Edit , make
+your changes, and click Save.</li>
+<li>To complete a task, hover to the far left of the task. Click
+Complete .</li>
+<li>To reschedule a task, hover to the right of the task. Click
+Reschedule this task .</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-task-notifications-3">Learn about task
+notifications</h4>
+<ul>
+<li>If you add a date and time to your task, you get notifications at
+the scheduled date and time.</li>
+<li>Tasks with a date also appear in the Calendar app.</li>
+<li>For tasks without a time, notifications appear at 9 AM.</li>
+<li>For tasks with a deadline, you get a notification to complete the
+task on the day of the deadline at 9 AM in your local time.</li>
+</ul>
+<h4 id="learn-about-repeating-tasks-3">Learn about repeating tasks</h4>
+<ul>
+<li>To repeat a task, select the date and time Repeat .</li>
+<li>Tasks with subtasks can’t repeat.</li>
+<li>In Calendar, a certain number of upcoming instances of a repeating
+task will appear on the calendar grid, and as time passes, new ones will
+be added automatically.</li>
+</ul>
+<h4 id="related-resources-20">Related resources</h4>
+<ul>
+<li>Organize your tasks</li>
+<li>Add or edit a task</li>
+</ul>
+<h3 id="create-manage-tasks-in-google-calendar-computer">Create &amp;
+manage tasks in Google Calendar (Computer)</h3>
+<p>In Google Calendar, you can create, view, and change tasks.</p>
+<h4 id="create-a-task-in-calendar-3">Create a task in Calendar</h4>
+<p>Important: Only work or school accounts can use the “Do not disturb”
+and “Automatically decline meetings” options.</p>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On your calendar, click an empty slot.
+<ul>
+<li>Or, at the top left, you can click Create.</li>
+</ul></li>
+<li>Click Task.</li>
+<li>Update your task settings.</li>
+<li>Click Save. Tip: To find a list of all tasks from the last 365 days,
+at the top of your calendar, click Pending tasks.</li>
+</ul>
+<h5 id="learn-about-task-settings-4">Learn about task settings</h5>
+<p>Task setting</p>
+<p>Description</p>
+<p>Start date and time</p>
+<p>Enter the start date and how much time you plan to spend on the
+task.</p>
+<p>Deadline</p>
+<p>Enter the date you expect to complete the task. The deadline appears
+on the “All day” section of Calendar.</p>
+<p>Description</p>
+<p>Enter the date when the task must be completed.</p>
+<p>Task list</p>
+<p>Select a list for your task.</p>
+<p>Advanced settings</p>
+<p>Customize your task with additional options. You can:</p>
+<ul>
+<li>Change the color of your tasks.</li>
+<li>Set your availability to Free or Busy.</li>
+<li>Turn on Do not disturb to mute chat notifications.</li>
+<li>Turn on Automatically decline meetings if your availability is
+“Busy.”</li>
+<li>Select your task’s visibility to others.</li>
+</ul>
+<h4 id="create-a-task-from-tasks-in-calendar-3">Create a task from Tasks
+in Calendar</h4>
+<ul>
+<li><p>On your computer, select an option:</p>
+<ul>
+<li>Open <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</li>
+<li>At the top right, click Tasks .</li>
+</ul></li>
+<li><p>Click Create.</p></li>
+<li><p>Enter your task details.</p></li>
+<li><p>Click Save. Tips:</p></li>
+<li><p>To add a task to an existing list, at the top, click Add a
+task.</p></li>
+<li><p>Tasks with a date also appear on your calendar.</p></li>
+</ul>
+<h4 id="mark-a-task-as-complete-4">Mark a task as complete</h4>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On the left of the task name, click Complete .</li>
+<li>At the bottom right, click Mark completed.</li>
+</ul>
+<h4 id="view-edit-or-delete-tasks-1">View, edit, or delete tasks</h4>
+<p>To appear on your calendar, tasks must have a date.</p>
+<p>View your tasks</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/calendar">Google
+Calendar</a>.</p></li>
+<li><p>On the left panel, go to “My calendars.”</p>
+<ul>
+<li>To find “My calendars,” you may have to click Menu .</li>
+</ul></li>
+<li><p>Make sure the “Tasks” box is checked. Edit a task</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>Click the task you want to edit Edit task .</p></li>
+<li><p>Update any task details.</p></li>
+<li><p>Click Save. Tips:</p></li>
+<li><p>You can also edit tasks from the side panel or from <a
+href="https://calendar.google.com/calendar/u/0/r/tasks">Tasks in
+Calendar</a>.</p></li>
+<li><p>If you want to change the date and time of the next repeating
+task in a series, click the date.</p></li>
+<li><p>To edit the date and time for all tasks, click the repetition
+info. Edit a deadline</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>Click the task you want to edit Edit task .</p></li>
+<li><p>Next to “Deadline ,” enter a new due date for the task.</p></li>
+<li><p>At the bottom right, click Save. Edit the task start &amp; end
+time</p></li>
+</ul>
+<p>Important: If you share your calendar with someone, you can change
+the visibility of tasks with a start and end time. Learn how to change
+event and task visibility.</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>Click the task you want to edit Edit task .</p></li>
+<li><p>Next to “Start date ,” choose your start and end time.</p></li>
+<li><p>At the bottom right, click Save. Tips:</p></li>
+<li><p>You can’t add an end time for recurring tasks.</p></li>
+<li><p>To convert an existing task into a task with a start and end
+time:</p>
+<ul>
+<li>Open the task.</li>
+<li>Click Add time. Delete a task</li>
+</ul></li>
+<li><p>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</p></li>
+<li><p>Click the task to update Delete . Add an attachment</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>At the bottom right, click Show side panel .</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>To the right of the task, click Task options Add
+attachment.</p></li>
+<li><p>From your Google Drive, select a file.</p></li>
+<li><p>Click Insert. Learn more about attachments in Tasks.</p></li>
+</ul>
+<h4 id="hide-tasks-on-your-calendar-1">Hide tasks on your calendar</h4>
+<p>Hide completed tasks</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>At the top right, next to “Settings menu ,” click the View
+switcher menu .</p></li>
+<li><p>In the dropdown, deselect Show completed tasks. Hide all
+tasks</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>On the left panel, under “My calendars,” uncheck the box next to
+“Tasks.”</p>
+<ul>
+<li>To find “My calendars,” click Menu .</li>
+</ul></li>
+</ul>
+<h4 id="find-edit-pending-tasks-1">Find &amp; edit pending tasks</h4>
+<p>To check all uncompleted tasks from the last 365 days:</p>
+<ul>
+<li>Open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>While viewing a day’s schedule, click Pending tasks.</li>
+<li>In the pop-up list, choose how to update pending tasks:
+<ul>
+<li>To edit a task, hover to the right of the task. Click Edit , make
+your changes, and click Save.</li>
+<li>To complete a task, hover to the far left of the task. Click
+Complete .</li>
+<li>To reschedule a task, hover to the right of the task. Click
+Reschedule this task .</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-task-notifications-4">Learn about task
+notifications</h4>
+<ul>
+<li>If you add a date and time to your task, you get notifications at
+the scheduled date and time.</li>
+<li>Tasks with a date also appear in the Calendar app.</li>
+<li>For tasks without a time, notifications appear at 9 AM.</li>
+<li>For tasks with a deadline, you get a notification to complete the
+task on the day of the deadline at 9 AM in your local time.</li>
+</ul>
+<h4 id="learn-about-repeating-tasks-4">Learn about repeating tasks</h4>
+<ul>
+<li>To repeat a task, select the date and time Repeat .</li>
+<li>Tasks with subtasks can’t repeat.</li>
+<li>In Calendar, a certain number of upcoming instances of a repeating
+task will appear on the calendar grid, and as time passes, new ones will
+be added automatically.</li>
+</ul>
+<h4 id="related-resources-21">Related resources</h4>
+<ul>
+<li>Organize your tasks</li>
+<li>Add or edit a task</li>
+</ul>
+<h3 id="create-manage-tasks-in-google-calendar-iphone-and-ipad">Create
+&amp; manage tasks in Google Calendar (iPhone and iPad)</h3>
+<p>In Google Calendar, you can create, view, and change tasks.</p>
+<h4 id="create-a-task-in-calendar-4">Create a task in Calendar</h4>
+<ul>
+<li>On your iPhone or iPad, open the Google Calendar app .</li>
+<li>On your calendar, tap an empty slot Task.
+<ul>
+<li>Or, you can tap Add Task .</li>
+</ul></li>
+<li>Update your task settings.</li>
+<li>Tap Save. Tip: To find a list of all tasks from the last 365 days,
+at the top of your calendar, tap Pending tasks.</li>
+</ul>
+<h5 id="learn-about-task-settings-5">Learn about task settings</h5>
+<p>Task setting</p>
+<p>Description</p>
+<p>Start date and time</p>
+<p>Enter the task start date and the total task time.</p>
+<p>Deadline</p>
+<p>Enter the date you expect to complete the task. This date shows in
+the “All day” section of your calendar.</p>
+<p>Description</p>
+<p>Enter the task end date.</p>
+<p>Task list</p>
+<p>Select a list for your task.</p>
+<h4 id="view-edit-or-delete-tasks-2">View, edit, or delete tasks</h4>
+<p>View your tasks</p>
+<p>Tasks must have a date to appear in Google Calendar. To turn on
+Tasks:</p>
+<ul>
+<li>Go to the Calendar app .</li>
+<li>At the top left, tap Menu .</li>
+<li>Make sure the “Tasks” box is checked.</li>
+<li>Any tasks with dates will appear on your calendar. Tip: A list of
+all uncompleted tasks from the last 365 days are shown as “Pending
+tasks,” which can be found in the current day.</li>
+</ul>
+<p>Hide all tasks</p>
+<ul>
+<li><p>Open the Google Calendar app ,</p></li>
+<li><p>In the top left, tap Menu .</p></li>
+<li><p>Uncheck the box next to “Tasks.” Edit a task</p></li>
+<li><p>Open the Google Calendar app .</p></li>
+<li><p>Tap a task to update Edit task .</p></li>
+<li><p>Update task details.</p></li>
+<li><p>Tap Save. Mark a task as complete</p></li>
+<li><p>Open the Google Calendar app .</p></li>
+<li><p>Tap a task to update Mark completed. Completed tasks are shown on
+your calendar by default.</p></li>
+</ul>
+<p>Hide completed tasks</p>
+<p>To hide completed tasks crossed out in your calendar, you can adjust
+your settings.</p>
+<p>In your settings</p>
+<ul>
+<li><p>On your iPhone &amp; iPad, open the Google Calendar app
+.</p></li>
+<li><p>Tap Menu Settings General.</p></li>
+<li><p>Turn off Show completed tasks. Report an assigned task as
+spam</p></li>
+<li><p>On your device, open the Google Calendar app .</p></li>
+<li><p>On the calendar grid, tap the task you want to report.</p></li>
+<li><p>At the top right, tap Options .</p></li>
+<li><p>Tap Report as spam Report as spam. Learn how to report assigned
+tasks as spam</p></li>
+</ul>
+<p>Delete a task</p>
+<p>When you delete a task from your calendar, it’s removed
+completely.</p>
+<ul>
+<li>Open the Google Calendar app .</li>
+<li>Tap the task to delete More Delete Delete task. Find &amp; edit
+pending tasks</li>
+</ul>
+<p>To check all uncompleted tasks from the last 365 days:</p>
+<ul>
+<li>Open the Google Calendar app .</li>
+<li>While viewing a day’s schedule, tap Pending tasks.</li>
+<li>In the pop-up list, choose how to update pending tasks:
+<ul>
+<li>To edit a task, tap the task, tap the pencil icon , make your
+changes, and tap Save.</li>
+<li>To delete a task, tap the task and tap the , then tap Delete.</li>
+<li>To complete a task, swipe right.</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-task-notifications-5">Learn about task
+notifications</h4>
+<ul>
+<li>If you add a date and time to your task, you get notifications at
+the scheduled date and time.</li>
+<li>Tasks with a date also appear in the Calendar app.</li>
+<li>For tasks without a time, notifications appear at 9 AM.</li>
+<li>For tasks with a deadline, you get a notification to complete the
+task on the day of the deadline at 9 AM in your local time.</li>
+</ul>
+<h4 id="learn-about-repeating-tasks-5">Learn about repeating tasks</h4>
+<ul>
+<li>To repeat a task, select the date and time Repeat .</li>
+<li>Tasks with subtasks can’t repeat.</li>
+<li>In Calendar, a certain number of upcoming instances of a repeating
+task will appear on the calendar grid, and as time passes, new ones will
+be added automatically.</li>
+</ul>
+<h4 id="related-resources-22">Related resources</h4>
+<ul>
+<li>Organize your tasks</li>
+<li>Add or edit a task</li>
+</ul>
+<h3 id="get-started-with-shared-tasks">Get started with shared
+tasks</h3>
+<p>With shared tasks in Google Chat and Google Docs, you can:</p>
+<ul>
+<li>Assign a task to someone to complete.</li>
+<li>Check the status of a shared task.</li>
+<li>Update a shared task from a shared surface, like a space or a
+document.</li>
+<li>Update a shared task assigned to you from your personal task list.
+Tip: You can neither create a subtask nor repeat shared tasks.</li>
+</ul>
+<h4 id="learn-how-shared-tasks-work">Learn how shared tasks work</h4>
+<p>You can create and assign a shared task in:</p>
+<ul>
+<li><p>A space in Google Chat. Learn about shared tasks in
+Chat.</p></li>
+<li><p>Google Docs for eligible Google Workspace plans. Learn about
+shared tasks in Google Docs. When shared tasks are assigned to
+you:</p></li>
+<li><p>Shared tasks go into your default list in Tasks, but you can move
+them into different lists.</p></li>
+<li><p>Your task appears in:</p>
+<ul>
+<li>Your personal task list</li>
+<li>Shared spaces, like a chat space or document</li>
+<li>Google Calendar, if the task has a date and time</li>
+</ul></li>
+<li><p>You can edit or delete the task.</p>
+<ul>
+<li>Changes are reflected on your assigned shared tasks in a space or
+document.</li>
+</ul></li>
+<li><p>If you have access to the space or document history, you can
+confirm who completed the task or changed the assignee. Tip: You can
+report an assigned task as spam from a shared surface, like a space or
+document. Learn how to report assigned tasks as spam.</p></li>
+</ul>
+<h4 id="learn-about-shared-tasks-notifications">Learn about shared tasks
+notifications</h4>
+<ul>
+<li>You receive notifications when tasks are:
+<ul>
+<li>Created</li>
+<li>Assigned, reassigned, or unassigned</li>
+<li>Completed or marked as incomplete</li>
+<li>Deleted without being completed</li>
+</ul></li>
+<li>In Chat, you receive notifications about the tasks in the
+space.</li>
+<li>In Google Docs, you receive email notifications, which includes the
+email address of the assignee. You also get notifications when the date
+or title changes. Tip: For any task changes you make yourself, you won’t
+get notifications.</li>
+</ul>
+<h4 id="learn-about-deleted-shared-tasks">Learn about deleted shared
+tasks</h4>
+<p>When a shared task is deleted, it’s removed from your personal task
+list and the shared space.</p>
+<ul>
+<li>If the task is in Chat: Any related messages remain in the space
+until you delete them.</li>
+<li>If the task is in Google Docs and you:
+<ul>
+<li>Have edit access:
+<ul>
+<li>The task no longer shows in the document, but the checklist item and
+text remain.</li>
+</ul></li>
+<li>Don’t have edit access:
+<ul>
+<li>The task shows as deleted next to the checklist item.</li>
+<li>Any collaborators with edit access can accept these changes.</li>
+<li>Tasks continue to show in the list stream until the deletion is
+accepted. Important: To review deleted tasks, go to “Version history” in
+the document. Learn how to find what’s changed in a document.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="if-the-space-or-document-is-deleted">If the space or document is
+deleted:</h5>
+<ul>
+<li>In Chat: All tasks are deleted from that space and their assignee’s
+personal task list.</li>
+<li>In Google Docs: All tasks stay on your personal task list but you
+can’t view the linked doc because it’s deleted.</li>
+</ul>
+<h5 id="if-a-google-account-is-deleted">If a Google Account is
+deleted:</h5>
+<ul>
+<li>In Chat: Shared tasks assigned to you are unassigned but remain in
+the space.</li>
+<li>In Google Docs: Shared tasks assigned to you remain in the document
+but are assigned to an unknown user.</li>
+</ul>
+<h5 id="if-you-lose-access-to-the-space-or-document">If you lose access
+to the space or document:</h5>
+<ul>
+<li>Your tasks remain assigned to you. Changes you make are reflected in
+the shared space.
+<ul>
+<li>Tip: In Google Docs, a collaborator with edit access has to accept
+your changes before they’re applied.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-23">Related resources</h4>
+<ul>
+<li>Assign tasks from Google Docs</li>
+<li>Create &amp; assign tasks in Google Chat</li>
+</ul>
+<h3 id="learn-about-google-keep-reminders-in-google-tasks">Learn about
+Google Keep reminders in Google Tasks</h3>
+<p>In the second half of 2025, Google Keep reminders will migrate to
+Google Tasks. New reminders will be saved as tasks. You can view, edit,
+and complete your reminders from:</p>
+<ul>
+<li>Calendar</li>
+<li>Gemini</li>
+<li>Keep</li>
+<li>Tasks</li>
+</ul>
+<h4 id="find-keep-reminders-in-calendar-tasks">Find Keep reminders in
+Calendar &amp; Tasks</h4>
+<p>You can find your Keep reminders in:</p>
+<ul>
+<li><p>Your calendar grid in Calendar</p></li>
+<li><p>Your task list Tips:</p></li>
+<li><p>To identify a Keep reminder, in the task details, find “From
+Keep.”</p></li>
+<li><p>To return to the original Keep note, select From Keep.</p></li>
+</ul>
+<h4 id="get-reminder-notifications-on-your-mobile-device">Get reminder
+notifications on your mobile device</h4>
+<p>You no longer get reminder notifications from Google Keep. To receive
+reminder notifications on your mobile device, install one of these
+apps:</p>
+<ul>
+<li>Calendar</li>
+<li>Tasks After you install an app on your device, make sure to allow
+notifications for it. Learn how to manage Google Tasks notification
+settings.</li>
+</ul>
+<h4 id="edit-delete-keep-reminders">Edit &amp; delete Keep
+reminders</h4>
+<p>You can manage Keep reminders from several Google products.</p>
+<ul>
+<li>To edit the date and time of a reminder, make changes in the:
+<ul>
+<li>Keep note</li>
+<li>Task details in Tasks or Calendar</li>
+</ul></li>
+<li>To edit the title of a reminder, use Tasks or Calendar.
+<ul>
+<li>If you only change the title of the Keep note, the reminder’s title
+doesn’t update.</li>
+</ul></li>
+<li>You can mark reminders as complete in the:
+<ul>
+<li>Reminder notification on your mobile device</li>
+<li>Keep note</li>
+<li>Task details in Tasks or Calendar</li>
+</ul></li>
+</ul>
+<h4
+id="learn-what-to-expect-when-your-keep-reminders-move-to-tasks">Learn
+what to expect when your Keep reminders move to Tasks</h4>
+<p>In general, Keep reminders move to Tasks with the same data and are
+visible on your Keep note and in Tasks. Here are some key points to
+remember when your Keep reminders move to Tasks:</p>
+<ul>
+<li>Location-based reminders in Keep: You can no longer create or get
+location-based reminders. To find your location reminder data:
+<ul>
+<li>On your device, open the Tasks app .</li>
+<li>Select a Keep reminder that was moved to Tasks.</li>
+<li>Review the description.</li>
+</ul></li>
+<li>Limits on tasks: You can have up to 100,000 tasks. If the number of
+Keep reminders is more than the task limit, the oldest reminders don’t
+migrate to Tasks.</li>
+<li>Long reminders: If your Keep reminder is too long, its title is
+shortened after it migrates to Tasks.</li>
+<li>Pending tasks: You can find a list of all “Pending tasks” from the
+last 365 days in the “All-day” section of your calendar for the current
+day.</li>
+<li>Repeating tasks: The maximum interval for repeating tasks in
+Calendar is 1000 days, weeks, months, or years. For example, if you set
+a task to repeat every 2,000 days, Calendar changes it to every 1,000
+days.
+<ul>
+<li>Reminders that don’t repeat and are older than a year are added to
+an “Old Google Keep Reminders” list.</li>
+</ul></li>
+<li>Tasks beyond the year 3000: Any tasks with dates beyond the year
+3000 are adjusted to the year 2900.</li>
+<li>Work or school accounts managed by an administrator:
+<ul>
+<li>If you’re an administrator, make sure that the “Tasks service” is
+turned on for your organization. Learn how to turn on Tasks for your
+organization.</li>
+<li>If the “Tasks service” is off, your organization’s reminder data
+doesn’t migrate to Tasks.</li>
+<li>Reminders for users with suspended Workspace licenses don’t migrate
+to Tasks.</li>
+<li>If your organization allows Google Takeout, you can export your
+reminders data before it’s deleted.</li>
+</ul></li>
+</ul>
+<h4 id="related-resources-24">Related resources</h4>
+<ul>
+<li>Set up reminders for your notes</li>
+<li>Learn about Google Tasks</li>
+<li>Manage Google Tasks notification settings</li>
+<li>Create &amp; manage tasks in Google Calendar</li>
+<li>Use Google products side by side</li>
+</ul>
+<h3 id="report-assigned-tasks-as-spam">Report assigned tasks as
+spam</h3>
+<p>You can report an assigned task as spam from a shared surface, like a
+space or document.</p>
+<p>When you report an assigned task as spam, it’s:</p>
+<ul>
+<li>Removed from your personal list.</li>
+<li>No longer assigned to you in the shared space.</li>
+</ul>
+<h4 id="report-an-assigned-task-as-spam-in-google-tasks">Report an
+assigned task as spam in Google Tasks</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>In the side panel, on the right, click Tasks .</li>
+<li>Click the task you want to report.</li>
+<li>To the right of the task, click Open menu .</li>
+<li>Click Report as spam Report as spam.</li>
+</ul>
+<h4 id="report-an-assigned-task-as-spam-in-google-calendar">Report an
+assigned task as spam in Google Calendar</h4>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On the calendar grid, click the task you want to report.</li>
+<li>At the top right of the task, click Options .</li>
+<li>Click Report as spam Report as spam. Tip: To report an assigned task
+as spam, enter the keyboard shortcut: !</li>
+</ul>
+<h4 id="related-resources-25">Related resources</h4>
+<ul>
+<li>Get started with Shared Google Tasks</li>
+<li>Create &amp; assign tasks in a Google Chat space</li>
+<li>Assign tasks from Google Docs</li>
+</ul>
+<h3 id="report-assigned-tasks-as-spam-computer">Report assigned tasks as
+spam (Computer)</h3>
+<p>You can report an assigned task as spam from a shared surface, like a
+space or document.</p>
+<p>When you report an assigned task as spam, it’s:</p>
+<ul>
+<li>Removed from your personal list.</li>
+<li>No longer assigned to you in the shared space.</li>
+</ul>
+<h4 id="report-an-assigned-task-as-spam-in-google-tasks-1">Report an
+assigned task as spam in Google Tasks</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>In the side panel, on the right, click Tasks .</li>
+<li>Click the task you want to report.</li>
+<li>To the right of the task, click Open menu .</li>
+<li>Click Report as spam Report as spam.</li>
+</ul>
+<h4 id="report-an-assigned-task-as-spam-in-google-calendar-1">Report an
+assigned task as spam in Google Calendar</h4>
+<ul>
+<li>On your computer, open <a href="https://calendar.google.com/">Google
+Calendar</a>.</li>
+<li>On the calendar grid, click the task you want to report.</li>
+<li>At the top right of the task, click Options .</li>
+<li>Click Report as spam Report as spam. Tip: To report an assigned task
+as spam, enter the keyboard shortcut: !</li>
+</ul>
+<h4 id="related-resources-26">Related resources</h4>
+<ul>
+<li>Get started with Shared Google Tasks</li>
+<li>Create &amp; assign tasks in a Google Chat space</li>
+<li>Assign tasks from Google Docs</li>
+</ul>
+<h3 id="report-assigned-tasks-as-spam-iphone-and-ipad">Report assigned
+tasks as spam (iPhone and iPad)</h3>
+<p>You can report an assigned task as spam from a shared surface, like a
+space or document.</p>
+<p>When you report an assigned task as spam, it’s:</p>
+<ul>
+<li>Removed from your personal list.</li>
+<li>No longer assigned to you in the shared space.</li>
+</ul>
+<h4 id="report-an-assigned-task-as-spam-in-google-tasks-2">Report an
+assigned task as spam in Google Tasks</h4>
+<ul>
+<li>On your device, open the Google Tasks app .</li>
+<li>Tap the task you want to report.</li>
+<li>At the top right, tap Options .</li>
+<li>Tap Report as spam Report as spam.</li>
+</ul>
+<h4 id="report-an-assigned-task-as-spam-in-google-calendar-2">Report an
+assigned task as spam in Google Calendar</h4>
+<ul>
+<li>On your device, open the Google Calendar app .</li>
+<li>On the calendar grid, tap the task you want to report.</li>
+<li>At the top right, tap Options .</li>
+<li>Tap Report as spam Report as spam.</li>
+</ul>
+<h4 id="related-resources-27">Related resources</h4>
+<ul>
+<li>Get started with Shared Google Tasks</li>
+<li>Create &amp; assign tasks in a Google Chat space</li>
+<li>Assign tasks from Google Docs</li>
+</ul>
+<h3 id="use-google-products-side-by-side">Use Google products side by
+side</h3>
+<p>Want advanced Google Workspace features for your business?</p>
+<p><a
+href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=106237">Try
+Google Workspace today!</a></p>
+<p>You can use Google products such as Gmail and Calendar in the same
+window. This helps you increase productivity without switching between
+tabs.</p>
+<h4 id="open-two-google-products-in-one-window">Open two Google products
+in one window</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>At the bottom right, click Show side panel .</li>
+<li>On the right, choose the product you want to open:
+<ul>
+<li>Calendar : Check your schedule and add or edit events.</li>
+<li>Keep : Create a note or list.</li>
+<li>Tasks : Add to-do items and deadlines.</li>
+<li>Contacts : Access your contacts.</li>
+<li>Voice : Make a Google Voice call.</li>
+<li>Maps : Search Google Maps.</li>
+</ul></li>
+<li>To close the app panel, on the right, click Close . Tip: You can get
+add-ons from Google Workspace to add more options to your side
+panel.</li>
+</ul>
+<p>Learn more:</p>
+<ul>
+<li>Get started with Google Calendar</li>
+<li>How to use Google Keep</li>
+<li>How to use Google Tasks</li>
+</ul>
+<h4 id="close-or-hide-the-right-side-panel">Close or hide the right side
+panel</h4>
+<p>You can close or hide the Google Workspace side panel.</p>
+<ul>
+<li>To close the right side panel: On the right, click Close .</li>
+<li>To hide the right side panel: If the panel is expanded, in the top
+right of the app panel, click Close . Then, at the bottom right, click
+Hide side panel .</li>
+<li>To show the right side panel: At the bottom right, click Show side
+panel .</li>
+</ul>
+<h4 id="create-a-calendar-event">Create a calendar event</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Google Calendar .</li>
+<li>Click a time on the calendar.</li>
+<li>Enter event details.</li>
+<li>Click Save. Learn more about Google Calendar.</li>
+</ul>
+<p>Attach a document to a calendar event</p>
+<ul>
+<li>Go to <a href="https://drive.google.com/">Google Drive</a> or open a
+file in <a href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>, or <a
+href="https://docs.google.com/drawings/u/0/">Drawings</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Google Calendar .</li>
+<li>Click a time on the calendar.</li>
+<li>Enter event details.</li>
+<li>Below “Add description,” click Attach [your document name].</li>
+<li>Click Save.</li>
+</ul>
+<h4 id="find-a-place-or-get-directions-in-google-calendar">Find a place
+or get directions in Google Calendar</h4>
+<ul>
+<li><p>On a computer, go to Google Calendar .</p></li>
+<li><p>If the side panel isn’t displayed, on the bottom right, click
+Show side panel .</p></li>
+<li><p>On the right, click Maps .</p></li>
+<li><p>Search for a place.</p></li>
+<li><p>View details about the place or click Directions to get
+directions. Tips:</p></li>
+<li><p>To stop Google Maps from opening in Google Calendar: At the top
+right of the Maps panel, click Close . Then, at the bottom right, click
+Hide side panel . Your locations will open in a new tab.</p></li>
+<li><p>To add travel time to an event directly to Google Calendar:
+Select a travel mode and trip, then click Add to Calendar.</p></li>
+</ul>
+<h4 id="preview-an-events-location">Preview an event’s location</h4>
+<ul>
+<li><p>On a computer, go to Google Calendar .</p></li>
+<li><p>Create an event and enter location information or click on an
+existing event that has a location.</p></li>
+<li><p>Optional: To preview the location of an event you’re creating,
+click Preview in Maps .</p></li>
+<li><p>Click the location.</p></li>
+<li><p>View the place information on the right. Tips:</p></li>
+<li><p>To stop Google Maps from opening in Google Calendar: At the top
+right of the Maps panel, click Close . Then, at the bottom right, click
+Hide side panel . Your locations will open in a new tab.</p></li>
+<li><p>To add travel time to an event directly to Google Calendar:
+Select a travel mode and trip, then click Add to Calendar.</p></li>
+</ul>
+<h4 id="create-a-note-or-list">Create a note or list</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Keep .</li>
+<li>Choose an option:
+<ul>
+<li>Take a note</li>
+<li>New list</li>
+</ul></li>
+<li>Add the text you want.</li>
+<li>Click Done. Learn more about Google Keep.</li>
+</ul>
+<p>Add a Keep note to a doc or presentation</p>
+<ul>
+<li><p>In <a href="https://docs.google.com/document/u/0">Google Docs</a>
+or <a href="https://docs.google.com/presentation/u/0/">Slides</a>, open
+a document or presentation.</p></li>
+<li><p>If the side panel isn’t displayed, on the bottom right, click
+Show side panel .</p></li>
+<li><p>On the right, click Keep .</p></li>
+<li><p>Find the note or list you want to add, then drag it to the doc or
+presentation. Save text from Docs or Slides in Keep</p></li>
+<li><p>In <a href="https://docs.google.com/document/u/0">Google Docs</a>
+or <a href="https://docs.google.com/presentation/u/0/">Slides</a>, open
+a doc or presentation.</p></li>
+<li><p>Highlight the text you want to add to a note.</p></li>
+<li><p>Right-click the text, then choose Save to Keep.</p></li>
+</ul>
+<h4 id="create-a-task-3">Create a task</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Tasks .</li>
+<li>Click Add a task.</li>
+<li>Enter information.</li>
+<li>Optional: To add details or a due date, click Edit .</li>
+<li>When you’re done, click Close Tasks . Tip: To rearrange your tasks,
+drag the task you want to move.</li>
+</ul>
+<p>Learn how to use Google Tasks.</p>
+<p>Save an email as a task</p>
+<ul>
+<li>Go to <a href="https://mail.google.com">Gmail</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Tasks .</li>
+<li>In your inbox, find the email you want to save as a task.</li>
+<li>Drag the email to the right side panel. Organize your tasks into
+lists</li>
+</ul>
+<p>You can separate different kinds of tasks like your work and personal
+items.</p>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Tasks .</li>
+<li>At the top next to “My List” or “Team”, click the Down arrow Create
+new list.</li>
+<li>Enter a name for the list, then click Done.</li>
+<li>To go to a different list, at the top, next to your list title,
+click the Down arrow . Choose another list.</li>
+</ul>
+<h4 id="use-other-apps-with-gmail">Use other apps with Gmail</h4>
+<p>You can add other apps to use with Google Workspace products,
+including Asana, Trello, Intuit, Docusign, and <a
+href="https://gsuite.google.com/marketplace/category/works-with-gmail">other
+tools</a>.</p>
+<h4 id="install-google-workspace-add-ons">Install Google Workspace
+Add-ons</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>Click Get Add-ons .</li>
+<li>Search for and select the tools you want to use.</li>
+<li>Click Install Continue.</li>
+<li>Choose your account, then follow the steps on the screen.</li>
+</ul>
+<h4 id="uninstall-google-workspace-add-ons">Uninstall Google Workspace
+Add-ons</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>Click the add-on you want to uninstall Manage add-on.</li>
+<li>In the window that appears, select the add-on.</li>
+<li>Click Uninstall Uninstall app.</li>
+</ul>
+<h4 id="how-your-organization-can-find-marketplace-apps">How your
+organization can find Marketplace apps</h4>
+<p>You and your users can use the Google Workspace Marketplace to find
+and install apps to expand core Google Workspace services, such as
+Google Drive or Gmail, and standalone apps that enhance the existing
+capabilities of Google Workspace.</p>
+<h5 id="how-google-reviews-marketplace-apps">How Google reviews
+Marketplace apps</h5>
+<p>When a developer submits an app to the Marketplace to be publicly
+available, Google reviews the submission <a
+href="https://developers.google.com/workspace/marketplace/about-app-review">to
+make sure the app meets our guidelines</a>. The developer must provide
+information about the app’s features and how it works, in addition to
+links to help users get started or to contact the developer for support.
+Google also conducts regular reviews for the most popular apps. For more
+information, see <a
+href="https://developers.google.com/workspace/marketplace/about-app-review">About
+app review</a>.</p>
+<p>Additionally, apps that use Google APIs to access user data might
+have to complete a verification process before the app is made available
+on the Marketplace. Whether verification is needed depends on what type
+of user data the app accesses and the degree of access that’s needed.
+For more information, see How do I submit for verification?</p>
+<h5 id="how-apps-are-organized-ranked">How apps are organized &amp;
+ranked</h5>
+<p>The Marketplace displays relevant apps based on a user’s interests
+and needs. The apps are ranked based on:</p>
+<ul>
+<li>App-experience quality and editorial value: Apps in the Editor’s
+choice category are curated by Google. For more information, see
+Editor’s choice.</li>
+<li>Relevancy: Search results are based on how relevant the app’s name
+and description are to the search term, the app’s popularity, and its
+user-experience rating. Popularity and user experience have similar
+importance.</li>
+<li>Popularity: Ranking is based on the number of users who installed
+the app. Apps with the most installations are in the Most popular
+category.</li>
+<li>User experience: The number of ratings and average rating are used
+to order apps in the Top rated category. Google doesn’t verify user
+reviews and ratings. However, if a review violates our policies, it will
+be removed. Users can also report abusive reviews.</li>
+</ul>
+<h4 id="issues-with-multiple-google-accounts">Issues with multiple
+Google Accounts</h4>
+<p>If you log into multiple Google Accounts at the same time, you might
+have access issues with your Apps Script projects, add-ons, and web
+apps.</p>
+<p>Multi-login, or being logged into multiple Google Accounts at the
+same time, isn’t supported for Apps Script projects, add-ons, or web
+apps.</p>
+<p>To fix multi-login issues, try one of the solutions below:</p>
+<ul>
+<li>Log out of all your Google Accounts, then sign in to one that has
+the Apps Script project, add-on, or web app you want to use.</li>
+<li>Open an incognito window in Google Chrome, or another private
+browsing window, and sign in to the Google Account that has the Apps
+Script project, add-on, or web app you want to use.</li>
+</ul>
+<h3 id="use-google-products-side-by-side-computer">Use Google products
+side by side (Computer)</h3>
+<p>Want advanced Google Workspace features for your business?</p>
+<p><a
+href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=106237">Try
+Google Workspace today!</a></p>
+<p>You can use Google products such as Gmail and Calendar in the same
+window. This helps you increase productivity without switching between
+tabs.</p>
+<h4 id="open-two-google-products-in-one-window-1">Open two Google
+products in one window</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>At the bottom right, click Show side panel .</li>
+<li>On the right, choose the product you want to open:
+<ul>
+<li>Calendar : Check your schedule and add or edit events.</li>
+<li>Keep : Create a note or list.</li>
+<li>Tasks : Add to-do items and deadlines.</li>
+<li>Contacts : Access your contacts.</li>
+<li>Voice : Make a Google Voice call.</li>
+<li>Maps : Search Google Maps.</li>
+</ul></li>
+<li>To close the app panel, on the right, click Close . Tip: You can get
+add-ons from Google Workspace to add more options to your side
+panel.</li>
+</ul>
+<p>Learn more:</p>
+<ul>
+<li>Get started with Google Calendar</li>
+<li>How to use Google Keep</li>
+<li>How to use Google Tasks</li>
+</ul>
+<h4 id="close-or-hide-the-right-side-panel-1">Close or hide the right
+side panel</h4>
+<p>You can close or hide the Google Workspace side panel.</p>
+<ul>
+<li>To close the right side panel: On the right, click Close .</li>
+<li>To hide the right side panel: If the panel is expanded, in the top
+right of the app panel, click Close . Then, at the bottom right, click
+Hide side panel .</li>
+<li>To show the right side panel: At the bottom right, click Show side
+panel .</li>
+</ul>
+<h4 id="create-a-calendar-event-1">Create a calendar event</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Google Calendar .</li>
+<li>Click a time on the calendar.</li>
+<li>Enter event details.</li>
+<li>Click Save. Learn more about Google Calendar.</li>
+</ul>
+<p>Attach a document to a calendar event</p>
+<ul>
+<li>Go to <a href="https://drive.google.com/">Google Drive</a> or open a
+file in <a href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>, or <a
+href="https://docs.google.com/drawings/u/0/">Drawings</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Google Calendar .</li>
+<li>Click a time on the calendar.</li>
+<li>Enter event details.</li>
+<li>Below “Add description,” click Attach [your document name].</li>
+<li>Click Save.</li>
+</ul>
+<h4 id="find-a-place-or-get-directions-in-google-calendar-1">Find a
+place or get directions in Google Calendar</h4>
+<ul>
+<li><p>On a computer, go to Google Calendar .</p></li>
+<li><p>If the side panel isn’t displayed, on the bottom right, click
+Show side panel .</p></li>
+<li><p>On the right, click Maps .</p></li>
+<li><p>Search for a place.</p></li>
+<li><p>View details about the place or click Directions to get
+directions. Tips:</p></li>
+<li><p>To stop Google Maps from opening in Google Calendar: At the top
+right of the Maps panel, click Close . Then, at the bottom right, click
+Hide side panel . Your locations will open in a new tab.</p></li>
+<li><p>To add travel time to an event directly to Google Calendar:
+Select a travel mode and trip, then click Add to Calendar.</p></li>
+</ul>
+<h4 id="preview-an-events-location-1">Preview an event’s location</h4>
+<ul>
+<li><p>On a computer, go to Google Calendar .</p></li>
+<li><p>Create an event and enter location information or click on an
+existing event that has a location.</p></li>
+<li><p>Optional: To preview the location of an event you’re creating,
+click Preview in Maps .</p></li>
+<li><p>Click the location.</p></li>
+<li><p>View the place information on the right. Tips:</p></li>
+<li><p>To stop Google Maps from opening in Google Calendar: At the top
+right of the Maps panel, click Close . Then, at the bottom right, click
+Hide side panel . Your locations will open in a new tab.</p></li>
+<li><p>To add travel time to an event directly to Google Calendar:
+Select a travel mode and trip, then click Add to Calendar.</p></li>
+</ul>
+<h4 id="create-a-note-or-list-1">Create a note or list</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Keep .</li>
+<li>Choose an option:
+<ul>
+<li>Take a note</li>
+<li>New list</li>
+</ul></li>
+<li>Add the text you want.</li>
+<li>Click Done. Learn more about Google Keep.</li>
+</ul>
+<p>Add a Keep note to a doc or presentation</p>
+<ul>
+<li><p>In <a href="https://docs.google.com/document/u/0">Google Docs</a>
+or <a href="https://docs.google.com/presentation/u/0/">Slides</a>, open
+a document or presentation.</p></li>
+<li><p>If the side panel isn’t displayed, on the bottom right, click
+Show side panel .</p></li>
+<li><p>On the right, click Keep .</p></li>
+<li><p>Find the note or list you want to add, then drag it to the doc or
+presentation. Save text from Docs or Slides in Keep</p></li>
+<li><p>In <a href="https://docs.google.com/document/u/0">Google Docs</a>
+or <a href="https://docs.google.com/presentation/u/0/">Slides</a>, open
+a doc or presentation.</p></li>
+<li><p>Highlight the text you want to add to a note.</p></li>
+<li><p>Right-click the text, then choose Save to Keep.</p></li>
+</ul>
+<h4 id="create-a-task-4">Create a task</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Tasks .</li>
+<li>Click Add a task.</li>
+<li>Enter information.</li>
+<li>Optional: To add details or a due date, click Edit .</li>
+<li>When you’re done, click Close Tasks . Tip: To rearrange your tasks,
+drag the task you want to move.</li>
+</ul>
+<p>Learn how to use Google Tasks.</p>
+<p>Save an email as a task</p>
+<ul>
+<li>Go to <a href="https://mail.google.com">Gmail</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Tasks .</li>
+<li>In your inbox, find the email you want to save as a task.</li>
+<li>Drag the email to the right side panel. Organize your tasks into
+lists</li>
+</ul>
+<p>You can separate different kinds of tasks like your work and personal
+items.</p>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>On the right, click Tasks .</li>
+<li>At the top next to “My List” or “Team”, click the Down arrow Create
+new list.</li>
+<li>Enter a name for the list, then click Done.</li>
+<li>To go to a different list, at the top, next to your list title,
+click the Down arrow . Choose another list.</li>
+</ul>
+<h4 id="use-other-apps-with-gmail-1">Use other apps with Gmail</h4>
+<p>You can add other apps to use with Google Workspace products,
+including Asana, Trello, Intuit, Docusign, and <a
+href="https://gsuite.google.com/marketplace/category/works-with-gmail">other
+tools</a>.</p>
+<h4 id="install-google-workspace-add-ons-1">Install Google Workspace
+Add-ons</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>Click Get Add-ons .</li>
+<li>Search for and select the tools you want to use.</li>
+<li>Click Install Continue.</li>
+<li>Choose your account, then follow the steps on the screen.</li>
+</ul>
+<h4 id="uninstall-google-workspace-add-ons-1">Uninstall Google Workspace
+Add-ons</h4>
+<ul>
+<li>Go to <a href="https://mail.google.com/">Gmail</a>, <a
+href="https://calendar.google.com/">Calendar</a>, <a
+href="https://chat.google.com">Chat</a>, <a
+href="https://drive.google.com/">Drive</a>, or a file in Google <a
+href="https://docs.google.com/document/u/0">Docs</a>, <a
+href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>, or <a
+href="https://docs.google.com/presentation/u/0/">Slides</a>.</li>
+<li>If the side panel isn’t displayed, on the bottom right, click Show
+side panel .</li>
+<li>Click the add-on you want to uninstall Manage add-on.</li>
+<li>In the window that appears, select the add-on.</li>
+<li>Click Uninstall Uninstall app.</li>
+</ul>
+<h4 id="how-your-organization-can-find-marketplace-apps-1">How your
+organization can find Marketplace apps</h4>
+<p>You and your users can use the Google Workspace Marketplace to find
+and install apps to expand core Google Workspace services, such as
+Google Drive or Gmail, and standalone apps that enhance the existing
+capabilities of Google Workspace.</p>
+<h5 id="how-google-reviews-marketplace-apps-1">How Google reviews
+Marketplace apps</h5>
+<p>When a developer submits an app to the Marketplace to be publicly
+available, Google reviews the submission <a
+href="https://developers.google.com/workspace/marketplace/about-app-review">to
+make sure the app meets our guidelines</a>. The developer must provide
+information about the app’s features and how it works, in addition to
+links to help users get started or to contact the developer for support.
+Google also conducts regular reviews for the most popular apps. For more
+information, see <a
+href="https://developers.google.com/workspace/marketplace/about-app-review">About
+app review</a>.</p>
+<p>Additionally, apps that use Google APIs to access user data might
+have to complete a verification process before the app is made available
+on the Marketplace. Whether verification is needed depends on what type
+of user data the app accesses and the degree of access that’s needed.
+For more information, see How do I submit for verification?</p>
+<h5 id="how-apps-are-organized-ranked-1">How apps are organized &amp;
+ranked</h5>
+<p>The Marketplace displays relevant apps based on a user’s interests
+and needs. The apps are ranked based on:</p>
+<ul>
+<li>App-experience quality and editorial value: Apps in the Editor’s
+choice category are curated by Google. For more information, see
+Editor’s choice.</li>
+<li>Relevancy: Search results are based on how relevant the app’s name
+and description are to the search term, the app’s popularity, and its
+user-experience rating. Popularity and user experience have similar
+importance.</li>
+<li>Popularity: Ranking is based on the number of users who installed
+the app. Apps with the most installations are in the Most popular
+category.</li>
+<li>User experience: The number of ratings and average rating are used
+to order apps in the Top rated category. Google doesn’t verify user
+reviews and ratings. However, if a review violates our policies, it will
+be removed. Users can also report abusive reviews.</li>
+</ul>
+<h4 id="issues-with-multiple-google-accounts-1">Issues with multiple
+Google Accounts</h4>
+<p>If you log into multiple Google Accounts at the same time, you might
+have access issues with your Apps Script projects, add-ons, and web
+apps.</p>
+<p>Multi-login, or being logged into multiple Google Accounts at the
+same time, isn’t supported for Apps Script projects, add-ons, or web
+apps.</p>
+<p>To fix multi-login issues, try one of the solutions below:</p>
+<ul>
+<li>Log out of all your Google Accounts, then sign in to one that has
+the Apps Script project, add-on, or web app you want to use.</li>
+<li>Open an incognito window in Google Chrome, or another private
+browsing window, and sign in to the Google Account that has the Apps
+Script project, add-on, or web app you want to use.</li>
+</ul>
+<h3 id="use-google-products-side-by-side-iphone-and-ipad">Use Google
+products side by side (iPhone and iPad)</h3>
+<p>Want advanced Google Workspace features for your business?</p>
+<p><a
+href="https://workspace.google.com/business/signup/welcome?utm_source=gwslearningcenter&amp;utm_medium=support&amp;utm_campaign=106237">Try
+Google Workspace today!</a></p>
+<p>You can use Google products such as Gmail and Calendar in the same
+window. This helps you increase productivity without switching between
+tabs.</p>
+<p><a href="https://support.apple.com/en-us/HT207582">Learn how to use 2
+apps side by side on your iPad</a>.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="attach-google-drive-files-to-a-task">Attach Google Drive files
+to a task</h3>
+<p>You can attach Google Drive files to your tasks in Google Calendar.
+Learn how to use Google products side by side.</p>
+<h4 id="add-a-google-drive-file-to-a-task">Add a Google Drive file to a
+task</h4>
+<p>To attach a file when you create a new task or edit an existing
+one:</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>You can:</p>
+<ul>
+<li>Create a new task.</li>
+<li>Open an existing task.</li>
+</ul></li>
+<li><p>Click Add a Google Drive attachment.</p></li>
+<li><p>Select a file from your Google Drive.</p></li>
+<li><p>To add the file, click Insert Save. You can also attach a file on
+an existing task through the side panel:</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>At the bottom right, click Show side panel .</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>To the right of the task, click Task options Add
+attachment.</p></li>
+<li><p>From your Google Drive, select a file.</p></li>
+<li><p>Click Insert.</p></li>
+</ul>
+<h4 id="open-or-remove-a-google-drive-file">Open or remove a Google
+Drive file</h4>
+<ul>
+<li>To open a file:
+<ul>
+<li>On your computer, open the task.</li>
+<li>Select the file.</li>
+</ul></li>
+<li>To remove a file:
+<ul>
+<li>Open the task.</li>
+<li>Click Edit Remove attachment.
+<ul>
+<li>If you open the task from the right-side Tasks panel, click Remove
+attachment Edit .</li>
+</ul></li>
+<li>Click Save.</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-attachment-limits-requirements">Learn about
+attachment limits &amp; requirements</h4>
+<ul>
+<li>You can add a maximum of 25 attachments per task.</li>
+<li>If you have a work or school account, you can only add or open
+attachments if your administrator turns on Google Drive for your
+organization.</li>
+</ul>
+<h4 id="related-resources-28">Related resources</h4>
+<ul>
+<li>Learn about Google Tasks</li>
+<li>Add or edit a task</li>
+<li>Organize your tasks</li>
+</ul>
+<h3 id="attach-google-drive-files-to-a-task-computer">Attach Google
+Drive files to a task (Computer)</h3>
+<p>You can attach Google Drive files to your tasks in Google Calendar.
+Learn how to use Google products side by side.</p>
+<h4 id="add-a-google-drive-file-to-a-task-1">Add a Google Drive file to
+a task</h4>
+<p>To attach a file when you create a new task or edit an existing
+one:</p>
+<ul>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>You can:</p>
+<ul>
+<li>Create a new task.</li>
+<li>Open an existing task.</li>
+</ul></li>
+<li><p>Click Add a Google Drive attachment.</p></li>
+<li><p>Select a file from your Google Drive.</p></li>
+<li><p>To add the file, click Insert Save. You can also attach a file on
+an existing task through the side panel:</p></li>
+<li><p>On your computer, open <a
+href="https://calendar.google.com/">Google Calendar</a>.</p></li>
+<li><p>At the bottom right, click Show side panel .</p></li>
+<li><p>On the right, click Tasks .</p></li>
+<li><p>To the right of the task, click Task options Add
+attachment.</p></li>
+<li><p>From your Google Drive, select a file.</p></li>
+<li><p>Click Insert.</p></li>
+</ul>
+<h4 id="open-or-remove-a-google-drive-file-1">Open or remove a Google
+Drive file</h4>
+<ul>
+<li>To open a file:
+<ul>
+<li>On your computer, open the task.</li>
+<li>Select the file.</li>
+</ul></li>
+<li>To remove a file:
+<ul>
+<li>Open the task.</li>
+<li>Click Edit Remove attachment.
+<ul>
+<li>If you open the task from the right-side Tasks panel, click Remove
+attachment Edit .</li>
+</ul></li>
+<li>Click Save.</li>
+</ul></li>
+</ul>
+<h4 id="learn-about-attachment-limits-requirements-1">Learn about
+attachment limits &amp; requirements</h4>
+<ul>
+<li>You can add a maximum of 25 attachments per task.</li>
+<li>If you have a work or school account, you can only add or open
+attachments if your administrator turns on Google Drive for your
+organization.</li>
+</ul>
+<h4 id="related-resources-29">Related resources</h4>
+<ul>
+<li>Learn about Google Tasks</li>
+<li>Add or edit a task</li>
+<li>Organize your tasks</li>
+</ul>
+<h3 id="export-your-data-from-google-tasks">Export your data from Google
+Tasks</h3>
+<p>You can export and download your data from Google Tasks. You can’t
+export deleted user data.</p>
+<p>To keep records of your data or use data in another service, create
+an archive. Learn how to download your data.</p>
+<h4 id="learn-what-data-is-available-from-google-tasks">Learn what data
+is available from Google Tasks</h4>
+<p>This information is included in your download:</p>
+<ul>
+<li>Assignee emails</li>
+<li>Assigner emails</li>
+<li>Associated task recurrence</li>
+<li>Completed timestamps</li>
+<li>Creation timestamps</li>
+<li>Creator emails</li>
+<li>Descriptions</li>
+<li>Due dates</li>
+<li>IDs</li>
+<li>Last updated timestamps</li>
+<li>Link descriptions</li>
+<li>Link types</li>
+<li>Links</li>
+<li>List IDs</li>
+<li>List titles</li>
+<li>Parent IDs</li>
+<li>Schedule of task recurrences</li>
+<li>Sort order of task lists (for web)</li>
+<li>Source IDs</li>
+<li>Source names</li>
+<li>Starring timestamps</li>
+<li>Task types</li>
+<li>Titles</li>
+<li>Visibility of task lists in the fullscreen web view</li>
+<li>Whether task was completed or needs action</li>
+<li>Whether the task was starred</li>
+<li>Whether the task was created with the help of AI features</li>
+<li>Whether the task recurrence was stopped</li>
+<li>Whether a task is an active instance of a task recurrence</li>
+</ul>
+</main>
+</body>
+</html>
