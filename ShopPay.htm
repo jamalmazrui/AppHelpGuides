@@ -1,0 +1,1680 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.14" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Shop Pay help</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    em, em em em, em em em em em {
+      font-style: italic;
+    }
+    em em, em em em em {
+      font-style: normal;
+    }
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#shop-pay-help" id="toc-shop-pay-help">Shop Pay help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#managing-your-shop-pay-installments-payments-settings"
+id="toc-managing-your-shop-pay-installments-payments-settings">Managing
+your Shop Pay Installments payments settings</a></li>
+<li><a href="#managing-your-shop-pay-settings"
+id="toc-managing-your-shop-pay-settings">Managing your Shop Pay
+settings</a></li>
+<li><a href="#shop-pay" id="toc-shop-pay">Shop Pay</a></li>
+<li><a href="#shop-pay-installments" id="toc-shop-pay-installments">Shop
+Pay Installments</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="shop-pay-help">Shop Pay help</h1>
+<p>This guide holds Shopify’s own help for Shop Pay, gathered from
+help.shop.app in November 2026. Shop Pay saves your payment and shipping
+details so you can check out faster at stores that use Shopify. It
+covers paying online and in stores, the cards it accepts, its settings
+and security, and Shop Pay Installments, which splits a purchase into
+payments.</p>
+<p>Shop and Shop Pay share one help centre, so this collection splits it
+in two: Shop.md for the Shop app and ShopPay.md for paying with Shop Pay
+and Shop Pay Installments. Each section opens with Shopify’s own
+overview of it. Shopify’s help for store owners is a separate guide,
+Shopify.md.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Managing your Shop Pay Installments payments settings
+<ul>
+<li><a href="#make-a-manual-installments-payment-for-your-order">Make a
+manual installments payment for your order</a></li>
+<li><a href="#manage-your-automatic-payment-settings">Manage your
+automatic payment settings</a></li>
+<li><a
+href="#overview-managing-your-shop-pay-installments-payments-settings">Overview:
+Managing your Shop Pay Installments payments settings</a></li>
+</ul></li>
+<li>Managing your Shop Pay settings
+<ul>
+<li><a href="#change-your-shop-pay-phone-number">Change your Shop Pay
+phone number</a></li>
+<li><a
+href="#edit-your-shop-pay-shipping-addresses-and-payment-methods">Edit
+your Shop Pay shipping addresses and payment methods</a></li>
+<li><a href="#manage-your-shop-pay-subscriptions">Manage your Shop Pay
+subscriptions</a></li>
+<li><a href="#overview-managing-your-shop-pay-settings">Overview:
+Managing your Shop Pay settings</a></li>
+<li><a href="#send-in-store-receipts-to-shop">Send in-store receipts to
+Shop</a></li>
+<li><a href="#set-up-shop-pay">Set up Shop Pay</a></li>
+<li><a href="#shop-pay-security-settings">Shop Pay security
+settings</a></li>
+</ul></li>
+<li>Shop Pay
+<ul>
+<li><a href="#accepted-cards-that-you-can-use-with-shop-pay">Accepted
+cards that you can use with Shop Pay</a></li>
+<li><a href="#check-out-with-shop-pay-on-an-online-store">Check out with
+Shop Pay on an online store</a></li>
+<li><a href="#make-a-purchase-using-shop-pay-at-a-retail-store">Make a
+purchase using Shop Pay at a retail store</a></li>
+<li><a href="#overview-shop-pay">Overview: Shop Pay</a></li>
+<li><a href="#pay-for-a-subscription-using-shop-pay">Pay for a
+subscription using Shop Pay</a></li>
+<li><a
+href="#paying-for-hsa-and-fsa-eligible-purchases-using-shop-pay">Paying
+for HSA and FSA-eligible purchases using Shop Pay</a></li>
+<li><a href="#use-a-discount-code-or-gift-card-at-checkout">Use a
+discount code or gift card at checkout</a></li>
+<li><a href="#using-shop-pay">Using Shop Pay</a></li>
+</ul></li>
+<li>Shop Pay Installments
+<ul>
+<li><a href="#getting-help-with-shop-pay-installments">Getting help with
+Shop Pay Installments</a></li>
+<li><a href="#overview-shop-pay-installments">Overview: Shop Pay
+Installments</a></li>
+<li><a href="#shop-pay-installments-eligibility-and-requirements">Shop
+Pay Installments eligibility and requirements</a></li>
+<li><a href="#shop-pay-installments-overview">Shop Pay Installments
+overview</a></li>
+<li><a href="#shop-pay-installments-plans">Shop Pay Installments
+plans</a></li>
+<li><a
+href="#understanding-payments-refunds-and-troubleshooting-with-shop-pay-installments">Understanding
+payments, refunds, and troubleshooting with Shop Pay
+Installments</a></li>
+</ul></li>
+</ul>
+<h2 id="managing-your-shop-pay-installments-payments-settings">Managing
+your Shop Pay Installments payments settings</h2>
+<h3 id="make-a-manual-installments-payment-for-your-order">Make a manual
+installments payment for your order</h3>
+<p>If you want to make an early payment, late payment, or pay off your
+remaining balance on an order, then you can do it manually.</p>
+<p>There are no penalties for making an early installment payment. For
+interest-bearing loans, you can save on interest fees when you pay off
+the remaining balance early. However, while there are no late fees, late
+payments might affect your eligibility to pay for orders with Shop Pay
+Installments in the future.</p>
+<h4 id="on-this-page">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments-settings/make-a-manual-installments-payment#make-a-manual-payment-in-the-shop-app">Make
+a manual payment in the Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments-settings/make-a-manual-installments-payment#make-a-manual-payment-on-a-web-browser">Make
+a manual payment on a web browser</a></li>
+</ul>
+<h4 id="make-a-manual-payment-in-the-shop-app">Make a manual payment in
+the Shop app</h4>
+<p>You can make a manual payment in the Shop app.</p>
+<h5 id="steps">Steps:</h5>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you want to make a payment for.</li>
+<li>Tap Make payment.</li>
+<li>Enter the amount that you want to pay.</li>
+<li>Tap Pay now.</li>
+</ul>
+<h4 id="make-a-manual-payment-on-a-web-browser">Make a manual payment on
+a web browser</h4>
+<p>You can make a manual payment on a web browser by signing in to your
+Shop Pay account.</p>
+<h5 id="steps-1">Steps:</h5>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the Account icon.</li>
+<li>In the Installments section, click the order that you want to
+pay.</li>
+<li>Click Make a payment to open the payment dialog.</li>
+<li>Select or enter a payment amount.</li>
+<li>In the Payment method section, use the drop-down arrow to select
+your preferred payment method.</li>
+<li>Click the Pay button.</li>
+</ul>
+<h3 id="manage-your-automatic-payment-settings">Manage your automatic
+payment settings</h3>
+<p>After your first payment, Shop Pay automatically charges your method
+of payment for installment payments going forward, either bi-weekly, or
+monthly.</p>
+<p>You can change your automatic payment method on a Shop Pay
+Installments order while it’s in repayment. However, you can’t use
+Capital One cards, Chase credit cards, or prepaid debit cards as a
+payment method. If you’ve opted into monthly payments, then you can only
+pay with a debit card.</p>
+<p>Going forward, the new payment method will be used for payments on
+this order. If you want to update your payment method or multiple Shop
+Pay Installments orders, then you need to change your automatic payment
+method for each order.</p>
+<h4 id="on-this-page-1">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments-settings/manage-automatic-payment-settings#change-your-automatic-payment-method-in-the-shop-app">Change
+your automatic payment method in the Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments-settings/manage-automatic-payment-settings#change-your-automatic-payment-method-on-a-web-browser">Change
+your automatic payment method on a web browser</a></li>
+</ul>
+<h4 id="change-your-automatic-payment-method-in-the-shop-app">Change
+your automatic payment method in the Shop app</h4>
+<ul>
+<li>From the Orders tab in the Shop app, tap the order that you want to
+change the payment method for.</li>
+<li>Tap View Installments, and then tap Manage.</li>
+<li>Select the new payment method that you want to use. If you need to
+add a new payment method, then tap Add card, and complete the required
+fields.</li>
+</ul>
+<h4 id="change-your-automatic-payment-method-on-a-web-browser">Change
+your automatic payment method on a web browser</h4>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the Account icon to see your account settings.</li>
+<li>In the Installments section, select the order that you want to
+update your payment method for.</li>
+<li>Click Manage to open the payment method dialog.</li>
+<li>Select a payment method from the drop-down menu, or use a different
+card.</li>
+<li>Click Save.</li>
+</ul>
+<h3
+id="overview-managing-your-shop-pay-installments-payments-settings">Overview:
+Managing your Shop Pay Installments payments settings</h3>
+<p>After your first payment at checkout, Shop Pay automatically charges
+your method of payment for installment payments going forward, depending
+on the payment schedule that you choose. You can change your automatic
+payment method in the Shop app or on a web browser.</p>
+<p>If you want to make an early or late payment, or you want to pay off
+your balance on an order, then you can make a manual payment.</p>
+<h4 id="in-this-section">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments-settings/manage-automatic-payment-settings">Manage
+your automatic payment settings</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments-settings/make-a-manual-installments-payment">Make
+a manual installments payment for your order</a></li>
+</ul>
+<h2 id="managing-your-shop-pay-settings">Managing your Shop Pay
+settings</h2>
+<h3 id="change-your-shop-pay-phone-number">Change your Shop Pay phone
+number</h3>
+<p>To change your phone number, you need to sign in to Shop on <a
+href="https://shop.com/">shop.com</a> through a web browser.</p>
+<h4 id="on-this-page-2">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/change-phone-number#considerations-for-changing-your-shop-pay-phone-number">Considerations
+for changing your Shop Pay phone number</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/change-phone-number#change-your-shop-pay-phone-number">Change
+your Shop Pay phone number</a></li>
+</ul>
+<h4
+id="considerations-for-changing-your-shop-pay-phone-number">Considerations
+for changing your Shop Pay phone number</h4>
+<p>Before you change your Shop Pay phone number, review the following
+considerations:</p>
+<ul>
+<li>You can only use a mobile phone number with Shop.</li>
+<li>You can only change your phone number one time within 24 hours.</li>
+<li>If you can’t verify your Shop account using your existing phone
+number, then you can verify by email. However, to ensure that your
+payment details are protected, this option removes all of your payment
+information from your Shop account.</li>
+<li>If you change your Shop Pay phone number, then you also need to <a
+href="https://helpcenter.affirm.com/s/article/update-my-contact-information">update
+your phone number with Affirm</a> before you can pay for another
+purchase using <a
+href="https://help.shop.app/en/shop/shop-pay-installments">Shop Pay
+Installments</a>.</li>
+</ul>
+<h4
+id="change-your-shop-pay-phone-number-change-your-shop-pay-phone-number">Change
+your Shop Pay phone number</h4>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the Account icon, and then click Sign in &amp; security.</li>
+<li>Click Change next to your existing phone number.</li>
+<li>If you’re prompted with the Confirm it’s you dialog, do either of
+the following to verify your existing phone number:
+<ul>
+<li>To confirm using your existing mobile number, click Send code, and
+then enter the 6-digit security code sent to your phone number.</li>
+<li>If you don’t have access to your existing mobile number, then click
+I don’t have access to this phone number. In the Change phone number
+dialog, check I understand that changing this number will delete my
+payment information.</li>
+</ul></li>
+<li>In the Update mobile number dialog, enter the new phone number that
+you want to use, and then click Continue.</li>
+<li>In the Confirm it’s you dialog, enter the 6-digit security code that
+you receive to your new phone number.</li>
+</ul>
+<p>After you change your Shop Pay phone number, you’re automatically
+logged out from all of your devices using Shop Pay.</p>
+<h3 id="edit-your-shop-pay-shipping-addresses-and-payment-methods">Edit
+your Shop Pay shipping addresses and payment methods</h3>
+<p>You can edit your shipping addresses and payment methods in the Shop
+app, or during checkout. You can save up to 10 credit cards, and 20
+shipping addresses in your Shop Pay wallet.</p>
+<h4 id="on-this-page-3">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment#update-your-payment-methods">Update
+your payment methods</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment#update-your-shipping-addresses">Update
+your shipping addresses</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment#default-address">Update
+your default shipping address</a></li>
+</ul>
+<h4 id="update-your-payment-methods">Update your payment methods</h4>
+<p>You can update your payment methods in the Shop app.</p>
+<h5 id="steps-2">Steps:</h5>
+<ul>
+<li><p>From the Shop app in the tab, tap the Account icon, which is your
+profile picture or initials.</p></li>
+<li><p>In the Payment methods section, tap Add card.</p></li>
+<li><p>Do any of the following:</p></li>
+<li><p>To add a card, fill in the Card number field, and then follow the
+prompts to fill in the remaining required fields.</p></li>
+<li><p>To delete a credit card, tap on the credit card that you want to
+delete, and then tap Delete.</p></li>
+<li><p>To change your billing address on an existing card, delete and
+then re-add your card.</p></li>
+<li><p>Optional: If you have a co-branded card, then you can change your
+processing network by deleting and re-adding your card.</p></li>
+<li><p>Optional: When you have multiple saved credit cards, you can
+assign a nickname to your credit card for display instead of showing
+only the last 4 digits. This feature is available for updating credit
+card information during checkout, and is unavailable in the Shop
+app.</p></li>
+</ul>
+<h4 id="update-your-shipping-addresses">Update your shipping
+addresses</h4>
+<p>You can update your shipping addresses in the Shop app. The following
+limitations exist for shipping addresses:</p>
+<ul>
+<li>You can store a maximum of 20 addresses. To add a new one after
+reaching the limit, you’ll need to delete an existing address.</li>
+<li>You can’t change the shipping address on an order that’s already
+been placed. If you need to update the shipping address after purchase,
+then contact the store you bought from. If the order has already
+shipped, then contact the carrier.</li>
+<li>If an order is edited after it appears in the Shop app, then those
+changes aren’t reflected on the order receipt in the Shop app.</li>
+</ul>
+<h5 id="steps-3">Steps</h5>
+<ul>
+<li><p>From the Shop app in the tab, tap the Account icon, which is your
+profile picture or initials.</p></li>
+<li><p>Tap Addresses.</p></li>
+<li><p>Do any of the following:</p></li>
+<li><p>To edit a shipping address, tap the address that you want to
+change. Edit the fields that you need, and then tap Save.</p></li>
+<li><p>To add a shipping address, tap Add address, enter your address
+details, and then tap Save.</p></li>
+<li><p>To delete a shipping address, tap the address, tap the trash can
+icon next to the address, and then tap Delete.</p></li>
+<li><p>Optional: To set a default shipping address, tap the address,
+select Default address, and then tap Save.</p></li>
+</ul>
+<p>After you update your shipping address, it displays when you check
+out using Shop Pay on future orders. To update your shipping address for
+an order that’s already been placed, you need to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#product-issue">contact
+the store that you purchased from</a>.</p>
+<h4 id="update-your-default-shipping-address">Update your default
+shipping address</h4>
+<p>You can store up to 20 shipping addresses in your Shop Pay account
+and set one as your default address. You can add or edit addresses in
+the Shop app, at checkout, or by logging into your Shop Pay account
+online.</p>
+<p>The default address is set automatically using the following
+parameters:</p>
+<ul>
+<li>If you set a default address, then this is used as your default
+shipping address at checkout.</li>
+<li>If you don’t set a default address, then your last used address is
+used as the default.</li>
+<li>If you have only one address, then it’s automatically set as your
+default.</li>
+<li>If you’re a new user, then your first saved address becomes your
+default.</li>
+</ul>
+<p>Your default shipping address determines the currency that’s shown
+while you shop in the Shop app.</p>
+<p>If you want to change the currency you see in the Shop app, or update
+the default shipping address at checkout, then set a different address
+as your default in the Addresses section of your Shop account.</p>
+<h3 id="manage-your-shop-pay-subscriptions">Manage your Shop Pay
+subscriptions</h3>
+<p>You can manage your Shop Pay subscriptions by signing in to your <a
+href="https://shop.com/account">Shop account</a> in a web browser. If
+you’re on a mobile device, open this link in your mobile web browser
+rather than the Shop app. This includes viewing subscription details and
+updating your payment method for each subscription individually. You can
+also click Manage subscription to access your customer account through
+the store that you purchased from to make a payment, pause, or cancel
+your subscription.</p>
+<h4 id="steps-4">Steps:</h4>
+<ul>
+<li>Sign in to your <a href="https://shop.com/account">Shop account</a>
+in a web browser.</li>
+<li>Click your account icon.</li>
+<li>In the Account tab, click Subscriptions.</li>
+<li>Click the subscription that you want to manage.</li>
+<li>Do any of the following to manage your subscription:
+<ul>
+<li>Update your subscription payment method. Changing your default
+payment method doesn’t automatically update your existing subscriptions,
+so you need to update the payment method for each subscription:
+<ul>
+<li>Click Update payment method.</li>
+<li>Select or add a new payment method for your subscription.</li>
+<li>Click Save.</li>
+</ul></li>
+<li>To make a payment, pause, or cancel your subscription, click Manage
+subscription. This redirects you to your customer account on the store
+that you purchased from, where you can make changes to your
+subscription.</li>
+</ul></li>
+</ul>
+<h4 id="on-this-page-4">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/subscriptions#delete-a-card-from-shop-pay">Deleting
+a card from Shop Pay</a></li>
+</ul>
+<h4 id="deleting-a-card-from-shop-pay">Deleting a card from Shop
+Pay</h4>
+<p>If you delete a payment card from your Shop Pay account, then your
+active subscriptions aren’t canceled. Your subscriptions continue to
+bill according to their existing schedule, even after the card is
+removed from your Shop Pay wallet.</p>
+<p>When you delete a card that’s linked to an active subscription,
+you’re notified that your subscriptions won’t be canceled. After the
+card is deleted, you receive an email with a summary of your active
+subscriptions and a link to manage them.</p>
+<p>To cancel a subscription, click Manage subscription on your <a
+href="https://shop.com/account/subscriptions">subscriptions
+page</a>.</p>
+<h3 id="overview-managing-your-shop-pay-settings">Overview: Managing
+your Shop Pay settings</h3>
+<p>Learn how to manage your Shop Pay payment settings, including your
+Shop Pay shipping addresses, payment methods, phone number, and
+subscription orders. You can also manage your in-store receipts to send
+receipts from participating in-person retail stores to the Shop app.</p>
+<p>To opt out of Shop Pay, refer to <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data#opt-out-of-shop-pay">Managing
+your Shop account and data</a>.</p>
+<h4 id="in-this-section-1">In this section</h4>
+<ul>
+<li><a href="https://help.shop.app/en/shop/shop-pay-settings/setup">Set
+up Shop Pay</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/change-phone-number">Change
+your Shop Pay phone number</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/security">Shop Pay
+security settings</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment">Edit
+your Shop Pay shipping addresses and payment methods</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/in-store-receipts">Send
+in-store receipts to Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/subscriptions">Manage
+your Shop Pay subscriptions</a></li>
+</ul>
+<h3 id="send-in-store-receipts-to-shop">Send in-store receipts to
+Shop</h3>
+<p>If you make an in-store payment with a payment card that’s saved in
+your Shop account, then you can receive your digital receipt in the
+following ways:</p>
+<ul>
+<li>In the Shop app, your receipt displays in the Orders tab.</li>
+<li>You can also receive your receipt at the email address or phone
+number that’s associated with your Shop Pay account, when
+available.</li>
+</ul>
+<p>In-store receipts are activated by default for each card that you use
+with <a href="https://help.shop.app/en/shop/shop-pay/in-store">Shop Pay
+at a retail store</a>.</p>
+<p>When in-store receipts are turned on and you make a purchase at a
+store that accepts Shop Pay, you can select Shop app as your receipt
+option at checkout. After you select Shop app one time, your future
+receipts are sent to your Shop app automatically. This applies to
+purchases made with any payment card saved to your Shop account, at any
+store that accepts Shop Pay.</p>
+<p>When the in-store receipts setting is turned on, your name and email
+address are shared with the store that you’re shopping at so that you
+can view your in-store order in the Shop app.</p>
+<p>You can turn in-store receipts on or off for each card from your Shop
+account.</p>
+<h4 id="steps-5">Steps:</h4>
+<p>Shop app</p>
+<ul>
+<li>In the Shop app, tap the Account icon.</li>
+<li>In the Payment methods section, tap the card that you want to adjust
+settings for.</li>
+<li>Tap In-store receipts.</li>
+<li>Turn the setting on or off.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the Account icon, and then click In-store receipts.</li>
+<li>Find the card that you want to adjust settings for, and then turn
+the setting on or off.</li>
+</ul>
+<h3 id="set-up-shop-pay">Set up Shop Pay</h3>
+<p>You can set up Shop Pay in the Shop app or save your information for
+faster checkout during a purchase.</p>
+<h4 id="on-this-page-5">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/setup#set-up-shop-pay-in-the-shop-app">Set
+up Shop Pay in the Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/setup#save-your-information-for-faster-checkout">Save
+your information for faster checkout</a></li>
+</ul>
+<h4 id="set-up-shop-pay-in-the-shop-app">Set up Shop Pay in the Shop
+app</h4>
+<p>You can set up Shop Pay in the Shop app.</p>
+<h5 id="steps-6">Steps:</h5>
+<ul>
+<li>After you download <a
+href="https://shop.com/#smsFormTelephoneFooter">Shop</a>, tap Get
+Started.</li>
+<li>Choose how you want to sign in with Shop, and then follow the
+prompts to <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/create-shop-account">set
+up your primary email as an order source</a>.</li>
+<li>On the Account page, in the Set up Shop Pay section, enter your
+mobile phone number, and then tap Continue.</li>
+<li>Enter your verification code, and then enter your shipping
+address.</li>
+<li>Tap Save Address.</li>
+<li>Enter the details for the card you want to use with Shop Pay, and
+then tap Save card.</li>
+</ul>
+<p>You can update your Shop Pay information anytime through the Account
+tab.</p>
+<h4 id="save-your-information-for-faster-checkout">Save your information
+for faster checkout</h4>
+<p>If a store offers Shop Pay, then you can save your information for
+faster checkouts during the purchase process.</p>
+<h5 id="steps-7">Steps:</h5>
+<ul>
+<li>When you check out from a participating store, complete the checkout
+with your contact and shipping information.</li>
+<li>Enter your mobile phone number in the Shop Pay section to save your
+details for faster future checkouts.</li>
+<li>Confirmation is displayed when you complete your order, indicating
+that your information is saved to your Shop Pay account.</li>
+</ul>
+<p>After your information is saved, you can use Shop Pay to check out
+faster on any store that offers Shop Pay.</p>
+<h3 id="shop-pay-security-settings">Shop Pay security settings</h3>
+<p>Learn about sign-in and verification with Shop Pay, and how to sign
+out everywhere from your Shop Pay account. To manage Shop account
+passkeys, refer to <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/passkeys">Set
+up a Shop passkey</a> and <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/remove-passkeys">Remove
+a passkey from Shop</a>.</p>
+<h4 id="in-this-section-2">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/security/verification-code">Shop
+Pay verification code</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-settings/security/log-out-everywhere">Sign
+out everywhere from Shop Pay</a></li>
+</ul>
+<h2 id="shop-pay">Shop Pay</h2>
+<h3 id="accepted-cards-that-you-can-use-with-shop-pay">Accepted cards
+that you can use with Shop Pay</h3>
+<p>To use Shop Pay, you need to have a supported payment card that the
+online store that you’re purchasing from supports. You can usually find
+the list of supported payment methods on the payment screen at
+checkout.</p>
+<p>In addition to credit and debit cards, Shop Pay supports the
+following local payment methods when they’re available from the store
+and processed by Shopify Payments:</p>
+<ul>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/bancontact">Bancontact</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/blik">BLIK</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/eps">EPS</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/ideal">iDEAL
+| Wero</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/mobilepay">MobilePay</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/multibanco">Multibanco</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/przelewy24">Przelewy24</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/swish">Swish</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/twint">TWINT</a></li>
+<li><a
+href="https://help.shop.app/en/manual/payments/shopify-payments/local-payment-methods/usdc-payments">USDC</a></li>
+</ul>
+<p>Which payment methods you can use depends on your location and the
+store’s settings. You can’t use local payment methods to pay for <a
+href="https://help.shop.app/en/shop/shop-pay/pay-for-a-subscription">subscriptions</a>.</p>
+<p>Some participating stores also let you use <a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments">health
+savings account (HSA) and flexible spending account (FSA) payments with
+Shop Pay</a> for eligible products. You can pay with a supported HSA or
+FSA card. You can also use a standard credit card and request
+reimbursement from your HSA or FSA. HSA/FSA payments are available only
+when the store, products, checkout, and card meet the requirements. If
+the HSA/FSA funds option isn’t displayed at checkout, then the order
+isn’t eligible for HSA/FSA payment with Shop Pay.</p>
+<p>If you’re having trouble using Shop Pay with your card, then you can
+troubleshoot by confirming the following information:</p>
+<ul>
+<li>If applicable, make sure that you’ve activated your card before
+using it.</li>
+<li>Check that your billing information matches your bank information on
+file. For example, the zip code needs to match the billing address.</li>
+<li>Make sure that you’re using a supported debit or credit card. For
+example, some prepaid cards aren’t supported.</li>
+<li>Payment cards issued in India aren’t supported by Shop Pay.</li>
+<li>If you’re using <a
+href="https://help.shop.app/en/shop/shop-pay-installments/overview">Shop
+Pay Installments</a>, then make sure you’re not using a Capital One
+card, Chase credit card, or prepaid debit card.</li>
+</ul>
+<h3 id="check-out-with-shop-pay-on-an-online-store">Check out with Shop
+Pay on an online store</h3>
+<p>Shop Pay is the default checkout experience when you make a purchase
+in the Shop app or on <a href="https://shop.com">shop.com</a>. You can
+also check out using Shop Pay on participating online stores for a
+faster checkout experience.</p>
+<p>If you’re recognized as being signed in with Shop, then the Shop Pay
+button displays the last four digits of your primary payment method.</p>
+<p>After you authenticate or check out using Shop Pay on an online
+store, you’re automatically signed in with Shop on that store. After
+you’re signed in, you can access your customer account to manage your
+orders, customer profile, and features such as loyalty points, when
+available.</p>
+<h4 id="steps-8">Steps:</h4>
+<ul>
+<li><p>On an online store that offers Shop Pay as a payment method,
+select the Shop Pay button on the product page, in your cart, or at
+checkout.</p></li>
+<li><p>Enter your email address, or select the passkey icon in the email
+field.</p></li>
+<li><p>Do one of the following:</p></li>
+<li><p>If you selected the passkey icon, then follow the prompts to sign
+in using your saved passkey.</p></li>
+<li><p>If you <a
+href="https://help.shop.app/en/shop/shop-pay-settings/setup">set up Shop
+Pay</a>, then you’ll receive a six-digit SMS verification code to the
+phone number on your Shop Pay account. In the Confirm it’s you section,
+enter your six-digit code.</p></li>
+<li><p>If you’ve previously verified your Shop email address when you
+set up Shop Pay, then you can select Send me a code by email
+instead.</p></li>
+<li><p>Optional: In the Ship to section, select Set as default to
+designate an address as the default shipping destination for orders paid
+with Shop Pay.</p></li>
+<li><p>Optional: If the store offers <a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments">health
+savings account (HSA) and flexible spending account (FSA) payments</a>
+and your order is eligible, then select I want to use HSA/FSA funds for
+this purchase. You might need to complete a short health survey before
+you can complete your purchase.</p></li>
+<li><p>Review your order before it’s final.</p></li>
+<li><p>Select Complete purchase to finalize your order.</p></li>
+</ul>
+<h3 id="make-a-purchase-using-shop-pay-at-a-retail-store">Make a
+purchase using Shop Pay at a retail store</h3>
+<p>At participating retail stores that offer Shop Pay as a payment
+option, staff will show you a QR code at checkout. You can scan the QR
+code and complete payment on shop.com. Purchases made at a retail store
+using Shop Pay can be completed on shop.com only, not in the Shop
+app.</p>
+<h4 id="steps-9">Steps:</h4>
+<ul>
+<li>Scan the available QR code at the register using your phone’s
+camera.</li>
+<li>Tap the link from the QR code to open the checkout on shop.com.</li>
+<li>Review your details, and then tap Pay now.</li>
+</ul>
+<p>When your order is complete, you can view the order confirmation page
+in your browser. You can also select a receipt option on the store’s
+device at the register.</p>
+<h3 id="overview-shop-pay">Overview: Shop Pay</h3>
+<p>Shop Pay lets you save your payment preferences to help you check out
+faster on participating online stores and on Shop. You can also purchase
+items in participating retail stores using Shop Pay. Learn how to set up
+and use Shop Pay at checkout, and manage your billing and payment
+settings.</p>
+<h4 id="in-this-section-3">In this section</h4>
+<ul>
+<li><a href="https://help.shop.app/en/shop/shop-pay/overview">Using Shop
+Pay</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/accepted-cards">Accepted
+cards that you can use with Shop Pay</a></li>
+<li><a href="https://help.shop.app/en/shop/shop-pay/check-out">Check out
+with Shop Pay on an online store</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/using-discounts-or-gift-cards">Use
+a discount code or gift card at checkout</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/pay-for-a-subscription">Pay
+for a subscription using Shop Pay</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments">Paying
+for HSA and FSA-eligible purchases using Shop Pay</a></li>
+<li><a href="https://help.shop.app/en/shop/shop-pay/in-store">Make a
+purchase using Shop Pay at a retail store</a></li>
+</ul>
+<h3 id="pay-for-a-subscription-using-shop-pay">Pay for a subscription
+using Shop Pay</h3>
+<p>You can use Shop Pay as a payment method for subscription orders at
+participating online stores.</p>
+<h4 id="steps-10">Steps:</h4>
+<ul>
+<li><p>On the product page of an online store, select the Subscribe
+&amp; save option.</p></li>
+<li><p>Complete one of the following options:</p></li>
+<li><p>Click Add to cart to add the product to your cart. When you’re
+ready to complete your order, <a
+href="https://help.shop.app/en/shop/shop-pay/check-out">check out with
+Shop Pay</a>.</p></li>
+<li><p>Click Buy with Shop Pay, and then follow the prompts to check out
+with Shop Pay.</p></li>
+</ul>
+<p>You can also <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#subscriptions">subscribe
+to a product when you make a purchase on Shop</a>. After you subscribe
+to a product, you can manage your subscription <a
+href="https://help.shop.app/en/shop/shop-pay-settings/subscriptions">from
+your Shop account</a> or through the online store that you purchased
+from.</p>
+<p>If you remove a payment card from your Shop Pay account, then your
+subscriptions aren’t canceled automatically. Learn more about <a
+href="https://help.shop.app/en/shop/shop-pay-settings/subscriptions#delete-a-card-from-shop-pay">deleting
+a card from Shop Pay</a>.</p>
+<h3 id="paying-for-hsa-and-fsa-eligible-purchases-using-shop-pay">Paying
+for HSA and FSA-eligible purchases using Shop Pay</h3>
+<p>Some online stores let you use Shop Pay to buy eligible
+health-related products. These stores can offer a health savings account
+(HSA) or flexible spending account (FSA) checkout flow. You can pay with
+an HSA or FSA card, or use a standard credit card and request
+reimbursement from your HSA or FSA. HSA/FSA payments with Shop Pay are
+powered by Truemed, which reviews product eligibility and medical
+qualification for eligible purchases.</p>
+<p>HSA/FSA payments aren’t available for every store, product, or
+order.</p>
+<h4 id="on-this-page-6">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments#requirements-for-hsa-and-fsa-payments">Requirements
+for HSA and FSA payments</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments#check-out-with-hsa-or-fsa-payments">Check
+out with HSA or FSA payments</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments#health-surveys-and-letters-of-medical-necessity-lmns">Health
+surveys and Letters of Medical Necessity (LMNs)</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments#troubleshooting-hsa-and-fsa-payment-availability">Troubleshooting
+HSA and FSA payment availability</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/hsa-fsa-payments#rejected-medical-qualification">Rejected
+medical qualification</a></li>
+</ul>
+<h4 id="requirements-for-hsa-and-fsa-payments">Requirements for HSA and
+FSA payments</h4>
+<p>To use HSA/FSA payments with Shop Pay, the following requirements
+need to be met:</p>
+<ul>
+<li>The store offers HSA/FSA payments with Shop Pay.</li>
+<li>Your order contains eligible products.</li>
+<li>You’re logged in to Shop and check out with Shop Pay.</li>
+<li>You use a supported HSA or FSA card, or a standard credit card for
+reimbursement.</li>
+<li>The store is based in the United States, the checkout is in USD, and
+you’re located in the United States.</li>
+</ul>
+<p>You can’t use HSA/FSA payments with Shop Pay for every type of
+purchase. HSA/FSA payments aren’t available with Shop Pay Installments
+or subscriptions. Orders that include both eligible and non-eligible
+products aren’t supported. To use HSA/FSA funds, remove the non-eligible
+products from your cart.</p>
+<h4 id="check-out-with-hsa-or-fsa-payments">Check out with HSA or FSA
+payments</h4>
+<p>If HSA/FSA payment is available for your order, then the HSA/FSA
+funds option is displayed during Shop Pay checkout.</p>
+<h5 id="steps-11">Steps:</h5>
+<ul>
+<li>At checkout, select Shop Pay.</li>
+<li>Log in to Shop and complete Shop Pay verification.</li>
+<li>Select I want to use HSA/FSA funds for this purchase when it’s
+available.</li>
+<li>Review your order.</li>
+<li>Select Complete purchase. If your purchase requires a health survey,
+then select Continue to health survey instead.</li>
+<li>If you selected Continue to health survey, then complete the survey.
+Your checkout continues automatically after you submit it.</li>
+</ul>
+<h4 id="health-surveys-and-letters-of-medical-necessity-lmns">Health
+surveys and Letters of Medical Necessity (LMNs)</h4>
+<p>Some HSA/FSA purchases require a short health survey before payment
+can be completed. The health survey is provided during the Shop Pay
+checkout flow. You have 72 hours to complete the survey. Your order is
+placed after you complete the survey.</p>
+<p>If your purchase qualifies after review, then Truemed provides a
+Letter of Medical Necessity (LMN). An LMN is typically ready in about 4
+hours. Depending on the time of day and your state, it can take 1–2
+days. Your order might not ship until the qualification review is
+complete.</p>
+<p>After you place an order that requires an LMN, you receive an email
+at the email address on your order that says your order is in
+review.</p>
+<p>When your LMN is approved, you receive an email from Shop at the
+email address on your order. The email includes a link to log in to
+Truemed, where you can download your LMN. You need a Truemed account to
+download your LMN.</p>
+<h4
+id="troubleshooting-hsa-and-fsa-payment-availability">Troubleshooting
+HSA and FSA payment availability</h4>
+<p>If the HSA/FSA funds option isn’t displayed during Shop Pay checkout,
+then your order doesn’t meet the requirements for HSA/FSA payment with
+Shop Pay.</p>
+<p>This can happen for the following reasons:</p>
+<ul>
+<li>The store doesn’t offer HSA/FSA payments with Shop Pay.</li>
+<li>One or more products in your order aren’t eligible.</li>
+<li>Your order includes both eligible and non-eligible products.</li>
+<li>Your order includes a subscription.</li>
+<li>Shop Pay Installments is selected.</li>
+<li>Your payment card isn’t supported.</li>
+<li>The store, checkout currency, or your location doesn’t meet the
+requirements.</li>
+</ul>
+<h4 id="rejected-medical-qualification">Rejected medical
+qualification</h4>
+<p>If your medical qualification isn’t approved, then you receive an
+email that says your LMN wasn’t approved. The email includes a link to
+your order status page. If your payment hasn’t been collected and your
+order hasn’t started shipping, then your order is canceled and your
+payment authorization is voided. You also receive an email from the
+store that your order was canceled. For questions about your order,
+contact the store where you placed the order. For questions about your
+payment card, contact your card issuer.</p>
+<h3 id="use-a-discount-code-or-gift-card-at-checkout">Use a discount
+code or gift card at checkout</h3>
+<p>During checkout, tap Add a discount code or gift card, and then enter
+the code and tap Apply. Before checking out, review your order to make
+sure the discount code or gift card was applied.</p>
+<p>To redeem multiple gift cards at checkout, you can add each gift card
+code individually. You can also use a discount code in combination with
+a gift card at checkout. However, you can only apply one discount code
+per order at checkout.</p>
+<h3 id="using-shop-pay">Using Shop Pay</h3>
+<p>Shop Pay is a wallet that helps you check out faster on participating
+stores by automatically filling in your saved email, payment, and
+shipping details.</p>
+<h4 id="on-this-page-7">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/overview#get-account">Creating
+a Shop Pay account</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/overview#information-saved-to-shop-pay">Information
+saved to Shop Pay</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/overview#keeping-your-information-secure">Keeping
+your information secure</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay/overview#managing-your-shop-pay-information">Managing
+your Shop Pay information</a></li>
+</ul>
+<h4 id="creating-a-shop-pay-account">Creating a Shop Pay account</h4>
+<p>You can create a Shop Pay account in either of the following
+ways:</p>
+<ul>
+<li>You enter your mobile phone number at a store’s checkout that offers
+Shop Pay, which saves your details for faster future checkouts.</li>
+<li>You <a
+href="https://help.shop.app/en/shop/shop-pay-settings/setup">set up Shop
+Pay in the Shop app</a>.</li>
+</ul>
+<p>Your Shop Pay account is linked to your phone number and email
+address, so if you save your details when checking out at a store that
+offers Shop Pay, this creates a Shop Pay account. Because this happens
+during checkout, it’s easy to forget. This is why you might receive a
+verification code, or have an account that you don’t remember setting
+up. If you don’t want a Shop Pay account, then you can <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data#opt-out-or-delete">opt
+out of Shop Pay or delete your Shop account</a>.</p>
+<h4 id="information-saved-to-shop-pay">Information saved to Shop
+Pay</h4>
+<p>The following information is saved and securely encrypted for your
+future purchases:</p>
+<ul>
+<li>Email</li>
+<li>Up to 20 shipping addresses</li>
+<li>Credit card details for up to 10 credit cards, including billing
+addresses</li>
+<li>Mobile phone number</li>
+</ul>
+<h4 id="keeping-your-information-secure">Keeping your information
+secure</h4>
+<p>The following precautions protect your saved payment and personal
+information:</p>
+<ul>
+<li>Your saved cards are encrypted by Shop Pay.</li>
+<li>Your saved payment details are stored by Shop Pay, not by each store
+you purchase from. Your full card number isn’t shared with individual
+stores.</li>
+<li>Your shipping and billing details are shared with a store only after
+you place an order.</li>
+<li>Your saved information meets payment industry security standards. To
+learn more, refer to <a href="https://www.shopify.com/security">Shopify
+security</a>.</li>
+</ul>
+<p>For details about what information Shop collects, and how it’s kept
+secure, refer to the <a
+href="https://www.shopify.com/legal/privacy/app-users">Privacy for Users
+of Shopify Apps policy</a>. For more about shopping safely, refer to <a
+href="https://help.shop.app/en/shop/shopping/shopping-safely">Shopping
+with confidence on Shop</a>.</p>
+<h4 id="managing-your-shop-pay-information">Managing your Shop Pay
+information</h4>
+<p>After you set up Shop Pay, you can manage your credit card and
+billing information from the Payment methods section in the Shop app.
+You can manage your shipping addresses from the Addresses settings in
+the Shop app. Learn more about <a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment">managing
+your payment and shipping details</a>.</p>
+<p>To view and control the information that Shop has access to, refer to
+<a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/data-privacy-settings">Manage
+your data and privacy settings</a> and <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data">Managing
+your Shop account and data</a>.</p>
+<h2 id="shop-pay-installments">Shop Pay Installments</h2>
+<h3 id="getting-help-with-shop-pay-installments">Getting help with Shop
+Pay Installments</h3>
+<p>Shop Pay Installments is powered and supported by Affirm. You can get
+help for your Shop Pay Installments based on what type of support you
+need.</p>
+<h4 id="on-this-page-8">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/support#contacting-affirm">Contacting
+Affirm</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/support#additional-support-areas">Additional
+support areas</a></li>
+</ul>
+<h4 id="contacting-affirm">Contacting Affirm</h4>
+<p>Use Affirm’s Shop Pay Installments Help Center for your location:</p>
+<ul>
+<li><a
+href="https://help.au.affirm.com/topic/shop-pay-installments">Australia</a></li>
+<li><a
+href="https://helpcenter.affirm.ca/s/?language=en_US">Canada</a></li>
+<li><a
+href="https://help.uk.affirm.com/topic/shop-pay-installments">United
+Kingdom</a></li>
+<li><a href="https://shoppay.affirm.com/help/s">United States</a></li>
+</ul>
+<p>These Help Centers can direct you to the appropriate resources and
+support options for a variety of common issues.</p>
+<p>The issue-specific sections on this page include direct links for
+Canada, the United Kingdom, and the United States. For Australia, use
+Affirm’s Australia Help Center to review available support options.</p>
+<p>Bankruptcy filing</p>
+<p>If you’ve filed for bankruptcy and need to update your account status
+accordingly, then use one of the following contact forms, depending on
+your location:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/article/bankruptcy-sp-ca?language=en_US">Canada</a></li>
+<li><a
+href="https://shoppay.affirm.com/help/s/article/bankruptcy-sp">United
+States</a></li>
+<li><a
+href="https://help.uk.affirm.com/article/i-have-filed-for-bankruptcy-sp-uk">United
+Kingdom</a></li>
+</ul>
+<p>Disputing a purchase</p>
+<p>To start a dispute over a Shop Pay Installments purchase, follow the
+dispute resolution process for the country that you’re located in, which
+includes a link to submit your dispute through Affirm’s website:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/article/dispute-a-purchase-sp-ca?language=en_US">Canada</a></li>
+<li><a
+href="https://shoppay.affirm.com/help/s/article/dispute-a-purchase-sp">United
+States</a></li>
+<li><a
+href="https://help.uk.affirm.com/article/dispute-a-purchase-sp-uk">United
+Kingdom</a></li>
+</ul>
+<p>If you’ve already initiated a chargeback with your bank and need to
+resolve discrepancies concerning your loan, then contact Affirm.</p>
+<p>Non-urgent payment concerns</p>
+<p>If you have non-urgent payment queries such as refund requests for
+overpayments, then use Affirm’s contact form for the country that you’re
+located in:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/contact-us?language=en_US">Canada</a></li>
+<li><a
+href="https://shoppay.affirm.com/help/s/article/payment-issues-sp">United
+States</a></li>
+<li><a href="https://help.uk.affirm.com/contact-us">United
+Kingdom</a></li>
+</ul>
+<p>Overpayments and accidental payments</p>
+<p>For issues related to payment transfers, overpayments, or accidental
+payments, use Affirm’s contact form for the country that you’re located
+in immediately for corrections:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/contact-us?language=en_US">Canada</a></li>
+<li><a
+href="https://shoppay.affirm.com/help/s/article/payment-issues-sp">United
+States</a></li>
+<li><a
+href="https://help.uk.affirm.com/article/payment-issues-sp-uk">United
+Kingdom</a></li>
+</ul>
+<p>Payments and financing</p>
+<p>For detailed information regarding payments, financing options,
+eligibility criteria, potential fees, and troubleshooting refund issues,
+refer to Affirm’s Shop Pay Installments Help Center for the country that
+you’re located in:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/?language=en_US">Canada</a></li>
+<li><a href="https://shoppay.affirm.com/help/s">United States</a></li>
+<li><a
+href="https://help.uk.affirm.com/article/making-a-payment-sp-uk">United
+Kingdom</a></li>
+</ul>
+<p>Privacy requests by California residents</p>
+<p>California residents wishing to submit CCPA/CPRA privacy requests
+should use the designated <a
+href="https://shoppay.affirm.com/help/s/article/privacy-request-ccpa-sp">Privacy
+Request Form</a>.</p>
+<p>Reporting fraudulent activities</p>
+<p>To report unauthorized or fraudulent transactions on your Shop Pay
+Installments account, use the form for reporting unauthorized activity
+for the country that you’re located in:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/contact-us?language=en_US">Canada</a></li>
+<li><a
+href="https://shoppay.affirm.com/help/s/article/report-unauthorized-activity-sp">United
+States</a></li>
+<li><a
+href="https://help.uk.affirm.com/article/report-unauthorized-activity-sp-uk">United
+Kingdom</a></li>
+</ul>
+<p>Urgent concerns</p>
+<p>For other immediate issues such as confirming privacy requests or
+updating your status due to bankruptcy, it’s important to contact Affirm
+without delay through the relevant contact forms for the country that
+you’re located in:</p>
+<ul>
+<li><a
+href="https://helpcenter.affirm.ca/s/contact-us?language=en_US">Canada</a></li>
+<li><a
+href="https://shoppay.affirm.com/help/s/article/payment-issues-sp">United
+States</a></li>
+<li><a href="https://help.uk.affirm.com/contact-us">United
+Kingdom</a>.</li>
+</ul>
+<h4 id="additional-support-areas">Additional support areas</h4>
+<ul>
+<li>General questions about Shop Pay Installments: For general
+information about Shop Pay Installments, contact <a
+href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team">Shop
+Support</a>. This includes how Shop Pay Installments works and the
+purchase flow.</li>
+<li>Refunds and returns: For questions about refunds and returns, <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#refund-or-return">reach
+out directly to the store from which you made your purchase</a>. They
+can provide guidance based on their specific return policy.</li>
+</ul>
+<h3 id="overview-shop-pay-installments">Overview: Shop Pay
+Installments</h3>
+<p>Shop Pay Installments is available to eligible customers in
+Australia, Canada, the United Kingdom, and the United States. On
+participating stores, you can pay for an order over time in
+installments.</p>
+<h4 id="in-this-section-4">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/overview">Shop
+Pay Installments overview</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements">Shop
+Pay Installments eligibility and requirements</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/payments-and-refunds">Understanding
+payments, refunds, and troubleshooting with Shop Pay
+Installments</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/plans">Shop
+Pay Installments plans</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/support">Getting
+help with Shop Pay Installments</a></li>
+</ul>
+<h3 id="shop-pay-installments-eligibility-and-requirements">Shop Pay
+Installments eligibility and requirements</h3>
+<p>You can use Shop Pay Installments when you meet the eligibility
+criteria and use an accepted payment method. If your order requires
+shipping, then you also need to use a supported shipping address.</p>
+<h4 id="on-this-page-9">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#1-eligibility-criteria">1.
+Eligibility criteria</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#2-payment-method-restrictions">2.
+Payment method restrictions</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#3-compatibility-and-address-limitations">3.
+Compatibility and address limitations</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#4-updating-personal-information">4.
+Updating personal information</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#5-payment-details-and-options">5.
+Payment details and options</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#6-account-modifications">6.
+Account modifications</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#7-credit-considerations">7.
+Credit considerations</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements#8-purchase-type-and-shipping-limitations">8.
+Purchase type and shipping limitations</a></li>
+</ul>
+<h4 id="eligibility-criteria">1. Eligibility criteria</h4>
+<ul>
+<li>Location and billing address: You must reside within Australia,
+Canada, the United Kingdom (UK), or the United States (US). Your payment
+card must have a billing address in the same country.</li>
+<li>Age requirement: You must be at least 18 years old to use Shop Pay
+Installments in Australia and most other regions. If you reside in any
+of the following areas, then you must be at least 19 years old to use
+Shop Pay Installments:
+<ul>
+<li>In the United States:
+<ul>
+<li>Alabama</li>
+<li>Nebraska, if you’re a ward of the state</li>
+</ul></li>
+<li>In Canada:
+<ul>
+<li>British Columbia</li>
+<li>New Brunswick</li>
+<li>Newfoundland and Labrador</li>
+<li>Northwest Territories</li>
+<li>Nova Scotia</li>
+<li>Nunavut</li>
+<li>Yukon</li>
+</ul></li>
+</ul></li>
+<li>Shop Pay: You need to have a Shop Pay account to use Shop Pay
+Installments.</li>
+<li>Currency: Your transaction must use AUD, CAD, GBP, or USD, based on
+where you reside. Another currency prevents the installment option from
+being available.</li>
+<li>Order value: Your order total must be between the following amounts
+including shipping and taxes, depending on your location:
+<ul>
+<li>$50 AUD and $30,000 AUD in Australia</li>
+<li>$35 and $30,000 CAD in Canada</li>
+<li>£50 and £30,000 GBP in the United Kingdom</li>
+<li>$35 USD and $30,000 USD in the United States</li>
+</ul></li>
+<li>Prohibited items: Orders can’t include any form of currency,
+including virtual and digital currencies such as gift cards.</li>
+</ul>
+<h4 id="payment-method-restrictions">2. Payment method restrictions</h4>
+<ul>
+<li>Accepted cards: You can pay using a supported debit or credit card,
+depending on your location. Monthly payments require a debit card. In
+Canada and the United States, credit cards are accepted only on
+installment plans of 4 payments. In Australia and the United Kingdom,
+debit cards are the only supported payment method.</li>
+<li>Excluded cards: Capital One and Chase credit cards, as well as all
+prepaid credit and debit cards, aren’t accepted.</li>
+<li>Digital wallets: Transactions using Shop Pay Installments aren’t
+compatible with digital wallets such as Apple Pay.</li>
+<li>Single store purchase: Purchases must be from a single store. Orders
+combining products from multiple stores aren’t eligible for Shop Pay
+Installments.</li>
+<li>Final approval: Even if all criteria are met, final approval for
+Shop Pay Installments is determined by Affirm on a case-by-case
+basis.</li>
+</ul>
+<h4 id="compatibility-and-address-limitations">3. Compatibility and
+address limitations</h4>
+<ul>
+<li>Shipping addresses: Orders that require shipping can’t be delivered
+to P.O. boxes. In the United States, orders also can’t be delivered to
+army post office (APO) addresses.</li>
+</ul>
+<h4 id="updating-personal-information">4. Updating personal
+information</h4>
+<ul>
+<li>Mandatory updates: Changes in your personally identifiable
+information (PII), such as your phone number or email address, require
+updates with both Shop Pay and Affirm before a new installment purchase
+can be made. Payments to existing orders can still be processed during
+this update period.</li>
+</ul>
+<h4 id="payment-details-and-options">5. Payment details and options</h4>
+<ul>
+<li>Order total display: Interest fees owed aren’t included in the order
+total displayed in the Shop app.</li>
+<li>Installment options: Product pages list the option to pay in 4
+installments in Australia, Canada, and the United States. In the United
+Kingdom, product pages list 3 monthly installments. Checkout might offer
+other monthly installment options.</li>
+</ul>
+<h4 id="account-modifications">6. Account modifications</h4>
+<ul>
+<li>Opting out: You cannot opt out of Shop or Shop Pay while there are
+active installments being paid. Opting out is only possible after all
+payments are completed.</li>
+</ul>
+<h4 id="credit-considerations">7. Credit considerations</h4>
+<ul>
+<li>Credit adjustments: Any credit freeze or lock must be lifted before
+Affirm can process your application. These actions can be implemented
+online, by phone, or mail.</li>
+</ul>
+<h4 id="purchase-type-and-shipping-limitations">8. Purchase type and
+shipping limitations</h4>
+<ul>
+<li>Subscriptions and B2B: Shop Pay Installments cannot be used for
+subscription orders or business-to-business (B2B) transactions.</li>
+<li>Shipping for physical products: If you’re ordering physical
+products, then the shipping address must be within Australia, Canada,
+the United Kingdom, or the United States. Customers in US territories,
+including Puerto Rico, aren’t eligible for Shop Pay Installments.
+Digital products don’t require a shipping address.</li>
+</ul>
+<h3 id="shop-pay-installments-overview">Shop Pay Installments
+overview</h3>
+<p>Shop Pay Installments lets <a
+href="https://help.shop.app/en/shop/shop-pay-installments/eligibility-requirements">eligible
+customers</a> pay for an order in smaller increments over time. It’s
+available in Australia, Canada, the United Kingdom, and the United
+States. Shop Pay Installments is powered and serviced by Affirm and is
+only available in some stores. You can use Shop Pay Installments for
+orders between the following amounts, depending on your location:</p>
+<ul>
+<li>$50 AUD and $30,000 AUD in Australia</li>
+<li>$35 CAD and $30,000 CAD in Canada</li>
+<li>£50 and £30,000 GBP in the United Kingdom</li>
+<li>$35 USD and $30,000 USD in the United States</li>
+</ul>
+<h4 id="on-this-page-10">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/overview#how-shop-pay-installments-works">How
+Shop Pay Installments works</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/overview#what-to-expect-after-applying-for-shop-pay-installments">What
+to expect after applying for Shop Pay Installments</a></li>
+</ul>
+<h4 id="how-shop-pay-installments-works">How Shop Pay Installments
+works</h4>
+<p>When you choose Shop Pay Installments at checkout, you’re applying
+for a loan through Affirm. Affirm might ask you for additional
+information to review your application. If approved, then Affirm splits
+your purchase into several smaller payments.</p>
+<p>Payments are due either every 2 weeks or monthly, depending on the
+plans available for you to choose from at checkout. In Australia, you
+can choose 4 interest-free payments due every 2 weeks, or monthly
+payments over 6, 12, or 24 months with interest from 0% to 36% p.a.</p>
+<p>Depending on your location, the purchase amount, and the plans
+available, a down payment might be required at the time of checkout. You
+can also choose to pay off your loan early without any penalties. For
+interest-bearing loans, you can save on interest fees when you pay off
+the remaining balance early.</p>
+<p>Shop Pay Installments is offered in partnership with Affirm, who
+services your loan. Review the following pages on the Affirm Help Center
+to learn more about Affirm and Shop Pay Installments, depending on your
+location:</p>
+<ul>
+<li><a
+href="https://help.au.affirm.com/topic/shop-pay-installments">About Shop
+Pay Installments</a> (Australia)</li>
+<li><a
+href="https://helpcenter.affirm.ca/s/article/about-shop-pay-installments-sp-ca?language=en_US">About
+Shop Pay Installments</a> (Canada)</li>
+<li><a
+href="https://help.uk.affirm.com/topic/shop-pay-installments">About Shop
+Pay Installments</a> (United Kingdom)</li>
+<li><a href="https://shoppay.affirm.com/s/article/about-sp">About Shop
+Pay Installments</a> (United States)</li>
+</ul>
+<h4 id="what-to-expect-after-applying-for-shop-pay-installments">What to
+expect after applying for Shop Pay Installments</h4>
+<p>After you apply for Shop Pay Installments, Affirm will review your
+application. You’ll receive an email from Affirm (<a
+href="mailto:shoppay@shop.affirm.com">shoppay@shop.affirm.com</a>) to
+the email address you use for Shop Pay, letting you know whether you’re
+approved. This email might go to your spam or junk folder, so remember
+to check those folders too.</p>
+<p>If you’re not approved, then the email will explain why and might
+include next steps, if applicable. Keep in mind that you may be approved
+the next time you apply, as your eligibility is determined by Affirm on
+each individual purchase attempt.</p>
+<p>If you’re approved, then your payment schedule displays in the Shop
+app, and you’ll receive email and SMS text reminders (if applicable)
+before each payment. You can also <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/notifications">turn
+on push notifications in the Shop app</a>. You can view and manage your
+Shop Pay Installments orders in the Shop app.</p>
+<p>You can’t customize your payment schedule, but you can make early
+payments. You can also make manual payments in the Shop app or when
+logged into Shop on <a href="https://shop.com">your browser</a>.</p>
+<h3 id="shop-pay-installments-plans">Shop Pay Installments plans</h3>
+<p>Affirm offers several Shop Pay Installments plans. Affirm determines
+your eligibility for each plan, and the types of plans offered can
+change. At checkout, you can review all available options. If you’re
+eligible to use Shop Pay Installments, then you can pay over time for
+orders between the following amounts, depending on your location:</p>
+<ul>
+<li>From $50 to $30,000 AUD in Australia</li>
+<li>From $35 CAD to $30,000 CAD in Canada</li>
+<li>From £50 to £30,000 GBP in the United Kingdom</li>
+<li>From $35 USD to $30,000 USD in the United States</li>
+</ul>
+<p>Your payment options and schedule depend on your purchase amount. A
+down payment might be required. You can’t change the type of payment
+plan after you’ve completed your checkout. To request a refund or
+cancellation for your order, contact the online store directly.</p>
+<h4 id="on-this-page-11">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/plans#disclosures-for-using-shop-pay-installments">Disclosures
+for using Shop Pay Installments</a></li>
+</ul>
+<h4 id="disclosures-for-using-shop-pay-installments">Disclosures for
+using Shop Pay Installments</h4>
+<p>Review the following disclosures for using Shop Pay Installments in
+Australia, Canada, the United Kingdom, and the United States, depending
+on your location.</p>
+<h5 id="united-states-disclosure">United States disclosure</h5>
+<p>Rates from 0-36% APR. Payment options through Shop Pay Installments
+are subject to an eligibility check and are provided by these lending
+partners: affirm.com/lenders. Options depend on your purchase amount,
+and a down payment may be required. State notices to consumers:
+affirm.com/licenses.</p>
+<h5 id="australia-disclosure">Australia disclosure</h5>
+<p>Shop Pay Installments is made available by Shopify Commerce Singapore
+Pte. Ltd. (Shop Pay) (Credit Representative Number 000580369) as a
+credit representative of Affirm Australia Pty Ltd (Australian Credit
+Licence 569362). Credit is provided by Affirm Australia Pty
+Ltd. Available to approved applicants only. Terms and conditions
+apply.</p>
+<h5 id="canada-disclosure">Canada disclosure</h5>
+<p>Rates from 0-31.99% APR (subject to provincial regulatory
+limitations). Payment options through Affirm Canada Holdings
+Ltd. (“Affirm”) are subject to an eligibility check and depend on
+purchase amount, vary by merchant, and may not be available in all
+provinces/territories. A down payment (or a payment due today) may be
+required. See affirm.ca/helpcenter for more information.</p>
+<h5 id="united-kingdom-disclosure">United Kingdom disclosure</h5>
+<p>Shopify International Limited is an Appointed Representative of
+Affirm U.K. Limited which is authorized and regulated by the Financial
+Conduct Authority (Firm Reference Number: 1031087).</p>
+<p>Affirm U.K. Limited provides consumer credit products and is
+authorized and regulated by the Financial Conduct Authority (“FCA”) for
+carrying out regulated consumer credit activities (firm reference number
+756087). Company number 10199101, with its registered Office at C/O TMF
+Group, 1 Angel Court, 13th Floor, London, EC2R 7HJ. Affirm is the
+trading name of Affirm U.K. Limited.</p>
+<p>Shop Pay Installments offers credit in partnership with Affirm as
+lender. Affirm provides unregulated credit, subject to a credit check
+and minimum spend, which may vary. Terms apply. UK residents only, 18
+and over with a debit card. A deposit is required at checkout. Missed
+payments could affect your financial status.</p>
+<h3
+id="understanding-payments-refunds-and-troubleshooting-with-shop-pay-installments">Understanding
+payments, refunds, and troubleshooting with Shop Pay Installments</h3>
+<p>With Shop Pay Installments, you have a payment schedule set when you
+order. You can request a refund but during the refund process, you’ll
+still need to make payments that are due. You can update your payment
+method for existing and future Shop Pay Installments orders.</p>
+<h4 id="on-this-page-12">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/payments-and-refunds#payment-schedule">Payment
+schedule</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/payments-and-refunds#late-fees-and-credit-reporting">Late
+fees and credit reporting</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/payments-and-refunds#refunds-on-orders-paid-with-shop-pay-installments">Refunds
+on orders paid with Shop Pay Installments</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/payments-and-refunds#updating-payment-methods">Updating
+payment methods</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-pay-installments/payments-and-refunds#troubleshooting-installment-orders">Troubleshooting
+installment orders</a></li>
+</ul>
+<h4 id="payment-schedule">Payment schedule</h4>
+<p>Depending on where you make your purchase, the purchase amount, and
+the available plans, a down payment might be required at the time of
+checkout. After your first payment, you’re charged either every 2 weeks
+or monthly, depending on the payment option that you chose. Payments
+every 2 weeks are available in Australia, Canada, and the United States.
+Monthly payments are available in Australia, Canada, the United Kingdom,
+and the United States. You’re reminded by email and SMS text (if
+applicable) before each payment is charged to your card. You can also
+turn on push notifications in the Shop app to be reminded about upcoming
+charges. You can’t customize your payment schedule.</p>
+<h4 id="late-fees-and-credit-reporting">Late fees and credit
+reporting</h4>
+<p>There are no late fees associated with Shop Pay Installments orders.
+Although there’s no impact to your credit when you apply to use Shop Pay
+Installments, your loan and payment information might be shared with
+credit reporting agencies.</p>
+<h4 id="refunds-on-orders-paid-with-shop-pay-installments">Refunds on
+orders paid with Shop Pay Installments</h4>
+<p><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#refund-or-return">Contact
+the store you purchased from</a> to request a refund. They can let you
+know whether a return is possible and how much the refund would be,
+according to their own policies. As you wait for your refund, you need
+to continue to make any payments that are due.</p>
+<p>The following are key details you need to know about getting a refund
+when you’ve used Shop Pay Installments:</p>
+<ul>
+<li>Refund timing: If a refund is processed by an online store, then it
+will appear on your original payment method within 3 to 10 business
+days, and your installments balance and payments will automatically be
+updated.</li>
+<li>Refund application: The refund is first applied to any outstanding
+installment balance of the order. Any remaining refund amount is then
+returned to your original payment method.</li>
+<li>Refund notification: You will receive an email from Affirm
+explaining how the refund was allocated between your remaining balance
+and your payment method.</li>
+</ul>
+<h4 id="updating-payment-methods">Updating payment methods</h4>
+<p>Here’s how to update your payment methods for both future purchases
+and existing installment orders:</p>
+<ul>
+<li>For future purchases: <a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment">Updating
+the payment method in your Shop Pay account</a> affects only future
+purchases with Shop Pay. This change will not impact the payment method
+for existing installment orders.</li>
+<li>For existing installment orders: To change the payment details for
+ongoing installment payments, you must update the payment method
+specifically for each existing Shop Pay Installments order.</li>
+</ul>
+<h4 id="troubleshooting-installment-orders">Troubleshooting installment
+orders</h4>
+<p>If you’re encountering issues with your installment orders, consider
+the following common problems and solutions:</p>
+<ul>
+<li>Order not visible: If you cannot see your installment order in your
+Shop Pay account or the Shop app, then check that you are logged in with
+the same email address used for the order. This is the email where you
+received the order confirmation.</li>
+<li>Overpayments: In cases where you’ve accidentally overpaid on your
+total installment balance, Affirm will automatically refund the payment
+method you used. If the overpayment occurred on a single monthly
+payment, then the additional funds are credited towards your total
+installment balance. Alternatively, you can request a refund for the
+excess amount by completing a form in Affirm’s Help Center for the <a
+href="https://shoppay.affirm.com/help/s/article/payment-issues-sp">United
+States</a>, <a
+href="https://helpcenter.affirm.ca/s/article/payment-issues-sp-ca?language=en_US">Canada</a>,
+or the <a
+href="https://help.uk.affirm.com/article/payment-issues-sp-uk">United
+Kingdom</a>, depending on your location.</li>
+</ul>
+</main>
+</body>
+</html>

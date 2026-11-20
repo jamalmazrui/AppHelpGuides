@@ -1,0 +1,3106 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.14" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Shop help</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    em, em em em, em em em em em {
+      font-style: italic;
+    }
+    em em, em em em em {
+      font-style: normal;
+    }
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#shop-help" id="toc-shop-help">Shop help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#delivery-tracking" id="toc-delivery-tracking">Delivery
+tracking</a></li>
+<li><a href="#getting-started-with-shop"
+id="toc-getting-started-with-shop">Getting started with Shop</a></li>
+<li><a href="#managing-your-orders-in-shop"
+id="toc-managing-your-orders-in-shop">Managing your orders in
+Shop</a></li>
+<li><a href="#reporting-an-issue-to-shop"
+id="toc-reporting-an-issue-to-shop">Reporting an issue to Shop</a></li>
+<li><a href="#shop-cash" id="toc-shop-cash">Shop Cash</a></li>
+<li><a href="#shopping" id="toc-shopping">Shopping</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="shop-help">Shop help</h1>
+<p>This guide holds Shopify’s own help for Shop, gathered from
+help.shop.app in November 2026. Shop is Shopify’s shopping and delivery
+tracking app, on the iPhone and on the web at shop.com. It covers
+getting started, shopping, tracking deliveries, managing orders, Shop
+Cash rewards, and reporting a problem.</p>
+<p>Shop and Shop Pay share one help centre, so this collection splits it
+in two: Shop.md for the Shop app and ShopPay.md for paying with Shop Pay
+and Shop Pay Installments. Each section opens with Shopify’s own
+overview of it. Shopify’s help for store owners is a separate guide,
+Shopify.md. Android-only articles are left out, as this collection
+covers Windows, the web, iPhone and iPad, and Alexa.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Delivery tracking
+<ul>
+<li><a href="#overview-delivery-tracking">Overview: Delivery
+tracking</a></li>
+<li><a href="#report-incorrect-order-information">Report incorrect order
+information</a></li>
+<li><a href="#shop-promise">Shop Promise</a></li>
+<li><a href="#tracking-your-orders-with-shop">Tracking your orders with
+Shop</a></li>
+<li><a href="#understanding-order-status-updates-in-shop">Understanding
+order status updates in Shop</a></li>
+</ul></li>
+<li>Getting started with Shop
+<ul>
+<li><a href="#manage-your-shop-account">Manage your Shop
+account</a></li>
+<li><a href="#manage-your-shop-profile">Manage your Shop
+profile</a></li>
+<li><a href="#overview-getting-started-with-shop">Overview: Getting
+started with Shop</a></li>
+<li><a href="#shop-account-setup">Shop account setup</a></li>
+</ul></li>
+<li>Managing your orders in Shop
+<ul>
+<li><a href="#common-issues-and-troubleshooting-steps-for-orders">Common
+issues and troubleshooting steps for orders</a></li>
+<li><a href="#managing-returns-in-the-shop-app">Managing returns in the
+Shop app</a></li>
+<li><a href="#overview-managing-your-orders-in-shop">Overview: Managing
+your orders in Shop</a></li>
+<li><a href="#share-an-order-receipt">Share an order receipt</a></li>
+<li><a href="#view-archive-and-delete-your-orders">View, archive, and
+delete your orders</a></li>
+</ul></li>
+<li>Reporting an issue to Shop
+<ul>
+<li><a href="#contact-the-shop-support-team">Contact the Shop support
+team</a></li>
+<li><a href="#overview-reporting-an-issue-to-shop">Overview: Reporting
+an issue to Shop</a></li>
+<li><a href="#report-content-in-the-shop-app">Report content in the Shop
+app</a></li>
+<li><a href="#reporting-an-order-issue-and-getting-help">Reporting an
+order issue and getting help</a></li>
+<li><a href="#troubleshooting-the-shop-app">Troubleshooting the Shop
+app</a></li>
+</ul></li>
+<li>Shop Cash
+<ul>
+<li><a href="#checking-your-shop-cash-balance">Checking your Shop Cash
+balance</a></li>
+<li><a href="#earn-shop-cash">Earn Shop Cash</a></li>
+<li><a href="#overview-shop-cash">Overview: Shop Cash</a></li>
+<li><a href="#redeeming-your-shop-cash">Redeeming your Shop
+Cash</a></li>
+<li><a href="#refunds-on-shop-cash-orders">Refunds on Shop Cash
+orders</a></li>
+<li><a href="#shop-cash-expiration">Shop Cash expiration</a></li>
+</ul></li>
+<li>Shopping
+<ul>
+<li><a href="#contests-and-giveaways">Contests and giveaways</a></li>
+<li><a href="#discover-stores-and-products-in-shop">Discover stores and
+products in Shop</a></li>
+<li><a href="#make-purchases-in-shop">Make purchases in Shop</a></li>
+<li><a href="#overview-shopping">Overview: Shopping</a></li>
+<li><a
+href="#product-recalls-and-safety-notices-in-the-european-union">Product
+recalls and safety notices in the European Union</a></li>
+<li><a href="#review-a-product-that-you-purchased-through-shop">Review a
+product that you purchased through Shop</a></li>
+<li><a href="#shop-offers">Shop offers</a></li>
+<li><a href="#shopping-activity-syncing">Shopping activity
+syncing</a></li>
+<li><a href="#shopping-with-confidence-on-shop">Shopping with confidence
+on Shop</a></li>
+<li><a
+href="#understanding-tariffs-and-their-impact-on-your-purchases">Understanding
+tariffs and their impact on your purchases</a></li>
+<li><a href="#using-shop-with-ai-agents-and-agentic-platforms">Using
+Shop with AI agents and agentic platforms</a></li>
+<li><a href="#using-shop.com">Using shop.com</a></li>
+</ul></li>
+</ul>
+<h2 id="delivery-tracking">Delivery tracking</h2>
+<h3 id="overview-delivery-tracking">Overview: Delivery tracking</h3>
+<p>You can track orders in the Shop app or on <a
+href="https://shop.com">shop.com</a> to view delivery status and
+location. Orders from Shopify stores and Shop Pay purchases populate
+automatically, without connecting an email account. To automatically
+track orders from other stores, you can <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts">connect
+a supported email account</a>. You can also add tracking information to
+Shop manually.</p>
+<p>Shop isn’t involved in the fulfillment or delivery process for your
+order. Your order is managed by the online store you purchased from.
+After an order is shipped, its delivery is managed by the shipping
+carrier associated with the tracking number for your order. If you have
+questions about your order status or delivery, then refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#order-not-arrived">Reporting
+an order issue and getting help</a>.</p>
+<p>If you’ve contacted the store and shipping carrier and haven’t been
+able to resolve the issue, then you can <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#report-an-issue">report
+an issue with your order</a>.</p>
+<h4 id="in-this-section">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders">Tracking
+your orders with Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/view-order-status">Understanding
+order status updates in Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/shop-promise">Shop
+Promise</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info">Report
+incorrect order information</a></li>
+</ul>
+<h3 id="report-incorrect-order-information">Report incorrect order
+information</h3>
+<p>If an unexpected or incorrect order is displayed in the Shop app,
+then you can review its details, take steps to protect your account, or
+report the information as incorrect.</p>
+<h4 id="on-this-page">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info#verify">Review
+an unrecognized order in Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info#report">Report
+incorrect order information</a></li>
+</ul>
+<h4 id="review-an-unrecognized-order-in-shop">Review an unrecognized
+order in Shop</h4>
+<p>If you don’t recognize an order, then review its details and check
+your email for a matching order confirmation. To review the order
+details, tap the order from the Home or Orders tab.</p>
+<h5 id="unrecognized-orders">Unrecognized orders</h5>
+<p>If you still don’t recognize the order after reviewing its details
+and checking your email, then check your bank account to confirm whether
+you were charged for the order:</p>
+<ul>
+<li>If you weren’t charged for the order, then proceed to <a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info#report">report
+the order</a> as Not my order in Shop.</li>
+<li>If you were charged for the order, then contact your bank to start a
+dispute. After you start the dispute, <a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info#report">report
+the order</a> as Not my order in Shop.</li>
+</ul>
+<h4
+id="report-incorrect-order-information-report-incorrect-order-information">Report
+incorrect order information</h4>
+<p>If you can’t match an order to an email confirmation, or you didn’t
+place an order that’s displayed in Shop, then you can report the
+order.</p>
+<h5 id="steps">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the or tab, tap an order.</li>
+<li>Tap &gt; Report an issue with this order.</li>
+<li>Fill in the form details.</li>
+<li>Tap Submit.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click the order that you want to report.</li>
+<li>Click &gt; Report incorrect information.</li>
+<li>Fill in the form details.</li>
+<li>Click Submit.</li>
+</ul>
+<p>If you have an issue with an order that you purchased through a Shop
+store, then refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#no-tracking">Reporting
+an order issue and getting help</a> for the right steps to take,
+including how to contact the store and how to report an issue with your
+order.</p>
+<h3 id="shop-promise">Shop Promise</h3>
+<p>The Shop Promise badge is displayed on products from US stores that
+meet the Shop Promise requirements. The badge names what you can count
+on when you buy that product:</p>
+<ul>
+<li>Trusted delivery: Orders for this type of product from this store
+consistently reach the carrier quickly.</li>
+<li>Free returns: You can return the product without paying for return
+shipping or a restocking fee.</li>
+<li>Returns accepted: You can return the product under the store’s
+return policy, but fees might apply.</li>
+</ul>
+<p>A product can display one or more of these benefits. An estimated
+arrival date might also be displayed with the badge. There are no
+subscription or membership fees for Shop Promise.</p>
+<p>You can find the Shop Promise badge in the following places:</p>
+<ul>
+<li>Product pages</li>
+<li>Checkout</li>
+<li>Order confirmation and order status pages</li>
+<li>The Shop app</li>
+</ul>
+<p>On the store’s online product pages, at checkout, on the order
+confirmation page, and on your order status page, the badge can display
+the store’s return window instead of Returns accepted, for example
+30-day returns. This means that you can return the product within that
+number of days under the store’s return policy, but fees might apply. In
+the Shop app, the badge displays Free returns or Returns accepted
+instead of a return window.</p>
+<p>If the products in your order have different return windows, then
+each product displays its own return window. If any product offers free
+returns, then no return windows are displayed. Final sale items can’t be
+returned. They display Final sale at checkout when you check out with
+Shop Pay, and on your order status page. The return window is still
+displayed on your order status page after the window ends.</p>
+<p>Returns are handled by the store under its own return policy. If you
+have a question about a return, then contact the store.</p>
+<h4 id="on-this-page-1">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/shop-promise#limited-guarantee">Limited
+guarantee for earlier orders</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/shop-promise#claim-your-shop-cash">Claim
+your Shop Cash</a></li>
+</ul>
+<h4 id="limited-guarantee-for-earlier-orders">Limited guarantee for
+earlier orders</h4>
+<p>Stores are moving to an updated Shop Promise. The updated Shop
+Promise doesn’t include a delivery guarantee, so orders placed after a
+store moved aren’t eligible for Shop Cash when they arrive late.</p>
+<p>Some earlier orders are still covered under the previous terms. These
+orders were placed before the store moved to the updated Shop Promise,
+and qualified for the limited guarantee. If the first delivery attempt
+for one of these orders was later than its estimated delivery date, then
+you might be eligible to receive $5.00 USD in <a
+href="https://help.shop.app/en/shop/shop-cash">Shop Cash</a>. You can
+spend Shop Cash in the Shop app or on the Shop website. Learn more about
+<a href="https://shop.com/shop-promise-policies">the eligibility
+requirements for the limited guarantee</a>.</p>
+<h4 id="claim-your-shop-cash">Claim your Shop Cash</h4>
+<p>How you claim Shop Cash for an eligible order depends on the payment
+method that you used at checkout. You can claim in the Shop app or on
+the Shop website.</p>
+<h5 id="orders-made-using-shop-pay">Orders made using Shop Pay</h5>
+<p>If you paid with <a
+href="https://help.shop.app/en/shop/shop-pay">Shop Pay</a> and your
+order arrived late, then you can check whether it qualifies and claim
+$5.00 USD in Shop Cash from the order.</p>
+<h6 id="steps-1">Steps:</h6>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that was delivered late.</li>
+<li>On the Shop Promise card, tap Claim Shop Cash.</li>
+<li>If you’re prompted to complete Shop Pay setup, then follow the
+prompts, and then return to the order and tap Claim Shop Cash
+again.</li>
+</ul>
+<h5 id="orders-made-using-other-payment-methods">Orders made using other
+payment methods</h5>
+<p>If you didn’t pay with Shop Pay, then you can claim only if it’s your
+first claim with that store. You need a verified <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/create-shop-account">Shop
+account</a> and <a
+href="https://help.shop.app/en/shop/shop-pay-settings/setup">Shop Pay
+account</a> to make the claim. After you set up both accounts, follow
+the same steps to claim your Shop Cash.</p>
+<h3 id="tracking-your-orders-with-shop">Tracking your orders with
+Shop</h3>
+<p>You can use the Shop app or <a href="https://shop.com">shop.com</a>
+to track orders with a valid tracking number. After you add an order to
+Shop, Shop uses information from the carrier to provide you with
+tracking updates.</p>
+<p>When tracking an order, the delivery details page displays the
+following information, if available:</p>
+<ul>
+<li>A tracking map with the approximate location of your package during
+transit</li>
+<li>The store name, <a
+href="https://help.shop.app/en/shop/delivery-tracking/view-order-status">order
+status</a>, and shipping updates</li>
+<li>The tracking number with a copy option</li>
+<li>The carrier name</li>
+<li>A tracking URL to the carrier site</li>
+<li>A delivery date estimate that’s updated as your shipment progresses,
+labeled Predicted by Shop when it differs from the carrier’s date</li>
+<li>A menu with more options to contact the online store and shipping
+carrier, <a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#edit-your-order-tracking-information">edit</a>
+or <a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete#delete">delete
+your order</a>, and <a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info">report
+incorrect tracking information</a></li>
+</ul>
+<h4 id="on-this-page-2">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#automatic-order-tracking">Automatic
+order tracking</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#manual">Adding
+orders to Shop manually</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#in-store-orders">Track
+in-store pickup orders</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#edit-your-order-tracking-information">Edit
+your order tracking information</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#mark-an-order-as-delivered">Mark
+an order as delivered</a></li>
+</ul>
+<h4 id="automatic-order-tracking">Automatic order tracking</h4>
+<p>Shop can track many of your orders automatically in either of the
+following ways:</p>
+<ul>
+<li>Orders from Shopify stores and Shop Pay: These orders are tracked
+automatically. Shop doesn’t access your email inbox to track these
+orders.</li>
+<li>Orders from other online stores: If you choose to <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts">connect
+a supported email account</a>, then Shop can scan your inbox for these
+orders. Connecting an email account is optional.</li>
+</ul>
+<h5 id="orders-from-shopify-stores-and-shop-pay">Orders from Shopify
+stores and Shop Pay</h5>
+<p>Orders that you place using <a
+href="https://help.shop.app/en/shop/shop-pay">Shop Pay</a>, or from a
+store that uses Shopify features, products, or services, are added to
+your Orders tab automatically when the email that you used for the order
+matches one of the email addresses on your <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/create-shop-account">Shop
+account</a>. This works as soon as you set up a Shop account, without
+connecting an email account or giving Shop access to your inbox.</p>
+<h5 id="orders-from-other-stores">Orders from other stores</h5>
+<p>After you complete checkout on a participating online store, you
+might be prompted to track your order with Shop from the order
+confirmation or order status page. The prompt can open the Shop app, ask
+you to install the Shop app, or ask you to sign in so the order can be
+added to Shop.</p>
+<p>To track orders from stores that don’t use Shopify, you can connect a
+supported email account to follow all of your online orders in one
+place. After you <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts#connect-emails">connect
+an email account</a>, Shop scans your inbox for order and tracking
+emails from the last 30 days, and then keeps checking for new tracking
+emails. When Shop finds a tracking number, the delivery is added to your
+Orders tab.</p>
+<p>For automatic order tracking with Gmail and Outlook accounts, Shop
+searches only for emails with keywords such as
+<code>tracking number</code> and <code>track your package</code>, and
+doesn’t read the rest of your inbox.</p>
+<p>Not all orders from stores outside of the Shop network are
+automatically tracked, because Shop can’t read some tracking emails. If
+an order isn’t added, then you can <a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#manual">add
+it to Shop manually</a>.</p>
+<p>You can manage or disconnect a connected account at any time from <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts">your
+connected accounts</a>.</p>
+<h4 id="adding-orders-to-shop-manually">Adding orders to Shop
+manually</h4>
+<p>If an order doesn’t automatically populate in the Shop app, or you
+don’t want to connect an email account to Shop, then you can manually
+add a tracking number to Shop, or forward your order tracking
+emails.</p>
+<h5 id="add-a-tracking-number-to-shop">Add a tracking number to
+Shop</h5>
+<p>Shop app</p>
+<ul>
+<li>Find the tracking information for a delivery that you want to track.
+You can usually find tracking information in a shipping confirmation
+email, or from your customer account on an online store.</li>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap &gt; Add order manually.</li>
+<li>Optional: If you need to search a connected email for a tracking
+number, then tap Search email for a tracking number, select the email
+that you want to search, and then copy the tracking number.</li>
+<li>Fill in the Tracking number, Package name, and Carrier fields.</li>
+<li>Tap Add order.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click &gt; Add order manually.</li>
+<li>Fill in the Tracking number, Package name, and Carrier fields.</li>
+<li>Click Add order.</li>
+</ul>
+<h5 id="forward-your-order-tracking-emails-to-shop">Forward your order
+tracking emails to Shop</h5>
+<p>You can add an order to Shop to track manually by forwarding an email
+that’s in English and includes a tracking number. If you set up
+automatic email forwarding through your email service provider, then
+make sure to use your unique Shop forwarding email address as the
+recipient.</p>
+<h6 id="steps-2">Steps:</h6>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap &gt; Add order manually.</li>
+<li>In the Forward shipping emails section, tap Open Email app, and then
+select an email app such as Gmail or Outlook to continue.</li>
+<li>From your email inbox, find your shipping confirmation email
+containing a tracking number.</li>
+<li>Forward the email to your unique Shop forwarding email address by
+pasting it from your clipboard.</li>
+</ul>
+<p>If you forward an email containing a tracking number that you’re
+already tracking in Shop, then it won’t be added. If your delivery isn’t
+displayed in the Shop app after you forward an email, then it could be
+because the Shop app had issues tracking it. You can <a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#add-tracking-number">add
+the tracking number to Shop manually</a> instead.</p>
+<h4 id="track-in-store-pickup-orders">Track in-store pickup orders</h4>
+<p>After you <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#pickup">place
+an order for in-store pickup</a>, you can track its status in the Orders
+tab of the Shop app. The order tracking page provides specific
+information about when your order will be ready and where to pick it
+up.</p>
+<h5 id="steps-3">Steps:</h5>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap your order to view the order tracking page, which displays the
+following information:
+<ul>
+<li>Pickup status</li>
+<li>Store details</li>
+<li>A scannable QR code to present to store staff at the pickup
+location</li>
+<li>Pickup instructions</li>
+</ul></li>
+<li>When you receive the notification that your order is ready, visit
+the store location and present the QR code from your order tracking
+page.</li>
+</ul>
+<p>After you pick up your order, the order status updates to Picked
+up.</p>
+<h4 id="edit-your-order-tracking-information">Edit your order tracking
+information</h4>
+<p>After an order is displayed in Shop with its tracking details, you
+can edit the package name, tracking number, and carrier. After an order
+is delivered, you can only change the package name.</p>
+<h5 id="steps-4">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li><p>From the Shop app, go to the tab.</p></li>
+<li><p>Tap the order that you want to edit.</p></li>
+<li><p>Complete one of the following actions:</p></li>
+<li><p>For orders that were automatically added through Shop stores, tap
+the tracking number, and then tap .</p></li>
+<li><p>For orders that were imported through a connected email account,
+forwarded, or added manually, tap .</p></li>
+<li><p>Tap Edit tracking details.</p></li>
+<li><p>Update your order details, and then tap Update tracking
+details.</p></li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click &gt; Edit tracking details.</li>
+<li>Update your order details, and then click Update tracking
+details.</li>
+</ul>
+<h4 id="mark-an-order-as-delivered">Mark an order as delivered</h4>
+<p>If you’ve received an order but the carrier didn’t mark your order as
+delivered, then you can mark it as delivered in the Shop app. After you
+mark an order as delivered, you no longer receive updates for that
+order. You can also <a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete#archive">archive</a>
+or <a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete#delete">delete</a>
+the order from Shop.</p>
+<h5 id="steps-5">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Swipe left on the order that you want to mark as delivered.</li>
+<li>Tap Mark as delivered.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click the order that you want to mark as delivered.</li>
+<li>Click &gt; Mark as delivered.</li>
+</ul>
+<h5 id="unmark-an-order-as-delivered">Unmark an order as delivered</h5>
+<p>You can unmark an order as delivered to continue tracking it. This
+option is available for 7 days after you manually mark the order as
+delivered.</p>
+<h6 id="steps-6">Steps:</h6>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you want to unmark as delivered.</li>
+<li>Tap &gt; Unmark as delivered or Undo mark as delivered.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click the order that you want to unmark as delivered.</li>
+<li>Click &gt; ** Undo mark as delivered**.</li>
+</ul>
+<h3 id="understanding-order-status-updates-in-shop">Understanding order
+status updates in Shop</h3>
+<p>You can view the status of your orders in the Orders tab of the Shop
+app, or on <a href="https://shop.com">shop.com</a>. Order statuses
+communicate the current state of your package.</p>
+<h4 id="on-this-page-3">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/view-order-status#before-your-order-ships">Before
+your order ships</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/view-order-status#after-your-order-ships">After
+your order ships</a></li>
+<li><a
+href="https://help.shop.app/en/shop/delivery-tracking/view-order-status#canceled-orders-and-refunds">Canceled
+orders and refunds</a></li>
+</ul>
+<h4 id="before-your-order-ships">Before your order ships</h4>
+<p>The following order status updates are based on information from the
+store that you purchased from, if the store is within the Shop
+network:</p>
+<ul>
+<li>Waiting for details: A new order has been detected, but the Shop app
+is waiting for more information. The order might already have tracking
+details, but the carrier might not have updated the tracking information
+yet. If there are no tracking details, then refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#no-tracking">Reporting
+an order issue and getting help</a> for guidance on contacting the
+store.</li>
+<li>Order placed: Your order has been placed, but the store hasn’t
+shipped it yet.</li>
+<li>Shipped: The store has added tracking information to your order, and
+the package is on its way to the shipping carrier.</li>
+<li>Shipped partially or Partially shipped: The store has added tracking
+information, and some items have been shipped.</li>
+<li>Ready for pickup: If you placed an order for in-store pickup, then
+it’s ready to be picked up.</li>
+<li>Picked up: Your order status is displayed as picked up after you
+pick up your order. The store that you purchased from needs to send
+pickup notification and confirmation emails to update the order status
+to Ready for pickup or Picked up.</li>
+</ul>
+<h4 id="after-your-order-ships">After your order ships</h4>
+<p>The following order statuses are based on information from the
+shipping carrier:</p>
+<ul>
+<li>In transit: Your package is on its way to the shipping distribution
+center.</li>
+<li>Out for delivery: Your package is on its way to you.</li>
+<li>Delivered: Your package has been delivered, or you’ve <a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#mark-an-order-as-delivered">marked
+the order as delivered</a> in the Shop app. If there aren’t any details
+in the Shop app of where the carrier left your package, then check the
+carrier’s website.</li>
+<li>Delivered partially: Some items in your order have been delivered.
+You’ll receive another update when the rest of your order is
+delivered.</li>
+<li>Delayed: The delivery of your package is delayed.</li>
+<li>Action required: An action is required for your shipment to proceed.
+For example, you might need to pay a customs fee.</li>
+<li>Failure: The delivery carrier has reported a delivery failure. Refer
+to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#order-not-arrived">Reporting
+an order issue and getting help</a> for guidance on contacting the
+carrier.</li>
+</ul>
+<h4 id="canceled-orders-and-refunds">Canceled orders and refunds</h4>
+<p>The following order cancellation and refund statuses are displayed in
+the app if the store has a profile in Shop:</p>
+<ul>
+<li>Canceled: The online store that you purchased from has canceled your
+order, and it won’t be fulfilled.</li>
+<li>Partially refunded: The online store that you purchased from has
+partially refunded your order.</li>
+<li>Refunded: The online store that you purchased from has fully
+refunded your order.</li>
+</ul>
+<p>Tracking updates might be displayed in different time zones because
+they’re based on your delivery location at the time of each update.</p>
+<h2 id="getting-started-with-shop">Getting started with Shop</h2>
+<h3 id="manage-your-shop-account">Manage your Shop account</h3>
+<p>You can manage your Shop account and data from your Account screen in
+the Shop app or on <a href="https://shop.com">shop.com</a>. This
+includes choosing whether to use Shop Pay, controlling your privacy, and
+managing your connections.</p>
+<h4 id="managing-your-account-and-data">Managing your account and
+data</h4>
+<p>Update your account details, opt out of Shop Pay, delete your Shop
+account, or erase your personal data by <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data">managing
+your Shop account and data</a>. You can also update your <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/data-privacy-settings">data
+and privacy settings</a>. To learn how Shop safeguards your information,
+refer to <a
+href="https://help.shop.app/en/shop/shopping/shopping-safely">Shopping
+with confidence on Shop</a>.</p>
+<h4 id="managing-your-saved-payment-methods-and-addresses">Managing your
+saved payment methods and addresses</h4>
+<p>View, add, or remove the credit cards and shipping addresses saved to
+your Shop Pay wallet by <a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment">editing
+your Shop Pay shipping addresses and payment methods</a>. To stop using
+Shop Pay as a payment method, <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data#opt-out-of-shop-pay">opt
+out of Shop Pay</a>.</p>
+<h4 id="managing-sign-in-and-security">Managing sign-in and
+security</h4>
+<p>Manage your sign-in methods, passkeys, and security from Sign in
+&amp; security on your Account page. You can <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/passkeys">set
+up a Shop passkey</a> or <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/remove-passkeys">remove
+a passkey from Shop</a>.</p>
+<h4 id="customizing-your-notifications">Customizing your
+notifications</h4>
+<p>Choose which updates you receive from Shop and the stores that you
+follow. You can <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/notifications">manage
+notifications</a>.</p>
+<h4 id="personalizing-your-experience">Personalizing your
+experience</h4>
+<p>Tailor your shopping experience by updating your <a
+href="https://help.shop.app/en/shop/getting-started/profile">personalization
+settings</a> from your profile.</p>
+<h4 id="managing-your-connections-and-language">Managing your
+connections and language</h4>
+<p>Connect or disconnect email and social accounts, and set your
+preferred language. You can manage your <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts">connected
+accounts</a> and <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/language-settings">language
+settings</a>.</p>
+<h4 id="in-this-section-1">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/language-settings">Manage
+your Shop language settings</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data">Managing
+your Shop account and data</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/passkeys">Set
+up a Shop passkey</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/data-privacy-settings">Manage
+your data and privacy settings</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/remove-passkeys">Remove
+a passkey from Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/notifications">Manage
+notifications</a></li>
+</ul>
+<h3 id="manage-your-shop-profile">Manage your Shop profile</h3>
+<p>Your Shop profile includes your profile photo, display name, bio,
+personalization preferences, and public collections that you’ve created.
+You can manage your profile in the Shop app or on <a
+href="https://shop.com">shop.com</a>.</p>
+<p>Your profile is hidden until you <a
+href="https://help.shop.app/en/shop/shopping/discover/save-products-and-follow-stores#create">create
+your first public collection</a>. After you create a public collection,
+your display name, profile photo, and a link to your full profile
+displays in Shop alongside your public collections.</p>
+<h4 id="on-this-page-4">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/profile#edit">Edit
+your Shop profile</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/profile#share">Share
+your Shop profile URL</a></li>
+</ul>
+<h4 id="edit-your-shop-profile">Edit your Shop profile</h4>
+<p>You can update your account name, photo, gender, birthday, and
+personalization preferences such as sizing, skin care, and hair care.
+You can also store preferences for other people that you shop for. Some
+personalizations might be saved to your profile automatically based on
+your order history.</p>
+<p>Shop app</p>
+<ul>
+<li><p>From the Shop app in the tab, tap the Account icon, which is your
+profile picture or initials.</p></li>
+<li><p>Tap your profile card.</p></li>
+<li><p>Do any of the following:</p></li>
+<li><p>To update your account name, edit the First name or Last name
+field, and then tap Save.</p></li>
+<li><p>To update your gender, use the Gender menu.</p></li>
+<li><p>To update your birthday, edit the Birthday field.</p></li>
+<li><p>To change your profile picture, tap your profile picture, and
+then do one of the following:</p>
+<ul>
+<li>To use a photo from your device, tap Choose from library, and then
+follow the prompts to select and crop a photo.</li>
+<li>To take a new photo, tap Take a photo, and then follow the prompts
+to take and crop a photo.</li>
+<li>To remove an existing profile picture, tap Remove photo, and then
+tap Yes in the Delete current photo dialog.</li>
+</ul></li>
+<li><p>To update your personalization categories, use the drop-down
+menus in the Sizing, Skin care, and Hair care sections.</p></li>
+<li><p>To add preferences for others that you shop for, in the Others
+you shop for section, tap Add someone, and then add their
+details.</p></li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li><p>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</p></li>
+<li><p>Click Sign in, and then follow the prompts to sign in to your
+Shop account.</p></li>
+<li><p>Click the Account icon, and then click Profile.</p></li>
+<li><p>Do any of the following:</p></li>
+<li><p>To update your account name, edit the First name or Last name
+field, and then click Save.</p></li>
+<li><p>To update your gender, use the Gender menu.</p></li>
+<li><p>To update your birthday, edit the Birthday field.</p></li>
+<li><p>To change your profile picture, click Edit, and then upload a new
+photo from your device.</p></li>
+<li><p>To update your personalization categories, use the drop-down
+menus in the Sizing, Skin care, and Hair care sections.</p></li>
+<li><p>To add preferences for others that you shop for, in the Others
+you shop for section, click Add someone, and then add their
+details.</p></li>
+</ul>
+<h4 id="share-your-shop-profile-url">Share your Shop profile URL</h4>
+<ul>
+<li>From the Shop app, tap your profile icon.</li>
+<li>Tap View public profile.</li>
+<li>Tap the share icon, and then copy or send the link to share your
+profile.</li>
+</ul>
+<h3 id="overview-getting-started-with-shop">Overview: Getting started
+with Shop</h3>
+<p>Shop is a shopping destination and delivery tracking app created by
+Shopify. You can access Shop on the <a
+href="https://shop.com/download">Shop app</a> for iOS and Android, or on
+the web at <a href="https://shop.com">shop.com</a>. To learn how stores
+qualify to sell on Shop and how to review a store before you buy, refer
+to <a
+href="https://help.shop.app/en/shop/shopping/shopping-safely">Shopping
+with confidence on Shop</a>.</p>
+<h4 id="discover-and-shop">Discover and shop</h4>
+<p>You can use Shop to <a
+href="https://help.shop.app/en/shop/shopping/discover">browse and
+discover products</a> from participating Shopify stores, follow stores
+to get updates about new arrivals and sales, and save favorite products
+for later. You can <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop">make
+a purchase</a> from a Shop store in the app or on shop.com. Some stores
+offer pricing and rewards through <a
+href="https://help.shop.app/en/shop/shopping/shop-offers">Shop
+offers</a>.</p>
+<h4 id="payment-methods-and-rewards">Payment methods and rewards</h4>
+<p>Shop Pay is a wallet that stores your email, shipping addresses, and
+payment information. When you check out on a store that accepts Shop
+Pay, you pay with your saved payment details. You don’t have to enter
+them again. Some stores offer Shop Pay Installments, so you can <a
+href="https://help.shop.app/en/shop/shop-pay-installments/overview">split
+your purchase into multiple payments</a> on eligible orders. Earn <a
+href="https://help.shop.app/en/shop/shop-cash">Shop Cash</a> on eligible
+purchases and redeem your Shop Cash towards future orders in Shop.</p>
+<h4 id="track-and-manage-your-orders">Track and manage your orders</h4>
+<p>You can <a
+href="https://help.shop.app/en/shop/delivery-tracking">track your
+deliveries</a> in real-time and <a
+href="https://help.shop.app/en/shop/managing-orders">manage your
+orders</a> from the Shop app. This lets you view order details and track
+your delivery journey. You can also <a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop">review
+an order in Shop</a> after you receive it.</p>
+<h4
+id="overview-getting-started-with-shop-manage-your-shop-account">Manage
+your Shop account</h4>
+<p>You can keep your Shop <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings">account
+settings</a> up to date with your current payment information, shipping
+addresses, and privacy preferences. You can also <a
+href="https://help.shop.app/en/shop/getting-started/profile">manage your
+Shop profile</a> to save your shopping preferences and receive more
+personalized product recommendations.</p>
+<h4 id="in-this-section-2">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/account-setup">Shop
+account setup</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/manage-settings">Manage
+your Shop account</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/profile">Manage your
+Shop profile</a></li>
+</ul>
+<h3 id="shop-account-setup">Shop account setup</h3>
+<p>This section covers how to create your Shop account and connect it to
+your order sources so that your orders automatically display in Shop for
+tracking. You can <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/create-shop-account">create
+a Shop account</a> with your email address, and <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts#connect-emails">connect
+additional email accounts</a> for order tracking. If you’re located in
+the United States, then you can also <a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-prime">connect
+your Amazon Prime account</a> for Prime delivery benefits at
+checkout.</p>
+<p>After you set up your Shop account, you can <a
+href="https://help.shop.app/en/shop/getting-started/profile">manage your
+profile</a> to customize your personalization preferences and display
+name, <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/data-privacy-settings">control
+your data and privacy settings</a>, <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/notifications">manage
+your notifications</a>, and <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/language-settings">change
+your language</a>. You can also <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data">update
+your account details or opt out of Shop Pay</a> from the Account page in
+the Shop app or shop.com.</p>
+<h4 id="in-this-section-3">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/account-setup/create-shop-account">Create
+a Shop account</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-accounts">Manage
+your connected accounts</a></li>
+<li><a
+href="https://help.shop.app/en/shop/getting-started/account-setup/connect-prime">Connecting
+your Amazon Prime account to Shop</a></li>
+</ul>
+<h2 id="managing-your-orders-in-shop">Managing your orders in Shop</h2>
+<h3 id="common-issues-and-troubleshooting-steps-for-orders">Common
+issues and troubleshooting steps for orders</h3>
+<p>Some issues that you might encounter with orders in the Shop app are
+related to how order information is displayed, rather than a problem
+with the order itself. This page covers the most common issues and how
+to resolve them. For issues that need the attention of the store or the
+Shop support team, refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a>.</p>
+<h4 id="on-this-page-5">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/common-issues-and-troubleshooting-steps-for-orders#pre-orders">Pre-orders</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/common-issues-and-troubleshooting-steps-for-orders#shipped-orders-without-tracking-details">Shipped
+orders without tracking details</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/common-issues-and-troubleshooting-steps-for-orders#order-edits-made-by-the-store">Order
+edits made by the store</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/common-issues-and-troubleshooting-steps-for-orders#order-marked-as-delivered-but-not-received">Order
+marked as delivered, but not received</a></li>
+</ul>
+<h4 id="pre-orders">Pre-orders</h4>
+<p>Pre-orders might be displayed in your Past orders section even if
+they haven’t been delivered yet. The Shop app uses active tracking
+information to inform you about your order. Because pre-orders don’t
+usually provide tracking updates until the order is ready, the order
+might be displayed as inactive in the Shop app.</p>
+<h4 id="shipped-orders-without-tracking-details">Shipped orders without
+tracking details</h4>
+<p>Orders from stores in the Shop network might have a Shipped status
+without tracking details. To learn why this happens and how to contact
+the store, refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#no-tracking">Reporting
+an order issue and getting help</a>.</p>
+<h4 id="order-edits-made-by-the-store">Order edits made by the
+store</h4>
+<p>The Shop app doesn’t currently reflect any order edits made by the
+store. This includes returns and removed items. Order exchanges might
+also cause the Shop app to display both the original product and the new
+product on your order details.</p>
+<h4 id="order-marked-as-delivered-but-not-received">Order marked as
+delivered, but not received</h4>
+<p>If you accidentally mark an order as delivered in the Shop app, then
+you can <a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders#unmark-an-order-as-delivered">unmark
+the order as delivered</a> to continue tracking it.</p>
+<p>The Unmark as delivered option disappears 7 days after the order was
+marked as delivered.</p>
+<h3 id="managing-returns-in-the-shop-app">Managing returns in the Shop
+app</h3>
+<p>To cancel an order or request a refund, <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#refund-or-return">contact
+the store that you purchased from</a>. The process for <a
+href="https://help.shop.app/en/shop/managing-orders/returns#request-return">submitting
+a return</a> depends on the store that you purchase from.</p>
+<p>For full guidance on getting help with an order, including returns,
+refunds, contacting the store, and reporting an issue, refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a>.</p>
+<h4 id="on-this-page-6">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/returns#canceled-order-and-refund-statuses">Canceled
+order and refund statuses</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/returns#request-return">Start
+a return in the Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/returns#manage-a-return-in-the-shop-app">Manage
+a return in the Shop app</a></li>
+</ul>
+<h4 id="canceled-order-and-refund-statuses">Canceled order and refund
+statuses</h4>
+<p>When the store has a profile in Shop, canceled orders and refunds
+have a status in the app, such as Canceled, Partially refunded, or
+Refunded. For what each status means, refer to <a
+href="https://help.shop.app/en/shop/delivery-tracking/view-order-status#canceled-orders-and-refunds">Understanding
+order status updates in Shop</a>.</p>
+<h4 id="start-a-return-in-the-shop-app">Start a return in the Shop
+app</h4>
+<p>If a store offers the option to start a return through the Shop app,
+then the Start a return option is displayed on the order page. You can
+return By mail or In-store at an available retail location. The In-store
+return option is available only when your default shipping address in
+Shop is within 15 miles of a retail location. You can view and select
+the items that are eligible for a return on the return page.</p>
+<p>If the Start a return option isn’t displayed, then <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#refund-or-return">contact
+the online store that you purchased from</a> directly to request a
+return.</p>
+<h5 id="steps-7">Steps:</h5>
+<ul>
+<li><p>From the Shop app, go to the tab.</p></li>
+<li><p>Tap the order with the items that you want to return.</p></li>
+<li><p>Tap Start a return, and then select one of the
+following:</p></li>
+<li><p>To return your products to an available retail location, tap
+In-store. The Shop app generates a QR code for your return that you can
+present to staff at that location.</p></li>
+<li><p>To return your products by mail, tap By mail. The Shop app
+provides a shipping label after your return request is
+accepted.</p></li>
+<li><p>Select the eligible items that you want to return, and then
+select a return reason for each item.</p></li>
+<li><p>Tap Submit.</p></li>
+</ul>
+<h4 id="manage-a-return-in-the-shop-app">Manage a return in the Shop
+app</h4>
+<p>If you start a return in the Shop app, then you can view your return
+status and contact the store that you purchased from.</p>
+<p>To edit a return, you must cancel the return, and then <a
+href="https://help.shop.app/en/shop/managing-orders/returns#request-return">start
+a new return request</a>.</p>
+<p>If the in-app return option isn’t available for your order, then <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#refund-or-return">contact
+the online store that you purchased from</a> directly to manage your
+return.</p>
+<h5 id="steps-8">Steps:</h5>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order for the return that you want to view.</li>
+<li>To cancel your return request, tap Cancel return.</li>
+<li>Optional: To create a new return request for that order, tap Start a
+return.</li>
+</ul>
+<h3 id="overview-managing-your-orders-in-shop">Overview: Managing your
+orders in Shop</h3>
+<p>After an order is added to Shop, you can manage it from the Orders
+tab in the Shop app or on <a href="https://shop.com">shop.com</a>. You
+can view your order history, archive or delete individual orders to keep
+your list organized, and share order receipts from Shop.</p>
+<p>You can also start a cancellation, refund, or return with the store
+that you purchased from. If you encounter a problem with an order, then
+review the <a
+href="https://help.shop.app/en/shop/managing-orders/common-issues-and-troubleshooting-steps-for-orders">common
+order issues and troubleshooting steps</a>.</p>
+<p>For more ways to get help with an order, including contacting the
+store or carrier and reaching the Shop support team, refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a>.</p>
+<h4 id="in-this-section-4">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/returns">Managing
+returns in the Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete">View,
+archive, and delete your orders</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/share-an-order-receipt">Share
+an order receipt</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/common-issues-and-troubleshooting-steps-for-orders">Common
+issues and troubleshooting steps for orders</a></li>
+</ul>
+<h3 id="share-an-order-receipt">Share an order receipt</h3>
+<p>Your order receipt contains sensitive information such as your order
+number, the last four digits of your credit card, both shipping and
+billing address details, email address, and the store name. Be cautious
+about where and with whom you share this information to protect your
+privacy.</p>
+<p>You can use the icon in the Shop app to share an order receipt
+through supported apps on your device, such as messaging apps, or to
+download a receipt by saving it to your files.</p>
+<h4 id="steps-9">Steps:</h4>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you want to get a receipt for.</li>
+<li>Tap View receipt.</li>
+<li>Tap , and then select an app to send or save your receipt.</li>
+</ul>
+<h3 id="view-archive-and-delete-your-orders">View, archive, and delete
+your orders</h3>
+<p>You can view your order history in the Shop app, and manage
+individual orders by archiving or deleting them. Archiving an order
+hides it from your Home and Orders tabs but keeps it in your order
+history. Deleting an order removes it permanently and can’t be
+undone.</p>
+<h4 id="on-this-page-7">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete#view">View
+your order history</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete#archive">Archive
+an order</a></li>
+<li><a
+href="https://help.shop.app/en/shop/managing-orders/archive-delete#delete">Delete
+an order</a></li>
+</ul>
+<h4 id="view-your-order-history">View your order history</h4>
+<p>You can view your order history in the Orders tab of the Shop
+app.</p>
+<p>Your order history is displayed chronologically by the date each
+order was created. The most recently created order is displayed first in
+your list of orders.</p>
+<h5 id="steps-10">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap Past orders.</li>
+<li>Optional: To view archived orders, tap the icon.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click Past orders.</li>
+<li>Optional: To view archived orders, click &gt; View order
+archive.</li>
+</ul>
+<h4 id="archive-an-order">Archive an order</h4>
+<p>You can archive an order so that it isn’t displayed in your Home or
+Orders tab in the Shop app.</p>
+<h5 id="steps-11">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you want to archive.</li>
+<li>Tap &gt; Archive order.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click &gt; Archive order.</li>
+</ul>
+<h5 id="unarchive-an-order">Unarchive an order</h5>
+<p>You can unarchive an order so that it’s displayed in your Home and
+Orders tabs again.</p>
+<h6 id="steps-12">Steps:</h6>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap Past orders.</li>
+<li>Tap the icon.</li>
+<li>Tap the order that you want to unarchive.</li>
+<li>Tap &gt; Unarchive order.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click &gt; Unarchive order.</li>
+</ul>
+<h4 id="delete-an-order">Delete an order</h4>
+<p>You can permanently delete an order from the Shop app.</p>
+<h5 id="steps-13">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you want to delete.</li>
+<li>Tap &gt; Delete.</li>
+<li>Tap Delete.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click &gt; Delete.</li>
+</ul>
+<h2 id="reporting-an-issue-to-shop">Reporting an issue to Shop</h2>
+<h3 id="contact-the-shop-support-team">Contact the Shop support
+team</h3>
+<p>If you have a question about the Shop app or a technical issue, then
+you can contact the Shop support team.</p>
+<p>The Shop support team can help with the following topics:</p>
+<ul>
+<li>Questions about using the Shop app, <a
+href="https://shop.com">shop.com</a>, and features such as <a
+href="https://help.shop.app/en/shop/shop-cash">Shop Cash</a>, <a
+href="https://help.shop.app/en/shop/shopping/shop-offers">Shop
+offers</a>, <a href="https://help.shop.app/en/shop/shop-pay">Shop
+Pay</a>, <a
+href="https://help.shop.app/en/shop/shop-pay-installments">Shop Pay
+Installments</a>, and <a
+href="https://help.shop.app/en/shop/delivery-tracking/shop-promise">Shop
+Promise</a></li>
+<li>Technical support</li>
+<li>Reporting a bug or issue with the Shop app</li>
+<li>Suggesting an improvement to the Shop app</li>
+</ul>
+<h4 id="on-this-page-8">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team#get-help-from-shop-com-or-shop-app">Get
+help from shop.com or Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team#use-the-shop-contact-form">Use
+the Shop contact form</a></li>
+</ul>
+<h4 id="get-help-from-shop.com-or-shop-app">Get help from shop.com or
+Shop app</h4>
+<p>The Shop assistant can answer common questions or connect you with
+the Shop support team.</p>
+<h5 id="steps-14">Steps:</h5>
+<ul>
+<li>Go to <a href="https://shop.com">shop.com</a>, or open the Shop
+app.</li>
+<li>Enter your question or request in the search bar.</li>
+<li>Follow the prompts to get help.</li>
+</ul>
+<h4 id="use-the-shop-contact-form">Use the Shop contact form</h4>
+<p>You can also contact the Shop support team using the <a
+href="https://shop.com/help/shop-app-help-contact">Shop contact
+form</a>.</p>
+<p>For questions about a specific order, product details, shipping,
+returns, or refunds, refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a> to find the right contact path for
+your situation.</p>
+<h3 id="overview-reporting-an-issue-to-shop">Overview: Reporting an
+issue to Shop</h3>
+<p>If something is wrong with an order, then start with <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a>. It walks you through the right path
+based on your situation, whether you need to contact the store, contact
+the carrier, report an issue, start a return, or report a Shop
+store.</p>
+<p>You can also report inappropriate content in the Shop app, or contact
+the Shop support team for a technical issue.</p>
+<h4 id="in-this-section-5">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/report-content-in-the-Shop-app">Report
+content in the Shop app</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team">Contact
+the Shop support team</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/troubleshooting">Troubleshooting
+the Shop app</a></li>
+</ul>
+<h3 id="report-content-in-the-shop-app">Report content in the Shop
+app</h3>
+<p>Shop has a <a href="https://shop.com/content-policies">content
+policy</a> in place to ensure a safe and respectful experience when you
+use the app.</p>
+<p>You can report a store from a shoppable post or report a video review
+that goes against Shop’s content policy.</p>
+<h4 id="on-this-page-9">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/report-content-in-the-Shop-app#report-from-post">Report
+a store from a shoppable post</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/report-content-in-the-Shop-app#report-video-review">Report
+a video review</a></li>
+</ul>
+<h4 id="report-a-store-from-a-shoppable-post">Report a store from a
+shoppable post</h4>
+<p>To report a shoppable post, report the store that published it.</p>
+<h5 id="steps-15">Steps:</h5>
+<ul>
+<li>In the Shop app, open the shoppable post that you want to
+report.</li>
+<li>Tap &gt; Report.</li>
+<li>Complete the <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#report-a-store">store
+reporting steps</a>, starting from the Report shop dialog.</li>
+</ul>
+<h4 id="report-a-video-review">Report a video review</h4>
+<p>You can report a video review from its menu in the Shop app.</p>
+<h5 id="steps-16">Steps:</h5>
+<ul>
+<li>Open the video review that you want to report.</li>
+<li>Tap &gt; Report this review.</li>
+<li>In the Why are you reporting this review? dialog, select a reason
+for reporting.</li>
+<li>Tap Report.</li>
+</ul>
+<h3 id="reporting-an-order-issue-and-getting-help">Reporting an order
+issue and getting help</h3>
+<p>If there’s an issue with an order that you’re tracking in Shop, then
+how you can get help depends on what’s happening with your order. For
+most issues, you start by contacting the store. Use the following
+situations to choose the right path, including the steps to take and
+what to expect next.</p>
+<p>The store that you purchased from is responsible for fulfilling your
+order, providing product support, and processing returns and refunds.
+Shop and Shopify handle the security of checkout and payments, store
+eligibility, and the tools that you can use to report issues and dispute
+transactions.</p>
+<p>You can track your order in the Shop app or on <a
+href="https://shop.com">shop.com</a>, and contact the store from the
+Shop app. Order details beyond what’s displayed in Shop aren’t
+available.</p>
+<h4 id="on-this-page-10">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#contact-store">Contact
+the store that you purchased from</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#order-not-arrived">Late
+or missing order</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#product-issue">Issue
+with a product</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#refund-or-return">Refunds
+and returns</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#suspected-fraud">Suspected
+fraud</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#dispute-transaction">Dispute
+a transaction</a></li>
+<li><a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#report-a-store">Report
+a store for misleading or inappropriate content</a></li>
+</ul>
+<h4 id="contact-the-store-that-you-purchased-from">Contact the store
+that you purchased from</h4>
+<p>The store that you purchased from handles order questions, changes,
+refunds, and returns. For most order issues, start by messaging the
+store directly from the Shop app.</p>
+<h5 id="steps-17">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you need help with.</li>
+<li>Tap Contact [Store Name].</li>
+<li>Choose your preferred contact method, and then contact the
+store.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click the order that you need help with.</li>
+<li>Click &gt; Contact [Store Name].</li>
+<li>Choose your preferred contact method, and then contact the
+store.</li>
+</ul>
+<h4 id="late-or-missing-order">Late or missing order</h4>
+<p>If your order is late or hasn’t arrived, then start by checking the
+tracking information and contacting the shipping carrier, and then wait
+for the carrier or store to respond with delivery details or next
+steps.</p>
+<h5 id="steps-18">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that hasn’t arrived.</li>
+<li>Review the tracking status on the order page.</li>
+<li>To contact the shipping carrier, open the delivery tracking details,
+and then tap .</li>
+<li>If Contact carrier is available, then tap it to call the
+carrier.</li>
+<li>If you can’t reach the carrier or your tracking hasn’t updated, then
+<a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#contact-store">contact
+the store</a> to message them directly.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click the icon.</li>
+<li>Click the order that hasn’t arrived.</li>
+<li>Review the tracking status on the order page.</li>
+<li>To contact the shipping carrier, click &gt; Visit carrier website to
+contact the carrier through their website.</li>
+<li>If you can’t reach the carrier or your tracking hasn’t updated, then
+<a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#contact-store">contact
+the store</a> to message them directly.</li>
+</ul>
+<p>If more than 30 days have passed from when you placed your order and
+you don’t receive a response from the carrier or store, then you can <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#report-an-issue">report
+an issue with your order</a> so that it can be investigated.</p>
+<h5 id="missing-or-delayed-tracking-details">Missing or delayed tracking
+details</h5>
+<p>If your order is marked as shipped but tracking details aren’t
+displayed, or your order status is Waiting for details, then the store
+hasn’t added tracking information yet. This can happen when the store
+marks an order as shipped without a tracking number, or ships with a
+carrier that the Shop app doesn’t support.</p>
+<p>To get tracking details, <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#contact-store">contact
+the store</a> and ask them to share the tracking information, and then
+wait for them to respond. If more than 30 days have passed from when you
+placed your order and you don’t receive a response, then you can <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#report-an-issue">report
+an issue with your order</a>.</p>
+<h4 id="issue-with-a-product">Issue with a product</h4>
+<p>If your order arrived but the product is damaged, incorrect, has
+missing items, or isn’t as described, then <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#contact-store">contact
+the store</a> first. The store decides on refunds, replacements, and
+exchanges, and responds with a resolution or next steps, such as a
+refund, replacement, or instructions for a return. When you message the
+store, include your order number, a description of the issue, and photos
+if possible. You can also reply to the order confirmation email that the
+store sent you.</p>
+<p>If more than 30 days have passed from when you placed your order and
+you haven’t been able to reach the store, then you can <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#report-an-issue">report
+an issue with your order</a>.</p>
+<h5 id="report-an-issue-with-an-order">Report an issue with an
+order</h5>
+<p>If you can’t reach the store and more than 30 days have passed from
+when you placed your order, then you can report an order issue to
+Shop.</p>
+<p>When you report an order issue or store, it’s reviewed so that
+appropriate action can be taken to help protect Shop customers. After
+you report an issue, you’re contacted only if more information is
+needed.</p>
+<h6 id="steps-19">Steps:</h6>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you have an issue with.</li>
+<li>Tap &gt; Report an issue with this order.</li>
+<li>Complete the form to submit your issue.</li>
+</ul>
+<p>To report an issue with an order in a web browser, complete the <a
+href="https://www.shopify.com/legal/tools/report-an-issue/order-issue">Issue
+with an order</a> form.</p>
+<h4 id="refunds-and-returns">Refunds and returns</h4>
+<p>Refunds and returns are managed by the store that you purchased from.
+If the store supports in-app returns, then the Start a return option is
+displayed on the order page. For full instructions, including in-app
+returns by mail and in-store, refer to <a
+href="https://help.shop.app/en/shop/managing-orders/returns">Managing
+returns in the Shop app</a>. If in-app returns aren’t available, then <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#contact-store">contact
+the store</a> to request a return or refund directly.</p>
+<h4 id="suspected-fraud">Suspected fraud</h4>
+<p>If you didn’t place an order, you don’t recognize the store, or you
+suspect fraud, then report the store. If an order that you don’t
+recognize is displayed in the Shop app, then refer to <a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info">Report
+incorrect order information</a>. For tips on reviewing a store before
+you buy, refer to <a
+href="https://help.shop.app/en/shop/shopping/shopping-safely">Shopping
+with confidence on Shop</a>.</p>
+<p>To report a store that you believe is engaging in fraudulent
+activity, complete the <a
+href="https://www.shopify.com/legal/tools/report-an-issue/fraud">Fraud
+report form</a>. Reporting suspicious activity helps Shopify investigate
+and take appropriate action to protect Shop customers from fraud. After
+you report an issue, you’re contacted only if more information is
+needed.</p>
+<h4 id="dispute-a-transaction">Dispute a transaction</h4>
+<p>If you’ve contacted the store and it’s unresponsive, or you suspect
+fraudulent activity, then contact your bank or the payment provider that
+you paid with. Your bank or payment provider can help you dispute a
+transaction. After you dispute a transaction, Shopify is notified and
+can then investigate the store that you purchased from.</p>
+<h5 id="dispute-a-shop-pay-installments-order">Dispute a Shop Pay
+Installments order</h5>
+<p>If you paid with Shop Pay Installments, which is powered by Affirm,
+and the store is unresponsive, then follow the steps to <a
+href="https://shoppay.affirm.com/help/s/article/dispute-a-purchase-sp">dispute
+a purchase through Affirm’s website</a>.</p>
+<h4 id="report-a-store-for-misleading-or-inappropriate-content">Report a
+store for misleading or inappropriate content</h4>
+<p>If a Shop store has misleading content, inappropriate content, or
+otherwise violates <a href="https://shop.com/content-policies">Shop’s
+content policies</a>, then you can report it from Shop. When you report
+an issue with the store, you can choose from the following reasons:</p>
+<ul>
+<li>Misleading: A store with misleading content or products</li>
+<li>Inappropriate content: A store with inappropriate content or
+products</li>
+<li>IP Infringement: Intellectual property infringement</li>
+<li>Other: Any other reason</li>
+</ul>
+<h5 id="steps-20">Steps:</h5>
+<p>Shop app</p>
+<ul>
+<li><p>In the Shop app, on the Shop store page, tap &gt;
+Report.</p></li>
+<li><p>In the Report shop dialog, select a reason for
+reporting.</p></li>
+<li><p>Complete the steps for your selected reason:</p></li>
+<li><p>For IP Infringement, tap Report to open Shopify’s intellectual
+property guidance. Follow the guidance to complete the appropriate form
+and submit your infringement notice.</p></li>
+<li><p>For any other reason, complete the following steps:</p>
+<ul>
+<li>Tap Next.</li>
+<li>If prompted, then select a more specific reason and optionally add
+details in the Tell us more text box.</li>
+<li>Tap Report.</li>
+</ul></li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li><p>On a web browser, on the Shop store page, click &gt;
+Report.</p></li>
+<li><p>In the Report shop dialog, select a reason for
+reporting.</p></li>
+<li><p>Complete the steps for your selected reason:</p></li>
+<li><p>For IP Infringement, click Report to open Shopify’s intellectual
+property guidance. Follow the guidance to complete the appropriate form
+and submit your infringement notice.</p></li>
+<li><p>For any other reason, complete the following steps:</p>
+<ul>
+<li>Click Next.</li>
+<li>If prompted, then select a more specific reason and optionally add
+details in the Tell us more text box.</li>
+<li>Click Report.</li>
+</ul></li>
+</ul>
+<p>If more information is needed after you submit a report in Shop, then
+you’ll be contacted by Shopify. To report a store from a shoppable post
+or report a video review, refer to <a
+href="https://help.shop.app/en/shop/report-issue/report-content-in-the-Shop-app">Report
+content in the Shop app</a>.</p>
+<h4 id="still-need-help">Still need help</h4>
+<p>If none of these paths match your situation, or you’re having a
+technical problem with the Shop app itself, then you can <a
+href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team">contact
+the Shop support team</a>.</p>
+<p>The Shop support team can help with the following topics:</p>
+<ul>
+<li>Questions about using the Shop app, <a
+href="https://shop.com">shop.com</a>, and features such as <a
+href="https://help.shop.app/en/shop/shop-cash">Shop Cash</a>, <a
+href="https://help.shop.app/en/shop/shopping/shop-offers">Shop
+offers</a>, <a href="https://help.shop.app/en/shop/shop-pay">Shop
+Pay</a>, <a
+href="https://help.shop.app/en/shop/shop-pay-installments">Shop Pay
+Installments</a>, and <a
+href="https://help.shop.app/en/shop/delivery-tracking/shop-promise">Shop
+Promise</a></li>
+<li>Technical support</li>
+<li>Reporting a bug or issue with the Shop app</li>
+<li>Suggesting an improvement to the Shop app</li>
+</ul>
+<p>For questions about a specific order, product, shipping, return, or
+refund, use one of the paths on this page to contact the store or
+carrier directly. The Shop support team can’t access those details.</p>
+<h3 id="troubleshooting-the-shop-app">Troubleshooting the Shop app</h3>
+<p>Review the following troubleshooting tips for the Shop app:</p>
+<ul>
+<li>Make sure that you’re using a mobile device: While you can still
+manage Shop Pay settings on desktop, the Shop app is only available for
+download through your mobile device.</li>
+<li>Use a stable internet connection: Try disconnecting from your
+wireless network or any Virtual Private Networks (VPNs), and using
+cellular data instead.</li>
+<li>Make sure that your operating system is up to date: The Shop app is
+available on <a href="https://apps.apple.com/app/id1223471316">iOS</a>
+for iPhone and iPad, and <a
+href="https://play.google.com/store/apps/details?id=com.shopify.arrive">Android</a>
+for smartphones and supported tablets. Review the compatibility
+information on the app listing to ensure that your device meets the
+operating system requirements.</li>
+<li>Make sure that you’re using the most recent version of Shop: Check
+your device’s app store for the most recent version of the Shop
+app.</li>
+</ul>
+<h2 id="shop-cash">Shop Cash</h2>
+<h3 id="checking-your-shop-cash-balance">Checking your Shop Cash
+balance</h3>
+<p>To view your Shop Cash balance, sign into the Shop app or <a
+href="https://shop.com">shop.com</a> using the same email address
+associated with your Shop Pay account. If you’ve been notified through
+email about your Shop Cash, then use the email mentioned in that
+notification.</p>
+<p>Your Shop Cash balance is displayed in the following location
+depending on whether you use the Shop app or shop.com:</p>
+<ul>
+<li>Shop app: In the Shop app, tap the Account icon, which is your
+profile picture or initials, and then go to Payment methods, where Shop
+Cash is displayed as a payment method.</li>
+<li>shop.com: On <a href="https://shop.com">shop.com</a>, click your
+account icon. Your Shop Cash balance is displayed as a dollar amount
+next to your account name and email.</li>
+</ul>
+<p>If your Shop Cash balance doesn’t display immediately after logging
+in, then try logging out and logging back in with the appropriate email
+address.</p>
+<p>Your Shop Cash <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-expiration">expires</a>
+depending on when it was earned.</p>
+<h3 id="earn-shop-cash">Earn Shop Cash</h3>
+<p>You might have the opportunity to earn Shop Cash through promotional
+events in the Shop app and on <a href="https://shop.com">shop.com</a>. A
+Shop Cash banner is displayed at checkout on eligible orders. To earn
+Shop Cash, your order must also meet the following requirements:</p>
+<ul>
+<li>You pay for your order using <a
+href="https://help.shop.app/en/shop/shop-pay">Shop Pay</a> or <a
+href="https://help.shop.app/en/shop/shop-pay-installments">Shop Pay
+Installments</a> in the Shop app or on <a
+href="https://shop.com">shop.com</a>. You can’t earn Shop Cash on orders
+placed on an online store.</li>
+<li>The purchase doesn’t include gift cards or products that don’t
+require shipping, such as digital products. Some product add-ons that
+don’t require shipping, such as shipping protection, warranties, or
+tips, can still be eligible.</li>
+<li>The store isn’t a wholesale store.</li>
+<li>If a Shop offer has a minimum order value, then eligibility is based
+on the order subtotal before shipping fees and taxes are applied.</li>
+<li>If you purchase a <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#subscriptions">subscription</a>,
+then you earn Shop Cash only on the initial subscription payment. You
+don’t earn Shop Cash on recurring subscription payments after you place
+your order.</li>
+</ul>
+<p>Eligibility depends on the store’s internal shipping setting for each
+product, not on the delivery method that you choose at checkout. If you
+choose local pickup for a product that’s been set internally as
+requiring shipping, then your order can still earn Shop Cash. Some
+stores might set pickup-only products as not requiring shipping, and
+these products aren’t eligible for Shop Cash.</p>
+<p>You only earn Shop Cash on the portion of the order you pay for with
+Shop Pay or Shop Pay Installments using a credit or debit card. You
+won’t earn Shop Cash on portions paid with gift cards, rebates, or any
+form of discounts or promotional value. You can’t opt out of earning
+Shop Cash.</p>
+<p>Selecting Apple Pay within the Shop Pay checkout in the Shop app or
+on <a href="https://shop.com">shop.com</a> doesn’t disqualify your order
+from earning Shop Cash.</p>
+<p>Learn more in the <a href="https://shop.com/shop-cash-terms">Shop
+Rewards Terms</a>.</p>
+<h4 id="on-this-page-11">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/earn-shop-cash#important-restrictions-and-conditions">Important
+restrictions and conditions</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/earn-shop-cash#using-shop-cash">Using
+Shop Cash</a></li>
+</ul>
+<h4 id="important-restrictions-and-conditions">Important restrictions
+and conditions</h4>
+<ul>
+<li>Non-transferable: Shop Cash can’t be manually added to your balance
+or to orders that have already been processed.</li>
+<li>Unique offers: Offers including Shop Cash are personalized for each
+Shop user and might not be universally available.</li>
+<li>Account limitations: You can’t merge or transfer Shop Cash between
+different accounts, or recover Shop Cash from deleted accounts.</li>
+<li>Expiration: Expired Shop Cash can’t be recovered and might lead to a
+negative Shop Cash balance if associated with a refunded order.</li>
+</ul>
+<h4 id="using-shop-cash">Using Shop Cash</h4>
+<ul>
+<li>Redeeming Shop Cash: You can redeem Shop Cash only on the Shop app
+and <a href="https://shop.com">shop.com</a>. Refer to the <a
+href="https://help.shop.app/en/shop/shop-cash/redeeming-shop-cash">Redeeming
+Shop Cash</a> article to learn more about order requirements for
+redeeming Shop Cash.</li>
+<li>Negative balances: To earn or redeem Shop Cash, ensure that any
+other Shop Pay account you own doesn’t have a negative Shop Cash
+balance.</li>
+<li>Refunds: Refer to the <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds">Refunds
+on Shop Cash orders</a> article to learn how refunds impact your Shop
+Cash balance.</li>
+<li>Eligibility at checkout: During checkout, if your order is eligible
+to use Shop Cash, it will appear as a payment option. If not eligible,
+Shop Cash won’t appear.</li>
+</ul>
+<h3 id="overview-shop-cash">Overview: Shop Cash</h3>
+<p>Shop Cash is a rewards program for Shop app users. You can <a
+href="https://help.shop.app/en/shop/shop-cash/earn-shop-cash">earn Shop
+Cash</a> on eligible purchases through promotional offers, and <a
+href="https://help.shop.app/en/shop/shop-cash/redeeming-shop-cash">redeem
+Shop Cash</a> toward orders from stores that accept Shop Pay.</p>
+<p>When you have a Shop Cash balance, it’s displayed as a payment method
+at checkout on eligible orders. You can check your <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-balance">Shop
+Cash balance</a> in the Shop app or on shop.com, and track when your
+Shop Cash <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-expiration">expires</a>.</p>
+<p>If you receive a refund on an order that involved Shop Cash, then
+your balance is adjusted accordingly. Learn more about <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds">refunds
+on Shop Cash orders</a>.</p>
+<h4 id="in-this-section-6">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/earn-shop-cash">Earn Shop
+Cash</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/redeeming-shop-cash">Redeeming
+your Shop Cash</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds">Refunds
+on Shop Cash orders</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-balance">Checking
+your Shop Cash balance</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-expiration">Shop
+Cash expiration</a></li>
+</ul>
+<h3 id="redeeming-your-shop-cash">Redeeming your Shop Cash</h3>
+<p>You can redeem your Shop Cash at checkout when you place an order
+through the Shop app, <a href="https://shop.com">shop.com</a>, or when
+you complete a Shop Pay checkout on a store’s website after being
+redirected from Shop. When you select Apple Pay within the Shop Pay
+checkout in the Shop app or on shop.com, your order is still eligible to
+redeem Shop Cash. Apple Pay used on a store’s own checkout, outside of
+Shop Pay, isn’t eligible.</p>
+<p>Shop Cash is displayed as a payment option at checkout whenever it’s
+available for your order. If Shop Cash doesn’t appear at checkout, then
+the store doesn’t currently accept it for your order.</p>
+<p>After you redeem Shop Cash on an order, it’s displayed as a payment
+method on your order receipt in the Shop app. You can’t redeem Shop Cash
+after you’ve placed an order. If you redeem Shop Cash at a store that
+uses a different currency than your Shop Cash balance, then your Shop
+Cash is converted to the store’s currency at the current exchange
+rate.</p>
+<h4 id="on-this-page-12">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/redeeming-shop-cash#requirements">Requirements
+to redeem Shop Cash</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/redeeming-shop-cash#view-your-redeemed-shop-cash">View
+your redeemed Shop Cash</a></li>
+</ul>
+<h4 id="requirements-to-redeem-shop-cash">Requirements to redeem Shop
+Cash</h4>
+<p>To redeem your Shop Cash, your order must meet the following
+requirements:</p>
+<ul>
+<li>You place the order in the Shop app or on <a
+href="https://help.shop.app/en/shop/shopping/shop-on-the-web">shop.com</a>,
+or you complete Shop Pay checkout on the store’s website after being
+redirected from Shop.</li>
+<li>Shop Cash is displayed as an available payment method at checkout.
+Not every store accepts Shop Cash, so the option displays only when the
+store accepts it.</li>
+<li>The purchase doesn’t include gift cards or digital products.</li>
+<li>The store isn’t a wholesale store.</li>
+</ul>
+<p>The delivery method that you choose doesn’t affect redemption. You
+can redeem Shop Cash when you choose local pickup at checkout.</p>
+<h5
+id="shop-cash-redemption-conditions-for-first-time-shop-pay-users">Shop
+Cash redemption conditions for first-time Shop Pay users</h5>
+<p>The following additional conditions apply if you’re using Shop Pay
+for the first time, purchasing a subscription, or paying in
+installments:</p>
+<ul>
+<li>If you’ve never used Shop Pay before, then your first order must
+total at least $10 in your local currency to redeem Shop Cash. This
+excludes taxes and shipping charges.</li>
+<li>Shop Cash can be applied to the first installment payment when you
+place a <a
+href="https://help.shop.app/en/shop/shop-pay-installments/overview">Shop
+Pay Installments</a> order. You can’t use Shop Cash toward any other
+Shop Pay Installments payments.</li>
+<li>If you purchase a <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#subscriptions">subscription</a>,
+then you can redeem Shop Cash only on the initial subscription payment.
+You can’t redeem Shop Cash toward recurring subscription payments after
+you place your order.</li>
+</ul>
+<h4 id="view-your-redeemed-shop-cash">View your redeemed Shop Cash</h4>
+<p>You can view the Shop Cash that you’ve redeemed in the Shop app. When
+you view your Shop Cash activity, your earned and redeemed Shop Cash
+display in order by the date that you earned or redeemed them.</p>
+<p>Shop app</p>
+<ul>
+<li>From the Shop app in the tab, tap your Shop Cash balance.</li>
+<li>Tap the icon to view your Shop Cash activity.</li>
+</ul>
+<p>shop.com</p>
+<ul>
+<li>On a web browser, go to <a
+href="https://shop.com">shop.com</a>.</li>
+<li>Click Sign in, and then follow the prompts to sign in to your Shop
+account.</li>
+<li>Click your Shop Cash balance.</li>
+<li>Click &gt; Activity &gt; All activity.</li>
+</ul>
+<h3 id="refunds-on-shop-cash-orders">Refunds on Shop Cash orders</h3>
+<p>The following sections explain what happens to your Shop Cash balance
+when you receive a refund.</p>
+<h4 id="on-this-page-13">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds#refunds-on-orders-that-earned-shop-cash">Refunds
+on orders that earned Shop Cash</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds#refunds-on-orders-that-were-paid-for-using-shop-cash">Refunds
+on orders that were paid for using Shop Cash</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds#full-refunds">Full
+refunds</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds#partial-refunds">Partial
+refunds</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds#shop-cash-expiration-and-refunds">Shop
+Cash expiration and refunds</a></li>
+</ul>
+<h4 id="refunds-on-orders-that-earned-shop-cash">Refunds on orders that
+earned Shop Cash</h4>
+<p>If you earn Shop Cash on an order, and the order is later refunded,
+then the Shop Cash that you earned from that order is deducted from your
+Shop Cash balance. This includes Shop Cash that you’ve already
+spent.</p>
+<p>Learn more about earning Shop Cash in the <a
+href="https://shop.com/shop-cash-terms">Shop Rewards Terms and
+Conditions</a>.</p>
+<h4 id="refunds-on-orders-that-were-paid-for-using-shop-cash">Refunds on
+orders that were paid for using Shop Cash</h4>
+<p>When you receive a refund on an order where you used Shop Cash, the
+Shop Cash is returned to your balance. However, <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-expiration">expired
+Shop Cash</a> isn’t returned to your balance after you receive a
+refund.</p>
+<h4 id="full-refunds">Full refunds</h4>
+<p>With full refunds, you’re refunded in the same way you paid for the
+order, except for expired Shop Cash. <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-expiration">Expired
+Shop Cash</a> isn’t credited back to your balance after a refund is
+issued. The following is a detailed breakdown of how full refunds are
+processed when Shop Cash is involved:</p>
+<ul>
+<li>Initial refund process: When you receive a full refund on an order
+that used Shop Cash as part of the payment, the refund is initially
+applied to your Shop Pay payment method.</li>
+<li>Subsequent refunds: Any remaining amount after the initial refund is
+then returned to your Shop Cash balance, ensuring that you’re reimbursed
+appropriately.</li>
+</ul>
+<h4 id="partial-refunds">Partial refunds</h4>
+<p>With partial refunds, the amount of Shop Cash you get back depends on
+the store’s refund process:</p>
+<ul>
+<li>Refund allocation: The store decides the portion of the refund that
+goes back to your Shop Pay payment method and the amount that is
+restored to your Shop Cash balance. Refer to the store’s refund policy
+for more information about refunds.</li>
+<li>Processing order refunds: If the refund is from an order where Shop
+Cash was applied without any special offer, then the refund will first
+apply to your payment card. Subsequently, any leftover amount will be
+credited back to your Shop Cash.</li>
+<li>Refund limits: The refund amount credited to either your Shop Pay
+payment method or Shop Cash balance will not exceed the original amount
+used in each respective payment type.</li>
+<li>Refund processing time: The refunded Shop Cash may take up to 48
+hours to reflect in your balance once the online store has processed the
+refund.</li>
+</ul>
+<p>Learn more about refunds on orders that were paid for using Shop Cash
+in the <a href="https://shop.com/shop-cash-terms">Shop Rewards Terms and
+Conditions</a>.</p>
+<h4 id="shop-cash-expiration-and-refunds">Shop Cash expiration and
+refunds</h4>
+<p>Shop Cash might be removed from your balance either when it expires
+or if you receive a refund on an order where you had earned Shop
+Cash.</p>
+<h3 id="shop-cash-expiration">Shop Cash expiration</h3>
+<p>Shop Cash expires on a rolling basis, which means different amounts
+might have different expiration dates.</p>
+<ul>
+<li>Unless stated otherwise, most Shop Cash expires 180 days after you
+earn it. In Canada, Ontario or Quebec residents can check the <a
+href="https://shop.com/shop-cash-terms-ca">Shop Rewards Terms</a> for
+certain exceptions.</li>
+<li>If you receive Shop Cash as part of a promotion or giveaway, then
+that reward might have a different expiration period.</li>
+<li>If you only redeem part of your Shop Cash on an order, then the
+expiration date on your remaining Shop Cash balance resets from the date
+of that purchase.</li>
+</ul>
+<p>Shop Cash might be removed from your balance either when it expires,
+or if you receive a refund on an order where you earned Shop Cash.</p>
+<p>After your Shop Cash expires, it’s removed from your Shop Cash
+balance, and can’t be recovered.</p>
+<p>Learn more about Shop Cash expiration in the <a
+href="https://shop.com/shop-cash-terms">Shop Rewards Terms</a>.</p>
+<h2 id="shopping">Shopping</h2>
+<h3 id="contests-and-giveaways">Contests and giveaways</h3>
+<p>Shop occasionally runs contests that you can participate in as a Shop
+app user. Shop might promote such contests through the following
+channels:</p>
+<ul>
+<li>In the Shop app</li>
+<li>Email or push notifications</li>
+<li>Shop social media accounts</li>
+<li>Shop’s app store listing</li>
+</ul>
+<h4 id="on-this-page-14">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/contests#participation-requirements">Participation
+requirements</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/contests#current-contests">Current
+contests</a></li>
+</ul>
+<h4 id="participation-requirements">Participation requirements</h4>
+<p>In order to participate in contests run by Shop, you need to follow
+the <a
+href="https://shop.com/terms-of-service?utm_medium=website&amp;utm_source=shop-website">Shopify
+Consumer Terms of Service</a> and agree to the contest’s official rules.
+Restrictions based on location might apply.</p>
+<h4 id="current-contests">Current contests</h4>
+<p>This page includes links to current contest rules when available, but
+may not be exhaustive of all Shop contests.</p>
+<h3 id="discover-stores-and-products-in-shop">Discover stores and
+products in Shop</h3>
+<p>You can discover stores and products in Shop through Shop search,
+your personalized home feed, and interactive experiences such as <a
+href="https://help.shop.app/en/shop/shopping/discover/shop-minis">Shop
+Minis</a>. This section also details how to manage the recommendations
+that you receive in Shop, and how to follow and save stores and
+products.</p>
+<h4 id="shop-search">Shop search</h4>
+<p>Shop search helps you find products and stores by using keywords, or
+through conversations with a shopping assistant where you can describe
+what you’re searching for in your own words. For example, a
+conversational search might be “Help me find a birthday gift for someone
+who loves hiking”. The shopping assistant responds to conversational
+searches in the language that you use.</p>
+<p>Depending on your search query, Shop might return your search results
+in the following ways:</p>
+<ul>
+<li>For keyword searches containing a brand name, product name, or
+category, additional filters might display so that you can refine your
+search results.</li>
+<li>Conversational searches return results based on the context and
+details that you provide, rather than using filters.</li>
+</ul>
+<p>Your search results are personalized based on your purchase history,
+<a
+href="https://help.shop.app/en/shop/shopping/shopping-activity-sync">shopping
+activity</a>, and <a
+href="https://help.shop.app/en/shop/getting-started/profile">personalization
+settings</a>. Results are also filtered to include only stores that ship
+to your location. The more that you use Shop, the more relevant your
+search results become.</p>
+<h4 id="your-personalized-home-feed">Your personalized home feed</h4>
+<p>Your home feed in the tab of the Shop app includes personalized
+content from stores that you follow and new stores that you might like.
+Content in your home feed is based on your <a
+href="https://help.shop.app/en/shop/shopping/shopping-activity-sync">shopping
+activity</a>, browsing history, and <a
+href="https://help.shop.app/en/shop/getting-started/profile">personalization
+settings</a>.</p>
+<p>Your home feed might include the following types of content:</p>
+<ul>
+<li>Product and store recommendations based on your interests</li>
+<li>New products, posts, and videos from stores that you follow</li>
+<li>Recently viewed products</li>
+<li>Updates on saved items, such as price drops and back-in-stock
+notifications</li>
+<li>Suggestions to reorder products that you’ve purchased before</li>
+<li>Promotional offers</li>
+</ul>
+<p>From the home feed, you can also navigate to Deals, Following, Minis,
+and Saved products and stores.</p>
+<p>If you’re signed in on <a
+href="https://help.shop.app/en/shop/shopping/shop-on-the-web">shop.com</a>,
+then the shop.com home page also includes posts from stores that you
+follow.</p>
+<p>You can <a
+href="https://help.shop.app/en/shop/shopping/discover/manage-recommendations">manage
+your recommendations</a> to help Shop refine what it suggests. For
+example, you can press and hold a recommended product, and then tap Not
+interested or Show similar.</p>
+<h4 id="in-this-section-7">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/discover/save-products-and-follow-stores">Save
+products and follow stores</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/discover/manage-recommendations">Manage
+recommendations</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/discover/shop-minis">Interactive
+shopping experiences with Shop Minis</a></li>
+</ul>
+<h3 id="make-purchases-in-shop">Make purchases in Shop</h3>
+<p>You can browse products on the Shop app, <a
+href="https://shop.com">shop.com</a>, or through agentic shopping
+experiences such as the Shop app for ChatGPT. When shopping on the Shop
+app or website, you can pay for orders by using <a
+href="https://help.shop.app/en/shop/shop-pay/check-out">Shop Pay</a>.
+While browsing products, you can add items to your cart by selecting Add
+to cart. When you’ve finished adding items to your cart, you can
+continue to checkout.</p>
+<p>When you discover products through agentic shopping experiences, you
+might be directed to the store’s website to complete your purchase, or
+you might be able to review and approve the purchase through Shop,
+depending on the experience.</p>
+<p>Orders placed through Shop include marketplace sales tax for US
+orders. Learn more about <a
+href="https://help.shop.app/en/manual/online-sales-channels/shop/sales-tax">sales
+tax in Shop</a>.</p>
+<h4 id="on-this-page-15">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#considerations">Considerations
+before you check out on Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#make-purchase">Check
+out from one store</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#multiple-store-checkout">Check
+out from multiple stores at one time</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#subscriptions">Purchase
+a subscription product</a></li>
+</ul>
+<h4 id="considerations-before-you-check-out-on-shop">Considerations
+before you check out on Shop</h4>
+<p>In the Shop app, your cart can contain items from more than one
+store. When it does, you can check out from each store separately, or
+from all of the stores together at one time. On shop.com, you can check
+out from only one store at a time.</p>
+<p>In the Shop app, you need to check out from each store separately in
+the following cases:</p>
+<ul>
+<li>Your cart contains items priced in more than one currency.</li>
+<li>Your cart directs you to a store’s website to complete your
+purchase.</li>
+<li>Your payment method requires extra verification, such as Apple Pay,
+or you want to pay for your order in installments.</li>
+</ul>
+<p>If a store has physical locations, then you can pick up your order
+instead of having it shipped. When a pickup location is available,
+product pages display Available at with a location name or the number of
+locations where in-store pickup is available, and you can select a
+pickup option at checkout. The nearest city locations are based on the
+<a
+href="https://help.shop.app/en/shop/shop-pay-settings/shipping-and-payment#default-address">default
+shipping address in your account settings</a>.</p>
+<h4 id="check-out-from-one-store">Check out from one store</h4>
+<p>You can make a purchase from a single Shop store in the Shop app or
+on shop.com.</p>
+<h5 id="steps-21">Steps:</h5>
+<ul>
+<li>From the Shop app or on <a href="https://shop.com">shop.com</a>,
+select the icon.</li>
+<li>In the section for the Shop store you want to check out from, select
+Continue to checkout.</li>
+<li>Select your shipping or pickup option:
+<ul>
+<li>To ship your order:
+<ul>
+<li>Select Ship.</li>
+<li>In the Ship to section, select a saved address or select + Use a
+different address to enter a new shipping address.</li>
+<li>In the Shipping section, select a shipping method.</li>
+</ul></li>
+<li>To pick up your order from a physical location:
+<ul>
+<li>Select Pickup.</li>
+<li>In the Location section, select the location that you want to pick
+up from.</li>
+</ul></li>
+</ul></li>
+<li>Select your payment plan and method:
+<ul>
+<li>If a Plan section is displayed, then select an available payment
+plan.</li>
+<li>In the Payment section, select a saved payment method or select Pay
+another way to add a new payment method.</li>
+</ul></li>
+<li>Optional: Apply any gift cards or discount codes to your order.</li>
+<li>Select Pay now to complete your purchase.</li>
+</ul>
+<p>After you complete checkout, your order is displayed in the Orders
+tab of Shop. After the store provides a tracking number for your order,
+you can <a
+href="https://help.shop.app/en/shop/delivery-tracking/track-orders">track
+the delivery using Shop</a>.</p>
+<h4 id="check-out-from-multiple-stores-at-one-time">Check out from
+multiple stores at one time</h4>
+<p>When your cart in the Shop app contains items from more than one
+store, you have the option to purchase products from all of those stores
+together in one session. Checkout from multiple Shop stores is available
+only in the Shop app.</p>
+<p>When you check out from all the stores together, the checkout for
+each store is displayed one after the other. You select your shipping or
+pickup method for each store’s order. You can use a different payment
+method for each store’s order, and you select Pay now only one time to
+pay for all of the orders. Shipping costs, taxes, discounts, and gift
+cards apply to each store’s order separately. Your <a
+href="https://help.shop.app/en/shop/shop-cash/redeeming-shop-cash">Shop
+Cash</a> balance is applied to the orders one at a time until your
+balance is used up.</p>
+<p>When your cart is eligible, a Check out all option is available in
+the Shop app. To check out from all the stores in your cart at one time,
+your <a
+href="https://help.shop.app/en/shop/shop-pay-settings/setup">Shop Pay
+account</a> needs at least one saved payment method and one saved
+shipping address.</p>
+<h5 id="steps-22">Steps:</h5>
+<ul>
+<li>From the Shop app, select the icon.</li>
+<li>Select Check out all.</li>
+<li>Select your shipping or pickup option for each store’s items:
+<ul>
+<li>To ship your order:
+<ul>
+<li>Select Ship.</li>
+<li>In the Ship to section, select a saved address or select + Use a
+different address to enter a new shipping address.</li>
+<li>In the Shipping section, select a shipping method.</li>
+</ul></li>
+<li>To pick up your order from a physical location:
+<ul>
+<li>Select Pickup.</li>
+<li>In the Location section, select the location that you want to pick
+up from.</li>
+</ul></li>
+</ul></li>
+<li>In the Payment section for each store’s items, select a saved
+payment method or select Pay another way to add a new payment
+method.</li>
+<li>Optional: Apply any gift cards or discount codes to your order.</li>
+<li>Select Pay now.</li>
+</ul>
+<p>After you check out from multiple Shop stores at one time, you
+receive a separate order confirmation from each store. Each order is
+displayed in the Orders tab of Shop separately.</p>
+<p>If an order from one store can’t be completed at checkout, then the
+orders from the other stores are still placed. You can correct the
+details for that order and submit it again, or remove it from your
+cart.</p>
+<h4 id="purchase-a-subscription-product">Purchase a subscription
+product</h4>
+<p>When available, you can purchase a subscription product on the Shop
+app or <a href="https://shop.com">shop.com</a>. Some stores might offer
+special pricing when you subscribe to a product.</p>
+<p>After you subscribe to a product, you can manage your subscription <a
+href="https://help.shop.app/en/shop/shop-pay-settings/subscriptions">from
+your Shop account</a> or through the online store that you purchased
+from.</p>
+<h5 id="steps-23">Steps:</h5>
+<ul>
+<li>From a product page on the Shop app or <a
+href="https://shop.com">shop.com</a>, select the Subscribe or Subscribe
+&amp; save option.</li>
+<li>Optional: If multiple delivery frequency options are available, then
+select a delivery frequency from the drop-down menu.</li>
+<li>Do either of the following:
+<ul>
+<li>To complete your purchase immediately, select Subscribe now, and
+then select Continue to checkout.</li>
+<li>To add the product to your cart and check out at a later time,
+select Add to cart, and then follow the steps to check out from a <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#make-purchase">single
+store</a> or from <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop#multiple-store-checkout">multiple
+stores at one time</a>.</li>
+</ul></li>
+<li>Follow the prompts at checkout to complete your purchase.</li>
+</ul>
+<h3 id="overview-shopping">Overview: Shopping</h3>
+<p>You can make purchases through the Shop app, <a
+href="https://shop.com">shop.com</a>, and agentic shopping experiences
+like the Shop App for ChatGPT. You can also review products from Shop
+stores and manage your shopping preferences using Shop.</p>
+<p>When you discover products through agentic shopping experiences, you
+might be directed to the store’s website to complete your purchase, or
+you might be able to review and approve the purchase through Shop,
+depending on the experience.</p>
+<p>Participating Shop stores also may display Shop offers, which give
+you access to special pricing, or opportunities to earn extra Shop Cash
+back on your purchases.</p>
+<h4 id="in-this-section-8">In this section</h4>
+<ul>
+<li><a href="https://help.shop.app/en/shop/shopping/discover">Discover
+stores and products in Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop">Make
+purchases in Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-safely">Shopping
+with confidence on Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/understanding-tariffs-and-their-impact-on-your-purchases">Understanding
+tariffs and their impact on your purchases</a></li>
+<li><a href="https://help.shop.app/en/shop/shopping/contests">Contests
+and giveaways</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop">Review
+a product that you purchased through Shop</a></li>
+<li><a href="https://help.shop.app/en/shop/shopping/shop-offers">Shop
+offers</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shop-on-the-web">Using
+shop.com</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-activity-sync">Shopping
+activity syncing</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents">Using Shop
+with AI agents and agentic platforms</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/product-recalls">Product
+recalls and safety notices in the European Union</a></li>
+</ul>
+<h3
+id="product-recalls-and-safety-notices-in-the-european-union">Product
+recalls and safety notices in the European Union</h3>
+<p>When Shop is notified by sellers or authorities about product recalls
+or safety notices issued under the European Union (EU) General Product
+Safety Regulation (GPSR), those products are added to the <a
+href="https://cdn.shopify.com/static/regulatory/EU-General-Product-Safety-Regulation-Recalls.pdf">EU
+General Product Safety Regulation Recalls</a> list. This list includes a
+summary of current recalls or safety notices provided by stores who sell
+products through Shop.</p>
+<h4 id="on-this-page-16">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/product-recalls#checking-if-a-product-has-been-recalled">Checking
+if a product has been recalled</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/product-recalls#questions-about-product-recalls">Questions
+about product recalls</a></li>
+</ul>
+<h4 id="checking-if-a-product-has-been-recalled">Checking if a product
+has been recalled</h4>
+<p>To learn if a product that you’ve purchased from a Shop store has
+been recalled, review the <a
+href="https://cdn.shopify.com/static/regulatory/EU-General-Product-Safety-Regulation-Recalls.pdf">EU
+General Product Safety Regulation Recalls</a> list.</p>
+<h4 id="questions-about-product-recalls">Questions about product
+recalls</h4>
+<p>If you believe that you’ve purchased a recalled product, or have
+questions about product safety, then <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order#product-issue">contact
+the store that you’ve purchased from</a> or the manufacturer of the
+product for specific instructions.</p>
+<h3 id="review-a-product-that-you-purchased-through-shop">Review a
+product that you purchased through Shop</h3>
+<p>You can review products that you <a
+href="https://help.shop.app/en/shop/shopping/make-purchases-in-shop">purchased
+through the Shop app</a>, or products that you purchased through an
+online store that also appear in the Shop app. For eligible products,
+you’ll receive a review request <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/notifications">notification</a>
+one week after your order is delivered.</p>
+<p>Product reviews are displayed publicly on the Shop app to provide
+helpful and honest feedback about products to Shop stores and customers.
+When you review a product on Shop, your first name appears on the
+review. Reviews can’t be left anonymously.</p>
+<p>When you review a product, you can leave a rating from 1 to 5 stars,
+alongside a comment up to 1,000 characters long. You can’t leave a
+review on an order with a value of 0.</p>
+<h4 id="on-this-page-17">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop#leave-a-product-review">Leave
+a product review</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop#edit-a-product-review">Edit
+a product review</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop#delete-a-product-review">Delete
+a product review</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop#report-a-product-review">Report
+a product review</a></li>
+</ul>
+<h4 id="leave-a-product-review">Leave a product review</h4>
+<p>You can leave a product review in the Shop app.</p>
+<h5 id="steps-24">Steps:</h5>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that you want to review.</li>
+<li>Tap Review next to the product that you want to review.</li>
+<li>Select a rating from one to five stars.</li>
+<li>Write your review in the text field.</li>
+<li>Tap Submit.</li>
+</ul>
+<p>If you don’t want to complete a review, then tap the icon to close
+the review.</p>
+<p>By leaving a product review, you acknowledge that your review is
+truthful, and follows <a
+href="https://shop.com/product-review-policies">Shop Product Review
+Policies</a>. Shop might reject, remove, or redact information from a
+review that doesn’t follow the review policies.</p>
+<h4 id="edit-a-product-review">Edit a product review</h4>
+<p>You can edit your product reviews in the Shop app.</p>
+<h5 id="steps-25">Steps:</h5>
+<ul>
+<li><p>From the Shop app, go to the tab.</p></li>
+<li><p>Tap the order that you want to edit.</p></li>
+<li><p>Tap Edit review next to the product that you want to
+update.</p></li>
+<li><p>Do any of the following:</p></li>
+<li><p>Select a rating from one to five stars.</p></li>
+<li><p>Update your review text.</p></li>
+<li><p>Tap Update review.</p></li>
+</ul>
+<h4 id="delete-a-product-review">Delete a product review</h4>
+<p>You can delete a product review in the Shop app.</p>
+<h5 id="steps-26">Steps:</h5>
+<ul>
+<li>From the Shop app, go to the tab.</li>
+<li>Tap the order that contains the review you want to delete.</li>
+<li>Tap Edit review next to the product that contains the review you
+want to delete.</li>
+<li>Tap &gt; Delete review.</li>
+<li>Tap Continue to delete your review.</li>
+</ul>
+<p>After you delete a product review, the Edit review button changes
+back to Review. You can leave a new product review anytime.</p>
+<h4 id="report-a-product-review">Report a product review</h4>
+<p>If you come across a review on Shop that you feel shouldn’t be there
+according to Shop’s policies, then you can report a review.</p>
+<h5 id="steps-27">Steps:</h5>
+<ul>
+<li>On the product review that you want to report, tap &gt; Report this
+review.</li>
+<li>On the Why are you reporting this review? dialog box, select a
+reason for reporting.</li>
+<li>Tap Report.</li>
+</ul>
+<h3 id="shop-offers">Shop offers</h3>
+<p>Shop offers are promotions that are available exclusively in Shop,
+and might include the following incentives:</p>
+<ul>
+<li>Limited-time special pricing from participating Shop stores</li>
+<li>The opportunity to earn extra <a
+href="https://help.shop.app/en/shop/shop-cash/earn-shop-cash">Shop
+Cash</a> when you purchase from a specific Shop store</li>
+</ul>
+<h4 id="on-this-page-18">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shop-offers#applying-an-offer">Applying
+a Shop offer to your order</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shop-offers#limits">Shop
+offer limits</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shop-offers#refunds">Shop
+offers and refunds</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shop-offers#view-offers">Viewing
+Shop offers</a></li>
+</ul>
+<h4 id="applying-a-shop-offer-to-your-order">Applying a Shop offer to
+your order</h4>
+<p>If your order meets the requirements for a Shop offer, such as
+minimum order value, then it applies automatically to your cart at
+checkout. A Shop offer isn’t confirmed until the offer is applied to
+your cart at checkout.</p>
+<p>Shop offers apply only when you check out on the Shop app or <a
+href="https://shop.com">shop.com</a>. Shop offers can’t be applied when
+you check out on an online store. If you view a product in Shop and are
+redirected to the online store checkout to purchase that product, then
+Shop offers don’t apply to your purchase.</p>
+<h4 id="shop-offer-limits">Shop offer limits</h4>
+<p>Shop offers are subject to change, and are only available while
+quantities last or for a limited time. Stores may set limits on their
+offers, which are indicated on the offer. The following limitations
+might apply to a Shop offer:</p>
+<ul>
+<li>You might need to meet a minimum order value to be eligible for an
+offer. If a Shop offer has a minimum order value, then eligibility is
+based on the order subtotal before shipping fees and taxes are applied.
+If your cart doesn’t meet the minimum order value, then you won’t be
+eligible to use that Shop offer.</li>
+<li>There might be a limit on how much Shop Cash can be earned for an
+offer.</li>
+</ul>
+<h4 id="shop-offers-and-refunds">Shop offers and refunds</h4>
+<p>When you receive a refund for an order that included a Shop
+offer:</p>
+<ul>
+<li>You receive a refund that matches the discounted price you paid for
+the items, whether you return some or all of your order.</li>
+<li>The Shop offer amount (the discount you received at checkout) isn’t
+returned as Shop Cash or in any other form.</li>
+<li>If you earned Shop Cash as part of the offer, then refer to <a
+href="https://help.shop.app/en/shop/shop-cash/shop-cash-refunds">Shop
+Cash refunds</a> for more information.</li>
+</ul>
+<h4 id="viewing-shop-offers">Viewing Shop offers</h4>
+<p>You can view Shop offers on the Shop app, <a
+href="https://shop.com">shop.com</a>, and after you make a purchase on a
+participating online store. Offers in the Shop app and shop.com are
+personalized to you. You need to be signed in to Shop to view the
+details of an offer.</p>
+<p>When you view Shop offers on the Shop app or website, you can filter
+by product category, such as Beauty or Accessories.</p>
+<p>Viewing Shop offers on the Shop app</p>
+<p>You can view Shop offers in the following ways on the Shop app:</p>
+<ul>
+<li>From the tab, tap Deals.</li>
+<li>In the tab, offers are displayed under your order list when
+available. Offers might also be displayed on an individual order’s order
+detail page or delivery tracking page.</li>
+<li>Use the Exclusive offers filter when browsing products.</li>
+</ul>
+<p>Viewing Shop offers on shop.com</p>
+<p>You can view Shop offers in the following ways on <a
+href="https://shop.com">shop.com</a>:</p>
+<ul>
+<li>If you’re signed in to Shop, then click Deals.</li>
+<li>If you’re not signed in to Shop, then click Exclusive offers. To
+view the details of an offer, you need to sign in to Shop.</li>
+<li>Use the Exclusive offers filter when browsing products.</li>
+</ul>
+<p>Viewing Shop offers on online stores</p>
+<p>If you make a purchase from a participating Shop brand on their
+online store, then Shop might display exclusive personalized offers
+after checkout and on your order status page. You don’t need to be
+signed in to Shop to view the details of an offer that displays on an
+online store.</p>
+<p>If you don’t want to view personalized offers after purchasing from
+an online store, then you need to opt out of data sharing on that online
+store and <a
+href="https://privacy.shopify.com/en/consumer-services/opt-out/new">opt
+out of Shop targeted advertising</a>. After you opt out of data sharing,
+generalized offers might still display after checkout.</p>
+<h3 id="shopping-activity-syncing">Shopping activity syncing</h3>
+<p>Shopping activity syncing streamlines your shopping experience by
+syncing your shopping and browsing activity across participating online
+stores that offer <a href="https://help.shop.app/en/shop/shop-pay">Shop
+Pay</a>, the Shop app, and <a href="https://shop.com">shop.com</a>.</p>
+<p>When you’re signed in or recognized by Shop on a web browser, your
+shopping activities sync in the following ways:</p>
+<ul>
+<li>Your shopping cart syncs between participating online stores and
+Shop. Learn more about <a
+href="https://help.shop.app/en/shop/shopping/shopping-activity-sync/sync-shopping-cart">shopping
+cart syncing</a>.</li>
+<li>Products that you’ve viewed on participating online stores,
+including from past browsing sessions, display in the Shop app.</li>
+</ul>
+<p>Shop collects and uses this information in accordance with the <a
+href="https://www.shopify.com/legal/privacy/consumers">Shopify Consumer
+Privacy Policy</a>. Refer to the policy for more information on how this
+data is used.</p>
+<h4 id="in-this-section-9">In this section</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-activity-sync/sync-shopping-cart">Shopping
+cart syncing</a></li>
+</ul>
+<h3 id="shopping-with-confidence-on-shop">Shopping with confidence on
+Shop</h3>
+<p>Shop is a shopping and tracking app built and operated by Shopify.
+Stores that sell products through Shop must meet the trust, safety, and
+fraud-prevention requirements set by Shopify, and your saved information
+is stored securely.</p>
+<p>To shop with confidence, review the safeguards that Shop has in
+place, follow the best practices before you buy, and learn where to
+report a store if you have concerns.</p>
+<h4 id="on-this-page-19">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-safely#store-eligibility">How
+stores qualify to sell on Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-safely#data-and-payment-security">Your
+information and privacy on Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-safely#best-practices-before-making-a-purchase-on-shop">Best
+practices before making a purchase on Shop</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/shopping-safely#reporting-a-store">Reporting
+a store</a></li>
+</ul>
+<h4 id="how-stores-qualify-to-sell-on-shop">How stores qualify to sell
+on Shop</h4>
+<p>Before a store can sell in Shop, it’s screened against the following
+trust, safety, and fraud-prevention requirements set by Shopify:</p>
+<ul>
+<li>Eligibility requirements for Shop and Shopify Payments, including
+compliance with the <a
+href="https://www.shopify.com/legal/terms">Shopify Terms of Service</a>
+and <a href="https://www.shopify.com/legal/aup">Acceptable Use
+Policy</a></li>
+<li>Products that meet Shop’s product eligibility requirements</li>
+<li>Compliance with <a href="https://shop.com/content-policies">Shop’s
+content policies</a></li>
+<li>A chargeback rate under 1% over the past 6 months</li>
+</ul>
+<p>Stores are reviewed on an ongoing basis. If a store falls out of
+compliance with these requirements, then it’s made ineligible and can no
+longer be displayed or advertised in Shop.</p>
+<p>The Buy with Shop button, which lets you pay for an order using <a
+href="https://help.shop.app/en/shop/shop-pay">Shop Pay</a>, is displayed
+at checkout only for stores that meet Shop’s eligibility
+requirements.</p>
+<h4 id="your-information-and-privacy-on-shop">Your information and
+privacy on Shop</h4>
+<p>Shop stores your saved information securely, and your shipping and
+billing details are shared with a store only after you place an order.
+To learn how your payment details are kept secure, refer to <a
+href="https://help.shop.app/en/shop/shop-pay/overview">Using Shop
+Pay</a>.</p>
+<p>You can add extra protection to your account, such as passkeys and
+verification codes, from your <a
+href="https://help.shop.app/en/shop/shop-pay-settings/security">Shop Pay
+security settings</a>.</p>
+<p>You can also manage the information that Shop has access to, and
+delete your data or your Shop account at any time. To manage your
+information, refer to <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/data-privacy-settings">Manage
+your data and privacy settings</a> and <a
+href="https://help.shop.app/en/shop/getting-started/manage-settings/account-and-data">Managing
+your Shop account and data</a>. To understand what information Shop
+collects and how it’s kept secure, refer to the <a
+href="https://www.shopify.com/legal/privacy/consumers">Shopify Consumer
+Privacy Policy</a>.</p>
+<h4 id="best-practices-before-making-a-purchase-on-shop">Best practices
+before making a purchase on Shop</h4>
+<p>Review the following best practices before making a purchase through
+Shop:</p>
+<ul>
+<li>Check the store’s product reviews and star ratings to learn about
+other customers’ experiences.</li>
+<li>Review the store’s shipping, return, and refund policies, so you
+know what to expect.</li>
+<li>Be cautious if a product’s price seems far lower than you expect.
+Consider <a
+href="https://www.shopify.com/legal/tools/report-an-issue/fraud">reporting
+the store to Shop</a> if you suspect potential fraud.</li>
+<li>If an order that you don’t recognize is displayed in Shop, then <a
+href="https://help.shop.app/en/shop/delivery-tracking/report-wrong-info">report
+the incorrect order information</a>.</li>
+</ul>
+<p>To understand Shop’s role in your shopping experience, review the <a
+href="https://shop.com/terms-of-service">Shopify Consumer Terms of
+Service</a>.</p>
+<h4 id="reporting-a-store">Reporting a store</h4>
+<p>If you’re concerned that a store might be engaging in fraudulent
+activity, or a store has misleading or inappropriate content, then you
+can report it. To report a store or get help with an order, refer to <a
+href="https://help.shop.app/en/shop/report-issue/getting-help-with-an-order">Reporting
+an order issue and getting help</a>.</p>
+<p>To report a specific piece of content, such as a shoppable post or
+video review, rather than a whole store, refer to <a
+href="https://help.shop.app/en/shop/report-issue/report-content-in-the-Shop-app">Report
+content in the Shop app</a>.</p>
+<h3
+id="understanding-tariffs-and-their-impact-on-your-purchases">Understanding
+tariffs and their impact on your purchases</h3>
+<p>Tariffs are taxes that might be imposed by the government on imported
+goods. This article explains tariffs and how they might affect your
+online shopping experience. For more information about tariffs and their
+implications, you can visit official government websites, or consult
+with trade experts.</p>
+<h4 id="on-this-page-20">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/understanding-tariffs-and-their-impact-on-your-purchases#impact-of-tariffs-on-purchases">Impact
+of tariffs on purchases</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/understanding-tariffs-and-their-impact-on-your-purchases#identifying-products-impacted-by-tariffs">Identifying
+products impacted by tariffs</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/understanding-tariffs-and-their-impact-on-your-purchases#exemptions-from-tariffs">Exemptions
+from tariffs</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/understanding-tariffs-and-their-impact-on-your-purchases#supporting-local-businesses">Supporting
+local businesses</a></li>
+</ul>
+<h4 id="impact-of-tariffs-on-purchases">Impact of tariffs on
+purchases</h4>
+<p>Tariffs might impact your Shop purchases in the following ways:</p>
+<ul>
+<li>Increased prices: Due to tariffs, stores might raise prices on
+imported goods to cover the additional costs. This means you might
+notice higher prices for certain products.</li>
+<li>Shipping adjustments: Some stores might adjust their shipping fees
+or policies to account for tariffs. This might affect the shipping
+process or total cost of your order.</li>
+</ul>
+<h4 id="identifying-products-impacted-by-tariffs">Identifying products
+impacted by tariffs</h4>
+<p>If you purchase items that are subject to tariffs, then the
+additional costs might be reflected at checkout, or as duties charges
+from the carrier upon delivery. Shop stores are encouraged to
+communicate these costs clearly to help you understand the total
+price.</p>
+<p>If you have a specific question about tariffs, then contact the store
+that you want to purchase from.</p>
+<h4 id="exemptions-from-tariffs">Exemptions from tariffs</h4>
+<p>Certain goods may be exempt from tariffs, but this varies by product
+category. If you have questions about specific items that might be
+exempt from tariffs, then contact the store that you want to purchase
+from for more information.</p>
+<h4 id="supporting-local-businesses">Supporting local businesses</h4>
+<p>Purchasing from local stores or those within your own country may
+help you avoid additional tariff costs. However, products imported by
+these stores from another country may still be subject to tariffs.</p>
+<p>When you search for products in the Shop app, you can use the Sells
+from filter to browse products and stores in your country. The Sells
+from filter uses your shipping address to find and feature brands near
+you.</p>
+<p>If you have questions about tariffs on a store or product, including
+those you find using the Sells from filter in Shop, then you should
+contact the store that you want to purchase from for more
+information.</p>
+<h3 id="using-shop-with-ai-agents-and-agentic-platforms">Using Shop with
+AI agents and agentic platforms</h3>
+<p>You can use Shop with AI agents and agentic platforms in different
+ways. For example, you can add the <a href="https://shop.md">Shop
+skill</a> to any AI agent, such as ChatGPT, Claude, <a
+href="https://clawhub.com/shop">OpenClaw</a>, <a
+href="https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/productivity/productivity-shop">Hermes</a>,
+or another agent that supports Model Context Protocol (MCP), and use it
+as your personal shopper. You can also pay with Shop Pay using some
+personal agents, such as Muse, Instinct, Claude Duet, and Grok Bot.
+These experiences can help you search for products, prepare checkouts,
+review purchases, place orders, track deliveries, and check a store’s
+return policy. Some features require you to sign in to your Shop account
+or approve a connection through Shop. The features available might
+differ depending on the agent, platform, online store, payment method,
+and transaction.</p>
+<h4 id="on-this-page-21">On this page</h4>
+<ul>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents#ways-to-use">Ways
+to use Shop with AI agents and agentic platforms</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents#considerations">Considerations
+for connecting Shop to your personal agent or agentic platform</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents#account-information">Shop
+account information shared with your personal agent or agentic
+platforms</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents#capabilities">Capabilities
+of Shop and agentic integrations</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents#connect">Connecting
+Shop to your personal agent or an agentic platform</a></li>
+<li><a
+href="https://help.shop.app/en/shop/shopping/personal-agents#budget">Manage
+your connection and purchase permissions</a></li>
+</ul>
+<h4 id="ways-to-use-shop-with-ai-agents-and-agentic-platforms">Ways to
+use Shop with AI agents and agentic platforms</h4>
+<p>You can add the Shop skill to any AI agent, such as ChatGPT, Claude,
+OpenClaw, Hermes, or another agent that supports MCP, to turn it into
+your personal shopper. With the Shop skill, your agent can use your
+preferences and order history from Shop to personalize your product
+searches. You can also personalize the skill on <a
+href="https://shop.md">shop.md</a> with your own guardrails and rules so
+that it shops the way you do. Your agent can also help you prepare
+checkouts, check out with Shop Pay, track orders, check return policies,
+or request payment approval through Shop.</p>
+<p>You can also <a
+href="https://help.shop.app/en/shop/shopping/personal-agents#capabilities">pay
+with Shop Pay</a> using some personal agents, such as Muse, Instinct,
+Claude Duet, and Grok Bot.</p>
+<p>You control whether to connect Shop, and you can manage or disconnect
+access in your <a
+href="https://shop.com/account/connections">Connections
+settings</a>.</p>
+<h4
+id="considerations-for-connecting-shop-to-your-personal-agent-or-agentic-platform">Considerations
+for connecting Shop to your personal agent or agentic platform</h4>
+<p>Review the following considerations before connecting Shop to a
+personal agent or agentic platform:</p>
+<ul>
+<li>By using Shop with an AI agent or agentic platform, you accept and
+agree to the <a href="https://shop.com/terms-of-service">Shopify
+Consumer Terms of Service</a>.</li>
+<li>Shop isn’t responsible for how your agent or an agentic platform
+uses your information or follows your instructions.</li>
+<li>Agents and agentic platforms might make mistakes, misunderstand your
+instructions, or display inaccurate product, price, tax, shipping,
+availability, or return information. Review purchase details carefully
+before approving payment.</li>
+<li>Agents and agentic platforms can’t guarantee product quality or
+provide legal or financial advice.</li>
+<li>Shop integrations are for personal, individual shopping use only,
+unless separately authorized by Shopify.</li>
+<li>By default, your agent or agentic platform can prepare a checkout
+for you with your name, contact information, shipping address, and
+items. When an agent or agentic platform makes a purchase for you, it
+also agrees to the store’s shipping, refund, return, and cancellation
+policies on your behalf. Review those policies and purchase details
+before approving payment and consider instructing your agent or agentic
+platform not to purchase from stores with policies that you wouldn’t
+accept, such as prompting with “Don’t buy items from stores that don’t
+accept returns”.</li>
+<li>You’re responsible for purchases that you approve through an agent
+or agentic platform, and orders are processed as though you made the
+purchase yourself. If you approved a purchase, or gave the agent or
+platform permission to make it, then your attempt to dispute the
+transaction might be unsuccessful.</li>
+<li>For some purchases, such as purchases from stores that don’t offer
+Shop Pay, Shop might use a limited-use payment credential, such as a
+token or one-time virtual card, instead of sharing your underlying
+payment method details. Shop may then charge your selected payment
+method for the approved purchase amount. In these cases, Shop might pay
+the online store on your behalf and then charge your selected payment
+method for the approved purchase amount. The charge to your selected
+payment method displays on your card, bank, or payment method statement
+as “SHOPPAY*[store name]” or a similar descriptor.</li>
+<li>The store that you purchase from remains responsible for fulfilling
+your order and handling returns, refunds, warranties, and product
+support.</li>
+</ul>
+<h5
+id="unauthorized-use-of-the-shop-skill-for-personal-agents">Unauthorized
+use of the Shop skill for personal agents</h5>
+<p>You can’t use the Shop skill for any of the following purposes:</p>
+<ul>
+<li>Circumventing rate limits or Cloudflare bot protection.</li>
+<li>Building commercial products, services, or platforms using Shop data
+or features, including the following uses:
+<ul>
+<li>Bulk downloading, copying, or reselling product catalog data.</li>
+<li>Using data from the Shop skill to train or improve AI models.</li>
+<li>Accessing, collecting, or aggregating data from more than one Shop
+user.</li>
+<li>Operating as an automated service, background process, or
+intermediary that accesses user account data without the Shop account
+holder actively directing the agent on their own device.</li>
+</ul></li>
+</ul>
+<h4
+id="shop-account-information-shared-with-your-personal-agent-or-agentic-platforms">Shop
+account information shared with your personal agent or agentic
+platforms</h4>
+<p>When you connect the Shop skill to a personal agent or connect your
+Shop account to an agentic platform, Shop might share certain Shop
+account information to help provide shopping, checkout, payment
+approval, order tracking, return, and reorder features. Some information
+might be shared when you connect, and other information might be shared
+later when needed to prepare or complete a purchase.</p>
+<p>The information being shared is displayed at the time of connection,
+and might include the following details:</p>
+<ul>
+<li>Your name, email address, phone number, and shipping and billing
+address from your Shop profile</li>
+<li>Limited payment method details, such as card brand, payment method
+type, and the last four digits of a saved payment method</li>
+<li>Purchase approval details, such as the online store, items,
+subtotal, taxes, shipping costs, fees, and total amount</li>
+<li>Order information in Shop, to support order tracking, return
+inquiries, and reordering</li>
+<li>Personalized search results based on your Shop profile and <a
+href="https://help.shop.app/en/shop/getting-started/profile">personalization
+settings</a></li>
+</ul>
+<p>After your Shop account information is shared with a third-party AI
+agent or agentic platform, that third party’s use of the information is
+governed by its own terms, privacy policy, settings, and your
+instructions. You can disconnect an agent or agentic platform’s access
+from Shop at any time, but disconnecting won’t delete information that
+was already shared.</p>
+<h4 id="capabilities-of-shop-and-agentic-integrations">Capabilities of
+Shop and agentic integrations</h4>
+<p>When you connect the Shop skill to your personal agent, or connect
+your Shop account to an agentic platform, you can do the following
+depending on the features available:</p>
+<ul>
+<li>Sign in with Shop: Sign in to your Shop account from your agent or
+agentic platform. After you sign in, your agent can use your preferences
+and order history from Shop to personalize recommendations, help you
+check out with Shop Pay, and track your orders.</li>
+<li>Search for products and get personalized recommendations: Ask your
+agent or agentic platform to search using natural language, such as
+“waterproof hiking boots under $150” or “gift ideas for someone who
+loves baking”. If you’re signed in to Shop, then products are ranked
+based on your <a
+href="https://help.shop.app/en/shop/getting-started/profile">personalization
+settings</a>.</li>
+<li>Prepare checkouts: Ask your agent or agentic platform to prepare
+checkouts for your review so that you can buy products with all of your
+information prefilled.</li>
+<li>Place orders: Approve purchases through Shop so your agent or
+agentic platform can complete checkout with the online store.</li>
+<li>Pay with Shop Pay: Check out with Shop Pay in your agent. In Claude
+Duet, Instinct, and Grok Bot, you can use Shop Pay to pay for purchases
+from online stores, including brands and stores that aren’t on Shopify.
+If a store doesn’t offer Shop Pay at checkout, then you approve the
+store, purchase details, payment method, and spending limit in Shop.
+Your agent then receives a one-time payment credential to enter at the
+store’s checkout, so your saved payment method details aren’t shared
+with your agent or the store. In Muse, you can use Shop Pay only for
+purchases from stores on Shopify.</li>
+<li>Reorder products: Ask your agent or agentic platform to reorder a
+product that you’ve bought before.</li>
+<li>Track orders: Ask your agent or agentic platform about the status of
+your recent orders. Order data comes from your <a
+href="https://help.shop.app/en/shop/getting-started/account-setup">Shop
+account</a>, including orders from any store where you’ve received email
+receipts at the email address that you have connected to Shop. You can
+track the same orders in your agent or in the Shop app.</li>
+<li>Check return policies: Ask your agent or agentic platform whether an
+item is returnable. Your agent reads the store’s published return policy
+and tells you the return window. To start a return, refer to <a
+href="https://help.shop.app/en/shop/managing-orders/returns">Managing
+returns in the Shop app</a>.</li>
+<li>Give your agent permission to purchase a product on your behalf
+using your Shop account: Agents and agentic platforms can complete
+purchases with your approval. In some cases, you can <a
+href="https://help.shop.app/en/shop/shopping/personal-agents#budget">set
+spending limits</a> and allow your personal agent to complete purchases
+on your behalf.</li>
+</ul>
+<h4
+id="connecting-shop-to-your-personal-agent-or-an-agentic-platform">Connecting
+Shop to your personal agent or an agentic platform</h4>
+<p>You can connect Shop to a personal agent or agentic platform in the
+following ways:</p>
+<ul>
+<li>Adding the Shop skill to an AI agent: Get the Shop skill from <a
+href="https://shop.md">shop.md</a> or <a
+href="https://shop.com/skill.md">shop.com/skill.md</a>. On <a
+href="https://shop.md">shop.md</a>, you can add the skill to ChatGPT or
+Claude, or copy a prompt to paste into another agent. You can also
+provide the <a href="https://shop.com/skill.md">Shop skill</a> link to
+your AI agent, and then ask the agent to install the skill. To
+personalize the skill, click Build your own skill on <a
+href="https://shop.md">shop.md</a>.</li>
+<li>Paying with Shop Pay in a personal agent: In a personal agent that
+supports Shop Pay, such as Muse, Instinct, Claude Duet, or Grok Bot,
+follow the prompts in the agent to connect to Shop Pay.</li>
+</ul>
+<p>Some features such as tracking orders and making purchases require
+you to sign in to Shop. When this is required, you’re sent a sign-in
+link to open on your device’s browser. After you verify your connection,
+your agent or connected agentic platform stays connected until it’s
+disconnected, after which point you’ll need to connect again.</p>
+<p>Only sign in or connect through Shop’s authorization screen. Don’t
+share your Shop passkey, verification code, or Shop security credentials
+directly with an agent, platform, or developer.</p>
+<h4 id="manage-your-connection-and-purchase-permissions">Manage your
+connection and purchase permissions</h4>
+<p>By default, AI agents and connected agentic platforms prepare
+checkouts with your information prefilled so that you can review and
+approve every purchase.</p>
+<p>You can allow your personal agent to place orders on your behalf
+without manually approving each purchase by turning on the Allow agent
+to pay for me setting and setting a weekly, monthly, or total
+budget.</p>
+<p>This setting is optional, and you can revoke this permission at any
+time.</p>
+<h5 id="steps-28">Steps:</h5>
+<ul>
+<li>From the Shop app in the tab, tap the Account icon, which is your
+profile picture or initials.</li>
+<li>Tap Connections.</li>
+<li>Tap the personal agent that you’re connected to.</li>
+<li>Turn the Allow agent to pay for me setting on or off.</li>
+<li>Optional: If you turned the Allow agent to pay for me setting on,
+then set up your budget:
+<ul>
+<li>Select a Monthly, Weekly, or Total budget.</li>
+<li>Select a preset budget amount, or tap Custom to set your own
+amount.</li>
+</ul></li>
+</ul>
+<p>After you set your budget, you can return to this setting to view how
+much of your budget remains after you start making purchases with your
+agent.</p>
+<p>Your agent will initially attempt to charge the last-used card in
+your Shop wallet, and then use other saved, valid cards if the payment
+attempt fails. If all cards fail, then the checkout fails, and the agent
+receives a failure message. You’re responsible for purchases made within
+the permissions and budget that you set, even if the agent
+misunderstands your instructions or buys something you didn’t expect. If
+you don’t agree with a purchase made within those permissions, then your
+attempt to dispute the transaction might be unsuccessful.</p>
+<p>You can disconnect an AI agent or connected agentic platform at any
+time in your <a href="https://shop.com/account/connections">Connections
+settings</a>.</p>
+<h3 id="using-shop.com">Using shop.com</h3>
+<p>If you don’t have the Shop app installed on your device, then you can
+use Shop in a web browser by visiting <a
+href="https://shop.com">shop.com</a>.</p>
+<p>Using <a href="https://shop.com">shop.com</a>, you can browse and
+search for products and stores, and view posts on store pages, whether
+you’re signed in with Shop, or browsing as a guest. However, you need to
+sign in with Shop to access the following features on shop.com:</p>
+<ul>
+<li>View and use your <a
+href="https://help.shop.app/en/shop/shop-cash">Shop Cash</a> and <a
+href="https://help.shop.app/en/shop/shopping/shop-offers">Shop
+offers</a>.</li>
+<li>Make a purchase using <a
+href="https://help.shop.app/en/shop/shop-pay/overview">Shop
+Pay</a>.</li>
+<li>View items in your <a
+href="https://help.shop.app/en/shop/shopping/shopping-activity-sync/sync-shopping-cart">synced
+shopping cart</a>.</li>
+<li>Manage your <a href="https://shop.com/account">Shop account
+settings</a>, such as addresses and credit card information.</li>
+<li>Save your favorite products and follow stores.</li>
+<li>View posts from stores that you follow on the shop.com home
+page.</li>
+<li><a href="https://help.shop.app/en/shop/delivery-tracking">Track your
+orders</a>.</li>
+</ul>
+<p>Not all Shop features are available on <a
+href="https://shop.com">shop.com</a>. To <a
+href="https://help.shop.app/en/shop/shopping/review-a-product-that-you-purchased-through-shop">review
+a product that you purchased from Shop</a>, you need to use the Shop
+app.</p>
+</main>
+</body>
+</html>
