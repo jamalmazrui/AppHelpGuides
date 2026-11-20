@@ -1,0 +1,1116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.14" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Claude help: the Windows desktop app</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    em, em em em, em em em em em {
+      font-style: italic;
+    }
+    em em, em em em em {
+      font-style: normal;
+    }
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#claude-help-the-windows-desktop-app"
+id="toc-claude-help-the-windows-desktop-app">Claude help: the Windows
+desktop app</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#desktop-extensions" id="toc-desktop-extensions">Desktop
+extensions</a></li>
+<li><a href="#general" id="toc-general">General</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="claude-help-the-windows-desktop-app">Claude help: the Windows
+desktop app</h1>
+<p>This guide holds Anthropic’s own help for the Claude desktop app on
+Windows, gathered from support.claude.com in November 2026. It covers
+installing and updating the app, its settings and shortcuts, and desktop
+extensions, which let Claude reach programs and files on your
+computer.</p>
+<p>Anthropic writes one help centre for every way of using Claude, so
+this collection splits it into six guides: ClaudeWeb.md for Claude on
+the web and in Chrome, with plans, connectors and safety;
+ClaudeDesktop.md for the Windows app; ClaudeIos.md for the iPhone and
+iPad app; ClaudeCowork.md for Cowork; ClaudeCode.md for Claude Code; and
+ClaudeDuet.md for Duet. Each article is in one guide only. Articles
+written only for a Mac or for Android are left out, since this
+collection covers Windows, the web and the iPhone and iPad. Also left
+out are pages for an organization’s administrators, and Anthropic’s
+collections on its programming interface and Console, Amazon Bedrock,
+identity management, and privacy and legal terms. The categories are
+Anthropic’s own, taken from the trail of collections printed above each
+article.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Desktop extensions
+<ul>
+<li><a
+href="#enabling-and-using-the-desktop-extension-allowlist">Enabling and
+using the desktop extension allowlist</a></li>
+<li><a
+href="#getting-started-with-local-mcp-servers-on-claude-desktop">Getting
+Started with Local MCP Servers on Claude Desktop</a></li>
+</ul></li>
+<li>General
+<ul>
+<li><a href="#enterprise-configuration-for-claude-desktop">Enterprise
+configuration for Claude Desktop</a></li>
+<li><a href="#install-claude-desktop">Install Claude Desktop</a></li>
+<li><a href="#open-claude-desktop-with-a-link">Open Claude Desktop with
+a link</a></li>
+</ul></li>
+</ul>
+<h2 id="desktop-extensions">Desktop extensions</h2>
+<h3 id="enabling-and-using-the-desktop-extension-allowlist">Enabling and
+using the desktop extension allowlist</h3>
+<p>The desktop extension allowlist is available for Owners and Primary
+Owners of Team and Enterprise plans.</p>
+<p>This article introduces a desktop extension allowlist that Team and
+Enterprise plan Owners can use to manage their organization’s access to
+extensions.</p>
+<h4 id="how-to-enable-the-allowlist">How to enable the allowlist</h4>
+<p>Important: If you’ve previously configured Enterprise policy controls
+at the user-machine level, these will override the in-app allowlist.
+Ensure both <code>isDesktopExtensionDirectoryEnabled</code> and
+<code>isDesktopExtensionEnabled</code> are not set to “false” so the
+allowlist can populate the available registry. Refer to our <a
+href="https://support.claude.com/en/articles/12622667-enterprise-configuration">desktop
+enterprise configuration documentation</a> for more information.</p>
+<p>The desktop extension allowlist is disabled by default, so an
+organization Owner will need to switch it on manually. Note that users
+will be able to access all desktop extensions in the registry until you
+enable the allowlist. To prevent this, ensure you activate the allowlist
+to block all desktop extensions by default, then add only the extensions
+your team needs access to.</p>
+<p>To turn on the allowlist:</p>
+<ul>
+<li>Open Claude Desktop</li>
+<li>Click your initials or name in the lower left corner</li>
+<li>Navigate to Organization settings &gt; Connectors</li>
+<li>Switch to the “Desktop” tab:</li>
+<li>Toggle Allowlist on:</li>
+</ul>
+<p>On the Enterprise plan, you can also choose “Block all desktop
+extensions” under the allowlist switch, which turns off installed
+extensions, even those on your list, and stops new installs. Learn more
+in <a
+href="https://support.claude.com/en/articles/12622667-enterprise-configuration-for-claude-desktop">Enterprise
+configuration for Claude Desktop</a>.</p>
+<h4 id="what-happens-after-enabling-the-allowlist">What happens after
+enabling the allowlist?</h4>
+<p>Once the allowlist is enabled:</p>
+<ul>
+<li>Any existing desktop extension installations will be force-deleted
+from Claude Desktop clients.</li>
+<li>Users will no longer be able to install new desktop extensions that
+are not included within the allowlist.</li>
+<li>Users can only download extensions from the sanctioned in-app
+registry; they can no longer drag or click to install MCPBs.</li>
+</ul>
+<p>Note that the allowlist does not guard against individuals tampering
+with local MCP file contents after installation.</p>
+<p>Consider completing the allowlist setup during off-hours to minimize
+disruption to existing users. If a user’s installed extension is deleted
+while the allowlist is being configured, they will need to manually
+re-install the extension.</p>
+<p>Important: The allowlist requires Claude Desktop version 0.13.91 or
+higher, so users should update the desktop app by clicking “Claude”,
+then either “Check for updates” or “Restart to update to Claude
+0.13.91”:</p>
+<h4 id="managing-allowed-extensions">Managing allowed extensions</h4>
+<p>After enabling the allowlist, you can choose which extensions to
+allow:</p>
+<ul>
+<li>Navigate to Organization settings &gt; Connectors and select the
+“Desktop” tab.</li>
+<li>Click “Browse extensions” to view the list of available
+extensions.</li>
+<li>Select the extension you want to add.</li>
+<li>Click the “Add to your team” button.</li>
+<li>The extension will appear in your allowlist.</li>
+</ul>
+<p>If you want to remove an extension from the allowlist, click the “…”
+button and “Remove from allowlist.”</p>
+<h4 id="uploading-custom-extensions">Uploading custom extensions</h4>
+<p>You can also upload custom extensions to deploy across your
+organization via Organization settings &gt; Connectors &gt; Desktop.</p>
+<p>Note: Ensure the name field in the manifest.json does not overlap
+with any existing MCPBs. All names for unique MCPBs / desktop extensions
+must be unique.</p>
+<ul>
+<li>Click “Add custom extension”</li>
+<li>This will open a filepicker; select the .mcpb file.</li>
+<li>The extension will appear under Custom team extensions.</li>
+<li>Click “…” then “Add to team” to add it to your allowlist and enable
+it for your team.</li>
+</ul>
+<p>When you allowlist a custom extension, it’s scoped to your specific
+organization and can’t be used across other organizations. For more
+in-depth information about creating custom extensions with MCP Bundles
+(.mcpb), please refer to our <a
+href="https://github.com/anthropics/mcpb">desktop extension developer
+documentation</a>.</p>
+<h4 id="updating-custom-extensions">Updating custom extensions</h4>
+<p>We’ve also introduced the ability to update previously-installed
+custom extensions to new versions without having to remove and reinstall
+them.</p>
+<p>You can update a new MCPB version by making changes to manifest.json,
+ensuring the version field for the update candidate is incremented from
+the current uploaded version, and that you leave the name value
+unchanged. Changing the name will create a new custom desktop extension
+rather than uploading a new version. Then navigate to the custom upload
+pane, select “Upload new version” via the kebab menu, and upload the new
+file.</p>
+<h3
+id="getting-started-with-local-mcp-servers-on-claude-desktop">Getting
+Started with Local MCP Servers on Claude Desktop</h3>
+<p>The Model Context Protocol (MCP) is an open protocol that enables
+seamless integration between LLM applications and external data sources
+and tools. With the introduction of desktop extensions, installing and
+managing local MCP servers has become significantly easier.</p>
+<h4 id="desktop-extensions-1">Desktop Extensions</h4>
+<p>Desktop extensions provide a streamlined way to install and manage
+local MCP servers through single-click installable packages. Instead of
+manually configuring JSON files and managing dependencies, you can now
+install local MCP servers on your computer as easily as browser
+extensions.</p>
+<p>Note: If you’re a developer who wants to list a desktop extension (a
+local MCP server for Claude Desktop) in the directory, submit it through
+the <a href="https://clau.de/desktop-extention-submission">desktop
+extension submission form</a>. To submit a plugin or a remote connector
+instead, use the <a href="https://claude.ai/directory/manage">developer
+portal</a>. See <a
+href="https://claude.com/docs/plugins/submit">Submitting your plugin</a>
+for what each route accepts.</p>
+<h4 id="installing-desktop-extensions-from-the-directory">Installing
+desktop extensions from the directory</h4>
+<ul>
+<li>Navigate to Settings &gt; Desktop app and select “Manage” next to
+Extensions (or Settings &gt; Extensions in the older Settings layout) on
+Claude Desktop.</li>
+<li>Click “Browse extensions” to view our directory and click on any
+Anthropic-reviewed tools you want to use. Click “Install” on your
+desired extension.</li>
+<li>Configure any required settings (like API keys) through the
+user-friendly interface.</li>
+<li>The extension will automatically be available in your
+conversations.</li>
+</ul>
+<h4 id="installing-custom-desktop-extensions">Installing custom desktop
+extensions</h4>
+<ul>
+<li>Navigate to Settings &gt; Desktop app and select “Manage” next to
+Extensions (or Settings &gt; Extensions in the older Settings layout) on
+Claude Desktop.</li>
+<li>Click “Advanced settings” and find the Extension Developer
+section.</li>
+<li>Click “Install Extension…”</li>
+<li>Select the .mcpb file and follow the prompts to install.</li>
+</ul>
+<h4 id="admin-controls-for-desktop-extensions">Admin Controls for
+Desktop Extensions</h4>
+<p>Owners and Primary Owners of Team and Enterprise plans can manage
+team access to desktop extensions using two controls:</p>
+<ul>
+<li>Enable or disable public desktop extensions depending on your
+organization’s security standards.</li>
+<li>Upload custom desktop extensions and make them available to your
+team for one-click install.</li>
+</ul>
+<p>These controls allow organizations to fully customize their
+registries by adding only the extensions the team needs to access, and
+removing any others.</p>
+<h5
+id="enablingdisabling-specific-extensions-on-team-and-enterprise-plans">Enabling/disabling
+specific extensions on Team and Enterprise plans</h5>
+<p>Owners and Primary Owners of Team and Enterprise organizations can
+manage which desktop extensions are enabled for your organization and
+accessible to other members via Claude Desktop. See <a
+href="https://support.claude.com/en/articles/12592343-enabling-and-using-the-desktop-extension-allowlist">Enabling
+and using the desktop extension allowlist</a></p>
+<p>for specific instructions.</p>
+<h5
+id="create-and-upload-custom-extensions-for-your-organization">Create
+and upload custom extensions for your organization</h5>
+<p>Custom desktop extensions uploads allow Team and Enterprise plans to
+leverage organization-specific workflows that aren’t available in the
+public directory. After creating a custom desktop extension, Owners and
+Primary Owners can navigate to Settings &gt; Desktop app, select
+“Manage” next to Extensions (or Settings &gt; Extensions in the older
+Settings layout), and click “Advanced settings” to access the Extension
+Developer section:</p>
+<p>Click “Install Extension…” and select the .mcpb file. Follow the
+prompts to install and configure your custom desktop extension. For more
+in-depth information, please refer to our <a
+href="https://github.com/anthropics/mcpb">desktop extension developer
+documentation</a>.</p>
+<h4 id="enterprise-policy-controls">Enterprise Policy Controls</h4>
+<p>Note: Enterprise policy controls at the user-machine level will
+override any in-app controls (blocklist and allowlist). If you want to
+use an in-app control, ensure <code>isDesktopExtensionEnabled</code> and
+<code>isDesktopExtensionDirectoryEnabled</code> are not set to “false”
+so the allowlist can populate the available registry.</p>
+<p>For controlling desktop extensions through system policies, please
+refer to our <a
+href="https://support.claude.com/en/articles/12622667-enterprise-configuration">desktop
+enterprise configuration documentation</a>.</p>
+<h4
+id="troubleshooting-desktop-extension-installation-issues">Troubleshooting
+desktop extension installation issues</h4>
+<h5 id="extension-wont-install">Extension won’t install</h5>
+<ul>
+<li>Ensure you’re running the latest version of Claude Desktop.</li>
+<li>Check that the extension file isn’t corrupted by re-downloading
+it.</li>
+<li>Verify you have sufficient disk space for the installation.</li>
+</ul>
+<h5 id="extension-appears-installed-but-tools-arent-available">Extension
+appears installed but tools aren’t available</h5>
+<ul>
+<li>Restart Claude Desktop to refresh the extension registry.</li>
+<li>Check the extension’s configuration settings for missing required
+fields.</li>
+<li>Verify any API keys or authentication credentials are entered
+correctly.</li>
+</ul>
+<h5 id="extension-configuration-issues">Extension configuration
+issues</h5>
+<ul>
+<li>Navigate to Settings &gt; Desktop app and select “Manage” next to
+Extensions (or Settings &gt; Extensions in the older Settings layout),
+then click on the extension to review its settings.</li>
+<li>Ensure all required configuration fields are completed.</li>
+<li>Check that file paths (if applicable) point to existing directories
+you have access to.</li>
+</ul>
+<h5 id="permission-or-security-errors">Permission or security
+errors</h5>
+<ul>
+<li>On macOS, check System Preferences &gt; Security &amp; Privacy if
+you receive security warnings.</li>
+<li>On Windows and Linux, ensure Claude Desktop has necessary
+permissions to access required directories.</li>
+<li>For enterprise environments, verify that desktop extensions are
+enabled through your organization’s policies.</li>
+</ul>
+<h4 id="developer-faq">Developer FAQ</h4>
+<h5
+id="how-do-i-check-if-my-mcp-servers-are-properly-connected-in-claude-desktop">How
+do I check if my MCP servers are properly connected in Claude
+Desktop?</h5>
+<p>Click the “+” button on bottom the chat box within Claude Desktop,
+then select “Connectors.” This will show you connected MCP servers and
+their tools. Alternatively, go to the Local MCP servers section of the
+Extensions page (Settings &gt; Desktop app, then “Manage” next to
+Extensions), or to Settings &gt; Developer, under This computer, in the
+older Settings layout, to see connection status and look at the logs for
+any MCP servers.</p>
+<h5
+id="how-do-i-convert-my-existing-mcp-server-to-a-desktop-extension">How
+do I convert my existing MCP server to a desktop extension?</h5>
+<ul>
+<li>Add a manifest.json file to your MCP server directory with the
+required metadata.</li>
+<li>Package it using the <code>mcpb pack</code> command.</li>
+<li>See the <a href="https://github.com/anthropics/mcpb">MCPB
+documentation</a> for detailed instructions.</li>
+</ul>
+<h5
+id="what-programming-languages-are-supported-for-desktop-extensions">What
+programming languages are supported for desktop extensions?</h5>
+<p>Desktop extensions support Node.js, Python, and binary MCP servers.
+Claude Desktop includes a built-in Node.js environment, so Node.js
+installation isn’t required.</p>
+<h5 id="how-do-i-handle-sensitive-configuration-like-api-keys">How do I
+handle sensitive configuration like API keys?</h5>
+<p>Mark configuration fields as “sensitive”: true in your manifest.json.
+Claude Desktop will automatically encrypt these values using the
+operating system’s secure storage (Keychain on macOS, Credential Manager
+on Windows, and your distro’s keychain manager on Linux).</p>
+<h5 id="can-i-distribute-my-custom-desktop-extension-privately">Can I
+distribute my custom desktop extension privately?</h5>
+<p>Yes, you can share .mcpb files directly with specific users or teams.
+For broader distribution, you can submit extensions to the official
+directory.</p>
+<h5 id="how-do-i-debug-issues-with-my-desktop-extension">How do I debug
+issues with my desktop extension?</h5>
+<p>Enable debug logging in Claude Desktop settings, check the extension
+logs in the Extensions settings panel, and refer to the MCP debugging
+guide for protocol-specific troubleshooting.</p>
+<h5 id="what-happens-when-my-extension-needs-updates">What happens when
+my extension needs updates?</h5>
+<p>Extensions from the official directory update automatically by
+default. For privately distributed extensions, users will need to
+install updated .mcpb files manually.</p>
+<h4 id="interested-in-learning-more-about-mcp">Interested in learning
+more about MCP?</h4>
+<p>For more in-depth information on building your own MCP clients and
+servers, we recommend reviewing the following resources:</p>
+<ul>
+<li><a
+href="https://modelcontextprotocol.io/docs/getting-started/intro">MCP
+Quickstart Guide</a> - A step-by-step tutorial perfect for getting
+started with basic MCP integration.</li>
+<li><a href="https://github.com/modelcontextprotocol">Model Context
+Protocol Github</a> - Contains the complete technical documentation,
+code examples, and implementation guides.</li>
+<li><a href="https://modelcontextprotocol.io/docs/tools/debugging">Guide
+to debugging MCP integrations</a> - Troubleshooting tips and solutions
+for common implementation challenges.</li>
+</ul>
+<p>If you need further guidance, visit our guide on <a
+href="https://support.claude.com/en/articles/9015913-how-to-get-support">How
+to Get Support</a> for additional support options.</p>
+<h2 id="general">General</h2>
+<h3 id="enterprise-configuration-for-claude-desktop">Enterprise
+configuration for Claude Desktop</h3>
+<p>Administrators on Team or Enterprise plans can control Claude Desktop
+through system policies.</p>
+<p>On the Enterprise plan, owners can set several of these controls in
+Organization settings (beta), with no MDM tool. See Manage Claude
+Desktop from Organization settings.</p>
+<p>Note: Enterprise policy controls at the user-machine level will
+override the in-app <a
+href="https://support.claude.com/en/articles/12592343-enabling-and-using-the-desktop-extension-allowlist">allowlist</a>.
+If you want to use the allowlist, ensure
+<code>isDesktopExtensionEnabled</code> and
+<code>isDesktopExtensionDirectoryEnabled</code> are not set to “false”
+so the allowlist can populate the available registry.</p>
+<h4 id="macos-enterprise-configuration">macOS enterprise
+configuration</h4>
+<p>Deploy configuration settings through your MDM solution using
+configuration profiles. Claude Desktop reads preferences from the domain
+<code>com.anthropic.claudefordesktop</code>. Use your MDM tool (Jamf
+Pro, Kandji, Microsoft Intune) to deploy configuration profiles to
+target machines or user groups. Configuration profiles allow you to
+manage Claude Desktop settings centrally without user intervention.</p>
+<p>Configuration profile tools:</p>
+<ul>
+<li>Built-in MDM profile editors (Jamf Pro, Kandji, Intune)</li>
+<li><a
+href="https://github.com/profileCreator/ProfileCreator/">ProfileCreator</a>
+- Profile management</li>
+<li><a href="https://imazing.com/profile-editor">iMazing Profile
+Editor</a> - Configuration profiles</li>
+</ul>
+<h4 id="windows-enterprise-configuration">Windows enterprise
+configuration</h4>
+<p>Deploy configuration settings through your enterprise management
+solution using <a
+href="https://learn.microsoft.com/en-us/previous-versions/windows/desktop/policy/group-policy-objects">Group
+Policy</a> or Intune policies. Settings can be configured at
+machine-wide (HKLM) or per-user (HKCU) level. Machine-level settings
+take priority over user-level settings when both are configured.</p>
+<pre><code># Set machine-wide settings (recommended)
+New-Item -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Force
+Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;disableAutoUpdates&quot; -Value 0 -Type DWord
+Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;autoUpdaterEnforcementHours&quot; -Value 72 -Type DWord
+Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;isDesktopExtensionEnabled&quot; -Value 1 -Type DWord
+Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;isDesktopExtensionDirectoryEnabled&quot; -Value 1 -Type DWord
+Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;isLocalDevMcpEnabled&quot; -Value 1 -Type DWord
+Set-ItemProperty -Path &quot;HKLM:\SOFTWARE\Policies\Claude&quot; -Name &quot;isClaudeCodeForDesktopEnabled&quot; -Value 1 -Type DWord</code></pre>
+<h4 id="enterprise-policy-options">Enterprise policy options</h4>
+<p>Key</p>
+<p>Type</p>
+<p>Default</p>
+<p>Description</p>
+<p><code>allowedWorkspaceFolders</code></p>
+<p>string[] (JSON)</p>
+<p>Unrestricted</p>
+<p>Filepath or filepaths the user can mount to Cowork</p>
+<p>Enterprise plan: also available in Organization settings.</p>
+<p><code>autoUpdaterEnforcementHours</code></p>
+<p>Integer (1-72)</p>
+<p>72</p>
+<p>Hours before forcefully restarting Claude to apply a prepared
+update</p>
+<p>Enterprise plan: also available in Organization settings.</p>
+<p><code>disableAutoUpdates</code></p>
+<p>Boolean</p>
+<p>false</p>
+<p>Disable automatic updates. Set this when your MDM manages Claude
+Desktop versions; leave unset to let the app self-update after a
+one-time provisioned install. See <a
+href="https://support.claude.com/en/articles/12622703-deploy-claude-desktop-for-windows">Deploy
+Claude Desktop for Windows</a>.</p>
+<p>Enterprise plan: also available in Organization settings.</p>
+<p><code>effortLevel</code></p>
+<p>string</p>
+<p>null</p>
+<p>Sets the default effort level (<code>low</code>, <code>medium</code>,
+<code>high</code>, <code>xhigh</code>, or <code>max</code>) for Claude
+Code sessions in Claude Desktop. The managed value applies fresh at the
+start of every session, even if someone changed the effort level from
+the picker in an earlier session. Requires Claude Desktop version
+1.25927.0 or later. Doesn’t apply to Cowork sessions in Claude
+Desktop.</p>
+<p><code>forceLoginOrgUUID</code></p>
+<p>string / array</p>
+<p>null</p>
+<p>Require login to belong to a specific organization. Accepts a single
+UUID string, which also pre-selects that organization during login, or
+an array of UUIDs where any listed organization is accepted without
+pre-selection. Login fails if the authenticated account does not belong
+to a listed organization. To list more than one organization, see Set
+forceLoginOrgUUID for multiple organizations below.</p>
+<p><code>isClaudeCodeForDesktopEnabled</code></p>
+<p>Boolean</p>
+<p>true</p>
+<p>Enable Claude Code access in desktop</p>
+<p><code>isDesktopExtensionEnabled</code></p>
+<p>Boolean</p>
+<p>true</p>
+<p>Enable/disable extensions</p>
+<p>Enterprise plan: also available in Organization settings.</p>
+<p><code>isDesktopExtensionDirectoryEnabled</code></p>
+<p>Boolean</p>
+<p>true</p>
+<p>Enable extension directory access</p>
+<p>Enterprise plan: also available in Organization settings.</p>
+<p><code>isLocalDevMcpEnabled</code></p>
+<p>Boolean</p>
+<p>true</p>
+<p>Enable local MCP servers</p>
+<p>Enterprise plan: also available in Organization settings.</p>
+<p><code>secureVmFeaturesEnabled</code></p>
+<p>Boolean</p>
+<p>true</p>
+<p>Enable <a
+href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork">Cowork</a>
+access in desktop</p>
+<p><code>coworkEDRIntegration</code></p>
+<p>string</p>
+<p>Not set</p>
+<p>Full path of your EDR vendor’s signed sensor package on the user’s
+computer (beta). If it isn’t set, no package is installed. On Windows,
+set this under
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Claude</code>.</p>
+<p><code>coworkEDRIntegrationVendor</code></p>
+<p>string</p>
+<p>Not set</p>
+<p>Your EDR vendor’s ID, in lowercase. On Windows, set this under
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Claude</code>. Learn more
+about <a
+href="https://support.claude.com/en/articles/17828685-run-your-endpoint-detection-and-response-edr-sensor-in-claude-cowork">running
+your EDR sensor in Claude Cowork</a>.</p>
+<p><code>computerUseEnabled</code></p>
+<p>Boolean</p>
+<p>Not set</p>
+<p>Set to false to turn off computer use on this computer, for every
+account. True doesn’t turn it on. Requires Claude Desktop version
+5.1231.0 or later. On Windows, set it as a <code>DWORD</code> value of
+<code>0</code> under
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Claude</code>. While
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Claude</code> holds any
+value, Claude Desktop doesn’t read
+<code>HKEY_CURRENT_USER\SOFTWARE\Policies\Claude</code>. Before you
+deploy it, see Keep computer use off on a computer in <a
+href="https://support.claude.com/en/articles/18483812-set-up-computer-use-for-team-and-enterprise-plans">Set
+up computer use for Team and Enterprise plans</a>.</p>
+<p>Setting any Claude Desktop policy key hides the Release channel
+setting, and that device follows Stable. A device already on Latest
+keeps its version until a newer Stable version comes out. Learn more
+about <a
+href="https://support.claude.com/en/articles/10065433-install-claude-desktop#h_ac219b3bde">choosing
+a release channel</a>.</p>
+<h4 id="manage-claude-desktop-from-organization-settings-beta">Manage
+Claude Desktop from Organization settings (beta)</h4>
+<p>On the Enterprise plan, owners can set these Claude Desktop controls
+in Organization settings (beta), with no MDM tool needed, unless you
+need what an MDM key adds.</p>
+<ul>
+<li>Turn on “Limit Claude Desktop to allowed organizations (shadow IT)”
+under “Security” in <a
+href="https://claude.ai/admin-settings/organization">Organization
+settings &gt; Organization and access</a>: After a member signs in to
+your organization in Claude Desktop on a computer, the app on that
+computer blocks personal accounts and other organizations you haven’t
+allowed, starting the next time it opens. To block them before anyone
+signs in, set <code>forceLoginOrgUUID</code> through MDM.
+<ul>
+<li>Limitations: This block isn’t permanent. It ends if a member doesn’t
+use your organization on that computer for 30 days, and anyone using the
+computer can remove it. If you allow more than one organization, set the
+same list of allowed organizations in each organization.</li>
+</ul></li>
+<li>Turn off “Auto-updates” in <a
+href="https://claude.ai/admin-settings/capabilities">Organization
+settings &gt; Capabilities</a>: Claude Desktop stops checking for and
+downloading updates. Users can still update from the app menu, and a
+downloaded update still installs.</li>
+<li>Allow workspace folders in <a
+href="https://claude.ai/admin-settings/capabilities">Organization
+settings &gt; Capabilities</a>: Choose “Allow only the folders on the
+list,” or turn it off to allow none. Mark a folder “Read only” and
+Claude’s file tools can’t change files there.
+<ul>
+<li>Limitations: “Read only” covers Claude’s file tools only. In the
+Code tab, commands, MCP servers, and hooks can still change those
+folders and reach others, and it’s ignored on folders holding Claude
+Desktop’s own data, such as a home folder. It doesn’t apply over SSH to
+Windows. Each computer uses its own OS list, and SSH sessions use the
+list of the computer they start from. WSL and localhost SSH are blocked
+when folders are limited. Missing folders aren’t created.</li>
+</ul></li>
+<li>Turn off “Allow local MCP servers” (<a
+href="https://claude.ai/admin-settings/connectors">Organization settings
+&gt; Plugins &gt; Connectors</a>): Local MCP servers that users add
+don’t start. Desktop extensions can still run local servers, so also
+choose “Block all desktop extensions” to stop those.</li>
+<li>Choose “Block all desktop extensions” (<a
+href="https://claude.ai/admin-settings/connectors">Organization settings
+&gt; Plugins &gt; Connectors</a>): Installed extensions stop working and
+none can be installed.</li>
+</ul>
+<p>If a policy on the computer sets the matching key, the policy wins on
+that computer, even if it’s less strict. For Auto-updates,
+<code>autoUpdaterEnforcementHours</code> counts too. These settings
+follow the account, so they don’t apply to a personal account. These
+settings need Claude Desktop 4.29.0 or later.</p>
+<h4 id="set-forceloginorguuid-for-multiple-organizations">Set
+<code>forceLoginOrgUUID</code> for multiple organizations</h4>
+<p>To accept more than one organization, set
+<code>forceLoginOrgUUID</code> to a JSON array of organization UUIDs,
+saved as a single string value.</p>
+<p>Windows</p>
+<p>Use a string value (REG_SZ) whose data is the JSON text. Don’t use a
+multi-string value (REG_MULTI_SZ).</p>
+<pre><code>New-ItemProperty -Path &#39;HKLM:\SOFTWARE\Policies\Claude&#39; -Name forceLoginOrgUUID
+-PropertyType String -Value &#39;[&quot;&lt;uuid-1&gt;&quot;,&quot;&lt;uuid-2&gt;&quot;]&#39; -Force</code></pre>
+<p>macOS</p>
+<p>In your configuration profile for the
+<code>com.anthropic.claudefordesktop</code> domain, set the key as a
+string that contains the JSON text:</p>
+<pre><code>&lt;key&gt;forceLoginOrgUUID&lt;/key&gt;
+&lt;string&gt;[&quot;&lt;uuid-1&gt;&quot;,&quot;&lt;uuid-2&gt;&quot;]&lt;/string&gt;</code></pre>
+<p>Claude Desktop reads this setting when it launches. After you change
+it, quit and reopen Claude Desktop. To check the value the app read, go
+to Help &gt; Troubleshooting &gt; Generate Diagnostic Report.</p>
+<h3 id="install-claude-desktop">Install Claude Desktop</h3>
+<p>The Claude desktop apps bring Claude’s capabilities directly to your
+computer, allowing for seamless integration with your workflow.</p>
+<h4 id="availability">Availability</h4>
+<p>Claude Desktop is available on macOS, Windows, and Linux (beta). What
+you can do depends on your plan:</p>
+<p>Feature</p>
+<p>Free</p>
+<p>Pro</p>
+<p>Max</p>
+<p>Ultra</p>
+<p>Team</p>
+<p>Enterprise</p>
+<p>Chat</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>Claude Code</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>Claude Cowork</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<p>✅</p>
+<h4 id="system-requirements">System Requirements</h4>
+<ul>
+<li>macOS: macOS 13 (Ventura) or higher</li>
+<li>Windows: Windows 10 or higher</li>
+<li>Linux: Ubuntu 22.04 LTS+ or Debian 12 (bookworm)+, on x64 or
+arm64</li>
+</ul>
+<h4 id="installation-steps-for-mac-os-and-windows">Installation steps
+for mac OS and Windows</h4>
+<ul>
+<li>Visit the <a href="https://claude.ai/download">Claude downloads
+page</a>.</li>
+<li>Select the appropriate version for your operating system:
+<ul>
+<li>For Mac users, find macOS and click “Download.”</li>
+<li>For Windows users, find Windows and click “Download.”</li>
+</ul></li>
+</ul>
+<p>Once the download is completed:</p>
+<ul>
+<li>Open the file to complete installation.</li>
+<li>Launch Claude from your Applications folder (Mac) or Start menu
+(Windows).</li>
+<li>Sign in with your account to get started.</li>
+</ul>
+<h4 id="installation-steps-for-linux">Installation steps for Linux</h4>
+<h5 id="install-using-apt">Install using apt</h5>
+<p>On Linux, you can install Claude Desktop from Anthropic’s apt
+repository rather than as a downloaded .deb file so that updates arrive
+through your system’s normal package updates rather than in-app.</p>
+<ol type="1">
+<li>On Ubuntu or Debian, open a terminal and run:</li>
+</ol>
+<p>​</p>
+<pre><code>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc [downloads.claude.ai](https://downloads.claude.ai/claude-desktop/key.asc)
+echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] [downloads.claude.ai](https://downloads.claude.ai/claude-desktop/apt/stable) stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list
+sudo apt update &amp;&amp; sudo apt install claude-desktop</code></pre>
+<ol start="2" type="1">
+<li>Launch Claude from your applications menu, or run
+<code>claude-desktop</code> from a terminal, and sign in.</li>
+</ol>
+<p>Keeping Claude Desktop up to date on Linux</p>
+<p>The app doesn’t update itself. Updates arrive with your system’s
+regular package updates
+(<code>sudo apt update &amp;&amp; sudo apt upgrade</code>).</p>
+<h5 id="install-using-file-download">Install using file download</h5>
+<p>Note: Downloading the .deb will not opt you into regular package
+updates. We highly recommend that you install using apt, or set up the
+apt repo using the steps above.</p>
+<p>If you can’t install Claude Desktop using apt, you can install it by
+downloading a .deb file instead:</p>
+<ul>
+<li>Visit the <a href="https://claude.ai/download">Claude downloads
+page</a>.</li>
+<li>Find the .deb for your architecture (x64 or arm64) and click
+“Download.”</li>
+<li>From the folder you downloaded the .deb file, run:
+<code>sudo apt install ~/Downloads/claude-desktop_amd64.deb</code></li>
+<li>Launch Claude from your applications menu (or run
+<code>claude-desktop</code>), then sign in.</li>
+</ul>
+<h5 id="verify-the-download-on-linux-optional">Verify the download on
+Linux (optional)</h5>
+<p>Verify the signing key fingerprint before trusting it:</p>
+<ul>
+<li>Run:
+<code>gpg --show-keys /usr/share/keyrings/claude-desktop-archive-keyring.asc</code></li>
+<li>Confirm the output matches:
+<code>31DD DE24 DDFA B679 F42D 7BD2 BAA9 29FF 1A7E CACE</code></li>
+</ul>
+<h5
+id="current-limitations-when-you-use-claude-desktop-on-linux">Current
+limitations when you use Claude Desktop on Linux</h5>
+<ul>
+<li>Computer use isn’t available.</li>
+<li>Dictation isn’t available.</li>
+<li>Quick Entry, the global hotkey, works on X11. On native Wayland, it
+relies on your desktop’s GlobalShortcuts portal.</li>
+</ul>
+<h4 id="choose-a-release-channel">Choose a release channel</h4>
+<p>Release channels are available on all plans, in Claude for Mac and
+Claude for Windows. It isn’t available on Linux, Microsoft Store
+installs, or on computers where your IT team has set a Claude
+policy.</p>
+<p>A release channel sets which version of Claude Desktop you get when
+the app updates:</p>
+<ul>
+<li>Stable: The default. Gets new versions less often, after more
+testing, so it’s more reliable. Fixes and new features can reach you a
+few days later than on Latest.</li>
+<li>Latest: Gets a new version about once a day, so fixes and new
+features reach you sooner. It can be less reliable than Stable.</li>
+</ul>
+<h5 id="change-your-release-channel-to-latest">Change your release
+channel to Latest</h5>
+<p>To get new versions sooner, change your release channel to
+Latest:</p>
+<ul>
+<li>Navigate to Settings &gt; Desktop app.</li>
+<li>Under Release channel, select “Latest.”</li>
+</ul>
+<p>The change applies to the computer you’re using, the next time Claude
+Desktop checks for updates. To check right away, close Settings, then
+select Claude &gt; Check for Updates on Mac or Help &gt; Check for
+Updates on Windows. While you’re on Latest, About Claude shows “latest”
+after the version number.</p>
+<h5 id="change-your-release-channel-to-stable">Change your release
+channel to Stable</h5>
+<p>To change your release channel to Stable:</p>
+<ul>
+<li>Navigate to Settings &gt; Desktop app.</li>
+<li>Next to Release channel, select “Stable.”</li>
+</ul>
+<p>Important: Going back to Stable doesn’t replace the version you have.
+Claude Desktop only moves to newer versions, so you keep your Latest
+version until a newer Stable version comes out. Until then, you don’t
+receive Stable updates, including urgent fixes, which can contain
+security fixes. If a Latest update has already downloaded, it still
+installs when you restart. Don’t reinstall Claude Desktop to get back
+sooner, because reinstalling can put data stored on your computer at
+risk, especially on Windows.</p>
+<h4 id="if-you-cant-choose-a-release-channel">If you can’t choose a
+release channel</h4>
+<ul>
+<li>Your computer is managed: If your IT team has set any Claude policy
+on your computer, Release channel doesn’t appear. Claude Desktop follows
+Stable, even if you chose Latest before.</li>
+<li>You installed Claude for Windows with an older installer: Release
+channel is grayed out. To change your release channel, reinstall Claude
+Desktop from the <a href="https://claude.ai/download">Claude downloads
+page</a>. Reinstalling can put data stored on your computer at risk, so
+save anything you need first.</li>
+<li>Your version is out of date: Update to Claude Desktop 4.29.0 or
+later.</li>
+<li>You use Claude Desktop on a cloud provider: Release channel doesn’t
+appear. Your IT team sets the channel. Learn more about <a
+href="https://claude.com/docs/third-party/claude-desktop/configuration#releasechannel">the
+release channel setting</a>.</li>
+</ul>
+<h4 id="desktop-extensions-2">Desktop extensions</h4>
+<p>Desktop extensions transform how you connect Claude to your desktop
+applications and data. Similar to browser extensions, these secure,
+installable packages let you:</p>
+<ul>
+<li>Connect Claude to your desktop apps with one click: Install
+extensions that integrate with your local files, calendars, emails, and
+messaging apps.</li>
+<li>Access a curated directory of extensions: Browse verified extensions
+directly within Claude Desktop, including options like filesystem access
+and iMessage.</li>
+<li>Enjoy enterprise-ready security: Extensions use code signing,
+encrypted storage for sensitive data like API keys, and enterprise
+policy controls.</li>
+</ul>
+<p>To explore desktop extensions, navigate to Settings &gt; Desktop app
+and select “Manage” next to Extensions (or Settings &gt; Extensions in
+the older Settings layout) within the Claude Desktop app after
+installation.</p>
+<p>Note: If you’re a developer who wants to list a desktop extension (a
+local MCP server for Claude Desktop) in the directory, submit it through
+the <a href="https://clau.de/desktop-extention-submission">desktop
+extension submission form</a>. To submit a plugin or a remote connector
+instead, use the <a href="https://claude.ai/directory/manage">developer
+portal</a>. See <a
+href="https://claude.com/docs/plugins/submit">Submitting your plugin</a>
+for what each route accepts.</p>
+<p>Read more about desktop extensions in our <a
+href="https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop">Getting
+Started with Local MCP Servers on Claude Desktop</a> article.</p>
+<h4 id="claude-cowork">Claude Cowork</h4>
+<p>Claude Cowork is available for all paid plans (Pro, Max, Ultra, Team,
+Enterprise) using the Claude Desktop app on macOS, Windows, and Linux
+(beta).</p>
+<p>Users on paid Claude plans can access Cowork in Claude Desktop.
+Cowork brings Claude Code’s agentic capabilities to a visual interface,
+allowing you to hand off complex, multi-step tasks without using a
+terminal.</p>
+<p>With Cowork, Claude can:</p>
+<ul>
+<li>Access your local files directly without manual uploads.</li>
+<li>Work on long-running tasks like research synthesis, file
+organization, and document generation.</li>
+<li>Coordinate parallel workstreams for complex projects.</li>
+<li>Deliver professional outputs like spreadsheets with working formulas
+and formatted presentations.</li>
+</ul>
+<p>Cowork runs code in an isolated virtual machine on your computer.
+File reads and writes are limited to folders you connect, and network
+access follows your egress settings.</p>
+<p>To learn more, see <a
+href="https://support.claude.com/en/articles/13345190-get-started-with-cowork">Get
+started with Cowork</a>.</p>
+<p>Setup requirements for Claude Cowork on Linux</p>
+<p>Cowork on Linux has its own setup requirements. Cowork runs your
+tasks in a virtual machine on your computer. Before it can start, your
+machine needs:</p>
+<ul>
+<li>Hardware virtualization (KVM). Most computers support this, but it’s
+sometimes turned off in firmware. If Cowork says virtualization isn’t
+available, enable it in your BIOS or UEFI settings and restart.</li>
+<li>Permission to use virtualization. Add yourself to the KVM group,
+then log out and back in: <code>sudo usermod -aG kvm $USER</code></li>
+<li>QEMU and supporting packages. Installing Claude with
+<code>apt install</code> pulls these in automatically.
+<ul>
+<li>If you installed the .deb file directly on x64, run
+<code>sudo apt install qemu-system-x86 ovmf virtiofsd</code></li>
+<li>On arm64, run
+<code>qemu-system-arm qemu-efi-aarch64 virtiofsd</code> instead.</li>
+</ul></li>
+<li>About 25 GB of free disk space for the workspace image, and at least
+8 GB of RAM. The workspace uses 4 GB while it’s running.</li>
+</ul>
+<h3 id="open-claude-desktop-with-a-link">Open Claude Desktop with a
+link</h3>
+<p>Claude for macOS, Windows, and Linux respond to the
+<code>claude://</code> URL scheme, much like a browser responds to the
+<code>https://</code> scheme. You can use these links from a website, a
+script, or another app to open Claude Desktop and jump straight to a
+chat, a Cowork session, or a Code session.</p>
+<p>This article lists the link formats Claude Desktop supports and the
+parameters each one accepts.</p>
+<h4 id="how-deep-links-work">How deep links work</h4>
+<p>When your operating system opens a <code>claude://</code> URL, it
+hands the URL to Claude. If the app isn’t running, macOS, Windows, and
+Linux will launch it first. Claude then reads the path and query
+parameters and navigates to the right place inside the app.</p>
+<p>All parameter values must be URL-encoded. Prompt text passed in
+<code>q</code> is truncated to roughly 14,000 characters.</p>
+<h4 id="start-a-new-chat">Start a new chat</h4>
+<pre><code>claude://claude.ai/new
+claude://claude.ai/new?q=Summarize%20this%20week%27s%20release%20notes</code></pre>
+<p>Opens a new chat in Claude Desktop. If you include <code>q</code>,
+the prompt field is prefilled with that text so you can review and send
+it.</p>
+<p>Parameter</p>
+<p>Required</p>
+<p>Description</p>
+<p><code>q</code></p>
+<p>No</p>
+<p>Text to prefill in the prompt field.</p>
+<h4 id="open-an-existing-chat-or-project">Open an existing chat or
+project</h4>
+<pre><code>claude://claude.ai/chat/{conversation-id}
+claude://claude.ai/project/{project-id}</code></pre>
+<p>Opens a specific chat or project by its ID. The ID is the UUID you
+see at the end of the chat or project URL in Claude. If the ID is
+missing or invalid, Claude opens your recent chats or your projects list
+instead.</p>
+<h4 id="start-a-claude-code-session">Start a Claude Code session</h4>
+<pre><code>claude://code/new
+claude://code/new?q=Fix%20the%20failing%20test&amp;folder=%2FUsers%2Fme%2Frepo</code></pre>
+<p>Opens Claude Code in Claude Desktop with the composer prefilled. Use
+this for “Open in Claude Code” buttons in your own tools.</p>
+<p>Parameter</p>
+<p>Required</p>
+<p>Description</p>
+<p><code>q</code></p>
+<p>No</p>
+<p>Text to prefill in the composer. prompt is accepted as an alias.</p>
+<p><code>folder</code></p>
+<p>No</p>
+<p>Absolute path to use as the working directory. Claude Desktop asks
+you to confirm the folder before it’s used. Only the first folder value
+is applied today.</p>
+<p><code>file</code></p>
+<p>No</p>
+<p>Absolute path to a file to attach. Accepted but not currently
+supported.</p>
+<p>Note: Any folder supplied through a link is treated as untrusted.
+Claude Desktop always shows a confirmation dialog before adopting it as
+the working directory, even if you’ve trusted that folder before.</p>
+<h4 id="start-a-claude-cowork-session">Start a Claude Cowork
+session</h4>
+<pre><code>claude://cowork/new
+claude://cowork/new?q=Draft%20the%20Q2%20update&amp;folder=%2FUsers%2Fme%2Fdocs&amp;file=%2FUsers%2Fme
+%2Fdocs%2Fnotes.md</code></pre>
+<p>Opens a new Cowork session with the composer prefilled. Use this for
+“Open in Claude Cowork” buttons in your own tools.</p>
+<p>Parameter</p>
+<p>Required</p>
+<p>Description</p>
+<p><code>q</code></p>
+<p>No</p>
+<p>Text to prefill in the composer.</p>
+<p><code>folder</code></p>
+<p>No</p>
+<p>Absolute path to a folder to attach. Repeat the parameter to attach
+more than one. Claude Desktop asks you to confirm each folder before
+it’s used.</p>
+<p><code>file</code></p>
+<p>No</p>
+<p>Absolute path to a file to attach. Repeat the parameter to attach
+more than one.</p>
+<p>Note: Any folder supplied through a link is treated as untrusted.
+Claude Desktop always shows a confirmation dialog before adopting it as
+the working directory, even if you’ve trusted that folder before.</p>
+<h4 id="test-a-deep-link">Test a deep link</h4>
+<h5 id="on-macos">On macOS</h5>
+<p>Open Terminal and run:</p>
+<pre><code>open &quot;claude://claude.ai/new?q=Hello&quot;</code></pre>
+<h5 id="on-windows">On Windows</h5>
+<p>Open Command Prompt and run:</p>
+<pre><code>start &quot;&quot; &quot;claude://claude.ai/new?q=Hello&quot;</code></pre>
+<h5 id="on-linux">On Linux</h5>
+<p>Open a terminal and run:</p>
+<pre><code>xdg-open &quot;claude://claude.ai/new?q=Hello&quot;</code></pre>
+</main>
+</body>
+</html>

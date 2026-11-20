@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="generator" content="pandoc 3.14" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Claude Duet help</title>
+  <title>Claude help: Duet</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,27 +35,6 @@
       }
       h1 {
         font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        color-scheme: light only;
-      }
-      html, body, pre, code {
-        background-color: transparent;
-      }
-      body, a, a:visited, blockquote {
-        color: black;
-      }
-      pre, code {
-        padding: 0;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
       }
     }
     p {
@@ -163,6 +142,12 @@
       text-decoration: none;
     }
     span.smallcaps{font-variant: small-caps;}
+    em, em em em, em em em em em {
+      font-style: italic;
+    }
+    em em, em em em em {
+      font-style: normal;
+    }
     div.columns{display: flex; gap: 1.5em;}
     div.column{flex: auto;}
     @media screen {
@@ -179,13 +164,33 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-  </style>
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
 </head>
 <body>
 <nav id="TOC" role="doc-toc" aria-label="Contents">
 <ul>
-<li><a href="#claude-duet-help" id="toc-claude-duet-help">Claude Duet
-help</a>
+<li><a href="#claude-help-duet" id="toc-claude-help-duet">Claude help:
+Duet</a>
 <ul>
 <li><a href="#contents" id="toc-contents">Contents</a></li>
 <li><a href="#features-and-capabilities"
@@ -194,19 +199,24 @@ id="toc-features-and-capabilities">Features and capabilities</a></li>
 </ul>
 </nav>
 <main>
-<h1 id="claude-duet-help">Claude Duet help</h1>
-<p>This guide holds the help Anthropic publishes for Claude Duet, its
-proactive agent in research preview, gathered on 31 October 2026 from
-the Claude Help Center: 3 articles, the whole of Duet’s help when
-gathered. The Help Center files them in its Features and capabilities
-collection, among Claude’s own articles. Left out: second copies of
-pages published at two addresses (2 pages). Claude Duet can pay for
-purchases through Link by Stripe and Shop Pay once you approve them, and
-it is an early preview that changes often, so check the live article
-before acting on anything about money. The Claude guide in this
-collection covers Claude itself, the Shopify guide covers the store side
-of Shop Pay, and the ChatGPT dots, Grok Bot and Muse guides cover
-similar agents.</p>
+<h1 id="claude-help-duet">Claude help: Duet</h1>
+<p>This guide holds Anthropic’s own help for Claude Duet, gathered from
+support.claude.com in November 2026. It covers getting started with Duet
+and paying through Link by Stripe or Shop Pay. It is short because the
+source is short.</p>
+<p>Anthropic writes one help centre for every way of using Claude, so
+this collection splits it into six guides: ClaudeWeb.md for Claude on
+the web and in Chrome, with plans, connectors and safety;
+ClaudeDesktop.md for the Windows app; ClaudeIos.md for the iPhone and
+iPad app; ClaudeCowork.md for Cowork; ClaudeCode.md for Claude Code; and
+ClaudeDuet.md for Duet. Each article is in one guide only. Articles
+written only for a Mac or for Android are left out, since this
+collection covers Windows, the web and the iPhone and iPad. Also left
+out are pages for an organization’s administrators, and Anthropic’s
+collections on its programming interface and Console, Amazon Bedrock,
+identity management, and privacy and legal terms. The categories are
+Anthropic’s own, taken from the trail of collections printed above each
+article.</p>
 <p>The help text belongs to its publisher and is gathered here unchanged
 for accessible reading. This guide’s own arrangement and wording are
 available under <a
@@ -226,14 +236,14 @@ with Claude Duet</a></li>
 </ul>
 <h2 id="features-and-capabilities">Features and capabilities</h2>
 <h3 id="get-started-with-claude-duet">Get started with Claude Duet</h3>
-<p><strong><a href="https://claude.com/product/claude-duet">Claude
-Duet</a></strong> is a research preview of Claude that you message the
-way you’d message a person. Tell it what you need, typed or spoken, and
-it works in the apps you’ve connected, lets you know when something
-needs you, and is designed to ask before it sends a message, makes a
-payment, signs a document, or deletes anything. This article explains
-what Claude Duet does, who can get access, how to join the waitlist, and
-what it can’t do yet.</p>
+<p><a href="https://claude.com/product/claude-duet">Claude Duet</a> is a
+research preview of Claude that you message the way you’d message a
+person. Tell it what you need, typed or spoken, and it works in the apps
+you’ve connected, lets you know when something needs you, and is
+designed to ask before it sends a message, makes a payment, signs a
+document, or deletes anything. This article explains what Claude Duet
+does, who can get access, how to join the waitlist, and what it can’t do
+yet.</p>
 <p>Claude Duet is available as a research preview to users on Pro, Max,
 and Ultra plans in the US, through a waitlist. It uses your Claude
 account settings and your plan usage limits. It isn’t available on Team
@@ -243,22 +253,21 @@ preview.</p>
 <h4 id="who-can-get-access">Who can get access</h4>
 <p>To use Claude Duet, you need:</p>
 <ul>
-<li><p>A Pro, Max, or Ultra plan</p></li>
-<li><p>A Claude account in the US</p></li>
-<li><p>An invitation from the waitlist</p></li>
+<li>A Pro, Max, or Ultra plan</li>
+<li>A Claude account in the US</li>
+<li>An invitation from the waitlist or from a Claude Duet user</li>
 </ul>
 <h4 id="why-you-might-not-have-access-yet">Why you might not have access
 yet</h4>
 <ul>
-<li><p>Invitations go out in waves, so joining the waitlist doesn’t
-guarantee a specific date.</p></li>
-<li><p>Claude Duet is available in the US only during the research
-preview.</p></li>
-<li><p>Claude Duet isn’t available on Team or Enterprise plans
-yet.</p></li>
-<li><p>The email address you used on the waitlist doesn’t match your
-Claude account, or the Google or Apple account on your phone. Access is
-tied to the email address you gave us.</p></li>
+<li>Invitations go out in waves, so joining the waitlist doesn’t
+guarantee a specific date.</li>
+<li>Claude Duet is available in the US only during the research
+preview.</li>
+<li>Claude Duet isn’t available on Team or Enterprise plans yet.</li>
+<li>The email address you used on the waitlist doesn’t match your Claude
+account, or the Google or Apple account on your phone. Access is tied to
+the email address you gave us.</li>
 </ul>
 <h4 id="how-claude-duet-works">How Claude Duet works</h4>
 <p>Claude Duet runs on your Claude account, so the memory, skills, and
@@ -266,63 +275,58 @@ connectors you’ve set up in Claude are there from your first message. It
 works on its own computer in the cloud, so it can keep working after you
 close the app.</p>
 <ul>
-<li><p><strong>Message it like a person.</strong> Type a message or
-record a voice message. Your main thread stays in one place, so Claude
-Duet picks up where you left off. You can also start separate channels
-for different topics, and they share the same memory.</p></li>
-<li><p><strong>Start the day with a brief.</strong> Each morning, it
-looks across your email and calendar, picks what most needs your
-attention, and can start the first steps, like drafting replies for you
-to review. Through the day, it sends updates on the work it’s doing and
-follows up on threads that have gone quiet.</p></li>
-<li><p><strong>Hand it larger jobs.</strong> Describe what you need, and
-it works out which apps to use and how much effort the job takes. Bigger
-results come back as files you can review and edit, such as a research
-brief, a financial model, a slide deck, or a dashboard. Finished work
-appears in the <strong>Make</strong> tab.</p></li>
-<li><p><strong>Add plugins.</strong> Claude Duet supports plugins, such
-as the small business plugin, and can suggest ones that fit your
-work.</p></li>
-<li><p><strong>Use websites without a connector.</strong> For sites that
-don’t have a connector, Claude Duet uses its own browser in the
-cloud.</p></li>
+<li>Message it like a person. Type a message or record a voice message.
+Your main thread stays in one place, so Claude Duet picks up where you
+left off. You can also start separate channels for different topics, and
+they share the same memory.</li>
+<li>Start the day with a brief. Each morning, it looks across your email
+and calendar, picks what most needs your attention, and can start the
+first steps, like drafting replies for you to review. Through the day,
+it sends updates on the work it’s doing and follows up on threads that
+have gone quiet.</li>
+<li>Hand it larger jobs. Describe what you need, and it works out which
+apps to use and how much effort the job takes. Bigger results come back
+as files you can review and edit, such as a research brief, a financial
+model, a slide deck, or a dashboard. Finished work appears in the Make
+tab.</li>
+<li>Add plugins. Claude Duet supports plugins, such as the small
+business plugin, and can suggest ones that fit your work.</li>
+<li>Use websites without a connector. For sites that don’t have a
+connector, Claude Duet uses its own browser in the cloud.</li>
 </ul>
 <h5 id="example-requests">Example requests</h5>
 <ul>
-<li><p>“Clear out anything in my inbox that I don’t need to
-read.”</p></li>
-<li><p>“Check Stripe for unpaid invoices and draft reminder emails for
-me to approve.”</p></li>
-<li><p>“Pull together a brief on this company before my 2 pm
-meeting.”</p></li>
+<li>“Clear out anything in my inbox that I don’t need to read.”</li>
+<li>“Check Stripe for unpaid invoices and draft reminder emails for me
+to approve.”</li>
+<li>“Pull together a brief on this company before my 2 pm meeting.”</li>
 </ul>
 <h5 id="keep-track-of-tasks">Keep track of tasks</h5>
-<p>The <strong>Tasks</strong> tab shows what Claude Duet is working on
-and highlights tasks that need your input. Your main thread stays
-quieter: Claude Duet posts there when a task is done or needs a decision
-from you. It may suggest that a task looks finished, but only you can
-mark a task as completed.</p>
+<p>The Tasks tab shows what Claude Duet is working on and highlights
+tasks that need your input. Your main thread stays quieter: Claude Duet
+posts there when a task is done or needs a decision from you. It may
+suggest that a task looks finished, but only you can mark a task as
+completed.</p>
 <h4 id="join-the-waitlist-and-get-the-app">Join the waitlist and get the
 app</h4>
-<ol type="1">
-<li><p>Go to the <strong><a
-href="https://claude.com/product/claude-duet">Claude Duet product
-page</a></strong> and select “Join the waitlist.”</p></li>
-<li><p>Enter your name and email address. If you already use Claude,
-enter the email address on your Claude account.</p></li>
-<li><p>Choose your Claude plan and your phone type (iPhone or Android).
-You can also tell us what you do and what you’d hand off to Claude Duet
-first.</p></li>
-<li><p>Select “Submit”. We’re adding people gradually, and you’ll get an
-email when it’s your turn.</p></li>
-<li><p>When it’s your turn, open the invitation email on your phone and
+<ul>
+<li>Go to the <a href="https://claude.com/product/claude-duet">Claude
+Duet product page</a> and select “Join the waitlist.”</li>
+<li>Enter your name and email address. If you already use Claude, enter
+the email address on your Claude account.</li>
+<li>Choose your Claude plan and your phone type (iPhone or Android). You
+can also tell us what you do and what you’d hand off to Claude Duet
+first.</li>
+<li>Select “Submit”. We’re adding people gradually, and you’ll get an
+email when it’s your turn.</li>
+<li>When it’s your turn, open the invitation email on your phone and
 follow the setup steps for iPhone or Android. Use the Apple or Google
 account linked to the email address you gave us, since access is tied to
-that address.</p></li>
-<li><p>Open Claude Duet and sign in with your Claude account. It can
-take a few minutes for the app to become available after you accept the
-invitation.</p></li>
-</ol>
+that address.</li>
+<li>Open Claude Duet and sign in with your Claude account. It can take a
+few minutes for the app to become available after you accept the
+invitation.</li>
+</ul>
 <h4 id="connect-your-apps">Connect your apps</h4>
 <p>Claude Duet can use the apps you’ve already connected in Claude. You
 can manage access in your Claude settings. It works with the connectors
@@ -332,23 +336,23 @@ every connection yourself, and you can disconnect any app at any time.
 Disconnecting an app stops Claude Duet from accessing it from that point
 on, but memory of past information from earlier conversations is
 kept.</p>
-<p>Learn more about <strong><a
+<p>Learn more about <a
 href="https://support.claude.com/en/articles/11176164">using
-connectors</a></strong>.</p>
+connectors</a>.</p>
 <h5 id="partner-integrations">Partner integrations</h5>
 <p>Claude Duet also works with a few partner services:</p>
 <ul>
-<li><p><strong>Stripe:</strong> Check your Stripe account for unpaid
-invoices and draft reminder emails for you to approve. This uses the
-Stripe connector, which is separate from Link.</p></li>
-<li><p><strong>Link:</strong> Pay for purchases you approve with Link,
-Stripe’s digital wallet. Learn more about <strong><a
-href="#how-to-use-link-by-stripe-with-claude-duet">how to use Link by
-Stripe with Claude Duet</a></strong>.</p></li>
-<li><p><strong>Shop Pay:</strong> Pay for purchases you approve with
-Shop Pay, Shopify’s wallet. Learn more about <strong><a
-href="#how-to-use-shop-pay-with-claude-duet">how to use Shop Pay with
-Claude Duet</a></strong>.</p></li>
+<li>Stripe: Check your Stripe account for unpaid invoices and draft
+reminder emails for you to approve. This uses the Stripe connector,
+which is separate from Link.</li>
+<li>Link: Pay for purchases you approve with Link, Stripe’s digital
+wallet. Learn more about <a
+href="https://support.claude.com/en/articles/17666484">how to use Link
+by Stripe with Claude Duet</a>.</li>
+<li>Shop Pay: Pay for purchases you approve with Shop Pay, Shopify’s
+wallet. Learn more about <a
+href="https://support.claude.com/en/articles/17666489">how to use Shop
+Pay with Claude Duet</a>.</li>
 </ul>
 <p>Claude Duet is designed to ask before each purchase, and each
 purchase uses a one-time card that only works for that purchase. Link
@@ -359,53 +363,59 @@ them in Claude Duet, not in the connectors directory.</p>
 earlier work, so you don’t have to repeat yourself. It searches your
 Claude Duet chats and your chats in Claude outside of projects. When you
 delete a chat, it’s removed from search.</p>
-<p>This uses the same <strong><a
+<p>This uses the same <a
 href="https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context#h_a11816bb20">Search
-and reference chats</a></strong> setting as Claude. To stop Claude Duet
-from searching your past chats, turn off <strong>Search and reference
-chats</strong> in <strong>Settings &gt; Your Claude</strong> (or
-<strong>Settings &gt; Memory</strong> in the older Settings layout).</p>
+and reference chats</a> setting as Claude. To stop Claude Duet from
+searching your past chats, turn off Search and reference chats in
+Settings &gt; Your Claude (or Settings &gt; Memory in the older Settings
+layout).</p>
 <h4 id="limitations">Limitations</h4>
 <p>During the research preview, keep these limits in mind:</p>
 <ul>
-<li><p>You can’t choose a model. Claude Duet runs on Claude Opus 5.5 and
-decides how much effort a job needs.</p></li>
-<li><p>You can’t watch Claude Duet work in its browser or take over the
-browser.</p></li>
-<li><p>It checks your accounts at set intervals, so something urgent can
-arrive between checks.</p></li>
-<li><p>It can’t see all of your projects or the files on your computer,
-and it can read your work in Claude but can’t change it.</p></li>
-<li><p>It doesn’t make phone calls or send text messages to other
-people. With your approval, it can send emails from the accounts you’ve
-connected.</p></li>
-<li><p>Some actions are off-limits even with your approval, such as
-trading securities, moving money between accounts, or accessing someone
-else’s account.</p></li>
-<li><p>Some connectors, such as Slack, work with limits in Claude Duet.
-Microsoft 365 isn’t available yet.</p></li>
+<li>You can’t choose a model. Claude Duet runs on Claude Opus 5.5 and
+decides how much effort a job needs.</li>
+<li>You can’t watch Claude Duet work in its browser or take over the
+browser.</li>
+<li>It checks your accounts at set intervals, so something urgent can
+arrive between checks.</li>
+<li>It can’t see all of your projects or the files on your computer, and
+it can read your work in Claude but can’t change it.</li>
+<li>It doesn’t make phone calls or send text messages to other people.
+With your approval, it can send emails from the accounts you’ve
+connected.</li>
+<li>Some actions are off-limits even with your approval, such as trading
+securities, moving money between accounts, or accessing someone else’s
+account.</li>
+<li>Some connectors, such as Slack, work with limits in Claude
+Duet.</li>
+<li>Personal Finance isn’t available in Claude Duet.</li>
 </ul>
 <p>Claude Duet can also make mistakes, such as misreading a thread or
 misjudging what’s urgent. Review drafts and approval requests before you
 confirm them.</p>
 <h4 id="pricing-and-usage-limits">Pricing and usage limits</h4>
-<p><strong>Pricing.</strong> During the research preview, Claude Duet is
-included with Pro, Max, and Ultra plans at no extra cost.</p>
-<p><strong>Usage limits.</strong> Claude Duet uses your plan’s usage
-limits, including any five-hour session limit and your weekly limits, at
-the same rate as chats in Claude. Work it does in the background, like
-the morning brief and check-ins, also counts, so you may reach your
-limits sooner than with chat alone. Claude Duet checks your accounts at
-set intervals to keep that background work from using up your limits.
-Learn more about <strong><a
+<p>Pricing. During the research preview, Claude Duet is included with
+Pro, Max, and Ultra plans at no extra cost.</p>
+<p>Usage limits. Claude Duet uses your plan’s usage limits, including
+any five-hour session limit and your weekly limits, at the same rate as
+chats in Claude. Work it does in the background, like the morning brief
+and check-ins, also counts, so you may reach your limits sooner than
+with chat alone. Learn more about <a
 href="https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work#h_673be3815f">usage
-limits</a></strong>.</p>
-<p><strong>Limit reset.</strong> When you’re admitted to the Claude Duet
-research preview, you get one full limit reset, which resets both your
-five-hour session and weekly limits. This limit reset is available until
-November 30, 2026. Learn more about <strong><a
+limits</a>.</p>
+<p>Limit resets. During the research preview, we add full limit resets
+to your account so you have room to try Claude Duet. Each one refills
+both your five-hour session and weekly limits when you choose to use it
+in <a href="https://claude.ai/settings/usage">Settings &gt; Usage</a> on
+the web or in Claude Desktop. The number you get depends on your
+plan:</p>
+<ul>
+<li>Pro: three limit resets</li>
+<li>Max and Ultra: one limit reset</li>
+</ul>
+<p>Unused limit resets expire on December 15, 2026. Learn more about <a
 href="https://support.claude.com/en/articles/17007452-what-is-a-limit-reset">limit
-resets</a></strong>.</p>
+resets</a>.</p>
 <h4 id="privacy-safety-and-control">Privacy, safety, and control</h4>
 <p>Claude Duet is designed to show you what it’s about to do and await
 your approval before sending a message, making a payment, signing a
@@ -415,9 +425,9 @@ later. When it gives you a number or a summary, it tells you which
 email, file, or spreadsheet it came from.</p>
 <p>Claude Duet reads content written by other people, such as email and
 web pages, and that content can contain instructions meant to mislead
-it. This is called <em>prompt injection</em>. Claude Duet is built to
-treat what it reads as information and to act on what you ask, but no
-defense is perfect, which is one reason consequential actions need your
+it. This is called prompt injection. Claude Duet is built to treat what
+it reads as information and to act on what you ask, but no defense is
+perfect, which is one reason consequential actions need your
 approval.</p>
 <p>In its browser, Claude Duet aims to follow the rules sites set for
 agents. When a site asks for a password, you type it into a separate
@@ -427,20 +437,19 @@ designed to keep it out of your chat with Claude Duet.</p>
 Pay</h4>
 <p>Where to get help with a purchase depends on the problem:</p>
 <ul>
-<li><p><strong>Order status, delivery, returns, or a product
-refund:</strong> Contact the store you bought from.</p></li>
-<li><p><strong>A Link charge or Link account problem:</strong> Select
-“Get help” in the Link app, or visit <strong><a
+<li>Order status, delivery, returns, or a product refund: Contact the
+store you bought from.</li>
+<li>A Link charge or Link account problem: Select “Get help” in the Link
+app, or visit <a
 href="https://support.link.com/topics/link-agent-wallet">Link
-support</a></strong>.</p></li>
-<li><p><strong>A Shop Pay charge or Shop Pay account problem:</strong>
-Contact <strong><a
+support</a>.</li>
+<li>A Shop Pay charge or Shop Pay account problem: Contact <a
 href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team">Shop
-support</a></strong>.</p></li>
-<li><p><strong>Claude Duet chose a different product, store, or option
-than you intended:</strong> Contact us. Learn more about <strong><a
+support</a>.</li>
+<li>Claude Duet chose a different product, store, or option than you
+intended: Contact us. Learn more about <a
 href="https://support.claude.com/en/articles/9015913-how-to-get-support">how
-to get support</a></strong>.</p></li>
+to get support</a>.</li>
 </ul>
 <h4 id="send-feedback">Send feedback</h4>
 <p>You can send feedback or report any issues directly from the chat by
@@ -457,56 +466,53 @@ in Claude, Cowork, or Claude Code for now.</p>
 your Stripe account. You can use either one without the other.</p>
 <h4 id="what-you-can-do">What you can do</h4>
 <ul>
-<li><p><strong>Approve every purchase.</strong> Claude Duet is designed
-to ask you before each purchase and not submit the Link payment until
-you approve the maximum amount. When you approve, Link may place a
-temporary authorization on your selected payment method. The final
-charge is completed only if the merchant completes the
-purchase.</p></li>
-<li><p><strong>Pay with a one-time card.</strong> Each purchase uses a
-one-time card that only works for that purchase.</p></li>
+<li>Approve every purchase. Claude Duet is designed to ask you before
+each purchase and not submit the Link payment until you approve the
+maximum amount. When you approve, Link may place a temporary
+authorization on your selected payment method. The final charge is
+completed only if the merchant completes the purchase.</li>
+<li>Pay with a one-time card. Each purchase uses a one-time card that
+only works for that purchase.</li>
 </ul>
 <h4 id="how-to-connect">How to connect</h4>
 <p>Link isn’t listed in the connectors directory. You connect it in
 Claude Duet.</p>
-<ol type="1">
-<li><p>Select your avatar in Claude Duet.</p></li>
-<li><p>Select the option to connect payments, then choose Link.</p></li>
-<li><p>Sign in to your Link account and approve access.</p></li>
-</ol>
+<ul>
+<li>Select your avatar in Claude Duet.</li>
+<li>Select the option to connect payments, then choose Link.</li>
+<li>Sign in to your Link account and approve access.</li>
+</ul>
 <p>Claude Duet also suggests connecting Link when you ask for something
 that needs a payment.</p>
-<p>Claude Duet can see the card type, last four digits of your card or
-bank account, nickname and expiration date of your saved payment
-methods, plus your shipping addresses. Claude isn’t given your full
-credit card number (PAN) or bank account number.</p>
+<p>Claude Duet can see the last four digits and expiration date of your
+saved payment methods, as well as your billing address. It doesn’t have
+access to your full card or bank account numbers.</p>
 <h4 id="how-to-pay-with-link">How to pay with Link</h4>
-<ol type="1">
-<li><p>Ask Claude Duet for what you need, like “Reorder ink for the
-office printer.”</p></li>
-<li><p>Claude Duet finds the item and asks you to approve the
-purchase.</p></li>
-<li><p>Create or sign in to your Link account using the Link mobile app
-or app.link.com, then approve your Spend Request.</p></li>
-<li><p>Claude Duet pays with a one-time card scoped to the merchant and
-amount.</p></li>
-</ol>
+<ul>
+<li>Ask Claude Duet for what you need, like “Reorder ink for the office
+printer.”</li>
+<li>Claude Duet finds the item and asks you to approve the
+purchase.</li>
+<li>Create or sign in to your Link account using the Link mobile app or
+app.link.com, then approve your Spend Request.</li>
+<li>Claude Duet pays with a one-time card scoped to the merchant and
+amount.</li>
+</ul>
 <h4 id="current-limitations">Current limitations</h4>
 <ul>
-<li><p>Link is available only in Claude Duet, on Pro, Max, and Ultra
-plans in the US.</p></li>
-<li><p>A US payment method is required.</p></li>
-<li><p>Claude Duet can’t pay with Link until you approve the amount in
-the Link app.</p></li>
-<li><p>A business may decline or block checkout after you approve the
-Spend Request.</p></li>
-<li><p>A failed purchase may temporarily appear as pending on the
-selected funding method.</p></li>
-<li><p>Claude Duet can’t make recurring payments with Link.</p></li>
-<li><p>Some sites can block Claude Duet from paying. If that happens,
-you may need to finish the purchase yourself.</p></li>
+<li>Link is available only in Claude Duet, on Pro, Max, and Ultra plans
+in the US.</li>
+<li>A US payment method is required.</li>
+<li>Claude Duet can’t pay with Link until you approve the amount in the
+Link app.</li>
+<li>A business may decline or block checkout after you approve the Spend
+Request.</li>
+<li>A failed purchase may temporarily appear as pending on the selected
+funding method.</li>
+<li>Claude Duet can’t make recurring payments with Link.</li>
+<li>Some sites can block Claude Duet from paying. If that happens, you
+may need to finish the purchase yourself.</li>
 </ul>
-<hr />
 <h4 id="frequently-asked-questions">Frequently asked questions</h4>
 <h5 id="can-claude-duet-buy-something-without-asking-me">Can Claude Duet
 buy something without asking me?</h5>
@@ -525,30 +531,30 @@ id="who-do-i-contact-about-a-charge-a-refund-or-a-problem-with-a-purchase">Who
 do I contact about a charge, a refund, or a problem with a
 purchase?</h5>
 <ul>
-<li><p>Contact the store for order status, delivery, cancellations,
-returns, damaged or incorrect products, and product refunds.</p></li>
-<li><p>Contact <strong><a
+<li>Contact the store for order status, delivery, cancellations,
+returns, damaged or incorrect products, and product refunds.</li>
+<li>Contact <a
 href="https://support.link.com/topics/link-agent-wallet">Link
-Support</a></strong> for Link account problems, approval problems,
-payment-method issues, duplicate or incorrect payment amounts, an
-unrecognized Link payment, or a payment authorization that remains
-pending after a failed purchase.</p></li>
-<li><p>Contact <strong><a
+Support</a> for Link account problems, approval problems, payment-method
+issues, duplicate or incorrect payment amounts, an unrecognized Link
+payment, or a payment authorization that remains pending after a failed
+purchase.</li>
+<li>Contact <a
 href="https://support.claude.com/en/articles/9015913-how-to-get-support">our
-Support team</a></strong> if Claude Duet selected a different product,
-store, quantity, or option than you requested, or if Claude Duet itself
-did not work correctly. You can tell Claude Duet what happened directly
-in the chat and it will pass your report to our team.</p></li>
-<li><p>If you do not recognize a purchase, deny any pending approval
+Support team</a> if Claude Duet selected a different product, store,
+quantity, or option than you requested, or if Claude Duet itself did not
+work correctly. You can tell Claude Duet what happened directly in the
+chat and it will pass your report to our team.</li>
+<li>If you do not recognize a purchase, deny any pending approval
 requests, disconnect Link from Claude Duet, and contact Link Support
-promptly.</p></li>
+promptly.</li>
 </ul>
 <h5 id="how-do-i-disconnect-link">How do I disconnect Link?</h5>
-<ol type="1">
-<li><p>In Claude Duet, select your Claude Duet avatar.</p></li>
-<li><p>Select payments, then choose Link.</p></li>
-<li><p>Select “Disconnect.”</p></li>
-</ol>
+<ul>
+<li>In Claude Duet, select your Claude Duet avatar.</li>
+<li>Select payments, then choose Link.</li>
+<li>Select “Disconnect.”</li>
+</ul>
 <h3 id="how-to-use-shop-pay-with-claude-duet">How to use Shop Pay with
 Claude Duet</h3>
 <p>Connect Shop Pay, Shopify’s wallet, to Claude Duet so it can pay for
@@ -561,42 +567,41 @@ work in your Shopify store. You can use either one without the
 other.</p>
 <h4 id="what-you-can-do-1">What you can do</h4>
 <ul>
-<li><p><strong>Approve every purchase.</strong> Claude Duet is designed
-to ask before each purchase.</p></li>
-<li><p><strong>Pay with a one-time card.</strong> Each purchase uses a
-one-time card that only works for that purchase.</p></li>
+<li>Approve every purchase. Claude Duet is designed to ask before each
+purchase.</li>
+<li>Pay with a one-time card. Each purchase uses a one-time card that
+only works for that purchase.</li>
 </ul>
 <h4 id="how-to-connect-1">How to connect</h4>
 <p>Shop Pay isn’t listed in the connectors directory. You connect it in
 Claude Duet.</p>
-<ol type="1">
-<li><p>Select your avatar in Claude Duet.</p></li>
-<li><p>Select the option to connect payments, then choose Shop Pay, or
-select from the recommended connectors list on mobile.</p></li>
-<li><p>Sign in to your Shop Pay account and approve access.</p></li>
-</ol>
+<ul>
+<li>Select your avatar in Claude Duet.</li>
+<li>Select the option to connect payments, then choose Shop Pay, or
+select from the recommended connectors list on mobile.</li>
+<li>Sign in to your Shop Pay account and approve access.</li>
+</ul>
 <p>Claude Duet also suggests connecting Shop Pay when you ask for
 something that needs a payment.</p>
-<p>Claude Duet can see the card type, last four digits of your card or
-bank account, nickname and expiration date of your saved payment
-methods, plus your shipping addresses. Claude isn’t given your full
-credit card number (PAN) or bank account number.</p>
+<p>Claude Duet can see the last four digits and expiration date of your
+saved payment methods, as well as your billing address. It doesn’t have
+access to your full card or bank account numbers.</p>
 <h4 id="how-to-pay-with-shop-pay">How to pay with Shop Pay</h4>
-<ol type="1">
-<li><p>Ask Claude Duet for what you need, like “Order more shipping
-labels, same as last time.”</p></li>
-<li><p>Claude Duet finds the item and asks you to approve the
-purchase.</p></li>
-<li><p>Click “Review in Shop Pay,” then approve the purchase.</p></li>
-<li><p>Claude Duet pays with Shop Pay using a one-time card that is
-scoped to the approved amount.</p></li>
-</ol>
+<ul>
+<li>Ask Claude Duet for what you need, like “Order more shipping labels,
+same as last time.”</li>
+<li>Claude Duet finds the item and asks you to approve the
+purchase.</li>
+<li>Click “Review in Shop Pay,” then approve the purchase.</li>
+<li>Claude Duet pays with Shop Pay using a one-time card that is scoped
+to the approved amount.</li>
+</ul>
 <h4 id="current-limitations-1">Current limitations</h4>
 <ul>
-<li><p>Shop Pay is available only in Claude Duet, on Pro, Max, and Ultra
-plans in the US.</p></li>
-<li><p>Some sites can block Claude Duet from paying. If that happens,
-you may need to finish the purchase yourself.</p></li>
+<li>Shop Pay is available only in Claude Duet, on Pro, Max, and Ultra
+plans in the US.</li>
+<li>Some sites can block Claude Duet from paying. If that happens, you
+may need to finish the purchase yourself.</li>
 </ul>
 <h4 id="frequently-asked-questions-1">Frequently asked questions</h4>
 <h5 id="can-claude-duet-buy-something-without-asking-me-1">Can Claude
@@ -616,17 +621,16 @@ do I contact about a charge, a refund, or a problem with a
 purchase?</h5>
 <p>The store you bought from handles refunds, returns, and problems with
 an order. Contact the store directly. For questions about your Shop Pay
-account or a charge, contact <strong><a
+account or a charge, contact <a
 href="https://help.shop.app/en/shop/report-issue/contact-the-shop-support-team">Shop
-support</a></strong>. For problems with Claude Duet itself, tell Claude
-Duet what happened in the chat and it passes your report to our
-team.</p>
+support</a>. For problems with Claude Duet itself, tell Claude Duet what
+happened in the chat and it passes your report to our team.</p>
 <h5 id="how-do-i-disconnect-shop-pay">How do I disconnect Shop Pay?</h5>
-<ol type="1">
-<li><p>In Claude Duet, select your Claude Duet avatar.</p></li>
-<li><p>Select payments, then choose Shop Pay.</p></li>
-<li><p>Select “Disconnect”.</p></li>
-</ol>
+<ul>
+<li>In Claude Duet, select your Claude Duet avatar.</li>
+<li>Select payments, then choose Shop Pay.</li>
+<li>Select “Disconnect”.</li>
+</ul>
 </main>
 </body>
 </html>
