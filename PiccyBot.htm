@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.14" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>PiccyBot help</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    em, em em em, em em em em em {
+      font-style: italic;
+    }
+    em em, em em em em {
+      font-style: normal;
+    }
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc" aria-label="Contents">
+<ul>
+<li><a href="#piccybot-help" id="toc-piccybot-help">PiccyBot help</a>
+<ul>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#features-and-pricing"
+id="toc-features-and-pricing">Features And Pricing</a></li>
+<li><a href="#piccybot-on-whatsapp"
+id="toc-piccybot-on-whatsapp">PiccyBot on WhatsApp</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="piccybot-help">PiccyBot help</h1>
+<p>This guide holds PiccyBot’s own words about using it, gathered from
+piccybot.com on 23 November 2026. PiccyBot describes photos and videos
+aloud on the iPhone and on Android, answers questions about them, and
+works through WhatsApp, including hands-free with Meta’s Ray-Ban
+glasses. It covers how the app works, its features, setting it up on
+WhatsApp and the glasses, and what the free and Pro plans include.</p>
+<p>This is a short guide, because PiccyBot publishes its help on a
+single page. That page also lists common questions, but it shows each
+answer only when its question is opened, so the answers did not come
+with the page and the questions are left out rather than given without
+answers. Also left out: the welcome, what users say, the video showcase,
+honors, donations and the technology partner, which are not help. The
+categories are PiccyBot’s own headings.</p>
+<p>The help text belongs to its publisher and is gathered here unchanged
+for accessible reading. This guide’s own arrangement and wording are
+available under <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+4.0</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Features And Pricing
+<ul>
+<li><a href="#free">Free</a></li>
+<li><a href="#pro">Pro</a></li>
+</ul></li>
+<li>PiccyBot on WhatsApp
+<ul>
+<li><a href="#piccybot-on-whatsapp">PiccyBot on WhatsApp</a></li>
+<li><a href="#setting-up">Setting Up</a></li>
+<li><a href="#use-piccybot-on-your-meta-raybans-via-whatsapp">Use
+PiccyBot on your Meta Raybans via Whatsapp</a></li>
+<li><a href="#why-piccybot-whatsapp-service-is-a-game-changer">Why
+PiccyBot WhatsApp Service is a Game-Changer!</a></li>
+</ul></li>
+<li>Miscellaneous
+<ul>
+<li><a href="#how-piccybot-works">How PiccyBot Works</a></li>
+<li><a href="#lets-connect">Let’s Connect</a></li>
+<li><a href="#visual-accessibility-made-simple">Visual Accessibility
+Made Simple</a></li>
+</ul></li>
+</ul>
+<h2 id="features-and-pricing">Features And Pricing</h2>
+<h3 id="free">Free</h3>
+<ul>
+<li>Convert Photos and Videos to Descriptions</li>
+<li>Ask Follow-up Questions</li>
+<li>Background Processing with Notifications</li>
+<li>Full Localization &amp; VoiceOver Support</li>
+<li>Social Media Sharing</li>
+<li>Dedicated Chat Screen</li>
+<li>Siri &amp; Shortcuts Support</li>
+<li>Quick Camera Access with Volume Button</li>
+<li>Save Descriptions as Metadata</li>
+<li>1mVideo Processing (1 min free)</li>
+</ul>
+<h3 id="pro">Pro</h3>
+<p>$2.99/month or $19.99 Lifetime</p>
+<ul>
+<li>Includes everything in Free, plus:</li>
+<li>Ad-Free Experience</li>
+<li>Extended Video Processing</li>
+<li>Enhanced YouTube Support (30 min)</li>
+<li>Voice Selection</li>
+<li>Personality Mode Switching</li>
+<li>Talkback Speed Control</li>
+<li>Model Selection</li>
+<li>Description Length Control</li>
+<li>Video Upload Quality Control</li>
+<li>Audio-Video Mixing Controls</li>
+<li>Advanced Language Selection (55 Languages)</li>
+</ul>
+<p>Feature</p>
+<p>Free</p>
+<p>Pro</p>
+<p>$2.99/month or $19.99 Lifetime</p>
+<p>Convert Photos and Videos to Descriptions</p>
+<p>Ask Follow-up Questions</p>
+<p>Background Processing with Notifications</p>
+<p>Full Localization &amp; VoiceOver Support</p>
+<p>Social Media Sharing</p>
+<p>Dedicated Chat Screen</p>
+<p>Siri &amp; Shortcuts Support</p>
+<p>Quick Camera Access with Volume Button</p>
+<p>Save Descriptions as Metadata</p>
+<p>Video Processing (1 min free)</p>
+<p>Limited</p>
+<p>Ad-Free Experience</p>
+<p>Extended Video Processing</p>
+<p>Enhanced YouTube Support (30 min)</p>
+<p>Voice Selection</p>
+<p>Personality Mode Switching</p>
+<p>Talkback Speed Control</p>
+<p>Model Selection</p>
+<p>Description Length Control</p>
+<p>Video Upload Quality Control</p>
+<p>Audio-Video Mixing Controls</p>
+<p>Advanced Language Selection (55 Languages)</p>
+<h2 id="piccybot-on-whatsapp">PiccyBot on WhatsApp</h2>
+<h3 id="piccybot-on-whatsapp-1">PiccyBot on WhatsApp</h3>
+<p>Join PiccyBot on WhatsApp with a simple, user-friendly registration
+process that respects your privacy.</p>
+<p>PiccyBot</p>
+<p>Hi! I need help describing an image.</p>
+<p>Hello! I’m PiccyBot. Just send me any image, and I’ll describe it for
+you.</p>
+<p>[Image]</p>
+<p>I see a beautiful sunset over the ocean with palm trees.</p>
+<p>PiccyBot</p>
+<p>Setting Up</p>
+<p>Phone Number – Required for WhatsApp</p>
+<p>Preferred Language – Localizes responses</p>
+<p>Accessibility Needs – Blind, Low Vision, etc.</p>
+<p>Consent – Terms &amp; privacy compliance</p>
+<p>Use with Meta Ray-Bans</p>
+<h4 id="setup">Setup</h4>
+<ul>
+<li>Download PiccyBot (iOS / Android)</li>
+<li>Register for WhatsApp service</li>
+<li>Open MetaView → Settings → Communication</li>
+<li>Select WhatsApp and connect</li>
+</ul>
+<h4 id="for-photos">For Photos</h4>
+<p>“Hey Meta, take a photo and send it to PiccyBot.”</p>
+<p>“Hey Meta, take a photo.” → After the click sound, say: “Send the
+latest photo to PiccyBot.”</p>
+<h4 id="for-videos">For Videos</h4>
+<p>“Hey Meta, take a video.” → Say “Stop” to finish recording.</p>
+<p>After stopping, say: “Send the latest video to PiccyBot.”</p>
+<p>(Videos are limited to 15 seconds.)</p>
+<h4 id="what-happens-next">What Happens Next?</h4>
+<ul>
+<li>Your image/video is sent to PiccyBot on WhatsApp.</li>
+<li>Your glasses notify: “Voice message from PiccyBot.”</li>
+<li>Say: “Play the voice message.” to hear the description.</li>
+</ul>
+<p>Why It’s Powerful</p>
+<p>Instant image &amp; video descriptions</p>
+<p>Supports social media links</p>
+<p>Fully hands-free accessible</p>
+<p>Fast &amp; reliable responses</p>
+<h3 id="setting-up">Setting Up</h3>
+<ul>
+<li>Phone Number → Required for WhatsApp</li>
+<li>Preferred Language → Helps localize responses</li>
+<li>Basic Accessibility Needs → Blind, Low Vision, Color Blind,
+Other</li>
+<li>Consent Checkbox → Terms of service &amp; privacy policy
+compliance</li>
+</ul>
+<h4 id="why">Why?</h4>
+<ul>
+<li>Ensures smooth onboarding</li>
+<li>Helps personalize user experience</li>
+</ul>
+<h3 id="use-piccybot-on-your-meta-raybans-via-whatsapp">Use PiccyBot on
+your Meta Raybans via Whatsapp</h3>
+<p>Follow these steps to connect your Meta Ray-Bans with PiccyBot:</p>
+<ul>
+<li>Download PiccyBot: iOS or Android</li>
+<li>(Optional) Subscribe for enhanced features</li>
+<li>Register for WhatsApp service: <a
+href="https://piccybot.com/register">piccybot.com/register</a></li>
+<li>Save the contact “PiccyBot” on your WhatsApp</li>
+</ul>
+<h4 id="connect-meta-ray-bans-to-piccybot">Connect Meta Ray-Bans to
+PiccyBot:</h4>
+<ul>
+<li>Open the MetaView app → Go to Settings → Communication</li>
+<li>Select WhatsApp and connect</li>
+</ul>
+<h4 id="hands-free-commands-for-piccybot">Hands-Free Commands for
+PiccyBot:</h4>
+<h5 id="for-photos-1">For Photos:</h5>
+<ul>
+<li>“Hey Meta, take a photo and send it to PiccyBot.”</li>
+<li>“Hey Meta, take a photo.” → After the click sound, say: “Send the
+latest photo to PiccyBot.”</li>
+</ul>
+<h5 id="for-videos-1">For Videos:</h5>
+<ul>
+<li>“Hey Meta, take a video.” → Say “Stop” to finish recording</li>
+<li>After stopping, say: “Send the latest video to PiccyBot.”</li>
+<li>(Videos are limited to 15 seconds.)</li>
+</ul>
+<h4 id="what-happens-next-1">What Happens Next?</h4>
+<ul>
+<li>Your image/video is sent to PiccyBot on WhatsApp.</li>
+<li>Your glasses will notify: “Voice message from PiccyBot.”</li>
+<li>Say: “Play the voice message.” to hear the description.</li>
+</ul>
+<p>Enjoy hands-free AI assistance with PiccyBot &amp; Meta Ray-Bans.</p>
+<h3 id="why-piccybot-whatsapp-service-is-a-game-changer">Why PiccyBot
+WhatsApp Service is a Game-Changer!</h3>
+<ul>
+<li>Instant Image &amp; Video Descriptions – Get clear, detailed
+descriptions of any image or video you send.</li>
+<li>Social Media Link Support – Share photos or videos from Instagram,
+Facebook, Youtube, Snapchat, Reddit, Telegram, Whatsapp, Threads and
+PiccyBot will describe them instantly.</li>
+<li>Hands-Free Accessibility – Designed for the visually impaired,
+PiccyBot provides audio descriptions so users can listen instead of
+reading.</li>
+<li>Fast &amp; Reliable – Get quick, accurate responses directly on
+WhatsApp without needing extra apps.</li>
+<li>Seamless Integration – Works perfectly with Meta Ray-Bans, allowing
+hands-free image sharing and audio feedback.</li>
+</ul>
+<p>Experience smarter accessibility with PiccyBot WhatsApp Service
+today!</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="how-piccybot-works">How PiccyBot Works</h3>
+<p>Use Piccybot to describe photos and videos. Just follow these simple
+steps to get started.</p>
+<p>1</p>
+<h4 id="open-the-app">Open the App</h4>
+<p>Get Piccybot from the App Store or Google Play Store and install it
+on your device.</p>
+<p>2</p>
+<h4 id="point-your-camera-or-upload-imagevideo">Point Your Camera or
+Upload Image/Video</h4>
+<p>Open the app and point your camera at any image, object, or scene you
+want described.</p>
+<p>3</p>
+<h4 id="listen-to-description">Listen to Description</h4>
+<p>Piccybot will analyze what’s in the frame and provide a detailed
+audio description.</p>
+<p>4</p>
+<h4 id="ask-questions">Ask Questions</h4>
+<p>If you need more details, ask follow-up questions about specific
+parts of the image.</p>
+<h3 id="lets-connect">Let’s Connect</h3>
+<p>Have questions? We’re here to help!</p>
+<h4 id="get-in-touch">Get in Touch</h4>
+<p>We’d love to hear from you.</p>
+<h5 id="email-us">Email Us</h5>
+<p><a
+href="mailto:support@sparklingapps.com">support@sparklingapps.com</a></p>
+<h5 id="visit-us">Visit Us</h5>
+<p><a href="https://sparklingapps.com/">Sparkling Apps</a></p>
+<h4 id="send-a-message">Send a Message</h4>
+<h3 id="visual-accessibility-made-simple">Visual Accessibility Made
+Simple</h3>
+<p>Piccybot comes packed with features designed to make visual content
+accessible to everyone, regardless of visual ability.</p>
+<h4 id="video-and-image-description">Video and Image Description</h4>
+<p>Point your camera at any image or video to get an accurate, detailed
+description of what’s in the frame.</p>
+<h4 id="converse-with-piccybot">Converse with PiccyBot</h4>
+<p>Ask follow-up questions about the images or videos to get more
+specific information.</p>
+<h4 id="share-media-from-apps">Share Media from Apps</h4>
+<p>Instantly share photos &amp; videos from any social app with ease</p>
+<h4 id="voice-output">Voice Output</h4>
+<p>Clear, natural-sounding voice reads out descriptions, making it easy
+to understand visual content.</p>
+<h4 id="privacy-focused">Privacy Focused</h4>
+<p>Your images and videos remain private and are processed securely.</p>
+</main>
+</body>
+</html>
