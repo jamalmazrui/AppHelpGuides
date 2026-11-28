@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jamal Mazrui" />
+  <title>StreetReaderAI Help Guide</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<main>
+<h1 id="streetreaderai-help-guide">StreetReaderAI Help Guide</h1>
+<p>StreetReaderAI is a web app from Google Research that lets blind and
+low-vision people explore real streets by ear. You stand at a spot on a
+street, turn, step forward, and hear what is around you: the roads, the
+nearby places, and an AI description of the scene. You can also ask
+questions out loud or by typing, such as whether there is a marked
+crosswalk ahead.</p>
+<p><strong>About this guide.</strong> Gathered 27 November 2026 from
+what Google Research has published:</p>
+<ul>
+<li><a href="https://github.com/research-ground/streetreaderAI">The
+StreetReaderAI project on GitHub</a>, its read-me page and its settings
+document</li>
+<li><a
+href="https://research.google/blog/streetreaderai-towards-making-street-view-accessible-via-context-aware-multimodal-ai/">The
+Google Research blog post</a> about the original prototype and its
+study</li>
+<li><a href="https://arxiv.org/abs/2508.08524">The research paper</a>,
+presented at the UIST 2025 conference</li>
+</ul>
+<p>StreetReaderAI runs in a web browser, so it works on Windows. Its
+project calls it an experimental research prototype that will likely
+have bugs, meant for demonstration rather than everyday travel. The
+developer documents (the programming reference and the routing design)
+are left out.</p>
+<p>The open-source version differs a little from the prototype that
+Google tested in 2025. Where they differ, this guide follows the
+open-source version, because that is the one you can run.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>About StreetReaderAI
+<ul>
+<li>Limits and plans</li>
+<li>What testers found</li>
+<li>Who made it</li>
+</ul></li>
+<li>AI features
+<ul>
+<li>AI Chat</li>
+<li>AI Describer</li>
+<li>Preset questions</li>
+</ul></li>
+<li>Getting started
+<ul>
+<li>Choosing where pictures and places come from</li>
+<li>Getting an AI key</li>
+<li>Running it in Google AI Studio</li>
+<li>Running it on your own computer</li>
+<li>The Welcome and Settings dialogs</li>
+</ul></li>
+<li>Moving around
+<ul>
+<li>Finding your bearings</li>
+<li>Jumping to a place</li>
+<li>Moving and turning</li>
+</ul></li>
+<li>Miscellaneous
+<ul>
+<li>Getting help and reporting problems</li>
+<li>Keyboard shortcuts</li>
+<li>The screen curtain</li>
+</ul></li>
+</ul>
+<h2 id="about-streetreaderai">About StreetReaderAI</h2>
+<h3 id="limits-and-plans">Limits and plans</h3>
+<p>StreetReaderAI is a proof of concept. Keep these limits in mind:</p>
+<ul>
+<li>It is not built for real travel decisions, and the project says it
+is for demonstration only.</li>
+<li>It does not plan a full trip from a starting point to a
+destination.</li>
+<li>Speech is its main output. Richer sounds are still being
+explored.</li>
+<li>The AI can be wrong. In the 2025 study, most wrong answers were the
+AI saying something was not there when it was, such as a bike rack.</li>
+</ul>
+<p>Google Research has described these future ideas:</p>
+<ul>
+<li>An agent that explores on its own and answers questions like “What’s
+the next bus stop down this road?”</li>
+<li>An agent that walks a route ahead of you and sums it up, including
+obstacles and building entrances.</li>
+<li>Sound placed around you in space, made from the images.</li>
+</ul>
+<h3 id="what-testers-found">What testers found</h3>
+<p>In 2025, eleven blind screen reader users tried the first prototype
+in a lab.</p>
+<ul>
+<li>They rated its overall usefulness 6.4 out of 7.</li>
+<li>They valued having movement and AI together, the chat, and the
+information it gave.</li>
+<li>They looked at over 350 street views and made over 1,000 AI
+requests. They used AI Chat six times as often as AI Describer.</li>
+<li>Their most common questions were about which way things were,
+whether something was there, what the scene looked like, and where a
+thing was.</li>
+<li>Of 816 questions, 703 (86.3%) were answered correctly, 26 partly, 54
+were declined, and 32 were wrong.</li>
+<li>Some testers found it hard to keep their bearings, to judge whether
+an answer was right, and to know the limits of what the AI knew.</li>
+</ul>
+<h3 id="who-made-it">Who made it</h3>
+<p>Jon E. Froehlich, Alex Fiannaca, Victor Tsaran, Nimer Jaber and Shaun
+Kane built the original prototype. Shaun Kane, Sam Sepah, Bill Neubauer
+and Philip Nelson made the open-source version. Google Research says the
+prototype was designed by blind and sighted accessibility researchers
+working together. StreetReaderAI is free and open source under the
+Apache 2.0 license.</p>
+<h2 id="ai-features">AI features</h2>
+<h3 id="ai-chat">AI Chat</h3>
+<p>AI Chat answers questions about what is in front of you, what you
+passed earlier, and the area nearby. Each time you turn or move, the app
+sends the current view and your location details to the AI.</p>
+<ol type="1">
+<li>Press Mod+K to move to the chat box. (Mod is Alt unless you change
+it.)</li>
+<li>Type a question, such as “Is there a marked crosswalk?”, and press
+Enter.</li>
+<li>Or press Mod+B, or choose the microphone button, and ask aloud.</li>
+</ol>
+<p>Chat remembers earlier parts of your session. In the prototype, a
+tester could walk past a bus stop, turn a corner, and ask where the bus
+stop was.</p>
+<p>If movement commands are turned on in Settings, you can also tell the
+chat “turn left” or “move forward.”</p>
+<h3 id="ai-describer">AI Describer</h3>
+<p>AI Describer gives a short description, two or three sentences, of
+the scene in front of you: the street layout, sidewalks, buildings and
+landmarks. It joins what the picture shows with nearby places and
+roads.</p>
+<ul>
+<li>Press Mod+A to turn automatic descriptions on or off. When they are
+on, you hear a new description as you move.</li>
+<li>You can also choose automatic descriptions in Settings.</li>
+</ul>
+<p>The original prototype had a second style, a tour guide that added
+history and building details. The open-source read-me does not mention
+it.</p>
+<h3 id="preset-questions">Preset questions</h3>
+<p>When you are not typing in a box, press 5, 6 or 7 to ask one of the
+app’s ready questions about the view.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="choosing-where-pictures-and-places-come-from">Choosing where
+pictures and places come from</h3>
+<p>StreetReaderAI takes its street pictures and its place names from
+outside services. You choose them in the settings file,
+streetreaderai.conf.</p>
+<p><strong>Street pictures:</strong></p>
+<ul>
+<li><strong>Panoramax</strong> (the default): free, open 360-degree
+pictures. No key needed.</li>
+<li><strong>Mapillary:</strong> needs a free token from the Mapillary
+Developer Portal.</li>
+<li><strong>Google Street View:</strong> needs a Google Maps key.</li>
+</ul>
+<p><strong>Places and addresses:</strong></p>
+<ul>
+<li><strong>OpenStreetMap</strong> (the default): no key needed.</li>
+<li><strong>Google:</strong> needs a Google Maps key.</li>
+</ul>
+<p>Not every street has pictures from every service, so try another
+service if a place has none.</p>
+<h3 id="getting-an-ai-key">Getting an AI key</h3>
+<p>StreetReaderAI needs one AI service to describe scenes and answer
+questions:</p>
+<ul>
+<li><strong>Google Gemini</strong> (the default): get a key from the API
+key page of Google AI Studio. In AI Studio itself, the app finds the key
+on its own.</li>
+<li><strong>OpenAI:</strong> get a key from OpenAI’s platform site.</li>
+</ul>
+<p>Put your key in the settings file under the keys section, and set the
+AI choice to match. Your keys stay on the computer running the app. They
+are not sent to the web browser.</p>
+<p>The project does not say exactly what is sent to each AI service, so
+read each service’s terms before you use it.</p>
+<h3 id="running-it-in-google-ai-studio">Running it in Google AI
+Studio</h3>
+<p>This way needs no setup on your computer.</p>
+<ol type="1">
+<li>Open Google AI Studio and go to its Build section.</li>
+<li>Import the public StreetReaderAI project from GitHub.</li>
+<li>Run it. AI Studio supplies the Gemini key for you.</li>
+</ol>
+<p>To share it, use Share for a link, or Deploy to Cloud Run for a web
+address of its own. In AI Studio, the app speaks with your computer’s
+own voice, which avoids using up cloud speech allowances.</p>
+<h3 id="running-it-on-your-own-computer">Running it on your own
+computer</h3>
+<p>You need Node.js version 18 or later. Then:</p>
+<ol type="1">
+<li>Download the project from GitHub.</li>
+<li>In its folder, run <code>make setup</code> to install what it
+needs.</li>
+<li>Edit streetreaderai.conf to choose your services and add your
+keys.</li>
+<li>Run <code>make start</code>.</li>
+<li>Open <a href="http://localhost:4200">http://localhost:4200</a> in
+your browser.</li>
+</ol>
+<p>After you change the settings file, refresh the browser page. You do
+not need to restart. If a key is missing, a Configuration Error dialog
+names it.</p>
+<h3 id="the-welcome-and-settings-dialogs">The Welcome and Settings
+dialogs</h3>
+<p>The first time you open StreetReaderAI, a Welcome dialog asks how you
+want it to work. Change these later with the Settings button.</p>
+<ul>
+<li><strong>Self-voicing speech:</strong> the app speaks for itself.
+Turn this off if you use NVDA, JAWS or VoiceOver, so you hear your
+screen reader instead.</li>
+<li><strong>Automatic descriptions:</strong> a new scene description as
+you move.</li>
+<li><strong>Chat movement commands:</strong> lets you say or type “turn
+left” and the like.</li>
+<li><strong>Modifier key:</strong> the Mod key in the shortcuts. It is
+Alt unless you change it.</li>
+<li><strong>Direction format:</strong> directions as compass points,
+degrees, or both.</li>
+<li><strong>Voice type:</strong> Gemini speech, or Local, which uses the
+English voices on your computer. If Gemini speech fails, you hear the
+error in the local voice.</li>
+</ul>
+<h2 id="moving-around">Moving around</h2>
+<h3 id="finding-your-bearings">Finding your bearings</h3>
+<ul>
+<li>Press Mod+I to hear your current address, which way you face, and
+the streets nearby.</li>
+<li>After you turn, the app says which way you face, such as North or
+Northeast.</li>
+<li>After a step, it says how far you went and whether you can keep
+going.</li>
+<li>Nearby businesses and landmarks are named by where they sit from
+you, such as FRONT LEFT or BEHIND RIGHT.</li>
+</ul>
+<h3 id="jumping-to-a-place">Jumping to a place</h3>
+<ul>
+<li>Press Mod+L to move to the address search. Type an address, pick
+from the suggestions, and press Enter.</li>
+<li>Or, when you are not typing, press 1, 2, 3 or 4 to jump to a
+ready-made place: Seattle, Paris, Amsterdam or Lyon.</li>
+</ul>
+<h3 id="moving-and-turning">Moving and turning</h3>
+<p>When you are not typing in a box:</p>
+<ul>
+<li><strong>Up Arrow:</strong> step forward about 18 meters (about 60
+feet).</li>
+<li><strong>Down Arrow:</strong> turn around.</li>
+<li><strong>Left Arrow or Right Arrow:</strong> turn 45 degrees left or
+right.</li>
+</ul>
+<p>Each of these also works with the Mod key held, such as Mod+Up Arrow.
+That is handy if your screen reader would otherwise take the arrow
+keys.</p>
+<p>In the original prototype, Down Arrow stepped backward instead of
+turning around.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="getting-help-and-reporting-problems">Getting help and reporting
+problems</h3>
+<ul>
+<li>Press the question mark key (?) in the app to open its help and
+shortcut list.</li>
+<li>Report bugs on the project’s <a
+href="https://github.com/research-ground/streetreaderAI/issues">GitHub
+issues page</a>.</li>
+<li>Write to the team at <a
+href="mailto:streetreaderai-team@google.com">streetreaderai-team@google.com</a>.</li>
+</ul>
+<h3 id="keyboard-shortcuts">Keyboard shortcuts</h3>
+<p>Mod is Alt unless you change it in Settings. Number keys and plain
+arrows work when you are not typing in a box.</p>
+<ul>
+<li><strong>Up Arrow, or Mod+Up Arrow:</strong> step forward.</li>
+<li><strong>Down Arrow, or Mod+Down Arrow:</strong> turn around.</li>
+<li><strong>Left or Right Arrow, or Mod with either:</strong> turn 45
+degrees.</li>
+<li><strong>1 to 4:</strong> jump to a ready-made place.</li>
+<li><strong>5 to 7:</strong> ask a preset question.</li>
+<li><strong>Mod+A:</strong> turn automatic descriptions on or off.</li>
+<li><strong>Mod+B:</strong> ask by voice.</li>
+<li><strong>Mod+I:</strong> hear your address, direction and nearby
+streets.</li>
+<li><strong>Mod+K:</strong> move to the chat box.</li>
+<li><strong>Mod+L:</strong> move to the address search.</li>
+<li><strong>Mod+T:</strong> screen curtain.</li>
+<li><strong>? (question mark):</strong> open help and shortcuts.</li>
+<li><strong>Escape:</strong> stop speech and close dialogs.</li>
+</ul>
+<h3 id="the-screen-curtain">The screen curtain</h3>
+<p>Press Mod+T for the screen curtain, which blacks out everything shown
+on the screen. Your screen reader and the app’s speech keep working.</p>
+</main>
+</body>
+</html>
